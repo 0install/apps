@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/python/python/upstream.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
+  <name>Python</name>
+  <summary>The Python Programming Language</summary>
+  <description>
+Python is a programming language that lets you work more quickly and integrate
+your systems more effectively. You can learn to use Python and see almost
+immediate gains in productivity and lower maintenance costs.</description>
+  <homepage>http://www.python.org/</homepage>
+  <category>Development</category>
+  <!-- <icon href="http://afb.users.sourceforge.net/zero-install/icons/python.png" type="image/png"/> -->
+  <needs-terminal/>
+  <feed-for interface="http://repo.roscidus.com/python/python"/>
+  <group license="OSI Approved :: Python License" released="2011-06-11" stability="stable" version="2.7.2">
+  <implementation arch="*-src" compile:binary-main="bin/python" compile:command="chmod +w Python/graminit.c Include/graminit.h; $SRCDIR/configure --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install; 0launch http://afb.users.sourceforge.net/zero-install/interfaces/shebangs.xml $DISTDIR/bin" compile:dup-src="true" id="sha1new=1f411e645412b2e5bf9e28bdfa6a3b08b73a574c" version="2.7.2">
+    <archive extract="Python-2.7.2" href="http://python.org/ftp/python/2.7.2/Python-2.7.2.tar.bz2" size="11754834" type="application/x-bzip-compressed-tar"/>
+    <requires interface="http://afb.users.sourceforge.net/zero-install/interfaces/shebangs.xml"/>
+  </implementation>
+  </group>
+  <group license="OSI Approved :: Python License" released="2010-11-27" stability="stable" version="2.7.1">
+  <implementation arch="*-src" compile:binary-main="bin/python" compile:command="$SRCDIR/configure --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" id="sha1new=08d9b34d377b0713eeaf1e094b559d427c234c01" version="2.7.1">
+    <archive extract="Python-2.7.1" href="http://python.org/ftp/python/2.7.1/Python-2.7.1.tar.bz2" size="11722546" type="application/x-bzip-compressed-tar"/>
+  </implementation>
+  <implementation arch="Linux-i486" id="sha1new=0769fb909e4df8f33637c278a87c61a979e52dc7" main="bin/python" stability="testing" version="2.7.1">
+    <manifest-digest sha256="4938ce8ae9dbaf770fe7af604f1ce1535b75ef2d8a9a5481959119b4521c24a7"/>
+    <!-- <archive extract="python-linux-i486-2.7.1" href="http://afb.users.sourceforge.net/zero-install/implementations/python-linux-i486-2.7.1.tar.bz2" size="19533251"/> -->
+  </implementation>
+  <implementation arch="Linux-x86_64" id="sha1new=c38fe8f18382ff8c8df0761db9c14f57b14f50c7" main="bin/python" stability="testing" version="2.7.1">
+    <manifest-digest sha256="1e4f3e081f0feab80d61569b234f0621bdc8f829c9de8d46f6c1d7aa07b40dd2"/>
+    <!-- <archive extract="python-linux-x86_64-2.7.1" href="http://afb.users.sourceforge.net/zero-install/implementations/python-linux-x86_64-2.7.1.tar.bz2" size="20071919"/> -->
+  </implementation>
+  </group>
+  <group license="OSI Approved :: Python License" released="2010-07-03" stability="stable" version="2.7">
+  <implementation arch="*-src" compile:binary-main="bin/python" compile:command="$SRCDIR/configure --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" id="sha1new=846cb9f3a661e2b0f8416ccbed8cbb4bcf53b11a" version="2.7">
+    <archive extract="Python-2.7" href="http://python.org/ftp/python/2.7/Python-2.7.tar.bz2" size="11735195" type="application/x-bzip-compressed-tar"/>
+  </implementation>
+  </group>
+  <group license="OSI Approved :: Python License" released="2011-06-03" stability="stable" version="2.6.7">
+  <implementation arch="*-src" compile:binary-main="bin/python" compile:command="$SRCDIR/configure --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" id="sha1new=bde820643b6c3e928fc91fe179f3ba406e6ef483" version="2.6.7">
+    <archive extract="Python-2.6.7" href="http://www.python.org/ftp/python/2.6.7/Python-2.6.7.tar.bz2" size="11084667" type="application/x-bzip-compressed-tar"/>
+  </implementation>
+  </group>
+  <group license="OSI Approved :: Python License" released="2010-03-19" stability="stable" version="2.6.5">
+  <implementation arch="*-src" compile:binary-main="bin/python" compile:command="$SRCDIR/configure --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" id="sha1new=a53a9875b0514a0ce05116d6863a1eba8472b67b" version="2.6.5">
+    <archive extract="Python-2.6.5" href="http://www.python.org/ftp/python/2.6.5/Python-2.6.5.tar.bz2" size="11095581" type="application/x-bzip-compressed-tar"/>
+  </implementation>
+  </group>
+  <group license="OSI Approved :: Python License" released="2011-05-26" stability="stable" version="2.5.6">
+  <implementation arch="*-src" compile:binary-main="bin/python" compile:command="$SRCDIR/configure --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" id="sha1new=5ab860190b8ca40613cfc154d6a70afe2de4cdf5" version="2.5.6">
+    <archive extract="Python-2.5.6" href="http://www.python.org/ftp/python/2.5.6/Python-2.5.6.tar.bz2" size="9821788" type="application/x-bzip-compressed-tar"/>
+  </implementation>
+  </group>
+  <group license="OSI Approved :: Python License" released="2010-01-31" stability="stable" version="2.5.5">
+  <implementation arch="*-src" compile:binary-main="bin/python" compile:command="$SRCDIR/configure --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" id="sha1new=167290777377ffbdf48138ff14737b95bd301649" version="2.5.5">
+    <archive extract="Python-2.5.5" href="http://www.python.org/ftp/python/2.5.5/Python-2.5.5.tar.bz2" size="9822917" type="application/x-bzip-compressed-tar"/>
+  </implementation>
+  </group>
+  <group license="OSI Approved :: Python License" released="2008-12-19" stability="stable" version="2.4.6">
+  <implementation arch="*-src" compile:binary-main="bin/python" compile:command="$SRCDIR/configure --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" id="sha1new=6e3292e8462393c6343a27c1f00052df34cfa13a" version="2.4.6">
+    <archive extract="Python-2.4.6" href="http://www.python.org/ftp/python/2.4.6/Python-2.4.6.tar.bz2" size="8154677" type="application/x-bzip-compressed-tar"/>
+  </implementation>
+  </group>
+  <group license="OSI Approved :: Python License" released="2008-03-11" stability="stable" version="2.3.7">
+  <implementation arch="*-src" compile:binary-main="bin/python" compile:command="$SRCDIR/configure --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" id="sha1new=95d637737444c99af608f55cf8152708254a3dd0" version="2.3.7">
+    <archive extract="Python-2.3.7" href="http://www.python.org/ftp/python/2.3.7/Python-2.3.7.tar.bz2" size="7352771" type="application/x-bzip-compressed-tar"/>
+  </implementation>
+  </group>
+</interface>

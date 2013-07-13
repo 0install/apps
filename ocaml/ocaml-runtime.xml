@@ -18,6 +18,16 @@
       <manifest-digest sha256new="2M3IRTVAOS4XQTLTJJRWYDNDKEWAQFPBDR35KWKMUIR7ZQ2YNSOQ"/>
       <archive extract="ocaml-runtime-windows-i386-4.0.1" href="ocaml-runtime-windows-i386-4.0.1.tar.bz2" size="4207899"/>
     </implementation>
+    <implementation arch="Linux-i486" id="sha1new=12905f3f5e3f8878e262c771c16267636f43c625" released="2013-07-13" version="4.0.1">
+      <environment insert="" mode="replace" name="OCAML_HOME"/>
+      <environment insert="lib" mode="replace" name="OCAMLLIB"/>
+      <environment insert="lib/stublibs" name="CAML_LD_LIBRARY_PATH"/>
+      <command name="run" path="bin/ocamlrun">
+        <arg>${OCAML_HOME}/bin/ocaml</arg>
+      </command>
+      <manifest-digest sha256new="GUYTA2LOHVQEMF5B3MLLA6BFWM4ZIPLNVUWHDE6CSPTIV5P677GA"/>
+      <archive extract="ocaml-runtime-linux-i486-4.0.1" href="ocaml-runtime-linux-i486-4.0.1.tar.bz2" size="2170892"/>
+    </implementation>
   </group>
 
   <group arch="*-src">
@@ -26,12 +36,12 @@
     </requires>
     <command name="compile" shell-command="&quot;$SRCDIR/zi_build.sh&quot;">
       <compile:implementation>
-	<environment insert="" mode="replace" name="OCAML_HOME"/>
-	<environment insert="lib" mode="replace" name="OCAMLLIB"/>
-	<environment insert="lib/stublibs" name="CAML_LD_LIBRARY_PATH"/>
-	<command name="run" path="bin/ocamlrun">
-	  <arg>${OCAML_HOME}/bin/ocaml</arg>
-	</command>
+        <environment insert="" mode="replace" name="OCAML_HOME"/>
+        <environment insert="lib" mode="replace" name="OCAMLLIB"/>
+        <environment insert="lib/stublibs" name="CAML_LD_LIBRARY_PATH"/>
+        <command name="run" path="bin/ocamlrun">
+          <arg>${OCAML_HOME}/bin/ocaml</arg>
+        </command>
       </compile:implementation>
     </command>
     <implementation compile:dup-src="true" id="sha1new=b32d1b07744b831446a761bc3519c5eec01c6357" released="2013-07-13" version="4.0.1">

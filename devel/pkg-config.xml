@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/devel/pkg-config" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>pkg-config</name>
+  <summary>manage compile and link flags for libraries</summary>
+  <description>
+pkg-config is a system for managing library compile and link flags that works
+with automake and autoconf.
+
+Increasingly libraries ship with &quot;.pc&quot; files that allow querying of the compiler
+and linker flags needed to use them through the pkg-config(1) program.</description>
+  <category>Development</category>
+
+  <package-implementation distributions="RPM" main="/usr/bin/pkg-config" package="pkgconfig"/>
+  <package-implementation distributions="Debian RPM" main="/usr/bin/pkg-config" package="pkg-config"/>
+  <package-implementation distributions="Gentoo" main="/usr/bin/pkg-config" package="dev-util/pkgconfig"/>
+  <homepage>http://pkg-config.freedesktop.org/</homepage>
+
+  <group license="OSI Approved :: GNU General Public License v2" main="usr/bin/pkg-config">
+    <requires interface="http://repo.roscidus.com/lib/popt">
+      <environment insert="lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <group arch="Linux-i386">
+      <implementation id="sha1new=7619ff7ef124c2dcc423be77d22c4d6deac30cab" main="bin/pkg-config" released="2010-04-24" version="0.22-1">
+        <archive href="http://repo.roscidus.com/devel/pkg-config/pkg-config-i386-0.22-1.tar.bz2" size="52359"/>
+      </implementation>
+      <implementation id="sha1new=ac17f4bffd491781e31dbef628e0d0bf94d596d3" main="bin/pkg-config" released="2011-05-29" version="0.25-1.1">
+      <archive href="http://repo.roscidus.com/devel/pkg-config/pkg-config-i386-0.25-1.1.tar.bz2" size="57194"/>
+    </implementation>
+      <implementation arch="Linux-x86_64" id="sha1new=221455243b97d96b3db60220482cde5705c2196f" main="bin/pkg-config" released="2011-05-29" version="0.25-1.1">
+      <archive href="http://repo.roscidus.com/devel/pkg-config/pkg-config-amd64-0.25-1.1.tar.bz2" size="59401"/>
+    </implementation>
+    </group>
+    <group arch="Linux-x86_64">
+      <implementation id="sha1new=3f38637717d69aae67a7d0f843b239bb661a908f" main="bin/pkg-config" released="2010-04-24" version="0.22-1">
+        <archive href="http://repo.roscidus.com/devel/pkg-config/pkg-config-amd64-0.22-1.tar.bz2" size="55581"/>
+      </implementation>
+    </group>
+  </group>
+</interface>

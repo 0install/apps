@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/python/whoosh" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile" xmlns:gfxmonk="http://gfxmonk.net/dist/0install">
+  <name>python-whoosh</name>
+  <summary>fast, pure-Python full text indexing, search, and spell checking library</summary>
+  <gfxmonk:upstream id="Whoosh" type="pypi"/>
+  <gfxmonk:publish>third-party</gfxmonk:publish>
+  <homepage>http://bitbucket.org/mchaput/whoosh</homepage>
+  <description>
+    Whoosh is a fast, featureful full-text indexing and searching library
+    implemented in pure Python. Programmers can use it to easily add search
+    functionality to their applications and websites. Every part of how Whoosh
+    works can be extended or replaced to meet your needs exactly.
+
+    Some of Whoosh's features include:
+
+    * Pythonic API.
+    * Pure-Python. No compilation or binary packages needed, no mysterious crashes.
+    * Fielded indexing and search.
+    * Fast indexing and retrieval -- faster than any other pure-Python, scoring,
+    full-text search solution I know of.
+    * Pluggable scoring algorithm (including BM25F), text analysis, storage,
+    posting format, etc.
+    * Powerful query language.
+    * Pure Python spell-checker (as far as I know, the only one). 
+
+    Whoosh might be useful in the following circumstances:
+
+    * Anywhere a pure-Python solution is desirable to avoid having to build/compile
+    native libraries (or force users to build/compile them).
+    * As a research platform (at least for programmers that find Python easier to
+    read and work with than Java ;)
+    * When an easy-to-use Pythonic interface is more important to you than raw
+    speed. 
+
+    Whoosh was created and is maintained by Matt Chaput. It was originally created
+    for use in the online help system of Side Effects Software's 3D animation
+    software Houdini. Side Effects Software Inc. graciously agreed to open-source
+    the code.
+
+    This software is licensed under the terms of the simplified BSD (A.K.A. &quot;two
+    clause&quot; or &quot;FreeBSD&quot;) license. See LICENSE.txt for information.
+  </description>
+  <group>
+    <environment insert="src" name="PYTHONPATH"/>
+    <implementation id="sha1new=6069e9f59d6fab618f32e7294490021cec0caaeb" released="2012-06-16" version="2.4.1">
+      <archive extract="Whoosh-2.4.1" href="http://pypi.python.org/packages/source/W/Whoosh/Whoosh-2.4.1.tar.gz" size="938446"/>
+      <manifest-digest sha256="741baed545d22b9448d990c44aaf7e2c695b88198982ae3354965840acb5428f"/>
+    </implementation>
+  </group>
+</interface>

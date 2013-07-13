@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/lib/stdc++6" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libstdc++6</name>
+  <summary>The GNU Standard C++ Library v3</summary>
+  <description>This package contains an additional runtime library for C++ programs
+built with the GNU compiler.
+
+libstdc++-v3 is a complete rewrite from the previous libstdc++-v2, which
+was included up to g++-2.95. The first version of libstdc++-v3 appeared
+in g++-3.0.</description>
+  <package-implementation package="libstdc++6"/>
+  <package-implementation distributions="Arch" package="gcc-libs"/>
+  <group arch="Linux-i386">
+    <requires interface="http://repo.roscidus.com/lib/gcc1">
+      <environment insert="lib" mode="prepend" name="LD_LIBRARY_PATH"/>
+    </requires>
+
+    <implementation id="sha1new=3ea473cbd976fac4360478603fd301fc387ec21b" released="2011-10-01" version="4.4.5-8">
+      <archive href="http://repo.roscidus.com/lib/stdc++6/libstdc++6-i386-4.4.5-8.tar.bz2" size="329917"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=addf2265c9a59a45aa95db15d7458d00a65bfe96" released="2011-10-01" version="4.4.5-8">
+      <archive href="http://repo.roscidus.com/lib/stdc++6/libstdc++6-amd64-4.4.5-8.tar.bz2" size="324558"/>
+    </implementation>
+  </group>
+
+</interface>

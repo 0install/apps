@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/lib/xml2" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libxml2</name>
+  <summary>GNOME XML library</summary>
+  <description>XML is a metalanguage to let you design your own markup language.
+A regular markup language defines a way to describe information in
+a certain class of documents (eg HTML). XML lets you define your
+own customized markup languages for many classes of document. It
+can do this because it's written in SGML, the international standard
+metalanguage for markup languages.
+
+This package provides a library providing an extensive API to handle
+such XML data files.</description>
+  <package-implementation package="libxml2"/>
+  <group arch="Linux-i386">
+    <implementation id="sha1new=f248e00cdda7e14ec148cd7120f575c4650157fe" released="2011-09-17" version="2.7.8">
+      <archive href="http://repo.roscidus.com/lib/xml2/libxml2-i386-2.7.8.dfsg-2+squeeze1.tar.bz2" size="808089"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=0eec0a01c3d12de6f07faf138df1a24634d7326a" released="2011-09-17" version="2.7.8">
+      <archive href="http://repo.roscidus.com/lib/xml2/libxml2-amd64-2.7.8.dfsg-2+squeeze1.tar.bz2" size="861925"/>
+    </implementation>
+    <group>
+      <requires interface="http://repo.roscidus.com/lib/zlib1g">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+      <implementation id="sha1new=a7e5d754ed506f4e567fabeae05884d073a69433" released="2012-03-27" version="2.7.8">
+      <archive href="http://repo.roscidus.com/lib/xml2/libxml2-i386-2.7.8.dfsg-2+squeeze3.tar.bz2" size="809575"/>
+    </implementation>
+      <implementation arch="Linux-x86_64" id="sha1new=9e9d62c9b0aec9ad55de90c0df16e08a8d29f373" released="2012-03-27" version="2.7.8">
+      <archive href="http://repo.roscidus.com/lib/xml2/libxml2-amd64-2.7.8.dfsg-2+squeeze3.tar.bz2" size="862772"/>
+    </implementation>
+    </group>
+  </group>
+
+</interface>

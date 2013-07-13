@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="http://repo.roscidus.com/ocaml/ocaml-runtime" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="http://repo.roscidus.com/ocaml/ocaml-runtime" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
   <name>OCaml runtime</name>
   <summary>ML language implementation with a class-based object system</summary>
   <description>OCaml is a general purpose industrial-strength programming language with an emphasis on expressiveness and safety. Developed for more than 20 years at Inria it benefits from one of the most advanced type systems and supports functional, imperative and object-oriented styles of programming.
@@ -18,5 +18,24 @@
       <manifest-digest sha256new="2M3IRTVAOS4XQTLTJJRWYDNDKEWAQFPBDR35KWKMUIR7ZQ2YNSOQ"/>
       <archive extract="ocaml-runtime-windows-i386-4.0.1" href="ocaml-runtime-windows-i386-4.0.1.tar.bz2" size="4207899"/>
     </implementation>
+    <group>
+      <requires interface="http://repo.roscidus.com/devel/make" os="POSIX">
+        <executable-in-path name="make"/>
+      </requires>
+      <command name="compile" shell-command="&quot;$SRCDIR/zi_build.sh&quot;">
+        <compile:implementation>
+          <environment insert="" mode="replace" name="OCAML_HOME"/>
+          <environment insert="lib" mode="replace" name="OCAMLLIB"/>
+          <environment insert="lib/stublibs" name="CAML_LD_LIBRARY_PATH"/>
+          <command name="run" path="bin/ocamlrun">
+            <arg>${OCAML_HOME}/bin/ocaml</arg>
+          </command>
+        </compile:implementation>
+      </command>
+      <implementation arch="*-src" compile:dup-src="true" id="sha1new=b32d1b07744b831446a761bc3519c5eec01c6357" released="2013-07-13" version="4.0.1">
+        <manifest-digest sha256new="ZFC5XK2XODZWGVSZHNOMK7D6LHCBPFFCKRYPHQLPELMZBSWTJGKA"/>
+        <archive extract="ocaml-runtime-4.0.1" href="ocaml-runtime-4.0.1.tar.bz2" size="2749775"/>
+      </implementation>
+    </group>
   </group>
 </interface>

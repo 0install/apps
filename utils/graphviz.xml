@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/utils/graphviz" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+    <name>graphviz</name>
+    <summary>Open Source Graph Visualization Software</summary>
+    <description>
+Open Source Graph Visualization Software</description>
+    <homepage>http://www.graphviz.org/</homepage>
+    <package-implementation distributions="RPM Debian Arch" main="/usr/bin/dot" package="graphviz"/>
+    <package-implementation distributions="Gentoo" main="/usr/bin/dot" package="media-gfx/graphviz"/>
+    <package-implementation distributions="MacPorts" main="/opt/local/bin/dot" package="graphviz"/>
+    <package-implementation distributions="Ports" main="/usr/local/bin/dot" package="graphviz"/>
+
+  <group arch="Windows-i386" doc-dir="doc" license="Eclipse Public License" main="bin/dot.exe">
+    <implementation id="sha1new=b9ad8643984d120799c43f3d85d58f2653f87955" released="2011-04-21" version="2.27.20110421.0445">
+    <archive extract="release" href="http://repo.roscidus.com/utils/graphviz/graphviz-bin-2.27.20110421.0445.zip" size="49035660" type="application/zip"/>
+  </implementation>
+  </group>
+</interface>

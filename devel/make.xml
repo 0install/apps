@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/devel/make" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>make</name>
+  <summary>The GNU version of the &quot;make&quot; utility.</summary>
+  <description>
+GNU Make is a program that determines which pieces of a large program need to be
+recompiled and issues the commands to recompile them, when necessary.
+
+The upstream sources for this package are available at the location
+ftp://ftp.gnu.org/gnu/make/. The documentation for this package does not meet
+the Debian Free Software Guidelines, and has been removed from this package.</description>
+  <category>Development</category>
+  <needs-terminal/>
+  <homepage>http://www.gnu.org/software/make/</homepage>
+  <package-implementation main="/usr/bin/make" package="make"/>
+  <package-implementation distributions="MacPorts" main="/opt/local/bin/gmake" package="gmake"/>
+  <feed arch="Windows-*" src="http://0install.de/feeds/make.xml"/>
+  <group arch="Linux-i386" main="bin/make">
+    <implementation id="sha1new=78fd81f1743ffe1c29f1025d1898b48634a391be" released="2010-04-25" version="3.81-5">
+      <archive href="http://repo.roscidus.com/devel/make/make-i386-3.81-5.tar.bz2" size="317167"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=fdc117f803c22a910e10b03caf43bd08efedc475" released="2010-04-25" version="3.81-5">
+      <archive href="http://repo.roscidus.com/devel/make/make-amd64-3.81-5.tar.bz2" size="327457"/>
+    </implementation>
+    <implementation id="sha1new=62aea41d2b6ecfbb1569f739d607a7f664e73b81" released="2011-05-29" version="3.81-8">
+      <archive href="http://repo.roscidus.com/devel/make/make-i386-3.81-8.tar.bz2" size="320143"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=cfdba304764c3265a3e35db5abc0e3bf170048e2" released="2011-05-29" version="3.81-8">
+      <archive href="http://repo.roscidus.com/devel/make/make-amd64-3.81-8.tar.bz2" size="330847"/>
+    </implementation>
+  </group>
+
+</interface>

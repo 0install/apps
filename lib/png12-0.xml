@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/lib/png12-0" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libpng12-0</name>
+  <summary>PNG library - runtime</summary>
+  <description>libpng is a library implementing an interface for reading and writing
+PNG (Portable Network Graphics) format files.
+
+This package contains the runtime library files needed to run software
+using libpng.</description>
+  <package-implementation package="libpng12-0"/>
+  <package-implementation package="libpng12"/>
+  <group arch="Linux-i386">
+    <implementation id="sha1new=c33007f8f0185af570fe3c37f391b5832c8cb2de" released="2011-10-01" version="1.2.44-1">
+      <archive href="http://repo.roscidus.com/lib/png12-0/libpng12-0-i386-1.2.44-1+squeeze1.tar.bz2" size="106531"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=24a3bed36ab3898dab469b4faa8a7216f2813cce" released="2011-10-01" version="1.2.44-1">
+      <archive href="http://repo.roscidus.com/lib/png12-0/libpng12-0-amd64-1.2.44-1+squeeze1.tar.bz2" size="106552"/>
+    </implementation>
+    <group>
+      <requires interface="http://repo.roscidus.com/lib/zlib1g">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+      <implementation id="sha1new=8390965d5ff42850c411b6902a72b5f7683ae1ae" released="2012-03-27" version="1.2.44-1">
+      <archive href="http://repo.roscidus.com/lib/png12-0/libpng12-0-i386-1.2.44-1+squeeze3.tar.bz2" size="106547"/>
+    </implementation>
+      <implementation arch="Linux-x86_64" id="sha1new=99450d9b55c1ffc3d05432f6424d804a055f331d" released="2012-03-27" version="1.2.44-1">
+      <archive href="http://repo.roscidus.com/lib/png12-0/libpng12-0-amd64-1.2.44-1+squeeze3.tar.bz2" size="106559"/>
+    </implementation>
+    </group>
+  </group>
+
+</interface>

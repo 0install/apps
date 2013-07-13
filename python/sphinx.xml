@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/python/sphinx" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>python-sphinx</name>
+  <summary>tool for producing documentation for Python projects</summary>
+  <description>
+Sphinx is a tool that makes it easy to create intelligent and beautiful
+documentation. It was originally created for the new Python documentation, and
+it has excellent facilities for the documentation of Python projects, but C/C++
+is already supported as well, and it is planned to add special support for other
+languages as well.</description>
+  <needs-terminal/>
+
+  <package-implementation distributions="Debian" main="/usr/bin/sphinx-build" package="python-sphinx"/>
+  <package-implementation distributions="RPM" main="/usr/bin/sphinx-build" package="python-sphinx"/>
+  <package-implementation distributions="RPM" main="/usr/bin/sphinx-build" package="python-Sphinx"/>
+
+  <group main="sphinx-build.py">
+    <command name="run" path="sphinx-build.py">
+      <runner interface="http://repo.roscidus.com/python/python">
+	<version before="3"/>
+      </runner>
+    </command>
+    <requires interface="http://repo.roscidus.com/python/docutils"/>
+    <requires interface="http://gfxmonk.net/dist/0install/jinja2.xml"/>
+
+    <implementation doc-dir="doc" id="sha1new=7dd5e02109d6906134d10ea06f8d892269a1e83f" license="OSI Approved :: BSD License (revised)" released="2013-01-18" version="1.1.3">
+      <archive extract="Sphinx-1.1.3" href="http://repo.roscidus.com/python/sphinx/Sphinx-1.1.3.tar.gz" size="2632059" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

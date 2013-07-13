@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/lib/krb53" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libkrb53</name>
+  <summary>MIT Kerberos runtime libraries</summary>
+  <description>Kerberos is a system for authenticating users and services on a network.
+Kerberos is a trusted third-party service. That means that there is a
+third party (the Kerberos server) that is trusted by all the entities on
+the network (users and services, usually called &quot;principals&quot;).
+
+This is the MIT reference implementation of Kerberos V5.
+
+This package contains the runtime libraries used by applications and
+Kerberos clients.</description>
+  <package-implementation package="libkrb53"/>
+  <group arch="Linux-i386">
+    <requires interface="http://0install.net/2007/3rd-party/libcomerr2.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://0install.net/2007/3rd-party/libkeyutils1.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <implementation id="sha1new=2a8dbfd1181e06f6c1903ffe209da7dedc92cfb9" released="2010-06-26" version="1.6">
+      <archive href="http://repo.roscidus.com/lib/krb53/libkrb53-i386-1.6.dfsg.4~beta1-5lenny4.tar.bz2" size="464267"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=35b78e682f6f51e05ccdd9155698a0667ff9aea6" released="2010-06-26" version="1.6">
+      <archive href="http://repo.roscidus.com/lib/krb53/libkrb53-amd64-1.6.dfsg.4~beta1-5lenny4.tar.bz2" size="508704"/>
+    </implementation>
+  </group>
+  <implementation arch="Linux-*" id="sha1new=8510fa7b47a00d8f45a17a02e2736ff4361c144e" released="2011-05-29" version="1.8.3">
+      <archive href="http://repo.roscidus.com/lib/krb53/libkrb53-i386-1.8.3+dfsg-4.tar.bz2" size="1380447"/>
+    </implementation>
+  <implementation arch="Linux-*" id="sha1new=ab541b8fecb59f40b1eea7e9e1b5cbfe660b9cc9" released="2011-09-17" version="1.8.3">
+      <archive href="http://repo.roscidus.com/lib/krb53/libkrb53-1.8.3+dfsg-4squeeze1.tar.bz2" size="1380605"/>
+    </implementation>
+
+</interface>

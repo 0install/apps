@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/lib/x-sm-dev" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libsm-dev</name>
+  <summary>X11 Session Management library (development headers)</summary>
+  <description>
+This package provides the main interface to the X11 Session Management library,
+which allows for applications to both manage sessions, and make use of session
+managers to save and restore their state for later use.
+
+This package contains the development headers for the library found in libsm6.
+Non-developers likely have little use for this package.
+
+More information about X.Org can be found at: &lt;URL:http://www.X.org&gt;
+&lt;URL:http://xorg.freedesktop.org&gt;
+&lt;URL:http://lists.freedesktop.org/mailman/listinfo/xorg&gt;
+
+This module can be found at git://anongit.freedesktop.org/git/xorg/lib/libSM</description>
+  <package-implementation package="libsm-dev"/>
+  <group arch="Linux-i386">
+    <requires interface="http://repo.roscidus.com/lib/x11proto-core-dev">
+      <environment insert="lib/pkgconfig" name="PKG_CONFIG_PATH"/>
+    </requires>
+    <implementation id="sha1new=e26870cf728fff1f84a32fb53c76342b4e48c11a" released="2010-08-12" version="1.0.3-2">
+      <archive href="http://repo.roscidus.com/lib/x-sm-dev/libsm-dev-i386-2_1.0.3-2.tar.bz2" size="24583"/>
+    </implementation>
+  </group>
+  <group arch="Linux-x86_64">
+    <requires interface="http://repo.roscidus.com/lib/x-ice-dev">
+      <environment insert="lib/pkgconfig" name="PKG_CONFIG_PATH"/>
+    </requires>
+    <implementation id="sha1new=9f7efcbdc1ba0384c3f76e400a28e014d63705c9" released="2010-08-12" version="1.0.3-2">
+      <archive href="http://repo.roscidus.com/lib/x-sm-dev/libsm-dev-amd64-2_1.0.3-2.tar.bz2" size="26124"/>
+    </implementation>
+  </group>
+  <group>
+    <requires interface="http://repo.roscidus.com/lib/x11proto-core-dev">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="http://repo.roscidus.com/lib/x-ice-dev">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <implementation arch="Linux-i386" id="sha1new=5f5c0729c1a04ed2f3a7f87e59b8abefbfaf12ef" released="2011-05-29" version="1.1.1-1">
+      <archive href="http://repo.roscidus.com/lib/x-sm-dev/libsm-dev-i386-2_1.1.1-1.tar.bz2" size="26574"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=539e5829034005f02ff033acb08a2a76e61128e7" released="2011-05-29" version="1.1.1-1">
+      <archive href="http://repo.roscidus.com/lib/x-sm-dev/libsm-dev-amd64-2_1.1.1-1.tar.bz2" size="28006"/>
+    </implementation>
+  </group>
+
+</interface>

@@ -6,13 +6,9 @@
 
     This is the runtime package. It contains the bytecode interpreter (ocamlrun) and the toplevel (ocaml), which allows dynamic linking. It also includes the standard library, plus the Dynlink, Bigarray, Str and Unix extra libraries. Note: only changes to the last version component are binary compatible (e.g. 4.00.1 and 4.00.2 are compatible with each other, but not with 4.01.0).</description>
   <group>
-    <environment insert="" mode="replace" name="OCAML_HOME"/>
-    <environment insert="lib" mode="replace" name="OCAMLLIB"/>
     <environment insert="lib/stublibs" name="CAML_LD_LIBRARY_PATH"/>
 
-    <command name="run" path="bin/ocamlrun">
-      <arg>${OCAML_HOME}/bin/ocaml</arg>
-    </command>
+    <command name="run" path="bin/ocamlrun"/>
 
     <implementation arch="Windows-i386" id="sha1new=a99d962a1749d75c59b9cd92edc7de43337d34ec" released="2013-07-13" version="4.0.1">
       <manifest-digest sha256new="2M3IRTVAOS4XQTLTJJRWYDNDKEWAQFPBDR35KWKMUIR7ZQ2YNSOQ"/>
@@ -23,6 +19,11 @@
       <manifest-digest sha256new="GUYTA2LOHVQEMF5B3MLLA6BFWM4ZIPLNVUWHDE6CSPTIV5P677GA"/>
       <archive extract="ocaml-runtime-linux-i486-4.0.1" href="ocaml-runtime-linux-i486-4.0.1.tar.bz2" size="2170892"/>
     </implementation>
+
+    <implementation arch="Linux-x86_64" id="sha1new=f954d6a6a995f5753523060d91f1d157a3292e15" released="2013-07-13" version="4.0.1">
+      <manifest-digest sha256new="O54BXOLDB6DA35QJA54YB3HQBIREQDG32NV4FEDL4YGMR5MLC73A"/>
+      <archive extract="ocaml-runtime-linux-x86_64-4.0.1" href="ocaml-runtime-linux-x86_64-4.0.1.tar.bz2" size="2219541"/>
+    </implementation>
   </group>
 
   <group arch="*-src">
@@ -31,12 +32,8 @@
     </requires>
     <command name="compile" shell-command="&quot;$SRCDIR/zi_build.sh&quot;">
       <compile:implementation>
-        <environment insert="" mode="replace" name="OCAML_HOME"/>
-        <environment insert="lib" mode="replace" name="OCAMLLIB"/>
         <environment insert="lib/stublibs" name="CAML_LD_LIBRARY_PATH"/>
-        <command name="run" path="bin/ocamlrun">
-          <arg>${OCAML_HOME}/bin/ocaml</arg>
-        </command>
+	<command name="run" path="bin/ocamlrun"/>
       </compile:implementation>
     </command>
     <implementation compile:dup-src="true" id="sha1new=b32d1b07744b831446a761bc3519c5eec01c6357" released="2013-07-13" version="4.0.1">
@@ -44,14 +41,4 @@
       <archive extract="ocaml-runtime-4.0.1" href="ocaml-runtime-4.0.1.tar.bz2" size="2749775"/>
     </implementation>
   </group>
-  <implementation arch="Linux-x86_64" id="sha1new=f954d6a6a995f5753523060d91f1d157a3292e15" released="2013-07-13" version="4.0.1">
-    <environment insert="" mode="replace" name="OCAML_HOME"/>
-    <environment insert="lib" mode="replace" name="OCAMLLIB"/>
-    <environment insert="lib/stublibs" name="CAML_LD_LIBRARY_PATH"/>
-    <command name="run" path="bin/ocamlrun">
-      <arg>${OCAML_HOME}/bin/ocaml</arg>
-    </command>
-    <manifest-digest sha256new="O54BXOLDB6DA35QJA54YB3HQBIREQDG32NV4FEDL4YGMR5MLC73A"/>
-    <archive extract="ocaml-runtime-linux-x86_64-4.0.1" href="ocaml-runtime-linux-x86_64-4.0.1.tar.bz2" size="2219541"/>
-  </implementation>
 </interface>

@@ -17,6 +17,11 @@
       <manifest-digest sha256new="7OUBK5LSRUT6N2FMGDAWCNIR2R3W25F63V37QMI5LMWBEUZBPC3Q"/>
       <archive extract="ocaml-runtime-linux-i486-4.0.1" href="ocaml-runtime-linux-i486-4.0.1.tar.bz2" size="2170074"/>
     </implementation>
+
+    <implementation arch="Linux-x86_64" id="sha1new=9be6ad1b01107220998b7b7e51ade1746fc8f11b" released="2013-07-19" version="4.0.1">
+      <manifest-digest sha256new="CKP57AQST2VERD6OHVNLY7FNHUDLF3EG33DEUMJEVLSWSFZ4IZDA"/>
+      <archive extract="ocaml-runtime-linux-x86_64-4.0.1" href="ocaml-runtime-linux-x86_64-4.0.1.tar.bz2" size="2258087"/>
+    </implementation>
   </group>
 
   <group arch="*-src">
@@ -38,14 +43,4 @@
       <archive extract="ocaml-runtime-4.0.1" href="ocaml-runtime-4.0.1.tar.bz2" size="2749065"/>
     </implementation>
   </group>
-  <implementation arch="Linux-x86_64" id="sha1new=9be6ad1b01107220998b7b7e51ade1746fc8f11b" released="2013-07-19" version="4.0.1">
-    <environment insert="" mode="replace" name="OCAML_HOME"/>
-    <environment insert="lib" mode="replace" name="OCAMLLIB"/>
-    <environment insert="lib/stublibs" name="CAML_LD_LIBRARY_PATH"/>
-    <command name="run" path="bin/ocamlrun">
-      <arg>${OCAML_HOME}/bin/ocaml</arg>
-    </command>
-    <manifest-digest sha256new="CKP57AQST2VERD6OHVNLY7FNHUDLF3EG33DEUMJEVLSWSFZ4IZDA"/>
-    <archive extract="ocaml-runtime-linux-x86_64-4.0.1" href="ocaml-runtime-linux-x86_64-4.0.1.tar.bz2" size="2258087"/>
-  </implementation>
 </interface>

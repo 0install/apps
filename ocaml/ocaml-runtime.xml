@@ -6,10 +6,17 @@
 
     This is the runtime package. It contains the bytecode interpreter (ocamlrun) and the toplevel (ocaml), which allows dynamic linking. It also includes the standard library, plus the Dynlink, Bigarray, Str and Unix extra libraries. Note: only changes to the last version component are binary compatible (e.g. 4.00.1 and 4.00.2 are compatible with each other, but not with 4.01.0).</description>
   <group>
+    <environment insert="" mode="replace" name="OCAML_HOME"/>
+    <environment insert="lib" mode="replace" name="OCAMLLIB"/>
     <environment insert="lib/stublibs" name="CAML_LD_LIBRARY_PATH"/>
+    <command name="run" path="bin/ocamlrun">
+      <arg>${OCAML_HOME}/bin/ocaml</arg>
+    </command>
 
-    <command name="run" path="bin/ocamlrun"/>
-
+    <implementation arch="Linux-i486" id="sha1new=69261094f7e487933baa6bae9180dfbbf141c13a" released="2013-07-19" version="4.0.1">
+      <manifest-digest sha256new="7OUBK5LSRUT6N2FMGDAWCNIR2R3W25F63V37QMI5LMWBEUZBPC3Q"/>
+      <archive extract="ocaml-runtime-linux-i486-4.0.1" href="ocaml-runtime-linux-i486-4.0.1.tar.bz2" size="2170074"/>
+    </implementation>
   </group>
 
   <group arch="*-src">
@@ -31,14 +38,4 @@
       <archive extract="ocaml-runtime-4.0.1" href="ocaml-runtime-4.0.1.tar.bz2" size="2749065"/>
     </implementation>
   </group>
-  <implementation arch="Linux-i486" id="sha1new=69261094f7e487933baa6bae9180dfbbf141c13a" released="2013-07-19" version="4.0.1">
-    <environment insert="" mode="replace" name="OCAML_HOME"/>
-    <environment insert="lib" mode="replace" name="OCAMLLIB"/>
-    <environment insert="lib/stublibs" name="CAML_LD_LIBRARY_PATH"/>
-    <command name="run" path="bin/ocamlrun">
-      <arg>${OCAML_HOME}/bin/ocaml</arg>
-    </command>
-    <manifest-digest sha256new="7OUBK5LSRUT6N2FMGDAWCNIR2R3W25F63V37QMI5LMWBEUZBPC3Q"/>
-    <archive extract="ocaml-runtime-linux-i486-4.0.1" href="ocaml-runtime-linux-i486-4.0.1.tar.bz2" size="2170074"/>
-  </implementation>
 </interface>

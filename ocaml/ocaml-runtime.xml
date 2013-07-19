@@ -19,8 +19,24 @@
     <command name="compile" shell-command="&quot;$SRCDIR/zi_build.sh&quot;">
       <compile:implementation>
         <environment insert="lib/stublibs" name="CAML_LD_LIBRARY_PATH"/>
-	<command name="run" path="bin/ocamlrun"/>
+        <command name="run" path="bin/ocamlrun"/>
       </compile:implementation>
     </command>
+    <group>
+      <command name="compile" shell-command="&quot;$SRCDIR/zi_build.sh&quot;">
+        <compile:implementation>
+          <environment insert="" mode="replace" name="OCAML_HOME"/>
+          <environment insert="lib" mode="replace" name="OCAMLLIB"/>
+          <environment insert="lib/stublibs" name="CAML_LD_LIBRARY_PATH"/>
+          <command name="run" path="bin/ocamlrun">
+            <arg>${OCAML_HOME}/bin/ocaml</arg>
+          </command>
+        </compile:implementation>
+      </command>
+      <implementation compile:dup-src="true" id="sha1new=29cebf65e8e10c6f3c32762f29b4bacc818d00e5" released="2013-07-19" version="4.0.1">
+        <manifest-digest sha256new="3KF7EWYDIIA323AP2YRHHFUYTSKLLD7Z2I7P75RVRA6HJ76UWCGQ"/>
+        <archive extract="ocaml-runtime-4.0.1" href="ocaml-runtime-4.0.1.tar.bz2" size="2749065"/>
+      </implementation>
+    </group>
   </group>
 </interface>

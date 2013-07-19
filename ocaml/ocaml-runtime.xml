@@ -43,4 +43,14 @@
       <archive extract="ocaml-runtime-4.0.1" href="ocaml-runtime-4.0.1.tar.bz2" size="2749065"/>
     </implementation>
   </group>
+  <implementation arch="Windows-x86_64" id="sha1new=eafb82036d69adf0985935b5e52a905aea88fe7a" released="2013-07-19" version="4.0.1">
+    <environment insert="" mode="replace" name="OCAML_HOME"/>
+    <environment insert="lib" mode="replace" name="OCAMLLIB"/>
+    <environment insert="lib/stublibs" name="CAML_LD_LIBRARY_PATH"/>
+    <command name="run" path="bin/ocamlrun">
+      <arg>${OCAML_HOME}/bin/ocaml</arg>
+    </command>
+    <manifest-digest sha256new="ILENJBVUI26KGISWGUYDLC3PCSNSE6KKJ4XY2SLDLEGUGHMLTTVA"/>
+    <archive extract="ocaml-runtime-windows-x86_64-4.0.1" href="ocaml-runtime-windows-x86_64-4.0.1.tar.bz2" size="4206694"/>
+  </implementation>
 </interface>

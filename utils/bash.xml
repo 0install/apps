@@ -22,7 +22,8 @@ bash.sourceforge.net/).</description>
   <category>Utility</category>
   <needs-terminal/>
 
-  <package-implementation main="/usr/bin/bash" package="bash"/>
+  <!-- Not /usr/bin/bash : http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7135 -->
+  <package-implementation main="/bin/bash" package="bash"/>
 
   <!-- Warning: we don't give any arch here, even though it's a Windows-x86 binary.
        That's because 0compile depends on it and old versions of 0install don't understand

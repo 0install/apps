@@ -20,7 +20,7 @@ IcedTea project.</description>
   <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-1_6_0-openjdk-devel"/>
   <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-1.6.0-openjdk-devel"/>
 
-  <group main="bin/javac">
+  <group main="bin/javac" arch="POSIX-*">
     <command name="run">
       <runner interface="http://repo.roscidus.com/java/openjdk-jre"/>
       <arg>-cp</arg><arg>${JDK_CLASSPATH}</arg>

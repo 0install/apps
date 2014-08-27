@@ -3,13 +3,27 @@
   <name>aspcud</name>
   <summary>a solver for CUDF instances based on ASP tools</summary>
   <description>
-    aspcud is a solver for CUDF (Common Upgradeability Description Format) instances based on ASP tools developed within the potassco project. It utilizes the preprocessor cudf2lp that rewrites CUDF specifications into ASP facts. These facts together with an ASP program are then passed to grounder gringo and are finally solved by solver clasp.
-  </description>
+aspcud is a solver for CUDF (Common Upgradeability Description Format) instances
+based on ASP tools developed within the potassco project. It utilizes the
+preprocessor cudf2lp that rewrites CUDF specifications into ASP facts. These
+facts together with an ASP program are then passed to grounder gringo and are
+finally solved by solver clasp.</description>
   <homepage>http://www.cs.uni-potsdam.de/wv/aspcud/</homepage>
   <category>Utility</category>
 
-  <package-implementation
-    package="aspcud"
-    main="/usr/bin/aspcud"
-    distributions="RPM Debian Arch"/>
+  <package-implementation distributions="RPM Debian Arch" main="/usr/bin/aspcud" package="aspcud"/>
+
+  <group license="OSI Approved :: GNU General Public License v3">
+    <command name='run' path='aspcud'>
+      <environment name='ASPCUD_HOME' insert='' mode='replace'/>
+      <arg>-s</arg><arg>${ASPCUD_HOME}/clasp</arg>
+      <arg>-g</arg><arg>${ASPCUD_HOME}/gringo</arg>
+    </command>
+    <implementation arch="Linux-i686" id="sha1new=1fadafaa0c5be52d0169e03b79dbaad1938017ff" released="2014-08-27" version="1.9.0">
+      <archive extract="aspcud-1.9.0-x86-linux" href="http://downloads.sourceforge.net/project/potassco/aspcud/1.9.0/aspcud-1.9.0-x86-linux.tar.gz" size="3097241" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=5f838f78e489dabc2e2965ba100f14ae8350cbce" released="2014-08-27" version="1.9.0">
+      <archive extract="aspcud-1.9.0-x86_64-linux" href="http://downloads.sourceforge.net/project/potassco/aspcud/1.9.0/aspcud-1.9.0-x86_64-linux.tar.gz" size="3754443" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
 </interface>

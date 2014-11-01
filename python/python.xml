@@ -16,30 +16,37 @@ language for applications that need a programmable interface.</description>
   <feed arch="Windows-*" src="http://0install.de/feeds/Python.xml"/>
   <feed src="http://repo.roscidus.com/python/python/upstream.xml"/>
 
-  <package-implementation distributions="Cygwin" main="/usr/bin/python" package="python"/>
+  <group>
+    <!-- There is a seperate GUI version of the Python executable on Windows. On POSIX systems we simply map it back to regular Python. -->
+    <command name="run-gui">
+      <runner interface="http://repo.roscidus.com/python/python"/>
+    </command>
 
-  <package-implementation distributions="RPM" main="/usr/bin/python" package="python"/>
-  <package-implementation distributions="RPM" main="/usr/bin/python2.5" package="python25"/>
-  <package-implementation distributions="RPM" main="/usr/bin/python2.6" package="python26"/>
-  <package-implementation distributions="RPM" main="/usr/bin/python2.7" package="python27"/>
-  <package-implementation distributions="RPM" main="/usr/bin/python3" package="python3"/>
-  <package-implementation distributions="Gentoo" main="/usr/bin/python" package="dev-lang/python"/>
+    <package-implementation distributions="Cygwin" main="/usr/bin/python" package="python"/>
 
-  <package-implementation distributions="Debian" main="/usr/bin/python" package="python"/>
-  <package-implementation distributions="Debian" main="/usr/bin/python2.5" package="python2.5"/>
-  <package-implementation distributions="Debian" main="/usr/bin/python2.6" package="python2.6"/>
-  <package-implementation distributions="Debian" main="/usr/bin/python2.7" package="python2.7"/>
-  <package-implementation distributions="Debian" main="/usr/bin/python3" package="python3"/>
+    <package-implementation distributions="RPM" main="/usr/bin/python" package="python"/>
+    <package-implementation distributions="RPM" main="/usr/bin/python2.5" package="python25"/>
+    <package-implementation distributions="RPM" main="/usr/bin/python2.6" package="python26"/>
+    <package-implementation distributions="RPM" main="/usr/bin/python2.7" package="python27"/>
+    <package-implementation distributions="RPM" main="/usr/bin/python3" package="python3"/>
+    <package-implementation distributions="Gentoo" main="/usr/bin/python" package="dev-lang/python"/>
 
-  <package-implementation distributions="Arch" main="/usr/bin/python2" package="python2"/>
-  <package-implementation distributions="Arch" main="/usr/bin/python3" package="python"/>
+    <package-implementation distributions="Debian" main="/usr/bin/python" package="python"/>
+    <package-implementation distributions="Debian" main="/usr/bin/python2.5" package="python2.5"/>
+    <package-implementation distributions="Debian" main="/usr/bin/python2.6" package="python2.6"/>
+    <package-implementation distributions="Debian" main="/usr/bin/python2.7" package="python2.7"/>
+    <package-implementation distributions="Debian" main="/usr/bin/python3" package="python3"/>
 
-  <package-implementation distributions="Ports" main="/usr/local/bin/python" package="python"/> 
-  <package-implementation distributions="Ports" main="/usr/local/bin/python2.5" package="python25"/>
-  <package-implementation distributions="Ports" main="/usr/local/bin/python2.6" package="python26"/>
-  <package-implementation distributions="Ports" main="/usr/local/bin/python2.7" package="python27"/>
+    <package-implementation distributions="Arch" main="/usr/bin/python2" package="python2"/>
+    <package-implementation distributions="Arch" main="/usr/bin/python3" package="python"/>
 
-  <package-implementation distributions="MacPorts" main="/opt/local/bin/python2.5" package="python25"/>
-  <package-implementation distributions="MacPorts" main="/opt/local/bin/python2.6" package="python26"/>
-  <package-implementation distributions="MacPorts" main="/opt/local/bin/python2.7" package="python27"/>
+    <package-implementation distributions="Ports" main="/usr/local/bin/python" package="python"/> 
+    <package-implementation distributions="Ports" main="/usr/local/bin/python2.5" package="python25"/>
+    <package-implementation distributions="Ports" main="/usr/local/bin/python2.6" package="python26"/>
+    <package-implementation distributions="Ports" main="/usr/local/bin/python2.7" package="python27"/>
+
+    <package-implementation distributions="MacPorts" main="/opt/local/bin/python2.5" package="python25"/>
+    <package-implementation distributions="MacPorts" main="/opt/local/bin/python2.6" package="python26"/>
+    <package-implementation distributions="MacPorts" main="/opt/local/bin/python2.7" package="python27"/>
+  </group>
 </interface>

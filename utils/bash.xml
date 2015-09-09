@@ -25,18 +25,24 @@ bash.sourceforge.net/).</description>
   <!-- Not /usr/bin/bash : http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7135 -->
   <package-implementation main="/bin/bash" package="bash"/>
 
-  <!-- Warning: we don't give any arch here, even though it's a Windows-x86 binary.
-       That's because 0compile depends on it and old versions of 0install don't understand
-       Windows-only dependencies and might therefore insist on downloading a version (if
-       the <package-implementation> above doesn't find anything). It's better to download it
-       and ignore it than to fail to run 0compile.
-
-       We also don't want to specify the word size because bash doesn't link to anything and
-       we don't want to force everything else to be 32-bit. Once 0install supports scoped
-       dependencies we can add this.
-    -->
+  <!--
+     Note: We don't want to specify the word size because bash doesn't link to anything and
+     we don't want to force everything else to be 32-bit. Once 0install supports scoped
+     dependencies we can add this.
+  -->
   <group license="OSI Approved :: GNU General Public License v2" main="win-bash.exe">
-    <implementation id="sha1new=624fe11b4b9f88c1087ed915e2c66b07edaf62dd" released="2013-03-02" version="0.6">
+    <!-- Warning: we don't give any arch here, even though it's a Windows-x86 binary.
+	 That's because 0compile depends on it and old versions of 0install don't understand
+	 Windows-only dependencies and might therefore insist on downloading a version (if
+	 the <package-implementation> above doesn't find anything). It's better to download it
+	 and ignore it than to fail to run 0compile.
+      -->
+    <implementation id="sha1new=624fe11b4b9f88c1087ed915e2c66b07edaf62dd" released="2013-03-02" version="0.6" if-0install-version='..!1.12'>
+      <archive href="https://downloads.sourceforge.net/project/win-bash/win-bash/0.6/win-bash_0_6.zip" size="969894" type="application/zip"/>
+    </implementation>
+
+    <implementation id="bash-for-windows" released="2013-03-02" version="0.6" if-0install-version='1.12..' arch='Windows-*'>
+      <manifest-digest sha1new="624fe11b4b9f88c1087ed915e2c66b07edaf62dd"/>
       <archive href="https://downloads.sourceforge.net/project/win-bash/win-bash/0.6/win-bash_0_6.zip" size="969894" type="application/zip"/>
     </implementation>
   </group>

@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/python/python-gtk" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>python-gtk</name>
+  <summary>Python Bindings for GTK+</summary>
+  <description>PyGTK lets you to easily create programs with a graphical user interface using the Python programming language. The underlying GTK+ library provides all kind of visual elements and utilities for it and, if needed, you can develop full featured applications for the GNOME Desktop.</description>
+  <homepage>http://www.pygtk.org/</homepage>
+
+  <group>
+    <package-implementation distributions="Debian" package="python-gtk2"/>
+    <package-implementation distributions="Arch" package="pygtk" />
+  </group>
+
+  <group arch="Windows-i486" license="OSI Approved :: GNU Lesser General Public License (LGPL)">
+    <restricts interface="http://repo.roscidus.com/python/python">
+      <version before="2.8" not-before="2.7"/>
+    </restricts>
+    <requires interface="http://repo.roscidus.com/lib/gtk" />
+    <requires interface="http://repo.roscidus.com/python/python-cairo" />
+    <requires interface="http://repo.roscidus.com/python/python-gobject" />
+    <environment name="PYTHONPATH" insert="." />
+
+    <implementation version="2.24.0" released="2011-04-10" stability="stable" id="sha1new=f29642fc00bdfa2a64b443c0a5f94dfb3ed72c99">
+      <manifest-digest sha1new="f29642fc00bdfa2a64b443c0a5f94dfb3ed72c99" sha256="eb60285c99026373399e3f33c05d013723fcf63208a21ec4b93ddadd358d43e7" sha256new="5NQCQXEZAJRXGOM6H4Z4AXIBG4R7Z5RSBCRB5RFZHXNN2NMNIPTQ" />
+      <archive href="http://ftp.gnome.org/pub/GNOME/binaries/win32/pygtk/2.24/pygtk-2.24.0.win32-py2.7.msi" size="835584" type="application/x-msi" extract="SourceDir/Lib/site-packages" />
+    </implementation>
+  </group>
+
+</interface>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/java/ant" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Apache Ant</name>
+  <summary>A software project management and comprehension tool</summary>
+  <homepage>http://ant.apache.org/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+  <group license="The Apache Software License, Version 2.0">
+    <environment insert="" mode="replace" name="ANT_HOME"/>
+    <command name="run">
+      <runner command="java" interface="http://repo.roscidus.com/java/openjdk-jdk">
+        <for-each item-from="ANT_OPTS" separator=" ">
+          <arg>$item</arg>
+        </for-each>
+        <arg>-classpath</arg>
+        <arg>$ANT_HOME/lib/ant-launcher.jar</arg>
+        <arg>-Dant.home=$ANT_HOME</arg>
+        <arg>org.apache.tools.ant.launch.Launcher</arg>
+      </runner>
+    </command>
+    <implementation id="sha1new=47baf384dc231623f39a770a074a53f91492cde4" released="2010-02-02" stability="stable" version="1.8.0">
+      <manifest-digest sha256new="RB5H5DL6PKGVSSC24PEDZKZONUAP4GDKTJPT3YKBECJMSZSKVSPA"/>
+      <archive extract="apache-ant-1.8.0" href="http://archive.apache.org/dist/ant/binaries/apache-ant-1.8.0-bin.tar.gz" size="9514591" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=44396a568b223184e07f09b20861c7ed8529feee" released="2010-04-30" stability="stable" version="1.8.1">
+      <manifest-digest sha256new="NHYTDDBL3ZDHWGTGBTNPSCH75MPRMDKB7JRAPIB3OU5XFIZRVGBQ"/>
+      <archive extract="apache-ant-1.8.1" href="http://archive.apache.org/dist/ant/binaries/apache-ant-1.8.1-bin.tar.gz" size="8264796" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=88716a30709b893856c4d0dd34473782a97f7f9f" released="2010-12-20" stability="stable" version="1.8.2">
+      <manifest-digest sha256new="YXKQXVS3HF54X6TD55QBMBHV3J4JJ2EQ3J27S3URTUJAMFWJYQRQ"/>
+      <archive extract="apache-ant-1.8.2" href="http://archive.apache.org/dist/ant/binaries/apache-ant-1.8.2-bin.tar.gz" size="8324124" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=29e6ab60fc172c0303c67c428d2e5910ae95e199" released="2012-03-13" stability="stable" version="1.8.3">
+      <manifest-digest sha256new="LCLSGNV3NDI7FPKFHX2OJLXVWDJNZMJBWFUUEFPHPGJBTSBUNSCA"/>
+      <archive extract="apache-ant-1.8.3" href="http://archive.apache.org/dist/ant/binaries/apache-ant-1.8.3-bin.tar.gz" size="5442181" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=3118e904eab163b713acae6fc107a304ab57abd7" released="2012-05-23" stability="stable" version="1.8.4">
+      <manifest-digest sha256new="GOS4AFM33IPBJ6PLK6HK3IKBFQWFZQB7PIUVFF2CJU47UQ2TRYAA"/>
+      <archive extract="apache-ant-1.8.4" href="http://archive.apache.org/dist/ant/binaries/apache-ant-1.8.4-bin.tar.gz" size="5425171" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=2ef8f1e07cfd92c4d5db0e1c3f35197688b49e61" released="2013-03-10" stability="stable" version="1.9.0">
+      <manifest-digest sha256new="JAAEIQJV64WMY3HKJDRUDK6PS2HKETTPXVOI4TY3E33RR2LM5L5Q"/>
+      <archive extract="apache-ant-1.9.0" href="http://archive.apache.org/dist/ant/binaries/apache-ant-1.9.0-bin.tar.gz" size="5494136" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=719a40374be6ed57b02ac82255012978e1d995ab" released="2013-05-22" stability="stable" version="1.9.1">
+      <manifest-digest sha256new="IQJOM2AVLO4FONI7V2KVFO3AIHVPBJCEXRQ4VXQAVZJZTVQUFB7Q"/>
+      <archive extract="apache-ant-1.9.1" href="http://archive.apache.org/dist/ant/binaries/apache-ant-1.9.1-bin.tar.gz" size="5508934" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=02317a8e0d0f49f45b34df6b71ce6fe7a79126fb" released="2013-07-12" stability="stable" version="1.9.2">
+      <manifest-digest sha256new="EL3PYDHOVD6ONM6ST6OEUSBTLPBJEEMWX34XA4UCNFJEDJTLEICA"/>
+      <archive extract="apache-ant-1.9.2" href="http://archive.apache.org/dist/ant/binaries/apache-ant-1.9.2-bin.tar.gz" size="5512093" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=09a16666e6324b14c96b04d6453083358768af7c" released="2013-12-29" stability="stable" version="1.9.3">
+      <manifest-digest sha256new="VJOT6AKHQOWME2DRAY6PVO4YDGVIZDU6Y63KQWCMF64J7PE2JRGQ"/>
+      <archive extract="apache-ant-1.9.3" href="http://archive.apache.org/dist/ant/binaries/apache-ant-1.9.3-bin.tar.gz" size="5529017" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=ef498d86a008d0538cc47bcfeee347a246de33d4" released="2014-04-30" stability="stable" version="1.9.4">
+      <manifest-digest sha256new="WPGN3EOUBX6UAWE5CQ6HNZP3Y5JF7KRUMEQHY24BRCLNVWJAETIA"/>
+      <archive extract="apache-ant-1.9.4" href="http://archive.apache.org/dist/ant/binaries/apache-ant-1.9.4-bin.tar.gz" size="5564593" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=3eb761df47b5182b3d0ab6b660d1bbc9ef5aed5e" released="2015-06-03" stability="stable" version="1.9.5">
+      <manifest-digest sha256new="XUJHSR7T5KY3PYXXCNNSQDQ36VUXCJRRFH75HTBMBVJ5DYTZCRXQ"/>
+      <archive extract="apache-ant-1.9.5" href="http://archive.apache.org/dist/ant/binaries/apache-ant-1.9.5-bin.tar.gz" size="5586953" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=f4717aa74156d6eac9ac45d1eefc0ca78b8e23ff" released="2015-07-02" stability="stable" version="1.9.6">
+      <manifest-digest sha256new="YOUUS265UGOGDVFIHQNOSBLHLNS3MP7GB53JMFLFI3QY3XCYHNTQ"/>
+      <archive extract="apache-ant-1.9.6" href="http://archive.apache.org/dist/ant/binaries/apache-ant-1.9.6-bin.tar.gz" size="5588888" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=3cba7b59fb6fe25b6faf89c5e32c29a9e09d8616" released="2016-04-12" stability="stable" version="1.9.7">
+      <manifest-digest sha256new="LNW2PBI65CHDW7BLV72FXOTLRVEUCEXMHQ5PFAISSYZZZENPRWIA"/>
+      <archive extract="apache-ant-1.9.7" href="http://archive.apache.org/dist/ant/binaries/apache-ant-1.9.7-bin.tar.gz" size="5601575" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=3a66615a3bf4eb5684967625cee039c76b98996f" released="2016-12-31" stability="stable" version="1.9.8">
+      <manifest-digest sha256new="YQA4EC3XG44EEBMO2G5YGO4HH2AB5IEPBR7T2WTDUBFLDU7NFOJQ"/>
+      <archive extract="apache-ant-1.9.8" href="http://archive.apache.org/dist/ant/binaries/apache-ant-1.9.8-bin.tar.gz" size="5635283" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+  <entry-point binary-name="ant" command="run"/>
+</interface>

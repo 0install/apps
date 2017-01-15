@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/java/maven" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Apache Maven</name>
+  <summary>A software project management and comprehension tool</summary>
+  <homepage>http://maven.apache.org/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+  <group license="The Apache Software License, Version 2.0">
+    <environment insert="" mode="replace" name="M2_HOME"/>
+    <environment insert="boot/*" mode="replace" name="CLASSWORLDS_JAR"/>
+    <environment mode="replace" name="CLASSWORLDS_LAUNCHER" value="org.codehaus.plexus.classworlds.launcher.Launcher"/>
+    <requires interface="http://repo.roscidus.com/java/openjdk-jdk">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+    <command name="run">
+      <runner command="java" interface="http://repo.roscidus.com/java/openjdk-jdk">
+        <for-each item-from="MAVEN_OPTS" separator=" ">
+          <arg>$item</arg>
+        </for-each>
+        <arg>-Dclassworlds.conf=$M2_HOME/bin/m2.conf</arg>
+        <arg>-Dmaven.home=$M2_HOME</arg>
+        <arg>-Dmaven.multiModuleProjectDirectory=$MAVEN_PROJECTBASEDIR</arg>
+        <arg>-classpath</arg>
+        <arg>$CLASSWORLDS_JAR</arg>
+        <arg>$CLASSWORLDS_LAUNCHER</arg>
+      </runner>
+    </command>
+    <implementation id="sha1new=e788278471bb86db90710c9273998606aa5c4fe5" released="2013-02-23" stability="stable" version="3.0.5">
+      <manifest-digest sha256new="OIK64UK6TZTJWXY2NITBGW6LF6IBTKLLF2VPHWBBOEMBZU7ULPZA"/>
+      <archive extract="apache-maven-3.0.5" href="http://archive.apache.org/dist/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz" size="5144659" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=79f5d13272ab401923bf49a1ff33a4fb982977b5" released="2013-10-04" stability="stable" version="3.1.1">
+      <manifest-digest sha256new="5DPCYBNNUUVCK7ZZQQSPHXJ66CK5I3B5AFG5WQQRT76CO42F2UDQ"/>
+      <archive extract="apache-maven-3.1.1" href="http://archive.apache.org/dist/maven/maven-3/3.1.1/binaries/apache-maven-3.1.1-bin.tar.gz" size="5494427" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=3aca011d4ca966bf602bb719e564df9975e0db33" released="2014-08-17" stability="stable" version="3.2.3">
+      <manifest-digest sha256new="GRWAZ5PWMOOHDQAQWT55JOVUOONXEA4HOVT2PAAUTTFEON7LGWCQ"/>
+      <archive extract="apache-maven-3.2.3" href="http://archive.apache.org/dist/maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.tar.gz" size="6956162" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=4468bfd40d0a08f00255cf073023de778c492c74" released="2014-12-20" stability="stable" version="3.2.5">
+      <manifest-digest sha256new="ODD3GBRJ37YCUVFV53WQ2SILOSE6ZGR2U5C7DB2USUOKWL4WDGJA"/>
+      <archive extract="apache-maven-3.2.5" href="http://archive.apache.org/dist/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.tar.gz" size="7956528" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=54f1f4adcde1ca7be683a1d6835c23c4b8295aa9" released="2015-03-18" stability="stable" version="3.3.1">
+      <manifest-digest sha256new="5ESY4XSUCIY4GKNKXUFCTC4BPKGEKATMOHGZDV4RG6B4JIWRDB6Q"/>
+      <archive extract="apache-maven-3.3.1" href="http://archive.apache.org/dist/maven/maven-3/3.3.1/binaries/apache-maven-3.3.1-bin.tar.gz" size="8059952" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=0bb00e9d3b8862dd67c0685483846ac35ac844d1" released="2015-04-28" stability="stable" version="3.3.3">
+      <manifest-digest sha256new="QKZ7NDEV2PXGZ4IELOP2MJO7I2XGUN5U3KZPJD3MX4L7X67LW6MQ"/>
+      <archive extract="apache-maven-3.3.3" href="http://archive.apache.org/dist/maven/maven-3/3.3.3/binaries/apache-maven-3.3.3-bin.tar.gz" size="8042383" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=c7a8a6d0b6e7184b7998f62ae90822779374338a" released="2015-11-18" stability="stable" version="3.3.9">
+      <manifest-digest sha256new="264ZHQWJZB43WFEQAERDHHIQ3ZATBRWFS6HLAZ7XT3EC55QOT6YQ"/>
+      <archive extract="apache-maven-3.3.9" href="http://archive.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" size="8491533" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+  <entry-point binary-name="mvn" command="run"/>
+</interface>

@@ -16,8 +16,7 @@ the Debian Free Software Guidelines, and has been removed from this package.</de
   <package-implementation main="/usr/bin/make" package="make"/>
   <package-implementation distributions="FreeBSD" main="/usr/local/bin/gmake" package="gmake"/>
   <package-implementation distributions="MacPorts" main="/opt/local/bin/gmake" package="gmake"/>
-  <feed arch="Windows-*" src="http://0install.de/feeds/make.xml"/>
-  <group arch="Linux-i386" main="bin/make">
+  <group arch="Linux-i386" license="GPL v2 (GNU General Public License)" main="bin/make">
     <implementation id="sha1new=78fd81f1743ffe1c29f1025d1898b48634a391be" released="2010-04-25" version="3.81-5">
       <archive href="http://repo.roscidus.com/devel/make/make-i386-3.81-5.tar.bz2" size="317167"/>
     </implementation>
@@ -30,6 +29,15 @@ the Debian Free Software Guidelines, and has been removed from this package.</de
     <implementation arch="Linux-x86_64" id="sha1new=cfdba304764c3265a3e35db5abc0e3bf170048e2" released="2011-05-29" version="3.81-8">
       <archive href="http://repo.roscidus.com/devel/make/make-amd64-3.81-8.tar.bz2" size="330847"/>
     </implementation>
+    <group arch="Windows-i486" license="GPL v2 (GNU General Public License)" main="bin/make.exe">
+      <requires interface="http://repo.roscidus.com/devel/make-dep">
+        <environment name="PATH" insert="bin" mode="append"/>
+      </requires>
+      <implementation version="3.81" stability="stable" id="sha1new=90f22a15896ea14db005aa13b922b187f9fa8067">
+        <manifest-digest sha1new="90f22a15896ea14db005aa13b922b187f9fa8067" sha256="63bcce7ce44f11ec38b3f6ddc5f770bbffc5764febe1e8fb65b9f8b29b1d8336" sha256new="MO6M47HEJ4I6YOFT63O4L53QXP74K5SP5PQ6R63FXH4LFGY5QM3A"/>
+        <archive href="http://downloads.sourceforge.net/gnuwin32/make-3.81-bin.zip" size="495645" type="application/zip"/>
+      </implementation>
+    </group>
   </group>
 
 </interface>

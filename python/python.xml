@@ -13,6 +13,9 @@ modules are easily written in C or C++. Python is also usable as an extension
 language for applications that need a programmable interface.</description>
   <needs-terminal/>
 
+  <icon href="http://0install.de/feed-icons/Python.png" type="image/png"/>
+  <icon href="http://0install.de/feed-icons/Python.ico" type="image/vnd.microsoft.icon"/>
+
   <feed arch="Windows-*" src="http://0install.de/feeds/Python.xml"/>
   <feed src="http://repo.roscidus.com/python/python/upstream.xml"/>
 
@@ -49,4 +52,39 @@ language for applications that need a programmable interface.</description>
     <package-implementation distributions="MacPorts" main="/opt/local/bin/python2.6" package="python26"/>
     <package-implementation distributions="MacPorts" main="/opt/local/bin/python2.7" package="python27"/>
   </group>
+
+  <entry-point binary-name="python" command="run">
+    <needs-terminal/>
+    <name>Python command-line interpreter</name>
+  </entry-point>
+  <entry-point binary-name="pythonw" command="run-gui">
+    <name>Python GUI interpreter</name>
+  </entry-point>
+  <entry-point binary-name="easy_install" command="easy_install">
+    <needs-terminal/>
+    <name>Easy Install</name>
+  </entry-point>
+  <entry-point binary-name="pip" command="pip">
+    <needs-terminal/>
+    <name>PIP</name>
+  </entry-point>
+
+  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
+    <file-type id="Python.File">
+      <description>Python File</description>
+      <verb args="&quot;%1&quot; %*" name="open"/>
+      <extension mime-type="text/plain" value=".py"/>
+    </file-type>
+    <file-type id="Python.NoConFile">
+      <description>Python File (no console)</description>
+      <verb args="&quot;%1&quot; %*" command="run-gui" name="open"/>
+      <extension mime-type="text/plain" value=".pyw"/>
+    </file-type>
+    <file-type id="Python.CompiledFile">
+      <description>Compiled Python File</description>
+      <verb args="&quot;%1&quot; %*" name="open"/>
+      <extension value=".pyc"/>
+      <extension value=".pyo"/>
+    </file-type>
+  </capabilities>
 </interface>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Apache Ant</name>
+  <summary>A software project management and comprehension tool</summary>
+  <homepage>http://ant.apache.org/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+  <feed-for interface="http://repo.roscidus.com/java/ant"/>
+  <group license="The Apache Software License, Version 2.0">
+    <environment name="ANT_HOME" insert="" mode="replace"/>
+    <command name="run">
+      <runner command="java" interface="http://repo.roscidus.com/java/openjdk-jdk">
+        <for-each item-from="ANT_OPTS" separator=" ">
+          <arg>$item</arg>
+        </for-each>
+        <arg>-classpath</arg>
+        <arg>$ANT_HOME/lib/ant-launcher.jar</arg>
+        <arg>-Dant.home=$ANT_HOME</arg>
+        <arg>org.apache.tools.ant.launch.Launcher</arg>
+      </runner>
+    </command>
+    <implementation version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="http://archive.apache.org/dist/ant/binaries/apache-ant-{version}-bin.tar.gz" type="application/x-compressed-tar" extract="apache-ant-{version}"/>
+    </implementation>
+  </group>
+</interface>

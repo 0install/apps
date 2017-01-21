@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Apache Maven</name>
+  <summary>A software project management and comprehension tool</summary>
+  <homepage>http://maven.apache.org/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+  <feed-for interface="http://repo.roscidus.com/java/maven"/>
+  <group license="The Apache Software License, Version 2.0">
+    <requires interface="http://repo.roscidus.com/java/openjdk-jdk">
+      <environment name="JAVA_HOME" insert="" mode="replace"/>
+    </requires>
+    <environment name="M2_HOME" insert="" mode="replace"/>
+    <environment name="CLASSWORLDS_JAR" insert="boot/*" mode="replace"/>
+    <environment name="CLASSWORLDS_LAUNCHER" value="org.codehaus.plexus.classworlds.launcher.Launcher" mode="replace"/>
+    <command name="run">
+      <runner command="java" interface="http://repo.roscidus.com/java/openjdk-jdk">
+        <for-each item-from="MAVEN_OPTS" separator=" ">
+          <arg>$item</arg>
+        </for-each>
+        <arg>-Dclassworlds.conf=$M2_HOME/bin/m2.conf</arg>
+        <arg>-Dmaven.home=$M2_HOME</arg>
+        <arg>-Dmaven.multiModuleProjectDirectory=$MAVEN_PROJECTBASEDIR</arg>
+        <arg>-classpath</arg>
+        <arg>$CLASSWORLDS_JAR</arg>
+        <arg>$CLASSWORLDS_LAUNCHER</arg>
+      </runner>
+    </command>
+    <implementation version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="http://archive.apache.org/dist/maven/maven-3/{version}/binaries/apache-maven-{version}-bin.tar.gz" type="application/x-compressed-tar" extract="apache-maven-{version}"/>
+    </implementation>
+  </group>
+</interface>

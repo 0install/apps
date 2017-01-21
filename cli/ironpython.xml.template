@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>IronPython</name>
+  <summary>implementation of Python running under .NET/Mono</summary>
+  <description>IronPython is an implementation of the Python programming language running under .NET/Mono and Silverlight/Moonlight. It supports an interactive console with fully dynamic compilation. It's well integrated with the rest of the .NET Framework and makes all .NET libraries easily available to Python programmers, while maintaining compatibility with the Python language. There also is Visual Studio tooling integration.</description>
+  <homepage>http://ironpython.net/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+
+  <icon href="http://0install.de/feed-icons/IronPython.png" type="image/png"/>
+  <icon href="http://0install.de/feed-icons/IronPython.ico" type="image/vnd.microsoft.icon"/> 
+
+  <feed-for interface="http://repo.roscidus.com/cli/ironpython"/>
+
+  <group license="The Apache License v2" arch="*-x86_64">
+    <command name="run" path="ipy64.exe">
+      <runner interface="http://repo.roscidus.com/cli/cli" command="run">
+        <version not-before="3.5"/>
+      </runner>
+    </command>
+    <command name="run-gui" path="ipyw64.exe">
+      <runner interface="http://repo.roscidus.com/cli/cli" command="run-gui">
+        <version not-before="3.5"/>
+      </runner>
+    </command>
+    <implementation version="{version}" released="{released}" id="v{version}-x64">
+      <manifest-digest/>
+      <archive href="https://github.com/IronLanguages/main/releases/download/ipy-{version}/IronPython-{version}-win.zip" type="application/zip" extract="IronPython-{version}"/>
+    </implementation>
+  </group>
+
+  <group license="The Apache License v2" arch="*-i486">
+    <command name="run" path="ipy.exe">
+      <runner interface="http://repo.roscidus.com/cli/cli" command="run">
+        <version not-before="3.5"/>
+      </runner>
+    </command>
+    <command name="run-gui" path="ipyw.exe">
+      <runner interface="http://repo.roscidus.com/cli/cli" command="run-gui">
+        <version not-before="3.5"/>
+      </runner>
+    </command>
+    <implementation version="{version}" released="{released}" id="v{version}-x86">
+      <manifest-digest/>
+      <archive href="https://github.com/IronLanguages/main/releases/download/ipy-{version}/IronPython-{version}-win.zip" type="application/zip" extract="IronPython-{version}"/>
+    </implementation>
+  </group>
+</interface>

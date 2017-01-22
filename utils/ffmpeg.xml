@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/utils/ffmpeg" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>FFmpeg</name>
+  <summary>record, convert and stream audio and video</summary>
+  <description>A complete, cross-platform solution to record, convert and stream audio and video.</description>
+  <category>Utility</category>
+  <homepage>http://ffmpeg.org/</homepage>
+  <needs-terminal/>
+
+  <package-implementation package="ffmpeg" main="/usr/bin/ffmpeg">
+    <command name="ffplay" path="/usr/bin/ffplay"/>
+    <command name="ffprobe" path="/usr/bin/ffprobe"/>
+  </package-implementation>
+
+  <group license="LGPL (GNU Lesser General Public License)">
+    <command name="run" path="bin/ffmpeg.exe"/>
+    <command name="ffplay" path="bin/ffplay.exe"/>
+    <command name="ffprobe" path="bin/ffprobe.exe"/>
+    <implementation arch="Windows-x86_64" id="sha1new=315460953b8552b661ae03fcd18a140b61996a64" released="2016-11-06" stability="stable" version="3.2">
+      <manifest-digest sha1new="315460953b8552b661ae03fcd18a140b61996a64" sha256="fca32aa20e2b312949f66747ce0751358e4313f810b7f19c38820d2b6aa932fc" sha256new="7SRSVIQOFMYSSSPWM5D44B2RGWHEGE7YCC37DHBYQIGSW2VJGL6A"/>
+      <archive extract="ffmpeg-3.2-win64-static" href="https://ffmpeg.zeranoe.com/builds/win64/static/ffmpeg-3.2-win64-static.zip" size="48285194" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=00cd6377e6075236933ef75b273ac38f56748304" released="2016-11-06" stability="stable" version="3.2">
+      <manifest-digest sha1new="00cd6377e6075236933ef75b273ac38f56748304" sha256="67b372202307bf673e726716947035a00af8b64d4428377fb35aed20333d408d" sha256new="M6ZXEIBDA67WOPTSM4LJI4BVUAFPRNSNIQUDO75TLLWSAMZ5ICGQ"/>
+      <archive extract="ffmpeg-3.2-win32-static" href="https://ffmpeg.zeranoe.com/builds/win32/static/ffmpeg-3.2-win32-static.zip" size="43478822" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=f6f546e810d32e66f6a85cb7deecc996e73aed49" released="2016-12-16" stability="stable" version="3.2.2">
+      <manifest-digest sha1new="f6f546e810d32e66f6a85cb7deecc996e73aed49" sha256="9a83dd057edc5821c185bef48e081ab1b760143184faa10017d158da9570955a" sha256new="TKB52BL63RMCDQMFX32I4CA2WG3WAFBRQT5KCAAX2FMNVFLQSVNA"/>
+      <archive extract="ffmpeg-3.2.2-win64-static" href="https://ffmpeg.zeranoe.com/builds/win64/static/ffmpeg-3.2.2-win64-static.zip" size="46998421" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=bc82a0b2abf040f0216c12083d5e1d960049c8b3" released="2016-12-16" stability="stable" version="3.2.2">
+      <manifest-digest sha1new="bc82a0b2abf040f0216c12083d5e1d960049c8b3" sha256="17fe9ee2f1c39fdea6b505a97ce0ef54608acfe7b98a906405ddb2feb821bb7e" sha256new="C77J5YXRYOP55JVVAWUXZYHPKRQIVT7HXGFJAZAF3WZP5OBBXN7A"/>
+      <archive extract="ffmpeg-3.2.2-win32-static" href="https://ffmpeg.zeranoe.com/builds/win32/static/ffmpeg-3.2.2-win32-static.zip" size="42470268" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <entry-point binary-name="ffmpeg" command="run"/>
+  <entry-point binary-name="ffplay" command="ffplay">
+    <needs-terminal/>
+    <name>FFplay</name>
+    <summary>very simple and portable media player</summary>
+    <description>FFplay is a very simple and portable media player using the FFmpeg libraries and the SDL library. It is mostly used as a testbed for the various FFmpeg APIs.</description>
+  </entry-point>
+  <entry-point binary-name="ffprobe" command="ffprobe">
+    <needs-terminal/>
+    <name>FFprobe</name>
+    <summary>gathers information from multimedia streams</summary>
+    <description>ffprobe gathers information from multimedia streams and prints it in human- and machine-readable fashion.</description>
+  </entry-point>
+</interface>

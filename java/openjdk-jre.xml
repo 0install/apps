@@ -31,4 +31,54 @@
 
   <package-implementation distributions="Windows" package="openjdk-7-jre"/>
   <package-implementation distributions="Windows" package="openjdk-8-jre"/>
+
+  <entry-point binary-name="java" command="run">
+    <needs-terminal/>
+    <name>Java command-line runner</name>
+  </entry-point>
+  <entry-point command="run-gui">
+    <name>Java GUI runner</name>
+  </entry-point>
+  <entry-point command="javaws">
+    <name>Java Web Start</name>
+  </entry-point>
+  <entry-point command="java-rmi">
+    <needs-terminal/>
+    <name>Java Remote Method Invocation</name>
+  </entry-point>
+  <entry-point command="javacpl">
+    <name>Java Control Panel</name>
+  </entry-point>
+  <entry-point binary-name="policytool" command="policytool">
+    <name>Policy Tool</name>
+  </entry-point>
+  <entry-point binary-name="servertool" command="servertool">
+    <needs-terminal/>
+    <name>Java IDL Server Tool</name>
+  </entry-point>
+  <entry-point binary-name="keytool" command="keytool">
+    <needs-terminal/>
+    <name>Key and Certificate Management Tool</name>
+  </entry-point>
+  <entry-point binary-name="pak200" command="pak200">
+    <needs-terminal/>
+  </entry-point>
+  <entry-point binary-name="unpak200" command="unpak200">
+    <needs-terminal/>
+  </entry-point>
+
+  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
+    <file-type id="jarfile">
+      <description>Executable Jar File</description>
+      <verb args="-jar &quot;%1&quot; %*" command="run-gui" name="open"/>
+      <extension value=".jar"/>
+    </file-type>
+    <file-type id="JNLPFile">
+      <description>JNLP File</description>
+      <verb args="&quot;%1&quot;" command="javaws" name="Open">
+        <description>&amp;Launch</description>
+      </verb>
+      <extension mime-type="application/x-java-jnlp-file" value=".jnlp"/>
+    </file-type>
+  </capabilities>
 </interface>

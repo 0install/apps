@@ -20,6 +20,9 @@ IcedTea project.</description>
     <command name="java">
       <runner interface="http://repo.roscidus.com/java/openjdk-jre"/>
     </command>
+    <command name="java-gui">
+      <runner interface="http://repo.roscidus.com/java/openjdk-jre" command="run-gui"/>
+    </command>
 
     <package-implementation distributions="Debian" main="/usr/bin/javac" package="openjdk-7-jdk"/>
     <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-1_7_0-openjdk-devel"/>

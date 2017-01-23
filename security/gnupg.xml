@@ -11,6 +11,9 @@ as described in RFC2440.
 
 GnuPG does not use any patented algorithms so it cannot be compatible with PGP2
 because it uses IDEA (which is patented worldwide).</description>
+  <homepage>http://www.gnupg.org/</homepage>
+  <needs-terminal/>
+
   <package-implementation distributions="RPM" main="/usr/bin/gpg2" package="gpg2"/>
   <package-implementation distributions="RPM" main="/usr/bin/gpg2" package="gnupg2"/>
   <package-implementation distributions="Arch Slack Debian RPM Cygwin" main="/usr/bin/gpg" package="gnupg"/>
@@ -20,7 +23,6 @@ because it uses IDEA (which is patented worldwide).</description>
   <package-implementation distributions="Darwin" main="/usr/local/bin/gpg" package="gnupg"/>
   <package-implementation distributions="Darwin" main="/usr/local/bin/gpg2" package="gnupg2"/>
 
-  <feed arch="Windows-*" src="http://0install.de/feeds/GnuPG.xml"/>
   <feed arch="Darwin-*" src="http://afb.users.sourceforge.net/zero-install/interfaces/GnuPG.xml"/>
 
   <group arch="Linux-i386" main="bin/gpg">
@@ -43,4 +45,22 @@ because it uses IDEA (which is patented worldwide).</description>
     </group>
   </group>
 
+  <group arch="Windows-*" license="GPL v3 (GNU General Public License)">
+    <command name="run" path="gpg.exe"/>
+    <command name="gpgv" path="gpgv.exe"/>
+    <command name="gpgsplit" path="gpgsplit.exe"/>
+    <implementation version="1.4.11" stability="stable" id="sha1new=13f58c4e0c8cefb86b993e13f1b3111a082467b2">
+      <manifest-digest sha1new="13f58c4e0c8cefb86b993e13f1b3111a082467b2" sha256="8432d5b002edba0d26a75c3bb2e5183801eca4cd766a0958d9117f68ed5953ff" sha256new="QQZNLMAC5W5A2JVHLQ53FZIYHAA6ZJGNOZVASWGZCF7WR3KZKP7Q"/>
+      <archive href="gnupg-w32-1.4.11.zip" size="2114852" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <entry-point command="run" binary-name="gpg"/>
+  <entry-point command="gpgv">
+    <name>OpenPGP signature checking tool</name>
+    <summary>stripped down version of gpg which is only able to check signatures</summary>
+  </entry-point>
+  <entry-point command="gpgsplit">
+    <summary>splits an OpenPGP message into packets</summary>
+  </entry-point>
 </interface>

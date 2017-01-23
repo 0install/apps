@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/utils/gnuplot" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>gnuplot</name>
+  <summary>famous scientific plotting package</summary>
+  <description>gnuplot is a portable command-line driven graphing utility.</description>
+  <homepage>http://gnuplot.sourceforge.net/</homepage>
+  <category>Graphics</category>
+  <category>Utility</category>
+  <needs-terminal/>
+
+  <icon href="http://0install.de/feed-icons/gnuplot.png" type="image/png"/>
+  <icon href="http://0install.de/feed-icons/gnuplot.ico" type="image/vnd.microsoft.icon"/>
+
+  <package-implementation distributions="Debian Gentoo Ports RPM Slack" main="/usr/bin/gnuplot" package="gnuplot"/>
+
+  <group license="GPL v2 (GNU General Public License)">
+    <command name="run" path="bin/gnuplot.exe"/>
+    <command name="run-gui" path="bin/wgnuplot.exe"/>
+    <implementation arch="Windows-*" id="sha1new=f9d7518a15456df012b967e00d21c458ca31151b" released="2012-03-12" stability="stable" version="4.6.0">
+      <manifest-digest sha1new="f9d7518a15456df012b967e00d21c458ca31151b" sha256="deca15cf952f9e42b589df5e15f7d2dbb0cf1c8aa190400d5de2fc7e28a4c35b" sha256new="33FBLT4VF6PEFNMJ35PBL56S3OYM6HEKUGIEADK54L6H4KFEYNNQ"/>
+      <archive extract="gnuplot" href="http://downloads.sourceforge.net/gnuplot/gp460win32.zip" size="12580915" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-*" id="sha1new=ddc371583072e2a35978f28a9636a61a055bfad9" released="2013-04-18" stability="stable" version="4.6.3">
+      <manifest-digest sha256new="2UDQAII5HNFQ772DW777ME4Y2WKIW2TYV36KZZ7RPU6MBBZCELKQ"/>
+      <archive extract="gnuplot" href="http://downloads.sourceforge.net/gnuplot/gp463-win32.zip" size="12939069" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=dce2b136a626770c43e73dc80e62ac4c7922032c" released="2014-09-25" stability="stable" version="4.6.6">
+      <manifest-digest sha256new="4RSZAZMVX6YYVKHPP74XDUO35OKSRIPAOQXHVFQCZPTVCSX4RNZA"/>
+      <archive extract="gnuplot" href="http://downloads.sourceforge.net/gnuplot/gp466-win64.zip" size="18196122" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=0664860f03dcf4290b40c13b98da166c64daa5c6" released="2014-09-25" stability="stable" version="4.6.6">
+      <manifest-digest sha256new="CGNQH572RZOO23YTVRJV7PAX2RF5NUAG3B2FRC2MUSZU2RJHNURQ"/>
+      <archive extract="gnuplot" href="http://downloads.sourceforge.net/gnuplot/gp466-win32.zip" size="18619570" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=560f9bc763446bf452b3075b1b63d72de6cae5e2" released="2015-07-14" stability="stable" version="4.6.7">
+      <manifest-digest sha256new="KQGO6LQBG7N7V5XO74IYOV57EUKGCIWMIKA325ZZS57TVHS3UVPQ"/>
+      <archive extract="gnuplot" href="http://downloads.sourceforge.net/gnuplot/gp467-win64-mingw.zip" size="17903121" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=e5f5f7ad2a2505137788f4f2c385b03015bc9e63" released="2015-07-14" stability="stable" version="4.6.7">
+      <manifest-digest sha256new="XSREMJPRPMONO37RYTTE2ZGQSY4AZTZ43SYQIQPRDZRMWF53W6FQ"/>
+      <archive extract="gnuplot" href="http://downloads.sourceforge.net/gnuplot/gp467-win32-mingw.zip" size="19030500" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=b47628842922e6fbc3296bc204786dbd7eddea68" released="2015-02-20" stability="stable" version="5.0.0">
+      <manifest-digest sha256new="ORT2PZNSRX6ENTSTONUCLLWHYCVBGMI47XZYXGQ5A2ODKWX5ZWCA"/>
+      <archive extract="gnuplot" href="http://downloads.sourceforge.net/gnuplot/gp500-win64-mingw.zip" size="27008593" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=09792d532826fad85f0ff39c18690fa8699bf156" released="2015-01-01" stability="stable" version="5.0.0">
+      <manifest-digest sha256new="EK2SG2GL3CDZTQIBZKLHHZNS2TSET526RAIWE2MBDMN7XWJJDDGA"/>
+      <archive extract="gnuplot" href="http://downloads.sourceforge.net/gnuplot/gp500-win32-mingw.zip" size="32246165" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=e5d71d316bb13cb29b9ecd6613f01a963779bf5b" released="2015-07-14" stability="stable" version="5.0.1">
+      <manifest-digest sha256new="PEDCXZXJGHOXZJK5UJTYCTTSIMMTKWECBIQQFBICDRGOBF72BHXA"/>
+      <archive extract="gnuplot" href="http://downloads.sourceforge.net/gnuplot/gp501-win64-mingw.zip" size="26467769" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=e0ba6ddfdfd95041adf59b35b6b91b9da200adec" released="2015-07-14" stability="stable" version="5.0.1">
+      <manifest-digest sha256new="64IUHDKIYAJ3JV6GMKKVNYBD2C5LN72V5MS7YFAFQE5OG5SWCTGQ"/>
+      <archive extract="gnuplot" href="http://downloads.sourceforge.net/gnuplot/gp501-win32-mingw.zip" size="27841476" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=72a1c8ea2d7d8608d3a76fc6dfa403eebf3eb3a8" released="2016-02-23" stability="stable" version="5.0.3">
+      <manifest-digest sha256new="DS2OKW4ZZW4XRUI7ZXL6ATA7B4GKDTZURKWRDSO7CHRM63UJAG5A"/>
+      <archive extract="gnuplot" href="http://downloads.sourceforge.net/gnuplot/gp503-win64-mingw.zip" size="26516436" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=7287c6673907478c681aa37711d6e17ee503a88a" released="2016-02-23" stability="stable" version="5.0.3">
+      <manifest-digest sha256new="PDI45B7PYR2HZUZCCQK4FJW5AUEJPP4AVHCROKLIQJ5U7O44NGFA"/>
+      <archive extract="gnuplot" href="http://downloads.sourceforge.net/gnuplot/gp503-win32-mingw.zip" size="32263719" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=67f949ce763a07aa7e375f049d2f2c9b219e8a59" released="2016-07-22" stability="stable" version="5.0.4">
+      <manifest-digest sha256new="EKX5HCGNJXTO36Y4FJQUPOC3IOHYH2DS3TQKZ6WJQYAF6T3ZC4KQ"/>
+      <archive extract="gnuplot" href="http://downloads.sourceforge.net/gnuplot/gp504-win64-mingw.zip" size="25304554" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=783e24cec7b340fbd016348f8e86a1ac53b3d29e" released="2016-07-22" stability="stable" version="5.0.4">
+      <manifest-digest sha256new="XR4YCRBHCIVLTDRNWSRBL4TQWLIVHYNYRRSGMILEEVVAOVVQL3XA"/>
+      <archive extract="gnuplot" href="http://downloads.sourceforge.net/gnuplot/gp504-win32-mingw.zip" size="25861411" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=60c31b10b8c8e9861d6b8371245a40908f6e0eed" released="2017-01-19" stability="stable" version="5.0.5">
+      <manifest-digest sha256new="DF6L46P3YCJ4OSRXHZVB4LADCSMGUH5LN2AJBFY6SS7QL4AO5ATQ"/>
+      <archive extract="gnuplot" href="http://downloads.sourceforge.net/gnuplot/gp505-win64-mingw.zip" size="25738695" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=1361e24c1d5231bbd30779b78bd7a7ff5535cac9" released="2017-01-19" stability="stable" version="5.0.5">
+      <manifest-digest sha256new="FI2IM4B2W7MNORESQNPC5RO3O3OVIIWNSWLKPQD3LJQ6Z66K4WPA"/>
+      <archive extract="gnuplot" href="http://downloads.sourceforge.net/gnuplot/gp505-win32-mingw.zip" size="26320180" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <entry-point binary-name="gnuplot" command="run">
+    <name>Gnuplot command-line interface</name>
+    <name xml:lang="de">Gnuplot Befehlszeilenoberfläche</name>
+  </entry-point>
+  <entry-point binary-name="wgnuplot" command="run-gui">
+    <name>Gnuplot graphical interface</name>
+    <name xml:lang="de">Gnuplot grafische Oberfläche</name>
+  </entry-point>
+</interface>

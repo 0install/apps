@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Scala</name>
+  <summary>functional and object-oriented programming language</summary>
+  <description>Scala is a functional and object-oriented programming language based on the Java Virtual Machine.</description>
+  <homepage>http://www.scala-lang.org/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+
+  <icon href="http://0install.de/feeds/images/Scala.png" type="image/png"/>
+  <icon href="http://0install.de/feeds/images/Scala.ico" type="image/vnd.microsoft.icon"/>
+
+  <feed-for interface="http://repo.roscidus.com/java/scala"/>
+
+  <group license="BSD License">
+    <environment name="SCALA_HOME" insert="." mode="replace"/>
+    <environment name="SCALA_LIB" insert="lib" mode="replace"/>
+    <command name="run">
+      <runner interface="http://repo.roscidus.com/java/openjdk-jre">
+        <arg>-Xmx256M</arg>
+        <arg>-Xms32M</arg>
+        <arg>-Dscala.home=$SCALA_HOME</arg>
+        <arg>-Dscala.usejavacp=true</arg>
+        <arg>-cp</arg>
+        <arg>$SCALA_LIB/*</arg>
+        <arg>scala.tools.nsc.MainGenericRunner</arg>
+      </runner>
+    </command>
+    <command name="scalac">
+      <runner interface="http://repo.roscidus.com/java/openjdk-jre">
+        <arg>-Xmx256M</arg>
+        <arg>-Xms32M</arg>
+        <arg>-Dscala.home=$SCALA_HOME</arg>
+        <arg>-Dscala.usejavacp=true</arg>
+        <arg>-cp</arg>
+        <arg>$SCALA_LIB/*</arg>
+        <arg>scala.tools.nsc.Main</arg>
+      </runner>
+    </command>
+    <command name="scaladoc">
+      <runner interface="http://repo.roscidus.com/java/openjdk-jre">
+        <arg>-Xmx256M</arg>
+        <arg>-Xms32M</arg>
+        <arg>-Dscala.home=$SCALA_HOME</arg>
+        <arg>-Dscala.usejavacp=true</arg>
+        <arg>-cp</arg>
+        <arg>$SCALA_LIB/*</arg>
+        <arg>scala.tools.nsc.ScalaDoc</arg>
+      </runner>
+    </command>
+    <command name="scalap">
+      <runner interface="http://repo.roscidus.com/java/openjdk-jre">
+        <arg>-Xmx256M</arg>
+        <arg>-Xms32M</arg>
+        <arg>-Dscala.home=$SCALA_HOME</arg>
+        <arg>-Dscala.usejavacp=true</arg>
+        <arg>-cp</arg>
+        <arg>$SCALA_LIB/*</arg>
+        <arg>scala.tools.scalap.Main</arg>
+      </runner>
+    </command>
+    <implementation version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="http://www.scala-lang.org/files/archive/scala-{version}.tgz" type="application/x-compressed-tar" extract="scala-{version}"/>
+    </implementation>
+  </group>
+</interface>

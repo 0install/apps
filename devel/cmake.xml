@@ -1,0 +1,230 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/devel/cmake" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
+  <name>CMake</name>
+  <summary>cross platform make</summary>
+  <description>CMake is a family of tools designed to build, test and package software. CMake is
+used to control the software compilation process using simple platform and
+compiler independent configuration files. CMake generates native makefiles and
+workspaces that can be used in the compiler environment of your choice.</description>
+  <homepage>http://www.cmake.org/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+
+  <icon href="http://0install.de/feed-icons/CMake.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="http://0install.de/feed-icons/CMake.png" type="image/png"/>
+
+  <package-implementation distributions="Debian RPM Cygwin" main="/usr/bin/cmake" package="cmake"/>
+  <package-implementation distributions="Ports" main="/usr/local/bin/cmake" package="cmake"/>
+  <package-implementation distributions="MacPorts" main="/opt/local/bin/cmake" package="cmake"/>
+
+  <group license="BSD License (revised)">
+    <command name="run" path="bin/cmake"/>
+    <command name="run-gui" path="bin/cmake-gui"/>
+    <command name="run-curses" path="bin/ccmake"/>
+    <command name="cpack" path="bin/cpack"/>
+    <command name="ctest" path="bin/ctest"/>
+    <implementation arch="Linux-x86_64" id="sha1new=1c3393a56b2a4ca62986982c5aa3e8967fef995f" released="2015-02-12" stability="stable" version="3.1.3">
+      <manifest-digest sha256new="DUINB5QK74LR3WNN4DP6NDC24BUQB3GEUC7VYPNKTX3FSLTKHT7Q"/>
+      <archive extract="cmake-3.1.3-Linux-x86_64" href="http://www.cmake.org/files/v3.1/cmake-3.1.3-Linux-x86_64.tar.gz" size="26051536" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=f7423fe6f5d1ce6ef9f4585e589d72578ffb51ac" released="2015-02-12" stability="stable" version="3.1.3">
+      <manifest-digest sha256new="XEIHMYVLQ53WW5IRQFMWACVEVCFTRQHISUY7AE6VDM6TXZM43VQQ"/>
+      <archive extract="cmake-3.1.3-Linux-i386" href="http://www.cmake.org/files/v3.1/cmake-3.1.3-Linux-i386.tar.gz" size="24891432" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=38c294906ce67a992cc8f4c1b675e8ca7136199a" stability="stable" version="3.2.0-pre2">
+      <manifest-digest sha256new="QCZATA235K5BLWRH4SAGXQLLBZIWB4VGSCNZJFFNODS4AWJQLPKQ"/>
+      <archive extract="cmake-3.2.0-rc2-Linux-x86_64" href="http://www.cmake.org/files/v3.2/cmake-3.2.0-rc2-Linux-x86_64.tar.gz" size="26992531" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=b442abdcdc879e3c06c4c750c11f9bd5207bc00a" stability="stable" version="3.2.0-pre2">
+      <manifest-digest sha256new="CXRFYZUIACN4B4ZLRHVVBAMRHWDFIHA2DB33JZYMOZYDNSVYPQ5Q"/>
+      <archive extract="cmake-3.2.0-rc2-Linux-i386" href="http://www.cmake.org/files/v3.2/cmake-3.2.0-rc2-Linux-i386.tar.gz" size="26594100" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=538082076c90289ca8237830a2be146202bc0fc3" released="2015-06-01" stability="stable" version="3.2.3">
+      <manifest-digest sha256new="ZDWN5YCKXX373WW7HYLXAOSTCGF46HZBNWFIF6BT4HUFOQLEYPYQ"/>
+      <archive extract="cmake-3.2.3-Linux-x86_64" href="http://www.cmake.org/files/v3.2/cmake-3.2.3-Linux-x86_64.tar.gz" size="26997309" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=915239edc31d9ef016ab2106a87fb77afe528f75" released="2015-06-01" stability="stable" version="3.2.3">
+      <manifest-digest sha256new="456KYO4TD7YA34DXVDUODY5NNOJTLLP4C3NAGIAFALIXAVAW6BQA"/>
+      <archive extract="cmake-3.2.3-Linux-i386" href="http://www.cmake.org/files/v3.2/cmake-3.2.3-Linux-i386.tar.gz" size="26558578" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=f4bc980d6a546c23d49397c86f74509f5d6f3a3d" released="2015-09-17" stability="stable" version="3.3.2">
+      <manifest-digest sha256new="NLFPTW5YUT2BBJ74BBQDNHUOQNN4LNWKRBSJY3J6X6TMYAVB2YSA"/>
+      <archive extract="cmake-3.3.2-Linux-x86_64" href="http://www.cmake.org/files/v3.3/cmake-3.3.2-Linux-x86_64.tar.gz" size="27896803" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=1f33960b9cde73694a935481ea77fca30467b87b" released="2015-09-17" stability="stable" version="3.3.2">
+      <manifest-digest sha256new="ZBZHGCQ7WPVZ4NJ3NQB3X3BPFZVRKRJVEEDN4PWHXRTM2O4PRKIA"/>
+      <archive extract="cmake-3.3.2-Linux-i386" href="http://www.cmake.org/files/v3.3/cmake-3.3.2-Linux-i386.tar.gz" size="27390817" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=55b0ad93490d015c82562fc9571c7048df13ccd3" released="2016-01-25" stability="stable" version="3.4.3">
+      <manifest-digest sha256new="RZWGWQQCWZMB3DUVSUYPJIL5OI65SRLCWD3ZWBNC7RVEATPBEKJQ"/>
+      <archive extract="cmake-3.4.3-Linux-x86_64" href="http://www.cmake.org/files/v3.4/cmake-3.4.3-Linux-x86_64.tar.gz" size="28268935" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=cafe3a7ebedebf622845b3e5aee8799e5fd29808" released="2016-01-25" stability="stable" version="3.4.3">
+      <manifest-digest sha256new="PDGQDWQA366HAQTBUBJOTG77CIHFUT7XUBCFB2AOFKZAQT7OKNUQ"/>
+      <archive extract="cmake-3.4.3-Linux-i386" href="http://www.cmake.org/files/v3.4/cmake-3.4.3-Linux-i386.tar.gz" size="27658650" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=94eba8b777bd21bb6c78a505c8b198c39993bb0a" released="2016-04-15" stability="stable" version="3.5.2">
+      <manifest-digest sha256new="CZ2RVCUA2G5ZAH7GHC5LTMDF3B34BVISNVCA4YHHE6EJG7IW424A"/>
+      <archive extract="cmake-3.5.2-Linux-x86_64" href="http://www.cmake.org/files/v3.5/cmake-3.5.2-Linux-x86_64.tar.gz" size="28434362" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=0f7a1d28018ac544f471b190163a771f3c1263d7" released="2016-04-15" stability="stable" version="3.5.2">
+      <manifest-digest sha256new="MLF23OYMZAX7AD54V4BLMSE4M62ACEHZDCUI4F3RIOGIFIRN4XXA"/>
+      <archive extract="cmake-3.5.2-Linux-i386" href="http://www.cmake.org/files/v3.5/cmake-3.5.2-Linux-i386.tar.gz" size="27975653" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=a12e4eb112ceaebb10b533190383225f387161bb" released="2016-11-03" stability="stable" version="3.6.3">
+      <manifest-digest sha256new="5YA5XJURGOSEDSQ3J6LXANFG5FXRJEE3GTJGT6ONKJNSGAAX4A3A"/>
+      <archive extract="cmake-3.6.3-Linux-x86_64" href="http://www.cmake.org/files/v3.6/cmake-3.6.3-Linux-x86_64.tar.gz" size="28542477" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=9c8a3eae0cce24bdb7a6f5719e616541ec1833f9" released="2016-11-03" stability="stable" version="3.6.3">
+      <manifest-digest sha256new="VU7U4XCZ3R2UMQBRBXMPGFN3XECYJYYWKYTR5GU7EPNQWE5445SQ"/>
+      <archive extract="cmake-3.6.3-Linux-i386" href="http://www.cmake.org/files/v3.6/cmake-3.6.3-Linux-i386.tar.gz" size="28150292" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=f94fdb4f11b5c04f2d44e1c2b80a3a489341bcf9" released="2016-01-13" stability="stable" version="3.7.2">
+      <manifest-digest sha256new="6IU7JIBBAOPCFHBIQ5RBBG6AEBRJNRYPXE2JUU3X5KU24CQKUTDA"/>
+      <archive extract="cmake-3.7.2-Linux-x86_64" href="http://www.cmake.org/files/v3.7/cmake-3.7.2-Linux-x86_64.tar.gz" size="30681434" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="BSD License (revised)">
+    <command name="run" path="CMake.app/Contents/MacOS/CMake"/>
+    <command name="run-gui" path="CMake.app/Contents/bin/cmake-gui"/>
+    <command name="run-curses" path="CMake.app/Contents/bin/ccmake"/>
+    <command name="cpack" path="CMake.app/Contents/bin/cpack"/>
+    <command name="ctest" path="CMake.app/Contents/bin/ctest"/>
+    <implementation arch="MacOSX-x86_64" id="sha1new=2d6efd9c6b7039812518778167793383d2b9a186" released="2015-02-12" stability="stable" version="3.1.3">
+      <manifest-digest sha256new="6RJEGDP4WKWK37GD2VUEKHVUFAI5JCLKHUHN6EHMEWHITAZWXYQQ"/>
+      <archive extract="cmake-3.1.3-Darwin-x86_64" href="http://www.cmake.org/files/v3.1/cmake-3.1.3-Darwin-x86_64.tar.gz" size="29967010" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-*" id="sha1new=5bc5d64a0638cf04bb785fe42c4acb12d61bd33f" released="2015-02-12" stability="stable" version="3.1.3">
+      <manifest-digest sha256new="4FERRFFPQMCUYZV3IPYH3LGEW2MRLZYA3OWSGYSD6HCDEIGVYKPA"/>
+      <archive extract="cmake-3.1.3-Darwin-universal" href="http://www.cmake.org/files/v3.1/cmake-3.1.3-Darwin-universal.tar.gz" size="46656712" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" id="sha1new=56a644bda1dad957545cd08256dadcac617006f6" stability="stable" version="3.2.0-pre2">
+      <manifest-digest sha256new="NVCM7AJ4K6535LGIBUAPS6X3Z2IOXPJ6HXDWZWG2HMWXNPQJ7UMA"/>
+      <archive extract="cmake-3.2.0-rc2-Darwin-x86_64" href="http://www.cmake.org/files/v3.2/cmake-3.2.0-rc2-Darwin-x86_64.tar.gz" size="27705735" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-*" id="sha1new=f00b670d978513891d65dd85b29d4994f8b422d8" stability="stable" version="3.2.0-pre2">
+      <manifest-digest sha256new="7PMLBJ3OHKWXUFA2TNRZQJRJHKUZ5IJFK6ASPHTMF7X63T6AZ2YA"/>
+      <archive extract="cmake-3.2.0-rc2-Darwin-universal" href="http://www.cmake.org/files/v3.2/cmake-3.2.0-rc2-Darwin-universal.tar.gz" size="48662169" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" id="sha1new=58daa68cbccbf9d8f63511967cb6d1b67054553f" released="2015-06-01" stability="stable" version="3.2.3">
+      <manifest-digest sha256new="FRPCPLJBQEBP22TY7IYKJINMW4MZDP2IQQH2RFX7A2KZJJWN2X7A"/>
+      <archive extract="cmake-3.2.3-Darwin-x86_64" href="http://www.cmake.org/files/v3.2/cmake-3.2.3-Darwin-x86_64.tar.gz" size="27716824" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-*" id="sha1new=8fc3c2911e27cfebe0d4954ec0fa0aa054a58bbe" released="2015-06-01" stability="stable" version="3.2.3">
+      <manifest-digest sha256new="7GFROLRRCTS3BJSGFOB37Z6J6EW7N5WWR27SALAMZZY6SSVDDJ3A"/>
+      <archive extract="cmake-3.2.3-Darwin-universal" href="http://www.cmake.org/files/v3.2/cmake-3.2.3-Darwin-universal.tar.gz" size="48677251" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" id="sha1new=b2d2b3d088c4b7f4abc97d528ad3bf95f62df113" released="2015-09-17" stability="stable" version="3.3.2">
+      <manifest-digest sha256new="263HKSQTBDC5QFXMHE6VU4XMIZBOXMITVDX7WLHFSRXWYQKECHKQ"/>
+      <archive extract="cmake-3.3.2-Darwin-x86_64" href="http://www.cmake.org/files/v3.3/cmake-3.3.2-Darwin-x86_64.tar.gz" size="22378062" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-*" id="sha1new=6420cf6d6c623cd7761c270ca61788c37736a8c9" released="2015-09-17" stability="stable" version="3.3.2">
+      <manifest-digest sha256new="X2GU6NUP4JAU3SBPIWOB4EUTDYGPACXE353ISQQSCP6PLW37EN7Q"/>
+      <archive extract="cmake-3.3.2-Darwin-universal" href="http://www.cmake.org/files/v3.3/cmake-3.3.2-Darwin-universal.tar.gz" size="49658642" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" id="sha1new=ee3b0ffebdbbeb1522fc95a4f0684e39e4e14087" released="2016-01-25" stability="stable" version="3.4.3">
+      <manifest-digest sha256new="QX27VH5OSL4VIFXADDGUJTJLZH6XX44GPEP2ML7EOOKKWHVYF67A"/>
+      <archive extract="cmake-3.4.3-Darwin-x86_64" href="http://www.cmake.org/files/v3.4/cmake-3.4.3-Darwin-x86_64.tar.gz" size="22636550" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" id="sha1new=4fed75a487a439b6b664699dd2967fd78c99d588" released="2016-04-15" stability="stable" version="3.5.2">
+      <manifest-digest sha256new="U4FRJIFQ2U2A5LYP235IVCRRXO7H4WX2VQI2WJRUF534JDLTFSEQ"/>
+      <archive extract="cmake-3.5.2-Darwin-x86_64" href="http://www.cmake.org/files/v3.5/cmake-3.5.2-Darwin-x86_64.tar.gz" size="22853687" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" id="sha1new=eca3a572e180eba5cb1356b393a51a0f4c7ffeb1" released="2016-11-03" stability="stable" version="3.6.3">
+      <manifest-digest sha256new="YWECGJKJ2ZORZ7RFPPSAEXO5O3UWNZ4U5FO26CNJA5NUYPTJUZWQ"/>
+      <archive extract="cmake-3.6.3-Darwin-x86_64" href="http://www.cmake.org/files/v3.6/cmake-3.6.3-Darwin-x86_64.tar.gz" size="26058692" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" id="sha1new=80bd2e53885d43013163e061586cad9753adfdb9" released="2016-01-13" stability="stable" version="3.7.2">
+      <manifest-digest sha256new="DMSCEYBXS5NVKHNLIA5YOX3N6BCKEBBKQBWADAG4R23M46UFMCGA"/>
+      <archive extract="cmake-3.7.2-Darwin-x86_64" href="http://www.cmake.org/files/v3.7/cmake-3.7.2-Darwin-x86_64.tar.gz" size="26367672" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="BSD License (revised)">
+    <command name="run" path="bin/cmake.exe"/>
+    <command name="run-gui" path="bin/cmake-gui.exe"/>
+    <command name="cpack" path="bin/cpack.exe"/>
+    <command name="ctest" path="bin/ctest.exe"/>
+    <implementation id="sha1new=841c453bef82500fa93a9fd68fc513287617a6c0" released="2015-02-12" stability="stable" version="3.1.3">
+      <manifest-digest sha256new="QWVCR6BYXGNLMRCOHDWRICCJ2UJSUZZNRD7WEJLOQIFBJQX2WXXA"/>
+      <archive extract="cmake-3.1.3-win32-x86" href="http://www.cmake.org/files/v3.1/cmake-3.1.3-win32-x86.zip" size="15847870" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=5ff772b0378756c829ff2c53823b6c080d9ce4d0" stability="stable" version="3.2.0-pre2">
+      <manifest-digest sha256new="YMYKLKV4DITH6LBNKHXNSZ7XDSO2BTKSKBBGZ5YOUTU5QJPNWAGQ"/>
+      <archive extract="cmake-3.2.0-rc2-win32-x86" href="http://www.cmake.org/files/v3.2/cmake-3.2.0-rc2-win32-x86.zip" size="15588685" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="3.6.3" released="2016-11-03" stability="stable" id="sha1new=61171029f5ae45d8559f40a4fd3bbe67bca11a50">
+      <manifest-digest sha1new="61171029f5ae45d8559f40a4fd3bbe67bca11a50" sha256="1781db4403a178d32eeaea5edb97d7e7dcd90994c54909f8af07599afe73a77d" sha256new="C6A5WRADUF4NGLXK5JPNXF6X47ONSCMUYVEQT6FPA5MZV7TTU56Q"/>
+      <archive href="http://www.cmake.org/files/v3.6/cmake-3.6.3-win64-x64.msi" size="17867800" type="application/x-msi" extract="SourceDir/CMake"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="3.6.3" released="2016-11-03" stability="stable" id="sha1new=143ad9e946c191fbe25438cfcfd011e92266fdf4">
+      <manifest-digest sha1new="143ad9e946c191fbe25438cfcfd011e92266fdf4" sha256="ded11557bbb79832d97f96942b541c2a8b66eff76ede279b07bdad5aaad474a6" sha256new="33IRKV53W6MDFWL7S2KCWVA4FKFWN37XN3PCPGYHXWWVVKWUOSTA"/>
+      <archive href="http://www.cmake.org/files/v3.6/cmake-3.6.3-win32-x86.msi" size="15455256" type="application/x-msi" extract="SourceDir/CMake"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="3.7.2" released="2016-01-13" stability="stable" id="sha1new=536aa1887e3efba9b76d3c731e05e7a760d96b0c">
+      <manifest-digest sha1new="536aa1887e3efba9b76d3c731e05e7a760d96b0c" sha256="d60e8e955a5e7c14ead6a54df4562c756eedd1514f907410504980899452e03d" sha256new="2YHI5FK2LZ6BJ2WWUVG7IVRMOVXO3UKRJ6IHIECQJGAITFCS4A6Q"/>
+      <archive href="http://www.cmake.org/files/v3.7/cmake-3.7.2-win64-x64.msi" size="18235900" type="application/x-msi" extract="SourceDir/CMake"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="3.7.2" released="2016-01-13" stability="stable" id="sha1new=a5cbe08591b01720551cd3e2b67d971e0770e1ac">
+      <manifest-digest sha1new="a5cbe08591b01720551cd3e2b67d971e0770e1ac" sha256="acb12e02b69b60dbccdd6b25bb7f0ae5bff84eff855523290467b3111ccfd130" sha256new="VSYS4AVWTNQNXTG5NMS3W7YK4W77QTX7QVKSGKIEM6ZRCHGP2EYA"/>
+      <archive href="http://www.cmake.org/files/v3.7/cmake-3.7.2-win32-x86.msi" size="15831548" type="application/x-msi" extract="SourceDir/CMake"/>
+    </implementation>
+  </group>
+
+  <group arch="*-src" license="BSD License (revised)">
+    <implementation compile:binary-main="bin/cmake" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" compile:dup-src="true" id="sha1new=7b9ab3431e5243a876fe301d75e0212a9ebc8604" released="2015-02-12" stability="stable" version="3.1.3">
+      <manifest-digest sha256new="DGUX34C4LZVNCCRDUGKEOACYWXCL5JZHYFUJ7MWF6XIOK3GQLBNA"/>
+      <archive extract="cmake-3.1.3" href="http://www.cmake.org/files/v3.1/cmake-3.1.3.tar.gz" size="5959549" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation compile:binary-main="bin/cmake" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" compile:dup-src="true" id="sha1new=45a04eb8326192f374448651b53db6bfe7fb9e47" stability="stable" version="3.2.0-pre2" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
+      <manifest-digest sha256new="QO3POA7KSTTLTDSKFBGZODK72HKHMQLCC5O3DB57NHZHPCM6NT3Q"/>
+      <archive extract="cmake-3.2.0-rc2" href="http://www.cmake.org/files/v3.2/cmake-3.2.0-rc2.tar.gz" size="6437651" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation compile:binary-main="bin/cmake" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" compile:dup-src="true" id="sha1new=cf715deb6a552f223ebeb1ed1a8357f1c39392fd" released="2015-06-01" stability="stable" version="3.2.3">
+      <manifest-digest sha256new="SLJ5MM3JI7F6GZAX3MW2PKQH4H7M6CGS6JSK3IXF7F6PNJ3MVOQQ"/>
+      <archive extract="cmake-3.2.3" href="http://www.cmake.org/files/v3.2/cmake-3.2.3.tar.gz" size="6438938" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation compile:binary-main="bin/cmake" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" compile:dup-src="true" id="sha1new=b4445dcdf0f381b0caaac3084783f0ef6d1f782e" released="2015-09-17" stability="stable" version="3.3.2">
+      <manifest-digest sha256new="SQJF5GXFGWYDSNLQZ5A43ZJJCIANX6LMKCHU66VUCT6G337MMRXA"/>
+      <archive extract="cmake-3.3.2" href="http://www.cmake.org/files/v3.3/cmake-3.3.2.tar.gz" size="6578184" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation compile:binary-main="bin/cmake" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" compile:dup-src="true" id="sha1new=a423675b5b85d2e8520dd7d8ebc88d3d201d7812" released="2016-01-25" stability="stable" version="3.4.3">
+      <manifest-digest sha256new="NMX42LHFYAZ356SCPHBVHYX4BBEG2PTAXYGQBNHN2AOCDKR6NOQA"/>
+      <archive extract="cmake-3.4.3" href="http://www.cmake.org/files/v3.4/cmake-3.4.3.tar.gz" size="6722311" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation compile:binary-main="bin/cmake" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" compile:dup-src="true" id="sha1new=65ad502fde22f799b52deb1873cf7b715e8821fa" released="2016-04-15" stability="stable" version="3.5.2">
+      <manifest-digest sha256new="TEOIHZTCXQIP7M4DK4KL6V47COJP6HRCWXTPM4GQEF5TNSTLF3OQ"/>
+      <archive extract="cmake-3.5.2" href="http://www.cmake.org/files/v3.5/cmake-3.5.2.tar.gz" size="6863498" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation compile:binary-main="bin/cmake" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" compile:dup-src="true" id="sha1new=3f52d0ac9d8a956225585706ec1963a41b10acdb" released="2016-11-03" stability="stable" version="3.6.3">
+      <manifest-digest sha256new="PWFFOII6BAIWK65JYQ2SSZOXOBI2FIH2PQOJD7KDXZF7GUEIRKNQ"/>
+      <archive extract="cmake-3.6.3" href="http://www.cmake.org/files/v3.6/cmake-3.6.3.tar.gz" size="6919949" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation compile:binary-main="bin/cmake" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" compile:dup-src="true" id="sha1new=dd8373a0c15a015e634e50897344163e2fc853e7" released="2016-01-13" stability="stable" version="3.7.2" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
+      <manifest-digest sha256new="RO5LOA6S4BWFNPFUSXBCUAGZJ5TAR3N7UT6PFQW2CL5HIJAXMQCQ"/>
+      <archive extract="cmake-3.7.2" href="http://www.cmake.org/files/v3.7/cmake-3.7.2.tar.gz" size="7361593" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <entry-point binary-name="cmake" command="run">
+    <needs-terminal/>
+    <name>CMake command-line</name>
+  </entry-point>
+  <entry-point binary-name="cmake-gui" command="run-gui">
+    <name>CMake GUI</name>
+  </entry-point>
+  <entry-point binary-name="ccmake" command="run-curses">
+    <needs-terminal/>
+    <name>CMake Curses Interface</name>
+  </entry-point>
+  <entry-point binary-name="cpack" command="cpack">
+    <needs-terminal/>
+    <name>CMake Packaging driver</name>
+  </entry-point>
+  <entry-point binary-name="ctest" command="ctest">
+    <needs-terminal/>
+    <name>CMake Testing driver</name>
+  </entry-point>
+</interface>

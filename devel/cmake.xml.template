@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
+  <name>CMake</name>
+  <summary>cross platform make</summary>
+  <description>CMake is a family of tools designed to build, test and package software. CMake is
+used to control the software compilation process using simple platform and
+compiler independent configuration files. CMake generates native makefiles and
+workspaces that can be used in the compiler environment of your choice.</description>
+  <homepage>http://www.cmake.org/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+
+  <icon href="http://0install.de/feed-icons/CMake.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="http://0install.de/feed-icons/CMake.png" type="image/png"/>
+
+  <feed-for interface="http://repo.roscidus.com/devel/cmake"/>
+
+  <group license="BSD License (revised)">
+    <command name="run" path="bin/cmake"/>
+    <command name="run-gui" path="bin/cmake-gui"/>
+    <command name="run-curses" path="bin/ccmake"/>
+    <command name="cpack" path="bin/cpack"/>
+    <command name="ctest" path="bin/ctest"/>
+    <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="http://www.cmake.org/files/v{version-group}/cmake-{version}-Linux-x86_64.tar.gz" type="application/x-compressed-tar" extract="cmake-{version}-Linux-x86_64"/>
+    </implementation>
+  </group>
+
+  <group license="BSD License (revised)">
+    <command name="run" path="CMake.app/Contents/MacOS/CMake"/>
+    <command name="run-gui" path="CMake.app/Contents/bin/cmake-gui"/>
+    <command name="run-curses" path="CMake.app/Contents/bin/ccmake"/>
+    <command name="cpack" path="CMake.app/Contents/bin/cpack"/>
+    <command name="ctest" path="CMake.app/Contents/bin/ctest"/>
+    <implementation arch="MacOSX-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="http://www.cmake.org/files/v{version-group}/cmake-{version}-Darwin-x86_64.tar.gz" type="application/x-compressed-tar" extract="cmake-{version}-Darwin-x86_64"/>
+    </implementation>
+  </group>
+
+  <group license="BSD License (revised)">
+    <command name="run" path="bin/cmake.exe"/>
+    <command name="run-gui" path="bin/cmake-gui.exe"/>
+    <command name="cpack" path="bin/cpack.exe"/>
+    <command name="ctest" path="bin/ctest.exe"/>
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="http://www.cmake.org/files/v{version-group}/cmake-{version}-win64-x64.msi" type="application/x-msi" extract="SourceDir/CMake"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="http://www.cmake.org/files/v{version-group}/cmake-{version}-win32-x86.msi" type="application/x-msi" extract="SourceDir/CMake"/>
+    </implementation>
+  </group>
+
+  <group arch="*-src" stability="stable" license="BSD License (revised)">
+    <implementation compile:binary-main="bin/cmake" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" compile:dup-src="true" version="{version}" released="{released}" stability="stable" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
+      <manifest-digest/>
+      <archive href="http://www.cmake.org/files/v{version-group}/cmake-{version}.tar.gz" type="application/x-compressed-tar" extract="cmake-{version}"/>
+    </implementation>
+  </group>
+</interface>

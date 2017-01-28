@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Ruby</name>
+  <summary>dynamic, open source programming language</summary>
+  <description>A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.</description>
+  <homepage>http://www.ruby-lang.org/</homepage>
+  <needs-terminal/>
+
+  <icon href="http://0install.de/feed-icons/Ruby.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="http://0install.de/feed-icons/Ruby.png" type="image/png"/>
+
+  <feed-for interface="http://repo.roscidus.com/ruby/ruby"/>
+
+  <group license="Ruby License">
+    <environment name="RUBY_BIN" insert="bin" mode="replace"/>
+    <command name="run" path="bin/ruby.exe"/>
+    <command name="run-gui" path="bin/rubyw.exe"/>
+    <command name="irb" path="bin/ruby.exe">
+      <arg>$RUBY_BIN/irb</arg>
+    </command>
+    <command name="erb" path="bin/ruby.exe">
+      <arg>$RUBY_BIN/erb</arg>
+    </command>
+    <command name="gem" path="bin/ruby.exe">
+      <arg>$RUBY_BIN/gem</arg>
+    </command>
+    <command name="rake" path="bin/ruby.exe">
+      <arg>$RUBY_BIN/rake</arg>
+    </command>
+    <command name="rdoc" path="bin/ruby.exe">
+      <arg>$RUBY_BIN/rdoc</arg>
+    </command>
+    <command name="ri" path="bin/ruby.exe">
+      <arg>$RUBY_BIN/ri</arg>
+    </command>
+    <implementation arch="Windows-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://dl.bintray.com/oneclick/rubyinstaller/ruby-{version}-x64-mingw32.7z" type="application/x-7z-compressed" extract="ruby-{version}-x64-mingw32"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://dl.bintray.com/oneclick/rubyinstaller/ruby-{version}-i386-mingw32.7z" type="application/x-7z-compressed" extract="ruby-{version}-i386-mingw32"/>
+    </implementation>
+  </group>
+</interface>

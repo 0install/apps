@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>XZ Utils</name>
+  <summary>xz data compression tool for .xz and .lzma files</summary>
+  <description>XZ Utils is free general-purpose data compression software with high compression ratio. XZ Utils are the successor to LZMA Utils.</description>
+  <homepage>http://tukaani.org/xz/</homepage>
+  <category>Utility</category>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/utils/xz"/>
+
+  <group license="LGPL (GNU Lesser General Public License)">
+    <command name="run" path="xz.exe"/>
+    <command name="unxz" path="xz.exe">
+      <arg>--decompress</arg>
+    </command>
+    <command name="xzcat" path="xz.exe">
+      <arg>--decompress</arg>
+      <arg>--stdout</arg>
+    </command>
+    <command name="lzma" path="xz.exe">
+      <arg>--format=lzma</arg>
+    </command>
+    <command name="unlzma" path="xz.exe">
+      <arg>--format=lzma</arg>
+      <arg>--decompress</arg>
+    </command>
+    <command name="lzcat" path="xz.exe">
+      <arg>--format=lzma</arg>
+      <arg>--decompress</arg>
+      <arg>--stdout</arg>
+    </command>
+    <implementation version="{version}" released="{released}" stability="stable" arch="Windows-x86_64">
+      <manifest-digest/>
+      <archive href="http://tukaani.org/xz/xz-{version}-windows.zip" type="application/zip" extract="bin_x86-64"/>
+    </implementation>
+    <implementation version="{version}" stability="stable" arch="Windows-i486">
+      <manifest-digest/>
+      <archive href="http://tukaani.org/xz/xz-{version}-windows.zip" type="application/zip" extract="bin_i686-sse2"/>
+    </implementation>
+  </group>
+</interface>

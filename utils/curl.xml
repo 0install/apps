@@ -1,19 +1,31 @@
 <?xml version="1.0" ?>
 <interface uri="http://repo.roscidus.com/utils/curl" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
-  <name>curl</name>
+  <name>cURL</name>
   <summary>command line tool for transferring data</summary>
   <description>
-    curl is a command line tool for transferring data with URL syntax,
+    cURL is a command line tool for transferring data with URL syntax,
     supporting DICT, FILE, FTP, FTPS, Gopher, HTTP, HTTPS, IMAP, IMAPS,
     LDAP, LDAPS, POP3, POP3S, RTMP, RTSP, SCP, SFTP, SMTP, SMTPS, Telnet
-    and TFTP. curl supports SSL certificates, HTTP POST, HTTP PUT, FTP
+    and TFTP. cURL supports SSL certificates, HTTP POST, HTTP PUT, FTP
     uploading, HTTP form based upload, proxies, cookies, user+password
     authentication (Basic, Digest, NTLM, Negotiate, kerberos...), file
     transfer resume, proxy tunneling and a busload of other useful
     tricks.
   </description>
-
-  <feed arch="Windows-*" src='http://0install.de/feeds/cURL.xml'/>
+  <category>Network</category>
+  <category>Utility</category>
+  <needs-terminal/>
 
   <package-implementation main="/usr/bin/curl" package="curl"/>
+
+  <group license="MIT License" main="curl.exe">
+    <implementation arch="Windows-x86_64" version="7.52.1" released="2016-12-23" stability="stable" id="sha1new=94706f2edaf19395b4fe2641c3c81aea5ed1beb9">
+      <manifest-digest sha1new="94706f2edaf19395b4fe2641c3c81aea5ed1beb9" sha256="ec6b0b48684269a780a34c6142138947104becffb9fee7224504a6fec0d1353d" sha256new="5RVQWSDIIJU2PAFDJRQUEE4JI4IEX3H7XH7OOISFASTP5QGRGU6Q"/>
+      <archive href="https://dl.uxnr.de/build/curl/curl_winssl_msys2_mingw64_stc/curl-7.52.1/curl-7.52.1.zip" size="595762" type="application/zip" extract="src"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="7.52.1" released="2016-12-23" stability="stable" id="sha1new=f707cf899d6e66737a55b2d48537b145baf16507">
+      <manifest-digest sha1new="f707cf899d6e66737a55b2d48537b145baf16507" sha256="034d132af4445d64f37b1c95928060ace1dcc8b6cdc53e5f0cf95018b2b387f8" sha256new="ANGRGKXUIROWJ433DSKZFADAVTQ5ZSFWZXCT4XYM7FIBRMVTQ74A"/>
+      <archive href="https://dl.uxnr.de/build/curl/curl_winssl_msys2_mingw32_stc/curl-7.52.1/curl-7.52.1.zip" size="580106" type="application/zip" extract="src"/>
+    </implementation>
+  </group>
 </interface>

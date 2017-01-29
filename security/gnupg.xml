@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="http://repo.roscidus.com/security/gnupg" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
-  <name>gnupg</name>
+  <name>GnuPG</name>
   <summary>GNU privacy guard - a free PGP replacement</summary>
   <description>
 GnuPG is GNU's tool for secure communication and data storage. It can be used to
@@ -57,10 +57,13 @@ because it uses IDEA (which is patented worldwide).</description>
 
   <entry-point command="run" binary-name="gpg"/>
   <entry-point command="gpgv">
+    <needs-terminal/>
     <name>OpenPGP signature checking tool</name>
     <summary>stripped down version of gpg which is only able to check signatures</summary>
   </entry-point>
   <entry-point command="gpgsplit">
+    <needs-terminal/>
+    <name>OpenPGP Split</name>
     <summary>splits an OpenPGP message into packets</summary>
   </entry-point>
 </interface>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>NW.js</name>
+  <summary>write desktop applications with all Web technologies</summary>
+  <description>NW.js (previously known as node-webkit) lets you call all Node.js modules directly from DOM and enables a new way of writing applications with all Web technologies.</description>
+  <homepage>https://nwjs.io/</homepage>
+  <icon href="http://nwjs.io/img/logo.png" type="image/png"/>
+
+  <feed-for interface="http://repo.roscidus.com/javascript/nwjs"/>
+
+  <group license="MIT License">
+    <implementation arch="Linux-x86_64" main="nw" version="{version}-pre{rc}" released="{released}" stability="testing">
+      <manifest-digest/>
+      <archive href="https://dl.nwjs.io/v{version}-rc{rc}/nwjs-v{version}-rc{rc}-linux-x64.tar.gz" type="application/x-compressed-tar" extract="nwjs-v{version}-rc{rc}-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-i486" main="nw" version="{version}-pre{rc}" released="{released}" stability="testing">
+      <manifest-digest/>
+      <archive href="https://dl.nwjs.io/v{version}-rc{rc}/nwjs-v{version}-rc{rc}-linux-ia32.tar.gz" type="application/x-compressed-tar" extract="nwjs-v{version}-rc{rc}-linux-ia32"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" main="nwjs.app/Contents/MacOS/nwjs" version="{version}-pre{rc}" released="{released}" stability="testing">
+      <manifest-digest/>
+      <archive href="https://dl.nwjs.io/v{version}-rc{rc}/nwjs-v{version}-rc{rc}-osx-x64.zip" type="application/zip" extract="nwjs-v{version}-rc{rc}-osx-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="nw.exe" version="{version}-pre{rc}" released="{released}" stability="testing">
+      <manifest-digest/>
+      <archive href="https://dl.nwjs.io/v{version}-rc{rc}/nwjs-v{version}-rc{rc}-win-x64.zip" type="application/zip" extract="nwjs-v{version}-rc{rc}-win-x64"/>
+    </implementation>
+    <implementation arch="Windows-i486" main="nw.exe" version="{version}-pre{rc}" released="{released}" stability="testing">
+      <manifest-digest/>
+      <archive href="https://dl.nwjs.io/v{version}-rc{rc}/nwjs-v{version}-rc{rc}-win-ia32.zip" type="application/zip" extract="nwjs-v{version}-rc{rc}-win-ia32"/>
+    </implementation>
+  </group>
+</interface>

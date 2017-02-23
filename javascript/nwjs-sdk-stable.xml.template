@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>NW.js SDK</name>
+  <summary>NW.js with DevTools for debugging</summary>
+  <description>This is the full NW.js plus additional DevTools for debugging.</description>
+  <homepage>https://nwjs.io/</homepage>
+  <icon href="http://nwjs.io/img/logo.png" type="image/png"/>
+
+  <feed-for interface="http://repo.roscidus.com/javascript/nwjs-sdk"/>
+
+  <group license="MIT License">
+    <implementation arch="Linux-x86_64" main="nw" version="{version}-0" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://dl.nwjs.io/v{version}/nwjs-sdk-v{version}-linux-x64.tar.gz" type="application/x-compressed-tar" extract="nwjs-sdk-v{version}-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-i486" main="nw" version="{version}-0" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://dl.nwjs.io/v{version}/nwjs-sdk-v{version}-linux-ia32.tar.gz" type="application/x-compressed-tar" extract="nwjs-sdk-v{version}-linux-ia32"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" main="nwjs.app/Contents/MacOS/nwjs" version="{version}-0" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://dl.nwjs.io/v{version}/nwjs-sdk-v{version}-osx-x64.zip" type="application/zip" extract="nwjs-sdk-v{version}-osx-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="nw.exe" version="{version}-0" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://dl.nwjs.io/v{version}/nwjs-sdk-v{version}-win-x64.zip" type="application/zip" extract="nwjs-sdk-v{version}-win-x64"/>
+    </implementation>
+    <implementation arch="Windows-i486" main="nw.exe" version="{version}-0" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://dl.nwjs.io/v{version}/nwjs-sdk-v{version}-win-ia32.zip" type="application/zip" extract="nwjs-sdk-v{version}-win-ia32"/>
+    </implementation>
+  </group>
+</interface>

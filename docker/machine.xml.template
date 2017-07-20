@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Docker Machine</name>
+  <summary>machine management for a container-centric world</summary>
+  <description>Docker Machine is a tool that lets you install Docker Engine on virtual hosts, and manage the hosts with docker-machine commands. You can use Machine to create Docker hosts on your local Mac or Windows box, on your company network, in your data center, or on cloud providers like Azure, AWS, or Digital Ocean.</description>
+  <homepage>https://docs.docker.com/machine/</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/docker/machine"/>
+
+  <group license="Apache License 2.0">
+    <implementation arch="Windows-x86_64" version="{version}" stability="{stability}" released="{released}" main="docker-machine.exe">
+      <manifest-digest/>
+      <file href="https://github.com/docker/machine/releases/download/v{version}/docker-machine-Windows-x86_64.exe" dest="docker-machine.exe" />
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" stability="{stability}" released="{released}" main="docker-machine.exe">
+      <manifest-digest/>
+      <file href="https://github.com/docker/machine/releases/download/v{version}/docker-machine-Windows-i386.exe" dest="docker-machine.exe" />
+    </implementation>
+
+    <!-- TODO: Set executable bit -->
+    <!--<implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}" main="docker-machine">
+      <manifest-digest/>
+      <file href="https://github.com/docker/machine/releases/download/v{version}/docker-machine-Linux-x86_64" dest="docker-machine" />
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" stability="{stability}" released="{released}" main="docker-machine">
+      <manifest-digest/>
+      <file href="https://github.com/docker/machine/releases/download/v{version}/docker-machine-Linux-aarch64" dest="docker-machine" />
+    </implementation>
+    <implementation arch="Linux-armhf" version="{version}" stability="{stability}" released="{released}" main="docker-machine">
+      <manifest-digest/>
+      <file href="https://github.com/docker/machine/releases/download/v{version}/docker-machine-Linux-armhf" dest="docker-machine" />
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" stability="{stability}" released="{released}" main="docker-machine">
+      <manifest-digest/>
+      <file href="https://github.com/docker/machine/releases/download/v{version}/docker-machine-Darwin-x86_64" dest="docker-machine" />
+    </implementation>-->
+  </group>
+</interface>

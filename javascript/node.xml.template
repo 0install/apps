@@ -11,23 +11,21 @@
 
   <feed-for interface="http://repo.roscidus.com/javascript/node"/>
 
-  <!-- Use this template for odd-numbered major versions, which are Current (non-LTS) releases and therefore marked "testing". -->
-
   <group license="MIT License">
     <environment name="NPM_CLI_JS" insert="lib/node_modules/npm/bin/npm-cli.js" mode="replace"/>
     <command name="run" path="bin/node"/>
     <command name="npm" path="bin/node">
       <arg>$NPM_CLI_JS</arg>
     </command>
-    <implementation arch="Linux-x86_64" version="{version}" stability="testing" released="{released}">
+    <implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}">
       <manifest-digest/>
       <archive href="https://nodejs.org/dist/v{version}/node-v{version}-linux-x64.tar.xz" type="application/x-xz-compressed-tar" extract="node-v{version}-linux-x64"/>
     </implementation>
-    <implementation arch="Linux-i486" version="{version}" stability="testing" released="{released}">
+    <implementation arch="Linux-i486" version="{version}" stability="{stability}" released="{released}">
       <manifest-digest/>
       <archive href="https://nodejs.org/dist/v{version}/node-v{version}-linux-x86.tar.xz" type="application/x-xz-compressed-tar" extract="node-v{version}-linux-x86"/>
     </implementation>
-    <implementation arch="Darwin-x86_64" version="{version}" stability="testing" released="{released}">
+    <implementation arch="Darwin-x86_64" version="{version}" stability="{stability}" released="{released}">
       <manifest-digest/>
       <archive href="https://nodejs.org/dist/v{version}/node-v{version}-darwin-x64.tar.gz" type="application/x-compressed-tar" extract="node-v{version}-darwin-x64" />
     </implementation>
@@ -39,11 +37,11 @@
     <command name="npm" path="node.exe">
       <arg>$NPM_CLI_JS</arg>
     </command>
-    <implementation arch="Windows-x86_64" version="{version}" stability="testing" released="{released}">
+    <implementation arch="Windows-x86_64" version="{version}" stability="{stability}" released="{released}">
       <manifest-digest/>
       <archive href="https://nodejs.org/dist/v{version}/node-v{version}-x64.msi" type="application/x-msi" extract="SourceDir/nodejs"/>
     </implementation>
-    <implementation arch="Windows-i486" version="{version}" stability="testing" released="{released}">
+    <implementation arch="Windows-i486" version="{version}" stability="{stability}" released="{released}">
       <manifest-digest/>
       <archive href="https://nodejs.org/dist/v{version}/node-v{version}-x86.msi" type="application/x-msi" extract="SourceDir/nodejs"/>
     </implementation>

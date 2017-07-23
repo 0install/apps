@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Docker Client</name>
+  <summary>Docker command-line client</summary>
+  <description>Docker is a software technology providing containers. This feed allows you to run Docker's command-line client.</description>
+  <homepage>https://www.docker.com/</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/docker/client"/>
+
+  <group license="Apache License 2.0">
+    <implementation arch="Windows-x86_64" version="{version}" stability="{stability}" released="{released}" main="docker.exe">
+      <archive href="https://download.docker.com/win/static/{channel}/x86_64/docker-{version-original}.zip" type="application/zip" extract="docker"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}" main="docker">
+      <archive href="https://download.docker.com/linux/static/{channel}/x86_64/docker-{version-original}.tgz" type="application/x-compressed-tar" extract="docker"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" stability="{stability}" released="{released}" main="docker">
+      <archive href="https://download.docker.com/mac/static/{channel}/x86_64/docker-{version-original}.tgz" type="application/x-compressed-tar" extract="docker"/>
+    </implementation>
+  </group>
+</interface>

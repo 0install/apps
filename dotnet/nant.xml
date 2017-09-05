@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/dotnet/nant" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>NAnt</name>
+  <summary>free .NET build tool</summary>
+  <description>NAnt is a free .NET build tool. In theory it is kind of like make without make's wrinkles. In practice it's a lot like Ant.</description>
+  <icon href="http://0install.de/feed-icons/NAnt.png" type="image/png" />
+  <category>Development</category>
+  <category>Utility</category>
+  <homepage>http://nant.sourceforge.net/</homepage>
+  <needs-terminal />
+  <group license="GPL v2 (GNU General Public License)">
+    <command name="run" path="bin/NAnt.exe">
+      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run" />
+    </command>
+    <implementation version="0.92" released="2012-06-09" stability="stable" id="sha1new=fb883ed9664dab9e062de01d0925fc28090379fe">
+      <manifest-digest sha1new="fb883ed9664dab9e062de01d0925fc28090379fe" sha256="6827eb007efa76f0b7e954034869b2d2b2025e85632b5b7dd64568f48658f35f" sha256new="NAT6WAD67J3PBN7JKQBUQ2NS2KZAEXUFMMVVW7OWIVUPJBSY6NPQ" />
+      <archive href="http://downloads.sourceforge.net/nant/nant-0.92-bin.zip" size="4422620" type="application/zip" extract="nant-0.92" />
+    </implementation>
+  </group>
+</interface>

@@ -6,7 +6,7 @@ def find_matches(uri):
     return re.findall(r'>docker-([0-9\.\-cerc]+).zip<\/a>\s*(....-..-..)', data.decode())
 
 def convert(match, channel):
-    return {'version': match[0].replace('-ce', ''),
+    return {'version': match[0].replace('-ce', '').replace('17.0', '17.').replace('18.0', '18.'),
         'version-original': match[0],
         'stability': 'testing' if channel == 'edge' else 'stable',
         'channel': channel,

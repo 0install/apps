@@ -10,6 +10,6 @@ def convert(match):
         'released': datetime.strftime(datetime.strptime(match[1], '%d-%b-%Y'), '%Y-%m-%d')
     }
 
-data = request.urlopen(request.Request('https://services.gradle.org/distributions/')).read()
-matches = re.findall(r'<span class="name">gradle-([0-9\.\-milestonerc]+)-bin.zip<\/span>\n<span class="date">(..-...-....)', data.decode())
+data = request.urlopen('https://services.gradle.org/distributions/').read().decode('utf-8')
+matches = re.findall(r'<span class="name">gradle-([0-9\.\-milestonerc]+)-bin.zip<\/span>\n<span class="date">(..-...-....)', data)
 releases = [convert(match) for match in matches]

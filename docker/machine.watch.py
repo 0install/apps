@@ -8,5 +8,5 @@ def convert(release):
         'released': release['published_at'][0:10]
     }
 
-data = request.urlopen('https://api.github.com/repos/docker/machine/releases').read()
+data = request.urlopen('https://api.github.com/repos/docker/machine/releases').read().decode('utf-8')
 releases = [convert(release) for release in json.loads(data)]

@@ -9,5 +9,5 @@ def convert(release):
     released = release['published_at'][0:10]
     return {'version': version, 'main-version': main_version, 'build': build, 'released': released}
 
-data = request.urlopen('https://api.github.com/repos/git-for-windows/git/releases').read()
+data = request.urlopen('https://api.github.com/repos/git-for-windows/git/releases').read().decode('utf-8')
 releases = [convert(release) for release in json.loads(data) if not release['prerelease']]

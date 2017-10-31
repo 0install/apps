@@ -9,6 +9,6 @@ def convert(match):
         'released': match[1]
     }
 
-data = request.urlopen('http://archive.apache.org/dist/maven/maven-3/').read()
-matches = re.findall(r'([0-9\.\-alphabeta]+)\/<\/a>\s+(....-..-..)', data.decode())
+data = request.urlopen('http://archive.apache.org/dist/maven/maven-3/').read().decode('utf-8')
+matches = re.findall(r'([0-9\.\-alphabeta]+)\/<\/a>\s+(....-..-..)', data)
 releases = [convert(match) for match in matches]

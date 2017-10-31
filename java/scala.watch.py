@@ -9,6 +9,6 @@ def convert(match):
         'released': match[1]
     }
 
-data = request.urlopen('http://www.scala-lang.org/files/archive/').read()
-matches = re.findall(r'scala-([0-9\.\-M]+)\.zip<\/a>\s+<\/td><td align="right">(....-..-..)', data.decode())
+data = request.urlopen('http://www.scala-lang.org/files/archive/').read().decode('utf-8')
+matches = re.findall(r'scala-([0-9\.\-M]+)\.zip<\/a>\s+<\/td><td align="right">(....-..-..)', data)
 releases = [convert(match) for match in matches]

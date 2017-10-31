@@ -2,8 +2,8 @@ from urllib import request
 import re
 
 def find_matches(uri):
-    data = request.urlopen(uri).read()
-    return re.findall(r'>docker-([0-9\.\-cerc]+).zip<\/a>\s*(....-..-..)', data.decode())
+    data = request.urlopen(uri).read().decode('utf-8')
+    return re.findall(r'>docker-([0-9\.\-cerc]+).zip<\/a>\s*(....-..-..)', data)
 
 def convert(match, channel):
     return {'version': match[0].replace('-ce', '').replace('17.0', '17.').replace('18.0', '18.'),

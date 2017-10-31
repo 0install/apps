@@ -10,6 +10,6 @@ def convert(match):
         'released': datetime.strftime(datetime.strptime(match[1], '%d-%b-%Y'), '%Y-%m-%d')
     }
 
-data = request.urlopen('https://dl.nwjs.io/').read()
-matches = re.findall(r'v([0-9\.\-alphabetarc]+)\/<\/a><\/td><td align="right">(..-...-....)', data.decode())
+data = request.urlopen('https://dl.nwjs.io/').read().decode('utf-8')
+matches = re.findall(r'v([0-9\.\-alphabetarc]+)\/<\/a><\/td><td align="right">(..-...-....)', data)
 releases = [convert(match) for match in matches if match[0][0:3] == '0.2']

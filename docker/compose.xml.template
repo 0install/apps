@@ -13,15 +13,13 @@
       <manifest-digest/>
       <file href="https://github.com/docker/compose/releases/download/{version}/docker-compose-Windows-x86_64.exe" dest="docker-compose.exe" />
     </implementation>
-
-    <!-- TODO: Set executable bit -->
-    <!--<implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}" main="docker-compose">
+    <implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}" main="docker-compose" if-0install-version="2.14.1">
       <manifest-digest/>
-      <file href="https://github.com/docker/compose/releases/download/{version}/docker-compose-Linux-x86_64" dest="docker-compose" />
+      <file href="https://github.com/docker/compose/releases/download/{version}/docker-compose-Linux-x86_64" dest="docker-compose" executable="true" />
     </implementation>
-    <implementation arch="Darwin-x86_64" version="{version}" stability="{stability}" released="{released}" main="docker-compose">
+    <implementation arch="Darwin-x86_64" version="{version}" stability="{stability}" released="{released}" main="docker-compose" if-0install-version="2.14.1">
       <manifest-digest/>
-      <file href="https://github.com/docker/compose/releases/download/{version}/docker-compose-Darwin-x86_64" dest="docker-compose" />
-    </implementation>-->
+      <file href="https://github.com/docker/compose/releases/download/{version}/docker-compose-Darwin-x86_64" dest="docker-compose" executable="true" />
+    </implementation>
   </group>
 </interface>

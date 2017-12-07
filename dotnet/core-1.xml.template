@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>.NET Core Runtime</name>
+  <summary>modular and high performance implementation of .NET</summary>
+  <homepage>https://www.microsoft.com/net/core</homepage>
+  <needs-terminal />
+
+  <feed-for interface="http://repo.roscidus.com/dotnet/core" />
+
+  <group license="MIT License">
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable" main="dotnet.exe">
+      <manifest-digest />
+      <archive href="https://download.microsoft.com/download/{download-id}/dotnet-win-x64.{version}.zip" type="application/zip" />
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" released="{released}" stability="stable" main="dotnet.exe">
+      <manifest-digest />
+      <archive href="https://download.microsoft.com/download/{download-id}/dotnet-win-x86.{version}.zip" type="application/zip" />
+    </implementation>
+  </group>
+</interface>

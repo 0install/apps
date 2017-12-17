@@ -14,6 +14,7 @@ IcedTea project.</description>
   <feed arch="Windows-*" src="http://0install.de/feeds/Oracle_JDK.xml"/>
   <package-implementation distributions="Windows" package="openjdk-7-jdk"/>
   <package-implementation distributions="Windows" package="openjdk-8-jdk"/>
+  <package-implementation distributions="Windows" package="openjdk-9-jdk"/>
 
   <group>
     <!-- Windows versions of the JDK bundle their own copy of the JRE. On POSIX systems we refer back the regular JRE. -->
@@ -27,8 +28,11 @@ IcedTea project.</description>
     <package-implementation distributions="Debian" main="/usr/bin/javac" package="openjdk-7-jdk"/>
     <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-1_7_0-openjdk-devel"/>
     <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-1.7.0-openjdk-devel"/>
+    <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-1.8.0-openjdk-devel"/>
+    <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-1.9.0-openjdk-devel"/>
     <package-implementation distributions="Darwin" package="openjdk-7-jdk"/>
     <package-implementation distributions="Darwin" package="openjdk-8-jdk"/>
+    <package-implementation distributions="Darwin" package="openjdk-9-jdk"/>
 
     <package-implementation main="/usr/bin/javac" package="openjdk-6-jdk"/>
     <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-1_6_0-openjdk-devel"/>

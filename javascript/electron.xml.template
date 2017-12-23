@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Electron</name>
+  <summary>framework for creating native applications with web technologies</summary>
+  <description>Electron is a framework for creating native applications with web technologies like JavaScript, HTML, and CSS.</description>
+  <homepage>https://electronjs.org/</homepage>
+
+  <feed-for interface="http://repo.roscidus.com/javascript/electron"/>
+
+  <group license="MIT License">
+    <implementation arch="Linux-x86_64" main="electron" version="{version}" released="{released}" stability="{stability}">
+      <manifest-digest/>
+      <archive href="https://github.com/electron/electron/releases/download/v{version-original}/electron-v{version-original}-linux-x64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-i486" main="electron" version="{version}" released="{released}" stability="{stability}">
+      <manifest-digest/>
+      <archive href="https://github.com/electron/electron/releases/download/v{version-original}/electron-v{version-original}-linux-ia32.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" main="Electron.app/Contents/MacOS/Electron" version="{version}" released="{released}" stability="{stability}">
+      <manifest-digest/>
+      <archive href="https://github.com/electron/electron/releases/download/v{version-original}/electron-v{version-original}-darwin-x64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="electron.exe" version="{version}" released="{released}" stability="{stability}">
+      <manifest-digest/>
+      <archive href="https://github.com/electron/electron/releases/download/v{version-original}/electron-v{version-original}-win32-x64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" main="electron.exe" version="{version}" released="{released}" stability="{stability}">
+      <manifest-digest/>
+      <archive href="https://github.com/electron/electron/releases/download/v{version-original}/electron-v{version-original}-win32-ia32.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

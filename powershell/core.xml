@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" ?>
 <interface uri="http://repo.roscidus.com/powershell/core" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>PowerShell Core</name>
   <summary>cross-platform version of PowerShell</summary>
@@ -6,20 +6,32 @@
   <feed-for interface="http://repo.roscidus.com/powershell/powershell"/>
 
   <group license="MIT License" main="pwsh.exe">
-    <implementation arch="Windows-x86_64" version="6.0.0-rc2" released="2017-12-14" stability="testing" id="sha1new=312ea20894071193967ec59558df23b9c9aa5a5b">
+    <implementation arch="Windows-x86_64" id="sha1new=312ea20894071193967ec59558df23b9c9aa5a5b" released="2017-12-14" stability="testing" version="6.0.0-rc2">
       <manifest-digest sha256new="AZPCGKOPIDEO5NYVDLUKZD7BLBKKUHJF22YSILHBBFKQZZP6UBMA"/>
       <archive href="https://github.com/PowerShell/PowerShell/releases/download/v6.0.0-rc.2/PowerShell-6.0.0-rc.2-win-x64.zip" size="51824537" type="application/zip"/>
     </implementation>
-    <implementation arch="Windows-i486" version="6.0.0-rc2" released="2017-12-14" stability="testing" id="sha1new=bd25400b951de89949b47dbd68613dbc39c71b51">
+    <implementation arch="Windows-i486" id="sha1new=bd25400b951de89949b47dbd68613dbc39c71b51" released="2017-12-14" stability="testing" version="6.0.0-rc2">
       <manifest-digest sha256new="PM6PZ66R3BRKXQZAW3VT52WWHBW3UIALNHLVEX6ADBB6AVOCDXKA"/>
       <archive href="https://github.com/PowerShell/PowerShell/releases/download/v6.0.0-rc.2/PowerShell-6.0.0-rc.2-win-x86.zip" size="47704571" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=a81207b1b4acb86581ca27d837b8d8f35863f1e0" released="2018-01-20" stability="stable" version="6.0.0">
+      <manifest-digest sha256new="JDCQR4WE2KMDAHDWMMO7F6YW5Z22GUYSUBFO47L2GE7V3ECDF7LA"/>
+      <archive href="https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/PowerShell-6.0.0-win-x64.zip" size="51833090" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=eda4989b4b87b77d3bd86c65a2686d38af7cd2dd" released="2018-01-20" stability="stable" version="6.0.0">
+      <manifest-digest sha256new="XC46J4VPW7ZZUWY7SV5RYG7E4GFLKK4BJCXT4SMVCR4HD526ROCQ"/>
+      <archive href="https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/PowerShell-6.0.0-win-x86.zip" size="47710286" type="application/zip"/>
     </implementation>
   </group>
   <group license="MIT License" main="pwsh">
     <requires interface="http://repo.roscidus.com/lib/unwind8"/>
-    <implementation arch="Linux-x86_64" version="6.0.0-rc2" released="2017-12-14" stability="testing" id="sha1new=029dd1d8bd0d019815035dd11d525178f2c7c42c">
+    <implementation arch="Linux-x86_64" id="sha1new=029dd1d8bd0d019815035dd11d525178f2c7c42c" released="2017-12-14" stability="testing" version="6.0.0-rc2">
       <manifest-digest sha256new="KPRMKFWKGS7Z5PG4TIJOT436FS5ZDHHG5MOATNSS6GOFJLSXUFQQ"/>
       <archive href="https://github.com/PowerShell/PowerShell/releases/download/v6.0.0-rc.2/powershell-6.0.0-rc.2-linux-x64.tar.gz" size="51899076" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=90ca740ef14160dcb46a91cf54253615ed5c8878" released="2018-01-20" stability="stable" version="6.0.0">
+      <manifest-digest sha256new="TKHDHQDQW2Y6MHZAUMNQTRQ3ITOEEKVFQZSV5VZA6L7UDGVF72WQ"/>
+      <archive href="https://github.com/PowerShell/PowerShell/releases/download/v6.0.0/powershell-6.0.0-linux-x64.tar.gz" size="51905994" type="application/x-compressed-tar"/>
     </implementation>
   </group>
 

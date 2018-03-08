@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>kubectl</name>
+  <summary>controls the Kubernetes cluster manager</summary>
+  <description>Command-line client that controls the Kubernetes cluster manager.</description>
+  <homepage>https://kubernetes.io/</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/kubernetes/kubectl"/>
+
+  <group license="Apache License 2.0">
+    <group>
+      <command name="run" path="kubectl"/>
+      <implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}">
+        <manifest-digest/>
+        <archive href="https://dl.k8s.io/v{original-version}/kubernetes-client-linux-amd64.tar.gz" type="application/x-compressed-tar" extract="kubernetes/client/bin"/>
+      </implementation>
+      <implementation arch="Linux-i486" version="{version}" stability="{stability}" released="{released}">
+        <manifest-digest/>
+        <archive href="https://dl.k8s.io/v{original-version}/kubernetes-client-linux-386.tar.gz" type="application/x-compressed-tar" extract="kubernetes/client/bin"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" version="{version}" stability="{stability}" released="{released}">
+        <manifest-digest/>
+        <archive href="https://dl.k8s.io/v{original-version}/kubernetes-client-darwin-amd64.tar.gz" type="application/x-compressed-tar" extract="kubernetes/client/bin"/>
+      </implementation>
+    </group>
+    <group>
+      <command name="run" path="kubectl.exe"/>
+      <implementation arch="Windows-x86_64" version="{version}" stability="{stability}" released="{released}">
+        <manifest-digest/>
+        <archive href="https://dl.k8s.io/v{original-version}/kubernetes-client-windows-amd64.tar.gz" type="application/x-compressed-tar" extract="kubernetes/client/bin"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="{version}" stability="{stability}" released="{released}">
+        <manifest-digest/>
+        <archive href="https://dl.k8s.io/v{original-version}/kubernetes-client-windows-386.tar.gz" type="application/x-compressed-tar" extract="kubernetes/client/bin"/>
+      </implementation>
+    </group>
+  </group>
+</interface>

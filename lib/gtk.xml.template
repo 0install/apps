@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>GTK+ Runtime</name>
+  <summary>runtime components of GTK+</summary>
+  <description>This package contains the runtime components for GTK+.</description>
+  <homepage>http://www.gtk.org/</homepage>
+
+  <feed-for interface="http://repo.roscidus.com/lib/gtk"/>
+
+  <group arch="Windows-i486" license="GPL v2 (GNU General Public License)">
+    <environment insert="bin" name="PATH"/>
+    <implementation arch="Windows-i486" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="http://sourceforge.net/projects/pidgin/files/GTK%2B%20for%20Windows/{version}/gtk-runtime-{version}.zip" type="application/zip" extract="Gtk"/>
+    </implementation>
+  </group>
+</interface>

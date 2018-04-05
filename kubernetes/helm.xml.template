@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Kubernetes Helm</name>
+  <summary>the Kubernetes package manager</summary>
+  <description>Helm is a tool for managing Kubernetes charts. Charts are packages of pre-configured Kubernetes resources.</description>
+  <homepage>https://helm.sh/</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/kubernetes/helm"/>
+
+  <group license="Apache License 2.0">
+    <group>
+      <command name="run" path="helm"/>
+      <implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}">
+        <manifest-digest/>
+        <archive href="https://storage.googleapis.com/kubernetes-helm/helm-v{version}-linux-amd64.tar.gz" type="application/x-compressed-tar" extract="linux-amd64"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" version="{version}" stability="{stability}" released="{released}">
+        <manifest-digest/>
+        <archive href="https://storage.googleapis.com/kubernetes-helm/helm-v{version}-darwin-amd64.tar.gz" type="application/x-compressed-tar" extract="darwin-amd64"/>
+      </implementation>
+    </group>
+    <group>
+      <command name="run" path="helm.exe"/>
+      <implementation arch="Windows-x86_64" version="{version}" stability="{stability}" released="{released}">
+        <manifest-digest/>
+        <archive href="https://storage.googleapis.com/kubernetes-helm/helm-v{version}-windows-amd64.tar.gz" type="application/x-compressed-tar" extract="windows-amd64"/>
+      </implementation>
+    </group>
+  </group>
+</interface>

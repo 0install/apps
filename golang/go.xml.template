@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Go</name>
+  <summary>tool for managing Go source code</summary>
+  <description>This is a tool for managing Go source code. Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.</description>
+  <homepage>https://golang.org/</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/golang/go"/>
+
+  <group license="BSD License">
+    <group>
+      <command name="run" path="bin/go"/>
+      <command name="godoc" path="bin/godoc"/>
+      <command name="gofmt" path="bin/gofmt"/>
+      <implementation arch="Linux-x86_64" version="{version}" stability="stable" released="{released}">
+        <manifest-digest/>
+        <archive href="https://dl.google.com/go/go{version}.linux-amd64.tar.gz" type="application/x-compressed-tar" extract="go"/>
+      </implementation>
+      <implementation arch="Linux-i486" version="{version}" stability="stable" released="{released}">
+        <manifest-digest/>
+        <archive href="https://dl.google.com/go/go{version}.linux-386.tar.gz" type="application/x-compressed-tar" extract="go"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" version="{version}" stability="stable" released="{released}">
+        <manifest-digest/>
+        <archive href="https://dl.google.com/go/go{version}.darwin-amd64.tar.gz" type="application/x-compressed-tar" extract="go"/>
+      </implementation>
+    </group>
+    <group>
+      <command name="run" path="bin/go.exe"/>
+      <command name="godoc" path="bin/godoc.exe"/>
+      <command name="gofmt" path="bin/gofmt.exe"/>
+      <implementation arch="Windows-x86_64" version="{version}" stability="stable" released="{released}">
+        <manifest-digest/>
+        <!--<archive href="https://dl.google.com/go/go{version}.windows-amd64.zip" type="application/zip" extract="go"/>-->
+        <archive href="https://dl.google.com/go/go{version}.windows-amd64.msi" type="application/x-msi" extract="SourceDir/Go"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="{version}" stability="stable" released="{released}">
+        <manifest-digest/>
+        <!--<archive href="https://dl.google.com/go/go{version}.windows-386.zip" type="application/zip" extract="go"/>-->
+        <archive href="https://dl.google.com/go/go{version}.windows-386.msi" type="application/x-msi" extract="SourceDir/Go"/>
+      </implementation>
+    </group>
+  </group>
+</interface>

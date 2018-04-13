@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Kubernetes Operations (kops)</name>
+  <summary>production grade Kubernetes installation, upgrades, and management </summary>
+  <description>kops helps you create, destroy, upgrade and maintain production-grade, highly available, Kubernetes clusters from the command line.</description>
+  <homepage>https://github.com/kubernetes/kops</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/kubernetes/kops"/>
+
+  <group license="Apache License 2.0">
+    <implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}" main="kops">
+      <manifest-digest/>
+      <file href="https://github.com/kubernetes/kops/releases/download/{original-version}/kops-linux-amd64" dest="kops" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" stability="{stability}" released="{released}" main="kops">
+      <manifest-digest/>
+      <file href="https://github.com/kubernetes/kops/releases/download/{original-version}/kops-darwin-amd64" dest="kops" executable="true"/>
+    </implementation>
+  </group>
+</interface>

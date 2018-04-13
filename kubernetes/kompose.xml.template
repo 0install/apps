@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Kompose</name>
+  <summary>go from Docker Compose to Kubernetes</summary>
+  <description>Kompose is a tool to help users who are familiar with docker-compose move to Kubernetes. kompose takes a Docker Compose file and translates it into Kubernetes resources.</description>
+  <homepage>http://kompose.io/</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/kubernetes/kompose"/>
+
+  <group license="Apache License 2.0">
+    <implementation arch="Windows-x86_64" version="{version}" stability="stable" released="{released}" main="kompose.exe">
+      <manifest-digest/>
+      <file href="https://github.com/kubernetes/kompose/releases/download/v{version}/kompose-windows-amd64.exe" dest="kompose.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="{version}" stability="stable" released="{released}" main="kompose">
+      <manifest-digest/>
+      <file href="https://github.com/kubernetes/kompose/releases/download/v{version}/kompose-linux-amd64" dest="kompose" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" stability="stable" released="{released}" main="kompose">
+      <manifest-digest/>
+      <file href="https://github.com/kubernetes/kompose/releases/download/v{version}/kompose-darwin-amd64" dest="kompose" executable="true"/>
+    </implementation>
+  </group>
+</interface>

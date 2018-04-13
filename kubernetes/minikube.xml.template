@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Minikube</name>
+  <summary>run Kubernetes locally</summary>
+  <description>Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day.</description>
+  <homepage>https://github.com/kubernetes/minikube</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/kubernetes/minikube"/>
+
+  <group license="Apache License 2.0">
+    <implementation arch="Windows-x86_64" version="{version}" stability="stable" released="{released}" main="minikube.exe">
+      <manifest-digest/>
+      <file href="https://github.com/kubernetes/minikube/releases/download/v{version}/minikube-windows-amd64" dest="minikube.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="{version}" stability="stable" released="{released}" main="minikube">
+      <manifest-digest/>
+      <file href="https://github.com/kubernetes/minikube/releases/download/v{version}/minikube-linux-amd64" dest="minikube" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" stability="stable" released="{released}" main="minikube">
+      <manifest-digest/>
+      <file href="https://github.com/kubernetes/minikube/releases/download/v{version}/minikube-darwin-amd64" dest="minikube" executable="true"/>
+    </implementation>
+  </group>
+</interface>

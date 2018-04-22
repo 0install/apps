@@ -5,16 +5,19 @@
   <homepage>http://www.gradle.org/</homepage>
   <category>Development</category>
   <needs-terminal/>
+
   <feed-for interface="http://repo.roscidus.com/java/gradle"/>
+
   <group license="The Apache Software License, Version 2.0">
-    <environment name="APP_BASE_NAME" insert="" mode="replace"/>
+    <requires interface="http://repo.roscidus.com/java/openjdk-jdk">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+    <environment insert="lib/*" name="CLASSPATH"/>
     <command name="run">
       <runner command="java" interface="http://repo.roscidus.com/java/openjdk-jdk">
         <for-each item-from="GRADLE_OPTS" separator=" ">
           <arg>$item</arg>
         </for-each>
-        <arg>-Dorg.gradle.appname=$APP_BASE_NAME</arg>
-        <arg>-classpath</arg>
         <arg>org.gradle.launcher.GradleMain</arg>
       </runner>
     </command>

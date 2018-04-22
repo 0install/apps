@@ -5,13 +5,13 @@
   <homepage>http://maven.apache.org/</homepage>
   <category>Development</category>
   <needs-terminal/>
+
   <group license="The Apache Software License, Version 2.0">
-    <environment insert="" mode="replace" name="M2_HOME"/>
-    <environment insert="boot/*" mode="replace" name="CLASSWORLDS_JAR"/>
-    <environment mode="replace" name="CLASSWORLDS_LAUNCHER" value="org.codehaus.plexus.classworlds.launcher.Launcher"/>
     <requires interface="http://repo.roscidus.com/java/openjdk-jdk">
       <environment insert="" mode="replace" name="JAVA_HOME"/>
     </requires>
+    <environment insert="" mode="replace" name="M2_HOME"/>
+    <environment insert="boot/*" name="CLASSPATH"/>
     <command name="run">
       <runner command="java" interface="http://repo.roscidus.com/java/openjdk-jdk">
         <for-each item-from="MAVEN_OPTS" separator=" ">
@@ -20,9 +20,7 @@
         <arg>-Dclassworlds.conf=$M2_HOME/bin/m2.conf</arg>
         <arg>-Dmaven.home=$M2_HOME</arg>
         <arg>-Dmaven.multiModuleProjectDirectory=$MAVEN_PROJECTBASEDIR</arg>
-        <arg>-classpath</arg>
-        <arg>$CLASSWORLDS_JAR</arg>
-        <arg>$CLASSWORLDS_LAUNCHER</arg>
+        <arg>org.codehaus.plexus.classworlds.launcher.Launcher</arg>
       </runner>
     </command>
     <implementation id="sha1new=e788278471bb86db90710c9273998606aa5c4fe5" released="2013-02-23" stability="stable" version="3.0.5">

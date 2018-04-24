@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>helmfile</name>
+  <summary>deploy Kubernetes Helm Charts</summary>
+  <description>helmfile is a declarative spec for deploying Kubernetes Helm Charts.</description>
+  <homepage>https://github.com/roboll/helmfile</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/kubernetes/helmfile"/>
+
+  <group license="MIT License">
+    <requires interface="http://repo.roscidus.com/kubernetes/helm">
+      <executable-in-path name="helm"/>
+    </requires>
+    <implementation arch="Windows-x86_64" version="{version}" stability="stable" released="{released}" main="helmfile.exe">
+      <manifest-digest/>
+      <file href="https://github.com/roboll/helmfile/releases/download/v{version}/helmfile_windows_amd64.exe" dest="helmfile.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" stability="stable" released="{released}" main="helmfile.exe">
+      <manifest-digest/>
+      <file href="https://github.com/roboll/helmfile/releases/download/v{version}/helmfile_windows_386.exe" dest="helmfile.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="{version}" stability="stable" released="{released}" main="helmfile">
+      <manifest-digest/>
+      <file href="https://github.com/roboll/helmfile/releases/download/v{version}/helmfile_linux_amd64" dest="helmfile" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i486" version="{version}" stability="stable" released="{released}" main="helmfile">
+      <manifest-digest/>
+      <file href="https://github.com/roboll/helmfile/releases/download/v{version}/helmfile_linux_386" dest="helmfile" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" stability="stable" released="{released}" main="helmfile">
+      <manifest-digest/>
+      <file href="https://github.com/roboll/helmfile/releases/download/v{version}/helmfile_darwin_amd64" dest="helmfile" executable="true"/>
+    </implementation>
+  </group>
+</interface>

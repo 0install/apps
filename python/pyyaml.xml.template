@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>PyYAML</name>
+  <summary>YAML parser and emitter for Python</summary>
+  <description>The next generation YAML parser and emitter for Python.</description>
+  <homepage>https://github.com/yaml/pyyaml</homepage>
+
+  <feed-for interface="http://repo.roscidus.com/python/pyyaml"/>
+
+  <group license="MIT License">
+    <environment name="PYTHONPATH" insert="."/>
+    <implementation version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/yaml/pyyaml/archive/{version-original}.tar.gz" type="application/x-compressed-tar" extract="pyyaml-{version-original}"/>
+    </implementation>
+  </group>
+</interface>

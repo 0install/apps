@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Vagrant</name>
+  <summary>tool for building and distributing development environments</summary>
+  <description>Development environments managed by Vagrant can run on local virtualized platforms such as VirtualBox or VMware, in the cloud via AWS or OpenStack, or in containers such as with Docker or raw LXC.</description>
+  <homepage>https://www.vagrantup.com/</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/hashicorp/vagrant"/>
+
+  <group license="MIT License">
+    <group>
+      <command name="run" path="vagrant"/>
+      <implementation arch="Linux-x86_64" version="{version}" stability="stable">
+        <manifest-digest/>
+        <archive href="https://releases.hashicorp.com/vagrant/{version}/vagrant_{version}_linux_amd64.zip" type="application/zip"/>
+      </implementation>
+    </group>
+    <group>
+      <command name="run" path="bin/vagrant.exe"/>
+      <implementation arch="Windows-x86_64" version="{version}" stability="stable">
+        <manifest-digest/>
+        <archive href="https://releases.hashicorp.com/vagrant/{version}/vagrant_{version}_x86_64.msi" type="application/x-msi" extract="SourceDir/HashiCorp/Vagrant"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="{version}" stability="stable">
+        <manifest-digest/>
+        <archive href="https://releases.hashicorp.com/vagrant/{version}/vagrant_{version}_i686.msi" type="application/x-msi" extract="SourceDir/HashiCorp/Vagrant"/>
+      </implementation>
+    </group>
+  </group>
+</interface>

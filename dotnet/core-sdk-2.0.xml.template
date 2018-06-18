@@ -13,11 +13,20 @@
     <group main="dotnet.exe">
       <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
         <manifest-digest/>
-        <archive href="https://download.microsoft.com/download/{download-id}/dotnet-dev-win-x64.{version}.zip" type="application/zip"/>
+        <archive href="https://download.microsoft.com/download/{download-id}/dotnet-sdk-{version}-win-x64.zip" type="application/zip"/>
       </implementation>
       <implementation arch="Windows-i486" version="{version}" released="{released}" stability="stable">
         <manifest-digest/>
-        <archive href="https://download.microsoft.com/download/{download-id}/dotnet-dev-win-x86.{version}.zip"  type="application/zip"/>
+        <archive href="https://download.microsoft.com/download/{download-id}/dotnet-sdk-{version}-win-x86.zip" type="application/zip"/>
+      </implementation>
+    </group>
+
+    <group arch="Linux-x86_64" license="MIT License" main="dotnet">
+      <requires interface="http://repo.roscidus.com/lib/curl"/>
+      <requires interface="http://repo.roscidus.com/lib/unwind"/>
+      <implementation version="{version}" released="{released}" stability="stable">
+        <manifest-digest/>
+        <archive href="https://download.microsoft.com/download/{download-id}/dotnet-sdk-{version}-linux-x64.tar.gz" type="application/x-compressed-tar"/>
       </implementation>
     </group>
   </group>

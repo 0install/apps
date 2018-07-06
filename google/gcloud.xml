@@ -1,0 +1,224 @@
+<?xml version="1.0" ?>
+<interface uri="http://repo.roscidus.com/google/gcloud" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Google Cloud SDK</name>
+  <summary>set of tools for Google Cloud Platform</summary>
+  <description>The Google Cloud SDK is a set of tools for the Google Cloud Platform. It contains gcloud, gsutil, and bq, which you can use to access Google Compute Engine, Google Cloud Storage, Google BigQuery, and other products and services from the command-line.</description>
+  <homepage>https://cloud.google.com/sdk/</homepage>
+  <needs-terminal/>
+
+  <group license="Apache License 2.0">
+    <command name="run" path="lib/gcloud.py">
+      <runner interface="http://repo.roscidus.com/python/python" version="2..!3"/>
+    </command>
+    <command name="gsutil" path="bin/bootstrapping/gsutil.py">
+      <runner interface="http://repo.roscidus.com/python/python" version="2..!3"/>
+    </command>
+    <command name="bq" path="bin/bootstrapping/bq.py">
+      <runner interface="http://repo.roscidus.com/python/python" version="2..!3"/>
+    </command>
+    <implementation arch="Linux-x86_64" id="sha1new=3846f2971a2ea1def394e96232232074cff0af80" released="2018-05-01" stability="stable" version="200.0.0">
+      <manifest-digest sha256new="A5IFCHAI3DNA7JFJV7CJYN7MBXJ3KA3XP7ZLFEKJ44HIWP3S4UNA"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-200.0.0-linux-x86_64.tar.gz" size="19607189" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i486" id="sha1new=c1410cf1fe5963de6381400629bf05315162c7ad" released="2018-05-01" stability="stable" version="200.0.0">
+      <manifest-digest sha256new="2TQBGFVR4Q2MJVVWYFHOJPBBW3GQVNQBLAF536FKC6BKD4YH6UFQ"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-200.0.0-linux-x86.tar.gz" size="19196936" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=5ca491a9b9fb42205b76fc4c5b027c471f61d76a" released="2018-05-01" stability="stable" version="200.0.0">
+      <manifest-digest sha256new="5SXFRRKYO4TEZAE3RIAV2KQAVYPOP7H726YLZR37XBSEW7OXMMHQ"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-200.0.0-darwin-x86_64.tar.gz" size="15669468" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i486" id="sha1new=20e6c3ff68346b0012a5b5ca92eaeec965aa397d" released="2018-05-01" stability="stable" version="200.0.0">
+      <manifest-digest sha256new="4QDR62DTW2ROBFIH6ZPVAWM2CXPDEPVUDJDE5MFRW2GRMWNXZVJA"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-200.0.0-darwin-x86.tar.gz" size="15667043" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=8130c3c0482b37025b50bd493cd774b0a886b0cc" released="2018-05-01" stability="stable" version="200.0.0">
+      <manifest-digest sha256new="A33DFBBEIEASM2SK4VAHAQXLI6NSYIHBV7UJEHJLEFM5H2PNQBKA"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-200.0.0-windows-x86_64.zip" size="100219566" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=a60030068ef3806159b6b68dfe353a892ddb4d3b" released="2018-05-01" stability="stable" version="200.0.0">
+      <manifest-digest sha256new="AENI2NCTU7LAW3BUKK4DWPAICRRTBP3DPG7RJQFBR2MNRKKQRFZQ"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-200.0.0-windows-x86.zip" size="100413084" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=f2e6c534912ae4ced167e4ed1db62bd2da1616f3" released="2018-05-15" stability="stable" version="201.0.0">
+      <manifest-digest sha256new="EGAJG57WU6MYNM57PP3CGTL5JBSSSI6L7QF62LQOCK4PNACNZCRA"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-201.0.0-linux-x86_64.tar.gz" size="19675245" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i486" id="sha1new=26b20d0591b6317e2abe6542527202576d12cde5" released="2018-05-15" stability="stable" version="201.0.0">
+      <manifest-digest sha256new="FSCC6S67ZVCVFPGAKD4YVSEPA6KYJ2ZHN7DF4DXJ3XH45BQS6F6Q"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-201.0.0-linux-x86.tar.gz" size="19263627" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=91efe447c2a1a122186af078877548f7f663a117" released="2018-05-15" stability="stable" version="201.0.0">
+      <manifest-digest sha256new="MVFCTPGSQ3LIO62NHVDZ44KP2TLDJQGO47XV2IFJ6II3VPR45ORQ"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-201.0.0-darwin-x86_64.tar.gz" size="15734245" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i486" id="sha1new=4dfc4d618494e47bb8481ff5611536045b3bb699" released="2018-05-15" stability="stable" version="201.0.0">
+      <manifest-digest sha256new="TIRB3SVYANKRRXMG3TA2FKUW6KGVKA4466WP2OPYIL446WM6XPNA"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-201.0.0-darwin-x86.tar.gz" size="15734291" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=2999ab7428fbfd0408f6de303f236fa76fa1dab6" released="2018-05-15" stability="stable" version="201.0.0">
+      <manifest-digest sha256new="CJTPHZOKKXCDKXWXW4UBLF4FLLGGEDIOA37ZKOJVT4JYAAD6NR6Q"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-201.0.0-windows-x86_64.zip" size="101110384" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=e5b88732b226f53d1bcd8317f3ac02308524eda0" released="2018-05-15" stability="stable" version="201.0.0">
+      <manifest-digest sha256new="FAIE6JWEYH2XPMZTNQEHC7RXKTM6PIZ2LRDGDW5SXBQWD3KGII3Q"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-201.0.0-windows-x86.zip" size="101303902" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=a6519f525c09df4c0ad7622121c923803256159f" released="2018-05-22" stability="stable" version="202.0.0">
+      <manifest-digest sha256new="WLF4WA6I3DRLOB3Q3CCLNOAUQU5BOUVEHBYDTASY22JDDSMTMXUA"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-202.0.0-linux-x86_64.tar.gz" size="19697286" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i486" id="sha1new=6a958d3e8952a141f7b3594bfc5036d2403a4e07" released="2018-05-22" stability="stable" version="202.0.0">
+      <manifest-digest sha256new="66OROSCBF32FZAWD5YNHG3AM2MQO7FMBT5XKUYZCDNEGFYUUJIEA"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-202.0.0-linux-x86.tar.gz" size="19288624" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=a288f24ca9d8870f03f87e848b142b746cbca533" released="2018-05-22" stability="stable" version="202.0.0">
+      <manifest-digest sha256new="5VSVICPDWIKE3WEZS6ST6OQQL32Q5N2WMCY24IIUHFRC2FQBBQXQ"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-202.0.0-darwin-x86_64.tar.gz" size="15755318" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i486" id="sha1new=04bedc8681e2ea46c485f5da96e2e534957c1923" released="2018-05-22" stability="stable" version="202.0.0">
+      <manifest-digest sha256new="EOYQZJ673ZY4DHRCEMLDVG3W4ODYHV5DIUR3BEJ24FOOJKDQTGWA"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-202.0.0-darwin-x86.tar.gz" size="15755656" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=6c5b49418d06dc524a6ac2d63ab3959d0930a0a4" released="2018-05-22" stability="stable" version="202.0.0">
+      <manifest-digest sha256new="WXWCCDHB7QFAPRD23PK3KTM2HPEAU4GQXSNJAWVCYM7P4XUJQLSQ"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-202.0.0-windows-x86_64.zip" size="101503126" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=172e685f99ef185c593d3894a2dea65744b33aa2" released="2018-05-22" stability="stable" version="202.0.0">
+      <manifest-digest sha256new="YC6ESCORX2LWT74SI7TLIRNBVXY5Y5SU7QSYPZCIQX7DTCFJKSFQ"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-202.0.0-windows-x86.zip" size="101696644" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=f7c6d36f2cbb632f354964e72ebcdfcafc73e848" released="2018-05-30" stability="stable" version="203.0.0">
+      <manifest-digest sha256new="4W7TSJ7PBD2C4ZS6WKUU4OEOTFBW3ZWBYOUWYGOOCVPMUEYZSHEA"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-203.0.0-linux-x86_64.tar.gz" size="19974870" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i486" id="sha1new=b34264bb1d4c98afee6c5ae59e9b2a47110a6b03" released="2018-05-30" stability="stable" version="203.0.0">
+      <manifest-digest sha256new="2AUPZPN7KJCE3RMCV35SXYIFYPM2DMECXILVYB6GQ4MOJ2AYYKMA"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-203.0.0-linux-x86.tar.gz" size="19561975" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=ee4cf155aacaceff3ff0ffb78dd3c5e74a7d1614" released="2018-05-30" stability="stable" version="203.0.0">
+      <manifest-digest sha256new="JBF55GEGMY4F46KN2PD6EFIWWAFPIQNT24VGUA2JZTMPLQPYXRWQ"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-203.0.0-darwin-x86_64.tar.gz" size="16031284" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i486" id="sha1new=95bbe557844f71315272821cb58520117ca59f3a" released="2018-05-30" stability="stable" version="203.0.0">
+      <manifest-digest sha256new="453KSEYOIYKVX3GCUZWJON7KT3AJLHPO4HFHMI3NDRPYJLCPD7IQ"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-203.0.0-darwin-x86.tar.gz" size="16033555" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=2a32e445563e24fb199f84544b84b17428d5608d" released="2018-05-30" stability="stable" version="203.0.0">
+      <manifest-digest sha256new="4BXIXIXOZ3AE2GIOGPEMDUIQ467TBW4PITM3I7MKT5YYFVNZIR4Q"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-203.0.0-windows-x86_64.zip" size="103214339" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=56f961459e7b7452bdeb9f3284e613f7c8af38c3" released="2018-05-30" stability="stable" version="203.0.0">
+      <manifest-digest sha256new="H7QF4KLX2HWVXIFTVNGY3ROKTHVKMPUDB7MCWAB6IBQ2BGBZHZZA"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-203.0.0-windows-x86.zip" size="103407857" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=2b49caf05e2ff77f99e0992cf399164dddb12bdd" released="2018-06-05" stability="stable" version="204.0.0">
+      <manifest-digest sha256new="K7EMO5AWWOZW4B6IIQQDXD2VPS4572JGMTARRGJWYSYRWPTMLSAA"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-204.0.0-linux-x86_64.tar.gz" size="19983889" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i486" id="sha1new=4413aba2d086f391c33528bd3c4f1966e585e61d" released="2018-06-05" stability="stable" version="204.0.0">
+      <manifest-digest sha256new="NXJPDM4C6HKVTBYUZM4LT2ZJIIYWNJ4SJJWOZ2SCQKYXH6NT4RSA"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-204.0.0-linux-x86.tar.gz" size="19570489" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=d739abe9b6ea14ad81ad2502d50b9d37a2c33212" released="2018-06-05" stability="stable" version="204.0.0">
+      <manifest-digest sha256new="5GDGYTJ5JQ7SZXU6LA6T3DQSZDGWZKHPHSTFP7DVB6BCDJI7G2AA"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-204.0.0-darwin-x86_64.tar.gz" size="16042861" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i486" id="sha1new=4ffb6e917623a8547386dca97ed9007ed2087378" released="2018-06-05" stability="stable" version="204.0.0">
+      <manifest-digest sha256new="VUEE574WGOSF4H4E4KGDPNYF6VMGD7FGKUIN4HBNWDOSF4OFKE5A"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-204.0.0-darwin-x86.tar.gz" size="16042093" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=550b6ec72a254ada92912524ed81147c46c92634" released="2018-06-05" stability="stable" version="204.0.0">
+      <manifest-digest sha256new="KNKMX63EPWVVYQFM5XFPSTRWABXHGGC3ZUGST5KNR53ITNBEKQHA"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-204.0.0-windows-x86_64.zip" size="103406178" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=40f38f3fcb98513bf34fc562691ac5461866494e" released="2018-06-05" stability="stable" version="204.0.0">
+      <manifest-digest sha256new="6ISC3YD44ZPWY74N42CLET3L4Y7NZ3POOROD7AUPIMGI47U6WHJA"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-204.0.0-windows-x86.zip" size="103599696" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=6d46dbd528f0a8c3924313e172f728079c2a87de" released="2018-06-12" stability="stable" version="205.0.0">
+      <manifest-digest sha256new="W2PB76JKAA5XGN3Q2IWUPQTVT65OS4VWVUEAVGX6I56NF6OOQ2WQ"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-205.0.0-linux-x86_64.tar.gz" size="20055033" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i486" id="sha1new=5fff4fb0fa49c15d1653b94c614afc15717b0021" released="2018-06-12" stability="stable" version="205.0.0">
+      <manifest-digest sha256new="YXZ7JU3STCMNTQXB46DKCELQAHTTT5HQSWCXBAZEOEW7L7SPMQEQ"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-205.0.0-linux-x86.tar.gz" size="19644856" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=01e882c7382da08b355ef677a71b8808f625f9cc" released="2018-06-12" stability="stable" version="205.0.0">
+      <manifest-digest sha256new="P27SBTBXSHY7L33Y6WXTNDY3LWWHTGGHSINELUW2V3VHT35HQEKA"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-205.0.0-darwin-x86_64.tar.gz" size="16115350" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i486" id="sha1new=4cd0c35b6de9b60aab71b26a60db212d5d39c196" released="2018-06-12" stability="stable" version="205.0.0">
+      <manifest-digest sha256new="GA56MWXRRR7CW64UIAU2XQ27IQIPY3XW2SYY3U5JX7WH55HPOTWA"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-205.0.0-darwin-x86.tar.gz" size="16112766" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=29e4f1e7ce6e35a81c9307e858e4c2714f356600" released="2018-06-12" stability="stable" version="205.0.0">
+      <manifest-digest sha256new="5WACKKHZ4JSIJFMQ4A6MMMVSFWUTHP4ED66PQKEME3IWXNJUCC2A"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-205.0.0-windows-x86_64.zip" size="103972381" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=29aee88a995761d08fca5abc026ff95a410c495d" released="2018-06-12" stability="stable" version="205.0.0">
+      <manifest-digest sha256new="EBJ7ETO4ORPWIBA4SOXTIKTL2EA2AYWSZNDJTUI4V77S6MHV2QQA"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-205.0.0-windows-x86.zip" size="104165899" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=d041d80a3cce4140b4e4e875f30b71c67f0e9e82" released="2018-06-19" stability="stable" version="206.0.0">
+      <manifest-digest sha256new="DDYWMTFRIJJWMA3A2WVZ4E2MXPSFJSTVNHVTONQMJDKYLLEOSYKA"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-206.0.0-linux-x86_64.tar.gz" size="20070992" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i486" id="sha1new=23d1adff6ab6b112f2a44e48c6f9383506d225aa" released="2018-06-19" stability="stable" version="206.0.0">
+      <manifest-digest sha256new="C4U43AYHSZEWR6QTMZUWWOZVTXVWRTSL2DFZ7QEYYH56DM4A23VQ"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-206.0.0-linux-x86.tar.gz" size="19659710" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=c860331fe619c002216098419459dd2ac958514d" released="2018-06-19" stability="stable" version="206.0.0">
+      <manifest-digest sha256new="LOZHICYM3JMTO4IMIVRQJ534M22PQ7NK4ITR5V3BS4WZRSJJ577A"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-206.0.0-darwin-x86_64.tar.gz" size="16131211" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i486" id="sha1new=7d7c6c7845cfd1be405e29ac6836e118650c5c7d" released="2018-06-19" stability="stable" version="206.0.0">
+      <manifest-digest sha256new="37XMIO62KFTHF2SS6XOJX4JY2KFVL565B7G75EXQYSKKJB4SBIWA"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-206.0.0-darwin-x86.tar.gz" size="16130499" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=ea81c65be5c892e73cc6f740eee4d751449b7a83" released="2018-06-19" stability="stable" version="206.0.0">
+      <manifest-digest sha256new="TCLLO3KASWUYBDKQVWREJZ3HKTKE34LF6WGZXL6CFMAFRQD3IJEA"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-206.0.0-windows-x86_64.zip" size="104047096" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=57c3f85a8f7223de9f276259c11009a92bd2aac6" released="2018-06-19" stability="stable" version="206.0.0">
+      <manifest-digest sha256new="4XA45MOM5KWQ54IWHJFSK4MQ2TB3GFSTEWKLDWQHDIQOCTYIH3WQ"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-206.0.0-windows-x86.zip" size="104240614" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=b5d4f9a73534c7d99ee0d51e9f9b81cace8d9c1f" released="2018-06-26" stability="stable" version="207.0.0">
+      <manifest-digest sha256new="VTHIVU5EWD6752LDVZQSJWHCHYBAX7DMMRXMEWIP6U375GLVXW2A"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-207.0.0-linux-x86_64.tar.gz" size="20143689" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i486" id="sha1new=6b76a0856ad71681d71925a7dde4588d1675ba0b" released="2018-06-26" stability="stable" version="207.0.0">
+      <manifest-digest sha256new="3P3WCID7SD4JCHCF4OZHC3XFTJOLR2ETM5TVE7HHZUAEH5V5HVJQ"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-207.0.0-linux-x86.tar.gz" size="19730563" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=7b81ebf3e67f49e92d7a23c3fd1b349697fe929f" released="2018-06-26" stability="stable" version="207.0.0">
+      <manifest-digest sha256new="JXX6VX7QHMXRUT22NP3SDLYMIQS2VFEGT7I72YMCO2ODIOLOPSIQ"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-207.0.0-darwin-x86_64.tar.gz" size="16201578" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i486" id="sha1new=7f8272d4ea1274bbec6004d36c386f6525415b6c" released="2018-06-26" stability="stable" version="207.0.0">
+      <manifest-digest sha256new="F5IGYX2CI3PWI3Y4QAVFJAEFRPMFWXCYEP6JCCHGRREFYAJBEY5A"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-207.0.0-darwin-x86.tar.gz" size="16201349" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=772edd178336b40f9624eb3d16293e496590f4f1" released="2018-06-26" stability="stable" version="207.0.0">
+      <manifest-digest sha256new="OAEYD5O4SNP4QQLL2NJNQ6HORVDVQFWEAESWZP4IUL2Y5ARE44JQ"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-207.0.0-windows-x86_64.zip" size="104788863" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=c9ff6e2f25cdb8d862f54d6bbce59acd15872c12" released="2018-06-26" stability="stable" version="207.0.0">
+      <manifest-digest sha256new="LTBLZKK5R7LA6RNJJ5VUO4QWEXV6C7L7YDRUNKNEJWFXUNO3TSKQ"/>
+      <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-207.0.0-windows-x86.zip" size="104982381" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <entry-point binary-name="gcloud" command="run">
+    <description>command-line tool for Google Cloud</description>
+  </entry-point>
+  <entry-point binary-name="gsutil" command="gsutil">
+    <needs-terminal/>
+    <description>command-line tool for Google Cloud Storage</description>
+  </entry-point>
+  <entry-point binary-name="bq" command="bq">
+    <needs-terminal/>
+    <description>command-line tool for BigQuery</description>
+  </entry-point>
+</interface>

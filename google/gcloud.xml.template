@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Google Cloud SDK</name>
+  <summary>set of tools for Google Cloud Platform</summary>
+  <description>The Google Cloud SDK is a set of tools for the Google Cloud Platform. It contains gcloud, gsutil, and bq, which you can use to access Google Compute Engine, Google Cloud Storage, Google BigQuery, and other products and services from the command-line.</description>
+  <homepage>https://cloud.google.com/sdk/</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/google/gcloud"/>
+
+  <group license="Apache License 2.0">
+    <command name="run" path="lib/gcloud.py">
+      <runner interface="http://repo.roscidus.com/python/python" version="2..!3"/>
+    </command>
+    <command name="gsutil" path="bin/bootstrapping/gsutil.py">
+      <runner interface="http://repo.roscidus.com/python/python" version="2..!3"/>
+    </command>
+    <command name="bq" path="bin/bootstrapping/bq.py">
+      <runner interface="http://repo.roscidus.com/python/python" version="2..!3"/>
+    </command>
+    <implementation arch="Linux-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-{version}-linux-x86_64.tar.gz" type="application/x-compressed-tar" extract="google-cloud-sdk"/>
+    </implementation>
+    <implementation arch="Linux-i486" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-{version}-linux-x86.tar.gz" type="application/x-compressed-tar" extract="google-cloud-sdk"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-{version}-darwin-x86_64.tar.gz" type="application/x-compressed-tar" extract="google-cloud-sdk"/>
+    </implementation>
+    <implementation arch="Darwin-i486" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-{version}-darwin-x86.tar.gz" type="application/x-compressed-tar" extract="google-cloud-sdk"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-{version}-windows-x86_64.zip" type="application/zip" extract="google-cloud-sdk"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-{version}-windows-x86.zip" type="application/zip" extract="google-cloud-sdk"/>
+    </implementation>
+  </group>
+</interface>

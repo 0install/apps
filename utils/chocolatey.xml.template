@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>chocolatey</name>
+  <summary>package manager for Windows</summary>
+  <description>Chocolatey is a package manager for Windows (like apt-get but for Windows). It was designed to be a decentralized framework for quickly installing applications and tools that you need. It is built on the NuGet infrastructure currently using PowerShell as its focus for delivering packages from the distros to your door, err computer.</description>
+  <icon href="https://chocolatey.org/content/packageimages/chocolatey.0.10.11.png" type="image/png"/>
+  <homepage>https://chocolatey.org/</homepage>
+  <needs-terminal/>
+  <feed-for interface="http://repo.roscidus.com/chocolatey/chocolatey"/>
+
+  <group arch="Windows-*" license="Apache License, Version 2.0">
+    <command name="run" path="chocolateyInstall/choco.exe">
+      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+    </command>
+    <command name="refresh-env" path="chocolateyInstall/redirects/RefreshEnv.cmd"/>
+
+    <!-- Aliases -->
+    <command name="chocolatey" path="chocolateyInstall/choco.exe">
+      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+    </command>
+    <command name="install" path="chocolateyInstall/choco.exe">
+      <arg>install</arg>
+      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+    </command>
+    <command name="uninstall" path="chocolateyInstall/choco.exe">
+      <arg>uninstall</arg>
+      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+    </command>
+    <command name="upgrade" path="chocolateyInstall/choco.exe">
+      <arg>upgrade</arg>
+      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+    </command>
+    <command name="list" path="chocolateyInstall/choco.exe">
+      <arg>list</arg>
+      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+    </command>
+    <command name="pack" path="chocolateyInstall/choco.exe">
+      <arg>pack</arg>
+      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+    </command>
+    <command name="push" path="chocolateyInstall/choco.exe">
+      <arg>push</arg>
+      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+    </command>
+
+    <implementation version="{version}" released="{released}" stability="{stability}">
+      <manifest-digest/>
+      <archive href="https://chocolatey.org/api/v2/package/chocolatey/{original-version}" type="application/zip" extract="tools"/>
+    </implementation>
+  </group>
+</interface>

@@ -1,6 +1,8 @@
 from urllib import request
 import json
 
+excluded_versions = ['v1.8.0', 'v2.1.0-unsupported.20180809']
+
 def convert(release):
     return {
         'version': release['tag_name'][1:].replace('beta.', 'pre'),
@@ -10,4 +12,4 @@ def convert(release):
     }
 
 data = request.urlopen('https://api.github.com/repos/electron/electron/releases').read().decode('utf-8')
-releases = [convert(release) for release in json.loads(data) if release['tag_name'] != 'v1.8.0']
+releases = [convert(release) for release in json.loads(data) if not release['tag_name'] in excluded_versions]

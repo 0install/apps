@@ -1,12 +1,9 @@
 from urllib import request
-import re
+import json
 
-def convert(match):
-    return {'version': match[0] + "-" + (str(ord(match[1][0]) - 96) if len(match[1]) == 1 else "0"),
-        'version-original': match[0] + match[1],
-        'released': match[2]
-    }
+# Convert OpenSSL version number (e.g., 1.1.0b) into Zero Install version number (e.g., 1.1.0-2)
+def convert(version):
+    return version[0:5] + "-" + str(ord(version[5]) - 96) if len(version) == 6 else version
 
-data = request.urlopen('https://indy.fulgan.com/SSL/').read().decode('utf-8')
-matches = re.findall(r'">openssl-([0-9]\.[0-9]\.[0-9])([a-z]?)-x64_86-win64.zip</a>\s+(....-..-..)', data)
-releases = [convert(match) for match in matches]
+data = json.loads(request.urlopen('https://api.bintray.com/packages/vszakats/generic/openssl').read().decode('utf-8'))
+releases = [{'version': convert(version), 'version-original': version, 'released': data['updated'][0:10]} for version in data['versions']]

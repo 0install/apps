@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Kotlin</name>
+  <summary>statically typed programming language for modern multiplatform applications</summary>
+  <description>Kotlin is a statically typed programming language for modern multiplatform applications. 100% interoperable with Java and Android.</description>
+  <homepage>http://kotlinlang.org/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+
+  <icon href="http://0install.de/feeds/images/Kotlin.png" type="image/png"/>
+  <icon href="http://0install.de/feeds/images/Kotlin.ico" type="image/vnd.microsoft.icon"/>
+
+  <feed-for interface="http://repo.roscidus.com/java/kotlin"/>
+
+  <group license="Apache License 2.0">
+    <environment insert="." mode="replace" name="KOTLIN_HOME"/>
+    <command name="run">
+      <runner interface="http://repo.roscidus.com/java/openjdk-jre">
+        <arg>-Dkotlin.home=$KOTLIN_HOME</arg>
+        <arg>-cp</arg>
+        <arg>$KOTLIN_HOME/lib/kotlin-runner.jar</arg>
+        <arg>org.jetbrains.kotlin.runner.Main</arg>
+      </runner>
+    </command>
+    <command name="kotlinc">
+      <runner interface="http://repo.roscidus.com/java/openjdk-jre">
+        <arg>-Dkotlin.home=$KOTLIN_HOME</arg>
+        <arg>-cp</arg>
+        <arg>$KOTLIN_HOME/lib/kotlin-preloader.jar</arg>
+        <arg>org.jetbrains.kotlin.preloading.Preloader</arg>
+        <arg>-cp</arg>
+        <arg>$KOTLIN_HOME/lib/kotlin-compiler.jar</arg>
+        <arg>org.jetbrains.kotlin.cli.jvm.K2JVMCompiler</arg>
+      </runner>
+    </command>
+    <command name="kotlinc-jvm">
+      <runner interface="http://repo.roscidus.com/java/openjdk-jre">
+        <arg>-Dkotlin.home=$KOTLIN_HOME</arg>
+        <arg>-cp</arg>
+        <arg>$KOTLIN_HOME/lib/kotlin-preloader.jar</arg>
+        <arg>org.jetbrains.kotlin.preloading.Preloader</arg>
+        <arg>-cp</arg>
+        <arg>$KOTLIN_HOME/lib/kotlin-compiler.jar</arg>
+        <arg>org.jetbrains.kotlin.cli.jvm.K2JVMCompiler</arg>
+      </runner>
+    </command>
+    <command name="kotlinc-js">
+      <runner interface="http://repo.roscidus.com/java/openjdk-jre">
+        <arg>-Dkotlin.home=$KOTLIN_HOME</arg>
+        <arg>-cp</arg>
+        <arg>$KOTLIN_HOME/lib/kotlin-preloader.jar</arg>
+        <arg>org.jetbrains.kotlin.preloading.Preloader</arg>
+        <arg>-cp</arg>
+        <arg>$KOTLIN_HOME/lib/kotlin-compiler.jar</arg>
+        <arg>org.jetbrains.kotlin.cli.js.K2JSCompiler</arg>
+      </runner>
+    </command>
+    <command name="kotlinc-dce-js">
+      <runner interface="http://repo.roscidus.com/java/openjdk-jre">
+        <arg>-Dkotlin.home=$KOTLIN_HOME</arg>
+        <arg>-cp</arg>
+        <arg>$KOTLIN_HOME/lib/kotlin-preloader.jar</arg>
+        <arg>org.jetbrains.kotlin.preloading.Preloader</arg>
+        <arg>-cp</arg>
+        <arg>$KOTLIN_HOME/lib/kotlin-compiler.jar</arg>
+        <arg>org.jetbrains.kotlin.cli.js.dce.K2JSDce</arg>
+      </runner>
+    </command>
+    <implementation version="{version}" released="{released}" stability="{stability}">
+      <manifest-digest/>
+      <archive href="https://github.com/JetBrains/kotlin/releases/download/v{version-original}/kotlin-compiler-{version-original}.zip" type="application/zip" extract="kotlinc"/>
+    </implementation>
+  </group>
+</interface>

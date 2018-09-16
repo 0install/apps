@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>DocFX</name>
+  <summary>documentation generation tool for API reference and Markdown files</summary>
+  <description>DocFX generates Documentation directly from source code (.NET, RESTful API, JavaScript, Java, etc...) and Markdown files.</description>
+  <homepage>https://dotnet.github.io/docfx/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/dotnet/docfx"/>
+
+  <group license="MIT License">
+    <command name="run" path="docfx.exe" version="4.6.1..">
+      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run" />
+    </command>
+    <implementation version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/dotnet/docfx/releases/download/v{version}/docfx.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

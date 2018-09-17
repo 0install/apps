@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>GitVersion</name>
+  <summary>versioning when using git, solved</summary>
+  <description>Versioning when using git, solved. GitVersion looks at your git history and works out the semantic version of the commit being built.</description>
+  <category>Development</category>
+  <homepage>https://github.com/GitTools/GitVersion</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/devel/gitversion"/>
+
+  <group>
+    <command name="run" path="GitVersion.exe">
+      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run"/>
+    </command>
+    <implementation version="{version}" released="{released}" stability="{stability}">
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/v{sem-ver}/GitVersion_{nuget-ver}.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

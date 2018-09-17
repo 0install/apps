@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>GPT fdisk</name>
+  <summary>disk partitioning tool for modifying GPT disks</summary>
+  <description>GPT fdisk is a disk partitioning tool loosely modeled on Linux fdisk, but used for modifying GUID Partition Table (GPT) disks.</description>
+  <homepage>http://www.rodsbooks.com/gdisk/</homepage>
+  <category>System</category>
+  <category>Utility</category>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/utils/gdisk"/>
+
+  <group arch="Windows-x86_64" license="GPL v2 (GNU General Public License)">
+    <command name="run" path="gdisk64.exe"/>
+    <implementation id="Windows-x86_64-{version}" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/{version}/gdisk-binaries/gdisk-windows-{version}.zip" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group arch="Windows-i486" license="GPL v2 (GNU General Public License)">
+    <command name="run" path="gdisk32.exe"/>
+    <implementation id="Windows-i486-{version}" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/{version}/gdisk-binaries/gdisk-windows-{version}.zip" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group doc-dir="usr/share/doc/gdisk" license="GPL v2 (GNU General Public License)">
+    <command name="run" path="usr/sbin/gdisk"/>
+    <command name="sgdisk" path="usr/sbin/sgdisk"/>
+    <command name="cgdisk" path="usr/sbin/cgdisk"/>
+    <implementation arch="Linux-x86_64" version="{version}-1" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/{version}/gdisk-binaries/gdisk_{version}-1_amd64.deb" type="application/x-deb"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="{version}-1" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/{version}/gdisk-binaries/gdisk_{version}-1_i386.deb" type="application/x-deb"/>
+    </implementation>
+  </group>
+</interface>

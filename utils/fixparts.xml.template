@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>FixParts</name>
+  <summary>fixes some common problems on MBR disks</summary>
+  <description>The FixParts utility fixes some common problems on Master Boot Record (MBR) disks.</description>
+  <homepage>http://www.rodsbooks.com/fixparts/</homepage>
+  <category>System</category>
+  <category>Utility</category>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/utils/fixparts"/>
+
+  <group arch="Windows-x86_64" license="GPL v2 (GNU General Public License)">
+    <command name="run" path="fixparts64.exe"/>
+    <implementation id="Windows-x86_64-{version}" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/{version}/fixparts-binaries/fixparts-windows-{version}.zip" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group arch="Windows-i486" license="GPL v2 (GNU General Public License)">
+    <command name="run" path="fixparts32.exe"/>
+    <implementation id="Windows-i486-{version}" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/{version}/fixparts-binaries/fixparts-windows-{version}.zip" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group doc-dir="usr/share/doc/fixparts" license="GPL v2 (GNU General Public License)">
+    <command name="run" path="usr/sbin/fixparts"/>
+    <implementation arch="Linux-x86_64" version="{version}-1" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/{version}/fixparts-binaries/fixparts_{version}-1_amd64.deb" type="application/x-deb"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="{version}-1" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/{version}/fixparts-binaries/fixparts_{version}-1_i386.deb" type="application/x-deb"/>
+    </implementation>
+  </group>
+</interface>

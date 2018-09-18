@@ -1,0 +1,273 @@
+<?xml version="1.0" ?>
+<interface uri="http://repo.roscidus.com/security/nmap" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Nmap</name>
+  <summary>utility for network discovery and security auditing</summary>
+  <description>Nmap (Network Mapper) is a free and open source utility for network discovery and security auditing. Many systems and network administrators also find it useful for tasks such as network inventory, managing service upgrade schedules, and monitoring host or service uptime. Nmap uses raw IP packets in novel ways to determine what hosts are available on the network, what services (application name and version) those hosts are offering, what operating systems (and OS versions) they are running, what type of packet filters/firewalls are in use, and dozens of other characteristics. It was designed to rapidly scan large networks, but works fine against single hosts.</description>
+  <icon href="http://0install.de/feed-icons/Nmap.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="http://0install.de/feed-icons/Nmap.png" type="image/png"/>
+  <category>Network</category>
+  <category>Utility</category>
+  <needs-terminal/>
+
+  <package-implementation main="/usr/bin/nmap" package="nmap"/>
+
+  <group arch="Windows-*" license="modfied GPL">
+    <requires interface="http://0install.de/feeds/MSVC100.xml">
+      <environment name="PATH" insert="." mode="append"/>
+    </requires>
+    <command name="run" path="nmap.exe"/>
+    <command name="ncat" path="ncat.exe"/>
+    <command name="nping" path="nping.exe"/>
+    <command name="ndiff" path="ndiff.py">
+      <runner interface="http://repo.roscidus.com/python/python" version="2.6..!3"/>
+    </command>
+    <implementation id="sha1new=71dcf94b6c2a0ebd50f58278302725eb8e7929e9" released="2013-04-12" stability="stable" version="6.00">
+      <manifest-digest sha256new="SL7UMYQGIQD372PPHEE7I75EXD6EDLBMWSXH6PVOKNNTF5WHMVIQ"/>
+      <archive extract="nmap-6.00" href="http://nmap.org/dist/nmap-6.00-win32.zip" size="19193787" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=4c057fc03dc624ed22c8028c01e02ca14c295ad5" released="2013-04-12" stability="stable" version="6.01">
+      <manifest-digest sha256new="MLPFLZEVAU5PLCGST4LN6PVWG4GZIOIBFDHEIDNQ5NJQPZTWY7UQ"/>
+      <archive extract="nmap-6.01" href="http://nmap.org/dist/nmap-6.01-win32.zip" size="19191884" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=1f3b9546920a78079251e433d39075c2282afccc" released="2013-04-12" stability="stable" version="6.25">
+      <manifest-digest sha256new="NCPXDNATODIAK3TPOPT2LGFI4HUW6UYFI7OOAGVVCVBP757EMJLA"/>
+      <archive extract="nmap-6.25" href="http://nmap.org/dist/nmap-6.25-win32.zip" size="19646416" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=0a9d505d17802cee8040a3629c8d6a1c8354e82f" released="2013-07-28" stability="stable" version="6.40">
+      <manifest-digest sha256new="XVIMAIR2FZZOQP7EEBTBRF5R4JFJFXJ74HB5545L3RPSJ6YY54AA"/>
+      <archive extract="nmap-6.40" href="http://nmap.org/dist/nmap-6.40-win32.zip" size="19863449" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=f36315daed74ead5e88a1eeca4d6d31c0d709e7e" released="2014-04-12" stability="stable" version="6.45">
+      <manifest-digest sha256new="OBS3BZ4JERVN5TZCLLYKSN4VPSGPNLBG33FVCGPCNNBUO7NYXBWQ"/>
+      <archive extract="nmap-6.45" href="http://nmap.org/dist/nmap-6.45-win32.zip" size="19960772" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=3fb8d90c6a5ae57a201ca97fdae6827d0820a698" released="2014-04-17" stability="stable" version="6.46">
+      <manifest-digest sha256new="WAOBFM7BRYKJIY4QQ65EGIQKJOHSWK3SLXXCEI6YUE2EGR7NSS5Q"/>
+      <archive extract="nmap-6.46" href="http://nmap.org/dist/nmap-6.46-win32.zip" size="19961033" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=7eb8207633ff66085220788ab9e39f7c63e0fb62" released="2014-08-22" stability="stable" version="6.47">
+      <manifest-digest sha256new="MH2JFSDIS75VIK562GFRKJOZ4SPCLUFPF7UD27MXXNL35Q6F5EUA"/>
+      <archive extract="nmap-6.47" href="http://nmap.org/dist/nmap-6.47-win32.zip" size="20002559" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=f05e503c7ce69770144357e7fa3742578f5904ce" released="2015-11-19" stability="stable" version="7.00">
+      <manifest-digest sha256new="I2WGGP2U2PGTLXN2RCVJCOVXH3YRBUUGJAAGD3Y4LL7KKEWWR7IQ"/>
+      <archive extract="nmap-7.00" href="http://nmap.org/dist/nmap-7.00-win32.zip" size="18725194" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=0a47e384eac986d5026f219be9cfdb2cf9ec51a8" released="2015-12-09" stability="stable" version="7.01">
+      <manifest-digest sha256new="V2ZKZC3MB2ZDF4H7FFVPTMQIADBPB7SFAHCYGJOHN2NTOO3XEO3A"/>
+      <archive extract="nmap-7.01" href="http://nmap.org/dist/nmap-7.01-win32.zip" size="18727987" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=32ffb8e43fdef4b6dc50cf7d796dcd90bd2a9e69" released="2016-03-17" stability="stable" version="7.10">
+      <manifest-digest sha256new="MGE4RRVVS47VUQ45LIJCWCXJPCMJS3SIPSNTMYOUPNPT6QXW5DKA"/>
+      <archive extract="nmap-7.10" href="http://nmap.org/dist/nmap-7.10-win32.zip" size="14340565" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=732a5b2a0a635966adec62b694da097087d7b57b" released="2016-03-22" stability="stable" version="7.11">
+      <manifest-digest sha256new="OWS4ROH6BHPARMJEMPOBRYLSY4VB5CANWM6Y6XMFM7XLTKWCX3MA"/>
+      <archive extract="nmap-7.11" href="http://nmap.org/dist/nmap-7.11-win32.zip" size="14344226" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=c5ddd44e0cd414fe4b72e745be049c4f036f4e3d" released="2016-03-29" stability="stable" version="7.12">
+      <manifest-digest sha256new="YWTIE5VRXT3NP5A33R2OH7MDMKP2IETYTE5YCIRSXYFB6QQLWADQ"/>
+      <archive extract="nmap-7.12" href="http://nmap.org/dist/nmap-7.12-win32.zip" size="14346005" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=3299d812eb08b62eb2931de5d01817c549847ea4" released="2016-09-29" stability="stable" version="7.30">
+      <manifest-digest sha256new="N45SZLJU5CD5FSILCNVP7AULQLF2O6V67Y5DDD34XXI4GEY7QIVQ"/>
+      <archive extract="nmap-7.30" href="http://nmap.org/dist/nmap-7.30-win32.zip" size="19635543" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=29b9bb0f23dbce11547b0dbdbfc37d4bc6dd22cb" released="2016-10-20" stability="stable" version="7.31">
+      <manifest-digest sha256new="3E7HWDR6D5VN4PFMREDTNHPHZDU6DF5I6MJNDKBLI4E75PXANEWQ"/>
+      <archive extract="nmap-7.31" href="http://nmap.org/dist/nmap-7.31-win32.zip" size="19652284" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d6ef836e2b156d893db6f2103135df1aaf0650cc" released="2016-12-20" stability="stable" version="7.40">
+      <manifest-digest sha256new="KYG2OKTVDQEZBOCRP7WOURUIMHO6AMMCE2SPWQNKIEEIYCY73XHQ"/>
+      <archive extract="nmap-7.40" href="http://nmap.org/dist/nmap-7.40-win32.zip" size="19486026" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=5dbd0c8e77bdb51fa8fba34dd2ed6c52aec76fcb" released="2017-06-13" stability="stable" version="7.50">
+      <manifest-digest sha256new="42NT2NB2HZNBMRIDRJOY77WOFATWNI6BDUASRHUYTWLZ7RXEC7UQ"/>
+      <archive extract="nmap-7.50" href="http://nmap.org/dist/nmap-7.50-win32.zip" size="19740464" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=3fcbaa90ffb87bde0a55f621e03a4efb4a83a0fb" released="2017-08-01" stability="stable" version="7.60">
+      <manifest-digest sha256new="SSVMLFHSENHSA3DYIDQPOXPGDSTATV46NBJOE5ITU5G722KVAMWA"/>
+      <archive extract="nmap-7.60" href="http://nmap.org/dist/nmap-7.60-win32.zip" size="19873849" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=bc61116d60dcea3fc885e74d6c5c0101cfb23fe4" released="2018-03-20" stability="stable" version="7.70">
+      <manifest-digest sha256new="HADOSECAAM5D5P4K5GVY3BDFICAPJ5V55WXA7FTMYFACTQXUSHRA"/>
+      <archive extract="nmap-7.70" href="http://nmap.org/dist/nmap-7.70-win32.zip" size="20111852" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group doc-dir="usr/share/doc/nmap" license="modfied GPL">
+    <requires interface="http://repo.roscidus.com/lib/svn-client-1">
+      <environment insert="lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <command name="run" path="usr/bin/nmap"/>
+    <command name="ndiff" path="usr/lib/python2.6/site-packages/ndiff.py">
+      <runner interface="http://repo.roscidus.com/python/python" version="2.6..!3"/>
+    </command>
+    <implementation arch="Linux-x86_64" id="sha1new=dc57eecac58f2d5ee867a29b86f37530f6436cf0" released="2013-04-12" stability="stable" version="6.00-1">
+      <manifest-digest sha256new="FMRA5OYMGSANUMQPKKSBC4OT3QIQHCWL4XM7YQY4SBWIEQIH536A"/>
+      <archive href="http://nmap.org/dist/nmap-6.00-1.x86_64.rpm" size="4489523" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=82c563d6d342c3a520a052c9df60ba9bf0a0d3a4" released="2013-04-12" stability="stable" version="6.00-1">
+      <manifest-digest sha256new="64JIW36PZBED2IDIXUCRFGRDHEOMD7FNL6QD7Q57NE2CYJX26OCQ"/>
+      <archive href="http://nmap.org/dist/nmap-6.00-1.i386.rpm" size="4421785" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=bd7470620998fe6e988467c82c424898d52ff84e" released="2013-04-12" stability="stable" version="6.01-1">
+      <manifest-digest sha256new="N2LWCXXNJ2KSQ7NRK2ZBUFXUDGFP5A7VSQOAWR5J54LRZSU4MW3Q"/>
+      <archive href="http://nmap.org/dist/nmap-6.01-1.x86_64.rpm" size="4489560" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=87ed80f61eada030df4b4b9ae83a6a25a0b36f68" released="2013-04-12" stability="stable" version="6.01-1">
+      <manifest-digest sha256new="O7BVSTJWKEIQMC2V6XO4OMALOYAECPAABPGIM5FHFXJN6ZBFXNJQ"/>
+      <archive href="http://nmap.org/dist/nmap-6.01-1.i386.rpm" size="4421945" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=aacaf6add0bc909c59c6747c5ea8defbbfff0fce" released="2013-04-12" stability="stable" version="6.25-1">
+      <manifest-digest sha256new="UEEPM7TUMLRLU3KDIQQUFRJAWMIVAMCOLWM7WTNNMD4JKN6WRSKA"/>
+      <archive href="http://nmap.org/dist/nmap-6.25-1.x86_64.rpm" size="4879319" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=04c39767ca12ae683b82b71fa7f3fba32d464850" released="2013-04-12" stability="stable" version="6.25-1">
+      <manifest-digest sha256new="XJMNM5HU6SE5BXZQ426CKSAUVJIVHHXK34KW6H33ZTY6ZAXUG5WA"/>
+      <archive href="http://nmap.org/dist/nmap-6.25-1.i386.rpm" size="4812345" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=a4bd83c31adbbe292f14b71c55ad86b2383c62b0" released="2013-07-28" stability="stable" version="6.40-1">
+      <manifest-digest sha256new="NPXY4TXHWMOGCBLHLN22EI27RATSEKHXQMADFWCY3NBZLKFUIZ2A"/>
+      <archive href="http://nmap.org/dist/nmap-6.40-1.x86_64.rpm" size="5007717" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=7f2d1f506a7939187ef8a534c86860623e5a6c5c" released="2013-07-28" stability="stable" version="6.40-1">
+      <manifest-digest sha256new="I3JWCQUMACQNWDBSE3PRLJ2HYULV23OTQNYTOTXDSR2RUAYKU2DQ"/>
+      <archive href="http://nmap.org/dist/nmap-6.40-1.i386.rpm" size="4940913" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=08fba64a574a62545b73485d5b1e1a1d006d87c0" released="2014-04-12" stability="stable" version="6.45-1">
+      <manifest-digest sha256new="R2AIFIUDOV6QB22DEPNMXXCLPJ5ZMDSKSQCAAOLBWBT7LJRDIMLQ"/>
+      <archive href="http://nmap.org/dist/nmap-6.45-1.x86_64.rpm" size="5086481" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=9b90e2e8d5124d815825bd384e1e5a39d21238f5" released="2014-04-12" stability="stable" version="6.45-1">
+      <manifest-digest sha256new="YT4KEI6CLIOQSHV4V4PBPYACSHVHB2DT5ANP637GNMHO3YAYA5UA"/>
+      <archive href="http://nmap.org/dist/nmap-6.45-1.i386.rpm" size="5015284" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=b30bac4aba440363b9df27de4e8dc8f734866373" released="2014-04-17" stability="stable" version="6.46-1">
+      <manifest-digest sha256new="KOMY66PS7A6LLQE2KX6X37X3WILAYOGOHDTUADUPLKHWW22FFERA"/>
+      <archive href="http://nmap.org/dist/nmap-6.46-1.x86_64.rpm" size="5086577" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=2d0ffef701028c350e75741dc7f2262270d174e7" released="2014-04-17" stability="stable" version="6.46-1">
+      <manifest-digest sha256new="WPQSACE3EDLT2765SLS6LJT7FH2TNVBB5VHG7HL32MTB3MSS75RQ"/>
+      <archive href="http://nmap.org/dist/nmap-6.46-1.i386.rpm" size="5015368" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=7e2ce9f5b7c9e0553d84e8ae57a5c6bef989ec1a" released="2014-08-22" stability="stable" version="6.47-1">
+      <manifest-digest sha256new="TJQE5UVJHHBHGHY2FRTHV55347I3PPRY7J7VQ4YOXBIUFP5BTG4A"/>
+      <archive href="http://nmap.org/dist/nmap-6.47-1.x86_64.rpm" size="5316443" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=642baef80da73589ef95e9748939e1df7e1199ef" released="2014-08-22" stability="stable" version="6.47-1">
+      <manifest-digest sha256new="TTCARAAC6EG4K6FO2F6VSPXYD4XOMDDLTH5OMZAT4KTFGSIPOGVA"/>
+      <archive href="http://nmap.org/dist/nmap-6.47-1.i386.rpm" size="5216735" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=e0e8ae511d0cb61e6a10e13d20b8e1ca833bc279" released="2015-11-19" stability="stable" version="7.00-1">
+      <manifest-digest sha256new="KDIWDUMWZKEZY4UNPQOJZBXB6LGY2MX4KXCINCEZCRM4OFL45BOA"/>
+      <archive href="http://nmap.org/dist/nmap-7.00-1.x86_64.rpm" size="6234124" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-i686" id="sha1new=ba6e6ba56f3baa7cf8fa06b709b2afa6ef4e7e60" released="2015-11-19" stability="stable" version="7.00-1">
+      <manifest-digest sha256new="RSVP3H5VWLX5GZVL2J7ZXRDXK7ICFWMGZDKEA2XIGFDU6JUEBMGQ"/>
+      <archive href="http://nmap.org/dist/nmap-7.00-1.i686.rpm" size="5958392" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=8f46aafda7440d403b778427db666b7ddf77a08e" released="2015-12-09" stability="stable" version="7.01-1">
+      <manifest-digest sha256new="EBSRTZWKDSGTOCB6EB2OABMQM6DYMLO3YHA5UKXN3AJVINWX3AOA"/>
+      <archive href="http://nmap.org/dist/nmap-7.01-1.x86_64.rpm" size="6235492" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-i686" id="sha1new=4e95632a09be94fc0a4db2e8792d8fd8f13b6a91" released="2015-12-09" stability="stable" version="7.01-1">
+      <manifest-digest sha256new="VDVBYMURGDPJYEC76JJSAXUPMOHKR7SUZOAWI5VUJKCCMVUNI5MQ"/>
+      <archive href="http://nmap.org/dist/nmap-7.01-1.i686.rpm" size="5959328" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=f5182f535355ce11ff8d29ee5eb6e3e062b47d8b" released="2016-03-17" stability="stable" version="7.10-1">
+      <manifest-digest sha256new="G3H52UOHT4PUEXU2NVHSE4ZZMUNZZC7N4WV4IBPV5VLFRLLHKMWA"/>
+      <archive href="http://nmap.org/dist/nmap-7.10-1.x86_64.rpm" size="6291244" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-i686" id="sha1new=a432f0262b0bea8ccdd658e9b8e6f237c7bd6957" released="2016-03-17" stability="stable" version="7.10-1">
+      <manifest-digest sha256new="SXD3IVSO7AKTDZY47SGQV2JHBMYCPLNL2DOHGB26R6KAIA5MC4HQ"/>
+      <archive href="http://nmap.org/dist/nmap-7.10-1.i686.rpm" size="6013536" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=178f55b8e2aafa99c94a995392c120ebfc6f24ab" released="2016-03-22" stability="stable" version="7.11-1">
+      <manifest-digest sha256new="SYQFALPRMYXZXXDR5VG7MHAMNX35SZP4QSRFCW5KL5YUZIGSKO5Q"/>
+      <archive href="http://nmap.org/dist/nmap-7.11-1.x86_64.rpm" size="6294304" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-i686" id="sha1new=e87de7ff6d37cf9631ba487c07efb5beb7879c31" released="2016-03-22" stability="stable" version="7.11-1">
+      <manifest-digest sha256new="ZZC2KRTZKYEHZYQPJNKRXE5OYZTIAMBD4NC6LJUQW6NTKTMKPF5Q"/>
+      <archive href="http://nmap.org/dist/nmap-7.11-1.i686.rpm" size="6016532" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=e83dd958bd7297a2c65dfaaa0d5a595990bc9158" released="2016-03-29" stability="stable" version="7.12-1">
+      <manifest-digest sha256new="FPK57PIQREMHX7NALLP5YXIFERK6CKD3RZDNA3A2AJMEA6GUBRKQ"/>
+      <archive href="http://nmap.org/dist/nmap-7.12-1.x86_64.rpm" size="6295792" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-i686" id="sha1new=dbd4cc586052fac1e1c41f77c502200d6597ff9d" released="2016-03-29" stability="stable" version="7.12-1">
+      <manifest-digest sha256new="JN4G6HPVHORBEOECFUTKU5ZABZVQDGEWKM77Z722QSDIYNNGWIPQ"/>
+      <archive href="http://nmap.org/dist/nmap-7.12-1.i686.rpm" size="6018064" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=566ab7bd4d48aeb683363cab21a93f9f77ca93c2" released="2016-09-29" stability="stable" version="7.30-1">
+      <manifest-digest sha256new="TYXEA76HEY6UPPGULGUI6BJUO4XCTC5U7XSTJK6SP7QAEWWTSEWA"/>
+      <archive href="http://nmap.org/dist/nmap-7.30-1.x86_64.rpm" size="6500096" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-i686" id="sha1new=c4a17177caecf176b851b7570a70061a213089d5" released="2016-09-29" stability="stable" version="7.30-1">
+      <manifest-digest sha256new="LTDSBNS63SPY6KGIKWCZOMNO6ZXBUVJWUGXDGA42TKHBAUCE5RPA"/>
+      <archive href="http://nmap.org/dist/nmap-7.30-1.i686.rpm" size="6237756" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=10b07112b66e39399664924d06dfba0b06caf3ac" released="2016-10-20" stability="stable" version="7.31-1">
+      <manifest-digest sha256new="CEOAR2J5YFC7L67DCRDP6BRYO25GV6V4SBZTUPQ2OIQIH47LTNQQ"/>
+      <archive href="http://nmap.org/dist/nmap-7.31-1.x86_64.rpm" size="6500252" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-i686" id="sha1new=cf247b466bab7ea7bcaf8ad426c3c72e64a923f2" released="2016-10-20" stability="stable" version="7.31-1">
+      <manifest-digest sha256new="E5JBGAWG2YJ4PNTT6IANH4LOEQQ3DBLX7L6CTY7PV2BQ4TOVDCVA"/>
+      <archive href="http://nmap.org/dist/nmap-7.31-1.i686.rpm" size="6237972" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=0935b06f33132286497258ddb3d77363c0925d2a" released="2016-12-20" stability="stable" version="7.40-1">
+      <manifest-digest sha256new="3KKXPE3Z2W6C4OZSW4GUB7I5Y52XMM5U4N5M3MC6A6VB2455Y7LQ"/>
+      <archive href="http://nmap.org/dist/nmap-7.40-1.x86_64.rpm" size="6580316" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-i686" id="sha1new=b1e619544e1cf731b729cf2901657927cacdfe18" released="2016-12-20" stability="stable" version="7.40-1">
+      <manifest-digest sha256new="3CDIDQYJANSUALYZFV3MRJYEXDSQ6YGUNQ5KFINP7OK5AKFMYHCA"/>
+      <archive href="http://nmap.org/dist/nmap-7.40-1.i686.rpm" size="6318156" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=9a03bf3b220fa7b3c5befdc817536505238a98ae" released="2017-06-13" stability="stable" version="7.50-1">
+      <manifest-digest sha256new="ZNPTODLJDX4NFCWH3GPZSXSN4CLSZJXRFLWPFZORGQQ3LK7ISWBQ"/>
+      <archive href="http://nmap.org/dist/nmap-7.50-1.x86_64.rpm" size="6806236" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-i686" id="sha1new=a76f14ecb4a7c6c76f5b171f61a6b08c28f17698" released="2017-06-13" stability="stable" version="7.50-1">
+      <manifest-digest sha256new="MQBHQSLASMRSEOLUDE3YIG2IHRJE325NX3AW2HECJK7MTXQPKFLA"/>
+      <archive href="http://nmap.org/dist/nmap-7.50-1.i686.rpm" size="6544532" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=e22b940d42c00b4dd22d23564e7c6299440513f1" released="2017-08-01" stability="stable" version="7.60-1">
+      <manifest-digest sha256new="ZTVRV3QK3JA2SFIRBYLSSWX5K45DRUI3CNR5WPWPVP3LW36FNP4A"/>
+      <archive href="http://nmap.org/dist/nmap-7.60-1.x86_64.rpm" size="6963200" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-i686" id="sha1new=03a144d2457f8c2a89e9309a9cb12dcbf10f2d18" released="2017-08-01" stability="stable" version="7.60-1">
+      <manifest-digest sha256new="D7TMRB2OBSXOC7U3YM4LM4XHCADY274O62RLOH2NULQRRC4AGL6A"/>
+      <archive href="http://nmap.org/dist/nmap-7.60-1.i686.rpm" size="6696672" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=68a2bf3f1948c892645ceffc03174814a593fba9" released="2018-03-20" stability="stable" version="7.70-1">
+      <manifest-digest sha256new="THBTVT677NGVNQPCAZSNHAJOPI3E3AXBYSN4N4CPS6XRRLWHWGOQ"/>
+      <archive href="http://nmap.org/dist/nmap-7.70-1.x86_64.rpm" size="7116160" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-i686" id="sha1new=aba452156f2453c2a64b4ce51ee1d3281ca4ea67" released="2018-03-20" stability="stable" version="7.70-1">
+      <manifest-digest sha256new="H23XG3KN2ICUJMAO3IJP64SU3FPZHY4UMDJWSQDHDW4Y3H5754GQ"/>
+      <archive href="http://nmap.org/dist/nmap-7.70-1.i686.rpm" size="6850972" type="application/x-rpm"/>
+    </implementation>
+  </group>
+
+  <entry-point binary-name="nmap" command="run">
+    <needs-terminal/>
+  </entry-point>
+  <entry-point binary-name="ncat" command="ncat">
+    <needs-terminal/>
+    <name>Ncat</name>
+    <summary>reads and writes data across networks from the command line</summary>
+    <description>Ncat is a feature-packed networking utility which reads and writes data across networks from the command line. Ncat was written for the Nmap Project as a much-improved reimplementation of the venerable Netcat. It uses both TCP and UDP for communication and is designed to be a reliable back-end tool to instantly provide network connectivity to other applications and users. Ncat will not only work with IPv4 and IPv6 but provides the user with a virtually limitless number of potential uses.</description>
+  </entry-point>
+  <entry-point binary-name="nping" command="nping">
+    <needs-terminal/>
+    <name>Nping</name>
+    <summary>network packet generation tool / ping utiliy</summary>
+    <description>Nping is an open source tool for network packet generation, response analysis and response time measurement. Nping can generate network packets for a wide range of protocols, allowing users full control over protocol headers. While Nping can be used as a simple ping utility to detect active hosts, it can also be used as a raw packet generator for network stack stress testing, ARP poisoning, Denial of Service attacks, route tracing, etc. Nping's novel echo mode lets users see how packets change in transit between the source and destination hosts. That's a great way to understand firewall rules, detect packet corruption, and more.</description>
+  </entry-point>
+  <entry-point binary-name="ndiff" command="ndiff">
+    <needs-terminal/>
+    <name>Ndiff</name>
+    <summary>a utility for comparing Nmap scan results</summary>
+    <description>Ndiff is a tool to aid in the comparison of Nmap scans. Specifically, it takes two Nmap XML output files and prints the differences between them: hosts coming up and down, ports becoming open or closed, and things like that. Ndiff can produce output in human-readable text or machine-readable XML formats. Many people like to scan their networks regularly (daily, weekly, etc.) and then use ndiff to easily detect any changes.</description>
+  </entry-point>
+</interface>

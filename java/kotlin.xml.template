@@ -13,9 +13,12 @@
   <feed-for interface="http://repo.roscidus.com/java/kotlin"/>
 
   <group license="Apache License 2.0">
+    <requires interface="http://repo.roscidus.com/java/openjdk-jdk" version="7..">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
     <environment insert="." mode="replace" name="KOTLIN_HOME"/>
     <command name="run">
-      <runner interface="http://repo.roscidus.com/java/openjdk-jre">
+      <runner command="java" interface="http://repo.roscidus.com/java/openjdk-jdk">
         <arg>-Dkotlin.home=$KOTLIN_HOME</arg>
         <arg>-cp</arg>
         <arg>$KOTLIN_HOME/lib/kotlin-runner.jar</arg>
@@ -23,7 +26,7 @@
       </runner>
     </command>
     <command name="kotlinc">
-      <runner interface="http://repo.roscidus.com/java/openjdk-jre">
+      <runner command="java" interface="http://repo.roscidus.com/java/openjdk-jdk">
         <arg>-Dkotlin.home=$KOTLIN_HOME</arg>
         <arg>-cp</arg>
         <arg>$KOTLIN_HOME/lib/kotlin-preloader.jar</arg>
@@ -34,7 +37,7 @@
       </runner>
     </command>
     <command name="kotlinc-jvm">
-      <runner interface="http://repo.roscidus.com/java/openjdk-jre">
+      <runner command="java" interface="http://repo.roscidus.com/java/openjdk-jdk">
         <arg>-Dkotlin.home=$KOTLIN_HOME</arg>
         <arg>-cp</arg>
         <arg>$KOTLIN_HOME/lib/kotlin-preloader.jar</arg>
@@ -45,7 +48,7 @@
       </runner>
     </command>
     <command name="kotlinc-js">
-      <runner interface="http://repo.roscidus.com/java/openjdk-jre">
+      <runner command="java" interface="http://repo.roscidus.com/java/openjdk-jdk">
         <arg>-Dkotlin.home=$KOTLIN_HOME</arg>
         <arg>-cp</arg>
         <arg>$KOTLIN_HOME/lib/kotlin-preloader.jar</arg>
@@ -56,7 +59,7 @@
       </runner>
     </command>
     <command name="kotlinc-dce-js">
-      <runner interface="http://repo.roscidus.com/java/openjdk-jre">
+      <runner command="java" interface="http://repo.roscidus.com/java/openjdk-jdk">
         <arg>-Dkotlin.home=$KOTLIN_HOME</arg>
         <arg>-cp</arg>
         <arg>$KOTLIN_HOME/lib/kotlin-preloader.jar</arg>
@@ -66,6 +69,7 @@
         <arg>org.jetbrains.kotlin.cli.js.dce.K2JSDce</arg>
       </runner>
     </command>
+
     <implementation version="{version}" released="{released}" stability="{stability}">
       <manifest-digest/>
       <archive href="https://github.com/JetBrains/kotlin/releases/download/v{version-original}/kotlin-compiler-{version-original}.zip" type="application/zip" extract="kotlinc"/>

@@ -44,7 +44,8 @@ IcedTea project.</description>
     <group main="bin/javac" arch="POSIX-*">
       <command name="run">
         <runner interface="http://repo.roscidus.com/java/openjdk-jre"/>
-        <arg>-cp</arg><arg>${JDK_CLASSPATH}</arg>
+        <arg>-cp</arg>
+        <arg>${JDK_CLASSPATH}</arg>
         <arg>com.sun.tools.javac.Main</arg>
       </command>
 
@@ -55,24 +56,24 @@ IcedTea project.</description>
 
       <group>
         <requires interface="http://repo.roscidus.com/java/openjdk-jre">
-	  <environment insert="bin/" mode="replace" name="OPENJDK_JRE_BIN"/>
+          <environment insert="bin/" mode="replace" name="OPENJDK_JRE_BIN"/>
         </requires>
         <environment insert="lib" mode="replace" name="OPENJDK_LIBS"/>
         <implementation id="sha1new=6b2afc4b5841dfa24b996b321d08b48109b0c5c3" released="2011-05-29" version="6.18-1.8.7-2">
-	  <archive extract="java-6-openjdk" href="http://repo.roscidus.com/java/openjdk-6-jdk/openjdk-6-jdk-6b18-1.8.7-2~squeeze1-1.tar.bz2" size="8887727" type="application/x-bzip-compressed-tar"/>
+          <archive extract="java-6-openjdk" href="http://repo.roscidus.com/java/openjdk-6-jdk/openjdk-6-jdk-6b18-1.8.7-2~squeeze1-1.tar.bz2" size="8887727" type="application/x-bzip-compressed-tar"/>
         </implementation>
         <implementation id="sha1new=9af7ae7fa806798b1df663c19cddf97f2aa411ca" released="2009-12-28" version="6.11" version-modifier="-9.1-1">
-	  <archive extract="java-6-openjdk" href="http://repo.roscidus.com/java/openjdk-6-jdk/openjdk-6-jdk-6b11-9.1+lenny2-1.tar.bz2" size="7610012" type="application/x-bzip-compressed-tar"/>
+          <archive extract="java-6-openjdk" href="http://repo.roscidus.com/java/openjdk-6-jdk/openjdk-6-jdk-6b11-9.1+lenny2-1.tar.bz2" size="7610012" type="application/x-bzip-compressed-tar"/>
         </implementation>
       </group>
 
       <group>
         <requires interface="http://repo.roscidus.com/java/openjdk-jre">
-	  <environment insert="bin/java" mode="replace" name="OPENJDK_JRE_JAVA"/>
+          <environment insert="bin/java" mode="replace" name="OPENJDK_JRE_JAVA"/>
         </requires>
         <implementation id="sha1new=f2da5d5538d0e3b9d9c0843cb9362e900fd33566" released="2009-12-27" version="6.11-9.1">
-	  <archive extract="java-6-openjdk" href="http://repo.roscidus.com/java/openjdk-6-jdk/openjdk-6-jdk-6b11-9.1+lenny2.tar.bz2" size="7602552" type="application/x-bzip-compressed-tar"/>
-	  <environment insert="lib" mode="replace" name="OPENJDK_LIBS"/>
+          <archive extract="java-6-openjdk" href="http://repo.roscidus.com/java/openjdk-6-jdk/openjdk-6-jdk-6b11-9.1+lenny2.tar.bz2" size="7602552" type="application/x-bzip-compressed-tar"/>
+          <environment insert="lib" mode="replace" name="OPENJDK_LIBS"/>
         </implementation>
       </group>
     </group>

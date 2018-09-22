@@ -47,6 +47,24 @@
       <manifest-digest sha256new="ODD3GBRJ37YCUVFV53WQ2SILOSE6ZGR2U5C7DB2USUOKWL4WDGJA"/>
       <archive extract="apache-maven-3.2.5" href="http://archive.apache.org/dist/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.tar.gz" size="7956528" type="application/x-compressed-tar"/>
     </implementation>
+  </group>
+  <group license="The Apache Software License, Version 2.0">
+    <requires interface="http://repo.roscidus.com/java/openjdk-jdk" version="7..">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+    <environment insert="" mode="replace" name="M2_HOME"/>
+    <environment insert="boot/*" name="CLASSPATH"/>
+    <command name="run">
+      <runner command="java" interface="http://repo.roscidus.com/java/openjdk-jdk">
+        <for-each item-from="MAVEN_OPTS" separator=" ">
+          <arg>$item</arg>
+        </for-each>
+        <arg>-Dclassworlds.conf=$M2_HOME/bin/m2.conf</arg>
+        <arg>-Dmaven.home=$M2_HOME</arg>
+        <arg>-Dmaven.multiModuleProjectDirectory=$MAVEN_PROJECTBASEDIR</arg>
+        <arg>org.codehaus.plexus.classworlds.launcher.Launcher</arg>
+      </runner>
+    </command>
     <implementation id="sha1new=54f1f4adcde1ca7be683a1d6835c23c4b8295aa9" released="2015-03-18" stability="stable" version="3.3.1">
       <manifest-digest sha256new="5ESY4XSUCIY4GKNKXUFCTC4BPKGEKATMOHGZDV4RG6B4JIWRDB6Q"/>
       <archive extract="apache-maven-3.3.1" href="http://archive.apache.org/dist/maven/maven-3/3.3.1/binaries/apache-maven-3.3.1-bin.tar.gz" size="8059952" type="application/x-compressed-tar"/>

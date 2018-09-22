@@ -11,29 +11,19 @@
   <group license="Apache License 2.0">
     <implementation arch="Windows-x86_64" version="{version}" stability="{stability}" released="{released}" main="docker-machine.exe">
       <manifest-digest/>
-      <file href="https://github.com/docker/machine/releases/download/v{version}/docker-machine-Windows-x86_64.exe" dest="docker-machine.exe" />
+      <file href="https://github.com/docker/machine/releases/download/v{version}/docker-machine-Windows-x86_64.exe" dest="docker-machine.exe"/>
     </implementation>
     <implementation arch="Windows-i486" version="{version}" stability="{stability}" released="{released}" main="docker-machine.exe">
       <manifest-digest/>
-      <file href="https://github.com/docker/machine/releases/download/v{version}/docker-machine-Windows-i386.exe" dest="docker-machine.exe" />
+      <file href="https://github.com/docker/machine/releases/download/v{version}/docker-machine-Windows-i386.exe" dest="docker-machine.exe"/>
     </implementation>
-
-    <!-- TODO: Set executable bit -->
-    <!--<implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}" main="docker-machine">
+    <implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}" main="docker-machine">
       <manifest-digest/>
-      <file href="https://github.com/docker/machine/releases/download/v{version}/docker-machine-Linux-x86_64" dest="docker-machine" />
-    </implementation>
-    <implementation arch="Linux-aarch64" version="{version}" stability="{stability}" released="{released}" main="docker-machine">
-      <manifest-digest/>
-      <file href="https://github.com/docker/machine/releases/download/v{version}/docker-machine-Linux-aarch64" dest="docker-machine" />
-    </implementation>
-    <implementation arch="Linux-armhf" version="{version}" stability="{stability}" released="{released}" main="docker-machine">
-      <manifest-digest/>
-      <file href="https://github.com/docker/machine/releases/download/v{version}/docker-machine-Linux-armhf" dest="docker-machine" />
+      <file href="https://github.com/docker/machine/releases/download/v{version}/docker-machine-Linux-x86_64" dest="docker-machine" executable="true"/>
     </implementation>
     <implementation arch="Darwin-x86_64" version="{version}" stability="{stability}" released="{released}" main="docker-machine">
       <manifest-digest/>
-      <file href="https://github.com/docker/machine/releases/download/v{version}/docker-machine-Darwin-x86_64" dest="docker-machine" />
-    </implementation>-->
+      <file href="https://github.com/docker/machine/releases/download/v{version}/docker-machine-Darwin-x86_64" dest="docker-machine" executable="true"/>
+    </implementation>
   </group>
 </interface>

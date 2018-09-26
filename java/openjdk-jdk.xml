@@ -7,114 +7,13 @@
 components using the Java programming language.</description>
   <category>Development</category>
 
+  <feed src="http://repo.roscidus.com/java/openjdk-10-jdk"/>
+  <feed src="http://repo.roscidus.com/java/openjdk-11-jdk"/>
   <feed arch="Windows-*" src="http://0install.de/feeds/Oracle_JDK.xml"/>
   <package-implementation distributions="Windows" package="openjdk-7-jdk"/>
   <package-implementation distributions="Windows" package="openjdk-8-jdk"/>
   <package-implementation distributions="Windows" package="openjdk-9-jdk"/>
   <package-implementation distributions="Windows" package="openjdk-10-jdk"/>
-
-  <group license="GNU General Public License, version 2, with the Classpath Exception">
-    <group arch="Linux-x86_64">
-      <command name="run" path="bin/javac"/>
-      <command name="java" path="bin/java"/>
-      <command name="javap" path="bin/javap"/>
-      <command name="jar" path="bin/jar"/>
-      <command name="jarsigner" path="bin/jarsigner"/>
-      <command name="javadoc" path="bin/javadoc"/>
-      <command name="keytool" path="bin/keytool"/>
-      <command name="servertool" path="bin/servertool"/>
-      <command name="pack200" path="bin/pack200"/>
-      <command name="unpack200" path="bin/unpack200"/>
-      <command name="appletviewer" path="bin/appletviewer"/>
-      <command name="rmid" path="bin/rmid"/>
-      <command name="rmiregistry" path="bin/rmiregistry"/>
-      <command name="idlj" path="bin/idlj"/>
-      <command name="jjs" path="bin/jjs"/>
-      <command name="jrunscript" path="bin/jrunscript"/>
-      <command name="jaotc" path="bin/jaotc"/>
-      <command name="jcmd" path="bin/jcmd"/>
-      <command name="jconsole" path="bin/jconsole"/>
-      <command name="jdb" path="bin/jdb"/>
-      <command name="jdeprscan" path="bin/jdeprscan"/>
-      <command name="jdeps" path="bin/jdeps"/>
-      <command name="jhsdb" path="bin/jhsdb"/>
-      <command name="jimage" path="bin/jimage"/>
-      <command name="jinfo" path="bin/jinfo"/>
-      <command name="jlink" path="bin/jlink"/>
-      <command name="jmap" path="bin/jmap"/>
-      <command name="jmod" path="bin/jmod"/>
-      <command name="jps" path="bin/jps"/>
-      <command name="jshell" path="bin/jshell"/>
-      <command name="jstack" path="bin/jstack"/>
-      <command name="jstat" path="bin/jstat"/>
-      <command name="jstatd" path="bin/jstatd"/>
-      <command name="rmic" path="bin/rmic"/>
-      <command name="schemagen" path="bin/schemagen"/>
-      <command name="serialver" path="bin/serialver"/>
-      <command name="wsgen" path="bin/wsgen"/>
-      <command name="wsimport" path="bin/wsimport"/>
-      <command name="xjc" path="bin/xjc"/>
-
-      <implementation id="sha1new=4b9b6c524a5acda72c872da29e7681ee79092fc1" released="2018-09-21" stability="stable" version="10.0.2">
-        <manifest-digest sha256new="U6PJWXCLYPEJQET4OJMZZTEQPJD3XV4NOHLFQVMC3D4DSW53YHPQ"/>
-        <archive extract="jdk-10.0.2" href="https://download.java.net/java/GA/jdk10/10.0.2/19aef61b38124481863b1413dce1855f/13/openjdk-10.0.2_linux-x64_bin.tar.gz" size="204892533" type="application/x-compressed-tar"/>
-      </implementation>
-    </group>
-
-    <group arch="Windows-x86_64">
-      <command name="run" path="bin/javac.exe"/>
-      <command name="java" path="bin/java.exe"/>
-      <command name="java-gui" path="bin/javaw.exe"/>
-      <command name="javadoc" path="bin/javadoc.exe"/>
-      <command name="javap" path="bin/javap.exe"/>
-      <command name="jar" path="bin/jar.exe"/>
-      <command name="jarsigner" path="bin/jarsigner.exe"/>
-      <command name="keytool" path="bin/keytool.exe"/>
-      <command name="servertool" path="bin/servertool.exe"/>
-      <command name="pack200" path="bin/pack200.exe"/>
-      <command name="unpack200" path="bin/unpack200.exe"/>
-      <command name="appletviewer" path="bin/appletviewer.exe"/>
-      <command name="rmid" path="bin/rmid.exe"/>
-      <command name="rmiregistry" path="bin/rmiregistry.exe"/>
-      <command name="idlj" path="bin/idlj.exe"/>
-      <command name="jjs" path="bin/jjs.exe"/>
-      <command name="jrunscript" path="bin/jrunscript.exe"/>
-      <command name="jaotc" path="bin/jaotc.exe"/>
-      <command name="jcmd" path="bin/jcmd.exe"/>
-      <command name="jconsole" path="bin/jconsole.exe"/>
-      <command name="jdb" path="bin/jdb.exe"/>
-      <command name="jdeprscan" path="bin/jdeprscan.exe"/>
-      <command name="jdeps" path="bin/jdeps.exe"/>
-      <command name="jhsdb" path="bin/jhsdb.exe"/>
-      <command name="jimage" path="bin/jimage.exe"/>
-      <command name="jinfo" path="bin/jinfo.exe"/>
-      <command name="jlink" path="bin/jlink.exe"/>
-      <command name="jmap" path="bin/jmap.exe"/>
-      <command name="jmod" path="bin/jmod.exe"/>
-      <command name="jps" path="bin/jps.exe"/>
-      <command name="jshell" path="bin/jshell.exe"/>
-      <command name="jstack" path="bin/jstack.exe"/>
-      <command name="jstat" path="bin/jstat.exe"/>
-      <command name="jstatd" path="bin/jstatd.exe"/>
-      <command name="rmic" path="bin/rmic.exe"/>
-      <command name="schemagen" path="bin/schemagen.exe"/>
-      <command name="serialver" path="bin/serialver.exe"/>
-      <command name="wsgen" path="bin/wsgen.exe"/>
-      <command name="wsimport" path="bin/wsimport.exe"/>
-      <command name="xjc" path="bin/xjc.exe"/>
-      <command name="kinit" path="bin/kinit.exe"/>
-      <command name="klist" path="bin/klist.exe"/>
-      <command name="ktab" path="bin/ktab.exe"/>
-      <command name="jabswitch" path="bin/jabswitch.exe"/>
-      <command name="jaccessinspector" path="bin/jaccessinspector.exe"/>
-      <command name="jaccesswalker" path="bin/jaccesswalker.exe"/>
-
-      <implementation id="sha1new=cf15788ac20daa85e51b42f9c23cbbe3c284f9f8" released="2018-09-21" stability="stable" version="10.0.2">
-        <manifest-digest sha256new="XDQKNQN4WAVQ5QFNMHZXGQSE7EVTDVCHB37IP757G4WENXUX4QTQ"/>
-        <archive extract="jdk-10.0.2" href="https://download.java.net/java/GA/jdk10/10.0.2/19aef61b38124481863b1413dce1855f/13/openjdk-10.0.2_windows-x64_bin.tar.gz" size="198305764" type="application/x-compressed-tar"/>
-      </implementation>
-    </group>
-  </group>
 
   <group>
     <!-- Some versions of JDK bundle their own copy of the JRE. For those that don't we refer back the regular JRE. -->
@@ -178,7 +77,6 @@ components using the Java programming language.</description>
     </group>
   </group>
 
-
   <entry-point binary-name="javac" command="run">
     <name>Java compiler</name>
   </entry-point>
@@ -209,10 +107,6 @@ components using the Java programming language.</description>
     <needs-terminal/>
     <name>Key and Certificate Management Tool</name>
   </entry-point>
-  <entry-point binary-name="servertool" command="servertool">
-    <needs-terminal/>
-    <name>Java IDL Server Tool</name>
-  </entry-point>
   <entry-point binary-name="pack200" command="pack200">
     <needs-terminal/>
     <name>JAR Packing tool</name>
@@ -221,9 +115,6 @@ components using the Java programming language.</description>
     <needs-terminal/>
     <name>JAR Unpacking tool</name>
   </entry-point>
-  <entry-point binary-name="appletviewer" command="appletviewer">
-    <name>Run applet outside of browser</name>
-  </entry-point>
   <entry-point binary-name="rmid" command="rmid">
     <needs-terminal/>
     <name>Remote activation system daemon</name>
@@ -231,10 +122,6 @@ components using the Java programming language.</description>
   <entry-point binary-name="rmiregistry" command="rmiregistry">
     <needs-terminal/>
     <name>Remote object registry</name>
-  </entry-point>
-  <entry-point binary-name="idlj" command="idlj">
-    <needs-terminal/>
-    <name>IDL-to-Java Compiler</name>
   </entry-point>
   <entry-point binary-name="jjs" command="jjs">
     <needs-terminal/>
@@ -295,19 +182,7 @@ components using the Java programming language.</description>
   <entry-point command="jstatd" binary-name="jstatd">
     <needs-terminal/>
   </entry-point>
-  <entry-point command="schemagen" binary-name="schemagen">
-    <needs-terminal/>
-  </entry-point>
   <entry-point command="serialver" binary-name="serialver">
-    <needs-terminal/>
-  </entry-point>
-  <entry-point command="wsgen" binary-name="wsgen">
-    <needs-terminal/>
-  </entry-point>
-  <entry-point command="wsimport" binary-name="wsimport">
-    <needs-terminal/>
-  </entry-point>
-  <entry-point command="xjc" binary-name="xjc">
     <needs-terminal/>
   </entry-point>
   <entry-point binary-name="kinit" command="kinit">

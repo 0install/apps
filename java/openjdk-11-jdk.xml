@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<interface uri="http://repo.roscidus.com/java/openjdk-11-jdk" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>openjdk-11-jdk</name>
+  <summary>OpenJDK Development Kit (JDK)</summary>
+  <description>OpenJDK is a development environment for building applications, applets, and
+components using the Java programming language.</description>
+  <homepage>http://jdk.java.net/11/</homepage>
+  <category>Development</category>
+
+  <feed-for interface="http://repo.roscidus.com/java/openjdk-jdk"/>
+
+  <group license="GNU General Public License, version 2, with the Classpath Exception">
+    <group arch="Linux-x86_64">
+      <command name="run" path="bin/javac"/>
+      <command name="java" path="bin/java"/>
+      <command name="javap" path="bin/javap"/>
+      <command name="jar" path="bin/jar"/>
+      <command name="jarsigner" path="bin/jarsigner"/>
+      <command name="javadoc" path="bin/javadoc"/>
+      <command name="keytool" path="bin/keytool"/>
+      <command name="pack200" path="bin/pack200"/>
+      <command name="unpack200" path="bin/unpack200"/>
+      <command name="rmid" path="bin/rmid"/>
+      <command name="rmiregistry" path="bin/rmiregistry"/>
+      <command name="jjs" path="bin/jjs"/>
+      <command name="jrunscript" path="bin/jrunscript"/>
+      <command name="jaotc" path="bin/jaotc"/>
+      <command name="jcmd" path="bin/jcmd"/>
+      <command name="jconsole" path="bin/jconsole"/>
+      <command name="jdb" path="bin/jdb"/>
+      <command name="jdeprscan" path="bin/jdeprscan"/>
+      <command name="jdeps" path="bin/jdeps"/>
+      <command name="jhsdb" path="bin/jhsdb"/>
+      <command name="jimage" path="bin/jimage"/>
+      <command name="jinfo" path="bin/jinfo"/>
+      <command name="jlink" path="bin/jlink"/>
+      <command name="jmap" path="bin/jmap"/>
+      <command name="jmod" path="bin/jmod"/>
+      <command name="jps" path="bin/jps"/>
+      <command name="jshell" path="bin/jshell"/>
+      <command name="jstack" path="bin/jstack"/>
+      <command name="jstat" path="bin/jstat"/>
+      <command name="jstatd" path="bin/jstatd"/>
+      <command name="rmic" path="bin/rmic"/>
+      <command name="serialver" path="bin/serialver"/>
+
+      <implementation id="sha1new=9c7622ade95eacd2c390d8170771e55babad244c" released="2018-09-26" stability="stable" version="11">
+        <manifest-digest sha256new="Q2X2UKIS43OQC4JKOKB4X655BCZCCO5BB6SVWTBEQGYL7CA5UR4Q"/>
+        <archive extract="jdk-11" href="https://download.java.net/java/GA/jdk11/28/GPL/openjdk-11+28_linux-x64_bin.tar.gz" size="187611826" type="application/x-compressed-tar"/>
+      </implementation>
+    </group>
+
+    <group arch="Windows-x86_64">
+      <command name="run" path="bin/javac.exe"/>
+      <command name="java" path="bin/java.exe"/>
+      <command name="java-gui" path="bin/javaw.exe"/>
+      <command name="javadoc" path="bin/javadoc.exe"/>
+      <command name="javap" path="bin/javap.exe"/>
+      <command name="jar" path="bin/jar.exe"/>
+      <command name="jarsigner" path="bin/jarsigner.exe"/>
+      <command name="keytool" path="bin/keytool.exe"/>
+      <command name="pack200" path="bin/pack200.exe"/>
+      <command name="unpack200" path="bin/unpack200.exe"/>
+      <command name="rmid" path="bin/rmid.exe"/>
+      <command name="rmiregistry" path="bin/rmiregistry.exe"/>
+      <command name="jjs" path="bin/jjs.exe"/>
+      <command name="jrunscript" path="bin/jrunscript.exe"/>
+      <command name="jaotc" path="bin/jaotc.exe"/>
+      <command name="jcmd" path="bin/jcmd.exe"/>
+      <command name="jconsole" path="bin/jconsole.exe"/>
+      <command name="jdb" path="bin/jdb.exe"/>
+      <command name="jdeprscan" path="bin/jdeprscan.exe"/>
+      <command name="jdeps" path="bin/jdeps.exe"/>
+      <command name="jhsdb" path="bin/jhsdb.exe"/>
+      <command name="jimage" path="bin/jimage.exe"/>
+      <command name="jinfo" path="bin/jinfo.exe"/>
+      <command name="jlink" path="bin/jlink.exe"/>
+      <command name="jmap" path="bin/jmap.exe"/>
+      <command name="jmod" path="bin/jmod.exe"/>
+      <command name="jps" path="bin/jps.exe"/>
+      <command name="jshell" path="bin/jshell.exe"/>
+      <command name="jstack" path="bin/jstack.exe"/>
+      <command name="jstat" path="bin/jstat.exe"/>
+      <command name="jstatd" path="bin/jstatd.exe"/>
+      <command name="rmic" path="bin/rmic.exe"/>
+      <command name="serialver" path="bin/serialver.exe"/>
+      <command name="kinit" path="bin/kinit.exe"/>
+      <command name="klist" path="bin/klist.exe"/>
+      <command name="ktab" path="bin/ktab.exe"/>
+      <command name="jabswitch" path="bin/jabswitch.exe"/>
+      <command name="jaccessinspector" path="bin/jaccessinspector.exe"/>
+      <command name="jaccesswalker" path="bin/jaccesswalker.exe"/>
+
+      <implementation id="sha1new=0116490dd2f3bdf07cafd60d7a670dc5bde7ab01" released="2018-09-26" stability="stable" version="11">
+        <manifest-digest sha256new="5C36AHI7R24LHCRV3YO4QNQKE5CD7PQ3LQWTZ4JG27QNC2VIY53A"/>
+        <archive extract="jdk-11" href="https://download.java.net/java/GA/jdk11/28/GPL/openjdk-11+28_windows-x64_bin.zip" size="187396683" type="application/zip"/>
+      </implementation>
+    </group>
+  </group>
+</interface>

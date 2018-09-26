@@ -9,12 +9,21 @@
 
   <feed-for interface="http://repo.roscidus.com/devel/gitversion"/>
 
-  <group>
+  <group arch="Windows-*" license="MIT License">
     <command name="run" path="GitVersion.exe">
       <runner interface="http://repo.roscidus.com/dotnet/clr" command="run"/>
     </command>
     <implementation version="{version}" released="{released}" stability="{stability}">
       <archive href="https://github.com/GitTools/GitVersion/releases/download/v{sem-ver}/GitVersion_{nuget-ver}.zip" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group arch="POSIX-*" license="MIT License">
+    <command name="run" path="GitVersion.dll">
+      <runner interface="http://repo.roscidus.com/dotnet/core" command="run"/>
+    </command>
+    <implementation version="{version}" released="{released}" stability="{stability}">
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/v{sem-ver}/GitVersionDotNetCore_{nuget-ver}.zip" type="application/zip"/>
     </implementation>
   </group>
 </interface>

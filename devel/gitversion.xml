@@ -7,7 +7,7 @@
   <homepage>https://github.com/GitTools/GitVersion</homepage>
   <needs-terminal/>
 
-  <group>
+  <group license="MIT License">
     <command name="run" path="GitVersion.exe">
       <runner command="run" interface="http://repo.roscidus.com/dotnet/clr"/>
     </command>
@@ -127,9 +127,25 @@
       <manifest-digest sha256new="AWV4SAZR36RMJHPZ75BCLFENMMZWHVEPZ2UTPD7ZCPPOQJKH4MXQ"/>
       <archive href="https://github.com/GitTools/GitVersion/releases/download/v4.0.0-beta.13/GitVersion_4.0.0-beta0013.zip" size="6172795" type="application/zip"/>
     </implementation>
-    <implementation id="sha1new=b136b60860de70c7e3453de9bd9662e49872bd51" released="2018-08-21" stability="testing" version="4.0.0-pre14">
+  </group>
+
+  <group arch="Windows-*" license="MIT License">
+    <command name="run" path="GitVersion.exe">
+      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run"/>
+    </command>
+    <implementation arch="Windows-*" id="sha1new=b136b60860de70c7e3453de9bd9662e49872bd51" released="2018-08-21" stability="testing" version="4.0.0-pre14">
       <manifest-digest sha256new="AH7H5V5QJ2YWVYEADXZHG45FLXDKXYGFYSCL3TRTVYDX2LI7L3MA"/>
       <archive href="https://github.com/GitTools/GitVersion/releases/download/v4.0.0-beta.14/GitVersion_4.0.0-beta0014.zip" size="5996644" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group arch="POSIX-*" license="MIT License">
+    <command name="run" path="GitVersion.dll">
+      <runner interface="http://repo.roscidus.com/dotnet/core" command="run"/>
+    </command>
+    <implementation id="sha1new=ff2ab061486866b0ead2ad5d0374329b9b4d3592" released="2018-08-21" stability="testing" version="4.0.0-pre14">
+      <manifest-digest sha256new="K3YQ26RZBG5YURR57DIM6SSZ6GQO3OKARPTDXFKOSAHWSIZKFBKA"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/v4.0.0-beta.14/GitVersionDotNetCore_4.0.0-beta0014.zip" size="11902775" type="application/zip"/>
     </implementation>
   </group>
 

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Doxygen</name>
+  <summary>generate documentation from source code</summary>
+  <homepage>http://www.doxygen.nl/</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/devel/doxygen"/>
+
+  <group arch="Linux-x86_64" license="GPL v2 (GNU General Public License)">
+    <command name="run" path="bin/doxygen"/>
+    <command name="doxyindexer" path="bin/doxyindexer"/>
+
+    <implementation stability="stable" version="{version}" released="{released}">
+      <manifest-digest/>
+      <archive extract="doxygen-{version}" href="http://downloads.sourceforge.net/project/doxygen/rel-{version}/doxygen-{version}.linux.bin.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="GPL v2 (GNU General Public License)">
+    <command name="run" path="doxygen.exe"/>
+    <command name="doxyindexer" path="doxyindexer.exe"/>
+
+    <implementation arch="Windows-i486" stability="stable" version="{version}" released="{released}">
+      <manifest-digest/>
+      <archive href="http://downloads.sourceforge.net/project/doxygen/rel-{version}/doxygen-{version}.windows.bin.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" stability="stable" version="{version}" released="{released}">
+      <manifest-digest/>
+      <archive href="http://downloads.sourceforge.net/project/doxygen/rel-{version}/doxygen-{version}.windows.x64.bin.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

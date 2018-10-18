@@ -9,8 +9,9 @@
 
   <group license="MIT License">
     <command name="run" path="GitVersion.exe">
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/clr"/>
+      <runner command="run" interface="http://repo.roscidus.com/dotnet/clr" version="4.0.."/>
     </command>
+
     <implementation id="sha1new=5c46d21ee73a5d055f295b64b47d6bfb89810724" released="2015-08-26" stability="stable" version="3.1.1">
       <manifest-digest sha256new="I62ITQTZQDAXEBMSAJIWUDWOQKMKGNTDHAYZIOC4EZ3GZDIOMITQ"/>
       <archive href="https://github.com/GitTools/GitVersion/releases/download/v3.1.1/GitVersion_3.1.1.zip" size="1174161" type="application/zip"/>
@@ -131,21 +132,33 @@
 
   <group arch="Windows-*" license="MIT License">
     <command name="run" path="GitVersion.exe">
-      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run"/>
+      <runner command="run" interface="http://repo.roscidus.com/dotnet/clr" version="4.0.."/>
     </command>
-    <implementation arch="Windows-*" id="sha1new=b136b60860de70c7e3453de9bd9662e49872bd51" released="2018-08-21" stability="testing" version="4.0.0-pre14">
+
+    <implementation id="sha1new=b136b60860de70c7e3453de9bd9662e49872bd51" released="2018-08-21" stability="testing" version="4.0.0-pre14">
       <manifest-digest sha256new="AH7H5V5QJ2YWVYEADXZHG45FLXDKXYGFYSCL3TRTVYDX2LI7L3MA"/>
       <archive href="https://github.com/GitTools/GitVersion/releases/download/v4.0.0-beta.14/GitVersion_4.0.0-beta0014.zip" size="5996644" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=3f2587560625dbbdd5c32a4a87cf415fa6974a7d" released="2018-10-12" stability="stable" version="4.0.0">
+      <manifest-digest sha256new="VQD6Y6HBSIZBI66LGSFFBXHMRWATCYLMANPELHGRVKUBNTSUMR5A"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/v4.0.0/GitVersion-bin-net40-v4.0.0.zip" size="6000624" type="application/zip"/>
     </implementation>
   </group>
 
   <group arch="POSIX-*" license="MIT License">
     <command name="run" path="GitVersion.dll">
-      <runner interface="http://repo.roscidus.com/dotnet/core" command="run"/>
+      <runner command="run" interface="http://repo.roscidus.com/dotnet/core" version="2.0.."/>
     </command>
+    <requires interface="http://repo.roscidus.com/lib/icu"/>
+    <requires interface="http://repo.roscidus.com/lib/curl"/>
+
     <implementation id="sha1new=ff2ab061486866b0ead2ad5d0374329b9b4d3592" released="2018-08-21" stability="testing" version="4.0.0-pre14">
       <manifest-digest sha256new="K3YQ26RZBG5YURR57DIM6SSZ6GQO3OKARPTDXFKOSAHWSIZKFBKA"/>
       <archive href="https://github.com/GitTools/GitVersion/releases/download/v4.0.0-beta.14/GitVersionDotNetCore_4.0.0-beta0014.zip" size="11902775" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=fe3ab5f8ec2b8671bf62bc3a16f704c9f9944f8c" released="2018-10-12" stability="stable" version="4.0.0">
+      <manifest-digest sha256new="IUN5UVOAGELPAYPKO7YZ6IEQLFEF5A2VUT6W2257KAJQC2CDO3NA"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/v4.0.0/GitVersion-bin-coreclr-v4.0.0.zip" size="11911459" type="application/zip"/>
     </implementation>
   </group>
 

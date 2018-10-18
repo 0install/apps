@@ -11,19 +11,23 @@
 
   <group arch="Windows-*" license="MIT License">
     <command name="run" path="GitVersion.exe">
-      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run"/>
+      <runner command="run" interface="http://repo.roscidus.com/dotnet/clr" version="4.0.."/>
     </command>
+
     <implementation version="{version}" released="{released}" stability="{stability}">
-      <archive href="https://github.com/GitTools/GitVersion/releases/download/v{sem-ver}/GitVersion_{nuget-ver}.zip" type="application/zip"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/v{original-version}/GitVersion-bin-net40-v{original-version}.zip" type="application/zip"/>
     </implementation>
   </group>
 
   <group arch="POSIX-*" license="MIT License">
     <command name="run" path="GitVersion.dll">
-      <runner interface="http://repo.roscidus.com/dotnet/core" command="run"/>
+      <runner command="run" interface="http://repo.roscidus.com/dotnet/core" version="2.0.."/>
     </command>
+    <requires interface="http://repo.roscidus.com/lib/icu"/>
+    <requires interface="http://repo.roscidus.com/lib/curl"/>
+
     <implementation version="{version}" released="{released}" stability="{stability}">
-      <archive href="https://github.com/GitTools/GitVersion/releases/download/v{sem-ver}/GitVersionDotNetCore_{nuget-ver}.zip" type="application/zip"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/v{original-version}/GitVersion-bin-coreclr-v{original-version}.zip" type="application/zip"/>
     </implementation>
   </group>
 </interface>

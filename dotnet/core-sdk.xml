@@ -8,214 +8,302 @@
   <feed-for interface="http://repo.roscidus.com/dotnet/core"/><!-- The .NET Core SDK bundles a .NET Core Runtime -->
 
   <group license="MIT License">
+    <command name="run" path="dotnet.exe"/>
     <environment mode="replace" name="DOTNET_SKIP_FIRST_TIME_EXPERIENCE" value="true"/><!-- Prevent extraction of NuGet packages into implementation dir (which is read-only) -->
 
-    <group main="dotnet.exe">
-      <implementation arch="Windows-x86_64" id="sha1new=c2e0c6e906bc9a148ea70d065e7693e1b0a9fdf9" stability="stable" version="1.0.4">
-        <manifest-digest sha256new="HRNM3EIMRYJ3TMXOX362R4GSHPQXWLUKZM3D7FSYYOIDTHCMOHOQ"/>
-        <archive href="https://download.microsoft.com/download/E/7/8/E782433E-7737-4E6C-BFBF-290A0A81C3D7/dotnet-dev-win-x64.1.0.4.zip" size="125194623" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-i486" id="sha1new=be7e3a7dc9feb271c7aa5f5595eac9e4a897cb39" stability="stable" version="1.0.4">
-        <manifest-digest sha256new="R6O25BJODZ2P7QA22JWFJFFSCIHL4SEEAE4MTGNHMBHXJO2RMVAA"/>
-        <archive href="https://download.microsoft.com/download/E/7/8/E782433E-7737-4E6C-BFBF-290A0A81C3D7/dotnet-dev-win-x86.1.0.4.zip" size="118083902" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-x86_64" id="sha1new=202d3806159ff42e97476e1b1318acd5c7f4fa55" released="2017-10-18" stability="stable" version="1.1.4">
-        <manifest-digest sha256new="KHAKQZ4QWDOVUX2U357QOENLE6HUY2AMOR7UEOYPTV3RYYA2BMAQ"/>
-        <archive href="https://download.microsoft.com/download/F/4/F/F4FCB6EC-5F05-4DF8-822C-FF013DF1B17F/dotnet-dev-win-x64.1.1.4.zip" size="140925240" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-i486" id="sha1new=6ab349d5a5a430b9f7cc313cf854be9c0c8cf2c1" released="2017-10-18" stability="stable" version="1.1.4">
-        <manifest-digest sha256new="FUQA4EL4DWQHGQZCJRLLCUTB56ZISJ3RYPQCVV7VWMNVNSXMYM7Q"/>
-        <archive href="https://download.microsoft.com/download/F/4/F/F4FCB6EC-5F05-4DF8-822C-FF013DF1B17F/dotnet-dev-win-x86.1.1.4.zip" size="133463151" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-x86_64" id="sha1new=65b70e31b80503d6f4dd593bb5b568e306d4f400" released="2017-11-15" stability="stable" version="1.1.5">
-        <manifest-digest sha256new="P26R63NPDYCFIGXRREQ6BLL2YJPGGJCHWRRWJJL2MKNRD52MCVIA"/>
-        <archive href="https://download.microsoft.com/download/C/5/5/C55807F5-601C-49B1-B9BB-1BE03EB83E0A/dotnet-dev-win-x64.1.1.5.zip" size="141002281" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-i486" id="sha1new=cb741f5f3bba91969f149221dc9231cc7d040b8b" released="2017-11-15" stability="stable" version="1.1.5">
-        <manifest-digest sha256new="QUCWWKWJ6BKORRLHXBBNPVWWXEQRAUT4T3DAZCS5RCJVUYHTIJDQ"/>
-        <archive href="https://download.microsoft.com/download/C/5/5/C55807F5-601C-49B1-B9BB-1BE03EB83E0A/dotnet-dev-win-x86.1.1.5.zip" size="133544266" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-x86_64" id="sha1new=759cd2f22a39e7b50c1996d54f18765f5aa067ce" stability="stable" version="2.0.0">
-        <manifest-digest sha256new="UIJ4FRX5CSNSXLS4W35NS7UIXUFKMHY6UD3LZRFAHGL5PHAV6M4Q"/>
-        <archive href="https://download.microsoft.com/download/1/B/4/1B4DE605-8378-47A5-B01B-2C79D6C55519/dotnet-sdk-2.0.0-win-x64.zip" size="129741059" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-i486" id="sha1new=521222c2b1bd3b6a33d98b654279cdd569364d37" stability="stable" version="2.0.0">
-        <manifest-digest sha256new="JSDLYGYT7EQGVBUR2MHT2OPTV5URBTHWTUBSRAPJIOEDYQPSFLTQ"/>
-        <archive href="https://download.microsoft.com/download/1/B/4/1B4DE605-8378-47A5-B01B-2C79D6C55519/dotnet-sdk-2.0.0-win-x86.zip" size="123540137" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-x86_64" id="sha1new=aa2cbc1b39dd42935b2427a8359b781c04a78271" released="2017-11-02" stability="stable" version="2.0.2">
-        <manifest-digest sha256new="JEXMORJAGWNIE672BDY2J2APNNHFQA57AQN7ETL5YTCBFOWL4BIA"/>
-        <archive href="https://download.microsoft.com/download/7/3/A/73A3E4DC-F019-47D1-9951-0453676E059B/dotnet-sdk-2.0.2-win-x64.zip" size="129893032" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-i486" id="sha1new=620fe41f0820e6eaaea9c1bad9c6f51878211670" released="2017-11-02" stability="stable" version="2.0.2">
-        <manifest-digest sha256new="57ZQ4HZ2WXE7V6UDBFG7FCDC4B7VRNAQLNJ3DFGQX3GTDCKOJZ7A"/>
-        <archive href="https://download.microsoft.com/download/7/3/A/73A3E4DC-F019-47D1-9951-0453676E059B/dotnet-sdk-2.0.2-win-x86.zip" size="123684607" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-x86_64" id="sha1new=ca6fec3db6784315d2b3dab7da6c199128012314" released="2017-11-29" stability="stable" version="2.0.3">
-        <manifest-digest sha256new="VCHAVYS726J5AIIEKTDVRVX46M7E77KIDH54QXXOVBKZOT5NXUXQ"/>
-        <archive href="https://download.microsoft.com/download/D/7/2/D725E47F-A4F1-4285-8935-A91AE2FCC06A/dotnet-sdk-2.0.3-win-x64.zip" size="138667703" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-i486" id="sha1new=3ec3b8cbabda3ed1669c51febaeacba8e8cd307d" released="2017-11-29" stability="stable" version="2.0.3">
-        <manifest-digest sha256new="NX63MP5EO3RBHBAOIWNEVHKLWEOYNDPEW2R2RTCTEKTKAQ4WHCKA"/>
-        <archive href="https://download.microsoft.com/download/D/7/2/D725E47F-A4F1-4285-8935-A91AE2FCC06A/dotnet-sdk-2.0.3-win-x86.zip" size="131851115" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-x86_64" id="sha1new=416925d667eb7a172496fac9eb6c0cf31822462d" released="2018-01-09" stability="stable" version="1.1.7">
-        <manifest-digest sha256new="WVMPHRCDYPUBF2BCW4RWDYIYVUU6DSJN5S5X6IUOWBYTYROI663A"/>
-        <archive href="https://download.microsoft.com/download/4/E/6/4E64A465-F02E-43AD-9A86-A08A223A82C3/dotnet-dev-win-x64.1.1.7.zip" size="140998484" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-i486" id="sha1new=c7b02153b6956a753daa9b98873d38dfe0caca85" released="2018-01-09" stability="stable" version="1.1.7">
-        <manifest-digest sha256new="V75YS77GLEBKS5AYFR5A6EZKCHFWSNMEQFXBRGYMBUA7PYRPKJEA"/>
-        <archive href="https://download.microsoft.com/download/4/E/6/4E64A465-F02E-43AD-9A86-A08A223A82C3/dotnet-dev-win-x86.1.1.7.zip" size="133542140" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-x86_64" id="sha1new=4bd80be9c778865971ebde42447d94d2308c42cc" released="2018-03-13" stability="stable" version="1.1.8">
-        <manifest-digest sha256new="4ZPNDK5LR3M77QAQTCZO2AZRY7MFMXZLNCKAGUX5JTSVRBGMN2ZA"/>
-        <archive href="https://download.microsoft.com/download/6/5/F/65F1653E-F835-4DE3-BB36-F324D3925F32/dotnet-dev-win-x64.1.1.8.zip" size="140997763" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-i486" id="sha1new=734fcffbd3f3a270be6fb5db4fe91ef6b322a678" released="2018-03-13" stability="stable" version="1.1.8">
-        <manifest-digest sha256new="PT2FKG4465A2LHU7MBAUMN72AC4L3EDEY7AJCXIQGODU5QXOXQRA"/>
-        <archive href="https://download.microsoft.com/download/6/5/F/65F1653E-F835-4DE3-BB36-F324D3925F32/dotnet-dev-win-x86.1.1.8.zip" size="133543080" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-x86_64" id="sha1new=0796b17f73240c6b8a2489109e1092ff21bd0b38" released="2018-03-13" stability="stable" version="2.1.101">
-        <manifest-digest sha256new="JYCKYQBROY2XASDJ3O2IHWMYTIS77JW5UYHO6GXSQM3UGVN4WWCQ"/>
-        <archive href="https://download.microsoft.com/download/D/C/F/DCFA73BE-93CE-4DA0-AB76-98972FD6E475/dotnet-sdk-2.1.101-win-x64.zip" size="154646623" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-i486" id="sha1new=06a711c4d7cfe9a19eaea2fcebdaf6db012db074" released="2018-03-13" stability="stable" version="2.1.101">
-        <manifest-digest sha256new="HRBTBZUYC6WTEO72IF3ZAYDWINRCXFJQO53JCZ2N6V6GIBNSEGUQ"/>
-        <archive href="https://download.microsoft.com/download/D/C/F/DCFA73BE-93CE-4DA0-AB76-98972FD6E475/dotnet-sdk-2.1.101-win-x86.zip" size="146754975" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-x86_64" id="sha1new=24b5ad257edc02f77dc1ebf3dd3d50fa815a305c" released="2017-12-13" stability="stable" version="2.1.3">
-        <manifest-digest sha256new="I73UYXDSKXHAEAY7ZXPK5DHPX67WVMWMAFZAAGZOSWJBNEFAJQEA"/>
-        <archive href="https://download.microsoft.com/download/2/9/3/293BC432-348C-4D1C-B628-5AC8AB7FA162/dotnet-sdk-2.1.3-win-x64.zip" size="142332802" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-i486" id="sha1new=8592da7d4cba3483bb24568c7f77372c8366a001" released="2017-12-13" stability="stable" version="2.1.3">
-        <manifest-digest sha256new="GLBKAWQMOAOSFWASUEBC4Y76OOR7GFK5X72CAFFIZRBFIKF5NXWA"/>
-        <archive href="https://download.microsoft.com/download/2/9/3/293BC432-348C-4D1C-B628-5AC8AB7FA162/dotnet-sdk-2.1.3-win-x86.zip" size="135308281" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-x86_64" id="sha1new=777e952b5dd277fc47413675ce2d90fb9a930d90" released="2018-01-09" stability="stable" version="2.1.4">
-        <manifest-digest sha256new="ZHDU5WSTIIL4IO4BNDLDOFRTDA232E7CORDCGQNGY6LI3TBWCQKA"/>
-        <archive href="https://download.microsoft.com/download/1/1/5/115B762D-2B41-4AF3-9A63-92D9680B9409/dotnet-sdk-2.1.4-win-x64.zip" size="144044555" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-i486" id="sha1new=e6ff0af4228fcdb37734d10e7a22ec2ac4c02292" released="2018-01-09" stability="stable" version="2.1.4">
-        <manifest-digest sha256new="G2OTU42GCCS4AQJR6WHKY7FOOL5VMNTYJUJ3FJCIXW7FYRQXWMTA"/>
-        <archive href="https://download.microsoft.com/download/1/1/5/115B762D-2B41-4AF3-9A63-92D9680B9409/dotnet-sdk-2.1.4-win-x86.zip" size="136894744" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-x86_64" id="sha1new=f1b120469c9e0bbf59760fc8683cd81311c8aad2" released="2018-04-17" stability="stable" version="1.1.9">
-        <manifest-digest sha256new="WWL3NIYWQPSBMGD42JW4VXT2GB23AG5JUGKITEASOLVKVKVXFHZQ"/>
-        <archive href="https://download.microsoft.com/download/4/0/2/4022CFC7-5061-4762-B9BA-48B35632572D/dotnet-dev-win-x64.1.1.9.zip" size="141007414" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-i486" id="sha1new=ab828f94fa6ea6a5094a64e89c7fb25b1fb3c8b7" released="2018-04-17" stability="stable" version="1.1.9">
-        <manifest-digest sha256new="TM3J346NSVKPGSVWG5RLBO6UOIOJZON4J3JSXWJELSXHY523V5JQ"/>
-        <archive href="https://download.microsoft.com/download/4/0/2/4022CFC7-5061-4762-B9BA-48B35632572D/dotnet-dev-win-x86.1.1.9.zip" size="133552481" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-x86_64" id="sha1new=82c7718705b2ad4aa4111dfc2ac3b0120ac29a1a" released="2017-12-11" stability="stable" version="2.1.2">
-        <manifest-digest sha256new="QNHC5FHZC7ILPEYBNG7KOTBSUGJEZELYX4NRXWSEREKSXUT2GVJA"/>
-        <archive href="https://download.microsoft.com/download/5/D/F/5DF4B836-7DFD-4CCF-AC96-101E2A4C7421/dotnet-sdk-2.1.2-win-x64.zip" size="141940648" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-i486" id="sha1new=83e5994bc54792e0f0a42703654ea64b55f2d821" released="2017-12-11" stability="stable" version="2.1.2">
-        <manifest-digest sha256new="GMJGBCFGJPRMKBLM3E2RFNXOFSARLMTRSUNCDPEHH2CXQV367MDQ"/>
-        <archive href="https://download.microsoft.com/download/5/D/F/5DF4B836-7DFD-4CCF-AC96-101E2A4C7421/dotnet-sdk-2.1.2-win-x86.zip" size="134896642" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-x86_64" id="sha1new=689dc02c76c436e602377166eefe1d1189126689" released="2018-05-08" stability="stable" version="2.1.200">
-        <manifest-digest sha256new="HVM57LNDG3V4FXF2SVH6TKHR75OT5WSZXLNKZXOWN4VKOXKNXV4Q"/>
-        <archive href="https://download.microsoft.com/download/3/7/1/37189942-C91D-46E9-907B-CF2B2DE584C7/dotnet-sdk-2.1.200-win-x64.zip" size="164622711" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-i486" id="sha1new=4cc625855bf7d11bd45c203478533233ac7e3382" released="2018-05-08" stability="stable" version="2.1.200">
-        <manifest-digest sha256new="I3ONJYJKTKAN7GH5WBJZMFQUDUZIJQ2WUR75VVU7DUBAAG4DQEWQ"/>
-        <archive href="https://download.microsoft.com/download/3/7/1/37189942-C91D-46E9-907B-CF2B2DE584C7/dotnet-sdk-2.1.200-win-x86.zip" size="156047952" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-x86_64" id="sha1new=013be81497ee640f10d47ff0f4a37caac3b2590a" released="2018-05-30" stability="stable" version="2.1.300">
-        <manifest-digest sha256new="NPV2SKS2CNDCQQ3YBKCJ757UPFLLWDE65MT477TKF5JKD7J5EBVQ"/>
-        <archive href="https://download.microsoft.com/download/8/8/5/88544F33-836A-49A5-8B67-451C24709A8F/dotnet-sdk-2.1.300-win-x64.zip" size="158440155" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-i486" id="sha1new=ead6f71d0e1ea633396bcc441b8ed8a888d171b1" released="2018-05-30" stability="stable" version="2.1.300">
-        <manifest-digest sha256new="EOPQV2VMJKDFJT4L7LCAJHP363KGZI2ZBQ4PUNYSZY42XWYJP3WA"/>
-        <archive href="https://download.microsoft.com/download/8/8/5/88544F33-836A-49A5-8B67-451C24709A8F/dotnet-sdk-2.1.300-win-x86.zip" size="149400121" type="application/zip"/>
-      </implementation>
-    </group>
-
-    <group arch="Linux-x86_64" main="dotnet">
-      <requires interface="http://repo.roscidus.com/lib/curl"/>
-      <requires interface="http://repo.roscidus.com/lib/unwind"/>
-      <implementation id="sha1new=8eaa3ff9958d1dcf380233b8296d3983a1d7d427" stability="stable" version="2.0.0">
-        <manifest-digest sha256new="3NJE4MHKOA4VHG2IYVKQUPYEESKFNSDB2PH3BG7A7RMRUNHYU6VA"/>
-        <archive href="https://download.microsoft.com/download/1/B/4/1B4DE605-8378-47A5-B01B-2C79D6C55519/dotnet-sdk-2.0.0-linux-x64.tar.gz" size="134275497" type="application/x-compressed-tar"/>
-      </implementation>
-      <implementation id="sha1new=1591bc3e16d8cfcd9d9ffb4da979d54044e18208" released="2017-11-02" stability="stable" version="2.0.2">
-        <manifest-digest sha256new="FZYKWLKXW4E3IBRA3NSHGJXV5F4UCRV6CQ2ZNPSZBSB2PMIG4NIQ"/>
-        <archive href="https://download.microsoft.com/download/7/3/A/73A3E4DC-F019-47D1-9951-0453676E059B/dotnet-sdk-2.0.2-linux-x64.tar.gz" size="134377550" type="application/x-compressed-tar"/>
-      </implementation>
-      <implementation id="sha1new=ab4d374e6a9ea99ab4289775f5e37fb2ecc387a2" released="2017-11-29" stability="stable" version="2.0.3">
-        <manifest-digest sha256new="UGMP77PUQCXJ7EOBULWKBYKSLQZB2GVHKDN3K4XVQ6R4MJHAKE6A"/>
-        <archive href="https://download.microsoft.com/download/D/7/2/D725E47F-A4F1-4285-8935-A91AE2FCC06A/dotnet-sdk-2.0.3-linux-x64.tar.gz" size="142924266" type="application/x-compressed-tar"/>
-      </implementation>
-      <implementation id="sha1new=c6a6f92158c1ced3cc9e7e4f4c59d9057997d76e" released="2018-03-13" stability="stable" version="2.1.101">
-        <manifest-digest sha256new="MUOAUATJF7OIQF6OVJDNPY2VTLIB3JGA4GJDVXQFHZ67RXTGVXRQ"/>
-        <archive href="https://download.microsoft.com/download/D/C/F/DCFA73BE-93CE-4DA0-AB76-98972FD6E475/dotnet-sdk-2.1.101-linux-x64.tar.gz" size="160347601" type="application/x-compressed-tar"/>
-      </implementation>
-      <implementation id="sha1new=2bb330a43d7b1284d182ca2251048c84b295bc57" released="2017-12-13" stability="stable" version="2.1.3">
-        <manifest-digest sha256new="SYKWNVSCQH5UB52CA3TKLOHYCYLWGKH4G5YRVQWBO2SVR7YLIHHQ"/>
-        <archive href="https://download.microsoft.com/download/2/9/3/293BC432-348C-4D1C-B628-5AC8AB7FA162/dotnet-sdk-2.1.3-linux-x64.tar.gz" size="148274081" type="application/x-compressed-tar"/>
-      </implementation>
-      <implementation id="sha1new=d07135078e629855808d6539377bc5d3f07fc262" released="2018-01-09" stability="stable" version="2.1.4">
-        <manifest-digest sha256new="BI2YYWZFQS7QJ5V6MD3S5LCA2MVTFSU4ZQC5VNR7MZ2P56673SKA"/>
-        <archive href="https://download.microsoft.com/download/1/1/5/115B762D-2B41-4AF3-9A63-92D9680B9409/dotnet-sdk-2.1.4-linux-x64.tar.gz" size="149982164" type="application/x-compressed-tar"/>
-      </implementation>
-      <implementation id="sha1new=2d7fa22c5d7a952488682fa7dccd9f0285538125" released="2017-12-11" stability="stable" version="2.1.2">
-        <manifest-digest sha256new="G5LV3F4UOXTYANISK7HHRLP3XTOXJ4LQVTEIJJAACJGEAP5Y2ZCQ"/>
-        <archive href="https://download.microsoft.com/download/5/D/F/5DF4B836-7DFD-4CCF-AC96-101E2A4C7421/dotnet-sdk-2.1.2-linux-x64.tar.gz" size="147883879" type="application/x-compressed-tar"/>
-      </implementation>
-      <implementation id="sha1new=30267ce5bfbb2c8f8d3398bc7818f5499df78b04" released="2018-05-08" stability="stable" version="2.1.200">
-        <manifest-digest sha256new="YQ4AT6NRZE3DSCSQTJJZ6DKGDU5ESGBYCXEBN6ZWQICKVTFQ4SDQ"/>
-        <archive href="https://download.microsoft.com/download/3/7/1/37189942-C91D-46E9-907B-CF2B2DE584C7/dotnet-sdk-2.1.200-linux-x64.tar.gz" size="170229746" type="application/x-compressed-tar"/>
-      </implementation>
-    </group>
-
-    <group arch="Linux-x86_64" main="dotnet">
-      <requires interface="http://repo.roscidus.com/lib/curl"/>
-      <implementation id="sha1new=50bc318f670a661f5351bba6e8c5175d062a5fb7" released="2018-05-30" stability="stable" version="2.1.300">
-        <manifest-digest sha256new="BUD77V4UMBBUK6PG3NDGNYCUBJXXR5PSGENNSYYG442DD2MR3B7Q"/>
-        <archive href="https://download.microsoft.com/download/8/8/5/88544F33-836A-49A5-8B67-451C24709A8F/dotnet-sdk-2.1.300-linux-x64.tar.gz" size="162079345" type="application/x-compressed-tar"/>
-      </implementation>
-      <implementation id="sha1new=91e4fa71015f47d556f681c34e8d9520f29d0b1f" released="2018-06-07" stability="stable" version="2.1.201">
-        <manifest-digest sha256new="JHXDMBE4BASMIJ53MTYPFRK6NBBQO6CTCQQU7EGNYKA3DVOWMYUQ"/>
-        <archive href="https://download.microsoft.com/download/C/7/D/C7DCA2DE-7163-45D1-A05A-5112DAF51445/dotnet-sdk-2.1.201-linux-x64.tar.gz" size="170197700" type="application/x-compressed-tar"/>
-      </implementation>
-    </group>
-
-    <group arch="MacOSX-x86_64" main="dotnet">
-      <implementation id="sha1new=56bd3430f1d39e17d349961606103f7d69fde44a" released="2018-05-30" stability="stable" version="2.1.300">
-        <manifest-digest sha256new="QVWIXJFEFD6AMF34RJAQN45KZT2JJOOP7ESO4CWZDDF7ODWZBE5A"/>
-        <archive href="https://download.microsoft.com/download/8/8/5/88544F33-836A-49A5-8B67-451C24709A8F/dotnet-sdk-2.1.300-osx-x64.tar.gz" size="161684924" type="application/x-compressed-tar"/>
-      </implementation>
-      <implementation arch="Windows-x86_64" id="sha1new=81f4de769c3cbb5a5f05e8ec11063a93afdc62a8" main="dotnet.exe" released="2018-06-07" stability="stable" version="2.1.201">
-        <manifest-digest sha256new="6W7HAUWHGASAPHG5UCVT575NGEM6KODDNMH4JA5PHZ7IYX2CQHPQ"/>
-        <archive href="https://download.microsoft.com/download/C/7/D/C7DCA2DE-7163-45D1-A05A-5112DAF51445/dotnet-sdk-2.1.201-win-x64.zip" size="164584646" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-i486" id="sha1new=14f6a9dabba1147fe223c8658626f91aa554ecd8" main="dotnet.exe" released="2018-06-07" stability="stable" version="2.1.201">
-        <manifest-digest sha256new="JS3WDLROVA7OJWRSLYNBVXTGTQ5S535LRBGNSLHFTTPBLCC5CXEA"/>
-        <archive href="https://download.microsoft.com/download/C/7/D/C7DCA2DE-7163-45D1-A05A-5112DAF51445/dotnet-sdk-2.1.201-win-x86.zip" size="156007048" type="application/zip"/>
-      </implementation>
-      <implementation id="sha1new=7098c25e1609fa3aa0dc2f5fc0bc8d462baf186b" released="2018-06-07" stability="stable" version="2.1.201">
-        <manifest-digest sha256new="V7IOO6MEZOOHWZMRG5UZXK6OCPYYAZ74BZRY4WBBZLE2SG625KTQ"/>
-        <archive href="https://download.microsoft.com/download/C/7/D/C7DCA2DE-7163-45D1-A05A-5112DAF51445/dotnet-sdk-2.1.201-osx-x64.tar.gz" size="169493583" type="application/x-compressed-tar"/>
-      </implementation>
-    </group>
+    <implementation arch="Windows-x86_64" id="sha1new=c2e0c6e906bc9a148ea70d065e7693e1b0a9fdf9" stability="stable" version="1.0.4">
+      <manifest-digest sha256new="HRNM3EIMRYJ3TMXOX362R4GSHPQXWLUKZM3D7FSYYOIDTHCMOHOQ"/>
+      <archive href="https://download.microsoft.com/download/E/7/8/E782433E-7737-4E6C-BFBF-290A0A81C3D7/dotnet-dev-win-x64.1.0.4.zip" size="125194623" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=be7e3a7dc9feb271c7aa5f5595eac9e4a897cb39" stability="stable" version="1.0.4">
+      <manifest-digest sha256new="R6O25BJODZ2P7QA22JWFJFFSCIHL4SEEAE4MTGNHMBHXJO2RMVAA"/>
+      <archive href="https://download.microsoft.com/download/E/7/8/E782433E-7737-4E6C-BFBF-290A0A81C3D7/dotnet-dev-win-x86.1.0.4.zip" size="118083902" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=202d3806159ff42e97476e1b1318acd5c7f4fa55" released="2017-10-18" stability="stable" version="1.1.4">
+      <manifest-digest sha256new="KHAKQZ4QWDOVUX2U357QOENLE6HUY2AMOR7UEOYPTV3RYYA2BMAQ"/>
+      <archive href="https://download.microsoft.com/download/F/4/F/F4FCB6EC-5F05-4DF8-822C-FF013DF1B17F/dotnet-dev-win-x64.1.1.4.zip" size="140925240" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=6ab349d5a5a430b9f7cc313cf854be9c0c8cf2c1" released="2017-10-18" stability="stable" version="1.1.4">
+      <manifest-digest sha256new="FUQA4EL4DWQHGQZCJRLLCUTB56ZISJ3RYPQCVV7VWMNVNSXMYM7Q"/>
+      <archive href="https://download.microsoft.com/download/F/4/F/F4FCB6EC-5F05-4DF8-822C-FF013DF1B17F/dotnet-dev-win-x86.1.1.4.zip" size="133463151" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=65b70e31b80503d6f4dd593bb5b568e306d4f400" released="2017-11-15" stability="stable" version="1.1.5">
+      <manifest-digest sha256new="P26R63NPDYCFIGXRREQ6BLL2YJPGGJCHWRRWJJL2MKNRD52MCVIA"/>
+      <archive href="https://download.microsoft.com/download/C/5/5/C55807F5-601C-49B1-B9BB-1BE03EB83E0A/dotnet-dev-win-x64.1.1.5.zip" size="141002281" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=cb741f5f3bba91969f149221dc9231cc7d040b8b" released="2017-11-15" stability="stable" version="1.1.5">
+      <manifest-digest sha256new="QUCWWKWJ6BKORRLHXBBNPVWWXEQRAUT4T3DAZCS5RCJVUYHTIJDQ"/>
+      <archive href="https://download.microsoft.com/download/C/5/5/C55807F5-601C-49B1-B9BB-1BE03EB83E0A/dotnet-dev-win-x86.1.1.5.zip" size="133544266" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=759cd2f22a39e7b50c1996d54f18765f5aa067ce" stability="stable" version="2.0.0">
+      <manifest-digest sha256new="UIJ4FRX5CSNSXLS4W35NS7UIXUFKMHY6UD3LZRFAHGL5PHAV6M4Q"/>
+      <archive href="https://download.microsoft.com/download/1/B/4/1B4DE605-8378-47A5-B01B-2C79D6C55519/dotnet-sdk-2.0.0-win-x64.zip" size="129741059" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=521222c2b1bd3b6a33d98b654279cdd569364d37" stability="stable" version="2.0.0">
+      <manifest-digest sha256new="JSDLYGYT7EQGVBUR2MHT2OPTV5URBTHWTUBSRAPJIOEDYQPSFLTQ"/>
+      <archive href="https://download.microsoft.com/download/1/B/4/1B4DE605-8378-47A5-B01B-2C79D6C55519/dotnet-sdk-2.0.0-win-x86.zip" size="123540137" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=aa2cbc1b39dd42935b2427a8359b781c04a78271" released="2017-11-02" stability="stable" version="2.0.2">
+      <manifest-digest sha256new="JEXMORJAGWNIE672BDY2J2APNNHFQA57AQN7ETL5YTCBFOWL4BIA"/>
+      <archive href="https://download.microsoft.com/download/7/3/A/73A3E4DC-F019-47D1-9951-0453676E059B/dotnet-sdk-2.0.2-win-x64.zip" size="129893032" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=620fe41f0820e6eaaea9c1bad9c6f51878211670" released="2017-11-02" stability="stable" version="2.0.2">
+      <manifest-digest sha256new="57ZQ4HZ2WXE7V6UDBFG7FCDC4B7VRNAQLNJ3DFGQX3GTDCKOJZ7A"/>
+      <archive href="https://download.microsoft.com/download/7/3/A/73A3E4DC-F019-47D1-9951-0453676E059B/dotnet-sdk-2.0.2-win-x86.zip" size="123684607" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=ca6fec3db6784315d2b3dab7da6c199128012314" released="2017-11-29" stability="stable" version="2.0.3">
+      <manifest-digest sha256new="VCHAVYS726J5AIIEKTDVRVX46M7E77KIDH54QXXOVBKZOT5NXUXQ"/>
+      <archive href="https://download.microsoft.com/download/D/7/2/D725E47F-A4F1-4285-8935-A91AE2FCC06A/dotnet-sdk-2.0.3-win-x64.zip" size="138667703" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=3ec3b8cbabda3ed1669c51febaeacba8e8cd307d" released="2017-11-29" stability="stable" version="2.0.3">
+      <manifest-digest sha256new="NX63MP5EO3RBHBAOIWNEVHKLWEOYNDPEW2R2RTCTEKTKAQ4WHCKA"/>
+      <archive href="https://download.microsoft.com/download/D/7/2/D725E47F-A4F1-4285-8935-A91AE2FCC06A/dotnet-sdk-2.0.3-win-x86.zip" size="131851115" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=416925d667eb7a172496fac9eb6c0cf31822462d" released="2018-01-09" stability="stable" version="1.1.7">
+      <manifest-digest sha256new="WVMPHRCDYPUBF2BCW4RWDYIYVUU6DSJN5S5X6IUOWBYTYROI663A"/>
+      <archive href="https://download.microsoft.com/download/4/E/6/4E64A465-F02E-43AD-9A86-A08A223A82C3/dotnet-dev-win-x64.1.1.7.zip" size="140998484" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=c7b02153b6956a753daa9b98873d38dfe0caca85" released="2018-01-09" stability="stable" version="1.1.7">
+      <manifest-digest sha256new="V75YS77GLEBKS5AYFR5A6EZKCHFWSNMEQFXBRGYMBUA7PYRPKJEA"/>
+      <archive href="https://download.microsoft.com/download/4/E/6/4E64A465-F02E-43AD-9A86-A08A223A82C3/dotnet-dev-win-x86.1.1.7.zip" size="133542140" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=4bd80be9c778865971ebde42447d94d2308c42cc" released="2018-03-13" stability="stable" version="1.1.8">
+      <manifest-digest sha256new="4ZPNDK5LR3M77QAQTCZO2AZRY7MFMXZLNCKAGUX5JTSVRBGMN2ZA"/>
+      <archive href="https://download.microsoft.com/download/6/5/F/65F1653E-F835-4DE3-BB36-F324D3925F32/dotnet-dev-win-x64.1.1.8.zip" size="140997763" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=734fcffbd3f3a270be6fb5db4fe91ef6b322a678" released="2018-03-13" stability="stable" version="1.1.8">
+      <manifest-digest sha256new="PT2FKG4465A2LHU7MBAUMN72AC4L3EDEY7AJCXIQGODU5QXOXQRA"/>
+      <archive href="https://download.microsoft.com/download/6/5/F/65F1653E-F835-4DE3-BB36-F324D3925F32/dotnet-dev-win-x86.1.1.8.zip" size="133543080" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=0796b17f73240c6b8a2489109e1092ff21bd0b38" released="2018-03-13" stability="stable" version="2.1.101">
+      <manifest-digest sha256new="JYCKYQBROY2XASDJ3O2IHWMYTIS77JW5UYHO6GXSQM3UGVN4WWCQ"/>
+      <archive href="https://download.microsoft.com/download/D/C/F/DCFA73BE-93CE-4DA0-AB76-98972FD6E475/dotnet-sdk-2.1.101-win-x64.zip" size="154646623" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=06a711c4d7cfe9a19eaea2fcebdaf6db012db074" released="2018-03-13" stability="stable" version="2.1.101">
+      <manifest-digest sha256new="HRBTBZUYC6WTEO72IF3ZAYDWINRCXFJQO53JCZ2N6V6GIBNSEGUQ"/>
+      <archive href="https://download.microsoft.com/download/D/C/F/DCFA73BE-93CE-4DA0-AB76-98972FD6E475/dotnet-sdk-2.1.101-win-x86.zip" size="146754975" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=24b5ad257edc02f77dc1ebf3dd3d50fa815a305c" released="2017-12-13" stability="stable" version="2.1.3">
+      <manifest-digest sha256new="I73UYXDSKXHAEAY7ZXPK5DHPX67WVMWMAFZAAGZOSWJBNEFAJQEA"/>
+      <archive href="https://download.microsoft.com/download/2/9/3/293BC432-348C-4D1C-B628-5AC8AB7FA162/dotnet-sdk-2.1.3-win-x64.zip" size="142332802" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=8592da7d4cba3483bb24568c7f77372c8366a001" released="2017-12-13" stability="stable" version="2.1.3">
+      <manifest-digest sha256new="GLBKAWQMOAOSFWASUEBC4Y76OOR7GFK5X72CAFFIZRBFIKF5NXWA"/>
+      <archive href="https://download.microsoft.com/download/2/9/3/293BC432-348C-4D1C-B628-5AC8AB7FA162/dotnet-sdk-2.1.3-win-x86.zip" size="135308281" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=777e952b5dd277fc47413675ce2d90fb9a930d90" released="2018-01-09" stability="stable" version="2.1.4">
+      <manifest-digest sha256new="ZHDU5WSTIIL4IO4BNDLDOFRTDA232E7CORDCGQNGY6LI3TBWCQKA"/>
+      <archive href="https://download.microsoft.com/download/1/1/5/115B762D-2B41-4AF3-9A63-92D9680B9409/dotnet-sdk-2.1.4-win-x64.zip" size="144044555" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=e6ff0af4228fcdb37734d10e7a22ec2ac4c02292" released="2018-01-09" stability="stable" version="2.1.4">
+      <manifest-digest sha256new="G2OTU42GCCS4AQJR6WHKY7FOOL5VMNTYJUJ3FJCIXW7FYRQXWMTA"/>
+      <archive href="https://download.microsoft.com/download/1/1/5/115B762D-2B41-4AF3-9A63-92D9680B9409/dotnet-sdk-2.1.4-win-x86.zip" size="136894744" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=f1b120469c9e0bbf59760fc8683cd81311c8aad2" released="2018-04-17" stability="stable" version="1.1.9">
+      <manifest-digest sha256new="WWL3NIYWQPSBMGD42JW4VXT2GB23AG5JUGKITEASOLVKVKVXFHZQ"/>
+      <archive href="https://download.microsoft.com/download/4/0/2/4022CFC7-5061-4762-B9BA-48B35632572D/dotnet-dev-win-x64.1.1.9.zip" size="141007414" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=ab828f94fa6ea6a5094a64e89c7fb25b1fb3c8b7" released="2018-04-17" stability="stable" version="1.1.9">
+      <manifest-digest sha256new="TM3J346NSVKPGSVWG5RLBO6UOIOJZON4J3JSXWJELSXHY523V5JQ"/>
+      <archive href="https://download.microsoft.com/download/4/0/2/4022CFC7-5061-4762-B9BA-48B35632572D/dotnet-dev-win-x86.1.1.9.zip" size="133552481" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=82c7718705b2ad4aa4111dfc2ac3b0120ac29a1a" released="2017-12-11" stability="stable" version="2.1.2">
+      <manifest-digest sha256new="QNHC5FHZC7ILPEYBNG7KOTBSUGJEZELYX4NRXWSEREKSXUT2GVJA"/>
+      <archive href="https://download.microsoft.com/download/5/D/F/5DF4B836-7DFD-4CCF-AC96-101E2A4C7421/dotnet-sdk-2.1.2-win-x64.zip" size="141940648" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=83e5994bc54792e0f0a42703654ea64b55f2d821" released="2017-12-11" stability="stable" version="2.1.2">
+      <manifest-digest sha256new="GMJGBCFGJPRMKBLM3E2RFNXOFSARLMTRSUNCDPEHH2CXQV367MDQ"/>
+      <archive href="https://download.microsoft.com/download/5/D/F/5DF4B836-7DFD-4CCF-AC96-101E2A4C7421/dotnet-sdk-2.1.2-win-x86.zip" size="134896642" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=689dc02c76c436e602377166eefe1d1189126689" released="2018-05-08" stability="stable" version="2.1.200">
+      <manifest-digest sha256new="HVM57LNDG3V4FXF2SVH6TKHR75OT5WSZXLNKZXOWN4VKOXKNXV4Q"/>
+      <archive href="https://download.microsoft.com/download/3/7/1/37189942-C91D-46E9-907B-CF2B2DE584C7/dotnet-sdk-2.1.200-win-x64.zip" size="164622711" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=4cc625855bf7d11bd45c203478533233ac7e3382" released="2018-05-08" stability="stable" version="2.1.200">
+      <manifest-digest sha256new="I3ONJYJKTKAN7GH5WBJZMFQUDUZIJQ2WUR75VVU7DUBAAG4DQEWQ"/>
+      <archive href="https://download.microsoft.com/download/3/7/1/37189942-C91D-46E9-907B-CF2B2DE584C7/dotnet-sdk-2.1.200-win-x86.zip" size="156047952" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=81f4de769c3cbb5a5f05e8ec11063a93afdc62a8" released="2018-06-07" stability="stable" version="2.1.201">
+      <manifest-digest sha256new="6W7HAUWHGASAPHG5UCVT575NGEM6KODDNMH4JA5PHZ7IYX2CQHPQ"/>
+      <archive href="https://download.microsoft.com/download/C/7/D/C7DCA2DE-7163-45D1-A05A-5112DAF51445/dotnet-sdk-2.1.201-win-x64.zip" size="164584646" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=14f6a9dabba1147fe223c8658626f91aa554ecd8" released="2018-06-07" stability="stable" version="2.1.201">
+      <manifest-digest sha256new="JS3WDLROVA7OJWRSLYNBVXTGTQ5S535LRBGNSLHFTTPBLCC5CXEA"/>
+      <archive href="https://download.microsoft.com/download/C/7/D/C7DCA2DE-7163-45D1-A05A-5112DAF51445/dotnet-sdk-2.1.201-win-x86.zip" size="156007048" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=013be81497ee640f10d47ff0f4a37caac3b2590a" released="2018-05-30" stability="stable" version="2.1.300">
+      <manifest-digest sha256new="NPV2SKS2CNDCQQ3YBKCJ757UPFLLWDE65MT477TKF5JKD7J5EBVQ"/>
+      <archive href="https://download.microsoft.com/download/8/8/5/88544F33-836A-49A5-8B67-451C24709A8F/dotnet-sdk-2.1.300-win-x64.zip" size="158440155" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=ead6f71d0e1ea633396bcc441b8ed8a888d171b1" released="2018-05-30" stability="stable" version="2.1.300">
+      <manifest-digest sha256new="EOPQV2VMJKDFJT4L7LCAJHP363KGZI2ZBQ4PUNYSZY42XWYJP3WA"/>
+      <archive href="https://download.microsoft.com/download/8/8/5/88544F33-836A-49A5-8B67-451C24709A8F/dotnet-sdk-2.1.300-win-x86.zip" size="149400121" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=84470a2d50811c71876b7fec6d528997d2346ebd" released="2018-06-27" stability="stable" version="2.1.301">
+      <manifest-digest sha256new="YRK2HCFGZFIRNUN4MQ4EXAXI5Y7CLQO2JYVDHCSCEKRTF7F5AHXA"/>
+      <archive href="https://download.microsoft.com/download/D/0/4/D04C5489-278D-4C11-9BD3-6128472A7626/dotnet-sdk-2.1.301-win-x64.zip" size="158460071" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=642d26f135dbba0f0b6c65c20ac716ced364ca9b" released="2018-06-27" stability="stable" version="2.1.301">
+      <manifest-digest sha256new="PPRQZ5Z4KJG3MRBQFX2UN6REFZK6IMZC534SIUDESOHWG6RXGETA"/>
+      <archive href="https://download.microsoft.com/download/D/0/4/D04C5489-278D-4C11-9BD3-6128472A7626/dotnet-sdk-2.1.301-win-x86.zip" size="149371376" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=735c19370695be149209201d48fc7413ae18aa47" released="2018-07-10" stability="stable" version="2.1.302">
+      <manifest-digest sha256new="3ZA4UVMJ7GDBHU2WAT73FIKJC5NCUNBNGV44ZZ3FAKETSQ5M5BIQ"/>
+      <archive href="https://download.microsoft.com/download/4/0/9/40920432-3302-47a8-b13c-bbc4848ad114/dotnet-sdk-2.1.302-win-x64.zip" size="156075205" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=ca97857c7e28b52561e1caf32a2b267ac327c90c" released="2018-07-10" stability="stable" version="2.1.302">
+      <manifest-digest sha256new="QBKQ3Y5CPHED6V3NEKAV24KSQLAIHIUKJK5U3SKORUN2723636RQ"/>
+      <archive href="https://download.microsoft.com/download/4/0/9/40920432-3302-47a8-b13c-bbc4848ad114/dotnet-sdk-2.1.302-win-x86.zip" size="147089819" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=2306592d4e81fdb2888b961519ff3895bd3152c9" released="2018-08-14" stability="stable" version="2.1.400">
+      <manifest-digest sha256new="WYW5GRMNUQFDZTN2LWVCCZLOK46O2ROWMWRCO72ZGQNFLNU35FBQ"/>
+      <archive href="https://download.microsoft.com/download/9/D/2/9D2354BE-778B-42D6-BA4F-3CEF489A4FDE/dotnet-sdk-2.1.400-win-x64.zip" size="157820187" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=ca76399659731f545c5dc959110fb091f8ddf9d2" released="2018-08-14" stability="stable" version="2.1.400">
+      <manifest-digest sha256new="DFYUNZVRFXWLK5QDBRZVHM4CLTFEFOH7HSCFEXK3GGNCT3CQL6LQ"/>
+      <archive href="https://download.microsoft.com/download/9/D/2/9D2354BE-778B-42D6-BA4F-3CEF489A4FDE/dotnet-sdk-2.1.400-win-x86.zip" size="148697744" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=9a19721c97fad89e96244a2956875cb76d1363f8" released="2018-08-21" stability="stable" version="2.1.401">
+      <manifest-digest sha256new="MO6QVTTBY3YL2DEPYG23RHPWXMPG3UM5GM2GBHGSJTHELAMIHXBA"/>
+      <archive href="https://download.microsoft.com/download/E/8/A/E8AF2EE0-5DDA-4420-A395-D1A50EEFD83E/dotnet-sdk-2.1.401-win-x64.zip" size="160413938" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=7763c6d5aad675e7d7de54f42b6522d87edb0dcc" released="2018-08-21" stability="stable" version="2.1.401">
+      <manifest-digest sha256new="JPBKBZMCBONFNUDREYM6QMXA3LZI22DKRCP6CXYAIAD3MCCXUUJA"/>
+      <archive href="https://download.microsoft.com/download/E/8/A/E8AF2EE0-5DDA-4420-A395-D1A50EEFD83E/dotnet-sdk-2.1.401-win-x86.zip" size="151277481" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=adfb32c96c6fa1ca90ba03471ce3ccde1dcbfbbc" released="2018-09-11" stability="stable" version="2.1.402">
+      <manifest-digest sha256new="YMQERF6N6BDBI7A3W45B3CG22HX45FBPEKVHBLCMX2LBCSIXBPUA"/>
+      <archive href="https://download.microsoft.com/download/8/A/7/8A765126-50CA-4C6F-890B-19AE47961E4B/dotnet-sdk-2.1.402-win-x64.zip" size="160505569" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=ea6da1bc5046eea07d920c36021d43e45e12e89f" released="2018-09-11" stability="stable" version="2.1.402">
+      <manifest-digest sha256new="LITK5I4WEUIPPJ75X7I7HILBQICSQMMHIZAP73JUCHR6DJ5REV4Q"/>
+      <archive href="https://download.microsoft.com/download/8/A/7/8A765126-50CA-4C6F-890B-19AE47961E4B/dotnet-sdk-2.1.402-win-x86.zip" size="151257782" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=a157d1082264d921ea192ca3baaf1c93a67f2d18" released="2018-10-02" stability="stable" version="2.1.403">
+      <manifest-digest sha256new="O3A3MET6VQAJCE2XUIBTLC2LAVNNOYCVFCGJBJ2QCIZLILDS2NVQ"/>
+      <archive href="https://download.visualstudio.microsoft.com/download/pr/28820b2a-0aec-4c24-a271-a14bcb3e2686/5e0ad8ae32f1497e8d0cace2447b9e01/dotnet-sdk-2.1.403-win-x64.zip" size="160070600" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=29e626fa14b59f5274c0e3f12a7217075bff9fc5" released="2018-10-02" stability="stable" version="2.1.403">
+      <manifest-digest sha256new="KN5A7H3MFCUXGZS7DKYCYPQTDOBSZKIWRRCM7HJ65NORE3OUEZUQ"/>
+      <archive href="https://download.visualstudio.microsoft.com/download/pr/849dd909-5412-4b79-a66b-b173d462d0f2/a75544b6df62239374e77e78d9a5899f/dotnet-sdk-2.1.403-win-x86.zip" size="150976336" type="application/zip"/>
+    </implementation>
   </group>
 
-  <entry-point binary-name="dotnet" command="run"/>
-  <implementation arch="Windows-x86_64" id="sha1new=84470a2d50811c71876b7fec6d528997d2346ebd" license="MIT License" main="dotnet.exe" released="2018-06-27" stability="stable" version="2.1.301">
-    <manifest-digest sha256new="YRK2HCFGZFIRNUN4MQ4EXAXI5Y7CLQO2JYVDHCSCEKRTF7F5AHXA"/>
-    <archive href="https://download.microsoft.com/download/D/0/4/D04C5489-278D-4C11-9BD3-6128472A7626/dotnet-sdk-2.1.301-win-x64.zip" size="158460071" type="application/zip"/>
-  </implementation>
-  <implementation arch="Windows-i486" id="sha1new=642d26f135dbba0f0b6c65c20ac716ced364ca9b" license="MIT License" main="dotnet.exe" released="2018-06-27" stability="stable" version="2.1.301">
-    <manifest-digest sha256new="PPRQZ5Z4KJG3MRBQFX2UN6REFZK6IMZC534SIUDESOHWG6RXGETA"/>
-    <archive href="https://download.microsoft.com/download/D/0/4/D04C5489-278D-4C11-9BD3-6128472A7626/dotnet-sdk-2.1.301-win-x86.zip" size="149371376" type="application/zip"/>
-  </implementation>
-  <group>
-    <requires interface="http://repo.roscidus.com/lib/unwind8"/>
-    <implementation arch="Linux-x86_64" id="sha1new=7b531b4da60bdea45a460b6f392791bae6b8bc02" license="MIT License" main="dotnet" released="2018-06-27" stability="stable" version="2.1.301">
+  <group arch="Linux-x86_64" license="MIT License" main="dotnet">
+    <command name="run" path="dotnet"/>
+    <environment mode="replace" name="DOTNET_SKIP_FIRST_TIME_EXPERIENCE" value="true"/><!-- Prevent extraction of NuGet packages into implementation dir (which is read-only) -->
+    <requires interface="http://repo.roscidus.com/lib/curl"/>
+    <requires interface="http://repo.roscidus.com/lib/unwind"/>
+
+    <implementation id="sha1new=8eaa3ff9958d1dcf380233b8296d3983a1d7d427" stability="stable" version="2.0.0">
+      <manifest-digest sha256new="3NJE4MHKOA4VHG2IYVKQUPYEESKFNSDB2PH3BG7A7RMRUNHYU6VA"/>
+      <archive href="https://download.microsoft.com/download/1/B/4/1B4DE605-8378-47A5-B01B-2C79D6C55519/dotnet-sdk-2.0.0-linux-x64.tar.gz" size="134275497" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=1591bc3e16d8cfcd9d9ffb4da979d54044e18208" released="2017-11-02" stability="stable" version="2.0.2">
+      <manifest-digest sha256new="FZYKWLKXW4E3IBRA3NSHGJXV5F4UCRV6CQ2ZNPSZBSB2PMIG4NIQ"/>
+      <archive href="https://download.microsoft.com/download/7/3/A/73A3E4DC-F019-47D1-9951-0453676E059B/dotnet-sdk-2.0.2-linux-x64.tar.gz" size="134377550" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=ab4d374e6a9ea99ab4289775f5e37fb2ecc387a2" released="2017-11-29" stability="stable" version="2.0.3">
+      <manifest-digest sha256new="UGMP77PUQCXJ7EOBULWKBYKSLQZB2GVHKDN3K4XVQ6R4MJHAKE6A"/>
+      <archive href="https://download.microsoft.com/download/D/7/2/D725E47F-A4F1-4285-8935-A91AE2FCC06A/dotnet-sdk-2.0.3-linux-x64.tar.gz" size="142924266" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=c6a6f92158c1ced3cc9e7e4f4c59d9057997d76e" released="2018-03-13" stability="stable" version="2.1.101">
+      <manifest-digest sha256new="MUOAUATJF7OIQF6OVJDNPY2VTLIB3JGA4GJDVXQFHZ67RXTGVXRQ"/>
+      <archive href="https://download.microsoft.com/download/D/C/F/DCFA73BE-93CE-4DA0-AB76-98972FD6E475/dotnet-sdk-2.1.101-linux-x64.tar.gz" size="160347601" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=2bb330a43d7b1284d182ca2251048c84b295bc57" released="2017-12-13" stability="stable" version="2.1.3">
+      <manifest-digest sha256new="SYKWNVSCQH5UB52CA3TKLOHYCYLWGKH4G5YRVQWBO2SVR7YLIHHQ"/>
+      <archive href="https://download.microsoft.com/download/2/9/3/293BC432-348C-4D1C-B628-5AC8AB7FA162/dotnet-sdk-2.1.3-linux-x64.tar.gz" size="148274081" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=d07135078e629855808d6539377bc5d3f07fc262" released="2018-01-09" stability="stable" version="2.1.4">
+      <manifest-digest sha256new="BI2YYWZFQS7QJ5V6MD3S5LCA2MVTFSU4ZQC5VNR7MZ2P56673SKA"/>
+      <archive href="https://download.microsoft.com/download/1/1/5/115B762D-2B41-4AF3-9A63-92D9680B9409/dotnet-sdk-2.1.4-linux-x64.tar.gz" size="149982164" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=2d7fa22c5d7a952488682fa7dccd9f0285538125" released="2017-12-11" stability="stable" version="2.1.2">
+      <manifest-digest sha256new="G5LV3F4UOXTYANISK7HHRLP3XTOXJ4LQVTEIJJAACJGEAP5Y2ZCQ"/>
+      <archive href="https://download.microsoft.com/download/5/D/F/5DF4B836-7DFD-4CCF-AC96-101E2A4C7421/dotnet-sdk-2.1.2-linux-x64.tar.gz" size="147883879" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=30267ce5bfbb2c8f8d3398bc7818f5499df78b04" released="2018-05-08" stability="stable" version="2.1.200">
+      <manifest-digest sha256new="YQ4AT6NRZE3DSCSQTJJZ6DKGDU5ESGBYCXEBN6ZWQICKVTFQ4SDQ"/>
+      <archive href="https://download.microsoft.com/download/3/7/1/37189942-C91D-46E9-907B-CF2B2DE584C7/dotnet-sdk-2.1.200-linux-x64.tar.gz" size="170229746" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group arch="Linux-x86_64" license="MIT License">
+    <command name="run" path="dotnet"/>
+    <environment mode="replace" name="DOTNET_SKIP_FIRST_TIME_EXPERIENCE" value="true"/><!-- Prevent extraction of NuGet packages into implementation dir (which is read-only) -->
+    <requires interface="http://repo.roscidus.com/lib/curl"/>
+
+    <implementation id="sha1new=50bc318f670a661f5351bba6e8c5175d062a5fb7" released="2018-05-30" stability="stable" version="2.1.300">
+      <manifest-digest sha256new="BUD77V4UMBBUK6PG3NDGNYCUBJXXR5PSGENNSYYG442DD2MR3B7Q"/>
+      <archive href="https://download.microsoft.com/download/8/8/5/88544F33-836A-49A5-8B67-451C24709A8F/dotnet-sdk-2.1.300-linux-x64.tar.gz" size="162079345" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=91e4fa71015f47d556f681c34e8d9520f29d0b1f" released="2018-06-07" stability="stable" version="2.1.201">
+      <manifest-digest sha256new="JHXDMBE4BASMIJ53MTYPFRK6NBBQO6CTCQQU7EGNYKA3DVOWMYUQ"/>
+      <archive href="https://download.microsoft.com/download/C/7/D/C7DCA2DE-7163-45D1-A05A-5112DAF51445/dotnet-sdk-2.1.201-linux-x64.tar.gz" size="170197700" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=7b531b4da60bdea45a460b6f392791bae6b8bc02" released="2018-06-27" stability="stable" version="2.1.301">
       <manifest-digest sha256new="ILBTFOUKMRGTNJ2GCA5RNPW3OOEOZFSPG7M5FXSGOFWXATU6EVWA"/>
       <archive href="https://download.microsoft.com/download/D/0/4/D04C5489-278D-4C11-9BD3-6128472A7626/dotnet-sdk-2.1.301-linux-x64.tar.gz" size="162064583" type="application/x-compressed-tar"/>
     </implementation>
+    <implementation id="sha1new=2aef08760af589a4c64bf8fa425ba8f6cb9cc295" released="2018-07-10" stability="stable" version="2.1.302">
+      <manifest-digest sha256new="VLJNQRQ3VNPY7TIRXDTNV3B2V5CXE7ZZ6RSBOVMKC6FMX5RZEGQA"/>
+      <archive href="https://download.microsoft.com/download/4/0/9/40920432-3302-47a8-b13c-bbc4848ad114/dotnet-sdk-2.1.302-linux-x64.tar.gz" size="159799872" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=40ee64224aa3207b42920639ff0b16c920ba32f8" released="2018-08-14" stability="stable" version="2.1.400">
+      <manifest-digest sha256new="R5ZNECLIKSY47ERSDXBYOAWXNJZY5LKZTXG4LGG6UHSHH33MUVHA"/>
+      <archive href="https://download.microsoft.com/download/9/D/2/9D2354BE-778B-42D6-BA4F-3CEF489A4FDE/dotnet-sdk-2.1.400-linux-x64.tar.gz" size="161325422" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=70b2105829c1f96275c06feb96e7846f9ffcb073" released="2018-08-21" stability="stable" version="2.1.401">
+      <manifest-digest sha256new="TMR5HQKKSS35YRDDGWJS4ATS5IHFR3NH76EBVJMZN6KKBJXWS2VA"/>
+      <archive href="https://download.microsoft.com/download/E/8/A/E8AF2EE0-5DDA-4420-A395-D1A50EEFD83E/dotnet-sdk-2.1.401-linux-x64.tar.gz" size="163723708" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=805deefa9090c216b2ca68e8d35f8360a318daf2" released="2018-09-11" stability="stable" version="2.1.402">
+      <manifest-digest sha256new="Y7VMNU6B2DMI6YACAZVJKN7FQPGTB2ISIWDGSJKX3SR2BLXLMCOQ"/>
+      <archive href="https://download.microsoft.com/download/8/A/7/8A765126-50CA-4C6F-890B-19AE47961E4B/dotnet-sdk-2.1.402-linux-x64.tar.gz" size="163600519" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=7615b7e4f793aa6b1d442001e73d411472df8f82" released="2018-10-02" stability="stable" version="2.1.403">
+      <manifest-digest sha256new="IDUSKVNXQHDWUEEIAV6LPF7BLRFGIZB375FOTOG6BFJF7NK47U2A"/>
+      <archive href="https://download.visualstudio.microsoft.com/download/pr/e85de743-f80b-481b-b10e-d2e37f05a7ce/0bf3ff93417e19ad8d6b2d3ded84d664/dotnet-sdk-2.1.403-linux-x64.tar.gz" size="163502295" type="application/x-compressed-tar"/>
+    </implementation>
   </group>
+
+  <group arch="MacOSX-x86_64" license="MIT License">
+    <command name="run" path="dotnet"/>
+
+    <implementation id="sha1new=56bd3430f1d39e17d349961606103f7d69fde44a" released="2018-05-30" stability="stable" version="2.1.300">
+      <manifest-digest sha256new="QVWIXJFEFD6AMF34RJAQN45KZT2JJOOP7ESO4CWZDDF7ODWZBE5A"/>
+      <archive href="https://download.microsoft.com/download/8/8/5/88544F33-836A-49A5-8B67-451C24709A8F/dotnet-sdk-2.1.300-osx-x64.tar.gz" size="161684924" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=7098c25e1609fa3aa0dc2f5fc0bc8d462baf186b" released="2018-06-07" stability="stable" version="2.1.201">
+      <manifest-digest sha256new="V7IOO6MEZOOHWZMRG5UZXK6OCPYYAZ74BZRY4WBBZLE2SG625KTQ"/>
+      <archive href="https://download.microsoft.com/download/C/7/D/C7DCA2DE-7163-45D1-A05A-5112DAF51445/dotnet-sdk-2.1.201-osx-x64.tar.gz" size="169493583" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=131cac59715382d54dae4635f7708ed87909c941" released="2018-06-27" stability="stable" version="2.1.301">
+      <manifest-digest sha256new="TKK43A7H4UQSXFRUBTNJT4DE6OD7SPW4PSLJFY764B6SSGGN5IXQ"/>
+      <archive href="https://download.microsoft.com/download/D/0/4/D04C5489-278D-4C11-9BD3-6128472A7626/dotnet-sdk-2.1.301-osx-x64.tar.gz" size="161748628" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=e3c4c40547dae286030f9de5444070f8db4dcd1b" released="2018-07-10" stability="stable" version="2.1.302">
+      <manifest-digest sha256new="P6R36ZS2WBAVRTWIHW2JWJJT7CJM75CO2KPRPEOVCQYQRXCMALEQ"/>
+      <archive href="https://download.microsoft.com/download/4/0/9/40920432-3302-47a8-b13c-bbc4848ad114/dotnet-sdk-2.1.302-osx-x64.tar.gz" size="159399866" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=19a05ae938e6af015f9e3bdb2ccef38f31c2cec0" released="2018-08-14" stability="stable" version="2.1.400">
+      <manifest-digest sha256new="5IGA6ULIZRCFRE7VEYQTGX43GBDCCMH6TJVUGP7GYUNJKOICS2KQ"/>
+      <archive href="https://download.microsoft.com/download/9/D/2/9D2354BE-778B-42D6-BA4F-3CEF489A4FDE/dotnet-sdk-2.1.400-osx-x64.tar.gz" size="160919206" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=f87fe437335fbfd926f6b885f1781f254a79c923" released="2018-08-21" stability="stable" version="2.1.401">
+      <manifest-digest sha256new="KMO7XT76SVXLGJQCBNLBWEVSXYD4MCOS5KLPIHLQQNY7FD4JFBRQ"/>
+      <archive href="https://download.microsoft.com/download/E/8/A/E8AF2EE0-5DDA-4420-A395-D1A50EEFD83E/dotnet-sdk-2.1.401-osx-x64.tar.gz" size="163345784" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=1232745c4e17ef279ef95230672d65055c32abb9" released="2018-09-11" stability="stable" version="2.1.402">
+      <manifest-digest sha256new="MPGVNP6R4NSTMHUYMF6EL5VT3NJJKYOICPOP2523RYUVGNMOQQEQ"/>
+      <archive href="https://download.microsoft.com/download/8/A/7/8A765126-50CA-4C6F-890B-19AE47961E4B/dotnet-sdk-2.1.402-osx-x64.tar.gz" size="163204568" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=b5bc2cb839b1bf69139f172562e2c4c62514039e" released="2018-10-02" stability="stable" version="2.1.403">
+      <manifest-digest sha256new="7JOUYRIUCNEZQ6EUF4YI6Y7SYF4N2CP4TEZRU76Y7YGSVSFXGK5A"/>
+      <archive href="https://download.visualstudio.microsoft.com/download/pr/fcdaa140-a2a3-46cf-bab1-e211e7d070c8/9498335457a65063ec789e5532020cf7/dotnet-sdk-2.1.403-osx-x64.tar.gz" size="163092352" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <entry-point binary-name="dotnet" command="run"/>
 </interface>

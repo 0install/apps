@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>.NET Core SDK</name>
+  <summary>tools for building .NET Core applications</summary>
+  <homepage>https://www.microsoft.com/net/core</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/dotnet/core-sdk"/>
+
+  <group license="MIT License">
+    <command name="run" path="dotnet.exe"/>
+    <environment mode="replace" name="DOTNET_SKIP_FIRST_TIME_EXPERIENCE" value="true"/><!-- Prevent extraction of NuGet packages into implementation dir (which is read-only) -->
+
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="{windows-x64-download-uri}" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="{windows-x86-download-uri}" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group arch="Linux-x86_64" license="MIT License">
+    <command name="run" path="dotnet"/>
+    <environment mode="replace" name="DOTNET_SKIP_FIRST_TIME_EXPERIENCE" value="true"/><!-- Prevent extraction of NuGet packages into implementation dir (which is read-only) -->
+    <requires interface="http://repo.roscidus.com/lib/curl"/>
+
+    <implementation version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="{linux-x64-download-uri}" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group arch="MacOSX-x86_64" license="MIT License">
+    <command name="run" path="dotnet"/>
+
+    <implementation version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="{macos-x64-download-uri}" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

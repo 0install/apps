@@ -3,7 +3,7 @@ import json
 
 def convert(release):
     original_version = release['tag_name'].strip('v')
-    if 'RC' in original_version or 'beta' in original_version:
+    if 'RC' in original_version or 'rc' in original_version or 'beta' in original_version:
         version = original_version.replace('.RC', '-rc').replace('RC', '-rc').replace('beta', 'pre')
         stability = 'testing'
     else:

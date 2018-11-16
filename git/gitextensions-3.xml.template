@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
-  <name>GitExtensions</name>
+  <name>GitExtensions 3.x</name>
   <summary xml:lang="en">GitExtensions is a graphical interface for Git</summary>
   <summary xml:lang="de">GitExtensions ist eine grafische Oberfläche für Git</summary>
   <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/git/gitextensions.ico" type="image/vnd.microsoft.icon"/>
   <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/git/gitextensions.png" type="image/png"/>
   <category>Development</category>
   <homepage>https://github.com/gitextensions/gitextensions</homepage>
-  <feed-for interface="http://repo.roscidus.com/git/gitextensions"/>
+
+  <feed-for interface="http://repo.roscidus.com/git/gitextensions-3"/>
 
   <group license="GPL v3 (GNU General Public License)">
     <requires interface="http://repo.roscidus.com/git/core">
@@ -25,19 +26,15 @@
       <executable-in-path name="notepad++"/>
     </requires>
     <command name="run" path="GitExtensions.exe">
-      <runner command="run-gui" interface="http://repo.roscidus.com/dotnet/clr"/>
+      <runner command="run-gui" interface="http://repo.roscidus.com/dotnet/framework"/>
     </command>
     <command name="gitex" path="GitExtensions.exe">
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/clr"/>
+      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
     </command>
 
-    <!-- <implementation arch="POSIX-*" version="{version}" released="{released}" stability="{stability}">
+    <implementation version="{version}" released="{released}" stability="{stability}">
       <manifest-digest/>
-      <archive href="https://github.com/gitextensions/gitextensions/releases/download/v{original-version}/GitExtensions-{original-version}-Mono.zip" type="application/zip" extract="GitExtensions"/>
-    </implementation> -->
-    <implementation arch="Windows-*" version="{version}" released="{released}" stability="{stability}">
-      <manifest-digest/>
-      <archive href="https://github.com/gitextensions/gitextensions/releases/download/v{original-version}/GitExtensions-{original-version}.msi" type="application/x-msi" extract="SourceDir/GitExtensions"/>
+      <archive extract="GitExtensions" href="{download-url}" type="application/zip"/>
     </implementation>
   </group>
 </interface>

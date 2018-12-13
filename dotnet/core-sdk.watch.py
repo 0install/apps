@@ -1,7 +1,7 @@
 from urllib import request
 import re
 
-skipped_versions = ['2.1.300', '2.1.301', '2.1.302', '2.1.400', '2.1.401', '2.1.402']
+skipped_versions = []
 
 def get(uri):
     return request.urlopen(request.Request(uri, headers={'User-Agent': 'Python'})).read().decode('utf-8')
@@ -20,6 +20,6 @@ def handle(version, released):
         'macos-x64-download-uri': download_uri('macos-x64')
     }
 
-data = get('https://www.microsoft.com/net/download/dotnet-core/2.1')
+data = get('https://www.microsoft.com/net/download/dotnet-core/2.2')
 matches = re.findall(r'<p class="mb-5">Released (....-..-..)<\/p>[\S\s]*?\s+<h3 id="sdk-([0-9\.]+)">', data, re.MULTILINE)
 releases = [handle(version=match[1], released=match[0]) for match in matches if match[1] not in skipped_versions]

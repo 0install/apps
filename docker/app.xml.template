@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Docker Application Packages</name>
+  <summary>utility to help make Compose files more reusable and sharable</summary>
+  <homepage>https://github.com/docker/app</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/docker/app"/>
+
+  <group license="Apache License 2.0">
+    <implementation arch="Windows-x86_64" version="{version}" stability="{stability}" released="{released}" main="docker-app-windows.exe">
+      <manifest-digest/>
+      <archive href="https://github.com/docker/app/releases/download/v{version}/docker-app-windows.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}" main="docker-app-linux">
+      <manifest-digest/>
+      <archive href="https://github.com/docker/app/releases/download/v{version}/docker-app-linux.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" stability="{stability}" released="{released}" main="docker-app-darwin">
+      <manifest-digest/>
+      <archive href="https://github.com/docker/app/releases/download/v{version}/docker-app-darwin.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

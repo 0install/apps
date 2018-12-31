@@ -11,18 +11,24 @@
     <package-implementation distributions="Arch" package="pygtk" />
   </group>
 
-  <group arch="Windows-i486" license="OSI Approved :: GNU Lesser General Public License (LGPL)">
-    <restricts interface="http://repo.roscidus.com/python/python">
-      <version before="2.8" not-before="2.7"/>
-    </restricts>
-    <requires interface="http://repo.roscidus.com/lib/gtk" />
+  <group license="LGPL (GNU Lesser General Public License)">
+    <restricts interface="http://repo.roscidus.com/python/python" version="2.7..!2.8" />
+    <requires interface="http://repo.roscidus.com/lib/gtk" version="2.22..!3" />
     <requires interface="http://repo.roscidus.com/python/python-cairo" />
     <requires interface="http://repo.roscidus.com/python/python-gobject" />
     <environment name="PYTHONPATH" insert="." />
     <environment name="PYTHONPATH" insert="gtk-2.0" />
 
-    <implementation version="2.24.0" released="2011-04-10" stability="stable" id="sha1new=f29642fc00bdfa2a64b443c0a5f94dfb3ed72c99">
-      <manifest-digest sha1new="f29642fc00bdfa2a64b443c0a5f94dfb3ed72c99" sha256="eb60285c99026373399e3f33c05d013723fcf63208a21ec4b93ddadd358d43e7" sha256new="5NQCQXEZAJRXGOM6H4Z4AXIBG4R7Z5RSBCRB5RFZHXNN2NMNIPTQ" />
+    <implementation arch="Windows-x86_64" version="2.22.0" stability="stable" id="sha1new=2f5fef4f9becc3b50c76fe497f95d4f3a6bb3ca6">
+      <manifest-digest sha256new="XHJCZH3BXCJ4T75HQ63JXU6URTXAE5WIAMWSD2UXUYF4LATFVIIQ" />
+      <archive href="pygtk-2.22.0-cp27-none-win_amd64.whl" size="963000" type="application/zip" />
+    </implementation>
+    <implementation arch="Windows-i486" version="2.22.0" stability="stable" id="sha1new=870fd5d1c2968e3da44232f492064a69ec70c0b8">
+      <manifest-digest sha256new="674477UGD7YPVU4RYTGPVJ5EIXVQJJFIVB5YZ6C7Q66JZJREZJQA" />
+      <archive href="pygtk-2.22.0-cp27-none-win32.whl" size="757169" type="application/zip" />
+    </implementation>
+    <implementation arch="Windows-i486" version="2.24.0" released="2011-04-10" stability="stable" id="sha1new=f29642fc00bdfa2a64b443c0a5f94dfb3ed72c99">
+      <manifest-digest sha256new="5NQCQXEZAJRXGOM6H4Z4AXIBG4R7Z5RSBCRB5RFZHXNN2NMNIPTQ" />
       <archive href="http://ftp.gnome.org/pub/GNOME/binaries/win32/pygtk/2.24/pygtk-2.24.0.win32-py2.7.msi" size="835584" type="application/x-msi" extract="SourceDir/Lib/site-packages" />
     </implementation>
   </group>

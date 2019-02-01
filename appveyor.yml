@@ -1,0 +1,22 @@
+image:
+- Visual Studio 2017
+- Ubuntu
+
+artifacts:
+  - path: _watch
+    name: watch
+
+for:
+  - matrix:
+      only:
+        - image: Visual Studio 2017
+    build_script:
+      - ps: .\watch.ps1
+
+  - matrix:
+      only:
+        - image: Ubuntu
+    before_build:
+      - sudo apt-get install -y --no-install-recommends 0install-core
+    build_script:
+      - sh: ./watch.sh

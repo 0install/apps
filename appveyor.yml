@@ -1,22 +1,44 @@
+branches:
+  except:
+    - pending-windows
+    - pending-linux
+
 image:
 - Visual Studio 2017
 - Ubuntu
-
-artifacts:
-  - path: _watch
-    name: watch
 
 for:
   - matrix:
       only:
         - image: Visual Studio 2017
+    cache:
+      - '%LOCALAPPDATA%\0install.net'
+      - '%APPDATA%\0install.net'
+    clone_folder: C:\projects\repo\feeds
     build_script:
+      # Enable pushing back to GitHub
+      - git config --global credential.helper store
+      - ps: Add-Content ~\.git-credentials "https://${env:GITHUB_ACCESS_TOKEN}:x-oauth-basic@github.com`n"
+      # Run watch scripts and push result to branch "pending-windows"
+      - git checkout -b pending-windows
       - ps: .\watch.ps1
+      - git push origin pending-windows --force
 
   - matrix:
       only:
         - image: Ubuntu
+    cache:
+      - '$HOME/.cache/0install.net'
+      - '$HOME/.config/0install.net'
+      - '$HOME/.gnupg'
     before_build:
-      - sudo apt-get install -y --no-install-recommends 0install-core
+      - sudo apt-get install -y --no-install-recommends 0install-core python-gobject
+    clone_folder: $HOME/repo/feeds
     build_script:
+      # Enable pushing back to GitHub
+      - git config --global credential.helper store
+      - sh: echo "https://$GITHUB_ACCESS_TOKEN:x-oauth-basic@github.com" >> ~/.git-credentials
+      # Run watch scripts and push result to branch "pending-linux"
+      - git checkout -b pending-linux
       - sh: ./watch.sh
+      - git push origin pending-linux --force

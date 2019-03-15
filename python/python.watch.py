@@ -2,7 +2,7 @@ from urllib import request
 import re
 from datetime import datetime
 
-skipped_versions = ['3.5.5rc1', '3.5.5', '3.5.6rc1', '3.5.6', '3.5.7rc1']
+skipped_versions = ['3.5.5rc1', '3.5.5', '3.5.6rc1', '3.5.6', '3.5.7rc1', '3.5.7']
 
 def convert(match):
     version_full = match[0] # e.g. 3.7.2rc2

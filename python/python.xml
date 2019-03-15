@@ -1,5 +1,4 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="http://repo.roscidus.com/python/python" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>python</name>
   <summary>interactive high-level object-oriented language</summary>
@@ -18,8 +17,7 @@ language for applications that need a programmable interface.</description>
 
   <feed src="http://repo.roscidus.com/python/python/upstream.xml"/>
 
-  <group>
-    <!-- There is a separate GUI version of the Python executable on Windows. On POSIX systems we simply map it back to regular Python. -->
+  <group><!-- There is a separate GUI version of the Python executable on Windows. On POSIX systems we simply map it back to regular Python. -->
     <command name="run-gui">
       <runner interface="http://repo.roscidus.com/python/python"/>
     </command>
@@ -43,7 +41,7 @@ language for applications that need a programmable interface.</description>
     <package-implementation distributions="Arch" main="/usr/bin/python2" package="python2"/>
     <package-implementation distributions="Arch" main="/usr/bin/python3" package="python"/>
 
-    <package-implementation distributions="Ports" main="/usr/local/bin/python" package="python"/> 
+    <package-implementation distributions="Ports" main="/usr/local/bin/python" package="python"/>
     <package-implementation distributions="Ports" main="/usr/local/bin/python2.5" package="python25"/>
     <package-implementation distributions="Ports" main="/usr/local/bin/python2.6" package="python26"/>
     <package-implementation distributions="Ports" main="/usr/local/bin/python2.7" package="python27"/>
@@ -52,8 +50,7 @@ language for applications that need a programmable interface.</description>
     <package-implementation distributions="MacPorts" main="/opt/local/bin/python2.6" package="python26"/>
     <package-implementation distributions="MacPorts" main="/opt/local/bin/python2.7" package="python27"/>
   </group>
-
-  <!-- Python for Windows 2.7.x -->
+<!-- Python for Windows 2.7.x -->
   <group license="Python License">
     <command name="run" path="python.exe"/>
     <command name="run-gui" path="pythonw.exe"/>
@@ -79,8 +76,7 @@ language for applications that need a programmable interface.</description>
       <archive extract="SourceDir" href="https://www.python.org/ftp/python/2.7.15/python-2.7.15.msi" size="19304448" type="application/x-msi"/>
     </implementation>
   </group>
-
-  <!-- Python for Windows 3.4.x -->
+<!-- Python for Windows 3.4.x -->
   <group>
     <command name="run" path="python.exe"/>
     <command name="run-gui" path="pythonw.exe"/>
@@ -97,17 +93,16 @@ language for applications that need a programmable interface.</description>
       <manifest-digest sha1new="173ef9fd3010d8e2e2ee19c56e03d93e794b6011" sha256="13b8550d444d6659ec6685c17a674a671de52c4609a1ecc6731ef8c726664bf1" sha256new="CO4FKDKEJVTFT3DGQXAXUZ2KM4O6KLCGBGQ6ZRTTD34MOJTGJPYQ"/>
       <archive extract="SourceDir" href="https://www.python.org/ftp/python/3.4.3/python-3.4.3.msi" size="24846336" type="application/x-msi"/>
     </implementation>
-    <implementation arch="Windows-x86_64" id="sha1new=8477d8f12220dfb26f68ed773d33125d2e2d18c3" released="2015-12-21" version="3.4.4" stability="stable">
+    <implementation arch="Windows-x86_64" id="sha1new=8477d8f12220dfb26f68ed773d33125d2e2d18c3" released="2015-12-21" stability="stable" version="3.4.4">
       <manifest-digest sha256new="4C5WBENNBKC7SZMGOEP7OMQDBSNLOYIUU2QTUCCHCYBSUSSETY4Q"/>
       <archive extract="SourceDir" href="https://www.python.org/ftp/python/3.4.4/python-3.4.4.amd64.msi" size="26054656" type="application/x-msi"/>
     </implementation>
-    <implementation arch="Windows-i486" id="sha1new=3c32a3b7bb96e734514e3e9e4a9c33eae4ed2025" released="2015-12-21" version="3.4.4" stability="stable">
+    <implementation arch="Windows-i486" id="sha1new=3c32a3b7bb96e734514e3e9e4a9c33eae4ed2025" released="2015-12-21" stability="stable" version="3.4.4">
       <manifest-digest sha256new="RJSQEABOVDBHIHG5NO5T52GEUPSA27GZZK6QOCRPSX76X6Z5L3PQ"/>
       <archive extract="SourceDir" href="https://www.python.org/ftp/python/3.4.4/python-3.4.4.msi" size="24932352" type="application/x-msi"/>
     </implementation>
   </group>
-
-  <!-- Python for Windows >= 3.5 -->
+<!-- Python for Windows >= 3.5 -->
   <group>
     <command name="run" path="python.exe"/>
     <command name="run-gui" path="pythonw.exe"/>
@@ -685,6 +680,20 @@ language for applications that need a programmable interface.</description>
       <manifest-digest sha256new="ZJUGT4WXR6FUZX4Z6MVFHS2WG57E7Z333O7ZAZDT6PVUU7M757OQ"/>
       <recipe>
         <archive href="https://www.python.org/ftp/python/3.7.2/python-3.7.2-embed-win32.zip" size="6590778" type="application/zip"/>
+        <remove path="python37._pth"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=7d12d2f9f7e706ddca3c7c186e0da9ba7ed538b8" released="2019-03-12" stability="testing" version="3.7.3-rc1">
+      <manifest-digest sha256new="O53SHSJSA7RIKB6GJMKLBZW677BGKZXD2GEJKOULE4DQIBDYTRCQ"/>
+      <recipe>
+        <archive href="https://www.python.org/ftp/python/3.7.3/python-3.7.3rc1-embed-amd64.zip" size="7019029" type="application/zip"/>
+        <remove path="python37._pth"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=55faceaa9b514ab3d9d664a2e9e4b3774b5b653b" released="2019-03-12" stability="testing" version="3.7.3-rc1">
+      <manifest-digest sha256new="W4D26M7OJGSSIOP6TYHMMSX5BZFA5ZG6PLW47ONOW6OP5QWVFOWQ"/>
+      <recipe>
+        <archive href="https://www.python.org/ftp/python/3.7.3/python-3.7.3rc1-embed-win32.zip" size="6526592" type="application/zip"/>
         <remove path="python37._pth"/>
       </recipe>
     </implementation>

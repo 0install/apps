@@ -16,6 +16,7 @@ components using the Java programming language.</description>
   <feed src="http://repo.roscidus.com/java/openjdk-9-jdk"/>
   <feed src="http://repo.roscidus.com/java/openjdk-10-jdk"/>
   <feed src="http://repo.roscidus.com/java/openjdk-11-jdk"/>
+  <feed src="http://repo.roscidus.com/java/openjdk-12-jdk"/>
 
   <group>
     <!-- Some versions of JDK bundle their own copy of the JRE. For those that don't we refer back the regular JRE. -->
@@ -145,6 +146,10 @@ components using the Java programming language.</description>
   </entry-point>
   <entry-point command="jdeps" binary-name="jdeps">
     <needs-terminal/>
+  </entry-point>
+  <entry-point command="jfr" binary-name="jfr">
+    <needs-terminal/>
+    <name>Tool for working with Flight Recorder files (.jfr)</name>
   </entry-point>
   <entry-point command="jhsdb" binary-name="jhsdb">
     <needs-terminal/>

@@ -1,0 +1,709 @@
+<?xml version="1.0" ?>
+<interface uri="http://repo.roscidus.com/kubernetes/k9s" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>k9s</name>
+  <summary>curses based terminal UI to interact with Kubernetes</summary>
+  <description>K9s provides a curses based terminal UI to interact with your Kubernetes clusters. The aim of this project is to make it easier to navigate, observe and manage your applications. This command line app continually watches Kubernetes for changes and offers subsequent commands to interact with observed resources.</description>
+  <homepage>https://k9ss.io/</homepage>
+  <needs-terminal/>
+
+  <group license="Apache License 2.0">
+    <implementation arch="Windows-x86_64" id="sha1new=6d5f36c0df606371cfe6595c8bcb5dc38ebbfd53" main="k9s.exe" released="2019-02-02" stability="stable" version="0.1.0">
+      <manifest-digest sha256new="5GZSKOPNRYHSTYGOUVQED7GLZSFKIXPZIGJZOFXYEPTPB2LYZHOQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.0/k9s_0.1.0_Windows_x86_64.tar.gz" size="8506839" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=009ca87365e25fd0fe90d3c22593cdaec8c831dd" main="k9s.exe" released="2019-02-02" stability="stable" version="0.1.0">
+      <manifest-digest sha256new="RNUUIL3QMXTRUPFTL5HOFDDFHIZ67X6FKIBSALZGILT6OELTNEMQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.0/k9s_0.1.0_Windows_i386.tar.gz" size="7990920" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=5225b18f02e62ef20684321dd5ac288d32c183bc" main="k9s" released="2019-02-02" stability="stable" version="0.1.0">
+      <manifest-digest sha256new="FZ4SSFCFOT5OETL2O6Z5GTSLGXL3M3BJDTMOKUPVOKTHP7IF4OZQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.0/k9s_0.1.0_Linux_x86_64.tar.gz" size="8522871" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=bdcfe8a6ddaf86efcfc2806834a617e8fb2faf66" main="k9s" released="2019-02-02" stability="stable" version="0.1.0">
+      <manifest-digest sha256new="5PWH7C5GEXS6EJIUTOMTMFOP53QDM4L2BZ2CJG3O4FVDNS3JQOSA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.0/k9s_0.1.0_Linux_i386.tar.gz" size="8041485" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=3810a0c9f7d4aef65f2f0e6b118aab5ba4051fbd" main="k9s" released="2019-02-02" stability="stable" version="0.1.0">
+      <manifest-digest sha256new="NXNRJRD26FTHPJRIOL6X7COIQWN2JU624W5WIAZVBSMECKUE4UTA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.0/k9s_0.1.0_Darwin_x86_64.tar.gz" size="8931071" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=c8f23ffe1c1713b207c44f281ca10cc7d8f122a5" main="k9s" released="2019-02-02" stability="stable" version="0.1.0">
+      <manifest-digest sha256new="DWB5ODK3P7Q7HQK7GL6ZPBQCGJYSEJIZQQB6BV6P3JEEPEZ5X4TQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.0/k9s_0.1.0_Darwin_i386.tar.gz" size="8451617" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=3e759c449097273b0e9e233641ca82ca91733d82" main="k9s.exe" released="2019-02-06" stability="stable" version="0.1.1">
+      <manifest-digest sha256new="THWJVUJEBXNEDN7WJHI3WGMSIESBVHVKQR5QZ7EH5HH7NIISCOUA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.1/k9s_0.1.1_Windows_x86_64.tar.gz" size="8529545" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=9df33e2ba453f48ba3733247fbb4f312324acd48" main="k9s.exe" released="2019-02-06" stability="stable" version="0.1.1">
+      <manifest-digest sha256new="GSHTUA6MC6OIADNVSKO6I6HHWSNSBFGD45JDDJGZO7JJMLVOVBPA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.1/k9s_0.1.1_Windows_i386.tar.gz" size="8014342" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=7cc3e418cdc09a190883f2111141116e1929bd22" main="k9s" released="2019-02-06" stability="stable" version="0.1.1">
+      <manifest-digest sha256new="TWD47QBD33N335V7YB5WKZZHCFMTLNNKTC6BN7EQ4WR55PT3HGCQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.1/k9s_0.1.1_Linux_x86_64.tar.gz" size="8549540" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=c4233d77e30a8e7906aa2c45a5db78a8d76b3446" main="k9s" released="2019-02-06" stability="stable" version="0.1.1">
+      <manifest-digest sha256new="YR2VMPJF5JP3BFDDT3E72MUADA4LS3VWRQAAHV5J2HQH3VYWVXYA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.1/k9s_0.1.1_Linux_i386.tar.gz" size="8067325" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=1cd1dd637e9f336a9ba61c49732eaa9110026535" main="k9s" released="2019-02-06" stability="stable" version="0.1.1">
+      <manifest-digest sha256new="VXD4S4BBI7W6N55S5V4Y6KHPSXKBZPKCPJOSFKTNBAH6EGXSLVBQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.1/k9s_0.1.1_Darwin_x86_64.tar.gz" size="8960644" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=25676827a8da2023ed6c59968e69bca422f80fb0" main="k9s" released="2019-02-06" stability="stable" version="0.1.1">
+      <manifest-digest sha256new="TK6EJ2IFMGMQFXQ6VLYWQKNYBINEBVULFYG5IMARQSAVRTVKA5FQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.1/k9s_0.1.1_Darwin_i386.tar.gz" size="8480453" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=2fa01588d33afbd04221541ee0c0b9b43063365f" main="k9s.exe" released="2019-02-06" stability="stable" version="0.1.2">
+      <manifest-digest sha256new="DZC5FVBYBFJ5Z64EX5BXLHEYLIVWCXXL6WW3JYUZPK3B2AQ7GHKA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.2/k9s_0.1.2_Windows_x86_64.tar.gz" size="8532284" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=318d31fc178f597ae2779e65044088c41182de55" main="k9s.exe" released="2019-02-06" stability="stable" version="0.1.2">
+      <manifest-digest sha256new="3QRHAIEIGHBCUGVYHJFL7HRZAS5522PEFL7BROBVL77EQLV4EY4Q"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.2/k9s_0.1.2_Windows_i386.tar.gz" size="8018888" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=982f74ad64dd5970c6c3b7af21ccfcc855b6e6d4" main="k9s" released="2019-02-06" stability="stable" version="0.1.2">
+      <manifest-digest sha256new="FPNQA6BR4EQKSDC6EYOTIHL7LCMWNWKL2U37W4UEQSWDTYEWW6ZA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.2/k9s_0.1.2_Linux_x86_64.tar.gz" size="8551282" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=a5ee1be5acf8352770d86024b48eef99a1b0ee3f" main="k9s" released="2019-02-06" stability="stable" version="0.1.2">
+      <manifest-digest sha256new="USOKJ723BEPLUDSMQMRDRKYW7GJCOXZM2IRA5JVLKEJA2XVMXXKA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.2/k9s_0.1.2_Linux_i386.tar.gz" size="8069161" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=1dae87bae5a27190d1afe4f492b026ff1b187544" main="k9s" released="2019-02-06" stability="stable" version="0.1.2">
+      <manifest-digest sha256new="VXJTX7RHKFXQLXAYEPHUJWRTAK7NIVJ4R7CJ2LQF2YEBNY3I4P6A"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.2/k9s_0.1.2_Darwin_x86_64.tar.gz" size="8962858" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=944157c5fe55c4b8133f7e2ac11ac91141d1a007" main="k9s" released="2019-02-06" stability="stable" version="0.1.2">
+      <manifest-digest sha256new="COYNIXU57SBTYRJO2BRMYVT64IUU3IRVA7JIWY367NKYG6MPRFZA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.2/k9s_0.1.2_Darwin_i386.tar.gz" size="8485135" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=7100494d683d3506b4af647e24df1e40ac77f023" main="k9s.exe" released="2019-02-08" stability="stable" version="0.1.3">
+      <manifest-digest sha256new="ZZKKDR43S6EGXF2UHAFMZGMNQX6BT2ACDOPX3TO74XERMOID72AA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.3/k9s_0.1.3_Windows_x86_64.tar.gz" size="10033563" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=ecf29cc643fc605a8d2961ea9c5e9d293dd597a8" main="k9s.exe" released="2019-02-08" stability="stable" version="0.1.3">
+      <manifest-digest sha256new="PNW6NNO26XC56QQVGCEFOTEAIUWXI3LTMZYEWRTEWLN745MZG2VQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.3/k9s_0.1.3_Windows_i386.tar.gz" size="9463613" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=18240d3d5fae9c96021925e13bbb8c3e777bcd8c" main="k9s" released="2019-02-08" stability="stable" version="0.1.3">
+      <manifest-digest sha256new="DUOYPXMKDAQSQLXF5LEFZVW5YAE6MPL2I4EREPKFIMICWX74R7DA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.3/k9s_0.1.3_Linux_x86_64.tar.gz" size="10053769" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=0499d9dcc63470a57d54f808dc9a36842ac2a9e1" main="k9s" released="2019-02-08" stability="stable" version="0.1.3">
+      <manifest-digest sha256new="66ANWZJA4FZVFGPGLKZ4MZI5T2YCER7YFIGBWJVKHC5JSS62GYKQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.3/k9s_0.1.3_Linux_i386.tar.gz" size="9510531" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=fc4e58d246c21d8b0d6d15236d3aff4af43392c3" main="k9s" released="2019-02-08" stability="stable" version="0.1.3">
+      <manifest-digest sha256new="DZK4YS3BXJDVYHKDGBKJNLW7N3NV2GGTT3BP4GC5A57TXEOW62SA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.3/k9s_0.1.3_Darwin_x86_64.tar.gz" size="10537192" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=399fcc9e0329a21963282b63e55da4fa50ce60fd" main="k9s" released="2019-02-08" stability="stable" version="0.1.3">
+      <manifest-digest sha256new="SAJNMHQHG3TNI7WITP6WFANLIJHGDKIP7BSJM6FYQC4E5W2VPEQQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.3/k9s_0.1.3_Darwin_i386.tar.gz" size="9999883" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=bb3fbcb948a1549d96dd4f25f344af6288063e09" main="k9s.exe" released="2019-02-19" stability="stable" version="0.1.4">
+      <manifest-digest sha256new="I6YIXIDMPU3MPUQVPSMKLNWAVGB6JYHOY2Q4NDMWM3UH66HRZ5JA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.4/k9s_0.1.4_Windows_x86_64.tar.gz" size="9865865" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=c33d3701d1419c059022dafc8d91799f9b96bf42" main="k9s.exe" released="2019-02-19" stability="stable" version="0.1.4">
+      <manifest-digest sha256new="3G6PMEPHYSZJMMZE6D6WEAMVCW3LNDHFJFZVU53YDUCTP3JSOUYQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.4/k9s_0.1.4_Windows_i386.tar.gz" size="9304501" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=ae5cc774c51d6cb9d136d51c06d32238f5f6186d" main="k9s" released="2019-02-19" stability="stable" version="0.1.4">
+      <manifest-digest sha256new="3ARTCBX6X7VRJBUWM7LZLT7IB5XWEAPNHXGIKSVPHCKIY466VBBQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.4/k9s_0.1.4_Linux_x86_64.tar.gz" size="9879140" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=0c11e9739e1596b57358067d7f8a97c3cb53d130" main="k9s" released="2019-02-19" stability="stable" version="0.1.4">
+      <manifest-digest sha256new="NPLNL3K3RSUW3OVVYLCIWAF5OVKM6GBBDCM4FF6Z6EJGZO7JEY4Q"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.4/k9s_0.1.4_Linux_i386.tar.gz" size="9353004" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=5e2de8a557e5fda58914044438103dadffbc30f7" main="k9s" released="2019-02-19" stability="stable" version="0.1.4">
+      <manifest-digest sha256new="3757DIFO4RUOAKNREZESS2PHRIBMHRSS7FNJNTVJKOT2BSSL4NTQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.4/k9s_0.1.4_Darwin_x86_64.tar.gz" size="10356630" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=38ae2f31b27af74c8eb1876d9b90c27943cbfd67" main="k9s" released="2019-02-19" stability="stable" version="0.1.4">
+      <manifest-digest sha256new="6DGLAWKZUBOPJYPQUMXQBWH2DFBAMMR6LMMZ32HWQYC4OIB53BIA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.4/k9s_0.1.4_Darwin_i386.tar.gz" size="9837510" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=158fc9e799cb0d30f28163e962eb307db722e06c" main="k9s.exe" released="2019-02-19" stability="stable" version="0.1.5">
+      <manifest-digest sha256new="PWTY5J27EWDHHPZAAFBRA46ISXLD3YCJENB5EI34E7ND2PGCEODQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.5/k9s_0.1.5_Windows_x86_64.tar.gz" size="9867166" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=a1b96ca58212db22b9fdfe8cd8324b6be996d654" main="k9s.exe" released="2019-02-19" stability="stable" version="0.1.5">
+      <manifest-digest sha256new="6WPFK5NTNZIYN5ZDZRJ6HLOC6ADUXYGA2LTICYVNC5LGH7FNHVLQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.5/k9s_0.1.5_Windows_i386.tar.gz" size="9305759" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=4f75637fd34328dc32695ff7c35bfc408ed0de48" main="k9s" released="2019-02-19" stability="stable" version="0.1.5">
+      <manifest-digest sha256new="VCZOB2BVU4PB26U7HWFEU3KXAZTRR2EJGFZJWRY75JP472JEUJKA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.5/k9s_0.1.5_Linux_x86_64.tar.gz" size="9880789" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=127bf5059a1c0ca6c1bfafa3a0591b6e2ec1f455" main="k9s" released="2019-02-19" stability="stable" version="0.1.5">
+      <manifest-digest sha256new="PU7M6HXTANDKT4AZHLM6N6ISIGBH32IMZINYIPOYU4FEPLVGUF7Q"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.5/k9s_0.1.5_Linux_i386.tar.gz" size="9353121" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=ad20977e61da50db67d71817a43c8a873fee4eb9" main="k9s" released="2019-02-19" stability="stable" version="0.1.5">
+      <manifest-digest sha256new="5RTRMCGPHXLUFNOWCWPRX3YIALVCNF3XPWYLBQ5ZUEX3OYLABUAA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.5/k9s_0.1.5_Darwin_x86_64.tar.gz" size="10358308" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=70b4e57c9c8ce96444ca38f2e9bd2ac376178981" main="k9s" released="2019-02-19" stability="stable" version="0.1.5">
+      <manifest-digest sha256new="R276OTC7U2GGWVEVDEQPDZ6PBKYFZYZ2KFDZ467OQ65Y35JIOVAA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.5/k9s_0.1.5_Darwin_i386.tar.gz" size="9835301" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=9f9e7d5595bd312049036a424c30a797b43cbfc2" main="k9s.exe" released="2019-02-20" stability="stable" version="0.1.6">
+      <manifest-digest sha256new="CDURREWNZOICGO2CJTXA5WGRUBPPJ4NFX7JZCWT7G4RCF6OIOZ6A"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.6/k9s_0.1.6_Windows_x86_64.tar.gz" size="10262622" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=25afecba7ff47ad49ec3f6f136d3ca07bac9ab27" main="k9s.exe" released="2019-02-20" stability="stable" version="0.1.6">
+      <manifest-digest sha256new="SC7H2LVM2XOLVEQX2R4P6UFEO6Q6SKW74MNSD75SFHU42ARJNUKA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.6/k9s_0.1.6_Windows_i386.tar.gz" size="9679303" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=3dbd09661e96ef060587cfcf6483430b7365aca4" main="k9s" released="2019-02-20" stability="stable" version="0.1.6">
+      <manifest-digest sha256new="ZGCKRAYSWXMKMOCK4HVFFGVCTGQ4F3FJ4ZRE3INRBYX26J4ACJLA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.6/k9s_0.1.6_Linux_x86_64.tar.gz" size="10281944" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=d4c89a7ac9c3a5d4ae13701704080359bc512590" main="k9s" released="2019-02-20" stability="stable" version="0.1.6">
+      <manifest-digest sha256new="SFT7NAPNZUIDBUXWQFBZPBKEAIB4J5EWU3DVYXL22FPVY3WDQNYA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.6/k9s_0.1.6_Linux_i386.tar.gz" size="9727925" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=7e79c9f571203182461f3ad9030581398f55cc7f" main="k9s" released="2019-02-20" stability="stable" version="0.1.6">
+      <manifest-digest sha256new="Q4MRGTCWCA5X6234HKBN2X5H6XMPXQBMS64A4ISYYH2CWQPBI2BQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.6/k9s_0.1.6_Darwin_x86_64.tar.gz" size="10791066" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=946d9565c06ce7bada82e43f22158b71f280bd5a" main="k9s" released="2019-02-20" stability="stable" version="0.1.6">
+      <manifest-digest sha256new="XWVFTTZEXNDET2HIAFGXDJ6PGKAZHBQSV3JGOFIVJJHEKGMSAFMQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.6/k9s_0.1.6_Darwin_i386.tar.gz" size="10239912" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=b5d267a43456191557c307d9c1d31f8907c4446c" main="k9s.exe" released="2019-02-23" stability="stable" version="0.1.7">
+      <manifest-digest sha256new="NHOOE4WLNX6JWYE6D7ZIHGQEIWX67DHENE3FGGB7ALFZPTF2PGCA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.7/k9s_0.1.7_Windows_x86_64.tar.gz" size="10272809" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=32d006fbb09bad5661a7812dcd3823a06e71c9f6" main="k9s.exe" released="2019-02-23" stability="stable" version="0.1.7">
+      <manifest-digest sha256new="IYBWGZKFYJMS5JE7QND625YJVIENDREZAKQUD6OKRDS7TAG4RMIQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.7/k9s_0.1.7_Windows_i386.tar.gz" size="9693065" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=fffb3fde5c4069a65f272f490291d9f2cd91bb04" main="k9s" released="2019-02-23" stability="stable" version="0.1.7">
+      <manifest-digest sha256new="WF4XPQBXQ6ZQM2WY4B5XSTJE7FIFBLV6KZD5QXQVLGA7NOJHA2BA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.7/k9s_0.1.7_Linux_x86_64.tar.gz" size="10288338" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=01c855ac0ef72179e84640d1d3f6db4613ad1b62" main="k9s" released="2019-02-23" stability="stable" version="0.1.7">
+      <manifest-digest sha256new="YBLMG6Z3HXG47MZKXAUEQ2LBW2L5OB562SXYYA7HT5J4Y4QULXCQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.7/k9s_0.1.7_Linux_i386.tar.gz" size="9739058" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=e1a0cbfb2bf9e4faa77cb9f3b3791b45c1186929" main="k9s" released="2019-02-23" stability="stable" version="0.1.7">
+      <manifest-digest sha256new="IQTP6L6T3Y6KZ6KF3PH6SCLZHJGY2WM7YJIX4AKED6UY2PVB5WKQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.7/k9s_0.1.7_Darwin_x86_64.tar.gz" size="10798258" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=b86b31e7f2ee20016707210138e65ede33d3baa7" main="k9s" released="2019-02-23" stability="stable" version="0.1.7">
+      <manifest-digest sha256new="UJLPWY2KOPL7IH6RWPJ7VZZXDAGAI6LP54F6GIDVEQNDDDZTHRAQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.7/k9s_0.1.7_Darwin_i386.tar.gz" size="10247863" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=178487e90ef2d30e3fb575361336fbe1b2253d6f" main="k9s.exe" released="2019-02-26" stability="stable" version="0.1.8">
+      <manifest-digest sha256new="LQ2Z5SCU7AVZVICAZOK2DPSKPDULJ6ZPWGBVSHGVIFHMLI4JNN7Q"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.8/k9s_0.1.8_Windows_x86_64.tar.gz" size="10272800" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=c21dfbb2202dd013a585b3b1cd81aae98c2b29ad" main="k9s.exe" released="2019-02-26" stability="stable" version="0.1.8">
+      <manifest-digest sha256new="6W2MTCK6Z3L3P647XRYNYEIDSKOMX5GCOITMFHRGQ5C6ZHSODWEA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.8/k9s_0.1.8_Windows_i386.tar.gz" size="9692008" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=bc4af044238f57765c1619a8ca2063a08a1c358d" main="k9s" released="2019-02-26" stability="stable" version="0.1.8">
+      <manifest-digest sha256new="N3HNAP2RYXRLT5H5QA3XWYD5WUONHIDAXJTJGNK5VMRCAQGJBZOQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.8/k9s_0.1.8_Linux_x86_64.tar.gz" size="10287537" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=1917d99af3ef0283bc91a2b7dc60e090a273002d" main="k9s" released="2019-02-26" stability="stable" version="0.1.8">
+      <manifest-digest sha256new="YC53LJ7LIL6A24DXVZ4XZQZTUZWH62QTU3VNRE5LV4FMUC2JSHHA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.8/k9s_0.1.8_Linux_i386.tar.gz" size="9738190" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=8eebbf6de7619c3aa296383553d99c65a07cd4ba" main="k9s" released="2019-02-26" stability="stable" version="0.1.8">
+      <manifest-digest sha256new="JNZC53DPWCKTDSK4Z2AVFWEGDQ3TRLNCXY3RG7PPDUO4N6JZPSXQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.8/k9s_0.1.8_Darwin_x86_64.tar.gz" size="10798282" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=53d5d3c8311946e29341dabde5a7949e8d41cf72" main="k9s" released="2019-02-26" stability="stable" version="0.1.8">
+      <manifest-digest sha256new="3U4ZOUG4WGGKNDFIAYA47J2AYWK22IVCOH5VFGUDOLSLCZHDXSAA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.8/k9s_0.1.8_Darwin_i386.tar.gz" size="10249319" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=50595e772f948aa99717896fe436778506591d72" main="k9s.exe" released="2019-02-26" stability="stable" version="0.1.9">
+      <manifest-digest sha256new="HSB3KJIJA6NIO5KRSS6HAO3O63XMNFUR4USNFOPWMVKIGTU6FGHQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.9/k9s_0.1.9_Windows_x86_64.tar.gz" size="10273314" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=3aac9517259a499a0d3eea24e84d910b10097f84" main="k9s.exe" released="2019-02-26" stability="stable" version="0.1.9">
+      <manifest-digest sha256new="QWGMGAAWSB6JPIWEQ7HFGSNVMDSCLLAHQPB77Z6UG6GMVZIOLARQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.9/k9s_0.1.9_Windows_i386.tar.gz" size="9693526" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=bf3cf870d25faaea051c4ca0d6e314f0e94e4788" main="k9s" released="2019-02-26" stability="stable" version="0.1.9">
+      <manifest-digest sha256new="2KDOF2YCUNO4BI5S7QTYECKJK6CBAO6KM2RC65JV2N37BUERQSBA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.9/k9s_0.1.9_Linux_x86_64.tar.gz" size="10288866" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=0c0d4d1cd2ae6c6bbdf08cad10ded01834d9ca95" main="k9s" released="2019-02-26" stability="stable" version="0.1.9">
+      <manifest-digest sha256new="3YRBEJUWSAKVC46MEL5PMO7QN6FYKW2ZLILVK5ZQXCEVLNKWMVFQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.9/k9s_0.1.9_Linux_i386.tar.gz" size="9739928" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=94f96ee988f85ddf6dd30867bedee7722daef58f" main="k9s" released="2019-02-26" stability="stable" version="0.1.9">
+      <manifest-digest sha256new="DHPK5DVDQGHSMLQSCAQLAXQIMKUR6TDF4HAMBI6MSRL3ZXBIM74A"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.9/k9s_0.1.9_Darwin_x86_64.tar.gz" size="10800286" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=94fe29d8ccf0e39619e0124ffccbb6bd082c759a" main="k9s" released="2019-02-26" stability="stable" version="0.1.9">
+      <manifest-digest sha256new="2A33GKH66D2LSWSNGMQU3JHKQKA3AATKWNOEENYJGML5G7P7AS6A"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.9/k9s_0.1.9_Darwin_i386.tar.gz" size="10249046" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=6bc5f2f1469ba732f31a2819ff7cfc6fbda4b655" main="k9s.exe" released="2019-02-28" stability="stable" version="0.1.10">
+      <manifest-digest sha256new="PNW7LTNATVSFTGAF7CQK24PCBNI3VRRS6AEBH4WPB6KE6BCEI7TA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.10/k9s_0.1.10_Windows_x86_64.tar.gz" size="10273249" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=f93cdd8aceec8c04c8dcbab3b17b393115631a07" main="k9s.exe" released="2019-02-28" stability="stable" version="0.1.10">
+      <manifest-digest sha256new="Q5I3M4DGSXPHVJJVXBNNSJERTQL5GDMYM7KY56WWID4B7MYML6OQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.10/k9s_0.1.10_Windows_i386.tar.gz" size="9693744" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=905a640c725ce3d88055dd3a8ebb44f384a6b2bd" main="k9s" released="2019-02-28" stability="stable" version="0.1.10">
+      <manifest-digest sha256new="AKXUR4DTEDNB352CUBOWA2O4P7CMCGGJFT4HM2WZQNHZW27I24EA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.10/k9s_0.1.10_Linux_x86_64.tar.gz" size="10288676" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=58868a9adbd7f59d86db772331e8524c51efca85" main="k9s" released="2019-02-28" stability="stable" version="0.1.10">
+      <manifest-digest sha256new="OSSXATAEVEOTHG7GFWSSEG2TEVKKWYPDDRLSTTL7FFIHILIJAERA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.10/k9s_0.1.10_Linux_i386.tar.gz" size="9739984" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=35a778f27cbe2ddf5ce4a737171b59eb5d995a9a" main="k9s" released="2019-02-28" stability="stable" version="0.1.10">
+      <manifest-digest sha256new="CEMUWSRQQVMSBIFANO6TVCMFCPWLLHBEJ3NLSR62D3KLZPEZLTSA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.10/k9s_0.1.10_Darwin_x86_64.tar.gz" size="10800800" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=d3e0954afe5bde5b211c9ef3e9fffab0a78f4d36" main="k9s" released="2019-02-28" stability="stable" version="0.1.10">
+      <manifest-digest sha256new="A5RFPDZRETH5U7PMQALQYZZ4VWDSVS5DPOBMLQ6VH5CY5GBDWDMQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.10/k9s_0.1.10_Darwin_i386.tar.gz" size="10249047" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=7a513f29d6458548c40b88821e641bbcd7258554" main="k9s.exe" released="2019-03-01" stability="stable" version="0.1.11">
+      <manifest-digest sha256new="3AX3ZN3KIWTCLTZHAMG2LTOTGVQFUZRKOXLU6MSV4SG244UBMYRQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.11/k9s_0.1.11_Windows_x86_64.tar.gz" size="10992571" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=58e1fa8ad520680c847b4e057b95d9fb6cc53d33" main="k9s.exe" released="2019-03-01" stability="stable" version="0.1.11">
+      <manifest-digest sha256new="KYQ2ZBD2PJGZNS764ATH4Y7TVAVEJRLBWRIU4DZOI3DSFHMRGT7Q"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.11/k9s_0.1.11_Windows_i386.tar.gz" size="10400590" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=b0468c8d489511f56510b639bc7b7aa91e83853f" main="k9s" released="2019-03-01" stability="stable" version="0.1.11">
+      <manifest-digest sha256new="IDB4GEJRQLLTENRGTTDPRI4XQZ4BCJJBSEKMNODSMLOUVLG2S3AQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.11/k9s_0.1.11_Linux_x86_64.tar.gz" size="11013918" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=a8a0c467390331271b09184a5fcd352a39198dd3" main="k9s" released="2019-03-01" stability="stable" version="0.1.11">
+      <manifest-digest sha256new="QGZI3CHK6IU6A7YYSN5QFD2HDB6OOPM4IRSZH5WMZ2X4ARW57H4Q"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.11/k9s_0.1.11_Linux_i386.tar.gz" size="10443426" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=435f14bf309f494ac8bb25785038ba8f65394a06" main="k9s" released="2019-03-01" stability="stable" version="0.1.11">
+      <manifest-digest sha256new="LFIV6UMF4KIUBVDAATOUU747VUYRFKBUDTJUKU6MFVTAC3EHFDKA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.11/k9s_0.1.11_Darwin_x86_64.tar.gz" size="11580961" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=3e3c15a6e7971d42e0f3e400cd2fcec2187b1944" main="k9s" released="2019-03-01" stability="stable" version="0.1.11">
+      <manifest-digest sha256new="25FYCQWZYF566XWEBCZQZ76EG7STA5VJKPPLRU7KQMPC2T6663AA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.1.11/k9s_0.1.11_Darwin_i386.tar.gz" size="11019613" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=313209301136c6c0626152b32a4a315a53ec7694" main="k9s.exe" released="2019-03-01" stability="stable" version="0.2.0">
+      <manifest-digest sha256new="FPRXYWE3YJTI3NLRVLZY4HLM7MEXOL7GTG54TF7UOB3N57MMR7LA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.0/k9s_0.2.0_Windows_x86_64.tar.gz" size="10999589" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=472c239433bc6d59e9b28b32d70dda94da1f6e27" main="k9s.exe" released="2019-03-01" stability="stable" version="0.2.0">
+      <manifest-digest sha256new="WQSVCL2L7WVNPLBVOLEB3AY7ONIG7QB2AWNGOS4DH6QR5H5SWAOQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.0/k9s_0.2.0_Windows_i386.tar.gz" size="10402731" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=4c5616dff3c7e57f4a7a290144161f887c623652" main="k9s" released="2019-03-01" stability="stable" version="0.2.0">
+      <manifest-digest sha256new="JBEMQADORNCWRXCMVJKCXZQGZ5TUWBP2LUTCBREYZZ27MG5THUXA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.0/k9s_0.2.0_Linux_x86_64.tar.gz" size="11018933" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=b064eb343b46d726ebf0c2c5d9aa35196df7088f" main="k9s" released="2019-03-01" stability="stable" version="0.2.0">
+      <manifest-digest sha256new="O2RF45VFNSSLD5BMJAJWY7GXWOHGXBNDVWWQDH6FZROE3E67N2BA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.0/k9s_0.2.0_Linux_i386.tar.gz" size="10449685" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=195ad089e4f6d9a50f70363231a25564313326c7" main="k9s" released="2019-03-01" stability="stable" version="0.2.0">
+      <manifest-digest sha256new="6S3Q6W6NHNMWO3F6OT37RWFJRXKBYIFOLPI4VZZJ7XGZRTN5DN6A"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.0/k9s_0.2.0_Darwin_x86_64.tar.gz" size="11583591" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=11f241002d5bf0a0e6c93374848db9e27f5b2e49" main="k9s" released="2019-03-01" stability="stable" version="0.2.0">
+      <manifest-digest sha256new="L7ZXX2BNT2AYKKJKRRBZ7YFCKXTKLFG2KJIEYXPMHYHVLXVWX7VQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.0/k9s_0.2.0_Darwin_i386.tar.gz" size="11023911" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=218abc368a999bc509eb9e0163d38ba9ab128aa4" main="k9s.exe" released="2019-03-03" stability="stable" version="0.2.1">
+      <manifest-digest sha256new="D5WM4AGIRGRLL5K6GME4U3BHJ5AVMGBJ4PDF6QDJ4N7LWNIDFSPA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.1/k9s_0.2.1_Windows_x86_64.tar.gz" size="11000045" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=17bfaba5448ef2ee9ef78cb17906aced67fd921a" main="k9s.exe" released="2019-03-03" stability="stable" version="0.2.1">
+      <manifest-digest sha256new="WK7AOKT6LPAUTPH7EYBRC7M6NQBWA57AEFIKPCTRZDRZAFVLVF5A"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.1/k9s_0.2.1_Windows_i386.tar.gz" size="10401637" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=a0a026281f49156995de857f344d415d49a4a935" main="k9s" released="2019-03-03" stability="stable" version="0.2.1">
+      <manifest-digest sha256new="42K7YMGTUKKMKGXZG4PHVU3VS23CY3OT6GHCWBBV6WKXUHP7SKTQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.1/k9s_0.2.1_Linux_x86_64.tar.gz" size="11018674" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=f5953652d63a6d7e3759f72dcc1ef84cad6ba7e3" main="k9s" released="2019-03-03" stability="stable" version="0.2.1">
+      <manifest-digest sha256new="ZZBC6U5OFBNDKCSCUMLAIEIIUCLFPHJYMMBPCWHPH466EF6AUT7A"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.1/k9s_0.2.1_Linux_i386.tar.gz" size="10449608" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=538180fde4e68e8819bd5e95c4e6d7f846347cf4" main="k9s" released="2019-03-03" stability="stable" version="0.2.1">
+      <manifest-digest sha256new="NECPFJ3XXDT6ID5GIBNQ6AX3AY5IQDPJTDH2YHH645KGTMC3IWKQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.1/k9s_0.2.1_Darwin_x86_64.tar.gz" size="11585053" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=9e484d7ca93267779dcc99bc27eb201093ef36ec" main="k9s" released="2019-03-03" stability="stable" version="0.2.1">
+      <manifest-digest sha256new="2UJ2ZSLOSBLSROB6Z4RZCAAZ7RA7Z4YKHI624VIEHIFGQJHAJDUQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.1/k9s_0.2.1_Darwin_i386.tar.gz" size="11024692" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=43b56b6402557b1fe6a57cb5114b6f5d8effd1c1" main="k9s.exe" released="2019-03-10" stability="stable" version="0.2.2">
+      <manifest-digest sha256new="IZC7R62YEROPWIAENMMVDKJQBKNKX2CF6JPOAQ75WZ7KUFPNXFNQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.2/k9s_0.2.2_Windows_x86_64.tar.gz" size="11098059" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=44e905c0b6941948d71e76306200c2cbfd55c282" main="k9s.exe" released="2019-03-10" stability="stable" version="0.2.2">
+      <manifest-digest sha256new="DPD4WGLIELJ5RYK6FP6CGQUQLKFSE2YMXE7DFFPJV4T6T3BGYZYQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.2/k9s_0.2.2_Windows_i386.tar.gz" size="10498961" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=40050369a96a975b4261b8d06023a1a759a3bbb6" main="k9s" released="2019-03-10" stability="stable" version="0.2.2">
+      <manifest-digest sha256new="UFUVFCZJDJV3JZQVO75XV36DTK76GORASHIUNQDGD7345LPVNJZA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.2/k9s_0.2.2_Linux_x86_64.tar.gz" size="11119187" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=50b5467a8e05288aa7c801f2bd95ff94f161d025" main="k9s" released="2019-03-10" stability="stable" version="0.2.2">
+      <manifest-digest sha256new="EVFIQB2TY4QP232GHNYKL3RCOWQNV22CZSBIXSTI3VNY3AEZ5BPQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.2/k9s_0.2.2_Linux_i386.tar.gz" size="10539715" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=cf6d4652d90b3cd78be7b400b15967ec0c5d6cf8" main="k9s" released="2019-03-10" stability="stable" version="0.2.2">
+      <manifest-digest sha256new="L4AHOKFABOM4NEUWIBIZJ6D6IXYFD2EMHCRBFXFEWRQ56STGWWBQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.2/k9s_0.2.2_Darwin_x86_64.tar.gz" size="11685764" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=2acf8890f4183f36302e312820945e031aec4159" main="k9s" released="2019-03-10" stability="stable" version="0.2.2">
+      <manifest-digest sha256new="OKVCVHAF27DFRQZ6ZVHEWE5DMJKMV3HB7M2TPOV3IZ7UA5IWUVXA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.2/k9s_0.2.2_Darwin_i386.tar.gz" size="11114208" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=620e0db57416023b6296bff81df5059c51c64d48" main="k9s.exe" released="2019-03-11" stability="stable" version="0.2.3">
+      <manifest-digest sha256new="76HU5AXBMBR26GB7MDGLWKJ3EH5VII2U7CONLOOD7IF354KZANCQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.3/k9s_0.2.3_Windows_x86_64.tar.gz" size="11099179" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=29002aec9d1f16ca533dada79f9c9f3236d79b27" main="k9s.exe" released="2019-03-11" stability="stable" version="0.2.3">
+      <manifest-digest sha256new="TWIDMN6BUCON2YHNYMPIZTYOCH2OUZI3NRPFE2KAQHB6WUKYRUDQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.3/k9s_0.2.3_Windows_i386.tar.gz" size="10499981" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=2415d4b333f423931d3701cef62132726e45757d" main="k9s" released="2019-03-11" stability="stable" version="0.2.3">
+      <manifest-digest sha256new="OSZW6T7GR7OBXHU7BRS4CXLH5HBQ7QLP7ECGID73EP7OM6TC7KRA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.3/k9s_0.2.3_Linux_x86_64.tar.gz" size="11118639" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=fea902056a696f3ed84ab0686c290596a70a5409" main="k9s" released="2019-03-11" stability="stable" version="0.2.3">
+      <manifest-digest sha256new="5NTRWFHQ4RWMHA6QJFROVS3E65YTKTP5CF7DV6TF46N6AZH3T6NA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.3/k9s_0.2.3_Linux_i386.tar.gz" size="10541618" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=4f21cb2efca5a3337bdd2194b3465db74a66dca9" main="k9s" released="2019-03-11" stability="stable" version="0.2.3">
+      <manifest-digest sha256new="3HOKZHXVABCMMZAIEYJ2HDNPY3GLPY4UJCYX4V4PCQIJUCFQO4SA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.3/k9s_0.2.3_Darwin_x86_64.tar.gz" size="11685105" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=43fd3fa2ad322f673cbe9b9bd882082fe526ecae" main="k9s" released="2019-03-11" stability="stable" version="0.2.3">
+      <manifest-digest sha256new="VNK3PXBT34QWDSTS2ILKHZ7VBXX73W4LZ53QDYAKL6DBZRQRMQ3A"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.3/k9s_0.2.3_Darwin_i386.tar.gz" size="11113871" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=3e69dec5057a5bcdc6d4c99f5525e73a04533e5c" main="k9s.exe" released="2019-03-12" stability="stable" version="0.2.4">
+      <manifest-digest sha256new="BGSXUSQ7GDMGBQSIEDMGEUF7ZHDM7RW7VX6A2FNYKCLMOE5SU36A"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.4/k9s_0.2.4_Windows_x86_64.tar.gz" size="11150287" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=7da2d87dbd43358b058d93976bb5f3cd9b3082ac" main="k9s.exe" released="2019-03-12" stability="stable" version="0.2.4">
+      <manifest-digest sha256new="PNMSFRMQRAXSZGPRDXTQ2UD34KYYFMXZI3SF4CRHUTFR4LOJX3EQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.4/k9s_0.2.4_Windows_i386.tar.gz" size="10551382" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=f1377ec9c444f5bea614a2383a9d230cd1c9dc2d" main="k9s" released="2019-03-12" stability="stable" version="0.2.4">
+      <manifest-digest sha256new="KKDUU5ZSFPXWFZGA25BJV26UOEHSXYYWKH675QNARVPW4KXERW2Q"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.4/k9s_0.2.4_Linux_x86_64.tar.gz" size="11169048" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=f4f44d60e908a9bf349dbe7df123ec12425ad89a" main="k9s" released="2019-03-12" stability="stable" version="0.2.4">
+      <manifest-digest sha256new="KSEKB2DBBGTDUQGIYO6WXSGRLU3SDYDXOF5RR4JUUGC6MWRUGE4A"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.4/k9s_0.2.4_Linux_i386.tar.gz" size="10595074" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=8799e064ea341c2ffb50a9acb7ecc2c36da71e9d" main="k9s" released="2019-03-12" stability="stable" version="0.2.4">
+      <manifest-digest sha256new="N55LEASUS5Y3CXHPZK52O4RJ53WYTNS5TUSNQDQQCBJ2LI5CYVMQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.4/k9s_0.2.4_Darwin_x86_64.tar.gz" size="11742415" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=052d880abd3c1978ab5f972795955f7b8feedf23" main="k9s" released="2019-03-12" stability="stable" version="0.2.4">
+      <manifest-digest sha256new="GLFX5AMDKAA5Q72JQDNJXTFRF5WPAVP26B63YONJNUAQRQK7TX7A"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.4/k9s_0.2.4_Darwin_i386.tar.gz" size="11165851" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=60d5ff173ab950d5831fb70baa604d285fc875b9" main="k9s.exe" released="2019-03-16" stability="stable" version="0.2.5">
+      <manifest-digest sha256new="533UVEGP7A4LS2HQPDN2KQ7HMMFMTM6Z2CL4YDJWAORGFJA2TMPQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.5/k9s_0.2.5_Windows_x86_64.tar.gz" size="11213285" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=21bd8730b926a5329c788fc8e856392d2691fad9" main="k9s.exe" released="2019-03-16" stability="stable" version="0.2.5">
+      <manifest-digest sha256new="7P6XR5RT5JTXMAEXFHJMTU7JAUAEKR7DN4ASXH5OGJN5WJLLMSGA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.5/k9s_0.2.5_Windows_i386.tar.gz" size="10614432" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=005cc4c706c5d846be842f1fe593ff8cda9e99ec" main="k9s" released="2019-03-16" stability="stable" version="0.2.5">
+      <manifest-digest sha256new="F7Q7HY4J7EUEIVHEIKAPQA7VYQWN4LCG3XG24PFKW2XSOCKY5PFQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.5/k9s_0.2.5_Linux_x86_64.tar.gz" size="11233438" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=e8d743573d6b106c68c6406e0ab0c524d55d9ae4" main="k9s" released="2019-03-16" stability="stable" version="0.2.5">
+      <manifest-digest sha256new="DOVZEVT72ZWF7M2LFES2VYKFTH5UJWJJVH2OHDHTNXOVZJIXDDFQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.5/k9s_0.2.5_Linux_i386.tar.gz" size="10654729" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=1b1928b05e00512e5c3686b38a2a582b81411c10" main="k9s" released="2019-03-16" stability="stable" version="0.2.5">
+      <manifest-digest sha256new="NLQ6UPE642IXOMIFPKMDG43YRWBKXQ5POL6NAZVPVE2UFR27E46A"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.5/k9s_0.2.5_Darwin_x86_64.tar.gz" size="11808506" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=33594606e7cd09da2e36fa13e020c223c2609267" main="k9s" released="2019-03-16" stability="stable" version="0.2.5">
+      <manifest-digest sha256new="CK5V4OQOWJYWIOAR42HB36QV4VIYRN7SMQY2O6LQHYSUTDU32XTA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.5/k9s_0.2.5_Darwin_i386.tar.gz" size="11227589" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=751e5570a70ac0215a65541900805282cf32696f" main="k9s.exe" released="2019-03-16" stability="stable" version="0.2.6">
+      <manifest-digest sha256new="Y4ER52WVIHC5YAE6V7O2IOOZ6R23CZWLVUCHQFPWLIUDRDUJAGZQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.6/k9s_0.2.6_Windows_x86_64.tar.gz" size="11222596" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=4e243adc7a8e1ee4a1f7bdee65428474103e571f" main="k9s.exe" released="2019-03-16" stability="stable" version="0.2.6">
+      <manifest-digest sha256new="Q2VHJT4BY6IGNKWUVXJ4VTGMYXDKM2Z3SFSS2LBFATPW33KJ5OZA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.6/k9s_0.2.6_Windows_i386.tar.gz" size="10622545" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=79205efc5132a4acb882ceebbe58d6815f7c22f6" main="k9s" released="2019-03-16" stability="stable" version="0.2.6">
+      <manifest-digest sha256new="3BEOSKTLQ7F4OADCKBTXYV6LSMAYEO3XDIQQJ5GFW6ESLNHIEUWQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.6/k9s_0.2.6_Linux_x86_64.tar.gz" size="11239868" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=9f2957eed5167f0f8a79656c2f949a92333f8ad6" main="k9s" released="2019-03-16" stability="stable" version="0.2.6">
+      <manifest-digest sha256new="HNNCDYVQNCEWLFDAP5C4SOFKFF4F5QOGQZBTJ2HX7ZLGB2R7S3YA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.6/k9s_0.2.6_Linux_i386.tar.gz" size="10667013" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=d07bc5b1c835ddb2e438bd521b2437d2fc7c0696" main="k9s" released="2019-03-16" stability="stable" version="0.2.6">
+      <manifest-digest sha256new="NFDIZAN4BQAZBI6KKGKRQO7MSUWWMTLJFRZS5ZV3RQUVYN7JZIHA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.6/k9s_0.2.6_Darwin_x86_64.tar.gz" size="11816139" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=96f6a7d7a9431c024a61ee6ea6425832240328bb" main="k9s" released="2019-03-16" stability="stable" version="0.2.6">
+      <manifest-digest sha256new="A5V7GFKY3CE5SC7UBBK6RJRQRIO3G7IZVGVWAYEDHSJKLYFGLUSQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.2.6/k9s_0.2.6_Darwin_i386.tar.gz" size="11239703" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=2cb3dc59b3de738ac1c0d4db50636f56bee6fe7b" main="k9s.exe" released="2019-03-22" stability="stable" version="0.3.0">
+      <manifest-digest sha256new="KCX6X46NBO5YF2BMBJOSG4B2VW2YBC2DR2VIKNHTLECDP4ANP7CA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.0/k9s_0.3.0_Windows_x86_64.tar.gz" size="11230049" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=f4527dee9f50e6c0225b9855df3287214e2871b7" main="k9s.exe" released="2019-03-22" stability="stable" version="0.3.0">
+      <manifest-digest sha256new="FMLPAME2UMSI6WIA7BTYEB4QLPRSXCW4JH7COGOKPJHUIMA5CPDQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.0/k9s_0.3.0_Windows_i386.tar.gz" size="10626630" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=5597ba02d19d545acf0bf7ac7009cc90682cc7ef" main="k9s" released="2019-03-22" stability="stable" version="0.3.0">
+      <manifest-digest sha256new="O7FCZZRW732DH7IQZYTE25UFYZ5SBSANZFYY72HFNOR5TT5NL4PA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.0/k9s_0.3.0_Linux_x86_64.tar.gz" size="11246667" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=8566072f2cc5dbb62da9f8e5ab2bce7baa6b92ed" main="k9s" released="2019-03-22" stability="stable" version="0.3.0">
+      <manifest-digest sha256new="MBAXP23LAEZR4KZOZEX5UOQCS6IRATZENB5GHY5VANZFWZ525BSQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.0/k9s_0.3.0_Linux_i386.tar.gz" size="10673397" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=97ee41a292f93fa6a408e3d882c33881e50cd633" main="k9s" released="2019-03-22" stability="stable" version="0.3.0">
+      <manifest-digest sha256new="ZEIGWKLZCSHODUOBOC5VVBQQBL3U3K7MY7QW35FG2GTQJVXHR4SA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.0/k9s_0.3.0_Darwin_x86_64.tar.gz" size="11822420" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=e3cb604d6743ae5b4eb71f7b02e2e4dbf0807c72" main="k9s" released="2019-03-22" stability="stable" version="0.3.0">
+      <manifest-digest sha256new="H46Q7TFQN5LERXSPF2CSUXEJPYOPZS3SZFUYRFWFE2QEVRIPSNVQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.0/k9s_0.3.0_Darwin_i386.tar.gz" size="11250961" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=82c19dc2e69ce062d4120aac8be7d24e09b27ab0" main="k9s.exe" released="2019-03-25" stability="stable" version="0.3.1">
+      <manifest-digest sha256new="DQK6LJAKRDL5BJWEDYJJB2KSE3TNRTA3RALYUBQE2DE6G37B7ZHQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.1/k9s_0.3.1_Windows_x86_64.tar.gz" size="11267374" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=32ce7c55d592bf3a2a0d307c4ab4f06f84960c5b" main="k9s.exe" released="2019-03-25" stability="stable" version="0.3.1">
+      <manifest-digest sha256new="ATBL4MQ6MB43O4XRWNP664P7LHNKOTNQBI3LRIVD7G465H3F5A2Q"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.1/k9s_0.3.1_Windows_i386.tar.gz" size="10661413" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=740c5558df7a83d9c0c04962874e576475a6a945" main="k9s" released="2019-03-25" stability="stable" version="0.3.1">
+      <manifest-digest sha256new="EXQPH7ZZCCZDKICM5WP3AAHOJBXDEG46RVKDLL5LVPSZ7PYVOURA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.1/k9s_0.3.1_Linux_x86_64.tar.gz" size="11285500" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=7f85bd5c560037798e39cfaa8a502ed1d9507067" main="k9s" released="2019-03-25" stability="stable" version="0.3.1">
+      <manifest-digest sha256new="47MCOYCCBPQJPW5VS5DSPAW4ATVG3U2RYTNCSRPQO3VSBQNEGZTA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.1/k9s_0.3.1_Linux_i386.tar.gz" size="10712346" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=bbc6f713a95b77c7a6d4064e917a37572a89751b" main="k9s" released="2019-03-25" stability="stable" version="0.3.1">
+      <manifest-digest sha256new="JRNXWU7PSKIODNPDWBURVPKYN7NE3FYKYVUYPBS47QG6NLT2UIDQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.1/k9s_0.3.1_Darwin_x86_64.tar.gz" size="11868720" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=e73cfd6e2a8125eed47bc94f8fe759c2e6706371" main="k9s" released="2019-03-25" stability="stable" version="0.3.1">
+      <manifest-digest sha256new="5DIUR5KYZFBLTSJABP3F4ZQLV77JDPQTIPF2U54YA25ZA2NOZEHA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.1/k9s_0.3.1_Darwin_i386.tar.gz" size="11292264" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=2fe5396c37c50d4f6f40e515333126aec6a335c1" main="k9s.exe" released="2019-03-26" stability="stable" version="0.3.2">
+      <manifest-digest sha256new="GOLQDEHCQHCTWXQUGAG6XN7XNFV74ZFUZYCDRXYVXDZCEJZRXO7Q"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.2/k9s_0.3.2_Windows_x86_64.tar.gz" size="11272958" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=de54d515300d56561d615e258eca913d1ceae796" main="k9s.exe" released="2019-03-26" stability="stable" version="0.3.2">
+      <manifest-digest sha256new="ZEDBV47LQCT3OYXCSYNM5K7RNOHQUN3OMDZHWICC7XSQR7L47Z3A"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.2/k9s_0.3.2_Windows_i386.tar.gz" size="10670285" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=b3e1d584a857bae41c0b3796174e71c50851ca66" main="k9s" released="2019-03-26" stability="stable" version="0.3.2">
+      <manifest-digest sha256new="IYK2BDZPP6BEA3HJPP55UVM4E7M3MHNZJJ25EUCXJORIDMGXS5NA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.2/k9s_0.3.2_Linux_x86_64.tar.gz" size="11293840" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=6ef90aef6336d897129f67a52ffea17e14fca0fe" main="k9s" released="2019-03-26" stability="stable" version="0.3.2">
+      <manifest-digest sha256new="LCKWDJ5EZOFY6NCFBRYJTDMRZZHDO7JA7TQ7Y2YIBDXHSWLQKTRA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.2/k9s_0.3.2_Linux_i386.tar.gz" size="10721490" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=0186cae05b7ca87e6dda5282f107c8c358f28dce" main="k9s" released="2019-03-26" stability="stable" version="0.3.2">
+      <manifest-digest sha256new="IZ4OFSWWMFPXRG627VFN4GS27QWPM4S6M3LTM6JSWMNL4VUWNC7A"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.2/k9s_0.3.2_Darwin_x86_64.tar.gz" size="11876678" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=11478c36185df74f87a68f1335c85a4907458fb2" main="k9s" released="2019-03-26" stability="stable" version="0.3.2">
+      <manifest-digest sha256new="IFC5BDUAXXGX7EBHWX343WWGF7QC36LF3AKFQFTLOMX7TGT2P4JA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.2/k9s_0.3.2_Darwin_i386.tar.gz" size="11300774" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=8a5cf391acc874cf63adcfe62a8d49b3d2ed2687" main="k9s.exe" released="2019-03-26" stability="stable" version="0.3.3">
+      <manifest-digest sha256new="VAWJZP2OKU4V7QYWYXBKFBGWEMMWSN6G52FXYXARGDMMKUQIGVBQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.3/k9s_0.3.3_Windows_x86_64.tar.gz" size="11273366" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=e5470e0a7570c21f338d05c696c3da38b74a78b0" main="k9s.exe" released="2019-03-26" stability="stable" version="0.3.3">
+      <manifest-digest sha256new="K4XV7MBV7CDIFKXTZODHOTNZCYEDBJLKP6DXZEZ2UVKCCFNWJFOQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.3/k9s_0.3.3_Windows_i386.tar.gz" size="10669092" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=0af32d76caf3056b5a2cafd9985b9c0ec827a144" main="k9s" released="2019-03-26" stability="stable" version="0.3.3">
+      <manifest-digest sha256new="OEKB7F7O7UW2GRTRADFNMVCNVHANMIICBWMZUNWKRACQZCRG3R6A"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.3/k9s_0.3.3_Linux_x86_64.tar.gz" size="11292871" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=3551315113071f1e30db08268440a6671ee3c807" main="k9s" released="2019-03-26" stability="stable" version="0.3.3">
+      <manifest-digest sha256new="MTIX7NDPSMS7YCQBE3TADH3L3DEAJHGA2VYGP5AUTBQYBY7KMQNQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.3/k9s_0.3.3_Linux_i386.tar.gz" size="10720866" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=2273e61da7a4704ee7526c9672ad709a86874493" main="k9s" released="2019-03-26" stability="stable" version="0.3.3">
+      <manifest-digest sha256new="TPDFZYBUL2AC7C3CDYYV3RZCRZGVLOW4PV5EEFPLXKP5JQYGDXYA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.3/k9s_0.3.3_Darwin_x86_64.tar.gz" size="11875727" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=34eda607e6bedeb2e5d426e317e90c6ee840375f" main="k9s" released="2019-03-26" stability="stable" version="0.3.3">
+      <manifest-digest sha256new="66CRIZGOMXO5WQUWNWCRO7M5TJ7XMPPLLJGQHFEWE2UUHTU6HCMA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.3.3/k9s_0.3.3_Darwin_i386.tar.gz" size="11299721" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=97861e7d1a338e99c9cbb026d17ef59b84e97022" main="k9s.exe" released="2019-03-28" stability="stable" version="0.4.0">
+      <manifest-digest sha256new="LNDZFUCQOJZHGMCXDX3447Q5WZ2LN5VA7TGMZCBCQD73KQ34MFEQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.0/k9s_0.4.0_Windows_x86_64.tar.gz" size="11314621" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=0ebd067755f96dc02cdbae870e7856be604177d5" main="k9s.exe" released="2019-03-28" stability="stable" version="0.4.0">
+      <manifest-digest sha256new="H4OMDYMLUVEXT3YB77ENGJOTNGLS52CVYJNNIVR5GUV453JVF6WQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.0/k9s_0.4.0_Windows_i386.tar.gz" size="10707611" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=8f90b0f174164e359b2174a1152ce65392816f89" main="k9s" released="2019-03-28" stability="stable" version="0.4.0">
+      <manifest-digest sha256new="ZND7KK7FBLY2C2ST4FWGUZHVQF4HJCMZUVGDGZW5HECOVPFIJ5DA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.0/k9s_0.4.0_Linux_x86_64.tar.gz" size="11331040" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=5a6b975336306b94ed48e8f55e43cd2c98a6a918" main="k9s" released="2019-03-28" stability="stable" version="0.4.0">
+      <manifest-digest sha256new="MMUB2BJGWRUHVH47RWHLXQZPQNPH7SNE6YNWU2SDJRIDISQPH7YQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.0/k9s_0.4.0_Linux_i386.tar.gz" size="10757153" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=cd8f5247d4f8261f22cf0e38fe297049ce6b6fc9" main="k9s" released="2019-03-28" stability="stable" version="0.4.0">
+      <manifest-digest sha256new="ZIFARZUIJATGOEG2KC2BZKRW5KF72IU4G27JTHVJA2634U6NECVQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.0/k9s_0.4.0_Darwin_x86_64.tar.gz" size="11916438" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=73e8337bcb30afd9363d36ca59bb434e1846ccf4" main="k9s" released="2019-03-28" stability="stable" version="0.4.0">
+      <manifest-digest sha256new="2QBBUDMO5YNK4FWHD5JIEYMTUGOJRUZHBY7OPFKRZSETVVV2QFVA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.0/k9s_0.4.0_Darwin_i386.tar.gz" size="11343112" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=41a34adcb7a6c10482075d0fe482ad522af58411" main="k9s.exe" released="2019-03-30" stability="stable" version="0.4.1">
+      <manifest-digest sha256new="HQ7VYB6N365QHH42B6QG3LTHLWOAPNMQMC3DNXRG5QYV622YV6PQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.1/k9s_0.4.1_Windows_x86_64.tar.gz" size="11344715" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=330c8abd3b725214040b3814d983d68be31ad937" main="k9s.exe" released="2019-03-30" stability="stable" version="0.4.1">
+      <manifest-digest sha256new="47HLNE7OQNFWGQG7UOKRRLY6HD3BKEV2YW4IDTZ4ZP4QYTG6KVDQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.1/k9s_0.4.1_Windows_i386.tar.gz" size="10737048" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=3d0bd9a441f209c6b59ea4889a638f70eb9bdc35" main="k9s" released="2019-03-30" stability="stable" version="0.4.1">
+      <manifest-digest sha256new="PYEQYAKXOSD3HWYROGK5JMKXU3VAJH2ZRRRNW36UU4BM4KMHLXWA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.1/k9s_0.4.1_Linux_x86_64.tar.gz" size="11360318" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=2dd86425dd142af0946a25dc116a18b78382be6b" main="k9s" released="2019-03-30" stability="stable" version="0.4.1">
+      <manifest-digest sha256new="LQTNPIQ3MNI7WJPX33GFPRW6DNBJWRJGTGLKBMP3FNZA4LEQJFWA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.1/k9s_0.4.1_Linux_i386.tar.gz" size="10788485" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=24b3b0cf1f358ead3a766d19a173cbe6a4ab7371" main="k9s" released="2019-03-30" stability="stable" version="0.4.1">
+      <manifest-digest sha256new="WWMSTBTOI2HC4DZWQIWTBAXUOP2C7XQI6CZONX5CY2EXVQ6AFSUA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.1/k9s_0.4.1_Darwin_x86_64.tar.gz" size="11949636" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=0fb3b9438172719e5e91c91984f4c92a435b601d" main="k9s" released="2019-03-30" stability="stable" version="0.4.1">
+      <manifest-digest sha256new="5HVPBP5JLYHKVP4U32QGXHYNJ4OU5G6L556OMY3CNRDWBLM5NRBQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.1/k9s_0.4.1_Darwin_i386.tar.gz" size="11373310" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=ddc8c9db7a84d170945fa4edccd4e11f67146a63" main="k9s.exe" released="2019-03-31" stability="stable" version="0.4.2">
+      <manifest-digest sha256new="RDTSCCTLPSWZWJ4CDU7K74VM3NKXE4R5VNWNNMSLH2TQX55IBR2Q"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.2/k9s_0.4.2_Windows_x86_64.tar.gz" size="11353211" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=dd77fb01a777d43f87abfc49fbbffc6bef58d5d9" main="k9s.exe" released="2019-03-31" stability="stable" version="0.4.2">
+      <manifest-digest sha256new="RSGBBCULAHNT5SXMSEEHLGAKP44H6UAKDBUFLW76N7ULYX2KYATQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.2/k9s_0.4.2_Windows_i386.tar.gz" size="10745186" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=30bcf35645fddf686f06f9707d1b883c034be09a" main="k9s" released="2019-03-31" stability="stable" version="0.4.2">
+      <manifest-digest sha256new="4ICRKNTZ456RIDNZIGT3G26BNTJOQQ47W7RDPM2LLKUABSYAKPMQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.2/k9s_0.4.2_Linux_x86_64.tar.gz" size="11370766" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=a26bf2fce9901cf86e22aaee0f6cc9de361a719b" main="k9s" released="2019-03-31" stability="stable" version="0.4.2">
+      <manifest-digest sha256new="3PLV27PMDDVN5XCFKGJRT4BMWFJXHIS5IZXKJPOXX5RTZHVQEGRA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.2/k9s_0.4.2_Linux_i386.tar.gz" size="10795330" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=e5fa5164b0038e734a7df4f0b3eac3326cb81789" main="k9s" released="2019-03-31" stability="stable" version="0.4.2">
+      <manifest-digest sha256new="666TVPP43NC4OVY54TRWTGP6P2OYSCLKH5LZSYCHGMXLPYMGL3NA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.2/k9s_0.4.2_Darwin_x86_64.tar.gz" size="11961912" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=d2c487ff65a657b7eef8199dc6e81b2b0bfbc19a" main="k9s" released="2019-03-31" stability="stable" version="0.4.2">
+      <manifest-digest sha256new="46KH4N6HN7WJ6ZFD7RIB6CJ6HGWDRCE36KVQOGC4IW2XJOLFJOQQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.2/k9s_0.4.2_Darwin_i386.tar.gz" size="11383074" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=11a4e5c30c960aacaa21a49d824c252ec4287046" main="k9s.exe" released="2019-04-01" stability="stable" version="0.4.3">
+      <manifest-digest sha256new="S2OFRCHYWLHNLV4CWQO4OXLWHD74UKANEVGPE77YZJPNGPO77OBA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.3/k9s_0.4.3_Windows_x86_64.tar.gz" size="11353108" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=3421d2ba975be7458a3b0c33ff798126f5493917" main="k9s.exe" released="2019-04-01" stability="stable" version="0.4.3">
+      <manifest-digest sha256new="HIDCGTTPS7YYQRPFDIO6WEZQXZCKLTVEMIRPIFIIEXRMEUE7SABA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.3/k9s_0.4.3_Windows_i386.tar.gz" size="10745631" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=045880bc6f96817cbc7d81efd4a2e0362dc28fa5" main="k9s" released="2019-04-01" stability="stable" version="0.4.3">
+      <manifest-digest sha256new="V7X42ZDDR5IOTHPXJ6NBHHV724Q5FTVEDNSPEL53D7IPJJREQ67A"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.3/k9s_0.4.3_Linux_x86_64.tar.gz" size="11370763" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=6e77c7b4f6ddc25d545eb35e110190cf9155311f" main="k9s" released="2019-04-01" stability="stable" version="0.4.3">
+      <manifest-digest sha256new="GVRKTX3DAJXA3YDXQTPU7HZKHAM2WAFW3COSHZNAEWF6JMHKQOJA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.3/k9s_0.4.3_Linux_i386.tar.gz" size="10794043" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=54c81105bc8ae5dbbb6cd3c137b74a8a01dafea9" main="k9s" released="2019-04-01" stability="stable" version="0.4.3">
+      <manifest-digest sha256new="BA5UME6KAIUT3XQJWVJVUCSSU32KI7UNZSL6S2B42UADLASVCBGQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.3/k9s_0.4.3_Darwin_x86_64.tar.gz" size="11961856" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=a77dba76980d7057dfddd1dcb5c85faece2a507e" main="k9s" released="2019-04-01" stability="stable" version="0.4.3">
+      <manifest-digest sha256new="TVAQ3V6E4FLJP2VLGOJYYPWHU7J2TLXOHOQKMX3B26WR3F2BEDCA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.3/k9s_0.4.3_Darwin_i386.tar.gz" size="11381652" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=3436bc28314f7d2bec1bcbe1680e46a2bf0c636b" main="k9s.exe" released="2019-04-02" stability="stable" version="0.4.4">
+      <manifest-digest sha256new="GNHSDCBMRIOY62KZF2PR535KD3DG7H2QZOMEQFGE436RBREU6HIQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.4/k9s_0.4.4_Windows_x86_64.tar.gz" size="11352637" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=1c3b28e4d0c1c22922de96945329b8e47e32b5e1" main="k9s.exe" released="2019-04-02" stability="stable" version="0.4.4">
+      <manifest-digest sha256new="J7CTFCMSVADD2U2M62MM3G5QSJYENDKEDPGHTI6HGGWHQ7AGPHOA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.4/k9s_0.4.4_Windows_i386.tar.gz" size="10745069" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=5cad23b747b527817b26916a35353761b31ea842" main="k9s" released="2019-04-02" stability="stable" version="0.4.4">
+      <manifest-digest sha256new="64DZU2HE2AO4CCMSF2MSPIX7LBTJMYCJGMK4IUTYXAOVHWXQJYMA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.4/k9s_0.4.4_Linux_x86_64.tar.gz" size="11369112" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=2f3384679fa8f89ee3ed7e8975c89ba34fef7575" main="k9s" released="2019-04-02" stability="stable" version="0.4.4">
+      <manifest-digest sha256new="XSGZ24FIDNNHEM475KKWDQZWDPOQUH3DSKAFRL6BTK5GP4PZHDHA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.4/k9s_0.4.4_Linux_i386.tar.gz" size="10794093" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=32acc23f99a19365af9545f2136242a9af4b5245" main="k9s" released="2019-04-02" stability="stable" version="0.4.4">
+      <manifest-digest sha256new="3XTKIT3KMMFX52ERFFLUT235XI73RGCOUKTO3JZ4BOJJIZ4P7TEA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.4/k9s_0.4.4_Darwin_x86_64.tar.gz" size="11961497" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=262a66675e132683e88e3a587ed2ef1f2caaf276" main="k9s" released="2019-04-02" stability="stable" version="0.4.4">
+      <manifest-digest sha256new="72MEEQNVDUC7TAETGOT6QU2KG37FXXJONKDUNUSUSNTZXDO3FF5Q"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.4/k9s_0.4.4_Darwin_i386.tar.gz" size="11382497" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=ab0f05b2fa4d026aa246828f0931ed1316145290" main="k9s.exe" released="2019-04-04" stability="stable" version="0.4.5">
+      <manifest-digest sha256new="EV5UZBS2G7LHGSGPVMGES4A44KYL6MCAQS4TAFBFBAMZREXEH7XQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.5/k9s_0.4.5_Windows_x86_64.tar.gz" size="11354369" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=34f4bfd0d9cba1195fdef623386291256ad41b65" main="k9s.exe" released="2019-04-04" stability="stable" version="0.4.5">
+      <manifest-digest sha256new="VR57TMTHAHJEAXPIZN3NLV2CRJ7CYVVURR6KFXZ3AQB5XDKI7E4Q"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.5/k9s_0.4.5_Windows_i386.tar.gz" size="10744333" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=a0cb10eb6974b3b92d5e570312ecce50a6ac82a8" main="k9s" released="2019-04-04" stability="stable" version="0.4.5">
+      <manifest-digest sha256new="TUGCBBHZDAVT7QH4NVHCJGJBO5VJU4TX6PVGPH3ESXCP2RCLICEQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.5/k9s_0.4.5_Linux_x86_64.tar.gz" size="11370372" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=b4ef352c34ab7229ac5448c6ddfaa25ec9117e6c" main="k9s" released="2019-04-04" stability="stable" version="0.4.5">
+      <manifest-digest sha256new="CPUBMB2MEBVZBQ525Y6B2DXVVSV3J64Z4NGPJY2GB4NHDSY5HSLA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.5/k9s_0.4.5_Linux_i386.tar.gz" size="10793422" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=f2f183401ad0ad1b5aeb3f7ddc2318bb7a7f2e6b" main="k9s" released="2019-04-04" stability="stable" version="0.4.5">
+      <manifest-digest sha256new="IXN2MWVPYJNWKPEEQAMC4XJLRMBKTDZ56XD7GJBLJJ5EJOLNQH7Q"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.5/k9s_0.4.5_Darwin_x86_64.tar.gz" size="11962628" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-i386" id="sha1new=60ab7d9c2f5d168b631179998e5420b6740dcf80" main="k9s" released="2019-04-04" stability="stable" version="0.4.5">
+      <manifest-digest sha256new="LX7KOICJCP4KOQZKNK4EYD2ES3R6I7ERU3DKFONPEFZAY43BHEWA"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/0.4.5/k9s_0.4.5_Darwin_i386.tar.gz" size="11384649" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <entry-point binary-name="k9s" command="run"/>
+</interface>

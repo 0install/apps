@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>k9s</name>
+  <summary>curses based terminal UI to interact with Kubernetes</summary>
+  <description>K9s provides a curses based terminal UI to interact with your Kubernetes clusters. The aim of this project is to make it easier to navigate, observe and manage your applications. This command line app continually watches Kubernetes for changes and offers subsequent commands to interact with observed resources.</description>
+  <homepage>https://k9ss.io/</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/kubernetes/k9s"/>
+
+  <group license="Apache License 2.0">
+    <implementation arch="Windows-x86_64" version="{version}" stability="stable" released="{released}" main="k9s.exe">
+      <manifest-digest/>
+      <archive href="https://github.com/derailed/k9s/releases/download/{version}/k9s_{version}_Windows_x86_64.tar.gz" type="application/x-compressed-tar" />
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" stability="stable" released="{released}" main="k9s.exe">
+      <manifest-digest/>
+      <archive href="https://github.com/derailed/k9s/releases/download/{version}/k9s_{version}_Windows_i386.tar.gz" type="application/x-compressed-tar" />
+    </implementation>
+    <implementation arch="Linux-x86_64" version="{version}" stability="stable" released="{released}" main="k9s">
+      <manifest-digest/>
+      <archive href="https://github.com/derailed/k9s/releases/download/{version}/k9s_{version}_Linux_x86_64.tar.gz" type="application/x-compressed-tar" />
+    </implementation>
+    <implementation arch="Linux-i386" version="{version}" stability="stable" released="{released}" main="k9s">
+      <manifest-digest/>
+      <archive href="https://github.com/derailed/k9s/releases/download/{version}/k9s_{version}_Linux_i386.tar.gz" type="application/x-compressed-tar" />
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" stability="stable" released="{released}" main="k9s">
+      <manifest-digest/>
+      <archive href="https://github.com/derailed/k9s/releases/download/{version}/k9s_{version}_Darwin_x86_64.tar.gz" type="application/x-compressed-tar" />
+    </implementation>
+    <implementation arch="Darwin-i386" version="{version}" stability="stable" released="{released}" main="k9s">
+      <manifest-digest/>
+      <archive href="https://github.com/derailed/k9s/releases/download/{version}/k9s_{version}_Darwin_i386.tar.gz" type="application/x-compressed-tar" />
+    </implementation>
+  </group>
+</interface>

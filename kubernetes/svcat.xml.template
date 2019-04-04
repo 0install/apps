@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>svcat</name>
+  <summary>CLI for interacting with Kubernetes Service Catalog</summary>
+  <description>This is a command-line interface (CLI) for interacting with Service Catalog resources. svcat is a domain-specific tool to make interacting with the Service Catalog easier. While many of its commands have analogs to kubectl, our goal is to streamline and optimize the operator experience.</description>
+  <homepage>https://svc-cat.io/docs/cli/</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/kubernetes/svcat"/>
+
+  <group license="Apache License 2.0">
+    <implementation arch="Windows-x86_64" version="{version}" stability="stable" released="{released}" main="svcat.exe">
+      <manifest-digest/>
+      <file href="https://download.svcat.sh/cli/v{version}/windows/amd64/svcat.exe" dest="svcat.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="{version}" stability="stable" released="{released}" main="svcat">
+      <manifest-digest/>
+      <file href="https://download.svcat.sh/cli/v{version}/linux/amd64/svcat" dest="svcat" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" stability="stable" released="{released}" main="svcat">
+      <manifest-digest/>
+      <file href="https://download.svcat.sh/cli/v{version}/darwin/amd64/svcat" dest="svcat" executable="true"/>
+    </implementation>
+  </group>
+</interface>

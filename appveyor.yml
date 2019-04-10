@@ -27,10 +27,6 @@ for:
   - matrix:
       only:
         - image: Ubuntu
-    cache:
-      - '$HOME/.cache/0install.net'
-      - '$HOME/.config/0install.net'
-      - '$HOME/.gnupg'
     before_build:
       - sudo apt-get install -y --no-install-recommends 0install-core python-gobject
     clone_folder: $HOME/repo/feeds

@@ -7,43 +7,71 @@
   <category>Development</category>
   <needs-terminal/>
 
-
   <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/dotnet/ironpython.png" type="image/png"/>
   <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/dotnet/ironpython.ico" type="image/vnd.microsoft.icon"/>
 
   <feed-for interface="http://repo.roscidus.com/dotnet/ironpython"/>
 
-  <group license="The Apache License v2" arch="*-x86_64">
-    <command name="run" path="ipy64.exe">
-      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run">
-        <version not-before="3.5"/>
-      </runner>
+  <!-- .NET Framework 4.0 -->
+  <group arch="Windows-x86_64" license="The Apache License v2">
+    <command name="run" path="net40/ipy.exe">
+      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run" version="4.0..!4.5" />
     </command>
-    <command name="run-gui" path="ipyw64.exe">
-      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run-gui">
-        <version not-before="3.5"/>
-      </runner>
+    <command name="run-gui" path="net40/ipyw.exe">
+      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run-gui" version="4.0..!4.5" />
     </command>
-    <implementation version="{version}" released="{released}" id="v{version}-x64">
+    <implementation version="{version}" released="{released}" id="v{version}-net40-x64">
       <manifest-digest/>
-      <archive href="https://github.com/IronLanguages/main/releases/download/ipy-{version}/IronPython-{version}-win.zip" type="application/zip" extract="IronPython-{version}"/>
+      <archive href="https://github.com/IronLanguages/ironpython2/releases/download/ipy-{version}/IronPython.{version}.zip" type="application/zip"/>
+    </implementation>
+  </group>
+  <group arch="Windows-i486" license="The Apache License v2">
+    <command name="run" path="net40/ipy32.exe">
+      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run" version="4.0..!4.5" />
+    </command>
+    <command name="run-gui" path="net40/ipyw32.exe">
+      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run-gui" version="4.0..!4.5" />
+    </command>
+    <implementation version="{version}" released="{released}" id="v{version}-net40-x86">
+      <manifest-digest/>
+      <archive href="https://github.com/IronLanguages/ironpython2/releases/download/ipy-{version}/IronPython.{version}.zip" type="application/zip"/>
     </implementation>
   </group>
 
-  <group license="The Apache License v2" arch="*-i486">
-    <command name="run" path="ipy.exe">
-      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run">
-        <version not-before="3.5"/>
-      </runner>
+  <!-- .NET Framework 4.5 -->
+  <group arch="Windows-x86_64" license="The Apache License v2">
+    <command name="run" path="net45/ipy.exe">
+      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run" version="4.5.." />
     </command>
-    <command name="run-gui" path="ipyw.exe">
-      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run-gui">
-        <version not-before="3.5"/>
-      </runner>
+    <command name="run-gui" path="net45/ipyw.exe">
+      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run-gui" version="4.5.." />
     </command>
-    <implementation version="{version}" released="{released}" id="v{version}-x86">
+    <implementation version="{version}" released="{released}" id="v{version}-net45-x64">
       <manifest-digest/>
-      <archive href="https://github.com/IronLanguages/main/releases/download/ipy-{version}/IronPython-{version}-win.zip" type="application/zip" extract="IronPython-{version}"/>
+      <archive href="https://github.com/IronLanguages/ironpython2/releases/download/ipy-{version}/IronPython.{version}.zip" type="application/zip"/>
+    </implementation>
+  </group>
+  <group arch="Windows-i486" license="The Apache License v2">
+    <command name="run" path="net45/ipy32.exe">
+      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run" version="4.5.." />
+    </command>
+    <command name="run-gui" path="net45/ipyw32.exe">
+      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run-gui" version="4.5.." />
+    </command>
+    <implementation version="{version}" released="{released}" id="v{version}-net45-x86">
+      <manifest-digest/>
+      <archive href="https://github.com/IronLanguages/ironpython2/releases/download/ipy-{version}/IronPython.{version}.zip" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <!-- .NET Core 2.0 -->
+  <group arch="POSIX-*" license="The Apache License v2">
+    <command name="run" path="netcoreapp2.0/ipy.dll">
+      <runner interface="http://repo.roscidus.com/dotnet/core" command="run" version="2.0.." />
+    </command>
+    <implementation version="{version}" released="{released}" id="v{version}-netcoreapp2.0">
+      <manifest-digest/>
+      <archive href="https://github.com/IronLanguages/ironpython2/releases/download/ipy-{version}/IronPython.{version}.zip" type="application/zip"/>
     </implementation>
   </group>
 </interface>

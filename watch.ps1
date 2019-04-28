@@ -1,5 +1,5 @@
 $ErrorActionPreference = "Stop"
-pushd $(Split-Path -Path $MyInvocation.MyCommand.Definition -Parent)
+pushd $PSScriptRoot
 
 # Set up 0repo
 if ((Split-Path $(pwd) -Leaf) -ne "feeds") {

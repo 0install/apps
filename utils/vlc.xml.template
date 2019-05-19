@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>VLC media player</name>
+  <summary xml:lang="en">powerful media player, playing most of the media codecs and video formats out there</summary>
+  <summary xml:lang="de">mächtiger Media Player, der die meissten Mediencodecs und Videoformate abspielen kann</summary>
+  <description xml:lang="en">The media player that fills all your needs. It can handle DVDs, (S)VCDs, Audio CDs, web streams, TV cards and much more. You don't need to keep track of a dozen codec packs you need to have installed. VLC has all codecs built-in. It comes with support for nearly all codec there is. And what is more it can even play back the file or media if it is damaged! Missing or broken pieces are no stop to VLC, it plays all the video and audio information that's still intact.</description>
+  <description xml:lang="de">Der Media Player der alle Ihre Wünsche abdeckt. Er kann mit DVDs, (S)VCDs, Audio CDs, Web Streams, TV Karten und vielem mehr umgehen. Sie brauchen nicht dutzende Codec Packs zu installieren. VLC hat alle Codecs bereits eingebaut. Zusätzlich kann VLC Dateien sogar wiedergeben wenn sie beschädigt sind! Fehlende oder beschädigte Teile halten VLC nicht auf, es gibt einfach alle Video- und Audio-Informationen die noch intakt sind wieder.</description>
+  <homepage>http://www.videolan.org/vlc/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/vlc.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/vlc.ico" type="image/vnd.microsoft.icon"/>
+  <category>AudioVideo</category>
+
+  <feed-for interface="http://repo.roscidus.com/utils/vlc"/>
+
+  <group if-0install-version="2.6.6.." license="GPL v2 (GNU General Public License)">
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable" main="vlc.exe">
+      <manifest-digest/>
+      <archive href="https://get.videolan.org/vlc/{version}/win64/vlc-{version}-win64.7z" type="application/x-7z-compressed" extract="vlc-{version}"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" released="{released}" stability="stable" main="vlc.exe">
+      <manifest-digest/>
+      <archive href="https://get.videolan.org/vlc/{version}/win32/vlc-{version}-win32.7z" type="application/x-7z-compressed" extract="vlc-{version}"/>
+    </implementation>
+  </group>
+</interface>

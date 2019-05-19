@@ -11,7 +11,7 @@ mkdir -p ../incoming
 cp */*.zip ../incoming/
 
 # Run watch scripts
-#FILES=$(ls */*.watch.py | grep -v gitextensions | grep -v go-windows | grep -v kotlin | grep -v node | grep -v vagrant) # Exclude feeds currently not supported by 0template on Linux
+#FILES=$(ls */*.watch.py | grep -v gitextensions | grep -v go-windows | grep -v kotlin | grep -v node | grep -v vagrant | grep -v vlc) # Exclude feeds currently not supported by 0template on Linux
 FILES="golang/go-linux.watch.py golang/go-darwin.watch.py" # Only feeds not handled on Windows
 for FILE in $FILES; do
     echo "Running $FILE"

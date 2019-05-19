@@ -20,4 +20,4 @@ done
 
 # Merge generated feeds
 cd ..
-0install run --not-before 0.7 http://0install.net/tools/0repo.xml || true # Ignore error due to missing archives.db
+0install run --not-before 0.8 http://0install.net/tools/0repo.xml || true # Ignore error due to missing archives.db

@@ -27,6 +27,6 @@ foreach ($file in $files) {
 
 # Merge generated feeds
 cd ..
-cmd /c "0install run --batch --not-before 0.7 http://0install.net/tools/0repo.xml 2>&1" # Ignore error due to missing archives.db
+cmd /c "0install run --batch --not-before 0.8 http://0install.net/tools/0repo.xml 2>&1" # Ignore error due to missing archives.db
 
 popd

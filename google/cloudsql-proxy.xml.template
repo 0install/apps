@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Cloud SQL Proxy</name>
+  <summary>allows user to connect to Cloud SQL without IP whitelisting or SSL certificates</summary>
+  <description>The Cloud SQL Proxy allows a user with the appropriate permissions to connect to a Second Generation Cloud SQL database without having to deal with IP whitelisting or SSL certificates manually.</description>
+  <homepage>https://cloud.google.com/sql/docs/mysql/sql-proxy</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/google/cloudsql-proxy"/>
+
+  <group license="Apache License 2.0">
+    <implementation arch="Windows-x86_64" version="{version}" stability="stable" released="{released}" main="cloud_sql_proxy.exe">
+      <manifest-digest/>
+      <file href="https://storage.googleapis.com/cloudsql-proxy/v{version}/cloud_sql_proxy_x64.exe" dest="cloud_sql_proxy.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" stability="stable" released="{released}" main="cloud_sql_proxy.exe">
+      <manifest-digest/>
+      <file href="https://storage.googleapis.com/cloudsql-proxy/v{version}/cloud_sql_proxy_x86.exe" dest="cloud_sql_proxy.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="{version}" stability="stable" released="{released}" main="cloud_sql_proxy">
+      <manifest-digest/>
+      <file href="https://storage.googleapis.com/cloudsql-proxy/v{version}/cloud_sql_proxy.linux.amd64" dest="cloud_sql_proxy" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="{version}" stability="stable" released="{released}" main="cloud_sql_proxy">
+      <manifest-digest/>
+      <file href="https://storage.googleapis.com/cloudsql-proxy/v{version}/cloud_sql_proxy.linux.386" dest="cloud_sql_proxy" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" stability="stable" released="{released}" main="cloud_sql_proxy">
+      <manifest-digest/>
+      <file href="https://storage.googleapis.com/cloudsql-proxy/v{version}/cloud_sql_proxy.darwin.amd64" dest="cloud_sql_proxy" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-i386" version="{version}" stability="stable" released="{released}" main="cloud_sql_proxy">
+      <manifest-digest/>
+      <file href="https://storage.googleapis.com/cloudsql-proxy/v{version}/cloud_sql_proxy.darwin.386" dest="cloud_sql_proxy" executable="true"/>
+    </implementation>
+  </group>
+</interface>

@@ -2,8 +2,6 @@ from urllib import request
 import re
 from datetime import datetime
 
-skipped_versions = ['3.5.5rc1', '3.5.5', '3.5.6rc1', '3.5.6', '3.5.7rc1', '3.5.7']
-
 def convert(match):
     version_full = match[0] # e.g. 3.7.2rc2
     version_minor = version_full[2] # e.g. 7
@@ -26,4 +24,4 @@ def convert(match):
 
 data = request.urlopen('https://www.python.org/downloads/windows/').read().decode('utf-8')
 matches = re.findall(r'Python (3\.[5-9]\.[0-9rc]+) - (.*)<\/a>', data)
-releases = [convert(match) for match in matches if match[0] not in skipped_versions]
+releases = [convert(match) for match in matches if (match[0] + '/') in data]

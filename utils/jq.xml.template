@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>jq</name>
+  <summary>command-line JSON processor</summary>
+  <description>jq is a lightweight and flexible command-line JSON processor.</description>
+  <homepage>https://stedolan.github.io/jq/</homepage>
+  <category>Utility</category>
+
+  <feed-for interface="http://repo.roscidus.com/utils/jq"/>
+
+  <group license="MIT License">
+    <implementation arch="Windows-x86_64" main="jq.exe" released="{released}" stability="{stability}" version="{version}">
+      <manifest-digest/>
+      <file dest="jq.exe" href="https://github.com/stedolan/jq/releases/download/jq-{version-original}/jq-win64.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" main="jq.exe" released="{released}" stability="{stability}" version="{version}">
+      <manifest-digest/>
+      <file dest="jq.exe" href="https://github.com/stedolan/jq/releases/download/jq-{version-original}/jq-win32.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="jq" released="{released}" stability="{stability}" version="{version}">
+      <manifest-digest/>
+      <file dest="jq" executable="true" href="https://github.com/stedolan/jq/releases/download/jq-{version-original}/jq-linux64"/>
+    </implementation>
+    <implementation arch="Linux-i486" main="jq" released="{released}" stability="{stability}" version="{version}">
+      <manifest-digest/>
+      <file dest="jq" executable="true" href="https://github.com/stedolan/jq/releases/download/jq-{version-original}/jq-linux32"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="jq" released="{released}" stability="{stability}" version="{version}">
+      <manifest-digest/>
+      <file dest="jq" executable="true" href="https://github.com/stedolan/jq/releases/download/jq-{version-original}/jq-osx-amd64"/>
+    </implementation>
+  </group>
+</interface>

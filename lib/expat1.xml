@@ -7,6 +7,8 @@
 This package contains the runtime, shared library of expat, the C library for
 parsing XML.</description>
   <package-implementation package="libexpat1"/>
+  <package-implementation package="expat"/>
+  <package-implementation ditributions="Gentoo" package="dev-libs/expat"/>
   <group arch="Linux-i386">
     <implementation id="sha1new=9b893d18c4fa1fcea73f35cd97d9c82c9d8fe2a6" released="2010-04-04" version="2.0.1-4">
       <archive href="http://repo.roscidus.com/lib/expat1/libexpat1-i386-2.0.1-4+lenny3.tar.bz2" size="102310"/>
@@ -21,5 +23,15 @@ parsing XML.</description>
       <archive href="http://repo.roscidus.com/lib/expat1/libexpat1-amd64-2.0.1-7.tar.bz2" size="106257"/>
     </implementation>
   </group>
+  <implementation arch="Windows-*" id="sha1new=f5ad88fda73a6060204f72326a9a875fe21c525e" license="MIT/X Consortium License" released="2000-10-22" version="1.95.1">
+    <manifest-digest sha256new="KBPHRCHXWQYXNJTXGUMRFMJVUJJ3YAM4JCBAHLRGJSDBCM6LTQKA"/>
+    <archive extract="expat_win32bin_1_95_1" href="https://sourceforge.net/projects/expat/files/expat_win32/1.95.1/expat_win32bin_1_95_1.zip" size="119596" type="application/zip"/>
+  </implementation>
+  <implementation arch="Windows-*" id="1.95.1withdllrenamed" license="MIT/X Consortium License" released="2000-10-22" version="1.95.0">
+    <manifest-digest sha256new="MCUPVDSVDVI5DJ63BTG2MI53FG23LX2CL6SDSKCNZO6RUZOLWTCQ"/>
+    <recipe>
+      <copy-from dest="libexpat.dll" id="sha1new=f5ad88fda73a6060204f72326a9a875fe21c525e" source="expat_1_95_1.dll"/>
+    </recipe>
+  </implementation>
 
 </interface>

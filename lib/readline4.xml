@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/lib/readline4" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>GNU Readline Library</name>
+  <summary xml:lang="en">Get a line from a user with editing.</summary>
+  <description xml:lang="en">Readline offers editing capabilities while the user is entering the line. By default, the line editing commands are similar to those of emacs.</description>
+  <icon href="http://0install.de/feed-icons/Gnu.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="http://0install.de/feed-icons/Gnu.png" type="image/png"/>
+  <category>System</category>
+  <homepage>http://mingwrep.sourceforge.net/</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=cc673e7a4960169c3cae331701247a60a05b781a" license="GPL v2 (GNU General Public License)" released="2001-07-27" version="4.2-20010727">
+    <command name="run" path="bin/rl.exe"/>
+    <command name="rlversion" path="bin/rlversion.exe"/>
+    <manifest-digest sha256new="2MXPRT36XXCPZK54IV3HM6YGMUMB3IGNJFK4RX7RYNRSF6AZOM4Q"/>
+    <archive href="https://sourceforge.net/projects/mingwrep/files/readline/4.2-20010727/readline-4.2-20010727.zip" size="227405" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="sys-libs/readline"/>
+  <entry-point binary-name="rl" command="run"/>
+  <entry-point binary-name="rlversion" command="rlversion">
+    <needs-terminal/>
+  </entry-point>
+</interface>

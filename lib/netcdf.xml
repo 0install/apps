@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://repo.roscidus.com/lib/netcdf" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Network Common Data Form (NetCDF)</name>
+  <summary xml:lang="en">NetCDF is a set of software libraries and self-describing, machine-independent data formats that support the creation, access, and sharing of array-oriented scientific data.</summary>
+  <description xml:lang="en">NetCDF (network Common Data Form) is a set of interfaces for array-oriented data access and a freely distributed collection of data access libraries for C, Fortran, C++, Java, and other languages. The netCDF libraries support a machine-independent format for representing scientific data. Together, the interfaces, libraries, and format support the creation, access, and sharing of scientific data.</description>
+  <category>Science</category>
+  <homepage>https://www.unidata.ucar.edu/software/netcdf/</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=b00607b01dd1d84ff10048ecbf6badd5deb937b8" license="UCAR-Unidata" released="2010-07-12" version="4.1.1">
+    <command name="run" path="ncdump.exe"/>
+    <command name="ncgen" path="ncgen.exe"/>
+    <command name="run_tests" path="nf_test/run_tests.bat"/>
+    <manifest-digest sha256new="RDZQJEV4MY7M2TDIQCMQIJWEQB7CYZ36ZHW7Y34MHGAMHYAE4JUQ"/>
+    <archive href="ftp://ftp.unidata.ucar.edu/pub/netcdf/contrib/win32/netcdf-4.1.1-win32-bin.zip" size="8805758" type="application/zip"/>
+    <archive href="http://studenno.kugi.kyoto-u.ac.jp/arch/ucar/netcdf/contrib/win32/netcdf-4.1.1-win32-bin.zip" size="8805758" type="application/zip"/>
+    <archive href="https://www.gfd-dennou.org/arch/ucar/netcdf/contrib/win32/netcdf-4.1.1-win32-bin.zip" size="8805758" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="sci-libs/netcdf"/>
+  <package-implementation package="netcdf"/>
+  <entry-point binary-name="ncdump" command="run">
+    <needs-terminal/>
+  </entry-point>
+  <entry-point binary-name="ncgen" command="ncgen">
+    <needs-terminal/>
+  </entry-point>
+  <entry-point binary-name="run_tests" command="run_tests">
+    <needs-terminal/>
+    <name xml:lang="en">run_tests</name>
+  </entry-point>
+</interface>

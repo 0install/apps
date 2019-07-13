@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/utils/arc" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Arc</name>
+  <summary xml:lang="en">Arc: create and extract files from DOS .ARC files</summary>
+  <description xml:lang="en">This package creates and extracts-from ARC archives. An ARC archive contains files which are compressed according to the most efficient of three algorithms. ARC archives are usually only used for compatibility with MS-DOS. 
+
+This port of Arc can be used as a plugin for WinZip. 
+</description>
+  <icon href="http://repo.roscidus.com/utils/arc.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="http://repo.roscidus.com/utils/arc.png" type="image/png"/>
+  <category>Utility</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/arc.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=6c132c19f291033626e04beffc90c2efc96cb405" license="GPL v2 (GNU General Public License)" released="2005-04-10" version="5.21" version-modifier="10-1">
+    <command name="run" path="bin/arc.exe"/>
+    <command name="marc" path="bin/marc.exe"/>
+    <manifest-digest sha256new="RJI6QSJMHYSVNKGVMCMY262RELUSPIIU7HCTATSQ453BGGEQPHNA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/arc/5.21j-1/arc-5.21j-1-bin.zip" size="85555" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/arc-bin.zip?raw=true" size="85555" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="app-arch/arc"/>
+  <package-implementation package="arc"/>
+  <entry-point binary-name="arc" command="run">
+    <needs-terminal/>
+    <summary xml:lang="en">pc archive utility</summary>
+    <description xml:lang="en">Arc is a general archive and file compression utility, used to maintain a compressed archive of files.
+An archive is a single file that combines many files, reducing storage space and allowing multiple files to be handled as one.
+Arc uses one of several compression methods for each file within the archive, based on whichever method yields the smallest result.</description>
+  </entry-point>
+  <entry-point binary-name="marc" command="marc">
+    <needs-terminal/>
+    <summary xml:lang="en"> Archive merger</summary>
+  </entry-point>
+</interface>

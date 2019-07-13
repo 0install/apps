@@ -26,11 +26,17 @@ parsing XML.</description>
   <implementation arch="Windows-*" id="sha1new=f5ad88fda73a6060204f72326a9a875fe21c525e" license="MIT/X Consortium License" released="2000-10-22" version="1.95.1">
     <manifest-digest sha256new="KBPHRCHXWQYXNJTXGUMRFMJVUJJ3YAM4JCBAHLRGJSDBCM6LTQKA"/>
     <archive extract="expat_win32bin_1_95_1" href="https://sourceforge.net/projects/expat/files/expat_win32/1.95.1/expat_win32bin_1_95_1.zip" size="119596" type="application/zip"/>
+    <archive href="https://github.com/libexpat/libexpat/releases/download/R_1_95_1/expat_win32bin_1_95_1.zip?raw=true" size="119596" type="application/zip" extract="expat_win32bin_1_95_1" />
   </implementation>
-  <implementation arch="Windows-*" id="1.95.1withdllrenamed" license="MIT/X Consortium License" released="2000-10-22" version="1.95.0">
-    <manifest-digest sha256new="MCUPVDSVDVI5DJ63BTG2MI53FG23LX2CL6SDSKCNZO6RUZOLWTCQ"/>
+  <implementation arch="Windows-*" version="1.95.0" released="2000-10-22" license="MIT/X Consortium License" id="1.95.1withdllrenamed">
+    <manifest-digest sha256new="NIFBMKJZ277BARKR4SOXWRHPTW45IL3NBJM76PZZD4GVCYV6RHQQ" />
     <recipe>
-      <copy-from dest="libexpat.dll" id="sha1new=f5ad88fda73a6060204f72326a9a875fe21c525e" source="expat_1_95_1.dll"/>
+      <archive href="https://sourceforge.net/projects/expat/files/expat_win32/1.95.1/expat_win32bin_1_95_1.zip" size="119596" type="application/zip" extract="expat_win32bin_1_95_1" />
+      <rename source="expat_1_95_1.dll" dest="libexpat.dll" />
+    </recipe>
+    <recipe>
+      <archive href="https://github.com/libexpat/libexpat/releases/download/R_1_95_1/expat_win32bin_1_95_1.zip?raw=true" size="119596" type="application/zip" extract="expat_win32bin_1_95_1" />
+      <rename source="expat_1_95_1.dll" dest="libexpat.dll" />
     </recipe>
   </implementation>
 

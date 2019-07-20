@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/utils/arj" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Arj</name>
+  <summary xml:lang="en">Arj: archiver for .arj files</summary>
+  <description xml:lang="en">ARJ is a file archiver that compresses files into a disk space saving archive. It is fast, reliable, and has a rich set of features which include Windows 9x, Millenium long filename support, file version management, data damage protection, ANSI escape sequence display handler, configurable command options, multiple volume archives (archives that span diskettes) and much more. </description>
+  <icon href="http://repo.roscidus.com/utils/arj.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="http://repo.roscidus.com/utils/arj.png" type="image/png"/>
+  <category>Utility</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/arj.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=66da5a83c98f27f39b6548ff12d0030b40719b8e" langs="en ru" license="GPL v2 (GNU General Public License)" released="2005-10-28" version="3.10.22">
+    <command name="run" path="bin/arj.exe"/>
+    <command name="arj-register" path="bin/arj-register.exe"/>
+    <command name="arjdisp" path="bin/arjdisp.exe"/>
+    <command name="rearj" path="bin/rearj.exe"/>
+    <manifest-digest sha256new="NQSWYKM6F5MTPK25JLQUAM46VEZ63J3E6U7ZFQ2KLZ3UH6YHFGQA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/arj/3.10.22/arj-3.10.22-bin.zip" size="283706" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/arj-bin.zip?raw=true" size="283706" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="app-arch/arj"/>
+  <package-implementation package="arj"/>
+  <entry-point binary-name="arj" command="run">
+    <needs-terminal/>
+    <summary xml:lang="en">Archiver for .arj files</summary>
+    <description xml:lang="en">arj  command  [-switch[-|+|option]]  archive[.arj] [base
+       directory] [!list name|path name|wildcard name]</description>
+  </entry-point>
+  <entry-point binary-name="arj-register" command="arj-register">
+    <needs-terminal/>
+    <name xml:lang="en">arj-register</name>
+    <summary xml:lang="en">Register the ARJ archiver</summary>
+    <description xml:lang="en">arj-register [options] program_name</description>
+  </entry-point>
+  <entry-point binary-name="arjdisp" command="arjdisp">
+    <needs-terminal/>
+    <name xml:lang="en">arjdisp</name>
+    <summary xml:lang="en">ARJ simple graphical interface</summary>
+    <description xml:lang="en">The arjdisp command is a graphical interface for arj.</description>
+  </entry-point>
+  <entry-point binary-name="rearj" command="rearj">
+    <needs-terminal/>
+    <name xml:lang="en">rearj</name>
+    <summary xml:lang="en">Converts other archive formats to .arj files</summary>
+    <description xml:lang="en">The rearj command can repackage other archive formats to arj.</description>
+  </entry-point>
+</interface>

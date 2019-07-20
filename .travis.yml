@@ -1,0 +1,5 @@
+language: c
+script:
+  - docker run --rm -i -v $(pwd):/repo/feeds talex5/repo-roscidus-ci /repo/ci.sh
+sudo: required
+dist: trusty

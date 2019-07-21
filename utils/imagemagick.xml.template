@@ -1,100 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd" uri="http://repo.roscidus.com/utils/imagemagick" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>ImageMagick</name>
-  <summary xml:lang="en">Use ImageMagick® to create, edit, compose, or convert bitmap images.</summary>
-  <description xml:lang="en"> It can read and write images in a variety of formats (over 200) including PNG, JPEG, GIF, HEIC, TIFF, DPX, EXR, WebP, Postscript, PDF, and SVG. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.</description>
-  <icon href="http://repo.roscidus.com/utils/imagemagick.ico" type="image/vnd.microsoft.icon" />
-  <icon href="http://repo.roscidus.com/utils/imagemagick.png" type="image/png" />
+  <summary>create, edit, compose, or convert bitmap images</summary>
+  <description>ImageMagick can read and write images in a variety of formats (over 200) including PNG, JPEG, GIF, HEIC, TIFF, DPX, EXR, WebP, Postscript, PDF, and SVG. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.</description>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/imagemagick.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/imagemagick.ico" type="image/vnd.microsoft.icon"/>
   <category>Graphics</category>
-  <homepage>https://www.imagemagick.org/index.php</homepage>
-  <needs-terminal />
-  <group arch="Windows-*" license="The Apache License v2">
+  <homepage>https://imagemagick.org/</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/utils/imagemagick"/>
+
+  <group license="Apache License 2.0">
+    <command name="run" path="magick.exe"/>
+    <command name="run-gui" path="IMDisplay.exe"/>
+    <command name="script" path="magick-script.exe"/>
+    <command name="compare" path="compare.exe"/>
+    <command name="composite" path="composite.exe"/>
+    <command name="conjure" path="conjure.exe"/>
+    <command name="convert" path="convert.exe"/>
+    <command name="dcraw" path="dcraw.exe"/>
+    <command name="hp2xx" path="hp2xx.exe"/>
+    <command name="identify" path="identify.exe"/>
+    <command name="mogrify" path="mogrify.exe"/>
+    <command name="montage" path="montage.exe"/>
+    <command name="stream" path="stream.exe"/>
     <environment insert="." mode="prepend" name="MAGICK_HOME"/>
-    <command name="run" path="magick.exe" />
-    <command name="compare" path="compare.exe" />
-    <command name="composite" path="composite.exe" />
-    <command name="conjure" path="conjure.exe" />
-    <command name="convert" path="convert.exe" />
-    <command name="dcraw" path="dcraw.exe" />
-    <command name="ffmpeg" path="ffmpeg.exe" />
-    <command name="hp2xx" path="hp2xx.exe" />
-    <command name="identify" path="identify.exe" />
-    <command name="run-gui" path="IMDisplay.exe" />
-    <command name="magick-script" path="magick-script.exe" />
-    <command name="mogrify" path="mogrify.exe" />
-    <command name="montage" path="montage.exe" />
-    <command name="stream" path="stream.exe" />
-    <group version="{version}" released="{released}">
-      <implementation arch="Windows-i386" released="{released}">
-        <requires interface="http://repo.roscidus.com/utils/ffmpeg" importance="recommended">
-          <executable-in-path name="ffmpeg" />
-        </requires>
-        <manifest-digest/>
-        <recipe>
-          <archive href="https://imagemagick.org/download/binaries/ImageMagick-{version}-portable-Q16-x86.zip" size="83667687" type="application/zip" />
-          <remove path="ffmpeg.exe" />
-        </recipe>
-        <recipe>
-          <archive href="http://ftp.icm.edu.pl/packages/ImageMagick/binaries/ImageMagick-{version}-portable-Q16-x86.zip" size="83667687" type="application/zip" />
-          <remove path="ffmpeg.exe" />
-        </recipe>
-      </implementation>
-      <implementation arch="Windows-x86_64" released="{released}">
-        <manifest-digest/>
-        <archive href="https://imagemagick.org/download/binaries/ImageMagick-{version}-portable-Q16-x64.zip" size="94561822" type="application/zip" />
-        <archive href="http://ftp.icm.edu.pl/packages/ImageMagick/binaries/ImageMagick-{version}-portable-Q16-x64.zip" size="94561822" type="application/zip" />
-      </implementation>
-    </group>
+    <requires interface="http://repo.roscidus.com/utils/ffmpeg">
+      <executable-in-path name="ffmpeg"/>
+    </requires>
+
+    <implementation arch="Windows-i486" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <recipe>
+        <archive href="http://ftp.icm.edu.pl/packages/ImageMagick/binaries/ImageMagick-{version}-portable-Q16-x86.zip" type="application/zip"/>
+        <remove path="ffmpeg.exe"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <recipe>
+        <archive href="http://ftp.icm.edu.pl/packages/ImageMagick/binaries/ImageMagick-{version}-portable-Q16-x64.zip" type="application/zip"/>
+        <remove path="ffmpeg.exe"/>
+      </recipe>
+    </implementation>
   </group>
-  <package-implementation package="media-gfx/imagemagick-tools" distributions="Gentoo" />
-  <package-implementation package="imagemagick" />
-  <entry-point command="run" binary-name="magick">
-    <needs-terminal />
-    <name xml:lang="en">magick</name>
-    <summary xml:lang="en">convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.</summary>
-  </entry-point>
-  <entry-point command="compare" binary-name="compare">
-    <needs-terminal />
-    <name xml:lang="en">compare</name>
-    <summary xml:lang="en">mathematically and visually annotate the difference between an image and its reconstruction.</summary>
-  </entry-point>
-  <entry-point command="composite" binary-name="composite">
-    <needs-terminal />
-    <name xml:lang="en">composite</name>
-    <summary xml:lang="en">overlap one image over another.</summary>
-  </entry-point>
-  <entry-point command="conjure" binary-name="conjure">
-    <needs-terminal />
-    <name xml:lang="en">conjure</name>
-    <summary xml:lang="en">interpret and execute scripts written in the Magick Scripting Language (MSL).</summary>
-  </entry-point>
-  <entry-point command="convert" binary-name="convert">
-    <needs-terminal />
-    <name xml:lang="en">convert</name>
-    <summary xml:lang="en">convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.</summary>
-  </entry-point>
-  <entry-point command="identify" binary-name="identify">
-    <needs-terminal />
-    <name xml:lang="en">identify</name>
-    <summary xml:lang="en">describe the format and characteristics of one or more image files.</summary>
-  </entry-point>
-  <entry-point command="run-gui" binary-name="IMDisplay">
-    <name xml:lang="en">IMDisplay Application</name>
-    <summary xml:lang="en">display an image or image sequence on any X server.</summary>
-  </entry-point>
-  <entry-point command="mogrify" binary-name="mogrify">
-    <needs-terminal />
-    <name xml:lang="en">mogrify</name>
-    <summary xml:lang="en">resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more. Mogrify overwrites the original image file, whereas, convert writes to a different image file.</summary>
-  </entry-point>
-  <entry-point command="montage" binary-name="montage">
-    <needs-terminal />
-    <name xml:lang="en">montage</name>
-    <summary xml:lang="en">create a composite image by combining several separate images. The images are tiled on the composite image optionally adorned with a border, frame, image name, and more.</summary>
-  </entry-point>
-  <entry-point command="stream" binary-name="stream">
-    <needs-terminal />
-    <name xml:lang="en">stream</name>
-    <summary xml:lang="en">a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats. It writes the pixel components as they are read from the input image a row at a time making stream desirable when working with large images or when you require raw pixel components.</summary>
-  </entry-point>
 </interface>

@@ -1,4 +1,4 @@
 #!/bin/bash
 set -eux
-wget http://repo.roscidus.com/archives.db
-0repo
+wget --quiet http://repo.roscidus.com/archives.db
+0install run http://0install.net/tools/0repo.xml

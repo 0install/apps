@@ -16,12 +16,15 @@ for:
       - '%APPDATA%\0install.net'
     clone_folder: C:\projects\repo\feeds
     build_script:
-      # Enable pushing back to GitHub
+      # Generate feeds using watch scripts
+      - ps: .\watch.ps1
+      # Merge feeds into branch using 0repo
+      - git checkout -b pending-windows
+      - ps: cp .ci\0repo-config.py ..
+      - ps: pushd ..; feeds\.ci\ci.ps1; popd
+      # Push branch back to GitHub
       - git config --global credential.helper store
       - ps: Add-Content ~\.git-credentials "https://${env:GITHUB_ACCESS_TOKEN}:x-oauth-basic@github.com`n"
-      # Run watch scripts and push result to branch "pending-windows"
-      - git checkout -b pending-windows
-      - ps: .\watch.ps1
       - git push origin pending-windows --force
 
   - matrix:
@@ -31,10 +34,13 @@ for:
       - sudo apt-get install -y --no-install-recommends 0install-core python-gobject
     clone_folder: $HOME/repo/feeds
     build_script:
-      # Enable pushing back to GitHub
-      - git config --global credential.helper store
-      - sh: echo "https://$GITHUB_ACCESS_TOKEN:x-oauth-basic@github.com" >> ~/.git-credentials
-      # Run watch scripts and push result to branch "pending-linux"
+      # Generate feeds using watch scripts
+      - ./watch.sh
+      # Merge feeds into branch using 0repo
       - git checkout -b pending-linux
-      - sh: ./watch.sh
+      - cp .ci/0repo-config.py ..
+      - pushd ..; feeds/.ci/ci.sh; popd
+      # Push branch back to GitHub
+      - git config --global credential.helper store
+      - echo "https://$GITHUB_ACCESS_TOKEN:x-oauth-basic@github.com" >> ~/.git-credentials
       - git push origin pending-linux --force

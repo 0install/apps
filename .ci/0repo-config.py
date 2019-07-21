@@ -12,6 +12,10 @@ GPG_SIGNING_KEY = None
 # files don't need to be signed.
 CONTRIBUTOR_GPG_KEYS = None
 
+# Prompt about old implementations that remain in the "testing" stability level for too long.
+# Set this to False if you intend to permanently mark releases as testing, e.g., release candidates.
+TRACK_TESTING_IMPLS = False
+
 
 # Some Python imports (needed for the code below) - you can leave these alone
 import os
@@ -64,8 +68,11 @@ def get_archive_rel_url(archive_basename, impl):
 #   archive.rel_url = result from get_archive_rel_url() above
 # If any target files already exist, overwrite them (we will retry if uploading
 # fails part way through).
-def upload_archives(archives):
-	print "upload_archives: skipping"
+def upload_archives(archives): pass
+
+# Recalculate the manifest digests specified for local archives in incoming feeds to ensure the are correct.
+# You can set this to False if you trust all contributors to create correct feeds.
+CHECK_DIGESTS = False
 
 #### Custom checks and rules ####
 
@@ -88,11 +95,8 @@ def check_new_impl(impl):
 		return "Missing 'license' attribute"
 
 	# Example: License must be OSI approved
-        if license in ("Python License", "GPL v2 (GNU General Public License)", "GPL v3 (GNU General Public License)", "MIT License", "BSD License", "BSD License (revised)",
-                       "LGPL (GNU Lesser General Public License)", "Ruby License"):
-		pass
-	elif not license.startswith('OSI Approved :: '):
-		return "Only Open Source software is permitted in this repository (license must start 'OSI Approved :: ')"
+	if not any(fragment in license for fragment in ("OSI Approved", "GPL", "General Public License", "MIT License", "BSD License", "Apache License", "Mozilla Public License", "Python License", "Ruby License")):
+		return "Only Open Source software is permitted in this repository"
 
 	return None
 
@@ -109,10 +113,10 @@ def check_new_impl(impl):
 # URLs ending in "/" or without an extension). The result must end in '.xml'.
 def get_feeds_rel_path(uri_rel_path):
 	if uri_rel_path == 'python/python/upstream.xml':
-		return 'python/python-upstream.xml'
+		return 'python/python-upstream.xml'.replace('/', os.sep)
 	assert not uri_rel_path.endswith('/'), uri_rel_path
 	assert not uri_rel_path.endswith('.xml'), uri_rel_path
-	return uri_rel_path + '.xml'
+	return uri_rel_path.replace('/', os.sep) + '.xml'
 
 # A source feed "feeds/games/my-game.xml" has a relative path of
 # "games/my-game.xml". Where should the corresponding generated (signed) feed
@@ -143,3 +147,9 @@ def get_public_rel_path(feeds_rel_path):
 # right place automatically by Apache, you can set this to None and avoid
 # generating any symlinks.
 GPG_PUBLIC_KEY_DIRECTORY = None
+
+# This for archives uploaded and managed by 0repo itself.
+def check_uploaded_archive(archive, url): pass
+
+# As check_uploaded_archive, but for external archives.
+def check_external_archive(archive, url): pass

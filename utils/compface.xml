@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/utils/compface" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>CompFace</name>
+  <summary xml:lang="en">Compface: compress 48x48x1 face image files</summary>
+  <description xml:lang="en">Compface provides utilities and a library to convert from/to X-Face format, a 48x48 bitmap format used to carry thumbnails of email authors in a mail header. Compface is a filter for generating highly compressed representations of 48x48x1 face image files. Uncompface is an inverse filter which performs an inverse transformation with no loss of data. </description>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/compface.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/compface.png" type="image/png"/>
+  <category>Graphics</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/compface.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=9a8ce25a2dc3410e4ef4cf47a3888eb3e1aead17" license="Freely distributable" released="2005-11-19" version="1.5.2">
+    <command name="run" path="bin/compface.exe"/>
+    <command name="uncompface" path="bin/uncompface.exe"/>
+    <command name="xbm2xface" path="bin/xbm2xface.pl">
+      <runner interface="http://repo.roscidus.com/perl/perl"/>
+    </command>
+    <manifest-digest sha256new="WRMLRNQO22BW6RC565TQEIUKQT6RWUIUECEIY63I5WUMPRIC322A"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/compface/1.5.2/compface-1.5.2-bin.zip" size="25788" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/compface-bin.zip?raw=true" size="25788" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="media-libs/compface"/>
+  <package-implementation package="compface"/>
+  <entry-point binary-name="compface" command="run">
+    <needs-terminal/>
+    <summary xml:lang="en">compress 48x48x1 face</summary>
+    <description xml:lang="en">compface is a filter for  generating  highly  compressed
+       representations of 48x48x1 face image files.  The algorithm used is
+       highly tuned for its purpose and achieves better than  a
+       five  to  one  compression  ratio on average.  Arguments
+       operate identically  for  both  programmes.   The  first
+       argument,  if present, causes input to be taken from the
+       named file instead of from standard input unless  it  is
+       the string ``-''.  A second argument, if present, causes
+       output to go to the named file instead  of  to  standard
+       output  unless it is the string ``-''.  Subsequent pairs
+       of arguments may be used to  specify  further  pairs  of
+       input and output files.</description>
+  </entry-point>
+  <entry-point binary-name="uncompface" command="uncompface">
+    <needs-terminal/>
+    <summary xml:lang="en">Uncompface: expand 48x48x1 face image files</summary>
+    <description xml:lang="en"> uncompface
+       is a filter which performs an inverse transformation 
+       with  no  loss  of  data.  The algorithm used is
+       highly tuned for its purpose and achieves better than  a
+       five  to  one  compression  ratio on average.  Arguments
+       operate identically  for  both  programmes.   The  first
+       argument,  if present, causes input to be taken from the
+       named file instead of from standard input unless  it  is
+       the string ``-''.  A second argument, if present, causes
+       output to go to the named file instead  of  to  standard
+       output  unless it is the string ``-''.  Subsequent pairs
+       of arguments may be used to  specify  further  pairs  of
+       input and output files.</description>
+  </entry-point>
+  <entry-point binary-name="xbm2xface" command="xbm2xface">
+    <needs-terminal/>
+    <name xml:lang="en">xbm2xface</name>
+  </entry-point>
+</interface>

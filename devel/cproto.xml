@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/devel/cproto" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Cproto</name>
+  <summary xml:lang="en">Cproto: generate C function prototypes and convert function definitions</summary>
+  <description xml:lang="en">cproto generates function prototypes for functions defined in the specified C source files to the standard output. The function definitions may be in K&amp;R or ANSI C style, or in lint-library form. cproto can also convert function definitions in the specified files from the K&amp;R style to the ANSI C style. </description>
+  <category>Development</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/cproto.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=81d27aefff4e4d4ce8abcf08f3e0ea290bb4fbcf" license="Public Domain" released="2005-04-24" version="4.7.3">
+    <command name="run" path="bin/cproto.exe"/>
+    <manifest-digest sha256new="ZM6CVTWX2YZ4FQ3FTFFYGX6MEZGHWYBYC4M2UO2WLCFU4MV7FJEQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/cproto/4.7c/cproto-4.7c-bin.zip" size="76709" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/cproto-bin.zip?raw=true" size="76709" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="dev-util/cproto"/>
+  <package-implementation package="cproto"/>
+  <entry-point binary-name="cproto" command="run">
+    <summary xml:lang="en">generate  C  function  prototypes and convert</summary>
+    <description xml:lang="en">proto  generates  function  prototypes  for   functions
+       defined  in the specified C source files to the standard
+       output.  The function definitions  may  be  in  the  old
+       style  or ANSI C style.  Optionally, cproto also outputs
+       declarations for variables defined in the files.  If  no
+       file  argument is given, cproto reads its input from the
+       standard input.</description>
+  </entry-point>
+</interface>
+

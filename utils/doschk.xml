@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/utils/doschk" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>DosChk</name>
+  <summary xml:lang="en">Doschk: checks filenames for SYSV and DOS compatibility</summary>
+  <description xml:lang="en">This program is intended as a utility to help software developers ensure that their source file names are distinguishable on MS-DOS and 14-character SYSV platforms. To perform this task, doschk reads a list of filenames and produces a report of all the conflicts that would arise if the files were transferred to a MS-DOS or SYSV platform. </description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <category>Utility</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/doschk.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=563bf70922990040864de5de3442bbc191f93bdf" license="GPL v2 (GNU General Public License)" released="2005-11-19" version="1.1-1">
+    <command name="run" path="bin/doschk.exe"/>
+    <manifest-digest sha256new="FKSS5I7AO2O7U4J4WYB5OHWIQURM24TDILKQ2AHHEVY35ZUIDOFQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/doschk/1.1-1/doschk-1.1-1-bin.zip" size="20599" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/doschk-bin.zip?raw=true" size="20599" type="application/zip"/>
+  </implementation>
+  <entry-point binary-name="doschk" command="run">
+    <needs-terminal/>
+    <description xml:lang="en"> To  perform  this task, doschk reads a list of filenames
+       and produces a report of all the  conflicts  that  would
+       arise  if the files were transferred to a MS-DOS or SYSV
+       platform.
+
+       To use this program, you must feed it a  list  of  filenames in this format:
+
+            dir
+
+            dir/file1.ext
+
+            dir/file2.exe
+
+            dir/dir2
+
+            dir/dir2/file3.ext
+
+       If  the  list  does not include the directory-only lines
+       (like dir/dir2) then their names will not be checked for
+       uniqueness,  else  they  will  be.  Typical uses of this
+       program are like these:
+
+
+            find . -print | doschk
+
+            tar tf file.tar | doschk
+
+       If this program produces no output, then all your  files
+       are MS-DOS compatible.  Any output messages are designed
+       to be self-explanatory  and  indicate  cases  where  the
+       files will not transfer to MS-DOS without problems.</description>
+  </entry-point>
+</interface>

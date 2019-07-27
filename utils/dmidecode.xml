@@ -1,0 +1,168 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/utils/dmidecode.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>DmiDecode</name>
+  <summary xml:lang="en">Dmidecode: DMI-table decoder</summary>
+  <description xml:lang="en">Dmidecode reports information about your system's hardware as described in your system BIOS according to the SMBIOS/DMI standard. This information typically includes system manufacturer, model name, serial number, BIOS version, asset tag as well as a lot of other details of varying level of interest and reliability depending on the manufacturer. This will often include usage status for the CPU sockets, expansion slots (e.g. AGP, PCI, ISA) and memory module slots, and the list of I/O ports (e.g. serial, parallel, USB). 
+Beware that DMI data have proven to be too unreliable to be blindly trusted. Dmidecode does not scan your hardware, it only reports what the BIOS told it to. 
+Three additional tools come with dmidecode: 
+•biosdecode prints all BIOS related information it can find 
+•ownership retrieves the &quot;ownership tag&quot; that can be set on Compaq computers 
+•vpddecode prints the &quot;vital product data&quot; information that can be found in almost all IBM computers 
+This MS-Windows port is based on the patches created by Hugo Weber &lt;http://lists.gnu.org/archive/html/dmidecode-devel/2006-10/msg00001.html&gt;. It works only on MS-Windows NT systems (NT, 2000, XP, 2003, Vista, 2008) and not on MS-Windows 9x systems (95, 98, ME). 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <category>Utility</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/dmidecode.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=654a3cbde310c65058dd94c34bc3c8f2f84e614a" license="GPL v2 (GNU General Public License)" released="2008-12-03" version="2.10">
+    <command name="run" path="sbin/dmidecode.exe"/>
+    <command name="biosdecode" path="sbin/biosdecode.exe"/>
+    <command name="ownership" path="sbin/ownership.exe"/>
+    <command name="vpddecode" path="sbin/vpddecode.exe"/>
+    <manifest-digest sha256new="7PGI3P7KQKGAK6EJYB7FJWUAJU34FJWGF5EBPFXXY6KFI45757MQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/dmidecode/2.10/dmidecode-2.10-bin.zip" size="126906" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/dmidecode-2.10-bin.zip?raw=true" size="126906" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="sys-apps/dmidecode"/>
+  <package-implementation package="dmidecode"/>
+  <entry-point binary-name="dmidecode" command="run">
+    <needs-terminal/>
+    <summary xml:lang="en">dmidecode - DMI table decoder</summary>
+    <description xml:lang="en">dmidecode  is  a tool for dumping a computer's DMI (some
+       say SMBIOS) table contents in a  human-readable  format.
+       This  table contains a description of the system's hard-
+       ware components, as  well  as  other  useful  pieces  of
+       information  such  as  serial numbers and BIOS revision.
+       Thanks to this table, you can retrieve this  information
+       without  having to probe for the actual hardware.  While
+       this is a good point in terms of report speed and  safe-
+       ness, this also makes the presented information possibly
+       unreliable.
+
+       The DMI table doesn't only describe what the  system  is
+       currently  made of, it also can report the possible evo-
+       lutions (such as the fastest supported CPU or the  maxi-
+       mal amount of memory supported).
+
+       SMBIOS  stands  for  System  Management  BIOS, while DMI
+       stands for Desktop Management Interface. Both  standards
+       are  tightly  related and developed by the DMTF (Desktop
+       Management Task Force).
+
+       As you run it, dmidecode will try to locate the DMI  ta-
+       ble.  If  it succeeds, it will then parse this table and
+       display a list of records like this one:
+
+       Handle 0x0002, DMI type 2, 8 bytes.  Base Board Informa-
+       tion
+               Manufacturer: Intel
+               Product Name: C440GX+
+               Version: 727281-001
+               Serial Number: INCY92700942
+
+       Each record has:
+
+       · A  handle.  This  is a unique identifier, which allows
+         records to reference each other. For example,  proces-
+         sor  records  usually  reference  cache memory records
+         using their handles.
+
+       · A type. The  SMBIOS  specification  defines  different
+         types  of  elements a computer can be made of. In this
+         example, the type is 2, which means  that  the  record
+         contains &quot;Base Board Information&quot;.
+
+       · A  size.  Each  record  has a 4-byte header (2 for the
+         handle, 1 for the type, 1 for the size), the  rest  is
+         used  by the record data. This value doesn't take text
+         strings into account (these are placed at the  end  of
+         the record), so the actual length of the record may be
+         (and is often) greater than the displayed value.
+
+       · Decoded values. The information  presented  of  course
+         depends  on  the  type of record. Here, we learn about
+         the board's manufacturer, model,  version  and  serial
+         number.</description>
+  </entry-point>
+  <entry-point binary-name="biosdecode" command="biosdecode">
+    <needs-terminal/>
+    <summary xml:lang="en">Biosdecode: BIOS-information decoder</summary>
+    <description xml:lang="en">biosdecode parses the BIOS memory and prints information
+       about all structures (or entry points) it knows of. Cur-
+       rently known entry point types are:
+
+       · SMBIOS (System Management BIOS)
+         Use dmidecode for a more detailed output.
+
+       · DMI (Desktop Management Interface, a legacy version of
+         SMBIOS)
+         Use dmidecode for a more detailed output.
+
+       · SYSID
+
+       · PNP (Plug and Play)
+
+       · ACPI (Advanced Configuration and Power Interface)
+
+       · BIOS32 (BIOS32 Service Directory)
+
+       · PIR (PCI IRQ Routing)
+
+       · 32OS (BIOS32 Extension, Compaq-specific)
+         See ownership for a  Compaq  ownership  tag  retrieval
+         tool.
+
+       · SNY (Sony-specific, not decoded)
+
+       · VPD (Vital Product Data, IBM-specific)
+         Use vpddecode for a more detailed output.
+
+       · FJKEYINF (Application Panel, Fujitsu-specific)
+
+
+       biosdecode  started  its life as a part of dmidecode but
+       as more entry point types were added, if was moved to  a
+       different program.</description>
+  </entry-point>
+  <entry-point binary-name="ownership" command="ownership">
+    <needs-terminal/>
+    <summary xml:lang="en">Ownership: Compaq ownership-tag retriever</summary>
+    <description xml:lang="en">ownership  retrieves and prints the &quot;ownership tag&quot; that
+       can be set on Compaq computers. Contrary  to  all  other
+       programs  of  the  dmidecode  package, ownership doesn't
+       print any version information, nor labels, but only  the
+       raw  ownership  tag. This should help its integration in
+       scripts.</description>
+  </entry-point>
+  <entry-point binary-name="vpddecode" command="vpddecode">
+    <needs-terminal/>
+    <name xml:lang="en">Vpddecode</name>
+    <summary xml:lang="en">Vpddecode: VPD-structure decoder</summary>
+    <description xml:lang="en">vpddecode  prints  the  &quot;vital product data&quot; information
+       that can be found in almost all IBM and  Lenovo  comput-
+       ers. Available items are:
+
+       · BIOS Build ID
+
+       · Box Serial Number
+
+       · Motherboard Serial Number
+
+       · Machine Type/Model
+
+
+       Some systems have these additional items:
+
+       · BIOS Release Date
+
+       · Default Flash Image File Name
+
+
+       Note  that  these additional items are not documented by
+       IBM, so this is guess work, and as such  should  not  be
+       blindly  trusted.  Feedback  about the accuracy of these
+       labels is welcome.</description>
+  </entry-point>
+</interface>

@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/devel/flex" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Flex</name>
+  <summary xml:lang="en">Flex: fast lexical analyzer generator</summary>
+  <description xml:lang="en">Flex is a fast lexical analyser generator. It is a tool for generating programs that perform pattern-matching on text. There are many applications for Flex, including writing compilers in conjunction with GNU Bison. Flex is a free implementation of the well known Lex program. It features a Lex compatibility mode, and also provides several new features such as exclusive start conditions. </description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <category>Development</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/flex.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=03ad46fc2fa15264b574f531a7f3fa63dfefddef" license="BSD License (revised)" released="2004-04-11" version="2.5.4.1-1">
+    <command name="run" path="bin/flex.exe"/>
+    <command name="flex++" path="bin/flex++.exe"/>
+    <manifest-digest sha256new="OGQLIR6WH47DZG55U7YQOF3ZP5C2RDKC45G24FW67OYZTO2CYRJA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/flex/2.5.4a-1/flex-2.5.4a-1-bin.zip" size="202802" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/flex-bin.zip?raw=true" size="202802" type="application/zip"/>
+  </implementation>
+  <entry-point binary-name="flex" command="run"/>
+  <entry-point binary-name="flex++" command="flex++">
+    <needs-terminal/>
+    <name xml:lang="en">Flex</name>
+    <summary xml:lang="en">Flex: fast lexical analyzer generator</summary>
+  </entry-point>
+</interface>

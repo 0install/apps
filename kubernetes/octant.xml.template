@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Octant</name>
+  <summary>web-based tool for visualizing Kubernetes clusters</summary>
+  <description>A web-based, highly extensible platform for developers to better understand the complexity of Kubernetes clusters.</description>
+  <homepage>https://github.com/vmware/octant</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="http://repo.roscidus.com/kubernetes/octant"/>
+
+  <group license="Apache License 2.0">
+    <implementation arch="Windows-x86_64" main="octant.exe" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="octant_{version}_Windows-64bit" href="https://github.com/vmware/octant/releases/download/v{version}/octant_{version}_Windows-64bit.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="octant" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="octant_{version}_Linux-64bit" href="https://github.com/vmware/octant/releases/download/v{version}/octant_{version}_Linux-64bit.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="octant" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="octant_{version}_macOS-64bit" href="https://github.com/vmware/octant/releases/download/v{version}/octant_{version}_macOS-64bit.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

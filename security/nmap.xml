@@ -14,7 +14,7 @@
 
   <group arch="Windows-*" license="modfied GPL">
     <requires interface="http://0install.de/feeds/MSVC100.xml">
-      <environment name="PATH" insert="." mode="append"/>
+      <environment insert="." mode="append" name="PATH"/>
     </requires>
     <command name="run" path="nmap.exe"/>
     <command name="ncat" path="ncat.exe"/>
@@ -93,6 +93,10 @@
     <implementation id="sha1new=bc61116d60dcea3fc885e74d6c5c0101cfb23fe4" released="2018-03-20" stability="stable" version="7.70">
       <manifest-digest sha256new="HADOSECAAM5D5P4K5GVY3BDFICAPJ5V55WXA7FTMYFACTQXUSHRA"/>
       <archive extract="nmap-7.70" href="http://nmap.org/dist/nmap-7.70-win32.zip" size="20111852" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=806f9509ca39e4326d534448a95da43af884cde6" released="2019-08-10" stability="stable" version="7.80">
+      <manifest-digest sha256new="IJBFJ45PF2R4NGBQKKTYLG2HMCSVB4JKZDCYB5RI5W4D6HLHMG6Q"/>
+      <archive extract="nmap-7.80" href="http://nmap.org/dist/nmap-7.80-win32.zip" size="14866429" type="application/zip"/>
     </implementation>
   </group>
 
@@ -244,6 +248,14 @@
     <implementation arch="Linux-i686" id="sha1new=aba452156f2453c2a64b4ce51ee1d3281ca4ea67" released="2018-03-20" stability="stable" version="7.70-1">
       <manifest-digest sha256new="H23XG3KN2ICUJMAO3IJP64SU3FPZHY4UMDJWSQDHDW4Y3H5754GQ"/>
       <archive href="http://nmap.org/dist/nmap-7.70-1.i686.rpm" size="6850972" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=b4949ba947d36367c2e98bba82399ece1b78f0bf" released="2019-08-10" stability="stable" version="7.80-1">
+      <manifest-digest sha256new="PU6IQX3F2ZWJ5AKETUBRTAGHY2D6GTALC73BY5B67RRQJSEAIATA"/>
+      <archive href="http://nmap.org/dist/nmap-7.80-1.x86_64.rpm" size="7174612" type="application/x-rpm"/>
+    </implementation>
+    <implementation arch="Linux-i686" id="sha1new=99727ffa005c24ebc5f8e96eff192f16993b9113" released="2019-08-10" stability="stable" version="7.80-1">
+      <manifest-digest sha256new="7LXXIPTTI3D5ODEVSQ6S6BCSBAGA7RW2R3FBUVHIQZPPVXHHGFAA"/>
+      <archive href="http://nmap.org/dist/nmap-7.80-1.i686.rpm" size="6911900" type="application/x-rpm"/>
     </implementation>
   </group>
 

@@ -12,7 +12,7 @@ for:
       only:
         - image: Ubuntu
     before_build:
-      - sudo apt-get install -y --no-install-recommends 0install-core python-gobject
+      - sudo apt-get install -y --no-install-recommends 0install-core python-gobject rpm2cpio
     clone_folder: $HOME/repo/feeds
     build_script:
       # Generate feeds using watch scripts

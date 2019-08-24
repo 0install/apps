@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/devel/freetype" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>FreeType</name>
+  <summary xml:lang="en">FreeType: font engine and rasterizer </summary>
+  <description xml:lang="en">FreeType is a software font engine that is designed to be small, efficient, highly customizable and portable while capable of producing high-quality output (glyph images). It can be used in graphics libraries, display servers, font conversion tools, text image generation tools, and many other products as well. 
+Note that FreeType is a font service and doesn't provide APIs to perform higher-level features, like text layout or graphics processing (e.g. colored text rendering, &quot;hollowing&quot;, etc.). However, it greatly simplifies these tasks by providing a simple, easy to use and uniform interface to access the content of font files. 
+•FreeType1 is in freetype-1.0 
+•FreeType2 is in freetype-1.1 / 1.4 
+•FreeType6 is in freetype-2.0.1 and higher 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/devel/freetype.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/devel/freetype.png" type="image/png"/>
+  <category>Development</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/freetype.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=feb1dad6bc4f933a42a204ac453e87fdddc308e6" license="GPL v2 (GNU General Public License)" released="2007-07-05" version="2.3.5-1-3">
+    <requires interface="http://repo.roscidus.com/lib/zlib">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/ftview.exe"/>
+    <command name="ftbench" path="bin/ftbench.exe"/>
+    <command name="ftchkwd" path="bin/ftchkwd.exe"/>
+    <command name="ftdiff" path="bin/ftdiff.exe"/>
+    <command name="ftdump" path="bin/ftdump.exe"/>
+    <command name="ftgamma" path="bin/ftgamma.exe"/>
+    <command name="ftgrid" path="bin/ftgrid.exe"/>
+    <command name="ftlint" path="bin/ftlint.exe"/>
+    <command name="ftmemchk" path="bin/ftmemchk.exe"/>
+    <command name="ftmulti" path="bin/ftmulti.exe"/>
+    <command name="ftpatchk" path="bin/ftpatchk.exe"/>
+    <command name="ftstring" path="bin/ftstring.exe"/>
+    <command name="fttimer" path="bin/fttimer.exe"/>
+    <command name="ftvalid" path="bin/ftvalid.exe"/>
+    <manifest-digest sha256new="SSHVFITQ7ILNPH4H27EF36GGP47NWATCXNSQRTNA3FEEHFG5SA2Q"/>
+    <recipe>
+      <archive href="https://sourceforge.net/projects/gnuwin32/files/freetype/2.3.5-1/freetype-2.3.5-1-bin.zip" size="1030605" type="application/zip"/>
+      <file dest="bin/ftpatchk.exe.manifest" href="https://github.com/MiKTeX/miktex/blob/master/Resources/Manifests/asInvoker.manifest?raw=true" size="380"/>
+    </recipe>
+    <recipe>
+      <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/freetype-bin.zip?raw=true" size="1030605" type="application/zip"/>
+      <file dest="bin/ftpatchk.exe.manifest" href="https://github.com/MiKTeX/miktex/blob/master/Resources/Manifests/asInvoker.manifest?raw=true" size="380"/>
+    </recipe>
+  </implementation>
+  <entry-point binary-name="ftview" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">ftview</name>
+    <summary xml:lang="en">Ftview: FreeType simple glyph viewer </summary>
+  </entry-point>
+  <entry-point binary-name="ftbench" command="ftbench">
+    <needs-terminal/>
+    <name xml:lang="en">Ftbench</name>
+    <summary xml:lang="en">Ftbench: bench some common FreeType paths </summary>
+  </entry-point>
+  <entry-point binary-name="ftchkwd" command="ftchkwd">
+    <needs-terminal/>
+    <name xml:lang="en">Ftchkwd</name>
+    <summary xml:lang="en">Ftchkwd: FreeType test fixed font width </summary>
+  </entry-point>
+  <entry-point binary-name="ftdiff" command="ftdiff">
+    <needs-terminal/>
+    <name xml:lang="en">Ftdiff</name>
+    <summary xml:lang="en">Ftdiff: FreeType proof several text hinting modes</summary>
+  </entry-point>
+  <entry-point binary-name="ftdump" command="ftdump">
+    <needs-terminal/>
+    <name xml:lang="en">Ftdump</name>
+    <summary xml:lang="en">Ftdump: FreeType simple font dumper </summary>
+  </entry-point>
+  <entry-point binary-name="ftgamma" command="ftgamma">
+    <needs-terminal/>
+    <name xml:lang="en">Ftgamma</name>
+    <summary xml:lang="en">Ftgamma: FreeType gamma matcher </summary>
+  </entry-point>
+  <entry-point binary-name="ftgrid" command="ftgrid">
+    <needs-terminal/>
+    <name xml:lang="en">Ftgrid</name>
+    <summary xml:lang="en">Ftgrid: font engine and rasterizer</summary>
+  </entry-point>
+  <entry-point binary-name="ftlint" command="ftlint">
+    <needs-terminal/>
+    <name xml:lang="en">Ftlint</name>
+    <summary xml:lang="en">Ftlint: FreeType simple font tester </summary>
+  </entry-point>
+  <entry-point binary-name="ftmemchk" command="ftmemchk">
+    <needs-terminal/>
+    <name xml:lang="en">Ftmemchk</name>
+    <summary xml:lang="en">Ftmemchk: FreeType simple memory tester </summary>
+  </entry-point>
+  <entry-point binary-name="ftmulti" command="ftmulti">
+    <needs-terminal/>
+    <name xml:lang="en">Ftmulti</name>
+    <summary xml:lang="en">Ftmulti: FreeType multiple masters font viewer </summary>
+  </entry-point>
+  <entry-point binary-name="ftpatchk" command="ftpatchk">
+    <needs-terminal/>
+    <name xml:lang="en">Ftpatchk</name>
+    <summary xml:lang="en">Ftpatchk: FreeType test whether patented hinting is necessary</summary>
+  </entry-point>
+  <entry-point binary-name="ftstring" command="ftstring">
+    <needs-terminal/>
+    <name xml:lang="en">Ftstring</name>
+    <summary xml:lang="en">Ftstring: FreeType string viewer </summary>
+  </entry-point>
+  <entry-point binary-name="fttimer" command="fttimer">
+    <needs-terminal/>
+    <name xml:lang="en">Fttimer</name>
+    <summary xml:lang="en">Fttimer: FreeType simple performance timer </summary>
+  </entry-point>
+  <entry-point binary-name="ftvalid" command="ftvalid">
+    <needs-terminal/>
+    <name xml:lang="en">Ftvalid</name>
+    <summary xml:lang="en">Ftvalid: FreeType layout table validator </summary>
+  </entry-point>
+</interface>

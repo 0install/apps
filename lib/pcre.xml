@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/lib/pcre" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Pcre</name>
+  <summary xml:lang="en">Pcregrep: a grep with Perl-compatible regular expressions </summary>
+  <description xml:lang="en">The PCRE library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5. PCRE has its own native API, as well as a set of wrapper functions that correspond to the POSIX regular expression API. The PCRE library is free, even for building commercial software. </description>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/pcre.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/pcre.png" type="image/png"/>
+  <category>Development</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/pcre.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=492099b5e85f1418a80d446def4f0469b3e28ad2" license="BSD License (revised)" released="2007-03-23" version="7.0">
+    <command name="run" path="bin/pcregrep.exe"/>
+    <command name="pcretest" path="bin/pcretest.exe"/>
+    <manifest-digest sha256new="23EYS5LDQ74KOXLXLSRANWAHRAM5YJ2NCO53Q3RSWKYGUXAN6UIA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/pcre/7.0/pcre-7.0-bin.zip" size="302480" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/pcre-bin.zip" size="302480" type="application/zip"/>
+  </implementation>
+  <entry-point binary-name="pcregrep" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">pcregrep</name>
+    <summary xml:lang="en">a grep with Perl-compatible regular expressions.    </summary>
+    <description xml:lang="en">pcregrep  searches  files for character patterns, in the
+       same way as other grep commands do, but it uses the PCRE
+       regular  expression library to support patterns that are
+       compatible with the regular expressions of Perl  5.  See
+       pcrepattern(3)  for  a  full  description  of syntax and
+       semantics of the regular expressions that PCRE supports.
+
+       Patterns,  whether  supplied on the command line or in a
+       separate file, are given without delimiters.  For  exam-
+       ple:
+
+         pcregrep Thursday /etc/motd
+
+       If  you  attempt to use delimiters (for example, by sur-
+       rounding a pattern with slashes, as is  common  in  Perl
+       scripts),  they  are interpreted as part of the pattern.
+       Quotes can of course be used on the command line because
+       they  are  interpreted by the shell, and indeed they are
+       required if a pattern  contains  white  space  or  shell
+       metacharacters.
+
+       The  first  argument that follows any option settings is
+       treated as the single pattern to be matched when neither
+       -e  nor  -f is present.  Conversely, when one or both of
+       these options are used to specify  patterns,  all  argu-
+       ments are treated as path names. At least one of -e, -f,
+       or an argument pattern must be provided.
+
+       If no files are specified, pcregrep reads  the  standard
+       input.  The  standard  input can also be referenced by a
+       name consisting of a single hyphen.  For example:
+
+         pcregrep some-pattern /file1 - /file3
+
+       By default, each line that matches the pattern is copied
+       to  the  standard  output, and if there is more than one
+       file, the file name is output at the start of each line.
+       However,  there are options that can change how pcregrep
+       behaves. In particular, the -M option makes it  possible
+       to  search  for patterns that span line boundaries. What
+       defines a line boundary is controlled by the -N  (--new-
+       line) option.
+
+       Patterns   are  limited  to  8K  or  BUFSIZ  characters,
+       whichever  is  the  greater.   BUFSIZ  is   defined   in
+       &lt;stdio.h&gt;.
+
+       If  the  LC_ALL or LC_CTYPE environment variable is set,
+       pcregrep uses the value to set a locale when calling the
+       PCRE  library.  The --locale option can be used to over-
+       ride this.</description>
+  </entry-point>
+  <entry-point binary-name="pcretest" command="pcretest">
+    <needs-terminal/>
+    <name xml:lang="en">Pcretest</name>
+    <summary xml:lang="en">a program for testing Perl-compatible regular expressions </summary>
+    <description xml:lang="en">pcretest was written as a test program for the PCRE regular  expression library itself, but it can also be used
+       for experimenting with regular expressions.  This  document  describes  the  features  of the test program; for
+ details of the regular expressions themselves,  see  the
+       pcrepattern  documentation.  For  details  of  the  PCRE
+ library  function  calls  and  their  options,  see  the
+       pcreapi documentation.
+</description>
+  </entry-point>
+</interface>

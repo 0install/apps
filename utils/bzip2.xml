@@ -1,0 +1,237 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/utils/bzip2" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Bzip2</name>
+  <summary xml:lang="en">Bzip2: file compressor</summary>
+  <description xml:lang="en">bzip2 is a freely available, patent free, high-quality data compressor. It typically compresses files to within 10% to 15% of the best available techniques (the PPM family of statistical compressors), whilst being around twice as fast at compression and six times faster at decompression. The code is organised as a library, with a programming interface. The bzip2 program itself is a client of the library. You can use the library in your own programs, to directly read and write .bz2 files, or even just to compress data in memory using the bzip2 algorithms. </description>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/bzip2.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/bzip2.png" type="image/png"/>
+  <category>Utility</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/bzip2.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=e860009dcf18cfda678a961664d1c5e072b3ef21" license="BZIP2" released="2008-03-20" version="1.0.5">
+    <executable-in-path command="run" name="bzip2"/>
+    <command name="run" path="bin/bzip2.exe"/>
+    <command name="bunzip2" path="bin/bunzip2.exe"/>
+    <command name="bzcat" path="bin/bzcat.exe"/>
+    <command name="bzip2recover" path="bin/bzip2recover.exe"/>
+    <command name="bzcmp" path="bin/bzcmp">
+      <requires interface="http://repo.roscidus.com/utils/sed">
+        <executable-in-path name="sed"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/diffutils">
+        <executable-in-path command="cmp" name="cmp"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/mktemp">
+        <executable-in-path name="mktemp"/>
+      </requires>
+      <runner interface="http://repo.roscidus.com/utils/bash"/>
+    </command>
+    <command name="bzdiff" path="bin/bzdiff">
+      <requires interface="http://repo.roscidus.com/utils/sed">
+        <executable-in-path name="sed"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/diffutils">
+        <executable-in-path command="run" name="diff"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/mktemp">
+        <executable-in-path name="mktemp"/>
+      </requires>
+      <runner interface="http://repo.roscidus.com/utils/bash"/>
+    </command>
+    <command name="bzegrep" path="bin/bzegrep">
+      <requires interface="http://repo.roscidus.com/utils/sed">
+        <executable-in-path name="sed"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/grep">
+        <executable-in-path command="egrep" name="egrep"/>
+      </requires>
+      <runner interface="http://repo.roscidus.com/utils/bash"/>
+    </command>
+    <command name="bzfgrep" path="bin/bzfgrep">
+      <requires interface="http://repo.roscidus.com/utils/sed">
+        <executable-in-path name="sed"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/grep">
+        <executable-in-path command="fgrep" name="fgrep"/>
+      </requires>
+      <runner interface="http://repo.roscidus.com/utils/bash"/>
+    </command>
+    <command name="bzgrep" path="bin/bzgrep">
+      <requires interface="http://repo.roscidus.com/utils/sed">
+        <executable-in-path name="sed"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/grep">
+        <executable-in-path command="run" name="grep"/>
+      </requires>
+      <runner interface="http://repo.roscidus.com/utils/bash"/>
+    </command>
+    <command name="bzless" path="bin/bzless">
+      <requires interface="http://repo.roscidus.com/utils/sed">
+        <executable-in-path name="sed"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/coreutils">
+        <executable-in-path command="dd" name="dd"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/less">
+        <executable-in-path command="run" name="less"/>
+      </requires>
+      <runner interface="http://repo.roscidus.com/utils/bash"/>
+    </command>
+    <command name="bzmore" path="bin/bzmore">
+      <environment name="LESS_IS_MORE" value="1"/>
+      <requires interface="http://repo.roscidus.com/utils/sed">
+        <executable-in-path name="sed"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/coreutils">
+        <executable-in-path command="dd" name="dd"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/less">
+        <executable-in-path command="run" name="more"/>
+      </requires>
+      <runner interface="http://repo.roscidus.com/utils/bash"/>
+    </command>
+    <manifest-digest sha256new="YQZFJYNF3KFXDFALIUBUIZP2P7Y3KZJZ5JBKBINU6KDNEVQPFWXQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/bzip2/1.0.5/bzip2-1.0.5-bin.zip" size="158416" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/bzip2-bin.zip?raw=true" size="158416" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="app-arch/bzip2"/>
+  <package-implementation package="bzip2"/>
+  <entry-point binary-name="bzip2" command="run">
+    <needs-terminal/>
+    <summary xml:lang="en">a block-sorting file compressor, v1.0.4</summary>
+    <description xml:lang="en">bzip2 compresses files using the  Burrows-Wheeler  block
+       sorting  text compression algorithm, and Huffman coding.
+       Compression is generally considerably better  than  that
+       achieved  by  more conventional LZ77/LZ78-based compres-
+       sors, and approaches the performance of the  PPM  family
+       of statistical compressors.</description>
+  </entry-point>
+  <entry-point binary-name="bunzip2" command="bunzip2">
+    <needs-terminal/>
+    <summary xml:lang="en">a block-sorting file compressor, v1.0.4</summary>
+    <description xml:lang="en">bunzip2 decompresses all specified files.
+       Files which were not created by bzip2 will  be  detected
+       and  ignored,  and  a warning issued. </description>
+  </entry-point>
+  <entry-point binary-name="bzcat" command="bzcat">
+    <needs-terminal/>
+    <summary xml:lang="en">decompresses files to stdout</summary>
+    <description xml:lang="en">bzcat (or bzip2 -dc) decompresses all specified files to
+       the standard output.</description>
+  </entry-point>
+  <entry-point binary-name="bzip2recover" command="bzip2recover">
+    <needs-terminal/>
+    <summary xml:lang="en">recovers data from damaged bzip2 files</summary>
+  </entry-point>
+  <entry-point binary-name="bzcmp" command="bzcmp">
+    <needs-terminal/>
+    <summary xml:lang="en">compare bzip2 compressed files</summary>
+    <description xml:lang="en">Used to invoke the cmp or the diff
+       program on bzip2 compressed files.  All  options  speci-
+       fied are passed directly to cmp or diff.  If only 1 file
+       is specified, then the files compared are file1  and  an
+       uncompressed  file1.bz2.   If  two  files are specified,
+       then they are uncompressed if necessary and fed  to  cmp
+       or diff.  The exit status from cmp or diff is preserved.</description>
+  </entry-point>
+  <entry-point binary-name="bzdiff" command="bzdiff">
+    <needs-terminal/>
+    <summary xml:lang="en">compare bzip2 compressed files</summary>
+    <description xml:lang="en">used to invoke the cmp or the diff
+       program on bzip2 compressed files.  All  options  speci-
+       fied are passed directly to cmp or diff.  If only 1 file
+       is specified, then the files compared are file1  and  an
+       uncompressed  file1.bz2.   If  two  files are specified,
+       then they are uncompressed if necessary and fed  to  cmp
+       or diff.  The exit status from cmp or diff is preserved.</description>
+  </entry-point>
+  <entry-point binary-name="bzegrep" command="bzegrep">
+    <needs-terminal/>
+    <summary xml:lang="en">search possibly bzip2 com-
+       pressed files for a regular expression</summary>
+    <description xml:lang="en">Bzgrep is used to invoke the  grep  on  bzip2-compressed
+       files.  All  options  specified  are  passed directly to
+       grep.  If no file is specified, then the standard  input
+       is decompressed if necessary and fed to grep.  Otherwise
+       the given files are uncompressed if necessary and fed to
+       grep.
+
+       If bzgrep is invoked as bzegrep or bzfgrep then egrep or
+       fgrep is used instead of grep.  If the GREP  environment
+       variable  is  set, bzgrep uses it as the grep program to
+       be invoked. For example:
+
+           for sh:  GREP=fgrep  bzgrep string files</description>
+  </entry-point>
+  <entry-point binary-name="bzfgrep" command="bzfgrep">
+    <needs-terminal/>
+    <summary xml:lang="en">search possibly bzip2 com-
+       pressed files for a regular expression</summary>
+    <description xml:lang="en">Bzgrep is used to invoke the  grep  on  bzip2-compressed
+       files.  All  options  specified  are  passed directly to
+       grep.  If no file is specified, then the standard  input
+       is decompressed if necessary and fed to grep.  Otherwise
+       the given files are uncompressed if necessary and fed to
+       grep.
+
+       If bzgrep is invoked as bzegrep or bzfgrep then egrep or
+       fgrep is used instead of grep.  If the GREP  environment
+       variable  is  set, bzgrep uses it as the grep program to
+       be invoked. For example:
+
+           for sh:  GREP=fgrep  bzgrep string files</description>
+  </entry-point>
+  <entry-point binary-name="bzgrep" command="bzgrep">
+    <needs-terminal/>
+    <summary xml:lang="en">search possibly bzip2 com-
+       pressed files for a regular expression</summary>
+    <description xml:lang="en">Bzgrep is used to invoke the  grep  on  bzip2-compressed
+       files.  All  options  specified  are  passed directly to
+       grep.  If no file is specified, then the standard  input
+       is decompressed if necessary and fed to grep.  Otherwise
+       the given files are uncompressed if necessary and fed to
+       grep.
+
+       If bzgrep is invoked as bzegrep or bzfgrep then egrep or
+       fgrep is used instead of grep.  If the GREP  environment
+       variable  is  set, bzgrep uses it as the grep program to
+       be invoked. For example:
+
+           for sh:  GREP=fgrep  bzgrep string files</description>
+  </entry-point>
+  <entry-point binary-name="bzless" command="bzless">
+    <needs-terminal/>
+    <summary xml:lang="en">file perusal filter for crt viewing of
+       bzip2 compressed text</summary>
+    <description xml:lang="en">Bzless  is  a  filter  which  allows examination of com-
+       pressed or plain text files one screenful at a time on a
+       soft-copy  terminal.   bzless  works on files compressed
+       with bzip2 and also on uncompressed files.   If  a  file
+       does not exist, bzless looks for a file of the same name
+       with the addition of a .bz2 suffix.
+
+       Bzless normally pauses after  each  screenful,  printing
+       --More--  at the bottom of the screen.  If the user then
+       types a carriage return, one more line is displayed.  If
+       the  user  hits a space, another screenful is displayed.
+       Other possibilities are enumerated later.</description>
+  </entry-point>
+  <entry-point binary-name="bzmore" command="bzmore">
+    <needs-terminal/>
+    <summary xml:lang="en">file perusal filter for crt viewing of
+       bzip2 compressed text</summary>
+    <description xml:lang="en">Bzmore  is  a  filter  which  allows examination of com-
+       pressed or plain text files one screenful at a time on a
+       soft-copy  terminal.   bzmore  works on files compressed
+       with bzip2 and also on uncompressed files.   If  a  file
+       does not exist, bzmore looks for a file of the same name
+       with the addition of a .bz2 suffix.
+
+       Bzmore normally pauses after  each  screenful,  printing
+       --More--  at the bottom of the screen.  If the user then
+       types a carriage return, one more line is displayed.  If
+       the  user  hits a space, another screenful is displayed.
+       Other possibilities are enumerated later.</description>
+  </entry-point>
+</interface>

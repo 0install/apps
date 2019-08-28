@@ -1,0 +1,124 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/utils/less" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Less</name>
+  <summary xml:lang="en">file viewer</summary>
+  <description xml:lang="en">Less is a pager. A pager is a program that displays text files. Other pagers commonly in use are more and pg. Less is similar to more, but allows backward movement in the file as well as forward movement. Also, less does not have to read the entire input file before starting, so with large input files it starts up faster than text editors like vi. </description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <category>System</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/less.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=b5ab96a0747d4c6e6cbe2610cf7b0a97225a7d65" license="GPL v2 (GNU General Public License); BSD License (revised)" released="2006-01-03" version="394-3">
+    <requires interface="http://repo.roscidus.com/lib/pcre">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/less.exe"/>
+    <command name="lessecho" path="bin/lessecho.exe"/>
+    <command name="lesskey" path="bin/lesskey.exe"/>
+    <command name="lessfile" path="bin/lessfile">
+      <requires interface="http://repo.roscidus.com/utils/coreutils">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/libarchive">
+        <executable-in-path name="tar"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/gzip">
+        <executable-in-path name="gzip"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/grep">
+        <executable-in-path name="grep"/>
+      </requires>
+      <runner interface="http://repo.roscidus.com/utils/bash"/>
+    </command>
+    <command name="lesspipe" path="bin/lesspipe">
+      <requires interface="http://repo.roscidus.com/utils/coreutils">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/libarchive">
+        <executable-in-path name="tar"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/gzip">
+        <executable-in-path name="gzip"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/grep">
+        <executable-in-path name="grep"/>
+      </requires>
+      <runner interface="http://repo.roscidus.com/utils/bash"/>
+    </command>
+    <manifest-digest sha256new="EW3ZLGAGM3EKN4EPV3PWATK5F23UNNAOIJCG4U2DFWJYB4HAW32A"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/less/394/less-394-bin.zip" size="176349" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/less-bin.zip?raw=true" size="176349" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="sys-apps/less"/>
+  <package-implementation package="less"/>
+  <entry-point binary-name="less" command="run">
+    <needs-terminal/>
+    <summary xml:lang="en">opposite of more</summary>
+    <description xml:lang="en">Less is a program similar to more (1), but which  allows
+       backward  movement  in the file as well as forward move-
+       ment.  Also, less does not have to read the entire input
+       file  before  starting,  so  with  large  input files it
+       starts up faster than text editors like  vi  (1).   Less
+       uses  termcap  (or  terminfo on some systems), so it can
+       run on a variety of terminals.  There  is  even  limited
+       support  for  hardcopy terminals.  (On a hardcopy termi-
+       nal, lines which should be printed at  the  top  of  the
+       screen are prefixed with a caret.)</description>
+  </entry-point>
+  <entry-point binary-name="lessecho" command="lessecho">
+    <needs-terminal/>
+    <name xml:lang="en">Lessecho</name>
+    <summary xml:lang="en">expand metacharacters</summary>
+    <description xml:lang="en">lessecho is a program that simply echos its arguments on
+       standard  output.  But any argument containing spaces is
+       enclosed in quotes.</description>
+  </entry-point>
+  <entry-point binary-name="lesskey" command="lesskey">
+    <needs-terminal/>
+    <name xml:lang="en">Lesskey</name>
+    <summary xml:lang="en">specify key bindings for less</summary>
+    <description xml:lang="en"> Lesskey  is  used to specify a set of key bindings to be
+       used by less.  The input  file  is  a  text  file  which
+       describes  the  key  bindings, If the input file is &quot;-&quot;,
+       standard input is read.  If no input file is  specified,
+       a  standard  filename  is  used as the name of the input
+       file, which depends on the system being  used:  On  Unix
+       systems,  $HOME/.lesskey  is  used;  on  MS-DOS systems,
+       $HOME/_lesskey   is   used;   and   on   OS/2    systems
+       $HOME/lesskey.ini is used, or $INIT/lesskey.ini if $HOME
+       is undefined.  The output file is a binary file which is
+       used  by  less.  If no output file is specified, and the
+       environment  variable  LESSKEY  is  set,  the  value  of
+       LESSKEY  is used as the name of the output file.  Other-
+       wise, a standard filename is used as  the  name  of  the
+       output  file, which depends on the system being used: On
+       Unix and OS-9 systems, $HOME/.less is  used;  on  MS-DOS
+       systems,  $HOME/_less  is  used;  and  on  OS/2 systems,
+       $HOME/less.ini is used, or $INIT/less.ini  if  $HOME  is
+       undefined.   If  the output file already exists, lesskey
+       will overwrite it.</description>
+  </entry-point>
+  <entry-point binary-name="lessfile" command="lessfile">
+    <needs-terminal/>
+    <name xml:lang="en">Lessfile</name>
+    <summary xml:lang="en">input preprocessor for  less.</summary>
+    <description xml:lang="en">lessfile  will  toss  the  contents/info on a file which
+       less will then read.  After you are done, lessfile  will
+       then  delete  the file.  This means that the process has
+       to finish before you see it, but you get  nice  percent-
+       ages (N%) up front.</description>
+  </entry-point>
+  <entry-point binary-name="lesspipe" command="lesspipe">
+    <needs-terminal/>
+    <name xml:lang="en">Lesspipe</name>
+    <summary xml:lang="en">input preprocessor for  less.</summary>
+    <description xml:lang="en">lesspipe  will toss the contents/info on STDOUT and less
+       will read them as they come across.  This means that you
+       do  not  have  to wait for the decoding to finish before
+       less shows you the file.  This also means that you  will
+       get  a  'byte N' instead of an N% as your file position.
+       You can seek to the end and back to get the N% but  that
+       means you have to wait for the pipe to finish.</description>
+  </entry-point>
+</interface>

@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/utils/libarchive" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>LibArchive</name>
+  <summary xml:lang="en">library for reading and writing streaming archives </summary>
+  <description xml:lang="en">Libarchive is a programming library that can create and read several different streaming archive formats, including most popular tar variants, several cpio formats, and both BSD and GNU ar variants. It can also write shar archives and read ISO9660 CDROM images and ZIP archives. The bsdtar program is an implementation of tar(1) that is built on top of libarchive. It started as a test harness, but has grown into a feature-competitive replacement for GNU tar. 
+
+The libarchive library offers a number of features that make it both very flexible and very powerful. 
+•Automatic format detection: libarchive can automatically determine both the compression and the archive format, regardless of the data source. (GNU tar and star only do full format detection when reading from a file, for instance. Gunnar Ritter's heirloom tar also does full automatic format detection.) 
+•Reads popular formats: libarchive can read GNU tar, ustar, pax interchange format, cpio, zip, and ISO9660 formats. The internal architecture is easily extensible. The only requirement for read support is that all metadata for a file must precede the file data itself within the archive. 
+•Writes popular formats: libarchive can write ustar, pax interchange format, cpio, and shar formats. The internal architecture is easily extensible. The only requirement for write support is that all metadata for a file must follow the preceding file's data within the archive. (Yes, there are formats that libarchive can write but not read and vice versa.) 
+•Reads and writes POSIX formats: libarchive reads and writes POSIX-standard formats, including &quot;ustar,&quot; &quot;pax interchange format,&quot; and the POSIX &quot;cpio&quot; format. 
+•Supports pax interchange format: Pax interchange format (which, despite the name, is really an extended tar format) eliminates almost all limitations of historic tar formats and provides a standard method for incorporating vendorspecific extensions. libarchive exploits this extension mechanism to support ACLs and file flags, for example. (Joerg Schilling's star archiver and recent versions of GNU tar also support pax interchange format.) 
+•High-Level API: the libarchive API makes it fairly simple to build an archive from a list of filenames or to extract the entries from an archive. However, the API also provides extreme flexibility with regards to data sources. For example, there are generic hooks that allow you to write an archive to a socket or read data from an archive entry into a memory buffer. 
+•Modular: The library design carefully minimizes link pollution. If you only need read support for a single format, for example, you will only get the required code. This minimizes the size of statically-linked executables. (In particular, zlib or libbz2 are only required if you specifically request gzip or bzip2 support.) 
+•Extensible: The internal design uses generic interfaces for compression, archive format detection and decoding, and archive data I/O. It should be very easy to add new formats, new compression methods, or new ways of reading/writing archives. 
+•Featureful: Libarchive handles ACLs, file flags, extended attributes, international characters, large files, long pathnames, and many other features. Details vary depending on the particular format, of course. 
+•Fast: Libarchive minimizes data copying when handling archive files and contains carefully-tuned code for recreating objects on disk. 
+
+The bsdtar archiving program is built on libarchive, so offers a variety of modern features. One unusual feature it offers is the ability to function as a format-conversion filter, reading entries from one archive and emitting an archive in a different format with the same contents. This feature was simple to implement because libarchive's robust automatic format detection makes it unnecessary to specify the format of the input archive. The bsdtar program has a number of advantages over previous tar implementations: 
+•Library. Since the core functionality is in a library, it can be used by other tools, such as pkg_add. 
+•Automatic format detection. Libarchive automatically detects the compression (none/gzip/bzip2) and format (old tar, ustar, gnutar, pax, cpio, iso9660, zip) when reading archives. It does this for any data source. 
+•Pax Interchange Format Support. This is a POSIX/SUSv3 extension to the old &quot;ustar&quot; tar format that adds arbitrary extended attributes to each entry. Does everything that GNU tar format does, only better. 
+•Handles file flags, ACLs, arbitrary pathnames, etc. Pax interchange format supports key/value attributes using an easily-extensible technique. Arbitrary pathnames, group names, user names, file sizes are part of the POSIX standard; libarchive extends this with support for file flags, ACLs, and arbitrary device numbers. 
+•GNU tar support. Libarchive reads most GNU tar archives. If there is demand, this can be improved further. 
+•BSD license. 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/libarchive.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/libarchive.png" type="image/png"/>
+  <category>System</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/libarchive.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=efaade1e475a4b90934407118837bd7759007f79" license="BSD License (revised)" released="2008-06-27" version="2.4.12-1" version-modifier="-3">
+    <requires interface="http://repo.roscidus.com/utils/bzip2">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="http://repo.roscidus.com/lib/zlib">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/bsdtar.exe"/>
+    <command name="bsdcpio" path="bin/bsdcpio.exe"/>
+    <manifest-digest sha256new="PTVI42XUTMV5IETSPTOYOF2ZIMDR2BZEHNCDLCEESS34366GCQSA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/libarchive/2.4.12-1/libarchive-2.4.12-1-bin.zip" size="263534" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/libarchive-2.4.12-1-bin.zip" size="263534" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="app-arch/libarchive"/>
+  <package-implementation package="libarchive"/>
+  <entry-point binary-name="bsdtar" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">bsdtar</name>
+    <summary xml:lang="en">manipulate tape archives</summary>
+    <description xml:lang="en">tar creates and manipulates streaming archive files.  This
+     implementation can extract from tar, pax, cpio, zip, jar,
+     ar, and ISO 9660 cdrom images and can create tar, pax,
+     cpio, ar, and shar archives.</description>
+  </entry-point>
+  <entry-point binary-name="bsdcpio" command="bsdcpio">
+    <needs-terminal/>
+    <name xml:lang="en">bsdcpio</name>
+    <summary xml:lang="en">copy files to and from archives</summary>
+    <description xml:lang="en"> cpio copies files between archives and directories.  This
+     implementation can extract from tar, pax, cpio, zip, jar,
+     ar, and ISO 9660 cdrom images and can create tar, pax,
+     cpio, ar, and shar archives.</description>
+  </entry-point>
+</interface>

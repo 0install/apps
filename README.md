@@ -1,8 +1,8 @@
 # repo.roscidus.com
 
-http://repo.roscidus.com/ provides [Zero Install](http://0install.net/) feeds for programs and libraries where the upstream authors do not provide feeds of their own. It also serves as a semi-official repository for basic infrastructure components such as libraries and runtime environments. Some packages are created by hand, others are generated automatically from Debian packages. It is kindly hosted by the [FSF](http://www.fsf.org/), and hosts only Free software.
+http://repo.roscidus.com/ provides [Zero Install](http://0install.net/) feeds for programs and libraries where the upstream authors do not provide feeds of their own. It also serves as a semi-official repository for basic infrastructure components such as libraries and runtime environments.
 
-This Git repository tracks changes to these feeds. The feeds are updated using the following tools:
+The feeds are updated using the following tools:
 
 [0watch](https://github.com/0install/0watch) scrapes upstream websites to discover new versions of applications. It runs a watch file (e.g., `ffmpeg.watch.py`) and then automatically calls 0template as needed.
 

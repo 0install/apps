@@ -1,6 +1,8 @@
 from urllib import request
 import json
 
+skipped_versions = ['v3.2']
+
 def convert(release):
     version = release['tag_name'].strip('v').replace('.0', '.').replace('..', '.0.').replace('RC', 'rc').replace('beta', 'pre')
     stability = 'testing' if 'rc' in version or 'pre' in version else 'stable'
@@ -9,4 +11,4 @@ def convert(release):
     return {'version': version, 'download-url': download_url, 'stability': stability, 'released': released}
 
 data = request.urlopen('https://api.github.com/repos/gitextensions/gitextensions/releases').read().decode('utf-8')
-releases = [convert(release) for release in json.loads(data) if str.startswith(release['tag_name'], 'v3.')]
+releases = [convert(release) for release in json.loads(data) if str.startswith(release['tag_name'], 'v3.') and not release['tag_name'] in skipped_versions]

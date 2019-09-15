@@ -9,17 +9,17 @@
   <feed-for interface="http://repo.roscidus.com/kubernetes/minikube"/>
 
   <group license="Apache License 2.0">
-    <implementation arch="Windows-x86_64" version="{version}" stability="stable" released="{released}" main="minikube.exe">
+    <implementation arch="Windows-x86_64" version="{version}" stability="{stability}" released="{released}" main="minikube.exe">
       <manifest-digest/>
-      <file href="https://storage.googleapis.com/minikube/releases/v{version}/minikube-windows-amd64.exe" dest="minikube.exe"/>
+      <file href="https://storage.googleapis.com/minikube/releases/v{original-version}/minikube-windows-amd64.exe" dest="minikube.exe"/>
     </implementation>
-    <implementation arch="Linux-x86_64" version="{version}" stability="stable" released="{released}" main="minikube">
+    <implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}" main="minikube">
       <manifest-digest/>
-      <file href="https://storage.googleapis.com/minikube/releases/v{version}/minikube-linux-amd64" dest="minikube" executable="true"/>
+      <file href="https://storage.googleapis.com/minikube/releases/v{original-version}/minikube-linux-amd64" dest="minikube" executable="true"/>
     </implementation>
-    <implementation arch="Darwin-x86_64" version="{version}" stability="stable" released="{released}" main="minikube">
+    <implementation arch="Darwin-x86_64" version="{version}" stability="{stability}" released="{released}" main="minikube">
       <manifest-digest/>
-      <file href="https://storage.googleapis.com/minikube/releases/v{version}/minikube-darwin-amd64" dest="minikube" executable="true"/>
+      <file href="https://storage.googleapis.com/minikube/releases/v{original-version}/minikube-darwin-amd64" dest="minikube" executable="true"/>
     </implementation>
   </group>
 </interface>

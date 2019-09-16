@@ -112,7 +112,7 @@ def check_new_impl(impl):
 		return "Missing 'license' attribute"
 
 	# Example: License must be OSI approved
-	if not any(fragment in license for fragment in ("OSI Approved", "GPL", "General Public License", "MIT License", "BSD License", "Apache License", "Mozilla Public License", "Python License", "Ruby License")):
+	if not any(fragment in license for fragment in ("OSI Approved", "GPL", "General Public License", "MIT License", "BSD License", "Apache License", "OpenSSL License", "Mozilla Public License", "Python License", "Ruby License")):
 		return "Only Open Source software is permitted in this repository"
 
 	return None

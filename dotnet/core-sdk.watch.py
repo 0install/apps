@@ -23,4 +23,4 @@ def get_releases(major_version):
     matches = re.findall(r'<p class="mb-5">Released (....-..-..)<\/p>[\S\s]*?\s+<h3 id="sdk-([0-9\.]+)">', data, re.MULTILINE)
     return [handle(version=match[1], released=match[0]) for match in matches if match[1]]
 
-releases = get_releases('2.1') + get_releases('2.2')
+releases = get_releases('2.1') + get_releases('2.2') + get_releases('3.0')

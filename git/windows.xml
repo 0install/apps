@@ -14,8 +14,9 @@
   <package-implementation distributions="Windows" package="git"/>
 
   <group license="GPL v2 (GNU General Public License)">
-    <requires interface="http://repo.roscidus.com/utils/putty">
+    <requires importance="recommended" interface="http://repo.roscidus.com/utils/putty">
       <environment insert="plink.exe" mode="replace" name="GIT_SSH"/>
+      <environment insert="plink.exe" mode="replace" name="SVN_SSH"/>
     </requires>
     <command name="run" path="cmd/git.exe"/>
     <command name="run-gui" path="cmd/git-gui.exe"/>

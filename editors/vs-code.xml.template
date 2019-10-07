@@ -12,6 +12,10 @@
   <feed-for interface="http://repo.roscidus.com/editors/vs-code"/>
 
   <group license="MIT License">
+    <requires interface="http://repo.roscidus.com/git/core">
+      <executable-in-path name="git"/>
+    </requires>
+
     <implementation arch="Windows-x86_64" main="Code.exe" stability="stable" version="{version}">
       <manifest-digest/>
       <archive href="https://az764295.vo.msecnd.net/stable/{release-id}/VSCode-win32-x64-{version}.zip" type="application/zip"/>

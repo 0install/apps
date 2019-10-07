@@ -9,17 +9,17 @@
   <feed-for interface="http://repo.roscidus.com/kubernetes/svcat"/>
 
   <group license="Apache License 2.0">
-    <implementation arch="Windows-x86_64" version="{version}" stability="stable" released="{released}" main="svcat.exe">
+    <implementation arch="Windows-x86_64" version="{version}" stability="{stability}" released="{released}" main="svcat.exe">
       <manifest-digest/>
-      <file href="https://download.svcat.sh/cli/v{version}/windows/amd64/svcat.exe" dest="svcat.exe"/>
+      <file href="https://download.svcat.sh/cli/v{original-version}/windows/amd64/svcat.exe" dest="svcat.exe"/>
     </implementation>
-    <implementation arch="Linux-x86_64" version="{version}" stability="stable" released="{released}" main="svcat">
+    <implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}" main="svcat">
       <manifest-digest/>
-      <file href="https://download.svcat.sh/cli/v{version}/linux/amd64/svcat" dest="svcat" executable="true"/>
+      <file href="https://download.svcat.sh/cli/v{original-version}/linux/amd64/svcat" dest="svcat" executable="true"/>
     </implementation>
-    <implementation arch="Darwin-x86_64" version="{version}" stability="stable" released="{released}" main="svcat">
+    <implementation arch="Darwin-x86_64" version="{version}" stability="{stability}" released="{released}" main="svcat">
       <manifest-digest/>
-      <file href="https://download.svcat.sh/cli/v{version}/darwin/amd64/svcat" dest="svcat" executable="true"/>
+      <file href="https://download.svcat.sh/cli/v{original-version}/darwin/amd64/svcat" dest="svcat" executable="true"/>
     </implementation>
   </group>
 </interface>

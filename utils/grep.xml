@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/utils/grep" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Grep</name>
+  <summary xml:lang="en">Grep: print lines matching a pattern</summary>
+  <description xml:lang="en">Grep searches one or more input files for lines containing a match to a specified pattern. By default, grep prints the matching lines. </description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <category>Utility</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/grep.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-i486" id="sha1new=b09cab2cbcce8dc65848c0f0215adc1708bb60b4" langs="af be bg ca cs da de el es et eu fi fr ga gl he hr hu id it ja ko ky lt nb nl pl pt pt_BR ro ru rw sk sl sr sv tr uk vi zh_TW" license="GPL v3 (GNU General Public License)" released="2017-02-13" version="2.5.4-3">
+    <requires interface="http://repo.roscidus.com/devel/libintl">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="http://repo.roscidus.com/lib/libiconv">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="http://repo.roscidus.com/lib/regex">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="http://repo.roscidus.com/lib/pcre">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/grep.exe"/>
+    <command name="egrep" path="bin/egrep.exe"/>
+    <command name="fgrep" path="bin/fgrep.exe"/>
+    <manifest-digest sha256new="2Y4YI2IHSPIICI7QRFKKXWEABHXHI3XP6RD75UKJVOLAFY5Z5ABA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/grep/2.5.4/grep-2.5.4-bin.zip" size="451824" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/grep-2.5.4-bin.zip?raw=true" size="451824" type="application/zip"/>
+  </implementation>
+  <package-implementation package="grep"/>
+  <package-implementation distributions="Gentoo" package="sys-apps/grep"/>
+  <entry-point binary-name="grep" command="run"/>
+  <entry-point binary-name="egrep" command="egrep">
+    <needs-terminal/>
+    <name xml:lang="en">Egrep</name>
+    <summary xml:lang="en">Egrep: print lines matching a pattern</summary>
+  </entry-point>
+  <entry-point binary-name="fgrep" command="fgrep">
+    <needs-terminal/>
+    <name xml:lang="en">Fgrep</name>
+    <summary xml:lang="en">Fgrep: print lines matching a pattern</summary>
+  </entry-point>
+</interface>

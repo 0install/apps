@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface uri="http://repo.roscidus.com/utils/wget" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>GNU Wget</name>
+  <summary xml:lang="en">A command-line utility for retrieving files using HTTP, HTTPS and FTP protocols.</summary>
+  <description xml:lang="en">GNU Wget is a free software package for retrieving files using HTTP, HTTPS, FTP and FTPS the most widely-used Internet protocols. It is a non-interactive commandline tool, so it may easily be called from scripts, cron jobs, terminals without X-Windows support, etc. 
+
+GNU Wget has many features to make retrieving large files or mirroring entire web or FTP sites easy, including: 
+◾Can resume aborted downloads, using REST and RANGE
+◾Can use filename wild cards and recursively mirror directories
+◾NLS-based message files for many different languages
+◾ Optionally converts absolute links in downloaded documents to relative, so that downloaded documents may link to each other locally 
+◾Runs on most UNIX-like operating systems as well as Microsoft Windows
+◾Supports HTTP proxies
+◾Supports HTTP cookies
+◾Supports persistent HTTP connections
+◾Unattended / background operation
+◾Uses local file timestamps to determine whether documents need to be re-downloaded when mirroring
+◾GNU Wget is distributed under the GNU General Public License.
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon" />
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png" />
+  <category>Network</category>
+  <homepage>https://eternallybored.org/misc/wget/</homepage>
+  <needs-terminal />
+  <group license="GPL v3 (GNU General Public License)">
+    <command name="run" path="wget.exe" />
+    <group version="1.19.4" released="2018-01-23">
+      <implementation arch="Windows-x86_64" id="sha1new=1fab78a3c725599251c8db265d292b988be03a4a">
+        <manifest-digest sha256new="KTI2LUWN4DL2VSHCHLREMTWRQJE2SRZTEPXBOMYNLRXQ34Q3ZHCA" />
+        <archive href="https://eternallybored.org/misc/wget/releases/old/wget-1.19.4-win64.zip" size="3419084" type="application/zip" />
+      </implementation>
+      <implementation arch="Windows-i486" id="sha1new=f495b9776497a9dc5b5d92d6c599ba2a06ed0b46">
+        <manifest-digest sha256new="PBYOCX3SYPU6B3IUI4FXQUFUDDHMZ46EM6IBQRVKOZ32TGLRH75Q" />
+        <archive href="https://eternallybored.org/misc/wget/releases/old/wget-1.19.4-win32.zip" size="3171063" type="application/zip" />
+      </implementation>
+    </group>
+    <group version="1.20" released="2018-12-04">
+      <implementation arch="Windows-x86_64" id="sha1new=95b8f393fcfaee6ac7aed8fc44e196be68bcf551">
+        <manifest-digest sha256new="5K6POTFUSRALGXGRKAOYIFRG3L3UVHUHK23XAFPWNLS5MFKOFIIA" />
+        <archive href="https://eternallybored.org/misc/wget/releases/old/wget-1.20-win64.zip" size="5095317" type="application/zip" />
+      </implementation>
+      <implementation arch="Windows-i486" id="sha1new=1184fff0640d55ac02cb57885cd39ce986a39fc0">
+        <manifest-digest sha256new="5GOETWX5UPX2Y4C3DOCIF5MW4ZZSIENFRBRTHHYYU2YDZAL54WMQ" />
+        <archive href="https://eternallybored.org/misc/wget/releases/old/wget-1.20-win32.zip" size="3300455" type="application/zip" />
+      </implementation>
+    </group>
+    <group version="1.20.3">
+      <implementation arch="Windows-x86_64" released="2019-04-22" id="sha1new=7d7b69132c0d6a57974d5397d504c67670c315a5">
+        <manifest-digest sha256new="RGSFIA3YB5FRBOKALDZXOZ2OW3ZFIHC5OFM3ORIRILCYEGX3YRJQ" />
+        <archive href="https://eternallybored.org/misc/wget/releases/wget-1.20.3-win64.zip" size="4961776" type="application/zip" />
+        <archive href="https://eternallybored.org/misc/wget/releases/old/wget-1.20.3-win64.zip" size="3419084" type="application/zip" />
+      </implementation>
+      <implementation arch="Windows-i486" released="2019-04-23" id="sha1new=612600c58e6c5705fabdb6f1d84c42c84d4efc06">
+        <manifest-digest sha256new="3QR23JCRDLUFJCSGSW6U4GXK6SPZS2Z2TPTNT7P6BW6OGZCOR6GQ" />
+        <archive href="https://eternallybored.org/misc/wget/releases/wget-1.20.3-win32.zip" size="4310591" type="application/zip" />
+        <archive href="https://eternallybored.org/misc/wget/releases/old/wget-1.20.3-win32.zip" size="3171063" type="application/zip" />
+      </implementation>
+    </group>
+  </group>
+  <package-implementation distributions="Gentoo" package="net-misc/wget" main="/usr/bin/wget"/>
+  <package-implementation package="wget" main="/usr/bin/wget"/>
+  <entry-point command="run" binary-name="wget">
+    <needs-terminal />
+    <name xml:lang="en">Wget</name>
+    <summary xml:lang="en">A command-line utility for retrieving files using HTTP, HTTPS and FTP protocols.</summary>
+  </entry-point>
+</interface>

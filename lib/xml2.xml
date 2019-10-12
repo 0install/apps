@@ -12,6 +12,12 @@ metalanguage for markup languages.
 
 This package provides a library providing an extensive API to handle
 such XML data files.</description>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/xml2.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/xml2.png" type="image/png"/>
+  <category>Development</category>
+  <homepage>http://xmlsoft.org/</homepage>
+  <needs-terminal/>
+  <package-implementation distributions="Gentoo" package="media-libs/libxml2"/>
   <package-implementation package="libxml2"/>
   <group arch="Linux-i386">
     <implementation id="sha1new=f248e00cdda7e14ec148cd7120f575c4650157fe" released="2011-09-17" version="2.7.8">
@@ -22,15 +28,42 @@ such XML data files.</description>
     </implementation>
     <group>
       <requires interface="http://repo.roscidus.com/lib/zlib1g">
-      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
-    </requires>
+        <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+      </requires>
       <implementation id="sha1new=a7e5d754ed506f4e567fabeae05884d073a69433" released="2012-03-27" version="2.7.8">
-      <archive href="libxml2-i386-2.7.8.dfsg-2+squeeze3.tar.bz2" size="809575"/>
-    </implementation>
+        <archive href="libxml2-i386-2.7.8.dfsg-2+squeeze3.tar.bz2" size="809575"/>
+      </implementation>
       <implementation arch="Linux-x86_64" id="sha1new=9e9d62c9b0aec9ad55de90c0df16e08a8d29f373" released="2012-03-27" version="2.7.8">
-      <archive href="libxml2-amd64-2.7.8.dfsg-2+squeeze3.tar.bz2" size="862772"/>
-    </implementation>
+        <archive href="libxml2-amd64-2.7.8.dfsg-2+squeeze3.tar.bz2" size="862772"/>
+      </implementation>
     </group>
   </group>
-
+  <implementation arch="Windows-i486" id="sha1new=865784de59ebfccf1b37d384fcfa7ec5c7b63dda" license="LGPL (GNU Lesser General Public License)" released="2001-12-23" version="2.4.12">
+    <command name="xmllint" path="bin/xmllint.exe"/>
+    <command name="xmlcatalog" path="bin/xmlcatalog.exe"/>
+    <manifest-digest sha256new="IOQHINFBGVOZDQTIZMG5VMB64HZBUAVXE4OBWFE4G3CSWDCNWHQQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/libxml/2.4.12-1/libxml2-2.4.12-bin.zip" size="385904" type="application/zip"/>
+  </implementation>
+  <entry-point binary-name="xmllint" command="xmllint">
+    <needs-terminal/>
+    <name xml:lang="en">xmllint</name>
+    <summary xml:lang="en">command line XML tool</summary>
+    <description xml:lang="en">The xmllint program parses one or more XML files, speci-
+       fied  on  the command line as xmlfile. It prints various
+       types of output, depending upon the options selected. It
+       is  useful  for detecting errors both in XML code and in
+       the XML parser itself.</description>
+  </entry-point>
+  <entry-point binary-name="xmlcatalog" command="xmlcatalog">
+    <needs-terminal/>
+    <name xml:lang="en">xmlcatalog</name>
+    <summary xml:lang="en">Command line tool to parse and manipulate XML or SGML catalog files.</summary>
+    <description xml:lang="en">xmlcatalog is a command line application allowing  users
+       to  monitor  and manipulate XML and SGML catalogs. It is
+       included in libxml2.
+       Its functions can be invoked from a single command  from
+       the  command  line, or it can perform multiple functions
+       in interactive mode. It can operate on both XML and SGML
+       files.</description>
+  </entry-point>
 </interface>

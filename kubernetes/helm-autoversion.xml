@@ -5,8 +5,13 @@
   <description>A wrapper for Kubernetes Helm that automatically downloads a Helm (client) version that matches the Tiller (server) version.</description>
   <needs-terminal/>
 
-  <!-- Intended to be registered by users via: 0install add-feed http://repo.roscidus.com/kubernetes/helm-autoversion -->
-  <feed-for interface="http://repo.roscidus.com/kubernetes/helm"/>
+  <!--
+    Intended to be registered by users via:
+    0install add-feed http://repo.roscidus.com/kubernetes/helm-2 http://repo.roscidus.com/kubernetes/helm-autoversion
+    -or-
+    0install add helm http://repo.roscidus.com/kubernetes/helm-autoversion
+  -->
+  <feed-for interface="http://repo.roscidus.com/kubernetes/helm-2"/>
 
   <!-- Marked as version 3-pre to be considered "better" than all Helm 2.x releases but not as a candidate for Helm >= 3.0. -->
   <implementation license="MIT License" released="2019-07-16" stability="stable" id="sha1new=a551fc5839686a79ee5fe9b7412f0bcb82b43605" version="3-pre">

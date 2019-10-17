@@ -90,53 +90,83 @@
       <manifest-digest sha256new="UJWIEE43PA6DXMZXO5RXSBAF2R7YYJWGQBRBFLTIZE3B23WQVXNA"/>
       <archive href="https://github.com/docker/app/releases/download/v0.6.0/docker-app-darwin.tar.gz" size="11585786" type="application/x-compressed-tar"/>
     </implementation>
-    <implementation arch="Windows-x86_64" id="sha1new=63a0998761f5b7cd7fad9075b5a0608801482d41" main="docker-app-windows.exe" released="2019-04-18" stability="testing" version="0.8.0-pre1">
+  </group>
+
+  <group arch="Windows-x86_64" license="Apache License 2.0">
+    <command name="run" path="docker-app-plugin-windows.exe">
+      <arg>app</arg>
+    </command>
+    <implementation id="sha1new=63a0998761f5b7cd7fad9075b5a0608801482d41" released="2019-04-18" stability="testing" version="0.8.0-pre1">
       <manifest-digest sha256new="E6PVN7CPKLQLZSZVH4P6ESGYBOLBHY5V4NOSWOSKIG5CWURC6C3A"/>
       <archive href="https://github.com/docker/app/releases/download/v0.8.0-beta1/docker-app-windows.tar.gz" size="23956062" type="application/x-compressed-tar"/>
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=9e47e0deaf51adda85cb8986edd664d483258feb" main="docker-app-linux" released="2019-04-18" stability="testing" version="0.8.0-pre1">
-      <manifest-digest sha256new="VAIZAV4UUTUWEAMOTLZTHVJEICPIMSPFMHQ25B35SZQGOJM5M2XA"/>
-      <archive href="https://github.com/docker/app/releases/download/v0.8.0-beta1/docker-app-linux.tar.gz" size="23990662" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation arch="Darwin-x86_64" id="sha1new=7e4851cba273f469c617519c4ef4ce6a6d3543ae" main="docker-app-darwin" released="2019-04-18" stability="testing" version="0.8.0-pre1">
-      <manifest-digest sha256new="N36YL3HNESG2IJBKPIJFXX6GE6XXSOSFFU7CACQZKHUMRYPNWPEA"/>
-      <archive href="https://github.com/docker/app/releases/download/v0.8.0-beta1/docker-app-darwin.tar.gz" size="26258419" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation arch="Windows-x86_64" id="sha1new=6d3bdd1c5e20e550adf9074b4c48213836f6e80b" main="docker-app-windows.exe" released="2019-04-26" stability="testing" version="0.8.0-pre2">
+    <implementation id="sha1new=6d3bdd1c5e20e550adf9074b4c48213836f6e80b" released="2019-04-26" stability="testing" version="0.8.0-pre2">
       <manifest-digest sha256new="WOWMVPNNXUIBMMY5DSDGR7WXQSKAUC3YTYMTWHD6SAWLRHDMC4AQ"/>
       <archive href="https://github.com/docker/app/releases/download/v0.8.0-beta2/docker-app-windows.tar.gz" size="23974315" type="application/x-compressed-tar"/>
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=d0ad06f4282d605de6f6d013548012e10cfec67f" main="docker-app-linux" released="2019-04-26" stability="testing" version="0.8.0-pre2">
-      <manifest-digest sha256new="GPOXREH6THIUITR5KAGJ5AZHQXESCQRMEMZJH65QCZ6KV6XLPK6Q"/>
-      <archive href="https://github.com/docker/app/releases/download/v0.8.0-beta2/docker-app-linux.tar.gz" size="24009459" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation arch="Darwin-x86_64" id="sha1new=42e2dc6fa13a03f188e36bf0fa0ca59c9bf8465d" main="docker-app-darwin" released="2019-04-26" stability="testing" version="0.8.0-pre2">
-      <manifest-digest sha256new="RK5KDFCOI4HUS3HJK5PTYEWOWCYRVFZOTLF3H5KXL6S7TWUGV22A"/>
-      <archive href="https://github.com/docker/app/releases/download/v0.8.0-beta2/docker-app-darwin.tar.gz" size="26283506" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation arch="Windows-x86_64" id="sha1new=8fe7d238b916869b4fbd99f138287a2bdf1adbf7" main="docker-app-windows.exe" released="2019-05-24" stability="testing" version="0.8.0-rc1">
+    <implementation id="sha1new=8fe7d238b916869b4fbd99f138287a2bdf1adbf7" released="2019-05-24" stability="testing" version="0.8.0-rc1">
       <manifest-digest sha256new="4D2DTNXGPJFDDUGJGUPJIWHWVSFGYLT6K7KR24R5GQYBT6NVJIOA"/>
       <archive href="https://github.com/docker/app/releases/download/v0.8.0-rc1/docker-app-windows.tar.gz" size="23231126" type="application/x-compressed-tar"/>
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=1a301c5e4113320dd5bde5e22eca58db5b102d5b" main="docker-app-linux" released="2019-05-24" stability="testing" version="0.8.0-rc1">
-      <manifest-digest sha256new="AWCC7ZCYLOU5QIOUQRTVDULPHW2W32DRFX5F72HDA4NXV4OTGS2A"/>
-      <archive href="https://github.com/docker/app/releases/download/v0.8.0-rc1/docker-app-linux.tar.gz" size="23250615" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation arch="Darwin-x86_64" id="sha1new=ce0070789161a00a5f66b472458c473a392402eb" main="docker-app-darwin" released="2019-05-24" stability="testing" version="0.8.0-rc1">
-      <manifest-digest sha256new="6NADBP3QCF2DZKC2RJGUJPJ7ZXAQATT6ZELAE453LTB2F5AQHDEQ"/>
-      <archive href="https://github.com/docker/app/releases/download/v0.8.0-rc1/docker-app-darwin.tar.gz" size="25447089" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation arch="Windows-x86_64" id="sha1new=3be2cdb925210ad93d07af0dc7ce27b58da424d6" main="docker-app-windows.exe" released="2019-06-11" stability="testing" version="0.8.0">
+    <implementation id="sha1new=3be2cdb925210ad93d07af0dc7ce27b58da424d6" released="2019-06-11" stability="testing" version="0.8.0">
       <manifest-digest sha256new="VMLI2FWR2O645VHRX23EGOCLQKHLJCHLLQFQ7TKZ7LXTAS6V5WIQ"/>
       <archive href="https://github.com/docker/app/releases/download/v0.8.0/docker-app-windows.tar.gz" size="23238774" type="application/x-compressed-tar"/>
     </implementation>
-    <implementation arch="Linux-x86_64" id="sha1new=3487e9ad5c3b5488ea1429e782824cb9c561fda3" main="docker-app-linux" released="2019-06-11" stability="testing" version="0.8.0">
+    <implementation id="sha1new=a1758c9b7257f5c6e760c6abdad2482a807b8362" released="2019-10-15" stability="testing" version="0.9.0-rc1">
+      <manifest-digest sha256new="5C5AERVJO46OEACAVX3ED5Q3WUAK6DZ67TMQD6M75J3XX7HJYA7A"/>
+      <archive href="https://github.com/docker/app/releases/download/v0.9.0-zeta1/docker-app-windows.tar.gz" size="13357522" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group arch="Linux-x86_64" license="Apache License 2.0">
+    <command name="run" path="docker-app-plugin-linux">
+      <arg>app</arg>
+    </command>
+    <implementation id="sha1new=9e47e0deaf51adda85cb8986edd664d483258feb" released="2019-04-18" stability="testing" version="0.8.0-pre1">
+      <manifest-digest sha256new="VAIZAV4UUTUWEAMOTLZTHVJEICPIMSPFMHQ25B35SZQGOJM5M2XA"/>
+      <archive href="https://github.com/docker/app/releases/download/v0.8.0-beta1/docker-app-linux.tar.gz" size="23990662" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=d0ad06f4282d605de6f6d013548012e10cfec67f" released="2019-04-26" stability="testing" version="0.8.0-pre2">
+      <manifest-digest sha256new="GPOXREH6THIUITR5KAGJ5AZHQXESCQRMEMZJH65QCZ6KV6XLPK6Q"/>
+      <archive href="https://github.com/docker/app/releases/download/v0.8.0-beta2/docker-app-linux.tar.gz" size="24009459" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=1a301c5e4113320dd5bde5e22eca58db5b102d5b" released="2019-05-24" stability="testing" version="0.8.0-rc1">
+      <manifest-digest sha256new="AWCC7ZCYLOU5QIOUQRTVDULPHW2W32DRFX5F72HDA4NXV4OTGS2A"/>
+      <archive href="https://github.com/docker/app/releases/download/v0.8.0-rc1/docker-app-linux.tar.gz" size="23250615" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=3487e9ad5c3b5488ea1429e782824cb9c561fda3" released="2019-06-11" stability="testing" version="0.8.0">
       <manifest-digest sha256new="6JCYJ7K7F6XMPEMUDIVOVIL7YLQ2G62HRCEXVCZY5M7ASZHJKLMQ"/>
       <archive href="https://github.com/docker/app/releases/download/v0.8.0/docker-app-linux.tar.gz" size="23257777" type="application/x-compressed-tar"/>
     </implementation>
-    <implementation arch="Darwin-x86_64" id="sha1new=a8d7d6a209b490871e958ace5df5ef16fc3ecfe8" main="docker-app-darwin" released="2019-06-11" stability="testing" version="0.8.0">
+    <implementation id="sha1new=9b6c3100ea014c234dca792740c6caa6d2233ec9" released="2019-10-15" stability="testing" version="0.9.0-rc1">
+      <manifest-digest sha256new="W2Q7PXPHHXERC3O7GYAYZBEEIMUMYYCBASS2ZMUYVKXSVVR3LWTQ"/>
+      <archive href="https://github.com/docker/app/releases/download/v0.9.0-zeta1/docker-app-linux.tar.gz" size="13612245" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group arch="Darwin-x86_64" license="Apache License 2.0">
+    <command name="run" path="docker-app-plugin-darwin">
+      <arg>app</arg>
+    </command>
+    <implementation id="sha1new=7e4851cba273f469c617519c4ef4ce6a6d3543ae" released="2019-04-18" stability="testing" version="0.8.0-pre1">
+      <manifest-digest sha256new="N36YL3HNESG2IJBKPIJFXX6GE6XXSOSFFU7CACQZKHUMRYPNWPEA"/>
+      <archive href="https://github.com/docker/app/releases/download/v0.8.0-beta1/docker-app-darwin.tar.gz" size="26258419" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=42e2dc6fa13a03f188e36bf0fa0ca59c9bf8465d" released="2019-04-26" stability="testing" version="0.8.0-pre2">
+      <manifest-digest sha256new="RK5KDFCOI4HUS3HJK5PTYEWOWCYRVFZOTLF3H5KXL6S7TWUGV22A"/>
+      <archive href="https://github.com/docker/app/releases/download/v0.8.0-beta2/docker-app-darwin.tar.gz" size="26283506" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=ce0070789161a00a5f66b472458c473a392402eb" released="2019-05-24" stability="testing" version="0.8.0-rc1">
+      <manifest-digest sha256new="6NADBP3QCF2DZKC2RJGUJPJ7ZXAQATT6ZELAE453LTB2F5AQHDEQ"/>
+      <archive href="https://github.com/docker/app/releases/download/v0.8.0-rc1/docker-app-darwin.tar.gz" size="25447089" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=a8d7d6a209b490871e958ace5df5ef16fc3ecfe8" released="2019-06-11" stability="testing" version="0.8.0">
       <manifest-digest sha256new="RU2NRME6CTLBKPSSQAYJJMKHYNPQNH654OCHZPWADYVYSTXM76FQ"/>
       <archive href="https://github.com/docker/app/releases/download/v0.8.0/docker-app-darwin.tar.gz" size="25459546" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=20530256e8fd8f5a181f253fd002b9e197f09185" released="2019-10-15" stability="testing" version="0.9.0-rc1">
+      <manifest-digest sha256new="JLC7ZMU2I2KVJ7B4NBPVLKMOUJFGTXLIISQO6EXTKUYX6DIGKWDQ"/>
+      <archive href="https://github.com/docker/app/releases/download/v0.9.0-zeta1/docker-app-darwin.tar.gz" size="14658505" type="application/x-compressed-tar"/>
     </implementation>
   </group>
 

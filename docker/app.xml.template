@@ -7,16 +7,31 @@
 
   <feed-for interface="http://repo.roscidus.com/docker/app"/>
 
-  <group license="Apache License 2.0">
-    <implementation arch="Windows-x86_64" version="{version}" stability="{stability}" released="{released}" main="docker-app-windows.exe">
+  <group arch="Windows-x86_64" license="Apache License 2.0">
+    <command name="run" path="docker-app-plugin-windows.exe">
+      <arg>app</arg>
+    </command>
+    <implementation version="{version}" stability="{stability}" released="{released}">
       <manifest-digest/>
       <archive href="https://github.com/docker/app/releases/download/v{version-original}/docker-app-windows.tar.gz" type="application/x-compressed-tar"/>
     </implementation>
-    <implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}" main="docker-app-linux">
+  </group>
+
+  <group arch="Linux-x86_64" license="Apache License 2.0">
+    <command name="run" path="docker-app-plugin-linux">
+      <arg>app</arg>
+    </command>
+    <implementation version="{version}" stability="{stability}" released="{released}">
       <manifest-digest/>
       <archive href="https://github.com/docker/app/releases/download/v{version-original}/docker-app-linux.tar.gz" type="application/x-compressed-tar"/>
     </implementation>
-    <implementation arch="Darwin-x86_64" version="{version}" stability="{stability}" released="{released}" main="docker-app-darwin">
+  </group>
+
+  <group arch="Darwin-x86_64" license="Apache License 2.0">
+    <command name="run" path="docker-app-plugin-darwin">
+      <arg>app</arg>
+    </command>
+    <implementation version="{version}" stability="{stability}" released="{released}" >
       <manifest-digest/>
       <archive href="https://github.com/docker/app/releases/download/v{version-original}/docker-app-darwin.tar.gz" type="application/x-compressed-tar"/>
     </implementation>

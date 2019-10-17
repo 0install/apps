@@ -4,7 +4,7 @@ import json
 def convert(release):
     return {
         'version-original': release['tag_name'].strip('v'),
-        'version': release['tag_name'].strip('v').replace('beta', 'pre'),
+        'version': release['tag_name'].strip('v').replace('beta', 'pre').replace('zeta', 'rc'),
         'stability': 'testing' if release['prerelease'] else 'stable',
         'released': release['published_at'][0:10]
     }

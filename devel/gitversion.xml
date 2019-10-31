@@ -170,5 +170,33 @@
     </implementation>
   </group>
 
+  <group arch="Windows-x86_64" license="MIT License">
+    <command name="run" path="GitVersion.exe"/>
+    <implementation id="sha1new=6e12267b712dc2e59222335bb781e5203ab51fe8" released="2019-10-28" stability="stable" version="5.1.1">
+      <manifest-digest sha256new="J46LDGOSB4W3GIJ5YZQCIROVALVABIB5W4HDNUEVODGS5Q2MX3WQ"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.1.1/gitversion-windows-5.1.1.tar.gz" size="19010809" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group arch="Linux-x86_64" license="MIT License">
+    <command name="run" path="GitVersion"/>
+    <requires interface="http://repo.roscidus.com/lib/icu"/>
+    <requires interface="http://repo.roscidus.com/lib/curl"/>
+
+    <implementation id="sha1new=04c51a41fa9430285095468363413b5feb6f2195" released="2019-10-28" stability="stable" version="5.1.1">
+      <manifest-digest sha256new="5ATXUA6ILV3Q7VRO7GP7M6FZVKFSDHSO6H6AO4QUVGR7T4WETSXA"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.1.1/gitversion-linux-5.1.1.tar.gz" size="18117187" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group arch="Darwin-x86_64" license="MIT License">
+    <command name="run" path="GitVersion"/>
+
+    <implementation id="sha1new=04104881114b3a7b26e881a357cfc1a77e6e3b52" released="2019-10-28" stability="stable" version="5.1.1">
+      <manifest-digest sha256new="UGWVHARJ5ZV4T5YX2FBV7ODBUY442YZDBX2XYXJ2JZYG6US4SJ2A"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.1.1/gitversion-osx-5.1.1.tar.gz" size="17960860" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
   <entry-point binary-name="GitVersion" command="run"/>
 </interface>

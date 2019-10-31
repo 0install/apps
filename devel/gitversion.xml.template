@@ -9,25 +9,29 @@
 
   <feed-for interface="http://repo.roscidus.com/devel/gitversion"/>
 
-  <group arch="Windows-*" license="MIT License">
-    <command name="run" path="GitVersion.exe">
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/clr" version="4.0.."/>
-    </command>
+  <group arch="Windows-x86_64" license="MIT License">
+    <command name="run" path="GitVersion.exe"/>
 
     <implementation version="{version}" released="{released}" stability="{stability}">
-      <archive href="https://github.com/GitTools/GitVersion/releases/download/{original-version}/GitVersion-bin-fullfx-v{original-version}.zip" type="application/zip"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/{original-version}/gitversion-windows-{original-version}.tar.gz" type="application/x-compressed-tar"/>
     </implementation>
   </group>
 
-  <group arch="POSIX-*" license="MIT License">
-    <command name="run" path="GitVersion.dll">
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/core" version="2.0.."/>
-    </command>
+  <group arch="Linux-x86_64" license="MIT License">
+    <command name="run" path="GitVersion"/>
     <requires interface="http://repo.roscidus.com/lib/icu"/>
     <requires interface="http://repo.roscidus.com/lib/curl"/>
 
     <implementation version="{version}" released="{released}" stability="{stability}">
-      <archive href="https://github.com/GitTools/GitVersion/releases/download/{original-version}/GitVersion-bin-corefx-v{original-version}.zip" type="application/zip"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/{original-version}/gitversion-linux-{original-version}.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group arch="Darwin-x86_64" license="MIT License">
+    <command name="run" path="GitVersion"/>
+
+    <implementation version="{version}" released="{released}" stability="{stability}">
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/{original-version}/gitversion-osx-{original-version}.tar.gz" type="application/x-compressed-tar"/>
     </implementation>
   </group>
 </interface>

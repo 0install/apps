@@ -1,4 +1,3 @@
-$ErrorActionPreference = "Stop"
 pushd $PSScriptRoot
 
 if ((Split-Path $(pwd) -Leaf) -ne "feeds") {
@@ -22,7 +21,6 @@ $files = (ls -Recurse -Filter *.watch.py -Exclude go-linux.watch.py,go-darwin.wa
 foreach ($file in $files) {
     echo "Running $file"
     cmd /c "0install run --batch http://0install.de/feeds/0watch.xml --output ..\incoming $file 2>&1" # Redirect stderr to stdout
-    if ($LASTEXITCODE -ne 0) {throw "Failed with exit code $LASTEXITCODE"}
 }
 
 popd

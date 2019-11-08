@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 cd `dirname $0`
 
 if [[ "$(basename $(pwd))" != "feeds" ]]; then 

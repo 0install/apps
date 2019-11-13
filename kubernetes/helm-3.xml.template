@@ -9,6 +9,7 @@
   <feed-for interface="http://repo.roscidus.com/kubernetes/helm-3"/>
 
   <group license="Apache License 2.0">
+    <environment name="HELMFILE_HELM3" mode="replace" value="1"/>
     <group>
       <command name="run" path="helm"/>
       <implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}">

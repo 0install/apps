@@ -1,0 +1,422 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/lib/tiff" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Tiff</name>
+  <summary xml:lang="en">Tiff: library and tools for TIFF images</summary>
+  <description xml:lang="en">This software provides support for the Tag Image File Format (TIFF), a widely used format for storing image data. The latest version of the TIFF specification is available on-line in several different formats, as are a number of Technical Notes (TTN's). 
+
+Included in this software distribution is a library, libtiff, for reading and writing TIFF, a small collection of tools for doing simple manipulations of TIFF images on UNIX systems, and documentation on the library and tools. A small assortment of TIFF-related software for UNIX that has been contributed by others is also included. 
+
+The library, along with associated tool programs, should handle most of your needs for reading and writing TIFF images on 32- and 64-bit machines. This software can also be used on older 16-bit systems though it may require some effort and you may need to leave out some of the compression support. 
+
+The GnuWin32 distribution comes in two versions. The ordinary version uses the standard Unix equivalents, such as fopen and read, for input and output, the other version (Tiff-win32&lt;http://gnuwin32.sourceforge.net/packages/tiff-win32.htm&gt;) uses the Win32 API functions, such as CreateFile and ReadFile, for input and output. The ordinary version (Tiff&lt;http://gnuwin32.sourceforge.net/packages/tiff.htm&gt;) is more suitable for porting Unix programs, the Win32-API version is more suitable for writing Win32 programs. 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/tiff.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/tiff.png" type="image/png"/>
+  <category>Graphics</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/tiff.htm</homepage>
+  <needs-terminal/>
+  <group arch="Windows-i486" license="libtiff" released="2006-03-28" version="3.8.2-1">
+    <requires interface="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/jpeg.xml" version="6-4-1">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/zlib.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/tiffinfo.exe"/>
+    <command name="addtiffo" path="bin/addtiffo.exe"/>
+    <command name="bmp2tiff" path="bin/bmp2tiff.exe"/>
+    <command name="fax2ps" path="bin/fax2ps.exe"/>
+    <command name="fax2tiff" path="bin/fax2tiff.exe"/>
+    <command name="gif2tiff" path="bin/gif2tiff.exe"/>
+    <command name="iptcutil" path="bin/iptcutil.exe"/>
+    <command name="pal2rgb" path="bin/pal2rgb.exe"/>
+    <command name="ppm2tiff" path="bin/ppm2tiff.exe"/>
+    <command name="ras2tiff" path="bin/ras2tiff.exe"/>
+    <command name="raw2tiff" path="bin/raw2tiff.exe"/>
+    <command name="rgb2ycbcr" path="bin/rgb2ycbcr.exe"/>
+    <command name="thumbnail" path="bin/thumbnail.exe"/>
+    <command name="tiff-bi" path="bin/tiff-bi.exe"/>
+    <command name="tiff-grayscale" path="bin/tiff-grayscale.exe"/>
+    <command name="tiff-palette" path="bin/tiff-palette.exe"/>
+    <command name="tiff-rgb" path="bin/tiff-rgb.exe"/>
+    <command name="tiff2bw" path="bin/tiff2bw.exe"/>
+    <command name="tiff2pdf" path="bin/tiff2pdf.exe"/>
+    <command name="tiff2ps" path="bin/tiff2ps.exe"/>
+    <command name="tiff2rgba" path="bin/tiff2rgba.exe"/>
+    <command name="tiffcmp" path="bin/tiffcmp.exe"/>
+    <command name="tiffcp" path="bin/tiffcp.exe"/>
+    <command name="tiffdither" path="bin/tiffdither.exe"/>
+    <command name="tiffdump" path="bin/tiffdump.exe"/>
+    <command name="tiffmedian" path="bin/tiffmedian.exe"/>
+    <command name="tiffset" path="bin/tiffset.exe"/>
+    <command name="tiffsplit" path="bin/tiffsplit.exe"/>
+    <command name="ycbcr" path="bin/ycbcr.exe"/>
+  <implementation id="sha1new=604da8a5ebc2bb6faef79a2d4c31472ab44d1bc9" version="3.8.2-1-3">
+    <command name="fax2png" path="bin/fax2png.exe">
+    <requires interface="http://repo.roscidus.com/lib/png12-0" version="1.2.8..!1.2.37">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    </command>
+    <!--command name="sgi2tiff" path="bin/sgi2tiff.exe">
+    <requires interface="http://repo.roscidus.com/utils/sgitools">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    </command-->
+    <command name="tiffgt" path="bin/tiffgt.exe">
+      <requires interface="http://repo.roscidus.com/lib/glut">
+        <environment insert="." name="PATH"/>
+      </requires>
+    </command>
+    <manifest-digest sha256new="J65BOHAOMQYFR32BJBPZCDFHLFEG7P3WERE5HCRLVPA77C2U4EXQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/tiff/3.8.2-1/tiff-3.8.2-1-bin.zip" size="687244" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/tiff-bin.zip?raw=true" size="687244" type="application/zip"/>
+  </implementation>
+  <implementation id="nodeps" version="3.8.2-1-1">
+    <manifest-digest sha256new="J65BOHAOMQYFR32BJBPZCDFHLFEG7P3WERE5HCRLVPA77C2U4EXQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/tiff/3.8.2-1/tiff-3.8.2-1-bin.zip" size="687244" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/tiff-bin.zip?raw=true" size="687244" type="application/zip"/>
+  </implementation>
+  </group>
+  <package-implementation distributions="Gentoo" package="media-libs/tiff"/>
+  <package-implementation package="tiff"/>
+  <entry-point binary-name="tiffinfo" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">Tiffinfo</name>
+    <summary xml:lang="en">print information about TIFF files</summary>
+    <description xml:lang="en">Tiffinfo   displays   information  about  files  created
+       according to the Tag Image File  Format,  Revision  6.0.
+       By  default, the contents of each TIFF directory in each
+       file is displayed, with the value of each tag shown sym-
+       bolically (where sensible).</description>
+  </entry-point>
+  <entry-point binary-name="addtiffo" command="addtiffo">
+    <needs-terminal/>
+    <name xml:lang="en">Addtiffo</name>
+    <summary xml:lang="en">Addtiffo: add overview pyramids to an existing TIFF or GeoTIFF file </summary>
+  </entry-point>
+  <entry-point binary-name="bmp2tiff" command="bmp2tiff">
+    <needs-terminal/>
+    <name xml:lang="en">Bmp2tiff</name>
+    <summary xml:lang="en">Bmp2tiff: create a TIFF file from a Microsoft Windows Device Independent Bitmap image file </summary>
+    <description xml:lang="en">bmp2tiff converts a Microsoft Windows Device Independent
+       Bitmap image file to TIFF.  If several input  BMP  files
+       are  being specified the multipage TIFF output file will
+       be created. By default, the TIFF image is  created  with
+       data  samples packed (PlanarConfiguration=1), compressed
+       with the  PackBits  algorithm  (Compression=32773),  and
+       with each strip no more than 8 kilobytes.  These charac-
+       teristics can overridden, or explicitly  specified  with
+       the options described below.</description>
+  </entry-point>
+  <entry-point binary-name="fax2png" command="fax2png">
+    <needs-terminal/>
+    <name xml:lang="en">Fax2Png</name>
+    <summary xml:lang="en">Fax2png: 1-bit multipage TIFF (fax) to PNG image converter</summary>
+    <description xml:lang="en">fax2png Extracts a specified page from a 1-bit black and
+     white TIFF image, such as a fax, and efficiently converts
+     it to PNG format without the performance overhead of
+     netpbm-based solutions. Antialiasing is supported to pro-
+     duce attractive reductions to typical web browser widths,
+     as in the example above. 90-degree-interval rotations and
+     flips are also supported. While all of the above can be
+     performed with netpbm and related utilities, fax2png is
+     much more efficient in time and memory usage.</description>
+    <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/fax2png.png" type="image/png"/>
+    <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/fax2png.ico" type="image/vnd.microsoft.icon"/>
+  </entry-point>
+  <entry-point binary-name="fax2ps" command="fax2ps">
+    <needs-terminal/>
+    <name xml:lang="en">Fax2ps</name>
+    <summary xml:lang="en">Fax2ps: convert a TIFF facsimile to compressed POSTSCRIPT </summary>
+    <description xml:lang="en">fax2ps  reads one or more TIFF facsimile image files and
+       prints a compressed form of
+        on the standard output that is suitable for printing.</description>
+  </entry-point>
+  <entry-point binary-name="fax2tiff" command="fax2tiff">
+    <needs-terminal/>
+    <name xml:lang="en">Fax2tiff</name>
+    <summary xml:lang="en">Fax2tiff: create a TIFF Class F fax file from raw fax data </summary>
+    <description xml:lang="en">Fax2tiff creates a TIFF file containing CCITT Group 3 or
+       Group  4  encoded data from one or more files containing
+       ``raw'' Group 3  or  Group  4  encoded  data  (typically
+       obtained  directly  from a fax modem).  By default, each
+       row of data in the resultant TIFF file  is  1-dimension-
+       ally  encoded and padded or truncated to 1728 pixels, as
+       needed.  The resultant image is a set of low  resolution
+       (98  lines/inch)  or  medium resolution (196 lines/inch)
+       pages, each of which is a single  strip  of  data.   The
+       generated file conforms to the TIFF Class F (FAX) speci-
+       fication for storing facsimile  data.   This  means,  in
+       particular,  that each page of the data does not include
+       the trailing return to control (RTC) code;  as  required
+       for  transmission  by  the CCITT Group 3 specifications.
+       The old, ``classic'', format is created if the -c option
+       is used.  (The Class F format can also be requested with
+       the -f option.)</description>
+  </entry-point>
+  <entry-point binary-name="gif2tiff" command="gif2tiff">
+    <needs-terminal/>
+    <name xml:lang="en">Gif2tiff</name>
+    <summary xml:lang="en">Gif2tiff: create a TIFF file from a GIF87 format image file </summary>
+    <description xml:lang="en">Gif2tiff converts a file in the GIF87  format  to  TIFF.
+       The  TIFF image is created as a palette image, with sam-
+       ples compressed with the Lempel-Ziv  &amp;  Welch  algorithm
+       (Compression=5).   These characteristics can overridden,
+       or  explicitly  specified  with  the  options  described
+       below.</description>
+  </entry-point>
+  <entry-point binary-name="iptcutil" command="iptcutil">
+    <needs-terminal/>
+    <name xml:lang="en">Iptcutil</name>
+    <summary xml:lang="en">Iptcutil: convert between IPTC binary and a special IPTC text file format </summary>
+  </entry-point>
+  <entry-point binary-name="pal2rgb" command="pal2rgb">
+    <needs-terminal/>
+    <name xml:lang="en">Pal2rgb</name>
+    <summary xml:lang="en">Pal2rgb: convert a palette color TIFF image to a full color image </summary>
+    <description xml:lang="en">Pal2rgb converts a palette color TIFF image  to  a  full
+       color  image  by  applying  the  colormap of the palette
+       image to each sample to generate a full color RGB image.</description>
+  </entry-point>
+  <entry-point binary-name="ppm2tiff" command="ppm2tiff">
+    <needs-terminal/>
+    <name xml:lang="en">Ppm2tiff</name>
+    <summary xml:lang="en">Ppm2tiff: create a TIFF file from a PPM image file </summary>
+    <description xml:lang="en">ppm2tiff converts a file in the PPM, PGM and  PBM  image
+       formats  to TIFF.  By default, the TIFF image is created
+       with data samples packed  (PlanarConfiguration=1),  com-
+       pressed with the Packbits algorithm (Compression=32773),
+       and with each strip no  more  than  8  kilobytes.  These
+       characteristics  can be overridden, or explicitly speci-
+       fied with the options described below
+</description>
+  </entry-point>
+  <entry-point binary-name="ras2tiff" command="ras2tiff">
+    <needs-terminal/>
+    <name xml:lang="en">Ras2tiff</name>
+    <summary xml:lang="en">Ras2tiff: create a TIFF file from a Sun rasterfile </summary>
+    <description xml:lang="en">ras2tiff converts a file in the Sun rasterfile format to
+       TIFF.  By default, the TIFF image is created  with  data
+       samples  packed (PlanarConfiguration=1), compressed with
+       the Lempel-Ziv &amp; Welch  algorithm  (Compression=5),  and
+       with each strip no more than 8 kilobytes.  These charac-
+       teristics can overridden, or explicitly  specified  with
+       the options described below.</description>
+  </entry-point>
+  <entry-point binary-name="raw2tiff" command="raw2tiff">
+    <needs-terminal/>
+    <name xml:lang="en">Raw2tiff</name>
+    <summary xml:lang="en">Raw2tiff: create a TIFF file from a raw data </summary>
+    <description xml:lang="en">raw2tiff  converts  a  raw  byte sequence into TIFF.  By
+       default, the TIFF image is  created  with  data  samples
+       packed   (PlanarConfiguration=1),  compressed  with  the
+       PackBits algorithm (Compression=32773),  and  with  each
+       strip  no  more than 8 kilobytes.  These characteristics
+       can overridden, or explicitly specified with the options
+       described below.
+</description>
+  </entry-point>
+  <entry-point binary-name="rgb2ycbcr" command="rgb2ycbcr">
+    <needs-terminal/>
+    <name xml:lang="en">Rgb2ycbcr</name>
+    <summary xml:lang="en">Rgb2ycbcr: convert non-YCbCr TIFF images to a YCbCr TIFF image </summary>
+    <description xml:lang="en">rgb2ycbcr converts RGB  color,  greyscale,  or  bi-level
+       TIFF images to YCbCr images by transforming and sampling
+       pixel data. If multiple files are specified on the  com-
+       mand  line  each  source file is converted to a separate
+       directory in the destination file.</description>
+  </entry-point>
+  <entry-point binary-name="sgi2tiff" command="sgi2tiff">
+    <needs-terminal/>
+    <name xml:lang="en">Sgi2tiff</name>
+    <summary xml:lang="en">Sgi2tiff: create a TIFF file from an SGI image file </summary>
+    <description xml:lang="en">sgi2tiff  converts  a  file  in  the SGI image format to
+       TIFF.  By default, the TIFF image is created  with  data
+       samples  packed (PlanarConfiguration=1), compressed with
+       the Lempel-Ziv &amp; Welch  algorithm  (Compression=5),  and
+       with each strip no more than 8 kilobytes.  These charac-
+       teristics can overridden, or explicitly  specified  with
+       the options described below.</description>
+  </entry-point>
+  <entry-point binary-name="thumbnail" command="thumbnail">
+    <needs-terminal/>
+    <name xml:lang="en">Thumbnail</name>
+    <summary xml:lang="en">Thumbnail: create a TIFF file with thumbnail images </summary>
+    <description xml:lang="en">thumbnail is a program written to show how one might use
+       the SubIFD tag (#330) to store thumbnail images.  thumb-
+       nail  copies a TIFF Class F facsimile file to the output
+       file and for each image  an  8-bit  greyscale  thumbnail
+       sketch.   The  output  file contains the thumbnail image
+       with the associated full-resolution  page  linked  below
+       with the SubIFD tag.</description>
+  </entry-point>
+  <entry-point binary-name="tiff-bi" command="tiff-bi">
+    <needs-terminal/>
+    <name xml:lang="en">Tiff-bi</name>
+    <summary xml:lang="en">Tiff-bi: create a Class B (bilevel) TIFF file </summary>
+  </entry-point>
+  <entry-point binary-name="tiff-grayscale" command="tiff-grayscale">
+    <needs-terminal/>
+    <name xml:lang="en">Tiff-grayscale</name>
+    <summary xml:lang="en">Tiff-grayscale: create a Class G (grayscale) TIFF file with a gray response curve in linear optical density </summary>
+  </entry-point>
+  <entry-point binary-name="tiff-palette" command="tiff-palette">
+    <needs-terminal/>
+    <name xml:lang="en">Tiff-palette</name>
+    <summary xml:lang="en">Tiff-palette: create a Class P (palette) TIFF file </summary>
+  </entry-point>
+  <entry-point binary-name="tiff-rgb" command="tiff-rgb">
+    <needs-terminal/>
+    <name xml:lang="en">Tiff-rgb</name>
+    <summary xml:lang="en">Tiff-rgb: create a 24-bit Class R (rgb) TIFF file </summary>
+  </entry-point>
+  <entry-point binary-name="tiff2bw" command="tiff2bw">
+    <needs-terminal/>
+    <name xml:lang="en">Tiff2bw</name>
+    <summary xml:lang="en">Tiff2bw: convert a color TIFF image to greyscale </summary>
+    <description xml:lang="en">Tiff2bw converts an RGB or Palette color TIFF image to a
+       greyscale image by combining  percentages  of  the  red,
+       green,  and  blue  channels.  By default, output samples
+       are created by taking 28% of the red channel, 59% of the
+       green  channel,  and  11% of the blue channel.  To alter
+       these percentages, the -R, -G, and  -B  options  may  be
+       used.</description>
+  </entry-point>
+  <entry-point binary-name="tiff2pdf" command="tiff2pdf">
+    <needs-terminal/>
+    <name xml:lang="en">Tiff2pdf</name>
+    <summary xml:lang="en">Tiff2pdf: convert a TIFF image to a PDF document </summary>
+    <description xml:lang="en">tiff2pdf opens a TIFF image and writes a PDF document to
+       standard output.
+
+       The program converts one TIFF  file  to  one  PDF  file,
+       including  multiple  page  TIFF files, tiled TIFF files,
+       black and white. grayscale, and color  TIFF  files  that
+       contain  data  of  TIFF  photometric  interpretations of
+       bilevel, grayscale, RGB, YCbCr, CMYK separation, and ICC
+       L*a*b* as supported by libtiff and PDF.</description>
+  </entry-point>
+  <entry-point binary-name="tiff2ps" command="tiff2ps">
+    <needs-terminal/>
+    <name xml:lang="en">Tiff2ps</name>
+    <summary xml:lang="en">Tiff2ps: convert a TIFF image to POSTSCRIPT </summary>
+    <description xml:lang="en">tiff2ps  reads  TIFF  images and writes  or Encapsulated
+       (EPS) on  the  standard  output.   By  default,  tiff2ps
+       writes  Encapsulated   for the first image in the speci-
+       fied TIFF image file.</description>
+  </entry-point>
+  <entry-point binary-name="tiff2rgba" command="tiff2rgba">
+    <needs-terminal/>
+    <name xml:lang="en">Tiff2rgba</name>
+    <summary xml:lang="en">Tiff2rgba: convert a TIFF image to RGBA color space </summary>
+    <description xml:lang="en">Tiff2rgba converts a wide variety of TIFF images into an
+       RGBA TIFF image.  This includes the ability to translate
+       different  color  spaces  and photometric interpretation
+       into RGBA, support for alpha blending,  and  translation
+       of many different bit depths into a 32bit RGBA image.</description>
+  </entry-point>
+  <entry-point binary-name="tiffcmp" command="tiffcmp">
+    <needs-terminal/>
+    <name xml:lang="en">Tiffcmp</name>
+    <summary xml:lang="en">Tiffcmp: compare two TIFF files </summary>
+    <description xml:lang="en">Tiffcmp  compares the tags and data in two files created
+       according to the Tagged Image File Format, Revision 6.0.
+       The  schemes  used for compressing data in each file are
+       immaterial when data are compared-data are compared on a
+       scanline-by-scanline  basis  after  decompression.  Most
+       directory tags  are  checked;  notable  exceptions  are:
+       GrayResponseCurve,   ColorResponseCurve,   and  ColorMap
+       tags.  Data will not be compared if any of the  BitsPer-
+       Sample,  SamplesPerPixel,  or  ImageWidth values are not
+       equal.  By default, tiffcmp will terminate if it encoun-
+       ters any difference.</description>
+  </entry-point>
+  <entry-point binary-name="tiffcp" command="tiffcp">
+    <needs-terminal/>
+    <name xml:lang="en">Tiffcp</name>
+    <summary xml:lang="en">Tiffcp: copy (and possibly convert) a TIFF file </summary>
+    <description xml:lang="en">tiffcp  combines  one or more files created according to
+       the Tag Image File Format, Revision 6.0  into  a  single
+       TIFF  file.   Because  the output file may be compressed
+       using a different algorithm than the input files, tiffcp
+       is most often used to convert between different compres-
+       sion schemes.</description>
+  </entry-point>
+  <entry-point binary-name="tiffdither" command="tiffdither">
+    <needs-terminal/>
+    <name xml:lang="en">Tiffdither</name>
+    <summary xml:lang="en">Tiffdither: convert a greyscale image to bilevel using dithering </summary>
+    <description xml:lang="en">tiffdither converts a  single  channel  8-bit  greyscale
+       image  to  a  bilevel  image using Floyd-Steinberg error
+       propagation with thresholding.</description>
+  </entry-point>
+  <entry-point binary-name="tiffdump" command="tiffdump">
+    <needs-terminal/>
+    <name xml:lang="en">Tiffdump</name>
+    <summary xml:lang="en">Tiffdump: print verbatim information about TIFF files </summary>
+    <description xml:lang="en">tiffdump  displays directory information from files cre-
+       ated according to the Tag Image  File  Format,  Revision
+       6.0.   The  header of each TIFF file (magic number, ver-
+       sion, and first directory offset) is displayed, followed
+       by  the tag contents of each directory in the file.  For
+       each tag, the name, data type, count,  and  value(s)  is
+       displayed.   When  the  symbolic  name for a tag or data
+       type is known, the symbolic name is  displayed  followed
+       by  it's  numeric  (decimal) value.  Tag values are dis-
+       played enclosed in ``&lt;&gt;''  characters  immediately  pre-
+       ceded  by the value of the count field.  For example, an
+       ImageWidth tag might be displayed as ``ImageWidth  (256)
+       SHORT (3) 1&lt;800&gt;''.</description>
+  </entry-point>
+  <entry-point binary-name="tiffgt" command="tiffgt">
+    <needs-terminal/>
+    <name xml:lang="en">Tiffgt</name>
+    <summary xml:lang="en">Tiffgt: display an image stored in a TIFF file (Silicon Graphics version) </summary>
+    <description xml:lang="en">tiffgt displays one or more images stored using the  Tag
+       Image  File  Format, Revision 6.0.  Each image is placed
+       in a fixed size window that the user  must  position  on
+       the  display  (unless  configured  otherwise  through  X
+       defaults).  If the display has fewer than 24  bitplanes,
+       or  if  the  image does not warrant full color, then RGB
+       color values are mapped to the closest values that exist
+       in  the  colormap  (this  is done using the rgbi routine
+       found in the graphics utility library -lgutil.)</description>
+  </entry-point>
+  <entry-point binary-name="tiffmedian" command="tiffmedian">
+    <needs-terminal/>
+    <name xml:lang="en">Tiffmedian</name>
+    <summary xml:lang="en">Tiffmedian: apply the median cut algorithm to data in a TIFF file </summary>
+    <description xml:lang="en">tiffmedian applies the median cut algorithm  to  an  RGB
+       image  in  input.tif to generate a palette image that is
+       written to output.tif.  The generated colormap  has,  by
+       default,  256  entries.   The image data is quantized by
+       mapping each pixel to the closest color  values  in  the
+       colormap.</description>
+  </entry-point>
+  <entry-point binary-name="tiffset" command="tiffset">
+    <needs-terminal/>
+    <name xml:lang="en">Tiffset</name>
+    <summary xml:lang="en">Tiffset: read the tag value from file (for ASCII tags only) </summary>
+    <description xml:lang="en">Tiffset  sets  the value of a TIFF header to a specified
+       value.</description>
+  </entry-point>
+  <entry-point binary-name="tiffsplit" command="tiffsplit">
+    <needs-terminal/>
+    <name xml:lang="en">Tiffsplit</name>
+    <summary xml:lang="en">Tiffsplit: split a multi-image TIFF into single-image TIFF files </summary>
+    <description xml:lang="en">tiffsplit takes a multi-directory (page) TIFF  file  and
+       creates  one  or more single-directory (page) TIFF files
+       from it.  The output files are given  names  created  by
+       concatenating  a  prefix,  a lexically ordered suffix in
+       the range [aaa-zzz], the suffix  .tif  (e.g.   xaaa.tif,
+       xaab.tif,  xzzz.tif).   If  a prefix is not specified on
+       the command line, the default prefix of x is used.</description>
+  </entry-point>
+  <entry-point binary-name="ycbcr" command="ycbcr">
+    <needs-terminal/>
+    <name xml:lang="en">Ycbcr</name>
+    <summary xml:lang="en">Ycbcr: library and tools for reading and writing TIFF images</summary>
+  </entry-point>
+</interface>
+

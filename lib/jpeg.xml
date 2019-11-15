@@ -1,0 +1,149 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/lib/jpeg" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Jpeg</name>
+  <summary xml:lang="en">Jpeg: library and tools for JPEG images</summary>
+  <description xml:lang="en">This package contains C software to implement JPEG image compression and decompression. JPEG is a standardized compression method for full-color and gray-scale images. JPEG is intended for &quot;real-world&quot; scenes; cartoons and other non-realistic images are not its strong suit. JPEG is lossy, meaning that the output image is not identical to the input image. The user can trade off output image quality against compressed file size by adjusting a compression parameter. 
+
+The distributed programs provide conversion between JPEG &quot;JFIF&quot; format and image files in PBMPLUS PPM/PGM, GIF, BMP, and Targa file formats. The core compression and decompression library can easily be reused in other programs, such as image viewers. 
+
+Includes EXIF patches from: 
+http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=106060 http://sylvana.net/jpegcrop/exifpatch.html 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/jpeg.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/jpeg.ico" type="image/png"/>
+  <category>Graphics</category>
+  <homepage>https://web.archive.org/web/20171208102837/http://gnuwin32.sourceforge.net/packages/jpeg.htm</homepage>
+  <needs-terminal/>
+  <group arch="Windows-i486" license="BSD License (original)" version="6-4">
+    <command name="jpegexiforient" path="bin/jpegexiforient.exe"/>
+    <command name="jpegtran" path="bin/jpegtran.exe"/>
+    <command name="run" path="bin/rdjpgcom.exe" />
+    <command name="wrjpgcom" path="bin/wrjpgcom.exe"/>
+    <command name="exifautotran" path="bin/exifautotran">
+      <executable-in-path command="jpegexiforient" name="jpegexiforient"/>
+      <executable-in-path command="jpegtran" name="jpegtran"/>
+      <requires interface="http://repo.roscidus.com/utils/coreutils">
+        <executable-in-path command="rm" name="rm"/>
+        <executable-in-path command="mv" name="mv"/>
+      </requires>
+      <runner interface="http://repo.roscidus.com/utils/bash"/>
+    </command>
+    <implementation id="sha1new=5a950b76f802d59d7a031c601e724c250125818e" version="6-4-3">
+      <environment insert="bin" name="PATH"/>
+      <!--command name="cjpeg" path="bin/cjpeg.exe">
+        <requires interface="http://repo.roscidus.com/lib/urt.xml" version="3.1.2.1-2-1">
+          <environment insert="bin" name="PATH"/>
+        </requires>
+      </command>
+      <command name="djpeg" path="bin/djpeg.exe">
+        <requires interface="http://repo.roscidus.com/lib/urt.xml" version="3.1.2.1-2-1">
+          <environment insert="bin" name="PATH"/>
+        </requires>
+      </command-->
+      <manifest-digest sha256new="ODO7ZRQPOXKEF6ECAN6JH6G4W4AH5KOW4OZHABZBBH2IUCR4BTBQ"/>
+      <archive href="https://sourceforge.net/projects/gnuwin32/files/jpeg/6b-4/jpeg-6b-4-bin.zip" size="189242" type="application/zip"/>
+      <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/jpeg-bin.zip?raw=true" size="189242" type="application/zip"/>
+    </implementation>
+    <implementation id="nodeps" version="6-4-1">
+      <manifest-digest sha256new="ODO7ZRQPOXKEF6ECAN6JH6G4W4AH5KOW4OZHABZBBH2IUCR4BTBQ"/>
+      <archive href="https://sourceforge.net/projects/gnuwin32/files/jpeg/6b-4/jpeg-6b-4-bin.zip" size="189242" type="application/zip"/>
+      <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/jpeg-bin.zip?raw=true" size="189242" type="application/zip"/>
+    </implementation>
+  </group>
+  <package-implementation distributions="Gentoo" package="media-libs/jpeg"/>
+  <package-implementation package="jpeg"/>
+  <package-implementation package="libjpeg"/>
+  <entry-point command="cjpeg" binary-name="cjpeg">
+    <needs-terminal/>
+    <name xml:lang="en">cjpeg</name>
+    <summary xml:lang="en">compress an image file to a JPEG file</summary>
+    <description xml:lang="en">cjpeg  compresses  the named image file, or the standard
+       input if no file is named, and produces a JPEG/JFIF file
+       on  the  standard output.  The currently supported input
+       file formats are: PPM (PBMPLUS color format), PGM  (PBM-
+       PLUS  gray-scale  format),  BMP,  Targa,  and  RLE (Utah
+       Raster Toolkit format).  (RLE is supported only  if  the
+       URT library is available.)</description>
+  </entry-point>
+  <entry-point binary-name="djpeg" command="djpeg">
+    <needs-terminal/>
+    <name xml:lang="en">djpeg</name>
+    <summary xml:lang="en">decompress a JPEG file to an image file</summary>
+    <description xml:lang="en">djpeg  decompresses the named JPEG file, or the standard
+       input if no file is named, and produces an image file on
+       the  standard  output.   PBMPLUS  (PPM/PGM),  BMP,  GIF,
+       Targa, or RLE (Utah Raster Toolkit) output format can be
+       selected.   (RLE is supported only if the URT library is
+       available.)</description>
+  </entry-point>
+  <entry-point binary-name="jpegexiforient" command="jpegexiforient">
+    <needs-terminal/>
+    <name xml:lang="en">jpegexiforient</name>
+    <summary xml:lang="en">reads  or writes the Exif Orientation</summary>
+    <description xml:lang="en">This is a utility program to get and set the Exif  Ori-
+       entation Tag.
+        It  can  be  used together with jpegtran in scripts for
+       automatic
+        orientation correction of digital camera pictures.</description>
+  </entry-point>
+  <entry-point binary-name="jpegtran" command="jpegtran">
+    <needs-terminal/>
+    <name xml:lang="en">jpegtran</name>
+    <summary xml:lang="en">lossless transformation of JPEG files</summary>
+    <description xml:lang="en">jpegtran performs various useful transformations of JPEG
+       files.  It can translate the coded  representation  from
+       one  variant  of JPEG to another, for example from base-
+       line JPEG to progressive JPEG or  vice  versa.   It  can
+       also  perform some rearrangements of the image data, for
+       example turning an image from landscape to portrait for-
+       mat by rotation.</description>
+  </entry-point>
+  <entry-point command="run" binary-name="rdjpgcom">
+    <needs-terminal/>
+    <name xml:lang="en">rdjpgcom</name>
+    <summary xml:lang="en">display text comments from a JPEG file</summary>
+    <description xml:lang="en">rdjpgcom reads the named JPEG/JFIF file, or the standard
+       input if no file is named, and prints any text  comments
+       found in the file on the standard output.
+
+       The JPEG standard allows &quot;comment&quot; (COM) blocks to occur
+       within a JPEG file.  Although the standard doesn't actu-
+       ally  define  what  COM  blocks are for, they are widely
+       used to hold user-supplied text strings.  This lets  you
+       add  annotations,  titles, index terms, etc to your JPEG
+       files, and later retrieve them as text.  COM  blocks  do
+       not  interfere  with  the image stored in the JPEG file.
+       The maximum size of a COM block is 64K, but you can have
+       as many of them as you like in one JPEG file.</description>
+  </entry-point>
+  <entry-point binary-name="wrjpgcom" command="wrjpgcom">
+    <needs-terminal/>
+    <name xml:lang="en">wrjpgcom</name>
+    <summary xml:lang="en">insert text comments into a JPEG file</summary>
+    <description xml:lang="en">wrjpgcom reads the named JPEG/JFIF file, or the standard
+       input if no file is named, and generates a new JPEG/JFIF
+       file on standard output.  A comment block  is  added  to
+       the file.
+
+       The JPEG standard allows &quot;comment&quot; (COM) blocks to occur
+       within a JPEG file.  Although the standard doesn't actu-
+       ally  define  what  COM  blocks are for, they are widely
+       used to hold user-supplied text strings.  This lets  you
+       add  annotations,  titles, index terms, etc to your JPEG
+       files, and later retrieve them as text.  COM  blocks  do
+       not  interfere  with  the image stored in the JPEG file.
+       The maximum size of a COM block is 64K, but you can have
+       as many of them as you like in one JPEG file.
+
+       wrjpgcom  adds a COM block, containing text you provide,
+       to a JPEG file.  Ordinarily,  the  COM  block  is  added
+       after  any  existing  COM blocks; but you can delete the
+       old COM blocks if you wish.</description>
+  </entry-point>
+  <entry-point binary-name="exifautotran" command="exifautotran">
+    <needs-terminal/>
+    <name xml:lang="en">exifautotran</name>
+  </entry-point>
+</interface>
+

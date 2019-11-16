@@ -10,12 +10,15 @@ recompiled and issues the commands to recompile them, when necessary.
 The upstream sources for this package are available at the location
 ftp://ftp.gnu.org/gnu/make/. The documentation for this package does not meet
 the Debian Free Software Guidelines, and has been removed from this package.</description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
   <category>Development</category>
   <needs-terminal/>
   <homepage>http://www.gnu.org/software/make/</homepage>
   <package-implementation main="/usr/bin/make" package="make"/>
   <package-implementation distributions="FreeBSD" main="/usr/local/bin/gmake" package="gmake"/>
   <package-implementation distributions="MacPorts" main="/opt/local/bin/gmake" package="gmake"/>
+  <package-implementation distributions="Gentoo" package="sys-devel/make"/>
   <group arch="Linux-i386" license="GPL v2 (GNU General Public License)" main="bin/make">
     <implementation id="sha1new=78fd81f1743ffe1c29f1025d1898b48634a391be" released="2010-04-25" version="3.81-5">
       <archive href="make-i386-3.81-5.tar.bz2" size="317167"/>
@@ -37,7 +40,20 @@ the Debian Free Software Guidelines, and has been removed from this package.</de
         <manifest-digest sha1new="90f22a15896ea14db005aa13b922b187f9fa8067" sha256="63bcce7ce44f11ec38b3f6ddc5f770bbffc5764febe1e8fb65b9f8b29b1d8336" sha256new="MO6M47HEJ4I6YOFT63O4L53QXP74K5SP5PQ6R63FXH4LFGY5QM3A"/>
         <archive href="http://downloads.sourceforge.net/gnuwin32/make-3.81-bin.zip" size="495645" type="application/zip"/>
       </implementation>
-    </group>
-  </group>
 
+    </group>
+    <implementation rch="Windows-i486" license="GPL v2 (GNU General Public License)" id="sha1new=90f22a15896ea14db005aa13b922b187f9fa8067" langs="be da de es fi fr ga gl he hr id ja ko nl pl pt_BR ru rw sv tr uk vi zh_CN" released="2006-11-25" version="3.81-3">
+      <requires interface="http://repo.roscidus.com/lib/libiconv">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/devel/gettext">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <command name="run" path="bin/make.exe"/>
+      <manifest-digest sha256new="MO6M47HEJ4I6YOFT63O4L53QXP74K5SP5PQ6R63FXH4LFGY5QM3A"/>
+      <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/make-bin.zip?raw=true" size="495645" type="application/zip"/>
+      <archive href="https://sourceforge.net/projects/gnuwin32/files/make/3.81/make-3.81-bin.zip" size="495645" type="application/zip"/>
+    </implementation>
+  </group>
+  <entry-point binary-name="make" command="run"/>
 </interface>

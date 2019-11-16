@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/utils/patch" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface uri="http://repo.roscidus.com/devel/patch" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Patch</name>
   <summary xml:lang="en">Patch: apply a diff file to an original</summary>
   <description xml:lang="en">`patch' takes a patch file containing a difference listing produced by diff and applies those differences to one or more original files, producing patched versions. </description>
@@ -22,7 +22,7 @@
     </recipe>
   </implementation>
   <package-implementation distributions="Gentoo" package="sys-devel/patch"/>
-  <package-implementation package="patch"/>
+  <package-implementation package="patch" main="/usr/bin/patch"/>
   <entry-point binary-name="patch" command="run">
     <needs-terminal/>
   </entry-point>

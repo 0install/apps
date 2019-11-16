@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/devel/m4" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>M4</name>
+  <summary xml:lang="en">M4: macro processor</summary>
+  <description xml:lang="en">An implementation of the traditional UNIX macro processor in that it copies its input to the output, expanding macros as it goes. Macros are either built-in or user-defined and can take any number of arguments. M4 also has built-in functions for including named files, running UNIX commands, doing integer arithmetic, manipulating text in various ways, and recursions. 
+
+It can also be used as either a front-end to a compiler or as a macro processor in its own right. It is often used to generate HTML as it can give a consistent look to pages. If GNU `m4' is meant to serve GNU `autoconf', beware that `m4' should be fully installed prior to configuring `autoconf' itself. 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <category>Development</category>
+  <homepage>http://www.gnu.org/software/m4/m4.html</homepage>
+  <needs-terminal/>
+  <package-implementation distributions="Gentoo" package="sys-devel/m4"/>
+  <package-implementation package="m4" main="/user/bin/m4"/>
+  <implementation arch="Windows-i486" id="sha1new=c32c028821f4147b50bdd1128659ceb5769e65db" license="GPL v3 (GNU General Public License)" released="2010-05-26" version="1.4.14-1-3">
+    <requires interface="http://repo.roscidus.com/lib/regex">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/m4.exe"/>
+    <manifest-digest sha256new="2AKDWISLYN3H4MCEXTNJ54CQAQGQOWYAM6KB3KA5EJAXS4OINBAQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/m4/1.4.14-1/m4-1.4.14-1-bin.zip" size="107181" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/m4-1.4.14-1-bin.zip?raw=true" size="107181" type="application/zip"/>
+  </implementation>
+  <entry-point binary-name="m4" command="run">
+    <needs-terminal/>
+  </entry-point>
+</interface>

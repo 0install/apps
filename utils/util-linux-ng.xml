@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/utils/util-linux-ng" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>util-linux-ng</name>
+  <summary xml:lang="en">Util-Linux: various system utilities</summary>
+  <description xml:lang="en">Util-Linux contains miscellaneous utilities: 
+•col: filter reverse line feeds from input 
+•colcrt: filter nroff output for CRT previewing 
+•colrm: remove columns from a file 
+•ddate: converts Gregorian dates to Discordian dates 
+•getopt: parse command options (enhanced) 
+•hexdump: ascii, decimal, hexadecimal, octal dump 
+•line: read one line 
+•rename: rename files 
+•rev: reverse lines of a file or files 
+•tailf: follow the growth of a log file 
+•whereis: locate the binary, source, and manual page files for a command 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/util-linux-ng.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/util-linux-ng.png" type="image/png"/>
+  <category>Utility</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/util-linux-ng.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-i486" id="sha1new=c120c11be458d7bc0cccbe921001cc34fb4b2d1a" langs="ca cs da de es eu fi fr hu id it ja nl pl pt_BR ru sl sv tr uk vi zh_CN" license="GPL v2 (GNU General Public License)" released="2008-09-28" version="2.14.1-3">
+    <requires interface="http://repo.roscidus.com/devel/gettext">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/whereis.exe"/>
+    <command name="col" path="bin/col.exe"/>
+    <command name="colcrt" path="bin/colcrt.exe"/>
+    <command name="colrm" path="bin/colrm.exe"/>
+    <command name="ddate" path="bin/ddate.exe"/>
+    <command name="getopt" path="bin/getopt.exe"/>
+    <command name="hexdump" path="bin/hexdump.exe"/>
+    <command name="line" path="bin/line.exe"/>
+    <command name="rename" path="bin/rename.exe"/>
+    <command name="rev" path="bin/rev.exe"/>
+    <command name="tailf" path="bin/tailf.exe"/>
+    <manifest-digest sha256new="U34HY6RTCSNIRONL4IQEPC2HU7LOIRLOKX4LQUQDCNT4CPNBGTFA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/util-linux/2.14.1/util-linux-ng-2.14.1-bin.zip" size="1588160" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/util-linux-ng-2.14.1-bin.zip?raw=true" size="1588160" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="sys-apps/util-linux"/>
+  <package-implementation package="util-linux"/>
+  <entry-point binary-name="whereis" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">whereis</name>
+    <summary xml:lang="en">whereis: locate the binary, source, and manual page files for a command</summary>
+  </entry-point>
+  <entry-point binary-name="col" command="col">
+    <needs-terminal/>
+    <name xml:lang="en">Col</name>
+    <summary xml:lang="en">Col: filter reverse line feeds from input </summary>
+  </entry-point>
+  <entry-point binary-name="colcrt" command="colcrt">
+    <needs-terminal/>
+    <name xml:lang="en">Colcrt</name>
+    <summary xml:lang="en">Colcrt: filter nroff output for CRT previewing </summary>
+  </entry-point>
+  <entry-point binary-name="colrm" command="colrm">
+    <needs-terminal/>
+    <name xml:lang="en">Colrm</name>
+    <summary xml:lang="en">Colrm: remove columns from a file </summary>
+  </entry-point>
+  <entry-point binary-name="ddate" command="ddate">
+    <needs-terminal/>
+    <name xml:lang="en">Ddate</name>
+    <summary xml:lang="en">Ddate: converts Gregorian dates to Discordian dates </summary>
+  </entry-point>
+  <entry-point binary-name="getopt" command="getopt">
+    <needs-terminal/>
+    <name xml:lang="en">Getopt</name>
+    <summary xml:lang="en">Getopt: parse command options (enhanced) </summary>
+  </entry-point>
+  <entry-point binary-name="hexdump" command="hexdump">
+    <needs-terminal/>
+    <name xml:lang="en">Hexdump</name>
+    <summary xml:lang="en">Hexdump: ascii, decimal, hexadecimal, octal dump </summary>
+  </entry-point>
+  <entry-point binary-name="line" command="line">
+    <needs-terminal/>
+    <name xml:lang="en">Line</name>
+    <summary xml:lang="en">Line: read one line</summary>
+  </entry-point>
+  <entry-point binary-name="rename" command="rename">
+    <needs-terminal/>
+    <name xml:lang="en">Rename</name>
+    <summary xml:lang="en">Rename: rename files </summary>
+  </entry-point>
+  <entry-point binary-name="rev" command="rev">
+    <needs-terminal/>
+    <name xml:lang="en">Rev</name>
+    <summary xml:lang="en">Rev: reverse lines of a file or files </summary>
+  </entry-point>
+  <entry-point binary-name="tailf" command="tailf">
+    <needs-terminal/>
+    <name xml:lang="en">Tailf</name>
+    <summary xml:lang="en">Tailf: follow the growth of a log file</summary>
+  </entry-point>
+</interface>

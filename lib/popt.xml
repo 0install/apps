@@ -1,16 +1,27 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="http://repo.roscidus.com/lib/popt" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
-  <name>popt</name>
-  <summary xml:lang="en">Popt: parse command line options</summary>
-  <description xml:lang="en">The popt library exists essentially for parsing commandline options. It is found superior in many ways when compared to parsing the argv array by hand or using the getopt functions getopt() and getopt_long() [see getopt(3)]. Some specific advantages of popt are: it does not utilize global variables, thus enabling multiple passes in parsing argv ; it can parse an arbitrary array of argv-style elements, allowing parsing of command -line-strings from any source; it provides a standard method of option aliasing (to be discussed at length below.); it can exec external option filters; and, finally, it can automatically generate help and usage messages for the application. </description>
-  <category>Development</category>
-  <homepage>http://gnuwin32.sourceforge.net/packages/popt.htm</homepage>
-  <needs-terminal/>
+  <<name>libpopt0</name>
+  <summary>lib for parsing cmdline parameters</summary>
+  <description>Popt was heavily influenced by the getopt() and getopt_long() functions,
+but it allows more powerful argument expansion. It can parse arbitrary
+argv[] style arrays and automatically set variables based on command
+line arguments. It also allows command line arguments to be aliased via
+configuration files and includes utility functions for parsing arbitrary
+strings into argv[] arrays using shell-like rules.
+
+This package contains the runtime library and locale data.</description>
+  <package-implementation package="libpopt0"/>
+  <package-implementation distributions="Gentoo" package="dev-libs/popt"/>
+  <package-implementation package="popt"/>
+  <implementation arch="Linux-i386" id="sha1new=362577ba8014c27fa70d458512af35b56cdf5ea6" released="2012-05-26" version="1.16-1">
+      <archive href="libpopt0-i386-1.16-1.tar.bz2" size="51588"/>
+  </implementation>
+  <implementation arch="Linux-x86_64" id="sha1new=856e07e63b6130b96ab39bf8dfc3ac5e3d18db96" released="2012-05-26" version="1.16-1">
+      <archive href="libpopt0-amd64-1.16-1.tar.bz2" size="53008"/>
+  </implementation>
   <implementation arch="Windows-i486" id="sha1new=d5bbadb4937a12bc359ec5a7b8b31386fddda0e3" langs="cs da de es eu_ES fi fr hu id is it ja ko no pl pt pt_BR ro ru sk sl sr sv tr uk zh zh_CN" license="MIT/X Consortium License" released="2003-10-04" version="1.8-1">
     <manifest-digest sha256new="JRTMSSV7YTHKUEVJRAYQ2JMEGEDB2MVMQTRSGRLWNDAT32EOTFOA"/>
     <archive href="https://sourceforge.net/projects/gnuwin32/files/popt/1.8-1/popt-1.8-1-bin.zip" size="66976" type="application/zip"/>
   </implementation>
-  <package-implementation distributions="Gentoo" package="dev-libs/popt"/>
-  <package-implementation package="popt"/>
 </interface>

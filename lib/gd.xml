@@ -1,0 +1,152 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/lib/gd" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Gd</name>
+  <summary xml:lang="en">Gd: graphics library for fast image creation</summary>
+  <description xml:lang="en">gd is a graphics library. It allows your code to quickly draw images complete with lines, arcs, text, multiple colors, cut and paste from other images, and flood fills, and write out the result as a PNG or JPEG file. This is particularly useful in World Wide Web applications, where PNG and JPEG are two of the formats accepted for inline images by most browsers. 
+
+gd is not a paint program. If you are looking for a paint program, you are looking in the wrong place. If you are not a programmer, you are looking in the wrong place, unless you are installing a required library in order to run an application. 
+
+gd does not provide for every possible desirable graphics operation. It is not necessary or desirable for gd to become a kitchen-sink graphics package, but version 2.0 does include most frequently requested features, including both truecolor and palette images, resampling (smooth resizing of truecolor images) and so forth. 
+</description>
+  <icon href="http://repo.roscidus.com/lib/gd.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="http://repo.roscidus.com/lib/gd.png" type="image/png"/>
+  <category>Graphics</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/gd.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-i486" id="sha1new=8b9b94c0478d296b8b88d7d12642014d45895494" license="gd, IJG, HPND, BSD License (revised)" released="2005-08-26" version="2.0.33-1-3">
+    <requires interface="http://repo.roscidus.com/devel/freetype">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="http://repo.roscidus.com/lib/jpeg"  version="6-4-1">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="http://repo.roscidus.com/lib/libiconv">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="http://repo.roscidus.com/lib/png12-0" version="1.2.8..!1.2.37">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <!--requires interface="http://repo.roscidus.com/lib/xpm">
+      <environment insert="bin" name="PATH"/>
+    </requires-->
+    <requires interface="http://repo.roscidus.com/lib/zlib">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/gdtest.exe"/>
+    <command name="annotate" path="bin/annotate.exe"/>
+    <command name="circletexttest" path="bin/circletexttest.exe"/>
+    <command name="fontconfigtest" path="bin/fontconfigtest.exe"/>
+    <command name="fontsizetest" path="bin/fontsizetest.exe"/>
+    <command name="fontwheeltest" path="bin/fontwheeltest.exe"/>
+    <command name="gd2copypal" path="bin/gd2copypal.exe"/>
+    <command name="gd2time" path="bin/gd2time.exe"/>
+    <command name="gd2togif" path="bin/gd2togif.exe"/>
+    <command name="gd2topng" path="bin/gd2topng.exe"/>
+    <command name="gdcmpgif" path="bin/gdcmpgif.exe"/>
+    <command name="gddemo" path="bin/gddemo.exe"/>
+    <command name="gdparttopng" path="bin/gdparttopng.exe"/>
+    <command name="gdtestft" path="bin/gdtestft.exe"/>
+    <command name="gdtopng" path="bin/gdtopng.exe"/>
+    <command name="gifanimtest" path="bin/gifanimtest.exe"/>
+    <command name="giftogd2" path="bin/giftogd2.exe"/>
+    <command name="pngtogd" path="bin/pngtogd.exe"/>
+    <command name="pngtogd2" path="bin/pngtogd2.exe"/>
+    <command name="testac" path="bin/testac.exe"/>
+    <command name="testtr" path="bin/testtr.exe"/>
+    <command name="webpng" path="bin/webpng.exe"/>
+    <manifest-digest sha256new="4Q6POERRAHI545S7BVPW7QNZSEMY2OSZ5STQFG7YUODJEITGUH4Q"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/gd/2.0.33-1/gd-2.0.33-1-bin.zip" size="180621" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/gd-bin.zip?raw=true" size="180621" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="media-libs/gd"/>
+  <package-implementation package="gd"/>
+  <entry-point binary-name="gdtest" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">gdtest</name>
+  </entry-point>
+  <entry-point binary-name="annotate" command="annotate">
+    <needs-terminal/>
+    <summary xml:lang="en"/>
+  </entry-point>
+  <entry-point binary-name="circletexttest" command="circletexttest">
+    <needs-terminal/>
+    <summary xml:lang="en"/>
+  </entry-point>
+  <entry-point binary-name="fontconfigtest" command="fontconfigtest">
+    <needs-terminal/>
+    <summary xml:lang="en"/>
+  </entry-point>
+  <entry-point binary-name="fontsizetest" command="fontsizetest">
+    <needs-terminal/>
+    <summary xml:lang="en"/>
+  </entry-point>
+  <entry-point binary-name="fontwheeltest" command="fontwheeltest">
+    <needs-terminal/>
+    <summary xml:lang="en"/>
+  </entry-point>
+  <entry-point binary-name="gd2copypal" command="gd2copypal">
+    <needs-terminal/>
+    <summary xml:lang="en"/>
+  </entry-point>
+  <entry-point binary-name="gd2time" command="gd2time">
+    <needs-terminal/>
+    <summary xml:lang="en"/>
+  </entry-point>
+  <entry-point binary-name="gd2togif" command="gd2togif">
+    <needs-terminal/>
+    <summary xml:lang="en">program to convert gd2 to gif</summary>
+  </entry-point>
+  <entry-point binary-name="gd2topng" command="gd2topng">
+    <needs-terminal/>
+    <summary xml:lang="en">program to convert gd2 to png</summary>
+  </entry-point>
+  <entry-point binary-name="gdcmpgif" command="gdcmpgif">
+    <needs-terminal/>
+    <summary xml:lang="en"/>
+  </entry-point>
+  <entry-point binary-name="gddemo" command="gddemo">
+    <needs-terminal/>
+    <summary xml:lang="en"/>
+  </entry-point>
+  <entry-point binary-name="gdparttopng" command="gdparttopng">
+    <needs-terminal/>
+    <summary xml:lang="en"/>
+  </entry-point>
+  <entry-point binary-name="gdtestft" command="gdtestft">
+    <needs-terminal/>
+    <summary xml:lang="en"/>
+  </entry-point>
+  <entry-point binary-name="gdtopng" command="gdtopng">
+    <needs-terminal/>
+    <summary xml:lang="en">program to convert gd to png</summary>
+  </entry-point>
+  <entry-point binary-name="gifanimtest" command="gifanimtest">
+    <needs-terminal/>
+    <summary xml:lang="en"/>
+  </entry-point>
+  <entry-point binary-name="giftogd2" command="giftogd2">
+    <needs-terminal/>
+    <summary xml:lang="en">program to convert gif to gd2</summary>
+  </entry-point>
+  <entry-point binary-name="pngtogd" command="pngtogd">
+    <needs-terminal/>
+    <summary xml:lang="en"/>
+  </entry-point>
+  <entry-point binary-name="pngtogd2" command="pngtogd2">
+    <needs-terminal/>
+    <summary xml:lang="en">program to convert png to gd2</summary>
+  </entry-point>
+  <entry-point binary-name="testac" command="testac">
+    <needs-terminal/>
+    <summary xml:lang="en"/>
+  </entry-point>
+  <entry-point binary-name="testtr" command="testtr">
+    <needs-terminal/>
+    <summary xml:lang="en"/>
+  </entry-point>
+  <entry-point binary-name="webpng" command="webpng">
+    <needs-terminal/>
+    <summary xml:lang="en"/>
+  </entry-point>
+</interface>

@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/lib/gdbm.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Gdbm</name>
+  <summary xml:lang="en">Gdbm: GNU database manager</summary>
+  <description xml:lang="en">The GNU `dbm' is a library of database functions that use extendible hashing and works similar to the standard UNIX `dbm' functions. These routines are provided to a programmer needing to create and manipulate a hashed database. </description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <category>System</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/gdbm.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-i486" id="sha1new=1fc820c6a1a56f2117b23df95120f789ed9f74ee" license="GPL v2 (GNU General Public License)" released="2004-12-18" version="1.8.3-1-3">
+    <command name="run" path="bin/testgdbm.exe"/>
+    <command name="conv2gdbm" path="bin/conv2gdbm.exe"/>
+    <command name="tdbm" path="bin/tdbm.exe">
+      <requires interface="http://repo.roscidus.com/utils/coreutils">
+        <executable-in-path command="touch" name="touch"/>
+      </requires>
+    </command>
+    <command name="testdbm" path="bin/testdbm.exe">
+      <requires interface="http://repo.roscidus.com/utils/coreutils">
+        <executable-in-path command="touch" name="touch"/>
+      </requires>
+    </command>
+    <command name="testndbm" path="bin/testndbm.exe"/>
+    <command name="tndbm" path="bin/tndbm.exe"/>
+    <manifest-digest sha256new="2EEZ52WXQ6TJFKK7TRD2YQOPD5FZBO52DH2VGRWAIKQP53V4IV5Q"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/gdbm/1.8.3-1/gdbm-1.8.3-1-bin.zip" size="112278" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="sys-libs/gdbm"/>
+  <package-implementation package="gdbm"/>
+  <entry-point binary-name="testgdbm" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">testgdbm</name>
+    <summary xml:lang="en">A simple test program</summary>
+  </entry-point>
+  <entry-point binary-name="conv2gdbm" command="conv2gdbm">
+    <needs-terminal/>
+    <name xml:lang="en">conv2gdbm</name>
+    <summary xml:lang="en">A dbm database conversion program</summary>
+  </entry-point>
+  <entry-point binary-name="tdbm" command="tdbm">
+    <needs-terminal/>
+    <name xml:lang="en">tdbm</name>
+  </entry-point>
+  <entry-point binary-name="testdbm" command="testdbm">
+    <needs-terminal/>
+    <name xml:lang="en">testdbm</name>
+    <summary xml:lang="en">A simple test program</summary>
+  </entry-point>
+  <entry-point binary-name="testndbm" command="testndbm">
+    <needs-terminal/>
+    <name xml:lang="en">testndbm</name>
+    <summary xml:lang="en">A simple test program</summary>
+  </entry-point>
+  <entry-point binary-name="tndbm" command="tndbm">
+    <needs-terminal/>
+    <name xml:lang="en">tndbm</name>
+    <summary xml:lang="en">the gndbm test program</summary>
+  </entry-point>
+</interface>

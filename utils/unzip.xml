@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/utils/unzip" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>UnZip</name>
+  <summary xml:lang="en">UnZip SPECS UnZip: list, test and extract compressed files in a ZIP archive</summary>
+  <description xml:lang="en">UnZip is an extraction utility for archives compressed in .zip format (also called &quot;zipfiles&quot;). Although highly compatible both with PKWARE's PKZIP and PKUNZIP utilities for MS-DOS and with Info-ZIP's own Zip program, our primary objectives have been portability and non-MSDOS functionality. 
+
+UnZip will list, test, or extract files from a .zip archive, commonly found on MS-DOS systems. The default behavior (with no options) is to extract into the current directory (and subdirectories below it) all files from the specified zipfile. A companion program, Zip, creates .zip archives; both programs are compatible with archives created by PKZIP and PKUNZIP for MS-DOS, but in many cases the program options or default behaviors differ. (For example, UnZip recreates the stored directory structure by default; PKUNZIP unpacks all files in the current directory by default.)
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/unzip.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/unzip.png" type="image/png"/>
+  <category>Utility</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/unzip.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=91d2946052e8c5dec556217561aba42463913ed1" license="Info-ZIP" released="2005-02-14" version="5.51-1">
+    <command name="run" path="bin/unzip.exe"/>
+    <command name="funzip" path="bin/funzip.exe"/>
+    <command name="SFXWiz32" path="bin/SFXWiz32.exe"/>
+    <command name="unzipsfx" path="bin/unzipsfx.exe"/>
+    <command name="uzexampl" path="bin/uzexampl.exe"/>
+    <command name="zipinfo" path="bin/zipinfo.exe"/>
+    <manifest-digest sha256new="3K5ISOG3HSCE4SDCCCA2GTBRVFZJJTINRGIZ7FQBMTUAKRYZFXEA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/unzip/5.51-1/unzip-5.51-1-bin.zip" size="457440" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/unzip-bin.zip?raw=true" size="457440" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="app-arch/unzip"/>
+  <package-implementation package="unzip" main="/usr/bin/unzip"/>
+  <entry-point binary-name="unzip" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">unzip</name>
+    <summary xml:lang="en">unzip: list, test and extract compressed files in a ZIP</summary>
+    <description xml:lang="en">unzip  will  list, test, or extract files from a ZIP ar-
+       chive, commonly found on MS-DOS  systems.   The  default
+       behavior  (with  no options) is to extract into the cur-
+       rent directory (and subdirectories below it)  all  files
+       from  the  specified  ZIP archive.  A companion program,
+       zip(1L), creates ZIP archives; both programs are compat-
+       ible with archives created by PKWARE's PKZIP and PKUNZIP
+       for MS-DOS, but in many cases  the  program  options  or
+       default behaviors differ.</description>
+  </entry-point>
+  <entry-point binary-name="funzip" command="funzip">
+    <needs-terminal/>
+    <name xml:lang="en">Funzip</name>
+    <summary xml:lang="en">Funzip: filter for extracting from a ZIP archive in a pipe</summary>
+    <description xml:lang="en">funzip  without  a  file argument acts as a filter; that
+       is, it assumes that a ZIP archive (or a gzip'd(1)  file)
+       is  being piped into standard input, and it extracts the
+       first member from the archive  to  stdout.   When  stdin
+       comes from a tty device, funzip assumes that this cannot
+       be a stream of (binary)  compressed  data  and  shows  a
+       short  help text, instead.  If there is a file argument,
+       then input is read from the specified  file  instead  of
+       from stdin.</description>
+  </entry-point>
+  <entry-point binary-name="SFXWiz32" command="SFXWiz32">
+    <name xml:lang="en">SFXWiz32</name>
+  </entry-point>
+  <entry-point binary-name="unzipsfx" command="unzipsfx">
+    <needs-terminal/>
+    <name xml:lang="en">UnzipSfx</name>
+    <summary xml:lang="en">UnzipSfx: self-extracting stub for prepending to ZIP archives</summary>
+    <description xml:lang="en">unzipsfx  is a modified version of unzip(1L) designed to
+       be prepended to existing ZIP archives in order  to  form
+       self-extracting  archives.   Instead of taking its first
+       non-flag argument to be the zipfile(s) to be  extracted,
+       unzipsfx  seeks  itself  under  the name by which it was
+       invoked and  tests  or  extracts  the  contents  of  the
+       appended archive.  Because the executable stub adds bulk
+       to the archive (the whole purpose of which is to  be  as
+       small as possible), a number of the less-vital capabili-
+       ties in regular unzip have been  removed.   Among  these
+       are the usage (or help) screen, the listing and diagnos-
+       tic functions (-l and -v),  the  ability  to  decompress
+       older  compression  formats  (the ``reduce,'' ``shrink''
+       and ``implode'' methods).  The ability to extract  to  a
+       directory  other than the current one can be selected as
+       a compile-time option, which is now enabled  by  default
+       since  UnZipSFX  version  5.5.   Similary, decryption is
+       supported as a compile-time option but should be avoided
+       unless  the  attached  archive contains encrypted files.
+       Starting with release 5.5, another  compile-time  option
+       adds  a simple ``run command after extraction'' feature.
+       This  feature  is  currently   incompatible   with   the
+       ``extract  to  different directory'' feature and remains
+       disabled by default.</description>
+  </entry-point>
+  <entry-point binary-name="zipinfo" command="zipinfo">
+    <needs-terminal/>
+    <name xml:lang="en">ZipInfo</name>
+    <summary xml:lang="en">ZipInfo: list detailed information about a ZIP archive</summary>
+    <description xml:lang="en">zipinfo lists technical information about files in a ZIP
+       archive, most commonly found on  MS-DOS  systems.   Such
+       information includes file access permissions, encryption
+       status, type of compression, version and operating  sys-
+       tem or file system of compressing program, and the like.
+       The default behavior (with no options) is to  list  sin-
+       gle-line  entries  for  each  file  in the archive, with
+       header and trailer lines providing  summary  information
+       for  the  entire archive.  The format is a cross between
+       Unix ``ls -l'' and ``unzip -v''  output.   See  DETAILED
+       DESCRIPTION  below.   Note that zipinfo is the same pro-
+       gram as unzip (under Unix, a link to it); on  some  sys-
+       tems,  however,  zipinfo  support  may have been omitted
+       when unzip was compiled.</description>
+  </entry-point>
+</interface>
+

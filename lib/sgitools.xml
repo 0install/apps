@@ -1,0 +1,591 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/lib/sgitools" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>SgiTools</name>
+  <summary xml:lang="en">SgiTools: tools and library for SGI (.rgb) images</summary>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/sgitools.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/sgiutils.png" type="image/png"/>
+  <category>Graphics</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/sgitools.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-i486" id="sha1new=f83b4ced9f008110fd07355ddc4bb9163abda610" license="GPL v2 (GNU General Public License)" released="2004-10-21" version="2.1.5-10-3">
+    <command name="run" path="bin/toascii.exe"/>
+    <command name="abs" path="bin/abs.exe"/>
+    <command name="add" path="bin/add.exe"/>
+    <command name="addborder" path="bin/addborder.exe"/>
+    <command name="addframe" path="bin/addframe.exe"/>
+    <command name="assemble" path="bin/assemble.exe"/>
+    <command name="blend" path="bin/blend.exe"/>
+    <command name="caglue" path="bin/caglue.exe"/>
+    <command name="cglue" path="bin/cglue.exe"/>
+    <command name="convolve" path="bin/convolve.exe"/>
+    <command name="cscale" path="bin/cscale.exe"/>
+    <command name="duotone" path="bin/duotone.exe"/>
+    <command name="fieldmerge" path="bin/fieldmerge.exe"/>
+    <command name="fitimg" path="bin/fitimg.exe"/>
+    <command name="fixdim" path="bin/fixdim.exe"/>
+    <command name="fromalias" path="bin/fromalias.exe"/>
+    <command name="frombin" path="bin/frombin.exe"/>
+    <command name="fromcmap" path="bin/fromcmap.exe"/>
+    <command name="fromcube" path="bin/fromcube.exe"/>
+    <command name="fromdi" path="bin/fromdi.exe"/>
+    <command name="fromface" path="bin/fromface.exe"/>
+    <command name="fromgif" path="bin/fromgif.exe"/>
+    <command name="fromppm" path="bin/fromppm.exe"/>
+    <command name="fromrla" path="bin/fromrla.exe"/>
+    <command name="fromsun" path="bin/fromsun.exe"/>
+    <command name="fromxwd" path="bin/fromxwd.exe"/>
+    <command name="iblend" path="bin/iblend.exe"/>
+    <command name="imean" path="bin/imean.exe"/>
+    <command name="imgexp" path="bin/imgexp.exe"/>
+    <command name="imgsize" path="bin/imgsize.exe"/>
+    <command name="imgwrap" path="bin/imgwrap.exe"/>
+    <command name="invert" path="bin/invert.exe"/>
+    <command name="iroll" path="bin/iroll.exe"/>
+    <command name="iset" path="bin/iset.exe"/>
+    <command name="istat" path="bin/istat.exe"/>
+    <command name="mapimg" path="bin/mapimg.exe"/>
+    <command name="max" path="bin/max.exe"/>
+    <command name="min" path="bin/min.exe"/>
+    <command name="mult" path="bin/mult.exe"/>
+    <command name="noblack" path="bin/noblack.exe"/>
+    <command name="oneband" path="bin/oneband.exe"/>
+    <command name="over" path="bin/over.exe"/>
+    <command name="postcard" path="bin/postcard.exe"/>
+    <command name="quant" path="bin/quant.exe"/>
+    <command name="randimg" path="bin/randimg.exe"/>
+    <command name="readimg" path="bin/readimg.exe"/>
+    <command name="repcolor" path="bin/repcolor.exe"/>
+    <command name="rle" path="bin/rle.exe"/>
+    <command name="saturate" path="bin/saturate.exe"/>
+    <command name="setlum" path="bin/setlum.exe"/>
+    <command name="shear" path="bin/shear.exe"/>
+    <command name="sub" path="bin/sub.exe"/>
+    <command name="subimg" path="bin/subimg.exe"/>
+    <command name="tile" path="bin/tile.exe"/>
+    <command name="toalias" path="bin/toalias.exe"/>
+    <command name="togif" path="bin/togif.exe"/>
+    <command name="toppm" path="bin/toppm.exe"/>
+    <command name="tosun" path="bin/tosun.exe"/>
+    <command name="totarga" path="bin/totarga.exe"/>
+    <command name="verbatim" path="bin/verbatim.exe"/>
+    <command name="writeimg" path="bin/writeimg.exe"/>
+    <command name="fromtiff" path="bin/fromtiff.exe">
+      <requires interface="http://repo.roscidus.com/lib/tiff" version="3.8.2-1-1">
+        <environment name="PATH" insert="bin" />
+      </requires>
+      <requires interface="http://repo.roscidus.com/lib/jpeg" version="6-4-1">
+        <environment name="PATH" insert="bin" />
+      </requires>
+      <requires interface="http://repo.roscidus.com/lib/zlib">
+        <environment name="PATH" insert="bin" />
+      </requires>
+    </command>
+    <manifest-digest sha256new="LNNXR6C7AWVOAOUQJCECPBSXJFPRO3YT3H372IXGGYFUNSUY2SCA" />
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/iristools/2.1.5-10/sgitools-2.1.5-10-bin.zip" size="298048" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/sgitools-bin.zip?raw=true" size="298048" type="application/zip"/>
+  </implementation>
+  <entry-point command="run" binary-name="toascii">
+    <needs-terminal/>
+    <name xml:lang="en">toascii</name>
+    <summary xml:lang="en">use text characters to represent an image</summary>
+    <description xml:lang="en">toascii  prints  textual  characters  that represent the
+       black and white image used as input. Output is  sent  to
+       stdout.  In order to better view the results, it is rec-
+       ommended that the size of  the  black  and  white  input
+       image  be  somewhere in the range of 50 to 200 in x, and
+       to use a wsh that is of a point size around 4 or  5  and
+       an width of at least 120.</description>
+  </entry-point>
+  <entry-point binary-name="abs" command="abs">
+    <needs-terminal/>
+    <summary xml:lang="en">get the absolute value of an image</summary>
+    <description xml:lang="en">abs generates outimage which contains the absolute value
+       of the input image. This treats input values  as  signed
+       8-bit  quantities.  Input  values of 0 map to white. 255
+       also maps to white. 128 maps into black.</description>
+  </entry-point>
+  <entry-point binary-name="add" command="add">
+    <needs-terminal/>
+    <summary xml:lang="en">add two images together</summary>
+    <description xml:lang="en"> add  takes  inimage1 and inimage2's intensities and adds
+       them together and stores the result in outimage. If  the
+       sum is greater than 255 the result is set to 255.</description>
+  </entry-point>
+  <entry-point binary-name="addborder" command="addborder">
+    <needs-terminal/>
+    <summary xml:lang="en">surround an input image with a border image</summary>
+    <description xml:lang="en">addborder  Surrounds  the  input  image  with the border
+       image. The four quadrants of the border image are placed
+       at  the  four  corners of the input image, and the edges
+       are extended to connect the corners surrounding the bor-
+       der  image.  Three  existing  borber  image files can be
+       found  in  ~4Dgifts/iristools/images/{cutline.bw,   reg-
+       mark.bw, shadow.bw}.</description>
+  </entry-point>
+  <entry-point binary-name="addframe" command="addframe">
+    <needs-terminal/>
+    <summary xml:lang="en">add a border to an image</summary>
+    <description xml:lang="en">addframe adds a constant width border to a monochrome or
+       color image. The default  width  is  1  pixel,  and  the
+       default color is black.</description>
+  </entry-point>
+  <entry-point binary-name="assemble" command="assemble">
+    <needs-terminal/>
+    <summary xml:lang="en">assemble an array of smaller images</summary>
+    <description xml:lang="en">assemble  assembles an nx by ny array of smaller images.
+       The catch here is that all images being  assembled  have
+       to  have  the  same  x/y dimensions.  The nx by ny array
+       works like this: nx is the number  of  images  that  are
+       going  to  be  sitting  side  by  side in the horizontal
+       direction, and ny is the number of images side  by  side
+       in  the  vertical  direction. Order imgfiles so that the
+       first image will be the one sitting in the bottom  left-
+       hand  corner of outimage, with the second sitting either
+       above it or to its right. If  fewer  than  nx  times  ny
+       images  are given on the command line, the last image is
+       used repeatedly.</description>
+  </entry-point>
+  <entry-point binary-name="blend" command="blend">
+    <needs-terminal/>
+    <summary xml:lang="en">linearly interporlate two images</summary>
+    <description xml:lang="en">blend  linearly  interpolates  two  images.  param  is a
+       floating point number that controls the weighting of the
+       two input images. A value of 0.0 will use only imimage1,
+       while a value of 1.0 will use only inimage2. Values out-
+       side  the  range [0.0...1.0] will extrapolate instead of
+       interpolate between the two images.</description>
+  </entry-point>
+  <entry-point binary-name="caglue" command="caglue">
+    <needs-terminal/>
+    <summary xml:lang="en">create  an  rgb image out of 3 black and white</summary>
+    <description xml:lang="en">cglue constructs an rgb image by combining  three  black
+       and  white (bw) images. These black and white images are
+       treated as intensity maps for the red, green,  and  blue
+       channels of the rgb generated image.</description>
+  </entry-point>
+  <entry-point binary-name="cglue" command="cglue">
+    <needs-terminal/>
+  </entry-point>
+  <entry-point binary-name="convolve" command="convolve">
+    <needs-terminal/>
+    <summary xml:lang="en">convolve an input image with a kernel</summary>
+    <description xml:lang="en">convolve  convolves the input image with a kernel image.
+       Kernel images can be created with the program greyscale.
+       To  do a convolution, the kernel image is stepped across
+       the surface of the input image. At  each  position,  all
+       the  image values under the kernel are multiplied by the
+       corresponding kernel values. The sum of all these  prod-
+       ucts is divided by the sum of all the values in the ker-
+       nel. The result is put into the output image. If the  -m
+       option is given, the maximum value of all the multiplies
+       is put into the output image instead of  the  normalized
+       sum  of the products. If the -d option is given, a delta
+       value is calculated wherever the kernel is greater  than
+       128.</description>
+  </entry-point>
+  <entry-point binary-name="cscale" command="cscale">
+    <needs-terminal/>
+    <summary xml:lang="en">scale the rgb colors of an image</summary>
+    <description xml:lang="en">cscale  can be used to color balance an image by scaling
+       the r, g, and b  channels  by  different  factors.  Each
+       scale  factor  is  an  integer  in the range 0 to 255. A
+       scale factor of 0 is interpreted to mean scale  by  0.0,
+       while  a  scale  factor  of 255 means scale by 1.0. Each
+       scale factor multiplies a color channel  of  the  source
+       image.  If  the -d option is given, the input colors are
+       divided by the given factors.</description>
+  </entry-point>
+  <entry-point binary-name="duotone" command="duotone">
+    <needs-terminal/>
+    <summary xml:lang="en">make  a color duotone image from a black and</summary>
+    <description xml:lang="en">duotone creates a duotoned color  image  from  a  single
+       channel  image.  The  r  g b arguments specify the color
+       that a 50 percent gray value in the source image  should
+       become  in  the  duotone  image.  Try experimenting with
+       &quot;doutone in.bw out.rgb 200 120 80&quot;.</description>
+  </entry-point>
+  <entry-point binary-name="fieldmerge" command="fieldmerge">
+    <needs-terminal/>
+    <summary xml:lang="en">merge two field images into one frame</summary>
+    <description xml:lang="en">Standard  NTSC Video displays 30 frames per second. Each
+       frame is composed of two  fields  that  are  interlaced.
+       When  recording video animations it is sometimes good to
+       record 60 fields per second, but to do this  two  fields
+       must  be  merged  together into a single frame by inter-
+       leaving scanlines from  two  images.  fieldmerge  inter-
+       leaves two images in this way.</description>
+  </entry-point>
+  <entry-point binary-name="fitimg" command="fitimg">
+    <needs-terminal/>
+    <summary xml:lang="en">force an image to be a specific size.</summary>
+    <description xml:lang="en">fitimg  uniformly  scales  a picture to a specific size.
+       This is accomplished by scaling the image to be  smaller
+       than  the  specified size, and surrounding it by a white
+       border as needed to make the final image  exactly  xsize
+       by ysize pixels. The aspect ratio of the source image is
+       preserved. This is useful for making an array of  images
+       using &quot;assemble&quot;.</description>
+  </entry-point>
+  <entry-point binary-name="fixdim" command="fixdim">
+    <needs-terminal/>
+  </entry-point>
+  <entry-point binary-name="fromalias" command="fromalias">
+    <needs-terminal/>
+    <summary xml:lang="en">converts an Alias image to an Iris image</summary>
+    <description xml:lang="en">fromalias  converts an Alias image to an IRIS image file
+       image.</description>
+  </entry-point>
+  <entry-point binary-name="frombin" command="frombin">
+    <needs-terminal/>
+    <summary xml:lang="en">create  an RGB Iris image file from a binary</summary>
+    <description xml:lang="en">frombin reads a binary dump of some image data, and cre-
+       ates  an  IRIS  image  file. If only xsize and ysize are
+       given, then a single channel black and  white  image  is
+       created.  The  first  byte of the input file becomes the
+       lower left pixel in the resulting image. If a zsize of 3
+       is given, a color image is created, by first reading all
+       the red band, followed by the green and blue bands.</description>
+  </entry-point>
+  <entry-point binary-name="fromcmap" command="fromcmap">
+    <needs-terminal/>
+    <summary xml:lang="en">convert  a color map into an image with one</summary>
+    <description xml:lang="en">fromcmap converts a color map into  an  RGB  image  with
+       scanline.  The  width of the image will be the number of
+       colors in the color map. Each pixel will contain the RGB
+       color of the corresponding color map entry.</description>
+  </entry-point>
+  <entry-point binary-name="fromcube" command="fromcube">
+    <needs-terminal/>
+    <summary xml:lang="en">convert a Cubicomp/Vertigo image file to IRIS</summary>
+    <description xml:lang="en">fromcube converts a Cubicomp/Vertigo image file into  an
+       Iris image file format.</description>
+  </entry-point>
+  <entry-point binary-name="fromdi" command="fromdi">
+    <needs-terminal/>
+    <summary xml:lang="en">convert an old .di dithered image into an RGB</summary>
+    <description xml:lang="en">fromdi converts an old .di dithered (8-bits) image  into
+       an  RGB  image.  ipaste works differently on 4D machines
+       than it originally did on 2000/3000 IRIS machines. While
+       it  is  true  that on the 2000/3000 machines image files
+       made by the program dither (making an 8-bit image) would
+       work  with  ipaste  ,  on the 4D's ipaste was written to
+       operate on RGB (24-bit) images or SCREEN (16-bit  start-
+       ing at zero) images but not with DITHERED (8-bits start-
+       ing at some offset) images. Refer to  the  Note  in  the
+       ipaste(1G)  man page stating that if one REALLY wants to
+       view their DITHERED images on a 4D, they will first need
+       to  use  fromdi  to  convert them from DITHERED into RGB
+       format, and then can use ipaste to display them.</description>
+  </entry-point>
+  <entry-point binary-name="fromface" command="fromface">
+    <needs-terminal/>
+    <summary xml:lang="en">convert  a  UNIX faceserver image into IRIS</summary>
+    <description xml:lang="en">fromface converts a UNIX faceserver image file into IRIS
+       image file format.</description>
+  </entry-point>
+  <entry-point binary-name="fromgif" command="fromgif">
+    <needs-terminal/>
+    <summary xml:lang="en">convert a GIF image into an IRIS image</summary>
+    <description xml:lang="en"> fromgif  converts  a  Compuserve  GIF image file into an
+       IRIS image file.</description>
+  </entry-point>
+  <entry-point binary-name="fromppm" command="fromppm">
+    <needs-terminal/>
+    <summary xml:lang="en">convert  an  image in Jef Poskanzer's format</summary>
+    <description xml:lang="en">fromppm converts a PPM image file to an IRIS image file.
+       PBMPLUS, is by Jef Poskanzer. It is a comprehensive for-
+       mat conversion and image manipulation package. The  lat-
+       est  version  is  always  available via anonymous FTP as
+       expo.lcs.mit.edu:contrib/pbmplus.tar.Z               and
+       ftp.ee.lbl.gov:pbmplus.tar.Z</description>
+  </entry-point>
+  <entry-point binary-name="fromrla" command="fromrla">
+    <needs-terminal/>
+    <summary xml:lang="en">converts a Wavefront image to an IRIS image</summary>
+    <description xml:lang="en">fromrla converts a Wavefront .rla image file into an rgb
+       IRIS image file.</description>
+  </entry-point>
+  <entry-point binary-name="fromsun" command="fromsun">
+    <needs-terminal/>
+    <summary xml:lang="en">convert a sun image into an IRIS image</summary>
+    <description xml:lang="en">fromsun  converts  any type of SUN rasterfile image into
+       an IRIS image file.</description>
+  </entry-point>
+  <entry-point binary-name="fromtiff" command="fromtiff">
+    <needs-terminal/>
+  </entry-point>
+  <entry-point binary-name="fromxwd" command="fromxwd">
+    <needs-terminal/>
+    <summary xml:lang="en">convert an xwd file into an IRIS image</summary>
+    <description xml:lang="en">fromxwd  converts an xwd file to IRIS image file format.</description>
+  </entry-point>
+  <entry-point binary-name="iblend" command="iblend">
+    <needs-terminal/>
+    <summary xml:lang="en">blend two images using a mat</summary>
+    <description xml:lang="en">iblend  blends  between  inimage1 and inimage2 to create
+       outimage. Pixel values from the image matimg.bw are used
+       to  select  how much of inimage1 and inimage2 to use for
+       each pixel. The output image will be the minimun of  the
+       input image sizes.</description>
+  </entry-point>
+  <entry-point binary-name="imean" command="imean">
+    <needs-terminal/>
+    <summary xml:lang="en">find the average pixel value of an image</summary>
+    <description xml:lang="en">imean  finds  the  average pixel value of inimage. imean
+       prints the average RGB color of all the  pixels  in  the
+       image to stdout.</description>
+  </entry-point>
+  <entry-point binary-name="imgexp" command="imgexp">
+    <needs-terminal/>
+    <summary xml:lang="en">expand the range of pixel values in an image.</summary>
+    <description xml:lang="en">imgexp  expands  the  range of pixel values in an image.
+       Pixel values less than or equal to min are mapped to  0,
+       while  pixel  values  greater  than  or equal to max are
+       mapped to 255. If min and max are not  provided  on  the
+       command  line, then the minimum and maximum pixel values
+       in the image are used. This can be  used  to  manipulate
+       the contrast of images.</description>
+  </entry-point>
+  <entry-point binary-name="imgsize" command="imgsize">
+    <needs-terminal/>
+    <summary xml:lang="en">print the size of an image</summary>
+    <description xml:lang="en">imgsize  prints the xsize, ysize, and zsize of the named
+       image. If the -2 option is given,  only  the  xsize  and
+       ysize  are printed. This is useful in shell scripts that
+       perform a sequence of image processing operations.</description>
+  </entry-point>
+  <entry-point binary-name="imgwrap" command="imgwrap">
+    <needs-terminal/>
+    <summary xml:lang="en">shift pixels left one bit.</summary>
+    <description xml:lang="en">imgwrap shifts image pixel values left one bit.</description>
+  </entry-point>
+  <entry-point binary-name="invert" command="invert">
+    <needs-terminal/>
+    <summary xml:lang="en">invert an image</summary>
+    <description xml:lang="en">invert  inverts  an  image. pixel values of 0 become 255
+       and pixel values of 255 map  to  0.  The  result  is  to
+       invert the tonal scale of an image.</description>
+  </entry-point>
+  <entry-point binary-name="iroll" command="iroll">
+    <needs-terminal/>
+    <summary xml:lang="en">roll an image in x and y directions</summary>
+    <description xml:lang="en">iroll rotationaly rolls an image. The integers xroll and
+       yroll specify how many pixels to roll the image in the x
+       direction or the y directon.</description>
+  </entry-point>
+  <entry-point binary-name="iset" command="iset">
+    <needs-terminal/>
+    <summary xml:lang="en">set the type of an image.</summary>
+    <description xml:lang="en">iset  sets  the  type of an image. This determines which
+       part of the color map ipaste uses to display the  image.
+       The  four types of viewable images are NORMAL, DITHERED,
+       SCREEN, and COLORMAP. These are the four values  newtype
+       can have (each must be spelled in all capital letters as
+       above).  A NORMAL image is an RGB or  monochrome  image.
+       A  DITHERED  image is a color image using only 8 bits to
+       represent the original 24-bit true RGB image. This image
+       type  is  obsolete  on 4D machines.  A SCREEN image con-
+       tains color indexes.  A COLORMAP image is used to  store
+       colormaps.</description>
+  </entry-point>
+  <entry-point binary-name="istat" command="istat">
+    <needs-terminal/>
+    <summary xml:lang="en">print the header information of a list of image</summary>
+    <description xml:lang="en">istat prints the header information of a list  of  image
+       files.  x/ysize  give the image's screen size in pixels;
+       zsize is the number of channels in  the  image.  An  RGB
+       image  will typically have three channels, while a Mono-
+       chrome image will use one channel. Min and max  are  the
+       range  of  pixel  intensity  values  in  the  image. Bpp
+       describes how many bytes are stored in each  channel  of
+       the  image;  either 1 byte or 2 bytes. Type of image can
+       be NORMAL, DITHERED, SCREEN, or COLORMAP. Storage refers
+       to  the  way the data is compressed: rle is a run-length
+       encoded image, verb is a verbatim image which means  the
+       data is not compressed in any way.</description>
+  </entry-point>
+  <entry-point binary-name="mapimg" command="mapimg">
+    <needs-terminal/>
+    <summary xml:lang="en">translates a screen image into an RGB image</summary>
+    <description xml:lang="en">mapimg  translates  a screen image into a full RGB image
+       using the given color map. The color map is usually gen-
+       erated by savemap.</description>
+  </entry-point>
+  <entry-point binary-name="max" command="max">
+    <needs-terminal/>
+    <summary xml:lang="en">get the maximum of two images</summary>
+    <description xml:lang="en">max  calculates  the  maximum of two images and puts the
+       result in outimage.</description>
+  </entry-point>
+  <entry-point binary-name="min" command="min">
+    <needs-terminal/>
+    <summary xml:lang="en">calculate the minimum of two images</summary>
+    <description xml:lang="en">min  calculates  the  minimum of two images and puts the
+       results in outimage.</description>
+  </entry-point>
+  <entry-point binary-name="mult" command="mult">
+    <needs-terminal/>
+    <summary xml:lang="en">multiply two images</summary>
+    <description xml:lang="en">mult  multiplies  two  images.  The value 255 is used to
+       represent 1.0 while 0 represents 0.0.</description>
+  </entry-point>
+  <entry-point binary-name="noblack" command="noblack">
+    <needs-terminal/>
+    <summary xml:lang="en">remove all the black from an image</summary>
+    <description xml:lang="en">noblack  scales  each  pixel in an RGB image so at least
+       one of its components is 255. This  has  the  effect  of
+       removing all the black from an image.</description>
+  </entry-point>
+  <entry-point binary-name="oneband" command="oneband">
+    <needs-terminal/>
+    <summary xml:lang="en">get a single band of an image</summary>
+    <description xml:lang="en">oneband  extracts  a  single band of a color image. Nor-
+       mally band should be a number in the range [0...3]. Band
+       0  is  the red part of and RGB image, while band 1 and 2
+       are the green and blue bands. Band 3 potentially  repre-
+       sents alpha.</description>
+  </entry-point>
+  <entry-point binary-name="over" command="over">
+    <needs-terminal/>
+    <summary xml:lang="en">put one image on top of another</summary>
+    <description xml:lang="en">over  places  one  image over (on top of) another image.
+       xpos and ypos specify the position  on  underimage  that
+       the overimage's origin will be placed at.</description>
+  </entry-point>
+  <entry-point binary-name="postcard" command="postcard">
+    <needs-terminal/>
+    <summary xml:lang="en">make an image look like a postcard</summary>
+    <description xml:lang="en">postcard  creates  a  postcard  image  by adding a black
+       frame to the input image and placing  this  on  a  white
+       rectangle  that  has  the  exact  same aspect ratio as a
+       standard postcard.</description>
+  </entry-point>
+  <entry-point binary-name="quant" command="quant">
+    <needs-terminal/>
+    <summary xml:lang="en">quantify an image</summary>
+    <description xml:lang="en">quant  quantifies  an image to have n levels. The output
+       image will only have nlevels different pixel values.</description>
+  </entry-point>
+  <entry-point binary-name="randimg" command="randimg">
+    <needs-terminal/>
+    <summary xml:lang="en">generate a noise image</summary>
+    <description xml:lang="en">randimg makes an image of random noise. Seed initializes
+       the random number generator. A seed  value  of  0  makes
+       randimg use its process id as the seed.</description>
+  </entry-point>
+  <entry-point binary-name="readimg" command="readimg">
+    <needs-terminal/>
+  </entry-point>
+  <entry-point binary-name="repcolor" command="repcolor">
+    <needs-terminal/>
+    <summary xml:lang="en">replace specified colors within an image</summary>
+    <description xml:lang="en">repcolor replaces colors in the  input  image  that  are
+       within  dist  of ir ig ib within the color or og ob. The
+       arguments ir, ig, ib, or, og, and ob, and dist should be
+       values in the range of 0 to 255.</description>
+  </entry-point>
+  <entry-point binary-name="rle" command="rle">
+    <needs-terminal/>
+    <summary xml:lang="en">force  an  image  to  be stored using run length</summary>
+    <description xml:lang="en">Sometimes images are stored with no compression in  ver-
+       batim  format.  rle converts an image to be stored using
+       run length encoding.</description>
+  </entry-point>
+  <entry-point binary-name="saturate" command="saturate">
+    <needs-terminal/>
+    <summary xml:lang="en">change an image's saturation</summary>
+    <description xml:lang="en">saturate changes the saturation of an image. A satval of
+       0.0 will make the image black and white  (no  color).  A
+       satval  of  1.0 will leave the image unchanged. A satval
+       of 2.0 will double the amount of color in an image.</description>
+  </entry-point>
+  <entry-point binary-name="setlum" command="setlum">
+    <needs-terminal/>
+    <summary xml:lang="en">modifies the luminance on an image</summary>
+    <description xml:lang="en">setlum modifies the luminance (brightness) of each pixel
+       in the first input image (inimage.rgb) to be the same as
+       the pixel value in inimage.bw.</description>
+  </entry-point>
+  <entry-point binary-name="shear" command="shear">
+    <needs-terminal/>
+    <summary xml:lang="en">shear an image diagonally</summary>
+    <description xml:lang="en">shear  diagonally  shears an image. If slope is 1.0, the
+       shear will make vertical lines into 45  degree  diagonal
+       lines.  If  slope is 0.5 the left edge of the image gets
+       transformed into a line that goes from the  lower  left-
+       hand corner into the middle of the top edge.</description>
+  </entry-point>
+  <entry-point binary-name="sub" command="sub">
+    <needs-terminal/>
+    <summary xml:lang="en">subtract two images</summary>
+    <description xml:lang="en">sub  subtracts  two  images.  This  caculates 128+(inim-
+       age2-inimage1).</description>
+  </entry-point>
+  <entry-point binary-name="subimg" command="subimg">
+    <needs-terminal/>
+    <summary xml:lang="en">extract a sub-region from an image</summary>
+    <description xml:lang="en">subimg extracts a region from an image. The region to be
+       extracted is specified by x1 x2, y1 and y2. These  coor-
+       dinates  are  relative  to the bottom left corner of the
+       image. Negative values may be used to  give  coordinates
+       from  the  upper right corner. To extract an image inset
+       10 pixels from a source image use coordinates 10 -10  10
+       -10.</description>
+  </entry-point>
+  <entry-point binary-name="tile" command="tile">
+    <needs-terminal/>
+    <summary xml:lang="en">repeats an image in two dimensions</summary>
+    <description xml:lang="en">tile repeats an image in two dimensions. An output image
+       that is xsize by ysize pixels is  created  by  repeating
+       the input image.</description>
+  </entry-point>
+  <entry-point binary-name="toalias" command="toalias">
+    <needs-terminal/>
+    <summary xml:lang="en">Convert an IRIS image to an Alias image</summary>
+    <description xml:lang="en">toalias  converts  an  IRIS image file to an Alias image
+       format.</description>
+  </entry-point>
+  <entry-point binary-name="togif" command="togif">
+    <needs-terminal/>
+    <summary xml:lang="en">convert an IRIS image to a Compuserve GIF image</summary>
+    <description xml:lang="en">togif  converts  an  IRIS image file to a Compuserve GIF
+       image file format.</description>
+  </entry-point>
+  <entry-point binary-name="toppm" command="toppm">
+    <needs-terminal/>
+    <summary xml:lang="en">convert an IRIS image file into Jef Poskanzer's</summary>
+    <description xml:lang="en">oppm converts an IRIS image file into  Jef  Poskanzer's
+       ppm  image file format. PBMPLUS, is by Jef Poskanzer. It
+       is a comprehensive format conversion and image manipula-
+       tion package. The latest version is always available via
+       anonymous FTP as  expo.lcs.mit.edu:contrib/pbmplus.tar.Z
+       and ftp.ee.lbl.gov:pbmplus.tar.Z</description>
+  </entry-point>
+  <entry-point binary-name="tosun" command="tosun">
+    <needs-terminal/>
+    <summary xml:lang="en">convert an IRIS image to a sun raster file</summary>
+    <description xml:lang="en">tosun converts an IRIS image file into a sun raster file
+       format. This creates a 24-bit SUN rasterfile.</description>
+  </entry-point>
+  <entry-point binary-name="totarga" command="totarga">
+    <needs-terminal/>
+    <summary xml:lang="en">Convert from an IRIS image to a type 2 (RGB)</summary>
+    <description xml:lang="en">totarga converts from an IRIS image to a  type  2  (RGB)
+       targa image. Most targa images are displayed directly on
+       monitors with no gamma correction.  The typical gamma is
+       about  2.2,  so you need to gammawarp the input image by
+       0.454545 to get it out of the  linear  intensity  space,
+       and into monitor space before using totarga.</description>
+  </entry-point>
+  <entry-point binary-name="verbatim" command="verbatim">
+    <needs-terminal/>
+    <summary xml:lang="en">force  an  image  to  be stored without run</summary>
+    <description xml:lang="en">verbatim converts an image to be stored with no compres-
+       sion.  Usually images are stored using run length encod-
+       ing in rle format.</description>
+  </entry-point>
+  <entry-point binary-name="writeimg" command="writeimg">
+    <needs-terminal/>
+  </entry-point>
+</interface>

@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/lib/jbigkit" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>JbigKit</name>
+  <summary xml:lang="en">JbigKit: library and tools for JBIG images</summary>
+  <description xml:lang="en">JBIG-KIT implements a highly effective data compression algorithm for bi-level high-resolution images such as fax pages or scanned documents. 
+
+JBIG-KIT provides a portable library of compression and decompression functions with a documented interface that you can very easily include into your image or document processing software. In addition, JBIG-KIT provides ready-to-use compression and decompression programs with a simple command line interface (similar to the converters found in netpbm). 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png"/>
+  <category>Graphics</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/jbigkit.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-i486" id="sha1new=5eb33f1c1d1cbeca88160bf7795dd4926f0e4358" license="GPL v2 (GNU General Public License)" released="2004-06-11" version="1.6">
+    <command name="run" path="bin/pbmtojbg.exe"/>
+    <command name="jbgtopbm" path="bin/jbgtopbm.exe"/>
+    <manifest-digest sha256new="SALT574BC5BIX4A2Y4VYY3GGYIS4YJGJZ5WO5UCOGUM2IFUDPNOQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/jbigkit/1.6/jbigkit-1.6-bin.zip" size="66430" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/jbigkit-bin.zip?raw=true" size="66430" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="media-libs/jbigkit"/>
+  <package-implementation package="jbigkit"/>
+  <entry-point binary-name="pbmtojbg" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">PbmToJbg</name>
+    <summary xml:lang="en">PbmToJbg: portable bitmap to JBIG file converter</summary>
+    <description xml:lang="en">Reads in a portable bitmap (PBM) from a file or standard
+       input, compresses it, and outputs the image as  a  JBIG1
+       bi-level image entity (BIE) file.
+</description>
+  </entry-point>
+  <entry-point binary-name="jbgtopbm" command="jbgtopbm">
+    <needs-terminal/>
+    <name xml:lang="en">JbgToPbm</name>
+    <summary xml:lang="en">JbgToPbm: JBIG to portable bitmap file converter</summary>
+    <description xml:lang="en">Reads in a JBIG1 bi-level image entity (BIE) from a file
+       or standard input, decompresses it, and outputs a porta-
+       ble bitmap (PBM) file.</description>
+  </entry-point>
+</interface>
+

@@ -1,0 +1,471 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/lib/urt" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>URT</name>
+  <summary xml:lang="en">URT: library and tools for URT images</summary>
+  <description xml:lang="en">The Utah Raster Toolkit is a collection of programs and C routines for dealing with raster images commonly encountered in computer graphics. It provides the following major functions: 
+•A device and system independent image format for storing images and information about them. Called the RLE format, it uses run length encoding to reduce storage space for most images. 
+•A library of C routines for reading, writing and manipulating images stored in the RLE format. 
+•A collections of programs for manipulating and displaying RLE images. 
+
+The programs (tools) currently included in the toolkit are listed above, together with a short description of each one. Most of the tools read one or more input RLE files and produce an output RLE file. Some generate RLE files from other information, and some read RLE files and produce output of a different form. 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/urt.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/urt.png" type="image/png"/>
+  <category>Graphics</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/urt.htm</homepage>
+  <needs-terminal/>
+  <group arch="Windows-i486" license="URT, gif, Free for non-commercial use" released="2003-12-27">
+    <command name="run" path="bin/rletoascii.exe"/>
+    <command name="aliastorle" path="bin/aliastorle.exe"/>
+    <command name="applymap" path="bin/applymap.exe"/>
+    <command name="avg4" path="bin/avg4.exe"/>
+    <command name="crop" path="bin/crop.exe"/>
+    <command name="cubitorle" path="bin/cubitorle.exe"/>
+    <command name="fant" path="bin/fant.exe"/>
+    <command name="giftorle" path="bin/giftorle.exe"/>
+    <command name="graytorle" path="bin/graytorle.exe"/>
+    <command name="into" path="bin/into.exe"/>
+    <command name="mcut" path="bin/mcut.exe"/>
+    <command name="mergechan" path="bin/mergechan.exe"/>
+    <command name="painttorle" path="bin/painttorle.exe"/>
+    <command name="pyrmask" path="bin/pyrmask.exe"/>
+    <command name="rawtorle" path="bin/rawtorle.exe"/>
+    <command name="repos" path="bin/repos.exe"/>
+    <command name="rlatorle" path="bin/rlatorle.exe"/>
+    <command name="rleaddcom" path="bin/rleaddcom.exe"/>
+    <command name="rlebg" path="bin/rlebg.exe"/>
+    <command name="rlebox" path="bin/rlebox.exe"/>
+    <command name="rlecat" path="bin/rlecat.exe"/>
+    <command name="rleccube" path="bin/rleccube.exe"/>
+    <command name="rleClock" path="bin/rleClock.exe"/>
+    <command name="rlecomp" path="bin/rlecomp.exe"/>
+    <command name="rledither" path="bin/rledither.exe"/>
+    <command name="rleflip" path="bin/rleflip.exe"/>
+    <command name="rlegrid" path="bin/rlegrid.exe"/>
+    <command name="rlehdr" path="bin/rlehdr.exe"/>
+    <command name="rlehisto" path="bin/rlehisto.exe"/>
+    <command name="rleldmap" path="bin/rleldmap.exe"/>
+    <command name="rlemandl" path="bin/rlemandl.exe"/>
+    <command name="rlenoise" path="bin/rlenoise.exe"/>
+    <command name="rlepatch" path="bin/rlepatch.exe"/>
+    <command name="rleprint" path="bin/rleprint.exe"/>
+    <command name="rlequant" path="bin/rlequant.exe"/>
+    <command name="rlescale" path="bin/rlescale.exe"/>
+    <command name="rleselect" path="bin/rleselect.exe"/>
+    <command name="rlesetbg" path="bin/rlesetbg.exe"/>
+    <command name="rlespiff" path="bin/rlespiff.exe"/>
+    <command name="rlesplice" path="bin/rlesplice.exe"/>
+    <command name="rlesplit" path="bin/rlesplit.exe"/>
+    <command name="rlestereo" path="bin/rlestereo.exe"/>
+    <command name="rleswap" path="bin/rleswap.exe"/>
+    <command name="rletoabA60" path="bin/rletoabA60.exe"/>
+    <command name="rletoabA62" path="bin/rletoabA62.exe"/>
+    <command name="rletoalias" path="bin/rletoalias.exe"/>
+    <command name="rletogif" path="bin/rletogif.exe"/>
+    <command name="rletogray" path="bin/rletogray.exe"/>
+    <command name="rletopaint" path="bin/rletopaint.exe"/>
+    <command name="rletops" path="bin/rletops.exe"/>
+    <command name="rletoraw" path="bin/rletoraw.exe"/>
+    <command name="rletorla" path="bin/rletorla.exe"/>
+    <command name="rletotarga" path="bin/rletotarga.exe"/>
+    <command name="rlezoom" path="bin/rlezoom.exe"/>
+    <command name="smush" path="bin/smush.exe"/>
+    <command name="targatorle" path="bin/targatorle.exe"/>
+    <command name="to8" path="bin/to8.exe"/>
+    <command name="tobw" path="bin/tobw.exe"/>
+    <command name="unexp" path="bin/unexp.exe"/>
+    <command name="unslice" path="bin/unslice.exe"/>
+    <command name="wasatchrle" path="bin/wasatchrle.exe"/>
+    <command name="xbmtorle" path="bin/xbmtorle.exe"/>
+    <implementation id="sha1new=b7686f0eb105b3ac5a9ac29faeb00d048c431997" version="3.1.2.1-2-3">
+    <command name="pgmtorle" path="bin/pgmtorle.exe">
+      <requires interface="http://repo.roscidus.com/lib/netpbm">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+	</command>
+    <command name="ppmtorle" path="bin/ppmtorle.exe">
+      <requires interface="http://repo.roscidus.com/lib/netpbm">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+	</command>
+    <command name="rletoppm" path="bin/rletoppm.exe">
+      <requires interface="http://repo.roscidus.com/lib/netpbm">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+	</command>
+    <command name="rletotiff" path="bin/rletotiff.exe">
+      <requires interface="http://repo.roscidus.com/lib/tiff" version="3.8.2-1-1">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+	</command>
+    <command name="tifftorle" path="bin/tifftorle.exe">
+      <requires interface="http://repo.roscidus.com/lib/tiff" version="3.8.2-1-1">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+	</command>
+
+      <manifest-digest sha256new="EOC3ZEBMEC572RRBXVOVG7DKUHX3HJZM5TVT6X3EOGHPDEYSM5JQ"/>
+      <recipe>
+        <archive href="https://sourceforge.net/projects/gnuwin32/files/urt/3.1b1-2/urt-3.1.b.1-2-bin.zip" size="488276" type="application/zip"/>
+        <file dest="bin/rlepatch.exe.manifest" href="https://github.com/MiKTeX/miktex/blob/master/Resources/Manifests/asInvoker.manifest?raw=true" size="380"/>
+      </recipe>
+      <recipe>
+        <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/urt-bin.zip?raw=true" size="488276" type="application/zip"/>
+        <file dest="bin/rlepatch.exe.manifest" href="https://github.com/MiKTeX/miktex/blob/master/Resources/Manifests/asInvoker.manifest?raw=true" size="380"/>
+      </recipe>
+    </implementation>
+    <implementation id="nodeps" version="3.1.2.1-2-1">
+      <manifest-digest sha256new="EOC3ZEBMEC572RRBXVOVG7DKUHX3HJZM5TVT6X3EOGHPDEYSM5JQ"/>
+      <recipe>
+        <archive href="https://sourceforge.net/projects/gnuwin32/files/urt/3.1b1-2/urt-3.1.b.1-2-bin.zip" size="488276" type="application/zip"/>
+        <file dest="bin/rlepatch.exe.manifest" href="https://github.com/MiKTeX/miktex/blob/master/Resources/Manifests/asInvoker.manifest?raw=true" size="380"/>
+      </recipe>
+      <recipe>
+        <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/urt-bin.zip?raw=true" size="488276" type="application/zip"/>
+        <file dest="bin/rlepatch.exe.manifest" href="https://github.com/MiKTeX/miktex/blob/master/Resources/Manifests/asInvoker.manifest?raw=true" size="380"/>
+      </recipe>
+    </implementation>
+  </group>
+  <package-implementation distributions="Gentoo" package="media-libs/urt"/>
+  <package-implementation package="urt"/>
+  <entry-point binary-name="rletoascii" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">rletoascii</name>
+    <summary xml:lang="en">rletoascii: Print an RLE image as ASCII chars.</summary>
+    <description xml:lang="en">Rletoascii reads a file in RLE(5) format, converts it to black and white, then dumps it as ASCII characters.  The 0 to 255 range of pixel values in the image is scaled to the length of asciistr and a the character at that position in the string is printed  for  each  pixel.   Input will  be  read  from  infile if specified, from standard input, otherwise.  Output dumps to standard  output,  or outfile, if specified.</description>
+  </entry-point>
+  <entry-point binary-name="aliastorle" command="aliastorle">
+    <needs-terminal/>
+    <summary xml:lang="en">aliastorle - Convert Alias raster files to RLE format.</summary>
+    <description xml:lang="en">This  program converts an image in Alias &quot;pix&quot; format to RLE(5) format.  Since &quot;pix&quot; and RLE differ on the origin location, the program flips the image top to bottom.</description>
+  </entry-point>
+  <entry-point binary-name="applymap" command="applymap">
+    <needs-terminal/>
+    <summary xml:lang="en">applymap:  Apply  the  color map in an RLE file to the pixel data</summary>
+    <description xml:lang="en">This program takes the color map in an RLE(5)  file  and modifies  the  pixel values by applying the color map to them.  If there is more than one color  channel  in  the input  file, the color map in the input file should have the same number of channels.  If the input  file  has  a single color channel, the output file will have the same number of color channels as the color map.</description>
+  </entry-point>
+  <entry-point binary-name="avg4" command="avg4">
+    <needs-terminal/>
+    <summary xml:lang="en">avg4: Downfilter an image by simple averaging.</summary>
+    <description xml:lang="en">Avg4  downfilters an RLE image into a resulting image of 1/4th the size, by simply averaging four pixel values in the input image to produce a single pixel in the output. If the original image does not contain an alpha channel, avg4 creates one by counting the number of non-zero pixels in each group of four input  pixels  and  using  the count  to  produce  a  coverage  value.  While the alpha channel produced this way is crude (only four levels  of coverage)  it is enough to make a noticeable improvement in the edges of composited images.</description>
+  </entry-point>
+  <entry-point binary-name="crop" command="crop">
+    <needs-terminal/>
+    <summary xml:lang="en">crop: Change the size of an RLE image</summary>
+    <description xml:lang="en">Crop changes the size of an RLE image.  The command line numbers  xmin  ymin  xmax ymax specify the bounds of the resulting image.  If the resulting image is larger  than the original, crop supplies blank pixels, otherwise pixels are thrown away.</description>
+  </entry-point>
+  <entry-point binary-name="cubitorle" command="cubitorle">
+    <needs-terminal/>
+    <summary xml:lang="en">cubitorle:  Convert  cubicomp  image  to an RLE format file.</summary>
+    <description xml:lang="en">Cubitorle converts a set of files in the Cubicomp  image format  to  a raster file in the Utah Raster Toolkit RLE format.  Cubitorle expects as input a set  of  files  of the   form  &quot;inprefix.r8&quot;,  &quot;inprefix.g8&quot;,  and  &quot;inprefix.b8&quot;.  These files are  combined  to  form  a  single RLE(5)  file.  The output is written to stdout unless an output file name is given using the -o option.</description>
+  </entry-point>
+  <entry-point binary-name="fant" command="fant">
+    <needs-terminal/>
+    <summary xml:lang="en">fant: perform simple spatial transforms on an image</summary>
+    <description xml:lang="en">Fant  rotates or scales an image by an arbitrary amount. t does this by using pixel integration  (if  the  image size  is  reduced)  or  pixel interpolation if the image size is increased.  Because it works with subpixel  precision,  aliasing artifacts are not introduced.  Fant uses a two-pass sampling technique to  perform  the  transformation.   If infile is &quot;-&quot; or absent, input is read from the standard input.</description>
+  </entry-point>
+  <entry-point binary-name="giftorle" command="giftorle">
+    <needs-terminal/>
+    <summary xml:lang="en">giftorle: Convert GIF images to RLE format</summary>
+    <description xml:lang="en">Giftorle  converts a file from Graphics Interchange Format (GIF) format into RLE format.  Multiple input images may  be converted, these will be written sequentially to the output RLE file.  The origin of a GIF  image  is  at the  upper  left, while the origin of an RLE image is at the lower left.  This program  automatically  flips  the image to preserve its orientation.</description>
+  </entry-point>
+  <entry-point binary-name="graytorle" command="graytorle">
+    <needs-terminal/>
+    <summary xml:lang="en">graytorle: Merges gray scale images into an RLE format file.</summary>
+    <description xml:lang="en">Graytorle  reads  a  list  of 8-bit gray scale images in unencoded binary format and converts them to  an  RLE(5) image  with  the number of channels corresponding to the number of input files.  A  command  line  option  allows specifying one of the files as an alpha channel.</description>
+  </entry-point>
+  <entry-point binary-name="into" command="into">
+    <needs-terminal/>
+    <summary xml:lang="en">into: copy into a file without destroying it</summary>
+    <description xml:lang="en">Into  copies  its standard input into the specified outfile, but doesn't actually modify the file until it gets EOF.   This  is  useful  in a pipeline for putting stuff back in the &quot;same place.&quot;  The outfile is not  overwritten  if  that  would  make it zero length, unless the -f option is given.  That option also forces overwriting of the outfile even if it is not directly writable (as long as the directory is writable).</description>
+  </entry-point>
+  <entry-point binary-name="mcut" command="mcut">
+    <needs-terminal/>
+    <summary xml:lang="en">mcut: Quantize colors in an image using the median cut algorithm</summary>
+    <description xml:lang="en">Mcut reads an RLE file and tries to  choose  the  &quot;best&quot; subset  of colors to represent the colors present in the original image.  A common use for this is to  display  a 24  bit image on a frame buffer with only eight bits per pixel using a 24 bit color map.   Mcut  first  quantizes intensity  values from eight bits to five bits, and then chooses the colors from this space.</description>
+  </entry-point>
+  <entry-point binary-name="mergechan" command="mergechan">
+    <needs-terminal/>
+    <summary xml:lang="en">mergechan: merge channels from several RLE files into a single output stream</summary>
+    <description xml:lang="en">Mergechan takes input from several RLE  files  and  combines them into a single output stream.  Each channel in the output stream comes  from  the  respective  filename specified on the input (i.e., channel zero is taken from the first file, channel one from the  next,  etc).   The same  file  can  be specified more than once.  If the -a flag is given, the channels are numbered  from  -1  (the alpha  channel) instead of zero.  All of the input channels must have exactly the same dimensions.</description>
+  </entry-point>
+  <entry-point binary-name="painttorle" command="painttorle">
+    <needs-terminal/>
+    <summary xml:lang="en">painttorle: Convert MacPaint images to RLE format.</summary>
+    <description xml:lang="en">Painttorle converts a file from MacPaint format into RLE format.   Because MacPaint and RLE disagree on which end is up, the output should be sent through rleflip to preserve orientation.</description>
+  </entry-point>
+  <entry-point binary-name="pgmtorle" command="pgmtorle">
+    <needs-terminal/>
+    <summary xml:lang="en">pgmtorle: convert a pbmplus/pgm image file into an RLE image file.</summary>
+    <description xml:lang="en">his  program  converts  PBMPLUS  grayscale  (pgm) image files into Utah RLE(5) image files.   PBMPLUS/pgm  image files contain the image dimensions and 8-bit pixels with no matte or alpha data.  When converting to an RLE file, the  alpha  channel may optionally be computed.  The RLE file will contain a &quot;grayscale&quot; image (8 bits)  with  no colormap.  The origins of PBMPLUS and Utah RLE files are in the upper left and lower left  corners  respectively, so  this program automatically &quot;flips&quot; the image.</description>
+  </entry-point>
+  <entry-point binary-name="ppmtorle" command="ppmtorle">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtorle: convert a PBMPLUS/ppm image file into an RLE image file.</summary>
+    <description xml:lang="en">This  program  converts  PBMPLUS  full-color (ppm) image files into Utah RLE(5) image files.   PBMPLUS/ppm  image files contain the image dimensions and image data in the form of RGB triplets.  When converting to an  RLE  file, the  alpha channel may be optionally computed.  The origins of PBMPLUS and Utah RLE files  are   in  the  upper left  and  lower left corners respectively, so this program automatically &quot;flips&quot; the  image.   The  input  can consist  of  several  concatenated  ppm images, in which case, the output will consist  of  several  concatenated RLE images.</description>
+  </entry-point>
+  <entry-point binary-name="pyrmask" command="pyrmask">
+    <needs-terminal/>
+    <summary xml:lang="en">pyrmask: Blend two images together using Gaussian pyramids.</summary>
+    <description xml:lang="en">Pyrmask blends two images together by first breaking the images down into  separate  bandpass  images,  combining these  separate images, and then adding the new bandpass images back into a single output image.  This  can  produce  very  seamless  blends of digital images.  The two images are combined on  the  basis  of  a  third  &quot;mask&quot; image.   The  resulting  image  will  contain the inmask image where the mask contains a maximum value (255)  and the  outmask  image where the mask contains zeros.  This is done on a channel by channel basis, i.e. the maskfile should  have data in each channel describing how to combine each channel of the inmask and outmask images.  All three images must have exactly the same dimensions (both image size and number of channels).  For  best  results, it's often useful to filter the mask image a little with smush(1) first.</description>
+  </entry-point>
+  <entry-point binary-name="rawtorle" command="rawtorle">
+    <needs-terminal/>
+    <summary xml:lang="en">rawtorle: Convert raw image data to RLE.</summary>
+    <description xml:lang="en">This program is used to convert image data in any  of  a number  of  &quot;raw&quot;  forms  to  the  RLE(5)  format.   The expected input size is computed from the  arguments,  so that  several  images  may  be concatenated together and will be processed in sequence.  In this case, the output file will contain several RLE images.</description>
+  </entry-point>
+  <entry-point binary-name="repos" command="repos">
+    <needs-terminal/>
+    <summary xml:lang="en">repos: reposition an RLE image</summary>
+    <description xml:lang="en">repos repositions an RLE image.  Repos just changes  the coordinates  stored  in  the RLE header (see RLE(5)), no modification is made to the image itself.</description>
+  </entry-point>
+  <entry-point binary-name="rlatorle" command="rlatorle">
+    <needs-terminal/>
+    <summary xml:lang="en">rlatorle: convert a Wavefront &quot;rla&quot; or &quot;rlb&quot; image file into an RLE image file.</summary>
+    <description xml:lang="en">This  program converts Wavefront image files (rla or rlb formats) into Utah RLE(5) image files.  Wavefront  image files  store  RGB data as well as a matte channel.  They also define a &quot;bounding box&quot;  containing  non-background pixels  which  is  in  many cases smaller than the total image area.  Only this non-background area is run length encoded.   When  converting  to  an  RLE file, the matte channel is stored as an alpha channel and the  &quot;bounding box&quot; dimensions are ignored.  It is for this reason that in general the RLE version of the file  will  be  larger than its Wavefront counterpart.</description>
+  </entry-point>
+  <entry-point binary-name="rleaddcom" command="rleaddcom">
+    <needs-terminal/>
+    <summary xml:lang="en">rleaddcom: add picture comments to an RLE file.</summary>
+    <description xml:lang="en">The  rleaddcom  program will add one or more comments to an RLE(5) file.  If infile is &quot;-&quot;, it will read from the standard  input.  The modified RLE(5) file is written to the standard output if the  -o  outfile  option  is  not given.   All remaining arguments on the command line are taken as comments.  Comments are nominally of  the  form name=value  or  name.   Any  comment already in the file with the same name will be replaced.</description>
+  </entry-point>
+  <entry-point binary-name="rlebg" command="rlebg">
+    <needs-terminal/>
+    <summary xml:lang="en">rlebg: generate simple backgrounds</summary>
+    <description xml:lang="en">rlebg generates a simple background.   These  are  typically used for compositing below other images.  The values red green blue specify the pixel values  (between  0 and  255)  the  background  will  have.  If alpha is not specified, it defaults to 255  (full  coverage).   rlebg generates both constant backgrounds and backgrounds with continuous ramps.</description>
+  </entry-point>
+  <entry-point binary-name="rlebox" command="rlebox">
+    <needs-terminal/>
+    <summary xml:lang="en">rlebox: print bounding box for image in an RLE file.</summary>
+    <description xml:lang="en">This  program prints the bounding box for the image por-tion of an RLE(5)  file.   This  is  distinct  from  the bounds  in  the file header, since it is computed solely on the basis of the actual image.  All background pixels are ignored.</description>
+  </entry-point>
+  <entry-point binary-name="rlecat" command="rlecat">
+    <needs-terminal/>
+    <summary xml:lang="en">rlecat: concatenate and repeat images.</summary>
+    <description xml:lang="en">This program  will  concatenate  all  the  input  RLE(5) images,  adding  titles,  and  optionally  repeating the images a specified number  of  times.   For  each  input file,  it  copies  all images to the output file.  If an image does not have a title or TITLE  comment,  and  the input  is  not  coming from the standard input, then the ile name (and an image number, if it is not  the  first image  in the file) is added as a TITLE comment.  If the input file were  named  'images.rle',  the  first  image would  be  given  a comment TITLE=images.rle, the second would get a comment TITLE=images.rle(2), and so on.</description>
+  </entry-point>
+  <entry-point binary-name="rleccube" command="rleccube">
+    <needs-terminal/>
+    <summary xml:lang="en">rleccube: Make a picture of a color cube.</summary>
+    <description xml:lang="en">This program computes an RLE(5) image of slices  through the  RGB  color cube.  The arguments control the size of the cube and the  arrangement  of  the  slices  into  an image.  Slices are taken in planes of constant red, with green varying along the &quot;x&quot; axis and blue along the  &quot;y&quot; axis  within  a slice.  The slice for red=0 is placed in the lower left corner of the image; red increases  along the bottom row, then to the left of the next row, and so on.  The rleswap(1) program can be used to get an  image with slices of constant green or blue.</description>
+  </entry-point>
+  <entry-point binary-name="rleClock" command="rleClock">
+    <needs-terminal/>
+    <summary xml:lang="en">rleClock: Generate a clock face in RLE format</summary>
+    <description xml:lang="en">This  program  generates  an analog clock face in RLE(5) file format and writes it to outfile or standard output. The picture is a standard clock face with optional digital representation above.  The user has control over the colors  of the portions of the clock face, the text, and the text background.  The user also has control over the clock  configuration:  number of ticks, scale of the big and little hands, the  values  of  the  big  and  little hands,  and the format used to generate the digital portion.</description>
+  </entry-point>
+  <entry-point binary-name="rlecomp" command="rlecomp">
+    <needs-terminal/>
+    <summary xml:lang="en">rlecomp: Digital image compositor</summary>
+    <description xml:lang="en">rlecomp implements an image compositor based on presence of an alpha, or matte channel  the  image.   This  extra channel  usually  defines a mask which represents a sort of a cookie-cutter for the image.  This is the case when alpha  is  255  (full  coverage)  for  pixels inside the shape, zero outside, and between zero  and  255  on  the boundary.   If  Afile  or Bfile is just a single -, then rlecomp reads that file from the standard input.</description>
+  </entry-point>
+  <entry-point binary-name="rledither" command="rledither">
+    <needs-terminal/>
+    <summary xml:lang="en">rledither: Floyd Steinberg dither an image to the given colors.</summary>
+    <description xml:lang="en">This  program  accepts an RLE(5) file and a file of colormap entries, and dithers the image  to  those  colors. Edge enhancement is also performed, if specified.</description>
+  </entry-point>
+  <entry-point binary-name="rleflip" command="rleflip">
+    <needs-terminal/>
+    <summary xml:lang="en">rleflip: Invert, reflect or rotate an image.</summary>
+    <description xml:lang="en">Rleflip  inverts,  reflects an image; or rotates left or right by 90 degrees.  The picture's origin  remains  the same.   If no input file is specified, the image is read from standard input.  For rotations  of  other  than  90 degrees, use fant(1).</description>
+  </entry-point>
+  <entry-point binary-name="rlegrid" command="rlegrid">
+    <needs-terminal/>
+    <summary xml:lang="en">rlegrid: create grids and checkerboards in rle format</summary>
+    <description xml:lang="en">rlegrid generates simple grid and checkboard patterns.</description>
+  </entry-point>
+  <entry-point binary-name="rlehdr" command="rlehdr">
+    <needs-terminal/>
+    <summary xml:lang="en">rlehdr: Prints the header of an RLE file</summary>
+    <description xml:lang="en">This program prints the header  of  RLE(5)  files  in  a human  readable form.  If the optional files argument is not supplied, input is read from standard input.</description>
+  </entry-point>
+  <entry-point binary-name="rlehisto" command="rlehisto">
+    <needs-terminal/>
+    <summary xml:lang="en">rlehisto: generate histogram of RLE image.</summary>
+    <description xml:lang="en">Rlehisto counts the pixel values in an RLE file, producing  an  RLE file graphing frequency of occurrence.  The horizontal axis runs from pixel value 0 on the  left  to pixel  value 255 on the right.  The height indicates the number of pixels seen for each pixel value.   Histograms are  computed  independently  for  each  channel, scaled identically, and then overlaid.</description>
+  </entry-point>
+  <entry-point binary-name="rleldmap" command="rleldmap">
+    <needs-terminal/>
+    <summary xml:lang="en">rleldmap: Load a new color map into an RLE file</summary>
+    <description xml:lang="en">The  program  will  load  a  specified color map into an RLE(5) file.  The color map may be computed by  rleldmap or  loaded  from  a file in one of several formats.  The input is read from infile or stdin if no file is  given, and the result is written to outfile or stdout.</description>
+  </entry-point>
+  <entry-point binary-name="rlemandl" command="rlemandl">
+    <needs-terminal/>
+    <summary xml:lang="en">rlemandl: Compute images of the Mandelbrot set.</summary>
+    <description xml:lang="en">Rlemandl computes images of the  Mandelbrot  set  as  an eight  bit  gray  scale  image.   The real and imaginary arguments specify the center of the area in the  complex plane to be examined.  Width specifies the width area to be examined.</description>
+  </entry-point>
+  <entry-point binary-name="rlenoise" command="rlenoise">
+    <needs-terminal/>
+    <summary xml:lang="en">rlenoise: Add random noise to an image</summary>
+    <description xml:lang="en">Rlenoise  adds  uniform  random  noise to an image.  The peak-to-peak amplitude of the  noise  can  be  specified with  the -n flag, the default value is 4.  This program may be useful for trying to deal with quantization in an output  device, if you are able to trade spatial resolution for color resolution, and you  don't  have  a  good characterization of the quantization function.</description>
+  </entry-point>
+  <entry-point binary-name="rlepatch" command="rlepatch">
+    <needs-terminal/>
+    <summary xml:lang="en">rlepatch: patch smaller RLE files over a larger image.</summary>
+    <description xml:lang="en">lepatch puts smaller RLE files on top of a  larger  RLE image.   One  use  for  rlepatch is to place small &quot;fix&quot; images on top of a larger image that took a long time to compute.  Along with repos(1), rlepatch can also be used as a simple way to build image mosaics.</description>
+  </entry-point>
+  <entry-point binary-name="rleprint" command="rleprint">
+    <needs-terminal/>
+    <summary xml:lang="en">rleprint:  Print  the  values of all the pixels in the file.</summary>
+    <description xml:lang="en">This program reads an RLE(5) image and prints the values of all the pixels to the standard output.  Each pixel is printed on a single line.  For example, a count  of  all the unique pixel values in the file could be obtained by rleprint pic.rle | sort -u | wc</description>
+  </entry-point>
+  <entry-point binary-name="rlequant" command="rlequant">
+    <needs-terminal/>
+    <summary xml:lang="en">rlequant:  variance  based  color quantization for RLE images</summary>
+    <description xml:lang="en">This program quantizes the colors in an RLE image  using a  variance-based  method.   See  colorquant(3) for more details on the method.</description>
+  </entry-point>
+  <entry-point binary-name="rlescale" command="rlescale">
+    <needs-terminal/>
+    <summary xml:lang="en">rlescale: produce gray scale images.</summary>
+    <description xml:lang="en">Rlescale produces an RLE image  containing  a  (more-or-less) standard gray scale image.  Along the bottom are 8 colored patches (in the standard primary  and  secondary colors).  Above these are a sequences of logarithmically scaled gray patches.  By default, a  16  step  scale  is produced.   The  size of the output file (default 512 by 480) can be set with the xsize and ysize arguments.</description>
+  </entry-point>
+  <entry-point binary-name="rleselect" command="rleselect">
+    <needs-terminal/>
+    <summary xml:lang="en">rleselect: Select images from an RLE file.</summary>
+    <description xml:lang="en">This program selects images from an RLE(5) file containing  multiple  concatenated images.  The selected images are specified by number; the first image in the file  is number  1.   A negative number in the image-numbers list means that all images from the previous  number  in  the list  to  the  absolute  value  of this number should be included.  A zero in the list is taken  as  '-infinity', so  that all images from the previous number to the last image in the file will be included.  To try  to  clarify this, some examples are included below.</description>
+  </entry-point>
+  <entry-point binary-name="rlesetbg" command="rlesetbg">
+    <needs-terminal/>
+    <summary xml:lang="en">rlesetbg: Set the background value in the RLE header.</summary>
+    <description xml:lang="en">rlesetbg sets the background color field  in  the  image header of an RLE(5) image (none of the actual pixels are changed).  If infile isn't specified, the image is  read from stdin.</description>
+  </entry-point>
+  <entry-point binary-name="rlespiff" command="rlespiff">
+    <needs-terminal/>
+    <summary xml:lang="en">rlespiff: Use simple contrast enhancement to &quot;spiff up&quot; an image.</summary>
+    <description xml:lang="en">Rlespiff &quot;spiffs up&quot; an image by stretching the contrast range so that the darkest pixel maps to  black  and  the lightest  to  white.  If the -s flag is given, the color channels will be treated separately.  This  will  likely cause some drastic color shifts.</description>
+  </entry-point>
+  <entry-point binary-name="rlesplice" command="rlesplice">
+    <needs-terminal/>
+    <summary xml:lang="en">rlesplice:  Splice two RLE files together horizontally or vertically.</summary>
+    <description xml:lang="en">rlesplice splices two RLE images together either  vertically  or  horizontally.   If one image is smaller, then its background value or black is used to pad that  image  to  equal  the larger dimension in the other image.  The -c flag is used to specify  whether  the  smaller  image should   be  centered  when  put  next  to  the  larger. Presently the two images must have the  same  number  of color  channels,  the same presence of an alpha channel, and the same colormap size  and  length.   The  colormap from the first image is used for the resultant image.</description>
+  </entry-point>
+  <entry-point binary-name="rlesplit" command="rlesplit">
+    <needs-terminal/>
+    <summary xml:lang="en">rlesplit: split a file of concatenated RLE images into separate image files</summary>
+    <description xml:lang="en">This program will split a file containing a concatenated sequence of RLE(5) images into separate files, each containing  a  single image.  The output file names will be constructed from the input file name or a specified prefix, and a sequence number.  If an input infile is specified, then the output file names will be  in  the  form &quot;rlefileroot.#.rle&quot;,  where  rlefileroot  is infile with any &quot;.rle&quot; suffix stripped off.  If the option -o prefix is  specified, then the output file names will be of the form &quot;prefix.#.rle&quot;.  If neither option is  given,  then the  output  file  names  will  be  in the form &quot;#.rle&quot;. Input will be read from infile if specified, from  standard  input,  otherwise.   File names will be printed on the standard error output as they are generated.</description>
+  </entry-point>
+  <entry-point binary-name="rlestereo" command="rlestereo">
+    <needs-terminal/>
+    <summary xml:lang="en">rlestereo: produce anaglyph from stereo pair</summary>
+    <description xml:lang="en">Rlestereo reads the two named RLE files and  produces  a single  image suitable for viewing with red-blue or red-green glasses.</description>
+  </entry-point>
+  <entry-point binary-name="rleswap" command="rleswap">
+    <needs-terminal/>
+    <summary xml:lang="en">rleswap: swap the channels in an RLE file.</summary>
+    <description xml:lang="en">This  program  can  be  used to select or swap the color channels in a RLE(5) file.  The  major  options  provide four  different ways of specifying a mapping between the channels in the input file and the  output  file.   Only one  of  the options -f, -t, -d, or -p may be specified. If the optional infile is not given, input will be  read from  standard input.  A new RLE(5) file will be written to the standard output or to outfile, if specified.  The output  image  will  be similar to the input, except for the specified channel remappings.</description>
+  </entry-point>
+  <entry-point binary-name="rletoabA60" command="rletoabA60">
+    <needs-terminal/>
+    <summary xml:lang="en">rletoabA60: convert RLE images to Abekas yuv format</summary>
+    <description xml:lang="en">This program converts an RLE(5) file to a yuv byte  file suitable  for  display  on an Abekas A60.  Typically the yuv file is then rcp'd to the Abekas  for  display.   By default  rletoabA60  will  attempt  to  place  the image according to the placement values in the  image  header. If  the  image  is  to large to fit in the Abekas format (720x486), the portion of the image  extending  off  the edge will be cropped.</description>
+  </entry-point>
+  <entry-point binary-name="rletoabA62" command="rletoabA62">
+    <needs-terminal/>
+    <summary xml:lang="en"> rletoabA62: Convert from RLE Format to Abekas A62 Dump Format</summary>
+    <description xml:lang="en">RletoabA62 converts a raster file  in  the  Utah  Raster Toolkit RLE format into a format suitable for writing to an Abekas A62 dump tape and subsequent loading onto  the Abekas disk.  The generated image is 768 pixels wide and 512 pixels high.  If the input is larger,  it  is  truncated.   If  it  is smaller, it is padded on the top and right with black.</description>
+  </entry-point>
+  <entry-point binary-name="rletoalias" command="rletoalias">
+    <needs-terminal/>
+    <summary xml:lang="en">rletoalias: Convert RLE image to Alias pix format.</summary>
+    <description xml:lang="en">This program converts an image in RLE(5) format to Alias &quot;pix&quot; format.  Since &quot;pix&quot; and RLE differ on the  origin location, the program flips the image top to bottom.</description>
+  </entry-point>
+  <entry-point binary-name="rletogif" command="rletogif">
+    <needs-terminal/>
+    <summary xml:lang="en">rletogif: Convert RLE files to GIF format.</summary>
+    <description xml:lang="en">This  program  converts an RLE(5) image file to GIF format.  The input file must be a single  channel  (8  bit) image.   Three  channel (24 bit) images can be converted to single channel images  using  the  programs  tobw(1), to8(1),  mcut(1),  or rlequant(1).  The input image will be flipped vertically, since the GIF origin  is  in  the upper  left,  and  the  RLE origin is in the lower left. Only a single image will be converted.</description>
+  </entry-point>
+  <entry-point binary-name="rletogray" command="rletogray">
+    <needs-terminal/>
+    <summary xml:lang="en">rletogray: Splits  an RLE format file into gray scale</summary>
+    <description xml:lang="en">Rletogray reads a file in RLE(5) format and  splits  the file  into  unencoded binary files, one for each channel in the RLE file.  The output file  names  will  be constructed from the input file name or a specified prefix.
+</description>
+  </entry-point>
+  <entry-point binary-name="rletopaint" command="rletopaint">
+    <needs-terminal/>
+    <summary xml:lang="en">rletopaint:  convert  an  RLE  file to MacPaint format</summary>
+    <description xml:lang="en">Rletopaint  converts  a  file from RLE(5) format to MacPaint format.  The program  uses  dithering  to  convert from a full 24 bit color image to a bitmapped image.  If the RLE file is larger than a MacPaint  image  (576x720) it is cropped to fit.
+</description>
+  </entry-point>
+  <entry-point binary-name="rletoppm" command="rletoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">rletoppm:  convert  a  Utah RLE image file into a PBM PLUS/ppm image file.</summary>
+    <description xml:lang="en">This program converts Utah RLE(5) image files into  PBMPLUS full-color (ppm) image files.  Rletoppm will handle four types of RLE files: Grayscale (8 bit data, no color map),  Pseudocolor  (8 bit data with a color map), True color (24 bit data with color map), and Directcolor  (24 bit  data,  no color map).  Since the orgins for the RLE and PBMPLUS image file formats are  in  different  locations, this program automatically &quot;flips&quot; the image when converting.</description>
+  </entry-point>
+  <entry-point binary-name="rletops" command="rletops">
+    <needs-terminal/>
+    <summary xml:lang="en">rletops: Convert RLE images to PostScript</summary>
+    <description xml:lang="en">Rletops converts RLE(5)  images  into  PostScript.   The conversion uses the PostScript image operator, instructing the device to reproduce the image to the best of its abilities.   If infile isn't specified, the RLE image is read from stdin.  The PostScript  output  is  dumped  to stdout, or to outfile.ps, if specified.</description>
+  </entry-point>
+  <entry-point binary-name="rletoraw" command="rletoraw">
+    <needs-terminal/>
+    <summary xml:lang="en">rletoraw: Convert RLE file to raw RGB form.</summary>
+    <description xml:lang="en">This program converts an RLE(5) image to a raw RGB form. The  output  file  is  normally  a  stream   of   pixels RGBRGB...), in left-to-right, bottom-to-top order (this can be changed with the -N or -s flags).  The width  and height  of  the input image will be printed on the standard error stream.</description>
+  </entry-point>
+  <entry-point binary-name="rletorla" command="rletorla">
+    <needs-terminal/>
+    <summary xml:lang="en">rletorla:  convert  a Utah RLE image file into a Wavefront &quot;rla&quot; or &quot;rlb&quot; image file.</summary>
+    <description xml:lang="en">This program converts Utah RLE(5) image files into Wavefront  &quot;rla&quot; or &quot;rlb&quot; image files.  Rletorla will handle four types of RLE files: Grayscale (8 bit data, no color map),  Pseudocolor  (8 bit data with a color map), Truecolor (24 bit data with color map), and Directcolor  (24 bit  data,  no  color  map).  In each case the resulting Wavefront image file will contain RGB data as well as  a matte  channel.  If no alpha channel is found in the RLE file, the Wavefront matte channel will be computed using the  RGB  or  mapped data.  The entire area of the Wavefront image will be run length encoded.  The size of the Wavefront  &quot;bounding  box&quot; data structure will be set to that of the total image area.</description>
+  </entry-point>
+  <entry-point binary-name="rletotarga" command="rletotarga">
+    <needs-terminal/>
+    <summary xml:lang="en">rletotarga: Convert an RLE(5) image file to Truevision TARGA format.</summary>
+    <description xml:lang="en">Rletotarga reads a file in RLE(5) format and converts it to Truevision's TARGA format.  If no input file is specified, the data is read from stdin.   The  output  TARGA file  will  be in one of three formats, depending on the contents of the RLE file: 8-bit B/W (format #3), 24-  or 32-bit  true color (format #2).  Only the first image in the RLE file is read.</description>
+  </entry-point>
+  <entry-point binary-name="rletotiff" command="rletotiff">
+    <needs-terminal/>
+    <summary xml:lang="en">rletotiff: Convert 24 bit RLE image files to TIFF.</summary>
+    <description xml:lang="en">This program converts a 24 bit image  in  RLE(5)  format into  TIFF form.  Only a single image will be converted.</description>
+  </entry-point>
+  <entry-point binary-name="rlezoom" command="rlezoom">
+    <needs-terminal/>
+    <summary xml:lang="en">rlezoom: Magnify an RLE file by pixel replication.</summary>
+    <description xml:lang="en">This program magnifies  (zooms)  an  RLE(5)  file  by  a floating point factor.  Each pixel in the original image becomes a block of pixels in the output image.  If no y-factor is specified, then the image will be magnified by factor equally  in  both  directions.   If  y-factor  is given,  then  each  input  pixel becomes a block of factor x y-factor pixels in the output.  If  factor  or  y-factor is less than 1.0, pixels will be dropped from the image.  There is no pixel blending performed.  Input  is taken  from  infile,  or  from the standard input if not specified.  The magnified image is written to the  standard output, or outfile, if specified.</description>
+  </entry-point>
+  <entry-point binary-name="smush" command="smush">
+    <needs-terminal/>
+    <summary xml:lang="en">smush: defocus an RLE image.</summary>
+    <description xml:lang="en">Smush convolves an image with a 5x5 Gaussian mask, blurring  the  image.  One may also provide a mask in a text file.  The file must contain an integer to  specify  the size  of  the square mask, followed by size*size floats. The mask will be  normalized  (forced  to  sum  to  1.0) unless the -n flag is given.</description>
+  </entry-point>
+  <entry-point binary-name="targatorle" command="targatorle">
+    <needs-terminal/>
+    <summary xml:lang="en">targatorle: Convert Truevision TARGA images to RLE format.</summary>
+    <description xml:lang="en">Targatorle  converts a file from Truevision's TARGA format into RLE format.  If no input file is specified, the data  is  read  from  stdin.</description>
+  </entry-point>
+  <entry-point binary-name="tifftorle" command="tifftorle">
+    <needs-terminal/>
+    <summary xml:lang="en">tifftorle: Convert TIFF image files to RLE.</summary>
+    <description xml:lang="en">This program converts a TIFF image to RLE(5) format.</description>
+  </entry-point>
+  <entry-point binary-name="to8" command="to8">
+    <needs-terminal/>
+    <summary xml:lang="en">to8:  Convert  a  24  bit RLE file to eight bits using</summary>
+    <description xml:lang="en">To8  Converts  an  image with 24 bit pixel values (eight bits each of red, green and blue) to eight bits of color using  a  dithered  color  map (the special color map is automatically written into  the  output  file).   If  no input  file  is  specified, to8 reads from stdin.  If no output file is specified with -o it writes the result to the standard output.</description>
+  </entry-point>
+  <entry-point binary-name="tobw" command="tobw">
+    <needs-terminal/>
+    <summary xml:lang="en">tobw:  Convert a 24 bit RLE file to eight bits of gray scale value.</summary>
+    <description xml:lang="en">Tobw converts an image with 24 bit pixel  values  (eight bits  each  of  red,  green  and  blue) to eight bits of grayscale information.  The NTSC Y  transform  is  used. If  the -t flag is given, then the monochrome pixel values are replicated on all three output channels  (otherwise,  just  one channel of eight bit data is produced). If no input file is specified, tobw  reads  from  stdin. If  no  output  file is specified with -o, it writes the result to stdout.</description>
+  </entry-point>
+  <entry-point binary-name="unexp" command="unexp">
+    <needs-terminal/>
+    <name xml:lang="en">unexp</name>
+    <summary xml:lang="en">unexp: Convert &quot;exponential&quot; files into normal files.</summary>
+    <description xml:lang="en">Unexp Converts a file of  &quot;exponential&quot;  floating  point values  into  an  RLE(5)  file containing integer valued bytes.  Exponential files have N-1 channels of eight bit data,  with the Nth channel containing a common exponent for the other channels.  This allows the  values  represented by the pixels to have a wider dynamic range.</description>
+  </entry-point>
+  <entry-point binary-name="unslice" command="unslice">
+    <needs-terminal/>
+    <summary xml:lang="en">unslice: Quickly assemble image slices</summary>
+    <description xml:lang="en">nslice quickly assembles a number of  horizontal  image strips  into  a  single output image.  A typical use for unslice  is  to  put  together  portions  of  an   image (&quot;slices&quot;)  computed  independently into a single output icture.  Because unslice uses  the  &quot;raw&quot;  RLE  library calls  to read and write the images, it runs much faster than doing the equivalent operations with crop and comp.</description>
+  </entry-point>
+  <entry-point binary-name="wasatchrle" command="wasatchrle">
+    <needs-terminal/>
+    <summary xml:lang="en">wasatchrle:- Convert Wasatch Systems image files to RLE format</summary>
+    <description xml:lang="en">Wasatchrle converts image files generated by the Wasatch Systems Paint program to RLE format.  It expects to find two files, &quot;basename.lut&quot; (the color look-up table)  and &quot;basename.rlc&quot; (the run-length encoded data).</description>
+  </entry-point>
+  <entry-point binary-name="xbmtorle" command="xbmtorle">
+    <needs-terminal/>
+    <name xml:lang="en">xbmtorle</name>
+  </entry-point>
+</interface>
+

@@ -1,0 +1,1927 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/lib/netpbm" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>NetPbm</name>
+  <summary xml:lang="en">NetPbm: tools for manipulating images</summary>
+  <description xml:lang="en">Netpbm is a package of graphics programs and programming libraries. There are over 220 separate programs in the package, most of which have &quot;pbm&quot;, &quot;pgm&quot;, &quot;ppm&quot;, or &quot;pnm&quot; in their names. For example, pnmscale and giftopnm. For example, you might use pnmscale to shrink an image by 10%. Or use pnmcomp to overlay one image on top of another. Or use pbmtext to create an image of text. Or reduce the number of colors in an image with ppmquant.</description>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/netpbm.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/netpbm.png" type="image/png"/>
+  <category>Graphics</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/netpbm.htm</homepage>
+  <needs-terminal/>
+  <group arch="Windows-i486" license="GPL v2 (GNU General Public License)">
+    <requires interface="http://repo.roscidus.com/lib/zlib">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/pbmtoascii.exe"/>
+    <command name="anytopnm" path="bin/anytopnm">
+      <requires interface="http://repo.roscidus.com/utils/coreutils">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/mktemp">
+        <executable-in-path name="mktemp"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/gawk">
+        <executable-in-path command="awk" name="awk"/>
+      </requires>
+      <requires importance="recommended" interface="http://repo.roscidus.com/utils/nawk">
+        <executable-in-path name="nawk"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/file">
+        <executable-in-path name="file"/>
+      </requires>
+      <runner interface="http://repo.roscidus.com/utils/bash"/>
+    </command>
+    <command name="411toppm" path="bin/411toppm.exe"/>
+    <command name="asciitopgm" path="bin/asciitopgm.exe"/>
+    <command name="atktopbm" path="bin/atktopbm.exe"/>
+    <command name="bioradtopgm" path="bin/bioradtopgm.exe"/>
+    <command name="bmptopnm" path="bin/bmptopnm.exe"/>
+    <command name="brushtopbm" path="bin/brushtopbm.exe"/>
+    <command name="cmuwmtopbm" path="bin/cmuwmtopbm.exe"/>
+    <command name="ddbugtopbm" path="bin/ddbugtopbm.exe"/>
+    <command name="escp2topbm" path="bin/escp2topbm.exe"/>
+    <command name="eyuvtoppm" path="bin/eyuvtoppm.exe"/>
+    <command name="fiascotopnm" path="bin/fiascotopnm.exe"/>
+    <command name="fitstopnm" path="bin/fitstopnm.exe"/>
+    <command name="fstopgm" path="bin/fstopgm.exe"/>
+    <command name="g3topbm" path="bin/g3topbm.exe"/>
+    <command name="gemtopnm" path="bin/gemtopnm.exe"/>
+    <command name="giftopnm" path="bin/giftopnm.exe"/>
+    <command name="gouldtoppm" path="bin/gouldtoppm.exe"/>
+    <command name="hdifftopam" path="bin/hdifftopam.exe"/>
+    <command name="hipstopgm" path="bin/hipstopgm.exe"/>
+    <command name="hpcdtoppm" path="bin/hpcdtoppm">
+      <requires interface="http://repo.roscidus.com/utils/coreutils">
+        <executable-in-path command="cat" name="cat"/>
+      </requires>
+      <runner interface="http://repo.roscidus.com/utils/bash"/>
+    </command>
+    <command name="icontopbm" path="bin/icontopbm.exe"/>
+    <command name="ilbmtoppm" path="bin/ilbmtoppm.exe"/>
+    <command name="imgtoppm" path="bin/imgtoppm.exe"/>
+    <command name="jbigtopnm" path="bin/jbigtopnm.exe">
+      <requires interface="http://repo.roscidus.com/lib/jbigkit">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+    </command>
+    <command name="jpeg2ktopam" path="bin/jpeg2ktopam.exe"/>
+    <command name="jpegtopnm" path="bin/jpegtopnm.exe">
+      <environment insert="bin" name="PATH"/>
+      <requires interface="http://repo.roscidus.com/lib/jpeg" version="6-4-1">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+    </command>
+    <command name="leaftoppm" path="bin/leaftoppm.exe"/>
+    <command name="lispmtopgm" path="bin/lispmtopgm.exe"/>
+    <command name="macptopbm" path="bin/macptopbm.exe"/>
+    <command name="manweb" path="bin/manweb">
+      <runner interface="http://repo.roscidus.com/perl/perl">
+        <arg>-w</arg>
+      </runner>
+    </command>
+    <command name="mdatopbm" path="bin/mdatopbm.exe"/>
+    <command name="mgrtopbm" path="bin/mgrtopbm.exe"/>
+    <command name="mrftopbm" path="bin/mrftopbm.exe"/>
+    <command name="mtvtoppm" path="bin/mtvtoppm.exe"/>
+    <command name="neotoppm" path="bin/neotoppm.exe"/>
+    <command name="palmtopnm" path="bin/palmtopnm.exe"/>
+    <command name="pamarith" path="bin/pamarith.exe"/>
+    <command name="pamchannel" path="bin/pamchannel.exe"/>
+    <command name="pamcut" path="bin/pamcut.exe"/>
+    <command name="pamdeinterlace" path="bin/pamdeinterlace.exe"/>
+    <command name="pamdice" path="bin/pamdice.exe"/>
+    <command name="pamedge" path="bin/pamedge.exe"/>
+    <command name="pamendian" path="bin/pamendian.exe"/>
+    <command name="pamfile" path="bin/pamfile.exe"/>
+    <command name="pamflip" path="bin/pamflip.exe"/>
+    <command name="pamfunc" path="bin/pamfunc.exe"/>
+    <command name="pamlookup" path="bin/pamlookup.exe"/>
+    <command name="pamoil" path="bin/pamoil.exe"/>
+    <command name="pampop9" path="bin/pampop9.exe"/>
+    <command name="pamseq" path="bin/pamseq.exe"/>
+    <command name="pamslice" path="bin/pamslice.exe"/>
+    <command name="pamstack" path="bin/pamstack.exe"/>
+    <command name="pamstretch" path="bin/pamstretch.exe"/>
+    <command name="pamstretch-gen" path="bin/pamstretch-gen">
+      <executable-in-path command="pamstretch" name="pamstretch"/>
+      <executable-in-path command="pamscale" name="pamscale"/>
+      <executable-in-path command="pnmfile" name="pnmfile"/>
+      <requires interface="http://repo.roscidus.com/utils/mktemp">
+        <executable-in-path name="mktemp"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/coreutils">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/lib/gawk">
+        <executable-in-path command="awk" name="awk"/>
+      </requires>
+      <runner interface="http://repo.roscidus.com/utils/bash"/>
+    </command>
+    <command name="pamtohdiff" path="bin/pamtohdiff.exe"/>
+    <command name="pamtohtmltbl" path="bin/pamtohtmltbl.exe"/>
+    <command name="pamtopnm" path="bin/pamtopnm.exe"/>
+    <command name="pamtotga" path="bin/pamtotga.exe"/>
+    <command name="pamtouil" path="bin/pamtouil.exe"/>
+    <command name="pbmclean" path="bin/pbmclean.exe"/>
+    <command name="pbmlife" path="bin/pbmlife.exe"/>
+    <command name="pbmmake" path="bin/pbmmake.exe"/>
+    <command name="pbmmask" path="bin/pbmmask.exe"/>
+    <command name="pbmpage" path="bin/pbmpage.exe"/>
+    <command name="pbmpscale" path="bin/pbmpscale.exe"/>
+    <command name="pbmreduce" path="bin/pbmreduce.exe"/>
+    <command name="pbmtext" path="bin/pbmtext.exe"/>
+    <command name="pbmtextps" path="bin/pbmtextps.exe"/>
+    <command name="pbmto10x" path="bin/pbmto10x.exe"/>
+    <command name="pbmto4425" path="bin/pbmto4425.exe"/>
+    <command name="pbmtoatk" path="bin/pbmtoatk.exe"/>
+    <command name="pbmtobbnbg" path="bin/pbmtobbnbg.exe"/>
+    <command name="pbmtocmuwm" path="bin/pbmtocmuwm.exe"/>
+    <command name="pbmtoepsi" path="bin/pbmtoepsi.exe"/>
+    <command name="pbmtoepson" path="bin/pbmtoepson.exe"/>
+    <command name="pbmtoescp2" path="bin/pbmtoescp2.exe"/>
+    <command name="pbmtog3" path="bin/pbmtog3.exe"/>
+    <command name="pbmtogem" path="bin/pbmtogem.exe"/>
+    <command name="pbmtogo" path="bin/pbmtogo.exe"/>
+    <command name="pbmtoicon" path="bin/pbmtoicon.exe"/>
+    <command name="pbmtolj" path="bin/pbmtolj.exe"/>
+    <command name="pbmtoln03" path="bin/pbmtoln03.exe"/>
+    <command name="pbmtolps" path="bin/pbmtolps.exe"/>
+    <command name="pbmtomacp" path="bin/pbmtomacp.exe"/>
+    <command name="pbmtomatrixorbital" path="bin/pbmtomatrixorbital.exe"/>
+    <command name="pbmtomda" path="bin/pbmtomda.exe"/>
+    <command name="pbmtomgr" path="bin/pbmtomgr.exe"/>
+    <command name="pbmtomrf" path="bin/pbmtomrf.exe"/>
+    <command name="pbmtonokia" path="bin/pbmtonokia.exe"/>
+    <command name="pbmtopgm" path="bin/pbmtopgm.exe"/>
+    <command name="pbmtopi3" path="bin/pbmtopi3.exe"/>
+    <command name="pbmtopk" path="bin/pbmtopk.exe"/>
+    <command name="pbmtoplot" path="bin/pbmtoplot.exe"/>
+    <command name="pbmtoppa" path="bin/pbmtoppa.exe"/>
+    <command name="pbmtopsg3" path="bin/pbmtopsg3.exe"/>
+    <command name="pbmtoptx" path="bin/pbmtoptx.exe"/>
+    <command name="pbmtowbmp" path="bin/pbmtowbmp.exe"/>
+    <command name="pbmtox10bm" path="bin/pbmtox10bm.exe"/>
+    <command name="pbmtoxbm" path="bin/pbmtoxbm.exe"/>
+    <command name="pbmtoybm" path="bin/pbmtoybm.exe"/>
+    <command name="pbmtozinc" path="bin/pbmtozinc.exe"/>
+    <command name="pbmupc" path="bin/pbmupc.exe"/>
+    <command name="pcdovtoppm" path="bin/pcdovtoppm">
+      <environment insert="bin" name="PATH"/>
+      <executable-in-path command="hpcdtoppm" name="dpcdtoppm"/>
+      <executable-in-path command="ppmquant" name="ppmquant"/>
+      <executable-in-path command="pnmmargin" name="pnmmargin"/>
+      <requires interface="http://repo.roscidus.com/utils/coreutils">
+        <executable-in-path command="cat" name="cat"/>
+        <executable-in-path command="rm" name="rm"/>
+      </requires>
+      <runner interface="http://repo.roscidus.com/utils/bash"/>
+    </command>
+    <command name="pcxtoppm" path="bin/pcxtoppm.exe"/>
+    <command name="pgmabel" path="bin/pgmabel.exe"/>
+    <command name="pgmbentley" path="bin/pgmbentley.exe"/>
+    <command name="pgmcrater" path="bin/pgmcrater.exe"/>
+    <command name="pgmenhance" path="bin/pgmenhance.exe"/>
+    <command name="pgmhist" path="bin/pgmhist.exe"/>
+    <command name="pgmkernel" path="bin/pgmkernel.exe"/>
+    <command name="pgmminkowski" path="bin/pgmminkowski.exe"/>
+    <command name="pgmmorphconv" path="bin/pgmmorphconv.exe"/>
+    <command name="pgmnoise" path="bin/pgmnoise.exe"/>
+    <command name="pgmramp" path="bin/pgmramp.exe"/>
+    <command name="pgmtexture" path="bin/pgmtexture.exe"/>
+    <command name="pgmtofs" path="bin/pgmtofs.exe"/>
+    <command name="pgmtolispm" path="bin/pgmtolispm.exe"/>
+    <command name="pgmtopbm" path="bin/pgmtopbm.exe"/>
+    <command name="pgmtopgm" path="bin/pgmtopgm.exe"/>
+    <command name="pgmtoppm" path="bin/pgmtoppm.exe"/>
+    <command name="pi1toppm" path="bin/pi1toppm.exe"/>
+    <command name="pi3topbm" path="bin/pi3topbm.exe"/>
+    <command name="pjtoppm" path="bin/pjtoppm.exe"/>
+    <command name="pktopbm" path="bin/pktopbm.exe"/>
+    <command name="pngtopnm" path="bin/pngtopnm.exe">
+      <requires interface="http://repo.roscidus.com/lib/png12-0" version="1.2.8..!1.2.37">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+    </command>
+    <command name="pnmalias" path="bin/pnmalias.exe"/>
+    <command name="pnmcat" path="bin/pnmcat.exe"/>
+    <command name="pnmcolormap" path="bin/pnmcolormap.exe"/>
+    <command name="pnmcomp" path="bin/pnmcomp.exe"/>
+    <command name="pnmconvol" path="bin/pnmconvol.exe"/>
+    <command name="pnmcrop" path="bin/pnmcrop.exe"/>
+    <command name="pnmcut" path="bin/pnmcut.exe"/>
+    <command name="pnmdepth" path="bin/pnmdepth.exe"/>
+    <command name="pnmenlarge" path="bin/pnmenlarge.exe"/>
+    <command name="pnmflip" path="bin/pnmflip">
+      <runner interface="http://repo.roscidus.com/perl/perl">
+        <arg>-w</arg>
+      </runner>
+    </command>
+    <command name="pnmgamma" path="bin/pnmgamma.exe"/>
+    <command name="pnmhisteq" path="bin/pnmhisteq.exe"/>
+    <command name="pnmhistmap" path="bin/pnmhistmap.exe"/>
+    <command name="pnmindex" path="bin/pnmindex">
+      <executable-in-path command="pnmfile" name="pnmfile"/>
+      <executable-in-path command="pamscale" name="pamscale"/>
+      <executable-in-path command="pgmtopbm" name="pgmtopbm"/>
+      <executable-in-path command="pnmquant" name="pnmquant"/>
+      <executable-in-path command="pbmtext" name="pbmtext"/>
+      <executable-in-path command="pnminvert" name="pnminvert"/>
+      <executable-in-path command="pnmcat" name="pnmcat"/>
+      <requires interface="http://repo.roscidus.com/utils/coreutils">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <runner interface="http://repo.roscidus.com/utils/bash"/>
+    </command>
+    <command name="pnminvert" path="bin/pnminvert.exe"/>
+    <command name="pnmmargin" path="bin/pnmmargin">
+      <executable-in-path command="pnmcut" name="pnmcut"/>
+      <executable-in-path command="pbmmake" name="pbmmake"/>
+      <executable-in-path command="ppmmake" name="ppmmake"/>
+      <executable-in-path command="pamflip" name="pamflip"/>
+      <executable-in-path command="pnmcat" name="pnmcat"/>
+      <requires interface="http://repo.roscidus.com/utils/mktemp">
+        <executable-in-path name="mktemp"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/coreutils">
+        <executable-in-path command="rm" name="rm"/>
+        <executable-in-path command="cat" name="cat"/>
+      </requires>
+      <runner interface="http://repo.roscidus.com/utils/bash"/>
+    </command>
+    <command name="pnmmontage" path="bin/pnmmontage.exe"/>
+    <command name="pnmnlfilt" path="bin/pnmnlfilt.exe"/>
+    <command name="pnmnorm" path="bin/pnmnorm.exe"/>
+    <command name="pnmpad" path="bin/pnmpad.exe"/>
+    <command name="pnmpaste" path="bin/pnmpaste.exe"/>
+    <command name="pnmpsnr" path="bin/pnmpsnr.exe"/>
+    <command name="pnmquant" path="bin/pnmquant">
+      <executable-in-path command="pnmcolormap" name="pnmcolormap"/>
+      <executable-in-path command="pnmremap" name="pnmremap"/>
+      <runner interface="http://repo.roscidus.com/perl/perl">
+        <arg>-w</arg>
+      </runner>
+    </command>
+    <command name="pnmremap" path="bin/pnmremap.exe"/>
+    <command name="pnmrotate" path="bin/pnmrotate.exe"/>
+    <command name="pnmscale" path="bin/pnmscale.exe"/>
+    <command name="pnmscalefixed" path="bin/pnmscalefixed.exe"/>
+    <command name="pnmshear" path="bin/pnmshear.exe"/>
+    <command name="pnmsmooth" path="bin/pnmsmooth.exe"/>
+    <command name="pnmsplit" path="bin/pnmsplit.exe"/>
+    <command name="pnmstitch" path="bin/pnmstitch.exe"/>
+    <command name="pnmtile" path="bin/pnmtile.exe"/>
+    <command name="pnmtoddif" path="bin/pnmtoddif.exe"/>
+    <command name="pnmtofiasco" path="bin/pnmtofiasco.exe"/>
+    <command name="pnmtofits" path="bin/pnmtofits.exe"/>
+    <command name="pnmtojbig" path="bin/pnmtojbig.exe">
+      <environment insert="bin" name="PATH"/>
+      <requires interface="http://repo.roscidus.com/lib/jbigkit">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+    </command>
+    <command name="pnmtojpeg" path="bin/pnmtojpeg.exe">
+      <environment insert="bin" name="PATH"/>
+      <requires interface="http://repo.roscidus.com/lib/jpeg" version="6-4-1">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+    </command>
+    <command name="pnmtopalm" path="bin/pnmtopalm.exe"/>
+    <command name="pnmtopclxl" path="bin/pnmtopclxl.exe"/>
+    <command name="pnmtoplainpnm" path="bin/pnmtoplainpnm">
+      <executable-in-path command="pnmtopnm" name="pnmtopnm"/>
+      <runner interface="http://repo.roscidus.com/utils/bash"/>
+    </command>
+    <command name="pnmtopng" path="bin/pnmtopng.exe">
+      <requires interface="http://repo.roscidus.com/lib/png12-0" version="1.2.8..!1.2.37">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+    </command>
+    <command name="pnmtops" path="bin/pnmtops.exe"/>
+    <command name="pnmtorast" path="bin/pnmtorast.exe"/>
+    <command name="pnmtorle" path="bin/pnmtorle.exe">
+      <requires interface="http://repo.roscidus.com/lib/urt">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+    </command>
+    <command name="pnmtosgi" path="bin/pnmtosgi.exe"/>
+    <command name="pnmtosir" path="bin/pnmtosir.exe"/>
+    <command name="pnmtotiff" path="bin/pnmtotiff.exe">
+      <requires interface="http://repo.roscidus.com/lib/tiff" version="3.8.2-1-1">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+    </command>
+    <command name="pnmtotiffcmyk" path="bin/pnmtotiffcmyk.exe">
+      <requires interface="http://repo.roscidus.com/lib/tiff" version="3.8.2-1-1">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+    </command>
+    <command name="pnmtoxwd" path="bin/pnmtoxwd.exe"/>
+    <command name="ppm3d" path="bin/ppm3d.exe"/>
+    <command name="ppmbrighten" path="bin/ppmbrighten.exe"/>
+    <command name="ppmchange" path="bin/ppmchange.exe"/>
+    <command name="ppmcie" path="bin/ppmcie.exe"/>
+    <command name="ppmcolormask" path="bin/ppmcolormask.exe"/>
+    <command name="ppmcolors" path="bin/ppmcolors.exe"/>
+    <command name="ppmdim" path="bin/ppmdim.exe"/>
+    <command name="ppmdist" path="bin/ppmdist.exe"/>
+    <command name="ppmdither" path="bin/ppmdither.exe"/>
+    <command name="ppmfade" path="bin/ppmfade">
+      <executable-in-path command="pnmfile" name="pnmfile"/>
+      <executable-in-path command="ppmmake" name="ppmmake"/>
+      <executable-in-path command="ppmspread" name="ppmspread"/>
+      <executable-in-path command="ppmshift" name="ppmshift"/>
+      <executable-in-path command="ppmrelief" name="ppmrelief"/>
+      <executable-in-path command="ppmmix" name="ppmmix"/>
+      <executable-in-path command="ppmtopgm" name="ppmtopgm"/>
+      <executable-in-path command="pgmoil" name="pgmoil"/>
+      <executable-in-path command="rgb3toppm" name="rgb3toppm"/>
+      <executable-in-path command="pgmedge" name="pgmedge"/>
+      <executable-in-path command="pgmbentley" name="pgmbentley"/>
+      <executable-in-path command="pamscale" name="pamscale"/>
+      <requires interface="http://repo.roscidus.com/utils/coreutils">
+        <executable-in-path command="rm" name="rm"/>
+        <executable-in-path command="cp" name="cp"/>
+      </requires>
+      <runner interface="http://repo.roscidus.com/perl/perl">
+        <arg>-w</arg>
+      </runner>
+    </command>
+    <command name="ppmflash" path="bin/ppmflash.exe"/>
+    <command name="ppmforge" path="bin/ppmforge.exe"/>
+    <command name="ppmglobe" path="bin/ppmglobe.exe"/>
+    <command name="ppmhist" path="bin/ppmhist.exe"/>
+    <command name="ppmlabel" path="bin/ppmlabel.exe"/>
+    <command name="ppmmake" path="bin/ppmmake.exe"/>
+    <command name="ppmmix" path="bin/ppmmix.exe"/>
+    <command name="ppmntsc" path="bin/ppmntsc.exe"/>
+    <command name="ppmpat" path="bin/ppmpat.exe"/>
+    <command name="ppmquantall" path="bin/ppmquantall">
+      <executable-in-path command="pnmcat" name="pnmcat"/>
+      <executable-in-path command="pnmquant" name="pnmquant"/>
+      <executable-in-path command="pnmcut" name="pnmcut"/>
+      <requires interface="http://repo.roscidus.com/utils/coreutils">
+        <executable-in-path command="rm" name="rm"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/mktemp">
+        <executable-in-path name="mktemp"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/sed">
+        <executable-in-path name="sed"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/grep">
+        <executable-in-path name="grep"/>
+      </requires>
+      <runner interface="http://repo.roscidus.com/utils/bash"/>
+    </command>
+    <command name="ppmrainbow" path="bin/ppmrainbow">
+      <executable-in-path command="pgmramp" name="pgmramp"/>
+      <executable-in-path command="pgmtoppm" name="pgmtoppm"/>
+      <executable-in-path command="pnmcat" name="pnmcat"/>
+      <runner interface="http://repo.roscidus.com/perl/perl">
+        <arg>-wl</arg>
+      </runner>
+    </command>
+    <command name="ppmrelief" path="bin/ppmrelief.exe"/>
+    <command name="ppmrough" path="bin/ppmrough.exe"/>
+    <command name="ppmshadow" path="bin/ppmshadow">
+      <executable-in-path command="pnmfile" name="pnmfile"/>
+      <executable-in-path command="pamcut" name="pamcut"/>
+      <executable-in-path command="pamscale" name="pamscale"/>
+      <executable-in-path command="pamarith" name="pamarith"/>
+      <executable-in-path command="pnminvert" name="pnminvert"/>
+      <executable-in-path command="ppmtopgm" name="ppmtopgm"/>
+      <executable-in-path command="pgmtopbm" name="pgmtopbm"/>
+      <executable-in-path command="pnmconvol" name="pnmconvol"/>
+      <executable-in-path command="pnmsmooth" name="pnmsmooth"/>
+      <executable-in-path command="pnmpaste" name="pnmpaste"/>
+      <requires interface="http://repo.roscidus.com/utils/mktemp">
+        <executable-in-path name="mktemp"/>
+      </requires>
+      <runner interface="http://repo.roscidus.com/perl/perl">
+        <arg>-w</arg>
+      </runner>
+    </command>
+    <command name="ppmshift" path="bin/ppmshift.exe"/>
+    <command name="ppmspread" path="bin/ppmspread.exe"/>
+    <command name="ppmtoacad" path="bin/ppmtoacad.exe"/>
+    <command name="ppmtoarbtxt" path="bin/ppmtoarbtxt.exe"/>
+    <command name="ppmtobmp" path="bin/ppmtobmp.exe"/>
+    <command name="ppmtoeyuv" path="bin/ppmtoeyuv.exe"/>
+    <command name="ppmtogif" path="bin/ppmtogif.exe"/>
+    <command name="ppmtoicr" path="bin/ppmtoicr.exe"/>
+    <command name="ppmtoilbm" path="bin/ppmtoilbm.exe"/>
+    <command name="ppmtoleaf" path="bin/ppmtoleaf.exe"/>
+    <command name="ppmtolj" path="bin/ppmtolj.exe"/>
+    <command name="ppmtomitsu" path="bin/ppmtomitsu.exe"/>
+    <command name="ppmtompeg" path="bin/ppmtompeg.exe">
+      <requires interface="http://repo.roscidus.com/lib/jpeg.xml" version="6-4-1">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+    </command>
+    <command name="ppmtoneo" path="bin/ppmtoneo.exe"/>
+    <command name="ppmtopcx" path="bin/ppmtopcx.exe"/>
+    <command name="ppmtopgm" path="bin/ppmtopgm.exe"/>
+    <command name="ppmtopi1" path="bin/ppmtopi1.exe"/>
+    <command name="ppmtopict" path="bin/ppmtopict.exe"/>
+    <command name="ppmtopj" path="bin/ppmtopj.exe"/>
+    <command name="ppmtopjxl" path="bin/ppmtopjxl.exe"/>
+    <command name="ppmtoppm" path="bin/ppmtoppm.exe"/>
+    <command name="ppmtopuzz" path="bin/ppmtopuzz.exe"/>
+    <command name="ppmtorgb3" path="bin/ppmtorgb3.exe"/>
+    <command name="ppmtosixel" path="bin/ppmtosixel.exe"/>
+    <command name="ppmtoterm" path="bin/ppmtoterm.exe"/>
+    <command name="ppmtowinicon" path="bin/ppmtowinicon.exe"/>
+    <command name="ppmtoxpm" path="bin/ppmtoxpm.exe"/>
+    <command name="ppmtoyuv" path="bin/ppmtoyuv.exe"/>
+    <command name="ppmtoyuvsplit" path="bin/ppmtoyuvsplit.exe"/>
+    <command name="ppmtv" path="bin/ppmtv.exe"/>
+    <command name="ppmwheel" path="bin/ppmwheel.exe"/>
+    <command name="psidtopgm" path="bin/psidtopgm.exe"/>
+    <command name="pstopnm" path="bin/pstopnm.exe"/>
+    <command name="qrttoppm" path="bin/qrttoppm.exe"/>
+    <command name="rasttopnm" path="bin/rasttopnm.exe"/>
+    <command name="rawtopgm" path="bin/rawtopgm.exe"/>
+    <command name="rawtoppm" path="bin/rawtoppm.exe"/>
+    <command name="rgb3toppm" path="bin/rgb3toppm.exe"/>
+    <command name="rletopnm" path="bin/rletopnm.exe">
+      <requires interface="http://repo.roscidus.com/lib/urt">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+    </command>
+    <command name="sbigtopgm" path="bin/sbigtopgm.exe"/>
+    <command name="sgitopnm" path="bin/sgitopnm.exe"/>
+    <command name="sirtopnm" path="bin/sirtopnm.exe"/>
+    <command name="sldtoppm" path="bin/sldtoppm.exe"/>
+    <command name="spctoppm" path="bin/spctoppm.exe"/>
+    <command name="spottopgm" path="bin/spottopgm.exe"/>
+    <command name="sputoppm" path="bin/sputoppm.exe"/>
+    <command name="tgatoppm" path="bin/tgatoppm.exe"/>
+    <command name="thinkjettopbm" path="bin/thinkjettopbm.exe"/>
+    <command name="tifftopnm" path="bin/tifftopnm.exe">
+      <requires interface="http://repo.roscidus.com/lib/tiff" version="3.8.2-1-1">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+    </command>
+    <command name="wbmptopbm" path="bin/wbmptopbm.exe"/>
+    <command name="winicontoppm" path="bin/winicontoppm.exe"/>
+    <command name="xbmtopbm" path="bin/xbmtopbm.exe"/>
+    <command name="ximtoppm" path="bin/ximtoppm.exe"/>
+    <command name="xpmtoppm" path="bin/xpmtoppm.exe"/>
+    <command name="xvminitoppm" path="bin/xvminitoppm.exe"/>
+    <command name="xwdtopnm" path="bin/xwdtopnm.exe"/>
+    <command name="ybmtopbm" path="bin/ybmtopbm.exe"/>
+    <command name="yuvsplittoppm" path="bin/yuvsplittoppm.exe"/>
+    <command name="yuvtoppm" path="bin/yuvtoppm.exe"/>
+    <command name="zeisstopnm" path="bin/zeisstopnm.exe"/>
+    <implementation id="sha1new=ac818277a14c481eb38404cef2488a646d5ce3a2" released="2005-05-12" version="10.278-3">
+      <command name="bmptoppm" path="bin/bmptoppm.exe"/>
+      <command name="gemtopbm" path="bin/gemtopbm.exe"/>
+      <command name="icotoppm" path="bin/icotoppm.exe"/>
+      <command name="infotopam" path="bin/infotopam.exe"/>
+      <command name="pamcomp" path="bin/pamcomp.exe"/>
+      <command name="pamditherbw" path="bin/pamditherbw.exe"/>
+      <command name="pamenlarge" path="bin/pamenlarge.exe"/>
+      <command name="pamgauss" path="bin/pamgauss.exe"/>
+      <command name="pammasksharpen" path="bin/pammasksharpen.exe"/>
+      <command name="pamperspective" path="bin/pamperspective.exe"/>
+      <command name="pamscale" path="bin/pamscale.exe"/>
+      <command name="pamsharpmap" path="bin/pamsharpmap.exe"/>
+      <command name="pamsharpness" path="bin/pamsharpness.exe"/>
+      <command name="pamstereogram" path="bin/pamstereogram.exe"/>
+      <command name="pamsumm" path="bin/pamsumm.exe"/>
+      <command name="pamsummcol" path="bin/pamsummcol.exe"/>
+      <command name="pamtodjvurle" path="bin/pamtodjvurle.exe"/>
+      <command name="pamtojpeg2k" path="bin/pamtojpeg2k.exe"/>
+      <command name="pamtopfm" path="bin/pamtopfm.exe"/>
+      <command name="pbmtodjvurle" path="bin/pbmtodjvurle.exe"/>
+      <command name="pbmtoibm23xx" path="bin/pbmtoibm23xx.exe"/>
+      <command name="pc1toppm" path="bin/pc1toppm.exe"/>
+      <command name="pfmtopam" path="bin/pfmtopam.exe"/>
+      <command name="pgmclouds" path="bin/pgmclouds.exe"/>
+      <command name="pgmedge" path="bin/pgmedge.exe"/>
+      <command name="pgmfract" path="bin/pgmfract.exe"/>
+      <command name="pgmmountains" path="bin/pgmmountains.exe"/>
+      <command name="pgmnorm" path="bin/pgmnorm.exe"/>
+      <command name="pgmoil" path="bin/pgmoil.exe"/>
+      <command name="pgmslice" path="bin/pgmslice.exe"/>
+      <command name="pnmarith" path="bin/pnmarith.exe"/>
+      <command name="pnmfile" path="bin/pnmfile.exe"/>
+      <command name="pnminterp" path="bin/pnminterp.exe"/>
+      <command name="pnmnoraw" path="bin/pnmnoraw">
+        <executable-in-path command="pnmtopnm" name="pnmtopnm"/>
+        <runner interface="http://repo.roscidus.com/utils/bash"/>
+      </command>
+      <command name="pnmtopnm" path="bin/pnmtopnm.exe"/>
+      <command name="ppmnorm" path="bin/ppmnorm.exe"/>
+      <command name="ppmquant" path="bin/ppmquant">
+        <executable-in-path command="pnmquant" name="pnmquant"/>
+        <executable-in-path command="pnmremap" name="pnmremap"/>
+        <runner interface="http://repo.roscidus.com/perl/perl">
+          <arg>-w</arg>
+        </runner>
+      </command>
+      <command name="ppmtojpeg" path="bin/ppmtojpeg.exe">
+        <requires interface="http://repo.roscidus.com/lib/jpeg" version="6-4-1">
+          <environment insert="bin" name="PATH"/>
+        </requires>
+      </command>
+      <command name="ppmtomap" path="bin/ppmtomap">
+        <executable-in-path command="pnmcolormap" name="pnmcolormap"/>
+        <runner interface="http://repo.roscidus.com/utils/bash"/>
+      </command>
+      <command name="ppmtouil" path="bin/ppmtouil.exe"/>
+      <command name="rgbpalettetoppm" path="bin/rgbpalettetoppm.exe"/>
+      <manifest-digest sha256new="S4IIF453SJENALD3SG6OZR5DKLBG2DPHWRAMOKEYOMXLNKY3CO3Q"/>
+      <archive href="https://sourceforge.net/projects/gnuwin32/files/netpbm/10.27/netpbm-10.27-bin.zip" size="3849261" type="application/zip"/>
+      <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/netpbm-bin.zip?raw=true" size="3849261" type="application/zip"/>
+    </implementation>
+    <implementation id="10.18.4" version="10.18.4-3">
+      <command name="bmptoppm" path="bin/bmptoppm"/>
+      <command name="gemtopbm" path="bin/gemtopbm"/>
+      <command name="pgmedge" path="bin/pgmedge"/>
+      <command name="pgmnorm" path="bin/pgmnorm"/>
+      <command name="pgmoil" path="bin/pgmoil"/>
+      <command name="pgmslice" path="bin/pgmslice"/>
+      <command name="pnmarith" path="bin/pnmarith"/>
+      <command name="pnmfile" path="bin/pnmfile"/>
+      <command name="pnminterp" path="bin/pnminterp"/>
+      <command name="picttoppm" path="bin/picttoppm"/>
+      <command name="ppmquant" path="bin/ppmquant"/>
+      <command name="ppmnorm" path="bin/ppmnorm"/>
+      <command name="ppmtojpeg" path="bin/ppmtojpeg">
+        <command name="ppmtouil" path="bin/ppmtouil" />
+        <requires interface="http://repo.roscidus.com/lib/jpeg" version="6-4-1">
+          <environment insert="bin" name="PATH"/>
+        </requires>
+      </command>
+      <manifest-digest sha256new="IYP7JNJO5NOGB4IOKURPRNHUWP5EPMJSB32KEDUSW25VOVG7ATOA"/>
+      <archive href="https://sourceforge.net/projects/gnuwin32/files/netpbm/10.18.4/netpbm-10.18.4-bin.zip" size="1935690" type="application/zip"/>
+    </implementation>
+  </group>
+  <package-implementation distributions="Gentoo" package="media-libs/netpbm"/>
+  <package-implementation package="netpbm"/>
+  <entry-point binary-name="pbmtoascii" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">pbmtoascii</name>
+    <summary xml:lang="en">pbmtoascii: convert a PBM image to ASCII graphics</summary>
+    <description xml:lang="en">pbmtoascii  reads  a  PBM  image as input and produces a
+       somewhat crude ASCII graphic image as output.
+
+       To convert back, use asciitopgm(1).</description>
+  </entry-point>
+  <entry-point binary-name="411toppm" command="411toppm">
+    <needs-terminal/>
+    <summary xml:lang="en">411toppm: convert Sony Mavica .411 image to PPM</summary>
+    <description xml:lang="en">411toppm reads a .411 file, such as from a  Sony  Mavic
+       camera, and converts it to a PPM image as output.</description>
+  </entry-point>
+  <entry-point binary-name="anytopnm" command="anytopnm">
+    <needs-terminal/>
+    <summary xml:lang="en">anytopnm: attempt to convert an unknown type of image file to a P?M file.</summary>
+  </entry-point>
+  <entry-point binary-name="asciitopgm" command="asciitopgm">
+    <needs-terminal/>
+    <summary xml:lang="en">asciitopgm: convert ASCII graphics into a portable graymap</summary>
+    <description xml:lang="en">asciitopgm  reads ASCII data as input and produces a PGM
+       image with pixel values which are  an  approximation  of
+       the  'brightness'  of  the  ASCII  characters,  assuming
+       black-on-white printing.  In other words, a capital M is
+       very dark, a period is very light, and a space is white.</description>
+  </entry-point>
+  <entry-point binary-name="atktopbm" command="atktopbm">
+    <needs-terminal/>
+    <summary xml:lang="en">atktopbm: convert Andrew Toolkit raster object to portable bitmap</summary>
+    <description xml:lang="en"> atktopbm reads an Andrew Toolkit raster object as input.
+       and produces a PBM image as output.</description>
+  </entry-point>
+  <entry-point binary-name="bioradtopgm" command="bioradtopgm">
+    <needs-terminal/>
+    <summary xml:lang="en">bioradtopgm: convert a Biorad confocal file into a portable graymap</summary>
+    <description xml:lang="en"> bioradtopgm reads a Biorad confocal file  as  input  and
+       produces  a PGM image as output.  If the resulting image
+       is upside down, run it through pamflip -tb.</description>
+  </entry-point>
+  <entry-point binary-name="bmptopnm" command="bmptopnm">
+    <needs-terminal/>
+    <summary xml:lang="en">bmptopnm: convert a BMP file into a PBM, PGM, or PNM image</summary>
+    <description xml:lang="en">bmptopnm reads a Microsoft Windows or OS/2 BMP  file  as
+       input.  and produces a PBM, PGM, or PNM image as output.
+       If the input is colormapped and contains only black  and
+       white,  the  output is PBM.  If the input is colormapped
+       and contains only black white and gray,  the  output  is
+       PGM.  Otherwise, the output is PPM.</description>
+  </entry-point>
+  <entry-point binary-name="bmptoppm" command="bmptoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">bmptopnm: convert a BMP file into a PBM, PGM, or PNM image</summary>
+    <description xml:lang="en">bmptoppm  was  replaced  in  Netpbm 9.25 (March 2002) by
+       bmptopnm(1).
+
+       bmptopnm is backward  compatible  with  bmptoppm  except
+       that  it  generates  PBM  and PGM output when it is more
+       appropriate than PPM.
+</description>
+  </entry-point>
+  <entry-point binary-name="brushtopbm" command="brushtopbm">
+    <needs-terminal/>
+    <summary xml:lang="en">brushtopbm: convert a doodle brush file into a portable bitmap</summary>
+    <description xml:lang="en">brushtopbm reads a Xerox doodle  brush  file  as  input.
+       and produces a portable bitmap as output.
+
+       Note that there is currently no pbmtobrush tool.</description>
+  </entry-point>
+  <entry-point binary-name="cmuwmtopbm" command="cmuwmtopbm">
+    <needs-terminal/>
+    <summary xml:lang="en">cmuwmtopbm: convert a CMU window manager bitmap into a portable bitmap</summary>
+    <description xml:lang="en">cmuwmtopbm reads a CMU window manager bitmap  as  input.
+       and produces a PBM image as output.</description>
+  </entry-point>
+  <entry-point binary-name="ddbugtopbm" command="ddbugtopbm">
+    <needs-terminal/>
+    <summary xml:lang="en">ddbugtopbm: convert Diddle or DiddleBug sketches to PBM files</summary>
+    <description xml:lang="en">ddbugtopbm converts all sketches present in  a  database
+       used  by  the  PalmOS  programs Diddle or DiddleBug into
+       appropriately-named PBM files.  The backup copy of  Did-
+       dleBug's database you should use as this program's input
+       is usually called DiddleBugDB.pdb.  Or if  you  use  the
+       original Diddle, it has two separate DBs - DiddleDB.pdb,
+       containing  unnamed   `scratch'   sketches,   and   Did-
+       dleIDB.pdb,  containing  the  saved (and named) sketches
+       which are listed by its `index' option.   You  can  feed
+       this program any of these three on standard input.</description>
+  </entry-point>
+  <entry-point binary-name="escp2topbm" command="escp2topbm">
+    <needs-terminal/>
+    <summary xml:lang="en">escp2topbm: convert an ESC/P2 printer file to a PBM image</summary>
+    <description xml:lang="en">escp2topbm reads an ESC/P2  printer  control  stream  as
+       input.  It produces a PBM image as output.</description>
+  </entry-point>
+  <entry-point binary-name="eyuvtoppm" command="eyuvtoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">eyuvtoppm: convert a Berkeley YUV file to a portable pixmap (ppm) file</summary>
+    <description xml:lang="en">eyuvtoppm reads a Berkeley Encoder YUV (not the same  as
+       Abekas  YUV)  file  as input and produces a PPM image on
+       Standard Output.</description>
+  </entry-point>
+  <entry-point binary-name="fiascotopnm" command="fiascotopnm">
+    <needs-terminal/>
+    <summary xml:lang="en">fiascotopnm: Convert compressed FIASCO image to PGM, or PPM</summary>
+    <description xml:lang="en">fiascotopnm decompresses the named FIASCO files, or  the
+       Standard  Input  if  no  file  is  named, and writes the
+       images as PGM, or PPM files, depending  on  whether  the
+       FIASCO image is black and white or color.</description>
+  </entry-point>
+  <entry-point binary-name="fitstopnm" command="fitstopnm">
+    <needs-terminal/>
+    <summary xml:lang="en">fitstopnm: convert a FITS file into a portable anymap</summary>
+    <description xml:lang="en">itstopnm  reads a FITS file as input and produces a PPM
+       image if the FITS file consists of 3 image planes (NAXIS
+       =  3  and  NAXIS3  = 3), or a PGM image if the FITS file
+       consists of 2 image planes (NAXIS = 2), or if you  spec-
+       ify  the  -image  option.   The  results  may need to be
+       flipped top for bottom; if  so,  just  pipe  the  output
+       through pamflip -tb.</description>
+  </entry-point>
+  <entry-point binary-name="fstopgm" command="fstopgm">
+    <needs-terminal/>
+    <summary xml:lang="en">fstopgm: convert a Usenix FaceSaver(tm) file into a portable graymap</summary>
+    <description xml:lang="en">fstopgm reads a Usenix FaceSaver(tm) file as  input  and
+       produces a PGM image as output.</description>
+  </entry-point>
+  <entry-point binary-name="g3topbm" command="g3topbm">
+    <needs-terminal/>
+    <summary xml:lang="en">g3topbm: convert a Group 3 fax file into a portable bitmap</summary>
+    <description xml:lang="en">g3topbm reads a Group 3 fax file as input and produces a
+       PBM image as output.</description>
+  </entry-point>
+  <entry-point binary-name="gemtopbm" command="gemtopbm">
+    <needs-terminal/>
+    <summary xml:lang="en">gemtopnm: convert a GEM .img file into a portable anymap</summary>
+    <description xml:lang="en">gemtopbm  was  replaced in Netpbm 9.1 (May 2000) by gem-
+       topnm(1).
+
+       gemtopnm is backward compatible with gemtopbm, but works
+       on color images as well.</description>
+  </entry-point>
+  <entry-point binary-name="gemtopnm" command="gemtopnm">
+    <needs-terminal/>
+    <summary xml:lang="en">gemtopnm: convert a GEM .img file into a portable anymap</summary>
+    <description xml:lang="en">gemtopnm  reads  a  GEM  .img file, either the one plane
+       (black/white) or four  plane  (16  color)  varieety,  as
+       input  and produces a PBM or PPM file as output, depend-
+       ing on whether the input is one or four plane.</description>
+  </entry-point>
+  <entry-point binary-name="giftopnm" command="giftopnm">
+    <needs-terminal/>
+    <summary xml:lang="en">giftopnm: convert a GIF file into a portable anymap</summary>
+    <description xml:lang="en">This  is a graphics format converter from the GIF format
+       to the PNM (i.e. PBM, PGM, or PPM) format.
+
+       If the image contains only black  and  maximally  bright
+       white,  the  output  is PBM.  If the image contains more
+       than those two colors, but only  grays,  the  output  is
+       PGM.   If the image contains other colors, the output is
+       PPM.
+</description>
+  </entry-point>
+  <entry-point binary-name="gouldtoppm" command="gouldtoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">gouldtoppm: convert Gould scanner file into a portable pixmap</summary>
+    <description xml:lang="en">gouldtoppm reads a file produced by the Gould scanner as
+       input and produces a PPM image as output.</description>
+  </entry-point>
+  <entry-point binary-name="hdifftopam" command="hdifftopam">
+    <needs-terminal/>
+    <summary xml:lang="en">hdifftopam: convert horizontal difference image to original PAM image</summary>
+    <description xml:lang="en">hdifftopam undoes what pamtohdiff does.</description>
+  </entry-point>
+  <entry-point binary-name="hipstopgm" command="hipstopgm">
+    <needs-terminal/>
+    <summary xml:lang="en">hipstopgm: convert a HIPS file into a portable graymap</summary>
+    <description xml:lang="en">hipstopgm  reads a HIPS file as input and produces a PGM
+       image as output.</description>
+  </entry-point>
+  <entry-point binary-name="hpcdtoppm" command="hpcdtoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">hpcdtoppm: a program named 'hpcdtoppm' that stands in for the
+real program by that name.</summary>
+    <description xml:lang="en">The real 'hpcdtoppm' is a program that converts an image from Photo CD
+format to PPM format.  The program you are running now just issues the
+message you are reading.
+
+Please get a copy of Hpcdtoppm from 
+
+  ftp://ibiblio.org/pub/linux/graphics/convert
+
+and replace this stand-in program with the real one.
+
+The point of this is that this stand-in 'hpcdtoppm' is distributed
+with Netpbm on Sourceforge.  Hpcdtoppm does not meet the requirements
+to be distributed on Sourceforge because a copyright holder does not
+permit people to sell copies.  In the past the real Hpcdtoppm was
+distributed with Netpbm on Sourceforge by mistake.</description>
+  </entry-point>
+  <entry-point binary-name="icontopbm" command="icontopbm">
+    <needs-terminal/>
+    <summary xml:lang="en">icontopbm: convert a Sun icon into a portable bitmap</summary>
+  </entry-point>
+  <entry-point binary-name="icotoppm" command="icotoppm">
+    <needs-terminal/>
+  </entry-point>
+  <entry-point binary-name="ilbmtoppm" command="ilbmtoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">ilbmtoppm: convert an ILBM file into a portable pixmap</summary>
+  </entry-point>
+  <entry-point binary-name="imgtoppm" command="imgtoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">imgtoppm: convert an Img-whatnot file into a portable pixmap</summary>
+  </entry-point>
+  <entry-point binary-name="infotopam" command="infotopam">
+    <needs-terminal/>
+    <summary xml:lang="en">infotopam: convert Amiga Info icon files to PAM files</summary>
+  </entry-point>
+  <entry-point binary-name="jbigtopnm" command="jbigtopnm">
+    <needs-terminal/>
+    <summary xml:lang="en">jbigtopnm: JBIG to PNM image file converter</summary>
+  </entry-point>
+  <entry-point binary-name="jpeg2ktopam" command="jpeg2ktopam">
+    <needs-terminal/>
+    <summary xml:lang="en">jpeg2ktopam: convert JPEG-2000 code stream to PAM/PNM</summary>
+  </entry-point>
+  <entry-point binary-name="jpegtopnm" command="jpegtopnm">
+    <needs-terminal/>
+    <summary xml:lang="en">jpegtopnm: convert JPEG/JFIF file to portable pixmap or graymap</summary>
+  </entry-point>
+  <entry-point binary-name="leaftoppm" command="leaftoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">leaftoppm: convert Interleaf image format to PPM image</summary>
+  </entry-point>
+  <entry-point binary-name="lispmtopgm" command="lispmtopgm">
+    <needs-terminal/>
+    <summary xml:lang="en">lispmtopgm: convert a Lisp Machine bitmap file into pgm format</summary>
+  </entry-point>
+  <entry-point binary-name="macptopbm" command="macptopbm">
+    <needs-terminal/>
+    <summary xml:lang="en">macptopbm: convert a MacPaint file into a portable bitmap</summary>
+  </entry-point>
+  <entry-point binary-name="manweb" command="manweb">
+    <needs-terminal/>
+    <summary xml:lang="en">Manweb is a replacement for Man</summary>
+    <description xml:lang="en">It gets reference documentation from the Worldwide Web or a private web.
+Manweb is distributed with the Netpbm package(http://netpbm.sourceforge.net). 
+Documentation of Manweb is at http://netpbm.sourceforge.net/doc/manweb.html
+Or if you have it properly installed, just use the command manweb manweb</description>
+  </entry-point>
+  <entry-point binary-name="mdatopbm" command="mdatopbm">
+    <needs-terminal/>
+    <summary xml:lang="en">mdatopbm: convert a Microdesign .mda or .mdp file into a portable bitmap</summary>
+  </entry-point>
+  <entry-point binary-name="mgrtopbm" command="mgrtopbm">
+    <needs-terminal/>
+    <summary xml:lang="en">mgrtopbm: convert a MGR bitmap into a portable bitmap</summary>
+  </entry-point>
+  <entry-point binary-name="mrftopbm" command="mrftopbm">
+    <needs-terminal/>
+    <summary xml:lang="en">mrftopbm: convert an MRF image to PBM format</summary>
+  </entry-point>
+  <entry-point binary-name="mtvtoppm" command="mtvtoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">mtvtoppm: convert output from the MTV or PRT ray tracers into a portable pixmap</summary>
+  </entry-point>
+  <entry-point binary-name="neotoppm" command="neotoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">neotoppm: convert an Atari Neochrome .neo into a PPM image</summary>
+  </entry-point>
+  <entry-point binary-name="palmtopnm" command="palmtopnm">
+    <needs-terminal/>
+    <summary xml:lang="en">palmtopnm: convert a Palm pixmap into a portable anymap</summary>
+  </entry-point>
+  <entry-point binary-name="pamarith" command="pamarith">
+    <needs-terminal/>
+    <summary xml:lang="en">pamarith: perform arithmetic on two Netpbm images</summary>
+  </entry-point>
+  <entry-point binary-name="pamchannel" command="pamchannel">
+    <needs-terminal/>
+    <summary xml:lang="en">pamchannel: extract channels from a PAM image</summary>
+  </entry-point>
+  <entry-point binary-name="pamcomp" command="pamcomp">
+    <needs-terminal/>
+    <summary xml:lang="en">pamcomp: composite (overlay) two Netpbm images together</summary>
+  </entry-point>
+  <entry-point binary-name="pamcut" command="pamcut">
+    <needs-terminal/>
+    <summary xml:lang="en">pamcut: cut a rectangle out of a PAM, PBM, PGM, or PPM image</summary>
+  </entry-point>
+  <entry-point binary-name="pamdeinterlace" command="pamdeinterlace">
+    <needs-terminal/>
+    <summary xml:lang="en">pamdeinterlace: remove ever other row from a PAM/PNM image</summary>
+  </entry-point>
+  <entry-point binary-name="pamdice" command="pamdice">
+    <needs-terminal/>
+    <summary xml:lang="en">pamdice: slice a Netpbm image into many horizontally and/or vertically</summary>
+  </entry-point>
+  <entry-point binary-name="pamditherbw" command="pamditherbw">
+    <needs-terminal/>
+    <summary xml:lang="en">pamditherbw: dither grayscale image to black and white</summary>
+  </entry-point>
+  <entry-point binary-name="pamedge" command="pamedge">
+    <needs-terminal/>
+    <summary xml:lang="en">pamedge: edge-detect an image</summary>
+  </entry-point>
+  <entry-point binary-name="pamendian" command="pamendian">
+    <needs-terminal/>
+    <summary xml:lang="en">pamendian: reverse endianness of a Netpbm image</summary>
+  </entry-point>
+  <entry-point binary-name="pamenlarge" command="pamenlarge">
+    <needs-terminal/>
+    <summary xml:lang="en">NetPbm: tools for manipulating images</summary>
+  </entry-point>
+  <entry-point binary-name="pamfile" command="pamfile">
+    <needs-terminal/>
+    <summary xml:lang="en">pamfile: describe a Netpbm (PAM or PNM) file</summary>
+  </entry-point>
+  <entry-point binary-name="pamflip" command="pamflip">
+    <needs-terminal/>
+    <summary xml:lang="en">pamflip: flip or rotate a PAM or PNM image</summary>
+  </entry-point>
+  <entry-point binary-name="pamfunc" command="pamfunc">
+    <needs-terminal/>
+    <summary xml:lang="en">pamfunc: apply simple arithmetic functions to a Netpbm image</summary>
+  </entry-point>
+  <entry-point binary-name="pamgauss" command="pamgauss">
+    <needs-terminal/>
+    <summary xml:lang="en">pamgauss: create a two dimensional gaussian function as a PAM image</summary>
+  </entry-point>
+  <entry-point binary-name="pamlookup" command="pamlookup">
+    <needs-terminal/>
+    <summary xml:lang="en">pamlookup: map an image to a new image by using it as indices into a table</summary>
+  </entry-point>
+  <entry-point binary-name="pammasksharpen" command="pammasksharpen">
+    <needs-terminal/>
+    <summary xml:lang="en">pammasksharpen: sharpen an image via an unsharp mask</summary>
+  </entry-point>
+  <entry-point binary-name="pamoil" command="pamoil">
+    <needs-terminal/>
+    <summary xml:lang="en">pamoil: turn a PAM image into an oil painting</summary>
+  </entry-point>
+  <entry-point binary-name="pamperspective" command="pamperspective">
+    <needs-terminal/>
+    <summary xml:lang="en">pamperspective: a reverse scanline renderer for Netpbm images</summary>
+  </entry-point>
+  <entry-point binary-name="pampop9" command="pampop9">
+    <needs-terminal/>
+    <summary xml:lang="en">pampop9: simulate a multi-lens camera such as the Pop9</summary>
+  </entry-point>
+  <entry-point binary-name="pamscale" command="pamscale">
+    <needs-terminal/>
+    <summary xml:lang="en">pamscale: scale a Netpbm image</summary>
+  </entry-point>
+  <entry-point binary-name="pamseq" command="pamseq">
+    <needs-terminal/>
+    <summary xml:lang="en">pamseq: generate PAM image of all possible tuple values, in sequence</summary>
+  </entry-point>
+  <entry-point binary-name="pamsharpmap" command="pamsharpmap">
+    <needs-terminal/>
+    <summary xml:lang="en">pamsharpmap: create map of sharpness in a PNM/PAM image</summary>
+  </entry-point>
+  <entry-point binary-name="pamsharpness" command="pamsharpness">
+    <needs-terminal/>
+    <summary xml:lang="en">pamsharpness: measure the sharpness of a PNM/PAM image</summary>
+  </entry-point>
+  <entry-point binary-name="pamslice" command="pamslice">
+    <needs-terminal/>
+    <summary xml:lang="en">pamslice: extract one line of values out of a Netpbm image</summary>
+  </entry-point>
+  <entry-point binary-name="pamstack" command="pamstack">
+    <needs-terminal/>
+    <summary xml:lang="en">pamstack: stack planes of multiple PAM images into one PAM image</summary>
+  </entry-point>
+  <entry-point binary-name="pamstereogram" command="pamstereogram">
+    <needs-terminal/>
+    <summary xml:lang="en">pamstereogram: create a PAM single-image stereogram from a PAM height map</summary>
+  </entry-point>
+  <entry-point binary-name="pamstretch" command="pamstretch">
+    <needs-terminal/>
+    <summary xml:lang="en">pamstretch: scale up a PNM or PAM image by interpolating between pixels.</summary>
+  </entry-point>
+  <entry-point binary-name="pamstretch-gen" command="pamstretch-gen">
+    <needs-terminal/>
+    <summary xml:lang="en">pamstretch-gen: a general form of pamstretch</summary>
+    <description xml:lang="en">pamstretch-gen - a shell script which acts a little like a general
+form of pamstretch, by scaling up with pamstretch then scaling down with pamscale.</description>
+  </entry-point>
+  <entry-point binary-name="pamsumm" command="pamsumm">
+    <needs-terminal/>
+    <summary xml:lang="en">pamsumm: sum the samples in a Netpbm image</summary>
+  </entry-point>
+  <entry-point binary-name="pamsummcol" command="pamsummcol">
+    <needs-terminal/>
+    <summary xml:lang="en">pamsummcol: sum the columns in a Netpbm image</summary>
+  </entry-point>
+  <entry-point binary-name="pamtodjvurle" command="pamtodjvurle">
+    <needs-terminal/>
+    <summary xml:lang="en">pamtodjvurle: convert a Netpbm image pam</summary>
+  </entry-point>
+  <entry-point binary-name="pamtohdiff" command="pamtohdiff">
+    <needs-terminal/>
+    <summary xml:lang="en">pamtohdiff: convert PAM image to horizontal difference image</summary>
+  </entry-point>
+  <entry-point binary-name="pamtohtmltbl" command="pamtohtmltbl">
+    <needs-terminal/>
+    <summary xml:lang="en">pamtohtmltbl: convert pnm/pam visual image to an HTML table</summary>
+  </entry-point>
+  <entry-point binary-name="pamtojpeg2k" command="pamtojpeg2k">
+    <needs-terminal/>
+    <summary xml:lang="en">pamtojpeg2k: convert PAM/PNM image to a JPEG-2000 code stream</summary>
+  </entry-point>
+  <entry-point binary-name="pamtopfm" command="pamtopfm">
+    <needs-terminal/>
+    <summary xml:lang="en">pamtopfm: convert Netpbm image to PFM (Portable Float Map)</summary>
+  </entry-point>
+  <entry-point binary-name="pamtopnm" command="pamtopnm">
+    <needs-terminal/>
+    <summary xml:lang="en">pamtopnm: convert PAM image to PBM, PGM, or PPM</summary>
+  </entry-point>
+  <entry-point binary-name="pamtotga" command="pamtotga">
+    <needs-terminal/>
+    <summary xml:lang="en">pamtotga: convert a Netpbm image to a TrueVision Targa file</summary>
+  </entry-point>
+  <entry-point binary-name="pamtouil" command="pamtouil">
+    <needs-terminal/>
+    <summary xml:lang="en">pamtouil: convert a PNM or PNM/alpha image into a Motif UIL icon file</summary>
+  </entry-point>
+  <entry-point binary-name="pbmclean" command="pbmclean">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmclean: flip isolated pixels in portable bitmap</summary>
+  </entry-point>
+  <entry-point binary-name="pbmlife" command="pbmlife">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmlife: apply Conway's rules of Life to a portable bitmap</summary>
+  </entry-point>
+  <entry-point binary-name="pbmmake" command="pbmmake">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmmake: create a blank bitmap of a specified size</summary>
+  </entry-point>
+  <entry-point binary-name="pbmmask" command="pbmmask">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmmask: create a mask bitmap from a regular bitmap</summary>
+  </entry-point>
+  <entry-point binary-name="pbmpage" command="pbmpage">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmpage: create a one page test pattern for printing</summary>
+  </entry-point>
+  <entry-point binary-name="pbmpscale" command="pbmpscale">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmpscale: enlarge a portable bitmap with edge smoothing</summary>
+  </entry-point>
+  <entry-point binary-name="pbmreduce" command="pbmreduce">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmreduce: read a portable bitmap and reduce it N times</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtext" command="pbmtext">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtext: render text into a bitmap</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtextps" command="pbmtextps">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtextps: render text into a bitmap using a postscript interpreter</summary>
+  </entry-point>
+  <entry-point binary-name="pbmto10x" command="pbmto10x">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmto10x: convert a portable bitmap into Gemini 10X printer graphics</summary>
+  </entry-point>
+  <entry-point binary-name="pbmto4425" command="pbmto4425">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmto4425: Display PBM images on an AT&amp;T 4425 terminal</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtoatk" command="pbmtoatk">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtoatk: convert portable bitmap to Andrew Toolkit raster object</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtobbnbg" command="pbmtobbnbg">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtobg: convert a portable bitmap into BitGraph graphics</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtocmuwm" command="pbmtocmuwm">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtocmuwm: convert a portable bitmap into a CMU window manager bitmap</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtodjvurle" command="pbmtodjvurle">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtodjvurle: convert a PBM image to DjVu Bitonal RLE format</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtoepsi" command="pbmtoepsi">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtoepsi: convert a portable bitmap into an encapsulated PostScript</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtoepson" command="pbmtoepson">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtoepson: convert a portable bitmap into Epson printer graphics</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtoescp2" command="pbmtoescp2">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtoescp2: convert a PBM image to a ESC/P2 printer file</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtog3" command="pbmtog3">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtog3: convert a portable bitmap into a Group 3 fax file</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtogem" command="pbmtogem">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtogem: convert a portable bitmap into a GEM .img file</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtogo" command="pbmtogo">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtogo: convert a portable bitmap into compressed GraphOn graphics</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtoibm23xx" command="pbmtoibm23xx">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtoibm23xx: convert a PBM image to IBM 23XX printer stream</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtoicon" command="pbmtoicon">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtoicon: convert a portable bitmap into a Sun icon</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtolj" command="pbmtolj">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtolj: convert a PBM image to HP LaserJet format</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtoln03" command="pbmtoln03">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtoln03: convert protable bitmap to DEC LN03+ Sixel output</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtolps" command="pbmtolps">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtolps: convert portable bitmap to PostScript</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtomacp" command="pbmtomacp">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtomacp: convert a portable bitmap into a MacPaint file</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtomatrixorbital" command="pbmtomatrixorbital">
+    <needs-terminal/>
+    <summary xml:lang="en">NetPbm: tools for manipulating images</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtomda" command="pbmtomda">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtomda: convert a portable bitmap to a Microdesign .mda</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtomgr" command="pbmtomgr">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtomgr: convert a portable bitmap into a MGR bitmap</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtomrf" command="pbmtomrf">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtomrf: convert a PBM format image to MRF</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtonokia" command="pbmtonokia">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtonokia: convert a portable bitmap to Nokia Smart Messaging Formats</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtopgm" command="pbmtopgm">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtopgm: convert PBM image to PGM by averaging areas</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtopi3" command="pbmtopi3">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtopi3: convert a portable bitmap into an Atari Degas .pi3 file</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtopk" command="pbmtopk">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtopk: convert a portable bitmap into a packed (PK) format font</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtoplot" command="pbmtoplot">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtoplot: convert a portable bitmap into a Unix plot(5) file</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtoppa" command="pbmtoppa">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtoppa: convert PBM image to HP Printer Performance Architecture (PPA)</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtopsg3" command="pbmtopsg3">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtopsg3: convert PBM images to Postscript with G3 fax compression</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtoptx" command="pbmtoptx">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtoptx: convert a portable bitmap into Printronix printer graphics</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtowbmp" command="pbmtowbmp">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtowbmp: convert a portable bitmap (pbm) to a wireless bitmap (wbmp) file</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtox10bm" command="pbmtox10bm">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtox10bm: convert a portable bitmap into an X10 bitmap</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtoxbm" command="pbmtoxbm">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtoxbm: convert a portable bitmap into an X11 bitmap</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtoybm" command="pbmtoybm">
+    <needs-terminal/>
+    <summary xml:lang="en">pgmtoybm: convert a portable bitmap into a Bennet Yee face file</summary>
+  </entry-point>
+  <entry-point binary-name="pbmtozinc" command="pbmtozinc">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmtozinc: convert a portable bitmap into a Zinc bitmap</summary>
+  </entry-point>
+  <entry-point binary-name="pbmupc" command="pbmupc">
+    <needs-terminal/>
+    <summary xml:lang="en">pbmupc: create a Universal Product Code bitmap</summary>
+  </entry-point>
+  <entry-point binary-name="pc1toppm" command="pc1toppm">
+    <needs-terminal/>
+    <summary xml:lang="en">pc1toppm: convert an Atari Degas .pc1 into a PPM image</summary>
+  </entry-point>
+  <entry-point binary-name="pcdovtoppm" command="pcdovtoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">pcdovtoppm: generate a single PPM file from a PCD overview file</summary>
+    <description xml:lang="en">Generate a single PPM file from a PCD overview file
+
+A similar result can be achieved by using &quot;hpcdtoppm -Overview&quot;
+followed by &quot;pnmindex -black&quot; on the generated PPM images.
+This shell just makes it more convenient and transparent to
+convert from one PCD to one PPM overview file.
+
+Additional options (compared to pnmindex) are -maxwidth and
+-font &gt;font&lt;. See &quot;man pbmtext&quot; on how to create your own font.</description>
+  </entry-point>
+  <entry-point binary-name="pcxtoppm" command="pcxtoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">pcxtoppm: convert a PCX file into a portable pixmap</summary>
+  </entry-point>
+  <entry-point binary-name="pfmtopam" command="pfmtopam">
+    <needs-terminal/>
+    <summary xml:lang="en">pamtopfm: convert PFM (Portable Float Map) image to Netpbm format</summary>
+  </entry-point>
+  <entry-point binary-name="pgmabel" command="pgmabel">
+    <needs-terminal/>
+    <summary xml:lang="en">pgmabel: create cross section using Abel Integration for Deconvolution</summary>
+  </entry-point>
+  <entry-point binary-name="pgmbentley" command="pgmbentley">
+    <needs-terminal/>
+    <summary xml:lang="en">pgmbentley: Bentleyize a portable graymap</summary>
+  </entry-point>
+  <entry-point binary-name="pgmclouds" command="pgmclouds">
+    <needs-terminal/>
+    <name xml:lang="en">PbmAdd</name>
+    <summary xml:lang="en">PbmAdd: additions to the PBMPLUS package</summary>
+  </entry-point>
+  <entry-point binary-name="pgmcrater" command="pgmcrater">
+    <needs-terminal/>
+    <summary xml:lang="en">pgmcrater: create cratered terrain by fractal forgery</summary>
+  </entry-point>
+  <entry-point binary-name="pgmedge" command="pgmedge">
+    <needs-terminal/>
+    <summary xml:lang="en">pamedge: edge-detect an image</summary>
+  </entry-point>
+  <entry-point binary-name="pgmenhance" command="pgmenhance">
+    <needs-terminal/>
+    <summary xml:lang="en">pgmenhance: edge-enhance a portable graymap</summary>
+  </entry-point>
+  <entry-point binary-name="pgmfract" command="pgmfract">
+    <needs-terminal/>
+    <name xml:lang="en">PbmAdd</name>
+    <summary xml:lang="en">PbmAdd: additions to the PBMPLUS package</summary>
+  </entry-point>
+  <entry-point binary-name="pgmhist" command="pgmhist">
+    <needs-terminal/>
+    <summary xml:lang="en">pgmhist: print a histogram of the values in a portable graymap</summary>
+  </entry-point>
+  <entry-point binary-name="pgmkernel" command="pgmkernel">
+    <needs-terminal/>
+    <summary xml:lang="en">pgmkernel: generate a convolution kernel</summary>
+  </entry-point>
+  <entry-point binary-name="pgmminkowski" command="pgmminkowski">
+    <needs-terminal/>
+    <summary xml:lang="en">pgmminkowski: compute Minkowski integral</summary>
+  </entry-point>
+  <entry-point binary-name="pgmmorphconv" command="pgmmorphconv">
+    <needs-terminal/>
+    <summary xml:lang="en">pgmmorphconv: perform morphological convolutions - dilation, erosion</summary>
+  </entry-point>
+  <entry-point binary-name="pgmmountains" command="pgmmountains">
+    <needs-terminal/>
+    <name xml:lang="en">PbmAdd</name>
+    <summary xml:lang="en">PbmAdd: additions to the PBMPLUS package</summary>
+  </entry-point>
+  <entry-point binary-name="pgmnoise" command="pgmnoise">
+    <needs-terminal/>
+    <summary xml:lang="en">pgmnoise: create a graymap made up of white noise</summary>
+  </entry-point>
+  <entry-point binary-name="pgmnorm" command="pgmnorm">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmnorm: normalize the contrast in a Netbpm image</summary>
+  </entry-point>
+  <entry-point binary-name="pgmoil" command="pgmoil">
+    <needs-terminal/>
+    <summary xml:lang="en">pamoil: turn a PAM image into an oil painting</summary>
+  </entry-point>
+  <entry-point binary-name="pgmramp" command="pgmramp">
+    <needs-terminal/>
+    <summary xml:lang="en">pgmramp: generate a grayscale ramp</summary>
+  </entry-point>
+  <entry-point binary-name="pgmslice" command="pgmslice">
+    <needs-terminal/>
+    <summary xml:lang="en">pamslice: extract one line of values out of a Netpbm image</summary>
+  </entry-point>
+  <entry-point binary-name="pgmtexture" command="pgmtexture">
+    <needs-terminal/>
+    <summary xml:lang="en">pgmtexture: calculate textural features on a portable graymap</summary>
+  </entry-point>
+  <entry-point binary-name="pgmtofs" command="pgmtofs">
+    <needs-terminal/>
+    <summary xml:lang="en">pgmtofs: convert portable graymap to Usenix FaceSaver(tm) format</summary>
+  </entry-point>
+  <entry-point binary-name="pgmtolispm" command="pgmtolispm">
+    <needs-terminal/>
+    <summary xml:lang="en">pgmtolispm: convert a portable graymap into Lisp Machine format</summary>
+  </entry-point>
+  <entry-point binary-name="pgmtopbm" command="pgmtopbm">
+    <needs-terminal/>
+    <summary xml:lang="en">pgmtopbm: convert a portable graymap into a portable bitmap</summary>
+  </entry-point>
+  <entry-point binary-name="pgmtopgm" command="pgmtopgm">
+    <needs-terminal/>
+    <summary xml:lang="en">pgmtopgm: copy PGM image</summary>
+  </entry-point>
+  <entry-point binary-name="pgmtoppm" command="pgmtoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">pgmtoppm: colorize a PGM (grayscale) image into a PGM (color) image</summary>
+  </entry-point>
+  <entry-point binary-name="pi1toppm" command="pi1toppm">
+    <needs-terminal/>
+    <summary xml:lang="en">pi1toppm: convert an Atari Degas .pi1 into a portable pixmap</summary>
+  </entry-point>
+  <entry-point binary-name="pi3topbm" command="pi3topbm">
+    <needs-terminal/>
+    <summary xml:lang="en">pi3topbm: convert an Atari Degas .pi3 file into a portable bitmap</summary>
+  </entry-point>
+  <entry-point binary-name="pjtoppm" command="pjtoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">pjtoppm: convert an HP PaintJet file to a portable pixmap</summary>
+  </entry-point>
+  <entry-point binary-name="pktopbm" command="pktopbm">
+    <needs-terminal/>
+    <summary xml:lang="en">pktopbm: convert packed (PK) format font into portable bitmap(s)</summary>
+  </entry-point>
+  <entry-point binary-name="pngtopnm" command="pngtopnm">
+    <needs-terminal/>
+    <summary xml:lang="en">pngtopnm: convert a Portable Network Graphics file into a portable anymap</summary>
+  </entry-point>
+  <entry-point binary-name="pnmalias" command="pnmalias">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmalias: antialias a portable anyumap.</summary>
+  </entry-point>
+  <entry-point binary-name="pnmarith" command="pnmarith">
+    <needs-terminal/>
+    <summary xml:lang="en">pamarith: perform arithmetic on two Netpbm images</summary>
+  </entry-point>
+  <entry-point binary-name="pnmcat" command="pnmcat">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmcat: concatenate portable anymaps</summary>
+  </entry-point>
+  <entry-point binary-name="pnmcolormap" command="pnmcolormap">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmcolormap: create quantization color map for a Netpbm image</summary>
+  </entry-point>
+  <entry-point binary-name="pnmcomp" command="pnmcomp">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmcomp: composite (overlay) two portable anymap files together</summary>
+  </entry-point>
+  <entry-point binary-name="pnmconvol" command="pnmconvol">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmconvol: general MxN convolution on a portable anymap</summary>
+  </entry-point>
+  <entry-point binary-name="pnmcrop" command="pnmcrop">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmcrop: crop a portable anymap</summary>
+  </entry-point>
+  <entry-point binary-name="pnmcut" command="pnmcut">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmcut: cut a rectangle out of a PBM, PGM, or PPM image</summary>
+  </entry-point>
+  <entry-point binary-name="pnmdepth" command="pnmdepth">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmdepth: change the maxval in a portable anymap</summary>
+  </entry-point>
+  <entry-point binary-name="pnmenlarge" command="pnmenlarge">
+    <needs-terminal/>
+    <summary xml:lang="en">NetPbm: tools for manipulating images</summary>
+  </entry-point>
+  <entry-point binary-name="pnmfile" command="pnmfile">
+    <needs-terminal/>
+    <summary xml:lang="en">pamfile: describe a Netpbm (PAM or PNM) file</summary>
+  </entry-point>
+  <entry-point binary-name="pnmflip" command="pnmflip">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmflip: a compatibility interface to Pamflip.</summary>
+    <description xml:lang="en">Pnmflip exists so existing programs and procedures that rely on Pnmflip
+syntax continue to work.  You should not make new use of Pnmflip and
+if you modify an old use, you should upgrade it to use Pamflip.
+
+The one way that Pamflip is not backward compatible with Pnmflip is
+that with Pnmflip, you can do this:
+
+  pnmflip -xy -tb
+
+and that causes pnmflip to do both transformations (i.e. the same thing
+as -r270).  With Pamflip, you can't specify multiple (or zero) flip
+type options.  Instead, you would use the -xform option:
+
+ pamflip -xform=transpose,topbottom</description>
+  </entry-point>
+  <entry-point binary-name="pnmgamma" command="pnmgamma">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmgamma: perform gamma correction on a PNM image</summary>
+  </entry-point>
+  <entry-point binary-name="pnmhisteq" command="pnmhisteq">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmhisteq: histogram equalise a portable anymap</summary>
+  </entry-point>
+  <entry-point binary-name="pnmhistmap" command="pnmhistmap">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmhistmap: build a visual index of a bunch of PNM images</summary>
+  </entry-point>
+  <entry-point binary-name="pnmindex" command="pnmindex">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmindex: draw a histogram for a PGM or PPM file</summary>
+  </entry-point>
+  <entry-point binary-name="pnminterp" command="pnminterp">
+    <needs-terminal/>
+    <summary xml:lang="en">pamstretch: scale up a PNM or PAM image by interpolating between pixels.</summary>
+  </entry-point>
+  <entry-point binary-name="pnminvert" command="pnminvert">
+    <needs-terminal/>
+    <summary xml:lang="en">pnminvert: invert a portable anymap</summary>
+  </entry-point>
+  <entry-point binary-name="ppmmargin" command="ppmmargin">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmmargin: add a margin to a PNM image</summary>
+  </entry-point>
+  <entry-point binary-name="pnmmontage" command="pnmmontage">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmmontage: create a montage of portable anymaps</summary>
+  </entry-point>
+  <entry-point binary-name="pnmnlfilt" command="pnmnlfilt">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmnlfilt: non-linear filters: smooth, alpha trim mean, optimal</summary>
+  </entry-point>
+  <entry-point binary-name="pnmnoraw" command="pnmnoraw">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmnoraw</summary>
+  </entry-point>
+  <entry-point binary-name="pnmnorm" command="pnmnorm">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmnorm: normalize the contrast in a Netbpm image</summary>
+  </entry-point>
+  <entry-point binary-name="pnmpad" command="pnmpad">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmpad: add borders to portable anymap</summary>
+  </entry-point>
+  <entry-point binary-name="pnmpaste" command="pnmpaste">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmpaste: paste a rectangle into a portable anymap</summary>
+  </entry-point>
+  <entry-point binary-name="pnmpsnr" command="pnmpsnr">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmpsnr: compute the difference between two images (the PSNR)</summary>
+  </entry-point>
+  <entry-point binary-name="pnmpsnr" command="pnmpsnr">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmpsnr: compute the difference between two images (the PSNR)</summary>
+  </entry-point>
+  <entry-point binary-name="pnmquant" command="pnmquant">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmquant</summary>
+  </entry-point>
+  <entry-point binary-name="pnmrotate" command="pnmrotate">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmrotate: rotate a portable anymap by some angle</summary>
+  </entry-point>
+  <entry-point binary-name="pnmscale" command="pnmscale">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmscale: scale a PNM image</summary>
+  </entry-point>
+  <entry-point binary-name="pnmscalefixed" command="pnmscalefixed">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmscalefixed: see pnmscalefixed.1</summary>
+  </entry-point>
+  <entry-point binary-name="pnmshear" command="pnmshear">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmshear: shear a portable anymap by some angle</summary>
+  </entry-point>
+  <entry-point binary-name="pnmsmooth" command="pnmsmooth">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmsmooth: smooth out an image</summary>
+  </entry-point>
+  <entry-point binary-name="pnmsplit" command="pnmsplit">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmsplit: split a multi-image PNM file into multiple single-image files</summary>
+  </entry-point>
+  <entry-point binary-name="pnmstitch" command="pnmstitch">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmstitch: stitch together two panoramic (side-by-side) photographs</summary>
+  </entry-point>
+  <entry-point binary-name="pnmtile" command="pnmtile">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmtile: replicate a portable anymap into a specified size</summary>
+  </entry-point>
+  <entry-point binary-name="pnmtoddif" command="pnmtoddif">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmtoddif: see pnmtoddif.1</summary>
+  </entry-point>
+  <entry-point binary-name="pnmtofiasco" command="pnmtofiasco">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmtofiasco: Convert PNM file to FIASCO compressed file</summary>
+  </entry-point>
+  <entry-point binary-name="pnmtofits" command="pnmtofits">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmtofits: convert a portable anymap into FITS format</summary>
+  </entry-point>
+  <entry-point binary-name="pnmtojbig" command="pnmtojbig">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmtojbig: PNM to JBIG file converter</summary>
+  </entry-point>
+  <entry-point binary-name="pnmtojpeg" command="pnmtojpeg">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmtojpeg: convert PNM image to a JFIF (JPEG) image</summary>
+  </entry-point>
+  <entry-point binary-name="pnmtopalm" command="pnmtopalm">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmtopalm: convert a portable anymap into a Palm pixmap</summary>
+  </entry-point>
+  <entry-point binary-name="pnmtoplainpnm" command="pnmtoplainpnm">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmtoplainpnm</summary>
+  </entry-point>
+  <entry-point binary-name="pnmtopclxl" command="pnmtopclxl">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmtopclxl: convert a PNM image to an HP LaserJet PCL XL printer stream</summary>
+  </entry-point>
+  <entry-point binary-name="pnmtopng" command="pnmtopng">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmtopng: convert a portable anymap into a Portable Network Graphics file</summary>
+  </entry-point>
+  <entry-point binary-name="pnmtopnm" command="pnmtopnm">
+    <needs-terminal/>
+    <summary xml:lang="en">pamtopnm: convert PAM image to PBM, PGM, or PPM</summary>
+  </entry-point>
+  <entry-point binary-name="pnmtops" command="pnmtops">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmtops: convert portable anymap to PostScript</summary>
+  </entry-point>
+  <entry-point binary-name="pnmtorast" command="pnmtorast">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmtorast: convert a portable pixmap into a Sun rasterfile</summary>
+  </entry-point>
+  <entry-point binary-name="pnmtorle" command="pnmtorle">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmtorle: convert a Netpbm image file into an RLE image file.</summary>
+  </entry-point>
+  <entry-point binary-name="pnmtosgi" command="pnmtosgi">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmtosgi: convert a portable anymap to a SGI image file</summary>
+  </entry-point>
+  <entry-point binary-name="pnmtosir" command="pnmtosir">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmtosir: convert a portable anymap into a Solitaire format</summary>
+  </entry-point>
+  <entry-point binary-name="pnmtotiff" command="pnmtotiff">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmtotiff: convert a PNM image to a TIFF file</summary>
+  </entry-point>
+  <entry-point binary-name="pnmtotiffcmyk" command="pnmtotiffcmyk">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmtotiffcmyk: convert a a portable anymap into a CMYK encoded TIFF file</summary>
+  </entry-point>
+  <entry-point binary-name="pnmtoxwd" command="pnmtoxwd">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmtoxwd: convert a portable anymap into an X11 window dump</summary>
+  </entry-point>
+  <entry-point binary-name="ppm3d" command="ppm3d">
+    <needs-terminal/>
+    <summary xml:lang="en">ppm3d: convert two portable pixmap into a red/blue 3d glasses pixmap</summary>
+  </entry-point>
+  <entry-point binary-name="ppmbrighten" command="ppmbrighten">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmbrighten: change an images Saturation and Value from an HSV map</summary>
+  </entry-point>
+  <entry-point binary-name="ppmchange" command="ppmchange">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmchange: change all pixels of one color to another in a portable pixmap</summary>
+  </entry-point>
+  <entry-point binary-name="ppmcie" command="ppmcie">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmcie: draw a CIE color chart as a PPM image</summary>
+  </entry-point>
+  <entry-point binary-name="ppmcolormask" command="ppmcolormask">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmcolormask: produce mask of areas of a certain color in a PPM file</summary>
+  </entry-point>
+  <entry-point binary-name="ppmcolors" command="ppmcolors">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmcolors: generate a color map of all colors of a certain maxval</summary>
+  </entry-point>
+  <entry-point binary-name="ppmdim" command="ppmdim">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmdim: dim a portable pixmap down to total blackness</summary>
+  </entry-point>
+  <entry-point binary-name="ppmdist" command="ppmdist">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmdist: simplistic grayscale assignment for machine generated, color images</summary>
+  </entry-point>
+  <entry-point binary-name="ppmdither" command="ppmdither">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmdither: ordered dither for color images</summary>
+  </entry-point>
+  <entry-point binary-name="ppmfade" command="ppmfade">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmfade: creates a fade (a sequence of frames) between two images</summary>
+  </entry-point>
+  <entry-point binary-name="ppmflash" command="ppmflash">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmflash: brighten a picture up to complete white-out</summary>
+  </entry-point>
+  <entry-point binary-name="ppmforge" command="ppmforge">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmforge: fractal forgeries of clouds, planets, and starry skies</summary>
+  </entry-point>
+  <entry-point binary-name="ppmglobe" command="ppmglobe">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmglobe: generate strips to glue onto a sphere</summary>
+  </entry-point>
+  <entry-point binary-name="ppmhist" command="ppmhist">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmhist: print a histogram of a PPM image</summary>
+  </entry-point>
+  <entry-point binary-name="ppmlabel" command="ppmlabel">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmlabel: add text to a portable pixmap</summary>
+  </entry-point>
+  <entry-point binary-name="ppmmake" command="ppmmake">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmmake: create a pixmap of a specified size and color</summary>
+  </entry-point>
+  <entry-point binary-name="ppmmix" command="ppmmix">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmmix: blend together two portable pixmaps</summary>
+  </entry-point>
+  <entry-point binary-name="ppmnorm" command="ppmnorm">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmnorm: normalize the contrast in a Netbpm image</summary>
+  </entry-point>
+  <entry-point binary-name="ppmntsc" command="ppmntsc">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmntsc: Make RGB colors legal for NTSC or PAL color systems.</summary>
+  </entry-point>
+  <entry-point binary-name="ppmpat" command="ppmpat">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmpat: make a pretty pixmap</summary>
+  </entry-point>
+  <entry-point binary-name="ppmquant" command="ppmquant">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmquant: compatibility interface for Pnmquant</summary>
+  </entry-point>
+  <entry-point binary-name="ppmquantall" command="ppmquantall">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmquantall: run ppmquant on a bunch of files all at once, so they share a common colormap</summary>
+    <description xml:lang="en">Let's say you've got a dozen pixmaps that you want
+to display on the screen all at the same time.  Your screen can only
+display 256 different colors, but the pixmaps have a total of a thousand
+or so different colors.  For a single pixmap you solve this problem with
+pnmquant; this script solves it for multiple pixmaps.  All it does is
+concatenate them together into one big pixmap, run pnmquant on that, and
+then split it up into little pixmaps again.
+	
+WARNING: overwrites the source files with the results!!!</description>
+  </entry-point>
+  <entry-point binary-name="ppmrainbow" command="ppmrainbow">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmrainbow</summary>
+    <description xml:lang="en">Pnmshadow is a brutal sledgehammer implemented in Perl which
+adds attractive shadows to images, as often seen in titles
+of World-Wide Web pages.  This program does not actually
+*do* any image processing--it simply invokes components of
+Jef Poskanzer's PBMplus package (which must be present on
+the path when this script is run) to bludgeon the source
+image into a plausible result.</description>
+  </entry-point>
+  <entry-point binary-name="ppmrelief" command="ppmrelief">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmrelief: run a Laplacian relief filter on a portable pixmap</summary>
+  </entry-point>
+  <entry-point binary-name="ppmrough" command="ppmrough">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmrough: create PPM image of two colors with a ragged border between them</summary>
+  </entry-point>
+  <entry-point binary-name="ppmshadow" command="ppmshadow">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmshadow: adds attractive shadows to images</summary>
+  </entry-point>
+  <entry-point binary-name="ppmshift" command="ppmshift">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmshift: shift lines of a portable pixmap left or right by a random amount</summary>
+  </entry-point>
+  <entry-point binary-name="ppmspread" command="ppmspread">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmspread: displace a portable pixmap's pixels by a random amount</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtoacad" command="ppmtoacad">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtoacad: convert portable pixmap to AutoCAD database or slide</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtoarbtxt" command="ppmtoarbtxt">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtoarbtxt: generate image in arbitrary text format from PPM image</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtobmp" command="ppmtobmp">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtobmp: convert a portable pixmap into a BMP file</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtoeyuv" command="ppmtoeyuv">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtoeyuv: convert a portable pixmap into a Berkeley YUV file</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtogif" command="ppmtogif">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtogif: convert a portable pixmap into a GIF file</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtoicr" command="ppmtoicr">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtoicr: convert a portable pixmap into NCSA ICR format</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtoilbm" command="ppmtoilbm">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtoilbm: convert a portable pixmap into an ILBM file</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtojpeg" command="ppmtojpeg">
+    <needs-terminal/>
+    <summary xml:lang="en">pnmtojpeg: convert PNM image to a JFIF (JPEG) image</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtoleaf" command="ppmtoleaf">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtoleaf: convert PPM image to Interleaf image format</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtolj" command="ppmtolj">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtolj: convert a portable pixmap to an HP LaserJet PCL 5 Color file</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtomap" command="ppmtomap">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtomap:  This program exists for backward compatibility.</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtomitsu" command="ppmtomitsu">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtomitsu: convert a portable pixmap to a Mitsubishi S340-10 file</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtompeg" command="ppmtompeg">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtompeg: encodes MPEG-1 bitstreams</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtoneo" command="ppmtoneo">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtoneo: convert a portable pixmap into an Atari Neochrome .neo file</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtopcx" command="ppmtopcx">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtopcx: convert a portable pixmap into a PCX file</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtopgm" command="ppmtopgm">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtopgm: convert a portable pixmap into a portable graymap</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtopi1" command="ppmtopi1">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtopi1: convert a portable pixmap into an Atari Degas .pi1 file</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtopict" command="ppmtopict">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtopict: convert a portable pixmap into a Macintosh PICT file</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtopj" command="ppmtopj">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtopj: convert a portable pixmap to an HP PaintJet file</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtopjxl" command="ppmtopjxl">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtopjxl: convert a portable pixmap into an HP PaintJet XL PCL file</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtoppm" command="ppmtoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtoppm: copy PPM image</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtopuzz" command="ppmtopuzz">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtopuzz: convert a portable pixmap into an X11 puzzle file</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtorgb3" command="ppmtorgb3">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtorgb3: separate a portable pixmap into three portable graymaps</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtosixel" command="ppmtosixel">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtosixel: convert a portable pixmap into DEC sixel format</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtoterm" command="ppmtoterm">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtoterm: convert a PPM image to a ANSI ISO 6429 ascii image</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtouil" command="ppmtouil">
+    <needs-terminal/>
+    <summary xml:lang="en">pamtouil: convert a PNM or PNM/alpha image into a Motif UIL icon file</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtowinicon" command="ppmtowinicon">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtowinicon: convert 1 or more portable pixmaps into a Windows .ico</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtoxpm" command="ppmtoxpm">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtoxpm: convert a PPM iamge into an X11 pixmap</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtoyuv" command="ppmtoyuv">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtoyuv: convert a portable pixmap into an Abekas YUV file</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtoyuvsplit" command="ppmtoyuvsplit">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtoyuvsplit: convert a portable pixmap into 3 subsampled raw YUV files</summary>
+  </entry-point>
+  <entry-point binary-name="ppmtv" command="ppmtv">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmtv: make a portable pixmap look like taken from an American TV</summary>
+  </entry-point>
+  <entry-point binary-name="ppmwheel" command="ppmwheel">
+    <needs-terminal/>
+    <summary xml:lang="en">ppmwheel: make a PPM image of a color wheel</summary>
+  </entry-point>
+  <entry-point binary-name="psidtopgm" command="psidtopgm">
+    <needs-terminal/>
+    <summary xml:lang="en">psidtopgm: convert PostScript image data into a portable graymap</summary>
+  </entry-point>
+  <entry-point binary-name="pstopnm" command="pstopnm">
+    <needs-terminal/>
+    <summary xml:lang="en">pstopnm: convert a PostScript file into a portable anymap</summary>
+  </entry-point>
+  <entry-point binary-name="qrttoppm" command="qrttoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">qrttoppm: convert output from the QRT ray tracer into a portable pixmap</summary>
+  </entry-point>
+  <entry-point binary-name="rasttopnm" command="rasttopnm">
+    <needs-terminal/>
+    <summary xml:lang="en">rasttopnm: convert a Sun rasterfile into a portable anymap</summary>
+  </entry-point>
+  <entry-point binary-name="rawtopgm" command="rawtopgm">
+    <needs-terminal/>
+    <summary xml:lang="en">rawtopgm: convert raw grayscale bytes into a portable graymap</summary>
+  </entry-point>
+  <entry-point binary-name="rawtoppm" command="rawtoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">rawtoppm: convert raw RGB bytes into a portable pixmap</summary>
+  </entry-point>
+  <entry-point binary-name="rgb3toppm" command="rgb3toppm">
+    <needs-terminal/>
+    <summary xml:lang="en">rgb3toppm: combine three portable graymaps into one portable pixmap</summary>
+  </entry-point>
+  <entry-point binary-name="rgbpalettetoppm" command="rgbpalettetoppm">
+    <needs-terminal/>
+    <name xml:lang="en">PbmAdd</name>
+    <summary xml:lang="en">PbmAdd: additions to the PBMPLUS package</summary>
+  </entry-point>
+  <entry-point binary-name="rletopnm" command="rletopnm">
+    <needs-terminal/>
+    <summary xml:lang="en">rletopnm: convert a Utah Raster Tools RLE image file into a PNM image file.</summary>
+  </entry-point>
+  <entry-point binary-name="sbigtopgm" command="sbigtopgm">
+    <needs-terminal/>
+    <summary xml:lang="en">sbigtopgm: convert an SBIG CCDOPS file into a portable graymap</summary>
+  </entry-point>
+  <entry-point binary-name="sgitopnm" command="sgitopnm">
+    <needs-terminal/>
+    <summary xml:lang="en">sgitopnm: convert a SGI image file to a portable anymap</summary>
+  </entry-point>
+  <entry-point binary-name="sirtopnm" command="sirtopnm">
+    <needs-terminal/>
+    <summary xml:lang="en">sirtopnm: convert a Solitaire file into a portable anymap</summary>
+  </entry-point>
+  <entry-point binary-name="sldtoppm" command="sldtoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">sldtoppm: convert an AutoCAD slide file into a portable pixmap</summary>
+  </entry-point>
+  <entry-point binary-name="spctoppm" command="spctoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">spctoppm: convert an Atari compressed Spectrum file into a portable pixmap</summary>
+  </entry-point>
+  <entry-point binary-name="spottopgm" command="spottopgm">
+    <needs-terminal/>
+    <summary xml:lang="en">spottopgm: convert SPOT satellite images to Portable Greymap format</summary>
+  </entry-point>
+  <entry-point binary-name="sputoppm" command="sputoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">sputoppm: convert an Atari uncompressed Spectrum file into a portable pixmap</summary>
+  </entry-point>
+  <entry-point binary-name="tgatoppm" command="tgatoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">tgatoppm: convert TrueVision Targa file into a portable pixmap</summary>
+  </entry-point>
+  <entry-point binary-name="thinkjettopbm" command="thinkjettopbm">
+    <needs-terminal/>
+    <summary xml:lang="en">thinkjettopbm: convert HP ThinkJet printer commands file to PBM</summary>
+  </entry-point>
+  <entry-point binary-name="tifftopnm" command="tifftopnm">
+    <needs-terminal/>
+    <summary xml:lang="en">tifftopnm: convert a TIFF file into a portable anymap</summary>
+  </entry-point>
+  <entry-point binary-name="wbmptopbm" command="wbmptopbm">
+    <needs-terminal/>
+    <summary xml:lang="en">wbmptopbm: convert a wireless bitmap (wbmp) file to a portable bitmap (pbm)</summary>
+  </entry-point>
+  <entry-point binary-name="winicontoppm" command="winicontoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">winicontoppm: convert a Windows .ico file into 1 or more portable pixmap</summary>
+  </entry-point>
+  <entry-point binary-name="xbmtopbm" command="xbmtopbm">
+    <needs-terminal/>
+    <summary xml:lang="en">xbmtopbm: convert an X11 or X10 bitmap into a portable bitmap</summary>
+  </entry-point>
+  <entry-point binary-name="ximtoppm" command="ximtoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">ximtoppm: convert an Xim file into a portable pixmap</summary>
+  </entry-point>
+  <entry-point binary-name="xpmtoppm" command="xpmtoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">xpmtoppm: convert an X11 pixmap into a PPM image</summary>
+  </entry-point>
+  <entry-point binary-name="xvminitoppm" command="xvminitoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">xvminitoppm: convert a XV thumbnail picture to PPM</summary>
+  </entry-point>
+  <entry-point binary-name="xwdtopnm" command="xwdtopnm">
+    <needs-terminal/>
+    <summary xml:lang="en">xwdtopnm: convert a X11 or X10 window dump file into a portable anymap</summary>
+  </entry-point>
+  <entry-point binary-name="ybmtopbm" command="ybmtopbm">
+    <needs-terminal/>
+    <summary xml:lang="en">ybmtopbm: convert a Bennet Yee face file into a portable bitmap</summary>
+  </entry-point>
+  <entry-point binary-name="yuvsplittoppm" command="yuvsplittoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">yuvplittoppm: convert a Y- and U- and a V-file into a portable pixmap.</summary>
+  </entry-point>
+  <entry-point binary-name="yuvtoppm" command="yuvtoppm">
+    <needs-terminal/>
+    <summary xml:lang="en">yuvtoppm: convert Abekas YUV bytes into a portable pixmap</summary>
+  </entry-point>
+  <entry-point binary-name="zeisstopnm" command="zeisstopnm">
+    <needs-terminal/>
+    <summary xml:lang="en">zeisstopnm: convert a Zeiss confocal file into a portable anymap</summary>
+  </entry-point>
+  <entry-point binary-name="pnmmargin" command="pnmmargin">
+    <needs-terminal/>
+    <name xml:lang="en">pnmmargin</name>
+    <summary xml:lang="en">pnmmargin: add a margin to a PNM image</summary>
+  </entry-point>
+</interface>
+

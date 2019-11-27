@@ -9,6 +9,7 @@
 
   <group license="MIT License">
     <command name="run" path="dotnet.exe"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
 
     <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
       <manifest-digest/>
@@ -22,6 +23,7 @@
 
   <group arch="Linux-x86_64" license="MIT License">
     <command name="run" path="dotnet"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
     <requires interface="http://repo.roscidus.com/lib/curl"/>
 
     <implementation version="{version}" released="{released}" stability="stable">
@@ -32,6 +34,7 @@
 
   <group arch="MacOSX-x86_64" license="MIT License">
     <command name="run" path="dotnet"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
 
     <implementation version="{version}" released="{released}" stability="stable">
       <manifest-digest/>

@@ -9,6 +9,7 @@
 
   <group license="MIT License">
     <command name="run" path="dotnet.exe"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
     <environment mode="replace" name="DOTNET_SKIP_FIRST_TIME_EXPERIENCE" value="true"/><!-- Prevent extraction of NuGet packages into implementation dir (which is read-only) -->
 
     <implementation arch="Windows-x86_64" id="sha1new=c2e0c6e906bc9a148ea70d065e7693e1b0a9fdf9" stability="stable" version="1.0.4">
@@ -495,6 +496,7 @@
 
   <group arch="Linux-x86_64" license="MIT License" main="dotnet">
     <command name="run" path="dotnet"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
     <environment mode="replace" name="DOTNET_SKIP_FIRST_TIME_EXPERIENCE" value="true"/><!-- Prevent extraction of NuGet packages into implementation dir (which is read-only) -->
     <requires interface="http://repo.roscidus.com/lib/curl"/>
     <requires interface="http://repo.roscidus.com/lib/unwind"/>
@@ -535,6 +537,7 @@
 
   <group arch="Linux-x86_64" license="MIT License">
     <command name="run" path="dotnet"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
     <environment mode="replace" name="DOTNET_SKIP_FIRST_TIME_EXPERIENCE" value="true"/><!-- Prevent extraction of NuGet packages into implementation dir (which is read-only) -->
     <requires interface="http://repo.roscidus.com/lib/curl"/>
 
@@ -726,6 +729,7 @@
 
   <group arch="MacOSX-x86_64" license="MIT License">
     <command name="run" path="dotnet"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
 
     <implementation id="sha1new=56bd3430f1d39e17d349961606103f7d69fde44a" released="2018-05-30" stability="stable" version="2.1.300">
       <manifest-digest sha256new="QVWIXJFEFD6AMF34RJAQN45KZT2JJOOP7ESO4CWZDDF7ODWZBE5A"/>

@@ -7,6 +7,7 @@
 
   <group license="MIT License">
     <command name="run" path="dotnet.exe"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
 
     <implementation arch="Windows-x86_64" id="sha1new=3b6b553323faed5bc5d5ab48f3d06336ec97961e" stability="stable" version="1.0.5">
       <manifest-digest sha256new="APBU2X4R24EOJVK2ZDAC4YT5BDUSMDYOBSCA337MKZWJPE5KCQLQ"/>
@@ -324,6 +325,7 @@
 
   <group arch="Linux-x86_64" license="MIT License">
     <command name="run" path="dotnet"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
     <requires interface="http://repo.roscidus.com/lib/curl"/>
     <requires interface="http://repo.roscidus.com/lib/unwind"/>
 
@@ -355,6 +357,7 @@
 
   <group arch="Linux-x86_64" license="MIT License">
     <command name="run" path="dotnet"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
     <requires interface="http://repo.roscidus.com/lib/curl"/>
 
     <implementation id="sha1new=e24b80194c902f0f6a05c40f18c06c0c968e7819" released="2018-05-30" stability="stable" version="2.1.0">
@@ -453,6 +456,7 @@
 
   <group arch="MacOSX-x86_64" license="MIT License">
     <command name="run" path="dotnet"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
 
     <implementation id="sha1new=198366e0f8aeba19d0301dbd446df1c38df98646" released="2018-05-30" stability="stable" version="2.1.0">
       <manifest-digest sha256new="LME5QVGLLGPYKHK3SECXY2DFXEEZRPN6FLFKVEK3DWLWX2URWUKQ"/>

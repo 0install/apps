@@ -7,7 +7,7 @@
 
   <group license="MIT License">
     <command name="run" path="dotnet.exe"/>
-    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
+    <environment insert="." mode="replace" name="DOTNET_ROOT"/>
 
     <implementation arch="Windows-x86_64" id="sha1new=3b6b553323faed5bc5d5ab48f3d06336ec97961e" stability="stable" version="1.0.5">
       <manifest-digest sha256new="APBU2X4R24EOJVK2ZDAC4YT5BDUSMDYOBSCA337MKZWJPE5KCQLQ"/>
@@ -321,11 +321,35 @@
       <manifest-digest sha256new="PTE3T65RLNXK4S7FJMFH3VMBIVT5Z2DPXXEZXBANGDI3JHDKV4SQ"/>
       <archive href="https://download.visualstudio.microsoft.com/download/pr/0205db4f-5819-4ecb-be78-3dfd23fe0f97/ec5633cbed223ea6a4c3b2ce0d0c7163/dotnet-runtime-3.0.0-win-x86.zip" size="27587393" type="application/zip"/>
     </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=073d4d5dea4a9864bbeb7f40f0f451b6afea7998" released="2019-11-19" stability="stable" version="2.1.14">
+      <manifest-digest sha256new="3STM5Q4ZUGZ2QVAKILYN4XRDLMLV6RH4KDDZWQYKMHX2Z3IFKUUA"/>
+      <archive href="https://download.visualstudio.microsoft.com/download/pr/9b76a451-c2a7-4782-874d-7c7cbde6a85c/d83ac3bb4a4f1f67a5a1f735078329ac/dotnet-runtime-2.1.14-win-x64.zip" size="29803624" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=2dfa1c3e5bf205ed01395bcbc07ab1647ff4c108" released="2019-11-19" stability="stable" version="2.1.14">
+      <manifest-digest sha256new="UNNN2EZMSTBD3XPPKAC2QZIPA6ZSNEOHJSLK4V4PC4WUNSSE7C5A"/>
+      <archive href="https://download.visualstudio.microsoft.com/download/pr/87f0d3c5-0734-4db6-83a3-363319fb4be1/3f302e68598e26c8741631f9278d4da5/dotnet-runtime-2.1.14-win-x86.zip" size="26877273" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=6fa73dd8f41a4fbaa571879ac795722632a4fa30" released="2019-11-19" stability="stable" version="2.2.8">
+      <manifest-digest sha256new="ZDFO5A6SJYRDHHAPMIZGNWMWDW6YO5OZ4IPR22LA2MJK5S5Z7TRQ"/>
+      <archive href="https://download.visualstudio.microsoft.com/download/pr/79365951-b51b-487e-a03c-6ffeb3a5f3ad/ce9eb59ba8a76621d5e76614b0c9e97d/dotnet-runtime-2.2.8-win-x64.zip" size="29815926" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=ac385d245aadf20cc1ad920a56c10c5a6dd7fd1a" released="2019-11-19" stability="stable" version="2.2.8">
+      <manifest-digest sha256new="CISCTLX6D5HJHB5ETAOK3ZJ3OVCPB473ZYSRLWIQQ3KVJ75GKPLA"/>
+      <archive href="https://download.visualstudio.microsoft.com/download/pr/33751b42-f854-4d55-b2ff-3f0d09a88cf7/0c268c32f7730e90bd0a370be6699bf6/dotnet-runtime-2.2.8-win-x86.zip" size="26905172" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=46100675988b30db1528374b8ef6d0fbe829d410" released="2019-11-19" stability="stable" version="3.0.1">
+      <manifest-digest sha256new="KZXIPWRUCKRMBO3XVGGX7HOG5PPA7THAI2LI32HO6VJFA7AA4KEQ"/>
+      <archive href="https://download.visualstudio.microsoft.com/download/pr/50485082-5eea-4ef1-9065-22aac3856892/2538796b016f6d56be9c8047a71a331a/dotnet-runtime-3.0.1-win-x64.zip" size="30894832" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=9a9ef042de9ff4c78bf24fbb3d3dc8c9babbabe7" released="2019-11-19" stability="stable" version="3.0.1">
+      <manifest-digest sha256new="24KKBWMIPZNJECVDTN3EREEOUGDEADFFDIVS6OLQ3VMR7QO4V3YQ"/>
+      <archive href="https://download.visualstudio.microsoft.com/download/pr/986ab6ba-907c-41bf-9fd7-75b7a6e19f6d/83608357096d989a446ca1d0b14bb394/dotnet-runtime-3.0.1-win-x86.zip" size="27604199" type="application/zip"/>
+    </implementation>
   </group>
 
   <group arch="Linux-x86_64" license="MIT License">
     <command name="run" path="dotnet"/>
-    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
+    <environment insert="." mode="replace" name="DOTNET_ROOT"/>
     <requires interface="http://repo.roscidus.com/lib/curl"/>
     <requires interface="http://repo.roscidus.com/lib/unwind"/>
 
@@ -357,7 +381,7 @@
 
   <group arch="Linux-x86_64" license="MIT License">
     <command name="run" path="dotnet"/>
-    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
+    <environment insert="." mode="replace" name="DOTNET_ROOT"/>
     <requires interface="http://repo.roscidus.com/lib/curl"/>
 
     <implementation id="sha1new=e24b80194c902f0f6a05c40f18c06c0c968e7819" released="2018-05-30" stability="stable" version="2.1.0">
@@ -452,11 +476,23 @@
       <manifest-digest sha256new="LN5II7A4PAPSDMEOAAUBA25MAVQLCH573HEHTOXDP7WLMDVFLBJQ"/>
       <archive href="https://download.visualstudio.microsoft.com/download/pr/a5ff9cbb-d558-49d1-9fd2-410cb1c8b095/a940644f4133b81446cb3733a620983a/dotnet-runtime-3.0.0-linux-x64.tar.gz" size="30340340" type="application/x-compressed-tar"/>
     </implementation>
+    <implementation id="sha1new=732235d875c3b75415c867c03f48445e94188db1" released="2019-11-19" stability="stable" version="2.1.14">
+      <manifest-digest sha256new="PGYRQ4427ONZWZRQJDC2KQ245T2O6YMYMMDWPJM4PDJGNO2TJ3NQ"/>
+      <archive href="https://download.visualstudio.microsoft.com/download/pr/5f7daa05-c09f-41c3-b607-eabeefb6b677/1effcfea7b7f5208de533db8686f6e0f/dotnet-runtime-2.1.14-linux-x64.tar.gz" size="28716311" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=78e52a41f331979c908e0500ec99ae7f89698933" released="2019-11-19" stability="stable" version="2.2.8">
+      <manifest-digest sha256new="ANU43SCNEOBXIDDM3DKTFP5RWAKZDRVSGQHSNYRPC4JEFXKG5GGQ"/>
+      <archive href="https://download.visualstudio.microsoft.com/download/pr/3fbca771-e7d3-45bf-8e77-cfc1c5c41810/e118d44f5a6df21714abd8316e2e042b/dotnet-runtime-2.2.8-linux-x64.tar.gz" size="28771338" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=acad9b0c5a53277574fd5eb44e2c404a1c422c78" released="2019-11-19" stability="stable" version="3.0.1">
+      <manifest-digest sha256new="T3A6JXHYRN56WWMYAZLCLK2EZ2TNPJMAZKLA7WFOAUZ6AII2AKRA"/>
+      <archive href="https://download.visualstudio.microsoft.com/download/pr/30ab052d-dbb6-4bce-8a44-a831034589ed/7ffaad695afb7ccd778b0d3fc1c89f50/dotnet-runtime-3.0.1-linux-x64.tar.gz" size="30347528" type="application/x-compressed-tar"/>
+    </implementation>
   </group>
 
   <group arch="MacOSX-x86_64" license="MIT License">
     <command name="run" path="dotnet"/>
-    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
+    <environment insert="." mode="replace" name="DOTNET_ROOT"/>
 
     <implementation id="sha1new=198366e0f8aeba19d0301dbd446df1c38df98646" released="2018-05-30" stability="stable" version="2.1.0">
       <manifest-digest sha256new="LME5QVGLLGPYKHK3SECXY2DFXEEZRPN6FLFKVEK3DWLWX2URWUKQ"/>
@@ -549,6 +585,18 @@
     <implementation id="sha1new=08208b51adc26d134417c66bc8785f27708386b4" released="2019-09-23" stability="stable" version="3.0.0">
       <manifest-digest sha256new="AJGQOZDPR6WINBO3HDQB4OCRSPQQJKZTGE3F43VRT5K27RLVVH4Q"/>
       <archive href="https://download.visualstudio.microsoft.com/download/pr/68123d89-73c0-40b0-ba9b-93667c25663b/001f66f8ec4666421acc16f74209aa99/dotnet-runtime-3.0.0-osx-x64.tar.gz" size="29790093" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=aeee4df892d8f76e7fd93b5fa765bd3db1c3b6ec" released="2019-11-19" stability="stable" version="2.1.14">
+      <manifest-digest sha256new="Y7BOQ5O3ONDD4ZRLVMX2DJN6QDFGJJ3R2RUPPWMY6OJR45E55ABQ"/>
+      <archive href="https://download.visualstudio.microsoft.com/download/pr/c5e16024-db4e-4e85-9ed7-93fd84fb9169/8c5a9772f7f27c5f9150023a5b76f24d/dotnet-runtime-2.1.14-osx-x64.tar.gz" size="27577768" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=1207cd27f6e0853219b4fe6aa957a1c1c934079c" released="2019-11-19" stability="stable" version="2.2.8">
+      <manifest-digest sha256new="QTPK6R36SCBB5LRZHPDFR5VFPLYO3WPBNMTBAFGVQ35GH7F2EH6Q"/>
+      <archive href="https://download.visualstudio.microsoft.com/download/pr/bbd4e493-6eed-45e8-90ed-7be0f1270c7a/2d19adb63887d3b02301361117bbe4f5/dotnet-runtime-2.2.8-osx-x64.tar.gz" size="27591761" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=9f18ea5b7445b1c627a5b0a74b9f59da697b2264" released="2019-11-19" stability="stable" version="3.0.1">
+      <manifest-digest sha256new="SETVKSH3GCINCAXVIPPJ342IZD4GKCS6ED5RHKJJLC2VBC6RQF7Q"/>
+      <archive href="https://download.visualstudio.microsoft.com/download/pr/3e6e9e3d-bd98-4d63-a44b-451c0d647285/63dd5642dd3b6108da4e66b1b20d6510/dotnet-runtime-3.0.1-osx-x64.tar.gz" size="29790100" type="application/x-compressed-tar"/>
     </implementation>
   </group>
 

@@ -1,26 +1,18 @@
 from urllib import request
-import re
+import json
 
-def get(uri):
-    return request.urlopen(request.Request(uri, headers={'User-Agent': 'Python'})).read().decode('utf-8')
+def get_download_uri(release, suffix):
+    return [file['url'] for file in release['runtime']['files'] if file['name'].endswith(suffix)][0]
 
-def handle(version, released):
-    def download_uri(arch):
-        download_page = get('https://www.microsoft.com/net/download/thank-you/dotnet-runtime-' + version + '-' + arch + '-binaries')
-        return re.search('<a href="(https:\/\/download\..*?)"', download_page).group(1)
-
-    return {
-        'version': version,
-        'released': released,
-        'windows-x64-download-uri': download_uri('windows-x64'),
-        'windows-x86-download-uri': download_uri('windows-x86'),
-        'linux-x64-download-uri': download_uri('linux-x64'),
-        'macos-x64-download-uri': download_uri('macos-x64')
-    }
-
-def get_releases(major_version):
-    data = get('https://www.microsoft.com/net/download/dotnet-core/' + major_version)
-    matches = re.findall(r'<h2 class="h3"><text>v<\/text>([0-9\.]+)<\/h2>[\S\s]*?\s+<p class="mb-5">Released (....-..-..)<\/p>', data, re.MULTILINE)
-    return [handle(version=match[0], released=match[1]) for match in matches if match[0]]
+def get_releases(channel):
+    data = request.urlopen('https://raw.githubusercontent.com/dotnet/core/master/release-notes/' + channel + '/releases.json').read().decode('utf-8')
+    return [{
+        'version': release['runtime']['version'],
+        'released': release['release-date'],
+        'windows-x64-download-uri': get_download_uri(release, 'win-x64.zip'),
+        'windows-x86-download-uri': get_download_uri(release, 'win-x86.zip'),
+        'linux-x64-download-uri': get_download_uri(release, 'linux-x64.tar.gz'),
+        'macos-x64-download-uri': get_download_uri(release, 'osx-x64.tar.gz')
+    } for release in json.loads(data)['releases'] if not '-' in release['release-version'] and 'runtime' in release]
 
 releases = get_releases('2.1') + get_releases('2.2') + get_releases('3.0')

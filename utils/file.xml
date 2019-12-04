@@ -3,14 +3,14 @@
 <interface uri="http://repo.roscidus.com/utils/file" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>File</name>
   <summary xml:lang="en">File: determine file type</summary>
-  <description xml:lang="en">File tests each argument in an attempt to classify it. There are three sets of tests, performed in this order: filesystem tests, magic number tests, and language tests. The first test that succeeds causes the file type to be printed. The type printed will usually contain one of the words text (the file contains only printing characters and a few common control characters and is probably safe to read on an ASCII terminal), executable (the file contains the result of compiling a program in a form understandable to some UNIX kernel or another), or data meaning anything else (data is usually `binary' or non-printable). Exceptions are well-known file formats (core files, tar archives) that are known to contain binary data. 
-
-Starting with version 4, the file command is not much more than a wrapper around the &quot;magic&quot; library. 
-</description>
+  <description xml:lang="en">The latest GnuWin32 port is of version 5.03, released in May 2009.
+  It has a subtle bug that breaks libtool, and also a few Windows
+  specific gotcha's (e.g., try "file NUL" or "file -").  This port of
+  the latest upstream release fixes those bugs.</description>
   <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/file.ico" type="image/vnd.microsoft.icon"/>
   <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/file.png" type="image/png"/>
   <category>Utility</category>
-  <homepage>http://gnuwin32.sourceforge.net/packages/file.htm</homepage>
+  <homepage>https://sourceforge.net/projects/ezwinports/files/</homepage>
   <needs-terminal/>
   <implementation arch="Windows-i486" id="sha1new=507a0447a9fb60da8fc5b34b2d5b968b2dd8de62" license="BSD License (revised)" released="2009-05-07" version="5.03">
     <requires interface="http://repo.roscidus.com/lib/regex">
@@ -23,6 +23,11 @@ Starting with version 4, the file command is not much more than a wrapper around
     <manifest-digest sha256new="IS34PRCL3BXH4QKZ5W3YP637X6PPNTIIQOTOJUFBPR4FOGAOJA4Q"/>
     <archive href="https://sourceforge.net/projects/gnuwin32/files/file/5.03/file-5.03-bin.zip" size="442585" type="application/zip"/>
     <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/file-5.03-bin.zip?raw=true" size="442585" type="application/zip"/>
+  </implementation>
+  <implementation arch="Windows-*"  license="BSD License (revised)" released="2012-01-06"  version="5.9" id="sha1new=92f09c596a997f8a948511b66b2627b0c425d064">
+    <command name="run" path="bin/file.exe" />
+    <manifest-digest sha256new="YKAAAMFC7O5J3RZJJR36QSBKUQCPKP5D43M5K33SEK57GWHM4BDA" />
+    <archive href="https://sourceforge.net/projects/ezwinports/files/file-5.09-w32-bin.zip" size="371683" type="application/zip" />
   </implementation>
   <package-implementation distributions="Gentoo" package="sys-apps/file"/>
   <package-implementation package="file" main="/usr/bin/file"/>

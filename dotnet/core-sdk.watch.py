@@ -15,4 +15,4 @@ def get_releases(channel):
         'macos-x64-download-uri': get_download_uri(release, 'osx-x64.tar.gz')
     } for release in json.loads(data)['releases'] if not '-' in release['release-version']]
 
-releases = get_releases('2.1') + get_releases('2.2') + get_releases('3.0')
+releases = get_releases('2.1') + get_releases('2.2') + get_releases('3.0') + get_releases('3.1')

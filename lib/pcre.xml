@@ -2,20 +2,38 @@
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="http://repo.roscidus.com/lib/pcre" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Pcre</name>
-  <summary xml:lang="en">Pcregrep: a grep with Perl-compatible regular expressions </summary>
-  <description xml:lang="en">The PCRE library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5. PCRE has its own native API, as well as a set of wrapper functions that correspond to the POSIX regular expression API. The PCRE library is free, even for building commercial software. </description>
+  <summary xml:lang="en">Library of Perl-compatible regular expressions.</summary>
+  <description xml:lang="en">Library of Perl-compatible regular expressions.  I needed this to
+  build Grep capable of &quot;grep -P&quot; mode.  (A newer version is available
+  below, but this one is still required for the ported Grep.)
+
+Version 8.36 of the library of Perl-compatible regular expressions.
+  I needed this to build wget (below).
+
+  The C++ bindings of this library is provided only as a static
+  library, to avoid dependency on libstdc++ DLL.</description>
   <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/pcre.ico" type="image/vnd.microsoft.icon"/>
   <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/pcre.png" type="image/png"/>
   <category>Development</category>
-  <homepage>http://gnuwin32.sourceforge.net/packages/pcre.htm</homepage>
+  <homepage>https://sourceforge.net/projects/ezwinports/files/</homepage>
   <needs-terminal/>
-  <implementation arch="Windows-i486" id="sha1new=492099b5e85f1418a80d446def4f0469b3e28ad2" license="BSD License (revised)" released="2007-03-23" version="7.0">
+  <group arch="Windows-i486" license="BSD License (revised)">
     <command name="run" path="bin/pcregrep.exe"/>
     <command name="pcretest" path="bin/pcretest.exe"/>
-    <manifest-digest sha256new="23EYS5LDQ74KOXLXLSRANWAHRAM5YJ2NCO53Q3RSWKYGUXAN6UIA"/>
-    <archive href="https://sourceforge.net/projects/gnuwin32/files/pcre/7.0/pcre-7.0-bin.zip" size="302480" type="application/zip"/>
-    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/pcre-bin.zip" size="302480" type="application/zip"/>
-  </implementation>
+    <implementation id="sha1new=492099b5e85f1418a80d446def4f0469b3e28ad2" released="2007-03-23" version="7.0">
+      <manifest-digest sha256new="23EYS5LDQ74KOXLXLSRANWAHRAM5YJ2NCO53Q3RSWKYGUXAN6UIA"/>
+      <archive href="https://sourceforge.net/projects/gnuwin32/files/pcre/7.0/pcre-7.0-bin.zip" size="302480" type="application/zip"/>
+      <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/pcre-bin.zip" size="302480" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=8f4cfac1071b28cf5c7900e7a3ee8d2b7599af2e" released="2012-02-03" version="8.21">
+      <manifest-digest sha256new="4F7ZCHGTOGHRBCSKR67ZJ7TMRCXN5YTAFQHATF3JWQYBPIWWCE7A"/>
+      <archive href="https://sourceforge.net/projects/ezwinports/files/pcre-8.21-w32-bin.zip" size="1112632" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=3779bb85a4712ea55497aa81e456038544f46ad0" released="2014-12-22" version="8.36">
+      <manifest-digest sha256new="CQLN7EW4CRRKGQWN3U5O2JYAW5JPOLN2DVHHX2OPZJLWKNF457AQ"/>
+      <archive href="https://sourceforge.net/projects/ezwinports/files/pcre-8.36-w32-bin.zip" size="2101201" type="application/zip"/>
+    </implementation>
+  </group>
   <entry-point binary-name="pcregrep" command="run">
     <needs-terminal/>
     <name xml:lang="en">pcregrep</name>

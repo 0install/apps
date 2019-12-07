@@ -78,6 +78,33 @@ The GnuWin32 distribution comes in two versions. The ordinary version uses the s
     <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/tiff-bin.zip?raw=true" size="687244" type="application/zip"/>
   </implementation>
   </group>
+  <implementation license="libtiff, BSD License (original), public domain, libpng/zlib license"  arch="Windows-i486" version="4.0.3" released="2013-11-25" id="sha1new=a044afe4e7954365562fe62e7a7952c8ee4a035a">
+    <command name="run" path="bin/tiffinfo.exe" />
+    <command name="bmp2tiff" path="bin/bmp2tiff.exe" />
+    <command name="fax2ps" path="bin/fax2ps.exe" />
+    <command name="fax2tiff" path="bin/fax2tiff.exe" />
+    <command name="gif2tiff" path="bin/gif2tiff.exe" />
+    <command name="pal2rgb" path="bin/pal2rgb.exe" />
+    <command name="ppm2tiff" path="bin/ppm2tiff.exe" />
+    <command name="ras2tiff" path="bin/ras2tiff.exe" />
+    <command name="raw2tiff" path="bin/raw2tiff.exe" />
+    <command name="rgb2ycbcr" path="bin/rgb2ycbcr.exe" />
+    <command name="thumbnail" path="bin/thumbnail.exe" />
+    <command name="tiff2bw" path="bin/tiff2bw.exe" />
+    <command name="tiff2pdf" path="bin/tiff2pdf.exe" />
+    <command name="tiff2ps" path="bin/tiff2ps.exe" />
+    <command name="tiff2rgba" path="bin/tiff2rgba.exe" />
+    <command name="tiffcmp" path="bin/tiffcmp.exe" />
+    <command name="tiffcp" path="bin/tiffcp.exe" />
+    <command name="tiffcrop" path="bin/tiffcrop.exe" />
+    <command name="tiffdither" path="bin/tiffdither.exe" />
+    <command name="tiffdump" path="bin/tiffdump.exe" />
+    <command name="tiffmedian" path="bin/tiffmedian.exe" />
+    <command name="tiffset" path="bin/tiffset.exe" />
+    <command name="tiffsplit" path="bin/tiffsplit.exe" />
+    <manifest-digest sha256new="XLWK3J7GRYU2AXU5CYPV43N2SXTCC2AFSCPRBXKELLC2YALC3YZA" />
+    <archive href="https://sourceforge.net/projects/ezwinports/files/tiff-4.0.3-w32-bin.zip" size="1790474" type="application/zip" />
+  </implementation>
   <package-implementation distributions="Gentoo" package="media-libs/tiff"/>
   <package-implementation package="tiff"/>
   <entry-point binary-name="tiffinfo" command="run">
@@ -342,6 +369,14 @@ The GnuWin32 distribution comes in two versions. The ordinary version uses the s
        using a different algorithm than the input files, tiffcp
        is most often used to convert between different compres-
        sion schemes.</description>
+  </entry-point>
+  <entry-point command="tiffcrop" binary-name="tiffcrop">
+    <needs-terminal />
+    <name xml:lang="en">Tiffcrop</name>
+    <summary xml:lang="en">tiffcrop - select, copy, crop, convert, extract, and/or process one or more files.</summary>
+    <description xml:lang="en">processes one or more files created according
+to the Tag Image File Format, Revision 6.0, specification into one or more 
+file(s). Tiffcrop is most often used to extract portions of an image.</description>
   </entry-point>
   <entry-point binary-name="tiffdither" command="tiffdither">
     <needs-terminal/>

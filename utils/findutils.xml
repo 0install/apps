@@ -12,36 +12,54 @@
   <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
   <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
   <category>System</category>
-  <homepage>http://gnuwin32.sourceforge.net/packages/findutils.htm</homepage>
+  <homepage>https://sourceforge.net/projects/ezwinports/files/</homepage>
   <needs-terminal/>
-  <implementation arch="Windows-i486" id="sha1new=6996e25456413b9e8b43c4b336e0c05d5e2509d9" langs="be ca da de el es et fi fr ga gl hr hu id it ja ko ms nl pl pt pt_BR ro ru sk sl sr sv tr vi zh_CN" license="GPL v2 (GNU General Public License)" released="2005-04-18" version="4.2.20-2-3">
-    <requires interface="http://repo.roscidus.com/devel/gettext">
-      <environment insert="bin" name="PATH"/>
-    </requires>
-    <environment insert="bin" name="BINDIR"/>
-    <environment insert="libexec" name="LIBEXECDIR"/>
-    <command name="run" path="bin/find.exe"/>
-    <command name="locate" path="bin/locate.exe"/>
-    <command name="xargs" path="bin/xargs.exe"/>
+  <group version="4.2.30.1-5" released="2013-06-22" license="GPL v2 (GNU General Public License)">
+    <environment name="BINDIR" insert="bin" />
+    <environment name="LIBEXECDIR" insert="libexec" />
+    <command name="run" path="bin/find.exe" />
+    <command name="locate" path="bin/locate.exe" />
     <command name="updatedb" path="bin/updatedb">
-      <requires interface="http://repo.roscidus.com/utils/coreutils">
-        <environment insert="bin" name="PATH"/>
+      <requires interface="https://pmiess.gitlab.io/0install-feeds/gnuwin32/coreutils.xml">
+        <environment name="PATH" insert="bin" />
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/mktemp">
-        <executable-in-path name="mktemp"/>
+      <requires interface="https://pmiess.gitlab.io/0install-feeds/gnuwin32/mktemp.xml">
+        <executable-in-path name="mktemp" />
       </requires>
       <requires interface="http://repo.roscidus.com/utils/bash">
-        <executable-in-var name="SHELL"/>
+        <executable-in-var name="SHELL" />
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/sed">
-        <executable-in-path name="sed"/>
+      <requires interface="https://pmiess.gitlab.io/0install-feeds/gnuwin32/sed.xml">
+        <executable-in-path name="sed" />
       </requires>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="http://repo.roscidus.com/utils/bash" />
     </command>
-    <manifest-digest sha256new="H566RWTE65EKXIXPAQ3SWIEEWT3HCONC5GKS6PJ2D4YJINEC5FAA"/>
-    <archive href="https://sourceforge.net/projects/gnuwin32/files/findutils/4.2.20-2/findutils-4.2.20-2-bin.zip" size="509555" type="application/zip"/>
-    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/findutils-bin.zip?raw=true" size="509555" type="application/zip"/>
-  </implementation>
+    <command name="updatedbbat" path="bin/updatedb.bat">
+      <executable-in-path name="https://pmiess.gitlab.io/0install-feeds/gnuwin32/gawk.xml" />
+      <requires interface="https://pmiess.gitlab.io/0install-feeds/gnuwin32/coreutils.xml">
+        <executable-in-path command="sort" name="sort" />
+        <executable-in-path command="tr" name="tr" />
+        <executable-in-path command="uniq" name="uniq" />
+      </requires>
+    </command>
+    <command name="xargs" path="bin/xargs.exe" />
+    <implementation arch="Windows-x86_64" id="sha1new=52d0ab9cc5a439ddf9835e7c4a16cdff27bfa839">
+      <manifest-digest sha256new="BWCHRNVIMZEJGWXE75UEYE2JRG4F2VYON3C6QLT35NEJQ54J2AEQ" />
+      <archive href="https://sourceforge.net/projects/ezwinports/files/findutils-4.2.30-5-w64-bin.zip" size="373067" type="application/zip" />
+    </implementation>
+    <implementation arch="Windows-i386" id="sha1new=ca970a6669285155889a92698103c7a1a864b50c">
+      <manifest-digest sha256new="ZV6JXIFRVML73ZATDMQTTDNSPM5WY3GQB23EKLH2N556RRUEWZMA" />
+      <archive href="https://sourceforge.net/projects/ezwinports/files/findutils-4.2.30-5-w32-bin.zip" size="325597" type="application/zip" />
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=6996e25456413b9e8b43c4b336e0c05d5e2509d9" langs="be ca da de el es et fi fr ga gl hr hu id it ja ko ms nl pl pt pt_BR ro ru sk sl sr sv tr vi zh_CN" license="GPL v2 (GNU General Public License)" released="2005-04-18" version="4.2.20-2-3">
+      <requires interface="http://repo.roscidus.com/devel/gettext">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <manifest-digest sha256new="H566RWTE65EKXIXPAQ3SWIEEWT3HCONC5GKS6PJ2D4YJINEC5FAA"/>
+      <archive href="https://sourceforge.net/projects/gnuwin32/files/findutils/4.2.20-2/findutils-4.2.20-2-bin.zip" size="509555" type="application/zip"/>
+      <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/findutils-bin.zip?raw=true" size="509555" type="application/zip"/>
+    </implementation>
+  </group>
   <package-implementation distributions="Gentoo" package="sys-apps/findutils"/>
   <package-implementation package="findutils" main="/usr/bin/find"/>
   <entry-point binary-name="find" command="run">
@@ -83,7 +101,7 @@
   <entry-point binary-name="xargs" command="xargs">
     <needs-terminal/>
     <name xml:lang="en">xargs</name>
-    <summary xml:lang="en">xargs  -  build  and execute command lines from standard</summary>
+    <summary xml:lang="en">xargs  -  build  and execute command lines</summary>
     <description xml:lang="en">xargs  reads items from the standard input, delimited by
        blanks (which can be protected  with  double  or  single
        quotes  or  a  backslash)  or newlines, and executes the
@@ -105,5 +123,10 @@
        entries  depend  on  how often updatedb is run, and with
        which arguments.
 </description>
+  <entry-point command="updatedb" binary-name="updatedbbat">
+    <needs-terminal />
+    <name xml:lang="en">updatedb bat</name>
+    <summary xml:lang="en">This is a pale imitation of the original `updatedb.sh'</summary>
+  </entry-point>
   </entry-point>
 </interface>

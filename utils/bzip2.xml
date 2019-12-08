@@ -2,14 +2,14 @@
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="http://repo.roscidus.com/utils/bzip2" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Bzip2</name>
-  <summary xml:lang="en">Bzip2: file compressor</summary>
-  <description xml:lang="en">bzip2 is a freely available, patent free, high-quality data compressor. It typically compresses files to within 10% to 15% of the best available techniques (the PPM family of statistical compressors), whilst being around twice as fast at compression and six times faster at decompression. The code is organised as a library, with a programming interface. The bzip2 program itself is a client of the library. You can use the library in your own programs, to directly read and write .bz2 files, or even just to compress data in memory using the bzip2 algorithms. </description>
+  <summary xml:lang="en">A program and library for data compression</summary>
+  <description xml:lang="en">bzip2 is a freely available, patent free, high-quality data compressor. It typically compresses files to within 10% to 15% of the best available techniques (the PPM family of statistical compressors), whilst being around twice as fast at compression and six times faster at decompression. The code is organised as a library, with a programming interface. The bzip2 program itself is a client of the library. You can use the library in your own programs, to directly read and write .bz2 files, or even just to compress data in memory using the bzip2 algorithms.</description>
   <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/bzip2.ico" type="image/vnd.microsoft.icon"/>
   <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/bzip2.png" type="image/png"/>
   <category>Utility</category>
-  <homepage>http://gnuwin32.sourceforge.net/packages/bzip2.htm</homepage>
+  <homepage>https://sourceforge.net/projects/ezwinports/</homepage>
   <needs-terminal/>
-  <implementation arch="Windows-i486" id="sha1new=e860009dcf18cfda678a961664d1c5e072b3ef21" license="BZIP2" released="2008-03-20" version="1.0.5">
+  <group arch="Windows-i486" license="BZIP2">
     <executable-in-path command="run" name="bzip2"/>
     <command name="run" path="bin/bzip2.exe"/>
     <command name="bunzip2" path="bin/bunzip2.exe"/>
@@ -91,10 +91,16 @@
       </requires>
       <runner interface="http://repo.roscidus.com/utils/bash"/>
     </command>
-    <manifest-digest sha256new="YQZFJYNF3KFXDFALIUBUIZP2P7Y3KZJZ5JBKBINU6KDNEVQPFWXQ"/>
-    <archive href="https://sourceforge.net/projects/gnuwin32/files/bzip2/1.0.5/bzip2-1.0.5-bin.zip" size="158416" type="application/zip"/>
-    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/bzip2-bin.zip?raw=true" size="158416" type="application/zip"/>
-  </implementation>
+    <implementation id="sha1new=e860009dcf18cfda678a961664d1c5e072b3ef21" released="2008-03-20" version="1.0.5">
+      <manifest-digest sha256new="YQZFJYNF3KFXDFALIUBUIZP2P7Y3KZJZ5JBKBINU6KDNEVQPFWXQ"/>
+      <archive href="https://sourceforge.net/projects/gnuwin32/files/bzip2/1.0.5/bzip2-1.0.5-bin.zip" size="158416" type="application/zip"/>
+      <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/bzip2-bin.zip?raw=true" size="158416" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d92df93455404bfa4a47c0d1f6f7f046519603de" released="2012-02-17" version="1.0.6">
+      <manifest-digest sha256new="PCD7UCAYVUXAAAACO4LJSWFBQZSBH3ZRZROYO63YKU5BQBNMSGVA"/>
+      <archive href="https://sourceforge.net/projects/ezwinports/files/bzip2-1.0.6-w32-bin.zip" size="675493" type="application/zip"/>
+    </implementation>
+  </group>
   <package-implementation distributions="Gentoo" package="app-arch/bzip2"/>
   <package-implementation package="bzip2"/>
   <entry-point binary-name="bzip2" command="run">

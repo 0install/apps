@@ -9,7 +9,7 @@
   <feed-for interface="http://repo.roscidus.com/kubernetes/helm"/>
 
   <group license="Apache License 2.0">
-    <environment name="HELMFILE_HELM3" mode="replace" value="1"/>
+    <environment mode="replace" name="HELMFILE_HELM3" value="1"/>
     <group>
       <command name="run" path="helm"/>
       <implementation arch="Linux-x86_64" id="sha1new=df92ce0014042f7786e506f25ef0a2d22798a480" released="2019-05-15" stability="developer" version="3.0.0-pre-pre1">
@@ -108,6 +108,14 @@
         <manifest-digest sha256new="VBECZBPI3DY2KA2BFAEU566F2J3USCPAX2UCPA7RVC6BX4M7TKKA"/>
         <archive extract="darwin-amd64" href="https://get.helm.sh/helm-v3.0.0-darwin-amd64.tar.gz" size="12688660" type="application/x-compressed-tar"/>
       </implementation>
+      <implementation arch="Linux-x86_64" id="sha1new=c3ad3a4529c2b3dbff88203745fac710e2e4ebf6" released="2019-12-05" stability="stable" version="3.0.1">
+        <manifest-digest sha256new="POBQDCPCB6BWIXFQC3YSZS3NSMGQZ2CDBDFHH7O2AVCC5KH3N7MA"/>
+        <archive extract="linux-amd64" href="https://get.helm.sh/helm-v3.0.1-linux-amd64.tar.gz" size="12082746" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" id="sha1new=ee1cd338d0b1767d3e20dc4b8bb9fc1bb1018683" released="2019-12-05" stability="stable" version="3.0.1">
+        <manifest-digest sha256new="UCLDLSMAYAWEJHLWTKPOWNWKBXDCSHJXW75DKT2B2RI4BFQTTCIQ"/>
+        <archive extract="darwin-amd64" href="https://get.helm.sh/helm-v3.0.1-darwin-amd64.tar.gz" size="12689379" type="application/x-compressed-tar"/>
+      </implementation>
     </group>
     <group>
       <command name="run" path="helm.exe"/>
@@ -158,6 +166,10 @@
       <implementation arch="Windows-x86_64" id="sha1new=b25ed43b89b306406a7e20a814bb78d26ee6d067" released="2019-11-13" stability="stable" version="3.0.0">
         <manifest-digest sha256new="WY3YP4SFNMKYJNRZYAVL6Z73LSI3B4SLB4H2W674XW3F7SCJ7VYA"/>
         <archive extract="windows-amd64" href="https://get.helm.sh/helm-v3.0.0-windows-amd64.tar.gz" size="11953944" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" id="sha1new=5e54ab911363af2fc93c1d1e8158a7d1e2c31b27" released="2019-12-05" stability="stable" version="3.0.1">
+        <manifest-digest sha256new="RQHJDIE7HMNDHUWGSAGWIOQZCPWDFIB7DAXUF2JVDCCTLNXUMKMQ"/>
+        <archive extract="windows-amd64" href="https://get.helm.sh/helm-v3.0.1-windows-amd64.tar.gz" size="11956262" type="application/x-compressed-tar"/>
       </implementation>
     </group>
   </group>

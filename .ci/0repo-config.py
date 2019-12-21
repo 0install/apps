@@ -56,7 +56,7 @@ def upload_public_dir(files, message):
 # you are hosting archives on a different server). Note that uploaders can choose whether to store
 # archives within 0repo or externally. This setting does not affect external archives, only archives
 # managed by 0repo.
-ARCHIVES_BASE_URL = REPOSITORY_BASE_URL + "archives/"
+ARCHIVES_BASE_URL = "https://github.com/0install/apps.0install.net/releases/download/archives/"
 
 # Where to keep copies of the archives we upload.
 LOCAL_ARCHIVES_BACKUP_DIR = "archive-backups/"
@@ -69,10 +69,23 @@ LOCAL_ARCHIVES_BACKUP_DIR = "archive-backups/"
 # Note: There may be multiple archives/files for a single version, so you
 #	probably want to keep archive_basename in the final URL.
 def get_archive_rel_url(archive_basename, impl):
-	program = os.path.basename(impl.feed.url)
-	return "{program}/{archive}".format(
-		program = program,
-		archive = archive_basename)
+	return archive_basename
+
+def guess_mime_type(name):
+	if name.endswith('.zip'): return 'application/zip'
+	elif name.endswith('.tar'): return 'application/x-tar'
+	elif name.endswith('.tar.gz') or name.endswith('.tgz'): return 'application/x-compressed-tar'
+	elif name.endswith('.tar.bz2') or name.endswith('.tbz2') or name.endswith('.tbz'): return 'application/x-bzip-compressed-tar'
+	elif name.endswith('.tar.lzma') or name.endswith('.tlzma'): return 'application/x-lzma-compressed-tar'
+	elif name.endswith('.tar.xz') or name.endswith('.txz'): return 'application/x-xz-compressed-tar'
+	elif name.endswith('.gem'): return 'application/x-ruby-gem'
+	elif name.endswith('.7z'): return 'application/x-7z-compressed'
+	elif name.endswith('.cab'): return 'application/vnd.ms-cab-compressed'
+	elif name.endswith('.msi'): return 'application/x-msi'
+	elif name.endswith('.deb'): return 'application/x-deb'
+	elif name.endswith('.rpm'): return 'application/x-rpm'
+	elif name.endswith('.dmg'): return 'application/x-apple-diskimage'
+	else: return 'application/zip'
 
 # Upload these new archives to the file server.
 # For each archive in the list:
@@ -84,8 +97,18 @@ def upload_archives(archives):
 	if os.getenv('CI'):
 		print "Just a CI run; not uploading archives"
 	else:
-		for dir_rel_url, files in paths.group_by_target_url_dir(archives):
-			subprocess.check_call(["scp"] + files + ["archives.0install.de:archives.0install.de" + dir_rel_url + '/'])
+		from urllib.request import Request, urlopen
+		for archive in archives:
+			with open(archive.source_path, 'br') as file:
+				urlopen(Request(
+					'https://uploads.github.com/repos/0install/apps.0install.net/releases/22408464/assets?name=' + archive.rel_url,
+					file.read(),
+					headers={
+						'Content-Type': guess_mime_type(archive.rel_url),
+						'Accept': 'application/vnd.github.v3+json',
+						'Authorization': 'token ' + os.environ['GITHUB_TOKEN']
+					}
+				)).read()
 
 # Recalculate the manifest digests specified for local archives in incoming feeds to ensure the are correct.
 # You can set this to False if you trust all contributors to create correct feeds.

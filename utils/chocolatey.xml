@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="http://repo.roscidus.com/utils/chocolatey" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="https://apps.0install.net/utils/chocolatey.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>chocolatey</name>
   <summary>package manager for Windows</summary>
   <description>Chocolatey is a package manager for Windows (like apt-get but for Windows). It was designed to be a decentralized framework for quickly installing applications and tools that you need. It is built on the NuGet infrastructure currently using PowerShell as its focus for delivering packages from the distros to your door, err computer.</description>
@@ -9,27 +9,27 @@
 
   <group arch="Windows-*" license="Apache License, Version 2.0">
     <command name="run" path="chocolateyInstall/chocolatey.ps1">
-      <runner interface="http://repo.roscidus.com/powershell/windows">
+      <runner interface="https://apps.0install.net/powershell/windows.xml">
         <arg>-ExecutionPolicy</arg>
         <arg>Bypass</arg>
       </runner>
     </command>
     <command name="chocolatey" path="chocolateyInstall/chocolatey.ps1">
-      <runner interface="http://repo.roscidus.com/powershell/windows">
+      <runner interface="https://apps.0install.net/powershell/windows.xml">
         <arg>-ExecutionPolicy</arg>
         <arg>Bypass</arg>
       </runner>
     </command>
     <command name="install" path="chocolateyInstall/chocolatey.ps1">
       <arg>install</arg>
-      <runner interface="http://repo.roscidus.com/powershell/windows">
+      <runner interface="https://apps.0install.net/powershell/windows.xml">
         <arg>-ExecutionPolicy</arg>
         <arg>Bypass</arg>
       </runner>
     </command>
     <command name="list" path="chocolateyInstall/chocolatey.ps1">
       <arg>list</arg>
-      <runner interface="http://repo.roscidus.com/powershell/windows">
+      <runner interface="https://apps.0install.net/powershell/windows.xml">
         <arg>-ExecutionPolicy</arg>
         <arg>Bypass</arg>
       </runner>
@@ -199,35 +199,35 @@
 
   <group arch="Windows-*" license="Apache License, Version 2.0">
     <command name="run" path="chocolateyInstall/choco.exe">
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
     </command>
     <command name="refresh-env" path="chocolateyInstall/redirects/RefreshEnv.cmd"/>
     <command name="chocolatey" path="chocolateyInstall/choco.exe">
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
     </command>
     <command name="install" path="chocolateyInstall/choco.exe">
       <arg>install</arg>
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
     </command>
     <command name="uninstall" path="chocolateyInstall/choco.exe">
       <arg>uninstall</arg>
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
     </command>
     <command name="upgrade" path="chocolateyInstall/choco.exe">
       <arg>upgrade</arg>
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
     </command>
     <command name="list" path="chocolateyInstall/choco.exe">
       <arg>list</arg>
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
     </command>
     <command name="pack" path="chocolateyInstall/choco.exe">
       <arg>pack</arg>
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
     </command>
     <command name="push" path="chocolateyInstall/choco.exe">
       <arg>push</arg>
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
     </command>
 
     <implementation id="sha1new=b53c9bccd494ff8aaa3951dbbb204a5c0dd8c001" released="2016-02-05" stability="testing" version="0.9.10-pre-20160205">

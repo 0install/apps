@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/git/core" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/git/core.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>git-core</name>
   <summary>fast, scalable, distributed revision control system</summary>
   <description>
@@ -19,17 +19,17 @@ provided as separate git* packages.</description>
   <category>Development</category>
   <needs-terminal/>
 
-  <feed arch="Windows-*" src="http://repo.roscidus.com/git/windows"/>
+  <feed arch="Windows-*" src="https://apps.0install.net/git/windows.xml"/>
 
   <package-implementation main="/usr/bin/git" package="git-core"/>
   <package-implementation main="/usr/bin/git" package="git"/>
   <group doc-dir="usr/share/doc" main="usr/bin/git">
   </group>
   <group>
-    <requires interface="http://repo.roscidus.com/lib/curl3-gnutls">
+    <requires interface="https://apps.0install.net/lib/curl3-gnutls.xml">
       <environment insert="lib" name="LD_LIBRARY_PATH"/>
     </requires>
-    <requires interface="http://repo.roscidus.com/lib/expat1">
+    <requires interface="https://apps.0install.net/lib/expat1.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
     <implementation arch="Linux-i386" id="sha1new=4ec5c577aab003f0f5e3a7728061a5def17176a8" main="usr/bin/git" released="2010-04-04" version="1.5.6.5-3">
@@ -40,10 +40,10 @@ provided as separate git* packages.</description>
     </implementation>
   </group>
   <group>
-    <requires interface="http://repo.roscidus.com/lib/curl3-gnutls">
+    <requires interface="https://apps.0install.net/lib/curl3-gnutls.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
-    <requires interface="http://repo.roscidus.com/lib/expat1">
+    <requires interface="https://apps.0install.net/lib/expat1.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
     <implementation arch="Linux-i386" id="sha1new=c89043aa88c264e0d38186133f1402ccaae2eb88" main="usr/bin/git" released="2011-05-29" version="1.7.2.5-1">
@@ -59,7 +59,7 @@ provided as separate git* packages.</description>
       <archive href="git-amd64-1_1.7.2.5-2.tar.bz2" size="4438560"/>
     </implementation>
     <group>
-      <requires interface="http://repo.roscidus.com/lib/zlib1g">
+      <requires interface="https://apps.0install.net/lib/zlib1g.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
       <implementation arch="Linux-i386" id="sha1new=d3b355aa19b2cebf7d6d4f7b090d20ec66abc920" main="usr/bin/git" released="2012-03-27" version="1.7.2.5-3">

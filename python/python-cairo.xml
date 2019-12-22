@@ -1,13 +1,13 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/python/python-cairo" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/python/python-cairo.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>python-cairo</name>
   <summary>Python bindings for the cairo graphics library</summary>
   <description>Pycairo is a set of Python bindings for the cairo graphics library.</description>
   <homepage>http://cairographics.org/pycairo/</homepage>
 
   <group>
-    <restricts interface="http://repo.roscidus.com/python/python">
+    <restricts interface="https://apps.0install.net/python/python.xml">
       <version before="4" not-before="3"/>
     </restricts>
 
@@ -18,7 +18,7 @@
   </group>
 
   <group>
-    <restricts interface="http://repo.roscidus.com/python/python">
+    <restricts interface="https://apps.0install.net/python/python.xml">
       <version before="3" not-before="2"/>
     </restricts>
 
@@ -27,8 +27,8 @@
   </group>
 
   <group license="LGPL (GNU Lesser General Public License)">
-    <restricts interface="http://repo.roscidus.com/python/python" version="2.7..!2.8" />
-    <requires interface="http://repo.roscidus.com/lib/gtk" version="2.22..!3" />
+    <restricts interface="https://apps.0install.net/python/python.xml" version="2.7..!2.8" />
+    <requires interface="https://apps.0install.net/lib/gtk.xml" version="2.22..!3" />
     <environment name="PYTHONPATH" insert="." />
 
     <implementation arch="Windows-i486" version="1.8.10" released="2010-12-23" stability="stable" id="sha1new=4529f3d66d923e8491aa029092a67d855d2771cb">

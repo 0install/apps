@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="http://repo.roscidus.com/utils/pidgin" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface uri="https://apps.0install.net/utils/pidgin.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Pidgin</name>
   <summary xml:lang="en">multi-protocol instant messaging application</summary>
   <summary xml:lang="de">multi-protokoll Instant-Messenger Anwendung</summary>
@@ -7,15 +7,15 @@
   <description xml:lang="de">Pidgin ist eine Instant-Messenger Anwendung die mehrere Protokolle (AIM, MSN, ICQ, XMPP, YIM und andere) unterstützt.</description>
   <homepage>https://www.pidgin.im/</homepage>
   <category>Network</category>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/pidgin.png" type="image/png"/>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/pidgin.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/pidgin.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/pidgin.ico" type="image/vnd.microsoft.icon"/>
 
   <entry-point binary-name="pidgin" command="run"/>
 
   <package-implementation arch="Linux-*" main="/usr/bin/pidgin" package="libreoffice"/>
 
   <group license="GPL v2 (GNU General Public License)">
-    <requires interface="http://repo.roscidus.com/lib/gtk" version="2.16..!2.17"/>
+    <requires interface="https://apps.0install.net/lib/gtk.xml" version="2.16..!2.17"/>
     <implementation arch="Windows-i486" id="sha1new=724e2c288d8197e03fa792665a2ddf2cbd010888" main="pidgin.exe" released="2007-10-24" stability="stable" version="2.2.2">
       <manifest-digest sha256new="YL3BBGOI6BXGPD2JMRQFBHYNPGKMDCHF74KFPAPWQYDYOSE4MTQA"/>
       <archive extract="pidgin-2.2.2-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.2.2/pidgin-2.2.2-win32-bin.zip" size="9895468" type="application/zip"/>

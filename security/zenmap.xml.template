@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>Zenmap</name>
   <summary xml:lang="en">Nmap frontend and results viewer</summary>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/security/nmap.ico" type="image/vnd.microsoft.icon"/>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/security/nmap.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/security/nmap.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/security/nmap.png" type="image/png"/>
   <category>Network</category>
   <category>Utility</category>
 
-  <feed-for interface="http://repo.roscidus.com/security/zenmap"/>
+  <feed-for interface="https://apps.0install.net/security/zenmap.xml"/>
 
   <group doc-dir="usr/share/zenmap/doc" license="modfied GPL">
     <command name="run" path="zenmap.py">
-      <runner interface="http://repo.roscidus.com/python/python" version="2..!3"/>
+      <runner interface="https://apps.0install.net/python/python.xml" version="2..!3"/>
     </command>
-    <requires interface="http://repo.roscidus.com/python/python-gtk"/>
-    <requires interface="http://repo.roscidus.com/security/nmap">
+    <requires interface="https://apps.0install.net/python/python-gtk.xml"/>
+    <requires interface="https://apps.0install.net/security/nmap.xml">
       <executable-in-path name="nmap"/>
       <executable-in-path command="ncat" name="ncat"/>
       <executable-in-path command="nping" name="nping"/>

@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<interface uri="http://repo.roscidus.com/powershell/core" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="https://apps.0install.net/powershell/core.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>PowerShell Core</name>
   <summary>cross-platform version of PowerShell</summary>
   <homepage>https://github.com/PowerShell/PowerShell</homepage>
-  <feed-for interface="http://repo.roscidus.com/powershell/powershell"/>
+  <feed-for interface="https://apps.0install.net/powershell/powershell.xml"/>
 
   <group license="MIT License" main="pwsh.exe">
     <implementation arch="Windows-x86_64" id="sha1new=312ea20894071193967ec59558df23b9c9aa5a5b" released="2017-12-14" stability="testing" version="6.0.0-rc2">
@@ -152,8 +152,8 @@
     </implementation>
   </group>
   <group license="MIT License" main="pwsh">
-    <requires interface="http://repo.roscidus.com/lib/curl"/>
-    <requires interface="http://repo.roscidus.com/lib/unwind8"/>
+    <requires interface="https://apps.0install.net/lib/curl.xml"/>
+    <requires interface="https://apps.0install.net/lib/unwind8.xml"/>
     <implementation arch="Linux-x86_64" id="sha1new=029dd1d8bd0d019815035dd11d525178f2c7c42c" released="2017-12-14" stability="testing" version="6.0.0-rc2">
       <manifest-digest sha256new="KPRMKFWKGS7Z5PG4TIJOT436FS5ZDHHG5MOATNSS6GOFJLSXUFQQ"/>
       <archive href="https://github.com/PowerShell/PowerShell/releases/download/v6.0.0-rc.2/powershell-6.0.0-rc.2-linux-x64.tar.gz" size="51899076" type="application/x-compressed-tar"/>
@@ -180,7 +180,7 @@
     </implementation>
   </group>
   <group license="MIT License" main="pwsh">
-    <requires interface="http://repo.roscidus.com/lib/curl"/>
+    <requires interface="https://apps.0install.net/lib/curl.xml"/>
     <implementation arch="Linux-x86_64" id="sha1new=082dd853049b265049bbbe08d4bb17ea958e47f0" released="2018-09-13" stability="stable" version="6.1.0">
       <manifest-digest sha256new="BLLVDOJLWRQKD72AHEYKWCQFI7T4XNQYZFVR2LRO264P7NYJSIHQ"/>
       <archive href="https://github.com/PowerShell/PowerShell/releases/download/v6.1.0/powershell-6.1.0-linux-x64.tar.gz" size="58271981" type="application/x-compressed-tar"/>

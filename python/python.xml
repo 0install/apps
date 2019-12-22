@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="http://repo.roscidus.com/python/python" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="https://apps.0install.net/python/python.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>python</name>
   <summary>interactive high-level object-oriented language</summary>
   <description>
@@ -12,14 +12,14 @@ modules are easily written in C or C++. Python is also usable as an extension
 language for applications that need a programmable interface.</description>
   <needs-terminal/>
 
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/python/python.png" type="image/png"/>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/python/python.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/python/python.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/python/python.ico" type="image/vnd.microsoft.icon"/>
 
-  <feed src="http://repo.roscidus.com/python/python/upstream.xml"/>
+  <feed src="https://apps.0install.net/python/python-upstream.xml"/>
 
   <group><!-- There is a separate GUI version of the Python executable on Windows. On POSIX systems we simply map it back to regular Python. -->
     <command name="run-gui">
-      <runner interface="http://repo.roscidus.com/python/python"/>
+      <runner interface="https://apps.0install.net/python/python.xml"/>
     </command>
 
     <package-implementation distributions="Cygwin" main="/usr/bin/python" package="python"/>
@@ -54,7 +54,7 @@ language for applications that need a programmable interface.</description>
   <group license="Python License">
     <command name="run" path="python.exe"/>
     <command name="run-gui" path="pythonw.exe"/>
-    <requires importance="recommended" interface="http://repo.roscidus.com/python/python-win32"/>
+    <requires importance="recommended" interface="https://apps.0install.net/python/python-win32.xml"/>
     <environment insert="." name="PATH"/>
     <environment insert="DLLs" name="PATH"/>
     <environment insert="Windows/system32" name="PATH"/>
@@ -80,7 +80,7 @@ language for applications that need a programmable interface.</description>
   <group>
     <command name="run" path="python.exe"/>
     <command name="run-gui" path="pythonw.exe"/>
-    <requires importance="recommended" interface="http://repo.roscidus.com/python/python-win32"/>
+    <requires importance="recommended" interface="https://apps.0install.net/python/python-win32.xml"/>
     <environment insert="." name="PATH"/>
     <environment insert="DLLs" name="PATH"/>
     <environment insert="Win/System" name="PATH"/>
@@ -106,7 +106,7 @@ language for applications that need a programmable interface.</description>
   <group>
     <command name="run" path="python.exe"/>
     <command name="run-gui" path="pythonw.exe"/>
-    <requires importance="recommended" interface="http://repo.roscidus.com/python/python-win32"/>
+    <requires importance="recommended" interface="https://apps.0install.net/python/python-win32.xml"/>
     <environment insert="." name="PATH"/>
 
     <implementation arch="Windows-x86_64" id="sha1new=26e180334418bafbf35490ef4c406d747cb3694a" released="2015-08-11" stability="testing" version="3.5.0-rc1">

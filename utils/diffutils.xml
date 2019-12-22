@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/utils/diffutils" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/utils/diffutils.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>DiffUtils</name>
   <summary xml:lang="en">show differences between files</summary>
   <description xml:lang="en">You can use the diff command to show differences between two files, or each corresponding file in two directories. diff outputs differences between files line by line in any of several formats, selectable by command line options. This set of differences is often called a `diff' or `patch'. For files that are identical, diff normally produces no output; for binary (non-text) files, diff normally reports only that they are different. 
@@ -17,13 +17,13 @@ You can use the sdiff command to merge two files interactively.
   <homepage>http://gnuwin32.sourceforge.net/packages/diffutils.htm</homepage>
   <needs-terminal/>
   <implementation arch="Windows-i486" id="sha1new=b7ac58b6aac3d2e3e032305e667c5854818430be" langs="ca cs da de el es fi fr gl he hu id ja ms nl pl pt_BR ro ru sr sv tr zh_TW" license="GPL v2 (GNU General Public License)" released="2004-05-24" version="2.8.7-19-3">
-    <requires interface="http://repo.roscidus.com/devel/gettext">
+    <requires interface="https://apps.0install.net/devel/gettext.xml">
       <environment insert="bin" name="PATH"/>
     </requires>
-    <requires interface="http://repo.roscidus.com/lib/libiconv">
+    <requires interface="https://apps.0install.net/lib/libiconv.xml">
       <environment insert="bin" name="PATH"/>
     </requires>
-    <requires interface="http://repo.roscidus.com/lib/regex">
+    <requires interface="https://apps.0install.net/lib/regex.xml">
       <environment insert="bin" name="PATH"/>
     </requires>
     <command name="run" path="bin/diff.exe"/>

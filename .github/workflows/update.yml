@@ -1,0 +1,66 @@
+# Create branches with automatic 0watch updates
+name: Update
+on:
+  schedule:
+    - cron: '0 0 * * *' # daily at midnight UTC
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - name: Set up 0install
+        run: |
+          Invoke-WebRequest https://0install.de/files/0install.exe -OutFile 0install.exe
+          echo "::add-path::$env:GITHUB_WORKSPACE"
+      - name: Clone feeds
+        uses: actions/checkout@v2
+        with:
+          path: feeds
+      - name: Set up repo
+        run: mkdir incoming | Out-Null
+      - name: Run 0watch
+        env: {'CI': '1'}
+        run: feeds\watch.ps1
+      - name: Upload feeds generated on Windows
+        uses: actions/upload-artifact@v1
+        with:
+          name: windows-feeds
+          path: incoming
+
+  linux:
+    runs-on: ubuntu-latest
+    needs: windows
+    steps:
+      - name: Set up 0install
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends 0install-core python-gobject rpm2cpio
+      - name: Clone feeds
+        uses: actions/checkout@v2
+        with:
+          path: feeds
+      - name: Clone public
+        uses: actions/checkout@v2
+        with:
+          path: public
+          ref: gh-pages
+      - name: Set up repo
+        run: |
+          cp feeds/0repo-config.py .
+          cp public/archives.db .
+          cd feeds && git checkout -b auto-updates
+      - name: Download feeds generated on Windows
+        uses: actions/download-artifact@v1
+        with:
+          name: windows-feeds
+          path: incoming
+      - name: Run 0watch
+        env: {'CI': '1'}
+        run: feeds/watch.sh
+      - name: Run 0repo and push branch
+        env: {'NO_SIGN': '1'}
+        run: |
+          if ls incoming/*.xml; then
+            0install run http://0install.net/tools/0repo.xml
+            cd feeds && git push origin auto-updates --force
+          else
+            echo "No new releases to process"
+          fi

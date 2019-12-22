@@ -3,7 +3,7 @@ import subprocess
 import re
 
 def helm(version, args):
-    return ['0install', 'run', '--version', version, 'http://repo.roscidus.com/kubernetes/helm'] + args
+    return ['0install', 'run', '--version', version, 'https://apps.0install.net/kubernetes/helm'] + args
 
 def get_version():
     version_dependant_commands = ['list', 'ls', 'get', 'status', 'history', 'hist', 'install', 'upgrade', 'test', 'rollback', 'delete', 'del']

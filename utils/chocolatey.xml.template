@@ -6,39 +6,39 @@
   <icon href="https://chocolatey.org/content/packageimages/chocolatey.0.10.15.png" type="image/png"/>
   <homepage>https://chocolatey.org/</homepage>
   <needs-terminal/>
-  <feed-for interface="http://repo.roscidus.com/utils/chocolatey"/>
+  <feed-for interface="https://apps.0install.net/utils/chocolatey.xml"/>
 
   <group arch="Windows-*" license="Apache License, Version 2.0">
     <command name="run" path="chocolateyInstall/choco.exe">
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
     </command>
     <command name="refresh-env" path="chocolateyInstall/redirects/RefreshEnv.cmd"/>
     <command name="chocolatey" path="chocolateyInstall/choco.exe">
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
     </command>
     <command name="install" path="chocolateyInstall/choco.exe">
       <arg>install</arg>
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
     </command>
     <command name="uninstall" path="chocolateyInstall/choco.exe">
       <arg>uninstall</arg>
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
     </command>
     <command name="upgrade" path="chocolateyInstall/choco.exe">
       <arg>upgrade</arg>
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
     </command>
     <command name="list" path="chocolateyInstall/choco.exe">
       <arg>list</arg>
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
     </command>
     <command name="pack" path="chocolateyInstall/choco.exe">
       <arg>pack</arg>
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
     </command>
     <command name="push" path="chocolateyInstall/choco.exe">
       <arg>push</arg>
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/framework"/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
     </command>
 
     <implementation version="{version}" released="{released}" stability="{stability}">

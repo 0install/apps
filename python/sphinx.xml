@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/python/sphinx" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/python/sphinx.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>python-sphinx</name>
   <summary>tool for producing documentation for Python projects</summary>
   <description>
@@ -17,11 +17,11 @@ languages as well.</description>
 
   <group main="sphinx-build.py">
     <command name="run" path="sphinx-build.py">
-      <runner interface="http://repo.roscidus.com/python/python">
+      <runner interface="https://apps.0install.net/python/python.xml">
 	<version before="3"/>
       </runner>
     </command>
-    <requires interface="http://repo.roscidus.com/python/docutils"/>
+    <requires interface="https://apps.0install.net/python/docutils.xml"/>
     <requires interface="http://gfxmonk.net/dist/0install/jinja2.xml"/>
 
     <implementation doc-dir="doc" id="sha1new=7dd5e02109d6906134d10ea06f8d892269a1e83f" license="OSI Approved :: BSD License (revised)" released="2013-01-18" version="1.1.3">

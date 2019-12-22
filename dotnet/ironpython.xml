@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="http://repo.roscidus.com/dotnet/ironpython" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="https://apps.0install.net/dotnet/ironpython.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>IronPython</name>
   <summary>implementation of Python running under .NET/Mono</summary>
   <description>IronPython is an implementation of the Python programming language running under .NET/Mono and Silverlight/Moonlight. It supports an interactive console with fully dynamic compilation. It's well integrated with the rest of the .NET Framework and makes all .NET libraries easily available to Python programmers, while maintaining compatibility with the Python language. There also is Visual Studio tooling integration.</description>
@@ -7,18 +7,18 @@
   <category>Development</category>
   <needs-terminal/>
 
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/dotnet/ironpython.png" type="image/png"/>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/dotnet/ironpython.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/dotnet/ironpython.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/dotnet/ironpython.ico" type="image/vnd.microsoft.icon"/>
 
   <package-implementation main="/usr/bin/ipy" package="ironpython"/>
 
   <!-- .NET Framework 3.5 -->
   <group arch="*-x86_64" license="The Apache License v2">
     <command name="run" path="ipy64.exe">
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/clr" version="3.5.."/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="3.5.."/>
     </command>
     <command name="run-gui" path="ipyw64.exe">
-      <runner command="run-gui" interface="http://repo.roscidus.com/dotnet/clr" version="3.5.."/>
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="3.5.."/>
     </command>
     <implementation id="v2.7.7-x64" released="2016-12-08" version="2.7.7">
       <manifest-digest sha1new="2ee1a91a64cd38b9e936b468c8cd1adb60581286" sha256="254e2431327ee2f99bd58f1f765d3812b12805a0a946312b5e4d200fc0b039fa" sha256new="EVHCIMJSP3RPTG6VR4PXMXJYCKYSQBNAVFDDCK26JUQA7QFQHH5A"/>
@@ -27,10 +27,10 @@
   </group>
   <group arch="*-i486" license="The Apache License v2">
     <command name="run" path="ipy.exe">
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/clr" version="3.5.."/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="3.5.."/>
     </command>
     <command name="run-gui" path="ipyw.exe">
-      <runner command="run-gui" interface="http://repo.roscidus.com/dotnet/clr" version="3.5.."/>
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="3.5.."/>
     </command>
     <implementation id="v2.7.7-x86" released="2016-12-08" version="2.7.7">
       <manifest-digest sha1new="2ee1a91a64cd38b9e936b468c8cd1adb60581286" sha256="254e2431327ee2f99bd58f1f765d3812b12805a0a946312b5e4d200fc0b039fa" sha256new="EVHCIMJSP3RPTG6VR4PXMXJYCKYSQBNAVFDDCK26JUQA7QFQHH5A"/>
@@ -41,10 +41,10 @@
   <!-- .NET Framework 4.0 -->
   <group arch="Windows-x86_64" license="The Apache License v2">
     <command name="run" path="net40/ipy.exe">
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/clr" version="4.0..!4.5"/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.0..!4.5"/>
     </command>
     <command name="run-gui" path="net40/ipyw.exe">
-      <runner command="run-gui" interface="http://repo.roscidus.com/dotnet/clr" version="4.0..!4.5"/>
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.0..!4.5"/>
     </command>
     <implementation id="v2.7.8-net40-x64" released="2018-02-17" version="2.7.8">
       <manifest-digest sha256new="BCD52QF3XFKJM4ASZBUVZ6LLXKNMWPXBABCO3JDYUICP2W3EVJ4Q"/>
@@ -57,10 +57,10 @@
   </group>
   <group arch="Windows-i486" license="The Apache License v2">
     <command name="run" path="net40/ipy32.exe">
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/clr" version="4.0..!4.5"/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.0..!4.5"/>
     </command>
     <command name="run-gui" path="net40/ipyw32.exe">
-      <runner command="run-gui" interface="http://repo.roscidus.com/dotnet/clr" version="4.0..!4.5"/>
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.0..!4.5"/>
     </command>
     <implementation id="v2.7.8-net40-x86" released="2018-02-17" version="2.7.8">
       <manifest-digest sha256new="BCD52QF3XFKJM4ASZBUVZ6LLXKNMWPXBABCO3JDYUICP2W3EVJ4Q"/>
@@ -75,10 +75,10 @@
   <!-- .NET Framework 4.5 -->
   <group arch="Windows-x86_64" license="The Apache License v2">
     <command name="run" path="net45/ipy.exe">
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/clr" version="4.5.."/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.."/>
     </command>
     <command name="run-gui" path="net45/ipyw.exe">
-      <runner command="run-gui" interface="http://repo.roscidus.com/dotnet/clr" version="4.5.."/>
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.."/>
     </command>
     <implementation id="v2.7.8-net45-x64" released="2018-02-17" version="2.7.8">
       <manifest-digest sha256new="BCD52QF3XFKJM4ASZBUVZ6LLXKNMWPXBABCO3JDYUICP2W3EVJ4Q"/>
@@ -91,10 +91,10 @@
   </group>
   <group arch="Windows-i486" license="The Apache License v2">
     <command name="run" path="net45/ipy32.exe">
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/clr" version="4.5.."/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.."/>
     </command>
     <command name="run-gui" path="net45/ipyw32.exe">
-      <runner command="run-gui" interface="http://repo.roscidus.com/dotnet/clr" version="4.5.."/>
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.."/>
     </command>
     <implementation id="v2.7.8-net45-x86" released="2018-02-17" version="2.7.8">
       <manifest-digest sha256new="BCD52QF3XFKJM4ASZBUVZ6LLXKNMWPXBABCO3JDYUICP2W3EVJ4Q"/>
@@ -109,7 +109,7 @@
   <!-- .NET Core 2.0 -->
   <group arch="POSIX-*" license="The Apache License v2">
     <command name="run" path="netcoreapp2.0/ipy.dll">
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/core" version="2.0.."/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/core.xml" version="2.0.."/>
     </command>
     <implementation id="v2.7.8-netcoreapp2.0" released="2018-02-17" version="2.7.8">
       <manifest-digest sha256new="BCD52QF3XFKJM4ASZBUVZ6LLXKNMWPXBABCO3JDYUICP2W3EVJ4Q"/>
@@ -132,7 +132,7 @@
   <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
     <file-type id="IronPython.File">
       <description>Python source code file</description>
-      <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/dotnet/ironpython.doc.ico" type="image/vnd.microsoft.icon" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/dotnet/ironpython.doc.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
       <verb args="&quot;%1&quot;" name="open"/>
       <extension value=".py"/>
     </file-type>

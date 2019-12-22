@@ -7,7 +7,7 @@
   <homepage>https://github.com/GitTools/GitVersion</homepage>
   <needs-terminal/>
 
-  <feed-for interface="http://repo.roscidus.com/devel/gitversion"/>
+  <feed-for interface="https://apps.0install.net/devel/gitversion.xml"/>
 
   <group arch="Windows-x86_64" license="MIT License">
     <command name="run" path="GitVersion.exe"/>
@@ -19,8 +19,8 @@
 
   <group arch="Linux-x86_64" license="MIT License">
     <command name="run" path="GitVersion"/>
-    <requires interface="http://repo.roscidus.com/lib/icu"/>
-    <requires interface="http://repo.roscidus.com/lib/curl"/>
+    <requires interface="https://apps.0install.net/lib/icu.xml"/>
+    <requires interface="https://apps.0install.net/lib/curl.xml"/>
 
     <implementation version="{version}" released="{released}" stability="{stability}">
       <archive href="https://github.com/GitTools/GitVersion/releases/download/{original-version}/gitversion-linux-{original-version}.tar.gz" type="application/x-compressed-tar"/>

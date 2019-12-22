@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/e/e-core" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/e/e-core.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
   <name>e-core</name>
   <summary>secure distributed pure-object language</summary>
   <description>
@@ -9,7 +9,7 @@ E is a scripting language designed for writing secure distributed programs.</des
   <category>Development</category>
   <needs-terminal/>
   <group license="OSI Approved :: Mozilla Public License (MPL)" main="rune">
-    <requires interface="http://repo.roscidus.com/java/openjdk-6-jre">
+    <requires interface="https://apps.0install.net/java/openjdk-6-jre.xml">
       <environment insert="bin/" mode="replace" name="RUNE_JRE_BIN"/>
     </requires>
     <implementation id="sha1new=d0ecc18c74a4342bf2a08da8237aee11d9f32b27" released="2009-12-30" stability="stable" version="0.9.2-post1">
@@ -33,7 +33,7 @@ E is a scripting language designed for writing secure distributed programs.</des
   </group>
   <group arch="Windows-*" license="OSI Approved :: Mozilla Public License (MPL)">
     <command name="run">
-      <runner interface="http://repo.roscidus.com/java/openjdk-6-jre">
+      <runner interface="https://apps.0install.net/java/openjdk-6-jre.xml">
 	<arg>-cp</arg>
 	<arg>$ECLASSPATH</arg>
 	<arg>-De.home=$EHOME</arg>
@@ -50,7 +50,7 @@ E is a scripting language designed for writing secure distributed programs.</des
   </group>
   <group>
     <command name="compile" path="src/Makefile">
-      <runner interface="http://repo.roscidus.com/devel/make">
+      <runner interface="https://apps.0install.net/devel/make.xml">
 	<arg>-f</arg>
       </runner>
       <arg>-C</arg>
@@ -64,13 +64,13 @@ E is a scripting language designed for writing secure distributed programs.</des
 	<command>. The <command> alternative is needed for Windows.
 	-->
 	<command name="run">
-	  <runner interface="http://repo.roscidus.com/java/openjdk-6-jre">
+	  <runner interface="https://apps.0install.net/java/openjdk-6-jre.xml">
 	    <arg>-De.home=$EHOME</arg>
 	    <arg>org.erights.e.elang.interp.Rune</arg>
 	  </runner>
 	</command>
 	<command name="updoc" path="scripts/updoc.e">
-	  <runner interface="http://repo.roscidus.com/java/openjdk-6-jre">
+	  <runner interface="https://apps.0install.net/java/openjdk-6-jre.xml">
 	    <arg>-De.home=$EHOME</arg>
 	    <arg>org.erights.e.elang.interp.Rune</arg>
 	  </runner>
@@ -79,11 +79,11 @@ E is a scripting language designed for writing secure distributed programs.</des
 	<environment insert="" mode="replace" name="EHOME"/>
 	<environment insert="e.jar" name="CLASSPATH"/>
 
-	<requires interface="http://repo.roscidus.com/java/openjdk-6-jre">
+	<requires interface="https://apps.0install.net/java/openjdk-6-jre.xml">
 	  <environment insert="bin/" mode="replace" name="RUNE_JRE_BIN"/>
 	</requires>
       </compile:implementation>
-      <requires interface="http://repo.roscidus.com/java/openjdk-6-jdk">
+      <requires interface="https://apps.0install.net/java/openjdk-6-jdk.xml">
 	<!-- XXX: breaks 0install 1.2
 	<executable-in-path name="javac"/>
 	-->
@@ -97,16 +97,16 @@ E is a scripting language designed for writing secure distributed programs.</des
   </group>
   <group>
     <command name="run">
-      <runner interface="http://repo.roscidus.com/java/openjdk-6-jre">
+      <runner interface="https://apps.0install.net/java/openjdk-6-jre.xml">
 	<arg>-De.home=$EHOME</arg><arg>org.erights.e.elang.interp.Rune</arg>
       </runner>
     </command>
     <command name="updoc" path="scripts/updoc.e">
-      <runner interface="http://repo.roscidus.com/java/openjdk-6-jre"><arg>-De.home=$EHOME</arg><arg>org.erights.e.elang.interp.Rune</arg></runner>
+      <runner interface="https://apps.0install.net/java/openjdk-6-jre.xml"><arg>-De.home=$EHOME</arg><arg>org.erights.e.elang.interp.Rune</arg></runner>
     </command>
     <environment insert="" mode="replace" name="EHOME"/>
     <environment insert="e.jar" name="CLASSPATH"/>
-    <requires interface="http://repo.roscidus.com/java/openjdk-6-jre">
+    <requires interface="https://apps.0install.net/java/openjdk-6-jre.xml">
       <environment insert="bin/" mode="replace" name="RUNE_JRE_BIN"/>
     </requires>
     <implementation id="sha1new=2079b36d1baa7892b57afa8623d7e540cdc0fbde" main="rune" released="2011-10-26" stability="stable" version="0.9.3-4-1">

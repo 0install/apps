@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="http://repo.roscidus.com/java/maven" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="https://apps.0install.net/java/maven.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>Apache Maven</name>
   <summary>build manager for Java projects</summary>
   <homepage>http://maven.apache.org/</homepage>
@@ -7,13 +7,13 @@
   <needs-terminal/>
 
   <group license="Apache License 2.0">
-    <requires interface="http://repo.roscidus.com/java/openjdk-jdk">
+    <requires interface="https://apps.0install.net/java/openjdk-jdk.xml">
       <environment insert="" mode="replace" name="JAVA_HOME"/>
     </requires>
     <environment insert="" mode="replace" name="M2_HOME"/>
     <environment insert="boot/*" name="CLASSPATH"/>
     <command name="run">
-      <runner command="java" interface="http://repo.roscidus.com/java/openjdk-jdk">
+      <runner command="java" interface="https://apps.0install.net/java/openjdk-jdk.xml">
         <for-each item-from="MAVEN_OPTS" separator=" ">
           <arg>$item</arg>
         </for-each>
@@ -49,13 +49,13 @@
     </implementation>
   </group>
   <group license="Apache License 2.0">
-    <requires interface="http://repo.roscidus.com/java/openjdk-jdk" version="7..">
+    <requires interface="https://apps.0install.net/java/openjdk-jdk.xml" version="7..">
       <environment insert="" mode="replace" name="JAVA_HOME"/>
     </requires>
     <environment insert="" mode="replace" name="M2_HOME"/>
     <environment insert="boot/*" name="CLASSPATH"/>
     <command name="run">
-      <runner command="java" interface="http://repo.roscidus.com/java/openjdk-jdk">
+      <runner command="java" interface="https://apps.0install.net/java/openjdk-jdk.xml">
         <for-each item-from="MAVEN_OPTS" separator=" ">
           <arg>$item</arg>
         </for-each>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/java/jar-launcher" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/java/jar-launcher.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>JAR Launcher</name>
   <summary>launcher that starts the main class while preserving the CLASSPATH</summary>
   <description>A launcher that starts the main class specified in a JAR while preserving the CLASSPATH.
@@ -10,14 +10,14 @@ Workaround for java -classpath ... -jar ... which does not work.</description>
   <group license="MIT License">
     <command name="run">
       <environment name="CLASSPATH" insert="jar-launcher.jar" />
-      <runner interface="http://repo.roscidus.com/java/openjdk-jre" command="run">
+      <runner interface="https://apps.0install.net/java/openjdk-jre.xml" command="run">
         <version not-before="1.3" />
         <arg>net.zeroinstall.jar.launcher.JarLauncher</arg>
       </runner>
     </command>
     <command name="run-gui">
       <environment name="CLASSPATH" insert="jar-launcher.jar" />
-      <runner interface="http://repo.roscidus.com/java/openjdk-jre" command="run-gui">
+      <runner interface="https://apps.0install.net/java/openjdk-jre.xml" command="run-gui">
         <version not-before="1.3" />
         <arg>net.zeroinstall.jar.launcher.JarLauncher</arg>
       </runner>

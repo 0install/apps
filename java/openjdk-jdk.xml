@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/java/openjdk-jdk" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/java/openjdk-jdk.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>openjdk-jdk</name>
   <summary>OpenJDK Development Kit (JDK)</summary>
   <description>OpenJDK is a development environment for building applications, applets, and
@@ -13,19 +13,19 @@ components using the Java programming language.</description>
   <package-implementation distributions="Windows" package="openjdk-8-jdk"/>
 
   <feed arch="Windows-*" src="http://0install.de/feeds/Oracle_JDK.xml"/>
-  <feed src="http://repo.roscidus.com/java/openjdk-9-jdk"/>
-  <feed src="http://repo.roscidus.com/java/openjdk-10-jdk"/>
-  <feed src="http://repo.roscidus.com/java/openjdk-11-jdk"/>
-  <feed src="http://repo.roscidus.com/java/openjdk-12-jdk"/>
-  <feed src="http://repo.roscidus.com/java/openjdk-13-jdk"/>
+  <feed src="https://apps.0install.net/java/openjdk-9-jdk.xml"/>
+  <feed src="https://apps.0install.net/java/openjdk-10-jdk.xml"/>
+  <feed src="https://apps.0install.net/java/openjdk-11-jdk.xml"/>
+  <feed src="https://apps.0install.net/java/openjdk-12-jdk.xml"/>
+  <feed src="https://apps.0install.net/java/openjdk-13-jdk.xml"/>
 
   <group>
     <!-- Some versions of JDK bundle their own copy of the JRE. For those that don't we refer back the regular JRE. -->
     <command name="java">
-      <runner interface="http://repo.roscidus.com/java/openjdk-jre"/>
+      <runner interface="https://apps.0install.net/java/openjdk-jre.xml"/>
     </command>
     <command name="java-gui">
-      <runner interface="http://repo.roscidus.com/java/openjdk-jre" command="run-gui"/>
+      <runner interface="https://apps.0install.net/java/openjdk-jre.xml" command="run-gui"/>
     </command>
 
     <package-implementation distributions="Debian" main="/usr/bin/javac" package="openjdk-7-jdk"/>
@@ -40,7 +40,7 @@ components using the Java programming language.</description>
 
     <group main="bin/javac" arch="POSIX-*">
       <command name="run">
-        <runner interface="http://repo.roscidus.com/java/openjdk-jre"/>
+        <runner interface="https://apps.0install.net/java/openjdk-jre.xml"/>
         <arg>-cp</arg>
         <arg>${JDK_CLASSPATH}</arg>
         <arg>com.sun.tools.javac.Main</arg>
@@ -52,7 +52,7 @@ components using the Java programming language.</description>
       <environment insert="lib/dt.jar" name="JDK_CLASSPATH"/>
 
       <group>
-        <requires interface="http://repo.roscidus.com/java/openjdk-jre">
+        <requires interface="https://apps.0install.net/java/openjdk-jre.xml">
           <environment insert="bin/" mode="replace" name="OPENJDK_JRE_BIN"/>
         </requires>
         <environment insert="lib" mode="replace" name="OPENJDK_LIBS"/>
@@ -65,7 +65,7 @@ components using the Java programming language.</description>
       </group>
 
       <group>
-        <requires interface="http://repo.roscidus.com/java/openjdk-jre">
+        <requires interface="https://apps.0install.net/java/openjdk-jre.xml">
           <environment insert="bin/java" mode="replace" name="OPENJDK_JRE_JAVA"/>
         </requires>
         <implementation id="sha1new=f2da5d5538d0e3b9d9c0843cb9362e900fd33566" released="2009-12-27" version="6.11-9.1">

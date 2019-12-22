@@ -3,29 +3,29 @@
   <name>GitExtensions 2.x</name>
   <summary xml:lang="en">GitExtensions is a graphical interface for Git</summary>
   <summary xml:lang="de">GitExtensions ist eine grafische Oberfläche für Git</summary>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/git/gitextensions.ico" type="image/vnd.microsoft.icon"/>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/git/gitextensions.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/git/gitextensions.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/git/gitextensions.png" type="image/png"/>
   <category>Development</category>
   <homepage>https://github.com/gitextensions/gitextensions</homepage>
 
-  <feed-for interface="http://repo.roscidus.com/git/gitextensions-2"/>
+  <feed-for interface="https://apps.0install.net/git/gitextensions-2.xml"/>
 
   <group license="GPL v3 (GNU General Public License)">
-    <requires interface="http://repo.roscidus.com/git/core">
+    <requires interface="https://apps.0install.net/git/core.xml">
       <environment insert="." mode="replace" name="GITEXT_GIT"/>
       <environment insert="bin" name="PATH"/>
     </requires>
-    <requires importance="recommended" interface="http://repo.roscidus.com/utils/putty" os="Windows">
+    <requires importance="recommended" interface="https://apps.0install.net/utils/putty.xml" os="Windows">
       <environment insert="." mode="replace" name="GITEXT_PUTTY"/>
       <environment insert="plink.exe" mode="replace" name="GITEXT_PLINK"/>
       <environment insert="puttygen.exe" mode="replace" name="GITEXT_PUTTYGEN"/>
       <environment insert="pageant.exe" mode="replace" name="GITEXT_PAGEANT"/>
     </requires>
     <command name="run" path="GitExtensions.exe">
-      <runner command="run-gui" interface="http://repo.roscidus.com/dotnet/clr"/>
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml"/>
     </command>
     <command name="gitex" path="GitExtensions.exe">
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/clr"/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml"/>
     </command>
 
     <implementation arch="POSIX-*" version="{version}" released="{released}" stability="{stability}">

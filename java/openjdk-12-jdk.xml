@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="http://repo.roscidus.com/java/openjdk-12-jdk" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="https://apps.0install.net/java/openjdk-12-jdk.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>openjdk-12-jdk</name>
   <summary>OpenJDK Development Kit (JDK)</summary>
   <description>OpenJDK is a development environment for building applications, applets, and
@@ -7,15 +7,15 @@ components using the Java programming language.</description>
   <homepage>http://jdk.java.net/12/</homepage>
   <category>Development</category>
 
-  <feed-for interface="http://repo.roscidus.com/java/openjdk-jdk"/>
+  <feed-for interface="https://apps.0install.net/java/openjdk-jdk.xml"/>
 
   <group>
     <!-- Some versions of JDK bundle their own copy of the JRE. For those that don't we refer back the regular JRE. -->
     <command name="java">
-      <runner interface="http://repo.roscidus.com/java/openjdk-jre"/>
+      <runner interface="https://apps.0install.net/java/openjdk-jre.xml"/>
     </command>
     <command name="java-gui">
-      <runner command="run-gui" interface="http://repo.roscidus.com/java/openjdk-jre"/>
+      <runner command="run-gui" interface="https://apps.0install.net/java/openjdk-jre.xml"/>
     </command>
 
     <package-implementation distributions="Debian" main="/usr/bin/javac" package="openjdk-12-jdk"/>

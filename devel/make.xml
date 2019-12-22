@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/devel/make" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/devel/make.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>make</name>
   <summary>The GNU version of the &quot;make&quot; utility.</summary>
   <description>
@@ -33,7 +33,7 @@ the Debian Free Software Guidelines, and has been removed from this package.</de
       <archive href="make-amd64-3.81-8.tar.bz2" size="330847"/>
     </implementation>
     <group arch="Windows-i486" license="GPL v2 (GNU General Public License)" main="bin/make.exe">
-      <requires interface="http://repo.roscidus.com/devel/make-dep">
+      <requires interface="https://apps.0install.net/devel/make-dep.xml">
         <environment name="PATH" insert="bin" mode="append"/>
       </requires>
       <implementation version="3.81" stability="stable" id="sha1new=90f22a15896ea14db005aa13b922b187f9fa8067">
@@ -43,10 +43,10 @@ the Debian Free Software Guidelines, and has been removed from this package.</de
 
     </group>
     <implementation arch="Windows-i486" license="GPL v2 (GNU General Public License)" id="withdeps" released="2006-11-25" version="3.81-3">
-      <requires interface="http://repo.roscidus.com/lib/libiconv">
+      <requires interface="https://apps.0install.net/lib/libiconv.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/devel/gettext">
+      <requires interface="https://apps.0install.net/devel/gettext.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
       <command name="run" path="bin/make.exe"/>

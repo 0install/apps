@@ -1,11 +1,11 @@
 <?xml version="1.0" ?>
-<interface uri="http://repo.roscidus.com/dotnet/core-sdk" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="https://apps.0install.net/dotnet/core-sdk.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>.NET Core SDK</name>
   <summary>tools for building .NET Core applications</summary>
   <homepage>https://www.microsoft.com/net/core</homepage>
   <needs-terminal/>
 
-  <feed-for interface="http://repo.roscidus.com/dotnet/core"/><!-- The .NET Core SDK bundles a .NET Core Runtime -->
+  <feed-for interface="https://apps.0install.net/dotnet/core.xml"/><!-- The .NET Core SDK bundles a .NET Core Runtime -->
 
   <group license="MIT License">
     <command name="run" path="dotnet.exe"/>
@@ -530,8 +530,8 @@
     <command name="run" path="dotnet"/>
     <environment insert="." mode="replace" name="DOTNET_ROOT"/>
     <environment mode="replace" name="DOTNET_SKIP_FIRST_TIME_EXPERIENCE" value="true"/><!-- Prevent extraction of NuGet packages into implementation dir (which is read-only) -->
-    <requires interface="http://repo.roscidus.com/lib/curl"/>
-    <requires interface="http://repo.roscidus.com/lib/unwind"/>
+    <requires interface="https://apps.0install.net/lib/curl.xml"/>
+    <requires interface="https://apps.0install.net/lib/unwind.xml"/>
 
     <implementation id="sha1new=8eaa3ff9958d1dcf380233b8296d3983a1d7d427" stability="stable" version="2.0.0">
       <manifest-digest sha256new="3NJE4MHKOA4VHG2IYVKQUPYEESKFNSDB2PH3BG7A7RMRUNHYU6VA"/>
@@ -571,7 +571,7 @@
     <command name="run" path="dotnet"/>
     <environment insert="." mode="replace" name="DOTNET_ROOT"/>
     <environment mode="replace" name="DOTNET_SKIP_FIRST_TIME_EXPERIENCE" value="true"/><!-- Prevent extraction of NuGet packages into implementation dir (which is read-only) -->
-    <requires interface="http://repo.roscidus.com/lib/curl"/>
+    <requires interface="https://apps.0install.net/lib/curl.xml"/>
 
     <implementation id="sha1new=50bc318f670a661f5351bba6e8c5175d062a5fb7" released="2018-05-30" stability="stable" version="2.1.300">
       <manifest-digest sha256new="BUD77V4UMBBUK6PG3NDGNYCUBJXXR5PSGENNSYYG442DD2MR3B7Q"/>

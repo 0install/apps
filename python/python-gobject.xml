@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/python/python-gobject" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/python/python-gobject.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>python-gobject</name>
   <summary>Python bindings for the GObject library</summary>
   <description>
@@ -11,7 +11,7 @@ the core library used to build GTK+ and GNOME.
   <homepage>https://wiki.gnome.org/action/show/Projects/PyGObject</homepage>
 
   <group>
-    <restricts interface="http://repo.roscidus.com/python/python">
+    <restricts interface="https://apps.0install.net/python/python.xml">
       <version before="4" not-before="3"/>
     </restricts>
 
@@ -26,7 +26,7 @@ the core library used to build GTK+ and GNOME.
   </group>
 
   <group>
-    <restricts interface="http://repo.roscidus.com/python/python">
+    <restricts interface="https://apps.0install.net/python/python.xml">
       <version before="3" not-before="2"/>
     </restricts>
 
@@ -41,8 +41,8 @@ the core library used to build GTK+ and GNOME.
   <package-implementation distributions="Gentoo" package="dev-python/pygobject"/>
 
   <group license="LGPL (GNU Lesser General Public License)">
-    <restricts interface="http://repo.roscidus.com/python/python" version="2.7..!2.8" />
-    <requires interface="http://repo.roscidus.com/lib/gtk" version="2.22..!3" />
+    <restricts interface="https://apps.0install.net/python/python.xml" version="2.7..!2.8" />
+    <requires interface="https://apps.0install.net/lib/gtk.xml" version="2.22..!3" />
     <environment name="PYTHONPATH" insert="." />
     <environment name="PYTHONPATH" insert="gtk-2.0" />
 
@@ -61,8 +61,8 @@ the core library used to build GTK+ and GNOME.
   </group>
 
   <group license="LGPL (GNU Lesser General Public License)">
-    <restricts interface="http://repo.roscidus.com/python/python" version="3.4..!3.5" />
-    <requires interface="http://repo.roscidus.com/lib/gtk" version="3.18..!4" />
+    <restricts interface="https://apps.0install.net/python/python.xml" version="3.4..!3.5" />
+    <requires interface="https://apps.0install.net/lib/gtk.xml" version="3.18..!4" />
     <environment name="PYTHONPATH" insert="." />
 
     <implementation arch="Windows-x86_64" version="3.24.1" stability="stable" id="sha1new=4e13aab34b0b9e821f865ac2727527d21762db4b">

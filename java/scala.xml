@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="http://repo.roscidus.com/java/scala" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="https://apps.0install.net/java/scala.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>Scala</name>
   <summary>functional and object-oriented programming language</summary>
   <description>Scala is a functional and object-oriented programming language based on the Java Virtual Machine.</description>
@@ -7,14 +7,14 @@
   <category>Development</category>
   <needs-terminal/>
 
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/java/scala.png" type="image/png"/>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/java/scala.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/java/scala.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/java/scala.ico" type="image/vnd.microsoft.icon"/>
 
   <group license="BSD License">
     <environment insert="." mode="replace" name="SCALA_HOME"/>
     <environment insert="lib" mode="replace" name="SCALA_LIB"/>
     <command name="run">
-      <runner interface="http://repo.roscidus.com/java/openjdk-jre">
+      <runner interface="https://apps.0install.net/java/openjdk-jre.xml">
         <arg>-Xmx256M</arg>
         <arg>-Xms32M</arg>
         <arg>-Dscala.home=$SCALA_HOME</arg>
@@ -25,7 +25,7 @@
       </runner>
     </command>
     <command name="scalac">
-      <runner interface="http://repo.roscidus.com/java/openjdk-jre">
+      <runner interface="https://apps.0install.net/java/openjdk-jre.xml">
         <arg>-Xmx256M</arg>
         <arg>-Xms32M</arg>
         <arg>-Dscala.home=$SCALA_HOME</arg>
@@ -36,7 +36,7 @@
       </runner>
     </command>
     <command name="scaladoc">
-      <runner interface="http://repo.roscidus.com/java/openjdk-jre">
+      <runner interface="https://apps.0install.net/java/openjdk-jre.xml">
         <arg>-Xmx256M</arg>
         <arg>-Xms32M</arg>
         <arg>-Dscala.home=$SCALA_HOME</arg>
@@ -47,7 +47,7 @@
       </runner>
     </command>
     <command name="scalap">
-      <runner interface="http://repo.roscidus.com/java/openjdk-jre">
+      <runner interface="https://apps.0install.net/java/openjdk-jre.xml">
         <arg>-Xmx256M</arg>
         <arg>-Xms32M</arg>
         <arg>-Dscala.home=$SCALA_HOME</arg>

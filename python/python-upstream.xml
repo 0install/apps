@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/python/python/upstream.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/python/python-upstream.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
   <name>Python</name>
   <summary>The Python Programming Language</summary>
   <description>
@@ -11,7 +11,7 @@ immediate gains in productivity and lower maintenance costs.</description>
   <category>Development</category>
   <!-- <icon href="http://afb.users.sourceforge.net/zero-install/icons/python.png" type="image/png"/> -->
   <needs-terminal/>
-  <feed-for interface="http://repo.roscidus.com/python/python"/>
+  <feed-for interface="https://apps.0install.net/python/python.xml"/>
   <group license="OSI Approved :: Python License" released="2011-06-11" stability="stable" version="2.7.2">
   <implementation arch="*-src" compile:binary-main="bin/python" compile:command="chmod +w Python/graminit.c Include/graminit.h; $SRCDIR/configure --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install; 0launch http://afb.users.sourceforge.net/zero-install/interfaces/shebangs.xml $DISTDIR/bin" compile:dup-src="true" id="sha1new=1f411e645412b2e5bf9e28bdfa6a3b08b73a574c" version="2.7.2">
     <archive extract="Python-2.7.2" href="http://python.org/ftp/python/2.7.2/Python-2.7.2.tar.bz2" size="11754834" type="application/x-bzip-compressed-tar"/>

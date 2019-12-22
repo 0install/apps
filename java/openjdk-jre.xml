@@ -1,18 +1,18 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/java/openjdk-jre" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/java/openjdk-jre.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>openjdk-jre</name>
   <summary>OpenJDK Java runtime</summary>
   <description>The Java runtime allows you to run applications built for Java.</description>
 
-  <feed src="http://repo.roscidus.com/java/openjdk-6-jre"/>
+  <feed src="https://apps.0install.net/java/openjdk-6-jre.xml"/>
 
   <feed arch="Windows-*" src="http://0install.de/feeds/Oracle_JRE.xml"/>
 
   <group>
     <!-- There is a seperate GUI version of the Java executable on Windows. On POSIX systems we simply map it back to regular Java. -->
     <command name="run-gui">
-      <runner interface="http://repo.roscidus.com/java/openjdk-jre"/>
+      <runner interface="https://apps.0install.net/java/openjdk-jre.xml"/>
     </command>
 
     <!-- Note: 0install >= 1.11 will fill in the correct main value automatically. -->

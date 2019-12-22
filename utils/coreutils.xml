@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/utils/coreutils" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/utils/coreutils.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>CoreUtils</name>
   <summary xml:lang="en">collection of basic file, shell and text manipulation utilities</summary>
   <description xml:lang="en">The GNU Core Utilities are the basic file, shell and text manipulation utilities of the GNU operating system. These are the core utilities which are expected to exist on every operating system. </description>
@@ -10,10 +10,10 @@
   <homepage>http://gnuwin32.sourceforge.net/packages/coreutils.htm</homepage>
   <needs-terminal/>
   <group arch="Windows-i486" langs="af be bg ca cs da de el es et eu fi fr ga gl hu it ja ko ms nb nl pl pt pt_BR ru sk sl sv tr zh_CN zh_TW" released="2005-04-21" version="5.3.0-3">
-    <requires interface="http://repo.roscidus.com/devel/gettext"  version="0.14.4-3">
+    <requires interface="https://apps.0install.net/devel/gettext.xml"  version="0.14.4-3">
       <environment insert="bin" name="PATH"/>
     </requires>
-    <requires interface="http://repo.roscidus.com/lib/libiconv" version="1.9.2-1-3">
+    <requires interface="https://apps.0install.net/lib/libiconv.xml" version="1.9.2-1-3">
       <environment insert="bin" name="PATH"/>
     </requires>
     <command name="run" path="bin/install.exe"/>
@@ -51,7 +51,7 @@
     <command name="grmdir" path="bin/grmdir.exe"/>
     <command name="groups" path="bin/groups">
       <executable-in-path command="id" name="id"/>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <command name="gsort" path="bin/gsort.exe"/>
     <command name="head" path="bin/head.exe"/>

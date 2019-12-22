@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="http://repo.roscidus.com/git/windows" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="https://apps.0install.net/git/windows.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>Git for Windows</name>
   <summary>decentralized version control system</summary>
   <description>Git is a powerful version control system aiming to be the fastest decentralized source code management tool on this planet.</description>
@@ -8,12 +8,12 @@
 
   <icon href="https://gitforwindows.org/img/gwindows_logo.png" type="image/png"/>
 
-  <feed-for interface="http://repo.roscidus.com/git/core"/>
+  <feed-for interface="https://apps.0install.net/git/core.xml"/>
 
   <package-implementation distributions="Windows" package="git"/>
 
   <group license="GPL v2 (GNU General Public License)">
-    <requires importance="recommended" interface="http://repo.roscidus.com/utils/putty">
+    <requires importance="recommended" interface="https://apps.0install.net/utils/putty.xml">
       <environment insert="plink.exe" mode="replace" name="GIT_SSH"/>
       <environment insert="plink.exe" mode="replace" name="SVN_SSH"/>
     </requires>

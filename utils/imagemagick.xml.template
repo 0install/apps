@@ -3,13 +3,13 @@
   <name>ImageMagick</name>
   <summary>create, edit, compose, or convert bitmap images</summary>
   <description>ImageMagick can read and write images in a variety of formats (over 200) including PNG, JPEG, GIF, HEIC, TIFF, DPX, EXR, WebP, Postscript, PDF, and SVG. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.</description>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/imagemagick.png" type="image/png"/>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/imagemagick.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/imagemagick.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/imagemagick.ico" type="image/vnd.microsoft.icon"/>
   <category>Graphics</category>
   <homepage>https://imagemagick.org/</homepage>
   <needs-terminal/>
 
-  <feed-for interface="http://repo.roscidus.com/utils/imagemagick"/>
+  <feed-for interface="https://apps.0install.net/utils/imagemagick.xml"/>
 
   <group license="Apache License 2.0">
     <command name="run" path="magick.exe"/>
@@ -26,7 +26,7 @@
     <command name="montage" path="montage.exe"/>
     <command name="stream" path="stream.exe"/>
     <environment insert="." mode="prepend" name="MAGICK_HOME"/>
-    <requires interface="http://repo.roscidus.com/utils/ffmpeg">
+    <requires interface="https://apps.0install.net/utils/ffmpeg.xml">
       <executable-in-path name="ffmpeg"/>
     </requires>
 

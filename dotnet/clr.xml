@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/dotnet/clr" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/dotnet/clr.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>Common Language Infrastructure</name>
   <summary>an implementation of the Common Language Infrastucture (.NET Framework on Windows, Mono on POSIX) using .NET profiles as version numbers</summary>
 
   <!-- The .NET Framework is an implementation of the Common Language Infrastructure. -->
-  <feed arch="Windows-*" src="http://repo.roscidus.com/dotnet/framework" />
+  <feed arch="Windows-*" src="https://apps.0install.net/dotnet/framework.xml" />
 
   <!-- Empty implementations used to map .NET Framework version numbers to roughly equivalent Mono version numbers. -->
   <group arch="POSIX-*" license="MIT License">
     <implementation version="2.0" id="netfx-2.0-mono">
       <command name="run">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
           <version not-before="1.2" before="2.0" />
         </runner>
       </command>
       <command name="run-gui">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run-gui">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
           <version not-before="1.2" before="2.0" />
         </runner>
       </command>
@@ -25,12 +25,12 @@
     </implementation>
     <implementation version="3.0" id="netfx-3.0-mono">
       <command name="run">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
           <version not-before="2.0" before="2.8" />
         </runner>
       </command>
       <command name="run-gui">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run-gui">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
           <version not-before="2.0" before="2.8" />
         </runner>
       </command>
@@ -39,12 +39,12 @@
     </implementation>
     <implementation version="3.5" id="netfx-3.5-mono">
       <command name="run">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
           <version not-before="2.0" before="2.8" />
         </runner>
       </command>
       <command name="run-gui">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run-gui">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
           <version not-before="2.0" before="2.8" />
         </runner>
       </command>
@@ -53,12 +53,12 @@
     </implementation>
     <implementation version="4.0" id="netfx-4.0-mono">
       <command name="run">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
           <version not-before="2.8" before="3.0" />
         </runner>
       </command>
       <command name="run-gui">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run-gui">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
           <version not-before="2.8" before="3.0" />
         </runner>
       </command>
@@ -67,12 +67,12 @@
     </implementation>
     <implementation version="4.5" id="netfx-4.5-mono">
       <command name="run">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
           <version not-before="3.0" />
         </runner>
       </command>
       <command name="run-gui">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run-gui">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
           <version not-before="3.0" />
         </runner>
       </command>
@@ -81,12 +81,12 @@
     </implementation>
     <implementation version="4.5.1" id="netfx-4.5.1-mono">
       <command name="run">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
           <version not-before="3.4" />
         </runner>
       </command>
       <command name="run-gui">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run-gui">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
           <version not-before="3.4" />
         </runner>
       </command>
@@ -95,12 +95,12 @@
     </implementation>
     <implementation version="4.5.2" id="netfx-4.5.2-mono">
       <command name="run">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
           <version not-before="3.6" />
         </runner>
       </command>
       <command name="run-gui">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run-gui">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
           <version not-before="3.6" />
         </runner>
       </command>
@@ -109,12 +109,12 @@
     </implementation>
     <implementation version="4.6" id="netfx-4.6-mono">
       <command name="run">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
           <version not-before="4.0" />
         </runner>
       </command>
       <command name="run-gui">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run-gui">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
           <version not-before="4.0" />
         </runner>
       </command>
@@ -123,12 +123,12 @@
     </implementation>
     <implementation version="4.6.1" id="netfx-4.6.1-mono">
       <command name="run">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
           <version not-before="4.2" />
         </runner>
       </command>
       <command name="run-gui">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run-gui">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
           <version not-before="4.2" />
         </runner>
       </command>
@@ -137,12 +137,12 @@
     </implementation>
     <implementation version="4.6.2" id="netfx-4.6.2-mono">
       <command name="run">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
           <version not-before="4.4" />
         </runner>
       </command>
       <command name="run-gui">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run-gui">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
           <version not-before="4.4" />
         </runner>
       </command>
@@ -151,12 +151,12 @@
     </implementation>
     <implementation version="4.7" id="netfx-4.7-mono">
       <command name="run">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
           <version not-before="5.8" />
         </runner>
       </command>
       <command name="run-gui">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run-gui">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
           <version not-before="5.8" />
         </runner>
       </command>
@@ -165,12 +165,12 @@
     </implementation>
     <implementation version="4.7.1" id="netfx-4.7.1-mono">
       <command name="run">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
           <version not-before="5.8" />
         </runner>
       </command>
       <command name="run-gui">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run-gui">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
           <version not-before="5.8" />
         </runner>
       </command>
@@ -179,12 +179,12 @@
     </implementation>
     <implementation version="4.7.2" id="netfx-4.7.2-mono">
       <command name="run">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
           <version not-before="5.12" />
         </runner>
       </command>
       <command name="run-gui">
-        <runner interface="http://repo.roscidus.com/dotnet/mono" command="run-gui">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
           <version not-before="5.12" />
         </runner>
       </command>

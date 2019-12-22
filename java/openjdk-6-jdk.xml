@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/java/openjdk-6-jdk" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/java/openjdk-6-jdk.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>openjdk-6-jdk</name>
   <summary>OpenJDK Development Kit (JDK)</summary>
   <description>
@@ -15,11 +15,11 @@ IcedTea project.</description>
   <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-1_6_0-openjdk-devel"/>
   <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-1.6.0-openjdk-devel"/>
 
-  <replaced-by interface="http://repo.roscidus.com/java/openjdk-jdk"/>
+  <replaced-by interface="https://apps.0install.net/java/openjdk-jdk.xml"/>
 
   <group main="bin/javac">
     <command name="run">
-      <runner interface="http://repo.roscidus.com/java/openjdk-6-jre"/>
+      <runner interface="https://apps.0install.net/java/openjdk-6-jre.xml"/>
       <arg>-cp</arg><arg>${JDK_CLASSPATH}</arg>
       <arg>com.sun.tools.javac.Main</arg>
     </command>
@@ -30,7 +30,7 @@ IcedTea project.</description>
     <environment insert="lib/dt.jar" name="JDK_CLASSPATH"/>
 
     <group>
-      <requires interface="http://repo.roscidus.com/java/openjdk-jre">
+      <requires interface="https://apps.0install.net/java/openjdk-jre.xml">
 	<environment insert="bin/" mode="replace" name="OPENJDK_JRE_BIN"/>
       </requires>
       <environment insert="lib" mode="replace" name="OPENJDK_LIBS"/>
@@ -43,7 +43,7 @@ IcedTea project.</description>
     </group>
 
     <group>
-      <requires interface="http://repo.roscidus.com/java/openjdk-jre">
+      <requires interface="https://apps.0install.net/java/openjdk-jre.xml">
 	<environment insert="bin/java" mode="replace" name="OPENJDK_JRE_JAVA"/>
       </requires>
       <implementation id="sha1new=f2da5d5538d0e3b9d9c0843cb9362e900fd33566" released="2009-12-27" version="6.11-9.1">

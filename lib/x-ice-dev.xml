@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/lib/x-ice-dev.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libice-dev</name>
+  <summary>X11 Inter-Client Exchange library (development headers)</summary>
+  <description>
+This package provides the main interface to the X11 Inter-Client Exchange
+library, which allows for communication of data between X clients.
+
+This package contains the development headers for the library found in libice6.
+Non-developers likely have little use for this package.
+
+More information about X.Org can be found at: &lt;URL:http://xorg.freedesktop.org&gt;
+&lt;URL:http://lists.freedesktop.org/mailman/listinfo/xorg&gt;</description>
+  <!--<package-implementation package="libice-dev"/>-->
+  <group arch="Linux-i386">
+    <requires interface="https://apps.0install.net/lib/x11proto-core-dev.xml">
+      <environment insert="lib/pkgconfig" name="PKG_CONFIG_PATH"/>
+    </requires>
+    <implementation id="sha1new=06a4f9ece282b4ed0644261210b4b9333d3c6da6" released="2010-08-12" version="1.0.4-1">
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/libice-dev-i386-2_1.0.4-1.tar.bz2" size="52221"/>
+    </implementation>
+  </group>
+  <group>
+    <requires interface="https://apps.0install.net/lib/x11proto-core-dev.xml">
+      <environment insert="lib/pkgconfig" name="PKG_CONFIG_PATH"/>
+    </requires>
+    <implementation arch="Linux-x86_64" id="sha1new=f718ecf1b9d55879794d79ea91e534dba545d478" released="2010-08-12" version="1.0.4-1">
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/libice-dev-amd64-2_1.0.4-1.tar.bz2" size="56596"/>
+    </implementation>
+  </group>
+  <group>
+    <requires interface="https://apps.0install.net/lib/x11proto-core-dev.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <implementation arch="Linux-i386" id="sha1new=7a3d73292920853f846035e27d1b23e473aeeb2d" released="2011-05-29" version="1.0.6-2">
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/libice-dev-i386-2_1.0.6-2.tar.bz2" size="56027"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=1a6aa1ed8c5e479bdb397be19781517808855703" released="2011-05-29" version="1.0.6-2">
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/libice-dev-amd64-2_1.0.6-2.tar.bz2" size="60874"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA337AAoJEFmqOSfCTk4eUqEIAJQd7LADxcKxGgMU2MWqOsQFc2dobyhSCNiC
+z3Ee0RZXJwxfJV+tLGwMvKg7MYa/V/vlmHGiJ6hWFdBU2cA0u9bNwrkglmLK+SFlevV3Z6imbSHe
+XLf1yM9sFM/1vSCfXzhruSljVoTlZdNsG2x/pqVpUXqwTpPoRuWhY3SVx0Sr1phpUCEM+X1ISVd2
+wQSdLpMm4kPKnTDkNvozetpn8oqx0kw6xJ/JX0dpvp8aaqrdk9BsxBPtfyR5KUgvaHQ0oEnjN8pI
+caFRDvyhXhK5wrl6jB3ed4zoImcEIfhn5299BGq9rq/z2du9P5/6fwhYasEZTtsF5J9GyX0dE42l
+bK8=
+
+-->

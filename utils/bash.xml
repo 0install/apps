@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/utils/bash.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>bash</name>
+  <summary>the GNU Bourne Again shell</summary>
+  <description>
+Bash is the shell, or command language interpreter, for the GNU operating
+system. The name is an acronym for the ‘Bourne-Again SHell’, a pun on
+Stephen Bourne, the author of the direct ancestor of the current Unix shell sh,
+which appeared in the Seventh Edition Bell Labs Research version of Unix.
+
+Bash is largely compatible with sh and incorporates useful features from the
+Korn shell ksh and the C shell csh. It is intended to be a conformant
+implementation of the IEEE POSIX Shell and Tools portion of the IEEE POSIX
+specification (IEEE Standard 1003.1). It offers functional improvements over sh
+for both interactive and programming use.
+
+Since bash is included on most Unix systems, this feed is mainly useful for
+Windows systems, where it provides a binary of win-bash (http://win-
+bash.sourceforge.net/).</description>
+  <homepage>http://www.gnu.org/software/bash/</homepage>
+  <category>Utility</category>
+  <needs-terminal/>
+
+  <!-- Not /usr/bin/bash : http://thread.gmane.org/gmane.comp.file-systems.zero-install.devel/7135 -->
+  <package-implementation main="/bin/bash" package="bash"/>
+
+  <!--
+     Note: We don't want to specify the word size because bash doesn't link to anything and
+     we don't want to force everything else to be 32-bit. Once 0install supports scoped
+     dependencies we can add this.
+  -->
+  <group license="OSI Approved :: GNU General Public License v2" main="win-bash.exe">
+    <!-- Warning: we don't give any arch here, even though it's a Windows-x86 binary.
+	 That's because 0compile depends on it and old versions of 0install don't understand
+	 Windows-only dependencies and might therefore insist on downloading a version (if
+	 the <package-implementation> above doesn't find anything). It's better to download it
+	 and ignore it than to fail to run 0compile.
+      -->
+    <implementation id="sha1new=624fe11b4b9f88c1087ed915e2c66b07edaf62dd" if-0install-version="..!1.12" released="2013-03-02" version="0.6">
+      <archive href="https://downloads.sourceforge.net/project/win-bash/win-bash/0.6/win-bash_0_6.zip" size="969894" type="application/zip"/>
+    </implementation>
+
+    <implementation arch="Windows-*" id="bash-for-windows" if-0install-version="1.12.." released="2013-03-02" version="0.6">
+      <manifest-digest sha1new="624fe11b4b9f88c1087ed915e2c66b07edaf62dd"/>
+      <archive href="https://downloads.sourceforge.net/project/win-bash/win-bash/0.6/win-bash_0_6.zip" size="969894" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA33/AAoJEFmqOSfCTk4exZcH/0GEN35deKvv4h9GK87orUzoZ+W8XyCm/7lv
+J7Wl3vnz3+v0UxbDAtrRjrC1srk93+2DBrFtYNl2PtApJOOQEBHFBzXOokRZsLKp7c9VHipAYXL8
+HkcXGggc1Yl5YpGBOG0OG8cuSGl1y1vApIV3o3Z7VxlvQnJqGDGxA3RtEgjSVenp4wDwyhZpeoc0
+JtIbbqge8mZVEIAfsvQ+10EzUTe1Gvb5jLoJhAXd1ZT85bJUL6e4Kp2sJCfJ+bUa1t3kS66fwk+g
+jfwXtVchJgCTi24iurZSsU95qzp5KOr+0xAUMB+MjdhfQExate0wqFfoUO0Yhad/Om7vCUuf//gL
+kaQ=
+
+-->

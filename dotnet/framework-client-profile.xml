@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/dotnet/framework-client-profile.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>.NET Framework Client Profile</name>
+  <summary>subset of the .NET Framework optimized for client applications</summary>
+  <description>This feed uses the version of .NET Framework already installed on the computer. It does not download new versions.</description>
+  <homepage>https://docs.microsoft.com/en-us/dotnet/framework/deployment/client-profile</homepage>
+
+  <package-implementation distributions="Windows" package="netfx-client">
+    <!-- There is a seperate GUI version of the Mono executable on Windows. For .NET we treat "run" and "run-gui" exactly the same. -->
+    <command name="run-gui" path=""/>
+  </package-implementation>
+
+  <!-- The regular .NET Framework is a superset of the Client Profile -->
+  <feed src="https://apps.0install.net/dotnet/framework.xml"/>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl4HuBwACgkQWao5J8JOTh5tzggAk8TF
+tTroAi8Ci+uC1JAxfH8hf08L4XbUVhGrRt+ldDPb5Jh7VdYSxXa44sw8YWYbaDRuw2N+fVp/rKbq
+RKXDegyRLyX9/L29tSAvIWQ5SKck+kjzaaU9/zgByF5BbLvETRwjCtmWB0jIxbAKI4OYUf9w1gC6
+sItcljrBjqC19PJIVS9G+/CROaTGxp6uYIfYOaYY94XAbknQECxlR/x6QZp2+okGs/FC8rH9RHm8
+1rId6cYRksBmwCNqhlhipbyHWoFNztluj/MuZWYUaCoZoyQtQmoLI/g0B9+MFzp6ATLgzEqBXVWx
+W+32OdGogF+J0T4bMGUQY0tMYpfTIGUr/w==
+
+-->

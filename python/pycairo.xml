@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/python/pycairo.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>PyCairo</name>
+  <summary>Python bindings for the Cairo graphics library</summary>
+  <description>Pycairo is a set of Python bindings for the cairo graphics library.</description>
+  <homepage>http://cairographics.org/pycairo/</homepage>
+
+  <group>
+    <restricts interface="https://apps.0install.net/python/python.xml">
+      <version before="4" not-before="3"/>
+    </restricts>
+
+    <package-implementation distributions="Debian" package="python3-cairo"/>
+    <package-implementation distributions="Arch" package="python-cairo">
+      <version not-before="3"/>
+    </package-implementation>
+  </group>
+
+  <group>
+    <restricts interface="https://apps.0install.net/python/python.xml">
+      <version before="3" not-before="2"/>
+    </restricts>
+
+    <package-implementation distributions="Debian" package="python-cairo"/>
+    <package-implementation distributions="Arch" package="python2-cairo2"/>
+  </group>
+
+  <group license="LGPL (GNU Lesser General Public License)">
+    <restricts interface="https://apps.0install.net/python/python.xml" version="2.7..!2.8"/>
+    <requires interface="https://apps.0install.net/lib/gtk.xml" version="2.22..!3"/>
+    <environment insert="." name="PYTHONPATH"/>
+
+    <implementation arch="Windows-i486" id="sha1new=4529f3d66d923e8491aa029092a67d855d2771cb" released="2010-12-23" stability="stable" version="1.8.10">
+      <manifest-digest sha256new="266MVTT4XWMYWQWFN2PWFACNH42TRTBDA2VSSRT7SACA44KULB2A"/>
+      <archive extract="SourceDir/Lib/site-packages" href="http://ftp.gnome.org/pub/GNOME/binaries/win32/pycairo/1.8/pycairo-1.8.10.win32-py2.7.msi" size="147456" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=b9b71efede8a8abd6df73c5e0e8b7eac1db0f795" stability="developer" version="1.10.0">
+      <manifest-digest sha256new="TGTXCGTCARXN5K42WXVGKXMTVIXOMMXMGLRTOLETSPS62L6P3VMQ"/>
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/pycairo_gtk-1.10.0-cp27-none-win_amd64.whl" size="29176" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=e6380430b93ea83a185f810f8b160d8b0a620dd1" stability="developer" version="1.10.0">
+      <manifest-digest sha256new="VTDYMK6G7VIG6IQ7LVWVPAM2Y5MUH3NFHXLJY5LRMEMH3I7JOWTA"/>
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/pycairo_gtk-1.10.0-cp27-none-win32.whl" size="25791" type="application/zip"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeCK+zAAoJEFmqOSfCTk4ebV0H/1j+8KOufPhXHBnXtXrTmSecudbmMYb+tMyQ
+Mc+tbwSbYLEqpr0emIwWt1GOPE34Wz6FC5ZWttrAuqMBljqGt1nMAt+P3NI2CaTTDVX0h245dP1d
+f2fMkczmQ1fDjnwfZwZc2/P1hdlxnUMYTrsWyEPJinMsG/eSS5k1WD841EnnV3k+5nDz0wLqzdnP
+HYy5J5AcbQ6YgR+bIh/1JAztx6dRer7MmYn/3q5g4gNXMbV5l/Nkl1kk4F+iqFzdA/2Xw/xZebaa
+RFU0/M68azAzSJiBo8ot/6Wm3CY8MIyYKEiRhwWlYPDWBeLqSnP8e04odIlsHEQRyCOucyphLhjI
+hVU=
+
+-->

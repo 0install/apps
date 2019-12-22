@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="catalog.xsl"?>
+<catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://0install.de/schema/injector/catalog http://0install.de/schema/injector/catalog/catalog.xsd" xmlns="http://0install.de/schema/injector/catalog">
+  <interface uri="http://0install.de/feeds/0watch.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+    <name>0watch</name>
+    <summary xml:lang="en">scans websites for new releases and triggers 0template if required</summary>
+    <description xml:lang="en">
+    0watch scans websites for new releases using arbritary Python code snippets.
+    When new releases are detected 0template is used to create/update a Zero Install feed.
+  </description>
+    <homepage>https://github.com/0install/0watch</homepage>
+    <needs-terminal />
+    <entry-point command="run" binary-name="0watch" />
+  </interface>
+  <interface uri="http://0install.de/feeds/ZeroInstall_Tools.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+    <name>Zero Install Publishing Tools</name>
+    <summary xml:lang="en">helps you create and update Zero Install feeds</summary>
+    <summary xml:lang="de">hilft Ihnen beim Erstellen und Aktualisieren von Zero Install Feeds</summary>
+    <description xml:lang="en">Zero Install uses feeds, XML files on the internet, to describe applications and how to download them. The Zero Install Publishing Tools allow you to create your own feeds. It consists of two main components:
+the Feed Editor (split with screen graphical and XML view)
+and the New Feed Wizard (walks you through the entire feed creation process, automatically extracts metadata when possible)</description>
+    <description xml:lang="de">Zero Install verwendet Feeds, XML Dateien im Internet, um Anwendungen sowie deren Download zu beschreiben. Die Zero Install Publishing Tools ermöglichen es Ihnen, Ihre eigenen Feeds zu erstellen. Sie bestehen aus zwei Hauptkomponenten:
+Der Feed Editor (Split Screen mit grafischer und XML Ansicht)
+und der New Feed Wizard (leitet Sie durch den kompletten Feed-Erstellungsprozess, extrahiert automatisch Metadaten wenn möglich)</description>
+    <icon href="https://raw.githubusercontent.com/0install/0publish-win/master/icon.png" type="image/png" />
+    <icon href="https://raw.githubusercontent.com/0install/0publish-win/master/icon.ico" type="image/vnd.microsoft.icon" />
+    <homepage>https://docs.0install.de/tools/0publish-win/</homepage>
+    <entry-point command="run" binary-name="0publish-win">
+      <name xml:lang="en">Zero Install Publishing Tools</name>
+    </entry-point>
+    <entry-point command="0publish">
+      <needs-terminal />
+      <name xml:lang="en">Feed Editor command-line</name>
+    </entry-point>
+  </interface>
+  <interface uri="http://0install.net/2006/interfaces/0compile.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+    <name>0compile</name>
+    <summary xml:lang="en">create a binary release from source code</summary>
+    <description xml:lang="en">
+0compile creates a binary from source code, either for your own use or ready for
+publishing on the web through Zero Install. It can use Zero Install to download
+any build dependencies (compilers, header files, build tools, etc).
+
+This is useful if there is no binary for your platform, or if you wish to modify
+the program in some way.
+
+If plash is installed, it is used to sandbox the build so that it can't
+accidentally modifiy any files outside of the build directory.
+
+For a full tutorial, see 0compile's homepage.</description>
+    <category>Development</category>
+    <homepage>https://docs.0install.net/tools/0compile/</homepage>
+    <needs-terminal />
+  </interface>
+  <interface uri="http://0install.net/2006/interfaces/0publish" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+    <name>0publish</name>
+    <summary xml:lang="en">utility to make creating injector interfaces easier</summary>
+    <description xml:lang="en">
+0publish makes creating and modifying injector interface files easier. It can
+create a new commented template for you or edit an existing one.
+
+Various editing operations are available, the most basic being to let you edit
+it in your preferred text editor. It automatically removes the signature when
+loading an interface and creates a new one when writing it back out. It will
+also validate the new version before saving it.
+
+A tutorial on 0publish can be found at http://0install.net/injector-
+packagers.html.</description>
+    <homepage>https://docs.0install.net/tools/0publish/</homepage>
+    <needs-terminal />
+  </interface>
+  <interface uri="http://0install.net/2007/interfaces/0publish-gui.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+    <name>0publish-gui</name>
+    <summary xml:lang="en">GTK editor for Zero Install feeds</summary>
+    <description xml:lang="en">
+Publishing a program using Zero Install requires you to create an XML file
+listing the available versions, where to get them, and what other software they
+depend on.
+
+This program provides a simple graphical interface for creating and editing
+these feeds.</description>
+    <icon href="https://0install.net/feed_icons/0publish-gui.png" type="image/png" />
+    <category>Development</category>
+    <homepage>https://docs.0install.net/packaging/</homepage>
+  </interface>
+  <interface uri="http://0install.net/2007/interfaces/0release.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+    <name>0release</name>
+    <summary xml:lang="en">manage new releases with Zero Install</summary>
+    <description xml:lang="en">
+If you have a local feed in the development version of your program, 0release
+can help you to create new releases easily.</description>
+    <category>Development</category>
+    <homepage>https://docs.0install.net/tools/0release/</homepage>
+  </interface>
+  <interface uri="http://0install.net/2007/interfaces/FeedLint.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+    <name>FeedLint</name>
+    <summary xml:lang="en">check your Zero Install feeds</summary>
+    <description xml:lang="en">
+FeedLint is a tool for Zero Install feed authors. It checks that your Zero
+Install feed can be downloaded, that it is valid and that all the links in it
+still work.
+
+Run this on all your feeds from time-to-time to make sure they still work.</description>
+    <category>Development</category>
+    <homepage>https://docs.0install.net/tools/feedlint/</homepage>
+    <needs-terminal />
+  </interface>
+  <interface uri="http://0install.net/2007/interfaces/Make-headers.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+    <name>Make-headers</name>
+    <summary xml:lang="en">creates -dev packages</summary>
+    <description xml:lang="en">
+Given a standard autoconf source package (in $SRCDIR), this script builds it
+(configure --prefix=$DISTDIR &amp;&amp; make install) and then removes files which
+shouldn't be in a -dev package (.so and .la files, etc).
+
+It also edits any pkg-config .pc files to use a relative path for the prefix.</description>
+    <category>Development</category>
+    <homepage>https://docs.0install.net/tools/make-headers/</homepage>
+  </interface>
+  <interface uri="http://0install.net/2008/interfaces/0test.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+    <name>0test</name>
+    <summary xml:lang="en">test Zero Install programs</summary>
+    <description xml:lang="en">
+Use 0test to run the unit tests for a Zero Install program. You can use this to
+test released versions or developer snapshots. You can give a selection of
+versions to test, and you can test against different versions of dependencies to
+create a matrix of test results.</description>
+    <category>Development</category>
+    <homepage>https://docs.0install.net/tools/0test/</homepage>
+    <needs-terminal />
+  </interface>
+  <interface uri="http://0install.net/tools/0export.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+    <name>0export</name>
+    <summary xml:lang="en">create self-installing bundles for distribution on CD</summary>
+    <description xml:lang="en">
+It is sometimes useful to bundle a program and its libraries together
+on a CD (for example) so that it can be used on machines without a network
+connection, or where the network is very slow. It is also useful for archival
+purposes, in case the original web-sites supplying required libraries become
+unavailable.
+
+0export takes the URI of a program and creates a "setup.sh" file; a self-
+extracting archive containing everything needed to run the program. This file
+can be executed on a machine without a network connection to install or run the
+program.
+
+Unlike the bundles created by the related zero2bundle program, programs
+installed using setup.sh are added to the Zero Install cache and are therefore
+still shared between users, and will get updates over the web where possible.</description>
+    <category>Development</category>
+    <homepage>https://docs.0install.net/tools/0export/</homepage>
+    <needs-terminal />
+  </interface>
+  <interface uri="http://0install.net/tools/0install.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+    <name>0install</name>
+    <summary xml:lang="en">decentralised installation system</summary>
+    <description xml:lang="en">
+Zero Install is a decentralised cross-platform software installation
+system available under the LGPL. It allows software developers to publish
+programs directly from their own web-sites, while supporting features familiar
+from centralised distribution repositories such as shared libraries, automatic
+updates and digital signatures. It is intended to complement, rather than
+replace, the operating system's package management. 0install packages never
+interfere with those provided by the distribution.
+</description>
+    <icon href="https://0install.net/feed_icons/ZeroInstall.png" type="image/png" />
+    <category>System</category>
+    <homepage>https://0install.net/</homepage>
+  </interface>
+  <interface uri="http://0install.net/tools/0repo.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+    <name>0repo</name>
+    <summary xml:lang="en">manage a repository of 0install feeds</summary>
+    <description xml:lang="en">
+    0repo allows a group of developers to publish a set of feeds. It can be
+    used by a single developer, generating a set of static files to publish on
+    a web-server, or as a service which accepts signed updates from a group
+    of developers.
+  </description>
+    <homepage>https://docs.0install.net/tools/0repo/</homepage>
+  </interface>
+</catalog>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeB0ezAAoJEFmqOSfCTk4exTAH/AlvWqPmrnDrqpTM3+D1oXQsLMUqYY89vb8mq7DXgBanjHKUzFqPSYD7M0Z0amp5MuPq7V3R84BP/RQqJYS6hg8f9pFFhpIcxK2nW8rELk80ypRYDW2LFfNUxHEaXfOfK7rCvehJPEFnCNGGOwI+AIu9XYaBCIYrpm384oE8C52z00xjezQB3oh0qwYyRLitIRxKE32SIFsiVQCDI9zyQ4EHaEtfX4wj9GAdUOUWD+w0dBYpRZ0wUI4Qqhk9leRdQKDrjteYjo5O6mYfwHfRsfJfHJ88FNT+zOrRHi6XbVOyfRyVCKt9XaDGKpVSYDBI/f9jBlGHeF4Gvpvzm30XAfM=
+
+-->

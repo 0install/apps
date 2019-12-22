@@ -1,0 +1,154 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/utils/xz.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>XZ Utils</name>
+  <summary>xz data compression tool for .xz and .lzma files</summary>
+  <description>XZ Utils is free general-purpose data compression software with high compression ratio. XZ Utils are the successor to LZMA Utils.</description>
+  <homepage>http://tukaani.org/xz/</homepage>
+  <category>Utility</category>
+  <needs-terminal/>
+
+  <package-implementation distributions="Debian" main="/usr/bin/gnuplot" package="xz-utils">
+    <command name="unxz" path="/usr/bin/unxz"/>
+    <command name="xzcat" path="/usr/bin/xzcat"/>
+    <command name="lzma" path="/usr/bin/lzma"/>
+    <command name="unlzma" path="/usr/bin/unlzma"/>
+    <command name="lzcat" path="/usr/bin/lzcat"/>
+  </package-implementation>
+  <package-implementation distributions="RPM" main="/usr/bin/gnuplot" package="xz">
+    <command name="unxz" path="/usr/bin/unxz"/>
+    <command name="xzcat" path="/usr/bin/xzcat"/>
+    <command name="lzma" path="/usr/bin/lzma"/>
+    <command name="unlzma" path="/usr/bin/unlzma"/>
+    <command name="lzcat" path="/usr/bin/lzcat"/>
+  </package-implementation>
+
+  <group license="LGPL (GNU Lesser General Public License)">
+    <command name="run" path="xz.exe"/>
+    <command name="unxz" path="xz.exe">
+      <arg>--decompress</arg>
+    </command>
+    <command name="xzcat" path="xz.exe">
+      <arg>--decompress</arg>
+      <arg>--stdout</arg>
+    </command>
+    <command name="lzma" path="xz.exe">
+      <arg>--format=lzma</arg>
+    </command>
+    <command name="unlzma" path="xz.exe">
+      <arg>--format=lzma</arg>
+      <arg>--decompress</arg>
+    </command>
+    <command name="lzcat" path="xz.exe">
+      <arg>--format=lzma</arg>
+      <arg>--decompress</arg>
+      <arg>--stdout</arg>
+    </command>
+    <implementation arch="Windows-x86_64" id="sha1new=ad4a155c894b93a78bfe10db3a856b53f4a60269" released="2010-10-23" stability="stable" version="5.0.0">
+      <manifest-digest sha1new="ad4a155c894b93a78bfe10db3a856b53f4a60269" sha256="62f1826a51e1eab12b89896a72ad9825fddedbde844099b87e5972069a790332" sha256new="MLYYE2SR4HVLCK4JRFVHFLMYEX655W66QRAJTOD6LFZANGTZAMZA"/>
+      <archive extract="bin_x86-64" href="http://tukaani.org/xz/xz-5.0.0-windows.zip" size="922822" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=caefb3c7282bef31fa0e7fbf2d72b3d43352fd20" released="2017-01-23" stability="stable" version="5.0.0">
+      <manifest-digest sha1new="caefb3c7282bef31fa0e7fbf2d72b3d43352fd20" sha256="1940d45be1a85a3558ec7fb9cc93e4c3119d425ec4e67eb7a87fc958203bb3c1" sha256new="DFANIW7BVBNDKWHMP644ZE7EYMIZ2QS6YTTH5N5IP7EVQIB3WPAQ"/>
+      <archive extract="bin_i486" href="http://tukaani.org/xz/xz-5.0.0-windows.zip" size="922822" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=b83fb075fd61f8ae6afd8b4afa3991b9c6ab4ab2" released="2011-01-29" stability="stable" version="5.0.1">
+      <manifest-digest sha1new="b83fb075fd61f8ae6afd8b4afa3991b9c6ab4ab2" sha256="e4503953720c5372968a88148915eb3ce8afa994434dc5c99dbac5e4d715f5e6" sha256new="4RIDSU3SBRJXFFUKRAKISFPLHTUK7KMUING4LSM5XLC6JVYV6XTA"/>
+      <archive extract="bin_x86-64" href="http://tukaani.org/xz/xz-5.0.1-windows.zip" size="925985" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=909e7d45ebf55e22c5b9f7db38985a7de100a410" released="2017-01-23" stability="stable" version="5.0.1">
+      <manifest-digest sha1new="909e7d45ebf55e22c5b9f7db38985a7de100a410" sha256="b6ac28f858d46379daf0431de47dcece2b66b230ac9d8ac590cfe3eabfa31f81" sha256new="W2WCR6CY2RRXTWXQIMO6I7OOZYVWNMRQVSOYVRMQZ7R6VP5DD6AQ"/>
+      <archive extract="bin_i486" href="http://tukaani.org/xz/xz-5.0.1-windows.zip" size="925985" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=ea83d221588a42b0265bcce4dc46852d8e340c00" released="2011-04-01" stability="stable" version="5.0.2">
+      <manifest-digest sha1new="ea83d221588a42b0265bcce4dc46852d8e340c00" sha256="ca74e78a94af4045436ac544886833221f611563f5f3fec15dd2d7c104874065" sha256new="ZJ2OPCUUV5AEKQ3KYVCIQ2BTEIPWCFLD6XZ75QK52LL4CBEHIBSQ"/>
+      <archive extract="bin_x86-64" href="http://tukaani.org/xz/xz-5.0.2-windows.zip" size="926340" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=501b62f3cfa02deb993dcb023563244b862ae6a4" released="2017-01-23" stability="stable" version="5.0.2">
+      <manifest-digest sha1new="501b62f3cfa02deb993dcb023563244b862ae6a4" sha256="c058518016edc3ddb474aba622d9f28b17c85200a73741c41d5853691d5a9873" sha256new="YBMFDAAW5XB53NDUVOTCFWPSRML4QUQAU43UDRA5LBJWSHK2TBZQ"/>
+      <archive extract="bin_i486" href="http://tukaani.org/xz/xz-5.0.2-windows.zip" size="926340" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=80a5a1fd77631ce0725fa4223ded251d92b6750a" released="2011-05-21" stability="stable" version="5.0.3">
+      <manifest-digest sha1new="80a5a1fd77631ce0725fa4223ded251d92b6750a" sha256="4ec0f07da1fd6e1bf048a756c647b2b39ad8811389d40ad5809f1ea437526c7d" sha256new="J3APA7NB7VXBX4CIU5LMMR5SWONNRAITRHKAVVMAT4PKIN2SNR6Q"/>
+      <archive extract="bin_x86-64" href="http://tukaani.org/xz/xz-5.0.3-windows.zip" size="927128" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=76d0ade8706efe4ab7dd6ca752b9eb5b172e964f" released="2017-01-23" stability="stable" version="5.0.3">
+      <manifest-digest sha1new="76d0ade8706efe4ab7dd6ca752b9eb5b172e964f" sha256="16096f40fdb0a97b0a98deb25c4c3f1a95500d4be03f9a324dff37d203930e4f" sha256new="CYEW6QH5WCUXWCUY32ZFYTB7DKKVADKL4A7ZUMSN7435EA4TBZHQ"/>
+      <archive extract="bin_i486" href="http://tukaani.org/xz/xz-5.0.3-windows.zip" size="927128" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=0828d2ec941d43f2b951f5adc60f371c998510ab" released="2012-06-22" stability="stable" version="5.0.4">
+      <manifest-digest sha1new="0828d2ec941d43f2b951f5adc60f371c998510ab" sha256="66582856e28e3d8f92566c1080b6295b433a9779ee316517abebc6a21cbb1a25" sha256new="MZMCQVXCRY6Y7ESWNQIIBNRJLNBTVF3Z5YYWKF5L5PDKEHF3DISQ"/>
+      <archive extract="bin_x86-64" href="http://tukaani.org/xz/xz-5.0.4-windows.zip" size="935531" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=4ca3d82a44d5c45d647e79ed4a21cadf80edd81c" released="2017-01-23" stability="stable" version="5.0.4">
+      <manifest-digest sha1new="4ca3d82a44d5c45d647e79ed4a21cadf80edd81c" sha256="f1f5b8aadaaef01e2d1520ce15d58871fb67ffd07bd0070081670f0f677d19b4" sha256new="6H23RKW2V3YB4LIVEDHBLVMIOH5WP76QPPIAOAEBM4HQ6Z35DG2A"/>
+      <archive extract="bin_i486" href="http://tukaani.org/xz/xz-5.0.4-windows.zip" size="935531" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=afc44af648ce5c373207f196045279289712f291" released="2013-06-30" stability="stable" version="5.0.5">
+      <manifest-digest sha1new="afc44af648ce5c373207f196045279289712f291" sha256="35884c8d344875e9e69744f01576816334c6e783a142c59316cb2ff2be2601c3" sha256new="GWEEZDJUJB26TZUXITYBK5UBMM2MNZ4DUFBMLEYWZMX7FPRGAHBQ"/>
+      <archive extract="bin_x86-64" href="http://tukaani.org/xz/xz-5.0.5-windows.zip" size="937840" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=c67f495e6cd79b7e4190f48f4c3d9b36a9c61736" released="2017-01-23" stability="stable" version="5.0.5">
+      <manifest-digest sha1new="c67f495e6cd79b7e4190f48f4c3d9b36a9c61736" sha256="702c17e6d75610a3bffc395842efd88bad11de3f99114341e689ebbcf5473572" sha256new="OAWBPZWXKYIKHP74HFMEF36YROWRDXR7TEIUGQPGRHV3Z5KHGVZA"/>
+      <archive extract="bin_i486" href="http://tukaani.org/xz/xz-5.0.5-windows.zip" size="937840" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=428a189614a45a2728ba9c13f99e46e95f9d0b34" released="2014-12-21" stability="stable" version="5.2.0">
+      <manifest-digest sha1new="428a189614a45a2728ba9c13f99e46e95f9d0b34" sha256="62ff57e39bd4148c382fb9f469962ea5effdbe84b27c5ed39a66588ce1194c28" sha256new="ML7VPY432QKIYOBPXH2GTFROUXX73PUEWJ6F5U42MZMIZYIZJQUA"/>
+      <archive extract="bin_x86-64" href="http://tukaani.org/xz/xz-5.2.0-windows.zip" size="1383950" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=8992319a7bb867ecbd5807d8334856ab7f25f85a" released="2017-01-23" stability="stable" version="5.2.0">
+      <manifest-digest sha1new="8992319a7bb867ecbd5807d8334856ab7f25f85a" sha256="33ea5321376a4866a12fc2d46d1042446f5fd3bd7d59d221a3f69e3b928c7357" sha256new="GPVFGIJXNJEGNIJPYLKG2ECCIRXV7U55PVM5EIND62PDXEUMONLQ"/>
+      <archive extract="bin_i686-sse2" href="http://tukaani.org/xz/xz-5.2.0-windows.zip" size="1383950" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=56911af9ccbd619bd71032fc02ad23e640f4eba4" released="2015-02-26" stability="stable" version="5.2.1">
+      <manifest-digest sha1new="56911af9ccbd619bd71032fc02ad23e640f4eba4" sha256="c8c3ee78240ed00384640b306be23781c2bf910067bce909990916f06cf9758e" sha256new="ZDB646BEB3IAHBDEBMYGXYRXQHBL7EIAM66OSCMZBELPA3HZOWHA"/>
+      <archive extract="bin_x86-64" href="http://tukaani.org/xz/xz-5.2.1-windows.zip" size="1384157" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=26d7e33a62ff3a13ca9d3995d3b2fba133a2bfd1" released="2017-01-23" stability="stable" version="5.2.1">
+      <manifest-digest sha1new="26d7e33a62ff3a13ca9d3995d3b2fba133a2bfd1" sha256="b2ac1ba6e8435a7ea4bd0c88d32d1a85bf4527028a7514659dfa742b9319011f" sha256new="WKWBXJXIINNH5JF5BSENGLI2QW7UKJYCRJ2RIZM57J2CXEYZAEPQ"/>
+      <archive extract="bin_i686-sse2" href="http://tukaani.org/xz/xz-5.2.1-windows.zip" size="1384157" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=37c272a2361150e66a0cb48ba145d5fd9e027a54" released="2016-12-30" stability="stable" version="5.2.3">
+      <manifest-digest sha1new="37c272a2361150e66a0cb48ba145d5fd9e027a54" sha256="9d521fef58b97be64f8f64832967209eb6145f5ae7a9ae02c7618f83c9594144" sha256new="TVJB732YXF56MT4PMSBSSZZAT23BIX2246U24AWHMGHYHSKZIFCA"/>
+      <archive extract="bin_x86-64" href="http://tukaani.org/xz/xz-5.2.3-windows.zip" size="1397687" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=f7f679b6c4d3ca876d44548229ee7cd68e30b840" released="2017-01-23" stability="stable" version="5.2.3">
+      <manifest-digest sha1new="f7f679b6c4d3ca876d44548229ee7cd68e30b840" sha256="e7b696119914db39c218ea32e7165ff25046099d14dc7d072b554d111e80526a" sha256new="463JMEMZCTNTTQQY5IZOOFS76JIEMCM5CTOH2BZLKVGRCHUAKJVA"/>
+      <archive extract="bin_i686-sse2" href="http://tukaani.org/xz/xz-5.2.3-windows.zip" size="1397687" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <entry-point binary-name="xz" command="run">
+    <name>compress .xz file</name>
+    <needs-terminal/>
+  </entry-point>
+  <entry-point command="unxz">
+    <name>decompress .xz file</name>
+    <needs-terminal/>
+  </entry-point>
+  <entry-point command="xzcat">
+    <name>decompress .xz file to stdout</name>
+    <needs-terminal/>
+  </entry-point>
+  <entry-point command="lzma">
+    <name>compress .lzma file</name>
+    <needs-terminal/>
+  </entry-point>
+  <entry-point command="unlzma">
+    <name>decompress .lzma file</name>
+    <needs-terminal/>
+  </entry-point>
+  <entry-point command="lzcat">
+    <name>decompress .lzma file to stdout</name>
+    <needs-terminal/>
+  </entry-point>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA34CAAoJEFmqOSfCTk4edPUIAKnXKT3Um1HDYPdz20DKja2MeNN4HOgi3Xmw
+N/EjXB8rfBUa9xK8kncVlCwEwlQJQv+t+Ai/9u2qxNBIXyo20mz0Q5Y+vxIb0wtZquWgi+5sSGsz
+7tm7/jakbSJT3WvaRRDaOilns19UZhMKoHVUJtIwa/U5TJL8Vchy/Bex1rq49KAyrHVQZ2ShXOry
+xVy8QD24E/ukB/7FHQyKBJed2UrbypFdwIWhsNwmqMbpLh0V2Mut0RTw6jkMH3vgCPtN0ae/NHjo
+Rq1pso+0pkbcwg9Ob3sEFmqkhlmiBFfUfZBYr+JcjoB706FftJXKjowRoODaxShfpYduPr4LaOf9
+q9w=
+
+-->

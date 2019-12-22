@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/lib/curl3-gnutls.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>curl3-gnutls</name>
+  <summary>Multi-protocol file transfer library (GnuTLS)</summary>
+  <description>libcurl is designed to be a solid, usable, reliable and portable
+multi-protocol file transfer library.
+
+SSL support is provided by GnuTLS.
+
+This is the shared version of libcurl.</description>
+  <package-implementation package="libcurl3-gnutls"/>
+  <group arch="Linux-i386">
+    <requires interface="https://apps.0install.net/lib/gnutls26.xml">
+      <environment insert="lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/krb53.xml">
+      <environment insert="lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/ldap-2.4-2.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <implementation id="sha1new=b78d7c3d298b307165e9f5b839ba78d6f893ee31" released="2010-06-26" version="7.18.2-8">
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/libcurl3-gnutls-i386-7.18.2-8lenny4.tar.bz2" size="212159"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=7e517b40db4abf858d82af82dc59b939130b89b5" released="2010-06-26" version="7.18.2-8">
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/libcurl3-gnutls-amd64-7.18.2-8lenny4.tar.bz2" size="217034"/>
+    </implementation>
+  </group>
+  <group>
+    <requires interface="http://0install.net/2007/3rd-party/libgcrypt11.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/gnutls26.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/ldap-2.4-2.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <implementation arch="Linux-i386" id="sha1new=3906d86ed089797c83783f5b50a71c18f3ef7d78" released="2011-05-29" version="7.21.0-1">
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/libcurl3-gnutls-i386-7.21.0-1.tar.bz2" size="261280"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=b688a3dc88fe3b50d3840e9dce2587bd9b59f646" released="2011-05-29" version="7.21.0-1">
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/libcurl3-gnutls-amd64-7.21.0-1.tar.bz2" size="268045"/>
+    </implementation>
+  </group>
+  <group>
+    <requires interface="http://0install.net/2007/3rd-party/libgcrypt11.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/gnutls26.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/ldap-2.4-2.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <implementation arch="Linux-i386" id="sha1new=c28b01d4fb0fdb1dcc9c5f90b9ea58ed59d1d213" released="2011-09-17" version="7.21.0-2">
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/libcurl3-gnutls-i386-7.21.0-2.tar.bz2" size="261535"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=ab130cb126c5f38b3971e36aae02fd5c55c5e090" released="2011-09-17" version="7.21.0-2">
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/libcurl3-gnutls-amd64-7.21.0-2.tar.bz2" size="268171"/>
+    </implementation>
+  </group>
+  <group>
+    <requires interface="http://0install.net/2007/3rd-party/libgcrypt11.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/gnutls26.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/ldap-2.4-2.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/zlib1g.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <implementation arch="Linux-i386" id="sha1new=b46795b486a7d4c886da888b98f2d54109afd3be" released="2012-03-27" version="7.21.0-2.1">
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/libcurl3-gnutls-i386-7.21.0-2.1+squeeze1.tar.bz2" size="261845"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=7e6cecf16eee7c1ed049bf72c0c3a2dd5fac5f28" released="2012-03-27" version="7.21.0-2.1">
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/libcurl3-gnutls-amd64-7.21.0-2.1+squeeze1.tar.bz2" size="268482"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA334AAoJEFmqOSfCTk4ez6MH/2OokQzhhmLjC2eXoIWyWwAeOvMnU4nSLtF1
+FD4rpWmkErtiwEdWQiWAYVfe875EotK4eI2EH4CtXd+YJgm6i8ZVvIhoG6T8y6PKLYgIn3LjatdR
+TmbIXsnxB/TW9fIxWDDJNxgk2cwPaT9J1xD3xr37bkd0tSEJp4s900I7OnCBVeu4fbXsR9dcuXrj
+Z1jbW5rBg+CoRHZF+0DN32SStc3yj/Q1HmU6Vt3HesHd9WYBbFFj6g4xGXy16V7FsBosdvmDIVlP
+PexUUBZoHcI2z65FmnIkC3E5OJmn77UxJJp4Mjl/fuXEPZL+cTQEmAmGxes2L6hM34A9Vo4ZDyQR
+oBw=
+
+-->

@@ -1,0 +1,150 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/dotnet/ironpython.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>IronPython</name>
+  <summary>implementation of Python running under .NET/Mono</summary>
+  <description>IronPython is an implementation of the Python programming language running under .NET/Mono and Silverlight/Moonlight. It supports an interactive console with fully dynamic compilation. It's well integrated with the rest of the .NET Framework and makes all .NET libraries easily available to Python programmers, while maintaining compatibility with the Python language. There also is Visual Studio tooling integration.</description>
+  <homepage>http://ironpython.net/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/dotnet/ironpython.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/dotnet/ironpython.ico" type="image/vnd.microsoft.icon"/>
+
+  <package-implementation main="/usr/bin/ipy" package="ironpython"/>
+
+  <!-- .NET Framework 3.5 -->
+  <group arch="*-x86_64" license="The Apache License v2">
+    <command name="run" path="ipy64.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="3.5.."/>
+    </command>
+    <command name="run-gui" path="ipyw64.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="3.5.."/>
+    </command>
+    <implementation id="v2.7.7-x64" released="2016-12-08" version="2.7.7">
+      <manifest-digest sha1new="2ee1a91a64cd38b9e936b468c8cd1adb60581286" sha256="254e2431327ee2f99bd58f1f765d3812b12805a0a946312b5e4d200fc0b039fa" sha256new="EVHCIMJSP3RPTG6VR4PXMXJYCKYSQBNAVFDDCK26JUQA7QFQHH5A"/>
+      <archive extract="IronPython-2.7.7" href="https://github.com/IronLanguages/main/releases/download/ipy-2.7.7/IronPython-2.7.7-win.zip" size="21150214" type="application/zip"/>
+    </implementation>
+  </group>
+  <group arch="*-i486" license="The Apache License v2">
+    <command name="run" path="ipy.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="3.5.."/>
+    </command>
+    <command name="run-gui" path="ipyw.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="3.5.."/>
+    </command>
+    <implementation id="v2.7.7-x86" released="2016-12-08" version="2.7.7">
+      <manifest-digest sha1new="2ee1a91a64cd38b9e936b468c8cd1adb60581286" sha256="254e2431327ee2f99bd58f1f765d3812b12805a0a946312b5e4d200fc0b039fa" sha256new="EVHCIMJSP3RPTG6VR4PXMXJYCKYSQBNAVFDDCK26JUQA7QFQHH5A"/>
+      <archive extract="IronPython-2.7.7" href="https://github.com/IronLanguages/main/releases/download/ipy-2.7.7/IronPython-2.7.7-win.zip" size="21150214" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <!-- .NET Framework 4.0 -->
+  <group arch="Windows-x86_64" license="The Apache License v2">
+    <command name="run" path="net40/ipy.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.0..!4.5"/>
+    </command>
+    <command name="run-gui" path="net40/ipyw.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.0..!4.5"/>
+    </command>
+    <implementation id="v2.7.8-net40-x64" released="2018-02-17" version="2.7.8">
+      <manifest-digest sha256new="BCD52QF3XFKJM4ASZBUVZ6LLXKNMWPXBABCO3JDYUICP2W3EVJ4Q"/>
+      <archive href="https://github.com/IronLanguages/ironpython2/releases/download/ipy-2.7.8/IronPython.2.7.8.zip" size="10543059" type="application/zip"/>
+    </implementation>
+    <implementation id="v2.7.9-net40-x64" released="2018-10-09" version="2.7.9">
+      <manifest-digest sha256new="OSD437DEKF3X6MS7YSJKKEQ35Z5GSHFC4J3YCHX2VXB7SZ64JKUA"/>
+      <archive href="https://github.com/IronLanguages/ironpython2/releases/download/ipy-2.7.9/IronPython.2.7.9.zip" size="11456474" type="application/zip"/>
+    </implementation>
+  </group>
+  <group arch="Windows-i486" license="The Apache License v2">
+    <command name="run" path="net40/ipy32.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.0..!4.5"/>
+    </command>
+    <command name="run-gui" path="net40/ipyw32.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.0..!4.5"/>
+    </command>
+    <implementation id="v2.7.8-net40-x86" released="2018-02-17" version="2.7.8">
+      <manifest-digest sha256new="BCD52QF3XFKJM4ASZBUVZ6LLXKNMWPXBABCO3JDYUICP2W3EVJ4Q"/>
+      <archive href="https://github.com/IronLanguages/ironpython2/releases/download/ipy-2.7.8/IronPython.2.7.8.zip" size="10543059" type="application/zip"/>
+    </implementation>
+    <implementation id="v2.7.9-net40-x86" released="2018-10-09" version="2.7.9">
+      <manifest-digest sha256new="OSD437DEKF3X6MS7YSJKKEQ35Z5GSHFC4J3YCHX2VXB7SZ64JKUA"/>
+      <archive href="https://github.com/IronLanguages/ironpython2/releases/download/ipy-2.7.9/IronPython.2.7.9.zip" size="11456474" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <!-- .NET Framework 4.5 -->
+  <group arch="Windows-x86_64" license="The Apache License v2">
+    <command name="run" path="net45/ipy.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.."/>
+    </command>
+    <command name="run-gui" path="net45/ipyw.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.."/>
+    </command>
+    <implementation id="v2.7.8-net45-x64" released="2018-02-17" version="2.7.8">
+      <manifest-digest sha256new="BCD52QF3XFKJM4ASZBUVZ6LLXKNMWPXBABCO3JDYUICP2W3EVJ4Q"/>
+      <archive href="https://github.com/IronLanguages/ironpython2/releases/download/ipy-2.7.8/IronPython.2.7.8.zip" size="10543059" type="application/zip"/>
+    </implementation>
+    <implementation id="v2.7.9-net45-x64" released="2018-10-09" version="2.7.9">
+      <manifest-digest sha256new="OSD437DEKF3X6MS7YSJKKEQ35Z5GSHFC4J3YCHX2VXB7SZ64JKUA"/>
+      <archive href="https://github.com/IronLanguages/ironpython2/releases/download/ipy-2.7.9/IronPython.2.7.9.zip" size="11456474" type="application/zip"/>
+    </implementation>
+  </group>
+  <group arch="Windows-i486" license="The Apache License v2">
+    <command name="run" path="net45/ipy32.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.."/>
+    </command>
+    <command name="run-gui" path="net45/ipyw32.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.."/>
+    </command>
+    <implementation id="v2.7.8-net45-x86" released="2018-02-17" version="2.7.8">
+      <manifest-digest sha256new="BCD52QF3XFKJM4ASZBUVZ6LLXKNMWPXBABCO3JDYUICP2W3EVJ4Q"/>
+      <archive href="https://github.com/IronLanguages/ironpython2/releases/download/ipy-2.7.8/IronPython.2.7.8.zip" size="10543059" type="application/zip"/>
+    </implementation>
+    <implementation id="v2.7.9-net45-x86" released="2018-10-09" version="2.7.9">
+      <manifest-digest sha256new="OSD437DEKF3X6MS7YSJKKEQ35Z5GSHFC4J3YCHX2VXB7SZ64JKUA"/>
+      <archive href="https://github.com/IronLanguages/ironpython2/releases/download/ipy-2.7.9/IronPython.2.7.9.zip" size="11456474" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <!-- .NET Core 2.0 -->
+  <group arch="POSIX-*" license="The Apache License v2">
+    <command name="run" path="netcoreapp2.0/ipy.dll">
+      <runner command="run" interface="https://apps.0install.net/dotnet/core.xml" version="2.0.."/>
+    </command>
+    <implementation id="v2.7.8-netcoreapp2.0" released="2018-02-17" version="2.7.8">
+      <manifest-digest sha256new="BCD52QF3XFKJM4ASZBUVZ6LLXKNMWPXBABCO3JDYUICP2W3EVJ4Q"/>
+      <archive href="https://github.com/IronLanguages/ironpython2/releases/download/ipy-2.7.8/IronPython.2.7.8.zip" size="10543059" type="application/zip"/>
+    </implementation>
+    <implementation id="v2.7.9-netcoreapp2.0" released="2018-10-09" version="2.7.9">
+      <manifest-digest sha256new="OSD437DEKF3X6MS7YSJKKEQ35Z5GSHFC4J3YCHX2VXB7SZ64JKUA"/>
+      <archive href="https://github.com/IronLanguages/ironpython2/releases/download/ipy-2.7.9/IronPython.2.7.9.zip" size="11456474" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <entry-point binary-name="ipy" command="run">
+    <needs-terminal/>
+    <name>IronPython command-line interpreter</name>
+  </entry-point>
+  <entry-point binary-name="ipyw" command="run-gui">
+    <name>IronPython grafical interpreter</name>
+  </entry-point>
+
+  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
+    <file-type id="IronPython.File">
+      <description>Python source code file</description>
+      <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/dotnet/ironpython.doc.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb args="&quot;%1&quot;" name="open"/>
+      <extension value=".py"/>
+    </file-type>
+  </capabilities>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA33vAAoJEFmqOSfCTk4erQMH/3JEIIxNqdeHxoKIIReJYPPEw2h5r2NZVoXH
+3oTIcbVt9DjgZknsTg9M/thhmaU99L9I/xZGIAbHaEqx6jOeJWFCzWs2b35L1TE6R/nKTaGXLSkj
+k9N4oGqTPMoseEsAsqQL3NKsrtOEDoJ5nrqAWlWAJL+skq++L85JJYv7sPdkxNVzK9udna2Sas0i
+oVOIFVSMKEpoNLnTqVpEkgrpHHHY5e+NLidIUuLSyYVvdH5W+z3u/yt5Zw+OJQUl14UFYf+5491H
+cmoidaLiOU+aAgQipEwCrwc7XZMUnWAqbVs0qHhMaziXNs+GDcBZYi/T+/mLqAXV28AoDDAeAyxV
+wWc=
+
+-->

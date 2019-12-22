@@ -1,0 +1,128 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/ruby/ruby.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Ruby</name>
+  <summary>dynamic, open source programming language</summary>
+  <description>A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.</description>
+  <homepage>http://www.ruby-lang.org/</homepage>
+  <needs-terminal/>
+
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/ruby/ruby.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/ruby/ruby.png" type="image/png"/>
+
+  <package-implementation main="/usr/bin/ruby" package="ruby"/>
+
+  <group license="Ruby License">
+    <environment insert="bin" mode="replace" name="RUBY_BIN"/>
+    <command name="run" path="bin/ruby.exe"/>
+    <command name="run-gui" path="bin/rubyw.exe"/>
+    <command name="irb" path="bin/ruby.exe">
+      <arg>$RUBY_BIN/irb</arg>
+    </command>
+    <command name="erb" path="bin/ruby.exe">
+      <arg>$RUBY_BIN/erb</arg>
+    </command>
+    <command name="gem" path="bin/ruby.exe">
+      <arg>$RUBY_BIN/gem</arg>
+    </command>
+    <command name="rake" path="bin/ruby.exe">
+      <arg>$RUBY_BIN/rake</arg>
+    </command>
+    <command name="rdoc" path="bin/ruby.exe">
+      <arg>$RUBY_BIN/rdoc</arg>
+    </command>
+    <command name="ri" path="bin/ruby.exe">
+      <arg>$RUBY_BIN/ri</arg>
+    </command>
+    <implementation arch="Windows-x86_64" id="sha1new=29f964ed4f83ac9164fd6b6fab0095d089768236" released="2016-03-30" stability="stable" version="2.1.9">
+      <manifest-digest sha1new="29f964ed4f83ac9164fd6b6fab0095d089768236" sha256="f9618c2b8962397f8a738184aaf5429d00aecbce21e937bae130e9bdb51c1552" sha256new="7FQYYK4JMI4X7CTTQGCKV5KCTUAK5S6OEHUTPOXBGDU33NI4CVJA"/>
+      <archive extract="ruby-2.1.9-x64-mingw32" href="https://dl.bintray.com/oneclick/rubyinstaller/ruby-2.1.9-x64-mingw32.7z" size="10468827" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=a49222187954595e05dd5c79e65108768ca6075b" released="2016-03-30" stability="stable" version="2.1.9">
+      <manifest-digest sha1new="a49222187954595e05dd5c79e65108768ca6075b" sha256="8c1e289ab1a5ee45d1006ea34373522907926ce09a4cc681f137d657ef7459a5" sha256new="RQPCRGVRUXXELUIAN2RUG42SFEDZE3HATJGMNAPRG7LFP33ULGSQ"/>
+      <archive extract="ruby-2.1.9-i386-mingw32" href="https://dl.bintray.com/oneclick/rubyinstaller/ruby-2.1.9-i386-mingw32.7z" size="9823850" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=69070d7f2bf575a0215f13a65540e0c2c25cb33d" released="2016-11-15" stability="stable" version="2.2.6">
+      <manifest-digest sha1new="69070d7f2bf575a0215f13a65540e0c2c25cb33d" sha256="450e0f11eba23e8aac5b2a8159d89757f8d9419ff4d3df66dd3c9e9ee403f3f5" sha256new="IUHA6EPLUI7IVLC3FKAVTWEXK74NSQM76TJ56ZW5HSPJ5ZAD6P2Q"/>
+      <archive extract="ruby-2.2.6-x64-mingw32" href="https://dl.bintray.com/oneclick/rubyinstaller/ruby-2.2.6-x64-mingw32.7z" size="10642163" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=6fd16ce894e4476d21a719c71ef43ea61ccffa3e" released="2016-11-15" stability="stable" version="2.2.6">
+      <manifest-digest sha1new="6fd16ce894e4476d21a719c71ef43ea61ccffa3e" sha256="d522cf492a024393e4775fc57ee4f75105cb55c842cccba675d46593a51dfe2f" sha256new="2URM6SJKAJBZHZDXL7CX5ZHXKEC4WVOIILGMXJTV2RSZHJI57YXQ"/>
+      <archive extract="ruby-2.2.6-i386-mingw32" href="https://dl.bintray.com/oneclick/rubyinstaller/ruby-2.2.6-i386-mingw32.7z" size="9887744" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=46d7f593f3be160ec567a51b701226c205479761" released="2016-11-21" stability="stable" version="2.3.3">
+      <manifest-digest sha1new="46d7f593f3be160ec567a51b701226c205479761" sha256="f4f501298978a63327da571c59f4075da82a34c5b4cdb02d7b5cf85ad9aec078" sha256new="6T2QCKMJPCTDGJ62K4OFT5AHLWUCUNGFWTG3ALL3LT4FVWNOYB4A"/>
+      <archive extract="ruby-2.3.3-x64-mingw32" href="https://dl.bintray.com/oneclick/rubyinstaller/ruby-2.3.3-x64-mingw32.7z" size="11570011" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=267ffa30eb4f3b120198623ee9e562e1594ecb04" released="2016-11-21" stability="stable" version="2.3.3">
+      <manifest-digest sha1new="267ffa30eb4f3b120198623ee9e562e1594ecb04" sha256="5a46a5df366c5dfe153461af08340c0afb6e3ecc31c6eec7ce32ca3ebf776462" sha256new="LJDKLXZWNRO74FJUMGXQQNAMBL5W4PWMGHDO5R6OGLFD5P3XMRRA"/>
+      <archive extract="ruby-2.3.3-i386-mingw32" href="https://dl.bintray.com/oneclick/rubyinstaller/ruby-2.3.3-i386-mingw32.7z" size="10763749" type="application/x-7z-compressed"/>
+    </implementation>
+  </group>
+
+  <entry-point binary-name="ruby" command="run">
+    <needs-terminal/>
+    <name>Ruby command-line runner</name>
+    <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/ruby/ruby.ico" type="image/vnd.microsoft.icon"/>
+    <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/ruby/ruby.png" type="image/png"/>
+  </entry-point>
+  <entry-point binary-name="rubyw" command="run-gui">
+    <name>Ruby GUI runner</name>
+    <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/ruby/ruby.gui.ico" type="image/vnd.microsoft.icon"/>
+    <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/ruby/ruby.gui.png" type="image/png"/>
+  </entry-point>
+  <entry-point binary-name="irb" command="irb">
+    <needs-terminal/>
+    <name>Interactive Ruby</name>
+    <summary>interactively execute Ruby expressions read from the standard input</summary>
+  </entry-point>
+  <entry-point binary-name="erb" command="erb">
+    <needs-terminal/>
+    <name>Embedded Ruby</name>
+    <summary>templating language based on Ruby</summary>
+  </entry-point>
+  <entry-point binary-name="gem" command="gem">
+    <needs-terminal/>
+    <name>RubyGems</name>
+    <summary>package management framework for Ruby</summary>
+  </entry-point>
+  <entry-point binary-name="rake" command="rake">
+    <needs-terminal/>
+    <name>RAKE</name>
+    <summary>make-like build utility for Ruby</summary>
+  </entry-point>
+  <entry-point binary-name="rdoc" command="rdoc">
+    <needs-terminal/>
+    <name>RDoc</name>
+    <summary>produces HTML and online documentation for Ruby project</summary>
+  </entry-point>
+  <entry-point binary-name="ri" command="ri">
+    <needs-terminal/>
+    <name>Ruby Index</name>
+    <summary>view the Ruby documentation off-line</summary>
+  </entry-point>
+
+  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
+    <file-type id="RubyFile">
+      <description>Ruby File</description>
+      <verb args="&quot;%1&quot; %*" name="open"/>
+      <extension value=".rb"/>
+    </file-type>
+    <file-type id="RubyWFile">
+      <description>RubyW File</description>
+      <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/ruby/ruby.gui.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/ruby/ruby.gui.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb args="&quot;%1&quot; %*" command="run-gui" name="open"/>
+      <extension value=".rbw"/>
+    </file-type>
+  </capabilities>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA33+AAoJEFmqOSfCTk4ergIIALK4luyIG1f7CLy1MmTphpTv8mJU/WpgV62q
+EDYGRZqeRQ9ECuT1B9fwquuthMF8MSo7a40c0+vlazsRQ2PISaYESBI4hSjmSz0/NAxfxOkayKwc
+bK452MP6o6W1jBYNs9HU18kwwbeooLSBpmWro9YxjCvEKLUBPHemmHKQo/63P1Q/4qYXQzUDNWXS
+NwVAXJiXMRwe+7zrAqv1BbpbUZ9jI+CLw4WkvlYTOgZxcxpnkHeavMFpUyL1rzzBXsvKZEdoTv60
+kXIxt5Lg4bkNwNqJ2oqoQbSKjeGDzkt9H4iYuIppPI0g8bkBSudwD3BWnPR8la25R+Swi4kIr3pm
+Ikw=
+
+-->

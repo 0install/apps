@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/utils/mktemp.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>MkTemp</name>
+  <summary xml:lang="en">Mktemp: return a temporary-file name</summary>
+  <description xml:lang="en">The mktemp utility takes a given file name template and overwrites a portion of it to create a unique file name. This allows shell scripts and other programs to safely create and use /tmp files. 
+
+Install the mktemp package if you need to use shell scripts or other programs which will create and use unique /tmp files. 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/mktemp.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/mktemp.png" type="image/png"/>
+  <homepage>http://gnuwin32.sourceforge.net/packages/mktemp.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=0e80ed49afbc108b26020e9e6d248b40395e67d6" license="OSI approved" released="2009-01-11" version="1.6">
+    <command name="run" path="bin/mktemp.exe"/>
+    <manifest-digest sha256new="OXAACI4QVJVNFJRTTHCKRWWG32IOW5M6D6BA22TWNU6646FSVEEQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/mktemp/1.6/mktemp-1.6-bin.zip" size="23375" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/mktemp-1.6-bin.zip?raw=true" size="23375" type="application/zip"/>
+  </implementation>
+  <entry-point binary-name="mktemp" command="run">
+    <needs-terminal/>
+    <summary xml:lang="en">make temporary filename (unique)</summary>
+    <description xml:lang="en">The mktemp utility takes the given filename template and
+     overwrites a portion of it to create a unique filename.
+     The template may be any filename with some number of `Xs'
+     appended to it, for example /tmp/tfile.XXXXXXXXXX.  If no
+     template is specified a default of tmp.XXXXXXXXXX is used
+     and the -t flag is implied (see below).</description>
+  </entry-point>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA34BAAoJEFmqOSfCTk4ed/QIALrlvIt8MTb2Soev8KA1C6+KNv47lmT06nrZ
+ryFoWA2vgXeEIkXm2VH+y2hTS802WwGjEiN3nh8QQFMnHGRlmk0qHZ9eEEQnros3JS5X+mw4W47l
+5bC8rkO/vQTuaiLltcHnk3Sgs3u95aimnZK89UIodKxR381LXYsYsHaicO3JDHUEmnnBJKAaqSAU
+FQFPve6sai0PBUeloqyHCM0dAv8d4vy13eHCwxZYBUz/y1o3k+hJb7uQuS/axjpqsnvhzRC65v7p
+aca1P9fZbR0bTqPichAgkihGznJsr0I7g8z/OztSOU2G+lXAKvy3JzlIK+ACzMuATAZFIfPEzjJl
+TEQ=
+
+-->

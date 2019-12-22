@@ -1,0 +1,371 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/java/kotlin.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Kotlin</name>
+  <summary>statically typed programming language for modern multiplatform applications</summary>
+  <description>Kotlin is a statically typed programming language for modern multiplatform applications. 100% interoperable with Java and Android.</description>
+  <homepage>http://kotlinlang.org/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/java/kotlin.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/java/kotlin.ico" type="image/vnd.microsoft.icon"/>
+
+  <group license="Apache License 2.0">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="7..">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+    <environment insert="." mode="replace" name="KOTLIN_HOME"/>
+    <command name="run">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
+        <arg>-Dkotlin.home=$KOTLIN_HOME</arg>
+        <arg>-cp</arg>
+        <arg>$KOTLIN_HOME/lib/kotlin-runner.jar</arg>
+        <arg>org.jetbrains.kotlin.runner.Main</arg>
+      </runner>
+    </command>
+    <command name="kotlinc">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
+        <arg>-Dkotlin.home=$KOTLIN_HOME</arg>
+        <arg>-cp</arg>
+        <arg>$KOTLIN_HOME/lib/kotlin-preloader.jar</arg>
+        <arg>org.jetbrains.kotlin.preloading.Preloader</arg>
+        <arg>-cp</arg>
+        <arg>$KOTLIN_HOME/lib/kotlin-compiler.jar</arg>
+        <arg>org.jetbrains.kotlin.cli.jvm.K2JVMCompiler</arg>
+      </runner>
+    </command>
+    <command name="kotlinc-jvm">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
+        <arg>-Dkotlin.home=$KOTLIN_HOME</arg>
+        <arg>-cp</arg>
+        <arg>$KOTLIN_HOME/lib/kotlin-preloader.jar</arg>
+        <arg>org.jetbrains.kotlin.preloading.Preloader</arg>
+        <arg>-cp</arg>
+        <arg>$KOTLIN_HOME/lib/kotlin-compiler.jar</arg>
+        <arg>org.jetbrains.kotlin.cli.jvm.K2JVMCompiler</arg>
+      </runner>
+    </command>
+    <command name="kotlinc-js">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
+        <arg>-Dkotlin.home=$KOTLIN_HOME</arg>
+        <arg>-cp</arg>
+        <arg>$KOTLIN_HOME/lib/kotlin-preloader.jar</arg>
+        <arg>org.jetbrains.kotlin.preloading.Preloader</arg>
+        <arg>-cp</arg>
+        <arg>$KOTLIN_HOME/lib/kotlin-compiler.jar</arg>
+        <arg>org.jetbrains.kotlin.cli.js.K2JSCompiler</arg>
+      </runner>
+    </command>
+    <command name="kotlinc-dce-js">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
+        <arg>-Dkotlin.home=$KOTLIN_HOME</arg>
+        <arg>-cp</arg>
+        <arg>$KOTLIN_HOME/lib/kotlin-preloader.jar</arg>
+        <arg>org.jetbrains.kotlin.preloading.Preloader</arg>
+        <arg>-cp</arg>
+        <arg>$KOTLIN_HOME/lib/kotlin-compiler.jar</arg>
+        <arg>org.jetbrains.kotlin.cli.js.dce.K2JSDce</arg>
+      </runner>
+    </command>
+
+    <implementation id="sha1new=8919914eaf40a76e9715c335dc8c51acc6b6ca56" released="2017-11-24" stability="stable" version="1.1.61">
+      <manifest-digest sha256new="MKAI4HMWEEV25T5KCHDF23A45UUXPOWXXEG3IRBNF3CTD26CKGWQ"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.1.61/kotlin-compiler-1.1.61.zip" size="32400359" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=4ae05eb9b0a46e43e97a89aef4656f91389024ae" released="2017-11-28" stability="stable" version="1.2.0">
+      <manifest-digest sha256new="KD2UOVOJQHVAAHTSWOTX33BXEWH5T4BFC4HTHSQVMFAVZUALMTCQ"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.0/kotlin-compiler-1.2.0.zip" size="32985939" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=380062fa535cbb115748d308ac3073dcb43e5c9f" released="2017-11-23" stability="testing" version="1.2-rc2">
+      <manifest-digest sha256new="T7XFFBBSG6RKEOUQOYI2LKM7NRNKU2JQYF3Y42D2OXFWNL6VAG6A"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2-rc2/kotlin-compiler-1.2.0-rc-84.zip" size="33038691" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=110e1be41c75fef373a2b217a4641697d91cedd5" released="2017-12-13" stability="stable" version="1.2.10">
+      <manifest-digest sha256new="CBUFYLVYA6YBCH2DNQ56UFZ6G7URZTJRG4EGDCRDTZZRXZJIMJ7A"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.10/kotlin-compiler-1.2.10.zip" size="33027301" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=203dfcfed8bad2dd6d2c214d18b3b8fe281b0327" released="2017-12-20" stability="testing" version="1.2.20-pre-11">
+      <manifest-digest sha256new="J3L2CVQTJYVIA2SXRDVJ62QUD3VYUCQ5IHQK2OHDJMARZREZJ6CQ"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.20-eap-11/kotlin-compiler-1.2.20-eap-11.zip" size="33312370" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=1e64d5404b3a9e06b2f48e846b3c521526b01ec7" released="2017-12-28" stability="testing" version="1.2.20-pre-33">
+      <manifest-digest sha256new="UXFLFTG2QQDQOAQ3GFWY6NDQQLSBW457EMJJNSESL7RWYFOOHZQQ"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.20-eap-33/kotlin-compiler-1.2.20-eap-33.zip" size="33393119" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d0b7e7109f45d3e1a4bfb2d9e28830217f2f55ef" released="2018-01-12" stability="testing" version="1.2.20-pre-71">
+      <manifest-digest sha256new="6BXF75G5PGGDGS222SRQMW4RYGBZP7IV6GXJJLDYSTAS4AP257DA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.20-eap-71/kotlin-compiler-1.2.20-eap-71.zip" size="33406514" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=bf50292c5b94d09d78fc6384137f0428109ec841" released="2018-01-17" stability="stable" version="1.2.20">
+      <manifest-digest sha256new="5XHGO6XBNLGN34JEASVKZYI43WVQOZMU7SD4ESBEFCY56LJKLBHA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.20/kotlin-compiler-1.2.20.zip" size="33403854" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=563af341868f4696d4b892e5d67392fb029d5469" released="2018-01-23" stability="stable" version="1.2.21">
+      <manifest-digest sha256new="ULF4BAR4LHAN32BCUX67PDFI2WOCY2WCJ5QJPWUCV7L57OYIQEJA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.21/kotlin-compiler-1.2.21.zip" size="33381480" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=ce3faffed7f78f30ef098f13ca5d4b96467f9fae" released="2018-02-01" stability="testing" version="1.2.30-pre-16">
+      <manifest-digest sha256new="MHWC7YUCVPL3KPOSTMNASZKATSULYLV2OFMYWQHFNSQ2UGVBPCVQ"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.30-eap-16/kotlin-compiler-1.2.30-eap-16.zip" size="34446308" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=61badd679b4254660ea6e6c3554ab49f4f12f683" released="2018-02-15" stability="testing" version="1.2.30-pre-47">
+      <manifest-digest sha256new="GIKYCRCR5KDVWHBMKEYNV2YYIMEGCYBUPN2XPNVUWO5E35576X2Q"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.30-eap-47/kotlin-compiler-1.2.30-eap-47.zip" size="34569725" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=b537177a3aef95cc9cef9f010a855bd5cf71fa22" released="2018-03-01" stability="stable" version="1.2.30">
+      <manifest-digest sha256new="S7NNE7OSVHQRLRMN4CRRS7TTZCLTFZXAA36BAND2SJITDCSC6W6Q"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.30/kotlin-compiler-1.2.30.zip" size="34575225" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=e118e077fecf1478ec0cebad137021784cb3f0c3" released="2018-03-23" stability="stable" version="1.2.31">
+      <manifest-digest sha256new="LA3GMYPW6MOVMUOJVD2Y5IPRFTOJFFWNTV6R2EVD3JQKDDAR7S2A"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.31/kotlin-compiler-1.2.31.zip" size="34568310" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=ee79e911e1e3bdbfb5a13758a1c0209781b612f4" released="2018-03-23" stability="testing" version="1.2.40-pre-16">
+      <manifest-digest sha256new="H3SYKHLNHBWS2MIVKJU5L3YACMC732PHNQIEZS3RBJAUNNXUXGEA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.40-eap-16/kotlin-compiler-1.2.40-eap-16.zip" size="34665920" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d9dd68e78b5a012bcdab990fe0cc0beda45cdd41" released="2018-04-06" stability="testing" version="1.2.40-pre-51">
+      <manifest-digest sha256new="65UVCJPRWVSVIQX7SKFW6SJRJEZVIFZANKMCPLIA5L2QJ7X3Y26A"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.40-eap-51/kotlin-compiler-1.2.40-eap-51.zip" size="34700313" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=6c693907147d9c14bb47532a8c0782eb52586416" released="2018-04-13" stability="testing" version="1.2.40-pre-62">
+      <manifest-digest sha256new="FZQWF3X3JATWHAX4JFGZBTUWVDDY2L36UNLWIXZDE7HGGFOLEUCA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.40-eap-62/kotlin-compiler-1.2.40-eap-62.zip" size="34653981" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=b6b93b1d1f89511b8f4f9b994ab13ede7d6c7a78" released="2018-04-19" stability="stable" version="1.2.40">
+      <manifest-digest sha256new="2YKDAFMNATATAV22IAIVYCZ7BQEXE5FQLYSU2RQQ3J4F4KWKW4ZQ"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.40/kotlin-compiler-1.2.40.zip" size="34698086" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=eaafa2a1dfbae544a3f3f640064eb0ed8cb61e0a" released="2018-04-28" stability="stable" version="1.2.41">
+      <manifest-digest sha256new="L3TCMKRZMQRF36PQBETFXEMBZ6RRBZSHP5RZGONQ4QGLHCHD42GQ"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.41/kotlin-compiler-1.2.41.zip" size="34700186" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=8f84d7f538674d75440c92e8b4ca5cc29b70789c" released="2018-05-16" stability="testing" version="1.2.50-pre-17">
+      <manifest-digest sha256new="4DYBO7AQKHHZ3YRC2TFK76TWYBBAVLKDJRR533UYATIC2SM6JTDA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.50-eap-17/kotlin-compiler-1.2.50-eap-17.zip" size="35686502" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=5282278ad78d48ede1c75e885c426aea72153ccf" released="2018-05-31" stability="testing" version="1.2.50-pre-62">
+      <manifest-digest sha256new="LYZIAPEOXDRB5QSJFCW35YL2EWEM4SW4ZTES2EWST6MARB6TK55Q"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.50-eap-62/kotlin-compiler-1.2.50-eap-62.zip" size="36051218" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=58f6af527c88d780772162e6811c132b9355dc31" released="2018-06-13" stability="stable" version="1.2.50">
+      <manifest-digest sha256new="DHANPWI47PIAEVH57FZFH47YQPW5VG2KS5JE6KFU4YXJHLTNWV7Q"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.50/kotlin-compiler-1.2.50.zip" size="35814395" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=ebcb65aaa4632fca888b6ac92c0ad3c20b29be76" released="2018-07-03" stability="stable" version="1.2.51">
+      <manifest-digest sha256new="LCKEUJ2FWUNVDHAPN3QYJRNZXBS6RQBCCTOWRDYEF2S3QYP5ZVQQ"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.51/kotlin-compiler-1.2.51.zip" size="35810810" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=2521b9f69d2b84bdb4e00994bb88bf8b063f1f35" released="2018-06-26" stability="testing" version="1.2.60-pre-7">
+      <manifest-digest sha256new="JEGGFI2QPLXM6H5VIRR6F7OXST56BNVNAVPZUW4ARZIQTQFYYQOA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.60-eap-7/kotlin-compiler-1.2.60-eap-7.zip" size="36264824" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=425a50270c9429760e8a2e75c4d4790ff2894ad4" released="2018-07-05" stability="testing" version="1.2.60-pre-27">
+      <manifest-digest sha256new="XN2KWCMMWR2BPVW5MUZ56MNL7DVEE6UC67P5BEL5NA2WN7LMZXNA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.60-eap-27/kotlin-compiler-1.2.60-eap-27.zip" size="36272332" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=48986ea066bba6336f44df260896e8cdf59ab1fe" released="2018-07-10" stability="testing" version="1.2.60-pre-44">
+      <manifest-digest sha256new="O72IJ5PTAU7Y2PVOKCTPS4XGPDRDIKWFQNX7FPI6GQFAQKIDQTJQ"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.60-eap-44/kotlin-compiler-1.2.60-eap-44.zip" size="36297783" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=e2e03b1d3c8e733f10f7cdec6dbc74f38baccceb" released="2018-07-31" stability="testing" version="1.2.60-pre-75">
+      <manifest-digest sha256new="PWHOBC4XN5DD7O3WUFIV5NBEHJLVP5KLAIK667RKWZLNWLHVI2CA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.60-eap-75/kotlin-compiler-1.2.60-eap-75.zip" size="36299991" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=1bbd07ed23b47e3d3d480543d3f2f77c5ac8c553" released="2018-08-01" stability="stable" version="1.2.60">
+      <manifest-digest sha256new="6UARY3PMU7OWABP4G2DKKUBDELD2RA5ZP4SW3MN2J3F6COKAYRGA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.60/kotlin-compiler-1.2.60.zip" size="36297681" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d405636a074a6976f858913de2f4b5bd3b82fde7" released="2018-08-20" stability="stable" version="1.2.61">
+      <manifest-digest sha256new="SIZXTJSU74ACM4ZR7RDPXYTS52LQ4JKFZX67NZIWNJXCXNZU2CKQ"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.61/kotlin-compiler-1.2.61.zip" size="36305401" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=e7fc3181e6f9e5f3e8b738fbac5c4fadde20d5d2" released="2018-08-08" stability="testing" version="1.2.70-pre-4">
+      <manifest-digest sha256new="KTN2MCIO362AAP6KPHAGE4CUVDMADKJMKHUFF5FFVGQSOV3N42MQ"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.70-eap-4/kotlin-compiler-1.2.70-eap-4.zip" size="36770670" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=40e0d56f244820c00e8a1313d1185487f8cbe8e0" released="2018-07-26" stability="testing" version="1.3-rc1">
+      <manifest-digest sha256new="C44W2ZAWRSEDABITC7GAIVXX257DOVD6LMTZWFPXAK355FAVYACA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3-M1/kotlin-compiler-1.3-M1.zip" size="37064655" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=6e67c024a6481c4d1965a191c0eff3401040d0c0" released="2018-08-29" stability="testing" version="1.3-rc2">
+      <manifest-digest sha256new="XFEHKQPMRSEEB7PIDDT3JPZPOO4LJLIKEY3ECFMWN2IC6KWYKNSA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3-M2/kotlin-compiler-1.3-M2.zip" size="35539921" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=850cbcd12040cf0851edc51d02b00cc98e51d72a" released="2018-09-05" stability="testing" version="1.2.70-pre-40">
+      <manifest-digest sha256new="R3UXIJUUOKI6Z2BEK5BGPIZ7WDK2FPQS6PL24OKD7ISMCEQVKSGQ"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.70-eap-40/kotlin-compiler-1.2.70-eap-40.zip" size="37178484" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=e0b2e9d8a7a12a3be3c5fd3bf11ba3be76c77166" released="2018-09-13" stability="stable" version="1.2.70">
+      <manifest-digest sha256new="Q5TTLLNVJ3GYX7Y4X52KL6Y5R7IMHHODIYC456EQ7A2U55FUMM2Q"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.70/kotlin-compiler-1.2.70.zip" size="37177896" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=dfabf171412be1a28ad31575cf77e9d3a1867696" released="2018-09-20" stability="testing" version="1.3-rc">
+      <manifest-digest sha256new="3BDZKG2YAPYUMPSAXK5EBJZTODEH6TO33QOL5ZFNHPKHWWIGHEYA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3-rc/kotlin-compiler-1.3.0-rc-57.zip" size="35983627" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=db731ee5ac357f9ede165efdd9467c163be2112c" released="2018-09-24" stability="stable" version="1.2.71">
+      <manifest-digest sha256new="W72FP73T54WUGRH5U5V5OWFR2UNN6BD65KD4MEZE44KQEMNEASKA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.2.71/kotlin-compiler-1.2.71.zip" size="37179301" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=bef8013890375afc5e2235791309c55841ab76a9" released="2018-10-03" stability="testing" version="1.3-rc3">
+      <manifest-digest sha256new="YMRIRGOJWV7YNBEXNENC2ABACKC5SZJZBF4QRY5AM3V67KWCBLOQ"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3-rc3/kotlin-compiler-1.3.0-rc-146.zip" size="37238118" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=5bf5a3f1ce99da55965ab5263899ddf01886a885" released="2018-10-18" stability="testing" version="1.3-rc4">
+      <manifest-digest sha256new="DKFC7ZLQF6NA3QRR6OWNSTKT4TGAKCLZCP27SRQELPW6X2MG5E2Q"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3-rc4/kotlin-compiler-1.3.0-rc-190.zip" size="37242784" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=15eee84c7f88105d766f30f6f2479d6d0cd115b2" released="2018-10-29" stability="stable" version="1.3.0">
+      <manifest-digest sha256new="LMXT7IW7RH245HINQS2HBT64CP6CIDSNPMMLKHFDG4UMI4FOTVWA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.0/kotlin-compiler-1.3.0-release-linux-x64.zip" size="70033094" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=e0cc42a447c2a22469894382fc7a20831e223026" released="2018-11-13" stability="stable" version="1.3.10">
+      <manifest-digest sha256new="EJDAYDLAGHEVS3SEBYC4CMWFZFDFOJC6HPRUQX3AZULRKSJ6MKGA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.10/kotlin-compiler-1.3.10-linux-x64.zip" size="70028540" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=9641bf8733983e5552d2e7f3ba7c78471efe5392" released="2018-12-06" stability="stable" version="1.3.11">
+      <manifest-digest sha256new="T5UXEEVC4JXQW46TVLYMN7IM6RP7BR6MYFPVODWWYEO3D5HIFS7A"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.11/experimental-kotlin-compiler-linux-x64.zip" size="69321298" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=6453e72050e3a43dad837bcd3f1d2882eb2e447b" released="2018-12-12" stability="testing" version="1.3.20-pre-25">
+      <manifest-digest sha256new="2BCEMPG45UOCSKAIBK57Y2ZO73VPZIVQGKO42LO6QHTEAGOPTLMA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.20-eap-25/kotlin-compiler-1.3.20-eap-25.zip" size="38173905" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=b89d93b4fe8b89eb2ca69f7a3b8534cd2669a6e8" released="2018-12-20" stability="testing" version="1.3.20-pre-52">
+      <manifest-digest sha256new="OVZJ36C26QIW3VXQHLPYYKRG2QZKJMHPRXT347REFBIBVRUVTVSQ"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.20-eap-52/kotlin-compiler-1.3.20-eap-52.zip" size="38263392" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=5f891a45c40a7c81ddfd47536fe4ffbe7980e18f" released="2019-01-15" stability="testing" version="1.3.20-pre-100">
+      <manifest-digest sha256new="MHDMZBQB5EMNOCA6TL47NRV35NBR7NSQUFFAXP2TGUBXXEL2SSWQ"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.20-eap-100/kotlin-compiler-1.3.20-eap-100.zip" size="38473324" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=9935ce5e2a79a5a94779d0cce01e13aee9e4b63d" released="2019-01-23" stability="stable" version="1.3.20">
+      <manifest-digest sha256new="VYX35NDYQVGGSFUXKTFGZH5U746VGZYH5LH7OL7JLFA3DE2CLN3A"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.20/experimental-kotlin-compiler-linux-x64.zip" size="70557820" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=361220f2e536d58c7782350892d41274a20eca38" released="2019-02-06" stability="stable" version="1.3.21">
+      <manifest-digest sha256new="EYWQFJQIH5TVB3MUHWPL4BBI74DXXMINUIH6HIAF4GCDBCEVO5TA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.21/experimental-kotlin-compiler-linux-x64.zip" size="70552429" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=a8143272e1e5a3b3b37da3776808f27184ae3ce6" released="2019-02-28" stability="testing" version="1.3.30-pre-11">
+      <manifest-digest sha256new="JLPEIJC7SECIFGKLK7ZPC4FVAIA2O6TL5P2Q3TVXL4RLKUQ7RKNA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.30-eap-11/kotlin-compiler-1.3.30-eap-11.zip" size="39904522" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=18438405101a82af0e3266b19ea83aa2efbba2e6" released="2019-03-15" stability="testing" version="1.3.30-pre-45">
+      <manifest-digest sha256new="R7XXP25PWVNT7R77VDVUTOLDT7QLGV63GRWK75FDTNOMJQ4HZI5Q"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.30-eap-45/kotlin-compiler-1.3.30-eap-45.zip" size="40125112" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=a52874416c92a6b09a4b70fd13ffa15fcae1343d" released="2019-03-29" stability="testing" version="1.3.30-pre-125">
+      <manifest-digest sha256new="BFU52EICKM72UP7Z47WKX4ZJ5URCFTPINHWKGGIVWDFJE54KWB6Q"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.30-eap-125/kotlin-compiler-1.3.30-eap-125.zip" size="41158360" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=c15144b95aae03738cac29201725aa2fb7deb312" released="2019-04-09" stability="testing" version="1.3.30-pre-164">
+      <manifest-digest sha256new="X44UG33QWPKQZFIHGD4FSUD3J643IFQ2DFVCIKRB2MAF74DNUNSQ"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.30-eap-164/kotlin-compiler-1.3.30-eap-164.zip" size="41225045" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=a25bd843d429be329bada6b86024fe94bd431b15" released="2019-04-11" stability="stable" version="1.3.30">
+      <manifest-digest sha256new="USCF2XPJ4B3KEGWNMW57RRLIRM2KJVSVLT7SIWMXODEAF6AFWAUQ"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.30/experimental-kotlin-compiler-linux-x64.zip" size="73290174" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=12930014378e100f0691f5842a925f2c691771a4" released="2019-04-25" stability="stable" version="1.3.31">
+      <manifest-digest sha256new="JLPCG43JAWTYEVN4A4IBDGY4DFGN2LQ7WTTTUV5QBK2VL4HXXZ6Q"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.31/experimental-kotlin-compiler-linux-x64.zip" size="73304430" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=3e4071a33054f4205f37613f7de07f69a4bfef32" released="2019-05-20" stability="testing" version="1.3.40-pre-32">
+      <manifest-digest sha256new="23VVB6G5RFDMHQDEEFM2UY3FLQGJUURNJ4O2JZHJFLVEUFSOCDZQ"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.40-eap-32/kotlin-compiler-1.3.40-eap-32.zip" size="45296950" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=1eadde523f59f9e65f8a09cdba2f3cfd33da7a51" released="2019-05-31" stability="testing" version="1.3.40-pre-67">
+      <manifest-digest sha256new="5UF3VEB6GOJ3OEPXJUDCHZZ2RZR4OD4FOARLXAMJRSSTNSI2ATXA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.40-eap-67/kotlin-compiler-1.3.40-eap-67.zip" size="45407980" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=8e04c5aa4a266011c7a6a10dd21af616010ce4da" released="2019-06-11" stability="testing" version="1.3.40-pre-105">
+      <manifest-digest sha256new="EWXJMLQDQ3N4SUWWP5C3LNN7XBW3JPY34PO6SBCPMUXKGU7HEYMA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.40-eap-105/kotlin-compiler-1.3.40-eap-105.zip" size="45344126" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=37ef106cf5624eddd8b2c68f49490a6cbe8bfe62" released="2019-06-19" stability="stable" version="1.3.40">
+      <manifest-digest sha256new="M37BFKHVRMNLENBBRSVIDMZIHBWZ3U6M3UNVXKZMXJXVOHWAILEQ"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.40/kotlin-compiler-1.3.40.zip" size="45428538" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=426642748a1cb9bce3facc75867cb8ffa47df6fb" released="2019-07-03" stability="stable" version="1.3.41">
+      <manifest-digest sha256new="LFGS7ANQIT6QLM7SEPYYHP7Z3OMBQ2M3SQLS6RX2TMD3OJA37PMQ"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.41/kotlin-compiler-1.3.41.zip" size="45655109" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=c04dd6afc49ee1576d8858a0b8779b9c20f9d06b" released="2019-07-18" stability="testing" version="1.3.50-pre-5">
+      <manifest-digest sha256new="WCUD3YTYRKJSFKJLIW5CHZTOPTO4DPNRF3XYBDYRV43PFLMHNJLQ"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.50-eap-5/kotlin-compiler-1.3.50-eap-5.zip" size="50349027" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=bcc9bef24d018c6e55dcefad314e135a76754a17" released="2019-07-30" stability="testing" version="1.3.50-pre-54">
+      <manifest-digest sha256new="M2OGTS3LUDTLWGEQOCPRNRMJELU5CHAMNDSCF6W7CNDEOZMPKWPA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.50-eap-54/kotlin-compiler-1.3.50-eap-54.zip" size="50521918" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d9b2be05d024e9df79dcce564ee79da550b4f706" released="2019-08-14" stability="testing" version="1.3.50-pre-86">
+      <manifest-digest sha256new="6TP77DOJF2B4A4DDNXDMBQZHQXNH5C6L662UHT25Z4PBSSMBSTLQ"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.50-eap-86/kotlin-compiler-1.3.50-eap-86.zip" size="50543709" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=242e238d71785e28b9b89b770b25e0a4a9b135f6" released="2019-08-22" stability="stable" version="1.3.50">
+      <manifest-digest sha256new="X27VZDLWMWJ27NXW7I7UH5UGARVFELE4SX6ZWM6FXSMDZFIJB6NA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.50/kotlin-compiler-1.3.50.zip" size="50555421" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=a1ab3155355389067d50bd8d7a9a37719e392cce" released="2019-10-08" stability="testing" version="1.3.60-pre-23">
+      <manifest-digest sha256new="HKZDFKEIX7PGAJZTUQBFWGLAYKJCMVZQH2SBI6BC4QR6T7LTTJNA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.60-eap-23/kotlin-compiler-1.3.60-eap-23.zip" size="52987767" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=1c183c20e0507aaa090761396fc8ce4aff1226b8" released="2019-10-22" stability="testing" version="1.3.60-pre-76">
+      <manifest-digest sha256new="O2LBJUYQIZKAM7DS3SGIL7GG4JU2KWDK3SFREIPCBZHIS3WYOMSA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.60-eap-76/kotlin-compiler-1.3.60-eap-76.zip" size="53050622" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=99311f0ea948d43bc8db8a88626f5b90f2c30d3d" released="2019-11-06" stability="testing" version="1.3.60-pre-143">
+      <manifest-digest sha256new="K33I4ZXGEH4VI7YNIMNLGGJNVQ3U5DOW4KYYJI7Y4CFXZGDMRESA"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.60-eap-143/kotlin-compiler-1.3.60-eap-143.zip" size="53117357" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=da39a3ee5e6b4b0d3255bfef95601890afd80709" released="2019-11-18" stability="stable" version="1.3.60">
+      <manifest-digest sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.60/kotlin-native-windows-1.3.60.zip" size="139987371" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=3fcfffda4ca82d59ba5bf5d869d1b70860185822" released="2019-11-26" stability="stable" version="1.3.61">
+      <manifest-digest sha256new="D572MFFTVOF5ORRL7BZRDHUXLV7VHRSWBRYIOOZ453JLGXBLUP5A"/>
+      <archive extract="kotlinc" href="https://github.com/JetBrains/kotlin/releases/download/v1.3.61/kotlin-compiler-1.3.61.zip" size="53125546" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <entry-point binary-name="kotlin" command="run">
+    <needs-terminal/>
+    <name>Kotlin interpreter</name>
+  </entry-point>
+  <entry-point command="kotlinc">
+    <needs-terminal/>
+    <name>Kotlin compiler</name>
+  </entry-point>
+  <entry-point command="kotlinc-jvm">
+    <needs-terminal/>
+    <name>Kotlin JVM compiler</name>
+  </entry-point>
+  <entry-point command="kotlinc-js">
+    <needs-terminal/>
+    <name>Kotlin JavaScript compiler</name>
+  </entry-point>
+  <entry-point command="kotlin-dce-js">
+    <needs-terminal/>
+    <name>Kotlin dead code elimination JavaScript compiler</name>
+  </entry-point>
+
+  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
+    <file-type id="Kotlin.Code">
+      <description>Kotlin Code File</description>
+      <verb args="&quot;%1&quot;" name="open"/>
+      <extension value=".kt"/>
+    </file-type>
+  </capabilities>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl4HW44ACgkQWao5J8JOTh6LQAf+NtjZ
+bGjpJc/21eIE93Mb4APe1/1s9rK0/E0EvprK0/4EUPMDTGP9k2lAjtmTVOVahxnhEfNW6WPBaIZw
+lrhnG5NXKE7OX6TbccylKGnAx+XyMa8zbhdZ2lgubZAdmZ4q9dpK2eO9k8XR2lSGS4gTa8nEdKcd
+W2ST7M8ePJKCerTNj/KgdwFXoRG3pcdql2ZZbgE2MG7aRFnlk1kIYT3Ay0qXMpmqvmV8oN+3S447
+Vzm9abcpvnbjIwCX37yWxZr2MwgfPWfkW3hyPS+wWjeeWYgOwig0tk5E1fcrCMm/sGxwEsIhCffS
+i7Y/edv4nMq8uZzjjEi0iUf5+lDMcRT1wQ==
+
+-->

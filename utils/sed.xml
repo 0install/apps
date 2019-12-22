@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/utils/sed.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>sed</name>
+  <summary xml:lang="en">Sed: stream editor</summary>
+  <description xml:lang="en">Sed (streams editor) isn't really a true text editor or text processor. Instead, it is used to filter text, i.e., it takes text input and performs some operation (or set of operations) on it and outputs the modified text. Sed is typically used for extracting part of a file using pattern matching or substituting multiple occurances of a string within a file. 
+
+Version 1.4 is the fast, small sed originally distributed in the GNU toolkit and still distributed with Minix -- but it's still better for some uses (in particular, faster and less memory-intensive). 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <category>Utility</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/sed.htm</homepage>
+  <needs-terminal/>
+  <package-implementation distributions="Gentoo" package="sys-apps/sed"/>
+  <package-implementation package="sed"/>
+  <implementation arch="Windows-i486" id="sha1new=5fdc6df218ab4690493ae813d39cc926f78c2435" langs="af ca cs da de el es et eu fi fr ga gl he hr hu id it ja ko nl pl pt pt_BR ro ru sk sl sr sv tr uk vi zh_CN zh_TW" license="GPL v1 (GNU General Public License)" released="2010-12-28" version="4.2.1-3">
+    <requires interface="https://apps.0install.net/devel/gettext.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/libiconv.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/regex.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/sed.exe"/>
+    <manifest-digest sha256new="F7FNVA4EJLRUQ7ZSWBKZIG2RNHYENAOXEDUBUHJWXMASSO6KKQHQ"/>
+    <archive href="http://sourceforge.net/projects/gnuwin32/files/sed/4.2.1/sed-4.2.1-bin.zip" size="317930" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/sed-4.2.1-bin.zip?raw=true" size="317930" type="application/zip"/>
+  </implementation>
+  <entry-point binary-name="sed" command="run"/>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA34CAAoJEFmqOSfCTk4efDIH/iTyTTzknLfcLvzfAj61MJ2xUr+nfqkg0JE3
+HT3jvJe9xxnCUFCKZ8EOxWQsYNf3gOpx102QLKWbkPYhSB8u3tccy/yhpwJdG33YwkmB66l/pcpL
+kC8CI/xvh9N7fDzPsR2M+OP/3L47zKMMP6sqXod/xMq4LtdE88aWtXNofMGq4FT1uxhdyKbmu1kc
+RSGF9/RSeLyyMV/WgEkZ6+nU6J7UU14Up+iuqBYdynTZoML8PnAHBNrg2J5ogckyIPlfTXjdKZFY
++0ahWHpYQZKTxvOBl4fpzV4Yw6MbxmXX9vNWgOfT/mx6vdCHFk570KMiphapIjMSiK7CFqvqW3kI
+nww=
+
+-->

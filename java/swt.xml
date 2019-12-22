@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/java/swt.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>swt</name>
+  <summary>the Standard Widget Toolkit</summary>
+  <description>
+SWT is an open source widget toolkit for Java designed to provide efficient,
+portable access to the user-interface facilities of the operating systems on
+which it is implemented.
+
+On OS X, an extra argument needs to be passed to Java. To support OS X, please use:
+
+&lt;runner interface=&quot;https://apps.0install.net/java/openjdk-jre&quot;&gt;
+  &lt;for-each item-from=&quot;ZEROINSTALL_EXTRA_JAVA_OPTIONS&quot; separator=&quot; &quot;&gt;
+    &lt;arg&gt;${item}&lt;/arg&gt;
+  &lt;/for-each&gt;
+&lt;/runner&gt;
+</description>
+  <homepage>http://www.eclipse.org/swt/</homepage>
+  <category>Development</category>
+  <group license="Eclipse Public License and LGPL">
+    <implementation arch="Linux-x86_64" id="sha1new=ef03ea4907d195beeb4e20d9427e565f3879b8ff" released="2009-12-31" version="3.5.1">
+      <archive extract="swt" href="https://github.com/0install/apps.0install.net/releases/download/archives/swt-3.5.1-gtk-linux-x86_64.tar.bz2" size="1439711" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=d1ac00014927f17d81b0e21e655fc15202d10dd0" released="2009-12-31" version="3.5.1">
+      <archive extract="swt" href="https://github.com/0install/apps.0install.net/releases/download/archives/swt-3.5.1-gtk-linux-x86.tar.bz2" size="1341127" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=c4a637dbcdb826bc9db8c36b3c97793f2047fb88" released="2011-01-07" version="3.6.1">
+      <archive extract="swt" href="https://github.com/0install/apps.0install.net/releases/download/archives/swt-3.6.1-win32-win32-x86_64.tar.bz2" size="1651871" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i386" id="sha1new=5b4d300050a2b972affad3398039114631786e79" released="2011-01-07" version="3.6.1">
+      <archive extract="swt" href="https://github.com/0install/apps.0install.net/releases/download/archives/swt-3.6.1-win32-win32-x86.tar.bz2" size="1631349" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=bb9479c20f7684b9423be7d76194929e9b6fb690" released="2011-01-07" version="3.6.1">
+      <archive extract="swt" href="https://github.com/0install/apps.0install.net/releases/download/archives/swt-3.6.1-gtk-linux-x86_64.tar.bz2" size="1582413" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=859ce16046774440401016064a59c2f2280df486" released="2011-01-07" version="3.6.1">
+      <archive extract="swt" href="https://github.com/0install/apps.0install.net/releases/download/archives/swt-3.6.1-gtk-linux-x86.tar.bz2" size="1425786" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+
+    <group>
+      <environment name="ZEROINSTALL_EXTRA_JAVA_OPTIONS" separator=" " value="-XstartOnFirstThread"/>
+      <implementation arch="MacOSX-x86_64" id="sha1new=0304451926f7865550effb10b6e0c11dfd3c5043" released="2011-01-11" version="3.6.1">
+	<archive extract="swt" href="https://github.com/0install/apps.0install.net/releases/download/archives/swt-3.6.1-cocoa-macosx-x86_64.tar.bz2" size="1434191" type="application/x-bzip-compressed-tar"/>
+      </implementation>
+      <implementation arch="MacOSX-i386" id="sha1new=07b352855c107ed97186794f7eb04aa61f2dd9ca" released="2011-01-11" version="3.6.1">
+	<archive extract="swt" href="https://github.com/0install/apps.0install.net/releases/download/archives/swt-3.6.1-cocoa-macosx.tar.bz2" size="1523076" type="application/x-bzip-compressed-tar"/>
+      </implementation>
+    </group>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA331AAoJEFmqOSfCTk4e+7sIAIRmbFt3ZmlCEffsW6cokC1+/3DfyBMFv672
+9fIkPHZ3igTot01+7G/nlNk8NG6rv8a4OTsdDQ4vrK97HSTlgi+AiHpE7pxPsrUPyAkV7XLOuUg0
+ubtDmyJYXCRYzYgTky08vNL8rvkHLFVGwrWzAdv8hnqcusgBWY9WMfdq1CzoirIuz7Q0m/J3Qh9S
+HDfv0XzL/SqB/DG0gvzelXcQo0Q4hFTfKoPNuMoNmiDKh/d9SaQpi3PjYcwyr+NrzbUpMskecIJ3
+Ek7yc1wrNfGyZ6D7wFgwLdrFS4PatcByOhcl+QwvCUpv1tXW2bpVkjcJW9MTQCbaNIzVXGYZYeoh
+bgs=
+
+-->

@@ -1,0 +1,261 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/gui/pidgin.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Pidgin</name>
+  <summary xml:lang="en">multi-protocol instant messaging application</summary>
+  <summary xml:lang="de">multi-protokoll Instant-Messenger Anwendung</summary>
+  <description xml:lang="en">Pidgin is an instant messaging application that supports multiple protocols (AIM, MSN, ICQ, XMPP, YIM and others).</description>
+  <description xml:lang="de">Pidgin ist eine Instant-Messenger Anwendung die mehrere Protokolle (AIM, MSN, ICQ, XMPP, YIM und andere) unterstützt.</description>
+  <homepage>https://www.pidgin.im/</homepage>
+  <category>Network</category>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/gui/pidgin.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/gui/pidgin.ico" type="image/vnd.microsoft.icon"/>
+
+  <entry-point binary-name="pidgin" command="run"/>
+
+  <package-implementation arch="Linux-*" main="/usr/bin/pidgin" package="libreoffice"/>
+
+  <group license="GPL v2 (GNU General Public License)">
+    <requires interface="https://apps.0install.net/lib/gtk.xml" version="2.16..!2.17"/>
+    <implementation arch="Windows-i486" id="sha1new=724e2c288d8197e03fa792665a2ddf2cbd010888" main="pidgin.exe" released="2007-10-24" stability="stable" version="2.2.2">
+      <manifest-digest sha256new="YL3BBGOI6BXGPD2JMRQFBHYNPGKMDCHF74KFPAPWQYDYOSE4MTQA"/>
+      <archive extract="pidgin-2.2.2-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.2.2/pidgin-2.2.2-win32-bin.zip" size="9895468" type="application/zip"/>
+    </implementation>
+    <implementation arch="*-src" id="sha1new=56ede72ff2e2365a994375a9d008c77e0099156c" released="2007-10-24" stability="stable" version="2.2.2">
+      <manifest-digest sha256new="HNJDMNADVLXZ2XNEHQHOVHNTJUQZU7LJQCDSLZGCRPUUY7QLNZMQ"/>
+      <archive extract="pidgin-2.2.2" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.2.2/pidgin-2.2.2.tar.bz2" size="8901875" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=6b8db05a8bac7c085c5994c4bb758c99a0d0a67a" main="pidgin.exe" released="2007-11-26" stability="stable" version="2.3.0">
+      <manifest-digest sha256new="B2OZU4TRTMTOQQAQ5WNBQEO2O44WH5QNKMYWPBXZQ7MLRSJ6RFDQ"/>
+      <archive extract="pidgin-2.3.0-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.3.0/pidgin-2.3.0-win32-bin.zip" size="10236723" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=f2d819abc207f03832fe3b1f8c0116cec840a821" main="pidgin.exe" released="2007-12-07" stability="stable" version="2.3.1">
+      <manifest-digest sha256new="7H5GYC4NWMJHRLAAYN3CWNVWQA42VMNPUWHCF53JEYJ6UU2LOJUQ"/>
+      <archive extract="pidgin-2.3.1-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.3.1/pidgin-2.3.1-win32-bin.zip" size="10235291" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=c88850a754e899a30b408480a1bdcf24c796b8de" main="pidgin.exe" released="2008-02-29" stability="stable" version="2.4.0">
+      <manifest-digest sha256new="4U3WURYCX4326GUIOWPGY3VZLXXP5MG4WP5CQEWC23VICJXDSLHA"/>
+      <archive extract="pidgin-2.4.0-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.4.0/pidgin-2.4.0-win32-bin.zip" size="10728967" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=c038a875c6617634c5f01f13bb9b3379ce1f5fec" main="pidgin.exe" released="2008-03-31" stability="stable" version="2.4.1">
+      <manifest-digest sha256new="CB3VEC6ENYEKEWBZCX74URSCLFOKCWCLRCQHVH5JFOQFJNE7QRHQ"/>
+      <archive extract="pidgin-2.4.1-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.4.1/pidgin-2.4.1-win32-bin.zip" size="10777956" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=41e38779dd66706e2a99432c215be7ad89506051" main="pidgin.exe" released="2008-05-17" stability="stable" version="2.4.2">
+      <manifest-digest sha256new="N5QD3YJ5ISVOR2SFA6EI5BLZCKGWQ3SOQBTWQALTGED5AQ673YTA"/>
+      <archive extract="pidgin-2.4.2-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.4.2/pidgin-2.4.2-win32-bin.zip" size="10841830" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=43b0596e5ee031739b46b3a34b9015b575135e92" main="pidgin.exe" released="2008-07-02" stability="stable" version="2.4.3">
+      <manifest-digest sha256new="AMHUWIVL5IBO3BJ5EYXT7EONTWMGZYZZEX6CJE6P3CEDVEHIGFCA"/>
+      <archive extract="pidgin-2.4.3-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.4.3/pidgin-2.4.3-win32-bin.zip" size="10750938" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=660c96a99fc7a771757c81b6c612327cd53e769b" main="pidgin.exe" released="2008-08-19" stability="stable" version="2.5.0">
+      <manifest-digest sha256new="HTAULTAXT3LZU7Z3KCWRJ3YKBNU5PILRRM77U4FECWRB6PFOBOCQ"/>
+      <archive extract="pidgin-2.5.0-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.5.0/pidgin-2.5.0-win32-bin.zip" size="10773511" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=d06f2e94036c6bb4238b289d98c8a62515e20267" main="pidgin.exe" released="2008-08-31" stability="stable" version="2.5.1">
+      <manifest-digest sha256new="QALTK7O7G5YKZQM4CLZ2QYL7PT7KD7IVC7QE2RNIFOIXZB6MV36A"/>
+      <archive extract="pidgin-2.5.1-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.5.1/pidgin-2.5.1-win32-bin.zip" size="10537810" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=129749c515911c5b93301e169bde9d77bde9e66f" main="pidgin.exe" released="2008-10-20" stability="stable" version="2.5.2">
+      <manifest-digest sha256new="NTUYYFIXBVFF6XH5UQICNGXCBFCHJLZF5HFUG2W27JLHWRLH65BA"/>
+      <archive extract="pidgin-2.5.2-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.5.2/pidgin-2.5.2-win32-bin.zip" size="10475597" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=80290bb95e8b21c0e956d3a19c132c25062f55d2" main="pidgin.exe" released="2008-12-21" stability="stable" version="2.5.3">
+      <manifest-digest sha256new="WPMIFVV6OHMKOZ5OH2EF5O6EEFXQ3WYQ7DVPL6WPDH53JWT7VAIQ"/>
+      <archive extract="pidgin-2.5.3-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.5.3/pidgin-2.5.3-win32-bin.zip" size="11648600" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=bacec4a7b32287d9edeedc6a637273492cca3032" main="pidgin.exe" released="2009-01-12" stability="stable" version="2.5.4">
+      <manifest-digest sha256new="KV7TFLFD2GDCX2G3WUBFLCAROKL6HGEJJQJNJSKUSY26OGBWT56A"/>
+      <archive extract="pidgin-2.5.4-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.5.4/pidgin-2.5.4-win32-bin.zip" size="11671749" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=91cb988734c354dc0407deeb22bfaa0fb9db1732" main="pidgin.exe" released="2009-03-11" stability="stable" version="2.5.5">
+      <manifest-digest sha256new="IT33LIQYARKOFKLZEJICG7QSKPVUZI6CS3FD46AVXRTVTLUJ3NHQ"/>
+      <archive extract="pidgin-2.5.5-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.5.5/pidgin-2.5.5-win32-bin.zip" size="11910916" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=1dd1e1403c8a09eb69f0d2f703d5c6180b3481f4" main="pidgin.exe" released="2009-05-20" stability="stable" version="2.5.6">
+      <manifest-digest sha256new="7JIG3CLHJD66NVP7D4AAOAQPMEKJDV4TN2LYOPV3B6ZGDTJ7BBYA"/>
+      <archive extract="pidgin-2.5.6-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.5.6/pidgin-2.5.6-win32-bin.zip" size="11927961" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=96a31f9f55297e82e41104a0e7153d8e2bda3d45" main="pidgin.exe" released="2009-06-21" stability="stable" version="2.5.7">
+      <manifest-digest sha256new="J5B3ILHOBNG6DQN2UPDKBPO23LVTTWJO7CPFISM7Z55KYCMQCX7Q"/>
+      <archive extract="pidgin-2.5.7-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.5.7/pidgin-2.5.7-win32-bin.zip" size="11875104" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=814aed38261a3e7acfa47cef38b5ea9a450ff4ba" main="pidgin.exe" released="2009-06-29" stability="stable" version="2.5.8">
+      <manifest-digest sha256new="RVGALFKLA6NRMG4LYVXO3ZTOOQBGRYEQXNMCSYJ74MLPKG5ZO2CA"/>
+      <archive extract="pidgin-2.5.8-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.5.8/pidgin-2.5.8-win32-bin.zip" size="11874724" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=0e35b49af51f5ecbf572136c598ef3a993252220" main="pidgin.exe" released="2009-08-19" stability="stable" version="2.6.1">
+      <manifest-digest sha256new="RZHT2WOIV6ZDZ6IFA4RTLBULKZCV7PCTJ7U7YC7FARSBPVX2HPYQ"/>
+      <archive extract="pidgin-2.6.1-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.6.1/pidgin-2.6.1-win32-bin.zip" size="12105447" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=55601d8346253e85e6e8e34e04dbac06a203c29f" main="pidgin.exe" released="2009-09-06" stability="stable" version="2.6.2">
+      <manifest-digest sha256new="XJKNBVG47CHKQPQTJFQNLQHCF5BGYFBERIJO7YSJYNAPJCPGPFRQ"/>
+      <archive extract="pidgin-2.6.2-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.6.2/pidgin-2.6.2-win32-bin.zip" size="12160778" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=9609031bac39fded2cf1627659e81cf336fa7063" main="pidgin.exe" released="2009-10-19" stability="stable" version="2.6.3">
+      <manifest-digest sha256new="CNTG5NUQTNJGH2WCKTGSHNV56RXG2DZBLC5AMS6AKXT6QFBILALQ"/>
+      <archive extract="pidgin-2.6.3-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.6.3/pidgin-2.6.3-win32-bin.zip" size="12166413" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=087511016f5ea168259ca83d428f0b06a3e6c579" main="pidgin.exe" released="2009-12-01" stability="stable" version="2.6.4">
+      <manifest-digest sha256new="UF5BBRASI7PUCDJJ5OOAS4LSCT2G2AQ5UMZDALUPUNFJJRDBSXGQ"/>
+      <archive extract="pidgin-2.6.4-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.6.4/pidgin-2.6.4-win32-bin.zip" size="12329246" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=6f3db5939fc17db19cc974294f9716656e1b80da" main="pidgin.exe" released="2010-01-08" stability="stable" version="2.6.5">
+      <manifest-digest sha256new="T2CYN5EO4MCUJWNLT5MXM3KA7UZXFT6GL465NL7JAST5S72HXCTQ"/>
+      <archive extract="pidgin-2.6.5-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.6.5/pidgin-2.6.5-win32-bin.zip" size="12332750" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=c1a599cd94d735e2de6d81199e3d4c5421b2431b" main="pidgin.exe" released="2010-02-18" stability="stable" version="2.6.6">
+      <manifest-digest sha256new="75QE4PY6VKL2BAUSF47XJ3DDNJCCMPQGNMVPL23O4WM4LY2FPYPQ"/>
+      <archive extract="pidgin-2.6.6-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.6.6/pidgin-2.6.6-win32-bin.zip" size="12891991" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=38072212915268062896100e2350b8424cd2cadd" main="pidgin.exe" released="2010-05-13" stability="stable" version="2.7.0">
+      <manifest-digest sha256new="QFIFPTHT2KGABK36Q4ZM5Z7MU66WCKLVILKDM625UW2OFGQSYFVA"/>
+      <archive extract="pidgin-2.7.0-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.7.0/pidgin-2.7.0-win32-bin.zip" size="15114549" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=9346fbbd2e3a520e29450f262c7378f120df4a33" main="pidgin.exe" released="2010-05-31" stability="stable" version="2.7.1">
+      <manifest-digest sha256new="LDSSNDZVU3W3NY7TLWKDFW6ZOKHDUND46CBJH5TVLL4KLWXUJHIQ"/>
+      <archive extract="pidgin-2.7.1-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.7.1/pidgin-2.7.1-win32-bin.zip" size="15443974" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=5de0240bd30ce5bb0c51c0f5ab6a20048e03a6fa" main="pidgin.exe" released="2011-02-22" stability="stable" version="2.7.10">
+      <manifest-digest sha256new="HCAQQAPSD25ZBQ3GEE4GYNGPLVM2SO3KIQJBOXML3WANTXWY7DZA"/>
+      <archive extract="pidgin-2.7.10-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.7.10/pidgin-2.7.10-win32-bin.zip" size="15790635" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=66bd2c418c1f16cfc9787f2b90e3dc208f401a17" main="pidgin.exe" released="2011-03-11" stability="stable" version="2.7.11">
+      <manifest-digest sha256new="7NGOGPFLODIVFBE6FB65JMZIGMP3CHCGNSS36EVOABB6ODUPVMNQ"/>
+      <archive extract="pidgin-2.7.11-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.7.11/pidgin-2.7.11-win32-bin.zip" size="15807125" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=9499337213a8f024f43418c8084fa8796fec7a16" main="pidgin.exe" released="2010-07-23" stability="stable" version="2.7.2">
+      <manifest-digest sha256new="AJLXQWDTLIDJYK2MLMU27LDLC47ETMPA7RSE5X26B6I5NNB2XK6A"/>
+      <archive extract="pidgin-2.7.2-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.7.2/pidgin-2.7.2-win32-bin.zip" size="15157414" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=c3559bf79feacac6fd229f3875b0570a40718a93" main="pidgin.exe" released="2010-08-10" stability="stable" version="2.7.3">
+      <manifest-digest sha256new="KFONW7LSHNFJQYESJ7WCXX7YXGXYDM5TOQSCWKEIRGVC3OH55UMA"/>
+      <archive extract="pidgin-2.7.3-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.7.3/pidgin-2.7.3-win32-bin.zip" size="15249103" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=971e10d4984a95f134597f12f39be94190a89529" main="pidgin.exe" released="2010-10-23" stability="stable" version="2.7.4">
+      <manifest-digest sha256new="5UOKXQPAT4MH4PHBGKENBHX5TGY3XSMB3RTYEVS5B5ULHROZYAVQ"/>
+      <archive extract="pidgin-2.7.4-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.7.4/pidgin-2.7.4-win32-bin.zip" size="15612511" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=d8f5b94e2a13d57825c54c1236ac47b1f52af70d" main="pidgin.exe" released="2010-11-01" stability="stable" version="2.7.5">
+      <manifest-digest sha256new="3ARTB5DMFR5C7BEWUW6BC4YI25ARAO6G3JHDTBRPCBEPJMAT4MIQ"/>
+      <archive extract="pidgin-2.7.5-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.7.5/pidgin-2.7.5-win32-bin.zip" size="15608973" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=0d5177e38e21fea880b34753a0622ffdd687fc90" main="pidgin.exe" released="2010-11-22" stability="stable" version="2.7.6">
+      <manifest-digest sha256new="URBWAJILNOQ335YF5ANETMUZG6UBBCIZVOAGGVZPXWQZEK2F64CA"/>
+      <archive extract="pidgin-2.7.6-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.7.6/pidgin-2.7.6-win32-bin.zip" size="15634164" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=afdc62a9ecdeafa7b25bafe7ebdc9a403947b8bf" main="pidgin.exe" released="2010-11-24" stability="stable" version="2.7.7">
+      <manifest-digest sha256new="PNVIMYZROZZHATMSZGB5RXXH5VSGYRA3BOC62DIVMT4FD4MPFJHA"/>
+      <archive extract="pidgin-2.7.7-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.7.7/pidgin-2.7.7-win32-bin.zip" size="15633960" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=e4c3ce6fd7cd9cd0e474d819448e56a0d77ebedd" main="pidgin.exe" released="2010-12-20" stability="stable" version="2.7.8">
+      <manifest-digest sha256new="KRB5B3QHV4ENSJHIMKLHMEQ4A2HRR46MAEPIHZYOXHZZHB7M6ISA"/>
+      <archive extract="pidgin-2.7.8-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.7.8/pidgin-2.7.8-win32-bin.zip" size="15775722" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=3178c2b927153eec6edc979ea24752874f4296c3" main="pidgin.exe" released="2010-12-27" stability="stable" version="2.7.9">
+      <manifest-digest sha256new="7GVNCMPV3WL5KJAS6F4V6ITSH3ZTPXYEJZTZBYX67J5T2TKG3MRA"/>
+      <archive extract="pidgin-2.7.9-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.7.9/pidgin-2.7.9-win32-bin.zip" size="15776633" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=d49886d4945462fb89628fe7f911fd4a7006d984" main="pidgin.exe" released="2011-06-08" stability="stable" version="2.8.0">
+      <manifest-digest sha256new="MOJWDI2LHMAWP76UF43WV7UIYFTGDWKZ5NH25YQHWC5VPB4R7HKA"/>
+      <archive extract="pidgin-2.8.0-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.8.0/pidgin-2.8.0-win32-bin.zip" size="15744530" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=8f7f3dad26f5c29a0cd6ecae7d4d90973f9b5aef" main="pidgin.exe" released="2011-06-24" stability="stable" version="2.9.0">
+      <manifest-digest sha256new="KPNEEYKYCEQJDBNV2OHLOZVISNASCOWTDW7S7G5THB6I32M4FTQQ"/>
+      <archive extract="pidgin-2.9.0-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.9.0/pidgin-2.9.0-win32-bin.zip" size="15499569" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=5c6c657128cae91b2afe8248460e6a67bff7cbe6" main="pidgin.exe" released="2011-08-20" stability="stable" version="2.10.0">
+      <manifest-digest sha256new="6WKWFEPGDFD6PGZJW5NHUJQRBOTRBAAELQ7Q7N6IFUVDI5BJWC2Q"/>
+      <archive extract="pidgin-2.10.0-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.10.0/pidgin-2.10.0-win32-bin.zip" size="15228474" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=9651466e1430743576ea1339e403e1db1d97741c" main="pidgin.exe" released="2011-12-15" stability="stable" version="2.10.1">
+      <manifest-digest sha256new="27MDGTO34D3UYSQOBEW722SGRWTGA6XPACXQF4PVMXSHXPD5GI3A"/>
+      <archive extract="pidgin-2.10.1-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.10.1/pidgin-2.10.1-win32-bin.zip" size="15349580" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=8931e1e27b18f4b31bb03ea14fc0efa10d3a7837" main="pidgin.exe" released="2012-03-26" stability="stable" version="2.10.2">
+      <manifest-digest sha256new="UNO2B3OLGI7H2YNYCD7IRISPZC6KTCE3EPZ7JF7NIXVQF52WDDMQ"/>
+      <archive extract="pidgin-2.10.2-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.10.2/pidgin-2.10.2-win32-bin.zip" size="15224514" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=04957f508a90d4bd497ea593c3a70db707d4ba8c" main="pidgin.exe" released="2012-03-26" stability="stable" version="2.10.3">
+      <manifest-digest sha256new="CUF4UINQEAUWQRJ247CUREEFTGPEBW6LQYGPHTO6XZUFQLZ5TYHQ"/>
+      <archive extract="pidgin-2.10.3-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.10.3/pidgin-2.10.3-win32-bin.zip" size="15352558" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=24c67134e2b6c2e3eeaf7c13c7e87991ca38ff3c" main="pidgin.exe" released="2012-05-07" stability="stable" version="2.10.4">
+      <manifest-digest sha256new="MFPBM2WTY4RETU72CIGSI7B4GEKTB2QUVZAPOM45SYCMNWI42CTA"/>
+      <archive extract="pidgin-2.10.4-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.10.4/pidgin-2.10.4-win32-bin.zip" size="15142090" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=1e00bd3960d4fdde58c4d0e8b90eedcc0ab0530a" main="pidgin.exe" released="2012-07-05" stability="stable" version="2.10.5">
+      <manifest-digest sha256new="HCQPM7YIRNUMMHT3KCVXIL3PT2B3DZZJZFPPZN3ZJCCEZKWYLABA"/>
+      <archive extract="pidgin-2.10.5-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.10.5/pidgin-2.10.5-win32-bin.zip" size="15108527" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=f9ae331333cf356176de00fef6555638cbbee3fc" main="pidgin.exe" released="2012-07-06" stability="stable" version="2.10.6">
+      <manifest-digest sha256new="NKSEWAOF5ZGQ7H44XCLOCGIHD7KE7JZ7TXN55UONJIDRKBCC5X7Q"/>
+      <archive extract="pidgin-2.10.6-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.10.6/pidgin-2.10.6-win32-bin.zip" size="15108637" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=aa6de980d1f5116bc1c53c1f657d45267cfcfbd3" main="pidgin.exe" released="2013-02-14" stability="stable" version="2.10.7">
+      <manifest-digest sha256new="KWO5EH5PJV5XP6BQDGX6PHW57PBI22EM64HP6H7K6D36DZBNNLZQ"/>
+      <archive extract="pidgin-2.10.7-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.10.7/pidgin-2.10.7-win32-bin.zip" size="15596967" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=b984e5e1583738966575addef9b43b8520cddff8" main="pidgin.exe" released="2014-01-28" stability="stable" version="2.10.8">
+      <manifest-digest sha256new="NBXMISCXDZOLWWXQ375WGVD2CBDIPC7WBFIPU55Z2BV5S3DJOHPA"/>
+      <archive extract="pidgin-2.10.8-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.10.8/pidgin-2.10.8-win32-bin.zip" size="15760086" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=c8a71032f60bfeaa9326ea29d88e0a44493995e0" main="pidgin.exe" released="2014-02-03" stability="stable" version="2.10.9">
+      <manifest-digest sha256new="6JKD4KCRBSHD4MS4UBTDDIZBAOLM45LBF6SGFCNW6VW2DKH635FA"/>
+      <archive extract="pidgin-2.10.9-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.10.9/pidgin-2.10.9-win32-bin.zip" size="15726727" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=62ab8f0df92b5b71c8dcfb26dc7acc8145efdaf2" main="pidgin.exe" released="2014-10-26" stability="stable" version="2.10.10">
+      <manifest-digest sha256new="KGROV3FUQRG52QNKUORDBT6GBV6QKZNCGHWDY55SMXZWX4LYPBYA"/>
+      <archive extract="pidgin-2.10.10-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.10.10/pidgin-2.10.10-win32-bin.zip" size="15893242" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=bbfa1cf42fec0ada3a332478272d084ff838f5eb" main="pidgin.exe" released="2014-11-23" stability="stable" version="2.10.11">
+      <manifest-digest sha256new="IY32PZZKXKJBGKRHL4QBCOESCSXVXRT4NP5P4TECQY2VMMTNDXSQ"/>
+      <archive extract="pidgin-2.10.11-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.10.11/pidgin-2.10.11-win32-bin.zip" size="15912228" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=c62189693cc826cbc483046eee4c6b51736cd496" main="pidgin.exe" released="2016-01-02" stability="stable" version="2.10.12">
+      <manifest-digest sha256new="QLVCUBC6F34M5NINWL23WTNSKF3ITBBC5O7HWB5D4DPIA3LX6SCQ"/>
+      <archive extract="pidgin-2.10.12-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.10.12/pidgin-2.10.12-win32-bin.zip" size="15136442" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=14c2a9686e1580d48173b9caae0ebf11c5a673cf" main="pidgin.exe" released="2016-06-21" stability="stable" version="2.11.0">
+      <manifest-digest sha256new="2CUR4OEQ3524XRAAIHPVCRMHV5W7JUZJ2E7PR2EX6MPPJLY5KFQQ"/>
+      <archive extract="pidgin-2.11.0-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.11.0/pidgin-2.11.0-win32-bin.zip" size="15604352" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=34d15cd420728543b0125db510105fc69563be04" main="pidgin.exe" released="2017-03-10" stability="stable" version="2.12.0">
+      <manifest-digest sha256new="AH7BG4IPBIMUZ3ITIQ6HV5O2JBSQKD2AN647IHTB24ELSKPPF3UA"/>
+      <archive extract="pidgin-2.12.0-win32bin" href="https://downloads.sourceforge.net/pidgin/Pidgin/2.12.0/pidgin-2.12.0-win32-bin.zip" size="14741297" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
+    <url-protocol id="aim">
+      <description xml:lang="en">URL:aim</description>
+      <verb args="--protocolhandler=%1" name="Open"/>
+    </url-protocol>
+    <url-protocol id="msnim">
+      <description xml:lang="en">URL:msnim</description>
+      <verb args="--protocolhandler=%1" name="Open"/>
+    </url-protocol>
+    <url-protocol id="myim">
+      <description xml:lang="en">URL:myim</description>
+      <verb args="--protocolhandler=%1" name="Open"/>
+    </url-protocol>
+    <url-protocol id="xmpp">
+      <description xml:lang="en">URL:xmpp</description>
+      <verb args="--protocolhandler=%1" name="Open"/>
+    </url-protocol>
+    <url-protocol id="ymsgr">
+      <description xml:lang="en">URL:ymsgr</description>
+      <verb args="--protocolhandler=%1" name="Open"/>
+    </url-protocol>
+  </capabilities>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA33yAAoJEFmqOSfCTk4eWisH/1Uq38JCQaOhugXFcyGkwwmwLVKqJQBfstfK
+hkFekY2g/ybs8QYmm+th1yVt8Pmh2stPfru2hDOXiN0MKDwko+cPjKtgSe2VGByq44LyFvxNSkGL
+TX05DOmB8O+HAuKhvsNxkyp/WdkCC+kMwuJJBc4IiRdAkbAbluSe6EtY75BrBPlTOyh9OWks5PEQ
+OYay5qci7sDyv1YkevUtwBBlVteyDZtXJkVipTgp+dd7/9TmVvECgGMt/Dx4sxgBXN+8Rivqaweb
+QzfsZ7bJwO0H/frhP7Qx748oG7YwsPjJBatatJ+hq/P6Nh25uzoKkcVZFwZ1TPnn4Sv7IzQ6esmQ
+B5U=
+
+-->

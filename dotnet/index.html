@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Zero Install: Apps: .NET</title>
+  <link rel="icon" href="https://0install.net/logo/favicon.ico" type="image/vnd.microsoft.icon" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+  <script src="tabs.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand my-3">
+      <div class="media">
+        <a href="https://0install.net/"><img class="mr-2" src="https://0install.net/logo/zeroinstall-icon.png" width="64" height="64" alt="Zero Install Logo"></a>
+        <a class="navbar-brand text-dark media-body align-self-center" href="https://0install.net/">Zero Install</a>
+      </div>
+      <div class="nav nav-pills">
+        <a class="nav-item nav-link" href="https://apps.0install.net/#more">Apps</a>
+        <a class="nav-item nav-link active" href="#">.NET</a>
+      </div>
+    </nav>
+
+    <main>
+      <p>.NET is a software framework and runtime developed by Microsoft. You can use Zero Install to:</p>
+      <ul>
+        <li>Get .NET development tools and SDKs</li>
+        <li>Run apps that need .NET as a dependency</li>
+      </ul>
+
+      <div class="card mb-4">
+        <div class="card-header">Feeds</div>
+        <div class="card-body tab-body" id="featured-tab">
+          <iframe src="catalog.xml"></iframe>
+        </div>
+      </div>
+
+      <h4>.NET Core</h4>
+      <p>
+        .NET Core is a light-weight cross-platform .NET implementation. To use .NET Core as the runner in a feed:<br>
+        <code>
+          <textarea readonly style="resize: none;" class="form-control-plaintext" rows="3">&lt;command name="run" path="myapp.dll"&gt;
+  &lt;runner interface="https://apps.0install.net/dotnet/core.xml"/&gt;
+&lt;/command&gt;</textarea>
+        </code>
+      </p>
+      <p>
+        To add <code>dotnet</code> (.NET Core SDK) to your <code>PATH</code>:<br>
+        <code>
+          <input type="text" readonly class="form-control-plaintext" value="0install add dotnet https://apps.0install.net/dotnet/core-sdk.xml">
+        </code>
+      </p>
+      <p>
+        To add <code>nuget</code> (.NET Package Manager) to your <code>PATH</code>:<br>
+        <code>
+          <input type="text" readonly class="form-control-plaintext" value="0install add nuget https://apps.0install.net/dotnet/nuget.xml">
+        </code>
+      </p>
+
+      <h4>.NET Framework and Mono</h4>
+      <p>.NET Framework is a Windows-only implementation of .NET. Mono is a cross-platform port of .NET Framework.</p>
+      <p>
+        To use a Common Lanaguage Runtime (.NET Framework or Mono) as the runner in a feed:<br>
+        <code>
+          <textarea readonly style="resize: none;" class="form-control-plaintext" rows="3">&lt;command name="run" path="myapp.exe"&gt;
+  &lt;runner interface="https://apps.0install.net/dotnet/clr.xml"/&gt;
+&lt;/command&gt;</textarea>
+        </code>
+      </p>
+      <p>
+        If you wish to use the <code>MONO_PATH</code> variable to specify external dependencies in a feed you can use <a href="https://github.com/0install/monopath-emulator">monopath-emulator</a>:<br>
+        <code>
+          <textarea readonly style="resize: none;" class="form-control-plaintext" rows="6">&lt;command name="run" path="myapp.exe"&gt;
+  &lt;runner interface="https://apps.0install.net/dotnet/clr-monopath.xml"/&gt;
+&lt;/command&gt;
+&lt;requires interface="http://example.com/mylib.xml"&gt;
+  &lt;environment name="MONO_PATH" insert="."/&gt;
+&lt;/requires&gt;</textarea>
+        </code>
+      </p>
+      <p>
+        To use the full version of .NET Framework as the runner in a feed:<br>
+        <code>
+          <textarea readonly style="resize: none;" class="form-control-plaintext" rows="3">&lt;command name="run" path="myapp.exe"&gt;
+  &lt;runner interface="https://apps.0install.net/dotnet/framework.xml"/&gt;
+&lt;/command&gt;</textarea>
+        </code>
+      </p>
+      <p>
+        To use either the Client Profile or the full version of .NET Framework as the runner in a feed:<br>
+        <code>
+          <textarea readonly style="resize: none;" class="form-control-plaintext" rows="3">&lt;command name="run" path="myapp.exe"&gt;
+  &lt;runner interface="https://apps.0install.net/dotnet/framework-client-profile.xml"/&gt;
+&lt;/command&gt;</textarea>
+        </code>
+      </p>
+      <p>
+        To use Mono as the runner in a feed:<br>
+        <code>
+          <textarea readonly style="resize: none;" class="form-control-plaintext" rows="3">&lt;command name="run" path="myapp.exe"&gt;
+  &lt;runner interface="https://apps.0install.net/dotnet/mono.xml"/&gt;
+&lt;/command&gt;</textarea>
+        </code>
+      </p>
+    </main>
+
+    <footer>
+      <hr>
+      <small class="text-muted">
+        © Copyright 2003-2019 Thomas Leonard, Bastian Eicher and others<br>
+        Permission is granted to use the site (excluding the software, which is licensed separately) in accordance with the terms of the <a href="https://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike 2.5 license</a>.
+      </small>
+    </footer>
+  </div>
+</body>
+
+</html>

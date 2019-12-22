@@ -1,0 +1,273 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/utils/gzip.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Gzip</name>
+  <summary xml:lang="en">Gzip: compress files</summary>
+  <description xml:lang="en">gzip (GNU zip) is a compression utility designed to be a replacement for compress. Its main advantages over compress are much better compression and freedom from patented algorithms. </description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <category>Utility</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/gzip.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=1bfb8dadd389203c9f55bd85fe364f2ae60fd8d2" license="GPL v2 (GNU General Public License)" released="2007-10-15" version="1.3.12-1">
+    <environment insert="bin" name="GZIP_BINDIR"/>
+    <command name="run" path="bin/gzip.exe"/>
+    <command name="gunzip" path="bin/gunzip">
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="gzexe" path="bin/gzexe">
+      <requires interface="https://apps.0install.net/utils/sed.xml">
+        <executable-in-path name="sed"/>
+      </requires>
+      <requires interface="https://apps.0install.net/utils/grep.xml">
+        <executable-in-path name="grep"/>
+      </requires>
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="uncompress" path="bin/uncompress">
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="zcat" path="bin/zcat">
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="zdiff" path="bin/zdiff">
+      <requires interface="https://apps.0install.net/utils/diffutils.xml">
+        <executable-in-path name="diff"/>
+      </requires>
+      <requires interface="https://apps.0install.net/utils/sed.xml">
+        <executable-in-path name="sed"/>
+      </requires>
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="zcmp" path="bin/zdiff">
+      <arg>--__cmp</arg>
+      <requires interface="https://apps.0install.net/utils/diffutils.xml">
+        <executable-in-path command="cmp" name="cmp"/>
+      </requires>
+      <requires interface="https://apps.0install.net/utils/sed.xml">
+        <executable-in-path name="sed"/>
+      </requires>
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="zgrep" path="bin/zgrep">
+      <requires interface="https://apps.0install.net/utils/grep.xml">
+        <executable-in-var name="GREP"/>
+      </requires>
+      <requires interface="https://apps.0install.net/utils/sed.xml">
+        <executable-in-path name="sed"/>
+      </requires>
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="zegrep" path="bin/zgrep">
+      <arg>-E</arg>
+      <requires interface="https://apps.0install.net/utils/grep.xml">
+        <executable-in-var name="GREP"/>
+      </requires>
+      <requires interface="https://apps.0install.net/utils/sed.xml">
+        <executable-in-path name="sed"/>
+      </requires>
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="zfgrep" path="bin/zgrep">
+      <arg>-F</arg>
+      <requires interface="https://apps.0install.net/utils/grep.xml">
+        <executable-in-var name="GREP"/>
+      </requires>
+      <requires interface="https://apps.0install.net/utils/sed.xml">
+        <executable-in-path name="sed"/>
+      </requires>
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="zforce" path="bin/zforce">
+      <requires interface="https://apps.0install.net/utils/grep.xml">
+        <executable-in-var name="GREP"/>
+      </requires>
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="zless" path="bin/zless">
+      <requires interface="https://apps.0install.net/utils/less.xml">
+        <executable-in-path name="less"/>
+      </requires>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="zmore" path="bin/zmore">
+      <environment name="LESS_IS_MORE" value="1"/>
+      <requires interface="https://apps.0install.net/utils/less.xml">
+        <executable-in-path name="more"/>
+      </requires>
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="znew" path="bin/znew">
+      <requires interface="https://apps.0install.net/utils/sed.xml">
+        <executable-in-path name="sed"/>
+      </requires>
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <manifest-digest sha256new="A6FIVMODJYHSF3H5HLNUKDZW4PIYM2HLKW7OFJNPT5QATXMFYGTQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/gzip/1.3.12-1/gzip-1.3.12-1-bin.zip" size="135350" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/gzip-bin.zip?raw=true" size="135350" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="app-arch/gzip"/>
+  <package-implementation package="gzip"/>
+  <entry-point binary-name="gzip" command="run">
+    <needs-terminal/>
+  </entry-point>
+  <entry-point binary-name="gunzip" command="gunzip">
+    <needs-terminal/>
+    <name xml:lang="en">gunzip</name>
+    <summary xml:lang="en">expand files</summary>
+  </entry-point>
+  <entry-point binary-name="gzexe" command="gzexe">
+    <name xml:lang="en">gzexe</name>
+    <summary xml:lang="en">Rename each FILE with a compressed version of itself, renaming FILE to FILE~.</summary>
+    <description xml:lang="en">The  gzexe utility allows you to compress executables in
+       place and have them automatically uncompress and execute
+       when  you  run  them (at a penalty in performance).  For
+       example if you execute ``gzexe  /usr/bin/gdb''  it  will
+       create the following two files:
+           -rwxr-xr-x  1 root root 1026675 Jun  7 13:53 /usr/bin/gdb
+           -rwxr-xr-x  1 root root 2304524 May 30 13:02 /usr/bin/gdb~
+       /usr/bin/gdb~  is  the original file and /usr/bin/gdb is
+       the self-uncompressing executable file.  You can  remove
+       /usr/bin/gdb~  once you are sure that /usr/bin/gdb works
+       properly.
+
+       This utility is most useful on systems with  very  small
+       disks.</description>
+  </entry-point>
+  <entry-point binary-name="uncompress" command="uncompress">
+    <needs-terminal/>
+    <name xml:lang="en">uncompress</name>
+    <summary xml:lang="en">expand files</summary>
+  </entry-point>
+  <entry-point binary-name="zcat" command="zcat">
+    <needs-terminal/>
+    <name xml:lang="en">zcat</name>
+    <summary xml:lang="en">expand files</summary>
+  </entry-point>
+  <entry-point binary-name="zcmp" command="zcmp">
+    <needs-terminal/>
+    <name xml:lang="en">zcmp</name>
+    <summary xml:lang="en">Compare FILE1 to FILE2, using their uncompressed contents if they are</summary>
+    <description xml:lang="en">Usage: $0 [OPTION]... FILE1 [FILE2]
+ If FILE2 is omitted, compare FILE1 to the uncompressed
+contents of FILE1.gz.  Do comparisons like cmp does.
+
+OPTIONs are the same as for cmp</description>
+  </entry-point>
+  <entry-point binary-name="zdiff" command="zdiff">
+    <needs-terminal/>
+    <name xml:lang="en">zdiff</name>
+    <summary xml:lang="en">Compare FILE1 to FILE2, using their uncompressed contents if they are</summary>
+    <description xml:lang="en">Usage: $0 [OPTION]... FILE1 [FILE2]
+If FILE2 is omitted, compare FILE1 to the uncompressed
+contents of FILE1.gz.  Do comparisons like diff does.
+
+OPTIONs are the same as for diff</description>
+  </entry-point>
+  <entry-point binary-name="zegrep" command="zegrep">
+    <needs-terminal/>
+    <name xml:lang="en">zegrep</name>
+    <summary xml:lang="en">Look for instances of PATTERN in the input FILEs, using their</summary>
+    <description xml:lang="en">Usage: $0 [OPTION]... [-e] PATTERN [FILE]...
+
+OPTIONs are the same as for 'grep'.
+</description>
+  </entry-point>
+  <entry-point binary-name="zfgrep" command="zfgrep">
+    <needs-terminal/>
+    <name xml:lang="en">zfgrep</name>
+    <summary xml:lang="en">Look for instances of PATTERN in the input FILEs, using their</summary>
+    <description xml:lang="en">Usage: $0 [OPTION]... [-e] PATTERN [FILE]...
+
+OPTIONs are the same as for 'grep'.
+</description>
+  </entry-point>
+  <entry-point binary-name="zgrep" command="zgrep">
+    <needs-terminal/>
+    <name xml:lang="en">zgrep</name>
+    <summary xml:lang="en">Look for instances of PATTERN in the input FILEs, using their</summary>
+    <description xml:lang="en">Usage: $0 [OPTION]... [-e] PATTERN [FILE]...
+
+OPTIONs are the same as for 'grep'.
+</description>
+  </entry-point>
+  <entry-point binary-name="zforce" command="zforce">
+    <needs-terminal/>
+    <name xml:lang="en">zforce</name>
+    <summary xml:lang="en">Force a .gz extension on all compressed FILEs so that gzip will</summary>
+    <description xml:lang="en">Usage: $0 [FILE]...
+</description>
+  </entry-point>
+  <entry-point binary-name="zless" command="zless">
+    <needs-terminal/>
+    <name xml:lang="en">zless</name>
+    <summary xml:lang="en">Like 'less', but operate on the uncompressed contents of any compressed FILEs.</summary>
+    <description xml:lang="en">Usage: $0 [OPTION]... [FILE]...
+
+Options are the same as for 'less'.
+</description>
+  </entry-point>
+  <entry-point binary-name="zmore" command="zmore">
+    <needs-terminal/>
+    <name xml:lang="en">zmore</name>
+    <summary xml:lang="en">Like 'more', but operate on the uncompressed contents of any compressed FILEs.</summary>
+    <description xml:lang="en">Usage: $0 [OPTION]... [FILE]...
+
+</description>
+  </entry-point>
+  <entry-point binary-name="znew" command="znew">
+    <needs-terminal/>
+    <name xml:lang="en">znew</name>
+    <summary xml:lang="en">Recompress files from .Z (compress) format to .gz (gzip) format.</summary>
+    <description xml:lang="en">Usage: $0 [OPTION]... [FILE]...
+
+Options:
+
+  -f     Force recompression even if a .gz file already exists.
+  -t     Test the new files before deleting originals.
+  -v     Verbose; display name and statistics for each file compressed.
+  -9     Use the slowest compression method (optimal compression).
+  -P     Use pipes for the conversion to reduce disk space usage.
+  -K     Keep a .Z file when it is smaller than the .gz file.
+      --help     display this help and exit
+      --version  output version information and exit
+</description>
+  </entry-point>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA34BAAoJEFmqOSfCTk4eysoH/jC4Lc7J9cygL4QXyxigOmnAIy09f9eo1Hcm
+Cam2FIHasOGgPj0xhNpqziHv+t/X/uUeal5rJql3izuRuV94CzysxcVVJOFj+TAAHcHDs4omcDDc
+J/cAu/+uBGV6EaeeU0OYW7ygQ5CrxPw/l9pkk+uLlqRzdxGP6DK2ntWebqLejFsQrizWkrDtT+U4
+G5DvPmlJqHpe70eA8IW4cPb6e8zGC0HPJKlFJqSdobX5u1GOQLBGizbVdKdgonV4kxi7di0/l7Yz
+51UBoWzVoS1zn5PzG9y+QdD8pLRXtoI4oSV6+FzfytRqQP49HZ0v3hucruJFYxc13E4GQSGjIkuq
+a1w=
+
+-->

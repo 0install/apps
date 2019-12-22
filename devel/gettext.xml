@@ -1,0 +1,222 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/devel/gettext.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>GetText</name>
+  <summary xml:lang="en">GetText: library and tools for native language support</summary>
+  <description xml:lang="en">A well integrated set of tools and documentation to help programmers, translators, and users make other GNU packages produce multi-lingual messages. The tools include a set of conventions about how programs should be written to support message catalogs, a directory and file naming organzation for those message catalogs, a runtime library that supports retrieval of translated messages, and a few stand-alone programs to manipulate sets of strings. A special GNU Emacs mode also helps work with these strings. 
+
+Libintl is a library that provides native language support to programs. It is part of Gettext. 
+•LibIntl-1 is in Gettext-0.10-.. 
+•LibIntl-2 is in Libintl-0.11-.. 
+•LibIntl-3 is in LibIntl-0.14-.. and in Gettext-0.14-.. 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <category>Development</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/gettext.htm</homepage>
+  <needs-terminal/>
+  <package-implementation distributions="Gentoo" package="sys-devel/gettext"/>
+  <package-implementation package="gettext"/>
+  <implementation arch="Windows-i486" id="sha1new=88e89c8b2adc839d16bf89710f76e9e2436b34b2" langs="be ca cs da de el es et fi fr ga gl id it ja ko nl nn no pl pt pt_BR ro ru sk sl sr sv tr uk vi zh_CN zh_TW" license="GPL v3+ (GNU General Public License), LGPLv2.1+ (GNU Lesser General Public License)" released="2005-05-06" version="0.14.4-3">
+    <requires interface="https://apps.0install.net/lib/libiconv.xml" version="1.9.2-1-3">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/gettext.exe"/>
+    <command name="envsubst" path="bin/envsubst.exe"/>
+    <command name="hostname" path="bin/hostname.exe"/>
+    <command name="msgattrib" path="bin/msgattrib.exe"/>
+    <command name="msgcat" path="bin/msgcat.exe"/>
+    <command name="msgcmp" path="bin/msgcmp.exe"/>
+    <command name="msgcomm" path="bin/msgcomm.exe"/>
+    <command name="msgconv" path="bin/msgconv.exe"/>
+    <command name="msgen" path="bin/msgen.exe"/>
+    <command name="msgexec" path="bin/msgexec.exe"/>
+    <command name="msgfmt" path="bin/msgfmt.exe"/>
+    <command name="msggrep" path="bin/msggrep.exe"/>
+    <command name="msginit" path="bin/msginit.exe"/>
+    <command name="msgmerge" path="bin/msgmerge.exe"/>
+    <command name="msgunfmt" path="bin/msgunfmt.exe"/>
+    <command name="msguniq" path="bin/msguniq.exe"/>
+    <command name="ngettext" path="bin/ngettext.exe"/>
+    <command name="urlget" path="bin/urlget.exe"/>
+    <command name="xgettext" path="bin/xgettext.exe">
+      <requires interface="https://apps.0install.net/lib/expat1.xml" version="1.95.0">
+        <environment insert="." name="PATH"/>
+      </requires>
+    </command>
+    <command name="gettext" path="bin/gettext.sh">
+      <executable-in-path name="gettext"/>
+      <executable-in-path command="ngettext" name="ngettext"/>
+      <executable-in-path command="envsubst" name="envsubst"/>
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="msgfilter" path="bin/msgfilter.exe"/>
+    <manifest-digest sha256new="VJG4ZEAYQCHTTLH232KEDSKFE7ZWOV3EVRWSKJ7J37MJKSHQCJBA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/gettext/0.14.4/gettext-0.14.4-bin.zip" size="1606131" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/gettext-bin.zip?raw=true" size="1606131" type="application/zip"/>
+  </implementation>
+  <entry-point binary-name="gettext" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">gettext</name>
+    <summary xml:lang="en">translate message</summary>
+    <description xml:lang="en">The  gettext  program translates a natural language mes-
+       sage into the user's language, by looking up the  trans-
+       lation in a message catalog.</description>
+  </entry-point>
+  <entry-point binary-name="envsubst" command="envsubst">
+    <needs-terminal/>
+    <name xml:lang="en">envsubst</name>
+    <summary xml:lang="en">substitutes  environment variables in shell</summary>
+    <description xml:lang="en">Substitutes the values of environment variables.</description>
+  </entry-point>
+  <entry-point binary-name="hostname" command="hostname">
+    <needs-terminal/>
+    <summary xml:lang="en">Print the machine's hostname.</summary>
+  </entry-point>
+  <entry-point binary-name="msgattrib" command="msgattrib">
+    <needs-terminal/>
+    <summary xml:lang="en">Filters the messages of a translation catalog according to their attributes,</summary>
+  </entry-point>
+  <entry-point binary-name="msgcat" command="msgcat">
+    <needs-terminal/>
+    <summary xml:lang="en">Concatenates and merges the specified PO files.</summary>
+    <description xml:lang="en">By using the --more-than option, greater commonality may be requested
+before messages are printed.  Conversely, the --less-than option may be
+used to specify less commonality before messages are printed (i.e.
+--less-than=2 will only print the unique messages).  Translations,
+comments and extract comments will be cumulated, except that if --use-first
+is specified, they will be taken from the first PO file to define them.
+File positions from all PO files will be cumulated.</description>
+  </entry-point>
+  <entry-point binary-name="msgcmp" command="msgcmp">
+    <needs-terminal/>
+    <summary xml:lang="en">Compare two Uniforum style .po files to check that both contain the same</summary>
+    <description xml:lang="en">The def.po file is an existing PO file with the
+translations.  The ref.pot file is the last created PO file, or a PO Template
+file (generally created by xgettext).  This is useful for checking that
+you have translated each and every message in your program.  Where an exact
+match cannot be found, fuzzy matching is used to produce better diagnostics.</description>
+  </entry-point>
+  <entry-point binary-name="msgcomm" command="msgcomm">
+    <needs-terminal/>
+    <summary xml:lang="en">Find messages which are common to two or more of the specified PO files.</summary>
+    <description xml:lang="en">By using the --more-than option, greater commonality may be requested
+before messages are printed.  Conversely, the --less-than option may be
+used to specify less commonality before messages are printed (i.e.
+--less-than=2 will only print the unique messages).  Translations,
+comments and extract comments will be preserved, but only from the first
+PO file to define them.  File positions from all PO files will be
+cumulated.</description>
+  </entry-point>
+  <entry-point binary-name="msgconv" command="msgconv">
+    <needs-terminal/>
+    <summary xml:lang="en">Converts a translation catalog to a different character encoding.</summary>
+  </entry-point>
+  <entry-point binary-name="msgen" command="msgen">
+    <needs-terminal/>
+    <summary xml:lang="en">Creates an English translation catalog.  </summary>
+    <description xml:lang="en">The input file is the last created English PO file, or a PO Template file (generally created by
+xgettext).  Untranslated entries are assigned a translation that is
+identical to the msgid.</description>
+  </entry-point>
+  <entry-point binary-name="msgexec" command="msgexec">
+    <needs-terminal/>
+    <summary xml:lang="en">Applies a command to all translations of a translation catalog.</summary>
+    <description xml:lang="en">The COMMAND can be any program that reads a translation from standard
+input.  It is invoked once for each translation.  Its output becomes
+msgexec's output.  msgexec's return code is the maximum return code
+across all invocations.</description>
+  </entry-point>
+  <entry-point binary-name="msgfilter" command="msgfilter">
+    <needs-terminal/>
+    <summary xml:lang="en">edit translations of message catalog</summary>
+    <description xml:lang="en">Applies a filter to all translations of a translation catalog.</description>
+  </entry-point>
+  <entry-point binary-name="msgfmt" command="msgfmt">
+    <needs-terminal/>
+    <summary xml:lang="en">Generate binary message catalog from textual translation description.</summary>
+  </entry-point>
+  <entry-point binary-name="msggrep" command="msggrep">
+    <needs-terminal/>
+    <summary xml:lang="en">Extracts all messages of a translation catalog that match a given pattern</summary>
+  </entry-point>
+  <entry-point binary-name="msginit" command="msginit">
+    <needs-terminal/>
+    <summary xml:lang="en">Creates a new PO file, initializing the meta information with values from the</summary>
+  </entry-point>
+  <entry-point binary-name="msgmerge" command="msgmerge">
+    <needs-terminal/>
+    <summary xml:lang="en">Merges two Uniforum style .po files together.</summary>
+    <description xml:lang="en">The def.po file is an
+existing PO file with translations which will be taken over to the newly
+created file as long as they still match; comments will be preserved,
+but extracted comments and file positions will be discarded.  The ref.pot
+file is the last created PO file with up-to-date source references but
+old translations, or a PO Template file (generally created by xgettext);
+any translations or comments in the file will be discarded, however dot
+comments and file positions will be preserved.  Where an exact match
+cannot be found, fuzzy matching is used to produce better results.</description>
+  </entry-point>
+  <entry-point binary-name="msgunfmt" command="msgunfmt">
+    <needs-terminal/>
+    <summary xml:lang="en">Convert binary message catalog to Uniforum style .po file.</summary>
+  </entry-point>
+  <entry-point binary-name="msguniq" command="msguniq">
+    <needs-terminal/>
+    <summary xml:lang="en">Unifies duplicate translations in a translation catalog.</summary>
+    <description xml:lang="en">Finds duplicate translations of the same message ID.  Such duplicates are
+invalid input for other programs like msgfmt, msgmerge or msgcat.  By
+default, duplicates are merged together.  When using the --repeated option,
+only duplicates are output, and all other messages are discarded.  Comments
+and extracted comments will be cumulated, except that if --use-first is
+specified, they will be taken from the first translation.  File positions
+will be cumulated.  When using the --unique option, duplicates are discarded.</description>
+  </entry-point>
+  <entry-point binary-name="ngettext" command="ngettext">
+    <needs-terminal/>
+    <summary xml:lang="en">translate message and choose plural form</summary>
+    <description xml:lang="en">The  ngettext program translates a natural language mes-
+       sage into the user's language, by looking up the  trans-
+       lation in a message catalog, and chooses the appropriate
+       plural form, which depends on the number COUNT  and  the
+       language  of  the  message catalog where the translation
+       was found.</description>
+  </entry-point>
+  <entry-point binary-name="urlget" command="urlget">
+    <needs-terminal/>
+    <summary xml:lang="en">Fetches and outputs the contents of an URL.</summary>
+    <description xml:lang="en">If the URL cannot be accessed,
+the locally accessible FILE is used instead.</description>
+  </entry-point>
+  <entry-point binary-name="xgettext" command="xgettext">
+    <needs-terminal/>
+    <summary xml:lang="en">extract gettext strings from source</summary>
+    <description xml:lang="en"> Extract translatable strings from given input files.</description>
+  </entry-point>
+  <entry-point binary-name="msginit" command="msginit">
+    <needs-terminal/>
+    <summary xml:lang="en">initialize a message catalog</summary>
+    <description xml:lang="en">Creates a new PO file, initializing the meta information with values from the
+user's environment.</description>
+  </entry-point>
+  <entry-point binary-name="msgen" command="msgen">
+    <needs-terminal/>
+    <summary xml:lang="en">create English message catalog</summary>
+    <description xml:lang="en">Creates an English translation catalog.  The input file is the last
+created English PO file, or a PO Template file (generally created by
+xgettext).  Untranslated entries are assigned a translation that is
+identical to the msgid.</description>
+  </entry-point>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA33tAAoJEFmqOSfCTk4eb50IAJkuZdDzziOL86w5ZO5yMRAyoKMX48TViqm0
+s+Ms95st1nckiZX5rLY8EDoR7zWb0tjJ7hAJgTmg2+nv0eW2v6ldOcI+60ATlkVOqkCco5Be0DQo
+IEK0jt1+UavWI4N9LLDQLZjhaFyXGeJtoxyAmvIGQ+i4gRKlosbeDRoJCNlbi2CjzN8Bs5Z/8R8I
+ZyeQFeOSSibAecr7dDAd8qyFngC/fiEuA9zLacc3kcnCmi5UhIO+p8FcGTHt5ux3envrxAYngwVk
+taytXox9NVxWaohKdXbY7QIwPZ8SfhS+Xd5zUD4NcROpZB0Im/2b63hQAIpKyCWxHQY9xm0nlqVb
+2IA=
+
+-->

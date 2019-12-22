@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/lib/cairo-dev.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libcairo2-dev</name>
+  <summary>Development files for the Cairo 2D graphics library</summary>
+  <description>Cairo is a multi-platform library providing anti-aliased
+vector-based rendering for multiple target backends.
+
+This package contains the development libraries, header files needed by
+programs that want to compile with Cairo.</description>
+  <package-implementation package="libcairo2-dev"/>
+  <group arch="Linux-i386">
+    <requires interface="https://apps.0install.net/lib/x-sm-dev.xml">
+      <environment insert="lib/pkgconfig" name="PKG_CONFIG_PATH"/>
+    </requires>
+
+    <implementation id="sha1new=10c834493ae8034aef70e6f889cc7c82a72fd0a0" released="2012-05-26" version="1.8.10-6">
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/libcairo2-dev-i386-1.8.10-6.tar.bz2" size="559054"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=025c935dcb64ada0cb2f733cc1d8ec129742a55e" released="2012-05-26" version="1.8.10-6">
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/libcairo2-dev-amd64-1.8.10-6.tar.bz2" size="577221"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA334AAoJEFmqOSfCTk4exyYH/3PEE0KK1sO8+uzVmhBpPKMSSgLpGyHnDVtd
+GCrfEoWySnGICx+KFXbg1W8JwndtYhoOKcpOueZwjviijUF7Nu4nDty+qM0k85NujqXkRgyL30nR
+TM7NzWRfrQfi/eWhAExmFyoGAhn4Qd2o6eaAjFWxjz51RPXlsJg9lyrpW22KQQgFeA4tIB6TKJ5j
+0W4uUzc8WC/yP6d/QwvzFHiJk05EEuf0BHmFR65bLdiv9Gu16E3VRK5lYWC7fnzkRlAkXKAbTqLb
+gKUNUVOqVGL59lJgoObgSFs0lc+XcPVmt3tK63auurAWegY2qktrEUS3YhVyzNPV2GfHiids/urF
+zSc=
+
+-->

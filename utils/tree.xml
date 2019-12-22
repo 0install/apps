@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/utils/tree.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Tree</name>
+  <summary xml:lang="en">Tree: list contents of directories in a tree-like format</summary>
+  <description xml:lang="en">Tree is a recursive directory listing program that  pro-
+       duces  a  depth indented listing of files, which is col-
+       orized ala dircolors if the LS_COLORS environment  vari-
+       able  is  set  and output is to tty.  With no arguments,
+       tree lists the files in  the  current  directory.   When
+       directory  arguments are given, tree lists all the files
+       and/or directories found in the given  directories  each
+       in  turn.  Upon completion of listing all files/directo-
+       ries found, tree  returns  the  total  number  of  files
+       and/or directories listed.</description>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/tree.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/tree.png" type="image/png"/>
+  <category>Utility</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/tree.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=5087aa6fbd78f28170c69ae7f13567ce8d2913c5" license="GPL v2 (GNU General Public License)" released="2009-02-09" version="1.5.2.2">
+    <command name="run" path="bin/tree.exe"/>
+    <manifest-digest sha256new="UNOHBY6HY6267FXTMJMDWWABKLSPD235TBYBR777OHJRP4REXKKA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/tree/1.5.2.2/tree-1.5.2.2-bin.zip" size="41328" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/tree-1.5.2.2-bin.zip?raw=true" size="41328" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="app-text/tree"/>
+  <package-implementation main="/usr/bin/tree" package="tree"/>
+  <entry-point binary-name="tree" command="run">
+    <needs-terminal/>
+  </entry-point>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA34CAAoJEFmqOSfCTk4eIz4IAILVmA4ca+cS6AlRkinLLZLvl5Ek9fAhbLu5
+ZFSmj7vd8WVUrzDIK0i61aksG9fOxqPa/eyjwo+s+zneTasVPLceR4ImCSzdnusUrS2k4JvK/Crv
+XoBeMU901bxUAu0tlbpRf5FSBHueIwHgZvSNVfNd/KTgNWGNhmJp6jkQz39lUNcooKDdpf1dZOfH
+2WwI8ZutmnGKpCvJbYMAhPclYUnIc1BMvXFesbXQrOIWBGS1ugM/cXnAqsWaBcN5ejkwV0l8q20C
+SEs8ovVWNt+f7oLgB4wvWG8ZrbwNc6hxSNtI7d7Mnvi0oF+mgR2k1ZSJOzZdR+VFiMuVUET9d/vG
+iG0=
+
+-->

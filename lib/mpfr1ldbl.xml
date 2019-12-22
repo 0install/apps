@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/lib/mpfr1ldbl.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libmpfr1ldbl</name>
+  <summary>multiple precision floating-point computation</summary>
+  <description>
+MPFR provides a library for multiple-precision floating-point computation with
+correct rounding. The computation is both efficient and has a well-defined
+semantics. It copies the good ideas from the ANSI/IEEE-754 standard for double-
+precision floating-point arithmetic (53-bit mantissa).</description>
+  <homepage>http://www.mpfr.org/</homepage>
+  <package-implementation package="libmpfr1ldbl"/>
+  <group arch="Linux-i386">
+    <requires interface="https://apps.0install.net/lib/gmp3c2.xml">
+      <environment insert="lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <implementation id="sha1new=564b2940f6df9993292e80bb40588b6aacdc2d66" released="2010-06-24" version="2.3.1">
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/libmpfr1ldbl-i386-2.3.1.dfsg.1-2.tar.bz2" size="342210"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=d54e8b7a69491bfa8ea1c750bc2db9fbd75f5f54" released="2010-06-24" version="2.3.1">
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/libmpfr1ldbl-amd64-2.3.1.dfsg.1-2.tar.bz2" size="354414"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA336AAoJEFmqOSfCTk4eO4AH/2WGGVQmpAEyjBURmdUtx9EKSRtt0ApsKVwz
+p4hNXvbnHG7dbkQZKFdEoUAvWGy8IzNmt58EMu/R9ruLpRmsvjzqo98901rA0EcyXNkP3n3Y9bDb
+ongnECG4VrBWpCL0nQFNnAJRJKjsF+m1wrQOKaTgxYEFPoQZjCIdrZbIhDTynhtLqDSe7veCIAyt
+WS0ZLJhs03fXK/5QdygLZ/EPt8C1xt4tS/GoNhOEgwOUU/Fl7Q0M8syppHShtd+cjkZQKo459mPu
+6X0udFwbNIXOrB3zUL+rd/B+mHSDj3Dd5MBai5iQmsfVQQeM/Bm+WjpIwfFaVp34PpNTtxAfFmsO
+iaw=
+
+-->

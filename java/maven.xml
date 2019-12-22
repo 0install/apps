@@ -1,0 +1,144 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/java/maven.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Apache Maven</name>
+  <summary>build manager for Java projects</summary>
+  <homepage>http://maven.apache.org/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+
+  <group license="Apache License 2.0">
+    <requires interface="https://apps.0install.net/java/jdk.xml">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+    <environment insert="" mode="replace" name="M2_HOME"/>
+    <environment insert="boot/*" name="CLASSPATH"/>
+    <command name="run">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
+        <for-each item-from="MAVEN_OPTS" separator=" ">
+          <arg>$item</arg>
+        </for-each>
+        <arg>-Dclassworlds.conf=$M2_HOME/bin/m2.conf</arg>
+        <arg>-Dmaven.home=$M2_HOME</arg>
+        <arg>-Dmaven.multiModuleProjectDirectory=$MAVEN_PROJECTBASEDIR</arg>
+        <arg>org.codehaus.plexus.classworlds.launcher.Launcher</arg>
+      </runner>
+    </command>
+    <implementation id="sha1new=e788278471bb86db90710c9273998606aa5c4fe5" released="2013-02-23" stability="stable" version="3.0.5">
+      <manifest-digest sha256new="OIK64UK6TZTJWXY2NITBGW6LF6IBTKLLF2VPHWBBOEMBZU7ULPZA"/>
+      <archive extract="apache-maven-3.0.5" href="http://archive.apache.org/dist/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz" size="5144659" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=35a83174b140bdbd86cd9bd71e4fe982f810aee5" released="2013-06-07" stability="developer" version="3.1.0-pre1-1">
+      <manifest-digest sha1new="35a83174b140bdbd86cd9bd71e4fe982f810aee5" sha256="2369b8bbed9fb49939d114823dfc1544f8439f64769a818f97f86a475f81d91f" sha256new="ENU3RO7NT62JSOORCSBD37AVIT4EHH3EO2NIDD4X7BVEOX4B3EPQ"/>
+      <archive extract="apache-maven-3.1.0-alpha-1" href="http://archive.apache.org/dist/maven/maven-3/3.1.0-alpha-1/binaries/apache-maven-3.1.0-alpha-1-bin.tar.gz" size="5439076" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=a7b1e5b2c80a58b5d386ac8b376ccc1b001792d4" released="2013-07-14" stability="stable" version="3.1.0">
+      <manifest-digest sha1new="a7b1e5b2c80a58b5d386ac8b376ccc1b001792d4" sha256="0f0672d6b328b8b76c7ac1583d303af53021611925d836632ca66047103ebc0b" sha256new="B4DHFVVTFC4LO3D2YFMD2MB26UYCCYIZEXMDMYZMUZQEOEB6XQFQ"/>
+      <archive extract="apache-maven-3.1.0" href="http://archive.apache.org/dist/maven/maven-3/3.1.0/binaries/apache-maven-3.1.0-bin.tar.gz" size="5439122" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=79f5d13272ab401923bf49a1ff33a4fb982977b5" released="2013-10-04" stability="stable" version="3.1.1">
+      <manifest-digest sha256new="5DPCYBNNUUVCK7ZZQQSPHXJ66CK5I3B5AFG5WQQRT76CO42F2UDQ"/>
+      <archive extract="apache-maven-3.1.1" href="http://archive.apache.org/dist/maven/maven-3/3.1.1/binaries/apache-maven-3.1.1-bin.tar.gz" size="5494427" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=3aca011d4ca966bf602bb719e564df9975e0db33" released="2014-08-17" stability="stable" version="3.2.3">
+      <manifest-digest sha256new="GRWAZ5PWMOOHDQAQWT55JOVUOONXEA4HOVT2PAAUTTFEON7LGWCQ"/>
+      <archive extract="apache-maven-3.2.3" href="http://archive.apache.org/dist/maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.tar.gz" size="6956162" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=4468bfd40d0a08f00255cf073023de778c492c74" released="2014-12-20" stability="stable" version="3.2.5">
+      <manifest-digest sha256new="ODD3GBRJ37YCUVFV53WQ2SILOSE6ZGR2U5C7DB2USUOKWL4WDGJA"/>
+      <archive extract="apache-maven-3.2.5" href="http://archive.apache.org/dist/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.tar.gz" size="7956528" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+  <group license="Apache License 2.0">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="7..">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+    <environment insert="" mode="replace" name="M2_HOME"/>
+    <environment insert="boot/*" name="CLASSPATH"/>
+    <command name="run">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
+        <for-each item-from="MAVEN_OPTS" separator=" ">
+          <arg>$item</arg>
+        </for-each>
+        <arg>-Dclassworlds.conf=$M2_HOME/bin/m2.conf</arg>
+        <arg>-Dmaven.home=$M2_HOME</arg>
+        <arg>-Dmaven.multiModuleProjectDirectory=$MAVEN_PROJECTBASEDIR</arg>
+        <arg>org.codehaus.plexus.classworlds.launcher.Launcher</arg>
+      </runner>
+    </command>
+    <implementation id="sha1new=54f1f4adcde1ca7be683a1d6835c23c4b8295aa9" released="2015-03-18" stability="stable" version="3.3.1">
+      <manifest-digest sha256new="5ESY4XSUCIY4GKNKXUFCTC4BPKGEKATMOHGZDV4RG6B4JIWRDB6Q"/>
+      <archive extract="apache-maven-3.3.1" href="http://archive.apache.org/dist/maven/maven-3/3.3.1/binaries/apache-maven-3.3.1-bin.tar.gz" size="8059952" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=0bb00e9d3b8862dd67c0685483846ac35ac844d1" released="2015-04-28" stability="stable" version="3.3.3">
+      <manifest-digest sha256new="QKZ7NDEV2PXGZ4IELOP2MJO7I2XGUN5U3KZPJD3MX4L7X67LW6MQ"/>
+      <archive extract="apache-maven-3.3.3" href="http://archive.apache.org/dist/maven/maven-3/3.3.3/binaries/apache-maven-3.3.3-bin.tar.gz" size="8042383" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=c7a8a6d0b6e7184b7998f62ae90822779374338a" released="2015-11-18" stability="stable" version="3.3.9">
+      <manifest-digest sha256new="264ZHQWJZB43WFEQAERDHHIQ3ZATBRWFS6HLAZ7XT3EC55QOT6YQ"/>
+      <archive extract="apache-maven-3.3.9" href="http://archive.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz" size="8491533" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=ad79e8041c0f56df14617d207370ef3d70141bea" released="2012-09-11" stability="stable" version="3.0.4">
+      <manifest-digest sha1new="ad79e8041c0f56df14617d207370ef3d70141bea" sha256="4cd0e4d7b00a362ce1cc1533498882ea927c6cd82cb81d7770b82aef3b2c6816" sha256new="JTIOJV5QBI3CZYOMCUZUTCEC5KJHY3GYFS4B253QXAVO6OZMNALA"/>
+      <archive extract="apache-maven-3.0.4" href="http://archive.apache.org/dist/maven/maven-3/3.0.4/binaries/apache-maven-3.0.4-bin.tar.gz" size="4873043" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=1855ccab0b122bed21ef4ec11bdebb68578130c1" released="2014-03-10" stability="stable" version="3.2.1">
+      <manifest-digest sha1new="1855ccab0b122bed21ef4ec11bdebb68578130c1" sha256="4ff57bf476232f80f49dd165e0a1890af7d9f8093df024f4a4aacfd23e79c4b6" sha256new="J72XX5DWEMXYB5E52FS6BIMJBL35T6AJHXYCJ5FEVLH5EPTZYS3A"/>
+      <archive extract="apache-maven-3.2.1" href="http://archive.apache.org/dist/maven/maven-3/3.2.1/binaries/apache-maven-3.2.1-bin.tar.gz" size="6927918" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=6bf8b156dddf4963ce006d15f9fcb2741bc8f17e" released="2014-06-26" stability="stable" version="3.2.2">
+      <manifest-digest sha1new="6bf8b156dddf4963ce006d15f9fcb2741bc8f17e" sha256="691440accc52b79d935e4e31de80876486543880972aa0bb6f757576c82e0e9f" sha256new="NEKEBLGMKK3Z3E26JYY55AEHMSDFIOEAS4VKBO3POV2XNSBOB2PQ"/>
+      <archive extract="apache-maven-3.2.2" href="http://archive.apache.org/dist/maven/maven-3/3.2.2/binaries/apache-maven-3.2.2-bin.tar.gz" size="6940967" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=16d3a1862fd70b54f6306781372ec68572d649ca" released="2017-02-28" stability="developer" version="3.5.0-pre1-1">
+      <manifest-digest sha1new="16d3a1862fd70b54f6306781372ec68572d649ca" sha256="def2e9991f4019f1eb4c725997bdf975f08ebf4bbdd34370e9f4dbe468f37595" sha256new="33ZOTGI7IAM7D22MOJMZPPPZOXYI5P2LXXJUG4HJ6TN6I2HTOWKQ"/>
+      <archive extract="apache-maven-3.5.0-alpha-1" href="http://archive.apache.org/dist/maven/maven-3/3.5.0-alpha-1/binaries/apache-maven-3.5.0-alpha-1-bin.tar.gz" size="8468662" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=47599824ee131048c9222f32ec7a3efff2cf80df" released="2017-03-24" stability="testing" version="3.5.0-pre2-1">
+      <manifest-digest sha1new="47599824ee131048c9222f32ec7a3efff2cf80df" sha256="24131710043c29dceb6f6d6ce531ae19724bf6b08caad65014b91002a53b4c58" sha256new="EQJROEAEHQU5Z23PNVWOKMNODFZEX5VQRSVNMUAUXEIAFJJ3JRMA"/>
+      <archive extract="apache-maven-3.5.0-beta-1" href="http://archive.apache.org/dist/maven/maven-3/3.5.0-beta-1/binaries/apache-maven-3.5.0-beta-1-bin.tar.gz" size="8533940" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=5be860aca3b7d5e58c925c469fa48246273d4156" released="2017-06-26" stability="stable" version="3.5.0">
+      <manifest-digest sha1new="5be860aca3b7d5e58c925c469fa48246273d4156" sha256="3b77b608ff57fb6bd6ec7dddc4c76ffc10fd9591b9f04a3ecae8bc1c99a9731c" sha256new="HN33MCH7K75WXVXMPXO4JR3P7QIP3FMRXHYEUPWK5C6BZGNJOMOA"/>
+      <archive extract="apache-maven-3.5.0" href="http://archive.apache.org/dist/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz" size="8534562" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=add9f8df4712e338734eddea39cfaa064057015f" released="2017-10-24" stability="stable" version="3.5.2">
+      <manifest-digest sha256new="K6BOOPVNCI7YKSMSPSQKSFFLZOCMDPKTWY5H3D672V44SB7FQWEA"/>
+      <archive extract="apache-maven-3.5.2" href="http://archive.apache.org/dist/maven/maven-3/3.5.2/binaries/apache-maven-3.5.2-bin.tar.gz" size="8738691" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=9978db8ff17ae9311936515080c304f0c452adb6" released="2018-03-08" stability="stable" version="3.5.3">
+      <manifest-digest sha256new="FTVOW6XRWBJW5O7F2KA6XU2P5KKIQVF5MCCD3ZXYQSN2V22WK5UQ"/>
+      <archive extract="apache-maven-3.5.3" href="http://archive.apache.org/dist/maven/maven-3/3.5.3/binaries/apache-maven-3.5.3-bin.tar.gz" size="8799579" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=769f8a81c9b354951cab5b976b3ad1962c55451c" released="2018-06-21" stability="stable" version="3.5.4">
+      <manifest-digest sha256new="7PDIY24U45ZCDQQGF47U27UDRJ5JIHQPZZKXT6KF3NHLJYD76KIQ"/>
+      <archive extract="apache-maven-3.5.4" href="http://archive.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz" size="8842660" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=54084698d52e6c379a14fb5a591ad941185fd7c8" released="2018-10-30" stability="stable" version="3.6.0">
+      <manifest-digest sha256new="SCSPEOWPBISLBRPWCRUC63X4QGFMEYKWA4GIW5J5P2H5LDRUTRZA"/>
+      <archive extract="apache-maven-3.6.0" href="http://archive.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz" size="9063587" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=cc01d0f907810cecbc34a3844d7097b74d359238" released="2019-04-12" stability="stable" version="3.6.1">
+      <manifest-digest sha256new="PUVF7AKE4SNDRFXJPQ4T5V3GX4SRYD5W4X7OQWAR72EJ7AAJGONA"/>
+      <archive extract="apache-maven-3.6.1" href="http://archive.apache.org/dist/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz" size="9136463" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=538c2411db8d5923213db290f2325bcf36c3396d" released="2019-09-03" stability="stable" version="3.6.2">
+      <manifest-digest sha256new="MUGCFLS6KBHFSVE2QGJ2E4DYQPQYPE3NZTRHN3RIM2TAOBAFLOOA"/>
+      <archive extract="apache-maven-3.6.2" href="http://archive.apache.org/dist/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.tar.gz" size="9142315" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=8a9195a775668e9f25adea67323093555b3994e1" released="2019-11-25" stability="stable" version="3.6.3">
+      <manifest-digest sha256new="2TOXRYY2UOWQ7JWNLI7NV6HWUPEOBVKRBWS2KHMSQ23JCR2UG3UA"/>
+      <archive extract="apache-maven-3.6.3" href="http://archive.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz" size="9506321" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+  <entry-point binary-name="mvn" command="run"/>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl4HW44ACgkQWao5J8JOTh4ECAgAsxtF
+D3uP/BOa1vTk5ywqw7j9kxuhx+8So0HT0o3nG6ucTVgb34PhSPWLqX6gSOICWKZ6GWVb2VqgEleE
+C/VyZJkHErzo2VfmE5qE4yvK06BMYFSepb7uLIr7RNKS4pZy488Ka3mKhfIBltWbOjbXdk86DWs7
+EanODVKKjVMuEXLzliKh2+XKfbj1BqqOKlYXMjbn842LiMY/4Maoyujkvi8oA90eQ1rIAcxexznU
+2MUHvYnTyUxcg/ZJcBy4OrNvHR9fGKgffNXhJKEvhOkzOjdyn5NOH+FG5yqz1dCoR5QhpzgCSb9o
+gXOp5qVPhG2xCrdISLYoRBPY5G8m3G/DeQ==
+
+-->

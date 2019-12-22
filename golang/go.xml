@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/golang/go.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Go</name>
+  <summary>tool for managing Go source code</summary>
+  <description>This is a tool for managing Go source code. Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.</description>
+  <homepage>https://golang.org/</homepage>
+  <needs-terminal/>
+
+  <feed arch="Linux-*" src="https://apps.0install.net/golang/go-linux.xml"/>
+  <feed arch="Darwin-*" src="https://apps.0install.net/golang/go-darwin.xml"/>
+  <feed arch="Windows-*" src="https://apps.0install.net/golang/go-windows.xml"/>
+  <package-implementation distributions="Virtual" main="/usr/bin/go" package="go"/><!-- Prevent this virtual feed from being seen as a library feed -->
+
+  <entry-point binary-name="go" command="run"/>
+  <entry-point binary-name="godoc" command="godoc">
+    <needs-terminal/>
+    <summary>extracts and generates documentation</summary>
+    <description>Godoc extracts and generates documentation for Go programs.</description>
+  </entry-point>
+  <entry-point binary-name="gofmt" command="gofmt">
+    <needs-terminal/>
+    <summary>formats Go programs</summary>
+    <description>Gofmt formats Go programs. It uses tabs for indentation and blanks for alignment. Alignment assumes that an editor is using a fixed-width font.</description>
+  </entry-point>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeCqNCAAoJEFmqOSfCTk4eW+QH/3sQ6dDLMWUbYSnNE8c6Cg2KaAYxsGW6qRKs
+1VyDyOFd6swcExvbTbYlejorQqYeloht8UW/bjsy1rrJAzDini80aACMMo3oNUNayptyQZ5uSYwN
+yeFH3ruGxY1Lnj0uMhomT3WXqacBc8jQ20NmojHIV+heSqZXfw6D+nvkVco939yQ19S3y4aLAAOl
+wh4lqg0lKMkZqk4kvt6CES0AMG9hYRpdsHVJpIaC8xwHuNDskKDYyf8hnOt8XhdkpisahZL5qyve
+Ou5Y5JYr48hgeUMT4Ro/7apy4nga/yvFKd4Hf03Bd0gDBpCnwhnITVpd2/YizaqLu7a+eL2KsAdC
+iic=
+
+-->

@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/dotnet/mono.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Mono</name>
+  <summary>open-source cross-platform implementation of the Common Language Runtime (.NET Framework compatible)</summary>
+  <homepage>http://www.mono-project.com/</homepage>
+
+  <group main="/usr/bin/mono">
+    <!-- There is a separate GUI version of the Mono executable on Windows. On POSIX systems we simply map it back to regular Mono. -->
+    <command name="run-gui">
+      <runner interface="https://apps.0install.net/dotnet/mono.xml"/>
+    </command>
+    <package-implementation distributions="Debian" package="mono-complete"/>
+    <package-implementation distributions="RPM" package="mono-winforms"/>
+    <package-implementation distributions="Arch" package="mono"/>
+    <package-implementation distributions="Gentoo" package="dev-lang/mono"/>
+  </group>
+
+  <group arch="Windows-*" license="MIT License">
+    <command name="run" path="bin/mono.exe"/>
+    <command name="run-gui" path="bin/monow.exe"/>
+    <implementation id="sha1new=5786d36753bb1f76e4d4f25b2980749ce3671aab" version="2.10.9">
+      <manifest-digest sha1new="5786d36753bb1f76e4d4f25b2980749ce3671aab" sha256="c5766eb07b242dc548e4af84671f07ad5e114f73b07317a0e96237ee553f761d" sha256new="YV3G5MD3EQW4KSHEV6CGOHYHVVPBCT3TWBZRPIHJMI364VJ7OYOQ"/>
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/mono-2.10.9-win32.tar.lzma" size="83591462" type="application/x-lzma-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <entry-point binary-name="mono" command="run"/>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl4HuBwACgkQWao5J8JOTh5JZgf+LF87
+wO0PkU15TYKlqBe+R62jJhqC7wZAGPqIrvqbnTLtVtkrJhpkh/U89BYWlTQEn0HRkRcS7++RHTuF
+eh4JjUjxhyU96RLLnWkJspi8MmtpcCAg0EQ/ivc03dz4SNbKzfkqqlEMdpHqtIP4nbI8A8COHIf/
+ko4m964gr3xHpL8fwYbzs4aKOOse5itiKEVpH2Q4Iz4ovOP+Py8vMZwfKLRgM5ONEcJgr9ueCaCo
+Bzjua9L76nQOEOaTacmV8HaJgICiAL1366F6YYbH3Q6GGl9QGiiGLfUsnVibxB/x5gPhCS6FC4Zu
+20z1Q3VKDDUgpndyAN4g9Oe72m8gQQpPUg==
+
+-->

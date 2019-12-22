@@ -1,0 +1,444 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/utils/chocolatey.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>chocolatey</name>
+  <summary>package manager for Windows</summary>
+  <description>Chocolatey is a package manager for Windows (like apt-get but for Windows). It was designed to be a decentralized framework for quickly installing applications and tools that you need. It is built on the NuGet infrastructure currently using PowerShell as its focus for delivering packages from the distros to your door, err computer.</description>
+  <icon href="https://chocolatey.org/content/packageimages/chocolatey.0.10.15.png" type="image/png"/>
+  <homepage>https://chocolatey.org/</homepage>
+  <needs-terminal/>
+
+  <group arch="Windows-*" license="Apache License, Version 2.0">
+    <command name="run" path="chocolateyInstall/chocolatey.ps1">
+      <runner interface="https://apps.0install.net/powershell/windows.xml">
+        <arg>-ExecutionPolicy</arg>
+        <arg>Bypass</arg>
+      </runner>
+    </command>
+    <command name="chocolatey" path="chocolateyInstall/chocolatey.ps1">
+      <runner interface="https://apps.0install.net/powershell/windows.xml">
+        <arg>-ExecutionPolicy</arg>
+        <arg>Bypass</arg>
+      </runner>
+    </command>
+    <command name="install" path="chocolateyInstall/chocolatey.ps1">
+      <arg>install</arg>
+      <runner interface="https://apps.0install.net/powershell/windows.xml">
+        <arg>-ExecutionPolicy</arg>
+        <arg>Bypass</arg>
+      </runner>
+    </command>
+    <command name="list" path="chocolateyInstall/chocolatey.ps1">
+      <arg>list</arg>
+      <runner interface="https://apps.0install.net/powershell/windows.xml">
+        <arg>-ExecutionPolicy</arg>
+        <arg>Bypass</arg>
+      </runner>
+    </command>
+
+    <implementation id="sha1new=efeff3d3c8d6c43d14adbf9cf6b3a31259052466" released="2011-08-23" stability="stable" version="0.7.0.0">
+      <manifest-digest sha256new="XXZE3QAXWV2UGONM26RMJQ6ROR3TH5ZDIE7YZO377HIVASWXF6PQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.7.0.0" size="168610" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=2b5282e1db5d057ca18684ccc867a4649ac864c7" released="2011-08-23" stability="stable" version="0.8.0.0">
+      <manifest-digest sha256new="RY3HC5HCFHNHKPDXPLB7XQBAKIP5WT4XUNGUMQXEEACHI6AJ37CA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.8.0.0" size="169504" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=16202670f6491108204c1870f3e3201688a5ebe3" released="2011-08-23" stability="stable" version="0.9.0.0">
+      <manifest-digest sha256new="OLWL77LTAR4UWIPEEY7JXQKYLWUJLJGFXYVSIAHJFDSPEFOOE6NA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.0.0" size="169695" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=965c29f6e6a214ff61962a5aaeee19849e65bd87" released="2011-08-23" stability="stable" version="0.9.1.0">
+      <manifest-digest sha256new="G4E4S4GOTDYOBGRCK244KTA6AG7FZRT2JDWJMHRLHNXX6LVG6KCA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.1.0" size="170078" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=ab6b61c9c6627712b1f39c18bea655bce7addb3b" released="2011-08-23" stability="stable" version="0.9.2.0">
+      <manifest-digest sha256new="ELYPJNA3HUVI7VDHB6VC3HRJQU7RRK36AQ3VE6X6EQSXNCOKMFEA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.2.0" size="170094" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=3a1078668af61e0ef2ce17dc17735c10689ea0b8" released="2011-08-23" stability="stable" version="0.9.3.0">
+      <manifest-digest sha256new="EEHTXE6LCQGGXJXAYM2CWJLDDHIVCJEALGEJ6PFPFEMJLY6Z2YOQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.3.0" size="174651" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=14f9b3f704b7cccb4734e50663c208a591d962c1" released="2011-08-23" stability="stable" version="0.9.4.0">
+      <manifest-digest sha256new="SAPYGBSWEP7ZOAANOHWA63NBPNMFK35WONOGVSQ3JYHXSFZ3XO3Q"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.4.0" size="175817" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=b5218eea1d0eed33142d5018f8a847c7f4d235aa" released="2011-08-23" stability="stable" version="0.9.5.0">
+      <manifest-digest sha256new="4MLNDFGNHKOX3UD55KQBVKDF6LJGQGQZ47ENBQWUOVMSJCT7TGWQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.5.0" size="184741" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=31c1987ba53fd03dd23fb4507f2f2c1933c953c9" released="2011-08-23" stability="stable" version="0.9.6.0">
+      <manifest-digest sha256new="DRHACX5IWBHOQHBUV363WR4T5P3D43GD2GXWUR3RXKHSFER4HX3Q"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.6.0" size="186227" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=97e189985cf8a8ae12d35f6f8cc870400b91e24d" released="2011-08-23" stability="stable" version="0.9.6.1">
+      <manifest-digest sha256new="ZXXOP7KGM3FXBWNUHDJG26ZDY3BATGOHGWATDN7FKHKMG5JQIHTA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.6.1" size="186294" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=a487c5f9db90991804b6f080ec6114469b1cc11d" released="2011-08-23" stability="stable" version="0.9.6.2">
+      <manifest-digest sha256new="SOU7JA6WTIN6AYOTJQQVFPJXRVVODI3WFCUKUHEBXPCUMUQU2ZLA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.6.2" size="186349" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=f3cdf0924de74b345266a39be6bfb4853581ba45" released="2011-08-23" stability="stable" version="0.9.6.3">
+      <manifest-digest sha256new="OSBITCTWUIUXVDNGJCKO4ZBIFVDGFZV4QBIA2EKKAC2X4KM3LQ6Q"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.6.3" size="186581" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=07f188fa3cb63c3f689a5bceb03b0d9fed7d1959" released="2011-08-23" stability="stable" version="0.9.6.4">
+      <manifest-digest sha256new="ZIFWRL2MZUVLMC4EHIZZOOCDTYDYYSVWW4WGUL2GN6P6PYOQM2GA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.6.4" size="186593" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=99092cec2cac15ab45344685194d1c7b36cba361" released="2011-08-23" stability="stable" version="0.9.7">
+      <manifest-digest sha256new="CB4XII3RK7OMRQ672G7DMVYUAFLFOUPT3IENPWOVJ7U6YKDMUKUQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.7" size="193030" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=b5e6bf79d8ba14d2d82db82ed447a284a0c86c61" released="2011-08-23" stability="stable" version="0.9.7.1">
+      <manifest-digest sha256new="SGOM3UBAID4YFD7QNMJEQ6QHB5KKVIQY7VC36S5G3KY4DGBBA6IA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.7.1" size="193038" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=6a8c38789ef67512bbb384c2f232de1d50e6e539" released="2011-08-23" stability="stable" version="0.9.7.2">
+      <manifest-digest sha256new="M3SVSFD2IYRA4LZLVP2ZDSMZU6ZGDYV5ZKI3ZPLO5RBD4XLL6BXQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.7.2" size="193151" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=ed2f9a90e8875e83ca122a1b304e0dc8ed97178f" released="2011-08-23" stability="stable" version="0.9.7.3">
+      <manifest-digest sha256new="2CETUHJLRJMQVPF4VBGXFEYOLYT4AYNPK76CIABJ7LVMVFSNQYXQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.7.3" size="193165" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=8900270b9331f3003134a214cd8a9eda145294ac" released="2011-08-23" stability="stable" version="0.9.8.1">
+      <manifest-digest sha256new="F3OKWTEJ3O7YNJBAWOYIOYNWOJAWJM5ILXRNUVUFSGGWUE46GWXA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.8.1" size="194041" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=5b859d74f609209b55fcf1d279ae2e1d0ffe45e8" released="2011-09-17" stability="stable" version="0.9.8.10">
+      <manifest-digest sha256new="NFU3I6CPLLLISTZ4H7236RJGDSJ4APHIVLJMZYVD3LIJYQHG3TIQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.8.10" size="256521" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=caeac82ddeafe020eb9927dc2d9adbfaac17cecb" released="2011-10-14" stability="stable" version="0.9.8.11">
+      <manifest-digest sha256new="J2R6INJ3QJWUXYEVEMUMRD4IY77OVS6TU3QP7IAFMQ4JYSKP5ANA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.8.11" size="281121" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=5b474d5ebcfe774d977ddc6306553fb98b10d192" released="2011-11-20" stability="stable" version="0.9.8.12">
+      <manifest-digest sha256new="EOIXN6WFEJVXRXOIPUKZHR3PJVYOX7VRANL6RE5UYC2TZSPZDPFQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.8.12" size="281252" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=8c924d480de82c9839b136de6b95809899baf1de" released="2012-01-08" stability="stable" version="0.9.8.13">
+      <manifest-digest sha256new="MFK5T3OXTTOKVQM7G2PO4RPPGCKUOXHOSL26AIUONNR2VBAMWZZQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.8.13" size="260400" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=5e75380d501f2947ee7554eab5bbe01a524c930e" released="2012-02-06" stability="stable" version="0.9.8.14">
+      <manifest-digest sha256new="FWQAWGVEESTCPU4HKIUYOCYETNM4FE5ZJOML43YPO23U33YQ2CNQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.8.14" size="294746" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=5cefce0f19fbce9bb7374b1645cb96af5c298eba" released="2012-02-25" stability="testing" version="0.9.8.15-pre2">
+      <manifest-digest sha256new="JUKMAK4NGVJ3M3KUXZOOOAP52SEXNCDI4RULPVKTQABTFI4PBL4Q"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.8.15-beta2" size="300386" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=c142fda7825f99cc8156503c98180f052d206d3f" released="2012-02-27" stability="stable" version="0.9.8.15">
+      <manifest-digest sha256new="J5RKZJ53TVOKO7X44KRW25Z5OMZBHFFXEKOSOBHI5RJ7CEQJE3IQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.8.15" size="300372" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=69b84648d339961fedceaaea0aeedb784f50bf4a" released="2012-02-27" stability="stable" version="0.9.8.16">
+      <manifest-digest sha256new="VPODLGRBMPMTVYYLN4LHU27MMXKC75DXUPACWLELRWD6I62J6POA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.8.16" size="300533" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=afd21d0a539ce863761a1e934c709ee087a28f96" released="2012-06-07" stability="testing" version="0.9.8.17-pre1">
+      <manifest-digest sha256new="CQEZ6SJ3TAZBM4BFMEDDPEJ4GGYBHGUDHR5O6RTSFE6JCJ3FRSGA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.8.17-beta1" size="327024" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=07cb133a30957065838b255663d018fe8d97f5bf" released="2012-06-13" stability="testing" version="0.9.8.17-rc1">
+      <manifest-digest sha256new="PBCQNIPJRHG65NWVNEUDQ3Q4AOXKU2IGA5H6JYEXKEKOO2N2CGTQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.8.17-rc1" size="327187" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=074243781b8aea7aedbf31d42bcda78b368b286f" released="2012-06-13" stability="testing" version="0.9.8.17-rc2">
+      <manifest-digest sha256new="X6MHEVGNFMKXTNQFTRM4YVWFHTQWROFLVXDVBF2SDIAK3HDNUYWA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.8.17-rc2" size="327237" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=16517bc3cf37cb61d62f81f3b26f5c7550cf4a7d" released="2012-06-15" stability="stable" version="0.9.8.17">
+      <manifest-digest sha256new="E5UUJTVHFUE7JCKUAQVWVOMSJOWGTLECBU7Y6535DAU67RDW47BQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.8.17" size="327238" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d6aee20f79322ac16666315cbe0fb548c9b79502" released="2012-06-16" stability="stable" version="0.9.8.18">
+      <manifest-digest sha256new="EBPM22B2EPTWMZKETDZAUJW7DLEKRSQHMWSFNGU6GIFQFPSPUTFA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.8.18" size="329276" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=f818fc1089a823e47647d68479104a3d12eaca94" released="2011-08-23" stability="stable" version="0.9.8.2">
+      <manifest-digest sha256new="IKQIF7DT7OLDYWV7GSODZ5OACXKUHQFTXJLCHGYDHPZAXFCMVJXA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.8.2" size="194686" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=be4cfd620bfe248df5e65ae681ef9966d3eaa30f" released="2011-08-23" stability="stable" version="0.9.8.3">
+      <manifest-digest sha256new="BUBMHTYB2I7Z5JX3CVXFEPRZUVCXUKPPGW65EBRNI263XXEENRGA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.8.3" size="223404" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=281bd30640f4a9dd450c02e164de0aa881920722" released="2011-08-23" stability="stable" version="0.9.8.4">
+      <manifest-digest sha256new="YDYZJKQPYHH2SW7WQQFVJXZIRX2AFH4QTLP2HW4GGCTOXVPOBPJA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.8.4" size="223447" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=cf7d2da9b9408e21aa9c53ed764e5f7d8546715e" released="2011-08-23" stability="stable" version="0.9.8.5">
+      <manifest-digest sha256new="DKWHAM7MLDK6GRDWYF6JQUOAYFHD7EDUJRVAZDQXZ7HQPJI55H3Q"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.8.5" size="220351" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=1249472169600eb26808c1076e9bfcf4a127bd7a" released="2011-08-23" stability="stable" version="0.9.8.6">
+      <manifest-digest sha256new="TVFNR3JEGSZPVJMRH4ECYSMSPXM33AHO7EZULTFGBDVWRBLDWHKQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.8.6" size="219819" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=eceaf643672a1b14e036fbfe739a9f0aafbb5167" released="2011-09-02" stability="stable" version="0.9.8.7">
+      <manifest-digest sha256new="B54KOBRDRHVWVFH4GSDDYEH5BEA4LOKGYRTS6F6J4A3M6YPHXQ4Q"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.8.7" size="254449" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=9ac4daad4c1583ffa953a245f2f0c91e072114cd" released="2011-09-10" stability="stable" version="0.9.8.8">
+      <manifest-digest sha256new="CGVDNFQXT75ADM53IGWHLW3OIV5IHS4D5R2Z72LEAXRVRWUE5N7A"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.8.8" size="278442" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=a04a43b983f1f09d9c41365102b300e0e425e4f7" released="2011-09-10" stability="stable" version="0.9.8.9">
+      <manifest-digest sha256new="ZPEQANRAK2DCZF5HNSFLJ4R5FQAQA45PMJRIDC3WIW3GHRR3UWMA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.8.9" size="280033" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=a27916aeff0c8bf170a110130b4a744cc2da7214" released="2011-08-23" stability="stable" version="0.9.8">
+      <manifest-digest sha256new="O5MLIR2NTTWN6XLOKPUZ4ZFOCFYEBCBPFBEEDA3GSN34M5TKAXMQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.8" size="193961" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group arch="Windows-*" license="Apache License, Version 2.0">
+    <command name="run" path="chocolateyInstall/choco.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
+    </command>
+    <command name="refresh-env" path="chocolateyInstall/redirects/RefreshEnv.cmd"/>
+    <command name="chocolatey" path="chocolateyInstall/choco.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
+    </command>
+    <command name="install" path="chocolateyInstall/choco.exe">
+      <arg>install</arg>
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
+    </command>
+    <command name="uninstall" path="chocolateyInstall/choco.exe">
+      <arg>uninstall</arg>
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
+    </command>
+    <command name="upgrade" path="chocolateyInstall/choco.exe">
+      <arg>upgrade</arg>
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
+    </command>
+    <command name="list" path="chocolateyInstall/choco.exe">
+      <arg>list</arg>
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
+    </command>
+    <command name="pack" path="chocolateyInstall/choco.exe">
+      <arg>pack</arg>
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
+    </command>
+    <command name="push" path="chocolateyInstall/choco.exe">
+      <arg>push</arg>
+      <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml"/>
+    </command>
+
+    <implementation id="sha1new=b53c9bccd494ff8aaa3951dbbb204a5c0dd8c001" released="2016-02-05" stability="testing" version="0.9.10-pre-20160205">
+      <manifest-digest sha256new="G53O2Q7MMF2RFAD4VWM23XY46PSLI2OGUGP3WE4YZLBUIIQV27BQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.10-beta-20160205" size="1854975" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=4690c035dadeb2dd0c8ff6a7a6425c429f0afde1" released="2016-02-12" stability="testing" version="0.9.10-pre-20160212">
+      <manifest-digest sha256new="BU53XDVFCRW4C62VSMUC2Q5EKBLFKTGRKRDMWAF5M3W7EHIEPBXA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.10-beta-20160212" size="1854819" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=8d1ec0c6a13dc5469f03cbd666a4ea957ec4efec" released="2016-06-17" stability="stable" version="0.9.10">
+      <manifest-digest sha256new="RKGEICYEZ7ACGDZ6JECI2GLBNGTN4CHV4IZHWWTOITGGZUH54G4A"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.10" size="6345293" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=e247771ef8c2fe3b0a2f8fbc8ecfe392786358e5" released="2016-06-18" stability="stable" version="0.9.10.1">
+      <manifest-digest sha256new="IOIGVO3JE7NAN52BKEU7C2IS3HPMSCJ2G5C6HSIKZLA2ENBEGT4Q"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.10.1" size="6453058" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=e7e569b89982452957f96d82c567906ae4c1b77b" released="2016-06-19" stability="stable" version="0.9.10.2">
+      <manifest-digest sha256new="OY2GLL6SZCWCOLRSRZTILQVZBPZIUJLFLVVD4TC3H76USBO2YTLA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.10.2" size="6454377" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=478edea8db2ded85b9c64c1578654dc04facd812" released="2016-06-23" stability="stable" version="0.9.10.3">
+      <manifest-digest sha256new="XZMQCOD6QFD5DT4C53FNB2QV25ONGL5UVBK2XEYX7MJ35YUZJBKQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.10.3" size="7214019" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=52c793ba326c17723a7b833b7d506819c50c02f1" released="2016-08-11" stability="stable" version="0.10.0">
+      <manifest-digest sha256new="U4NRPA7LT2Q3724OAQHUJVBKQ2RKJQDSN7YHUX6BAQKPRXYLVSBA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.0" size="6894450" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=b9ebd3c9be5a1c4135ada20722d137fcae6a365a" released="2016-09-19" stability="stable" version="0.10.1">
+      <manifest-digest sha256new="BU3YC5DXJAGT6YQKXZOHL5J5I7XUC6MLF4MBJTEFJUUB4ENWFVBQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.1" size="7059812" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=ec17c80023918e6802bd9b578c42f8f7d015fdf0" released="2016-09-30" stability="stable" version="0.10.2">
+      <manifest-digest sha256new="B6JCTV6R63IIVD4TDWIAOWM7JBWN76UJPZAIMPA7MODHGBLSSPCA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.2" size="7069514" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=c317d327875a8e2657a9cc2d72c697e64766fa9b" released="2016-10-07" stability="stable" version="0.10.3">
+      <manifest-digest sha256new="6TUE6XX7ZTZOJIVQWIFUHHB5NNJK63ZA3NOCZPOQKJR7YCFNBT6A"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.3" size="7071497" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=77f644cb0f1bf9ade5775f1bf2bc27e24eefb785" released="2017-03-23" stability="testing" version="0.10.4-pre1-20170323">
+      <manifest-digest sha256new="V2AAALY6RVERR2EN3IK4RCLRMLCNPLZQEFVCUJLM7IICZJPOCHNA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.4-beta1-20170323" size="7013409" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=f271abed37263d139405b4ce5c10aff36d393e82" released="2017-03-26" stability="testing" version="0.10.4-pre1-20170326">
+      <manifest-digest sha256new="HA6OTKDMZAQ7IXEUYU5OL66PR2NBVQUNK2CO7WY7U23PHC5EHUVA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.4-beta1-20170326" size="7014790" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=306358c8ef622820319a097415a589b207a2745d" released="2017-03-30" stability="stable" version="0.10.4">
+      <manifest-digest sha256new="P6I2SIOXLDX3R4T3EHY26YHES7GBBBO53MC35F35TVYE7IEFNAQA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.4" size="7017541" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=9ee0a2634ee9b178bf07d9b9221664dd06210633" released="2017-03-30" stability="stable" version="0.10.5">
+      <manifest-digest sha256new="F7JDTSM4OSFL6OD3FRF464UOC25HMOIYB25EOHGN5CIZVRQQ7JXQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.5" size="7017492" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=abc1b51bf614bede4afcdccc73cdcb5f38a7430d" released="2017-05-03" stability="testing" version="0.10.6-pre-20170503">
+      <manifest-digest sha256new="DIIR4Q3HWQVQ2QCLEGWV26TBS32V6ADXMMMRGAYIMNU3LRUQQLNA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.6-beta-20170503" size="8408582" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=10d078f9e5b49db5361a02ba17134d94de0a5853" released="2017-06-01" stability="testing" version="0.10.6-pre-20170531">
+      <manifest-digest sha256new="ATGVQ5EHAATXEMYJNU2UMLCWJCBFPONV7WSSMK6JCSHDM3F2WPKA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.6-beta-20170531" size="6703585" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=8da8d8f952d2d42af485bd7c192e2767377c222c" released="2017-06-01" stability="stable" version="0.10.6">
+      <manifest-digest sha256new="63I5DGS2EM4IIEP6T46V3TJKLG5YQBHJLM2MOFW7ED2O2WZKYU5A"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.6" size="6703854" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=a631fb565c22c13b4b19bf7b92e4a4b9cc9f4a15" released="2017-06-03" stability="stable" version="0.10.6.1">
+      <manifest-digest sha256new="L2UYK2ZE4X3XXD5ACSHCLFXATB4DF4QCFAVYNS37SG4EPH2TQDNQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.6.1" size="6705758" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=88e9ed9174941479649ed980887d4009fbf6a13f" released="2017-06-08" stability="stable" version="0.10.7">
+      <manifest-digest sha256new="2ZPMZ4SDTGXGQRCSTEKGT224TVT3YOP45HCNYT4RIPSPFKX2LAHA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.7" size="6703925" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=26180a19476cd6e3502c7a8464ab61872643e65e" released="2017-08-07" stability="testing" version="0.10.8-pre-20170806">
+      <manifest-digest sha256new="757P4DJHF5FK36VC3JQ6VWJUQ6KKZ7NZWFQZ7B7DE2PAWYAVCAZQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.8-beta-20170806" size="6731972" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=7e3d19db49a5dd633c0efb898bee44e79f885f7c" released="2017-08-30" stability="stable" version="0.10.8">
+      <manifest-digest sha256new="ETCZ6BWCXW66233YBYPX4IXKL4RR3M5CEKOF3LY3CBEVXQBTZEDA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.8" size="5372647" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=bafedf05b8c6195a5369bf8efa471896c4e492d7" released="2018-02-23" stability="testing" version="0.10.9-pre-20180223">
+      <manifest-digest sha256new="L5CL6QB3AFH65PJWQUTVCP3UOI4KKVBIY5BVB26ZMAZMKRSLKXGQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.9-beta-20180223" size="5707956" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=7252592ea30439ee35583f473a7d0ea131798609" released="2018-03-25" stability="stable" version="0.10.9">
+      <manifest-digest sha256new="E5BMCSQ2PBU2QID5KU23V44356DQJWCO6FL5ZWJCWAJYVNNZ5EYQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.9" size="5713520" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=193cad0bed69287a117d1e0d14754549343c7400" released="2018-04-12" stability="stable" version="0.10.10">
+      <manifest-digest sha256new="5HLK3EIGAC24ODLAKWE642LCO72TEAXQVNC234J44UPKQB2ZMY3Q"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.10" size="5712204" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=c3b651710c5a69e64168c51126896be82575269f" released="2018-05-04" stability="stable" version="0.10.11">
+      <manifest-digest sha256new="RN53RZSQXNVNQ5FHG5DN7RUUOOKDPVXGEXJHUHFJIEC4BIHX4Y6Q"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.11" size="5754091" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=7ed83c1122bf6b5f98052a4f58d68199edd8f4c0" released="2016-02-15" stability="testing" version="0.9.10-pre-20160215">
+      <manifest-digest sha256new="YXZLPMBKJKH4M7WVGKR7V5EU2NQ5YGVWPMITZH2UUNAXZU75UCBQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.10-beta-20160215" size="2879928" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=56318b6f7549a351bf2dd9e2fe8420a71244af8f" released="2016-03-02" stability="testing" version="0.9.10-pre-20160302">
+      <manifest-digest sha256new="NQXPPV3SYCVIJIDXZKQZ5TXEZE76IK5OAVP4NYNVMO6EYB3FGMZQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.10-beta-20160302" size="2881468" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=1fcd97af5a19141b2955fecaafbc2b610dba89ad" released="2016-03-11" stability="testing" version="0.9.10-pre-20160311">
+      <manifest-digest sha256new="A66GHEFDOLYVNJVRY53TFIVOBPKDTMEDI6A7Q2RM74GAT6QAGFWQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.10-beta-20160311" size="5885404" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=7bcbb877baa70dc7ece8340aaed3595f2b87f9fa" released="2016-03-14" stability="testing" version="0.9.10-pre-20160314">
+      <manifest-digest sha256new="TDBJTBGFXTKOTM6CPW5PBXUFUHCY4Z2IGJLEIH7E2M3BXEDCGDZA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.10-beta-20160314" size="5885505" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=ed701dbc0743bb26dace76d6e420e5d625749aa1" released="2016-03-18" stability="testing" version="0.9.10-pre-20160318">
+      <manifest-digest sha256new="YPG44BGOHP4RVLKUSV67N4HAQBD2SN7FQVDBMFA5PRNHLJK4VNMA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.10-beta-20160318" size="5885499" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=90ca223081fc51719e0a535a289c6f90f9d3ed8d" released="2018-10-09" stability="testing" version="0.10.12-pre-20181009">
+      <manifest-digest sha256new="WQ6N5IFGK4GVGUMOO2BZJF7ZSPT3H7YOZNZ2W2RXM5ZXK3OM7CSQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.12-beta-20181009" size="5758099" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=9dcd839f6bc32e187fbad65962359ea9d99541a1" released="2018-10-12" stability="testing" version="0.10.12-pre-20181011">
+      <manifest-digest sha256new="E37CN4ANSEJFCUXP2YSFZS35HXSHCR66UG66GNVTN373L3IGTNYA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.12-beta-20181011" size="5758603" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=35711d7cd6cd8d718201aedfbd9959fd56739a2b" released="2016-03-20" stability="testing" version="0.9.10-pre-20160320">
+      <manifest-digest sha256new="24TLCPVFA25LBBVNM2XL7Q4CPIJCZFFWZK2HWOSHMWTBGAAEFNMQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.9.10-beta-20160320" size="5891494" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=482506d41f8e96a20a4b0345e3804f4a85f7e3ab" released="2019-03-15" stability="stable" version="0.10.12">
+      <manifest-digest sha256new="3SA7OC6GKKJW7IDT7INUBQXAA6OUCNAMGNIFWA2B76LJV3C3RFDQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.12" size="4064224" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=3759833bae5cbe2fc6927a8b1fb857d912396df3" released="2019-03-15" stability="stable" version="0.10.13">
+      <manifest-digest sha256new="4HFPASZGWS2746VIXFRNTT6D6AXX2MYKVVMTTD3ZMTFBHRQJS2XA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.13" size="4064469" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=fd4742ad32eb2d35660bfea2927313a791bcaff6" released="2019-03-22" stability="testing" version="0.10.14-pre-20190321">
+      <manifest-digest sha256new="3RSBXSA6A6DUWCQSQLYDG2VODZAL7RPDWWXHG7LTPAXAOE56KCJA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.14-beta-20190321" size="4065147" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=880e64e80f8fe5daec3e1e96b5ec27e5463e0663" released="2019-04-02" stability="testing" version="0.10.14-pre-20190402">
+      <manifest-digest sha256new="BKEPQLHMN6SYK6DHOIUIB4XPZHKGO3TKPU7WI66MQHTXIAK7T24Q"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.14-beta-20190402" size="4065282" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d2f48c32f3edcdea4d9a3bb9dc6128d6ce660ef0" released="2019-04-18" stability="testing" version="0.10.14-pre-20190418">
+      <manifest-digest sha256new="5NI3SK4L6EGB5REJGR4W5O6HMFP5JD65J3R2DARA5XR5J34WDD5A"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.14-beta-20190418" size="4065791" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=bcec851164f5dfaf4f23a99322fa1772f30440cc" released="2019-05-30" stability="stable" version="0.10.14">
+      <manifest-digest sha256new="DD3U26EBKACRU27G343NYIJUGWW5RS2VEMJ77Z5J2TGUU2RGMJJA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.14" size="4067191" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=f3e68958351edf857e493f09552e8ecae7d6d41a" released="2019-05-31" stability="testing" version="0.10.15-pre-20190531">
+      <manifest-digest sha256new="V4ZZRKKC3OUJMEXGSK4WQRDJVJI6NF4OICGTJRUU37WDVPEYP7PA"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.15-beta-20190531" size="4067008" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d5f91253199e93484ada77cf331a0a3b606a8f16" released="2019-06-03" stability="stable" version="0.10.15">
+      <manifest-digest sha256new="FB5UGGJU7ZOSPIKS2P373EO6LM2XTG3KBPLMOIQYM4CBKK6KAGFQ"/>
+      <archive extract="tools" href="https://chocolatey.org/api/v2/package/chocolatey/0.10.15" size="4067171" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <entry-point binary-name="choco" command="run"/>
+  <entry-point binary-name="RefreshEnv" command="refresh-env">
+    <needs-terminal/>
+    <name>Refresh Environment</name>
+    <summary>read environment variables from registry and set session variables to these values</summary>
+  </entry-point>
+  <entry-point binary-name="chocolatey" command="chocolatey">
+    <needs-terminal/>
+    <name>chocolatey</name>
+    <summary>alias for 'choco'</summary>
+  </entry-point>
+  <entry-point binary-name="cinst" command="install">
+    <needs-terminal/>
+    <summary>installs packages from various sources</summary>
+  </entry-point>
+  <entry-point binary-name="cuninst" command="uninstall">
+    <needs-terminal/>
+    <summary>uninstalls a package</summary>
+  </entry-point>
+  <entry-point binary-name="cup" command="upgrade">
+    <needs-terminal/>
+    <summary>upgrades packages from various sources</summary>
+  </entry-point>
+  <entry-point binary-name="clist" command="list">
+    <needs-terminal/>
+    <summary>lists remote or local packages</summary>
+  </entry-point>
+  <entry-point binary-name="cpack" command="pack">
+    <needs-terminal/>
+    <summary>packages up a nuspec to a compiled nupkg</summary>
+  </entry-point>
+  <entry-point binary-name="cpush" command="push">
+    <needs-terminal/>
+    <summary>pushes a compiled nupkg</summary>
+  </entry-point>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA33/AAoJEFmqOSfCTk4eodkH/RnHUeJ8V8S+ApG9SHkfVPbyxMmlVj8hPx5v
+PmnAgX8I9I07ELRT/vk0MDEHdWPSe0gnuiQSHh0XtLxt6U/tZj76hMJWzZV+CDE54f4CqeBDNCFW
+4x1D9nUOpvVZEiyyWfh2mr7Hm7IKkHpGwaFuUNWMCx8a6vYbdlHSYF4cc/LsXijNZ6LHvgDdTuAq
+TrT9PWh4v69zt/NCH4Piv6N4xAtn6C8VrjWsCk/4CFrdj0TYs+DAS/ksfA9hV03pOZsMU9pK4GzF
+eh+8+sO8hEwnt5ERX1aeeHP3IITO7xTVpJiUbSkn7EYb6dP5oh8y72PSGbUMTzTHHZmCjoAqsOMc
+kgs=
+
+-->

@@ -1,0 +1,151 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/utils/gdisk.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>GPT fdisk</name>
+  <summary>disk partitioning tool for modifying GPT disks</summary>
+  <description>GPT fdisk is a disk partitioning tool loosely modeled on Linux fdisk, but used for modifying GUID Partition Table (GPT) disks.</description>
+  <homepage>http://www.rodsbooks.com/gdisk/</homepage>
+  <category>System</category>
+  <category>Utility</category>
+  <needs-terminal/>
+
+  <package-implementation distributions="Debian" main="/sbin/gdisk" package="gdisk"/>
+  <package-implementation distributions="RPM" main="/usr/sbin/gdisk" package="gdisk"/>
+
+  <group arch="Windows-x86_64" license="GPL v2 (GNU General Public License)">
+    <command name="run" path="gdisk64.exe"/>
+    <implementation id="Windows-x86_64-0.8.7" released="2013-07-09" stability="stable" version="0.8.7">
+      <manifest-digest sha256new="DAA7OLWNT6O7XNCESWLTGXAW4MDWYDR7IJLQQ2U6ZZ2AOEP2GVPQ"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/0.8.7/gdisk-binaries/gdisk-windows-0.8.7.zip" size="108378" type="application/zip"/>
+    </implementation>
+    <implementation id="Windows-x86_64-0.8.8" released="2013-10-14" stability="stable" version="0.8.8">
+      <manifest-digest sha256new="XPFOK763JS7BDITGDLY2JBC6PYMIZHG2O5SFOVZADPUPSAEQGPFQ"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/0.8.8/gdisk-binaries/gdisk-windows-0.8.8.zip" size="109626" type="application/zip"/>
+    </implementation>
+    <implementation id="Windows-x86_64-0.8.9" released="2014-02-17" stability="stable" version="0.8.9">
+      <manifest-digest sha256new="5X264JKLRNOEFRRDZDZZOZOS5T4TJ676Z2W22VMFCW4V65XDGP2Q"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/0.8.9/gdisk-binaries/gdisk-windows-0.8.9.zip" size="111152" type="application/zip"/>
+    </implementation>
+    <implementation id="Windows-x86_64-0.8.10" released="2014-03-02" stability="stable" version="0.8.10">
+      <manifest-digest sha256new="P3ECKFFH3OER2EGKLPCK5RD4V6MSLYTDXQFHT7DLFOMATXORM2KA"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/0.8.10/gdisk-binaries/gdisk-windows-0.8.10.zip" size="628225" type="application/zip"/>
+    </implementation>
+    <implementation id="Windows-x86_64-1.0.0" released="2015-03-17" stability="stable" version="1.0.0">
+      <manifest-digest sha256new="UDVCGXGVS36DBENNI6ESPQNYERNFWPLM4ESUHUVJCJRS3LGEXINA"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/1.0.0/gdisk-binaries/gdisk-windows-1.0.0.zip" size="630058" type="application/zip"/>
+    </implementation>
+    <implementation id="Windows-x86_64-1.0.1" released="2015-10-20" stability="stable" version="1.0.1">
+      <manifest-digest sha256new="B55HD5CN5BUDKSC7TTZCBWVCUJL7S5HIPOURRP7LRLVOQ634CTJQ"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/1.0.1/gdisk-binaries/gdisk-windows-1.0.1.zip" size="631692" type="application/zip"/>
+    </implementation>
+    <implementation id="Windows-x86_64-1.0.3" released="2017-07-28" stability="stable" version="1.0.3">
+      <manifest-digest sha256new="HM5RWDCKV7DFFEEU6463LRL3XQMNN5LEZBHGAVW5CPDJGQPHBYDA"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/1.0.3/gdisk-binaries/gdisk-windows-1.0.3.zip" size="789337" type="application/zip"/>
+    </implementation>
+    <implementation id="Windows-x86_64-1.0.4" released="2018-07-05" stability="stable" version="1.0.4">
+      <manifest-digest sha256new="IETAAX6JRGD3MRK3PQLMP3XCQPRHR222Q2GG2RGLVQNZOGFFEPGQ"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/1.0.4/gdisk-binaries/gdisk-windows-1.0.4.zip" size="808043" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group arch="Windows-i486" license="GPL v2 (GNU General Public License)">
+    <command name="run" path="gdisk32.exe"/>
+    <implementation id="Windows-i486-0.8.7" released="2013-07-09" stability="stable" version="0.8.7">
+      <manifest-digest sha256new="DAA7OLWNT6O7XNCESWLTGXAW4MDWYDR7IJLQQ2U6ZZ2AOEP2GVPQ"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/0.8.7/gdisk-binaries/gdisk-windows-0.8.7.zip" size="108378" type="application/zip"/>
+    </implementation>
+    <implementation id="Windows-i486-0.8.8" released="2013-10-14" stability="stable" version="0.8.8">
+      <manifest-digest sha256new="XPFOK763JS7BDITGDLY2JBC6PYMIZHG2O5SFOVZADPUPSAEQGPFQ"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/0.8.8/gdisk-binaries/gdisk-windows-0.8.8.zip" size="109626" type="application/zip"/>
+    </implementation>
+    <implementation id="Windows-i486-0.8.9" released="2014-02-17" stability="stable" version="0.8.9">
+      <manifest-digest sha256new="5X264JKLRNOEFRRDZDZZOZOS5T4TJ676Z2W22VMFCW4V65XDGP2Q"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/0.8.9/gdisk-binaries/gdisk-windows-0.8.9.zip" size="111152" type="application/zip"/>
+    </implementation>
+    <implementation id="Windows-i486-0.8.10" released="2014-03-02" stability="stable" version="0.8.10">
+      <manifest-digest sha256new="P3ECKFFH3OER2EGKLPCK5RD4V6MSLYTDXQFHT7DLFOMATXORM2KA"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/0.8.10/gdisk-binaries/gdisk-windows-0.8.10.zip" size="628225" type="application/zip"/>
+    </implementation>
+    <implementation id="Windows-i486-1.0.0" released="2015-03-17" stability="stable" version="1.0.0">
+      <manifest-digest sha256new="UDVCGXGVS36DBENNI6ESPQNYERNFWPLM4ESUHUVJCJRS3LGEXINA"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/1.0.0/gdisk-binaries/gdisk-windows-1.0.0.zip" size="630058" type="application/zip"/>
+    </implementation>
+    <implementation id="Windows-i486-1.0.1" released="2015-10-20" stability="stable" version="1.0.1">
+      <manifest-digest sha256new="B55HD5CN5BUDKSC7TTZCBWVCUJL7S5HIPOURRP7LRLVOQ634CTJQ"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/1.0.1/gdisk-binaries/gdisk-windows-1.0.1.zip" size="631692" type="application/zip"/>
+    </implementation>
+    <implementation id="Windows-i486-1.0.3" released="2017-07-28" stability="stable" version="1.0.3">
+      <manifest-digest sha256new="HM5RWDCKV7DFFEEU6463LRL3XQMNN5LEZBHGAVW5CPDJGQPHBYDA"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/1.0.3/gdisk-binaries/gdisk-windows-1.0.3.zip" size="789337" type="application/zip"/>
+    </implementation>
+    <implementation id="Windows-i486-1.0.4" released="2018-07-05" stability="stable" version="1.0.4">
+      <manifest-digest sha256new="IETAAX6JRGD3MRK3PQLMP3XCQPRHR222Q2GG2RGLVQNZOGFFEPGQ"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/1.0.4/gdisk-binaries/gdisk-windows-1.0.4.zip" size="808043" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group doc-dir="usr/share/doc/gdisk" license="GPL v2 (GNU General Public License)">
+    <command name="run" path="usr/sbin/gdisk"/>
+    <command name="sgdisk" path="usr/sbin/sgdisk"/>
+    <command name="cgdisk" path="usr/sbin/cgdisk"/>
+    <implementation arch="Linux-x86_64" id="sha1new=34f4282d39786353e4b02f9be264110852278b96" released="2014-02-17" stability="stable" version="0.8.9-2">
+      <manifest-digest sha256new="IML4KMBX55VFHGTVUXLGOE5C2GIUE2ROXAQ6FSMXXKGUDFJ3QNLQ"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/0.8.9/gdisk-binaries/gdisk_0.8.9-2_amd64.deb" size="291348" type="application/x-deb"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=fae69b80266944bf8780eb8aaa88b5487d9f0a48" released="2014-02-17" stability="stable" version="0.8.9-1">
+      <manifest-digest sha256new="UPO7BGFQMMO67IBQSPVPMXU6MNDLH4UNBXDNC6UKTHXTJMV6GEYA"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/0.8.9/gdisk-binaries/gdisk_0.8.9-1_i386.deb" size="165564" type="application/x-deb"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=6e54351ef5e0a27ab8618e22ed162822f31bedf9" released="2014-03-02" stability="stable" version="0.8.10-1">
+      <manifest-digest sha256new="FNS72D7C3BRH32OZHFZ3K3YJCCDIST45AJZHFPB7XVJYBPRY745A"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/0.8.10/gdisk-binaries/gdisk_0.8.10-1_amd64.deb" size="292596" type="application/x-deb"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=6c74d444c67d0077162876c0f4ea2e5a82464263" released="2014-03-02" stability="stable" version="0.8.10-1">
+      <manifest-digest sha256new="5324SO5RI5LELWZ7SI3TT6TSTDEVDSLWJBVLIHCS2CEDXHRITECQ"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/0.8.10/gdisk-binaries/gdisk_0.8.10-1_i386.deb" size="166036" type="application/x-deb"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=c0bc0047a9e619dad05a6211eae6db87aaadcddc" released="2015-03-17" stability="stable" version="1.0.0-1">
+      <manifest-digest sha256new="GQ4AX2IOXC2YL6LFF3DHEKV4YO7XY25DKVFYUKBRDCXA5E5WWZDA"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/1.0.0/gdisk-binaries/gdisk_1.0.0-1_amd64.deb" size="167050" type="application/x-deb"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=6aa5614914618ec49d5eaa5ea7be264c2421ffe1" released="2015-03-17" stability="stable" version="1.0.0-1">
+      <manifest-digest sha256new="6QLTUQRQJ4QLRISP3XHRAMFNHPPZOSYMSS3DBZSCGJDYESLY3SUQ"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/1.0.0/gdisk-binaries/gdisk_1.0.0-1_i386.deb" size="296630" type="application/x-deb"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=0d4536e2c9054d110aa0db629a83c2b0c80efc1e" released="2015-10-20" stability="stable" version="1.0.1-1">
+      <manifest-digest sha256new="DSTMZ6F6GAT2ZKLOWPST7ZLRKIJKDYUAASHQ75FUGBFMDMMP2RAQ"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/1.0.1/gdisk-binaries/gdisk_1.0.1-1_amd64.deb" size="168798" type="application/x-deb"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=8c4d2ed1dc874501c2cfad40fd8358ac5f5969f5" released="2015-10-20" stability="stable" version="1.0.1-1">
+      <manifest-digest sha256new="HENSIARGEWNIXE4INBBGFDIYVHHW2IUG4SAOWXRGJCUCL6J5K7XA"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/1.0.1/gdisk-binaries/gdisk_1.0.1-1_i386.deb" size="168756" type="application/x-deb"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=66a1234d5118695dfaf523bb26b5971f4808cd29" released="2017-07-28" stability="stable" version="1.0.3-1">
+      <manifest-digest sha256new="7SUKINMFHG3X2FZQ7NJRNS3POQV6ABBLKVIOBBLKINS35S2LOEUQ"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/1.0.3/gdisk-binaries/gdisk_1.0.3-1_amd64.deb" size="178876" type="application/x-deb"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=e4d11be30a69077481c85dc709ae2d8b42c7b4ad" released="2017-07-28" stability="stable" version="1.0.3-1">
+      <manifest-digest sha256new="C2IXVQMXHT5EOVMTRAGJ3234Y6723DDG24CPANLZPXDC63FR56FQ"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/1.0.3/gdisk-binaries/gdisk_1.0.3-1_i386.deb" size="178110" type="application/x-deb"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=83b74b8a21e30654c1b9c296706a34aeb211f5c1" released="2018-07-05" stability="stable" version="1.0.4-1">
+      <manifest-digest sha256new="SFMRBZFBF7VJWC7WG46ZBE7PHHZOERNGZ7LMTRGQC4NMENQLVPPQ"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/1.0.4/gdisk-binaries/gdisk_1.0.4-1_amd64.deb" size="183664" type="application/x-deb"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=e4638c3af8ae8edc72cfbc38cde3725e82b4e2fe" released="2018-07-05" stability="stable" version="1.0.4-1">
+      <manifest-digest sha256new="U3WY3LMAHJULO34IEK4WKZP3WCGFEARULYCTQQ3FJ77WO55FQOGQ"/>
+      <archive href="http://sourceforge.net/projects/gptfdisk/files/gptfdisk/1.0.4/gdisk-binaries/gdisk_1.0.4-1_i386.deb" size="192060" type="application/x-deb"/>
+    </implementation>
+  </group>
+
+  <entry-point binary-name="gdisk" command="run"/>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA34AAAoJEFmqOSfCTk4exUMH/3I2f3P09I437+f0IV34HrBjbBHAaPviuAaE
+5xogNE0Oe+9KvOVid0ru2TyO9cnxYIXzQSNh6Qx4Skjh+n8scM4Yh941fscWMn7rgxKNapUm0Ml4
+xNbKe+rRCthHOhQAOk7H/cXapplywjy6ZcaPHzZ+d8NCvX8qFROVlDx+vhIQHs2liMkMUAflMi8o
+EG+IkF/VQi/OKUJzx8HsT4dtr7ZLrpVYpEx4M98voCDEFo68gYEr1r8Efm0TrIp8nlc0ZX3hPIFZ
+wvBNmSs2U9fLeSUgxFUmdCoCxDnAEHyTOdDMxlj050CAbJ9ufjiLHJdTEWEQqNaEtqvLzfjyHguX
+Ihs=
+
+-->

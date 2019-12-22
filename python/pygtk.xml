@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/python/pygtk.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>PyGTK</name>
+  <summary>Python bindings for GTK+</summary>
+  <description>PyGTK lets you to easily create programs with a graphical user interface using the Python programming language. The underlying GTK+ library provides all kind of visual elements and utilities for it and, if needed, you can develop full featured applications for the GNOME Desktop.</description>
+  <homepage>https://pygobject.readthedocs.io/</homepage>
+
+  <group>
+    <package-implementation distributions="Debian" package="python-gtk2"/>
+    <package-implementation distributions="Arch" package="pygtk"/>
+  </group>
+
+  <group license="LGPL (GNU Lesser General Public License)">
+    <restricts interface="https://apps.0install.net/python/python.xml" version="2.7..!2.8"/>
+    <requires interface="https://apps.0install.net/lib/gtk.xml" version="2.22..!3"/>
+    <requires interface="https://apps.0install.net/python/pycairo.xml"/>
+    <requires interface="https://apps.0install.net/python/pygobject.xml"/>
+    <environment insert="." name="PYTHONPATH"/>
+    <environment insert="gtk-2.0" name="PYTHONPATH"/>
+
+    <implementation arch="Windows-x86_64" id="sha1new=2f5fef4f9becc3b50c76fe497f95d4f3a6bb3ca6" stability="stable" version="2.22.0">
+      <manifest-digest sha256new="XHJCZH3BXCJ4T75HQ63JXU6URTXAE5WIAMWSD2UXUYF4LATFVIIQ"/>
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/pygtk-2.22.0-cp27-none-win_amd64.whl" size="963000" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=870fd5d1c2968e3da44232f492064a69ec70c0b8" stability="developer" version="2.22.0">
+      <manifest-digest sha256new="674477UGD7YPVU4RYTGPVJ5EIXVQJJFIVB5YZ6C7Q66JZJREZJQA"/>
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/pygtk-2.22.0-cp27-none-win32.whl" size="757169" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=f29642fc00bdfa2a64b443c0a5f94dfb3ed72c99" released="2011-04-10" stability="developer" version="2.24.0">
+      <manifest-digest sha256new="5NQCQXEZAJRXGOM6H4Z4AXIBG4R7Z5RSBCRB5RFZHXNN2NMNIPTQ"/>
+      <archive extract="SourceDir/Lib/site-packages" href="http://ftp.gnome.org/pub/GNOME/binaries/win32/pygtk/2.24/pygtk-2.24.0.win32-py2.7.msi" size="835584" type="application/x-msi"/>
+    </implementation>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeCK+zAAoJEFmqOSfCTk4esfgH/iCrwXUeKfpbC1Xca6nPrave+PdorDQrnzY4
+hQYqFEulQDtS6e+I+p9EHTlbriWtbaB2KVR9ujIGOVSAJBMA8GBDnd2hEiM2ZXAFXiSC17BFIBq1
+4KTPnpFgAp99nyFZpOB861Q5KlFwRGPaeT0oydlwbPZVgVzZ9XTMzJP+ExpF0xg3LnPm6OCYnFlO
+BLjkHp1zC90AvdMBxhfbJSvx1+JXVj34CbaYy3yJWXqekRCwdhoB2vDh9xcIUVHambNzMJK5ve5q
+Sr0JRtY4fPQW+ZvDeuGOLiea8/LLtNEbSMoyiIdK5wFsGGzjzrlIcXXwRYE/bpmI1ewUSlBtEiIA
+trs=
+
+-->

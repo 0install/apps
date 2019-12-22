@@ -1,0 +1,777 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/utils/coreutils.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>CoreUtils</name>
+  <summary xml:lang="en">collection of basic file, shell and text manipulation utilities</summary>
+  <description xml:lang="en">The GNU Core Utilities are the basic file, shell and text manipulation utilities of the GNU operating system. These are the core utilities which are expected to exist on every operating system. </description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <category>Utility</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/coreutils.htm</homepage>
+  <needs-terminal/>
+  <group arch="Windows-i486" langs="af be bg ca cs da de el es et eu fi fr ga gl hu it ja ko ms nb nl pl pt pt_BR ru sk sl sv tr zh_CN zh_TW" released="2005-04-21" version="5.3.0-3">
+    <requires interface="https://apps.0install.net/devel/gettext.xml" version="0.14.4-3">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/libiconv.xml" version="1.9.2-1-3">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/install.exe"/>
+    <command name="basename" path="bin/basename.exe"/>
+    <command name="cat" path="bin/cat.exe"/>
+    <command name="chgrp" path="bin/chgrp.exe"/>
+    <command name="chmod" path="bin/chmod.exe"/>
+    <command name="chown" path="bin/chown.exe"/>
+    <command name="chroot" path="bin/chroot.exe"/>
+    <command name="cksum" path="bin/cksum.exe"/>
+    <command name="comm" path="bin/comm.exe"/>
+    <command name="cp" path="bin/cp.exe"/>
+    <command name="csplit" path="bin/csplit.exe"/>
+    <command name="cut" path="bin/cut.exe"/>
+    <command name="date" path="bin/date.exe"/>
+    <command name="dd" path="bin/dd.exe"/>
+    <command name="df" path="bin/df.exe"/>
+    <command name="dir" path="bin/dir.exe"/>
+    <command name="dircolors" path="bin/dircolors.exe"/>
+    <command name="dirname" path="bin/dirname.exe"/>
+    <command name="du" path="bin/du.exe"/>
+    <command name="echo" path="bin/echo.exe"/>
+    <command name="env" path="bin/env.exe"/>
+    <command name="expand" path="bin/expand.exe"/>
+    <command name="expr" path="bin/expr.exe"/>
+    <command name="factor" path="bin/factor.exe"/>
+    <command name="false" path="bin/false.exe"/>
+    <command name="fmt" path="bin/fmt.exe"/>
+    <command name="fold" path="bin/fold.exe"/>
+    <command name="gdate" path="bin/gdate.exe"/>
+    <command name="gecho" path="bin/gecho.exe"/>
+    <command name="ginstall" path="bin/ginstall.exe"/>
+    <command name="gln" path="bin/gln.exe"/>
+    <command name="gmkdir" path="bin/gmkdir.exe"/>
+    <command name="grmdir" path="bin/grmdir.exe"/>
+    <command name="groups" path="bin/groups">
+      <executable-in-path command="id" name="id"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="gsort" path="bin/gsort.exe"/>
+    <command name="head" path="bin/head.exe"/>
+    <command name="hostid" path="bin/hostid.exe"/>
+    <command name="hostname" path="bin/hostname.exe"/>
+    <command name="id" path="bin/id.exe"/>
+    <command name="join" path="bin/join.exe"/>
+    <command name="kill" path="bin/kill.exe"/>
+    <command name="link" path="bin/link.exe"/>
+    <command name="ln" path="bin/ln.exe"/>
+    <command name="logname" path="bin/logname.exe"/>
+    <command name="ls" path="bin/ls.exe"/>
+    <command name="md5sum" path="bin/md5sum.exe"/>
+    <command name="mkdir" path="bin/mkdir.exe"/>
+    <command name="mkfifo" path="bin/mkfifo.exe"/>
+    <command name="mknod" path="bin/mknod.exe"/>
+    <command name="mv" path="bin/mv.exe"/>
+    <command name="nice" path="bin/nice.exe"/>
+    <command name="nl" path="bin/nl.exe"/>
+    <command name="nohup" path="bin/nohup.exe"/>
+    <command name="od" path="bin/od.exe"/>
+    <command name="paste" path="bin/paste.exe"/>
+    <command name="pathchk" path="bin/pathchk.exe"/>
+    <command name="pinky" path="bin/pinky.exe"/>
+    <command name="pr" path="bin/pr.exe"/>
+    <command name="printenv" path="bin/printenv.exe"/>
+    <command name="printf" path="bin/printf.exe"/>
+    <command name="ptx" path="bin/ptx.exe"/>
+    <command name="pwd" path="bin/pwd.exe"/>
+    <command name="readlink" path="bin/readlink.exe"/>
+    <command name="rm" path="bin/rm.exe"/>
+    <command name="rmdir" path="bin/rmdir.exe"/>
+    <command name="seq" path="bin/seq.exe"/>
+    <command name="setuidgid" path="bin/setuidgid.exe"/>
+    <command name="sha1sum" path="bin/sha1sum.exe"/>
+    <command name="shred" path="bin/shred.exe"/>
+    <command name="sleep" path="bin/sleep.exe"/>
+    <command name="sort" path="bin/sort.exe"/>
+    <command name="split" path="bin/split.exe"/>
+    <command name="stat" path="bin/stat.exe"/>
+    <command name="stty" path="bin/stty.exe"/>
+    <command name="su" path="bin/su.exe"/>
+    <command name="sum" path="bin/sum.exe"/>
+    <command name="sync" path="bin/sync.exe"/>
+    <command name="tac" path="bin/tac.exe"/>
+    <command name="tail" path="bin/tail.exe"/>
+    <command name="tee" path="bin/tee.exe"/>
+    <command name="test" path="bin/test.exe"/>
+    <command name="touch" path="bin/touch.exe"/>
+    <command name="tr" path="bin/tr.exe"/>
+    <command name="true" path="bin/true.exe"/>
+    <command name="tsort" path="bin/tsort.exe"/>
+    <command name="tty" path="bin/tty.exe"/>
+    <command name="uname" path="bin/uname.exe"/>
+    <command name="unexpand" path="bin/unexpand.exe"/>
+    <command name="uniq" path="bin/uniq.exe"/>
+    <command name="unlink" path="bin/unlink.exe"/>
+    <command name="uptime" path="bin/uptime.exe"/>
+    <command name="users" path="bin/users.exe"/>
+    <command name="vdir" path="bin/vdir.exe"/>
+    <command name="wc" path="bin/wc.exe"/>
+    <command name="who" path="bin/who.exe"/>
+    <command name="whoami" path="bin/whoami.exe"/>
+    <command name="yes" path="bin/yes.exe"/>
+    <command name="[" path="bin/[.exe"/>
+    <implementation id="sha1new=e58d0958ee81dc7dc0eab09282e123561206ce2f" version="5.3.0-3">
+      <manifest-digest sha256new="UNGNIIPSNMEDD24ZYS3CBPT32A3P3RKSEA55BXGSECH26I47HQWQ"/>
+      <archive href="https://sourceforge.net/projects/gnuwin32/files/coreutils/5.3.0/coreutils-5.3.0-bin.zip" size="5176996" type="application/zip"/>
+      <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/coreutils-bin.zip?raw=true" size="5176996" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=fd8f9b01d0e8e38e9f5b91d4612aee526610ae20" version="5.3.0-4">
+      <manifest-digest sha256new="JXJRWRNPMOKCFMTUN3DPIS2FKGC74CVN5NNQFN4VPU53BP5YQVWQ"/>
+      <recipe>
+        <archive href="https://sourceforge.net/projects/gnuwin32/files/coreutils/5.3.0/coreutils-5.3.0-bin.zip" size="5176996" type="application/zip"/>
+        <file dest="bin/dircolors.exe.manifest" href="https://github.com/MiKTeX/miktex/blob/master/Resources/Manifests/asInvoker.manifest?raw=true" size="380"/>
+        <file dest="bin/install.exe.manifest" href="https://github.com/MiKTeX/miktex/blob/master/Resources/Manifests/asInvoker.manifest?raw=true" size="380"/>
+        <file dest="bin/ginstall.exe.manifest" href="https://github.com/MiKTeX/miktex/blob/master/Resources/Manifests/asInvoker.manifest?raw=true" size="380"/>
+      </recipe>
+      <recipe>
+        <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/coreutils-bin.zip?raw=true" size="5176996" type="application/zip"/>
+        <file dest="bin/dircolors.exe.manifest" href="https://github.com/MiKTeX/miktex/blob/master/Resources/Manifests/asInvoker.manifest?raw=true" size="380"/>
+        <file dest="bin/install.exe.manifest" href="https://github.com/MiKTeX/miktex/blob/master/Resources/Manifests/asInvoker.manifest?raw=true" size="380"/>
+        <file dest="bin/ginstall.exe.manifest" href="https://github.com/MiKTeX/miktex/blob/master/Resources/Manifests/asInvoker.manifest?raw=true" size="380"/>
+      </recipe>
+    </implementation>
+  </group>
+  <entry-point binary-name="install" command="run">
+    <summary xml:lang="en">copy files and set attributes</summary>
+    <description xml:lang="en">In  the first three forms, copy SOURCE to DEST or multi-
+       ple SOURCE(s) to the existing DIRECTORY,  while  setting
+       permission modes and owner/group.  In the 4th form, cre-
+       ate all components of the given DIRECTORY(ies).</description>
+  </entry-point>
+  <entry-point binary-name="basename" command="basename">
+    <needs-terminal/>
+    <summary xml:lang="en">Basename: strip directory and suffix from filenames</summary>
+    <description xml:lang="en">Print   NAME   with  any  leading  directory  components
+       removed.  If specified, also remove a trailing SUFFIX.</description>
+  </entry-point>
+  <entry-point binary-name="cat" command="cat">
+    <needs-terminal/>
+    <summary xml:lang="en">Cat: concatenate files and print on the standard output</summary>
+    <description xml:lang="en">Concatenate FILE(s), or standard input, to standard out-
+       put.</description>
+  </entry-point>
+  <entry-point binary-name="chgrp" command="chgrp">
+    <needs-terminal/>
+    <summary xml:lang="en">Chgrp: change group ownership</summary>
+    <description xml:lang="en">Change  the  group of each FILE to GROUP.  With --refer-
+       ence, change the group of each FILE to that of RFILE.</description>
+  </entry-point>
+  <entry-point binary-name="chmod" command="chmod">
+    <needs-terminal/>
+    <summary xml:lang="en">Chmod: change file access permissions</summary>
+    <description xml:lang="en">chmod changes the permissions of each given file accord-
+       ing  to mode, which can be either a symbolic representa-
+       tion of changes to make, or an octal number representing
+       the bit pattern for the new permissions.</description>
+  </entry-point>
+  <entry-point binary-name="chown" command="chown">
+    <needs-terminal/>
+    <summary xml:lang="en">Chown: change file owner and group</summary>
+    <description xml:lang="en">chown changes the user and/or group  ownership  of  each
+       given  file, according to its first non-option argument,
+       which is interpreted as follows.  If only  a  user  name
+       (or  numeric  user  ID)  is given, that user is made the
+       owner of each given file, and the files'  group  is  not
+       changed.  If the user name is followed by a colon or dot
+       and a group name (or numeric group ID), with  no  spaces
+       between  them,  the  group  ownership  of  the  files is
+       changed as well.  If a colon or dot but  no  group  name
+       follows  the  user  name, that user is made the owner of
+       the files and the group of the files is changed to  that
+       user's  login  group.  If the colon or dot and group are
+       given, but the user name is omitted, only the  group  of
+       the  files  is changed; in this case, chown performs the
+       same function as chgrp.</description>
+  </entry-point>
+  <entry-point binary-name="chroot" command="chroot">
+    <needs-terminal/>
+    <summary xml:lang="en">Chroot: run command or interactive shell with special root directory</summary>
+    <description xml:lang="en">Run COMMAND with root directory set to NEWROOT.</description>
+  </entry-point>
+  <entry-point binary-name="cksum" command="cksum">
+    <needs-terminal/>
+    <summary xml:lang="en">Cksum: checksum and count the bytes in a file</summary>
+    <description xml:lang="en">Print CRC checksum and byte counts of each FILE.</description>
+  </entry-point>
+  <entry-point binary-name="comm" command="comm">
+    <needs-terminal/>
+    <summary xml:lang="en">Comm: compare two sorted files line by line</summary>
+    <description xml:lang="en">Compare sorted files FILE1 and FILE2 line by line.
+
+       With  no  options,  produce three-column output.  Column
+       one contains lines unique to FILE1, column two  contains
+       lines  unique  to FILE2, and column three contains lines
+       common to both files.</description>
+  </entry-point>
+  <entry-point binary-name="cp" command="cp">
+    <needs-terminal/>
+    <summary xml:lang="en">Cp: copy files and directories</summary>
+    <description xml:lang="en">Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.</description>
+  </entry-point>
+  <entry-point binary-name="csplit" command="csplit">
+    <needs-terminal/>
+    <summary xml:lang="en">Csplit: split a file into sections determined by context lines</summary>
+    <description xml:lang="en">Output pieces of FILE separated by PATTERN(s)  to  files
+       `xx01',  `xx02',  ...,  and  output  byte counts of each
+       piece to standard output.</description>
+  </entry-point>
+  <entry-point binary-name="cut" command="cut">
+    <needs-terminal/>
+    <summary xml:lang="en">Cut: remove sections from each line of files</summary>
+    <description xml:lang="en">Print selected parts of lines from each FILE to standard
+       output.</description>
+  </entry-point>
+  <entry-point binary-name="date" command="date">
+    <needs-terminal/>
+    <summary xml:lang="en">Date: print or set the system date and time</summary>
+    <description xml:lang="en">Display the current time in the given FORMAT, or set the
+       system date.</description>
+  </entry-point>
+  <entry-point binary-name="dd" command="dd">
+    <needs-terminal/>
+    <summary xml:lang="en">Dd: convert and copy a file</summary>
+    <description xml:lang="en">Copy  a file, converting and formatting according to the
+       operands.</description>
+  </entry-point>
+  <entry-point binary-name="df" command="df">
+    <needs-terminal/>
+    <summary xml:lang="en">Df: report filesystem disk space usage</summary>
+    <description xml:lang="en"> df
+       displays the amount of disk space available on the  file
+       system  containing  each file name argument.  If no file
+       name is given, the  space  available  on  all  currently
+       mounted  file  systems is shown.  Disk space is shown in
+       1K blocks by default, unless  the  environment  variable
+       POSIXLY_CORRECT  is  set,  in which case 512-byte blocks
+       are used.</description>
+  </entry-point>
+  <entry-point binary-name="dir" command="dir">
+    <needs-terminal/>
+    <summary xml:lang="en">Dir: list directory contents</summary>
+    <description xml:lang="en">List  information about the FILEs (the current directory
+       by default).  Sort entries  alphabetically  if  none  of
+       -cftuSUX nor --sort.</description>
+  </entry-point>
+  <entry-point binary-name="dircolors" command="dircolors">
+    <needs-terminal/>
+    <summary xml:lang="en">DirColors: color setup for ls</summary>
+    <description xml:lang="en">Output  commands  to set the LS_COLORS environment vari-
+       able.</description>
+  </entry-point>
+  <entry-point binary-name="dirname" command="dirname">
+    <needs-terminal/>
+    <summary xml:lang="en">Dirname: strip non-directory suffix from file name</summary>
+    <description xml:lang="en">Print NAME with its trailing /component removed; if NAME
+       contains no /'s, output `.' (meaning the current  direc-
+       tory).</description>
+  </entry-point>
+  <entry-point binary-name="du" command="du">
+    <needs-terminal/>
+    <summary xml:lang="en">Du: estimate file space usage</summary>
+    <description xml:lang="en">Summarize  disk  usage  of  each  FILE,  recursively for
+       directories.</description>
+  </entry-point>
+  <entry-point binary-name="echo" command="echo">
+    <needs-terminal/>
+    <summary xml:lang="en">Echo: display a line of text</summary>
+    <description xml:lang="en">Echo the STRING(s) to standard output.
+</description>
+  </entry-point>
+  <entry-point binary-name="env" command="env">
+    <needs-terminal/>
+    <summary xml:lang="en">Env: run a program in a modified environment</summary>
+    <description xml:lang="en">Set  each  NAME to VALUE in the environment and run COM-
+       MAND.</description>
+  </entry-point>
+  <entry-point binary-name="expand" command="expand">
+    <needs-terminal/>
+    <summary xml:lang="en">Expand: convert tabs to spaces</summary>
+    <description xml:lang="en">Convert tabs in each FILE to spaces, writing to standard
+       output.  With no FILE, or when FILE is -, read  standard
+       input.</description>
+  </entry-point>
+  <entry-point binary-name="expr" command="expr">
+    <needs-terminal/>
+    <summary xml:lang="en">Expr: evaluate expressions</summary>
+    <description xml:lang="en">Print  the  value  of  EXPRESSION to standard output.  A
+       blank line below separates increasing precedence groups.</description>
+  </entry-point>
+  <entry-point binary-name="factor" command="factor">
+    <needs-terminal/>
+    <summary xml:lang="en">Factor: factor numbers</summary>
+    <description xml:lang="en">Print the prime factors of each NUMBER.</description>
+  </entry-point>
+  <entry-point binary-name="false" command="false">
+    <needs-terminal/>
+    <summary xml:lang="en">False: do nothing, unsuccessfully</summary>
+    <description xml:lang="en">Exit with a status code indicating failure.</description>
+  </entry-point>
+  <entry-point binary-name="fmt" command="fmt">
+    <needs-terminal/>
+    <summary xml:lang="en">Fmt: simple optimal text formatter</summary>
+    <description xml:lang="en">Reformat each paragraph in the FILE(s), writing to stan-
+       dard output.  If no FILE or if FILE is `-',  read  stan-
+       dard input.</description>
+  </entry-point>
+  <entry-point binary-name="fold" command="fold">
+    <needs-terminal/>
+    <summary xml:lang="en">Fold: wrap each input line to fit in specified width</summary>
+    <description xml:lang="en">Wrap  input  lines  in  each  FILE  (standard  input  by
+       default), writing to standard output.</description>
+  </entry-point>
+  <entry-point binary-name="gdate" command="gdate">
+    <needs-terminal/>
+    <summary xml:lang="en">Date: print or set the system date and time</summary>
+    <description xml:lang="en">Display the current time in the given FORMAT, or set the
+       system date.</description>
+  </entry-point>
+  <entry-point binary-name="gecho" command="gecho">
+    <needs-terminal/>
+    <summary xml:lang="en">Echo: display a line of text</summary>
+    <description xml:lang="en">Echo the STRING(s) to standard output.</description>
+  </entry-point>
+  <entry-point binary-name="ginstall" command="ginstall">
+    <needs-terminal/>
+    <summary xml:lang="en">Install: copy files and set attributes</summary>
+    <description xml:lang="en">In  the first three forms, copy SOURCE to DEST or multi-
+       ple SOURCE(s) to the existing DIRECTORY,  while  setting
+       permission modes and owner/group.  In the 4th form, cre-
+       ate all components of the given DIRECTORY(ies).</description>
+  </entry-point>
+  <entry-point binary-name="gln" command="gln">
+    <needs-terminal/>
+    <summary xml:lang="en">Ln: make links between files</summary>
+    <description xml:lang="en">In  the  1st form, create a link to TARGET with the name
+       LINK_NAME.  In the 2nd form, create a link to TARGET  in
+       the current directory.  In the 3rd and 4th forms, create
+       links to each TARGET in DIRECTORY.  Create hard links by
+       default,  symbolic links with --symbolic.  When creating
+       hard links, each TARGET must exist.</description>
+  </entry-point>
+  <entry-point binary-name="gmkdir" command="gmkdir">
+    <needs-terminal/>
+    <summary xml:lang="en">Mkdir:  make directories</summary>
+    <description xml:lang="en">Create the DIRECTORY(ies), if they do not already exist.</description>
+  </entry-point>
+  <entry-point binary-name="grmdir" command="grmdir">
+    <needs-terminal/>
+    <summary xml:lang="en">Rmdir: remove empty directories</summary>
+    <description xml:lang="en">Remove the DIRECTORY(ies), if they are empty.</description>
+  </entry-point>
+  <entry-point binary-name="groups" command="groups">
+    <needs-terminal/>
+    <name xml:lang="en">groups</name>
+    <summary xml:lang="en">groups - print the groups a user is in</summary>
+    <description xml:lang="en">Same as id -Gn.  If no USERNAME, use current process.</description>
+  </entry-point>
+  <entry-point binary-name="gsort" command="gsort">
+    <needs-terminal/>
+    <summary xml:lang="en">Sort: sort lines of text files</summary>
+    <description xml:lang="en">Write  sorted  concatenation  of all FILE(s) to standard
+       output.</description>
+  </entry-point>
+  <entry-point binary-name="head" command="head">
+    <needs-terminal/>
+    <summary xml:lang="en">Head: output the first part of files</summary>
+    <description xml:lang="en">Print  the  first 10 lines of each FILE to standard out-
+       put.  With more than  one  FILE,  precede  each  with  a
+       header giving the file name.  With no FILE, or when FILE
+       is -, read standard input.</description>
+  </entry-point>
+  <entry-point binary-name="hostid" command="hostid">
+    <needs-terminal/>
+    <summary xml:lang="en">Hostid: print the numeric identifier for the current host</summary>
+    <description xml:lang="en">Print the numeric identifier (in  hexadecimal)  for  the
+       current host.</description>
+  </entry-point>
+  <entry-point binary-name="hostname" command="hostname">
+    <needs-terminal/>
+    <summary xml:lang="en">Hostname: set or print the name of the current host system</summary>
+    <description xml:lang="en">Print or set the hostname of the current system.</description>
+  </entry-point>
+  <entry-point binary-name="id" command="id">
+    <needs-terminal/>
+    <summary xml:lang="en">Id: print real and effective UIDs and GIDs</summary>
+    <description xml:lang="en">Print information for USERNAME, or the current user.</description>
+  </entry-point>
+  <entry-point binary-name="join" command="join">
+    <needs-terminal/>
+    <summary xml:lang="en">Join: join lines of two files on a common field</summary>
+    <description xml:lang="en"> For each pair of input lines with identical join fields,
+       write a line to standard output.  The default join field
+       is  the  first,  delimited by whitespace.  When FILE1 or
+       FILE2 (not both) is -, read standard input.</description>
+  </entry-point>
+  <entry-point binary-name="kill" command="kill">
+    <needs-terminal/>
+    <summary xml:lang="en">Kill: send signals to processes, or list signals</summary>
+    <description xml:lang="en">Send signals to processes, or list signals.</description>
+  </entry-point>
+  <entry-point binary-name="link" command="link">
+    <needs-terminal/>
+    <summary xml:lang="en">Link: call the link function to create a link to a file</summary>
+    <description xml:lang="en">Call the link function to create a link named  FILE2  to
+       an existing FILE1.</description>
+  </entry-point>
+  <entry-point binary-name="ln" command="ln">
+    <needs-terminal/>
+    <summary xml:lang="en">Ln: make links between files</summary>
+    <description xml:lang="en">In  the  1st form, create a link to TARGET with the name
+       LINK_NAME.  In the 2nd form, create a link to TARGET  in
+       the current directory.  In the 3rd and 4th forms, create
+       links to each TARGET in DIRECTORY.  Create hard links by
+       default,  symbolic links with --symbolic.  When creating
+       hard links, each TARGET must exist.</description>
+  </entry-point>
+  <entry-point binary-name="logname" command="logname">
+    <needs-terminal/>
+    <summary xml:lang="en">Logname: print user's login name</summary>
+    <description xml:lang="en">Print the name of the current user.</description>
+  </entry-point>
+  <entry-point binary-name="ls" command="ls">
+    <needs-terminal/>
+    <summary xml:lang="en">Ls: list directory contents</summary>
+    <description xml:lang="en">List  information about the FILEs (the current directory
+       by default).  Sort entries  alphabetically  if  none  of
+       -cftuSUX nor --sort.</description>
+  </entry-point>
+  <entry-point binary-name="md5sum" command="md5sum">
+    <needs-terminal/>
+    <summary xml:lang="en">Md5Sum: compute and check MD5 message digest</summary>
+    <description xml:lang="en">Print  or  check MD5 (128-bit) checksums.  With no FILE,
+       or when FILE is -, read standard input.</description>
+  </entry-point>
+  <entry-point binary-name="mkdir" command="mkdir">
+    <needs-terminal/>
+    <summary xml:lang="en">Mkdir:  make directories</summary>
+    <description xml:lang="en">Create the DIRECTORY(ies), if they do not already exist.</description>
+  </entry-point>
+  <entry-point binary-name="mkfifo" command="mkfifo">
+    <needs-terminal/>
+    <summary xml:lang="en">Mkfifo: make FIFOs (named pipes)</summary>
+    <description xml:lang="en">Create named pipes (FIFOs) with the given NAMEs.</description>
+  </entry-point>
+  <entry-point binary-name="mknod" command="mknod">
+    <needs-terminal/>
+    <summary xml:lang="en">Mknod:  make block or character special files</summary>
+    <description xml:lang="en">Create the special file NAME of the given TYPE.</description>
+  </entry-point>
+  <entry-point binary-name="mv" command="mv">
+    <needs-terminal/>
+    <summary xml:lang="en">Mv: move (rename) files</summary>
+    <description xml:lang="en">Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.</description>
+  </entry-point>
+  <entry-point binary-name="nice" command="nice">
+    <needs-terminal/>
+    <summary xml:lang="en">Nice: run a program with modified scheduling priority</summary>
+    <description xml:lang="en">Run  COMMAND  with an adjusted nice value, which affects
+       the scheduling priority.  With  no  COMMAND,  print  the
+       current  nice  value.   Nice values range from -20 (most
+       favorable scheduling) to 19 (least favorable).</description>
+  </entry-point>
+  <entry-point binary-name="nl" command="nl">
+    <needs-terminal/>
+    <summary xml:lang="en">Nl: number lines of files</summary>
+    <description xml:lang="en">Write  each  FILE  to standard output, with line numbers
+       added.  With no FILE, or when FILE is -,  read  standard
+       input.</description>
+  </entry-point>
+  <entry-point binary-name="nohup" command="nohup">
+    <needs-terminal/>
+    <summary xml:lang="en">Nohup: run a command immune to hangups, with output to a non-tty</summary>
+    <description xml:lang="en">Run COMMAND, ignoring hangup signals.</description>
+  </entry-point>
+  <entry-point binary-name="od" command="od">
+    <needs-terminal/>
+    <summary xml:lang="en">Od: dump files in octal and other formats</summary>
+    <description xml:lang="en">Write an  unambiguous  representation,  octal  bytes  by
+       default, of FILE to standard output.  With more than one
+       FILE argument, concatenate them in the listed  order  to
+       form  the  input.  With no FILE, or when FILE is -, read
+       standard input.</description>
+  </entry-point>
+  <entry-point binary-name="paste" command="paste">
+    <needs-terminal/>
+    <summary xml:lang="en">Paste: merge lines of files</summary>
+    <description xml:lang="en">Write lines consisting of the sequentially corresponding
+       lines from each FILE, separated  by  TABs,  to  standard
+       output.   With no FILE, or when FILE is -, read standard
+       input.</description>
+  </entry-point>
+  <entry-point binary-name="pathchk" command="pathchk">
+    <needs-terminal/>
+    <summary xml:lang="en">Pathchk: check whether file names are valid or portable</summary>
+    <description xml:lang="en">Diagnose unportable constructs in NAME.</description>
+  </entry-point>
+  <entry-point binary-name="pinky" command="pinky">
+    <needs-terminal/>
+    <summary xml:lang="en">Pinky: lightweight finger</summary>
+    <description xml:lang="en">A lightweight `finger' program;  print user information.</description>
+  </entry-point>
+  <entry-point binary-name="pr" command="pr">
+    <needs-terminal/>
+    <summary xml:lang="en">Pr: convert text files for printing</summary>
+    <description xml:lang="en">Paginate or columnate FILE(s) for printing.</description>
+  </entry-point>
+  <entry-point binary-name="printenv" command="printenv">
+    <needs-terminal/>
+    <summary xml:lang="en">Printenv: print all or part of environment</summary>
+    <description xml:lang="en">If no environment VARIABLE specified, print them all.</description>
+  </entry-point>
+  <entry-point binary-name="printf" command="printf">
+    <needs-terminal/>
+    <summary xml:lang="en">Printf: format and print data</summary>
+    <description xml:lang="en">Print ARGUMENT(s) according to FORMAT.</description>
+  </entry-point>
+  <entry-point binary-name="ptx" command="ptx">
+    <needs-terminal/>
+    <summary xml:lang="en">Ptx: produce a permuted index of file contents</summary>
+    <description xml:lang="en"> Output a permuted index, including context, of the words
+       in the input files.</description>
+  </entry-point>
+  <entry-point binary-name="pwd" command="pwd">
+    <needs-terminal/>
+    <summary xml:lang="en">Pwd: print name of current/working directory</summary>
+    <description xml:lang="en">Print the full filename of the  current  working  direc-
+       tory.</description>
+  </entry-point>
+  <entry-point binary-name="readlink" command="readlink">
+    <needs-terminal/>
+    <summary xml:lang="en">Readlink: display value of a symbolic link</summary>
+    <description xml:lang="en">Display value of a symbolic link on standard output.</description>
+  </entry-point>
+  <entry-point binary-name="rm" command="rm">
+    <needs-terminal/>
+    <summary xml:lang="en">Rm: remove files or directories</summary>
+    <description xml:lang="en"> rm
+       removes each specified file.  By default,  it  does  not
+       remove directories.</description>
+  </entry-point>
+  <entry-point binary-name="rmdir" command="rmdir">
+    <needs-terminal/>
+    <summary xml:lang="en">Rmdir: remove empty directories</summary>
+    <description xml:lang="en">Remove the DIRECTORY(ies), if they are empty.</description>
+  </entry-point>
+  <entry-point binary-name="seq" command="seq">
+    <needs-terminal/>
+    <summary xml:lang="en">Seq: print a sequence of numbers</summary>
+    <description xml:lang="en">Print numbers from FIRST to LAST, in steps of INCREMENT.</description>
+  </entry-point>
+  <entry-point binary-name="setuidgid" command="setuidgid">
+    <needs-terminal/>
+    <summary xml:lang="en">Setuidgid: run a command as a specified user</summary>
+    <description xml:lang="en">Drop any supplemental groups, assume the user-ID and group-ID of
+the specified USERNAME, and run COMMAND with any specified ARGUMENTs.
+Exit with status 111 if unable to assume the required UID and GID.
+Otherwise, exit with the exit status of COMMAND.
+This program is useful only when run by root (UID=0).</description>
+  </entry-point>
+  <entry-point binary-name="sha1sum" command="sha1sum">
+    <needs-terminal/>
+    <summary xml:lang="en">Sha1sum: compute and check SHA1 message digest</summary>
+    <description xml:lang="en">Print  or check SHA1 (160-bit) checksums.  With no FILE,
+       or when FILE is -, read standard input.</description>
+  </entry-point>
+  <entry-point binary-name="shred" command="shred">
+    <needs-terminal/>
+    <summary xml:lang="en">Shred: delete a file securely</summary>
+    <description xml:lang="en">Overwrite the specified FILE(s) repeatedly, in order  to
+       make  it harder for even very expensive hardware probing
+       to recover the data.</description>
+  </entry-point>
+  <entry-point binary-name="sleep" command="sleep">
+    <needs-terminal/>
+    <summary xml:lang="en">Sleep: delay for a specified amount of time</summary>
+    <description xml:lang="en">Pause for NUMBER seconds.  SUFFIX may be `s' for seconds
+       (the default), `m' for minutes, `h' for hours or `d' for
+       days.   Unlike  most implementations that require NUMBER
+       be an integer, here NUMBER may be an arbitrary  floating
+       point number.</description>
+  </entry-point>
+  <entry-point binary-name="sort" command="sort">
+    <needs-terminal/>
+    <summary xml:lang="en">Sort: sort lines of text files</summary>
+    <description xml:lang="en">Write  sorted  concatenation  of all FILE(s) to standard
+       output.</description>
+  </entry-point>
+  <entry-point binary-name="split" command="split">
+    <needs-terminal/>
+    <summary xml:lang="en">Split: split a file into pieces</summary>
+    <description xml:lang="en">Output fixed-size pieces of INPUT to PREFIXaa, PREFIXab,
+       ...; default PREFIX is `x'.   With  no  INPUT,  or  when
+       INPUT is -, read standard input.</description>
+  </entry-point>
+  <entry-point binary-name="stat" command="stat">
+    <needs-terminal/>
+    <summary xml:lang="en">Stat: display file or filesystem status</summary>
+    <description xml:lang="en">Display file or file system status.</description>
+  </entry-point>
+  <entry-point binary-name="stty" command="stty">
+    <needs-terminal/>
+    <summary xml:lang="en">Stty: change and print terminal line settings</summary>
+    <description xml:lang="en">Print or change terminal characteristics.</description>
+  </entry-point>
+  <entry-point binary-name="su" command="su">
+    <needs-terminal/>
+    <summary xml:lang="en">Su: run a shell with substitute user and group IDs</summary>
+    <description xml:lang="en">Change  the  effective  user  id and group id to that of
+       USER.</description>
+  </entry-point>
+  <entry-point binary-name="sum" command="sum">
+    <needs-terminal/>
+    <summary xml:lang="en">Sum: checksum and count the blocks in a file</summary>
+    <description xml:lang="en">Print checksum and block counts for each FILE.</description>
+  </entry-point>
+  <entry-point binary-name="sync" command="sync">
+    <needs-terminal/>
+    <summary xml:lang="en">Sync: flush filesystem buffers</summary>
+    <description xml:lang="en">Force changed blocks to disk, update the super block.</description>
+  </entry-point>
+  <entry-point binary-name="tac" command="tac">
+    <needs-terminal/>
+    <summary xml:lang="en">Tac: concatenate and print files in reverse</summary>
+    <description xml:lang="en">Write  each  FILE  to  standard output, last line first.
+       With no FILE, or when FILE is -, read standard input.</description>
+  </entry-point>
+  <entry-point binary-name="tail" command="tail">
+    <needs-terminal/>
+    <summary xml:lang="en">Tail: output the last part of files</summary>
+    <description xml:lang="en">Print the last 10 lines of each FILE to standard output.
+       With more than one FILE, precede each with a header giv-
+       ing  the  file  name.   With no FILE, or when FILE is -,
+       read standard input.</description>
+  </entry-point>
+  <entry-point binary-name="tee" command="tee">
+    <needs-terminal/>
+    <summary xml:lang="en">Tee: read from standard input and write to standard output and files</summary>
+    <description xml:lang="en">Copy standard input to each FILE, and also  to  standard
+       output.</description>
+  </entry-point>
+  <entry-point binary-name="test" command="test">
+    <needs-terminal/>
+    <summary xml:lang="en">Test: check file types and compare values</summary>
+    <description xml:lang="en">Exit with the status determined by EXPRESSION.</description>
+  </entry-point>
+  <entry-point binary-name="touch" command="touch">
+    <needs-terminal/>
+    <summary xml:lang="en">Touch: change file timestamps</summary>
+    <description xml:lang="en">Update the access and modification times of each FILE to
+       the current time.</description>
+  </entry-point>
+  <entry-point binary-name="tr" command="tr">
+    <needs-terminal/>
+    <summary xml:lang="en">Tr: translate or delete characters</summary>
+    <description xml:lang="en">Translate,  squeeze, and/or delete characters from stan-
+       dard input, writing to standard output.</description>
+  </entry-point>
+  <entry-point binary-name="true" command="true">
+    <needs-terminal/>
+    <summary xml:lang="en">True: do nothing, successfully</summary>
+    <description xml:lang="en">Exit with a status code indicating success.</description>
+  </entry-point>
+  <entry-point binary-name="tsort" command="tsort">
+    <needs-terminal/>
+    <summary xml:lang="en">Tsort: perform topological sort</summary>
+    <description xml:lang="en">Write  totally  ordered list consistent with the partial
+       ordering in FILE.  With no FILE, or when FILE is -, read
+       standard input.</description>
+  </entry-point>
+  <entry-point binary-name="tty" command="tty">
+    <needs-terminal/>
+    <summary xml:lang="en">Tty: print the file name of the terminal connected to standard input</summary>
+    <description xml:lang="en">Print the file name of the terminal connected  to  stan-
+       dard input.</description>
+  </entry-point>
+  <entry-point binary-name="uname" command="uname">
+    <needs-terminal/>
+    <summary xml:lang="en">Uname: print system information</summary>
+    <description xml:lang="en">Print  certain system information.  With no OPTION, same
+       as -s.</description>
+  </entry-point>
+  <entry-point binary-name="unexpand" command="unexpand">
+    <needs-terminal/>
+    <summary xml:lang="en">Unexpand: convert spaces to tabs</summary>
+    <description xml:lang="en">       Convert blanks in each FILE to tabs, writing to standard
+       output.  With no FILE, or when FILE is -, read  standard
+       input.</description>
+  </entry-point>
+  <entry-point binary-name="uniq" command="uniq">
+    <needs-terminal/>
+    <summary xml:lang="en">Uniq: remove duplicate lines from a sorted file</summary>
+    <description xml:lang="en">Discard  all  but one of successive identical lines from
+       INPUT (or standard input), writing to OUTPUT  (or  stan-
+       dard output).</description>
+  </entry-point>
+  <entry-point binary-name="unlink" command="unlink">
+    <needs-terminal/>
+    <summary xml:lang="en">Unlink: call the unlink function to remove the specified file</summary>
+    <description xml:lang="en">Call the unlink function to remove the specified FILE.</description>
+  </entry-point>
+  <entry-point binary-name="uptime" command="uptime">
+    <needs-terminal/>
+    <summary xml:lang="en">Uptime: tell how long the system has been running</summary>
+    <description xml:lang="en">Print  the  current  time, the length of time the system
+       has been up, the number of users on the system, and  the
+       average number of jobs in the run queue over the last 1,
+       5 and  15  minutes.   If  FILE  is  not  specified,  use
+       /var/run/utmp.  /var/log/wtmp as FILE is common.</description>
+  </entry-point>
+  <entry-point binary-name="users" command="users">
+    <needs-terminal/>
+    <summary xml:lang="en">Users: print the user names of users currently logged in to the current host</summary>
+    <description xml:lang="en">Output who is currently logged in according to FILE.  If
+       FILE is not specified, use /var/run/utmp.  /var/log/wtmp
+       as FILE is common.</description>
+  </entry-point>
+  <entry-point binary-name="vdir" command="vdir">
+    <needs-terminal/>
+    <summary xml:lang="en">Vdir: list directory contents</summary>
+    <description xml:lang="en">List  information about the FILEs (the current directory
+       by default).  Sort entries  alphabetically  if  none  of
+       -cftuSUX nor --sort.</description>
+  </entry-point>
+  <entry-point binary-name="wc" command="wc">
+    <needs-terminal/>
+    <summary xml:lang="en">Wc: print the number of bytes, words, and lines in files</summary>
+    <description xml:lang="en">Print newline, word, and byte counts for each FILE,  and
+       a  total  line if more than one FILE is specified.  With
+       no FILE, or when FILE is -, read standard input.</description>
+  </entry-point>
+  <entry-point binary-name="who" command="who">
+    <needs-terminal/>
+    <summary xml:lang="en">Who: show who is logged on</summary>
+  </entry-point>
+  <entry-point binary-name="whoami" command="whoami">
+    <needs-terminal/>
+    <summary xml:lang="en">Whoami: print effective userid</summary>
+    <description xml:lang="en">Print  the  user name associated with the current effec-
+       tive user id.  Same as id -un.</description>
+  </entry-point>
+  <entry-point binary-name="yes" command="yes">
+    <needs-terminal/>
+    <summary xml:lang="en">Yes: output a string repeatedly until killed</summary>
+    <description xml:lang="en">Repeatedly  output  a line with all specified STRING(s),
+       or `y'.</description>
+  </entry-point>
+  <entry-point binary-name="[" command="[">
+    <needs-terminal/>
+    <summary xml:lang="en">[: test expression</summary>
+    <description xml:lang="en">Exit with the status determined by EXPRESSION.</description>
+  </entry-point>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA33/AAoJEFmqOSfCTk4eJV8IAJvQYkV1ixFhedsKQR6euzcZeku1W3TWf4SD
+7sIiRH65PrZg2+afAGA0iCeamKWH9pzXx0cbiod9G0KUAF/m8tNvPQ8ahjU1kCEJtf8qDiB9nNB7
+JQQ5VFQFkaTlPk7jAaLloOYeyDAYhsHr91KyLCMSGFZYFxPbEYJMxMygLDJ1ClG6Jddhoq0DuQPl
+QF5EFufOAWErebxROPXsnGk3+SsTwmPY4N8wgOuh6OvPnPWcYdtfCLRvf2l9lyziK58diI7OVQQ7
+YXeVdW6DM9d3yBGX8rE9eW6eHJ15jx7Mt8zgnaCp4m0hXho6rdX652u6kq2CXGutDXWe/mAfIzUd
+CIQ=
+
+-->

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Zero Install: Apps</title>
+  <link rel="icon" href="https://0install.net/logo/favicon.ico" type="image/vnd.microsoft.icon" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+  <script src="tabs.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand my-3">
+      <div class="media">
+        <a href="https://0install.net/"><img class="mr-2" src="https://0install.net/logo/zeroinstall-icon.png" width="64" height="64" alt="Zero Install Logo"></a>
+        <a class="navbar-brand text-dark media-body align-self-center" href="https://0install.net/">Zero Install</a>
+      </div>
+      <div class="nav nav-pills">
+        <a class="nav-item nav-link" href="https://0install.net/injector.html">Get</a>
+        <a class="nav-item nav-link active" href="https://apps.0install.net/">Apps</a>
+        <a class="nav-item nav-link" href="https://0install.net/support.html">Support</a>
+        <a class="nav-item nav-link" href="https://docs.0install.net/">Docs</a>
+      </div>
+    </nav>
+
+    <main>
+      <p>With Zero Install you get apps via so called <a href="https://docs.0install.net/basics/">feeds</a>.</p>
+
+      <div class="card mb-4">
+        <div class="card-header">
+          <div class="nav nav-tabs card-header-tabs">
+            <a class="nav-item nav-link" href="#featured"><i class="fas fa-thumbs-up"></i> Featured apps</a>
+            <a class="nav-item nav-link" href="#0tools"><i class="fas fa-tools"></i> 0install tools</a>
+            <a class="nav-item nav-link" href="#more"><i class="fas fa-list-alt"></i> More</a>
+          </div>
+        </div>
+        <div class="card-body tab-body" id="featured-tab">
+          <iframe src="catalog.xml"></iframe>
+        </div>
+        <div class="card-body tab-body" id="0tools-tab">
+          <iframe src="0tools/catalog.xml"></iframe>
+        </div>
+        <div class="card-body tab-body" id="more-tab">
+          <p>apps.0install.net provides a repository of common tools, libraries and runtime environments:</p>
+          <div class="row">
+            <ul>
+              <li><a href="gui/">GUI apps</a></li>
+              <li><a href="utils/">Utilities</a></li>
+              <li><a href="devel/">Development tools</a></li>
+              <li><a href="docker/">Docker tools</a></li>
+              <li><a href="kubernetes/">Kubernetes tools</a></li>
+            </ul>
+            <ul>
+              <li><a href="python/">Python</a></li>
+              <li><a href="powershell/">PowerShell</a></li>
+              <li><a href="perl/">Perl</a></li>
+              <li><a href="ruby/">Ruby</a></li>
+              <li><a href="javascript/">JavaScript</a></li>
+            </ul>
+            <ul>
+              <li><a href="ocaml/">OCaml</a></li>
+              <li><a href="golang/">Golang</a></li>
+              <li><a href="java/">Java</a></li>
+              <li><a href="dotnet/">.NET</a></li>
+              <li><a href="lib/">Libraries</a></li>
+            </ul>
+          </div>
+          <p>You can use the <a href="catalog.xml">Catalog</a> to search all feeds on this website.</p>
+          <p>Feeds can be hosted on any normal website. <a href="http://roscidus.com/0mirror/">0mirror</a> provides a list of all currently known feeds.</p>
+          <p>If you want to create your own fees to make additional apps available via Zero Install, please read the <a href="https://docs.0install.net/packaging/">packaging guide</a>.</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <hr>
+      <small class="text-muted">
+        © Copyright 2003-2019 Thomas Leonard, Bastian Eicher and others<br>
+        Permission is granted to use the site (excluding the software, which is licensed separately) in accordance with the terms of the <a href="https://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike 2.5 license</a>.
+      </small>
+    </footer>
+  </div>
+</body>
+
+</html>

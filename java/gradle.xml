@@ -1,0 +1,1008 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/java/gradle.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Gradle</name>
+  <summary>modern open source build tool for continuous delivery</summary>
+  <homepage>http://www.gradle.org/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+
+  <group license="Apache License 2.0">
+    <requires interface="https://apps.0install.net/java/jdk.xml">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+    <environment insert="lib/*" name="CLASSPATH"/>
+    <command name="run">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
+        <for-each item-from="GRADLE_OPTS" separator=" ">
+          <arg>$item</arg>
+        </for-each>
+        <arg>org.gradle.launcher.GradleMain</arg>
+      </runner>
+    </command>
+    <implementation id="sha1new=20b8cf6f647f6327291ed700e8f9681593918787" released="2012-01-30" stability="stable" version="0.7">
+      <manifest-digest sha1new="20b8cf6f647f6327291ed700e8f9681593918787" sha256="c9a73c51679e4ec6f703bcade01b4de6dadaa2c3acda3f37c2861676f907f475" sha256new="ZGTTYULHTZHMN5YDXSW6AG2N43NNVIWDVTND6N6CQYLHN6IH6R2Q"/>
+      <archive extract="gradle-0.7" href="https://services.gradle.org/distributions/gradle-0.7-bin.zip" size="20429110" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d38548095a230c49999a160cafd049e08cb99b4e" released="2012-01-30" stability="stable" version="0.8">
+      <manifest-digest sha1new="d38548095a230c49999a160cafd049e08cb99b4e" sha256="2e89229c51c352cb4cd88c0ac722af9be9350f50b58c81c09a751ff51ff8aeb4" sha256new="F2ESFHCRYNJMWTGYRQFMOIVPTPUTKD2QWWGIDQE2OUP7KH7YV22A"/>
+      <archive extract="gradle-0.8" href="https://services.gradle.org/distributions/gradle-0.8-bin.zip" size="18856865" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=e8fcda296a5101bf76b69a8b973080a92f489d6e" released="2012-01-30" stability="testing" version="0.9-rc-1">
+      <manifest-digest sha1new="e8fcda296a5101bf76b69a8b973080a92f489d6e" sha256="2eb1efbe51faeb965fed9516099da02e1cb9a0ec497968f20000d91c3315aecd" sha256new="F2Y67PSR7LVZMX7NSULATHNAFYOLTIHMJF4WR4QAADMRYMYVV3GQ"/>
+      <archive extract="gradle-0.9-rc-1" href="https://services.gradle.org/distributions/gradle-0.9-rc-1-bin.zip" size="26489743" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=4c73ce2f681ae53e46af8794c9113bb248d7c9e0" released="2012-01-30" stability="testing" version="0.9-rc-2">
+      <manifest-digest sha1new="4c73ce2f681ae53e46af8794c9113bb248d7c9e0" sha256="58908b580b5fe4aeeedda66af3147f7f7a37ca426b1b683fb983d7ac9d00b998" sha256new="LCIIWWALL7SK53W5UZVPGFD7P55DPSSCNMNWQP5ZQPL2ZHIAXGMA"/>
+      <archive extract="gradle-0.9-rc-2" href="https://services.gradle.org/distributions/gradle-0.9-rc-2-bin.zip" size="30033701" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=fa1e29cab6f04ce8cedc61773bee6d8909d1e21c" released="2012-01-30" stability="testing" version="0.9-rc-3">
+      <manifest-digest sha1new="fa1e29cab6f04ce8cedc61773bee6d8909d1e21c" sha256="f39a83a8c53b367645df6e08afb6b6d9f38dfb8f02c4a0cc499338b1b4da523b" sha256new="6ONIHKGFHM3HMRO7NYEK7NVW3HZY364PALCKBTCJSM4LDNG2KI5Q"/>
+      <archive extract="gradle-0.9-rc-3" href="https://services.gradle.org/distributions/gradle-0.9-rc-3-bin.zip" size="30739144" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=cb83e3600c7586d0991e729d4d0e218137934562" released="2012-01-30" stability="stable" version="0.9.1">
+      <manifest-digest sha1new="cb83e3600c7586d0991e729d4d0e218137934562" sha256="9a49d937d96465fa6f558e7cfd9aea3d0dda21a8f96e4f4ddb906591a0d960a0" sha256new="TJE5SN6ZMRS7U32VRZ6P3GXKHUG5UINI7FXE6TO3SBSZDIGZMCQA"/>
+      <archive extract="gradle-0.9.1" href="https://services.gradle.org/distributions/gradle-0.9.1-bin.zip" size="30926298" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=9e68af881dc816e68396d1f3b2a801be804b991f" released="2012-01-30" stability="stable" version="0.9.2">
+      <manifest-digest sha1new="9e68af881dc816e68396d1f3b2a801be804b991f" sha256="a282af067fb592af64340b1b32c26c93f07635f8d628e089e2783825a26c83f2" sha256new="UKBK6BT7WWJK6ZBUBMNTFQTMSPYHMNPY2YUOBCPCPA4CLITMQPZA"/>
+      <archive extract="gradle-0.9.2" href="https://services.gradle.org/distributions/gradle-0.9.2-bin.zip" size="31271729" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=f321ee0affd8aaf2cc4c5c07b916917972ea2aeb" released="2012-01-30" stability="stable" version="0.9">
+      <manifest-digest sha1new="f321ee0affd8aaf2cc4c5c07b916917972ea2aeb" sha256="b769c4d70e88a1391fe0e86454dd349764786769ce6bfd113270b72b2bbbf391" sha256new="W5U4JVYORCQTSH7A5BSFJXJUS5SHQZ3JZZV72EJSOC3SWK536OIQ"/>
+      <archive extract="gradle-0.9" href="https://services.gradle.org/distributions/gradle-0.9-bin.zip" size="30917663" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=95e3778afe7e867ac5d548c13be16704cfab31f8" released="2012-01-30" stability="developer" version="1.0-pre-1">
+      <manifest-digest sha1new="95e3778afe7e867ac5d548c13be16704cfab31f8" sha256="9e5b63f0125536766f264d2412e432ba569f828957795859ee9d585815c0bf73" sha256new="TZNWH4ASKU3HM3ZGJUSBFZBSXJLJ7AUJK54VQWPOTVMFQFOAX5ZQ"/>
+      <archive extract="gradle-1.0-milestone-1" href="https://services.gradle.org/distributions/gradle-1.0-milestone-1-bin.zip" size="26899590" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d767c11205f97b516b8da170588bddf1c687550d" released="2012-01-30" stability="developer" version="1.0-pre-2">
+      <manifest-digest sha1new="d767c11205f97b516b8da170588bddf1c687550d" sha256="29bad1b4d4a1a6c710a75d97a4ce425a87045bc437aa2713094d968fa78930f6" sha256new="FG5NDNGUUGTMOEFHLWL2JTSCLKDQIW6EG6VCOEYJJWLI7J4JGD3A"/>
+      <archive extract="gradle-1.0-milestone-2" href="https://services.gradle.org/distributions/gradle-1.0-milestone-2-bin.zip" size="28085330" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=2b4f8ad4d3958265aad5d631a636d1ddcd93b684" released="2012-01-30" stability="developer" version="1.0-pre-3">
+      <manifest-digest sha1new="2b4f8ad4d3958265aad5d631a636d1ddcd93b684" sha256="db9248e6821e2e7469833aa7cda58ce0389ed0fac612013a69c4203f8f7f9ec1" sha256new="3OJERZUCDYXHI2MDHKT43JMM4A4J5UH2YYJACOTJYQQD7D37T3AQ"/>
+      <archive extract="gradle-1.0-milestone-3" href="https://services.gradle.org/distributions/gradle-1.0-milestone-3-bin.zip" size="28128424" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=137a41bb6f6b39e1fec88544430d770e3a9f3b55" released="2012-01-30" stability="developer" version="1.0-pre-4">
+      <manifest-digest sha1new="137a41bb6f6b39e1fec88544430d770e3a9f3b55" sha256="48c25c6d706724465eceb10b442252f4c9402b29ae0030e24df9d87bab59f517" sha256new="JDBFY3LQM4SEMXWOWEFUIISS6TEUAKZJVYADBYSN7HMHXK2Z6ULQ"/>
+      <archive extract="gradle-1.0-milestone-4" href="https://services.gradle.org/distributions/gradle-1.0-milestone-4-bin.zip" size="33676725" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=65173b96bb6eb6e3b90c84142ed5412281be77a4" released="2012-01-30" stability="developer" version="1.0-pre-5">
+      <manifest-digest sha1new="65173b96bb6eb6e3b90c84142ed5412281be77a4" sha256="81069310dcc38b4ac80686effef543fb1e00a5d1a9fdeb0da4e51c2ac805a89a" sha256new="QEDJGEG4YOFUVSAGQ3X755KD7MPABJORVH66WDNE4UOCVSAFVCNA"/>
+      <archive extract="gradle-1.0-milestone-5" href="https://services.gradle.org/distributions/gradle-1.0-milestone-5-bin.zip" size="31807137" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=63672c1d9adef179251c1008eccbd6ec4607833c" released="2012-01-30" stability="developer" version="1.0-pre-6">
+      <manifest-digest sha1new="63672c1d9adef179251c1008eccbd6ec4607833c" sha256="5cac01434c05e2b5c56326c1a0dfbe55b60a0bc7ff1e8e123c3aec1324d3d1d5" sha256new="LSWACQ2MAXRLLRLDE3A2BX56KW3AUC6H74PI4ER4HLWBGJGT2HKQ"/>
+      <archive extract="gradle-1.0-milestone-6" href="https://services.gradle.org/distributions/gradle-1.0-milestone-6-bin.zip" size="32239791" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=b45b2d316503d8051057762e73692409e113fdd8" released="2012-01-30" stability="developer" version="1.0-pre-7">
+      <manifest-digest sha1new="b45b2d316503d8051057762e73692409e113fdd8" sha256="58d21342e7c92012c77a73c2147b9642dc836628b63f6424dfffe08a83e47032" sha256new="LDJBGQXHZEQBFR32OPBBI64WILOIGZRIWY7WIJG777QIVA7EOAZA"/>
+      <archive extract="gradle-1.0-milestone-7" href="https://services.gradle.org/distributions/gradle-1.0-milestone-7-bin.zip" size="33484757" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=6d383ea303e08d4cba694f3ccb724b31ab1c3ff1" released="2012-02-14" stability="developer" version="1.0-pre-8">
+      <manifest-digest sha1new="6d383ea303e08d4cba694f3ccb724b31ab1c3ff1" sha256="cf29c14d800341a16ea83e63fa0a520f0d75aff88b4f3b050883ef8eb5b3b1b9" sha256new="Z4U4CTMAANA2C3VIHZR7UCSSB4GXLL7YRNHTWBIIQPXY5NNTWG4Q"/>
+      <archive extract="gradle-1.0-milestone-8" href="https://services.gradle.org/distributions/gradle-1.0-milestone-8-bin.zip" size="29944820" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=009fcc20e7e2ac70f65ac156ee1dfafa23245fef" released="2012-03-13" stability="developer" version="1.0-pre-9">
+      <manifest-digest sha1new="009fcc20e7e2ac70f65ac156ee1dfafa23245fef" sha256="841526d31d000482ad9581e8c1546a492d3e5e6c17568cd0d29be1ffa643a47c" sha256new="QQKSNUY5AACIFLMVQHUMCVDKJEWT4XTMC5LIZUGSTPQ77JSDUR6A"/>
+      <archive extract="gradle-1.0-milestone-9" href="https://services.gradle.org/distributions/gradle-1.0-milestone-9-bin.zip" size="30116786" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=56058982bb4fb710968f69c0e13f40adfec0e74d" released="2012-04-11" stability="testing" version="1.0-rc-1">
+      <manifest-digest sha1new="56058982bb4fb710968f69c0e13f40adfec0e74d" sha256="1d0685aac26753a9619b5ca390fb72709ba78c6f21781d20fb806a90704974f3" sha256new="DUDILKWCM5J2SYM3LSRZB63SOCN2PDDPEF4B2IH3QBVJA4CJOTZQ"/>
+      <archive extract="gradle-1.0-rc-1" href="https://services.gradle.org/distributions/gradle-1.0-rc-1-bin.zip" size="29933300" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=f15cae1293e67907c1518c8f01ca3eb6e605712f" released="2012-04-25" stability="testing" version="1.0-rc-2">
+      <manifest-digest sha1new="f15cae1293e67907c1518c8f01ca3eb6e605712f" sha256="9f5ab3a963bee6c5632510106f6171ebe492d198816dca457fd981c7773c5386" sha256new="T5NLHKLDX3TMKYZFCAIG6YLR5PSJFUMYQFW4URL73GA4O5Z4KODA"/>
+      <archive extract="gradle-1.0-rc-2" href="https://services.gradle.org/distributions/gradle-1.0-rc-2-bin.zip" size="29947742" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=63976d5f12458e5917512266a1947b1a6c4d4d9c" released="2012-04-29" stability="testing" version="1.0-rc-3">
+      <manifest-digest sha1new="63976d5f12458e5917512266a1947b1a6c4d4d9c" sha256="544c4fbe388457d2f8a9a2a73bdd1be7ddf10692cd330f55cd0b1784b8360993" sha256new="KRGE7PRYQRL5F6FJUKTTXXI347O7CBUSZUZQ6VONBMLYJOBWBGJQ"/>
+      <archive extract="gradle-1.0-rc-3" href="https://services.gradle.org/distributions/gradle-1.0-rc-3-bin.zip" size="29952367" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=aee2a7e8d33728f63c84b021af76902d847e7c04" released="2012-06-12" stability="stable" version="1.0">
+      <manifest-digest sha1new="aee2a7e8d33728f63c84b021af76902d847e7c04" sha256="681b40ca2ccb71cfea4efa98940131ef6c73e97387ce8f07812aa2a9a4b880bf" sha256new="NANUBSRMZNY472SO7KMJIAJR55WHH2LTQ7HI6B4BFKRKTJFYQC7Q"/>
+      <archive extract="gradle-1.0" href="https://services.gradle.org/distributions/gradle-1.0-bin.zip" size="29951532" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=c08ade9cc6c82f1b1f99d6ff5429ef58bc11c233" released="2012-07-24" stability="testing" version="1.1-rc-1">
+      <manifest-digest sha1new="c08ade9cc6c82f1b1f99d6ff5429ef58bc11c233" sha256="b68fccee82321faa9ec3251806031a8b68985f701a60862bc0d17be1959c2d9b" sha256new="W2H4Z3UCGIP2VHWDEUMAMAY2RNUJQX3QDJQIMK6A2F56DFM4FWNQ"/>
+      <archive extract="gradle-1.1-rc-1" href="https://services.gradle.org/distributions/gradle-1.1-rc-1-bin.zip" size="33922057" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=33a673fa76453b08e721bfb5620ef07ea63007d3" released="2012-07-26" stability="testing" version="1.1-rc-2">
+      <manifest-digest sha1new="33a673fa76453b08e721bfb5620ef07ea63007d3" sha256="0e259ec98232a7b05a60d9c4acfaba8d5f31d6d9444b91b8d984a918c4cf4334" sha256new="BYSZ5SMCGKT3AWTA3HCKZ6V2RVPTDVWZIRFZDOGZQSURRRGPIM2A"/>
+      <archive extract="gradle-1.1-rc-2" href="https://services.gradle.org/distributions/gradle-1.1-rc-2-bin.zip" size="34057115" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=9ab400eacb8f1cf36b2f418c2fa898094d2768d1" released="2012-07-31" stability="stable" version="1.1">
+      <manifest-digest sha1new="9ab400eacb8f1cf36b2f418c2fa898094d2768d1" sha256="9851d9382a7e3e28be0c1c60d2ded964351379f25912320d05b82c624797843e" sha256new="TBI5SOBKPY7CRPQMDRQNFXWZMQ2RG6PSLEJDEDIFXAWGER4XQQ7A"/>
+      <archive extract="gradle-1.1" href="https://services.gradle.org/distributions/gradle-1.1-bin.zip" size="34055776" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=935338173e18496cdeed79d7d66317cd22664e3b" released="2012-09-04" stability="testing" version="1.2-rc-1">
+      <manifest-digest sha1new="935338173e18496cdeed79d7d66317cd22664e3b" sha256="107a4b548605f10e4af3d815513de8894ca30d6fe5516a1aeb12e8b1afae6d4b" sha256new="CB5EWVEGAXYQ4SXT3AKVCPPIRFGKGDLP4VIWUGXLCLULDL5ONVFQ"/>
+      <archive extract="gradle-1.2-rc-1" href="https://services.gradle.org/distributions/gradle-1.2-rc-1-bin.zip" size="34839576" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=9cfb5d085a26d675da1dd595672cfb5a90aff0d9" released="2012-09-12" stability="stable" version="1.2">
+      <manifest-digest sha1new="9cfb5d085a26d675da1dd595672cfb5a90aff0d9" sha256="459fc75074948c9e738ee64b07a7ade84dc8ffc2d590baabc2bd0dcc2504c1e1" sha256new="IWP4OUDUSSGJ444O4ZFQPJ5N5BG4R76C2WILVK6CXUG4YJIEYHQQ"/>
+      <archive extract="gradle-1.2" href="https://services.gradle.org/distributions/gradle-1.2-bin.zip" size="34837708" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=85120fb01a36e8ca33650c7c92c910f3eca4b0f3" released="2012-11-12" stability="testing" version="1.3-rc-1">
+      <manifest-digest sha1new="85120fb01a36e8ca33650c7c92c910f3eca4b0f3" sha256="034ef73b05e46a5234d2cfd81f805a5d2dc74f12876e122fb61e327092d47593" sha256new="ANHPOOYF4RVFENGSZ7MB7AC2LUW4OTYSQ5XBEL5WDYZHBEWUOWJQ"/>
+      <archive extract="gradle-1.3-rc-1" href="https://services.gradle.org/distributions/gradle-1.3-rc-1-bin.zip" size="37385943" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=b846406bdc440dbc3dba4d455715c9a17111fc50" released="2012-11-15" stability="testing" version="1.3-rc-2">
+      <manifest-digest sha1new="b846406bdc440dbc3dba4d455715c9a17111fc50" sha256="7133cf9a9062b9fba858ff35a7a236460180369b1b8fd9f48645aca7c9763673" sha256new="OEZ47GUQMK47XKCY7422PIRWIYAYANU3DOH5T5EGIWWKPSLWGZZQ"/>
+      <archive extract="gradle-1.3-rc-2" href="https://services.gradle.org/distributions/gradle-1.3-rc-2-bin.zip" size="37386975" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=2c3bb094ec8d19e06cb40e1e0c0ab63321b5d1c1" released="2012-11-20" stability="stable" version="1.3">
+      <manifest-digest sha1new="2c3bb094ec8d19e06cb40e1e0c0ab63321b5d1c1" sha256="380caeb70ecb5aa61617624a95564081892e511d67a5111381afff3d63530b31" sha256new="HAGK5NYOZNNKMFQXMJFJKVSAQGES4UI5M6SRCE4BV77T2Y2TBMYQ"/>
+      <archive extract="gradle-1.3" href="https://services.gradle.org/distributions/gradle-1.3-bin.zip" size="37384932" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=4eda7fbdef1b6d3de85266b41a27bde244ae9458" released="2013-01-17" stability="testing" version="1.4-rc-1">
+      <manifest-digest sha1new="4eda7fbdef1b6d3de85266b41a27bde244ae9458" sha256="37a32a0ae0a41898adb93db27ff8e9083376380c1996061acf714217bdd55edc" sha256new="G6RSUCXAUQMJRLNZHWZH76HJBAZXMOAMDGLAMGWPOFBBPPOVL3OA"/>
+      <archive extract="gradle-1.4-rc-1" href="https://services.gradle.org/distributions/gradle-1.4-rc-1-bin.zip" size="37870189" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=b3f57481d3a6962660a339d324548d1c2a736383" released="2013-01-22" stability="testing" version="1.4-rc-2">
+      <manifest-digest sha1new="b3f57481d3a6962660a339d324548d1c2a736383" sha256="b5e1b157f5e1e534878fe011e38aa923145c75b0c37160eeed0916d4a302c399" sha256new="WXQ3CV7V4HSTJB4P4AI6HCVJEMKFY5NQYNYWB3XNBELNJIYCYOMQ"/>
+      <archive extract="gradle-1.4-rc-2" href="https://services.gradle.org/distributions/gradle-1.4-rc-2-bin.zip" size="37870184" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=e97a6b2ae0973b177cc9aa8596a25eafa1ab2c7d" released="2013-01-25" stability="testing" version="1.4-rc-3">
+      <manifest-digest sha1new="e97a6b2ae0973b177cc9aa8596a25eafa1ab2c7d" sha256="4c4ef8941fed3f1ec23053e57d15747c5b02b748d5b1ebf7302e92ad7d458921" sha256new="JRHPRFA75U7R5QRQKPSX2FLUPRNQFN2I2WY6X5ZQF2JK27KFREQQ"/>
+      <archive extract="gradle-1.4-rc-3" href="https://services.gradle.org/distributions/gradle-1.4-rc-3-bin.zip" size="37870204" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=6cdad5c494367f7b2b3f4e0556d9567941b4f36c" released="2013-01-28" stability="stable" version="1.4">
+      <manifest-digest sha1new="6cdad5c494367f7b2b3f4e0556d9567941b4f36c" sha256="0e114fb8efe9f00ca4683eea51dea9d7bb1e8664daba3503f5751f57a1e15c92" sha256new="BYIU7OHP5HYAZJDIH3VFDXVJ265R5BTE3K5DKA7VOUPVPIPBLSJA"/>
+      <archive extract="gradle-1.4" href="https://services.gradle.org/distributions/gradle-1.4-bin.zip" size="37868225" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=f18f0c01bba8aef09442574dad43eefbadaae2f9" released="2013-03-11" stability="testing" version="1.5-rc-1">
+      <manifest-digest sha1new="f18f0c01bba8aef09442574dad43eefbadaae2f9" sha256="eb7eaa64edf304e81815db5bc4f32eb1f4030d75679958198b1667cd0360b176" sha256new="5N7KUZHN6MCOQGAV3NN4J4ZOWH2AGDLVM6MVQGMLCZT42A3AWF3A"/>
+      <archive extract="gradle-1.5-rc-1" href="https://services.gradle.org/distributions/gradle-1.5-rc-1-bin.zip" size="38218369" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d4983b3b911451e2d72da8f150790478b226cec0" released="2013-03-17" stability="testing" version="1.5-rc-2">
+      <manifest-digest sha1new="d4983b3b911451e2d72da8f150790478b226cec0" sha256="0200f7c553abe7e2df020c7b6a989470211ea579f71115b770eeb8e405148792" sha256new="AIAPPRKTVPT6FXYCBR5WVGEUOAQR5JLZ64IRLN3Q524OIBIUQ6JA"/>
+      <archive extract="gradle-1.5-rc-2" href="https://services.gradle.org/distributions/gradle-1.5-rc-2-bin.zip" size="38217603" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=31c99b3a5c90763df5bf2adfdd551b7e7c97028f" released="2013-03-21" stability="testing" version="1.5-rc-3">
+      <manifest-digest sha1new="31c99b3a5c90763df5bf2adfdd551b7e7c97028f" sha256="052149b4dcfe5b9832d3775aa83c883d779911c978043e07958356a47b3b2550" sha256new="AUQUTNG47ZNZQMWTO5NKQPEIHV3ZSEOJPACD4B4VQNLKI6Z3EVIA"/>
+      <archive extract="gradle-1.5-rc-3" href="https://services.gradle.org/distributions/gradle-1.5-rc-3-bin.zip" size="38217540" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=1314030add5420ea15de8cc7c8bb80b6af462a88" released="2013-03-27" stability="stable" version="1.5">
+      <manifest-digest sha1new="1314030add5420ea15de8cc7c8bb80b6af462a88" sha256="da6cda22c97ab39dd44b76090428265fb1cfaca492ff3d5aca6eb6f14b88a501" sha256new="3JWNUIWJPKZZ3VCLOYEQIKBGL6Y47LFESL7T2WWKN23PCS4IUUAQ"/>
+      <archive extract="gradle-1.5" href="https://services.gradle.org/distributions/gradle-1.5-bin.zip" size="38215343" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=a712cb4ee5d154b4288edd8310ce46d68b326054" released="2013-04-30" stability="testing" version="1.6-rc-1">
+      <manifest-digest sha1new="a712cb4ee5d154b4288edd8310ce46d68b326054" sha256="559a7e8a8446b6e33b8d670cc98289ad69f8f6b59742a1ea78257c22c397544a" sha256new="KWNH5CUEI23OGO4NM4GMTAUJVVU7R5VVS5BKD2TYEV6CFQ4XKRFA"/>
+      <archive extract="gradle-1.6-rc-1" href="https://services.gradle.org/distributions/gradle-1.6-rc-1-bin.zip" size="38471095" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=aa1d3a9688b6aa7c560510ff30e3697237e0de46" released="2013-05-07" stability="stable" version="1.6">
+      <manifest-digest sha1new="aa1d3a9688b6aa7c560510ff30e3697237e0de46" sha256="9a3334622421ee94e538ecf53b53cd3a5805bd27d47c3ffac3e073a50ab1fa7c" sha256new="TIZTIYREEHXJJZJY5T2TWU6NHJMALPJH2R6D76WD4BZ2KCVR7J6A"/>
+      <archive extract="gradle-1.6" href="https://services.gradle.org/distributions/gradle-1.6-bin.zip" size="38468619" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=b327b3a4a911a03e2987bda4298bcf5c19e0a56b" released="2013-07-02" stability="testing" version="1.7-rc-1">
+      <manifest-digest sha1new="b327b3a4a911a03e2987bda4298bcf5c19e0a56b" sha256="cd77b25cfc5c3eaadd6542da617e97f351f2cd5802f76c8051e2408cde236966" sha256new="ZV33EXH4LQ7KVXLFILNGC7UX6NI7FTKYAL3WZACR4JAIZXRDNFTA"/>
+      <archive extract="gradle-1.7-rc-1" href="https://services.gradle.org/distributions/gradle-1.7-rc-1-bin.zip" size="39062754" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=414418101e1ac0d5173bb06b22a70d652647306d" released="2013-07-29" stability="testing" version="1.7-rc-2">
+      <manifest-digest sha1new="414418101e1ac0d5173bb06b22a70d652647306d" sha256="67a96e4f2bd49c9cf03925bbc5427f232b16444e8c0c592d0605e806526ad304" sha256new="M6UW4TZL2SOJZ4BZEW54KQT7EMVRMRCORQGFSLIGAXUAMUTK2MCA"/>
+      <archive extract="gradle-1.7-rc-2" href="https://services.gradle.org/distributions/gradle-1.7-rc-2-bin.zip" size="39065052" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=9bc150714ec0f47dc19d5d978cd487d03d31a589" released="2013-08-06" stability="stable" version="1.7">
+      <manifest-digest sha1new="9bc150714ec0f47dc19d5d978cd487d03d31a589" sha256="451970e2b242204e3a1f31c2f54afadd1e557bd56d792e86d4ba8ef4b94a11b9" sha256new="IUMXBYVSIIQE4OQ7GHBPKSX23UPFK66VNV4S5BWUXKHPJOKKCG4Q"/>
+      <archive extract="gradle-1.7" href="https://services.gradle.org/distributions/gradle-1.7-bin.zip" size="39062959" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=10f232694db1192b5997ad0ed03186792906d553" released="2013-09-10" stability="testing" version="1.8-rc-1">
+      <manifest-digest sha1new="10f232694db1192b5997ad0ed03186792906d553" sha256="d187400fa79ceebff380ad818a8de3d81bfe143f24a2d8f512c6761639381663" sha256new="2GDUAD5HTTXL744AVWAYVDPD3AN74FB7ESRNR5ISYZ3BMOJYCZRQ"/>
+      <archive extract="gradle-1.8-rc-1" href="https://services.gradle.org/distributions/gradle-1.8-rc-1-bin.zip" size="39399236" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=6664bb6a5b2811858f01871ded54d8ebd7f55217" released="2013-09-19" stability="testing" version="1.8-rc-2">
+      <manifest-digest sha1new="6664bb6a5b2811858f01871ded54d8ebd7f55217" sha256="57c7a608ea2d5f95570ad00aacae544ffea41f9f49965aff8e5ad09e5db1135a" sha256new="K7D2MCHKFVPZKVYK2AFKZLSUJ77KIH47JGLFV74OLLIJ4XNRCNNA"/>
+      <archive extract="gradle-1.8-rc-2" href="https://services.gradle.org/distributions/gradle-1.8-rc-2-bin.zip" size="39402129" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=8ebdd964391ec5c17fb2787ea46aa04ceb304e16" released="2013-09-24" stability="stable" version="1.8">
+      <manifest-digest sha1new="8ebdd964391ec5c17fb2787ea46aa04ceb304e16" sha256="fbb6072bd692cac85a777555d25c58899621d491f2fcdc21f6a58fbd8d635f5c" sha256new="7O3AOK6WSLFMQWTXOVK5EXCYRGLCDVER6L6NYIPWUWH33DLDL5OA"/>
+      <archive extract="gradle-1.8" href="https://services.gradle.org/distributions/gradle-1.8-bin.zip" size="39400269" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=989be4a5c88b97d1fed45d29359f4b4d71725185" released="2013-10-23" stability="testing" version="1.9-rc-1">
+      <manifest-digest sha1new="989be4a5c88b97d1fed45d29359f4b4d71725185" sha256="ee5cf59d98f1610783841022f695500c39967558cdfb5cf6c42f06d620a1ddae" sha256new="5ZOPLHMY6FQQPA4ECARPNFKQBQ4ZM5KYZX5VZ5WEF4DNMIFB3WXA"/>
+      <archive extract="gradle-1.9-rc-1" href="https://services.gradle.org/distributions/gradle-1.9-rc-1-bin.zip" size="40056449" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=2b75a5514f6ecec4906cf07868bbc5fff6956c19" released="2013-10-28" stability="testing" version="1.9-rc-2">
+      <manifest-digest sha1new="2b75a5514f6ecec4906cf07868bbc5fff6956c19" sha256="7010325cea6d697c47011b26fc803cad75314e33a5ad86afe3171f9ad0e6f7a6" sha256new="OAIDEXHKNVUXYRYBDMTPZAB4VV2TCTRTUWWYNL7DC4PZVUHG66TA"/>
+      <archive extract="gradle-1.9-rc-2" href="https://services.gradle.org/distributions/gradle-1.9-rc-2-bin.zip" size="40057537" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=8de88e2eed60947ba543df48ebe81ee55c2e87d8" released="2013-11-07" stability="testing" version="1.9-rc-3">
+      <manifest-digest sha1new="8de88e2eed60947ba543df48ebe81ee55c2e87d8" sha256="e4ff5ac0b97106fb0250a754a9a378d46935e8d8e5e2f3b92b5d893d5d632a34" sha256new="4T7VVQFZOEDPWASQU5KKTI3Y2RUTL2GY4XRPHOJLLWET2XLDFI2A"/>
+      <archive extract="gradle-1.9-rc-3" href="https://services.gradle.org/distributions/gradle-1.9-rc-3-bin.zip" size="40056957" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=cf93799e920bd815c34b829681de2b7019f9aa7b" released="2013-11-18" stability="testing" version="1.9-rc-4">
+      <manifest-digest sha1new="cf93799e920bd815c34b829681de2b7019f9aa7b" sha256="5bc0e8319d728d6313f017e17522cd3ef29d6ed0929333ce5fdff353a2603b15" sha256new="LPAOQMM5OKGWGE7QC7QXKIWNH3ZJ23WQSKJTHTS737ZVHITAHMKQ"/>
+      <archive extract="gradle-1.9-rc-4" href="https://services.gradle.org/distributions/gradle-1.9-rc-4-bin.zip" size="40057915" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=953d546e525fb6026c9479cdfb9b31ee7aa6671e" released="2013-11-19" stability="stable" version="1.9">
+      <manifest-digest sha1new="953d546e525fb6026c9479cdfb9b31ee7aa6671e" sha256="0fe79fa9dbbf4d74e15302516a487a2c009371a17a7f29cfc09abb041791db53" sha256new="B7TZ7KO3X5GXJYKTAJIWUSD2FQAJG4NBPJ7STT6ATK5QIF4R3NJQ"/>
+      <archive extract="gradle-1.9" href="https://services.gradle.org/distributions/gradle-1.9-bin.zip" size="40055092" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d7a902fa26fd9059c921fe6b571a8c979382c132" released="2013-12-04" stability="testing" version="1.10-rc-1">
+      <manifest-digest sha1new="d7a902fa26fd9059c921fe6b571a8c979382c132" sha256="b8a02634d851cec698ad864d30ca186350101c797c659f3f7d03f27005dc578e" sha256new="XCQCMNGYKHHMNGFNQZGTBSQYMNIBAHDZPRSZ6P35APZHABO4K6HA"/>
+      <archive extract="gradle-1.10-rc-1" href="https://services.gradle.org/distributions/gradle-1.10-rc-1-bin.zip" size="40401970" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=85674801795bd61517cf909b28a7a3abdece0381" released="2013-12-11" stability="testing" version="1.10-rc-2">
+      <manifest-digest sha1new="85674801795bd61517cf909b28a7a3abdece0381" sha256="b41f4a871b2385f28249e04b0c948a8753c14327f2d806ebf89182acddea97da" sha256new="WQPUVBY3EOC7FASJ4BFQZFEKQ5J4CQZH6LMAN27YSGBKZXPKS7NA"/>
+      <archive extract="gradle-1.10-rc-2" href="https://services.gradle.org/distributions/gradle-1.10-rc-2-bin.zip" size="40407139" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=e5e67fccafca9f915413f93d2bbdd73eb9b3ef92" released="2014-01-31" stability="testing" version="1.11-rc-1">
+      <manifest-digest sha1new="e5e67fccafca9f915413f93d2bbdd73eb9b3ef92" sha256="f92a9fb7735ae466ec64931e4a01b38ce8a52f222b9237bcd5fb43d8998605a7" sha256new="7EVJ7N3TLLSGN3DESMPEUANTRTUKKLZCFOJDPPGV7NB5RGMGAWTQ"/>
+      <archive extract="gradle-1.11-rc-1" href="https://services.gradle.org/distributions/gradle-1.11-rc-1-bin.zip" size="41858005" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=2f5fe791986d746c6dd123fd4787800c7be6a2fa" released="2013-12-17" stability="stable" version="1.10">
+      <manifest-digest sha256new="XR3HCLQBUX4BPDDCFTLX5JW5A5ZJVDEB53KVFEAH6TYGVFKIQ5RQ"/>
+      <archive extract="gradle-1.10" href="https://services.gradle.org/distributions/gradle-1.10-bin.zip" size="40404574" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=8a4aeb6c468368ab866258d437509c46aa7db8ed" released="2014-02-11" stability="stable" version="1.11">
+      <manifest-digest sha256new="NYIUWTIJ6LSD2GVGD3JHLIUTGPQ34KAU253PPPLL2T4SODNXXRYA"/>
+      <archive extract="gradle-1.11" href="https://services.gradle.org/distributions/gradle-1.11-bin.zip" size="41856417" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=78ef6c44a6f045a81b82875c78983e50c983cde3" released="2014-04-16" stability="testing" version="1.12-rc-1">
+      <manifest-digest sha1new="78ef6c44a6f045a81b82875c78983e50c983cde3" sha256="32180a17c2c747b70a5c2454f7d0ea3fcb6d06e0251e2d6072869bbbad948e18" sha256new="GIMAUF6CY5D3OCS4ERKPPUHKH7FW2BXAEUPC2YDSQ2N3XLMURYMA"/>
+      <archive extract="gradle-1.12-rc-1" href="https://services.gradle.org/distributions/gradle-1.12-rc-1-bin.zip" size="42082399" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=42b72e3efd3c31784423e3370d6a22b385e7daa1" released="2014-04-23" stability="testing" version="1.12-rc-2">
+      <manifest-digest sha1new="42b72e3efd3c31784423e3370d6a22b385e7daa1" sha256="cb18215ed2a3d1330c6487b1e8a54d4e3d6ccb1c91ffb30648bf1bebc27bec33" sha256new="ZMMCCXWSUPITGDDEQ6Y6RJKNJY6WZSY4SH73GBSIX4N6XQT35QZQ"/>
+      <archive extract="gradle-1.12-rc-2" href="https://services.gradle.org/distributions/gradle-1.12-rc-2-bin.zip" size="42083881" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=f99007bc14d577e27a853856913b067c87b618b4" released="2014-04-29" stability="stable" version="1.12">
+      <manifest-digest sha256new="XMD244NUCU462FRKB2ZAPJ36AU2LC4KZEOEVBQ66WNBX6KX6LRTA"/>
+      <archive extract="gradle-1.12" href="https://services.gradle.org/distributions/gradle-1.12-bin.zip" size="42080843" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d525e72b7f8a290f90dcf87566a78954824edf3e" released="2014-06-06" stability="testing" version="2.0-rc-1">
+      <manifest-digest sha1new="d525e72b7f8a290f90dcf87566a78954824edf3e" sha256="c6464e0c4167e31d91182ac68ac3d1467abe28921cf88215ab91c266e2960113" sha256new="YZDE4DCBM7RR3EIYFLDIVQ6RIZ5L4KESDT4IEFNLSHBGNYUWAEJQ"/>
+      <archive extract="gradle-2.0-rc-1" href="https://services.gradle.org/distributions/gradle-2.0-rc-1-bin.zip" size="41470537" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=297c106329a1a2e51e0577eb7b74a0d6c0c59117" released="2014-06-23" stability="testing" version="2.0-rc-2">
+      <manifest-digest sha1new="297c106329a1a2e51e0577eb7b74a0d6c0c59117" sha256="2bca6c1f81586685a1e75d6cc1d391f9885fb2236ab7bf6a92bd5460c882185c" sha256new="FPFGYH4BLBTILIPHLVWMDU4R7GEF7MRDNK3362USXVKGBSECDBOA"/>
+      <archive extract="gradle-2.0-rc-2" href="https://services.gradle.org/distributions/gradle-2.0-rc-2-bin.zip" size="41470673" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=6032161410573f91f79f39166ee8e71808f43f33" released="2014-07-01" stability="stable" version="2.0">
+      <manifest-digest sha256new="FJHPZOKFQA7W2FJO52HQMF2EVCYCQGNO32ZPIG77QTDN5JO2WCLQ"/>
+      <archive extract="gradle-2.0" href="https://services.gradle.org/distributions/gradle-2.0-bin.zip" size="41468729" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=a7471f53e1560cd6640202729f17aead96707c08" released="2014-08-19" stability="testing" version="2.1-rc-1">
+      <manifest-digest sha1new="a7471f53e1560cd6640202729f17aead96707c08" sha256="ff7a15243de0c91b6a934d13f5ca6e505d85f4837f76a2b4c0dca77591912fd1" sha256new="755BKJB54DERW2UTJUJ7LSTOKBOYL5EDP53KFNGA3STXLEMRF7IQ"/>
+      <archive extract="gradle-2.1-rc-1" href="https://services.gradle.org/distributions/gradle-2.1-rc-1-bin.zip" size="41543881" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=f794512855a8b24d82e58a22990adc13066cc6ba" released="2014-08-28" stability="testing" version="2.1-rc-2">
+      <manifest-digest sha1new="f794512855a8b24d82e58a22990adc13066cc6ba" sha256="a45d780cdcc31a823b8f070018f214a13aac26965afde792f4f7697696cbafd3" sha256new="UROXQDG4YMNIEO4PA4ABR4QUUE5KYJUWLL66PEXU65UXNFWLV7JQ"/>
+      <archive extract="gradle-2.1-rc-2" href="https://services.gradle.org/distributions/gradle-2.1-rc-2-bin.zip" size="41543484" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=1f4ef5d089bcb60060055825f1aa94973fdd1f6d" released="2014-09-01" stability="testing" version="2.1-rc-3">
+      <manifest-digest sha1new="1f4ef5d089bcb60060055825f1aa94973fdd1f6d" sha256="ce9effcf42a6ce1199362697e48ad38a57fd5327db6f891839e82e89622dec87" sha256new="Z2PP7T2CU3HBDGJWE2L6JCWTRJL72UZH3NXYSGBZ5AXISYRN5SDQ"/>
+      <archive extract="gradle-2.1-rc-3" href="https://services.gradle.org/distributions/gradle-2.1-rc-3-bin.zip" size="41542390" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=1dd74a4c435efb0951674c75fb70b24703a35ca4" released="2014-09-03" stability="testing" version="2.1-rc-4">
+      <manifest-digest sha1new="1dd74a4c435efb0951674c75fb70b24703a35ca4" sha256="c29c0f7ae793c004c3e0a0ab0d9d5955d58c07abb9d8c0152c90f90df769a42f" sha256new="YKOA66XHSPAAJQ7AUCVQ3HKZKXKYYB5LXHMMAFJMSD4Q353JUQXQ"/>
+      <archive extract="gradle-2.1-rc-4" href="https://services.gradle.org/distributions/gradle-2.1-rc-4-bin.zip" size="41542844" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=6e1a9ee8a4e869d0aa0165532ee310ffc0974e10" released="2014-11-08" stability="stable" version="2.1">
+      <manifest-digest sha256new="QEQP6AXSJ5GTRH6PE5KHI237AKMPMHWTTNOM7G53MMCXARSTNLPQ"/>
+      <archive extract="gradle-2.1" href="https://services.gradle.org/distributions/gradle-2.1-bin.zip" size="41540840" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=690a1a99855641788732fe89188382d0ff53107f" released="2014-11-17" stability="testing" version="2.2.1-rc-1">
+      <manifest-digest sha1new="690a1a99855641788732fe89188382d0ff53107f" sha256="449a407f38de6891a234264e68eddd0465d9472d2d7e81758bfee4afd2abdb1a" sha256new="ISNEA7ZY3ZUJDIRUEZHGR3O5ARS5SRZNFV7IC5ML73SK7UVL3MNA"/>
+      <archive extract="gradle-2.2.1-rc-1" href="https://services.gradle.org/distributions/gradle-2.2.1-rc-1-bin.zip" size="41656711" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=c71e9cb81951baee9d0fcc147bcf3a2dcea1acb4" released="2014-11-24" stability="stable" version="2.2.1">
+      <manifest-digest sha256new="E524KAMWA63LGYUL5JZDE2TIKXA6HSFMK5V5ZTGIDYVPFNX7FRCA"/>
+      <archive extract="gradle-2.2.1" href="https://services.gradle.org/distributions/gradle-2.2.1-bin.zip" size="41653933" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=e91985aafc467edbf95fb8298c7f3171fbd8eef4" released="2014-11-10" stability="stable" version="2.2">
+      <manifest-digest sha1new="e91985aafc467edbf95fb8298c7f3171fbd8eef4" sha256="ddf4b283bff05050d6986cff5691ac92a2e3f7079f467f0e48a40e0eae047a92" sha256new="3X2LFA576BIFBVUYNT7VNENMSKROH5YHT5DH6DSIUQHA5LQEPKJA"/>
+      <archive extract="gradle-2.2" href="https://services.gradle.org/distributions/gradle-2.2-bin.zip" size="41653976" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=bc28bd1946f69f18385431c66472f2f49cc1fb11" released="2014-10-20" stability="testing" version="2.2-rc-1">
+      <manifest-digest sha1new="bc28bd1946f69f18385431c66472f2f49cc1fb11" sha256="ca1fd851418ea9b72fb0fc537c5adbdc2159fa157d50532c3928003ea6734d54" sha256new="ZIP5QUKBR2U3OL5Q7RJXYWW33QQVT6QVPVIFGLBZFAAD5JTTJVKA"/>
+      <archive extract="gradle-2.2-rc-1" href="https://services.gradle.org/distributions/gradle-2.2-rc-1-bin.zip" size="41655703" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=843598d4a24296a4388dc587562a6a7209aa3b70" released="2014-11-03" stability="testing" version="2.2-rc-2">
+      <manifest-digest sha1new="843598d4a24296a4388dc587562a6a7209aa3b70" sha256="88b7b9c26ae8da62fd0f36d5644dff58ef6add0486e346ca3b40ecb2bb1826eb" sha256new="RC33TQTK5DNGF7IPG3KWITP7LDXWVXIEQ3RUNSR3IDWLFOYYE3VQ"/>
+      <archive extract="gradle-2.2-rc-2" href="https://services.gradle.org/distributions/gradle-2.2-rc-2-bin.zip" size="41656128" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=64db1d7b0c181157e5105cd5ac35736a6e487ee3" released="2015-01-27" stability="testing" version="2.3-rc-1">
+      <manifest-digest sha1new="64db1d7b0c181157e5105cd5ac35736a6e487ee3" sha256="cd0e1a81679cc6dfe72f3836135656982af98656c9711a3125a0edc065cff601" sha256new="ZUHBVALHTTDN7ZZPHA3BGVSWTAVPTBSWZFYRUMJFUDW4AZOP6YAQ"/>
+      <archive extract="gradle-2.3-rc-1" href="https://services.gradle.org/distributions/gradle-2.3-rc-1-bin.zip" size="42475971" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=2b2a98595936e7a8c5fa540e9cd802f20c7eb0ce" released="2015-02-04" stability="testing" version="2.3-rc-2">
+      <manifest-digest sha1new="2b2a98595936e7a8c5fa540e9cd802f20c7eb0ce" sha256="9dbe1f17a2d798bcc4f7d53e2ceef67b6e00480d8dc34c30fb58a49c851d34eb" sha256new="TW7B6F5C26MLZRHX2U7CZ3XWPNXAASANRXBUYMH3LCSJZBI5GTVQ"/>
+      <archive extract="gradle-2.3-rc-2" href="https://services.gradle.org/distributions/gradle-2.3-rc-2-bin.zip" size="42477990" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=5404f822a30f021329d2829291f305e2b5644245" released="2015-02-08" stability="testing" version="2.3-rc-3">
+      <manifest-digest sha1new="5404f822a30f021329d2829291f305e2b5644245" sha256="21c82c479fbab8617b0662a885b866d633e2ef597a4352d72d68daa568608795" sha256new="EHECYR47XK4GC6YGMKUILODG2YZ6F32ZPJBVFVZNNDNKK2DAQ6KQ"/>
+      <archive extract="gradle-2.3-rc-3" href="https://services.gradle.org/distributions/gradle-2.3-rc-3-bin.zip" size="42477601" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=a5f8e9b68fbcdd50a625daf79b3741b99f1f878d" released="2015-02-11" stability="testing" version="2.3-rc-4">
+      <manifest-digest sha1new="a5f8e9b68fbcdd50a625daf79b3741b99f1f878d" sha256="2a61558e4a5db1232d356b81b16359573381fb62eec0db561ae543c209b1f610" sha256new="FJQVLDSKLWYSGLJVNOA3CY2ZK4ZYD63C53ANWVQ24VB4ECNR6YIA"/>
+      <archive extract="gradle-2.3-rc-4" href="https://services.gradle.org/distributions/gradle-2.3-rc-4-bin.zip" size="42477773" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=3b15def939a14d126365a98f1f6a2d49f4e35ae8" released="2015-02-16" stability="stable" version="2.3">
+      <manifest-digest sha256new="NAMHHY2BH35YBG6IAY3VYCGT2VMDVVDQSBWTJIPNR2GWYILXXOCA"/>
+      <archive extract="gradle-2.3" href="https://services.gradle.org/distributions/gradle-2.3-bin.zip" size="42475057" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=ad20ed15aa53a0ee0af34bb7f0c9c0bb1e4c4696" released="2015-04-23" stability="testing" version="2.4-rc-1">
+      <manifest-digest sha1new="ad20ed15aa53a0ee0af34bb7f0c9c0bb1e4c4696" sha256="720172acac31617ca790a5b2ee1081d922c0a31517c1b3d8a51700aabe91071b" sha256new="OIAXFLFMGFQXZJ4QUWZO4EEB3ERMBIYVC7A3HWFFC4AKVPURA4NQ"/>
+      <archive extract="gradle-2.4-rc-1" href="https://services.gradle.org/distributions/gradle-2.4-rc-1-bin.zip" size="45386129" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=b5bf6cfb16d9a2c9beb13370cd0d38c50bb0f352" released="2015-04-29" stability="testing" version="2.4-rc-2">
+      <manifest-digest sha1new="b5bf6cfb16d9a2c9beb13370cd0d38c50bb0f352" sha256="51c2da0c789645c2e0abb2f497122ca6c63487e9d9edb592de762259a814d72c" sha256new="KHBNUDDYSZC4FYFLWL2JOERMU3DDJB7J3HW3LEW6OYRFTKAU24WA"/>
+      <archive extract="gradle-2.4-rc-2" href="https://services.gradle.org/distributions/gradle-2.4-rc-2-bin.zip" size="45385615" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=896a7a156cf172dc4b1f84cfedff6602fe930f30" released="2015-05-05" stability="stable" version="2.4">
+      <manifest-digest sha256new="GXQ25B6VLQB3RRTEEQWDJREBVSNBWQGI6EZF2CC3SZCKT3QJJ2DQ"/>
+      <archive extract="gradle-2.4" href="https://services.gradle.org/distributions/gradle-2.4-bin.zip" size="45383133" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=4a5a59b6e9b3257e34ea6566bbba5b061c9d25f0" released="2015-06-23" stability="testing" version="2.5-rc-1">
+      <manifest-digest sha1new="4a5a59b6e9b3257e34ea6566bbba5b061c9d25f0" sha256="2fd537b8ca65597bed5f8530f03f8bc86e73318f430a21d521bfd5e79fb191fd" sha256new="F7KTPOGKMVMXX3K7QUYPAP4LZBXHGMMPIMFCDVJBX7K6PH5RSH6Q"/>
+      <archive extract="gradle-2.5-rc-1" href="https://services.gradle.org/distributions/gradle-2.5-rc-1-bin.zip" size="44618206" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=e75e9b18f4ecc4199f380becc75355f12c4b6b15" released="2015-07-02" stability="testing" version="2.5-rc-2">
+      <manifest-digest sha1new="e75e9b18f4ecc4199f380becc75355f12c4b6b15" sha256="6813b6fa8b220197a135c5624c2dfb386ea54da44eb2ee00e67f2ebac0966615" sha256new="NAJ3N6ULEIAZPIJVYVREYLP3HBXKKTNEJ2ZO4AHGP4XLVQEWMYKQ"/>
+      <archive extract="gradle-2.5-rc-2" href="https://services.gradle.org/distributions/gradle-2.5-rc-2-bin.zip" size="44619834" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=7473c1bd694ac270e34d7f289f3224234632693e" released="2015-07-08" stability="stable" version="2.5">
+      <manifest-digest sha256new="YPDZM2CHCCHHAAGTJ37U4A66KWYRGA6C4CXUWCBRWHLKJR7KHRKA"/>
+      <archive extract="gradle-2.5" href="https://services.gradle.org/distributions/gradle-2.5-bin.zip" size="44617449" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=f8d7a5c4f33eb48c7492d42d3dff1b3fa428d2c1" released="2015-07-28" stability="testing" version="2.6-rc-1">
+      <manifest-digest sha1new="f8d7a5c4f33eb48c7492d42d3dff1b3fa428d2c1" sha256="65599e83bbc72855481b0229c1d7f7c83521f733bd89f5242e08dbc840e67f71" sha256new="MVMZ5A53Y4UFKSA3AIU4DV7XZA2SD5ZTXWE7KJBOBDN4QQHGP5YQ"/>
+      <archive extract="gradle-2.6-rc-1" href="https://services.gradle.org/distributions/gradle-2.6-rc-1-bin.zip" size="44745861" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=26dede0105c09b4b8e42b52b7c21a842b5120686" released="2015-08-04" stability="testing" version="2.6-rc-2">
+      <manifest-digest sha1new="26dede0105c09b4b8e42b52b7c21a842b5120686" sha256="6bf38db2415640a0e81fec67965089be85ac8566e993f2091020e02a7c80b105" sha256new="NPZY3MSBKZAKB2A75RTZMUEJX2C2ZBLG5GJ7ECIQEDQCU7EAWECQ"/>
+      <archive extract="gradle-2.6-rc-2" href="https://services.gradle.org/distributions/gradle-2.6-rc-2-bin.zip" size="44746108" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=a239bdd106d545f34aeef2d5a462e60ce6777362" released="2015-08-10" stability="stable" version="2.6">
+      <manifest-digest sha256new="GKZCZCTL7ADQSSBTGLIOLQPRN2HLJYXG7KLKBDE6RIALLUSYF3AQ"/>
+      <archive extract="gradle-2.6" href="https://services.gradle.org/distributions/gradle-2.6-bin.zip" size="44743194" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=7651fade677e3bb3477ed5c7aba69419976ccd06" released="2015-08-28" stability="testing" version="2.7-rc-1">
+      <manifest-digest sha1new="7651fade677e3bb3477ed5c7aba69419976ccd06" sha256="a99c97365c708b7e75f1222a72349d36da1ba7b445c8f346b04892661785401b" sha256new="VGOJONS4OCFX45PREIVHENE5G3NBXJ5UIXEPGRVQJCJGMF4FIANQ"/>
+      <archive extract="gradle-2.7-rc-1" href="https://services.gradle.org/distributions/gradle-2.7-rc-1-bin.zip" size="44806663" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=bfe2037f06835f0018b03778f6ff76840559dd2a" released="2015-09-05" stability="testing" version="2.7-rc-2">
+      <manifest-digest sha1new="bfe2037f06835f0018b03778f6ff76840559dd2a" sha256="c8283423798725e146c6c61fafe6bba33c8b8bb161396c1dad91ca3449d6cd01" sha256new="ZAUDII3ZQ4S6CRWGYYP27ZV3UM6IXC5RME4WYHNNSHFDISOWZUAQ"/>
+      <archive extract="gradle-2.7-rc-2" href="https://services.gradle.org/distributions/gradle-2.7-rc-2-bin.zip" size="44812284" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=b6d590000208bd7a7d55e9f31918bf4749b2c993" released="2015-09-14" stability="stable" version="2.7">
+      <manifest-digest sha256new="4FV3SZMTSW3EZOIDHVJJATLPAIG4XOMC2DG3VXOJ52JV7KKRIKBQ"/>
+      <archive extract="gradle-2.7" href="https://services.gradle.org/distributions/gradle-2.7-bin.zip" size="44809759" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=5f8c36fe3042d1e6bbbb96cd7fe0a74eaa7954f7" released="2015-09-30" stability="testing" version="2.8-rc-1">
+      <manifest-digest sha1new="5f8c36fe3042d1e6bbbb96cd7fe0a74eaa7954f7" sha256="e73189fe96329f7146111f11fc7c03fd48ade6d27154f232547c7520f374439d" sha256new="44YYT7UWGKPXCRQRD4I7Y7AD7VEK3ZWSOFKPEMSUPR2SB43UIOOQ"/>
+      <archive extract="gradle-2.8-rc-1" href="https://services.gradle.org/distributions/gradle-2.8-rc-1-bin.zip" size="44133106" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=fcb7a1efde8bafb4a528883493f78773afee800c" released="2015-10-15" stability="testing" version="2.8-rc-2">
+      <manifest-digest sha1new="fcb7a1efde8bafb4a528883493f78773afee800c" sha256="531f7339f0f66dda2ebfcd3bf29b66fb4340ec7ce89b2dfeb722197db3e729a9" sha256new="KMPXGOPQ6ZW5ULV7ZU57FG3G7NBUB3D45CNS37VXEIMX3M7HFGUQ"/>
+      <archive extract="gradle-2.8-rc-2" href="https://services.gradle.org/distributions/gradle-2.8-rc-2-bin.zip" size="44677251" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=1e823f7a1c59f49759330509ace1c0fd4c01655c" released="2015-10-20" stability="stable" version="2.8">
+      <manifest-digest sha256new="3A2OIN5RQEL5MEKMOJHU3OQR3JTN4ISA6XJQKU3IB7PDHVGJ6NLQ"/>
+      <archive extract="gradle-2.8" href="https://services.gradle.org/distributions/gradle-2.8-bin.zip" size="44674269" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=5d0302b76c59a5147c43fabce71cddb5d36b34b9" released="2015-11-03" stability="testing" version="2.9-rc-1">
+      <manifest-digest sha1new="5d0302b76c59a5147c43fabce71cddb5d36b34b9" sha256="7dc3828f37bf9f1f9414346ef4b70f8bf88df792785db1f15c74d3203bdaba5d" sha256new="PXBYFDZXX6PR7FAUGRXPJNYPRP4I354SPBO3D4K4OTJSAO62XJOQ"/>
+      <archive extract="gradle-2.9-rc-1" href="https://services.gradle.org/distributions/gradle-2.9-rc-1-bin.zip" size="44789301" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=3c8dc04afbc76eec7320fd76edbb7a77f0ac4367" released="2015-11-17" stability="stable" version="2.9">
+      <manifest-digest sha256new="X4CS246PFVAS4OLAL6T7U5JH2Y2LOZNB2L4TBX7ODGPJL6KH2YFQ"/>
+      <archive extract="gradle-2.9" href="https://services.gradle.org/distributions/gradle-2.9-bin.zip" size="44786923" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=90d549f544291115ffca3809383d638a085f5de2" released="2015-12-08" stability="testing" version="2.10-rc-1">
+      <manifest-digest sha1new="90d549f544291115ffca3809383d638a085f5de2" sha256="5032025a189b228bf927a8e9f291bfb34ad8bea8f3fd15b340accd7cb14a13d9" sha256new="KAZAEWQYTMRIX6JHVDU7FEN7WNFNRPVI6P6RLM2AVTGXZMKKCPMQ"/>
+      <archive extract="gradle-2.10-rc-1" href="https://services.gradle.org/distributions/gradle-2.10-rc-1-bin.zip" size="46375456" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=a011062cba3fd98fe914e0afc7c63f458eea8cf8" released="2015-12-18" stability="testing" version="2.10-rc-2">
+      <manifest-digest sha1new="a011062cba3fd98fe914e0afc7c63f458eea8cf8" sha256="bfe47c808d5b272e209fb1d06f63fc323172af70ebfd84d5c9fbfb80a61238cc" sha256new="X7SHZAENLMTS4IE7WHIG6Y74GIYXFL3Q5P6YJVOJ7P5YBJQSHDGA"/>
+      <archive extract="gradle-2.10-rc-2" href="https://services.gradle.org/distributions/gradle-2.10-rc-2-bin.zip" size="46375411" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=bae7a37b7d55debe0c08720a6a44b8e50892c841" released="2015-12-21" stability="stable" version="2.10">
+      <manifest-digest sha256new="YCQ4D3KCLMVCLFDQSNYKFMYC3RM4KTF45F2DSA3RMWRJFKWGGRUA"/>
+      <archive extract="gradle-2.10" href="https://services.gradle.org/distributions/gradle-2.10-bin.zip" size="46372477" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=638576ebf20ca0af17e26da43e249940424cfd1c" released="2016-01-20" stability="testing" version="2.11-rc-1">
+      <manifest-digest sha1new="638576ebf20ca0af17e26da43e249940424cfd1c" sha256="d79601bb21f6026a06856446bcb2cb2339c513d3d2de64debbf97d3b320a9307" sha256new="26LADOZB6YBGUBUFMRDLZMWLEM44KE6T2LPGJXV37F6TWMQKSMDQ"/>
+      <archive extract="gradle-2.11-rc-1" href="https://services.gradle.org/distributions/gradle-2.11-rc-1-bin.zip" size="46899886" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=e414fe1f8d14b7abfa4b06019c19ad33b0b26c8f" released="2016-02-02" stability="testing" version="2.11-rc-2">
+      <manifest-digest sha1new="e414fe1f8d14b7abfa4b06019c19ad33b0b26c8f" sha256="e791d0f5642ab763b9bc26c670ce9667a70943a6859db2f188ef2ff48bdf4691" sha256new="46I5B5LEFK3WHON4E3DHBTUWM6TQSQ5GQWO3F4MI54X7JC67I2IQ"/>
+      <archive extract="gradle-2.11-rc-2" href="https://services.gradle.org/distributions/gradle-2.11-rc-2-bin.zip" size="46900253" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=da823363ceafa56aa52f868ae4c667e7f79b0c78" released="2016-02-03" stability="testing" version="2.11-rc-3">
+      <manifest-digest sha1new="da823363ceafa56aa52f868ae4c667e7f79b0c78" sha256="c7e7310b7bc4feefb68ff5f6683c632d474746c4bc6f68c2e505e8d5ec2fcbb6" sha256new="Y7TTCC33YT7O7NUP6X3GQPDDFVDUORWEXRXWRQXFAXUNL3BPZO3A"/>
+      <archive extract="gradle-2.11-rc-3" href="https://services.gradle.org/distributions/gradle-2.11-rc-3-bin.zip" size="46900568" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=4120f6dc58fb66fe6b8fb2dfdfa54f3dc0320581" released="2016-02-08" stability="stable" version="2.11">
+      <manifest-digest sha256new="JXBOQOCSTMTRFHOQTJBZMMCG7YWS47BTKNPDEYGB6KLMNOUEECTQ"/>
+      <archive extract="gradle-2.11" href="https://services.gradle.org/distributions/gradle-2.11-bin.zip" size="46897904" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=ce6461f81ddbae9f4401fc3fb8532739a9d22a24" released="2016-03-07" stability="testing" version="2.12-rc-1">
+      <manifest-digest sha1new="ce6461f81ddbae9f4401fc3fb8532739a9d22a24" sha256="b1fee405d419b5f0c3f6324b2ddeddf1a381a1065d88eb4157721fafbd726c54" sha256new="WH7OIBOUDG27BQ7WGJFS3XW56GRYDIIGLWEOWQKXOIP27PLSNRKA"/>
+      <archive extract="gradle-2.12-rc-1" href="https://services.gradle.org/distributions/gradle-2.12-rc-1-bin.zip" size="46965521" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=eab62b4a42112771ae6bc5a7d5ef0601a74ef711" released="2016-03-14" stability="stable" version="2.12">
+      <manifest-digest sha256new="F64Z2EIULIYLH7VDFUKQG6P5HTQF25CKAGXKRU3EX2MLJP2ATDOQ"/>
+      <archive extract="gradle-2.12" href="https://services.gradle.org/distributions/gradle-2.12-bin.zip" size="46962889" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=551b888ea0fa3e16c1a4e4738ebad1a65eb2cb45" released="2016-04-06" stability="testing" version="2.13-rc-1">
+      <manifest-digest sha1new="551b888ea0fa3e16c1a4e4738ebad1a65eb2cb45" sha256="61027cc6455a7c40c22b8b2d182ded4c1575beb17fcc88d1a6f4af6475d7f589" sha256new="MEBHZRSFLJ6EBQRLRMWRQLPNJQKXLPVRP7GIRUNG6SXWI5OX6WEQ"/>
+      <archive extract="gradle-2.13-rc-1" href="https://services.gradle.org/distributions/gradle-2.13-rc-1-bin.zip" size="47085609" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=98445edf00258f13927988e6069c106320b3696f" released="2016-04-19" stability="testing" version="2.13-rc-2">
+      <manifest-digest sha1new="98445edf00258f13927988e6069c106320b3696f" sha256="a9a89cec811c9a70bf8c1f1d3fbf0eabe91998f58626a256a8dd773b6bae5758" sha256new="VGUJZ3EBDSNHBP4MD4OT7PYOVPURTGHVQYTKEVVI3V3TW25OK5MA"/>
+      <archive extract="gradle-2.13-rc-2" href="https://services.gradle.org/distributions/gradle-2.13-rc-2-bin.zip" size="47085932" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=facffe35352608e9b2856d242a52603a7d81ad43" released="2016-04-25" stability="stable" version="2.13">
+      <manifest-digest sha256new="GHKJXRWZEQKJ5ZK6XRVKKHJDWFQJPALS5AWQSVG5YDTMKUL7JPVQ"/>
+      <archive extract="gradle-2.13" href="https://services.gradle.org/distributions/gradle-2.13-bin.zip" size="47083522" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=07d071129bf3ee078e63da0f227eff49e9287cc1" released="2016-05-18" stability="testing" version="2.14-rc-1">
+      <manifest-digest sha1new="07d071129bf3ee078e63da0f227eff49e9287cc1" sha256="1abbe4bee12925aa9ca72877bede4097237788f4c6511646c2acc3a4b7d14d99" sha256new="DK56JPXBFES2VHFHFB335XSAS4RXPCHUYZIRMRWCVTB2JN6RJWMQ"/>
+      <archive extract="gradle-2.14-rc-1" href="https://services.gradle.org/distributions/gradle-2.14-rc-1-bin.zip" size="45013746" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=0f399c1e18f79ffe81ae02a742207d97f504b248" released="2016-05-27" stability="testing" version="2.14-rc-2">
+      <manifest-digest sha1new="0f399c1e18f79ffe81ae02a742207d97f504b248" sha256="effd8d36fa9be4783e619062cbd2f43f3c939409dc158432b53cfda4e72ee1a7" sha256new="576Y2NX2TPSHQPTBSBRMXUXUH46JHFAJ3QKYIMVVHT62JZZO4GTQ"/>
+      <archive extract="gradle-2.14-rc-2" href="https://services.gradle.org/distributions/gradle-2.14-rc-2-bin.zip" size="45033659" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=fae74aecee6a6f06b15be373d2cc37828532fbab" released="2016-05-30" stability="testing" version="2.14-rc-3">
+      <manifest-digest sha1new="fae74aecee6a6f06b15be373d2cc37828532fbab" sha256="adf9958ed1e75ceb0ee199c4890f2250623d644138973d15e6f619fdd24c5bc6" sha256new="VX4ZLDWR45OOWDXBTHCISDZCKBRD2ZCBHCLT2FPG6YM73USMLPDA"/>
+      <archive extract="gradle-2.14-rc-3" href="https://services.gradle.org/distributions/gradle-2.14-rc-3-bin.zip" size="45033775" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=6dc0e966b8b691385a325134a68e2a4dd0a78006" released="2016-06-03" stability="testing" version="2.14-rc-4">
+      <manifest-digest sha1new="6dc0e966b8b691385a325134a68e2a4dd0a78006" sha256="0e248caf71458b36ec7d3ef17bfd767037b2556a2fd71d818bb4bca056ef1b99" sha256new="BYSIZL3RIWFTN3D5H3YXX7LWOA33EVLKF7LR3AMLWS6KAVXPDOMQ"/>
+      <archive extract="gradle-2.14-rc-4" href="https://services.gradle.org/distributions/gradle-2.14-rc-4-bin.zip" size="45036434" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=73a4035ec4cc8b81de2a89c703849baaa0a567e1" released="2016-06-07" stability="testing" version="2.14-rc-5">
+      <manifest-digest sha1new="73a4035ec4cc8b81de2a89c703849baaa0a567e1" sha256="9d304837c6a51dd4165ab31a11e9637214f0a58ceb06f5e811bd886718f9e758" sha256new="TUYEQN6GUUO5IFS2WMNBD2LDOIKPBJMM5MDPL2ARXWEGOGHZ45MA"/>
+      <archive extract="gradle-2.14-rc-5" href="https://services.gradle.org/distributions/gradle-2.14-rc-5-bin.zip" size="45138596" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=419672abd23d264a241bbd82a6bb60df3a13a34a" released="2016-06-10" stability="testing" version="2.14-rc-6">
+      <manifest-digest sha1new="419672abd23d264a241bbd82a6bb60df3a13a34a" sha256="f20d4bdd7f6c79b9071452c8f38879a8163dd1a01240c7a7995e57c8452facd2" sha256new="6IGUXXL7NR43SBYUKLEPHCDZVALD3UNACJAMPJ4ZLZL4QRJPVTJA"/>
+      <archive extract="gradle-2.14-rc-6" href="https://services.gradle.org/distributions/gradle-2.14-rc-6-bin.zip" size="45036326" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=3eef86db620708241c45b13af48556714b92ad89" released="2016-06-14" stability="stable" version="2.14">
+      <manifest-digest sha256new="U26WUXU7DJT3DUYCI5ZN3ZUBP4OMPRWDZM6LH3I7VDWNHHMVVFGQ"/>
+      <archive extract="gradle-2.14" href="https://services.gradle.org/distributions/gradle-2.14-bin.zip" size="45033194" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=012b7c6d3e90dfba745ef0abf4b00037e4820268" released="2016-06-29" stability="testing" version="2.14.1-rc-1">
+      <manifest-digest sha1new="012b7c6d3e90dfba745ef0abf4b00037e4820268" sha256="6ca7c079040bf9d06921497c9af36968fed2c8ce80454d9819942676c9afe686" sha256new="NST4A6IEBP45A2JBJF6JV43JND7NFSGOQBCU3GAZSQTHNSNP42DA"/>
+      <archive extract="gradle-2.14.1-rc-1" href="https://services.gradle.org/distributions/gradle-2.14.1-rc-1-bin.zip" size="45042483" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=1da69bfa69e11944dc58b5c0a7fefe2d4a2cb6c9" released="2016-07-11" stability="testing" version="2.14.1-rc-2">
+      <manifest-digest sha1new="1da69bfa69e11944dc58b5c0a7fefe2d4a2cb6c9" sha256="a4ff52acc7a336bc4dbe7c857a35d2ae60cb1dfb713321bffff833f7b2c8788f" sha256new="UT7VFLGHUM3LYTN6PSCXUNOSVZQMWHP3OEZSDP777AZ7PMWIPCHQ"/>
+      <archive extract="gradle-2.14.1-rc-2" href="https://services.gradle.org/distributions/gradle-2.14.1-rc-2-bin.zip" size="45041391" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=ad6fe525c68eef7b90137257aa4834b5151774b2" released="2016-07-18" stability="stable" version="2.14.1">
+      <manifest-digest sha1new="ad6fe525c68eef7b90137257aa4834b5151774b2" sha256="558be5d4ba11d8dc53470bf02272f55030e87f7c0d76a4b014ee1c51cd9a4a30" sha256new="KWF6LVF2CHMNYU2HBPYCE4XVKAYOQ734BV3KJMAU5YOFDTM2JIYA"/>
+      <archive extract="gradle-2.14.1" href="https://services.gradle.org/distributions/gradle-2.14.1-bin.zip" size="45038784" type="application/zip"/>
+    </implementation>
+  </group>
+  <group license="Apache License 2.0">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="7..">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+    <environment insert="lib/*" name="CLASSPATH"/>
+    <command name="run">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
+        <for-each item-from="GRADLE_OPTS" separator=" ">
+          <arg>$item</arg>
+        </for-each>
+        <arg>org.gradle.launcher.GradleMain</arg>
+      </runner>
+    </command>
+    <implementation id="sha1new=d3c694a7227761d9cfd077cec31f876ec7dad375" released="2016-06-08" stability="developer" version="3.0-pre-1">
+      <manifest-digest sha1new="d3c694a7227761d9cfd077cec31f876ec7dad375" sha256="4b1986236f08380acb35c380e0e6fd2bdcca8c3b66fece30b7403620fb1bb539" sha256new="JMMYMI3PBA4AVSZVYOAOBZX5FPOMVDB3M37M4MFXIA3CB6Y3WU4Q"/>
+      <archive extract="gradle-3.0-milestone-1" href="https://services.gradle.org/distributions/gradle-3.0-milestone-1-bin.zip" size="63139051" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=342d4845785d546d999c140b1d50c02450c64abb" released="2016-06-21" stability="developer" version="3.0-pre-2">
+      <manifest-digest sha1new="342d4845785d546d999c140b1d50c02450c64abb" sha256="2126749da3dccafb6f46f906b8e7fbd6e9eedf8350fac16c413f5d9f9d45f574" sha256new="EETHJHND3TFPW32G7EDLRZ7323U65X4DKD5MC3CBH5OZ7HKF6V2A"/>
+      <archive extract="gradle-3.0-milestone-2" href="https://services.gradle.org/distributions/gradle-3.0-milestone-2-bin.zip" size="69090676" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=b400a775e04a9efaa2fdea1ec702117074314829" released="2016-08-02" stability="testing" version="3.0-rc-1">
+      <manifest-digest sha1new="b400a775e04a9efaa2fdea1ec702117074314829" sha256="e7b61c64720c380c37f7ef600b973117270c417c815804a18f178c572579363e" sha256new="463BYZDSBQ4AYN7X55QAXFZRC4TQYQL4QFMAJIMPC6GFOJLZGY7A"/>
+      <archive extract="gradle-3.0-rc-1" href="https://services.gradle.org/distributions/gradle-3.0-rc-1-bin.zip" size="69305820" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=128e91417105fc15d875a7176f949ba481510add" released="2016-08-08" stability="testing" version="3.0-rc-2">
+      <manifest-digest sha1new="128e91417105fc15d875a7176f949ba481510add" sha256="87bad841074bca17ce326e658b2e2776d6c5196f5c1f282f8deaf528a30de4e7" sha256new="Q65NQQIHJPFBPTRSNZSYWLRHO3LMKGLPLQPSQL4N5L2SRIYN4TTQ"/>
+      <archive extract="gradle-3.0-rc-2" href="https://services.gradle.org/distributions/gradle-3.0-rc-2-bin.zip" size="69306907" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=a357b43b89d8495105521d08fb0d087f365be80f" released="2016-08-15" stability="stable" version="3.0">
+      <manifest-digest sha256new="6IKCNJZZOFLUTEFTMK7JWJ6KX4DI4JNSNPCEHRE7JEPHMLWOIRCQ"/>
+      <archive extract="gradle-3.0" href="https://services.gradle.org/distributions/gradle-3.0-bin.zip" size="69303530" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=418affaa54d68f2970b98b899dff633985c7a636" released="2016-09-12" stability="testing" version="3.1-rc-1">
+      <manifest-digest sha1new="418affaa54d68f2970b98b899dff633985c7a636" sha256="fd345993f6f48f545aa275dcbbb77940f259c10bc585c6c0b4cb683ff793597c" sha256new="7U2FTE7W6SHVIWVCOXOLXN3ZIDZFTQILYWC4NQFUZNUD754TLF6A"/>
+      <archive extract="gradle-3.1-rc-1" href="https://services.gradle.org/distributions/gradle-3.1-rc-1-bin.zip" size="68966616" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=29d17246849e3ecd2f085c4323e14e5a634c0918" released="2016-09-19" stability="stable" version="3.1">
+      <manifest-digest sha256new="4S3LSXNUUASYBPUFALDF5LL7SUGHLN4NZTFSRIKKUJJVH4L7AUWQ"/>
+      <archive extract="gradle-3.1" href="https://services.gradle.org/distributions/gradle-3.1-bin.zip" size="68963781" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=a0f7bd32a0ca605089d89e75b7b4bb50b47243bb" released="2016-10-24" stability="testing" version="3.2-rc-1">
+      <manifest-digest sha1new="a0f7bd32a0ca605089d89e75b7b4bb50b47243bb" sha256="c4bb772d59823dafafcbeac0bded638f6d49e7561394b003a35e324e5628f331" sha256new="YS5XOLKZQI627L6L5LAL33LDR5WUTZ2WCOKLAA5DLYZE4VRI6MYQ"/>
+      <archive extract="gradle-3.2-rc-1" href="https://services.gradle.org/distributions/gradle-3.2-rc-1-bin.zip" size="69157271" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=96be4fbd88ccce3ff32d60312c62f738ed82d1fa" released="2016-10-31" stability="testing" version="3.2-rc-2">
+      <manifest-digest sha1new="96be4fbd88ccce3ff32d60312c62f738ed82d1fa" sha256="e25ee20bfb4fbcdf3c89c5c114e224f5897de7dd0612db1aa4dac70d58c87748" sha256new="4JPOEC73J66N6PEJYXARJYRE6WEX3Z65AYJNWGVE3LDQ2WGIO5EA"/>
+      <archive extract="gradle-3.2-rc-2" href="https://services.gradle.org/distributions/gradle-3.2-rc-2-bin.zip" size="69158298" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=85a53cd317f24ff164aa41fbdca21324fd5686ce" released="2016-11-07" stability="testing" version="3.2-rc-3">
+      <manifest-digest sha1new="85a53cd317f24ff164aa41fbdca21324fd5686ce" sha256="8119dcea7b4fd4765eccbab9c62bdd84eea5aaab13733a62349b2d6565707da0" sha256new="QEM5Z2T3J7KHMXWMXK44MK65QTXKLKVLCNZTUYRUTMWWKZLQPWQA"/>
+      <archive extract="gradle-3.2-rc-3" href="https://services.gradle.org/distributions/gradle-3.2-rc-3-bin.zip" size="69151437" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=af35ba60009dddd265395687760dbf2fd6456479" released="2016-11-14" stability="stable" version="3.2">
+      <manifest-digest sha256new="KQ3VTCX2DRCCJA3PNQ3MEW3NAXTSUY3FBMGC7NJU25B4UO5HWEPQ"/>
+      <archive extract="gradle-3.2" href="https://services.gradle.org/distributions/gradle-3.2-bin.zip" size="69147475" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=cc0020347de7bd0147a6e1e23e6076c810929545" released="2016-11-22" stability="stable" version="3.2.1">
+      <manifest-digest sha256new="ZLVNAFGWINTR4YO3OTE42IAERJYYJHUSSFHAEC2KRALOWE7QD3VA"/>
+      <archive extract="gradle-3.2.1" href="https://services.gradle.org/distributions/gradle-3.2.1-bin.zip" size="69149629" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=730c1ccb7e72e4e60044cedc75e30d1b4e3e581e" released="2016-12-19" stability="testing" version="3.3-rc-1">
+      <manifest-digest sha1new="730c1ccb7e72e4e60044cedc75e30d1b4e3e581e" sha256="417fe8d6d79b784eb156bcc82cddc7a2e50affa24c550a640bcafa9ff66fcfcb" sha256new="IF76RVWXTN4E5MKWXTECZXOHULSQV75CJRKQUZALZL5J75TPZ7FQ"/>
+      <archive extract="gradle-3.3-rc-1" href="https://services.gradle.org/distributions/gradle-3.3-rc-1-bin.zip" size="70121453" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=6951992d2bb91a6b89005d9f0ba946f0f6a21cde" released="2017-01-03" stability="stable" version="3.3">
+      <manifest-digest sha256new="FVMNEG7RRHVNT4SCM7IA5YCR64IQSHBAO4U2BGKTGS66WHBVSLZA"/>
+      <archive extract="gradle-3.3" href="https://services.gradle.org/distributions/gradle-3.3-bin.zip" size="70120398" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=9a7cf427cd0063b2d2628ab5f42a47979e7f7935" released="2017-01-26" stability="testing" version="3.4-rc-1">
+      <manifest-digest sha1new="9a7cf427cd0063b2d2628ab5f42a47979e7f7935" sha256="04f4f913d6d6f1d5706877b7cac98c4bb97b510af17caded02316e186f973f02" sha256new="AT2PSE6W23Y5K4DIO634VSMMJO4XWUIK6F6K33ICGFXBQ34XH4BA"/>
+      <archive extract="gradle-3.4-rc-1" href="https://services.gradle.org/distributions/gradle-3.4-rc-1-bin.zip" size="70307622" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=ab54727de9570783465fc53d750bb92eedea5b2a" released="2017-02-06" stability="testing" version="3.4-rc-2">
+      <manifest-digest sha1new="ab54727de9570783465fc53d750bb92eedea5b2a" sha256="127de3b3d6ec414514ec1019f452e67b0b64489219e0f24544455e5f4d18e267" sha256new="CJ66HM6W5RAUKFHMCAM7IUXGPMFWISESDHQPERKEIVPF6TIY4JTQ"/>
+      <archive extract="gradle-3.4-rc-2" href="https://services.gradle.org/distributions/gradle-3.4-rc-2-bin.zip" size="70309908" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=f85ec8ce650b6e3c54d29d6836d1171ea2d833f1" released="2017-02-13" stability="testing" version="3.4-rc-3">
+      <manifest-digest sha1new="f85ec8ce650b6e3c54d29d6836d1171ea2d833f1" sha256="ed1f024ca7c4e1bc4e3b7b4f70290f8389dbab2a9d5fc4b24682d3af92a73a3b" sha256new="5UPQETFHYTQ3YTR3PNHXAKIPQOE5XKZKTVP4JMSGQLJ27EVHHI5Q"/>
+      <archive extract="gradle-3.4-rc-3" href="https://services.gradle.org/distributions/gradle-3.4-rc-3-bin.zip" size="70310350" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=2b6dab4a60f045c5c2fb24e41334aeb1169869dc" released="2017-02-20" stability="stable" version="3.4">
+      <manifest-digest sha1new="2b6dab4a60f045c5c2fb24e41334aeb1169869dc" sha256="f8ff8208773ec5602ec7fb92bbd7c889dfeb826d4a0b6aa5c4ca3640c4484b4e" sha256new="7D7YECDXH3CWALWH7OJLXV6IRHP6XATNJIFWVJOEZI3EBRCIJNHA"/>
+      <archive extract="gradle-3.4" href="https://services.gradle.org/distributions/gradle-3.4-bin.zip" size="70308689" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=cb97f20da4f0c263e79b69fc4a63e6566480f39a" released="2017-03-03" stability="stable" version="3.4.1">
+      <manifest-digest sha1new="cb97f20da4f0c263e79b69fc4a63e6566480f39a" sha256="b10da51cc484c0defc0d322561fbfef7a257e913c867942834df2a33229e80f7" sha256new="WEG2KHGEQTAN57ANGISWD67666RFP2ITZBTZIKBU34VDGIU6QD3Q"/>
+      <archive extract="gradle-3.4.1" href="https://services.gradle.org/distributions/gradle-3.4.1-bin.zip" size="70310446" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=a9df6e5d03165303c57584e837e7d9eaf49761c3" released="2017-06-16" stability="stable" version="3.5.1">
+      <manifest-digest sha1new="a9df6e5d03165303c57584e837e7d9eaf49761c3" sha256="b89d9d64963f557a4e79774ba8d6ff664c811c7d15c0401037b2e2ff42f1cc79" sha256new="XCOZ2ZEWH5KXUTTZO5F2RVX7MZGICHD5CXAEAEBXWLRP6QXRZR4Q"/>
+      <archive extract="gradle-3.5.1" href="https://services.gradle.org/distributions/gradle-3.5.1-bin.zip" size="73302707" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=96e093389e5c416b81614de261654a75ce8d8bd0" released="2017-03-22" stability="testing" version="3.5-rc-1">
+      <manifest-digest sha1new="96e093389e5c416b81614de261654a75ce8d8bd0" sha256="3076c7ed8079630be751a94edb8dc04b4cf558f021bfb0c8af8987b158ef9ed1" sha256new="GB3MP3MAPFRQXZ2RVFHNXDOAJNGPKWHQEG73BSFPRGD3CWHPT3IQ"/>
+      <archive extract="gradle-3.5-rc-1" href="https://services.gradle.org/distributions/gradle-3.5-rc-1-bin.zip" size="73331981" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=c321b6fed1dce2de7d5eb1b4570c040b7f9afa5f" released="2017-03-27" stability="testing" version="3.5-rc-2">
+      <manifest-digest sha1new="c321b6fed1dce2de7d5eb1b4570c040b7f9afa5f" sha256="8d9c1bcab85810b1aeace7a85042c79a8b082d21659d4902c0547188aa4d933c" sha256new="RWOBXSVYLAILDLVM46UFAQWHTKFQQLJBMWOUSAWAKRYYRKSNSM6A"/>
+      <archive extract="gradle-3.5-rc-2" href="https://services.gradle.org/distributions/gradle-3.5-rc-2-bin.zip" size="73333277" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d0eda6aec41050a858c5e8644945478eaff82dbc" released="2017-04-04" stability="testing" version="3.5-rc-3">
+      <manifest-digest sha1new="d0eda6aec41050a858c5e8644945478eaff82dbc" sha256="6f78143aa9c364ec219a9a3465897d8af5e1425fae1571cad6b58dffc332325e" sha256new="N54BIOVJYNSOYIM2TI2GLCL5RL26CQS7VYKXDSWWWWG77QZSGJPA"/>
+      <archive extract="gradle-3.5-rc-3" href="https://services.gradle.org/distributions/gradle-3.5-rc-3-bin.zip" size="73332455" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=23a6df0a267882c31f781e403b87050fe9528a72" released="2017-04-10" stability="stable" version="3.5">
+      <manifest-digest sha1new="23a6df0a267882c31f781e403b87050fe9528a72" sha256="a55ddec70d8708a7074beb6f119dc59f138d914a77502f4e88b5cabec10e9ca4" sha256new="UVO55RYNQ4EKOB2L5NXRDHOFT4JY3EKKO5IC6TUIWXFL5QIOTSSA"/>
+      <archive extract="gradle-3.5" href="https://services.gradle.org/distributions/gradle-3.5-bin.zip" size="73331577" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=834c76c9ee54395294761733976393a934d61a65" released="2017-04-28" stability="developer" version="4.0-pre-1">
+      <manifest-digest sha1new="834c76c9ee54395294761733976393a934d61a65" sha256="18cfa034219e31b9b1e13c147b4b907878080f7a028132a7b0f1fcfbdf8a3387" sha256new="DDH2ANBBTYY3TMPBHQKHWS4QPB4AQD32AKATFJ5Q6H6PXX4KGODQ"/>
+      <archive extract="gradle-4.0-milestone-1" href="https://services.gradle.org/distributions/gradle-4.0-milestone-1-bin.zip" size="67223834" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=13ab62b20412db1e08b0c94c01f5cbdd2b730c1d" released="2017-05-17" stability="developer" version="4.0-pre-2">
+      <manifest-digest sha1new="13ab62b20412db1e08b0c94c01f5cbdd2b730c1d" sha256="6b1d35665dc3963662c84a5d0ad41b0de1e86fcbf036affd9316d436123a41cc" sha256new="NMOTKZS5YOLDMYWIJJOQVVA3BXQ6Q36L6A3K77MTC3KDMER2IHGA"/>
+      <archive extract="gradle-4.0-milestone-2" href="https://services.gradle.org/distributions/gradle-4.0-milestone-2-bin.zip" size="67403663" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=6fca9631076693337f7237c91fc4425e9db21dce" released="2017-05-30" stability="testing" version="4.0-rc-1">
+      <manifest-digest sha1new="6fca9631076693337f7237c91fc4425e9db21dce" sha256="5bad8f0079bed3edd562fedacb2fb27f4078ae2deaa0f0a14552ad5552182f2b" sha256new="LOWY6ADZX3J63VLC73NMWL5SP5AHRLRN5KQPBIKFKKWVKUQYF4VQ"/>
+      <archive extract="gradle-4.0-rc-1" href="https://services.gradle.org/distributions/gradle-4.0-rc-1-bin.zip" size="67518637" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=c7472e8e258926c5721de65d0fdbf3e820ac5897" released="2017-06-07" stability="testing" version="4.0-rc-2">
+      <manifest-digest sha1new="c7472e8e258926c5721de65d0fdbf3e820ac5897" sha256="73ac1787378d3ef7dcfb1bd74034d2c0cae00300e245c31be07d4d5535e812cc" sha256new="OOWBPBZXRU7PPXH3DPLUANGSYDFOAAYA4JC4GG7APVGVKNPICLGA"/>
+      <archive extract="gradle-4.0-rc-2" href="https://services.gradle.org/distributions/gradle-4.0-rc-2-bin.zip" size="67519847" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=e5b52927f4ae1890da7c44f9e33c1a2e5feec3b1" released="2017-06-12" stability="testing" version="4.0-rc-3">
+      <manifest-digest sha1new="e5b52927f4ae1890da7c44f9e33c1a2e5feec3b1" sha256="d6f453c4fa53a184cb94d9d1a95343edcfa76f4aaf2c406b852f8c7344076d83" sha256new="232FHRH2KOQYJS4U3HI2SU2D5XH2O32KV4WEA24FF6GHGRAHNWBQ"/>
+      <archive extract="gradle-4.0-rc-3" href="https://services.gradle.org/distributions/gradle-4.0-rc-3-bin.zip" size="67525628" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=573c63c508516ea36ccc984232b4922cf6b5acca" released="2017-06-14" stability="stable" version="4.0">
+      <manifest-digest sha1new="573c63c508516ea36ccc984232b4922cf6b5acca" sha256="2456627aa8b6c6ac6f229c23378061024c9c9dc46084aaf2ff4f2780e9aca2d5" sha256new="ERLGE6VIW3DKY3ZCTQRTPADBAJGJZHOEMCCKV4X7J4TYB2NMULKQ"/>
+      <archive extract="gradle-4.0" href="https://services.gradle.org/distributions/gradle-4.0-bin.zip" size="67523890" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=e35523f4d441ae27b1154ca688c32288764396ca" released="2017-07-07" stability="stable" version="4.0.1">
+      <manifest-digest sha1new="e35523f4d441ae27b1154ca688c32288764396ca" sha256="2ff58cfe0b650f86837a703127281f8dc888c72969ceda472ca2ac6f53bdd22a" sha256new="F72YZ7QLMUHYNA32OAYSOKA7RXEIRRZJNHHNURZMUKWG6U552IVA"/>
+      <archive extract="gradle-4.0.1" href="https://services.gradle.org/distributions/gradle-4.0.1-bin.zip" size="67524421" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=f77194fafdbd5ace2975f15c77c35bbe72de5fd9" released="2017-06-20" stability="developer" version="4.1-pre-1">
+      <manifest-digest sha1new="f77194fafdbd5ace2975f15c77c35bbe72de5fd9" sha256="2887c4aa89be1cfa3c02f0fb2a4f207468691f9f6751ff334e953aa6da0b1ae0" sha256new="FCD4JKUJXYOPUPAC6D5SUTZAORUGSH47M5I76M2OSU5KNWQLDLQA"/>
+      <archive extract="gradle-4.1-milestone-1" href="https://services.gradle.org/distributions/gradle-4.1-milestone-1-bin.zip" size="67601545" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=21adea1dddbbaa2d10413b7c58be44a58bb5615f" released="2017-07-20" stability="testing" version="4.1-rc-1">
+      <manifest-digest sha1new="21adea1dddbbaa2d10413b7c58be44a58bb5615f" sha256="af6922cdcdb604e03dc163ae0a12c53c45a85cc8017b94a15cb5a8a8c0e87bbc" sha256new="V5USFTONWYCOAPOBMOXAUEWFHRC2QXGIAF5ZJIK4WWUKRQHIPO6A"/>
+      <archive extract="gradle-4.1-rc-1" href="https://services.gradle.org/distributions/gradle-4.1-rc-1-bin.zip" size="67459532" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=c97ae89577f47f3c3931c8b04bce765d711c2965" released="2017-07-26" stability="stable" version="4.0.2">
+      <manifest-digest sha1new="c97ae89577f47f3c3931c8b04bce765d711c2965" sha256="ea093028b53dfd754cce4359e7473076f902cdcdbcba78f9038c5471185d27af" sha256new="5IETAKFVHX6XKTGOINM6ORZQO34QFTONXS5HR6IDRRKHCGC5E6XQ"/>
+      <archive extract="gradle-4.0.2" href="https://services.gradle.org/distributions/gradle-4.0.2-bin.zip" size="67522826" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=ac191fce4bb1098ed30e0c0ed561104b853777d5" released="2017-07-31" stability="testing" version="4.1-rc-2">
+      <manifest-digest sha1new="ac191fce4bb1098ed30e0c0ed561104b853777d5" sha256="5550fdab967df0a33230df66dc2a87891e4451f312b68a1c742cdbe79e5a6b56" sha256new="KVIP3K4WPXYKGMRQ35TNYKUHREPEIUPTCK3IUHDUFTN6PHS2NNLA"/>
+      <archive extract="gradle-4.1-rc-2" href="https://services.gradle.org/distributions/gradle-4.1-rc-2-bin.zip" size="67463107" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=ffbede459240103d750d5fc153ddbf3b67f838e8" released="2017-08-07" stability="stable" version="4.1">
+      <manifest-digest sha1new="ffbede459240103d750d5fc153ddbf3b67f838e8" sha256="f4339a950fe75b161c71fde30852efca707893bd717706109c64b085e96285b5" sha256new="6QZZVFIP45NRMHDR7XRQQUXPZJYHRE55OF3QMEE4MSYIL2LCQW2Q"/>
+      <archive extract="gradle-4.1" href="https://services.gradle.org/distributions/gradle-4.1-bin.zip" size="67461139" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=2c7e261285bab23dfcbfc9f5af31d391dd581520" released="2017-09-07" stability="testing" version="4.2-rc-1">
+      <manifest-digest sha1new="2c7e261285bab23dfcbfc9f5af31d391dd581520" sha256="c2232caf5b213e24974b654b57b26eae11fa2ee4d7b23fe925134a2edbe29417" sha256new="YIRSZL23EE7CJF2LMVFVPMTOVYI7ULXE26ZD72JFCNFC5W7CSQLQ"/>
+      <archive extract="gradle-4.2-rc-1" href="https://services.gradle.org/distributions/gradle-4.2-rc-1-bin.zip" size="71096323" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=1d10c840f1df8e0b3c7741eee1161a9d506831a8" released="2017-09-13" stability="testing" version="4.2-rc-2">
+      <manifest-digest sha1new="1d10c840f1df8e0b3c7741eee1161a9d506831a8" sha256="c0955943691b4ffad8ef47e5f8f1369d91eee066a4490bd0a77606360d436c92" sha256new="YCKVSQ3JDNH7VWHPI7S7R4JWTWI65YDGUREQXUFHOYDDMDKDNSJA"/>
+      <archive extract="gradle-4.2-rc-2" href="https://services.gradle.org/distributions/gradle-4.2-rc-2-bin.zip" size="71096378" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=5a50916bf1887be8eb84d4f7e6b9252c9d7d34c3" released="2017-09-20" stability="stable" version="4.2">
+      <manifest-digest sha1new="5a50916bf1887be8eb84d4f7e6b9252c9d7d34c3" sha256="af5b4e7ce5aed684db04a5147eb1669e579b9038ede132e6772e1035ff5130aa" sha256new="V5NU47HFV3LIJWYEUUKH5MLGTZLZXEBY5XQTFZTXFYIDL72RGCVA"/>
+      <archive extract="gradle-4.2" href="https://services.gradle.org/distributions/gradle-4.2-bin.zip" size="71094000" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=0359d3477cba03298adc7bbaf36d2a06e008211d" released="2017-10-02" stability="stable" version="4.2.1">
+      <manifest-digest sha256new="452TTY2DAE2GADYG3ISQEEXG7MZDFUULISLSU77BAIUU3JTWJXPA"/>
+      <archive extract="gradle-4.2.1" href="https://services.gradle.org/distributions/gradle-4.2.1-bin.zip" size="71095471" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d3d8f9c3fbd7ac40b1ee856b341de36741b6045d" released="2017-10-12" stability="testing" version="4.3-rc-1">
+      <manifest-digest sha256new="WIDNJB2WYYY6T3LZLYLYFFVJIFHIWA4XYOGFT7V7J2Z6FXBNGWXQ"/>
+      <archive extract="gradle-4.3-rc-1" href="https://services.gradle.org/distributions/gradle-4.3-rc-1-bin.zip" size="73018179" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=5478c3de0533848a972b9a872fd806deb1f7eb80" released="2017-10-18" stability="testing" version="4.3-rc-2">
+      <manifest-digest sha256new="AB34PUCAFNB6NFVSD4R4S55ILGQPFVUTDJ3BFYRESAX5F6BTEQ3A"/>
+      <archive extract="gradle-4.3-rc-2" href="https://services.gradle.org/distributions/gradle-4.3-rc-2-bin.zip" size="73020263" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=6ceabfbe37e4dbb4a0c09ef85a05180cc727ae84" released="2017-10-24" stability="testing" version="4.3-rc-3">
+      <manifest-digest sha256new="BS35KSGKE4MTZN4F4XSPCVPIPG3CAUBBA5RHO46JZE3R2BZCHSDA"/>
+      <archive extract="gradle-4.3-rc-3" href="https://services.gradle.org/distributions/gradle-4.3-rc-3-bin.zip" size="73019497" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=0f73a03c2492f7e12a5f8b3bbed4932401661477" released="2017-10-26" stability="testing" version="4.3-rc-4">
+      <manifest-digest sha256new="RYTIBKZGQMM2J7H4XZQQWVNKWLEDMLY5TY3SFH753VG7Y33DJZZA"/>
+      <archive extract="gradle-4.3-rc-4" href="https://services.gradle.org/distributions/gradle-4.3-rc-4-bin.zip" size="73020402" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d9c52ea4541ca8ad5fa7bdcd755b98e77e28d78a" released="2017-10-30" stability="stable" version="4.3">
+      <manifest-digest sha256new="IDYAKLB4HUDDBXDUVZO3XKXHGVUCZYCPU2UTKPLZ3DOXBNBFGHEQ"/>
+      <archive extract="gradle-4.3" href="https://services.gradle.org/distributions/gradle-4.3-bin.zip" size="73018108" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=3f9112b00d929ecfee0e65a90c14dc736941a66f" released="2017-11-08" stability="stable" version="4.3.1">
+      <manifest-digest sha256new="U6SS35UQTHSWLCHGR6ODRCWOMEWD47X5HUXJ6FOY7A2YLW7QWH4A"/>
+      <archive extract="gradle-4.3.1" href="https://services.gradle.org/distributions/gradle-4.3.1-bin.zip" size="73021060" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=be5ac21a2cc697db0118ed86cfcd6aed18e39217" released="2017-11-21" stability="testing" version="4.4-rc-1">
+      <manifest-digest sha256new="DIDHQ22BOFNX3LIXIX4TKPDHVZHCL5O62MGFLN3VKZRYEWZ3KT5A"/>
+      <archive extract="gradle-4.4-rc-1" href="https://services.gradle.org/distributions/gradle-4.4-rc-1-bin.zip" size="75572335" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=cb65365066e78df1f87e2786d7fdb4c677b304c8" released="2017-11-24" stability="testing" version="4.4-rc-2">
+      <manifest-digest sha256new="2FYKKWN6FF7GK3ZM6D73DIRXY26YNBFJXWGQAVQYT6DPIHE6PSYA"/>
+      <archive extract="gradle-4.4-rc-2" href="https://services.gradle.org/distributions/gradle-4.4-rc-2-bin.zip" size="75546456" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d8c3c1d25bff3646b8b01b7728b3f260c339f5da" released="2017-11-27" stability="testing" version="4.4-rc-3">
+      <manifest-digest sha256new="U6EFB5FDFE7MNIQ2QFZNYDIE2TSBNQQ2CZZQGQ2C2KY62LBAJCKA"/>
+      <archive extract="gradle-4.4-rc-3" href="https://services.gradle.org/distributions/gradle-4.4-rc-3-bin.zip" size="75546275" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=57b89af088f098843ab4147ad3e0d939486e9a0d" released="2017-11-28" stability="testing" version="4.4-rc-4">
+      <manifest-digest sha256new="GQTUZDHR2R4EBMSMTFPRU54E7EXSMLXFZVYKSESDKBEXP5JPBMGA"/>
+      <archive extract="gradle-4.4-rc-4" href="https://services.gradle.org/distributions/gradle-4.4-rc-4-bin.zip" size="75546245" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=6eec630cfe581744b107a5af2042e4e362f72e19" released="2017-11-30" stability="testing" version="4.4-rc-5">
+      <manifest-digest sha256new="VWO4QLGZ7R5XKGGELBVF6DPTAK373E6EV5HBITVE7XJWXWHCAZOA"/>
+      <archive extract="gradle-4.4-rc-5" href="https://services.gradle.org/distributions/gradle-4.4-rc-5-bin.zip" size="75522933" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=b0c4d50e6bdd09e34870fcbb57e0dc0d9cab4a36" released="2017-12-04" stability="testing" version="4.4-rc-6">
+      <manifest-digest sha256new="7FIYWMREFDH5MYJYV3ERUEUCLKBFABM5H76UQRWBNS7FIC33JP4A"/>
+      <archive extract="gradle-4.4-rc-6" href="https://services.gradle.org/distributions/gradle-4.4-rc-6-bin.zip" size="75522351" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=f95b81b5c428b554a6ea271f30c4b64beb638bdd" released="2017-12-20" stability="stable" version="4.4.1">
+      <manifest-digest sha256new="SESNXG75TFSLN7AAJX2HVUMZLSUKQNKONIOT4ZTCA6H2ZNYLR3FA"/>
+      <archive extract="gradle-4.4.1" href="https://services.gradle.org/distributions/gradle-4.4.1-bin.zip" size="75522539" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=1bbeba31e4247a72ee6127ae1bd664730937632e" released="2017-12-06" stability="stable" version="4.4">
+      <manifest-digest sha256new="BGA5TF555SNDY3TAGDN5ZNT4A3UH4BVZP4TZWSBOODCX5Z7ANRJQ"/>
+      <archive extract="gradle-4.4" href="https://services.gradle.org/distributions/gradle-4.4-bin.zip" size="75520391" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=f768f143af8da49e73fe193933494dae31277a82" released="2018-01-09" stability="testing" version="4.5-rc-1">
+      <manifest-digest sha256new="6T5KH5GOWCNY4KKAH7IYCBRCGBRNZYJSXOGO7QJCIBXNGFWD5OJA"/>
+      <archive extract="gradle-4.5-rc-1" href="https://services.gradle.org/distributions/gradle-4.5-rc-1-bin.zip" size="72426648" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=fc5c0796aaca4c41aae04b8108c7f3b19f53ce4f" released="2018-01-22" stability="testing" version="4.5-rc-2">
+      <manifest-digest sha256new="FKC3JAFPMDMNH7VPAMGXUOXV6KD3YDJA3BUVGXGURUKRO52FJBQQ"/>
+      <archive extract="gradle-4.5-rc-2" href="https://services.gradle.org/distributions/gradle-4.5-rc-2-bin.zip" size="72425271" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=071875528f59ee27a933c4abfe00c02df7fefd26" released="2018-02-05" stability="stable" version="4.5.1">
+      <manifest-digest sha256new="2EWDNEPRM34K6IFKNL5RLP2VOUXPBEY42QOTT4XGNSTN65RV5ERA"/>
+      <archive extract="gradle-4.5.1" href="https://services.gradle.org/distributions/gradle-4.5.1-bin.zip" size="72424144" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=884be9feaa42b145be1e3758f3c3e49e915643a3" released="2018-01-24" stability="stable" version="4.5">
+      <manifest-digest sha256new="PJC6EQK3HKGSHMDG6IFNWIRWQPU2KZIQSEAFYTELQ56DMJQ7VKWA"/>
+      <archive extract="gradle-4.5" href="https://services.gradle.org/distributions/gradle-4.5-bin.zip" size="72424229" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=9dc901d844fbdfac096743ffdf94b7bc4923cb7a" released="2018-02-16" stability="testing" version="4.6-rc-1">
+      <manifest-digest sha256new="ZEDBBIGNUWYW5JCKT6RMJ6U7HNCGB76BREXGV6VUFBRF2Y7SQHYA"/>
+      <archive extract="gradle-4.6-rc-1" href="https://services.gradle.org/distributions/gradle-4.6-rc-1-bin.zip" size="74177490" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=425045b0b1a147c11821518b1f371088b9a20c18" released="2018-02-21" stability="testing" version="4.6-rc-2">
+      <manifest-digest sha256new="UU66Z373XZSG4VP2OYBMLRGG7SHEURJNITQUVQTE6T2OBFZLILVQ"/>
+      <archive extract="gradle-4.6-rc-2" href="https://services.gradle.org/distributions/gradle-4.6-rc-2-bin.zip" size="74176997" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=c1a66fa21778b206f4bb6ef3fffe849171c0ae3e" released="2018-02-28" stability="stable" version="4.6">
+      <manifest-digest sha256new="CJRE3C6WR5P47HT2KNTWWFLHTCUC7ZSDXUNT5UOM3ZSASIP33LZA"/>
+      <archive extract="gradle-4.6" href="https://services.gradle.org/distributions/gradle-4.6-bin.zip" size="74176889" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=f2a24e1ba7eaa89fb2fe9abcc9cfbbbfaa4ac723" released="2018-04-03" stability="testing" version="4.7-rc-1">
+      <manifest-digest sha256new="XW5POEWHLVRF7UXHE4QJOZP7AQSHIDHBWOSDAU7DECMTUAS7QNBQ"/>
+      <archive extract="gradle-4.7-rc-1" href="https://services.gradle.org/distributions/gradle-4.7-rc-1-bin.zip" size="75322312" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=58aa98db9d2a5fee52a53a5bba8010b640ccffaa" released="2018-04-13" stability="testing" version="4.7-rc-2">
+      <manifest-digest sha256new="ANFZPC7TQNLLIPDVVTAMCC447IDGC2DDJ4FYXBDOLSV47GGT3WCA"/>
+      <archive extract="gradle-4.7-rc-2" href="https://services.gradle.org/distributions/gradle-4.7-rc-2-bin.zip" size="75323683" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=b2b441598ffd9db04d4e40ff8d111ef91b483ada" released="2018-04-18" stability="stable" version="4.7">
+      <manifest-digest sha256new="EZHCIWGW2INHEDWZC7PVB2HQ4B4F7KVT2OKU2MAER7GVVAV4JTKQ"/>
+      <archive extract="gradle-4.7" href="https://services.gradle.org/distributions/gradle-4.7-bin.zip" size="75323957" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=871e4b2227b64076db6d7665a6e4172552626a0e" released="2018-05-15" stability="testing" version="4.8-rc-1">
+      <manifest-digest sha256new="KQHQB4AT2D7UKA76ZOVVARRQOV7R7XJTUPUUMOBWNTLNP424U34Q"/>
+      <archive extract="gradle-4.8-rc-1" href="https://services.gradle.org/distributions/gradle-4.8-rc-1-bin.zip" size="75870663" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=1aa6730a364828d33eb29b65cdfc6ad4290debd5" released="2018-05-24" stability="testing" version="4.8-rc-2">
+      <manifest-digest sha256new="DOFIN5W7JWEMRGIZEME3SUMGG4PHW2RZJAQSSWBOXMF45QNUBQXQ"/>
+      <archive extract="gradle-4.8-rc-2" href="https://services.gradle.org/distributions/gradle-4.8-rc-2-bin.zip" size="75888431" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=9444eafd7e172c70d4dc3bf4530be1aeb42226a7" released="2018-05-31" stability="testing" version="4.8-rc-3">
+      <manifest-digest sha256new="NOJCM7SAKGCHCWGODCU263ETA4U54DK6OHVABZCHKZ3T3MVBVFRQ"/>
+      <archive extract="gradle-4.8-rc-3" href="https://services.gradle.org/distributions/gradle-4.8-rc-3-bin.zip" size="75888455" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=0d661c9d06e60639815a96aef11b786f7bba8ef8" released="2018-06-21" stability="stable" version="4.8.1">
+      <manifest-digest sha256new="NQNNQ32LKSID6Q6WPHMUBTI3E5ZPXXB5IDSDEPXWN7WANVLO7ICA"/>
+      <archive extract="gradle-4.8.1" href="https://services.gradle.org/distributions/gradle-4.8.1-bin.zip" size="75889282" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=8d07849d1ae1823508b50b38fe8c9a2f01df7b46" released="2018-06-04" stability="stable" version="4.8">
+      <manifest-digest sha256new="NMITZQAOAZBQYAV5WFB6SLNSP2MPBAWXYG2X22NRGDGBVWAESWVQ"/>
+      <archive extract="gradle-4.8" href="https://services.gradle.org/distributions/gradle-4.8-bin.zip" size="75885015" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=416925d358e5f1f47b0303b8d5ac45fbe6176b6d" released="2018-07-03" stability="testing" version="4.9-rc-1">
+      <manifest-digest sha256new="T4V2QVTZIIX7ZAZ3GBJJQAME4YNZDXXDQ5DNBYKTMI5BQNDRD3EA"/>
+      <archive extract="gradle-4.9-rc-1" href="https://services.gradle.org/distributions/gradle-4.9-rc-1-bin.zip" size="76336844" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=10b713550bef057a0bcc0242cb8299baae38f5cf" released="2018-07-11" stability="testing" version="4.9-rc-2">
+      <manifest-digest sha256new="H5Q3AW35D27R43KDTRWZWP2RGO6BYIEZZ3BKUSMJPKFDLHOXVO4Q"/>
+      <archive extract="gradle-4.9-rc-2" href="https://services.gradle.org/distributions/gradle-4.9-rc-2-bin.zip" size="76338302" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=74344c3b6b0d18faedebab765698ea91bbdec11a" released="2018-07-16" stability="stable" version="4.9">
+      <manifest-digest sha256new="27DNK4XOMLOX43IMIJBWGX7E2XBP3R2YDV5M7GSPSWUCPWPHCC4Q"/>
+      <archive extract="gradle-4.9" href="https://services.gradle.org/distributions/gradle-4.9-bin.zip" size="76334709" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=a30190ce961aa96d5ff43bd24d38546a64a9fc38" released="2018-08-09" stability="testing" version="4.10-rc-1">
+      <manifest-digest sha256new="IGPXQS5OWPGHZDTV24UMJALVW33IRE532OZK5T3ZQYSXYGNS4IEA"/>
+      <archive extract="gradle-4.10-rc-1" href="https://services.gradle.org/distributions/gradle-4.10-rc-1-bin.zip" size="78404459" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=904c6087334c17d395f7df37370a209284d5fbbe" released="2018-08-14" stability="testing" version="4.10-rc-2">
+      <manifest-digest sha256new="MAPVW6E5TGIZ6XM7TNFGA7UQT3OMJEJ4ZWLYUPWFJ3JUISCT7JCQ"/>
+      <archive extract="gradle-4.10-rc-2" href="https://services.gradle.org/distributions/gradle-4.10-rc-2-bin.zip" size="78406764" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=3e72e3b21ccfc8bb634b1888646eed5aa829dbbf" released="2018-08-23" stability="testing" version="4.10-rc-3">
+      <manifest-digest sha256new="NPU7XGGNEZFY4HJTYGWVZXS4Y7X35AACY332BDLKJTDZMXECN3CA"/>
+      <archive extract="gradle-4.10-rc-3" href="https://services.gradle.org/distributions/gradle-4.10-rc-3-bin.zip" size="78406395" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=9bea1927f82cf5b00c8914ac5fd450d9920b7d5d" released="2018-08-27" stability="stable" version="4.10">
+      <manifest-digest sha256new="YWIPT2PNR4AXBIBENJWBJSBBW3CMTILUZ7I5SE3HN7ZWR5B77O3A"/>
+      <archive extract="gradle-4.10" href="https://services.gradle.org/distributions/gradle-4.10-bin.zip" size="78403740" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=79f1a25a8cdbd186a29c4585ed3ac21e6a0fb02c" released="2018-09-12" stability="stable" version="4.10.1">
+      <manifest-digest sha256new="23ZERXQ2254BMEJMSUT7DKV4AWXCSCUITVNMMZBMTOLQPEDRRITA"/>
+      <archive extract="gradle-4.10.1" href="https://services.gradle.org/distributions/gradle-4.10.1-bin.zip" size="78415822" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=213998bd44f93f793b9b97b0034c2e80a623f5c7" released="2018-09-19" stability="stable" version="4.10.2">
+      <manifest-digest sha256new="QIEF2HCCCMTX6YWJLBCIOYUQAXIGQYFQC4TVH4NQNU24YR5KXHXA"/>
+      <archive extract="gradle-4.10.2" href="https://services.gradle.org/distributions/gradle-4.10.2-bin.zip" size="78420037" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=71d29d1af727b87831c92a3afa073813905fd05a" released="2018-10-03" stability="developer" version="5.0-pre-1">
+      <manifest-digest sha256new="C6BKQRCB6FHOPSEWJYLMVVSMVBY65RCO626XF6MFTDCHJB7PQ6IQ"/>
+      <archive extract="gradle-5.0-milestone-1" href="https://services.gradle.org/distributions/gradle-5.0-milestone-1-bin.zip" size="83499032" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=95965bf1743b124fa3182908c6f29b62ffa340d4" released="2018-10-30" stability="testing" version="5.0-rc-1">
+      <manifest-digest sha256new="EBP4ANA4KEHJCYB6MWI5DDLTRLMUOYLYGDAJFMRGGNVC455X64MQ"/>
+      <archive extract="gradle-5.0-rc-1" href="https://services.gradle.org/distributions/gradle-5.0-rc-1-bin.zip" size="85527871" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=da2fb94060d3c4fe1d4d239c750c8aa16f723a69" released="2018-11-12" stability="testing" version="5.0-rc-2">
+      <manifest-digest sha256new="7WWW7OND3MC4OLMZXCH7NGUTRHAIYV72OH3EELGN4I6JOGNOFWPQ"/>
+      <archive extract="gradle-5.0-rc-2" href="https://services.gradle.org/distributions/gradle-5.0-rc-2-bin.zip" size="85508751" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=9de469f0e4637d21ee2381fa3701588d65840ee9" released="2018-11-14" stability="testing" version="5.0-rc-3">
+      <manifest-digest sha256new="JWGRBFPZY7NCRHVR2EDSCH4L7B7R5VJKDYQIMBR2OEURKCRZMPYQ"/>
+      <archive extract="gradle-5.0-rc-3" href="https://services.gradle.org/distributions/gradle-5.0-rc-3-bin.zip" size="85517869" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=5f9e88949cc5225a1468fbbd52329800c0cbdc0d" released="2018-11-20" stability="testing" version="5.0-rc-4">
+      <manifest-digest sha256new="U7X3IYSF2JQFIKC26DP24SOGTSUEQOHFF6UFGMWHO6YQY35MUVFA"/>
+      <archive extract="gradle-5.0-rc-4" href="https://services.gradle.org/distributions/gradle-5.0-rc-4-bin.zip" size="85492676" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=7574063b385090eaf4cbb06e5035f8807c17082f" released="2018-11-22" stability="testing" version="5.0-rc-5">
+      <manifest-digest sha256new="KN4KS2P3465P54DDCYZIFWRESRZOJCSJBZODOBJY2POF2IJKRH7Q"/>
+      <archive extract="gradle-5.0-rc-5" href="https://services.gradle.org/distributions/gradle-5.0-rc-5-bin.zip" size="85493185" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=8e6db8fe0825cf71a7241f3786c37a4133c9e5b8" released="2018-11-26" stability="stable" version="5.0">
+      <manifest-digest sha256new="6BCUP73Q2R4O6QSYVJJ75IMCJ726SADX2NMJG5MBYINQY45TVYLQ"/>
+      <archive extract="gradle-5.0" href="https://services.gradle.org/distributions/gradle-5.0-bin.zip" size="85491215" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=fc968d5806fec8a15982def8f192c5f3a6ace462" released="2018-12-05" stability="stable" version="4.10.3">
+      <manifest-digest sha256new="BOANEJ2YNO2JEVF6Q3BHTORPVW3HL4BPZOTAH6OVEMLIJU2A5W7A"/>
+      <archive extract="gradle-4.10.3" href="https://services.gradle.org/distributions/gradle-4.10.3-bin.zip" size="78422006" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=40ad86a3329dc34336b7122cb054a6787bbcb8ff" released="2018-12-03" stability="developer" version="5.1-pre-1">
+      <manifest-digest sha256new="SU4KW3AR2JWVGSYV4F3AZSZHFOJUEZU46DCCUVK3ATARCEWQ453Q"/>
+      <archive extract="gradle-5.1-milestone-1" href="https://services.gradle.org/distributions/gradle-5.1-milestone-1-bin.zip" size="85703289" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=33cee262b84530c6f62b838ec48b2bf432647e39" released="2018-12-13" stability="testing" version="5.1-rc-1">
+      <manifest-digest sha256new="SOKPF24MU6QMJ27KSABXQSYHOTBFPHOX5IYNC5VLC47BJLE6DTKA"/>
+      <archive extract="gradle-5.1-rc-1" href="https://services.gradle.org/distributions/gradle-5.1-rc-1-bin.zip" size="85784990" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=e36640b77558fd07e404313a3d8c82d13d348de3" released="2018-12-17" stability="testing" version="5.1-rc-2">
+      <manifest-digest sha256new="RCWNHBZFJA7YPJFDWZZ7VUUFOZ7DJ23FAYF4VOXVZCZI2E2ISZ6Q"/>
+      <archive extract="gradle-5.1-rc-2" href="https://services.gradle.org/distributions/gradle-5.1-rc-2-bin.zip" size="85785659" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=bc24ff7a33252add4282a697578cdc1b5fd566f8" released="2018-12-22" stability="testing" version="5.1-rc-3">
+      <manifest-digest sha256new="N74SS3VVXJNFHNSJYL2U5CBAQXUCUA53RRO4TZZB27VM6WLTKY7Q"/>
+      <archive extract="gradle-5.1-rc-3" href="https://services.gradle.org/distributions/gradle-5.1-rc-3-bin.zip" size="85787281" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d72e75b77be7b5a32a8ad375fc3fe76b13e9a560" released="2019-01-02" stability="stable" version="5.1">
+      <manifest-digest sha256new="MZUDANXKCZV7ZUX7B2ATEO3KSYHWROJY6HQ3RVG2ZEFCNM35ACWQ"/>
+      <archive extract="gradle-5.1" href="https://services.gradle.org/distributions/gradle-5.1-bin.zip" size="85783841" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=95f4fe54b38af0aed42a2d11e9548f0675c3e0eb" released="2019-01-11" stability="stable" version="5.1.1">
+      <manifest-digest sha256new="7V7YHI6R7B6YV6GVWLITD5274MDEPU7QRS54IHM4UU7OAYMRDVZA"/>
+      <archive extract="gradle-5.1.1" href="https://services.gradle.org/distributions/gradle-5.1.1-bin.zip" size="85771326" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=983bd00de6e0edd0c56014693105e99b87792b8b" released="2019-01-29" stability="testing" version="5.2-rc-1">
+      <manifest-digest sha256new="X6XCSKOIZ4VL7D7LDPWVIGWSIWII4UTXR7WXY4DNNQAJVEU2LEEQ"/>
+      <archive extract="gradle-5.2-rc-1" href="https://services.gradle.org/distributions/gradle-5.2-rc-1-bin.zip" size="87429710" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=508ecc7c54fe4d878a25c045bb3750d52526a027" released="2019-02-08" stability="stable" version="5.2.1">
+      <manifest-digest sha256new="KKFKVLT64FIPFHN4TDJXZC3733XBB22KMKNP2FD2I3MHYD2Z3KCA"/>
+      <archive extract="gradle-5.2.1" href="https://services.gradle.org/distributions/gradle-5.2.1-bin.zip" size="87430521" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=c0b14b7a0874ff5247dc95db943921738be276c6" released="2019-02-04" stability="stable" version="5.2">
+      <manifest-digest sha256new="VQZ6RKREFK4CJDPW7EXAHHX3IFNGOUGMHMEJ3EB2UHWSGUXC4TRA"/>
+      <archive extract="gradle-5.2" href="https://services.gradle.org/distributions/gradle-5.2-bin.zip" size="87425679" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=8ee3686d7fc685e5999773b58d3c64a4b46c7a01" released="2019-03-05" stability="testing" version="5.3-rc-1">
+      <manifest-digest sha256new="WFKATNMYBNWAJK2IAL5FNKRTLW3CCQ4CE53XKYMCLIWMQ4IDTDDA"/>
+      <archive extract="gradle-5.3-rc-1" href="https://services.gradle.org/distributions/gradle-5.3-rc-1-bin.zip" size="87238414" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=4b3959ab01e33b77161e34f8764684bc19b789d5" released="2019-03-11" stability="testing" version="5.3-rc-2">
+      <manifest-digest sha256new="DYHFR7SIKABWLX62RV62VBTZXBAOUN4D4AI6RNY6BDILIVLLVEZQ"/>
+      <archive extract="gradle-5.3-rc-2" href="https://services.gradle.org/distributions/gradle-5.3-rc-2-bin.zip" size="87238800" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d02d101ce159c89cc596304b61072f53b9420c9c" released="2019-03-13" stability="testing" version="5.3-rc-3">
+      <manifest-digest sha256new="N4B6NTUY3APPKYCHB7BMHKPLIWU4L4RXESBRX6TW36EXD52LNZRA"/>
+      <archive extract="gradle-5.3-rc-3" href="https://services.gradle.org/distributions/gradle-5.3-rc-3-bin.zip" size="87237886" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=bede0d2b7f9f3d468ec6dd17142ee5e0c0275077" released="2019-03-28" stability="stable" version="5.3.1">
+      <manifest-digest sha256new="SOCUIAPAKSF3E3OOUGLUBMGEG7HZCTPXDTHWJRE65GZY7DKW3REA"/>
+      <archive extract="gradle-5.3.1" href="https://services.gradle.org/distributions/gradle-5.3.1-bin.zip" size="87237494" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=8999f6d92a0db3c247d5d097dc8f1729ca226678" released="2019-03-20" stability="stable" version="5.3">
+      <manifest-digest sha256new="G3WDMB4WRKAM5GTNZNE4CW2K222MI6WXDAWUB2VNG4FJMYOESEDA"/>
+      <archive extract="gradle-5.3" href="https://services.gradle.org/distributions/gradle-5.3-bin.zip" size="87235389" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=42319c9d36373c0569a3ac082d716bae83cef3c8" released="2019-04-10" stability="testing" version="5.4-rc-1">
+      <manifest-digest sha256new="DPQJ5LO2GYNP6MPSS3HD5B5P4C4NNDYID5GTKLTTPBAJ3WPYFMPA"/>
+      <archive extract="gradle-5.4-rc-1" href="https://services.gradle.org/distributions/gradle-5.4-rc-1-bin.zip" size="87108287" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=1d80217fd1597e8cce233ec76880b727e00c17a4" released="2019-04-16" stability="stable" version="5.4">
+      <manifest-digest sha256new="XYF7Z3I3X2JM4ZP2QXQ3BBAGI7MXGR2TOHVU2FAF2OAI4RJPMPIQ"/>
+      <archive extract="gradle-5.4" href="https://services.gradle.org/distributions/gradle-5.4-bin.zip" size="87106040" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=1dc663f0583a052bcc1e02d714f49ab6047b3fb7" released="2019-04-26" stability="stable" version="5.4.1">
+      <manifest-digest sha256new="JX366OUSO6IFCBZRNKCLSLSK2K63EBD7EJ336QRLHQ23FYYPJNXQ"/>
+      <archive extract="gradle-5.4.1" href="https://services.gradle.org/distributions/gradle-5.4.1-bin.zip" size="87107055" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=9b01469eab0ce51a4f75ee5eda0e06c3507415dd" released="2019-05-29" stability="testing" version="5.5-rc-1">
+      <manifest-digest sha256new="7AOUJL6GROE6F3ACMBF7UXKUP4HYGZZ2ELR2TKXTOI2WMMCJU4BQ"/>
+      <archive extract="gradle-5.5-rc-1" href="https://services.gradle.org/distributions/gradle-5.5-rc-1-bin.zip" size="89143384" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=0a826f6aaa61e0ce88990c57000b79b3e9bf9333" released="2019-06-07" stability="testing" version="5.5-rc-2">
+      <manifest-digest sha256new="QIXGOH7TPMRYMBET4CJUJMJYOAWQ7VXS7ZT257Y37JRHPBAUNHLQ"/>
+      <archive extract="gradle-5.5-rc-2" href="https://services.gradle.org/distributions/gradle-5.5-rc-2-bin.zip" size="89143513" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=86d36a2d9e4db696d75deb232e3d68d3d06ccfcc" released="2019-06-15" stability="testing" version="5.5-rc-3">
+      <manifest-digest sha256new="ZGF67DBLQXJF7GMTVPAXRFYPFS7JESCC4YEWPDXBVVT3ZK4UTQ4A"/>
+      <archive extract="gradle-5.5-rc-3" href="https://services.gradle.org/distributions/gradle-5.5-rc-3-bin.zip" size="89147894" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=4c6de6d993e56fc75bddf136b9ba51437d847f14" released="2019-06-24" stability="testing" version="5.5-rc-4">
+      <manifest-digest sha256new="7WOVCYBYIXCIKSTVQXDXPIO5HTAICI4WG4BJKWZ6WLEC6F3MFHHQ"/>
+      <archive extract="gradle-5.5-rc-4" href="https://services.gradle.org/distributions/gradle-5.5-rc-4-bin.zip" size="89152568" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=bf71c6837280e4b01c53e4539adb82f1c890d225" released="2019-06-28" stability="stable" version="5.5">
+      <manifest-digest sha256new="7BEKJYWKWWY6BCGRCQ5O6MNTG7XIVDEO4TJQ7X3JO6W6EUQGLK7Q"/>
+      <archive extract="gradle-5.5" href="https://services.gradle.org/distributions/gradle-5.5-bin.zip" size="89150290" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=a89d7180b9a2c58cc4a0d6e317596a2a79f53d91" released="2019-07-10" stability="stable" version="5.5.1">
+      <manifest-digest sha256new="VI65RW3VXB3LHYU43ZPNIZ2R3MSRJGNV6JLK47OFTNFKONVEGB5Q"/>
+      <archive extract="gradle-5.5.1" href="https://services.gradle.org/distributions/gradle-5.5.1-bin.zip" size="89152247" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=3f9f42f6d7df7c9d5fadd247a5294b16d1258cbc" released="2019-07-29" stability="testing" version="5.6-rc-1">
+      <manifest-digest sha256new="AQQZJ52MNBB2TSPAPOSVWDESPBWLHGRZ7NHLYHVQZRIX6VURFXOQ"/>
+      <archive extract="gradle-5.6-rc-1" href="https://services.gradle.org/distributions/gradle-5.6-rc-1-bin.zip" size="93893725" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=17e03a6d1bd2141324732edc43ace7651da26c7f" released="2019-08-07" stability="testing" version="5.6-rc-2">
+      <manifest-digest sha256new="CXTY3U4RLEPXLUVX27HEVCMM4NA77YVICFS3ZHGA3QJCGUD5BERA"/>
+      <archive extract="gradle-5.6-rc-2" href="https://services.gradle.org/distributions/gradle-5.6-rc-2-bin.zip" size="93896760" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=b7828fc7bf4066bced70d0b9c4070dff2786a1fe" released="2019-08-14" stability="stable" version="5.6">
+      <manifest-digest sha256new="2EZH4VD3DMGZQGGBP3232MZ3WHR6UJLDWXXJAQOQZNDZYX5XCIUA"/>
+      <archive extract="gradle-5.6" href="https://services.gradle.org/distributions/gradle-5.6-bin.zip" size="93883485" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=59a7ec7d33d002181df29ec7b29606127a626414" released="2019-08-28" stability="stable" version="5.6.1">
+      <manifest-digest sha256new="CPBLHRUEHWKFZYMUPHNIXVZZIIQZF6JJ7OGTIVGKDQNZ6NYOHXLA"/>
+      <archive extract="gradle-5.6.1" href="https://services.gradle.org/distributions/gradle-5.6.1-bin.zip" size="93890299" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=0e8cc3311906a1eb73d9586be016d9140c48eb87" released="2019-09-05" stability="stable" version="5.6.2">
+      <manifest-digest sha256new="FMX7PVVJCUKIOQ23F5ICYRS6ITET2AKHO63ZLKBYKSRPKNU6YFXQ"/>
+      <archive extract="gradle-5.6.2" href="https://services.gradle.org/distributions/gradle-5.6.2-bin.zip" size="93890597" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=6028010da26cd3db98cf5b065b61f1d9278038e2" released="2019-10-18" stability="stable" version="5.6.3">
+      <manifest-digest sha256new="5ZYI6IKUBLNNGVXD4SCFUJCUVS6GLDC2NUSRB5DTCSR4VD3Z3WYA"/>
+      <archive extract="gradle-5.6.3" href="https://services.gradle.org/distributions/gradle-5.6.3-bin.zip" size="93894006" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=40b8e158aa3d0d99d406127afb164119ec78b0b0" released="2019-10-18" stability="testing" version="6.0-rc-1">
+      <manifest-digest sha256new="DI4JME3ZKUA2QMXZGORNV4XBGMZMRMS77YGE6ZCNTW7OCVWXY2TQ"/>
+      <archive extract="gradle-6.0-rc-1" href="https://services.gradle.org/distributions/gradle-6.0-rc-1-bin.zip" size="95119620" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=b241c291a8fc3824062e0ebb213b02071d2d35c6" released="2019-10-30" stability="testing" version="6.0-rc-2">
+      <manifest-digest sha256new="GZOA7HYT5V7N4EMQU543BFQNYEFQLR4AB533FM45KLRJIJQZ2YJA"/>
+      <archive extract="gradle-6.0-rc-2" href="https://services.gradle.org/distributions/gradle-6.0-rc-2-bin.zip" size="95126092" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=2850abbdd2ed040dcdcf095b82ca992e25acd534" released="2019-11-01" stability="stable" version="5.6.4">
+      <manifest-digest sha256new="W7BTG7XCEK4WOVS3F5EACQWIWP7YMO3TYCMGD65CB72W2MLEQIHA"/>
+      <archive extract="gradle-5.6.4" href="https://services.gradle.org/distributions/gradle-5.6.4-bin.zip" size="93900716" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=e16644b6685d77437448adad7f81e06085645809" released="2019-11-05" stability="testing" version="6.0-rc-3">
+      <manifest-digest sha256new="3O3PTOLZIMTSSFA3XIJX7PPHMYW4HRPCM5RQKW7WIMN3CWJFFCTQ"/>
+      <archive extract="gradle-6.0-rc-3" href="https://services.gradle.org/distributions/gradle-6.0-rc-3-bin.zip" size="95126562" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=6fc0d6cdb8619240a447abb720d5d6c0b8788bf0" released="2019-11-08" stability="stable" version="6.0">
+      <manifest-digest sha256new="AO3PDQOEZIF5CFMWOLS76STMWMGER4ABRZHUC6XLWUX2WPK2TBTQ"/>
+      <archive extract="gradle-6.0" href="https://services.gradle.org/distributions/gradle-6.0-bin.zip" size="95124297" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=ec81ded5ca75dc526fe5e9af4f2db600adf4f3bc" released="2019-11-18" stability="stable" version="6.0.1">
+      <manifest-digest sha256new="SGQTWWGPH6DHJ6IV2E5ACZNBOWHEOZF36VKMSQEKUT6IVB3DLYFA"/>
+      <archive extract="gradle-6.0.1" href="https://services.gradle.org/distributions/gradle-6.0.1-bin.zip" size="95129672" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=009f36b6967486f4d3d4ebc08597e56b13b89d3d" released="2019-11-20" stability="developer" version="6.1-pre-1">
+      <manifest-digest sha256new="4LJI2UG23HPWOANSFS4HIS4MJWYUKQ6QZIMNKLCHOKBEFTAA7SGA"/>
+      <archive extract="gradle-6.1-milestone-1" href="https://services.gradle.org/distributions/gradle-6.1-milestone-1-bin.zip" size="95213268" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=7a50a4e8c8815ad1a820737f16ee3f6e195c2baf" released="2019-11-28" stability="developer" version="6.1-pre-2">
+      <manifest-digest sha256new="F5XUXYQRNJD5TOU32I3QNW42Q2CX4I4JMX7SICGYBP5XGTQNMAKQ"/>
+      <archive extract="gradle-6.1-milestone-2" href="https://services.gradle.org/distributions/gradle-6.1-milestone-2-bin.zip" size="97318492" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d683436ba2af618b2a6e37bf8eec845fdb2b37b1" released="2019-12-03" stability="developer" version="6.1-pre-3">
+      <manifest-digest sha256new="NCMN4ZZLFU2R3BYRGFY2CSJ4BD7V5TNWU7RGI4N4MZAFHHLFU2FA"/>
+      <archive extract="gradle-6.1-milestone-3" href="https://services.gradle.org/distributions/gradle-6.1-milestone-3-bin.zip" size="97408547" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=bbac377462023990db95a9bf0732354f335dfed7" released="2019-12-19" stability="testing" version="6.1-rc-1">
+      <manifest-digest sha256new="WJHRGO22CW275FJJXTHPHUYP7MMS3PVMSCY4HB7DGHSZCBK6JYYQ"/>
+      <archive extract="gradle-6.1-rc-1" href="https://services.gradle.org/distributions/gradle-6.1-rc-1-bin.zip" size="97472873" type="application/zip"/>
+    </implementation>
+  </group>
+  <entry-point binary-name="gradle" command="run"/>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl4HW48ACgkQWao5J8JOTh7bnAf6A4Ju
+yE1g4JOehVpncOioJRNO0A4G1fBmSzb0y3vfpqsw3HZg8iCUfcRt9Dxc4cbbDfujjL6YmaEsKiZc
+ZoH4ydGFOZ++3o3ttNF+6zaJV/35qunHfblx1dQBeOvcOnSCJAllyoltDekrQPQgmPKk35IuEpVJ
+xl05LEGJIu5NR+8HIxkrTEF1JPYRsAkPJolc8rerJ6OovJ0zj7Wrmh//0h8NbNF04V+m7RVdGoH1
+MNQacnh0K/HC7hPYdGFWQgeQGzvVRp+mYOCtQVEtlPzj+mcuq3hlflTXRqPtfZV0M8vu3nQYzAnd
+dAmajIJWfX6F5uCTqYhSa4Ha4JMsP0ajMw==
+
+-->

@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/java/jar-launcher.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>JAR Launcher</name>
+  <summary>launcher that starts the main class while preserving the CLASSPATH</summary>
+  <description>A launcher that starts the main class specified in a JAR while preserving the CLASSPATH.
+Workaround for java -classpath ... -jar ... which does not work.</description>
+  <homepage>https://github.com/0install/jar-launcher</homepage>
+
+  <group license="MIT License">
+    <command name="run">
+      <environment insert="jar-launcher.jar" name="CLASSPATH"/>
+      <runner command="run" interface="https://apps.0install.net/java/jre.xml">
+        <version not-before="1.3"/>
+        <arg>net.zeroinstall.jar.launcher.JarLauncher</arg>
+      </runner>
+    </command>
+    <command name="run-gui">
+      <environment insert="jar-launcher.jar" name="CLASSPATH"/>
+      <runner command="run-gui" interface="https://apps.0install.net/java/jre.xml">
+        <version not-before="1.3"/>
+        <arg>net.zeroinstall.jar.launcher.JarLauncher</arg>
+      </runner>
+    </command>
+    <implementation id="1.0" stability="stable" version="1.0">
+      <manifest-digest sha1new="3706305d50a745c5a362b02aaf417d2d0765c9c1" sha256="60d4d71585f66a36ac1e3116f234ff93d0319b6d0dccb17e027e162cc9da0481" sha256new="MDKNOFMF6ZVDNLA6GELPENH7SPIDDG3NBXGLC7QCPYLCZSO2ASAQ"/>
+      <file dest="jar-launcher.jar" href="https://github.com/0install/jar-launcher/releases/download/1.0/jar-launcher-1.0.jar" size="3201"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl4HW48ACgkQWao5J8JOTh4jhAgAkx5j
+GZuuUyeDBB9Hy3B71aoQywCpoMnG+GMGd6a3RiiHIu6VxmJIyOJW6oRjD4pCI0qumT57oucBzWQS
+HyzSvAZND7A77IEeptTAHlHY4neG0+uBTivjcMG7YdlfuXzH1+Fp7/CIh992lhVTWER3aJrFWXTH
+HUyFHfPwzJbmdt61ZFCj361C5PwZKS9bo5bWDn9Tgb/DJHN4kr/9IDndtjfa/2HfxMWXcE9wj9yx
+2AZElnb9sQ1DVeY8rpyReTVbmbT3ksLlJATZceGxG4AfLW68OKJbVC8bysyIck315RHdUzwSBnmN
+4NAT/EdmPPPK53FUU5CfZJTG0zJlikPMKw==
+
+-->

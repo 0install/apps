@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/utils/zip.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Zip</name>
+  <summary xml:lang="en">Zip: package and compress zip-archive files</summary>
+  <description xml:lang="en">Zip is a compression and file packaging/archive utility. Although \highly compatible both with PKWARE's PKZIP and PKUNZIP utilities for MS-DOS and with Info-ZIP's own UnZip, our primary objectives have been portability and other-than-MSDOS functionality. Features not found in the PKWARE version include: 
+•creating zipfiles in a pipe or on a device 
+•VMS and OS/2 extended file attributes 
+•conversion between Unix, MS-DOS and Macintosh text file formats 
+•the ability to run on most of your favorite operating systems. 
+
+Zip is useful for packaging a set of files for distribution, for archiving files, and for saving disk space by temporarily compressing unused files or directories. Zip puts one or more compressed files into a single ZIP archive, along with information about the files (name, path, date, time of last modification, protection, and check information to verify file integrity). An entire directory structure can be packed into a ZIP archive with a single command. 
+
+Zip has one compression method (deflation) and can also store files without compression. Zip automatically chooses the better of the two for each file. Compression ratios of 2:1 to 3:1 are common for text files. 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/unzip.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/unzip.png" type="image/png"/>
+  <category>Utility</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/zip.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-i486" id="sha1new=8649b604ca541f624ab44604763459e70c535739" license="Info-Zip" released="2008-07-13" version="3.0-3">
+    <requires interface="https://apps.0install.net/utils/bzip2.xml" version="1.0.5">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/utils/unzip.xml">
+      <executable-in-path name="unzip"/>
+    </requires>
+    <command name="run" path="bin/zip.exe"/>
+    <command name="zipcloak" path="bin/zipcloak.exe"/>
+    <command name="zipnote" path="bin/zipnote.exe"/>
+    <command name="zipsplit" path="bin/zipsplit.exe"/>
+    <manifest-digest sha256new="HOZXANJC46APEKKOSTYASJVNXXENE3YBATJM7B4Y7U4NAESER6MQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/zip/3.0/zip-3.0-bin.zip" size="576934" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/zip-3.0-bin.zip?raw=true" size="576934" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="app-arch/zip"/>
+  <package-implementation main="/usr/bin/zip" package="zip"/>
+  <entry-point binary-name="zip" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">zip</name>
+    <summary xml:lang="en">zip - package and compress (archive) files</summary>
+    <description xml:lang="en">zip  is  a  compression  and  file packaging utility for
+       Unix, VMS, MSDOS, OS/2, Windows 9x/NT/XP, Minix,  Atari,
+       Macintosh, Amiga, and Acorn RISC OS.  It is analogous to
+       a combination of  the  Unix  commands  tar(1)  and  com-
+       press(1)  and  is compatible with PKZIP (Phil Katz's ZIP
+       for MSDOS systems).</description>
+  </entry-point>
+  <entry-point binary-name="zipcloak" command="zipcloak">
+    <needs-terminal/>
+    <name xml:lang="en">Zipcloak</name>
+    <summary xml:lang="en">Zipcloak: encrypt entries in a zipfile</summary>
+    <description xml:lang="en">zipcloak  encrypts  all  unencrypted entries in the zipfile.</description>
+  </entry-point>
+  <entry-point binary-name="zipnote" command="zipnote">
+    <needs-terminal/>
+    <name xml:lang="en">Zipnote</name>
+    <summary xml:lang="en">Zipnote: write the comments in zipfile to stdout, edit comments and rename files in zipfile</summary>
+    <description xml:lang="en">zipnote  writes  the  comments  in  a zipfile to stdout.
+       This is the default mode.  A second mode allows updating
+       the comments in a zipfile as well as allows changing the
+       names of the files in  the  zipfile.   These  modes  are
+       described below.</description>
+  </entry-point>
+  <entry-point binary-name="zipsplit" command="zipsplit">
+    <needs-terminal/>
+    <name xml:lang="en">Zipsplit</name>
+    <summary xml:lang="en">Zipsplit: split a zipfile into smaller zipfiles</summary>
+    <description xml:lang="en">zipsplit reads a zipfile and splits it into smaller zipfiles.</description>
+  </entry-point>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA34CAAoJEFmqOSfCTk4e1vEH+QEddOxxGrFXhH6lvNfl40lCi9wGkbcwLRea
+eLyefaWWPbzW8UtQAWJcy9sr9BfEmOyzHhv1Gn4zQhypV5NShFZfXHF4AZ1T2hUngZBztRBKHpzw
+BnzHwslpWo0INt2y2Zl+SfR3bYkZLGHSzYmzHazGA19fqp/sNwa1/mBYlOkhA7JlgxcU6coKQ38s
+I0czdDCwHcmGvwDi5Y4y7i5OnsihyIh8GXytsOIdr6K6SCgR7gkI8pH9zBHRsaHTChDQjpUInT5F
+qJDxKiDdUSfE/LX6YPUBO0B886AVRMvL1KJ6DfRyyF1IyFL21fU9eXxoYNNI97mwwhvaK/iLqejo
+e9E=
+
+-->

@@ -1,0 +1,248 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/gui/winscp.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>WinSCP</name>
+  <summary xml:lang="en">SFTP and FTP client for Windows</summary>
+  <summary xml:lang="de">SFTP und FTP Klient für Windows</summary>
+  <description xml:lang="en">WinSCP is a SFTP and FTP client for Windows. Its main function is the secure file transfer between a local and a remote computer. It uses Secure Shell (SSH) and also supports, in addition to Secure FTP, the legacy SCP protocol.</description>
+  <description xml:lang="de">WinSCP ist ein SFTP und FTP Klient für Windows. Seine Hauptfunktion ist der sichere Dateitransfer zwischen einem lokalen und einem entfernten Rechner. Es verwendet Secure Shell (SSH) und unterstützt auch, zusätzlich zu Secure FTP, das veraltete SCP Protokoll.</description>
+  <homepage>https://winscp.net/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/gui/winscp.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/gui/winscp.ico" type="image/vnd.microsoft.icon"/>
+  <category>Network</category>
+  <category>Utility</category>
+
+  <entry-point binary-name="WinSCP" command="run">
+    <name>WinSCP</name>
+  </entry-point>
+  <entry-point binary-name="WinSCP" command="run-cli">
+    <needs-terminal/>
+    <name>WinSCP command-line</name>
+  </entry-point>
+
+  <group arch="Windows-*" license="GPL v2 (GNU General Public License)" main="winscp.exe">
+    <command name="run" path="WinSCP.exe"/>
+    <command name="run-cli" path="WinSCP.com"/>
+    <implementation id="sha1new=0904880b0f52213a5e1a83546f23c0ab940d47ef" released="2012-09-24" stability="stable" version="5.1">
+      <manifest-digest sha256new="FH44ERKHYPZIJXQ4SCPT4QJ7DLRLMPRSBEA2QPFLKAYMN64MTPSA"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp510.zip" size="3834608" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=4702131861bfaa04803d31f02dd7c39001fb88c2" released="2012-11-09" stability="stable" version="5.1.1">
+      <manifest-digest sha256new="S7ZA42OYQ2FKFFC36ARVJZJBSNPRVV3W6N26XDPH2K43Y2KAMOLA"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp511.zip" size="3835177" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=525911f08f874cbbea832e90437a3085e2ee03cc" released="2012-12-02" stability="stable" version="5.1.2">
+      <manifest-digest sha256new="ITRZD2H7F2ZVT77GG3AU2RFJUXLUAGK6LHFJ7XDB4YDBM4VFABEA"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp512.zip" size="3836113" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=5b983dd1c016b7a05a49a0d85207cee588f62663" released="2013-01-06" stability="stable" version="5.1.3">
+      <manifest-digest sha256new="LA3AHWVBRZZIKA3DK3PHECJAM42FHULVTLIS52II43WAMLROTKUQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp513.zip" size="3839083" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=3c53de22707255e40639a05c0a1e5606bfb75790" released="2013-02-21" stability="stable" version="5.1.4">
+      <manifest-digest sha256new="W2MZZ7LYZEHAVUCQYYV2ALQ3WL23END7H3ZTSPINO2SHOBRGXVGA"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp514.zip" size="3841416" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=dcf76d94b4e931e4fd9f8968b46b6fe950181ff0" released="2013-05-19" stability="stable" version="5.1.5">
+      <manifest-digest sha256new="UQCRHVZ4GETXKH7FFUHQXNIJTN4HUTNGPXSGXYQJXNY553NYKHFA"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp515.zip" size="3844236" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=e810dc9722f92badff3e72640505a3bc7f11bf26" released="2013-07-29" stability="stable" version="5.1.6">
+      <manifest-digest sha256new="EEBNMXSTAC6SRJJVZVGALUNNJLIVVESO2E7UXQALPULIYY3LVVDA"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp516.zip" size="3845859" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=922940665338f7055f64761d3dc65e5981de7b79" released="2013-08-14" stability="stable" version="5.1.7">
+      <manifest-digest sha256new="TRQOEL7UJPNIDUR42LZDKDCLES7AC4TEGCPA5CUPTF2SZDCMPRIQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp517.zip" size="3846336" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=833d04e50a8f560cd836bc6683d0a10666be0e28" released="2013-12-04" stability="stable" version="5.1.8">
+      <manifest-digest sha256new="4QQGI242TH2YFNWHN2BXBVGWKA3UDLXEUG366Y4XDSBNOG4H5TKQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp518.zip" size="3847962" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=41e225b6db638c66cd3b843b06a77b076a6be872" released="2013-12-19" stability="stable" version="5.5">
+      <manifest-digest sha256new="4OKBZNKYAZSE2SZWK2CGMHFKTPS3L7SWGNY7NQXF3TAOPC6D2KYQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp550.zip" size="4402083" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=ea25c75081695db69f16d049e3e9ba1518123ab4" released="2014-01-21" stability="stable" version="5.5.1">
+      <manifest-digest sha256new="SZUOKESWPRRMSM2HUYELRQRAN6YWM6ORI4MSQDGUDIYP5QX62HJQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp551.zip" size="4403280" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=03d536c4996496324a4aa6924314c2957bfcbecc" released="2014-03-20" stability="stable" version="5.5.2">
+      <manifest-digest sha256new="B7R5GMF6Z7LAXEASEBEYJWGMS3EK6WVFMUIUYFIHWL6DY5OV5PHQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp552.zip" size="4407694" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=5b9139dfe7e6ffea4a1b46bd7ec26bf2a4d05000" released="2014-04-14" stability="stable" version="5.5.3">
+      <manifest-digest sha256new="K7S5NPU3LKLR5464ZATNF7KRD7FWONHZVBPVCPA3RGM5SKTYZLNA"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp553.zip" size="4413052" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=635cdd7f434e0e45be40c43716f30d88318bbfca" released="2014-06-10" stability="stable" version="5.5.4">
+      <manifest-digest sha256new="LUHAFIUW3D3VIFWFGQLUPUGUIRQDV3D56VAFPZ5T2KQJP6KKJMJQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp554.zip" size="4416882" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=f79d483e2e5385ba3a3f59c72b6ec57a6ad550eb" released="2014-08-21" stability="stable" version="5.5.5">
+      <manifest-digest sha256new="M4TJLFOAW5RSGRUVYWEVGME6Z6US36NVWAZC3PKIU6CMQPO5HMKQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp555.zip" size="4419523" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=26c2261585867c960c7779007e6f7f51dd59f13a" released="2014-10-16" stability="stable" version="5.5.6">
+      <manifest-digest sha256new="PNTPJ7ZQ4TTTEGDBKU32CQOCKPXFW5IHKVSOXVN6JT4GGUSSZLQA"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp556.zip" size="4421991" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=af26cea7a3fabad7f4f74b1eb9c01c0c79841f7c" released="2015-02-20" stability="stable" version="5.7">
+      <manifest-digest sha256new="DH6Y7UPHOZN3KYLMXYAVBPS3WCB3LF3QS7THSEPM55MCI3RRDDEA"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp570.zip" size="4915350" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=1e5e1eea9c0cabd03a12fd1f835b392a25068d42" released="2015-03-25" stability="stable" version="5.7.1">
+      <manifest-digest sha256new="W5CFVHLFT3B7EO4JLJIXG72QKNO3R4WPOMZEBUHSNJX2F2HF4UAA"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp571.zip" size="4918038" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=614f75beb5c4681f34342815105e57ea9c18a42e" released="2015-04-14" stability="stable" version="5.7.2">
+      <manifest-digest sha256new="624UEOJRN4XLNK65IALROBOP7GCKNZZCQSJGXWXIUAZRZBGKDGSQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp572.zip" size="4918733" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=8f53da3a0b5fe1ea51768d410ce97740067c1d16" released="2015-05-13" stability="stable" version="5.7.3">
+      <manifest-digest sha256new="NEIHGWXDNTVBDI22DBT3T6ZQJ5Q72BMNPDYMCPE6ZHCB6J32STZA"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp573.zip" size="4920517" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=f93f4a0180e29734fdb051709baf70338dd6eb1c" released="2015-06-17" stability="stable" version="5.7.4">
+      <manifest-digest sha256new="QAVT5LJBJCXMMR7RL5ANTF7PTJF53FXMFKGBR4XGZJFEDPMPYIGA"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp574.zip" size="4923568" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=7865794fe4307bca52d8814a761d0acbf63b1066" released="2015-08-04" stability="stable" version="5.7.5">
+      <manifest-digest sha256new="HQETZW5AMQZMVSUFUXVDEY6WJ646YC6OQMW7JVLMR7PMEMNAGWNA"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp575.zip" size="4924411" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=57bfbca7edfab3a09da1788182cd5ab6416264db" released="2015-11-04" stability="stable" version="5.7.6">
+      <manifest-digest sha256new="NUILM442HZMG3KEMWQUZ7TMNDFVT34K5RRACS4SA6X3U3QSTGJBQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp576.zip" size="4925625" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=0d3657ee0c6e8e0014f6bec77edc17e5c7838368" released="2016-03-06" stability="stable" version="5.7.7">
+      <manifest-digest sha256new="G4P2PLFGRK37EKBLHRQFRKWF6V5HODZKDLWSVEWUIWLLWZMONQAQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/winscp577.zip" size="4920163" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=303b227a04cd620f62c59bfcadfe7e8c39f1f165" released="2016-07-22" stability="stable" version="5.9">
+      <manifest-digest sha256new="U5VVAV5B44JADTYYRZBZPS7WCICPSDQZSM3OPMTTT3TKBSUPY5RQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.9-Portable.zip" size="7476995" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=99978488d45cbe7cee8f703be0ef62bdf877ec77" released="2016-08-12" stability="stable" version="5.9.1">
+      <manifest-digest sha256new="TH2CKHDR6QKCKLNJQSTJZCBCLYM5PCVEUQRBEGPE7CDVTBSZPXBQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.9.1-Portable.zip" size="7477467" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=3e17c29bbd0a29601a68d4ff77c2df31448f5df6" released="2016-09-14" stability="stable" version="5.9.2">
+      <manifest-digest sha256new="FLKUXYT2VFGJOJTYDSY6AJFRQXAXHQXG3U6NFKWIF645JY2AG2TA"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.9.2-Portable.zip" size="7479048" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=ce060cabbb5b3af3fcf7a53a933f4a7341e0cfa7" released="2016-11-30" stability="stable" version="5.9.3">
+      <manifest-digest sha256new="TF6J2733E3WZ3A7EPINLLPTVB7R3OSFP6XROQLGZWKFEKMPCWPVQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.9.3-Portable.zip" size="7485918" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=c0e3cce4cf35d1d6566af052815ff95d5031d647" released="2017-02-15" stability="stable" version="5.9.4">
+      <manifest-digest sha256new="4SMWPSZRGVEH5P2VOPB5QWRFV2YE4A6LQDWKTQIAWQVCITOZIARQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.9.4-Portable.zip" size="7486640" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=6fef173654f3408a11fd707dddf8b68eca644c6b" released="2017-04-19" stability="stable" version="5.9.5">
+      <manifest-digest sha256new="WRLJDTAJT56Y6FURK4IBORWZ2R52MX7GY6GOH746H43EXFGHVX2Q"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.9.5-Portable.zip" size="7487127" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=9f5404bc960efb92db38aeae43bbbe95b535d173" released="2017-06-21" stability="stable" version="5.9.6">
+      <manifest-digest sha256new="HDJ27Y2ZVMSOCID77HNYIUJYT2HMMR7W7T2LOS5C2EPPSQMDECPQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.9.6-Portable.zip" size="7492376" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=f0c40e55ef2a812ae6b91d7ef7906009ef3c9dc7" released="2017-09-05" stability="stable" version="5.11">
+      <manifest-digest sha256new="VBIRPRWXHJ7G4GCFUBZDVU3KROTRFFWZTMQBCRQ6BU2UMRPSGCQQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.11-Portable.zip" size="7562630" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=99e10bb6cc38e0858e77df4c0ee4426607f6e0a2" released="2017-09-08" stability="stable" version="5.11.1">
+      <manifest-digest sha256new="QA5XMKQ7TCTWJM6IBVDSCBYHRWDOGBF4X6TAVZKQZ7EHJTSIZHGA"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.11.1-Portable.zip" size="7562735" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=e422c46f123cbdc69deb484c5dac7281d1aa3530" released="2017-10-10" stability="stable" version="5.11.2">
+      <manifest-digest sha256new="FOFPGW3PQLBISDJOZCYVQMDNH5NKXRMU23DXP4BMS4MTHUUCH7KQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.11.2-Portable.zip" size="7563337" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=657fb1f42a5139e4d1236c3d063713c21ff56f35" released="2017-12-14" stability="stable" version="5.11.3">
+      <manifest-digest sha256new="VP2YLTLXKZ5M2GYKJAUWE63UQAGJAYL23B5PGXACXGJMODTI5LVA"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.11.3-Portable.zip" size="7564259" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=3103eecee3086eb95a158921f7acee1e14dcbe2c" released="2018-02-19" stability="stable" version="5.13">
+      <manifest-digest sha256new="MG5IJSJA3MY333QRCM75UY2NWDXJQWFTB54R63KGUDVXUH55PBLQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.13-Portable.zip" size="7624566" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=80215c6aa8928e970f78910974e0bc23ede72708" released="2018-03-28" stability="stable" version="5.13.1">
+      <manifest-digest sha256new="QOQLGPA5H2CKYD2EYWU3YA4VHBOWGFENMTGB3HQZUS5P2VYG3W6Q"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.13.1-Portable.zip" size="7624308" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=cf49cf6513904961dab1158ce95ae62fa194035f" released="2018-05-11" stability="stable" version="5.13.2">
+      <manifest-digest sha256new="YAXS65BV72AUW7NLC6LWYMCUW75HD2KPZTEKWMQQEQPNZ2D6QH3Q"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.13.2-Portable.zip" size="7629221" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=8bdaa1159a15dc6a9a158da37ae57dacb98ec677" released="2018-06-18" stability="stable" version="5.13.3">
+      <manifest-digest sha256new="KECPTEWTMR5J4I6CODM642B5PVIT2BADTEI2YQQ4CUCQNDZGLYBA"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.13.3-Portable.zip" size="7629374" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=eb56ec6479aa8a5f45b1fdacc660b14fa57da0e0" released="2018-08-31" stability="stable" version="5.13.4">
+      <manifest-digest sha256new="TCD7CW7HID4MUHFYEU2UFFH6OENNNG5DMZPB5PAMUQ2C7WCJBJRQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.13.4-Portable.zip" size="7632744" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=243553223f05d1206bea08e048aff041205fd55c" released="2018-11-21" stability="stable" version="5.13.5">
+      <manifest-digest sha256new="3G3QR7Y5SSNDDC2YOJJPG4ZVMWQAILA4VHIZXAZUKMAKVZWXOBEA"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.13.5-Portable.zip" size="7633557" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d37dc07d635ac6aa27f33cf076fba1697d9ce6d1" released="2018-12-12" stability="stable" version="5.13.6">
+      <manifest-digest sha256new="2DCD5ISAGUDDVRZH7NSPRO5KUFN4EOKPXE6YFAATVVUBQSHMYGNQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.13.6-Portable.zip" size="7633559" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=a3a349528db5927d436598a3d74e0914b5ec3a8f" released="2019-01-08" stability="stable" version="5.13.7">
+      <manifest-digest sha256new="NECNCEON6MXPN35VWN7A7XAMLJHZYDHCSLIVRIFQ6Z3V2QCIIIWQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.13.7-Portable.zip" size="7633968" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d923093a0c2b4f5eb491d2f7c50be76aff8b24c5" released="2019-02-27" stability="stable" version="5.13.8">
+      <manifest-digest sha256new="D3JGSB6TID2LXUTBFAC7HTM7WI3NK6WO2F3W7TDCPXCZTZE7IQWQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.13.8-Portable.zip" size="7634952" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=2906ce490fba8141aac2beb05050ad0d4ed8884b" released="2019-03-19" stability="stable" version="5.13.9">
+      <manifest-digest sha256new="PAX5FZ3NE25BGHGGZAV72UV35SIFGFUAY6FBOWRARIFIE4OHX6BQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.13.9-Portable.zip" size="7634210" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=8a2b582489c921951c704ed269d6e6394bf91476" released="2019-03-27" stability="stable" version="5.15">
+      <manifest-digest sha256new="OWCQ34D5PWVAPDP2WB3GKTXYNN6GTTQWMOO6HVKXC2GG7LSA745Q"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.15-Portable.zip" size="7844038" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=1f7a4e31a2e00259517f12da3036ab3132758ace" released="2019-04-11" stability="stable" version="5.15.1">
+      <manifest-digest sha256new="WKW5HDMO64PMS6TOBWBL4CQXYZCK2N3HBWZDWHIC6HRGNDIWUDJA"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.15.1-Portable.zip" size="7844609" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=3fa5ca5a99e7161c6da6f84fdff310e405700f06" released="2019-05-29" stability="stable" version="5.15.2">
+      <manifest-digest sha256new="SVHBXOVQ7WVYFE7GCVYUBVFOZ57H7JGXJVPIVQ6DPGABUF3YOUAA"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.15.2-Portable.zip" size="7846247" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=5e9c5e8e6a9dde933caa277013db080b9dededba" released="2019-07-21" stability="stable" version="5.15.3">
+      <manifest-digest sha256new="WXAZRA72JDRLAN6XLVUTWS5YH4VNHLDT3QWT7T2QW6ANEB2LQHEQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.15.3-Portable.zip" size="7846102" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=e93fc7e0f3df49b775de5d020635fcc88b987aa4" released="2019-09-16" stability="stable" version="5.15.4">
+      <manifest-digest sha256new="VZXGRSRRNYGUTWKPD6NXF2SUWY2MJ35RE7LB2R473JJWR5SFZNOA"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.15.4-Portable.zip" size="7846963" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=25079e6a605eb36d0b7099dca5e19654b7a49c74" released="2019-10-16" stability="stable" version="5.15.5">
+      <manifest-digest sha256new="QTUK22FWLIDHYDONYWXRN4GTMXESAGTLMQPQW2LUUTOIZDP2TVVQ"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.15.5-Portable.zip" size="7846928" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=08b153fd4ff7b6d824d75d552279df6d19394217" released="2019-11-27" stability="stable" version="5.15.7">
+      <manifest-digest sha256new="PDGE2PC7BJ7UWKKD5CA5YPMYC2ERGYLZJPGQMYNZ5OVECO4FIB6A"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.15.7-Portable.zip" size="7847131" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=b2db600ce1799b92d421f8f14ff051ce0e260d40" released="2019-12-05" stability="stable" version="5.15.9">
+      <manifest-digest sha256new="2WEJ2O24ZWWXYRFNDSDAGA534RPBX3GDFHAAOURAPFJEYN2ICZ2A"/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-5.15.9-Portable.zip" size="7846977" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA33yAAoJEFmqOSfCTk4eaH4IAI+SbPlVJDqheEAhbeq6jsPnajXcvbVvI/Wd
+T3QlA5Zj/ySn6kFzfyqJkgZWVqX/+y3ncV8t0ketbqXebHkapz6EHsGofWO3dId8HBjZb+gqM/5r
+umjTX5bOWAlWPlNJCHaTCCOAjlEnazSj1dkE1ve1NVfXkWFBkeTeBpTp+NvYhuEjr1w4TQaw8nq7
+iurSVAB40VNgYZ/WLggiKvvRg923NzjKAuja4p44/nreNw5uwgW996+mfsuEqXBhJ1wR3D6ZOSeh
+z8H+wUBo3IbtHaoT7OvW6P+oAV6o+C2yyrpwe3KykhrBPM4tX3ZSRptPNxVqrzvfmfoL35S7e+DJ
+OA8=
+
+-->

@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/gui/gitextensions.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>GitExtensions</name>
+  <summary xml:lang="en">GitExtensions is a graphical interface for Git</summary>
+  <summary xml:lang="de">GitExtensions ist eine grafische Oberfläche für Git</summary>
+  <homepage>https://github.com/gitextensions/gitextensions</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/gui/gitextensions.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/gui/gitextensions.png" type="image/png"/>
+  <category>Development</category>
+
+  <feed src="https://apps.0install.net/gui/gitextensions-2.xml"/>
+  <feed arch="Windows-*" src="https://apps.0install.net/gui/gitextensions-3.xml"/>
+
+  <entry-point binary-name="GitExtensions" command="run">
+    <name>GitExtensions</name>
+  </entry-point>
+  <entry-point binary-name="gitex" command="gitex">
+    <needs-terminal/>
+    <name>GitExtensions command-line alias</name>
+  </entry-point>
+
+  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
+    <url-protocol id="github-windows">
+      <description xml:lang="en">URL: Github for Windows Protocol</description>
+      <verb args="%1" name="open"/>
+    </url-protocol>
+    <url-protocol id="git">
+      <description xml:lang="en">URL: Github for Windows Protocol</description>
+      <verb args="%1" name="open"/>
+    </url-protocol>
+    <context-menu id="gitex-browse" target="directories">
+      <verb args="browse &quot;%1&quot;" name="gitex_browse">
+        <description xml:lang="en">GitExtensions Browse</description>
+      </verb>
+    </context-menu>
+    <context-menu id="gitex-clone" target="directories">
+      <verb args="clone &quot;%1&quot;" name="gitex_clone">
+        <description xml:lang="en">GitExtensions Clone</description>
+      </verb>
+    </context-menu>
+  </capabilities>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA33xAAoJEFmqOSfCTk4eDdoIAI3NzxZiGgfprAk5GXpjjIrfjbUzhPc+37wi
+W9kGdcGPD61krJY8VQ4vELWPt5VZLVlTTyVHqqoitCL6c991q5O62ZJCNr4yBp6gQEsqpzwyml6z
+3zRQEl5ORT/tsNrlAyFzrOXGyL/B7F1JEQ+yJWu4XLWsiDFQenRAiN+YD5z7i3JSsOqUBrzRzqSU
+cs5QIFCrxc7awu80+LyWpYA6Arq25y/moZBR/W0TnVmQGrIhtF2iugytzPFco1x3FcoPOH/Z1IfT
+S3gY1RF9UukH1NUCJyaR+0dQqp+d3CcFmoWn1BqqcyzCvFatesZbEUHDJ2L9O+4q8IpDpQkaQ5G+
++AM=
+
+-->

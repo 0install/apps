@@ -1,0 +1,793 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/docker/compose.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Docker Compose</name>
+  <summary>define and run multi-container applications with Docker</summary>
+  <description>Compose is a tool for defining and running multi-container Docker applications.</description>
+  <homepage>https://docs.docker.com/compose/</homepage>
+  <needs-terminal/>
+
+  <icon href="https://raw.githubusercontent.com/docker/compose/1.14.0/logo.png" type="image/png"/>
+
+  <group license="Apache License 2.0">
+    <implementation arch="Windows-x86_64" id="sha1new=db74b752746165f65a35c59739fe964d62ddb2dc" main="docker-compose.exe" released="2017-01-04" stability="testing" version="1.10.0-rc1">
+      <manifest-digest sha256new="YS7DN65H44DWTAUYSM63GESSEM52PHQLEHIZTTV2253G2QIELGPQ"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.10.0-rc1/docker-compose-Windows-x86_64.exe" size="6340246"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=2dade4e6092d6341c55b033723ac9276792f9e06" main="docker-compose" released="2017-01-04" stability="testing" version="1.10.0-rc1">
+      <manifest-digest sha256new="FEVEGWC7CCYZ6TMC37SVTKOSFIDIV245NT5CLUNAYX7NNWH3WS2Q"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.10.0-rc1/docker-compose-Linux-x86_64" size="8119177"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=00c70026dad7ac3e0e5b22eb7efb09ea98e2dfc0" main="docker-compose" released="2017-01-04" stability="testing" version="1.10.0-rc1">
+      <manifest-digest sha256new="GBCVCLSD7KNHYCL23GKIM6D44LOYDWYLNU2V55PMLMDRXAYJYCOA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.10.0-rc1/docker-compose-Darwin-x86_64" size="5419463"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=14c7a37e7c7f84f406d1cd38496e757ff00efb1f" main="docker-compose.exe" released="2017-01-11" stability="testing" version="1.10.0-rc2">
+      <manifest-digest sha256new="DPP2MLZSWYD5KZGJ6SV5QVOGA5I2QS7QQYMUQID2JODO32XHW5LA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.10.0-rc2/docker-compose-Windows-x86_64.exe" size="6340585"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=8f23590d839b39bca79b08cf2c19f7e0683793a5" main="docker-compose" released="2017-01-11" stability="testing" version="1.10.0-rc2">
+      <manifest-digest sha256new="C4PRXSI3GBI2S53XAW7Y6WM55TP5HABSWQ2AQ3DY723SMKO52BCQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.10.0-rc2/docker-compose-Linux-x86_64" size="8119514"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=6255d1adaf2414371937f7517c466012ebb8305d" main="docker-compose" released="2017-01-11" stability="testing" version="1.10.0-rc2">
+      <manifest-digest sha256new="M25DB2B23FUHT6MWHBJA7CYHS2XJCA4X2UI3BMQ5TOWJJ34PYENA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.10.0-rc2/docker-compose-Darwin-x86_64" size="5419803"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=fa5c6344cdce42c2ad4044e51519e8bde9051606" main="docker-compose.exe" released="2017-01-17" stability="stable" version="1.10.0">
+      <manifest-digest sha256new="N4FE7GEBFFNNPXW7BDTB27LNTI54FVMGVIGXJ7BZKH4ECEZ25L4A"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.10.0/docker-compose-Windows-x86_64.exe" size="6340799"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=f0a46941b6aae6c861ad6e0934a45e5410c0778d" main="docker-compose" released="2017-01-17" stability="stable" version="1.10.0">
+      <manifest-digest sha256new="WFQFX36FHLBC3DXR77EGDBCLEGSAZL4PXRMAF6GJYRGWXDGHYBOA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.10.0/docker-compose-Linux-x86_64" size="8119734"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=895928e8fdd59ea0c55a1ba82b3078c34998f9df" main="docker-compose" released="2017-01-17" stability="stable" version="1.10.0">
+      <manifest-digest sha256new="ZU4A6BC76AD2RC6COYYNPEUGDDS7ENHU3DN7WEITAIROOCEWGFLA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.10.0/docker-compose-Darwin-x86_64" size="5420015"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=4f002e5f24233df7e891099a7b2ba8b2a025df02" main="docker-compose.exe" released="2017-02-01" stability="stable" version="1.10.1">
+      <manifest-digest sha256new="OLYU7WR3TXZMYMQE3HMAX4YEFHFWGHDQKOH7CQDG2KSEF7XGOMPA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.10.1/docker-compose-Windows-x86_64.exe" size="6342178"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=31e2dedbec1211434e4aa06aa14f5ae02a80eed8" main="docker-compose" released="2017-02-01" stability="stable" version="1.10.1">
+      <manifest-digest sha256new="H4ARJ2CMGK3IAD6RJF5JTCIXKCESCK3CDD6DAWMFM6TJTFIHIMDQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.10.1/docker-compose-Linux-x86_64" size="8121118"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=e7b687bce5b67bd67ed4d0d47b12bc7509f1861b" main="docker-compose" released="2017-02-01" stability="stable" version="1.10.1">
+      <manifest-digest sha256new="NKVEB5D2ZXAMSFMQXJB5UCTESCQ7N55BXXCAV2D64WOU4UOFSVMQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.10.1/docker-compose-Darwin-x86_64" size="5421395"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=7049360b5df5442f17a8b88e25f4b601aa1ffe19" main="docker-compose.exe" released="2017-02-06" stability="testing" version="1.11.0-rc1">
+      <manifest-digest sha256new="TLBFP7GI3XN7B34CS6WKIF5SILDEKHOP62VB5KYKGDHDGXZMMLPQ"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.11.0-rc1/docker-compose-Windows-x86_64.exe" size="6347539"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=59cc558878c8293bfa017e6d1c6b34d1ad0d3676" main="docker-compose" released="2017-02-06" stability="testing" version="1.11.0-rc1">
+      <manifest-digest sha256new="64AMMJOM6GFOHR7GMLGDCB2YGBDCGH35O3KZS2FF5FFVMY6RR33Q"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.11.0-rc1/docker-compose-Linux-x86_64" size="8245456"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=14d60a11f80c9ee48a12cd027f7feb9239c34fd2" main="docker-compose" released="2017-02-06" stability="testing" version="1.11.0-rc1">
+      <manifest-digest sha256new="XV3JX6IEIRVQOFPKSG2ZDFCGALVBR7ER4RVUGIXDCCLVOUWRBTEQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.11.0-rc1/docker-compose-Darwin-x86_64" size="5422631"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=526196fdedfb5177313b1aaaaf41233f95130e7b" main="docker-compose.exe" released="2017-02-08" stability="stable" version="1.11.0">
+      <manifest-digest sha256new="XRMHXUKJYH7WWG5FUZDTQN5MZ5P2FZXRIRTGB5LUTDY5XYYJEHDA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.11.0/docker-compose-Windows-x86_64.exe" size="6347543"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=5a165e0e379b775d05a79e662c60a2decedf635d" main="docker-compose" released="2017-02-08" stability="stable" version="1.11.0">
+      <manifest-digest sha256new="77IRGP3C3DOVEP7UFEAY5I2CSFECMU6LHQBYK66EQZTK2DK6C4ZQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.11.0/docker-compose-Linux-x86_64" size="8245456"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=420b485de8ae5883c05eca849b3671e084368592" main="docker-compose" released="2017-02-08" stability="stable" version="1.11.0">
+      <manifest-digest sha256new="4QTO3OHLQBXN24DN5NSFKB63QVXBZH5C6AU76EXTDYDINJVA7XEA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.11.0/docker-compose-Darwin-x86_64" size="5422633"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=a98742b9ceb1f56ed87e07a3498f6d05aeecee86" main="docker-compose.exe" released="2017-02-09" stability="stable" version="1.11.1">
+      <manifest-digest sha256new="IQAJVMDTCUU2FSZOVGNAE5F745P5HDH3BXWIZLXKVNDER6UC4E7A"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.11.1/docker-compose-Windows-x86_64.exe" size="6349218"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=aee007510255f9530a1216809a01e3b6f79dec8d" main="docker-compose" released="2017-02-09" stability="stable" version="1.11.1">
+      <manifest-digest sha256new="3ULEGGLQ2FIKR7LNIOK7AMCOSZI2J3F3XHUXU6KBAPGYF6XHCCXQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.11.1/docker-compose-Linux-x86_64" size="8247136"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=72cb7cd7bc49129593f3f4b5901a732d7fcb4cd3" main="docker-compose" released="2017-02-09" stability="stable" version="1.11.1">
+      <manifest-digest sha256new="7LIFAFWXAJED5MXFYHMP4INCGKXCIG5YKM6OKHGZOQHASBPTVA5A"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.11.1/docker-compose-Darwin-x86_64" size="5424305"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=2d6cb5bccb331a8965152d1a8da8fa9badc2ee3a" main="docker-compose.exe" released="2017-02-22" stability="stable" version="1.11.2">
+      <manifest-digest sha256new="4XIAJR6H5O6OYVJWJICJXGFPQ6FKOH3TGPHIP5LEMCYUCGUCVKDA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.11.2/docker-compose-Windows-x86_64.exe" size="6362399"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=79449836a333eed9507c6021eff3ab2ca4a36eb2" main="docker-compose" released="2017-02-22" stability="stable" version="1.11.2">
+      <manifest-digest sha256new="YRV65WW75EHRBPPYZWI3QBRCBOKOZFW7QQ5UVJ7PT2JLLOTLMLSA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.11.2/docker-compose-Linux-x86_64" size="8260272"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=b32f01aab1ced25b5dbd430b8ad74e1190260f2d" main="docker-compose" released="2017-02-22" stability="stable" version="1.11.2">
+      <manifest-digest sha256new="JQBYJ3BSCLYPCZD52SPFFKZUQHGTFRMZACAPFCWKTEJQ4OAVKPGA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.11.2/docker-compose-Darwin-x86_64" size="5437448"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=9c17bf40cda86de84e3b1a95ed987e1ad3c42695" main="docker-compose.exe" released="2017-03-20" stability="testing" version="1.12.0-rc1">
+      <manifest-digest sha256new="CQ54WSY32BHQSTSOC6TM7HSMR4A5TJJT4OYKZRFABRYSUF52FSGA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.12.0-rc1/docker-compose-Windows-x86_64.exe" size="6368007"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=27bd634a1b1e38056885a100806df28a620de990" main="docker-compose" released="2017-03-20" stability="testing" version="1.12.0-rc1">
+      <manifest-digest sha256new="WX3ISML4VGO7RCVVSTYLE5MXMZJRT2XLIU2FCLNUU2SUBI34EEQQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.12.0-rc1/docker-compose-Linux-x86_64" size="8265880"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=b6ed6df0c3cc0662c6d6c9e82ee58494a8ac9b9b" main="docker-compose" released="2017-03-20" stability="testing" version="1.12.0-rc1">
+      <manifest-digest sha256new="DLGLNFYLL7UY4QJLISCVL337GE6VOG5LP4QOPZ5CG6RUMEYMJUZQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.12.0-rc1/docker-compose-Darwin-x86_64" size="5443045"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=5d0c63cd1076e0f678857b7d964d5a73ed242232" main="docker-compose.exe" released="2017-03-27" stability="testing" version="1.12.0-rc2">
+      <manifest-digest sha256new="LY66PDMUA3SCBUPAHIADACRQGYV4LWLKSPKOIJFVFZ7XJVPBYCLQ"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.12.0-rc2/docker-compose-Windows-x86_64.exe" size="6368153"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=aa1960f1c7c18b5b1989f2b3371f1a7e6218e16f" main="docker-compose" released="2017-03-27" stability="testing" version="1.12.0-rc2">
+      <manifest-digest sha256new="VPXJCGGBMLXFB3URZSVV3V4AZLAUPDXWKO3QMIYQEO5AOYSUKRKA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.12.0-rc2/docker-compose-Linux-x86_64" size="8266032"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=fa87215235d71a0be385bf0f8594eff138657250" main="docker-compose" released="2017-03-27" stability="testing" version="1.12.0-rc2">
+      <manifest-digest sha256new="MDEYYWYQ4CGHY2O2GQF3SHRU2HEQCCPCKSDCH2W4QXNBGBSGG6WA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.12.0-rc2/docker-compose-Darwin-x86_64" size="5443196"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=017a1a1d174803f64994ded260f6bd1e8a50d55e" main="docker-compose.exe" released="2017-04-05" stability="stable" version="1.12.0">
+      <manifest-digest sha256new="YAV5FBXXXGZNVIGGUBC4DZ5OXZY7RTILZHI3XAUVAGXFRLVUFAXQ"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.12.0/docker-compose-Windows-x86_64.exe" size="6372239"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=ca4aede6e97e4a828168ab1c54dd56198000aabb" main="docker-compose" released="2017-04-05" stability="stable" version="1.12.0">
+      <manifest-digest sha256new="IWQZT5JXBNHUL2E4Z7M2QNP3CLEB6BVRVRAV2TVLFZBU2MHOFFXA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.12.0/docker-compose-Linux-x86_64" size="8270104"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=371317a355ec6f4ab815213a063377d8d6f13ef8" main="docker-compose" released="2017-04-05" stability="stable" version="1.12.0">
+      <manifest-digest sha256new="3I7UU3UUGJL6IOOCOQCMYERYM5V2NMIWR72XYHX46S5YVOSJ56TQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.12.0/docker-compose-Darwin-x86_64" size="5447285"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=2a1fef899f4c0f6301fd8806639151342f4dc35d" main="docker-compose.exe" released="2017-04-24" stability="testing" version="1.13.0-rc1">
+      <manifest-digest sha256new="TMBCB2EHCBEVVPXPPFVG4YQ4F3XZRRE5UJ72RZ5RELQWLB5RKRJQ"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.13.0-rc1/docker-compose-Windows-x86_64.exe" size="6375232"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=9c498884e166f1241dc763056baff5e7e8d4bec5" main="docker-compose" released="2017-04-24" stability="testing" version="1.13.0-rc1">
+      <manifest-digest sha256new="74OIBPFASGDREW55QCOVQQZIF3MVFFIJ2JBWP4K7PDLKNDJIN2YA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.13.0-rc1/docker-compose-Linux-x86_64" size="8273112"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=2e77038116fc8539e003f3b5c46ebbf416dc15e4" main="docker-compose" released="2017-04-24" stability="testing" version="1.13.0-rc1">
+      <manifest-digest sha256new="NSAPF4JWXEOSFRM5FB4SX4XYHCWBHS6SB4XBYQNXJDMOAADZ2KBA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.13.0-rc1/docker-compose-Darwin-x86_64" size="5450278"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=df84776e4996841c7994c84a8bcf9a49111e2fdd" main="docker-compose.exe" released="2017-05-02" stability="stable" version="1.13.0">
+      <manifest-digest sha256new="22JNO26P5L3WJP72MKRI2KC4IA3JX75TWDDTBUXYOJQC6MT4DCUA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.13.0/docker-compose-Windows-x86_64.exe" size="6375374"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=7ad12f7c710c193bd2d66f8983784e6e78f1d60b" main="docker-compose" released="2017-05-02" stability="stable" version="1.13.0">
+      <manifest-digest sha256new="EWW5NGO35RSPRP4EXACNHV2NWQL3UGTXFWJRJ7BYMLP6DA4SW4LA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.13.0/docker-compose-Linux-x86_64" size="8273264"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=5cdbd3f60bf949debc15f6e3738ccfa6124b2c09" main="docker-compose" released="2017-05-02" stability="stable" version="1.13.0">
+      <manifest-digest sha256new="Q34AHXWO5AWHSWM6XEUOPVB5AHDU5NTHNQO3RFE5QYDLIBIWQKJQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.13.0/docker-compose-Darwin-x86_64" size="5450427"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=a21db09cc64004f3ef555e1ecb129fdc5fd7ccb5" main="docker-compose.exe" released="2017-05-30" stability="testing" version="1.14.0-rc1">
+      <manifest-digest sha256new="EIXM45T3QXCGCIBDRFL6KPQ3EG6NTSIJGQWLJNUIE6QOT554BGTA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.14.0-rc1/docker-compose-Windows-x86_64.exe" size="6378470"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=758cf94f0eaf3c5d6e7e90d217b6dd052a9e787e" main="docker-compose" released="2017-05-30" stability="testing" version="1.14.0-rc1">
+      <manifest-digest sha256new="ZN5OSCHBKK3FIQAY7HPHUTIVZ6VEHBWK65ETHOJOVKZFFYLJKHWA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.14.0-rc1/docker-compose-Linux-x86_64" size="8277840"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=5012ae17decfd9d374b17943879b6af9bfc2236b" main="docker-compose" released="2017-05-30" stability="testing" version="1.14.0-rc1">
+      <manifest-digest sha256new="35PXXA6RBQFYN3UFRF34FGM3MOGJ6526JYECORGFXPYWXHEBQQUQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.14.0-rc1/docker-compose-Darwin-x86_64" size="5453518"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=dca37fb86ce1292e2e9832cea952680479da7de1" main="docker-compose.exe" released="2017-06-06" stability="testing" version="1.14.0-rc2">
+      <manifest-digest sha256new="QKDMXJTAMWPH5N5VI2VMZPZM3DZNW7BABXHP5QRZMBVYFPHCKAPA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.14.0-rc2/docker-compose-Windows-x86_64.exe" size="6380183"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=2014af5d51ed2ffd4c26f8e0b41fec768e66dc4e" main="docker-compose" released="2017-06-06" stability="testing" version="1.14.0-rc2">
+      <manifest-digest sha256new="4TFFS2NIHZ3TKKJSY3CSLQ6OIUL5S6Q6GCNW3D5ACT655YYFZXVQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.14.0-rc2/docker-compose-Linux-x86_64" size="8278064"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=2d22dde019a0c20596c0f7731cd7d318cab27ad8" main="docker-compose" released="2017-06-06" stability="testing" version="1.14.0-rc2">
+      <manifest-digest sha256new="MIQ2YYODEM2UZ27C6GMZPQPE2ZPODWKMK5VJIOCNEP2KQU6LMIVA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.14.0-rc2/docker-compose-Darwin-x86_64" size="5455232"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=0484e4b8ea1ef76456e7014ca75c85109664abcb" main="docker-compose.exe" released="2017-06-19" stability="stable" version="1.14.0">
+      <manifest-digest sha256new="4BFKL7FYAOEXA2OU5DJS7DYTNAP42VE7IEFO4TIQIHQ5TZ4QXPLA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.14.0/docker-compose-Windows-x86_64.exe" size="6380236"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=9a70a2398de99e8626a949dfb0b6fbe83e11f2ff" main="docker-compose" released="2017-06-19" stability="stable" version="1.14.0">
+      <manifest-digest sha256new="APJGDUOTUM57KP33TLCWG4YHEZ6W3K2IGYY6HMYEABI5XVUBZFWQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.14.0/docker-compose-Linux-x86_64" size="8278112"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=ada079131357586b3324e1f0b23aee5e8110ebca" main="docker-compose" released="2017-06-19" stability="stable" version="1.14.0">
+      <manifest-digest sha256new="7BGHHSTK36DZPG4E43WXYHHE4EHHKU4PJEQAFPP7O2UJ4ZQZ4KVQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.14.0/docker-compose-Darwin-x86_64" size="5455288"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=a0e09c39f5f901af86797df70b66c6a049780375" main="docker-compose.exe" released="2017-07-14" stability="testing" version="1.15.0-rc1">
+      <manifest-digest sha256new="ECR6OMPOWKMIWV4G6VZRNK52MYVVS7BNRPSONJ7JFFGL5ZP4OEQQ"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.15.0-rc1/docker-compose-Windows-x86_64.exe" size="6960929"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=76f6ca73928bb5ba6f695943abac5c2a37afbb01" main="docker-compose" released="2017-07-14" stability="testing" version="1.15.0-rc1">
+      <manifest-digest sha256new="M6HSQEQB7VCNLLPGOH2W2UWWNZOIG3PK7FVZQTQVLHDGM2AV7TYA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.15.0-rc1/docker-compose-Linux-x86_64" size="8858480"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=2d82405f538b48efe72d6bfcb4dacb2ff6d57b6a" main="docker-compose" released="2017-07-14" stability="testing" version="1.15.0-rc1">
+      <manifest-digest sha256new="3DQIYBMB6RCXOOIYVLAY5RQ2SJT4RNPEBDAUC3ZA4POZWO4ED5GA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.15.0-rc1/docker-compose-Darwin-x86_64" size="6047610"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=e5eff9847b4e30b46b8c3fa2d249a39cb4dd8a74" main="docker-compose.exe" released="2017-07-26" stability="stable" version="1.15.0">
+      <manifest-digest sha256new="3R5LNI7WBEMI2LT7IF4MQY4V3RQFLJYSFBCTXKLQEIGBCGPFTPNQ"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.15.0/docker-compose-Windows-x86_64.exe" size="6960939"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=5ac5964f3f1587e67939a6c7a67c3f278903b432" main="docker-compose" released="2017-07-26" stability="stable" version="1.15.0">
+      <manifest-digest sha256new="6YSMZRDKJEMNW3FMSP3VNNBZV76PETBA7MHPWGXKLTHWDSN6RIVA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.15.0/docker-compose-Linux-x86_64" size="8858496"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=a9b43658d595824dfdc460549e0f2fa87687fcf5" main="docker-compose" released="2017-07-26" stability="stable" version="1.15.0">
+      <manifest-digest sha256new="FVAGMFINL7ECVR4VC3EOPTA4O5UBZ42VY5L3EMOET7LJUZMUB4KA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.15.0/docker-compose-Darwin-x86_64" size="6047619"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=9eb106b14f452b873dc61365e3ab3286ea160506" main="docker-compose.exe" released="2017-08-21" stability="testing" version="1.16.0-rc1">
+      <manifest-digest sha256new="ID7NQSZBO5QY4SUCY7EXZSKDH6KOZE25UCW7UQZKPLAJG7U7XJYQ"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.16.0-rc1/docker-compose-Windows-x86_64.exe" size="6966295"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=65b3fa7ffaba19a0b43d9a120eaf3f194a798e86" main="docker-compose" released="2017-08-21" stability="testing" version="1.16.0-rc1">
+      <manifest-digest sha256new="ZISIJUXNGRFHIXVIB5KJ6QDMALVMD7KN4HR3ELPH7X7FFJ6O3LLQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.16.0-rc1/docker-compose-Linux-x86_64" size="8853464"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=352a13973dbc6a2567825edb67e9e53c382a94d1" main="docker-compose" released="2017-08-21" stability="testing" version="1.16.0-rc1">
+      <manifest-digest sha256new="URKJM624H7T4HIZ7Y7F6SKQ5SGNBPXZQ5VJM6X6NYGQBGTATRZCQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.16.0-rc1/docker-compose-Darwin-x86_64" size="6042596"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=2a916892fae8ba33730853844fbf00460686897a" main="docker-compose.exe" released="2017-08-28" stability="testing" version="1.16.0-rc2">
+      <manifest-digest sha256new="OCGGELT3I2QMTXJ4T256NWZRTYQGMYERF4D43GVWLP3RDOVI7OTA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.16.0-rc2/docker-compose-Windows-x86_64.exe" size="6968475"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=63d73f90c9f1cb996762f6d872e62d5ba6106ed7" main="docker-compose" released="2017-08-28" stability="testing" version="1.16.0-rc2">
+      <manifest-digest sha256new="FMLRQTS2HHDKCQDGOOFT6O5DT6WJH4FMTWOP2VKLLOFKXDUACL4Q"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.16.0-rc2/docker-compose-Linux-x86_64" size="8855656"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=0c3213e6d029236aa491e2fabc157cf1d740947b" main="docker-compose" released="2017-08-28" stability="testing" version="1.16.0-rc2">
+      <manifest-digest sha256new="FACNALTDA2HM3NYU6XJOGLQP7CBSM72TYVXTKCPX7AJCZ2ST2J7A"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.16.0-rc2/docker-compose-Darwin-x86_64" size="6044771"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=0ce27bcce4e062c1605fe3de434252a2801ff087" main="docker-compose.exe" released="2017-08-31" stability="stable" version="1.16.0">
+      <manifest-digest sha256new="KLXPVHPQ4HHGUFJTUUPNZRLGM5PY2GESBHCQVKSW3332VHYRDIBA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.16.0/docker-compose-Windows-x86_64.exe" size="6968467"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=107628072d54d5ca7205468a3fefab9b8f486908" main="docker-compose" released="2017-08-31" stability="stable" version="1.16.0">
+      <manifest-digest sha256new="2RMUWKWJJ5JILJBBBWS3HAGJLME5UHSQXPK4V4V77BYDITJ5DWCQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.16.0/docker-compose-Linux-x86_64" size="8855640"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=b8ac963f2f9a10d369e5065cc1d6326ece2979a7" main="docker-compose" released="2017-08-31" stability="stable" version="1.16.0">
+      <manifest-digest sha256new="B2ZHAF6AYFPNOGWBRVD77LIUWHX7WCLD5PJQNUNAWDTTLV4TOMEA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.16.0/docker-compose-Darwin-x86_64" size="6044766"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=313a20ad640a33417cbd03d5d42294066b4f7f2b" main="docker-compose.exe" released="2017-09-01" stability="stable" version="1.16.1">
+      <manifest-digest sha256new="527EY2TKGIXS6JXOF5MCO2MD3BWVNPYSZIP764FXNNH3THJJLCMA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.16.1/docker-compose-Windows-x86_64.exe" size="6968461"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=522de10b312f46ce38c8bfb0cf4d7efb747cd276" main="docker-compose" released="2017-09-01" stability="stable" version="1.16.1">
+      <manifest-digest sha256new="HKGUSCBZCH62JLARCU75LJF5DH5O3BKLFD43JL3E7R5KB5HKZS3A"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.16.1/docker-compose-Linux-x86_64" size="8855632"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=e1257948aa6f19bf1257d50f190a66ca7fc4f5d0" main="docker-compose" released="2017-09-01" stability="stable" version="1.16.1">
+      <manifest-digest sha256new="B7KUED6KZOI7PCJRNEQP3HDUGPOXSBWKEJBT2YPUWKUVNAWWGYNA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.16.1/docker-compose-Darwin-x86_64" size="6044758"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=5a356d9b7657ded334ba2a138551d357b00ca1ca" main="docker-compose.exe" released="2017-10-18" stability="testing" version="1.17.0-rc1">
+      <manifest-digest sha256new="KCJKUTRIFSCWRIXLUJWCIFBAJHLPLORZBMXZXN3NKXVTQRBC7IJQ"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.17.0-rc1/docker-compose-Windows-x86_64.exe" size="6973661"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=37f772cfb12691ddb28225ae94037ac30004fc9d" main="docker-compose" released="2017-10-18" stability="testing" version="1.17.0-rc1">
+      <manifest-digest sha256new="GS6PY4VJPLX6FBMPGTVFZU5RNX7PT57GGP5HK3NT6J6WSYEU56FA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.17.0-rc1/docker-compose-Linux-x86_64" size="8856744"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=35635eb4ed66b152dc8fb989a4639e47fdbbb6f3" main="docker-compose" released="2017-10-18" stability="testing" version="1.17.0-rc1">
+      <manifest-digest sha256new="5MO7XLIMTIDRXD33WO5GKHZ6DIJYJVJARFVMUI2KAWMLVGC4U6CA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.17.0-rc1/docker-compose-Darwin-x86_64" size="6045871"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=d7d0d86038e04c2b1ada1f820e4b3c9104fe8a30" main="docker-compose.exe" released="2017-11-02" stability="stable" version="1.17.0">
+      <manifest-digest sha256new="3PLBK265LEE7LHEPTWIJRTEHCMFH5D4BLYXQYB2JUZ3IQVSJJH2A"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.17.0/docker-compose-Windows-x86_64.exe" size="6989240"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=10f33b9691f1b0097bf1e61440f69e5521bf1641" main="docker-compose" released="2017-11-02" stability="stable" version="1.17.0">
+      <manifest-digest sha256new="K2TBTP6HOZ2XBSFDZZYSM4UC64WYZ6WXH3V7Q6WRFBPBFBJU2WWA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.17.0/docker-compose-Linux-x86_64" size="8856752"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=d8dd4bdb346cf8913a839fe2f3246331f70222dd" main="docker-compose" released="2017-11-02" stability="stable" version="1.17.0">
+      <manifest-digest sha256new="ER4LQBEU3LEF5TIYOKYCLNBZWCCRI5HMCAXTJFFHQGQFBD4B4LMQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.17.0/docker-compose-Darwin-x86_64" size="6045873"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=8428c452d61487c0dc1c87d088a18561735ae1f6" main="docker-compose.exe" released="2017-11-09" stability="stable" version="1.17.1">
+      <manifest-digest sha256new="746GDC5IV4ZDDFOIEQNCMKZ3HFJ3RIMKBBOGHM2LWSCMRMJKAKCQ"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.17.1/docker-compose-Windows-x86_64.exe" size="6989305"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=142940473a2e7912e06ec421c8f964f4aa106147" main="docker-compose" released="2017-11-09" stability="stable" version="1.17.1">
+      <manifest-digest sha256new="MQX4FF3BKR2ZLCRCKWIWIJSHJVI4K33HQ5HSKIU3YS62UL2GOKJQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.17.1/docker-compose-Linux-x86_64" size="8856808"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=99a488aec7127f36b290897d507abe8fd0a385b3" main="docker-compose" released="2017-11-09" stability="stable" version="1.17.1">
+      <manifest-digest sha256new="OSZ4DJTHHVRQNYKB5O4PA2YHTQVNJRXAQYOOZQBXGD3FLB5NY3FQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.17.1/docker-compose-Darwin-x86_64" size="6045934"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=9b760b3d262afee35e172c7abc144c7c645de0f7" main="docker-compose.exe" released="2016-10-20" stability="testing" version="1.9.0-rc1">
+      <manifest-digest sha256new="NPMYGP3XKBFYCLATJONMCO3EHWLHTMBMBNGQ3M2QITAAFSXQAGOA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.9.0-rc1/docker-compose-Windows-x86_64.exe" size="6257111"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=46d47af65bab365c1811a4f188dc87fa5f3259f4" main="docker-compose" released="2016-10-20" stability="testing" version="1.9.0-rc1">
+      <manifest-digest sha256new="JOJOW6NXVUNJ5PCMKMGBVXYMRZOQSBP7UVG6KUQ3LA7TEFFHRF3Q"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.9.0-rc1/docker-compose-Linux-x86_64" size="8044028"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=fd037730b5010c431e60bc081978d4ce5a63c7cd" main="docker-compose" released="2016-10-20" stability="testing" version="1.9.0-rc1">
+      <manifest-digest sha256new="HTO7MPGNWSODPYGWITBHJ7XUS426CCNX65NIJAE5XCNM3BC6K5CA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.9.0-rc1/docker-compose-Darwin-x86_64" size="5346703"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=e4da4368a3f054d103113f55c24ffd2f1c2300f3" main="docker-compose.exe" released="2016-10-27" stability="testing" version="1.9.0-rc2">
+      <manifest-digest sha256new="WADDKYRIZM3LEBOBZWGIYKVWCCIGH4TSPQTDD6HOXNWUODE57G7A"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.9.0-rc2/docker-compose-Windows-x86_64.exe" size="6258735"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=56e4f5051ba9afbbc7d8985b1aac2116ad01f063" main="docker-compose" released="2016-10-27" stability="testing" version="1.9.0-rc2">
+      <manifest-digest sha256new="CQQJLP7OL4WSFCB4YDL6ABOU7KC5X5BQ2WXUDATOI5RS7BJCGHDQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.9.0-rc2/docker-compose-Linux-x86_64" size="8045655"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=9c20d0b745ee7be3db1f48ecd52a0cc4348f9eb1" main="docker-compose" released="2016-10-27" stability="testing" version="1.9.0-rc2">
+      <manifest-digest sha256new="ZH2JVW5KJ3FH2MYDU3IDHRV3ZP7QGNH7G3U3HPUNQFK2BT67EYCQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.9.0-rc2/docker-compose-Darwin-x86_64" size="5348322"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=5081941c59724030b28b42d5c70164e519bf8e39" main="docker-compose.exe" released="2016-11-03" stability="testing" version="1.9.0-rc3">
+      <manifest-digest sha256new="F6UVYW5TZW5W6SXP7RRDI3JPPZQOZ4DCYUAUXNFNHNYGVDG6NRJA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.9.0-rc3/docker-compose-Windows-x86_64.exe" size="6259024"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=9d667d7af7268bc98718e5a76e78eabaed31f8a1" main="docker-compose" released="2016-11-03" stability="testing" version="1.9.0-rc3">
+      <manifest-digest sha256new="3O2SQZUBXG4MBRKXR3KWM52WAWCDS4LYC527D4PSP5SJ3H67SQ7A"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.9.0-rc3/docker-compose-Linux-x86_64" size="8045936"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=14984baff33643249669453b2dd3eb9228aa088e" main="docker-compose" released="2016-11-03" stability="testing" version="1.9.0-rc3">
+      <manifest-digest sha256new="5SQKFUVKPIQPREDROKBBG4QH67BC4WV7MPNNUWYRDBF6237OJGDQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.9.0-rc3/docker-compose-Darwin-x86_64" size="5348610"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=e8f65d37f99d11f97dc5ec519139e5fbcd524388" main="docker-compose.exe" released="2016-11-09" stability="testing" version="1.9.0-rc4">
+      <manifest-digest sha256new="NRPFHA2EZQGIKB4ZZTBSQYVTGAOSOLZHL22E2HFK2S2IYWKQOQEA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.9.0-rc4/docker-compose-Windows-x86_64.exe" size="6258982"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=416df998b4930e2d7b3ac17425db6b42546d0f61" main="docker-compose" released="2016-11-09" stability="testing" version="1.9.0-rc4">
+      <manifest-digest sha256new="J3PKSUBFT3VEULS7MN7WVKR3C5ITHKLVFFQROQ3VMFPVE27DXQGA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.9.0-rc4/docker-compose-Linux-x86_64" size="8045893"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=6f5686f165126885dd3c5965398d7f0a35c463ce" main="docker-compose" released="2016-11-09" stability="testing" version="1.9.0-rc4">
+      <manifest-digest sha256new="RGRFQ4GZJXQYX7TTZU3ZSWRQGQCG3KFZWUJVQF4E5HQI6JTKBGVQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.9.0-rc4/docker-compose-Darwin-x86_64" size="5348570"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=2b6326be409dbbfdabdf66c491fd9105310f931e" main="docker-compose.exe" released="2016-11-16" stability="stable" version="1.9.0">
+      <manifest-digest sha256new="OPHF7RAO3EPKI5O4YXVNGQ4TN6T2NCJHIM2ZSX2UMK4KRKS4N2JQ"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.9.0/docker-compose-Windows-x86_64.exe" size="6259038"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=884b8fffee75222b5b7900894cf060e9bfc4d1ee" main="docker-compose" released="2016-11-16" stability="stable" version="1.9.0">
+      <manifest-digest sha256new="SMSDDDNPEDCWMGLAN2MBKLMMOTIG2MH4M7NCQJ7AGX3THQ3FSETQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.9.0/docker-compose-Linux-x86_64" size="8045957"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=405d574ae535aa4fb2a8ae848eccfc15da1e6e7d" main="docker-compose" released="2016-11-16" stability="stable" version="1.9.0">
+      <manifest-digest sha256new="KTGASX3QT4HOSD4WVNCA4E7B2L3QRHTLDHGEJY5VNBH2DNPYS6KA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.9.0/docker-compose-Darwin-x86_64" size="5348629"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=4d33d67ec97836ddadbef2fc49977e5bc0a85fc5" main="docker-compose.exe" released="2017-12-07" stability="testing" version="1.18.0-rc1">
+      <manifest-digest sha256new="IZTHF7YEFJWZADOASZTYHJFLSV6B4KTIIBJNR2PKSIESVMGYDDFA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.18.0-rc1/docker-compose-Windows-x86_64.exe" size="6611281"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=1e99221768a20e9541a8f2609c912203a37715ab" main="docker-compose" released="2017-12-07" stability="testing" version="1.18.0-rc1">
+      <manifest-digest sha256new="YSB4UMUODXMMBGM5KWBWISPIXJZIRZSDVE3TEZ6IPME4UTVS4CQQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.18.0-rc1/docker-compose-Linux-x86_64" size="8478784"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=f809fd9c27d21221350680486cc36096d925777a" main="docker-compose" released="2017-12-07" stability="testing" version="1.18.0-rc1">
+      <manifest-digest sha256new="DNUKHMCWIB4XGDQU2N2AYJF67446IAPYCWIHJK354KN6C7G2KOXA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.18.0-rc1/docker-compose-Darwin-x86_64" size="5667787"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=842c2cedba846d9a346a62ecd66fccbaf5c8e84b" main="docker-compose.exe" released="2017-12-09" stability="testing" version="1.18.0-rc2">
+      <manifest-digest sha256new="QVVXIRE5MVRWKEXLOQTESTWD5MGQLRMOB6ESCVMLLOQW6BXFTLYA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.18.0-rc2/docker-compose-Windows-x86_64.exe" size="6611469"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=d1100a229b62fa810496f97ca515185ce86aabc4" main="docker-compose" released="2017-12-09" stability="testing" version="1.18.0-rc2">
+      <manifest-digest sha256new="GQ27RJDLKGR526AUXUBRIQEI3OZN3BZ2SKLT3LWAHVGVDZE5554A"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.18.0-rc2/docker-compose-Linux-x86_64" size="8478952"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=435254b84876af1262b7bef45406fa10c2bd68f2" main="docker-compose" released="2017-12-09" stability="testing" version="1.18.0-rc2">
+      <manifest-digest sha256new="C2O6WCSANZGISNAMDW5LN7Q7QXM5ZCJP3AKZ3D54QT7VP2GGYZ2Q"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.18.0-rc2/docker-compose-Darwin-x86_64" size="5667975"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=232618f0ab6ff6ead4da05412cae1979babba4f3" main="docker-compose.exe" released="2017-12-18" stability="stable" version="1.18.0">
+      <manifest-digest sha256new="7FSZM346BAO6KMTMPZTEHETONRXU2HMNRDHBNBZP4UXCPG2HL2SA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.18.0/docker-compose-Windows-x86_64.exe" size="6611687"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=18a5b4906f6afc69c94d9ad936e91c79c7331e94" main="docker-compose" released="2017-12-18" stability="stable" version="1.18.0">
+      <manifest-digest sha256new="7W7EM6CKSJOWK7RPY6IZVFQG4B6Z3D5WNLN656QE2VGNYR6YPDIA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.18.0/docker-compose-Linux-x86_64" size="8479184"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=a059043376b47eb34c660793e0c1e7162f152e0e" main="docker-compose" released="2017-12-18" stability="stable" version="1.18.0">
+      <manifest-digest sha256new="KR3C67JIEFJMD23JKCPXKOEH4RVJQRHEOADJB5ZW5D7YKUQZTMQQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.18.0/docker-compose-Darwin-x86_64" size="5668193"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=96aa676204a408c98cd5b9ad313442d156a590da" main="docker-compose.exe" released="2018-01-25" stability="testing" version="1.19.0-rc1">
+      <manifest-digest sha256new="G3DBXKKUN7EZQ5HZ5M6XXPJ2TQQWFVSHYCJB5EA3NETSDPE6UZPA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.19.0-rc1/docker-compose-Windows-x86_64.exe" size="6619415"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=9943087546bcd2d40e6dd9129f0051ad93f13b51" main="docker-compose" released="2018-01-25" stability="testing" version="1.19.0-rc1">
+      <manifest-digest sha256new="X3G2BZ2UPFGT23TFETSIKNNQPDGPI5OC3W6I6IWA3BK7K3HIO52Q"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.19.0-rc1/docker-compose-Linux-x86_64" size="8486920"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=593433e1b360142ec211b36b586bac6650e7c5a7" main="docker-compose" released="2018-01-25" stability="testing" version="1.19.0-rc1">
+      <manifest-digest sha256new="JMJ5WW7H6NOSNLIU4AH3R3UGNEM2XFBLZZPEI55UVXDOVZVO2WMA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.19.0-rc1/docker-compose-Darwin-x86_64" size="5570559"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=c45f115ce1e20fb4c599abdda668f9c5059c2d06" main="docker-compose.exe" released="2018-01-26" stability="testing" version="1.19.0-rc2">
+      <manifest-digest sha256new="HXX35FNIA52JODGVVZO2JYNBG2JE7PWUCXIAVZXPJHAYLIDZVSSQ"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.19.0-rc2/docker-compose-Windows-x86_64.exe" size="6619423"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=8b5aa74a898a09d886602944f79952c753a03b8a" main="docker-compose" released="2018-01-26" stability="testing" version="1.19.0-rc2">
+      <manifest-digest sha256new="XRD2PDOU5L4JUZIMJGWG75UDKD3UKKUWHDMHHCUTA2THLJSR2R2Q"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.19.0-rc2/docker-compose-Linux-x86_64" size="8486928"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=be109cfb5967ae9e9817378a90634ee62ccc6f2f" main="docker-compose" released="2018-01-26" stability="testing" version="1.19.0-rc2">
+      <manifest-digest sha256new="5QAEQMNH7XNTT5AFQ7PIGRUMKYEOJIX3MC4GHWAJ3KNDL5K4KWAQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.19.0-rc2/docker-compose-Darwin-x86_64" size="6249574"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=fa390752f3ab40885172db45b93682405b940f9d" main="docker-compose.exe" released="2018-02-01" stability="testing" version="1.19.0-rc3">
+      <manifest-digest sha256new="TX7WWMCVR5YGR42TMOJBZNIU7YE6XADLD4R75JFJGXQBIWUT2D3Q"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.19.0-rc3/docker-compose-Windows-x86_64.exe" size="6619474"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=1e1eaa11595a8bdc24a9b56afbbc03053db6fba2" main="docker-compose" released="2018-02-01" stability="testing" version="1.19.0-rc3">
+      <manifest-digest sha256new="FZ3FBN4O3LTFVN7VNNRFBM3NLXFJ5FIGZVKN5TQVI64XTGNS4KCQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.19.0-rc3/docker-compose-Linux-x86_64" size="8486976"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=cac62a7ee7bcc58bd0076a972835d45092ca9bbb" main="docker-compose" released="2018-02-01" stability="testing" version="1.19.0-rc3">
+      <manifest-digest sha256new="QDYYJDVCYZG37O4MCHRMFZJUCYAFHYE4Q5ABJCV7FBGUJDV6F34Q"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.19.0-rc3/docker-compose-Darwin-x86_64" size="6249620"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=831c5ab5b092de3c4d336dd2d240827163fa5d7d" main="docker-compose.exe" released="2018-02-07" stability="stable" version="1.19.0">
+      <manifest-digest sha256new="C7ONA4Y2OF5GWCFFXUAFXJPFWV5TWKKR2PJIGDCSPP3Q3Y5YOBRA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.19.0/docker-compose-Windows-x86_64.exe" size="6619469"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=b12fe3ab8d349345e3b1a58ae15f4e04dab5ef6a" main="docker-compose" released="2018-02-07" stability="stable" version="1.19.0">
+      <manifest-digest sha256new="EW6VZHQDJHVHX7N5EXEF7J4VLOX5CLE4IO6ZBKDZ7TSR2NNFHQ2A"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.19.0/docker-compose-Linux-x86_64" size="8486976"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=2d31fb71c83c1292c30d9e9a93defbae883d847a" main="docker-compose" released="2018-02-07" stability="stable" version="1.19.0">
+      <manifest-digest sha256new="T7UOUHAKZNZ532OBG6NVAOQFDSU5RT6BXHZPCHQSZ3CVIBO6ZG4A"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.19.0/docker-compose-Darwin-x86_64" size="6249620"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=cc16864aefc1edb25fbff520f092c621bb3e27ae" main="docker-compose.exe" released="2018-02-27" stability="testing" version="1.20.0-rc1">
+      <manifest-digest sha256new="SZGWTLKZLQMWKHTK65J7UE7HMCH5SZYFPW4G72CLNVNEIXP65BOQ"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.20.0-rc1/docker-compose-Windows-x86_64.exe" size="7545174"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=996393bc2eb882100ad880a298abd6d02afc5a78" main="docker-compose" released="2018-02-27" stability="testing" version="1.20.0-rc1">
+      <manifest-digest sha256new="SY7YZIRKVD5TCCYN254YN5BMZMALFGGBW6OBJ6BX4VHT6YNBSGIQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.20.0-rc1/docker-compose-Linux-x86_64" size="10846744"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=5e9a1897e8f0ce0fb4642b16514205f69ef3a2b1" main="docker-compose" released="2018-02-27" stability="testing" version="1.20.0-rc1">
+      <manifest-digest sha256new="7L5VERLX3V32JPVTAQIHXUO7NG2LF2OPHMLP74XIBDZF64OVNO4A"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.20.0-rc1/docker-compose-Darwin-x86_64" size="6191079"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=c5ab3350f75a361f2e12be7183317652a898bbf6" main="docker-compose.exe" released="2018-03-12" stability="testing" version="1.20.0-rc2">
+      <manifest-digest sha256new="JJR6JT6NOMXO3CFX2MSYYISV2LDPJUJYQ2MXSCZ3IY7ETR4VQGBA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.20.0-rc2/docker-compose-Windows-x86_64.exe" size="7546210"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=853af746a5626a9862d45e39f6ba80350daae0b5" main="docker-compose" released="2018-03-12" stability="testing" version="1.20.0-rc2">
+      <manifest-digest sha256new="KOKKHCGFH7RMS2HENTLAOTWBQPPTNOOWJU4K7PU3X5BECK5XUBFA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.20.0-rc2/docker-compose-Linux-x86_64" size="10849920"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=c5178c7fbbac26093b313af7b33954351927b4ac" main="docker-compose" released="2018-03-12" stability="testing" version="1.20.0-rc2">
+      <manifest-digest sha256new="2T4VJW3WBZTT4FKVPZR6MGPJGR3BLAPZ3TQCLZXGGKYXYM7O3NOA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.20.0-rc2/docker-compose-Darwin-x86_64" size="6192473"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=c44a9e5578d0fc37875b7c48a5e3f63d3cede766" main="docker-compose.exe" released="2018-03-20" stability="stable" version="1.20.0">
+      <manifest-digest sha256new="GHTZ7XUIY6FS5BSKKLQI2AEME2MEBUCNDRUNABDDPXZM4IE3BT2Q"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.20.0/docker-compose-Windows-x86_64.exe" size="7550403"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=42c1739313c84aa3cf14dafc7b1c6a3116ca7463" main="docker-compose" released="2018-03-20" stability="stable" version="1.20.0">
+      <manifest-digest sha256new="63RRAXMLVPH4CAOG7VOSRMOGAT5P4ICRWRDM4ZNOTGNBUJRCFURA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.20.0/docker-compose-Linux-x86_64" size="10846224"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=3b01ea98ae6cdef3cb8f926c607a05e38ab55677" main="docker-compose" released="2018-03-20" stability="stable" version="1.20.0">
+      <manifest-digest sha256new="MEECDDA7VCB2AQ5FTCM7KAN3JQH6ERTVSTOGZYHMOSDIYBFD5KVA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.20.0/docker-compose-Darwin-x86_64" size="6191960"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=a1b12faa970595feba6447f8a16f43fbaddb9661" main="docker-compose.exe" released="2018-03-21" stability="stable" version="1.20.1">
+      <manifest-digest sha256new="QXHMYDX5YKPIWPY6VJYM77K4NJAR3JWXB3SBA3FDGGMEC7ZYFM5Q"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.20.1/docker-compose-Windows-x86_64.exe" size="7551000"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=968b7c999de5f8f8ac835f300e27c8f300f7f516" main="docker-compose" released="2018-03-21" stability="stable" version="1.20.1">
+      <manifest-digest sha256new="5TW75PY5VWHV4XTWODHIFOZAIEE5MXLDUEHDOEV423PZ7H4PJ46A"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.20.1/docker-compose-Linux-x86_64" size="10850496"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=33345051d3c9d2bf4e2907b7f3ae0a6cb2215d3d" main="docker-compose" released="2018-03-21" stability="stable" version="1.20.1">
+      <manifest-digest sha256new="WAZQWZGSAAMXWHKHOQCEVXE2JNLJ47S2ZLMJJEG7G5FCUOMKZDGQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.20.1/docker-compose-Darwin-x86_64" size="6195823"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=85d0c3a09ddf8424d30827b25c38079230d9413b" main="docker-compose.exe" released="2018-04-02" stability="testing" version="1.21.0-rc1">
+      <manifest-digest sha256new="K6BXFXJ5VM2NJZGENTMATU3VSDS5EMXWVB4ANXXQFX42IXB2JR2A"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.21.0-rc1/docker-compose-Windows-x86_64.exe" size="7553202"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=2b03284d2e668105b0d5717416699180474e7a08" main="docker-compose" released="2018-04-02" stability="testing" version="1.21.0-rc1">
+      <manifest-digest sha256new="ROT6EKV4DY5SMKULL3WJ3VTZBXXAHGBE22J5DX2YSKBOQ4YKRIYA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.21.0-rc1/docker-compose-Linux-x86_64" size="10854176"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=b1f9e44e13fb2440bf3302ac9918679765723d9c" main="docker-compose" released="2018-04-02" stability="testing" version="1.21.0-rc1">
+      <manifest-digest sha256new="ZKCFR6VDISEYVQHOMU4LPP6HHCXJBZLEQ7MRRQSE4E5TAO4PDMEQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.21.0-rc1/docker-compose-Darwin-x86_64" size="6190391"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=fa47f866bdab8d35532a86beaaaeba2650b8855e" main="docker-compose.exe" released="2018-04-10" stability="stable" version="1.21.0">
+      <manifest-digest sha256new="7XIMNXJVUI7O5OHIHOJUHFZZOY7WQ75NX4UUCAHGSAFBS6WIL2PQ"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.21.0/docker-compose-Windows-x86_64.exe" size="7552556"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=744e7361df82b5dd49eb5cee49413cf582a64358" main="docker-compose" released="2018-04-10" stability="stable" version="1.21.0">
+      <manifest-digest sha256new="ZURU6C3QWBSLEJWICDAQF7M6W3L24QEJA63HZTC6QSTK2AZKANUA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.21.0/docker-compose-Linux-x86_64" size="10861704"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=d8058e50b021c1d499a30061ee8bec0d3f1ea160" main="docker-compose" released="2018-04-10" stability="stable" version="1.21.0">
+      <manifest-digest sha256new="2LMQJBRUUM7STFN3J5TMCFLM7LCDQVFCVW5BZSMXXHBLUPZHJO5Q"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.21.0/docker-compose-Darwin-x86_64" size="6188237"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=751978b5c27afb5adbbdc49c000a1400e62e185f" main="docker-compose.exe" released="2018-04-27" stability="stable" version="1.21.1">
+      <manifest-digest sha256new="5MXAX5W5XWHX7YAPXQKE2IRPWXCDKEQMZNKCHYCW3L4LSXIML5SQ"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.21.1/docker-compose-Windows-x86_64.exe" size="7550525"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=2e4766122a267b9942d85f8bae0e80e1ed493074" main="docker-compose" released="2018-04-27" stability="stable" version="1.21.1">
+      <manifest-digest sha256new="G3NIVG3XR2O6O6ORIDRGVBAW7WQOC425ADRMN2CLRRSCXKEAWVTA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.21.1/docker-compose-Linux-x86_64" size="10867152"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=86e4366e7bdd44d7a668cc3eea6236b9914e7e47" main="docker-compose" released="2018-04-27" stability="stable" version="1.21.1">
+      <manifest-digest sha256new="B6VWINLNUMXGII2U7QKW7HDOBXH4DD6A3Z545E4ZKB4TL5EQ2UVQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.21.1/docker-compose-Darwin-x86_64" size="6195140"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=16c4e884c57e4e359abbceae3ffee88c28a250be" main="docker-compose.exe" released="2018-05-02" stability="stable" version="1.21.2">
+      <manifest-digest sha256new="SIF2CT562AGQUYMTYI4OCLH4WSYBPRDFI4KYEH3UFVNLINDBBSXA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.21.2/docker-compose-Windows-x86_64.exe" size="7556204"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=9cc6027f4baf8ffbcd14c053f369a0f4954aba78" main="docker-compose" released="2018-05-02" stability="stable" version="1.21.2">
+      <manifest-digest sha256new="OU542BHRR3WMLLGCVMWBFCDZTZSYBBF77SZEXZJ2TYAAJ2RQGQQQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.21.2/docker-compose-Linux-x86_64" size="10858808"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=619fefb79556be1b95ca62859b1c45591dbc961e" main="docker-compose" released="2018-05-02" stability="stable" version="1.21.2">
+      <manifest-digest sha256new="RDLXLR57VEDCNQWKHBSUCXHDS6E7XBPDNGVCJR3TLQANSEWRNIQQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.21.2/docker-compose-Darwin-x86_64" size="6195320"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=faf42ec19b6ec0b9e0c5e48a6b71f33505d76c93" main="docker-compose.exe" released="2018-06-21" stability="testing" version="1.22.0-rc1">
+      <manifest-digest sha256new="N7OBPLT7P2NGCZRSTZN7MX6B2ZIMEHKMHO6AAOUWUI7QEIKPCEMA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.22.0-rc1/docker-compose-Windows-x86_64.exe" size="7564466"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=83541d32fe85eb5c9091343e6456cb8d15e568eb" main="docker-compose" released="2018-06-21" stability="testing" version="1.22.0-rc1">
+      <manifest-digest sha256new="S6ZQG2N3SBBUZCEUAWACRFENSVR4RNT7JDKHRZ34PQBT2GATUCWA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.22.0-rc1/docker-compose-Linux-x86_64" size="11745696"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=a4767514456ff4cb157c310a90ecd8d38f28e38a" main="docker-compose" released="2018-06-21" stability="testing" version="1.22.0-rc1">
+      <manifest-digest sha256new="W6WVPDZJXEXNF2XFG757ZY3WPML7UXO5J2YWOZFQDJEB5PLT3XBQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.22.0-rc1/docker-compose-Darwin-x86_64" size="6201489"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=bdd0d794a390495e0b96b22209a587f5d617bb9c" main="docker-compose.exe" released="2018-07-05" stability="testing" version="1.22.0-rc2">
+      <manifest-digest sha256new="QZCBFHKBTGANIAVJG5XRI3AMP2DCRBKSPO7MDCIEM3CGP3MCCT5Q"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.22.0-rc2/docker-compose-Windows-x86_64.exe" size="7565454"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=d1051f4cac4bb73fdf14ac057fb9fe02305e22cf" main="docker-compose" released="2018-07-05" stability="testing" version="1.22.0-rc2">
+      <manifest-digest sha256new="QVOSHZ3CUEKKYFDYOV7AEFRT7X4HLQ25MP5ITAVIXPVKQ7AJ5PMQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.22.0-rc2/docker-compose-Linux-x86_64" size="11746488"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=d850da7f0914d304481588f8f0c7b2219a27988e" main="docker-compose" released="2018-07-05" stability="testing" version="1.22.0-rc2">
+      <manifest-digest sha256new="MWTRAPFC7AHJGYXAV7V2BETBBENJOB4HJMXAG5LH6COJYNDYQV3A"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.22.0-rc2/docker-compose-Darwin-x86_64" size="6201004"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=f48aa57f6e2a30a62ba66e45695412d53b0d095e" main="docker-compose.exe" released="2018-07-17" stability="stable" version="1.22.0">
+      <manifest-digest sha256new="ONCJ3DNKAX5MFGJCAPNQENV2GMWLRRNSLUL4WRBGGD3OLA7BSOJQ"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.22.0/docker-compose-Windows-x86_64.exe" size="7565306"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=65a64c7a498aa0cd0757d611e4a0f9ff418bf38c" main="docker-compose" released="2018-07-17" stability="stable" version="1.22.0">
+      <manifest-digest sha256new="DCXDRIPIDEYZTLFIUL7QQO6R3BTRH5WOBXPYDEHODUU7VN77URFA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.22.0/docker-compose-Linux-x86_64" size="11750136"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=2a10303568ffd72dabd8bb9e80bc0f9ad033d3ee" main="docker-compose" released="2018-07-17" stability="stable" version="1.22.0">
+      <manifest-digest sha256new="QJJGQMDDK57M34VKUPFGPON2E7K4MUKCRKBMZ46K3ZIXTHJVQKRQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.22.0/docker-compose-Darwin-x86_64" size="6204149"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=0c5d4d15e98daf72e0a29a38db34b340302a75f3" main="docker-compose.exe" released="2018-09-26" stability="testing" version="1.23.0-rc1">
+      <manifest-digest sha256new="6DFAHOIU2ONGFZOWWELBG3BUYNAVM2OBDIY7MXSKXJEQK2YGRYOQ"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.23.0-rc1/docker-compose-Windows-x86_64.exe" size="7563493"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=3cbbb2ded956ddd7a1ea35b8f3fddddb2f84b40c" main="docker-compose" released="2018-09-26" stability="testing" version="1.23.0-rc1">
+      <manifest-digest sha256new="DZCXNQWG6DGO7JUTQLEYWDQ5EE2WN2F3T6JYS5TIWTKO53VMXHMA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.23.0-rc1/docker-compose-Linux-x86_64" size="11738272"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=0d9b129b9572f1560ca520936d1b564a84ce3a13" main="docker-compose" released="2018-09-26" stability="testing" version="1.23.0-rc1">
+      <manifest-digest sha256new="5ILWPZEMW5BKBSAFAB7YFSQCWC3VX3PZ364ZW3HCXRKEVFGU72IQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.23.0-rc1/docker-compose-Darwin-x86_64" size="6466665"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=c44eed699786019d552e8bf04e0b7484554c750f" main="docker-compose.exe" released="2018-10-08" stability="testing" version="1.23.0-rc2">
+      <manifest-digest sha256new="OHYDAGLOT57DDJKGPRCSPQZEUO76PVNA4UUML22DWW6FMIZU34DQ"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.23.0-rc2/docker-compose-Windows-x86_64.exe" size="7563891"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=b608f57f6f6129db920be8fea8b4f8bec21830d8" main="docker-compose" released="2018-10-08" stability="testing" version="1.23.0-rc2">
+      <manifest-digest sha256new="RXJ2BP5LS625EDYQVHAUJMY6JZ4OSIJFLSODJVHNOI5FAPB3ORKQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.23.0-rc2/docker-compose-Linux-x86_64" size="11739376"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=c62d18b55087513bda1040523bfed23a6a2c9d29" main="docker-compose" released="2018-10-08" stability="testing" version="1.23.0-rc2">
+      <manifest-digest sha256new="6BC6M6QQZMFBPCFZ5V3E5OTDRBUICTUFH7PPGXXAJON2ASTWYCTA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.23.0-rc2/docker-compose-Darwin-x86_64" size="6470219"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=8f75cf512bed7c669b809d9eff3369a8b9439dfc" main="docker-compose.exe" released="2018-10-17" stability="testing" version="1.23.0-rc3">
+      <manifest-digest sha256new="OYISQ77GYG4CM4NOJI5ZGPABSL6FRN6W4W263KKHOVXB4PEFW3VQ"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.23.0-rc3/docker-compose-Windows-x86_64.exe" size="7567123"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=2fb464291abde54fca1608f6680e76d6b4c91d29" main="docker-compose" released="2018-10-17" stability="testing" version="1.23.0-rc3">
+      <manifest-digest sha256new="WRJW5QVJDFOWIWG4HWKBDSWLEKLWURYATXDGFWESNELO4BJIJ6EA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.23.0-rc3/docker-compose-Linux-x86_64" size="11737728"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=3bc1b144cb64503e4df2320557a7b8a06a1cdb64" main="docker-compose" released="2018-10-17" stability="testing" version="1.23.0-rc3">
+      <manifest-digest sha256new="PLSPFPOIJZK6OV4ZLXFMM4SE4Z4AUFZKGWJ77FNUFZKQJRMXXS4A"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.23.0-rc3/docker-compose-Darwin-x86_64" size="6473563"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=b0954fcced812b7aa0e62645d73769a68bdfd826" main="docker-compose.exe" released="2018-10-30" stability="stable" version="1.23.0">
+      <manifest-digest sha256new="LNHXWDD4LTB42GDJK5AGBA6KXKFX2TPPB5TU36WIEFF3CGNBBBPA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.23.0/docker-compose-Windows-x86_64.exe" size="7559315"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=ff9a587e4be0c03f7a52145b9ca370948e667160" main="docker-compose" released="2018-10-30" stability="stable" version="1.23.0">
+      <manifest-digest sha256new="TRZO2MYXXWG7DOUCVVHWX34DQHGMPBDIMCLRRPDVRHGXTPGAGTUA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.23.0/docker-compose-Linux-x86_64" size="11736312"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=b5537ece287b48f76bf3516475d2faa9f7befa9c" main="docker-compose" released="2018-10-30" stability="stable" version="1.23.0">
+      <manifest-digest sha256new="N6S7VBUKYPRIU6O2QKUIK5YZL2B7SOJPG4JILUXLMOVLCLUCXF3A"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.23.0/docker-compose-Darwin-x86_64" size="6463909"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=36ed8f696208fbbcd58255e01cebd443d3a94c93" main="docker-compose.exe" released="2018-11-01" stability="stable" version="1.23.1">
+      <manifest-digest sha256new="MMJML5IQOETSOV7PKA7GPUR6YG5YIU3MTZXQQS47LIU2G7MAEWHQ"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.23.1/docker-compose-Windows-x86_64.exe" size="7555571"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=78160e843310c573ac640f327601b48a50b4e5c2" main="docker-compose" released="2018-11-01" stability="stable" version="1.23.1">
+      <manifest-digest sha256new="AGKKACHOFJRSJISY2XPALJNJY43KQKUKBYADCJBNFKUU5TWSNYJQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.23.1/docker-compose-Linux-x86_64" size="11737584"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=1f64752123f35a1102e3dfc42488ff2329c58617" main="docker-compose" released="2018-11-01" stability="stable" version="1.23.1">
+      <manifest-digest sha256new="BB43SNPPQO7M2WJVBJXWUBKHSZL37LFD33TBWBGKGMZTXW5IXAPA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.23.1/docker-compose-Darwin-x86_64" size="6467896"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=8a436fd172c021b9225e936d9e7c02b14f862ed5" main="docker-compose.exe" released="2018-11-28" stability="stable" version="1.23.2">
+      <manifest-digest sha256new="XFEDUQWOPPFLJYYC4VKFDC5777EAGEWXNK3TEYICG6HFEUIBKAOQ"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.23.2/docker-compose-Windows-x86_64.exe" size="7561604"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=0bce19c4d444f79e1df9e94a8a9a6c566f3fa4b5" main="docker-compose" released="2018-11-28" stability="stable" version="1.23.2">
+      <manifest-digest sha256new="BKZER52N5SV4PSCB5KKNG7FMZNOPY4ZABPFZW3A3DQXFNUUB5ELA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.23.2/docker-compose-Linux-x86_64" size="11748168"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=6643d757460de2320a7efa62b92ec63ff70c27d4" main="docker-compose" released="2018-11-28" stability="stable" version="1.23.2">
+      <manifest-digest sha256new="66UONZQ2UZPZEL5NISQCSNB4N2Q3O7TF5XNH336NYCO2L3UQG42A"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.23.2/docker-compose-Darwin-x86_64" size="6473013"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=0082dbe42816b0c77013d93d184c344a94f96dc7" main="docker-compose.exe" released="2019-01-14" stability="testing" version="1.24.0-rc1">
+      <manifest-digest sha256new="UG55FNCSO3ZPYWTR5XJCK5X53DHZHQOAPBKEMHNGQXELEZ3SH33A"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.24.0-rc1/docker-compose-Windows-x86_64.exe" size="9806331"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=1b8af125f603079ce29194cf3e3c4dbc854f4e5e" main="docker-compose" released="2019-01-14" stability="testing" version="1.24.0-rc1">
+      <manifest-digest sha256new="VBDFBGI2EZJYBRZ65XLRMNDTSYOUVGP7WT5VOM4ZUIPIYTM6U6OQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.24.0-rc1/docker-compose-Linux-x86_64" size="16007656"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=adab8a7a0df3f6200d4feca21552500156bac828" main="docker-compose" released="2019-01-14" stability="testing" version="1.24.0-rc1">
+      <manifest-digest sha256new="UMXAM5VE37FXJP4S75AHI2PYI77CWM22JSE4BKSOOAR2TDRWRPDA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.24.0-rc1/docker-compose-Darwin-x86_64" size="9026800"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=a779adc950ba76d9f534a2b0dcd08dada866c8ab" main="docker-compose.exe" released="2019-03-22" stability="testing" version="1.24.0-rc3">
+      <manifest-digest sha256new="4NOAS2H3YNPXCNEFWSVBFCUNJWVAC5U6NMFD5N4AY36IQW2OZRTA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.24.0-rc3/docker-compose-Windows-x86_64.exe" size="10036474"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=4eb63a69d49013e811a38a0e66d622b5b4b8a29a" main="docker-compose" released="2019-03-22" stability="testing" version="1.24.0-rc3">
+      <manifest-digest sha256new="46KMG43WQVTMEDJVH234HJDZH72WQM32TZWN5B3JOZA2LVSEEADQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.24.0-rc3/docker-compose-Linux-x86_64" size="16157072"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=31077bce20ada9a9376849ed74825c341a08b61d" main="docker-compose" released="2019-03-22" stability="testing" version="1.24.0-rc3">
+      <manifest-digest sha256new="XPLSHU6FAHPIBTTIOAFWU7C4BK67L3CNRC7TB55DYW3AWSJ4D37A"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.24.0-rc3/docker-compose-Darwin-x86_64" size="9198938"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=6915c6001c2dab0bf40fb7b479212d48eb632bef" main="docker-compose.exe" released="2019-03-28" stability="stable" version="1.24.0">
+      <manifest-digest sha256new="7HGEPC6ZYACLBLRDL64IDHLWX2LZBHM7HOYI4URFD2TGFRWGZLZA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.24.0/docker-compose-Windows-x86_64.exe" size="10035608"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=b7c4967ca590279cb7a8ffb3902220be08f849bf" main="docker-compose" released="2019-03-28" stability="stable" version="1.24.0">
+      <manifest-digest sha256new="BDVFAWFVH24BEFZAAVMO6T5OYKFGP7CZVHUD7G5KUQE4MLAYKGEQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.24.0/docker-compose-Linux-x86_64" size="16154160"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=939224e7febdf7fd0d1cf2416a0eccb7263dbf1a" main="docker-compose" released="2019-03-28" stability="stable" version="1.24.0">
+      <manifest-digest sha256new="DOADC4CNO2LS5ILYKBBCFJ33Z7IXRIHH7QUFRKXN6JSOHKMQ2KFQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.24.0/docker-compose-Darwin-x86_64" size="9205545"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=6d6892579428a464bc914f74c0beb6b9b4e188e1" main="docker-compose.exe" released="2019-05-24" stability="testing" version="1.25.0-rc1">
+      <manifest-digest sha256new="RWZ5ZGWDGYEC5THWL5J4YH5Y6RFWSF2VWLU2DHWQVP2LW2EYDQNQ"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.25.0-rc1/docker-compose-Windows-x86_64.exe" size="9700922"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=72b340400d0061f090d35d24cc3c8b53a93785bf" main="docker-compose" released="2019-05-24" stability="testing" version="1.25.0-rc1">
+      <manifest-digest sha256new="RNZHS72Q7GWQMV5YBCCLNF3GNSINPJR25EF33NXODDYV3P4QWPAA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.25.0-rc1/docker-compose-Linux-x86_64" size="16350840"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=f163eef1d749e92d32cbb5637f034905e2a83345" main="docker-compose" released="2019-05-24" stability="testing" version="1.25.0-rc1">
+      <manifest-digest sha256new="RCWSFLE5RT5JIHJIPSRMZ6YZAKJVUXCEAAD5T2D5ON4KJ3FPUYTQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.25.0-rc1/docker-compose-Darwin-x86_64" size="9426412"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=8b2861e7b56475d770bf5720736c572183aea098" main="docker-compose.exe" released="2019-06-24" stability="stable" version="1.24.1">
+      <manifest-digest sha256new="M5JUBGCPTPFMATTVX54ACGVLIBMRJ2JABIJAOXUSQU5ZE7JTMUCA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.24.1/docker-compose-Windows-x86_64.exe" size="10029238"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=8db89963ddb011c7cff707c546a5f8dd7cb559f2" main="docker-compose" released="2019-06-24" stability="stable" version="1.24.1">
+      <manifest-digest sha256new="7EZ4ZV3PCZ2VQXLYVS73UTDA543HMDL3VDUNBHB6YUIYAC7YUQKQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.24.1/docker-compose-Linux-x86_64" size="16168192"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=22e1168459ec10b1212fbd25b5b87c9ea05d1cab" main="docker-compose" released="2019-06-24" stability="stable" version="1.24.1">
+      <manifest-digest sha256new="VKK27TRDWP2TT3RCOMQJXLQXNXBCOPVUBFETONOIQSPCJSCMGEMQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.24.1/docker-compose-Darwin-x86_64" size="9162709"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=e341c1c532724b250c98247c7b85bd00c0fe442d" main="docker-compose.exe" released="2019-08-07" stability="testing" version="1.25.0-rc2">
+      <manifest-digest sha256new="EGWOTTRYMVOKS32HQEDYVJMAPU2WCNLZ4YRL3ZQBOIPVA6B3PBOA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.25.0-rc2/docker-compose-Windows-x86_64.exe" size="10151472"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=c1e2cb36f7d6b4183cd5e49dc0b7e0aa56b92a4d" main="docker-compose" released="2019-08-07" stability="testing" version="1.25.0-rc2">
+      <manifest-digest sha256new="A2SA7WLNEUN6B5MB5KNQCJAV4B75RBCIAP3IZSPZZPEZBFFLIUJQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.25.0-rc2/docker-compose-Linux-x86_64" size="16912904"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=b1b1b3843b0496cdfc744432af99455947ec6c26" main="docker-compose" released="2019-08-07" stability="testing" version="1.25.0-rc2">
+      <manifest-digest sha256new="AGFK3QTATEUVE25YLIKO5ZBMDFPSOHK6AJMW4MHSUG2DANKZMLAA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.25.0-rc2/docker-compose-Darwin-x86_64" size="9407005"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=fba2fa9abe833f5c48a5238901b0ba5d6cafd0a7" main="docker-compose.exe" released="2019-10-28" stability="testing" version="1.25.0-rc3">
+      <manifest-digest sha256new="YCFQWC7K762YYOZ2GRQMEMFNQ7KE3JPLMMYERGLGG4UFV5HS3ERA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.25.0-rc3/docker-compose-Windows-x86_64.exe" size="47"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=865233b0ff3959ec7f490afe8932c674c854fa49" main="docker-compose" released="2019-10-28" stability="testing" version="1.25.0-rc3">
+      <manifest-digest sha256new="PDSB6IMBXI3CS55JOOOXT2LN5EVQNODIAPKRS46SPEF2R57CBNYQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.25.0-rc3/docker-compose-Linux-x86_64" size="17028552"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=7c3751bd3a573be7a2a55f1fc6c8aadc40759d03" main="docker-compose" released="2019-10-28" stability="testing" version="1.25.0-rc3">
+      <manifest-digest sha256new="72F42HDIYJISW2QVA4RNZVKGQVG25AS6M3S3VWCBIF27ZKRRN4TA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.25.0-rc3/docker-compose-Darwin-x86_64" size="9595537"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=893f05d3e564be3913fef161934cab07c07c08bf" main="docker-compose.exe" released="2019-10-28" stability="testing" version="1.25.0-rc4">
+      <manifest-digest sha256new="55IDYE4AEQETQKYZ7PMMUCACIZH6TXG6GSJ57UJFBNETDGOUWQSQ"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.25.0-rc4/docker-compose-Windows-x86_64.exe" size="15019698"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=5e4392a03bc0d175bc9f10c92b5b6ca42217ecc6" main="docker-compose" released="2019-10-28" stability="testing" version="1.25.0-rc4">
+      <manifest-digest sha256new="4BEJEK3HA77LXVIW3YKQG6WCYEKVENIKR23TN6XUKKTISKNLFM2A"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.25.0-rc4/docker-compose-Linux-x86_64" size="17031592"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=4a4d694e5cab95e6377ff548db58c50b8f8451ee" main="docker-compose" released="2019-10-28" stability="testing" version="1.25.0-rc4">
+      <manifest-digest sha256new="CGYOTBN6OU2NO6IWLIKB2SYHSDBAUTBRKKLLJR3BFMLDDLFL5IQQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.25.0-rc4/docker-compose-Darwin-x86_64" size="9594323"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=d79206ab14ea870f59f3893cbb0059985c3c18b4" main="docker-compose.exe" released="2019-11-18" stability="stable" version="1.25.0">
+      <manifest-digest sha256new="GO2UY3PELIUMXC3VAATSNJZRW3IAHTUFISR4DGBN63JZMJ3HPWNA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.25.0/docker-compose-Windows-x86_64.exe" size="15021316"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=47851cad752768e17b19eed3106b0d9048c75f5d" main="docker-compose" released="2019-11-18" stability="stable" version="1.25.0">
+      <manifest-digest sha256new="TBLVHFURSH6FZ5R6KL6AITV56JDKAJL3QFDQY57DAQXROBEYTIHQ"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.25.0/docker-compose-Linux-x86_64" size="17031320"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=7f03b6177af0992ecf783cb156a517a4d0072805" main="docker-compose" released="2019-11-18" stability="stable" version="1.25.0">
+      <manifest-digest sha256new="4K5DZZZA3WF4OJG6XJHFOD7BX5A3VEF5RCAW5ITEIABRMPT6EH5Q"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.25.0/docker-compose-Darwin-x86_64" size="9593951"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=deb324e83ed7325d08767039f36ea5217f04038a" main="docker-compose.exe" released="2019-11-29" stability="testing" version="1.25.1-rc1">
+      <manifest-digest sha256new="P5WV2Y276UHC47EHTJK75NG7DSRJORODM23WMCKBTDEYHK4ZUEYA"/>
+      <file dest="docker-compose.exe" href="https://github.com/docker/compose/releases/download/1.25.1-rc1/docker-compose-Windows-x86_64.exe" size="15023305"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=0bb27d70e947f81cf74785a1f35d39d8e8e73c6c" main="docker-compose" released="2019-11-29" stability="testing" version="1.25.1-rc1">
+      <manifest-digest sha256new="DBKID2PFPOZQJARIVQMCNUBV3LJ3J4LOEWZHCNP646TNH7ANKGEA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.25.1-rc1/docker-compose-Linux-x86_64" size="17034528"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=ffb2cb2fffc58c85c75577c1d3a0d1eed1e2edfe" main="docker-compose" released="2019-11-29" stability="testing" version="1.25.1-rc1">
+      <manifest-digest sha256new="PVGVMXHCV7DMBW66T3D4NBSUIO3YJKHXDAUEB3MGI3VXJVSNKJEA"/>
+      <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.25.1-rc1/docker-compose-Darwin-x86_64" size="9592001"/>
+    </implementation>
+  </group>
+
+  <entry-point binary-name="docker-compose" command="run"/>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA33uAAoJEFmqOSfCTk4eVWUH/02GKUabaiOuAhMQ1TUlQBnx1EyK9mmZtaQK
+Z0MsdukQPs30w1tfolM/FVC07oRpZ3+spBj5clO3mz4gzh8ED8AsOIC6KaA+rW48e6+V39/u1TxQ
+kyyXp4YjfbGAsc+9dqX3umDylmi5wYJW0SFFTBOWHjzTdTa1qnZGz8jkeziQIiy0ajwfY5trS9A7
+mVNnbZ1RE/gWbEvdZZ3B3o0/nYcY7hBhbv0g+wTJKE/2p9HR1lidvDTtKqPsOiRd3bitNzEbo9GZ
+7MOf1usxj6MAOohqO2nkHUSLxmUOqSLMiAUH7qocpPDUm0f90oIIZUQFfZcU51/qKnYcNf4zqD9E
+4AE=
+
+-->

@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/lib/xslt.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>LibXslt</name>
+  <summary xml:lang="en">LibXslt: library and tools for applying XSLT to XML-documents</summary>
+  <description xml:lang="en">LibXslt is a library and tools for applying XSLT (Extensible Styleheets Transformations) to XML-documents. XML (Extensible Markup Language) is the universal format for data on the Web. XML is a metalanguage to design markup languages, i.e. text language where semantic and structure are added to the content using extra &quot;markup&quot; information enclosed between angle bracket. HTML is the most well-known markup language. </description>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/lib/xml2.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/lib/xml2.png" type="image/png"/>
+  <category>Development</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/libxslt.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-i486" id="sha1new=7bcb55f4519daf867981e4d03d042f4ac3d7f32a" license="GPL v2 (GNU General Public License), LGPL (GNU Lesser General Public License)" released="2001-12-23" version="1.0.9">
+    <requires interface="https://apps.0install.net/lib/xml2.xml" version="2.4.12">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/xsltproc.exe"/>
+    <manifest-digest sha256new="L5E56FP52UFPVDKKJVHRQNZ6C6AET3XFPIEKVCQDE5X3FPMSCEGA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/libxslt/1.0.9/libxslt-1.0.9-bin.zip" size="148088" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="dev-libs/libxslt"/>
+  <package-implementation package="libxslt"/>
+  <entry-point binary-name="xsltproc" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">xsltproc</name>
+    <summary xml:lang="en">xsltproc: command line xslt processor</summary>
+    <description xml:lang="en">xsltproc  is  a  command  line  tool  for  applying XSLT
+       stylesheets to XML documents. It is part of libxslt, the
+       XSLT C library for GNOME. While it was developed as part
+       of the GNOME project, it can  operate  independently  of
+       the GNOME desktop.</description>
+  </entry-point>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA338AAoJEFmqOSfCTk4eGL8H/332Whew7WTtVJoIeyUJHkkWZIqgQDTQfOSu
+6uJEXVX5SJHYd7wTymnbx9v7/aubNITBZICnhb2gmXGRKHZbrqtp12aJbBGHccVI83mWbX7ePqpg
+tuYy8mgUDJlRNlT+fMqnfzeKLdc5R4SgYd8KJ1MsSd3pxHrNid6jYs2gPqClyI0eWV/k8C5TAFBk
+2nZq5gi8Zt28Fq1ze+X4yZE2s1VwxYhvczQ9tvW7Vyoog1Dw6Dl3h/ql+GYQn/SO8FGTVURWGjsV
+OYhx339K6hNsmgRwX7XTqimsW0XvSw6kTbIx0e6Vwe0iYMwauXTMd0wm7Vct5UqX5hp9uc5bBvxZ
+KrI=
+
+-->

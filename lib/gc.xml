@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/lib/gc.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libgc1c2</name>
+  <summary>conservative garbage collector for C and C++</summary>
+  <description>Boehm's GC is a garbage collecting storage allocator that is
+intended to be used as a plug-in replacement for C's malloc.</description>
+  <package-implementation package="libgc1c2"/>
+  <group>
+    <requires interface="https://apps.0install.net/lib/gcc1.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/stdc++6.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <group arch="Linux-i386">
+      <implementation id="sha1new=a4037bc11ac0ece34b24adea70e7255689f52b19" released="2012-01-02" version="6.8-1.2">
+	<archive href="https://github.com/0install/apps.0install.net/releases/download/archives/libgc1c2-i386-1_6.8-1.2.tar.bz2" size="125683"/>
+      </implementation>
+    </group>
+    <group arch="Linux-x86_64">
+      <implementation id="sha1new=4803988e733f5c99bbbb6d2b6ddcb95a149d3f52" released="2012-01-02" version="6.8-1.2">
+	<archive href="https://github.com/0install/apps.0install.net/releases/download/archives/libgc1c2-amd64-1_6.8-1.2.tar.bz2" size="128933"/>
+      </implementation>
+    </group>
+  </group>
+
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeA334AAoJEFmqOSfCTk4e0RoIALx308tkNFDQ4Rz3j8joB0KaLXK+L32iyVXL
+5fB/mg+pJoySEBfpbhmTjXGB/9lHonpg6SOYuRo3IBX+Pv8wQsj/g4YWldVDSNX1hgH5Ou5Pc0VR
+6SjWgSSmXLQxljjmmm6/fm/2UTjGIGczsqmmaVo3KluKVnFGkwpV4VQ4tMnpohLG3rsr/PDm2YAI
+o/qRSpCG81xfKtr5r0qtmqZsY0/cox/WDIJ0se5hA3UYw9U+Wm4PQVXdQDW0FbxOGcVpvFGAPGJb
+HmJqCRbbtHwWeojTn0W/PbKSWeEra3T/pqiHz6V3xLbRSAUvipY/DLTSz12mPuFVU2q0W3CobcNY
+z50=
+
+-->

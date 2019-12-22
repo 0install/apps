@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/python/pygobject.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>PyGObject</name>
+  <summary>Python bindings for the GObject library</summary>
+  <description>
+GObject is an abstraction layer that allows programming with an object
+paradigm that is compatible with many languages. It is a part of Glib,
+the core library used to build GTK+ and GNOME.
+  </description>
+  <homepage>https://pygobject.readthedocs.io/</homepage>
+
+  <group>
+    <restricts interface="https://apps.0install.net/python/python.xml">
+      <version before="4" not-before="3"/>
+    </restricts>
+
+    <package-implementation distributions="FreeBSD" package="py34-gobject3"/>
+
+    <!-- On Debian, python3-gobject is virtual and replaced by python3-gi -->
+    <package-implementation distributions="Debian" package="python3-gi"/>
+
+    <package-implementation package="python3-gobject"/>
+
+    <package-implementation distributions="Arch" package="python-gobject"/>
+  </group>
+
+  <group>
+    <restricts interface="https://apps.0install.net/python/python.xml">
+      <version before="3" not-before="2"/>
+    </restricts>
+
+    <package-implementation distributions="FreeBSD" package="py27-gobject"/>
+    <package-implementation distributions="Debian" package="python-gobject"/>	<!-- Ubuntu 10.04 -->
+    <package-implementation distributions="Debian" package="python-gobject-2"/>
+    <package-implementation package="pygobject2"/>
+    <package-implementation package="python-gobject2"/>
+    <package-implementation distributions="Arch" package="python2-gobject2"/>
+  </group>
+
+  <package-implementation distributions="Gentoo" package="dev-python/pygobject"/>
+
+  <group license="LGPL (GNU Lesser General Public License)">
+    <restricts interface="https://apps.0install.net/python/python.xml" version="2.7..!2.8"/>
+    <requires interface="https://apps.0install.net/lib/gtk.xml" version="2.22..!3"/>
+    <environment insert="." name="PYTHONPATH"/>
+    <environment insert="gtk-2.0" name="PYTHONPATH"/>
+
+    <implementation arch="Windows-i486" id="sha1new=dded10ebd18836827f14a9f488346f2c57bd2f4d" released="2011-04-10" stability="stable" version="2.28.3">
+      <manifest-digest sha256new="GTWVISPUFHUCTTJGWC5PW2NYRWGSVES4HBRZ5O3H4K22S4UT5X4Q"/>
+      <archive extract="SourceDir/Lib/site-packages" href="http://ftp.gnome.org/pub/GNOME/binaries/win32/pygobject/2.28/pygobject-2.28.3.win32-py2.7.msi" size="442368" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=26307f0d01d2658495b0922c644e9b415e645406" stability="developer" version="2.28.6">
+      <manifest-digest sha256new="P4GNQDM7UJRU7JLJDXE6DAG5UJNVTTLHCIXHEHWR5KXPKKQ5HNQA"/>
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/pygobject-2.28.6-cp27-none-win_amd64.whl" size="538211" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=2ead3fbcf68cf5b175a536581a943ced35259d46" stability="developer" version="2.28.6">
+      <manifest-digest sha256new="VSYQ2X6A6BRVRCRYEYDXAXN2BUEGEJNI6O6SI7CXQELZKVJVCLGQ"/>
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/pygobject-2.28.6-cp27-none-win32.whl" size="511973" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group license="LGPL (GNU Lesser General Public License)">
+    <restricts interface="https://apps.0install.net/python/python.xml" version="3.4..!3.5"/>
+    <requires interface="https://apps.0install.net/lib/gtk.xml" version="3.18..!4"/>
+    <environment insert="." name="PYTHONPATH"/>
+
+    <implementation arch="Windows-x86_64" id="sha1new=4e13aab34b0b9e821f865ac2727527d21762db4b" stability="stable" version="3.24.1">
+      <manifest-digest sha256new="PQXAXJZSCXW3TXMF3VLMTHVHJLCG6X75H3JW72D5NDX2YMWVA2KQ"/>
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/pygobject-3.24.1-py3.4-win64.zip" size="306152" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=30912d6c8006758785ce97160bb6223752fb9a9f" stability="stable" version="3.24.1">
+      <manifest-digest sha256new="AFIIFWYRGY7HNFKSQUGGLITO62J33XIQ4RRBCNFBBU3YOIFYYNXQ"/>
+      <archive href="https://github.com/0install/apps.0install.net/releases/download/archives/pygobject-3.24.1-py3.4-win32.zip" size="294434" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEcBAABAgAGBQJeCK1fAAoJEFmqOSfCTk4eB5QH/RGZuc0P3vKd5+a69VtGsQw2r3n2yXvpl4yX
+ZSdMkjpNGbNWfpVdsEUUK8Tszb+CNaYoPRYb0tKZkNphgV8nFGuch3aUz3aO58JnT7slceZPIGmw
+eFNcj+1ijbw5Y4cU1LHbkoJe3UjBApC2+P8nVAUedpaHqHFjrnZZVuREU3+fAw4EBD8U0TvEuVTZ
+Ag9VJgy9VzfgakSQqsQWCV1QB4K0TC2N4pcMH4z1LFimqOVCxM0DkNaXfpwtwHItPClIL6jz1hqw
+4Iy1WRB5vHSG9uhiB/Y6eXYbJNl5DLgjuqqRy/zuhFmxe3V+Q6MU9FIeGbiKwxay6u6tyMT7vlub
+8Rs=
+
+-->

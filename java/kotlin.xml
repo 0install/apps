@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="http://repo.roscidus.com/java/kotlin" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="https://apps.0install.net/java/kotlin.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>Kotlin</name>
   <summary>statically typed programming language for modern multiplatform applications</summary>
   <description>Kotlin is a statically typed programming language for modern multiplatform applications. 100% interoperable with Java and Android.</description>
@@ -7,16 +7,16 @@
   <category>Development</category>
   <needs-terminal/>
 
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/java/kotlin.png" type="image/png"/>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/java/kotlin.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/java/kotlin.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/java/kotlin.ico" type="image/vnd.microsoft.icon"/>
 
   <group license="Apache License 2.0">
-    <requires interface="http://repo.roscidus.com/java/openjdk-jdk" version="7..">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="7..">
       <environment insert="" mode="replace" name="JAVA_HOME"/>
     </requires>
     <environment insert="." mode="replace" name="KOTLIN_HOME"/>
     <command name="run">
-      <runner command="java" interface="http://repo.roscidus.com/java/openjdk-jdk">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
         <arg>-Dkotlin.home=$KOTLIN_HOME</arg>
         <arg>-cp</arg>
         <arg>$KOTLIN_HOME/lib/kotlin-runner.jar</arg>
@@ -24,7 +24,7 @@
       </runner>
     </command>
     <command name="kotlinc">
-      <runner command="java" interface="http://repo.roscidus.com/java/openjdk-jdk">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
         <arg>-Dkotlin.home=$KOTLIN_HOME</arg>
         <arg>-cp</arg>
         <arg>$KOTLIN_HOME/lib/kotlin-preloader.jar</arg>
@@ -35,7 +35,7 @@
       </runner>
     </command>
     <command name="kotlinc-jvm">
-      <runner command="java" interface="http://repo.roscidus.com/java/openjdk-jdk">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
         <arg>-Dkotlin.home=$KOTLIN_HOME</arg>
         <arg>-cp</arg>
         <arg>$KOTLIN_HOME/lib/kotlin-preloader.jar</arg>
@@ -46,7 +46,7 @@
       </runner>
     </command>
     <command name="kotlinc-js">
-      <runner command="java" interface="http://repo.roscidus.com/java/openjdk-jdk">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
         <arg>-Dkotlin.home=$KOTLIN_HOME</arg>
         <arg>-cp</arg>
         <arg>$KOTLIN_HOME/lib/kotlin-preloader.jar</arg>
@@ -57,7 +57,7 @@
       </runner>
     </command>
     <command name="kotlinc-dce-js">
-      <runner command="java" interface="http://repo.roscidus.com/java/openjdk-jdk">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
         <arg>-Dkotlin.home=$KOTLIN_HOME</arg>
         <arg>-cp</arg>
         <arg>$KOTLIN_HOME/lib/kotlin-preloader.jar</arg>

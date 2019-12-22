@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Visual Studio Code</name>
+  <summary>lightweight but powerful source code editor</summary>
+  <description>Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Python, PHP, Go) and runtimes (such as .NET and Unity).</description>
+  <homepage>https://code.visualstudio.com/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/gui/vs-code.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/gui/vs-code.png" type="image/png"/>
+  <category>Development</category>
+  <category>Utility</category>
+
+  <feed-for interface="https://apps.0install.net/gui/vs-code.xml"/>
+
+  <group license="MIT License">
+    <requires importance="recommended" interface="https://apps.0install.net/devel/git.xml">
+      <executable-in-path name="git"/>
+    </requires>
+
+    <implementation arch="Windows-x86_64" main="Code.exe" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive href="https://az764295.vo.msecnd.net/stable/{release-id}/VSCode-win32-x64-{version}.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" main="Code.exe" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive href="https://az764295.vo.msecnd.net/stable/{release-id}/VSCode-win32-ia32-{version}.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/code" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="VSCode-linux-x64" href="https://az764295.vo.msecnd.net/stable/{release-id}/code-stable-{linux-amd64-timestamp}.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <!--<implementation arch="MacOSX-*" main="Contents/MacOS/Electron" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="Visual Studio Code.app" href="https://az764295.vo.msecnd.net/stable/{release-id}/VSCode-darwin-stable.zip" type="application/zip"/>
+    </implementation>-->
+  </group>
+</interface>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>LibreOffice</name>
+  <summary xml:lang="en">a free office suite</summary>
+  <summary xml:lang="de">eine freie Office-Suite</summary>
+  <description xml:lang="en">LibreOffice is a free and open source office suite, developed by The Document Foundation. It was forked from OpenOffice.org in 2010. The LibreOffice suite comprises programs to do word processing, spreadsheets, slideshows, diagrams, maintain databases, and compose math formulae.</description>
+  <description xml:lang="de">LibreOffice ist eine freie Zusammenstellung gebräuchlicher Software für Arbeiten im Büro (Office-Paket). Dazu gehören Programme zur Textverarbeitung, Tabellenkalkulation, Präsentation und zum Erstellen von Zeichnungen. Ein Datenbankmanagementsystem und ein Formeleditor sind ebenfalls enthalten.</description>
+  <homepage>http://www.libreoffice.org/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/gui/libreoffice/libreoffice.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/gui/libreoffice/libreoffice.ico" type="image/vnd.microsoft.icon"/>
+  <category>Office</category>
+
+  <feed-for interface="https://apps.0install.net/gui/libreoffice.xml"/>
+
+  <group license="Apache License 2.0">
+    <command name="run" path="program/soffice.exe"/>
+    <command name="writer" path="program/swriter.exe"/>
+    <command name="writer-web" path="program/sweb.exe"/>
+    <command name="calc" path="program/scalc.exe"/>
+    <command name="math" path="program/smath.exe"/>
+    <command name="impress" path="program/simpress.exe"/>
+    <command name="draw" path="program/sdraw.exe"/>
+    <command name="base" path="program/sbase.exe"/>
+    <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive href="https://downloadarchive.documentfoundation.org/libreoffice/old/{version-original}/win/x86_64/LibreOffice_{version-original}_Win_x64.msi" type="application/x-msi" extract="SourceDir"/>
+    </implementation>
+    <implementation arch="Windows-i486" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive href="https://downloadarchive.documentfoundation.org/libreoffice/old/{version-original}/win/x86/LibreOffice_{version-original}_Win_x86.msi" type="application/x-msi" extract="SourceDir"/>
+    </implementation>
+  </group>
+</interface>

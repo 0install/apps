@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/dotnet/mono" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/dotnet/mono.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>Mono</name>
-  <summary>open-source cross-platform implementation of the Common Language Infrastructure (.NET Framework compatible)</summary>
+  <summary>open-source cross-platform implementation of the Common Language Runtime (.NET Framework compatible)</summary>
   <homepage>http://www.mono-project.com/</homepage>
-  <feed-for interface="http://repo.roscidus.com/dotnet/clr" />
-  <feed-for interface="http://repo.roscidus.com/dotnet/clr-monopath" />
 
   <group main="/usr/bin/mono">
     <!-- There is a separate GUI version of the Mono executable on Windows. On POSIX systems we simply map it back to regular Mono. -->
     <command name="run-gui">
-      <runner interface="http://repo.roscidus.com/dotnet/mono"/>
+      <runner interface="https://apps.0install.net/dotnet/mono.xml"/>
     </command>
     <package-implementation package="mono-complete" distributions="Debian" />
     <package-implementation package="mono-winforms" distributions="RPM" />

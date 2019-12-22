@@ -1,16 +1,16 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/lib/gc" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/lib/gc.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libgc1c2</name>
   <summary>conservative garbage collector for C and C++</summary>
   <description>Boehm's GC is a garbage collecting storage allocator that is
 intended to be used as a plug-in replacement for C's malloc.</description>
   <package-implementation package="libgc1c2"/>
   <group>
-    <requires interface="http://repo.roscidus.com/lib/gcc1">
+    <requires interface="https://apps.0install.net/lib/gcc1.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
-    <requires interface="http://repo.roscidus.com/lib/stdc++6">
+    <requires interface="https://apps.0install.net/lib/stdc++6.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
     <group arch="Linux-i386">

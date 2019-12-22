@@ -1,14 +1,15 @@
 <?xml version="1.0" ?>
-<interface uri="http://repo.roscidus.com/golang/go" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="https://apps.0install.net/golang/go.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>Go</name>
   <summary>tool for managing Go source code</summary>
   <description>This is a tool for managing Go source code. Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.</description>
   <homepage>https://golang.org/</homepage>
   <needs-terminal/>
 
-  <feed src="http://repo.roscidus.com/golang/go-linux" arch="Linux-*"/>
-  <feed src="http://repo.roscidus.com/golang/go-darwin" arch="Darwin-*"/>
-  <feed src="http://repo.roscidus.com/golang/go-windows" arch="Windows-*"/>
+  <feed src="https://apps.0install.net/golang/go-linux.xml" arch="Linux-*"/>
+  <feed src="https://apps.0install.net/golang/go-darwin.xml" arch="Darwin-*"/>
+  <feed src="https://apps.0install.net/golang/go-windows.xml" arch="Windows-*"/>
+  <package-implementation distributions="Virtual" package="go" main="/usr/bin/go"/><!-- Prevent this virtual feed from being seen as a library feed -->
 
   <entry-point binary-name="go" command="run"/>
   <entry-point binary-name="godoc" command="godoc">

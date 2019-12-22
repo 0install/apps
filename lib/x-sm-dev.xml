@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/lib/x-sm-dev" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/lib/x-sm-dev.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libsm-dev</name>
   <summary>X11 Session Management library (development headers)</summary>
   <description>
@@ -18,7 +18,7 @@ More information about X.Org can be found at: &lt;URL:http://www.X.org&gt;
 This module can be found at git://anongit.freedesktop.org/git/xorg/lib/libSM</description>
   <package-implementation package="libsm-dev"/>
   <group arch="Linux-i386">
-    <requires interface="http://repo.roscidus.com/lib/x11proto-core-dev">
+    <requires interface="https://apps.0install.net/lib/x11proto-core-dev.xml">
       <environment insert="lib/pkgconfig" name="PKG_CONFIG_PATH"/>
     </requires>
     <implementation id="sha1new=e26870cf728fff1f84a32fb53c76342b4e48c11a" released="2010-08-12" version="1.0.3-2">
@@ -26,7 +26,7 @@ This module can be found at git://anongit.freedesktop.org/git/xorg/lib/libSM</de
     </implementation>
   </group>
   <group arch="Linux-x86_64">
-    <requires interface="http://repo.roscidus.com/lib/x-ice-dev">
+    <requires interface="https://apps.0install.net/lib/x-ice-dev.xml">
       <environment insert="lib/pkgconfig" name="PKG_CONFIG_PATH"/>
     </requires>
     <implementation id="sha1new=9f7efcbdc1ba0384c3f76e400a28e014d63705c9" released="2010-08-12" version="1.0.3-2">
@@ -34,10 +34,10 @@ This module can be found at git://anongit.freedesktop.org/git/xorg/lib/libSM</de
     </implementation>
   </group>
   <group>
-    <requires interface="http://repo.roscidus.com/lib/x11proto-core-dev">
+    <requires interface="https://apps.0install.net/lib/x11proto-core-dev.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
-    <requires interface="http://repo.roscidus.com/lib/x-ice-dev">
+    <requires interface="https://apps.0install.net/lib/x-ice-dev.xml">
       <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
     </requires>
     <implementation arch="Linux-i386" id="sha1new=5f5c0729c1a04ed2f3a7f87e59b8abefbfaf12ef" released="2011-05-29" version="1.1.1-1">

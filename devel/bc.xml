@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/devel/bc" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/devel/bc.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Bc</name>
   <summary xml:lang="en">Bc: arbitrary precision calculator language</summary>
   <description xml:lang="en">bc is an arbitrary precision numeric processing language. Syntax is similar to C, but differs in many substantial areas. It supports interactive execution of statements. bc is a language that supports arbitrary precision numbers with interactive execution of statements. There are some similarities in the syntax to the C programming language. A standard math library is available by command line option. If requested, the math library is defined before processing any files. bc starts by processing code from all the files listed on the command line in the order listed. After all files have been processed, bc reads from the standard input. All code is executed as it is read. (If a file contains a command to halt the processor, bc will never read from the standard input.) </description>
@@ -10,7 +10,7 @@
   <homepage>http://gnuwin32.sourceforge.net/packages/bc.htm</homepage>
   <needs-terminal/>
   <implementation arch="Windows-*" id="sha1new=cd7927ba401cf2a2c925d955794a048191ac4101" license="GPL v2 (GNU General Public License)" released="2005-03-06" version="1.6-2-3">
-    <requires interface="http://repo.roscidus.com/lib/readline5">
+    <requires interface="https://apps.0install.net/lib/readline5.xml">
       <environment insert="bin" name="PATH"/>
     </requires>
     <command name="run" path="bin/bc.exe"/>

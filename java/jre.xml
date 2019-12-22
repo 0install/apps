@@ -1,0 +1,130 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/java/jre.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Java Runtime Environment (JRE)</name>
+  <summary>Runtime for Java</summary>
+  <description>A Java runtime allows you to run applications built for Java.</description>
+
+  <feed arch="Windows-*" src="http://0install.de/feeds/Oracle_JRE.xml"/>
+
+  <package-implementation distributions="Windows" package="openjdk-7-jre"/>
+  <package-implementation distributions="Windows" package="openjdk-8-jre"/>
+  <package-implementation distributions="Windows" package="openjdk-9-jre"/>
+  <package-implementation distributions="Windows" package="openjdk-10-jre"/>
+
+  <group>
+    <!-- There is a seperate GUI version of the Java executable on Windows. On POSIX systems we simply map it back to regular Java. -->
+    <command name="run-gui">
+      <runner interface="https://apps.0install.net/java/jre.xml"/>
+    </command>
+
+    <package-implementation distributions="Debian Darwin" main="/usr/bin/java" package="openjdk-7-jre"/>
+    <package-implementation distributions="Debian Darwin" main="/usr/bin/java" package="openjdk-8-jre"/>
+    <package-implementation distributions="Debian Darwin" main="/usr/bin/java" package="openjdk-9-jre"/>
+    <package-implementation distributions="Debian Darwin" main="/usr/bin/java" package="openjdk-10-jre"/>
+    <package-implementation distributions="Debian Darwin" main="/usr/bin/java" package="openjdk-11-jre"/>
+    <package-implementation distributions="Debian Darwin" main="/usr/bin/java" package="openjdk-12-jre"/>
+    <package-implementation distributions="Debian Darwin" main="/usr/bin/java" package="openjdk-13-jre"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-1_7_0-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-1.7.0-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-1.8.0-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-9-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-10-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-11-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-12-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-13-openjdk"/>
+    <package-implementation distributions="Arch" main="/usr/bin/java" package="jre7-openjdk"/>
+    <package-implementation distributions="Arch" main="/usr/bin/java" package="jre8-openjdk"/>
+    <package-implementation distributions="Arch" main="/usr/bin/java" package="jre9-openjdk"/>
+    <package-implementation distributions="Arch" main="/usr/bin/java" package="jre10-openjdk"/>
+    <package-implementation distributions="Arch" main="/usr/bin/java" package="jre11-openjdk"/>
+    <package-implementation distributions="Arch" main="/usr/bin/java" package="jre12-openjdk"/>
+    <package-implementation distributions="Arch" main="/usr/bin/java" package="jre13-openjdk"/>
+  </group>
+
+  <entry-point binary-name="java" command="run">
+    <needs-terminal/>
+    <name>Java command-line runner</name>
+  </entry-point>
+  <entry-point binary-name="javaw" command="run-gui">
+    <name>Java GUI runner</name>
+  </entry-point>
+  <entry-point command="javaws">
+    <name>Java Web Start</name>
+  </entry-point>
+  <entry-point command="javacpl">
+    <name>Java Control Panel</name>
+  </entry-point>
+  <entry-point binary-name="keytool" command="keytool">
+    <needs-terminal/>
+    <name>Key and Certificate Management Tool</name>
+  </entry-point>
+  <entry-point binary-name="servertool" command="servertool">
+    <needs-terminal/>
+    <name>Java IDL Server Tool</name>
+  </entry-point>
+  <entry-point binary-name="pack200" command="pack200">
+    <needs-terminal/>
+    <name>JAR Packing tool</name>
+  </entry-point>
+  <entry-point binary-name="unpack200" command="unpack200">
+    <needs-terminal/>
+    <name>JAR Unpacking tool</name>
+  </entry-point>
+  <entry-point binary-name="appletviewer" command="appletviewer">
+    <name>Run applet outside of browser</name>
+  </entry-point>
+  <entry-point binary-name="rmid" command="rmid">
+    <needs-terminal/>
+    <name>Remote activation system daemon</name>
+  </entry-point>
+  <entry-point binary-name="rmiregistry" command="rmiregistry">
+    <needs-terminal/>
+    <name>Remote object registry</name>
+  </entry-point>
+  <entry-point binary-name="idlj" command="idlj">
+    <needs-terminal/>
+    <name>IDL-to-Java Compiler</name>
+  </entry-point>
+  <entry-point binary-name="jjs" command="jjs">
+    <needs-terminal/>
+    <name>Nashorn engine</name>
+  </entry-point>
+  <entry-point binary-name="jrunscript" command="jrunscript">
+    <needs-terminal/>
+    <name>Java command line script shell</name>
+  </entry-point>
+  <entry-point binary-name="kinit" command="kinit">
+    <needs-terminal/>
+    <name>Obtain and cache Kerberos ticket-granting ticket</name>
+  </entry-point>
+  <entry-point binary-name="klist" command="klist">
+    <needs-terminal/>
+    <name>Kerberos display entries in credentials cache and keytab</name>
+  </entry-point>
+  <entry-point binary-name="ktab" command="ktab">
+    <needs-terminal/>
+    <name>Kerberos key table manager</name>
+  </entry-point>
+  <entry-point binary-name="jabswitch" command="jabswitch">
+    <needs-terminal/>
+    <name>Java Access Bridge Switch</name>
+  </entry-point>
+  <entry-point binary-name="jaccessinspector" command="jaccessinspector"/>
+  <entry-point binary-name="jaccesswalker" command="jaccesswalker"/>
+
+  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
+    <file-type id="jarfile">
+      <description>Executable Jar File</description>
+      <verb args="-jar &quot;%1&quot; %*" command="run-gui" name="open"/>
+      <extension value=".jar"/>
+    </file-type>
+    <file-type id="JNLPFile">
+      <description>JNLP File</description>
+      <verb args="&quot;%1&quot;" command="javaws" name="Open">
+        <description>&amp;Launch</description>
+      </verb>
+      <extension mime-type="application/x-java-jnlp-file" value=".jnlp"/>
+    </file-type>
+  </capabilities>
+</interface>

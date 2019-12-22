@@ -1,0 +1,35 @@
+# Generate signed feeds and publish to GitHub Pages
+name: Publish
+on:
+  push:
+    branches: [master]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up 0install
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends 0install-core python-gobject rpm2cpio
+      - name: Clone feeds
+        uses: actions/checkout@v2
+        with:
+          path: feeds
+      - name: Clone public
+        uses: actions/checkout@v2
+        with:
+          path: public
+          ref: gh-pages
+          # Remove this once https://github.community/t5/GitHub-Actions/Github-action-not-triggering-gh-pages-upon-push/m-p/26869 is resolved
+          token: ${{ secrets.GITHUB_PAT }}
+      - name: Set up repo
+        run: |
+          cp feeds/0repo-config.py .
+          cp public/archives.db .
+          mkdir incoming
+          git config --global user.name "apps.0install.net"
+          git config --global user.email "webmaster@0install.net"
+          echo "${{ secrets.GPG_KEY }}" | gpg --import -
+      - name: Run 0repo
+        run: 0install run http://0install.net/tools/0repo.xml
+      - name: Push public
+        run: cd public && git push

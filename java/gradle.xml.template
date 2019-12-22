@@ -6,15 +6,15 @@
   <category>Development</category>
   <needs-terminal/>
 
-  <feed-for interface="http://repo.roscidus.com/java/gradle"/>
+  <feed-for interface="https://apps.0install.net/java/gradle.xml"/>
 
   <group license="Apache License 2.0">
-    <requires interface="http://repo.roscidus.com/java/openjdk-jdk" version="7..">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="7..">
       <environment insert="" mode="replace" name="JAVA_HOME"/>
     </requires>
     <environment insert="lib/*" name="CLASSPATH"/>
     <command name="run">
-      <runner command="java" interface="http://repo.roscidus.com/java/openjdk-jdk">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
         <for-each item-from="GRADLE_OPTS" separator=" ">
           <arg>$item</arg>
         </for-each>

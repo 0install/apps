@@ -2,10 +2,10 @@
 <interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>.NET Core Runtime</name>
   <summary>modular and high performance implementation of .NET</summary>
-  <homepage>https://www.microsoft.com/net/core</homepage>
+  <homepage>https://dotnet.microsoft.com/</homepage>
   <needs-terminal/>
 
-  <feed-for interface="http://repo.roscidus.com/dotnet/core"/>
+  <feed-for interface="https://apps.0install.net/dotnet/core.xml"/>
 
   <group license="MIT License">
     <command name="run" path="dotnet.exe"/>
@@ -24,7 +24,7 @@
   <group arch="Linux-x86_64" license="MIT License">
     <command name="run" path="dotnet"/>
     <environment mode="replace" name="DOTNET_ROOT" insert="."/>
-    <requires interface="http://repo.roscidus.com/lib/curl"/>
+    <requires interface="https://apps.0install.net/lib/curl.xml"/>
 
     <implementation version="{version}" released="{released}" stability="stable">
       <manifest-digest/>

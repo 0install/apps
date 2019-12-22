@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/dotnet/framework-client-profile" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/dotnet/framework-client-profile.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>.NET Framework Client Profile</name>
-  <summary>a limited version of the .NET Framework from Microsoft</summary>
+  <summary>subset of the .NET Framework optimized for client applications</summary>
+  <description>This feed uses the version of .NET Framework already installed on the computer. It does not download new versions.</description>
+  <homepage>https://docs.microsoft.com/en-us/dotnet/framework/deployment/client-profile</homepage>
 
   <package-implementation package="netfx-client" distributions="Windows">
     <!-- There is a seperate GUI version of the Mono executable on Windows. For .NET we treat "run" and "run-gui" exactly the same. -->
     <command name="run-gui" path="" />
   </package-implementation>
 
-  <!-- The regular .NET Framework is a true superset of the Client Profile -->
-  <feed src="http://repo.roscidus.com/dotnet/framework" />
+  <!-- The regular .NET Framework is a superset of the Client Profile -->
+  <feed src="https://apps.0install.net/dotnet/framework.xml" />
 </interface>

@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/devel/freetype" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/devel/freetype.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>FreeType</name>
   <summary xml:lang="en">FreeType: font engine and rasterizer </summary>
   <description xml:lang="en">FreeType is a software font engine that is designed to be small, efficient, highly customizable and portable while capable of producing high-quality output (glyph images). It can be used in graphics libraries, display servers, font conversion tools, text image generation tools, and many other products as well. 
@@ -9,13 +9,13 @@ Note that FreeType is a font service and doesn't provide APIs to perform higher-
 •FreeType2 is in freetype-1.1 / 1.4 
 •FreeType6 is in freetype-2.0.1 and higher 
 </description>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/devel/freetype.ico" type="image/vnd.microsoft.icon"/>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/devel/freetype.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/devel/freetype.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/devel/freetype.png" type="image/png"/>
   <category>Development</category>
   <homepage>http://gnuwin32.sourceforge.net/packages/freetype.htm</homepage>
   <needs-terminal/>
   <implementation arch="Windows-i486" id="sha1new=feb1dad6bc4f933a42a204ac453e87fdddc308e6" license="GPL v2 (GNU General Public License)" released="2007-07-05" version="2.3.5-1-3">
-    <requires interface="http://repo.roscidus.com/lib/zlib">
+    <requires interface="https://apps.0install.net/lib/zlib.xml">
       <environment insert="bin" name="PATH"/>
     </requires>
     <command name="run" path="bin/ftview.exe"/>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>WinSCP</name>
+  <summary xml:lang="en">SFTP and FTP client for Windows</summary>
+  <summary xml:lang="de">SFTP und FTP Klient für Windows</summary>
+  <description xml:lang="en">WinSCP is a SFTP and FTP client for Windows. Its main function is the secure file transfer between a local and a remote computer. It uses Secure Shell (SSH) and also supports, in addition to Secure FTP, the legacy SCP protocol.</description>
+  <description xml:lang="de">WinSCP ist ein SFTP und FTP Klient für Windows. Seine Hauptfunktion ist der sichere Dateitransfer zwischen einem lokalen und einem entfernten Rechner. Es verwendet Secure Shell (SSH) und unterstützt auch, zusätzlich zu Secure FTP, das veraltete SCP Protokoll.</description>
+  <homepage>https://winscp.net/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/gui/winscp.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/gui/winscp.ico" type="image/vnd.microsoft.icon"/>
+  <category>Network</category>
+  <category>Utility</category>
+
+  <feed-for interface="https://apps.0install.net/gui/winscp.xml"/>
+
+  <group arch="Windows-*" license="GPL v2 (GNU General Public License)" main="winscp.exe">
+    <command name="run" path="WinSCP.exe"/>
+    <command name="run-cli" path="WinSCP.com"/>
+    <implementation version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://downloads.sourceforge.net/winscp/WinSCP-{version}-Portable.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

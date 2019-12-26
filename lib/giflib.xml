@@ -1,0 +1,314 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/lib/giflib" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>GifLib</name>
+  <summary xml:lang="en">GifLib: library and tools for GIF images</summary>
+  <description xml:lang="en">The giflib package contains a shared library of functions for loading and saving GIF format image files. </description>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/giflib.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/giflib.png" type="image/png"/>
+  <category>Graphics</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/giflib.htm</homepage>
+  <needs-terminal/>
+  <group arch="Windows-*" license="MIT/X Consortium License" released="2007-02-21">
+    <command name="run" path="bin/gifinfo.exe"/>
+    <command name="gif2epsn" path="bin/gif2epsn.exe"/>
+    <command name="gif2ps" path="bin/gif2ps.exe"/>
+    <command name="gif2rgb" path="bin/gif2rgb.exe"/>
+    <command name="gifasm" path="bin/gifasm.exe"/>
+    <command name="gifbg" path="bin/gifbg.exe"/>
+    <command name="gifclip" path="bin/gifclip.exe"/>
+    <command name="gifclrmp" path="bin/gifclrmp.exe"/>
+    <command name="gifcolor" path="bin/gifcolor.exe"/>
+    <command name="gifcomb" path="bin/gifcomb.exe"/>
+    <command name="giffiltr" path="bin/giffiltr.exe"/>
+    <command name="giffix" path="bin/giffix.exe"/>
+    <command name="gifflip" path="bin/gifflip.exe"/>
+    <command name="gifhisto" path="bin/gifhisto.exe"/>
+    <command name="gifinter" path="bin/gifinter.exe"/>
+    <command name="gifinto" path="bin/gifinto.exe"/>
+    <command name="gifovly" path="bin/gifovly.exe"/>
+    <command name="gifpos" path="bin/gifpos.exe"/>
+    <command name="gifrotat" path="bin/gifrotat.exe"/>
+    <command name="gifrsize" path="bin/gifrsize.exe"/>
+    <command name="gifspnge" path="bin/gifspnge.exe"/>
+    <command name="giftext" path="bin/giftext.exe"/>
+    <command name="gifwedge" path="bin/gifwedge.exe"/>
+    <command name="icon2gif" path="bin/icon2gif.exe"/>
+    <command name="raw2gif" path="bin/raw2gif.exe"/>
+    <command name="rgb2gif" path="bin/rgb2gif.exe"/>
+    <command name="text2gif" path="bin/text2gif.exe"/>
+    <command name="gifburst" path="bin/gifburst">
+      <executable-in-path command="giftext" name="giftext"/>
+      <executable-in-path command="gifclip" name="gifclip"/>
+      <requires interface="http://repo.roscidus.com/utils/coreutils">
+        <executable-in-path command="head" name="head"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/utils/grep">
+        <executable-in-path name="grep"/>
+      </requires>
+      <requires interface="http://repo.roscidus.com/perl/perl4-corelibs">
+        <environment insert="lib" name="PERL5LIB"/>
+      </requires>
+      <runner interface="http://repo.roscidus.com/perl/perl" version="5.6..!6">
+        <arg>-I</arg>
+        <arg>$PERL5LIB</arg>
+      </runner>
+    </command>
+
+    <implementation id="sha1new=eb4c60e150674ccf33aafb4c2e37d550bfa46550" version="4.1.4-1-3">
+      <requires interface="https://gitlab.com/pmiess/0install-feeds/raw/test/public/gnuwin32/urt.xml">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <command name="gif2rle" path="bin/gif2rle.exe"/>
+      <command name="rle2gif" path="bin/rle2gif.exe"/>
+      <command name="gifcompose" path="bin/gifcompose">
+        <executable-in-path command="raw2gif" name="raw2gif"/>
+        <executable-in-path command="rgb2gif" name="rgb2gif"/>
+        <executable-in-path command="rle2gif" name="rle2gif"/>
+        <executable-in-path command="text2gif" name="text2gif"/>
+        <executable-in-path command="gifclip" name="gifclip"/>
+        <executable-in-path command="gifpos" name="gifpos"/>
+        <executable-in-path command="gifflip" name="gifflip"/>
+        <executable-in-path command="gifasm" name="gifasm"/>
+        <executable-in-path command="gifovly" name="gifovly"/>
+        <requires interface="http://repo.roscidus.com/utils/coreutils">
+          <executable-in-path command="rm" name="rm"/>
+          <executable-in-path command="cat" name="cat"/>
+          <executable-in-path command="mv" name="mv"/>
+          <executable-in-path command="mkdir" name="mkdir"/>
+        </requires>
+        <runner interface="http://repo.roscidus.com/utils/bash"/>
+      </command>
+      <manifest-digest sha256new="2X6M52YE5VE2APLBDF7PWZXNE26OFFAJOZL3PZK6ASOZI4SQCMSA"/>
+      <archive href="https://sourceforge.net/projects/gnuwin32/files/giflib/4.1.4-1/giflib-4.1.4-1-bin.zip" size="286723" type="application/zip"/>
+      <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/giflib-bin.zip?raw=true" size="286723" type="application/zip"/>
+    </implementation>
+
+    <implementation id="nourt" version="4.1.4-1-1">
+      <manifest-digest sha256new="2X6M52YE5VE2APLBDF7PWZXNE26OFFAJOZL3PZK6ASOZI4SQCMSA"/>
+      <archive href="https://sourceforge.net/projects/gnuwin32/files/giflib/4.1.4-1/giflib-4.1.4-1-bin.zip" size="286723" type="application/zip"/>
+      <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/giflib-bin.zip?raw=true" size="286723" type="application/zip"/>
+    </implementation>
+  </group>
+  <package-implementation distributions="Gentoo" package="media-libs/giflib"/>
+  <package-implementation package="giflib"/>
+  <entry-point binary-name="gifinfo" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">Gifinfo</name>
+    <summary xml:lang="en">Gifinfo: display information about GIF files</summary>
+    <description xml:lang="en">A program to display information (size and  comment)  of
+       GIF files.</description>
+  </entry-point>
+  <entry-point binary-name="gif2epsn" command="gif2epsn">
+    <needs-terminal/>
+    <summary xml:lang="en">Gif2epsn: dump GIF images on Epson type printers</summary>
+    <description xml:lang="en">A program to dump images saved as GIF files on Epson
+       type printers.</description>
+  </entry-point>
+  <entry-point binary-name="gif2ps" command="gif2ps">
+    <needs-terminal/>
+    <summary xml:lang="en">Gif2ps: GIF-to-PostScript conversion</summary>
+    <description xml:lang="en">GIF-to-PostScript conversion.</description>
+  </entry-point>
+  <entry-point binary-name="gif2rgb" command="gif2rgb">
+    <needs-terminal/>
+    <summary xml:lang="en">Gif2rgb: convert GIF images to 24-bit RGB image(s)</summary>
+    <description xml:lang="en">A program to convert images saved as GIF to 24-bit RGB
+       image(s).</description>
+  </entry-point>
+  <entry-point binary-name="gif2rle" command="gif2rle">
+    <needs-terminal/>
+    <summary xml:lang="en">Gif2rle: convert GIF images to RLE (Utah raster toolkit) format</summary>
+  </entry-point>
+  <entry-point binary-name="gifasm" command="gifasm">
+    <needs-terminal/>
+    <summary xml:lang="en">Gifasm: (dis)assemble multiple GIF files into one</summary>
+    <description xml:lang="en">A program to assemble multiple GIF files into one, or
+       disassemble a single GIF file with multiple images into
+       single image files.</description>
+  </entry-point>
+  <entry-point binary-name="gifbg" command="gifbg">
+    <needs-terminal/>
+    <summary xml:lang="en">Gifbg: generate a single-color test pattern GIF with gradient</summary>
+    <description xml:lang="en">A program to generate a single-color test pattern GIF
+       with gradually changing intensity in any of the basic 8
+       directions.</description>
+  </entry-point>
+  <entry-point binary-name="gifclip" command="gifclip">
+    <needs-terminal/>
+    <summary xml:lang="en">Gifclip: clip images in GIF file</summary>
+    <description xml:lang="en">Only one image in a GIF file can be modified at a time.
+       Neither the image position on screen nor the screen size
+       is modified (use gifpos for that)</description>
+  </entry-point>
+  <entry-point binary-name="gifclrmp" command="gifclrmp">
+    <needs-terminal/>
+    <summary xml:lang="en">Gifclrmp: modify GIF image colormaps</summary>
+    <description xml:lang="en">A program to modify GIF image colormaps.  Any local col-
+       ormap in a GIF file can be modified at a time, or the
+       global screen one.</description>
+  </entry-point>
+  <entry-point binary-name="gifcolor" command="gifcolor">
+    <needs-terminal/>
+    <summary xml:lang="en">Gifcolor: generate color test patterns</summary>
+    <description xml:lang="en">A program to generate color test patterns.</description>
+  </entry-point>
+  <entry-point binary-name="gifcomb" command="gifcomb">
+    <needs-terminal/>
+    <summary xml:lang="en">Gifcomb: combine 2 GIF images into one</summary>
+    <description xml:lang="en">A program to combine 2 GIF images of exactly the same
+       size into one.  The color maps are merged, but the
+       result may not exceed 256 colors.  A boolean mask GIF
+       file can be used to set which pixel from two images to
+       use at each location.  Otherwise any background color
+       from first image is converted to second image color at
+       that point.  Only the first image of each file is com-
+       bined; again, all files' first images must be of exactly
+       the same size.
+</description>
+  </entry-point>
+  <entry-point binary-name="giffiltr" command="giffiltr">
+    <needs-terminal/>
+    <summary xml:lang="en">Giffiltr: copy a gif</summary>
+    <description xml:lang="en">This is an expensive way to copy a GIF.  The source is
+       included as a skeleton for more sophisticated filters.
+       See the source in the util directory for details.</description>
+  </entry-point>
+  <entry-point binary-name="giffix" command="giffix">
+    <needs-terminal/>
+    <summary xml:lang="en">Giffix: attempt to fix broken packages</summary>
+    <description xml:lang="en">A program that attempts to fix broken GIF images.  Cur-
+       rently will &quot;fix&quot; images terminated prematurely by fill-
+       ing the rest of the image with the darkest color found
+       in image.</description>
+  </entry-point>
+  <entry-point binary-name="gifflip" command="gifflip">
+    <needs-terminal/>
+    <summary xml:lang="en">Gifflip: flip (mirror) GIF file</summary>
+    <description xml:lang="en">A program to flip (mirror) GIF file along X or Y axes,
+       or rotate the GIF file 90 degrees to the left or to the
+       right.</description>
+  </entry-point>
+  <entry-point binary-name="gifhisto" command="gifhisto">
+    <needs-terminal/>
+    <summary xml:lang="en">Gifhisto: create histogram of number of pixels using each color</summary>
+    <description xml:lang="en">A program to create histogram of number of pixels using
+       each color.  The output can be formatted into a GIF his-
+       togram file, or as text file - both go to stdout.</description>
+  </entry-point>
+  <entry-point binary-name="gifinter" command="gifinter">
+    <needs-terminal/>
+    <summary xml:lang="en">Gifinter: convert between interlaced and non-interlaced GIF images</summary>
+    <description xml:lang="en">A program to convert between interlaced and non-inter-
+       laced GIF images.</description>
+  </entry-point>
+  <entry-point binary-name="gifinto" command="gifinto">
+    <needs-terminal/>
+    <summary xml:lang="en">Gifinto: save stdin into a file with given name</summary>
+    <description xml:lang="en">A program to save stdin into a file with given name, if
+       the result file has size bigger than specified (see
+       below).  This can be used to save result in same files
+       name we started a chain of pipes.</description>
+  </entry-point>
+  <entry-point binary-name="gifovly" command="gifovly">
+    <needs-terminal/>
+    <summary xml:lang="en">Gifovly: convert a multi-image GIF file into a single GIF</summary>
+    <description xml:lang="en">This program takes a multi-image GIF file and generates
+       a single GIF consisting of all the images overlayed.
+       Each image's screen position is used.  Thus, you can use
+       this together with gifpos and gifasm to paste together
+       images.</description>
+  </entry-point>
+  <entry-point binary-name="gifpos" command="gifpos">
+    <needs-terminal/>
+    <summary xml:lang="en">Gifpos: change GIF screen size and/or reposition images</summary>
+    <description xml:lang="en">A program to change GIF screen size and/or reposition
+       images.  No test is made to make sure changes will gen-
+       erate valid GIF files (i.e. images are still confined to
+       screen etc.)</description>
+  </entry-point>
+  <entry-point binary-name="gifrotat" command="gifrotat">
+    <needs-terminal/>
+    <summary xml:lang="en">Gifrotat: rotate a GIF image by a specified angle</summary>
+    <description xml:lang="en">A program to rotate a GIF image by a specified angle.</description>
+  </entry-point>
+  <entry-point binary-name="gifrsize" command="gifrsize">
+    <needs-terminal/>
+    <summary xml:lang="en">Gifrsize: resize image size by an integer factor</summary>
+    <description xml:lang="en">A program to resize image size by an integer factor,
+       deleting bits when scaling down and duplicating bits
+       when scaling up.</description>
+  </entry-point>
+  <entry-point binary-name="gifspnge" command="gifspnge">
+    <needs-terminal/>
+    <summary xml:lang="en">Gifspnge: expensive way to copy a GIF</summary>
+    <description xml:lang="en">This is an expensive way to copy a GIF.  The source is
+       included as a skeleton for more sophisticated filters
+       using DGifSlurp() and EGifSpew().  See the source in the
+       util directory for details.</description>
+  </entry-point>
+  <entry-point binary-name="giftext" command="giftext">
+    <needs-terminal/>
+    <summary xml:lang="en">Giftext: dump (text only) general information about GIF file</summary>
+    <description xml:lang="en">A program to dump (text only) general information about
+       GIF file.</description>
+  </entry-point>
+  <entry-point binary-name="gifwedge" command="gifwedge">
+    <needs-terminal/>
+    <summary xml:lang="en">Gifwedge: create a test GIF image</summary>
+    <description xml:lang="en">A program to create a test GIF image with intensity lev-
+       els of the RGB colors YCM colors and white.</description>
+  </entry-point>
+  <entry-point binary-name="icon2gif" command="icon2gif">
+    <needs-terminal/>
+    <summary xml:lang="en">Icon2gif: create multi-image GIF</summary>
+    <description xml:lang="en">A program to convert a series of editable text GIF icon
+       specifications and named GIF files into a multi-image
+       GIF, usable as a graphic resource file.  It can also
+       dump existing GIFs in this format.</description>
+  </entry-point>
+  <entry-point binary-name="raw2gif" command="raw2gif">
+    <needs-terminal/>
+    <summary xml:lang="en">Raw2gif: convert RAW image data into GIF files</summary>
+    <description xml:lang="en">A program to convert RAW image data into GIF files.
+       Only one image can be handled.  The RAW image file is
+       assumed to hold one pixel color in one byte, and there-
+       fore the file size must be Width times Height as speci-
+       fied by the -s option below.</description>
+  </entry-point>
+  <entry-point binary-name="rgb2gif" command="rgb2gif">
+    <needs-terminal/>
+    <summary xml:lang="en">Rgb2gif: convert 24 bit images to a GIF</summary>
+    <description xml:lang="en">A program to convert 24 bit images to a GIF image using
+       color quantization.</description>
+  </entry-point>
+  <entry-point binary-name="rle2gif" command="rle2gif">
+    <needs-terminal/>
+    <name xml:lang="en">GifLib</name>
+    <summary xml:lang="en">Rle2gif: convert RLE (Utah raster toolkit) format to GIF images</summary>
+  </entry-point>
+  <entry-point binary-name="text2gif" command="text2gif">
+    <needs-terminal/>
+    <summary xml:lang="en">Text2gif: generate GIF images out of regular text</summary>
+    <description xml:lang="en">A program to generate GIF images out of regular text.
+       Text can be one line or multi-line, and is converted
+       using 8 by 8 fixed font.</description>
+  </entry-point>
+  <entry-point binary-name="gifburst" command="gifburst">
+    <needs-terminal/>
+    <summary xml:lang="en">gifburst: This program breaks into equal-sized tiles a GIF image.</summary>
+    <description xml:lang="en">The gifburst program takes a named GIF file and breaks
+       it into equal-sized tiles.  This is useful if a GIF is
+       too large for your viewer, so you have to look at it in
+       sections.</description>
+  </entry-point>
+  <entry-point binary-name="gifcompose" command="gifcompose">
+    <needs-terminal/>
+    <summary xml:lang="en">gifcompose: a GIF compositor</summary>
+    <description xml:lang="en">The gifcompose tool takes a series of text lines and
+       interprets them as commands to do pasteup operations.
+       Text directives may be generators, modifiers, target
+       operations and comments.</description>
+  </entry-point>
+</interface>
+

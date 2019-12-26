@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/devel/gperf" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Gperf</name>
+  <summary xml:lang="en">Gperf: generate a perfect hash function from a key set</summary>
+  <description xml:lang="en">GNU gperf is a perfect hash function generator. For a given list of strings, it produces a hash function and hash table in the form of C or C++ code, for looking up a value depending on the input string. The hash function is perfect,' which means that the hash table has no collisions, and the hash table lookup needs a single string comparison only. GNU gperf is highly customizable. There are options for generating C and C++ code, for emitting 'switch' statements or nested 'ifs' instead of a hash table, and for tuning the algorithm that gperf uses. </description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <category>Development</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/gperf.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=d6a199b034d0867b59e9ab8ae1b4d7a0f0289780" license="GPL v2 (GNU General Public License)" released="2004-11-14" version="3.0.1">
+    <command name="run" path="bin/gperf.exe"/>
+    <manifest-digest sha256new="LK2WYZOIW3HO2PSKITYQLZAMC6LTFWWU6GSHF5SUTATRPPTTJZJA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/gperf/3.0.1/gperf-3.0.1-bin.zip" size="105431" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/gperf-bin.zip?raw=true" size="105431" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="dev-util/gperf"/>
+  <package-implementation package="gperf"/>
+  <entry-point binary-name="gperf" command="run">
+    <needs-terminal/>
+  </entry-point>
+</interface>

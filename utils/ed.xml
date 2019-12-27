@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/utils/ed" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Ed</name>
+  <summary xml:lang="en">Ed: line-oriented text editor</summary>
+  <description xml:lang="en">`ed' is a line-oriented text editor. It is used to create, display, modify and otherwise manipulate text files, both interactively and via shell scripts. A restricted version of `ed', `red', can only edit files in the current directory and cannot execute shell commands. `ed' is the `standard' text editor in the sense that it is the original editor for Unix, and thus widely available. For most purposes, however, it is superseded by full-screen editors such as Emacs. </description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <category>Utility</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/ed.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-i486" id="sha1new=30c3e40cf8f595e76081b79a8720f625f643cdd0" released="2009-02-01" version="1.2-3">
+    <requires interface="http://repo.roscidus.com/lib/regex">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/ed.exe"/>
+    <manifest-digest sha256new="AWFKYBMRJGQF6CZHFAHQNWXZ4BPPRA6OGWNPUTYLAXHRMFWKEWEQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/ed/1.2/ed-1.2-bin.zip" size="92526" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="sys-apps/ed"/>
+  <package-implementation package="ed"/>
+  <entry-point binary-name="ed" command="run"/>
+</interface>
+

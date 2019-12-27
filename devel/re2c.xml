@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/devel/gnuwin32/re2c.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Re2C</name>
+  <summary xml:lang="en">Re2C: convert regular expressions to C/C++</summary>
+  <description xml:lang="en">re2c is a free and open-source lexer generator for C and C++. Its main goal is generating fast lexers: at least as fast as their reasonably optimized hand-coded counterparts. Instead of using traditional table-driven approach, re2c encodes the generated finite state automata directly in the form of conditional jumps and comparisons. The resulting programs are faster and often smaller than their table-driven analogues, and they are much easier to debug and understand. re2c applies quite a few optimizations in order to speed up and compress the generated code. Another distinctive feature is its flexible interface: instead of assuming a fixed program template, re2c lets the programmer write most of the interface code and adapt the generated lexer to any particular environment.</description>
+  <category>Development</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/re2c.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=8d0db11d71f93e6274c0cf5175b845d8455e388f" license="Public Domain" released="2005-03-15" version="0.9.4">
+    <command name="run" path="bin/re2c.exe"/>
+    <manifest-digest sha256new="3VGANZQESJ4DVZB6QYQHOIYDKW4CAUBOYQZUXNQRZGVKNZHI5AIA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/re2c/0.9.4/re2c-0.9.4-bin.zip" size="117553" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="dev-util/re2c"/>
+  <package-implementation package="re2c"/>
+  <entry-point binary-name="re2c" command="run">
+    <name xml:lang="en">Re2C</name>
+    <summary xml:lang="en">Re2C: convert regular expressions to C/C++</summary>
+    <description xml:lang="en">re2c  is a preprocessor that generates C-based recogniz-
+       ers from regular expressions.  The input  to  re2c  con-
+       sists  of  C/C++ source interleaved with comments of the
+       form /*!re2c ... */  which  contain  scanner  specifica-
+       tions.   In  the output these comments are replaced with
+       code that, when executed, will find the next input token
+       and then execute some user-supplied token-specific code.</description>
+  </entry-point>
+</interface>

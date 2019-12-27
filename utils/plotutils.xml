@@ -1,0 +1,129 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/plotutils.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>PlotUtils</name>
+  <summary xml:lang="en">PlotUtils: plotting utilities and library</summary>
+  <description xml:lang="en">The GNU plotutils package contains software for both programmers and technical users. Its centerpiece is libplot, a powerful C/C++ function library for exporting 2-D vector graphics in many file formats, both vector and raster. It can also do vector graphics animations. libplot is device-independent in the sense that its API (application programming interface) does not depend on the type of graphics file to be exported. Besides libplot, the package contains command-line programs for plotting scientific data. Many of them use libplot to export graphics. The program also contains the following command-line programs for plotting scientific data: 
+•graph: plots 2-D datasets or data streams in real time 
+•plot: translates metafile formats to any of the other formats 
+•tek2plot: translates legacy Textronix data to any of the above formats 
+•pic2plot: translates the pic language to any of the other formats 
+•plotfont: displays character maps of the fonts available in the above formats 
+•spline: spline interpolation of data 
+•ode: numerically integrates ordinary differential equations 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <category>Graphics</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/plotutils.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=14413a16182ba83cbb0ed07d7318f3338638e481" license="GPL v2 (GNU General Public License)" released="2004-04-16" version="2.4.1-4-3">
+    <requires interface="https://apps.0install.net/lib/png12-0">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/zlib">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/plot.exe"/>
+    <command name="double" path="bin/double.exe"/>
+    <command name="graph" path="bin/graph.exe"/>
+    <command name="ode" path="bin/ode.exe"/>
+    <command name="pic2plot" path="bin/pic2plot.exe"/>
+    <command name="plotfont" path="bin/plotfont.exe"/>
+    <command name="spline" path="bin/spline.exe"/>
+    <command name="tek2plot" path="bin/tek2plot.exe"/>
+    <manifest-digest sha256new="ECPF7C32SAGFV5NZ5BSYK3OAKWNXB567CDOUPH4J4QVO3R7HKLLA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/plotutils/2.4.1-4/plotutils-2.4.1-4-bin.zip" size="1657239" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/plotutils-bin.zip?raw=true" size="1657239" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="media-libs/plotutils"/>
+  <entry-point binary-name="plot" command="run">
+    <needs-terminal/>
+    <summary xml:lang="en">translate GNU metafiles to other graphics formats</summary>
+    <description xml:lang="en">plot translates files in GNU metafile  format  to  other
+       graphics formats, or displays them on an X Window System
+       display.  GNU metafile format  is  a  device-independent
+       format  for  the  storage  of  graphic  data.  It is the
+       default  output  format  of   the   programs   graph(1),
+       pic2plot(1),  tek2plot(1),  and plotfont(1), and is fur-
+       ther documented in plot(5), since it is an enhanced ver-
+       sion  of the traditional plot(5) format found on non-GNU
+       systems.  It can also be produced by the GNU libplot 2-D
+       graphics export library (see plot(3)).</description>
+  </entry-point>
+  <entry-point binary-name="double" command="double">
+    <needs-terminal/>
+    <summary xml:lang="en">convert, scale and cut data streams</summary>
+    <description xml:lang="en">This is a filter for converting, scaling and cutting
+		unformatted (binary) or ASCII data streams.  It is still
+		under development and is not yet documented.</description>
+  </entry-point>
+  <entry-point binary-name="graph" command="graph">
+    <needs-terminal/>
+    <name xml:lang="en">PlotUtils</name>
+    <summary xml:lang="en">plot XY (i.e. 2-dimensional) data</summary>
+    <description xml:lang="en">A full-featured scientific plotting program for plotting
+		XY (i.e. 2-dimensional) data.  It plots a stream of
+		datapoints, in real time if possible.  There is a
+		well-chosen set of command-line options for adjusting the
+		visual appearance of the plot, labelling axes (with
+		expressions that may include subscripts and superscripts,
+		and mathematical symbols), choosing marker symbols from
+		various fonts, etc.  Multiplotting is supported (a plot may
+		include sub-plots, side-by-side or inset).  Filled regions
+		are also supported.
+</description>
+  </entry-point>
+  <entry-point binary-name="ode" command="ode">
+    <needs-terminal/>
+    <summary xml:lang="en">numerical solution of ordinary differential equa-</summary>
+    <description xml:lang="en"> is a tool that solves, by numerical ode integration, the
+       initial  value  problem for a specified system of first-
+       order ordinary differential equations.   Three  distinct
+       numerical    integration    schemes    are    available:
+       Runge-Kutta-Fehlberg (the default),  Adams-Moulton,  and
+       Euler.   The  Adams-Moulton  and Runge-Kutta schemes are
+       available with adaptive step size.</description>
+  </entry-point>
+  <entry-point binary-name="pic2plot" command="pic2plot">
+    <needs-terminal/>
+    <summary xml:lang="en">translate pic language to other graphics</summary>
+    <description xml:lang="en">`pic2plot' is a translator from the pic language to numerous graphics
+formats such as X11, PS/EPS, PCL 5, PNM, GIF, Tektronix, and to editable
+formats such as idraw, xfig, Illustrator, and CGM.
+</description>
+  </entry-point>
+  <entry-point binary-name="plotfont" command="plotfont">
+    <needs-terminal/>
+    <summary xml:lang="en">produce character maps of fonts supported by</summary>
+    <description xml:lang="en">plotfont produces a character map for any font  that  is
+       supported  by  the  plotting  utilities,  which  include
+       graph(1), plot(1), pic2plot(1), tek2plot(1), and the GNU
+       libplot  2-D  graphics  export  library  (see  plot(3)).
+       Which fonts are supported depends on the  output  format
+       or display type, which is specified by the -T option.  A
+       listing of the fonts available in any  specified  output
+       format may be obtained with the --help-fonts option (see
+       below).</description>
+  </entry-point>
+  <entry-point binary-name="spline" command="spline">
+    <needs-terminal/>
+    <summary xml:lang="en">interpolate datasets using splines under ten-</summary>
+    <description xml:lang="en">spline reads datasets from standard input or from one or
+       more files, and fits a smooth curve (a &quot;spline&quot;) through
+       each dataset.  An interpolated version of each  dataset,
+       consisting  of  points from the smooth curve, is written
+       to standard output.</description>
+  </entry-point>
+  <entry-point binary-name="tek2plot" command="tek2plot">
+    <needs-terminal/>
+    <summary xml:lang="en"> translate Tektronix files to other graphics</summary>
+    <description xml:lang="en">tek2plot translates Tektronix graphics  files  to  other
+       formats, or displays them on an X Window System display.
+       The output format or display type is specified with  the
+       -T  option.   The  possible  output  formats and display
+       types are the  same  as  those  supported  by  graph(1),
+       plot(1),  pic2plot(1),  and  plotfont(1).   If an output
+       file is produced, it is written to standard output.</description>
+  </entry-point>
+</interface>

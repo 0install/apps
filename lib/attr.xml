@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/lib/attr" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Attr</name>
+  <summary xml:lang="en">Attr: library and utilities for extended attributes</summary>
+  <description xml:lang="en">Extended attributes are arbitrary name/value pairs which are associated with files or directories. They can be used to store system objects like capabilities of executables and access control lists, as well as user objects. The attr(5) manual page describes which kinds of extended attributes are defined. </description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <category>System</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/attr.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-i486" id="sha1new=131aedd9e46ed0fd9937be341960bf5e93a2e09c" license="LGPL (GNU Lesser General Public License)" released="2004-03-15" version="2.4.14-3">
+    <requires interface="http://repo.roscidus.com/devel/gettext">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="http://repo.roscidus.com/lib/libiconv">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="http://repo.roscidus.com/lib/rxspencer">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/attr.exe"/>
+    <command name="getfattr" path="bin/getfattr.exe"/>
+    <command name="setfattr" path="bin/setfattr.exe"/>
+    <manifest-digest sha256new="ADKHR4U26ELSDBAVQAH6DHMOOQYSQF2GNFKBSDTD5TQDQ7O4YGXQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/attr/2.4.14/attr-2.4.14-bin.zip" size="113349" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/attr-bin.zip?raw=true" size="113349" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="sys-apps/attr"/>
+  <package-implementation package="attr"/>
+  <entry-point binary-name="attr" command="run">
+    <needs-terminal/>
+    <summary xml:lang="en">extended attributes on XFS filesystem objects</summary>
+    <description xml:lang="en"> The attr utility allows  the  manipulation  of  extended
+       attributes   associated  with  filesystem  objects  from
+       within shell scripts.
+
+       There are four main operations that attr can perform:
+
+       GET    The -g attrname option tells attr to  search  the
+              named  object  and  print  (to  stdout) the value
+              associated with that attribute name.  With the -q
+              flag,  stdout  will be exactly and only the value
+              of the attribute, suitable for  storage  directly
+              into a file or processing via a piped command.
+
+       REMOVE The  -r  attrname  option tells attr to remove an
+              attribute with the given name from the object  if
+              the  attribute  exists.   There  is  no output on
+              sucessful completion.
+
+       SET/CREATE
+              The -s attrname option  tells  attr  to  set  the
+              named  attribute  of the object to the value read
+              from stdin.   If  an  attribute  with  that  name
+              already  exists,  its value will be replaced with
+              this one.  If an attribute with  that  name  does
+              not  already exist, one will be created with this
+              value.  With the -V attrvalue flag, the attribute
+              will  be  set  to  have  a value of attrvalue and
+              stdin will not be read.  With the -q flag, stdout
+              will not be used.  Without the -q flag, a message
+              showing the attribute name and the  entire  value
+              will be printed.
+
+       When  the  -L  option is given and the named object is a
+       symbolic link, operate on the attributes of  the  object
+       referenced  by  the symbolic link.  Without this option,
+       operate on the attributes of the symbolic link itself.
+
+       When the -R option is given and the process  has  appro-
+       priate  privileges, operate in the root attribute names-
+       pace rather that the USER attribute namespace.
+
+       When the -q option is given attr will try to keep quiet.
+       It  will  output error messages (to stderr) but will not
+       print status messages (to stdout).</description>
+  </entry-point>
+  <entry-point binary-name="getfattr" command="getfattr">
+    <needs-terminal/>
+    <summary xml:lang="en">get extended attributes of filesystem objects</summary>
+    <description xml:lang="en">For each file, getfattr displays the file name, and  the
+       set  of extended attribute names (and optionally values)
+       which are associated with that file.
+
+       The output format of getfattr -d is as follows:
+               1:  # file: somedir/
+               2:  user.name0=&quot;value0&quot;
+               3:  user.name1=&quot;value1&quot;
+               4:  user.name2=&quot;value2&quot;
+               5:  ...
+
+       Line 1 identifies the file name for which the  following
+       lines  are being reported.  The remaining lines (lines 2
+       to 4 above) show the name  and  value  pairs  associated
+       with the specified file.
+</description>
+  </entry-point>
+  <entry-point binary-name="setfattr" command="setfattr">
+    <needs-terminal/>
+    <summary xml:lang="en">set extended attributes of filesystem objects</summary>
+    <description xml:lang="en">The setfattr command associates  a  new  value  with  an
+       extended attribute name for each specified file.</description>
+  </entry-point>
+</interface>
+

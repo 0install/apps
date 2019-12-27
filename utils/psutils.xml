@@ -1,0 +1,229 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/psutils.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>PsUtils</name>
+  <summary xml:lang="en">PsUtils: Postscript utilities</summary>
+  <description xml:lang="en">Programs 
+•psbook: Rearranges pages into signatures 
+•psselect: Selects pages and page ranges 
+•pstops: Performs general page rearrangement and selection 
+•psnup: Put multiple pages per physical sheet of paper 
+•psresize: Alter document paper size 
+•epsffit: Fits an EPSF file to a given bounding box 
+
+Scripts 
+•getafm (sh): Outputs PostScript to retrieve AFM file from printer 
+•showchar (sh): Outputs PostScript to draw a character with metric info 
+•fixdlsrps (perl): Filter to fix DviLaser/PS output so that PSUtils works 
+•fixfmps (perl): Filter to fix framemaker documents so that psselect etc. work 
+•fixmacps (perl): Filter to fix Macintosh documents with saner version of md 
+•fixpsditps (perl): Filter to fix Transcript psdit documents to work with PSUtils 
+•fixpspps (perl): Filter to fix PSPrint PostScript so that psselect etc. work 
+•fixscribeps (perl): Filter to fix Scribe PostScript so that psselect etc. work 
+•fixtpps (perl): Filter to fix Troff Tpscript documents 
+•fixwfwps (perl): Filter to fix Word for Windows documents for PSUtils 
+•fixwpps (perl): Filter to fix WordPerfect documents for PSUtils 
+•fixwwps (perl): Filter to fix Windows Write documents for PSUtils 
+•extractres (perl): Filter to extract resources from PostScript files 
+•includeres (perl): Filter to include resources into PostScript files 
+•psmerge (perl): Hack script to merge multiple PostScript files 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/psutils.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/psutils.png" type="image/png"/>
+  <category>Office</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/psutils.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=0e489d8e37e9edd3e44f617802ad71949d6462be" license="psutils" released="2005-11-19" version="1.17-2" version-modifier="-3">
+    <requires interface="https://apps.0install.net/lib/libpaper.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/psbook.exe"/>
+    <command name="epsffit" path="bin/epsffit.exe"/>
+    <command name="psnup" path="bin/psnup.exe"/>
+    <command name="psresize" path="bin/psresize.exe"/>
+    <command name="psselect" path="bin/psselect.exe"/>
+    <command name="pstops" path="bin/pstops.exe"/>
+    <command name="getafm " path="bin/getafm ">
+      <requires interface="https://apps.0install.net/utils/coreutils">
+        <executable-in-path command="cat" name="cat"/>
+      </requires>
+      <requires interface="https://apps.0install.net/lib/netpbm.xml">
+        <executable-in-path command="pnmtopnm" name="pnmtopnm"/>
+      </requires>
+      <runner interface="https://apps.0install.net/utils/bash"/>
+    </command>
+    <command name="showchar" path="bin/showchar">
+      <requires interface="https://apps.0install.net/utils/coreutils">
+        <executable-in-path command="cat" name="cat"/>
+        <executable-in-path command="basename" name="basename"/>
+        <executable-in-path command="date" name="date"/>
+      </requires>
+      <requires interface="https://apps.0install.net/lib/netpbm.xml">
+        <executable-in-path command="pnmtopnm" name="pnmtopnm"/>
+      </requires>
+      <runner interface="https://apps.0install.net/utils/bash"/>
+    </command>
+    <command name="fixdlsrps" path="bin/fixdlsrps">
+      <runner interface="https://apps.0install.net/perl/perl"/>
+    </command>
+    <command name="fixfmps" path="bin/fixfmps">
+      <runner interface="https://apps.0install.net/perl/perl"/>
+    </command>
+    <command name="fixmacps" path="bin/fixmacps">
+      <runner interface="https://apps.0install.net/perl/perl"/>
+    </command>
+    <command name="fixpsditps" path="bin/fixpsditps">
+      <runner interface="https://apps.0install.net/perl/perl"/>
+    </command>
+    <command name="fixpspps" path="bin/fixpspps">
+      <runner interface="https://apps.0install.net/perl/perl"/>
+    </command>
+    <command name="fixscribeps" path="bin/fixscribeps">
+      <runner interface="https://apps.0install.net/perl/perl"/>
+    </command>
+    <command name="fixtpps" path="bin/fixtpps">
+      <runner interface="https://apps.0install.net/perl/perl"/>
+    </command>
+    <command name="fixwfwps" path="bin/fixwfwps">
+      <runner interface="https://apps.0install.net/perl/perl"/>
+    </command>
+    <command name="fixwpps" path="bin/fixwpps">
+      <runner interface="https://apps.0install.net/perl/perl"/>
+    </command>
+    <command name="fixwwps" path="bin/fixwwps">
+      <runner interface="https://apps.0install.net/perl/perl"/>
+    </command>
+    <command name="extractres" path="bin/extractres">
+      <runner interface="https://apps.0install.net/perl/perl"/>
+    </command>
+    <command name="includeres" path="bin/includeres">
+      <runner interface="https://apps.0install.net/perl/perl"/>
+    </command>
+    <command name="psmerge" path="bin/psmerge">
+      <runner interface="https://apps.0install.net/perl/perl"/>
+    </command>
+    <manifest-digest sha256new="RPU6K4SHBML3TCBSCJQAW72U42NHLZOHMCUMMZZDSAKBPMFETDSA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/psutils/1.17-2/psutils-1.17-2-bin.zip" size="239002" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/psutils-bin.zip?raw=true" size="239002" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="app-text/psutils"/>
+  <package-implementation package="psutils"/>
+  <entry-point binary-name="psbook" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">Psbook</name>
+    <summary xml:lang="en">Psbook: Rearranges pages into signatures </summary>
+  </entry-point>
+  <entry-point binary-name="epsffit" command="epsffit">
+    <needs-terminal/>
+    <name xml:lang="en">Epsffit</name>
+    <summary xml:lang="en">Epsffit: fit encapsulated PostScript file (EPSF) into constrained size </summary>
+  </entry-point>
+  <entry-point binary-name="psnup" command="psnup">
+    <needs-terminal/>
+    <name xml:lang="en">Psnup</name>
+    <summary xml:lang="en">Psnup: multiple pages per sheet </summary>
+  </entry-point>
+  <entry-point binary-name="psresize" command="psresize">
+    <needs-terminal/>
+    <name xml:lang="en">psresize</name>
+    <summary xml:lang="en">Psresize: multiple pages per sheet </summary>
+  </entry-point>
+  <entry-point binary-name="psselect" command="psselect">
+    <needs-terminal/>
+    <name xml:lang="en">Psselect</name>
+    <summary xml:lang="en">Psselect: select pages from a PostScript file </summary>
+  </entry-point>
+  <entry-point binary-name="pstops" command="pstops">
+    <needs-terminal/>
+    <name xml:lang="en">Pstops</name>
+    <summary xml:lang="en">Pstops: shuffle pages in a PostScript file </summary>
+  </entry-point>
+  <entry-point binary-name="getafm" command="getafm">
+    <needs-terminal/>
+    <name xml:lang="en">getafm</name>
+    <summary xml:lang="en">getafm: Outputs PostScript to retrieve AFM file from printer </summary>
+  </entry-point>
+  <entry-point binary-name="showchar" command="showchar">
+    <needs-terminal/>
+    <name xml:lang="en">showchar</name>
+    <summary xml:lang="en">showchar: Outputs PostScript to draw a character with metric info </summary>
+  </entry-point>
+  <entry-point binary-name="fixdlsrps" command="fixdlsrps">
+    <needs-terminal/>
+    <name xml:lang="en">fixdlsrps</name>
+    <summary xml:lang="en">fixdlsrps: Filter to fix DviLaser/PS output so that PSUtils works </summary>
+  </entry-point>
+  <entry-point binary-name="fixfmps" command="fixfmps">
+    <needs-terminal/>
+    <name xml:lang="en">fixfmps</name>
+    <summary xml:lang="en">fixfmps: Filter to fix framemaker documents so that psselect etc. work </summary>
+  </entry-point>
+  <entry-point binary-name="fixmacps" command="fixmacps">
+    <needs-terminal/>
+    <name xml:lang="en">fixmacps</name>
+    <summary xml:lang="en">fixmacps: Filter to fix Macintosh documents with saner version of md </summary>
+  </entry-point>
+  <entry-point binary-name="fixpsditps" command="fixpsditps">
+    <needs-terminal/>
+    <name xml:lang="en">fixsditps</name>
+    <summary xml:lang="en">fixpsditps: Filter to fix Transcript psdit documents to work with PSUtils </summary>
+  </entry-point>
+  <entry-point binary-name="fixpspps" command="fixpspps">
+    <needs-terminal/>
+    <name xml:lang="en">fixpspps</name>
+    <summary xml:lang="en">fixpspps: Filter to fix PSPrint PostScript so that psselect etc. work </summary>
+  </entry-point>
+  <entry-point binary-name="fixscribeps" command="fixscribeps">
+    <needs-terminal/>
+    <name xml:lang="en">fixscribeps</name>
+    <summary xml:lang="en">fixscribeps: Filter to fix Scribe PostScript so that psselect etc. work </summary>
+  </entry-point>
+  <entry-point binary-name="fixtpps" command="fixtpps">
+    <needs-terminal/>
+    <name xml:lang="en">fixpps</name>
+    <summary xml:lang="en">fixtpps: Filter to fix Troff Tpscript documents </summary>
+  </entry-point>
+  <entry-point binary-name="fixwfwps" command="fixwfwps">
+    <needs-terminal/>
+    <name xml:lang="en">foxwfwps</name>
+    <summary xml:lang="en">fixwfwps: Filter to fix Word for Windows documents for PSUtils </summary>
+  </entry-point>
+  <entry-point binary-name="fixwpps" command="fixwpps">
+    <needs-terminal/>
+    <name xml:lang="en">fixwpps</name>
+    <summary xml:lang="en">fixwpps: Filter to fix WordPerfect documents for PSUtils </summary>
+  </entry-point>
+  <entry-point binary-name="fixwwps" command="fixwwps">
+    <needs-terminal/>
+    <name xml:lang="en">fixwwps</name>
+    <summary xml:lang="en">fixwwps: Filter to fix Windows Write documents for PSUtils </summary>
+  </entry-point>
+  <entry-point binary-name="extractres" command="extractres">
+    <needs-terminal/>
+    <name xml:lang="en">extractres</name>
+    <summary xml:lang="en">extractres: Filter to extract resources from PostScript files </summary>
+  </entry-point>
+  <entry-point binary-name="includeres" command="includeres">
+    <needs-terminal/>
+    <name xml:lang="en">includeres</name>
+    <summary xml:lang="en">includeres: Filter to include resources into PostScript files </summary>
+  </entry-point>
+  <entry-point binary-name="psmerge" command="psmerge">
+    <needs-terminal/>
+    <name xml:lang="en">psmerge</name>
+    <summary xml:lang="en">psmerge: Hack script to merge multiple PostScript files</summary>
+  </entry-point>
+</interface>
+<!-- Base64 Signature
+iQIzBAABCAAdFiEEambp5cpD4j9nhHi5ars0tRatEWAFAl2qQrYACgkQars0tRatEWDNzw//fjq4
+Nx18G/J2qtqg6B2wfgb18+gM2ANeH0C1iDep44FguRH9tI0HOJr7WJfs2A8G1yQHYGuFbGCLO5uL
+J1vVs5p5U6yzDsL7QuLgjwtm6h+oVwDr35YdArc9CVS1XkRe0SBLeW6tNrMh0O1qtSHjrHyR4Ypq
+YhaKWJxU1WeuWpTecveLgeSCzdIMIjYxhmc7R6d6OKMNRc6CfEPxXWRqQ+bgA0gyRxuigMUlDg9F
+M3/bxtfuerXFmp4hB27CiIw2srhKNdlzwR4jM4tTrOwfzQu4ex0w6OmgJpnvK6QhUPm/QzOExIcm
+VsUsjexzKbc8OlvAiiQrtY3unh35lWzPD66DPii8yYsu60jgc/tfY8XCkIlmEL9UA/T6b8/4ssuN
+zgdcsgAWeibeTrNaQhFV6D9H9Yj5LxTHKBDdaEnSkAjG4M51wAtwuzZmknJjsEvVMJKMY6/aeDXB
+ISM/DTntzWZJcJsGli1SEj15GpyJOs4umXuuMxr1y+zK9CFZM0fwXeqlXr+Y1RT6GuYdKeOYqV/i
+KYN8sigR8z+lWYEoB1l+DMZW56Oa54zqfa3pEcXsMgshF10B92LpI1hvb8Av7z3R6DzurrhcRBET
+NN3WkvQ/hhf+BjSVpJGHMTOE68Su9tWj3Na+d87+FwyoYedd6Le9htATS485uUldt258TDg=
+
+-->

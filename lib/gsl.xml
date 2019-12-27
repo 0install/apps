@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/lib/gsl" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>GNU Scientific Library</name>
+  <summary xml:lang="en">GSL is the GNU scientific library for numerical computing. It is a collection of routines for numerical computing in e.g. linear algebra, probability, random number generation, statistics, differentiation, integration, optimization, and differential equations. </summary>
+  <description xml:lang="en">GSL is the GNU scientific library for numerical computing. It is a collection of routines for numerical computing in e.g. linear algebra, probability, random number generation, statistics, differentiation, integration, optimization, and differential equations. 
+
+The routines are written from scratch by the GSL team in ANSI C, and are meant to present a modern API for C programmers, while allowing wrappers to be written for very high-level languages. 
+
+The port of GSL has been contributed by Jerry St Clair. If you will be using one of the dynamic libraries, add GSL_DLL to the list of predefined macros; so for use with Mingw / GCC, add -DGSL_DLL 
+
+This is an unofficial port of GNU GSL to Microsoft Windows -- please report problems to our SourceForge bug tracker / mailing list &lt;http://gnuwin32.sourceforge.net/lists.html&gt;, not the GNU Project mailing lists or GSL developers. 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <category>Science</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/gsl.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-i486" id="sha1new=f139da364b9bb8d7dff38f9c707653f3f14cd5fa" license="GPL v2 (GNU General Public License)" released="2006-07-11" version="1.8">
+    <command name="run" path="bin/gsl-histogram.exe"/>
+    <command name="gsl-randist" path="bin/gsl-randist.exe"/>
+    <manifest-digest sha256new="26KR73UUDDITRSWXWAFLKULUVDEY6VK7GASY7HYRP5BV6EWJQI5Q"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/gsl/1.8/gsl-1.8-bin.zip" size="982270" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/gsl-bin.zip?raw=true" size="982270" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="sci-libs/gsl"/>
+  <package-implementation package="gsl"/>
+  <entry-point binary-name="gsl-histogram" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">histogram</name>
+    <summary xml:lang="en">Computes a histogram of data</summary>
+    <description xml:lang="en">Computes a histogram of the data on stdin using n bins from xmin to xmax.
+If n is unspecified then bins of integer width are used.</description>
+  </entry-point>
+  <entry-point binary-name="gsl-randist" command="gsl-randist">
+    <needs-terminal/>
+    <name xml:lang="en">randist</name>
+    <summary xml:lang="en">Generates samples from the distribution</summary>
+    <description xml:lang="en">Generates n samples from the distribution 
+Valid distributions are,
+
+  beta
+  binomial
+  bivariate-gaussian
+  cauchy
+  chisq
+  dir-2d
+  dir-3d
+  dir-nd
+  erlang
+  exponential
+  exppow
+  fdist
+  flat
+  gamma
+  gaussian-tail
+  gaussian
+  geometric
+  gumbel1
+  gumbel2
+  hypergeometric
+  laplace
+  landau
+  levy
+  levy-skew
+  logarithmic
+  logistic
+  lognormal
+  negative-binomial
+  pareto
+  pascal
+  poisson
+  rayleigh-tail
+  rayleigh
+  tdist
+  ugaussian-tail
+  ugaussian
+  weibull</description>
+  </entry-point>
+</interface>
+

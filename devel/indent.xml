@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://repo.roscidus.com/devel/indent" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Indent</name>
+  <summary xml:lang="en">Indent: format C source code</summary>
+  <description xml:lang="en">The indent program changes the appearance of a C program by inserting or deleting white-space. It can be used to make code easier to read. It can also convert from one style of writing C to another. Indent understands a substantial amount about the syntax of C, but it also attempts to cope with incomplete and misformed syntax. In version 1.2 and more recent versions, the GNU style of indenting is the default. </description>
+  <icon href="http://gnuwin32.sourceforge.net/favicon.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <category>Development</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/indent.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-i486" id="sha1new=a2481abbda8f31008f421346e7fa9a2f79c362f6" license="GPL v3 (GNU General Public License)" released="2009-02-15" version="2.2.10-3">
+    <requires interface="http://repo.roscidus.com/devel/gettext">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="http://repo.roscidus.com/lib/libiconv">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/indent.exe"/>
+    <command name="texinfo2man" path="bin/texinfo2man.exe"/>
+    <manifest-digest sha256new="SK32PZCQVKPXVZFDLC5IMAKNGNQCHVWFVX2QDBTAXEEI626Y7NSA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/indent/2.2.10/indent-2.2.10-bin.zip" size="218100" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/indent-2.2.10-bin.zip?raw=true" size="218100" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="dev-util/indent"/>
+  <package-implementation package="indent"/>
+  <entry-point binary-name="indent" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">Indent</name>
+  </entry-point>
+  <entry-point binary-name="texinfo2man" command="texinfo2man">
+    <needs-terminal/>
+    <name xml:lang="en">Texinfo2man</name>
+    <summary xml:lang="en">Convert a texinfo document to man format</summary>
+  </entry-point>
+</interface>

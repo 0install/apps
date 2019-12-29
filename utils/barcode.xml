@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/barcode.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>BarCode</name>
+  <summary xml:lang="en">Barcode: library for making barcodes</summary>
+  <description xml:lang="en">The barcode package is mainly a C library for creating bar-code output files. It also includes a command line front-end. </description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <category>Utility</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/barcode.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-i486" id="sha1new=70af4e838cf04ad45f296761dabe72752e036d93" license="GPL v2 (GNU General Public License)" released="2007-05-09" version="0.98-2-3">
+    <requires interface="https://apps.0install.net/lib/libpaper.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/barcode.exe"/>
+    <command name="sample" path="bin/sample.exe"/>
+    <manifest-digest sha256new="ZGZGU4A3ABSW5NL52GEDGXAGV2TNYYXAG3MIGSHPYQ34IWSDZOQA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/barcode/0.98-2/barcode-0.98-2-bin.zip" size="68753" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/barcode-bin.zip?raw=true" size="68753" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="app-text/barcode"/>
+  <package-implementation package="barcode"/>
+  <entry-point binary-name="barcode" command="run">
+    <needs-terminal/>
+    <summary xml:lang="en">A stand alone program to run the barcode library</summary>
+    <description xml:lang="en">The barcode program is a front-end to access  some  fea-
+       tures  of the library from the command line.  It is able
+       to read user supplied strings from the command line or a
+       data  file (standard input by default) and encode all of
+       them.</description>
+  </entry-point>
+  <entry-point binary-name="sample" command="sample">
+    <needs-terminal/>
+    <name xml:lang="en">sample</name>
+  </entry-point>
+</interface>

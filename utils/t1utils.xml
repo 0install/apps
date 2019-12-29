@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/t1utils.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>T1Utils</name>
+  <summary xml:lang="en">T1Utils: utilities for Postscript Type-1 fonts </summary>
+  <description xml:lang="en">Six free UNIX/Windows command-line tools for dealing with Type 1 fonts. This is a revision of I. Lee Hetherington’s beloved t1utils package. t1ascii changes PFB (binary) fonts into PFA (ASCII) format; t1binary goes the opposite direction. t1disasm translates PFBs or PFAs into a human-readable and -editable format; t1asm goes the opposite direction. Finally, t1unmac (formerly unpost) translates a Macintosh Type 1 font into either PFB or PFA format, and t1mac goes the opposite direction. </description>
+  <icon href="https://gitlab.com/pmiess/0install-feeds/raw/test/public/gnuwin32/t1utils.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://gitlab.com/pmiess/0install-feeds/raw/test/public/gnuwin32/t1utils.png" type="image/png"/>
+  <category>Utility</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/t1utils.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=850e58967954991f2499cbec851cebce307a34cf" license="BSD License (original)" released="2008-03-24" version="1.34">
+    <command name="run" path="bin/t1ascii.exe"/>
+    <command name="t1asm" path="bin/t1asm.exe"/>
+    <command name="t1binary" path="bin/t1binary.exe"/>
+    <command name="t1disasm" path="bin/t1disasm.exe"/>
+    <command name="t1mac" path="bin/t1mac.exe"/>
+    <command name="t1unmac" path="bin/t1unmac.exe"/>
+    <manifest-digest sha256new="ELC5OXNRQ33TBVJCAMEUFIX3AVXGJVCAOVHRC6W33UCGKR6CS67Q"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/t1utils/1.34/t1utils-1.34-bin.zip" size="133092" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/t1utils-bin.zip?raw=true" size="133092" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="app-text/t1utils"/>
+  <package-implementation package="t1utils"/>
+  <entry-point binary-name="t1ascii" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">T1ascii</name>
+    <summary xml:lang="en">T1ascii: convert type-1 font from binary to ASCII </summary>
+    <description xml:lang="en">t1ascii converts Adobe  Type  1  font  programs  in  PFB
+       (binary) format to PFA (hexadecimal) format. If the file
+       output is not specified output goes to the standard out-
+       put.   If  the  file  input is not specified input comes
+       from the standard input.</description>
+  </entry-point>
+  <entry-point binary-name="t1asm" command="t1asm">
+    <needs-terminal/>
+    <name xml:lang="en">T1asm</name>
+    <summary xml:lang="en">T1asm: assemble type-1 font </summary>
+    <description xml:lang="en">t1asm  assembles  Adobe Type 1 font programs into either
+       PFA (hexadecimal) or PFB (binary) formats from a  human-
+       readable  form. If the file output is not specified out-
+       put goes to the standard output. If the  file  input  is
+       not specified input comes from the standard input.</description>
+  </entry-point>
+  <entry-point binary-name="t1binary" command="t1binary">
+    <needs-terminal/>
+    <name xml:lang="en">T1binary</name>
+    <summary xml:lang="en">T1binary: convert type-1 font from ASCII to binary </summary>
+    <description xml:lang="en">t1binary converts Adobe Type  1  font  programs  in  PFA
+       (hexadecimal) format to PFB (binary) format. If the file
+       output is not specified output goes to the standard out-
+       put.   If  the  file  input is not specified input comes
+       from the standard input.</description>
+  </entry-point>
+  <entry-point binary-name="t1disasm" command="t1disasm">
+    <needs-terminal/>
+    <name xml:lang="en">T1disasm</name>
+    <summary xml:lang="en">T1disasm: disassemble type-1 font </summary>
+    <description xml:lang="en">t1disasm  disassembles  Adobe  Type  1  font programs in
+       either PFA (hexadecimal) or PFB  (binary)  formats  into
+       human-readable form. If the file output is not specified
+       output goes to the standard output.  If the  file  input
+       is not specified input comes from the standard input.</description>
+  </entry-point>
+  <entry-point binary-name="t1mac" command="t1mac">
+    <needs-terminal/>
+    <name xml:lang="en">T1mac</name>
+    <summary xml:lang="en">T1mac: translate a PostScript font into Macintosh format </summary>
+    <description xml:lang="en">t1mac   reads   a  PFA  (hexadecimal)  or  PFB  (binary)
+       PostScript Type 1 font file and generates an  equivalent
+       Macintosh  Type  1  font file. The output file can be in
+       MacBinary II, AppleSingle, AppleDouble, or  BinHex  for-
+       mat,  or  it  can be a raw resource fork. The default is
+       MacBinary II; use an option to choose a  different  for-
+       mat.  If the output file is not specified output goes to
+       the standard output.</description>
+  </entry-point>
+  <entry-point binary-name="t1unmac" command="t1unmac">
+    <needs-terminal/>
+    <name xml:lang="en">T1unmac</name>
+    <summary xml:lang="en">T1unmac: translate a Mac PostScript font into PFA/PFB format </summary>
+    <description xml:lang="en">t1unmac  extracts  POST  resources  from   a   Macintosh
+       PostScript  font file and creates a PFA (hexadecimal) or
+       PFB (binary) font file. The  file  input  should  be  in
+       MacBinary  I  or II, AppleSingle, AppleDouble, or BinHex
+       format, or it can be a raw resource fork. If the file is
+       a  raw  resource  fork,  you  need  to  give the `--raw'
+       option; otherwise t1unmac  should  automatically  figure
+       out  what  kind  of file you have. If the file output is
+       not specified output goes to the standard output.</description>
+  </entry-point>
+</interface>

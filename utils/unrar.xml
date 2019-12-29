@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/unrar.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>UnRar</name>
+  <summary xml:lang="en">unpack RAR archives</summary>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/unrar.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/unrar.png" type="image/png"/>
+  <category>Utility</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/unrar.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=ee4dc1a1257c87fe72ce5f16c5771d27b5fa80b2" license="Freeware" released="2005-02-20" version="3.4.3">
+    <command name="run" path="bin/unrar.exe"/>
+    <manifest-digest sha256new="SGBMS2STM6XKKWJOCJFJIE5JAWW7UKRWD27LCSOSRPBSVYXCLJ4A"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/unrar/3.4.3/unrar-3.4.3-bin.zip" size="262585" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/unrar-bin.zip?raw=true" size="262585" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="app-arch/unrar"/>
+  <package-implementation package="unrar"/>
+  <entry-point binary-name="unrar" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">unrar</name>
+    <summary xml:lang="en">unrar - extract files from rar archives</summary>
+  </entry-point>
+</interface>

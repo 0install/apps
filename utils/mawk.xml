@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="ttps://apps.0install.net/utils/mawk.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Mawk</name>
+  <summary xml:lang="en">Mawk: pattern scanning and text processing language</summary>
+  <description xml:lang="en">mawk is an interpreter for the AWK Programming Language. The AWK language is useful for manipulation of data files, text retrieval and processing, and for prototyping and experimenting with algorithms. mawk is a new awk meaning it implements the AWK language as defined in Aho, Kernighan and Weinberger, The AWK Programming Language, Addison-Wesley Publishing, 1988. (Hereafter referred to as the AWK book.) mawk conforms to the Posix 1003.2 (draft 11.3) definition of the AWK language which contains a few features not described in the AWK book, and mawk provides a small number of extensions. </description>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/mawk.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/mawk.png" type="image/png"/>
+  <category>System</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/mawk.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=095b9a5e1e612529e2d8e4dcdbd4cc673e0cbc60" license="GPL v2 (GNU General Public License)" released="2005-11-19" version="1.3.3-1">
+    <command name="run" path="bin/mawk.exe"/>
+    <manifest-digest sha256new="FVXKV3STY7IAQUCO37XEU3MVQRGRA2C7YYUR2T2WPTTC4WO6GSQQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/mawk/1.3.3-1/mawk-1.3.3-1-bin.zip" size="96988" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/mawk-bin.zip?raw=true" size="96988" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="sys-apps/mawk"/>
+  <package-implementation package="mawk"/>
+  <entry-point binary-name="mawk" command="run">
+    <needs-terminal/>
+  </entry-point>
+</interface>

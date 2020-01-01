@@ -1,0 +1,244 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/lib/wv.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Wv</name>
+  <summary xml:lang="en">Wv: wv is a library which allows access to Microsoft Word files</summary>
+  <description xml:lang="en">wv is a library which allows access to Microsoft Word files. It can load and parse Word 2000, 97, 95 and 6 file formats. (These are the file formats known internally as Word 9, 8, 7 and 6.) There is some support for reading earlier formats as well: Word 2 docs are converted to plaintext. 
+
+Provided with the wv distribution is an application called wvWare. wvWare is a &quot;power-user&quot; application with lots of command-line options, doo-dads, bells, and whistles. Less interesting, but more convenient, are the helper scripts that use wvWare. These are: 
+•wvHtml: convert your Word document into HTML4.0 
+•wvLatex: convert your Word document into visually (pretty) correct LaTeX 
+•wvCleanLatex: convert into 'cleaner' LaTeX containing less visual mark-up, more suitable for further use and LyX import. Work in progress 
+•wvDVI: converts word to DVI. Requires 'latex' 
+•wvPS: converts word to PostScript. Requires 'dvips' 
+•wvPDF: converts word to Adobe PDF. Requires 'distill' from Adobe [Someone do a pdflatex or pdfhtml version :-)] 
+•wvText: converts word to plain text. Textually correct output requires 'lynx.' For poor output, this doesn't require anything special. 
+•wvAbw: converts word to Abiword format. (Far better just to use Abiword.) 
+•wvWml: converts word to WML for viewing on portable devices like WebPhones and Palm Pilots. 
+•wvRtf: a basic version exists 
+•wvMime: can be plugged as a MIME helper application into your browser/mail client; presents the document on-screen inside GhostView, while all intermediate files generated go into the /tmp directory. 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/lib/wv.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/lib/wv.png" type="image/png"/>
+  <category>Office</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/wv.htm</homepage>
+  <needs-terminal/>
+  <group license="GPL v2 (GNU General Public License)">
+    <requires interface="https://apps.0install.net/utils/sed.xml">
+      <executable-in-path name="sed"/>
+    </requires>
+    <requires interface="https://apps.0install.net/utils/coreutils.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/utils/which.xml">
+      <executable-in-path name="which"/>
+    </requires>
+    <requires interface="https://apps.0install.net/devel/freetype.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/jpeg.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/libiconv.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/png12-0.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/libwmf.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/xml2.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/utils/plotutils.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/zlib.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <executable-in-path command="wvWare" name="wvWare.xml"/>
+    <environment insert="." name="prefix"/>
+    <command name="run" path="bin/wvConvert.exe"/>
+    <command name="wvAbw" path="bin/wvAbw">
+      <arg>--prefix=$prefix</arg>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="wvCleanLatex" path="bin/wvCleanLatex">
+      <arg>--prefix=$prefix</arg>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="wvDocBook" path="bin/wvDocBook">
+      <arg>--prefix=$prefix</arg>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="wvHtml" path="bin/wvHtml">
+      <arg>--prefix=$prefix</arg>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="wvLatex" path="bin/wvLatex">
+      <arg>--prefix=$prefix</arg>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="wvMime" path="bin/wvMime">
+      <executable-in-path command="wvLatex" name="wvLatex"/>
+      <executable-in-path command="wvPS" name="wvPS"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="wvRTF" path="bin/wvRTF.exe"/>
+    <command name="wvSummary" path="bin/wvSummary.exe"/>
+    <command name="wvText" path="bin/wvText">
+      <arg>--prefix=$prefix</arg>
+      <executable-in-path command="wvHtml" name="wvHtml"/>
+      <requires interface="https://apps.0install.net/utils/mktemp.xml">
+        <executable-in-path name="mktemp"/>
+      </requires>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="wvVersion" path="bin/wvVersion.exe"/>
+    <command name="wvWare" path="bin/wvWare.exe"/>
+    <command name="wvWml" path="bin/wvWml">
+      <arg>--prefix=$prefix</arg>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <group>
+      <requires interface="https://apps.0install.net/utils/grep.xml">
+        <executable-in-path name="grep"/>
+      </requires>
+      <requires importance="recommended" interface="https://apps.0install.net/utils/imagemagick.xml">
+        <executable-in-path name="convert"/>
+      </requires>
+      <command name="wvDVI" path="bin/wvDVI">
+        <arg>--prefix=$prefix</arg>
+        <runner interface="https://apps.0install.net/utils/bash.xml"/>
+      </command>
+      <command name="wvPS" path="bin/wvPS">
+        <arg>--prefix=$prefix</arg>
+        <runner interface="https://apps.0install.net/utils/bash.xml"/>
+      </command>
+      <command name="wvPDF" path="bin/wvPDF">
+        <arg>--prefix=$prefix</arg>
+        <runner interface="https://apps.0install.net/utils/bash.xml"/>
+      </command>
+      <implementation arch="Windows-i486" id="sha1new=256b34771cd654dcaff12b353d57c12d0ff729b8" released="2004-11-21" version="1.0.2-3">
+        <manifest-digest sha256new="3XOLDEIF7J27YS63CZD4EBZBTC2N547OP6QZKX6376EFPMRYHBSQ"/>
+        <archive href="https://sourceforge.net/projects/gnuwin32/files/wv/1.0.2/wv-1.0.2-bin.zip" size="590548" type="application/zip"/>
+        <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/wv-bin.zip?raw=true" size="590548" type="application/zip"/>
+      </implementation>
+    </group>
+  </group>
+  <package-implementation distributions="Gentoo" package="app-text/wv"/>
+  <package-implementation package="wv"/>
+  <entry-point binary-name="wvConvert" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">wvConvert</name>
+  </entry-point>
+  <entry-point binary-name="wvAbw" command="wvAbw">
+    <needs-terminal/>
+    <name xml:lang="en">wvAbw</name>
+    <summary xml:lang="en">wvAbw: convert msword documents to Abiword's format</summary>
+    <description xml:lang="en">wvAbw converts Word documents into Abiword's native format.</description>
+  </entry-point>
+  <entry-point binary-name="wvCleanLatex" command="wvCleanLatex">
+    <needs-terminal/>
+    <name xml:lang="en">wvCleanLatex</name>
+    <summary xml:lang="en">wvCleanLatex: convert msword documents to LaTeX</summary>
+    <description xml:lang="en">wvCleanLatex  converts  word  documents  into LaTeX that
+       looks like it'd been hand-edited</description>
+  </entry-point>
+  <entry-point binary-name="wvDocBook" command="wvDocBook">
+    <needs-terminal/>
+    <name xml:lang="en">wvDocBook</name>
+  </entry-point>
+  <entry-point binary-name="wvDVI" command="wvDVI">
+    <needs-terminal/>
+    <name xml:lang="en">wvDVI</name>
+    <summary xml:lang="en">wvDVI: convert msword documents to DVI</summary>
+    <description xml:lang="en">wvDVI converts word documents into DVI documents.
+REQUIREMENTS
+       wvLatex latex</description>
+  </entry-point>
+  <entry-point binary-name="wvHtml" command="wvHtml">
+    <needs-terminal/>
+    <name xml:lang="en">wvHtml</name>
+    <summary xml:lang="en">wvHtml: convert msword documents to html</summary>
+    <description xml:lang="en">wvHtml   converts  word  documents  into  W3C  certified
+       HTML4.0 format.</description>
+  </entry-point>
+  <entry-point binary-name="wvLatex" command="wvLatex">
+    <needs-terminal/>
+    <name xml:lang="en">wvLatex</name>
+    <summary xml:lang="en">wvLatex: convert msword documents to LaTeX</summary>
+    <description xml:lang="en">wvLatex converts word documents into LaTeX</description>
+  </entry-point>
+  <entry-point binary-name="wvMime" command="wvMime">
+    <needs-terminal/>
+    <name xml:lang="en">wvMime</name>
+    <summary xml:lang="en">wvMime: view MSWord documents</summary>
+    <description xml:lang="en">wvMime    will    view   your   word   documents   using
+       ggv,gv,ghostview,etc... instead of acting as  a  conver-
+       sion engine.</description>
+  </entry-point>
+  <entry-point binary-name="wvPDF" command="wvPDF">
+    <needs-terminal/>
+    <name xml:lang="en">wvPDF</name>
+    <summary xml:lang="en">wvPDF: convert msword documents to PDF</summary>
+    <description xml:lang="en">wvPDF converts word documents into Adobe's PDF format.
+REQUIREMENTS
+       wvPS distill</description>
+  </entry-point>
+  <entry-point binary-name="wvPS" command="wvPS">
+    <needs-terminal/>
+    <name xml:lang="en">wvPS</name>
+    <summary xml:lang="en">wvPS: convert msword documents to PS</summary>
+    <description xml:lang="en">wvPS  converts  word documents into PS (Postscript) for-
+       mat. You can then use the  PS  version  to  print,  view
+       using gv, ggv,ghostview,etc..
+REQUIREMENTS
+       wvDVI dvips</description>
+  </entry-point>
+  <entry-point binary-name="wvRTF" command="wvRTF">
+    <needs-terminal/>
+    <name xml:lang="en">WvRTF</name>
+    <summary xml:lang="en">WvRTF: convert msword documents to RTF</summary>
+    <description xml:lang="en">wvRTF  converts  word documents into RTF (Rich Text For-
+       mat). wvRTF is experimental.
+REQUIREMENTS
+       wvDVI dvips</description>
+  </entry-point>
+  <entry-point binary-name="wvSummary" command="wvSummary">
+    <needs-terminal/>
+    <name xml:lang="en">wvSummary</name>
+    <summary xml:lang="en">wvSummary: view word document's summary info</summary>
+    <description xml:lang="en">wvSummary  displays  the  summary  info  included in all
+       MSWord documents. This often includes the  Author,  time
+       created, etc...</description>
+  </entry-point>
+  <entry-point binary-name="wvText" command="wvText">
+    <needs-terminal/>
+    <name xml:lang="en">wvText</name>
+    <summary xml:lang="en">wvText: converts word to plain text.</summary>
+    <description xml:lang="en">Textually correct output requires 'lynx.' For poor output, this doesn't require anything special. </description>
+  </entry-point>
+  <entry-point binary-name="wvVersion" command="wvVersion">
+    <needs-terminal/>
+    <name xml:lang="en">wvVersion</name>
+    <summary xml:lang="en">wvVersion: view word document's version #</summary>
+    <description xml:lang="en">wvVersion  displays  the word version number of a MSWord
+       document. 8=Word97, 7=Word95, ...</description>
+  </entry-point>
+  <entry-point binary-name="wvWare" command="wvWare">
+    <needs-terminal/>
+    <name xml:lang="en">wvWare</name>
+    <summary xml:lang="en">wvWare: convert msword documents</summary>
+    <description xml:lang="en">wvWare  converts  word documents into other formats such
+       as PS,PDF,HTML,LaTeX,DVI,ABW</description>
+  </entry-point>
+  <entry-point binary-name="wvWml" command="wvWml">
+    <needs-terminal/>
+    <name xml:lang="en">wvWml</name>
+    <summary xml:lang="en">wvWml: convert msword documents to WML</summary>
+    <description xml:lang="en">wvWml  converts  word  documents  into WML, suitable for
+       viewing on PDAs such as web-phones.</description>
+  </entry-point>
+</interface>

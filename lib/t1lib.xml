@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/lib/t1lib.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>T1Lib</name>
+  <summary xml:lang="en">T1Lib :  functions for generating bitmaps from Adobe Type 1 fonts</summary>
+  <description xml:lang="en">t1lib is a library written in C which implements functions for generating bitmaps from Adobe Type 1 fonts. It uses most internal parts of the Type 1 rasterizer provided with X11R5 and newer but tries avoid the disadvantages known from that rasterizer. Although most people would use the rasterizer under X11, having X11 is not necessary at all. The rasterizer is implemented as a shared or static library to be linked to the programs that want to use Type 1 fonts. In addition to this library there is a test-program called xglyph which, as the name indicates, requires X11. It can be used to show most of the features of the library. xglyph can be run out of the box without doing any X11 configuration like setting resources. </description>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/lib/t1lib.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/lib/t1lib.png" type="image/png"/>
+  <homepage>http://gnuwin32.sourceforge.net/packages/t1lib.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-i486" id="sha1new=ca8a1a000203f00feb1eda566984f30226766a38" license="LGPL (GNU Lesser General Public License), GPL v2 (GNU General Public License)" released="2005-08-13" version="5.1.0-3">
+    <command name="run" path="bin/type1afm.exe"/>
+    <manifest-digest sha256new="AG6WA746L6BRIMLYLXZ4KHVNNLGSQTIUHTLYZ7GYHMUQUAMN6CYA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/t1lib/5.1.0/t1lib-5.1.0-bin.zip" size="199822" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/t1lib-bin.zip?raw=true" size="199822" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="media-libs/t1lib"/>
+  <package-implementation package="t1lib"/>
+  <implementation arch="Windows-i486" id="just the dll renamed" version="5.1.0-0">
+    <manifest-digest sha256new="NG5J24CVUTMXWP3OIYZQAIGRSKNIY7WB3MOKTVRDHICRHEHWJVYA"/>
+    <recipe>
+      <copy-from dest="bin\t1lib-5.dll" id="sha1new=ca8a1a000203f00feb1eda566984f30226766a38" source="bin\t1lib5.dll"/>
+    </recipe>
+  </implementation>
+  <entry-point binary-name="type1afm" command="run">
+    <name xml:lang="en">type1afm</name>
+    <summary xml:lang="en">Generate afm-file from Adobe Type 1 font file</summary>
+  </entry-point>
+</interface>

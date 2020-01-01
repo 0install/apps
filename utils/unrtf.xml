@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/unrtf.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>UnRtf</name>
+  <summary xml:lang="en">UnRtf: convert document in RTF format to other formats</summary>
+  <description xml:lang="en">UnRTF is a command-line program written in C which converts documents in Rich Text (.rtf) format to HTML, LaTeX, PostScript, and other formats. Converting to HTML, it supports a number of features of Rich Text Format: 
+•Changes in the text's font, size, weight (bold), and slant (italic) 
+•Underlines and strikethroughs 
+•Partial support for text shadowing, outlining, embossing, or engraving 
+•Capitalizations 
+•Superscripts and subscripts 
+•Expanded and condensed text 
+•Changes in the foreground and background colors 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <category>Utility</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/unrtf.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=264319dea5d984c222fd59e8afc93a58d39e50e1" license="GPL v2 (GNU General Public License)" released="2005-02-12" version="0.19.3">
+    <command name="run" path="bin/unrtf.exe"/>
+    <manifest-digest sha256new="FRPHZCZDL6QT5OV4UVWPPWLLEZ7V2CZWYIYJY2EBCGPMQNQDUKTQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/unrtf/0.19.3/unrtf-0.19.3-bin.zip" size="104737" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/unrtf-bin.zip?raw=true" size="104737" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="app-text/unrtf"/>
+  <package-implementation package="unrtf"/>
+  <entry-point binary-name="unrtf" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">UnRTF</name>
+    <summary xml:lang="en">UnRTF - converts document in RTF format to other formats</summary>
+    <description xml:lang="en">The  program  unrtf is a converter from Rich Text Format
+       (RTF) to  a  growing  number  of  document  formats.  At
+       present  it  supports  Hypertext Markup Language (HTML),
+       plain text, text with  VT100  codes,  LaTeX,  and  Post-
+       Script.  All output formats except HTML are &quot;alpha&quot; i.e.
+       limited and development has just  begun.   However  with
+       HTML,  the  program  supports  tables,  fonts,  embedded
+       images, hyperlinks, and paragraph alignment.  Font  sup-
+       port  includes face and size changes, as well as typical
+       attributes   such   as   italic,   bold,    underlining,
+       strikethrough,  smallcaps, allcaps, expand, compress and
+       both  foreground  and  background  colors.   Images  are
+       always  stored  to  separate files in the current direc-
+       tory, or they can be ignored.</description>
+  </entry-point>
+</interface>

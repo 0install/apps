@@ -1,0 +1,233 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/gcal.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Gcal</name>
+  <summary xml:lang="en">Gcal: print calendars</summary>
+  <description xml:lang="en">Gcal is a program for calculating and printing calendars. Gcal displays hybrid and proleptic Julian and Gregorian calendar sheets, respectively for one month, three months, or a whole year. It also displays eternal holiday lists for many countries around the globe, and features a very powerful creation of fixed date liststhat can be used for reminding purposes. Gcal can calculate various astronomical data and times of the Sun and the Moon for pleasure at any location, precisely enough for most civil purposes. Gcal supports some other calendar systems, for example, the Chinese and Japanese calendars, the Hebrew calendar, and the civil Islamic calendar, too. </description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <category>Office</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/gcal.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=6a1cfe90d15394e87325221b35cf268612eb17a9" license="GPL v2 (GNU General Public License)" released="2004-11-28" version="3.1-1-3">
+    <requires interface="http://apps.0install.net/devel/gettext.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="http://apps.0install.net/lib/libiconv.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="http://apps.0install.net/lib/rxspencer.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="http://apps.0install.net/utils/coreutils.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="http://apps.0install.net/utils/sed.xml">
+      <executable-in-path name="sed"/>
+    </requires>
+    <requires interface="http://apps.0install.net/utils/grep.xml">
+      <executable-in-path name="grep"/>
+    </requires>
+    <requires importance="recommended" interface="http://apps.0install.net/perl/perl.xml">
+      <executable-in-path command="perl" name="perl"/>
+    </requires>
+    <requires importance="recommended" interface="http://apps.0install.net/utils/gawk.xml">
+      <executable-in-path command="awk" name="awk"/>
+    </requires>
+    <executable-in-path name="gcal"/>
+    <command name="run" path="bin/gcal.exe"/>
+    <command name="gcal-daily" path="bin/gcal-daily">
+      <runner interface="http://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="gcal-ddiff" path="bin/gcal-ddiff">
+      <runner interface="http://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="gcal-ddiffdrv" path="bin/gcal-ddiffdrv">
+      <runner interface="http://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="gcal-dst" path="bin/gcal-dst">
+      <runner interface="http://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="gcal-gcalltx" path="bin/gcal-gcalltx">
+      <runner interface="http://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="gcal-gcalltxpl" path="bin/gcal-gcalltx.pl">
+      <runner command="perl" interface="http://apps.0install.net/perl/perl.xml"/>
+    </command>
+    <command name="gcal-moon" path="bin/gcal-moon">
+      <runner interface="http://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="gcal-mrms" path="bin/gcal-mrms">
+      <runner interface="http://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="gcal-srss" path="bin/gcal-srss">
+      <runner interface="http://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="gcal-wlocdrv" path="bin/gcal-wlocdrv">
+      <runner interface="http://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="gcal2txt" path="bin/gcal2txt.exe"/>
+    <command name="tcal" path="bin/tcal.exe"/>
+    <command name="txt2gcal" path="bin/txt2gcal.exe"/>
+    <manifest-digest sha256new="NI4WU7HWM5UXCJUVRS3JUPDLN7DTRNHNY3RBMEPCXEVMQ4E6RTIQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/gcal/3.01-1/gcal-3.01-1-bin.zip" size="922878" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/gcal-bin.zip?raw=true" size="922878" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="app-misc/gcal"/>
+  <package-implementation package="gcal"/>
+  <entry-point binary-name="gcal" command="run">
+    <needs-terminal/>
+    <summary xml:lang="en">a program for calculating and printing calendars.</summary>
+    <description xml:lang="en">Gcal is a program similar the standard calendar programs
+       BSD-`cal' and `calendar'.
+
+       Gcal  displays hybrid and proleptic Julian and Gregorian
+       calendar sheets,  respectively,  for  one  month,  three
+       months  or a whole year.  It also displays eternal holi-
+       day lists for many countries around the globe, and  fea-
+       tures  a very powerful creation of fixed date lists that
+       can be used for reminding purposes.  Gcal can  calculate
+       various  astronomical  data and times of the Sun and the
+       Moon for at pleasure any location, precisely enough  for
+       most  civil purposes.  Gcal supports some other calendar
+       systems, for example the Chinese and Japanese  calendar,
+       the Hebrew calendar and the civil Islamic calendar, too.</description>
+  </entry-point>
+  <entry-point binary-name="gcal-daily" command="gcal-daily">
+    <needs-terminal/>
+    <summary xml:lang="en">Time management of fixed dates</summary>
+    <description xml:lang="en">Uses `daily[.awk|.pl]' for processing Gcal resource file lines 
+used for time management of fixed dates stored in the fixed
+`DATE-PART HH1:MM1,HH2:MM2,%n,%t  FIXED-DATE-TEXT' format.
+`HH1:MM1' is the time (HOUR:MINUTE) the fixed date takes place.
+`HH2:MM2' is the time (HOUR:MINUTE) the fixed date is warned
+in advance.  The valid range of HOUR is 00...23, and the
+valid range of MINUTE is 00...59.  For example
+  `0 08:15,00:30,%n,%t  Dentist'
+creates a today's fixed date message of 30 minutes
+starting at 07:45 until 08:15.</description>
+  </entry-point>
+  <entry-point binary-name="gcal-ddiff" command="gcal-ddiff">
+    <needs-terminal/>
+    <summary xml:lang="en">Creates a Gcal location resource file which contains the day/night lengths and differences for all days of the year YYYY for a definite location.</summary>
+    <description xml:lang="en">Uses `ddiff1[.awk|.pl]' and `ddiff2[.awk|.pl]' for creating
+a Gcal location resource file which contains the day/night
+lengths and differences for all days of the year YYYY for
+a definite location.
+A Gcal location response file is a Gcal response file
+consisting of one line, which passes the location name
+LOC, its country code CC, and the ISO-6709-co-ordinate
+COORD via text variables to Gcal.</description>
+  </entry-point>
+  <entry-point binary-name="gcal-ddiffdrv" command="gcal-ddiffdrv">
+    <needs-terminal/>
+    <summary xml:lang="en">Creates all Gcal location response files which can be generated from the Gcal location pool resource file \`./$outfile1'.</summary>
+    <description xml:lang="en">First step:
+  Uses `ddiffdrv.rc' or any other Gcal location pool
+  resource file for creating all Gcal location response
+  files which can be generated from that file.
+  If no Gcal location pool resource file exists, this
+  script tries to create the `ddiffdrv.rc' file by
+  processing the ZONE file `zone.tab' by means of
+  AWK/Perl and the `ddiffdrv[.awk|.pl]' script.
+  A Gcal location response file is a Gcal response file
+  consisting of one line, which passes the location name
+  LOC, its country code CC, and the ISO-6709-co-ordinate
+  COORD via text variables to Gcal.  The line template of
+  a Gcal location response file is:
+    -r$l=CC-LOC:$c=COORD
+Second step (only if the `--create' option is given):
+  Creation of all Gcal location resource files, which
+  contain the day/night lengths and differences for all
+  days of the year YYYY for the location.
+Third step (also only if the `--create' option is given):
+  Creation of the Gcal include file `ddiff.rc', which
+  contains include statements of all Gcal location
+  resource files created</description>
+  </entry-point>
+  <entry-point binary-name="gcal-dst" command="gcal-dst">
+    <needs-terminal/>
+    <summary xml:lang="en">Processes ZONEINFO files and saves the dates at which Daylight-Saving Times take place</summary>
+    <description xml:lang="en">Uses `dst[.awk|.pl]' for processing ZONEINFO files and saves the
+dates at which Daylight-Saving Times take place converted to the
+Gcal fixed date format in a resource file.</description>
+  </entry-point>
+  <entry-point binary-name="gcal-gcalltx" command="gcal-gcalltx">
+    <needs-terminal/>
+  </entry-point>
+  <entry-point binary-name="gcal-gcalltxpl" command="gcal-gcalltxpl">
+    <needs-terminal/>
+    <summary xml:lang="en">This simple script converts 'gcal -n -u %0001 year' output to LaTeX tabular/longtable output for gcal.</summary>
+  </entry-point>
+  <entry-point binary-name="gcal-moon" command="gcal-moon">
+    <needs-terminal/>
+    <summary xml:lang="en">Displays the dates at which the next Full Moon and New Moon phases take place, p.</summary>
+    <description xml:lang="en">Displays the dates at which the next Full Moon and New Moon 
+phases take place, plus some additionally information
+about today's date.</description>
+  </entry-point>
+  <entry-point binary-name="gcal-mrms" command="gcal-mrms">
+    <needs-terminal/>
+    <summary xml:lang="en">Displays the times at which moon  has happened in the past respectively will happen in the future</summary>
+    <description xml:lang="en">Uses `mrms[.awk|.pl]' for processing the Gcal `mrms.rc' resource
+file to display the times at which moonrise/moonset has happened
+in the past respectively will happen in the future, based on
+the actual local time.  If a Gcal resource file is specified
+as program option, this resource file is used instead of the
+default resource file `mrms.rc'.</description>
+  </entry-point>
+  <entry-point binary-name="gcal-srss" command="gcal-srss">
+    <needs-terminal/>
+    <summary xml:lang="en">Displays the times at which sun has happened in the past respectively will happen in the future</summary>
+    <description xml:lang="en">Uses `srss[.awk|.pl]' for processing the Gcal `srss.rc' resource
+file to display the times at which sunrise/sunset has happened
+in the past respectively will happen in the future, based on
+the actual local time.  If a Gcal resource file is specified
+as program option, this resource file is used instead of the
+default resource file `srss.rc</description>
+  </entry-point>
+  <entry-point binary-name="gcal-wlocdrv" command="gcal-wlocdrv">
+    <needs-terminal/>
+    <summary xml:lang="en">Generates the Gcal resource file wlocdrv.rc and the wloc script text, which creates location files containing air line distances and course angles between several geographic locations around the world.</summary>
+    <description xml:lang="en">Uses `wlocdrv1[.awk|.pl]' and `wlocdrv2[.awk|.pl]'
+for processing the ZONE file `zone.tab' to generate the
+Gcal resource file `wlocdrv.rc' and the `wloc' script text,
+which creates location files containing air line distances
+and course angles between several geographic locations
+around the world.</description>
+  </entry-point>
+  <entry-point binary-name="gcal2txt" command="gcal2txt">
+    <needs-terminal/>
+    <summary xml:lang="en">Gcal2txt is  a  program  which  creates a text file from a verbatim Gcal resource file</summary>
+  </entry-point>
+  <entry-point binary-name="tcal" command="tcal">
+    <needs-terminal/>
+    <summary xml:lang="en">runs the Gcal program with the date of tomorrow's</summary>
+    <description xml:lang="en"> Tcal  is  a  program which runs gcal with a date set one
+       day ahead (equivalent the --shift=1 option).  All  given
+       arguments  are passed unmodified to the Gcal program. If
+       the Gcal program shall be called with another date  than
+       tomorrow's  date,  this  desired date can be selected by
+       using the --shift=[+|-]number option, in which [+|-]num-
+       ber  is the distance of days the desired date is distant
+       from the actual date (works only for  Gregorian  years).
+       The  --shift option must be given before all other argu-
+       ments which are passed to the Gcal program. An exit sta-
+       tus  of 0 means all processing is successfully done, any
+       other value means an error has occured.</description>
+  </entry-point>
+  <entry-point binary-name="txt2gcal" command="txt2gcal">
+    <needs-terminal/>
+    <summary xml:lang="en">creates a verbatim Gcal resource file from a</summary>
+    <description xml:lang="en"> Txt2gcal  is  a  program  which  creates a verbatim Gcal
+       resource file from a text file. If no text-file argument
+       is  given  or/but  a  single  `-' character, the program
+       reads and processes all input received from the standard
+       input  channel.  If  no  date-part  argument  is  given,
+       Txt2gcal creates a 0 for the date part. All results  are
+       always  shown  on  the  standard output channel. An exit
+       status of 0 means all processing is  successfully  done,
+       any other value means an error has occured.</description>
+  </entry-point>
+</interfacea>
+

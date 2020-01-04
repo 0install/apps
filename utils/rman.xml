@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/rman.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>PolyglotMan</name>
+  <summary xml:lang="en">PolyglotMan: convert man pages</summary>
+  <description xml:lang="en">PolyglotMan takes man pages from most of the popular flavors of UNIX and transforms them into any of a number of text source formats. In contrast to various man2html filters, which essentially translate bold and italic text and otherwise wrap the entire manual page in PRE tags, PolyglotMan tries to interpret the page and produce good HTML text that can be reflowed. Better translations are possible when working from source and some aspects of pages, like tables, require source input, as for instance the page for tbl itself. Several have written cgi programs for WWW to format man pages on the fly; these are collected in the contrib directory of the distribution. </description>
+  <category>Utility</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/polyglotman.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=8d0aac23ccd21d9342e8d063614fea027fc9d2f4" license="Artistic License" released="2003-10-18" version="3.2">
+    <command name="run" path="bin/rman.exe"/>
+    <manifest-digest sha256new="2VDLJYVXE3MNEQAORXX2GND44NEEQLSMSNN6AAYU3PSQXE5Z5A3A"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/polyglotman%20%28rman%29/3.2/polyglotman-3.2-bin.zip" size="54891" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="app-text/rman"/>
+  <package-implementation package="rman"/>
+  <entry-point binary-name="rman" command="run">
+    <needs-terminal/>
+    <summary xml:lang="en">PolyglotMan,  rman - reverse compile man pages from formatted form to a number of source formats</summary>
+    <description xml:lang="en">PolyglotMan   takes  man  pages from most of the popular
+       flavors of UNIX and transforms them into any of a number
+       of  text  source formats. PolyglotMan was formerly known
+       as RosettaMan. The name of the binary  is  still  called
+       rman  ,  for  scripts that depend on that name; mnemoni-
+       cally, just think &quot;reverse man&quot;. Previously  PolyglotMan
+       required  pages  to  be  formatted by nroff prior to its
+       processing. With version 3.0, it prefers [tn]roff source
+       and  usually  produces  results that are better yet. And
+       source processing is the only way to  translate  tables.
+       Source format translation is not as mature as formatted,
+       however, so try formatted translation as a backup.</description>
+  </entry-point>
+</interface>

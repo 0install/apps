@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/gri.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Gri</name>
+  <summary xml:lang="en">Gri: language for scientific graphics applications</summary>
+  <description xml:lang="en">Gri is an open-source language for scientific graphics programming. It is command-driven, as opposed to point/click, and its output is a PostScript file. Some users consider Gri similar to LaTeX, since both provide extensive power as a reward for tolerating a learning curve. Gri can make x-y graphs, contour graphs, and image graphs. Fine control is provided over all aspects of drawing, e.g. line widths, colors, and fonts. A TeX-like syntax provides the ability to use common Mathematical symbols. </description>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/gri.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/gri.png" type="image/png"/>
+  <category>Science</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/gri.htm</homepage>
+  <needs-terminal/>
+  <package-implementation distributions="Gentoo" package="sci-visualization/gri"/>
+  <package-implementation package="gri"/>
+  <implementation arch="Windows-i486" id="sha1new=33351071701a6921b382081beba5e7cd174f3c19" license="GPL v2 (GNU General Public License)" released="2006-01-29" version="2.12.10-3">
+    <requires interface="https://apps.0install.net/lib/libiconv" version="1.8..!1.9">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/devel/libintl.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/netcdf.xml">
+      <environment insert="." name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/popt.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/gri.exe"/>
+    <command name="gri_merge" path="bin/gri_merge">
+      <runner interface="https://apps.0install.net/perl/perl.xml"/>
+    </command>
+    <command name="gri_unpage" path="bin/gri_unpage">
+      <runner interface="https://apps.0install.net/perl/perl.xml"/>
+    </command>
+    <manifest-digest sha256new="CZA75JPRBSBNGH2RANGLYG5W24CWG6UYYPZBHID66GJN4ZHPFLHQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/gri/2.12.10/gri-2.12.10-bin.zip" size="591224" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/gri-bin.zip?raw=true" size="591224" type="application/zip"/>
+  </implementation>
+  <entry-point binary-name="gri" command="run">
+    <needs-terminal/>
+  </entry-point>
+  <entry-point binary-name="gri_merge" command="gri_merge">
+    <needs-terminal/>
+    <name xml:lang="en">gri_merge</name>
+    <summary xml:lang="en">Strings Gri PostScript files together.</summary>
+    <description xml:lang="en">USAGE (style 1):
+    gri_merge [OPTIONS] CxR a.ps b.ps ... &gt; merged_file.ps
+ Merges the files onto one page, in 'C' columns and 'R' rows.  The C*R
+ files are given in the order of words on a page.  The page is
+ presumed to be 8.5x11 in size, as are all the input files, and the
+ input files are sized to fit, and kept in natural scale.
+
+USAGE (style 2):
+    gri_merge [OPTIONS] xcm ycm enlarge a.ps [b.ps ...] &gt; merged_file.ps
+ Where `enlarge' is a scale factor applied after offsetting `xcm' to
+ the right and `ycm' upward.</description>
+  </entry-point>
+  <entry-point binary-name="gri_unpage" command="gri_unpage">
+    <needs-terminal/>
+    <name xml:lang="en">gri_unpage</name>
+  </entry-point>
+</interface>
+

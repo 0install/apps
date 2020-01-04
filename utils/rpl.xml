@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/rpl.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Rpl</name>
+  <summary xml:lang="en">Rpl: replace strings in multiple files</summary>
+  <description xml:lang="en">rpl is a UN*X text replacement utility. It will replace strings with new strings in multiple text files. It can work recursively over directories and supports limiting the search to specific file suffixes. 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/rpl.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/rpl.png" type="image/png"/>
+  <category>Utility</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/rpl.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=b72baf27426b202d3f7f5473c63964f1de0de316" license="GPL v2 (GNU General Public License)" released="2008-07-19" version="1.4.1-1">
+    <command name="run" path="bin/rpl.exe"/>
+    <manifest-digest sha256new="HQBETCJBHYEDRYJPBBYQKW7E7X4X65NVHKFFUIFVWMB6S6O7FSFA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/rpl/1.4.1-1/rpl-1.4.1-1-bin.zip" size="30644" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/rpl-1.4.1-1-bin.zip?raw=true" size="30644" type="application/zip"/>
+  </implementation>
+  <package-implementation package="app-text/rpl" distributions="Gentoo" />
+  <package-implementation package="misc/rpl" distributions="Ports" />
+  <package-implementation package="rpl" />
+  <entry-point command="run" binary-name="rpl">
+    <needs-terminal/>
+    <name xml:lang="en">rpl</name>
+    <summary xml:lang="en">rpl (RePLace) - replace strings in multiple files</summary>
+    <description xml:lang="en">rpl replaces old_str with new_str in all  target  files.
+       It  returns  the  number of strings replaced or a system
+       error code (non-zero) if there is an error.</description>
+  </entry-point>
+</interface>

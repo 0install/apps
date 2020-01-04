@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/lha.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Lha</name>
+  <summary xml:lang="en">Lha: archive files using LZW compression (.lzh files)</summary>
+  <description xml:lang="en">LHA is an archiving and compression utility for LHarc format archives. This unofficial version of lha is based on Version 1.00. This version supports extraction &amp; archiving using -lh5- &amp; -lh6- as well as extraction using -lh7- algorithm. </description>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/lha.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/lha.png" type="image/png"/>
+  <category>Utility</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/lha.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=275269534b7154490d70dcaaaa5eedcc1a4e93bb" license="lha" released="2005-11-19" version="1.14.9-1">
+    <command name="run" path="bin/lha.exe"/>
+    <manifest-digest sha256new="2SJE2IP7DHPCC7R6CWD6ML2PSMR62KZVOWABHLDEFEBD2C7DZCMQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/lha/1.14i-1/lha-1.14i-1-bin.zip" size="88852" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/lha-bin.zip?raw=true" size="88852" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="app-arch/lha"/>
+  <package-implementation package="lha"/>
+  <entry-point binary-name="lha" command="run">
+    <needs-terminal/>
+  </entry-point>
+</interface>

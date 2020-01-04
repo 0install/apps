@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/diction.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Diction</name>
+  <summary xml:lang="en">Diction: print wordy and commonly misused phrases in sentences</summary>
+  <description xml:lang="en">Diction and style are two old standard UNIX commands. Diction identifies wordy and commonly misused phrases. Style analyses surface characteristics of a document, including sentence length and other readability measures. 
+
+These programs cannot help you structure a document well, but they can help to avoid poor wording and compare the readability (not the understandability!) of your documents with others. Both commands support English and German documents. 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <category>Office</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/diction.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-i486" id="sha1new=9f184e8e3f51617a60f18c4c033c4c6f63d755aa" license="GPL v2 (GNU General Public License)" released="2007-09-13" version="1.11-3">
+    <requires interface="https://apps.0install.net/devel/gettext">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/libiconv">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/regex">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/diction.exe"/>
+    <command name="style" path="bin/style.exe"/>
+    <manifest-digest sha256new="4BJNBJA5D55SWGKBEYEVC6SCVGAT4ST34KRCZRN4P2QDXCT4S5NQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/diction/1.11/diction-1.11-bin.zip" size="83462" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/diction-bin.zip?raw=true" size="83462" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="app-text/diction"/>
+  <package-implementation package="diction"/>
+  <entry-point binary-name="diction" command="run">
+    <needs-terminal/>
+  </entry-point>
+  <entry-point binary-name="style" command="style">
+    <needs-terminal/>
+    <name xml:lang="en">Style</name>
+    <summary xml:lang="en">analyse surface characteristics of a document</summary>
+  </entry-point>
+</interface>

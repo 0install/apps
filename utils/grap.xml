@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/grap.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Grap</name>
+  <summary xml:lang="en">Grap: language for typesetting graphs</summary>
+  <description xml:lang="en">Grap is a language for typesetting graphs specified and first implemented by Brian Kernigan and Jon Bentley at Bell Labs. It is an expressive language for describing graphs an incorporating them in typeset documents. It is implemented as a preprocessor to Kernigan's pic language for describing languages, so any system that can use pic can use grap. 
+
+grap is a pic(1) pre-processor. It takes commands embedded in a troff(1) source file which are surrounded by .G1 and .G2 macros, and rewrites them into pic commands to display the graph. Other lines are copied. Output is always to the standard output, which is usually redirected. Input is from the given filenames, which are read in order. A filename of - is the standard input. If no filenames are given, input is read from the standard input. 
+
+Because grap is a pic preprocessor, and gnu pic will output TeX, it is possible to use grap with TeX. 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/grap.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/grap.png" type="image/png"/>
+  <category>Office</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/grap.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=90bfab80a827621682aa5096389a54aca154bf8d" license="BSD License (revised)" released="2008-10-28" version="1.43">
+    <command name="run" path="bin/grap.exe"/>
+    <manifest-digest sha256new="ZVHMAC7COACWT7OWTIS5S6UUVYCCLN6U5K4DKKMFVVQ2NJEU36DQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/grap/1.43/grap-1.43-bin.zip" size="305384" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/grap-1.43-bin.zip?raw=true" size="305384" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Ports" package="textproc/grap"/>
+  <entry-point binary-name="grap" command="run">
+    <needs-terminal/>
+  </entry-point>
+</interface>
+

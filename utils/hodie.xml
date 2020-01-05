@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/hodie.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Hodie</name>
+  <summary xml:lang="en">Hodie: print out the date and time in latin</summary>
+  <description xml:lang="en">Hodie prints out the current date and time in latin. 
+probably from https://sourceforge.net/projects/hodie/
+</description>
+  <category>Education</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/hodie.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=6ad95eb66dda01ffef1600793d40265846e67535" license="MIT/X Consortium License" released="2005-07-31" version="1.4">
+    <command name="run" path="bin/hodie.exe"/>
+    <manifest-digest sha256new="G7PZ6KPVTQHBD4OBSJQVG7GKQXZAYLHD7FVDIPVMSBRGYTEDVUBA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/hodie/1.4/hodie-1.4-bin.zip" size="21213" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/hodie-bin.zip?raw=true" size="21213" type="application/zip"/>
+  </implementation>
+  <entry-point binary-name="hodie" command="run">
+    <needs-terminal/>
+  </entry-point>
+</interface>
+

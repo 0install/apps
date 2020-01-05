@@ -30,6 +30,6 @@ jobs:
           git config --global user.email "webmaster@0install.net"
           echo "${{ secrets.GPG_KEY }}" | gpg --import -
       - name: Run 0repo
-        run: 0install run http://0install.net/tools/0repo.xml
+        run: 0install run --not-before 0.10 http://0install.net/tools/0repo.xml
       - name: Push public
         run: cd public && git push

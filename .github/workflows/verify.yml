@@ -24,4 +24,4 @@ jobs:
           mkdir incoming
       - name: Run 0repo
         env: {'NO_SIGN': '1'}
-        run: 0install run http://0install.net/tools/0repo.xml
+        run: 0install run --not-before 0.10 http://0install.net/tools/0repo.xml

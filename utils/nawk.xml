@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/nawk.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Nawk</name>
+  <summary xml:lang="en">Nawk: pattern scanning and text processing language</summary>
+  <description xml:lang="en">nawk is an interpreter for the AWK Programming Language. The AWK language is useful for manipulation of data files, text retrieval and processing, and for prototyping and experimenting with algorithms. nawk implements the AWK language as defined in Aho, Kernighan and Weinberger, The AWK Programming Language, Addison-Wesley Publishing, 1988. </description>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/nawk.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/nawk.png" type="image/png"/>
+  <category>System</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/nawk.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=38a8c05d4b7d9cd224d93470018e54609743328a" license="MIT/X Consortium License" released="2008-02-08" version="2007.10.23">
+    <command name="run" path="bin/nawk.exe"/>
+    <manifest-digest sha256new="4ZNI2HZ7ZFM5SQZXKLRXWB5TP3VCUL6QU5WIZ5ZAYIHK6QDTFC2Q"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/nawk/2007.10.23/nawk-2007.10.23-bin.zip" size="85614" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/nawk-bin.zip?raw=true" size="85614" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="sys-apps/nawk"/>
+  <package-implementation package="nawk"/>
+  <entry-point binary-name="nawk" command="run"/>
+</interface>
+

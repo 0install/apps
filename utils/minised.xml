@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/minised.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>MiniSed</name>
+  <summary xml:lang="en">Minised: stream editor</summary>
+  <description xml:lang="en">Sed (streams editor) isn't really a true text editor or text processor. Instead, it is used to filter text, i.e., it takes text input and performs some operation (or set of operations) on it and outputs the modified text. Sed is typically used for extracting part of a file using pattern matching or substituting multiple occurances of a string within a file. 
+
+MiniSed is the fast, small sed originally distributed in the GNU toolkit and still distributed with Minix -- but it's still better for some uses (in particular, faster and less memory-intensive). 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/minised.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/minised.png" type="image/png"/>
+  <category>System</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/minised.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=436dead7111a4538bd41b27a3b5253ff94139da6" license="GPL v2 (GNU General Public License)" released="2008-01-05" version="1.12">
+    <command name="run" path="bin/minised.exe"/>
+    <manifest-digest sha256new="QSNJIK6VTJAZY7EZEQ5AHUSLSGLVHWR6T5A2MCJDLECJOFEOKI7A"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/minised/1.12/minised-1.12-bin.zip" size="24790" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/minised-bin.zip?raw=true" size="24790" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="sys-apps/minised"/>
+  <package-implementation package="minised"/>
+  <entry-point binary-name="minised" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">sed</name>
+    <summary xml:lang="en">the stream editor</summary>
+    <description xml:lang="en">Sed  copies  the named files (standard input default) to
+       the standard output, edited according  to  a  script  of
+       commands.</description>
+  </entry-point>
+</interface>
+

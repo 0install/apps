@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/jwhois.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Jwhois</name>
+  <summary xml:lang="en">Jwhois: client for the whois service</summary>
+  <description xml:lang="en">JWHOIS is an Internet Whois client that contains an extensible configuration file which defines its operation. The client supports queries to foreign hosts either through the RFC 954 - NICNAME/WHOIS protocol, the RFC 2167 - Referral Whois 1.5 protocol, or HTTP using an external browser. 
+
+Upon execution, JWHOIS searches through the its configuration to find the most specific whois server to query. Depending upon the reply from that whois server, JWHOIS can assume the query was successfull and display the result to the user, or optionally redirect the query to another server to find more specific information. 
+</description>
+  <icon href="http://gnuwin32.sourceforge.net/favicon.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <category>Network</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/jwhois.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-i486" id="sha1new=d9080300995a44ba6aa779e1a4fa45bc623f0e5a" license="GPL v2 (GNU General Public License)" released="2005-09-09" version="3.2.3-3">
+    <requires interface="https://apps.0install.net/devel/libintl.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/devel/gettext.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/gdbm.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/jwhois.exe"/>
+    <manifest-digest sha256new="Y6FU65JXFCZOJEFY4L5DYOEKA3AJGVXX6RZTRUK7NCCU7G2MK3MQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/jwhois/3.2.3/jwhois-3.2.3-bin.zip" size="159532" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/jwhois-bin.zip?raw=true" size="159532" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="net-misc/jwhois"/>
+  <package-implementation package="jwhois"/>
+  <entry-point binary-name="jwhois" command="run">
+    <needs-terminal/>
+  </entry-point>
+</interface>
+

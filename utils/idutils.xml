@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/idutils.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Id-Utils</name>
+  <summary xml:lang="en">Id-Utils: tools for indexing</summary>
+  <description xml:lang="en">An &quot;ID database&quot; is a binary file containing a list of file names, a list of tokens, and a sparse matrix indicating which tokens appear in which files. 
+
+With this database and some tools to query it, many text-searching tasks become simpler and faster. For example, you can list all files that reference a particular `#include' file throughout a huge source hierarchy, search for all the memos containing references to a project, or automatically invoke an editor on all files containing references to some function or variable. Anyone with a large software project to maintain, or a large set of text files to organize, can benefit from the ID utilities. 
+
+Although the name `ID' is short for `identifier', the ID utilities handle more than just identifiers; they also treat other kinds of tokens, most notably numeric constants, and the contents of certain character strings. 
+
+Programs included are: 
+•mkid: Creating an ID database. 
+•lid: Matching words and patterns. 
+•fid: Listing a file's tokens. 
+•fnid: Looking up file names. 
+•xtokid: Testing mkid scanners. 
+</description>
+  <icon href="http://gnuwin32.sourceforge.net/favicon.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <category>Development</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/id-utils.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-i486" id="sha1new=ed7d071b81b9eb9226677e6b1cbfa1a0f871af9b" license="GPL v2 (GNU General Public License)" released="2006-03-09" version="4.0-2-3">
+    <requires interface="https://apps.0install.net/devel/libintl.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/libiconv.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/fid.exe"/>
+    <command name="fnid" path="bin/fnid.exe"/>
+    <command name="lid" path="bin/lid.exe"/>
+    <command name="mkid" path="bin/mkid.exe"/>
+    <command name="xtokid" path="bin/xtokid.exe"/>
+    <manifest-digest sha256new="66VK2GDNRIGZRC7TIGLNBMI45MJN3JUTJYRICEPC66YOM4ZITEFA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/id-utils/4.0-2/id-utils-4.0-2-bin.zip" size="381703" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/id-utils-bin.zip?raw=true" size="381703" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="dev-util/idutils"/>
+  <package-implementation package="idutils"/>
+  <entry-point binary-name="fid" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">Fid</name>
+    <summary xml:lang="en">Fid: list identifiers that occur in FILENAME</summary>
+  </entry-point>
+  <entry-point binary-name="fnid" command="fnid">
+    <needs-terminal/>
+    <name xml:lang="en">Fnid</name>
+    <summary xml:lang="en">Fnid: print constituent file names that match PATTERN</summary>
+  </entry-point>
+  <entry-point binary-name="lid" command="lid">
+    <needs-terminal/>
+    <name xml:lang="en">Lid</name>
+    <summary xml:lang="en">Lid: query ID database and report results</summary>
+  </entry-point>
+  <entry-point binary-name="mkid" command="mkid">
+    <needs-terminal/>
+    <name xml:lang="en">Mkid</name>
+    <summary xml:lang="en">Mkid: build an identifier database</summary>
+  </entry-point>
+  <entry-point binary-name="xtokid" command="xtokid">
+    <needs-terminal/>
+    <name xml:lang="en">Xtokid</name>
+    <summary xml:lang="en">Xtokid: print all tokens found in a source file</summary>
+  </entry-point>
+</interface>
+

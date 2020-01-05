@@ -7,9 +7,8 @@
   <homepage>http://cairographics.org/pycairo/</homepage>
 
   <group>
-    <restricts interface="https://apps.0install.net/python/python.xml">
-      <version before="4" not-before="3"/>
-    </restricts>
+    <restricts interface="https://apps.0install.net/python/python.xml" version="3..!4"/>
+    <restricts interface="http://repo.roscidus.com/python/python" version="3..!4"/>
 
     <package-implementation distributions="Debian" package="python3-cairo"/>
     <package-implementation distributions="Arch" package="python-cairo">
@@ -18,9 +17,8 @@
   </group>
 
   <group>
-    <restricts interface="https://apps.0install.net/python/python.xml">
-      <version before="3" not-before="2"/>
-    </restricts>
+    <restricts interface="https://apps.0install.net/python/python.xml" version="2..!3"/>
+    <restricts interface="http://repo.roscidus.com/python/python" version="2..!3"/>
 
     <package-implementation distributions="Debian" package="python-cairo"/>
     <package-implementation distributions="Arch" package="python2-cairo2"/>
@@ -28,6 +26,7 @@
 
   <group license="LGPL (GNU Lesser General Public License)">
     <restricts interface="https://apps.0install.net/python/python.xml" version="2.7..!2.8" />
+    <restricts interface="http://repo.roscidus.com/python/python" version="2.7..!2.8" />
     <requires interface="https://apps.0install.net/lib/gtk.xml" version="2.22..!3" />
     <environment name="PYTHONPATH" insert="." />
 

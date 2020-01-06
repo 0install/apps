@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/ttf2pt1.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Ttf2Pt1</name>
+  <summary xml:lang="en">Ttf2Pt1: convert truetype font to postscript type-1 font</summary>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/ttf2pt1.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/ttf2pt1.png" type="image/png"/>
+  <category>System</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/ttf2pt1.htm</homepage>
+  <needs-terminal/>
+  <group arch="Windows-i486" license="BSD License (original)" released="2004-01-02">
+    <command name="bz" path="bin/bz.exe"/>
+    <command name="cmpf" path="bin/cmpf.exe"/>
+    <command name="dmpf" path="bin/dmpf.exe"/>
+    <command name="nsfix" path="bin/nsfix.exe"/>
+    <command name="t1asm" path="bin/t1asm.exe"/>
+    <command name="run" path="bin/ttf2pt1.exe"/>
+    <command name="ttf2pt1_convert" path="bin/ttf2pt1_convert">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <requires interface="https://apps.0install.net/utils/gawk.xml">
+        <executable-in-path name="awk"/>
+      </requires>
+      <requires interface="https://apps.0install.net/utils/sed.xml">
+        <executable-in-path name="sed"/>
+      </requires>
+      <requires interface="https://apps.0install.net/utils/grep.xml">
+        <executable-in-path name="grep"/>
+      </requires>
+      <requires interface="hhttps://apps.0install.net/utils/findutils.xml">
+        <executable-in-path name="find"/>
+      </requires>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <command name="ttf2pt1_x2gs" path="bin/ttf2pt1_x2gs">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <requires interface="https://apps.0install.net/utils/sed.xml">
+        <executable-in-path name="sed"/>
+      </requires>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
+    </command>
+    <implementation id="sha1new=668890c1610ce73881b42261f1a193646ec9192e" version="3.4.4-3">
+      <requires interface="https://apps.0install.net/devel/freetype.xml">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <requires interface="https://apps.0install.net/lib/t1lib.xml" version="5.1.0-0">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <requires interface="https://apps.0install.net/lib/zlib.xml">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+      <manifest-digest sha256new="V7DIORWNVMM7MHAOVGOSRMHGNJOI3B2BPTPT7T5VBZIXF43PHBAQ"/>
+      <archive href="https://sourceforge.net/projects/gnuwin32/files/ttf2pt1/3.4.4/ttf2pt1-3.4.4-bin.zip" size="311889" type="application/zip"/>
+      <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/ttf2pt1-bin.zip?raw=true" size="311889" type="application/zip"/>
+    </implementation>
+  </group>
+  <package-implementation distributions="Gentoo" package="app-text/ttf2pt1"/>
+  <package-implementation package="ttf2pt1"/>
+  <entry-point binary-name="ttf2pt1" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">Ttf2Pt1</name>
+    <summary xml:lang="en">Ttf2Pt1: convert truetype font to postscript type-1 font</summary>
+    <description xml:lang="en">Ttf2pt1 is a font converter from the True Type format
+       (and some other formats supported by the FreeType
+       library as well) to the Adobe Type1 format.</description>
+  </entry-point>
+  <entry-point binary-name="ttf2pt1_convert" command="ttf2pt1_convert">
+    <needs-terminal/>
+    <name xml:lang="en">ttf2pt1_convert</name>
+    <summary xml:lang="en">ttf2pt1_convert: convenience font conversion script</summary>
+    <description xml:lang="en">`Convert' is the master conversion script provided with
+       ttf2pt1.  When installed into a public directory it's
+       named `ttf2pt1_convert' to avoid name collisions with
+       the other programs.</description>
+  </entry-point>
+  <entry-point binary-name="ttf2pt1_x2gs" command="ttf2pt1_x2gs">
+    <needs-terminal/>
+    <name xml:lang="en">ttf2pt1_x2gs</name>
+    <summary xml:lang="en">ttf2pt1_x2gs: font installer for Ghostscript</summary>
+    <description xml:lang="en">The fonts generated with ttf2pt1 work fine with
+       Ghostscript by themselves. The script `x2gs' (or
+       `ttf2pt1_x2gs' when installed into a public directory,
+       to avoid name conflicts with other programs) links the
+       font files from the X11 direcotry into the Ghostscript
+       directory and automatically creates the description file
+       (Fontmap) in Ghostscript format.</description>
+  </entry-point>
+</interface>
+

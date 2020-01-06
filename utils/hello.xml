@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/hello.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Hello</name>
+  <summary xml:lang="en">Hello: GNU greeting program</summary>
+  <description xml:lang="en">Writing a program that prints &quot;Hello, world!&quot; is the classic beginner's programming task. The GNU version takes this a step further by processing its argument list to modify its behavior, by supporting internationalization, and by including a mail reader. 
+
+The primary purpose of this program is to demonstrate how to write other programs that do these things; it serves as a model for all of the GNU coding standards. 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <homepage>http://gnuwin32.sourceforge.net/packages/hello.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-i486" id="sha1new=c9a38f045425dfc3bb6adf0c0487869d73459071" license="GPL v1 (GNU General Public License)" released="2008-12-10" version="2.4-3">
+    <requires interface="https://apps.0install.net/devel/libintl.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/libiconv.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/hello.exe"/>
+    <manifest-digest sha256new="L5YZDKCGBTIBGOOC3GX42N4JKIXXXUXX2VSDTV253UVPMAONEUBQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/hello/2.4/hello-2.4-bin.zip" size="190533" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/hello-2.4-bin.zip?raw=true" size="190533" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="app-misc/hello"/>
+  <package-implementation package="hello"/>
+  <entry-point binary-name="hello" command="run">
+    <needs-terminal/>
+  </entry-point>
+</interface>
+

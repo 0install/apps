@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/lib/pdfliblight.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>PDFlib-Lite</name>
+  <summary xml:lang="en">PDFLib-Lite: library for writing PDF files</summary>
+  <description xml:lang="en">PDFlib is a development tool for PDF-enabling your software, or generating PDF on your server. PDFlib saves you the intricate details of PDF generation by offering a simple-to-use API for programmatically creating PDF files from within your own server- or client-side software. PDFlib doesn't make use of third-party software for generating PDF, nor does it require any other tools. 
+
+The PDFlib software in this release is PDFlib Lite, an Open-source edition for basic PDF generation, free for personal use. 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/lib/pdfliblight.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/lib/pdfliblight.png" type="image/png"/>
+  <category>Graphics</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/pdflib-lite.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-i486" id="sha1new=a8d571fc7e5ef84f1b67683322b591c049d8619b" license="Free for home use" released="2005-08-13" version="6.0.2">
+    <command name="run" path="bin/pdfimage.exe"/>
+    <command name="pdfimpose" path="bin/pdfimpose.exe"/>
+    <command name="text2pdf" path="bin/text2pdf.exe"/>
+    <manifest-digest sha256new="Y3J7B325TZ7WWFNFKNDIYJLNHZNGI7U6LSIZQTHVQY4V4CZ7LWOQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/pdflib-lite/6.0.2/pdflib-lite-6.0.2-bin.zip" size="519505" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/pdflib-lite-bin.zip?raw=true" size="519505" type="application/zip"/>
+  </implementation>
+  <entry-point binary-name="pdfimage" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">pdfimage</name>
+    <summary xml:lang="en">pdfimage: convert images to PDF.</summary>
+  </entry-point>
+  <entry-point binary-name="pdfimpose" command="pdfimpose">
+    <needs-terminal/>
+    <name xml:lang="en">pdfimpose</name>
+    <summary xml:lang="en">pdfimpose: impose multiple PDF documents on a single sheet.</summary>
+  </entry-point>
+  <entry-point binary-name="text2pdf" command="text2pdf">
+    <needs-terminal/>
+    <name xml:lang="en">text2pdf</name>
+    <summary xml:lang="en">text2pdf - convert text files to PDF.</summary>
+  </entry-point>
+</interface>
+

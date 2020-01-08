@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd" uri="https://apps.0install.net/utils/imageworsener.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>ImageWorsener</name>
+  <summary xml:lang="en">ImageWorsener is a cross-platform command-line utility and library for image scaling and other image processing.</summary>
+  <description xml:lang="en">ImageWorsener is a cross-platform command-line utility and library for image scaling and other image processing. It has full support for PNG, JPEG, BMP formats, experimental support for WebP, read-only support for GIF, and limited support for some other image formats. It’s not as fast or memory-efficient as some utilities, but it’s very accurate.</description>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/imageworsener.ico" type="image/vnd.microsoft.icon" />
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/utils/imageworsener.png" type="image/png" />
+  <category>Graphics</category>
+  <homepage>http://entropymine.com/imageworsener/</homepage>
+  <needs-terminal />
+  <group arch="Windows-*"  license="MIT/X Consortium License">
+    <command name="run" path="imagew.exe" />
+    <group version="1.3.3" released="2018-10-19">
+      <implementation arch="Windows-i386" id="sha1new=c054743a6b62c6739cfaf4d820f69e9e74074fd2">
+        <manifest-digest sha256new="FF5OWCAMFXD43TV5ABFNGCNNGXZPH4A7N4K5MJM3756PUDUJK4VQ" />
+        <archive href="http://entropymine.com/imageworsener/imageworsener-win32-1.3.3.zip" size="517727" type="application/zip" />
+      </implementation>
+      <implementation arch="Windows-x86_64" id="sha1new=5e361059ae267a9b7b5367a5dce9cd99dceb9caf">
+        <manifest-digest sha256new="FKJI2B27BHOQL5H5NF4BOQUE3LNZSK5HTTA7UOJMNY4V7EVNRI6A" />
+        <archive href="http://entropymine.com/imageworsener/imageworsener-win64-1.3.3.zip" size="561019" type="application/zip" />
+      </implementation>
+    </group>
+  </group>
+  <package-implementation package="media-gfx/imageworsener" distributions="Gentoo" />
+  <package-implementation package="imageworsener" />
+  <entry-point command="run" binary-name="imagew" />
+</interface>

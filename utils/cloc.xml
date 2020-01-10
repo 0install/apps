@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/cloc.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>cloc</name>
+  <summary xml:lang="en">Count Lines of Code</summary>
+  <description xml:lang="en">cloc counts blank lines, comment lines, and physical lines of source code in many programming languages.</description>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/perl/perl.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/perl/perl.png" type="image/png"/>
+  <category>Development</category>
+  <homepage>https://github.com/AlDanial/cloc</homepage>
+  <needs-terminal/>
+  <group license="GPL v2 (GNU General Public License)">
+    <group released="2019-09-22" version="1.84">
+      <implementation id="sha1new=c69c241a7f3df167ad82060d7f6243dcf2b5b94e">
+        <requires importance="recommended" interface="https://apps.0install.net/perl//Parallel-ForkManager.xml">
+          <environment insert="lib" name="PERL5LIB"/>
+        </requires>
+        <requires importance="recommended" interface="https://apps.0install.net/perl//Regex-Common.xml">
+          <environment insert="lib" name="PERL5LIB"/>
+        </requires>
+        <requires importance="recommended" interface="https://apps.0install.net/perl//Algorithm-Diff.xml">
+          <environment insert="lib" name="PERL5LIB"/>
+        </requires>
+        <command name="run" path="cloc-1.84.pl">
+          <runner command="perl" interface="https://apps.0install.net/perl/perl.xml" version="5.6..!6"/>
+        </command>
+        <manifest-digest sha256new="RJEIAU3RNF6XG6BYSDEBYUXQ2LA7TM63QB6NJBOYVGMN6VFOQGXA"/>
+        <file dest="cloc-1.84.pl" href="https://github.com/AlDanial/cloc/releases/download/1.84/cloc-1.84.pl" size="592907"/>
+      </implementation>
+      <implementation id="sha1new=f671af4c3fb3363044d9886b705cd610c46a4856" main="cloc">
+        <requires importance="recommended" interface="https://apps.0install.net/perl/Parallel-ForkManager.xml">
+          <environment insert="lib" name="PERL5LIB"/>
+        </requires>
+        <requires importance="recommended" interface="https://apps.0install.net/perl/Regex-Common.xml">
+          <environment insert="lib" name="PERL5LIB"/>
+        </requires>
+        <requires importance="recommended" interface="https://apps.0install.net/perl/Algorithm-Diff.xml">
+          <environment insert="lib" name="PERL5LIB"/>
+        </requires>
+        <command name="run" path="cloc">
+          <runner command="perl" interface="https://apps.0install.net/perl/perl.xml" version="5.6..!6"/>
+        </command>
+        <manifest-digest sha256new="BSH7MFJKCZ5ZRMQKUIHTMFVMQRLJZ7VPMJAC7V36C7JQLKROUVLQ"/>
+        <archive extract="cloc-1.84" href="https://github.com/AlDanial/cloc/releases/download/1.84/cloc-1.84.tar.gz" size="518583" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-*" id="sha1new=059fbf9b650a52401b83fe9364579945b6791d7e" version-modifier="1">
+        <command name="run" path="cloc-1.84.exe"/>
+        <manifest-digest sha256new="V75JCM566YZDPZYNMOEGH3CT5QHFZ4NPSZPJ6D2Y77JVQR4NN74Q"/>
+        <file dest="cloc-1.84.exe" href="https://github.com/AlDanial/cloc/releases/download/1.84/cloc-1.84.exe" size="9145437"/>
+      </implementation>
+    </group>
+    <implementation id="sha1new=89bd89610030fcec17c6eaa3790433618a10955e" version="1.76">
+      <requires importance="recommended" interface="https://apps.0install.net/perl/Parallel-ForkManager.xml">
+        <environment insert="lib" name="PERL5LIB"/>
+      </requires>
+      <requires importance="recommended" interface="https://apps.0install.net/perl/Regex-Common.xml">
+        <environment insert="lib" name="PERL5LIB"/>
+      </requires>
+      <requires importance="recommended" interface="https://apps.0install.net/perl/Algorithm-Diff.xml">
+        <environment insert="lib" name="PERL5LIB"/>
+      </requires>
+      <command name="run" path="bin/cloc">
+        <runner command="perl" interface="https://apps.0install.net/perl/perl.xml" version="5.8..!6"/>
+      </command>
+      <manifest-digest sha256new="X47AJJ623IH3B4PKNQR435IKZCUVVI2GXM7GAGT4FXRIACQ6CO4A"/>
+      <archive extract="App-cloc-1.76" href="https://cpan.metacpan.org/authors/id/F/FI/FIBO/App-cloc-1.76.tar.gz" size="100375" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+  <package-implementation distributions="Gentoo" package="dev-util/cloc"/>
+  <package-implementation distributions="Ports" package="misc/cloc"/>
+  <package-implementation package="cloc"/>
+  <entry-point binary-name="cloc" command="run"/>
+</interface>
+

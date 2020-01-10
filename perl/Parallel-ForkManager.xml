@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/perl/Parallel-ForkManager.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Parallel-ForkManager</name>
+  <summary xml:lang="en">A simple parallel processing fork manager</summary>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/perl/perl.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/perl/perl.png" type="image/png"/>
+  <description xml:lang="en">This module is intended for use in operations that can be done in parallel where the number of processes to be forked off should be limited. Typical use is a downloader which will be retrieving hundreds/thousands of files.</description>
+  <category>Development</category>
+  <homepage>https://metacpan.org/pod/Parallel::ForkManager</homepage>
+  <needs-terminal/>
+  <implementation id="sha1new=bd5a98facadf236f8e9dc90b51a5f47efa531155" license="Perl License" released="2018-10-08" version="2.2">
+    <command name="run" path="examples/parallel_get.pl">
+      <environment insert="lib" name="PERL5LIB"/>
+      <runner command="perl" interface="https://apps.0install.net/perl/perl.xml" version="5.6..!6"/>
+    </command>
+    <command name="Makefile" path="Makefile.PL">
+      <runner command="perl" interface="https://apps.0install.net/perl/perl.xml" version="5.6..!6"/>
+    </command>
+    <command name="callback" path="examples/callback.pl">
+      <environment insert="lib" name="PERL5LIB"/>
+      <runner command="perl" interface="https://apps.0install.net/perl/perl.xml" version="5.6..!6"/>
+    </command>
+    <command name="callback_data" path="examples/callback_data.pl">
+      <environment insert="lib" name="PERL5LIB"/>
+      <runner command="perl" interface="https://apps.0install.net/perl/perl.xml" use="5.6..!6"/>
+    </command>
+    <manifest-digest sha256new="WSHHU7CBRH4BHOXZAGULISBQHK5QIEQJVU4RKMRACFFI36LDFOFQ"/>
+    <archive extract="Parallel-ForkManager-2.02" href="https://cpan.metacpan.org/authors/id/Y/YA/YANICK/Parallel-ForkManager-2.02.tar.gz" size="33457" type="application/x-compressed-tar"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="dev-perl/Parallel-ForkManager"/>
+  <package-implementation distributions="Arch" package="perl-parallel-forkmanager"/>
+  <package-implementation package="libparallel-forkmanager-perl"/>
+  <package-implementation distributions="MacPorts" package="p5.30-parallel-forkmanager"/>
+  <package-implementation distributions="Ports" package="devel/p5-Parallel-ForkManager"/>
+  <package-implementation distributions="Slack" package="perl-parallel-forkmanager"/>
+  <package-implementation distributions="RPM" package="perl-Parallel-ForkManager"/>
+  <entry-point binary-name="parallel_get" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">parallel_get</name>
+    <summary xml:lang="en">This small example can be used to get URLs in parallel.</summary>
+  </entry-point>
+  <entry-point binary-name="callback" command="callback">
+    <needs-terminal/>
+    <name xml:lang="en">callback</name>
+    <summary xml:lang="en">Example of a program using callbacks to get child exit codes</summary>
+  </entry-point>
+  <entry-point binary-name="callback_data" command="callback_data">
+    <needs-terminal/>
+    <name xml:lang="en">callback_data</name>
+    <summary xml:lang="en">Setup a callback for when a child finishes up so we can get it's exit code and any data it collected</summary>
+  </entry-point>
+</interface>

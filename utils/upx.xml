@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/upx.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>UPX</name>
+  <summary xml:lang="en">UPX executable packer</summary>
+  <description xml:lang="en">the Ultimate Packer for eXecutables</description>
+  <category>Utility</category>
+  <homepage>https://upx.github.io/</homepage>
+  <needs-terminal/>
+  <group license="GPL v2+ (GNU General Public License)" released="2018-08-25" version="3.95">
+    <command name="run" path="upx"/>
+    <implementation arch="Windows-x86_64" id="sha1new=1bf2480ef0e60f61c9133d609b14bf36b53a1eba">
+      <manifest-digest sha256new="LOEX77G3GCKACC4OXU4OJAJZNRUJZZ7IUN3IAFBIXNW2FVN6GDWA"/>
+      <archive extract="upx-3.95-win64" href="https://github.com/upx/upx/releases/download/v3.95/upx-3.95-win64.zip" size="462820" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=1277564ba3a8ead9f57ad5208811c9f947412019">
+      <manifest-digest sha256new="KN6AI7O6WSXJAAGVUFDFFIBZL43V66O7ZCE3T4YCFSOP3EX53NSA"/>
+      <archive extract="upx-3.95-win32" href="https://github.com/upx/upx/releases/download/v3.95/upx-3.95-win32.zip" size="460937" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" id="sha1new=ad3e9aee1e51387558b836e3492957fd7e631fb8">
+      <manifest-digest sha256new="UOCIQ245T5JP4PE6HH5TVA226XVHKSFHW5CNGYKCBV3QJLB3RB3Q"/>
+      <archive extract="upx-3.95-powerpc64le_linux" href="https://github.com/upx/upx/releases/download/v3.95/upx-3.95-powerpc64le_linux.tar.xz" size="498012" type="application/x-xz-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-ppc" id="sha1new=df88b4bd0d1171502ccbf8451cc3405dcb6fc616">
+      <manifest-digest sha256new="3B6J36WKHYXUPHEAE37MKM25KZYXZ6BFRZGB6JLGSBSBWKBWUFCA"/>
+      <archive extract="upx-3.95-powerpc_linux" href="https://github.com/upx/upx/releases/download/v3.95/upx-3.95-powerpc_linux.tar.xz" size="473136" type="application/x-xz-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=8032a03ecf65542f10270627330025dfbd81ecd6">
+      <manifest-digest sha256new="WFE77Y7KC2OYM4GUIAZHKNCOWKM2LEEZJMGTE4UGKWJV3QHE2C2Q"/>
+      <archive extract="upx-3.95-i386_linux" href="https://github.com/upx/upx/releases/download/v3.95/upx-3.95-i386_linux.tar.xz" size="477560" type="application/x-xz-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-unknown" id="sha1new=677bdb9159db7ec99684ef3e283a4c13073d4dd7">
+      <manifest-digest sha256new="VJ42FPTOEC5C6LX5KNB2YTVS7H33W67NS7Y4DA4W2DZ5LCD233VQ"/>
+      <archive extract="upx-3.95-arm_linux" href="https://github.com/upx/upx/releases/download/v3.95/upx-3.95-arm_linux.tar.xz" size="417600" type="application/x-xz-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=c76d7e67841828176bc704a980c045561309e6de">
+      <manifest-digest sha256new="BDCVFUHXSYQOIAD7YZFF4A6VL4X7CVFL655XDLSBR7AMQBEA6XPQ"/>
+      <archive extract="upx-3.95-amd64_linux" href="https://github.com/upx/upx/releases/download/v3.95/upx-3.95-amd64_linux.tar.xz" size="456788" type="application/x-xz-compressed-tar"/>
+    </implementation>
+  </group>
+  <entry-point binary-name="upx" command="run"/>
+</interface>
+

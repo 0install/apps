@@ -2,7 +2,7 @@
 name: Update
 on:
   schedule:
-    - cron: '0 0 * * *' # daily at midnight UTC
+    - cron: '0 2 * * *'
 
 jobs:
   windows:
@@ -64,6 +64,7 @@ jobs:
         if: env.NEW_INCOMING
         uses: peter-evans/create-pull-request@v2.1.0
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           path: feeds
           branch: automatic-updates
           title: Automatic updates

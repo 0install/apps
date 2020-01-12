@@ -10,6 +10,7 @@
 
   <feed src="https://apps.0install.net/gui/gitextensions-2.xml"/>
   <feed src="https://apps.0install.net/gui/gitextensions-3.xml" arch="Windows-*"/>
+  <package-implementation distributions="Virtual" package="gitextensions" main="/usr/bin/gitextensions"/><!-- Prevent this virtual feed from being seen as a library feed -->
 
   <entry-point binary-name="GitExtensions" command="run">
     <name>GitExtensions</name>

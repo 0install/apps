@@ -1,51 +1,102 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
 <interface uri="https://apps.0install.net/python/pywin32.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>PyWin32</name>
-  <summary>Python for Windows Extensions </summary>
+  <summary>Python for Windows Extensions</summary>
   <description>The Python for Windows Extensions provide bindings for the Win32 API.</description>
   <homepage>https://github.com/mhammond/pywin32</homepage>
 
   <group license="Python License">
-    <environment name="PATH" insert="pywin32_system32" />
-    <environment name="PYTHONPATH" insert="." />
-    <environment name="PYTHONPATH" insert="win32" />
-    <environment name="PYTHONPATH" insert="win32/lib" />
-    <environment name="PYTHONPATH" insert="pythonwin" />
+    <environment insert="pywin32_system32" name="PATH"/>
+    <environment insert="." name="PYTHONPATH"/>
+    <environment insert="win32" name="PYTHONPATH"/>
+    <environment insert="win32/lib" name="PYTHONPATH"/>
+    <environment insert="pythonwin" name="PYTHONPATH"/>
 
     <group>
       <restricts interface="https://apps.0install.net/python/python.xml" version="2.7..!2.8"/>
-      <implementation arch="Windows-x86_64" version="220" released="2016-01-11" stability="stable" id="sha1new=82da03f13a26ea30f73eab20c594155b4e7a99ff">
-        <manifest-digest sha1new="82da03f13a26ea30f73eab20c594155b4e7a99ff" sha256="b41e75de8c3a90800f7fd5e759f65ea1afef9c5425353fa1f4c899f3738c63f5" sha256new="WQPHLXUMHKIIAD372XTVT5S6UGX67HCUEU2T7IPUZCM7G44MMP2Q" />
-        <archive href="pywin32-220.win-amd64-py2.7.tar.bz2" size="6761214" type="application/x-bzip-compressed-tar" />
+      <implementation arch="Windows-x86_64" id="sha1new=82da03f13a26ea30f73eab20c594155b4e7a99ff" released="2016-01-11" stability="stable" version="220">
+        <manifest-digest sha1new="82da03f13a26ea30f73eab20c594155b4e7a99ff" sha256="b41e75de8c3a90800f7fd5e759f65ea1afef9c5425353fa1f4c899f3738c63f5" sha256new="WQPHLXUMHKIIAD372XTVT5S6UGX67HCUEU2T7IPUZCM7G44MMP2Q"/>
+        <archive href="pywin32-220.win-amd64-py2.7.tar.bz2" size="6761214" type="application/x-bzip-compressed-tar"/>
       </implementation>
-      <implementation arch="Windows-i486" version="220" released="2016-01-11" stability="stable" id="sha1new=b183810d9f9587c4b15eff3cfc411d6051ad80f9">
-        <manifest-digest sha1new="b183810d9f9587c4b15eff3cfc411d6051ad80f9" sha256="10ad28d68ccad186eb335a02b3ec7f1b5809b8f396206fb051981a8cfde607f0" sha256new="CCWSRVUMZLIYN2ZTLIBLH3D7DNMATOHTSYQG7MCRTANIZ7PGA7YA" />
-        <archive href="pywin32-220.win32-py2.7.tar.bz2" size="6133618" type="application/x-bzip-compressed-tar" />
+      <implementation arch="Windows-i486" id="sha1new=b183810d9f9587c4b15eff3cfc411d6051ad80f9" released="2016-01-11" stability="stable" version="220">
+        <manifest-digest sha1new="b183810d9f9587c4b15eff3cfc411d6051ad80f9" sha256="10ad28d68ccad186eb335a02b3ec7f1b5809b8f396206fb051981a8cfde607f0" sha256new="CCWSRVUMZLIYN2ZTLIBLH3D7DNMATOHTSYQG7MCRTANIZ7PGA7YA"/>
+        <archive href="pywin32-220.win32-py2.7.tar.bz2" size="6133618" type="application/x-bzip-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" id="sha1new=5ad6d1e7b0460af274ebee8ed7e60d4e04033451" released="2019-11-14" stability="stable" version="227">
+        <manifest-digest sha256new="A3B7BPTE5XCJUEVWSHHGO3SSBMTB2J5LZLMLDSJJ5NWDRIMGF7HQ"/>
+        <archive href="pywin32-227.win-amd64-py2.7.tar.gz" size="7193349" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-i486" id="sha1new=629289e2027bc7cda8bba902cd1d6b0e39ea6c12" released="2019-11-14" stability="stable" version="227">
+        <manifest-digest sha256new="ZOLMGN6IUGOQV2ZF4DKOJOKXPT2PDJIJQPYWR6MRGNT2ZUQVAR2Q"/>
+        <archive href="pywin32-227.win32-py2.7.tar.gz" size="6610245" type="application/x-compressed-tar"/>
       </implementation>
     </group>
- 
+
     <group>
       <restricts interface="https://apps.0install.net/python/python.xml" version="3.4..!3.5"/>
-      <implementation arch="Windows-x86_64" version="220" released="2016-01-11" stability="stable" id="sha1new=4498574d9a9fd5e00384881e471778ff71689d4d">
-        <manifest-digest sha1new="4498574d9a9fd5e00384881e471778ff71689d4d" sha256="4069b5d8d3dc94dc627191dbc8e5e0ce8619895baa3b71cf0c9bb10089033457" sha256new="IBU3LWGT3SKNYYTRSHN4RZPAZ2DBTCK3VI5XDTYMTOYQBCIDGRLQ" />
-        <archive href="pywin32-220.win-amd64-py3.4.tar.bz2" size="7764554" type="application/x-bzip-compressed-tar" />
+      <implementation arch="Windows-x86_64" id="sha1new=4498574d9a9fd5e00384881e471778ff71689d4d" released="2016-01-11" stability="stable" version="220">
+        <manifest-digest sha1new="4498574d9a9fd5e00384881e471778ff71689d4d" sha256="4069b5d8d3dc94dc627191dbc8e5e0ce8619895baa3b71cf0c9bb10089033457" sha256new="IBU3LWGT3SKNYYTRSHN4RZPAZ2DBTCK3VI5XDTYMTOYQBCIDGRLQ"/>
+        <archive href="pywin32-220.win-amd64-py3.4.tar.bz2" size="7764554" type="application/x-bzip-compressed-tar"/>
       </implementation>
-      <implementation arch="Windows-i486" version="220" released="2016-01-11" stability="stable" id="sha1new=cea2b73a81d5b3187f6dda4bdafb598dae185e28">
-        <manifest-digest sha1new="cea2b73a81d5b3187f6dda4bdafb598dae185e28" sha256="fe15af6cfd27986842bfbff66806c845b3fd897f6ff01d135cf6fb4b22a46641" sha256new="7YK263H5E6MGQQV7X73GQBWIIWZ73CL7N7YB2E24635UWIVEMZAQ" />
-        <archive href="pywin32-220.win32-py3.4.tar.bz2" size="7257586" type="application/x-bzip-compressed-tar" />
+      <implementation arch="Windows-i486" id="sha1new=cea2b73a81d5b3187f6dda4bdafb598dae185e28" released="2016-01-11" stability="stable" version="220">
+        <manifest-digest sha1new="cea2b73a81d5b3187f6dda4bdafb598dae185e28" sha256="fe15af6cfd27986842bfbff66806c845b3fd897f6ff01d135cf6fb4b22a46641" sha256new="7YK263H5E6MGQQV7X73GQBWIIWZ73CL7N7YB2E24635UWIVEMZAQ"/>
+        <archive href="pywin32-220.win32-py3.4.tar.bz2" size="7257586" type="application/x-bzip-compressed-tar"/>
+      </implementation>
+    </group>
+
+    <group>
+      <restricts interface="https://apps.0install.net/python/python.xml" version="3.5..!3.6"/>
+      <implementation arch="Windows-x86_64" id="sha1new=6fbe79dbfc7261bfe215ef4e074dafcd5a4d39f4" released="2019-11-14" stability="stable" version="227">
+        <manifest-digest sha256new="HQSPQRBNVGLMQ7XIVTJME3QZY6YX5SJWDJ6WKKJJJIYUWOT6625Q"/>
+        <archive href="pywin32-227.win-amd64-py3.5.tar.gz" size="8814857" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-i486" id="sha1new=bd185979188e452a007ffb6ece66ac9a6e21dee1" released="2019-11-14" stability="stable" version="227">
+        <manifest-digest sha256new="E233RO5SDNUWOHIQO2VRAST4SH3EVBCL2YTVLIQIAO57FEMCLPMQ"/>
+        <archive href="pywin32-227.win32-py3.5.tar.gz" size="8102285" type="application/x-compressed-tar"/>
       </implementation>
     </group>
 
     <group>
       <restricts interface="https://apps.0install.net/python/python.xml" version="3.6..!3.7"/>
-      <implementation arch="Windows-x86_64" version="220" released="2016-01-11" stability="stable" id="sha1new=3e4545ea916c2da4b407cd94d0f6b08f9e2eabbb">
-        <manifest-digest sha1new="3e4545ea916c2da4b407cd94d0f6b08f9e2eabbb" sha256="9eeb597c66c1cf76218ea86269d0b6415903bccb5ca840aca8ec6989e55bee34" sha256new="T3VVS7DGYHHXMIMOVBRGTUFWIFMQHPGLLSUEBLFI5RUYTZK35Y2A" />
-        <archive href="pywin32-220.win-amd64-py3.6.tar.bz2" size="8124468" type="application/x-bzip-compressed-tar" />
+      <implementation arch="Windows-x86_64" id="sha1new=3e4545ea916c2da4b407cd94d0f6b08f9e2eabbb" released="2016-01-11" stability="stable" version="220">
+        <manifest-digest sha1new="3e4545ea916c2da4b407cd94d0f6b08f9e2eabbb" sha256="9eeb597c66c1cf76218ea86269d0b6415903bccb5ca840aca8ec6989e55bee34" sha256new="T3VVS7DGYHHXMIMOVBRGTUFWIFMQHPGLLSUEBLFI5RUYTZK35Y2A"/>
+        <archive href="pywin32-220.win-amd64-py3.6.tar.bz2" size="8124468" type="application/x-bzip-compressed-tar"/>
       </implementation>
-      <implementation arch="Windows-i486" version="220" released="2016-01-11" stability="stable" id="sha1new=491bd916b9e3ddfd2106bcd8c5d15111e6d293e4">
-        <manifest-digest sha1new="491bd916b9e3ddfd2106bcd8c5d15111e6d293e4" sha256="a7b00d473ff753ef569b27bfba0fa78abcdf54f88a08331080506ab457de82d0" sha256new="U6YA2RZ765J66VU3E673UD5HRK6N6VHYRIEDGEEAKBVLIV66QLIA" />
-        <archive href="pywin32-220.win32-py3.6.tar.bz2" size="7454643" type="application/x-bzip-compressed-tar" />
+      <implementation arch="Windows-i486" id="sha1new=491bd916b9e3ddfd2106bcd8c5d15111e6d293e4" released="2016-01-11" stability="stable" version="220">
+        <manifest-digest sha1new="491bd916b9e3ddfd2106bcd8c5d15111e6d293e4" sha256="a7b00d473ff753ef569b27bfba0fa78abcdf54f88a08331080506ab457de82d0" sha256new="U6YA2RZ765J66VU3E673UD5HRK6N6VHYRIEDGEEAKBVLIV66QLIA"/>
+        <archive href="pywin32-220.win32-py3.6.tar.bz2" size="7454643" type="application/x-bzip-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" id="sha1new=b0546e7f7c7d7d40e18e43a71f9be10fc11e8a59" released="2019-11-14" stability="stable" version="227">
+        <manifest-digest sha256new="6RQAUJJUW4DKUFQB4U26KFPBO6J4NULWB3CB5GL7KI7CUVJNWY2Q"/>
+        <archive href="pywin32-227.win-amd64-py3.6.tar.gz" size="8833238" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-i486" id="sha1new=3f6b5bd19e29991d3d9c7b4b2162aa353cbf8928" released="2019-11-14" stability="stable" version="227">
+        <manifest-digest sha256new="EJYGKQMWCTDYV7MITJ23RGRR6L2AU6WFFBNNUH2JHG7O2IWR75GQ"/>
+        <archive href="pywin32-227.win32-py3.6.tar.gz" size="8102750" type="application/x-compressed-tar"/>
+      </implementation>
+    </group>
+
+    <group>
+      <restricts interface="https://apps.0install.net/python/python.xml" version="3.7..!3.8"/>
+      <implementation arch="Windows-x86_64" id="sha1new=e88a1765400d15dc637679b5faa284e14f159e2d" released="2019-11-14" stability="stable" version="227">
+        <manifest-digest sha256new="OHCC6AZUPF5QX4ZW4XNNCYJGY34WAVLZMQ5RBKZ5N2DCRTBTV67A"/>
+        <archive href="pywin32-227.win-amd64-py3.7.tar.gz" size="8827046" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-i486" id="sha1new=3eeb01755ff6959f104aa97569069c43c9d3dc75" released="2019-11-14" stability="stable" version="227">
+        <manifest-digest sha256new="DENJHULLVWKTGWZYT5FGI3TNCMAHYO3P4AGKREZ4GVRA56ZNPVEA"/>
+        <archive href="pywin32-227.win32-py3.7.tar.gz" size="8111983" type="application/x-compressed-tar"/>
+      </implementation>
+    </group>
+
+    <group>
+      <restricts interface="https://apps.0install.net/python/python.xml" version="3.8..!3.9"/>
+      <implementation arch="Windows-x86_64" id="sha1new=8c62434c115fe8b2a0bb6aa66376479c3f357a05" released="2019-11-14" stability="buggy" version="227">
+        <manifest-digest sha256new="JSMNRXSBVZ2L4WXNUMY6L4MFPGH27RDTTOXS7JCYSZWTWY43L3GQ"/>
+        <archive href="pywin32-227.win-amd64-py3.8.tar.gz" size="8830742" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-i486" id="sha1new=327d77cebfcd0b75db74c86a9f5e4667a312033c" released="2019-11-14" stability="buggy" version="227">
+        <manifest-digest sha256new="XLQAZBSJA3XID4XRS3TYXXZ2JPG2GA5CCRLUKMMO4MMQ5M5HYD7A"/>
+        <archive href="pywin32-227.win32-py3.8.tar.gz" size="8111154" type="application/x-compressed-tar"/>
       </implementation>
     </group>
   </group>

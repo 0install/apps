@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>PyWin32</name>
+  <summary>Python for Windows Extensions </summary>
+  <description>The Python for Windows Extensions provide bindings for the Win32 API.</description>
+  <homepage>https://github.com/mhammond/pywin32</homepage>
+
+  <feed-for interface="https://apps.0install.net/python/pywin32.xml"/>
+
+  <group license="Python License">
+    <environment insert="pywin32_system32" name="PATH"/>
+    <environment insert="." name="PYTHONPATH"/>
+    <environment insert="win32" name="PYTHONPATH"/>
+    <environment insert="win32/lib" name="PYTHONPATH"/>
+    <environment insert="pythonwin" name="PYTHONPATH"/>
+
+    <group>
+      <restricts interface="https://apps.0install.net/python/python.xml" version="2.7..!2.8"/>
+      <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
+        <manifest-digest/>
+        <archive href="pywin32-{version}.win-amd64-py2.7.tar.gz" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-i486" released="{released}" stability="stable" version="{version}">
+        <manifest-digest/>
+        <archive href="pywin32-{version}.win32-py2.7.tar.gz" type="application/x-compressed-tar"/>
+      </implementation>
+    </group>
+
+    <group>
+      <restricts interface="https://apps.0install.net/python/python.xml" version="3.5..!3.6"/>
+      <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
+        <manifest-digest/>
+        <archive href="pywin32-{version}.win-amd64-py3.5.tar.gz" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-i486" released="{released}" stability="stable" version="{version}">
+        <manifest-digest/>
+        <archive href="pywin32-{version}.win32-py3.5.tar.gz" type="application/x-compressed-tar"/>
+      </implementation>
+    </group>
+
+    <group>
+      <restricts interface="https://apps.0install.net/python/python.xml" version="3.6..!3.7"/>
+      <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
+        <manifest-digest/>
+        <archive href="pywin32-{version}.win-amd64-py3.6.tar.gz" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-i486" released="{released}" stability="stable" version="{version}">
+        <manifest-digest/>
+        <archive href="pywin32-{version}.win32-py3.6.tar.gz" type="application/x-compressed-tar"/>
+      </implementation>
+    </group>
+
+    <group>
+      <restricts interface="https://apps.0install.net/python/python.xml" version="3.7..!3.8"/>
+      <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
+        <manifest-digest/>
+        <archive href="pywin32-{version}.win-amd64-py3.7.tar.gz" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-i486" released="{released}" stability="stable" version="{version}">
+        <manifest-digest/>
+        <archive href="pywin32-{version}.win32-py3.7.tar.gz" type="application/x-compressed-tar"/>
+      </implementation>
+    </group>
+
+    <group>
+      <restricts interface="https://apps.0install.net/python/python.xml" version="3.8..!3.9"/>
+      <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
+        <manifest-digest/>
+        <archive href="pywin32-{version}.win-amd64-py3.8.tar.gz" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-i486" released="{released}" stability="stable" version="{version}">
+        <manifest-digest/>
+        <archive href="pywin32-{version}.win32-py3.8.tar.gz" type="application/x-compressed-tar"/>
+      </implementation>
+    </group>
+  </group>
+</interface>

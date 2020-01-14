@@ -17,7 +17,7 @@ The feeds are updated using the following tools:
 To work with this repository on your own machine run these commands inside an empty directory:
 
     git clone https://github.com/0install/apps.0install.net.git feeds
-    git clone https://github.com/0install/repo.roscidus.com.git --single-branch --branch=gh-pages public
+    git clone https://github.com/0install/apps.0install.net.git --single-branch --branch=gh-pages public
     cp feeds/0repo-config.py .
     cp public/archives.db .
     mkdir incoming

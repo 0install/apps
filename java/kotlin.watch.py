@@ -10,4 +10,4 @@ def convert(release):
     }
 
 data = request.urlopen('https://api.github.com/repos/JetBrains/kotlin/releases').read().decode('utf-8')
-releases = [convert(release) for release in json.loads(data)]
+releases = [convert(release) for release in json.loads(data) if release['tag_name'] <> 'v1.3.70-eap-42']

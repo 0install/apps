@@ -20,6 +20,9 @@
     <command name="pscp" path="PSCP.EXE"/>
     <command name="psftp" path="PSFTP.EXE"/>
 
+    <environment insert="plink.exe" mode="replace" name="GIT_SSH"/>
+    <environment insert="plink.exe" mode="replace" name="SVN_SSH"/>
+
     <implementation arch="Windows-*" id="sha1new=889b9bf64b02af4f043f886fc05c766513b11d17" released="2007-04-29" stability="stable" version="0.60">
       <manifest-digest sha1new="f28eb78ac8c30898130fa4ec7074bfceefdfd58b" sha256="695d41bfb11290a6631befd93db76bf6179bcac91f6c71649ca08eca67403f29" sha256new="NFOUDP5RCKIKMYY357MT3N3L6YLZXSWJD5WHCZE4UCHMUZ2AH4UQ"/>
       <archive href="http://the.earth.li/~sgtatham/putty/0.60/x86/putty.zip" size="1518921" type="application/zip"/>

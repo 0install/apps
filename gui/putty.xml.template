@@ -22,6 +22,9 @@
     <command name="pscp" path="PSCP.EXE"/>
     <command name="psftp" path="PSFTP.EXE"/>
 
+    <environment insert="plink.exe" mode="replace" name="GIT_SSH"/>
+    <environment insert="plink.exe" mode="replace" name="SVN_SSH"/>
+
     <implementation version="{version}" released="{released}" arch="Windows-x86_64" stability="stable">
       <manifest-digest/>
       <archive href="https://the.earth.li/~sgtatham/putty/{version}/w64/putty.zip" type="application/zip"/>

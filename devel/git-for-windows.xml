@@ -11,10 +11,7 @@
   <package-implementation distributions="Windows" package="git"/>
 
   <group license="GPL v2 (GNU General Public License)">
-    <requires importance="recommended" interface="https://apps.0install.net/gui/putty.xml">
-      <environment insert="plink.exe" mode="replace" name="GIT_SSH"/>
-      <environment insert="plink.exe" mode="replace" name="SVN_SSH"/>
-    </requires>
+    <requires importance="recommended" interface="https://apps.0install.net/devel/git-ssh.xml"/>
     <command name="run" path="cmd/git.exe"/>
     <command name="run-gui" path="cmd/git-gui.exe"/>
     <command name="gitk" path="cmd/gitk.exe"/>

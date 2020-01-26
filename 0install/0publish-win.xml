@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<interface uri="https://apps.0install.net/0install/0publish-win.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Zero Install Publishing Tools</name>
+  <summary xml:lang="en">helps you create and update Zero Install feeds</summary>
+  <summary xml:lang="de">hilft Ihnen beim Erstellen und Aktualisieren von Zero Install Feeds</summary>
+  <description xml:lang="en">Zero Install uses feeds, XML files on the internet, to describe applications and how to download them. The Zero Install Publishing Tools allow you to create your own feeds. It consists of two main components:
+the Feed Editor (split with screen graphical and XML view)
+and the New Feed Wizard (walks you through the entire feed creation process, automatically extracts metadata when possible)</description>
+  <description xml:lang="de">Zero Install verwendet Feeds, XML Dateien im Internet, um Anwendungen sowie deren Download zu beschreiben. Die Zero Install Publishing Tools ermöglichen es Ihnen, Ihre eigenen Feeds zu erstellen. Sie bestehen aus zwei Hauptkomponenten:
+Der Feed Editor (Split Screen mit grafischer und XML Ansicht)
+und der New Feed Wizard (leitet Sie durch den kompletten Feed-Erstellungsprozess, extrahiert automatisch Metadaten wenn möglich)</description>
+  <icon href="https://raw.githubusercontent.com/0install/0publish-win/master/icon.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/0publish-win/master/icon.ico" type="image/vnd.microsoft.icon"/>
+  <homepage>https://docs.0install.de/tools/0publish-win/</homepage>
+
+  <group license="LGPL v3 (GNU Lesser General Public License)">
+    <requires interface="https://apps.0install.net/utils/gnupg.xml">
+      <environment insert="." name="PATH"/>
+    </requires>
+    <command name="0publish" path="0publish.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.."/>
+    </command>
+    <command name="run" path="0publish-win.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.."/>
+    </command>
+
+    <implementation id="sha1new=4107dd240bb7b63832f14163755f1118fc8f76c3" released="2017-11-13" stability="stable" version="2.14.0">
+      <manifest-digest sha256new="3HR4BJ7RXFCN4H62HD3ODYJXOFAPWK2RZTWNRNVLAT55476RY4BA"/>
+      <archive href="https://github.com/0install/0publish-win/releases/download/2.14.0/ZeroInstall_Tools-2.14.0.tar.gz" size="2429286"/>
+    </implementation>
+    <implementation id="sha1new=b8582d6c52030c5791f872df54a3df90067c4ace" released="2017-11-24" stability="stable" version="2.14.2">
+      <manifest-digest sha256new="TCNXZNCGUDXJCADZSA3SUXQT3ORYSTT4DWKB7TU5GO2N7XQYSIUA"/>
+      <archive href="https://github.com/0install/0publish-win/releases/download/2.14.2/ZeroInstall_Tools-2.14.2.tar.gz" size="2432150"/>
+    </implementation>
+    <implementation id="sha1new=995a1f70d657b6b84dcd205d8091fca8a94b2225" released="2017-12-04" stability="stable" version="2.14.3">
+      <manifest-digest sha256new="Y4ENNVQWLZCEMMGPP4Q4FOVNOE4STURHM4ANQ3SUTDUT6YAVLEXA"/>
+      <archive href="https://github.com/0install/0publish-win/releases/download/2.14.3/ZeroInstall_Tools-2.14.3.tar.gz" size="2435119"/>
+    </implementation>
+    <implementation id="sha1new=6f89ab79d25e04c4cd53b3de36e76fa6c7fb218b" released="2018-01-07" stability="stable" version="2.14.5">
+      <manifest-digest sha256new="RYIPUIAPNYL3W5BXPNGVFLUF4HIMU343HZ4LFRCQUZYM56CP3PFA"/>
+      <archive href="https://github.com/0install/0publish-win/releases/download/2.14.5/ZeroInstall_Tools-2.14.5.tar.gz" size="2435686"/>
+    </implementation>
+    <implementation id="sha1new=b379dc49bdb0eb90bf4a45d347dd7d4a09bd98e3" released="2018-07-09" stability="stable" version="2.15.1">
+      <manifest-digest sha256new="SMPWQEM5WXSH63FR2XNFUWPAFRRMB75D2MRVH5AJL2XQBA3SBHGQ"/>
+      <archive href="https://github.com/0install/0publish-win/releases/download/2.15.1/ZeroInstall_Tools-2.15.1.tar.gz" size="2373166"/>
+    </implementation>
+    <implementation id="sha1new=d558cbd0da32684430aed72edca109cae0329d02" license="LGPL v3 (GNU Lesser General Public License)" released="2019-02-04" stability="stable" version="2.16.2">
+      <manifest-digest sha256new="BNXNE5TXQXD5ONGWHWARFTDC75XZHK3LXH3O363TXIHXKNDEW53A"/>
+      <archive href="https://github.com/0install/0publish-win/releases/download/2.16.2/ZeroInstall_Tools-2.16.2.tar.gz" size="2228658"/>
+    </implementation>
+    <implementation id="sha1new=1c8f813bf8d4c3764ddba790ff01e6573005df65" license="LGPL v3 (GNU Lesser General Public License)" released="2019-02-11" stability="stable" version="2.16.3">
+      <manifest-digest sha256new="TGO7XBYSPXGJLRGUICMSUKF4TBF2JBDK5LPJHYOKSEKW6EZNDA2A"/>
+      <archive href="https://github.com/0install/0publish-win/releases/download/2.16.3/ZeroInstall_Tools-2.16.3.tar.gz" size="2653221"/>
+    </implementation>
+    <implementation id="sha1new=cd21c979b7f05263d14317829e421e909bc2c403" license="LGPL v3 (GNU Lesser General Public License)" released="2019-04-04" stability="stable" version="2.16.4">
+      <manifest-digest sha256new="LLIQJ5UMXUEEML4F72JZXAW6PBEBX3IGERC5PTFELHI3C42KOYOA"/>
+      <archive href="https://github.com/0install/0publish-win/releases/download/2.16.4/ZeroInstall_Tools-2.16.4.tar.gz" size="2653155"/>
+    </implementation>
+    <implementation id="sha1new=edcf24dfaded125738c94692b70ea537c597790c" license="LGPL v3 (GNU Lesser General Public License)" released="2019-05-24" stability="stable" version="2.16.5">
+      <manifest-digest sha256new="IZJFVNV6QW5QG5CORP6GMB47MACBBPFSEA7FFIYOSJWAOHRQGHAA"/>
+      <archive href="https://github.com/0install/0publish-win/releases/download/2.16.5/ZeroInstall_Tools-2.16.5.tar.gz" size="2652601"/>
+    </implementation>
+    <implementation id="sha1new=4ef83ca118c827c0682367070988b25bbabfff17" released="2019-07-25" stability="stable" version="2.16.7">
+      <manifest-digest sha256new="D4Y77ARPDVTDJLUNYK4OJIH2PL25KNHSSOHB2D5BYXXVPU3YEODQ"/>
+      <archive href="https://github.com/0install/0publish-win/releases/download/2.16.7/ZeroInstall_Tools-2.16.7.tar.gz" size="2653592"/>
+    </implementation>
+    <implementation id="sha1new=9c28761a2186114cf8cb3c535752f6a7b65e5b5e" released="2019-10-15" stability="buggy" version="2.16.8">
+      <manifest-digest sha256new="XW4NO3D46N33RG6EL5NZDNWYSEBIEH7VAKQDX63WENIOD4GYK5HQ"/>
+      <archive href="https://github.com/0install/0publish-win/releases/download/2.16.8/ZeroInstall_Tools-2.16.8.tar.gz" size="2652723"/>
+    </implementation>
+  </group>
+
+  <entry-point binary-name="0publish-win" command="run">
+    <name xml:lang="en">Zero Install Publishing Tools</name>
+  </entry-point>
+  <entry-point command="0publish">
+    <needs-terminal/>
+    <name xml:lang="en">Feed Editor command-line</name>
+  </entry-point>
+
+  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
+    <file-type explicit-only="true" id="ZeroInstallFeed">
+      <description xml:lang="en">Zero Install Feed</description>
+      <verb args="&quot;%1&quot;" name="edit"/>
+      <extension value=".xml"/>
+    </file-type>
+  </capabilities>
+</interface>

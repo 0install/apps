@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="catalog.xsl"?>
 <catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://0install.de/schema/injector/catalog http://0install.de/schema/injector/catalog/catalog.xsd" xmlns="http://0install.de/schema/injector/catalog">
-  <interface uri="http://0install.de/feeds/0watch.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
-    <name>0watch</name>
-    <summary xml:lang="en">scans websites for new releases and triggers 0template if required</summary>
-    <description xml:lang="en">
-    0watch scans websites for new releases using arbritary Python code snippets.
-    When new releases are detected 0template is used to create/update a Zero Install feed.
-  </description>
-    <homepage>https://github.com/0install/0watch</homepage>
-    <needs-terminal />
-    <entry-point command="run" binary-name="0watch" />
-  </interface>
   <interface uri="http://0install.de/feeds/ZeroInstall_Tools.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
     <name>Zero Install Publishing Tools</name>
     <summary xml:lang="en">helps you create and update Zero Install feeds</summary>
@@ -25,6 +14,8 @@ und der New Feed Wizard (leitet Sie durch den kompletten Feed-Erstellungsprozess
     <icon href="https://raw.githubusercontent.com/0install/0publish-win/master/icon.png" type="image/png" />
     <icon href="https://raw.githubusercontent.com/0install/0publish-win/master/icon.ico" type="image/vnd.microsoft.icon" />
     <homepage>https://docs.0install.de/tools/0publish-win/</homepage>
+    <feed src="https://apps.0install.net/0install/0publish-win.xml" />
+    <replaced-by interface="https://apps.0install.net/0install/0publish-win.xml" />
     <entry-point command="run" binary-name="0publish-win">
       <name xml:lang="en">Zero Install Publishing Tools</name>
     </entry-point>
@@ -178,8 +169,19 @@ interfere with those provided by the distribution.
   </description>
     <homepage>https://docs.0install.net/tools/0repo/</homepage>
   </interface>
+  <interface uri="https://apps.0install.net/0install/0watch.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+    <name>0watch</name>
+    <summary xml:lang="en">scans websites for new releases and triggers 0template if required</summary>
+    <description xml:lang="en">
+    0watch scans websites for new releases using arbritary Python code snippets.
+    When new releases are detected 0template is used to create/update a Zero Install feed.
+  </description>
+    <homepage>https://github.com/0install/0watch</homepage>
+    <needs-terminal />
+    <entry-point command="run" binary-name="0watch" />
+  </interface>
 </catalog>
 <!-- Base64 Signature
-iQEcBAABAgAGBQJeB0ezAAoJEFmqOSfCTk4exTAH/AlvWqPmrnDrqpTM3+D1oXQsLMUqYY89vb8mq7DXgBanjHKUzFqPSYD7M0Z0amp5MuPq7V3R84BP/RQqJYS6hg8f9pFFhpIcxK2nW8rELk80ypRYDW2LFfNUxHEaXfOfK7rCvehJPEFnCNGGOwI+AIu9XYaBCIYrpm384oE8C52z00xjezQB3oh0qwYyRLitIRxKE32SIFsiVQCDI9zyQ4EHaEtfX4wj9GAdUOUWD+w0dBYpRZ0wUI4Qqhk9leRdQKDrjteYjo5O6mYfwHfRsfJfHJ88FNT+zOrRHi6XbVOyfRyVCKt9XaDGKpVSYDBI/f9jBlGHeF4Gvpvzm30XAfM=
+iQEcBAABAgAGBQJeLhxoAAoJEFmqOSfCTk4ePq8IAJSnhqh96nW8JLYajhpqlq7FvvRyDvO17p2tLks/qWZwPAe9+VYbK98gk/BeGdpezpZ6UKDW3FzC6gC1oSo3vY4rg7jdssElwYdzGPn1XEZpzJuCyBtBU+wtjsTMrQOqOa7VZggt20gT3cS9ZuLZchhfx+rGz2Z9Zs0OG6J91PTV2ZCLt13SZAv/1HMNBgK/wtLogbvdtY3ONMu8GSSGb3souAuJtHkgPXH1MoLBACjkGDKFbqF7rSNBIIa5/5nZscwwRBaGDHlTw17rE1G6k6CT7wnVzUsi1r/Kv+qDlNPpMQ1StGodLC+S08ykKDIon3qYZYnW0x+z2/ZAlznULtw=
 
 -->

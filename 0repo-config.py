@@ -34,7 +34,7 @@ TRACK_TESTING_IMPLS = False
 # 'message' can be used if you want to log the reason for the update.
 def upload_public_dir(files, message):
 	if os.getenv('NO_SIGN'):
-		print "Feeds not signed; not committing public"
+		print("Feeds not signed; not committing public")
 	else:
 		shutil.copyfile('../archives.db', 'archives.db')
 		subprocess.check_call(['git', 'add', '--', 'archives.db'] + files)
@@ -90,7 +90,7 @@ def guess_mime_type(name):
 # fails part way through).
 def upload_archives(archives):
 	if os.getenv('NO_SIGN'):
-		print "Feeds not signed; not uploading archives"
+		print("Feeds not signed; not uploading archives")
 	else:
 		from urllib import request
 		for archive in archives:

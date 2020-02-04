@@ -9,31 +9,30 @@
   <feed-for interface="https://apps.0install.net/devel/terraform.xml"/>
 
   <group license="Mozilla Public License 2.0">
-    <group>
-      <command name="run" path="terraform"/>
-      <implementation arch="Linux-x86_64" version="{version}" stability="stable" released="{released}">
-        <manifest-digest/>
-        <archive href="https://releases.hashicorp.com/terraform/{version}/terraform_{version}_linux_amd64.zip" type="application/zip"/>
-      </implementation>
-      <implementation arch="Linux-i386" version="{version}" stability="stable" released="{released}">
-        <manifest-digest/>
-        <archive href="https://releases.hashicorp.com/terraform/{version}/terraform_{version}_linux_386.zip" type="application/zip"/>
-      </implementation>
-      <implementation arch="Darwin-x86_64" version="{version}" stability="stable" released="{released}">
-        <manifest-digest/>
-        <archive href="https://releases.hashicorp.com/terraform/{version}/terraform_{version}_darwin_amd64.zip" type="application/zip"/>
-      </implementation>
-    </group>
-    <group>
-      <command name="run" path="terraform.exe"/>
-      <implementation arch="Windows-x86_64" version="{version}" stability="stable" released="{released}">
-        <manifest-digest/>
-        <archive href="https://releases.hashicorp.com/terraform/{version}/terraform_{version}_windows_amd64.zip" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-i486" version="{version}" stability="stable" released="{released}">
-        <manifest-digest/>
-        <archive href="https://releases.hashicorp.com/terraform/{version}/terraform_{version}_windows_386.zip" type="application/zip"/>
-      </implementation>
-    </group>
+    <command name="run" path="terraform"/>
+    <implementation arch="Linux-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://releases.hashicorp.com/terraform/{version}/terraform_{version}_linux_amd64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://releases.hashicorp.com/terraform/{version}/terraform_{version}_linux_386.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://releases.hashicorp.com/terraform/{version}/terraform_{version}_darwin_amd64.zip" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group license="Mozilla Public License 2.0">
+    <command name="run" path="terraform.exe"/>
+    <implementation arch="Windows-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://releases.hashicorp.com/terraform/{version}/terraform_{version}_windows_amd64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://releases.hashicorp.com/terraform/{version}/terraform_{version}_windows_386.zip" type="application/zip"/>
+    </implementation>
   </group>
 </interface>

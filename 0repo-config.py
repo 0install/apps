@@ -51,7 +51,7 @@ def upload_public_dir(files, message):
 # you are hosting archives on a different server). Note that uploaders can choose whether to store
 # archives within 0repo or externally. This setting does not affect external archives, only archives
 # managed by 0repo.
-ARCHIVES_BASE_URL = "https://github.com/0install/apps.0install.net/releases/download/archives/"
+ARCHIVES_BASE_URL = "https://github.com/0install/apps/releases/download/archives/"
 
 # Where to keep copies of the archives we upload.
 LOCAL_ARCHIVES_BACKUP_DIR = "archive-backups/"
@@ -96,7 +96,7 @@ def upload_archives(archives):
 		for archive in archives:
 			with open(archive.source_path, 'br') as file:
 				request.urlopen(request.Request(
-					'https://uploads.github.com/repos/0install/apps.0install.net/releases/22408464/assets?name=' + archive.rel_url,
+					'https://uploads.github.com/repos/0install/apps/releases/22408464/assets?name=' + archive.rel_url,
 					file.read(),
 					headers={
 						'Content-Type': guess_mime_type(archive.rel_url),

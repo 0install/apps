@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/gui/winmerge.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>WinMerge</name>
+  <summary xml:lang="en">differencing and merging tool for Windows</summary>
+  <summary xml:lang="de">Programm zum Vergleichen und Zusammenführen von Dateien sowie Ordner</summary>
+  <description xml:lang="en">WinMerge is an Open Source differencing and merging tool for Windows. WinMerge can compare both folders and files, presenting differences in a visual text format that is easy to understand and handle.</description>
+  <description xml:lang="de">WinMerge ist ein Open-Source-Programm zum Vergleichen und Zusammenführen von Dateien sowie Ordner. Das Windows-Tool stellt Unterschiede in einem visuellen Text-Format dar, das einfach zu verstehen und zu handhaben ist.</description>
+  <homepage>http://winmerge.org/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/winmerge.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/winmerge.ico" type="image/vnd.microsoft.icon"/>
+  <category>Development</category>
+  <category>Utility</category>
+  <group license="GPL v2 (GNU General Public License)">
+    <requires interface="https://apps.0install.net/lib/msvc90.xml"/>
+    <implementation arch="Windows-i486" id="sha1new=e26983ef702f773dd8d0177e6372b0f61972aabf" main="WinMergeU.exe" released="2013-02-03" stability="stable" version="2.14.0">
+      <manifest-digest sha256new="DKZW2SYSUDTQZJKMUHQXDZDC6QGSDTPS2S3NNWBLW67PL4PGLKFQ"/>
+      <archive extract="WinMerge-2.14.0-exe" href="http://downloads.sourceforge.net/winmerge/stable/2.14.0/WinMerge-2.14.0-exe.zip" size="2764125" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-src" id="sha1new=cc08580f384bcb00839387cd59e3922f5c3e2bcd" released="2013-02-03" stability="stable" version="2.14.0">
+      <manifest-digest sha256new="FSXAHZG6ZHS4LK4RJVSHTCZCO56ZKFLRRM7BWS7HJMNPPGVKCVYQ"/>
+      <archive extract="WinMerge-2.14.0-src" href="http://downloads.sourceforge.net/winmerge/stable/2.14.0/WinMerge-2.14.0-src.zip" size="6949845" type="application/zip"/>
+    </implementation>
+  </group>
+  <entry-point binary-name="WinMergeU" command="run"/>
+  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
+    <file-type id="WinMerge.Project.File">
+      <description xml:lang="en">WinMerge Project file</description>
+      <verb args="&quot;%1&quot;" name="open"/>
+      <extension value=".WinMerge"/>
+    </file-type>
+  </capabilities>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl5BqB4ACgkQWao5J8JOTh7SrAf+L+FJ
+1VdWUcerz3l012jqoyTabWAS6btnL+AXw5NeIi29q7X+Deff4QikOomLA3PWN2ZWbGA7wO7hdNss
+4OexcsckiULuzercKFDeFgOu4dunfHqOuu51P5YSSGI1/8oAJZbSPGMEtjwMIKZOfRAURZnA/hmS
+mgoDwVppn06GBNDJRngAGOvOF16aLB3/3RwMFXDjYu65O3menm3ASUrDWfhrG3wkF+7XYJJLcbD8
+8esFKxyK7JrVqciAf8CKMVQGomUPAaBh5cPyBy4VjOT7VGJMPrFLpY4vXlTLxHz0JE/LVzbS+9hS
+VlCkXYbyzjZowoYYkY989HVkdoKqM0cI1Q==
+
+-->

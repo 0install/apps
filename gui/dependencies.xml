@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/gui/dependencies.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Dependencies</name>
+  <summary>open-source modern Dependency Walker</summary>
+  <description>Dependencies is a rewrite of the legacy software Dependency Walker which was shipped along Windows SDK. It can help developers troubleshooting their DLL load dependencies issues.</description>
+  <homepage>https://github.com/lucasg/Dependencies</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/dependencies.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/dependencies.png" type="image/png"/>
+  <category>Development</category>
+
+  <entry-point binary-name="DependenciesGui" command="run"/>
+  <entry-point binary-name="dependencies" command="run-cli">
+    <name xml:lang="en">Dependencies command-line tool</name>
+    <needs-terminal/>
+  </entry-point>
+
+  <group license="MIT License">
+    <command name="run" path="Dependencies.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml"/>
+    </command>
+    <implementation arch="Windows-*" id="sha1new=6913dd81fd2da6a5efb4abff72eb0cb1a70dab6a" released="2017-07-09" stability="stable" version="1.0">
+      <manifest-digest sha256new="2GPZUXMXE6OELZSTMGK4ZMWLYLTN4WXORFAMXFNBPQVL2IODNGVA"/>
+      <archive href="https://github.com/lucasg/Dependencies/releases/download/v1.0/Dependencies.zip" size="453908" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-*" id="sha1new=cec4b0f1c624cc4bdae9bb2a738875d213437dd8" released="2017-10-14" stability="stable" version="1.5">
+      <manifest-digest sha256new="UGTHHFPCW54ROQJ7AJ7HV5YJMYHJKEYOZIPTMKAWC4JRSG22J3IQ"/>
+      <archive href="https://github.com/lucasg/Dependencies/releases/download/v1.5/Dependencies.zip" size="511314" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-*" id="sha1new=69ddeb2e1833e3a49d20a0f6abf3a5f2aa7b54f3" released="2018-01-14" stability="stable" version="1.6">
+      <manifest-digest sha256new="3LJXDPJ4TX5PV4VXXF3HZLM5UYXKRMZ5JGSV6ZZ4F5JW3TUJOYOQ"/>
+      <archive href="https://github.com/lucasg/Dependencies/releases/download/v1.6/Dependencies.zip" size="1079375" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group license="MIT License">
+    <command name="run" path="DependenciesGui.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml"/>
+    </command>
+    <command name="run-cli" path="Dependencies.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml"/>
+    </command>
+    <implementation arch="Windows-*" id="sha1new=95b57ec3f909aa3c09d688e096aac6593840b7a0" released="2018-04-29" stability="stable" version="1.7">
+      <manifest-digest sha256new="FO4YZGPYZFJZP6C2ZKOZTEIRCHSPSWBSRFVZPLYQ5Z3JR5KAEUXA"/>
+      <archive href="https://github.com/lucasg/Dependencies/releases/download/v1.7/Dependencies.zip" size="2332678" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=130b8f467020c562a595de936c4b9d34f9f8cb41" released="2018-06-20" stability="stable" version="1.8">
+      <manifest-digest sha256new="33CPDUNZSO5QBBYXDX2N7C4X5FHKCWNYH4HEVZSQJTWCBBC4NUYQ"/>
+      <archive href="https://github.com/lucasg/Dependencies/releases/download/v1.8/Dependencies_x64_Release.zip" size="2403904" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=86af1a8de2a54cc7eb8fd4becbb2aa172c473245" released="2018-06-20" stability="stable" version="1.8">
+      <manifest-digest sha256new="4BFY7QZCPSALN6W7KR7TT7INCHXPSSFJJJYVKOEFLZ7OMVZPLN6A"/>
+      <archive href="https://github.com/lucasg/Dependencies/releases/download/v1.8/Dependencies_x86_Release.zip" size="2328816" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=f838765b79a111b5b274693d76853611b33f98b5" released="2018-12-02" stability="stable" version="1.9">
+      <manifest-digest sha256new="SRYF6KM4N5UVKSYCXUM7LNC65GZOLVQ6H4KUWABVWEYSRDD76LZA"/>
+      <archive href="https://github.com/lucasg/Dependencies/releases/download/v1.9/Dependencies_x64_Release.zip" size="3155923" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=98fdf2dfb4d065fb9c3da77c8c582aa43f9b95d1" released="2018-12-02" stability="stable" version="1.9">
+      <manifest-digest sha256new="UWNX3OVDPYWZV4YBSDHIKKUQOLZ3JQXNQ2UOPBZ56CMIHJ4MXENA"/>
+      <archive href="https://github.com/lucasg/Dependencies/releases/download/v1.9/Dependencies_x86_Release.zip" size="3055986" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=805d9df49c87da4a9dc389e914e6f5620122811e" released="2019-12-29" stability="stable" version="1.10">
+      <manifest-digest sha256new="3JP3BWCZEFO2C6IE7IX736YDV2BP7LSVZXYRAAK246BK6U6CUVMQ"/>
+      <archive href="https://github.com/lucasg/Dependencies/releases/download/v1.10/Dependencies_x64_Release.zip" size="4216533" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=3a296cf92a46d32decc8becde570b50d195deecd" released="2019-12-29" stability="stable" version="1.10">
+      <manifest-digest sha256new="NVCFHMFYCAF4JWJT4YU4BRSEXGRJDPNEDNCGNW2Z4F3FM4M5FM5Q"/>
+      <archive href="https://github.com/lucasg/Dependencies/releases/download/v1.10/Dependencies_x86_Release.zip" size="4039914" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl5BqB4ACgkQWao5J8JOTh59KggAuPGN
+LQUQcZYDR+rF3zETf7XhKNeBBeEcvhhtVOieLMfzHoNDaMJNNrhcrmOYWtfGPdLtE6D4g7LSMXNi
+y6iT4S6zVMuSW2cVPQBfF6qX6TjHrHzX97B/5vEDS2tFTLBNL3SF7NeiN2ifFZD8AcK/yJ4T6R2j
+XckCAwWkbCXDz5XDTAjDYXy3C3movYomYsczyR98l1UMFG9MLasmVHWyvSZzXFi9ylJIxTH9nQbG
+jxrEYew8S51WuzDtT30OsVp8Bf+Zp6r6CD+PennWs3eCV09dUKOta5fwD/oeUzj/kjmIskza4/sD
+Z+qXsfPqn+J4lHG7MHwc0H1nlSR0NdvxHA==
+
+-->

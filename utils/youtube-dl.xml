@@ -1,0 +1,693 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/utils/youtube-dl.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>youtube-dl</name>
+  <summary xml:lang="en">command-line program to download videos from YouTube</summary>
+  <summary xml:lang="de">Befehlszeilenprogramm zum Runterladen von Videos von YouTube</summary>
+  <description xml:lang="en">youtube-dl is a command-line program to download videos from YouTube.com and a few more sites.</description>
+  <description xml:lang="de">youtube-dl ist ein Befehlszeilenprogramm zum Runterladen von Videos von YouTube und ein paar weiteren Seiten.</description>
+  <category>Utility</category>
+  <homepage>http://rg3.github.io/youtube-dl/</homepage>
+  <needs-terminal/>
+
+  <entry-point binary-name="youtube-dl" command="run"/>
+
+  <group license="Public Domain">
+    <requires importance="recommended" interface="https://apps.0install.net/utils/ffmpeg.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="youtube-dl">
+      <runner interface="https://apps.0install.net/python/python.xml"/>
+    </command>
+
+    <implementation id="sha1new=81fb51a07b4fd4c5fd7735035eb337694105dbba" released="2016-12-18" stability="stable" version="2016.12.18">
+      <manifest-digest sha256new="UQPQZCH27UTQDIENSCR4LSCCKJQODELASLSIGUHMPHNK4UN3WN6A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2016.12.18/youtube-dl" size="1413239"/>
+    </implementation>
+    <implementation id="sha1new=3cafb7feccce98fae3ecd17f6439077756eb68e3" released="2016-12-20" stability="stable" version="2016.12.20">
+      <manifest-digest sha256new="AKXE7UUEJYIB6SDNHSHTCJVEDX67VNYMNQIWGDGEXLPIXFAQ3XMA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2016.12.20/youtube-dl" size="1419366"/>
+    </implementation>
+    <implementation id="sha1new=0249946880691e3a284f49d87ff06c9457e2f1e1" released="2016-12-22" stability="stable" version="2016.12.22">
+      <manifest-digest sha256new="46GAHD5T32KIYMJ6OFX5BA2B7IMUDLUBXOTVQUGMZGOCHLBSEI7A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2016.12.22/youtube-dl" size="1420006"/>
+    </implementation>
+    <implementation id="sha1new=bc1ca441a5cb8843c6988b8f34247fc7c3686c1f" released="2017-01-10" stability="stable" version="2017.1.10">
+      <manifest-digest sha256new="TV75NGQWWEZTLY7BP24R3NXRDU7233TTE6VV674VH47HBUM6I2JQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.01.10/youtube-dl" size="1427827"/>
+    </implementation>
+    <implementation id="sha1new=807c6dddcf3f871493ac8fe2c0ead6d92e119b22" released="2017-02-04" stability="stable" version="2017.2.4.1">
+      <manifest-digest sha256new="WABPBZXXKO434HJ2RROAMZYIUH4Q4OM54AOQIM7QTJCQPAWMBIEQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.02.04.1/youtube-dl" size="1450796"/>
+    </implementation>
+    <implementation id="sha1new=0e406ccbea142e0a4c4ba7440be2847747e6f75c" released="2017-02-17" stability="stable" version="2017.2.17">
+      <manifest-digest sha256new="GWPR3YEGINYRA2ABKBZNFWQGAQQVJCEJRJJ7DS276DDKKXFBUA4Q"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.02.17/youtube-dl" size="1464456"/>
+    </implementation>
+    <implementation id="sha1new=fec356416131f67d384217eb1e2218ef29b21bf3" released="2017-03-26" stability="stable" version="2017.3.26">
+      <manifest-digest sha1new="fec356416131f67d384217eb1e2218ef29b21bf3" sha256="fd9a560e2c04d30a33619951f49e8477f13c2b05cd50d96ff9e87f2e92e1f0f1" sha256new="7WNFMDRMATJQUM3BTFI7JHUEO7YTYKYFZVINS37Z5B7S5EXB6DYQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.03.26/youtube-dl" size="1497486"/>
+    </implementation>
+    <implementation id="sha1new=e445a09225dbf82b08c41487e2828e34e5055a95" released="2017-04-01" stability="stable" version="2017.4.2">
+      <manifest-digest sha1new="e445a09225dbf82b08c41487e2828e34e5055a95" sha256="43ca5f21a583b3a22e791de248c9fd01edde5f58af5035887d8d9f793a257b3d" sha256new="IPFF6INFQOZ2ELTZDXRERSP5AHW54X2YV5IDLCD5RWPXSORFPM6Q"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.04.02/youtube-dl" size="1504219"/>
+    </implementation>
+    <implementation id="sha1new=c4737cc1e1117806efb9eab50ca05ccd09fdcbb2" released="2017-04-02" stability="stable" version="2017.4.3">
+      <manifest-digest sha1new="c4737cc1e1117806efb9eab50ca05ccd09fdcbb2" sha256="6fa686a1b08ca258d96323c444f5cbac6421e25dfb8221f3051c769c1678f395" sha256new="N6TININQRSRFRWLDEPCEJ5OLVRSCDYS57OBCD4YFDR3JYFTY6OKQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.04.03/youtube-dl" size="1506928"/>
+    </implementation>
+    <implementation id="sha1new=0a7b3faff04ea8dddd764de830d1b31ea6964799" released="2017-04-08" stability="stable" version="2017.4.9">
+      <manifest-digest sha1new="0a7b3faff04ea8dddd764de830d1b31ea6964799" sha256="39f72312c98461f41b016b64e4d1cf7348514879b44c44ad273d94d38504a647" sha256new="HH3SGEWJQRQ7IGYBNNSOJUOPONEFCSDZWRGEJLJHHWKNHBIEUZDQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.04.09/youtube-dl" size="1511219"/>
+    </implementation>
+    <implementation id="sha1new=4708dca64c21f603da1c71c8e60f4682203d5b18" released="2017-04-10" stability="stable" version="2017.4.11">
+      <manifest-digest sha1new="4708dca64c21f603da1c71c8e60f4682203d5b18" sha256="ea30e6a93c6ca363d976a2e9ff3042df5c92034f75fffb891c8e3b1ddd133ee4" sha256new="5IYONKJ4NSRWHWLWULU76MCC35OJEA2POX77XCI4RY5R3XITH3SA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.04.11/youtube-dl" size="1512320"/>
+    </implementation>
+    <implementation id="sha1new=4c2b7a6cd1ce2f77732ddf1e5d0cbbe05171bde2" released="2017-04-13" stability="stable" version="2017.4.14">
+      <manifest-digest sha1new="4c2b7a6cd1ce2f77732ddf1e5d0cbbe05171bde2" sha256="f4ff3997b6cbb7c4ec2aa8075ce7a2ef137774a79489fad851abca785df9ad66" sha256new="6T7TTF5WZO34J3BKVADVZZ5C54JXO5FHSSE7VWCRVPFHQXPZVVTA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.04.14/youtube-dl" size="1515697"/>
+    </implementation>
+    <implementation id="sha1new=8bd6e068f41102a5fb2cfa14989d4e09fca5f28c" released="2017-04-14" stability="stable" version="2017.4.15">
+      <manifest-digest sha1new="8bd6e068f41102a5fb2cfa14989d4e09fca5f28c" sha256="18002189d6eee319473f6a744cd49726e7ceea101862bf4fcefae67706f85afb" sha256new="DAACDCOW53RRSRZ7NJ2EZVEXE3T452QQDBRL6T6O7LTHOBXYLL5Q"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.04.15/youtube-dl" size="1515741"/>
+    </implementation>
+    <implementation id="sha1new=6a3931bd4648d167a9c65cc0a60858189e5360a8" released="2017-04-15" stability="stable" version="2017.4.16">
+      <manifest-digest sha1new="6a3931bd4648d167a9c65cc0a60858189e5360a8" sha256="ff1625a5528ae94f1bcbabfa732778136637a3e4a6cae41d7a006a96f67ef2a5" sha256new="74LCLJKSRLUU6G6LVP5HGJ3YCNTDPI7EU3FOIHL2ABVJN5T66KSQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.04.16/youtube-dl" size="1518524"/>
+    </implementation>
+    <implementation id="sha1new=a09325cfcce4db499be921471c2f6ccb875ed5ee" released="2017-04-16" stability="stable" version="2017.4.17">
+      <manifest-digest sha1new="a09325cfcce4db499be921471c2f6ccb875ed5ee" sha256="f6817e4dbdfa2fbc305eb427f43fdb0834da4989c5071145255744282ebfa307" sha256new="62AX4TN57IX3YMC6WQT7IP63BA2NUSMJYUDRCRJFK5CCQLV7UMDQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.04.17/youtube-dl" size="1519799"/>
+    </implementation>
+    <implementation id="sha1new=8270c27851cb3fcfde9becbc16feb067c4fea856" released="2017-04-25" stability="stable" version="2017.4.26">
+      <manifest-digest sha1new="8270c27851cb3fcfde9becbc16feb067c4fea856" sha256="e432baca353f16ad8c6524c87f825f9163ef9f2b34c2f74a424822bc02118f8b" sha256new="4QZLVSRVH4LK3DDFETEH7AS7SFR67HZLGTBPOSSCJARLYAQRR6FQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.04.26/youtube-dl" size="1520793"/>
+    </implementation>
+    <implementation id="sha1new=16cccde5be21faea3dd7f9f5f303f30dd7c7558e" released="2017-04-28" stability="stable" version="2017.4.28">
+      <manifest-digest sha1new="16cccde5be21faea3dd7f9f5f303f30dd7c7558e" sha256="f5639ed1142e76eddcfdcd79c61c26606b819009600c890956b6997def5f8a7d" sha256new="6VRZ5UIUFZ3O3XH5ZV44MHBGMBVYDEAJMAGISCKWW2MX3327RJ6Q"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.04.28/youtube-dl" size="1520919"/>
+    </implementation>
+    <implementation id="sha1new=de4957dee7e00f2edea59ceead9a486d12cf4e7f" released="2017-04-30" stability="stable" version="2017.5.1">
+      <manifest-digest sha1new="de4957dee7e00f2edea59ceead9a486d12cf4e7f" sha256="59ee0385fc7bafa8d7a4ce7d84711d0228cbbbdedd9a9db7475c12df31ab62d6" sha256new="LHXAHBP4POX2RV5EZZ6YI4I5AIUMXO663WNJ3N2HLQJN6MNLMLLA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.05.01/youtube-dl" size="1525705"/>
+    </implementation>
+    <implementation id="sha1new=a100ecfd07fe7f195b9e2130a745a92d6065f72e" released="2017-05-06" stability="stable" version="2017.5.7">
+      <manifest-digest sha1new="a100ecfd07fe7f195b9e2130a745a92d6065f72e" sha256="b5cf5447ae1d6e102d6483885b1ac1b11b3b8e6c698f96b75242322432dbc593" sha256new="WXHVIR5ODVXBALLEQOEFWGWBWENTXDTMNGHZNN2SIIZCIMW3YWJQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.05.07/youtube-dl" size="1530001"/>
+    </implementation>
+    <implementation id="sha1new=c0683271dbf666082e2aeb07537d585959dbe7ed" released="2017-05-09" stability="stable" version="2017.5.9">
+      <manifest-digest sha1new="c0683271dbf666082e2aeb07537d585959dbe7ed" sha256="6b011f380ab3adf4efcc97006155f3a7d02ba1fa4aeda74d5a0eda8534ed62fe" sha256new="NMAR6OAKWOW7J36MS4AGCVPTU7ICXIP2JLW2OTK2B3NIKNHNML7A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.05.09/youtube-dl" size="1529670"/>
+    </implementation>
+    <implementation id="sha1new=8aac2356de10d25df8d9b76dabf6190996038338" released="2017-05-14" stability="stable" version="2017.5.14">
+      <manifest-digest sha1new="8aac2356de10d25df8d9b76dabf6190996038338" sha256="b1acd5130c7dd7495fca63cb6a781639b9f961ca407789756bc04335d3da5f32" sha256new="WGWNKEYMPXLUSX6KMPFWU6AWHG47SYOKIB3YS5LLYBBTLU62L4ZA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.05.14/youtube-dl" size="1534217"/>
+    </implementation>
+    <implementation id="sha1new=b23a929e17ca54d69986ab0775e2b77a731e4acd" released="2017-05-18" stability="stable" version="2017.5.18">
+      <manifest-digest sha1new="b23a929e17ca54d69986ab0775e2b77a731e4acd" sha256="719a28d21c7b31931df5b5cb62c543a86fef15d36ca5dc212fc28ebe50375f4d" sha256new="OGNCRUQ4PMYZGHPVWXFWFRKDVBX66FOTNSS5YIJPYKHL4UBXL5GQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.05.18/youtube-dl" size="1535432"/>
+    </implementation>
+    <implementation id="sha1new=b31f92a1e18c00fcd716b0a1ba16d59694092bad" released="2017-05-18" stability="stable" version="2017.5.18.1">
+      <manifest-digest sha1new="b31f92a1e18c00fcd716b0a1ba16d59694092bad" sha256="08bdf4da1b2e9aabad0e2ca6f76ff32bf16543d2eadb282abcd1ea7c454b4c05" sha256new="BC67JWQ3F2NKXLIOFSTPO37TFPYWKQ6S5LNSQKV42HVHYRKLJQCQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.05.18.1/youtube-dl" size="1535435"/>
+    </implementation>
+    <implementation id="sha1new=3806fa949e56fb14b71ad588427408f1ddee605a" released="2017-05-22" stability="stable" version="2017.5.23">
+      <manifest-digest sha1new="3806fa949e56fb14b71ad588427408f1ddee605a" sha256="d2c5dbe5dd75cdb83d5e4e1c92b06ff36e160d44e2d696a0046b694f5710df3a" sha256new="2LC5XZO5OXG3QPK6JYOJFMDP6NXBMDKE4LLJNIAENNUU6VYQ345A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.05.23/youtube-dl" size="1535907"/>
+    </implementation>
+    <implementation id="sha1new=1ffed0f19ebb3dc8813586563c5e8897475d6f31" released="2017-05-26" stability="stable" version="2017.5.26">
+      <manifest-digest sha1new="1ffed0f19ebb3dc8813586563c5e8897475d6f31" sha256="a8a08eb2e3eb05a3731eed7e4e5d8e5e53b415286cfced93fe983d10d78a2d57" sha256new="VCQI5MXD5MC2G4Y65V7E4XMOLZJ3IFJINT6O3E76TA6RBV4KFVLQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.05.26/youtube-dl" size="1533624"/>
+    </implementation>
+    <implementation id="sha1new=8d69bdedd01ab52a0aaac94d00de194e87ed68b7" released="2017-05-28" stability="stable" version="2017.5.29">
+      <manifest-digest sha1new="8d69bdedd01ab52a0aaac94d00de194e87ed68b7" sha256="a7c8717e889a6147645c8cecd2e8ae2ea46849c7fa189838153aa88706a992be" sha256new="U7EHC7UITJQUOZC4RTWNF2FOF2SGQSOH7IMJQOAVHKUIOBVJSK7A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.05.29/youtube-dl" size="1535953"/>
+    </implementation>
+    <implementation id="sha1new=3c272dc8ef84bb0a8291eff132f259bbd71e5e04" released="2017-06-04" stability="stable" version="2017.6.5">
+      <manifest-digest sha1new="3c272dc8ef84bb0a8291eff132f259bbd71e5e04" sha256="c7bee3d49e9ec0d5d9a9a9e6e50a47bdb99e0f9cf1a201d92545d77b03d9cf57" sha256new="Y67OHVE6T3ANLWNJVHTOKCSHXW4Z4D446GRADWJFIXLXWA6ZZ5LQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.06.05/youtube-dl" size="1535004"/>
+    </implementation>
+    <implementation id="sha1new=811588c28d45c2cb7525c6d7e7da578ea7db59d4" released="2017-06-11" stability="stable" version="2017.6.12">
+      <manifest-digest sha1new="811588c28d45c2cb7525c6d7e7da578ea7db59d4" sha256="319192d522ecd2d56dbe651d63cba49ccec1231a3cb59b41b66d2229f6232759" sha256new="GGIZFVJC5TJNK3N6MUOWHS5ETTHMCIY2HS2ZWQNWNURCT5RDE5MQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.06.12/youtube-dl" size="1536694"/>
+    </implementation>
+    <implementation id="sha1new=9470fcf0a771817b66db72982cac93296074fea3" released="2017-06-17" stability="stable" version="2017.6.18">
+      <manifest-digest sha1new="9470fcf0a771817b66db72982cac93296074fea3" sha256="4bbc18000221801f67204337129a6be7b09aeae2bbd62bae838ee374da53aa85" sha256new="JO6BQAACEGAB6ZZAIM3RFGTL46YJV2XCXPLCXLUDR3RXJWSTVKCQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.06.18/youtube-dl" size="1537388"/>
+    </implementation>
+    <implementation id="sha1new=397cacde1e066b7bf54b2b7af7440596b27220d5" released="2017-06-22" stability="stable" version="2017.6.23">
+      <manifest-digest sha1new="397cacde1e066b7bf54b2b7af7440596b27220d5" sha256="4b74d38071a917b6e5412d7ba525ff820661dd40a79f77231524ce2f4d694a76" sha256new="JN2NHADRVEL3NZKBFV52KJP7QIDGDXKAU6PXOIYVETHC6TLJJJ3A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.06.23/youtube-dl" size="1541152"/>
+    </implementation>
+    <implementation id="sha1new=7a9cd5b626be1f81e6924e839a08caa7eb858916" released="2017-06-24" stability="stable" version="2017.6.25">
+      <manifest-digest sha1new="7a9cd5b626be1f81e6924e839a08caa7eb858916" sha256="7cbce5faaf886feec475c977b0f5f2beaac371c0ec5c43802e713882115543b3" sha256new="PS6OL6VPRBX65RDVZF33B5PSX2VMG4OA5ROEHABOOE4IEEKVIOZQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.06.25/youtube-dl" size="1542675"/>
+    </implementation>
+    <implementation id="sha1new=2d82e75a127493f24994f9b73e91dea80accf87d" released="2017-07-02" stability="stable" version="2017.7.2">
+      <manifest-digest sha1new="2d82e75a127493f24994f9b73e91dea80accf87d" sha256="e3d97a446ad5c237619cbac52e4f958d97aa7b9f5ca49f1caa8826c684c4e92d" sha256new="4PMXURDK2XBDOYM4XLCS4T4VRWL2U647LSSJ6HFKRATMNBGE5EWQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.07.02/youtube-dl" size="1544559"/>
+    </implementation>
+    <implementation id="sha1new=786f0277ef3f58a19dad85359fed1347e60a4c62" released="2017-07-09" stability="stable" version="2017.7.9">
+      <manifest-digest sha1new="786f0277ef3f58a19dad85359fed1347e60a4c62" sha256="da0cf07a8b992b51a73f79f1f769b69b7dd9ac1e47a0c572123100021c6dcdee" sha256new="3IGPA6ULTEVVDJZ7PHY7O2NWTN65TLA6I6QMK4QSGEAAEHDNZXXA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.07.09/youtube-dl" size="1547002"/>
+    </implementation>
+    <implementation id="sha1new=9e06e53cac41558fd15042d3a5aebca577927e20" released="2017-07-15" stability="stable" version="2017.7.15">
+      <manifest-digest sha1new="9e06e53cac41558fd15042d3a5aebca577927e20" sha256="bb2d9dd30e12050d3ffe3d77912117bc9c64ce290f1aa382b77b57afd9000bf4" sha256new="XMWZ3UYOCICQ2P76HV3ZCIIXXSOGJTRJB4NKHAVXPNL27WIABP2A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.07.15/youtube-dl" size="1551002"/>
+    </implementation>
+    <implementation id="sha1new=66a6aabf26228c0db7022bac93aa8828e7edb70f" released="2017-07-22" stability="stable" version="2017.7.23">
+      <manifest-digest sha1new="66a6aabf26228c0db7022bac93aa8828e7edb70f" sha256="3b2c47061b55587952a2ab548d3e57e3d1a0d612e745c757ed42bac0d7b40b08" sha256new="HMWEOBQ3KVMHSUVCVNKI2PSX4PI2BVQS45C4OV7NIK5MBV5UBMEA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.07.23/youtube-dl" size="1554622"/>
+    </implementation>
+    <implementation id="sha1new=4ada720675358757dfc98b9796047c7c08f91550" released="2017-07-30" stability="stable" version="2017.7.30.1">
+      <manifest-digest sha1new="4ada720675358757dfc98b9796047c7c08f91550" sha256="08bb1be5f0ab9741706f815014ca61fac1820461a3dddb34e2c998804590bc64" sha256new="BC5RXZPQVOLUC4DPQFIBJSTB7LAYEBDBUPO5WNHCZGMIARMQXRSA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.07.30.1/youtube-dl" size="1559297"/>
+    </implementation>
+    <implementation id="sha1new=013347634fad04cd182dda70077694a982354788" released="2017-08-13" stability="stable" version="2017.8.13">
+      <manifest-digest sha1new="013347634fad04cd182dda70077694a982354788" sha256="25837533dafea097d684db93fcd426b156e3c3032ac9ed189be6802cbfc48478" sha256new="EWBXKM6272QJPVUE3OJ7ZVBGWFLOHQYDFLE62GE342ACZP6EQR4A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.08.13/youtube-dl" size="1564477"/>
+    </implementation>
+    <implementation id="sha1new=118e8aad7b45c34c0ae5cbf4e8519f1d994daf2a" released="2017-08-17" stability="stable" version="2017.8.18">
+      <manifest-digest sha1new="118e8aad7b45c34c0ae5cbf4e8519f1d994daf2a" sha256="113ee12129bb8e5eef515b81809acd43be8688c37e35fdd6a139d5f131759d73" sha256new="CE7OCIJJXOHF532RLOAYBGWNIO7INCGDPY273VVBHHK7CMLVTVZQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.08.18/youtube-dl" size="1566028"/>
+    </implementation>
+    <implementation id="sha1new=317fe2b41558ce5cd027641864d7e1558ee41a7b" released="2017-08-23" stability="stable" version="2017.8.23">
+      <manifest-digest sha1new="317fe2b41558ce5cd027641864d7e1558ee41a7b" sha256="55d0ac5f7c7ab574ef8fb1ae671e202c03f608fd27ef26fd1f0fdf6c2ff2fc1f" sha256new="KXIKYX34PK2XJ34PWGXGOHRAFQB7MCH5E7XSN7I7B7PWYL7S7QPQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.08.23/youtube-dl" size="1567669"/>
+    </implementation>
+    <implementation id="sha1new=bac9aea557cd58150ac8daf23de5f9b1c86709b4" released="2017-08-26" stability="stable" version="2017.8.27.1">
+      <manifest-digest sha1new="bac9aea557cd58150ac8daf23de5f9b1c86709b4" sha256="2e739afe61cbaaa179ef101d9170c698f0b31b8b11fbcdc623ffa2544e5d20b7" sha256new="FZZZV7TBZOVKC6PPCAOZC4GGTDYLGG4LCH543RRD76RFITS5EC3Q"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.08.27.1/youtube-dl" size="1568354"/>
+    </implementation>
+    <implementation id="sha1new=637152a982007cb43801575f4b8c24e6a2de3537" released="2017-08-26" stability="stable" version="2017.8.27">
+      <manifest-digest sha1new="637152a982007cb43801575f4b8c24e6a2de3537" sha256="61952010bd5a1c399a197241c655b97c07c8ba91da0dce9b8cf14bf44fe86a83" sha256new="MGKSAEF5LIODTGQZOJA4MVNZPQD4ROUR3IG45G4M6FF7IT7INKBQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.08.27/youtube-dl" size="1568350"/>
+    </implementation>
+    <implementation id="sha1new=6e2b514660597aa3439c21de3e2bdfa7ef014b41" released="2017-08-06" stability="stable" version="2017.8.6">
+      <manifest-digest sha1new="6e2b514660597aa3439c21de3e2bdfa7ef014b41" sha256="3f9629d3ecec8dd0fd2ad02eae41bea5a5c8f297ea0de8827a85fb4fbebe2054" sha256new="H6LCTU7M5SG5B7JK2AXK4QN6UWS4R4UX5IG6RAT2QX5U7PV6EBKA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.08.06/youtube-dl" size="1559740"/>
+    </implementation>
+    <implementation id="sha1new=745cd8f396619fd403dfe0b1a5fcb4b3b36e467d" released="2017-08-09" stability="stable" version="2017.8.9">
+      <manifest-digest sha1new="745cd8f396619fd403dfe0b1a5fcb4b3b36e467d" sha256="cb175c902ca45bcb80f119e4c20dfb60e144e6c30c97cd4c0e192105dcb19da2" sha256new="ZMLVZEBMURN4XAHRDHSMEDP3MDQUJZWDBSL42TAODEQQLXFRTWRA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.08.09/youtube-dl" size="1561920"/>
+    </implementation>
+    <implementation id="sha1new=81f423e973df006eccabadeb780d6106b20cbbb0" released="2017-09-10" stability="stable" version="2017.9.10">
+      <manifest-digest sha1new="81f423e973df006eccabadeb780d6106b20cbbb0" sha256="be2e640c1e4283364f6481bb161190904c3551c81cf63eed65bace7d7d70a9ac" sha256new="XYXGIDA6IKBTMT3EQG5RMEMQSBGDKUOIDT3D53LFXLHH27LQVGWA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.09.10/youtube-dl" size="1572725"/>
+    </implementation>
+    <implementation id="sha1new=706f3a2d92f0e5c23b3c65104bf876084bfcb19f" released="2017-09-10" stability="stable" version="2017.9.11">
+      <manifest-digest sha1new="706f3a2d92f0e5c23b3c65104bf876084bfcb19f" sha256="b8692197d3fe0c124469569d338df59bb839843c268228ea233aa3cd94fe89b1" sha256new="XBUSDF6T7YGBERDJK2OTHDPVTO4DTBB4E2BCR2RDHKR43FH6RGYQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.09.11/youtube-dl" size="1572738"/>
+    </implementation>
+    <implementation id="sha1new=6142f8551f3b6a3620108cee1e438a691e3d64ac" released="2017-09-15" stability="stable" version="2017.9.15">
+      <manifest-digest sha1new="6142f8551f3b6a3620108cee1e438a691e3d64ac" sha256="f47915eca4cda8aa1971b47216f0fd4cab0f220276f3e47e8a383ada8bd6e3c3" sha256new="6R4RL3FEZWUKUGLRWRZBN4H5JSVQ6IQCO3Z6I7UKHA5NVC6W4PBQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.09.15/youtube-dl" size="1573886"/>
+    </implementation>
+    <implementation id="sha1new=4e3c8ae5c1b040801ab0289cfed93a4135ef94c4" released="2017-09-01" stability="stable" version="2017.9.2">
+      <manifest-digest sha1new="4e3c8ae5c1b040801ab0289cfed93a4135ef94c4" sha256="21f8b9a5309dc297ce6b5f067fcfe4cabb620a039d764befa6870a9168036414" sha256new="EH4LTJJQTXBJPTTLL4DH7T7EZK5WECQDTV3EX35GQ4FJC2ADMQKA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.09.02/youtube-dl" size="1569069"/>
+    </implementation>
+    <implementation id="sha1new=655e4c48c08b4741b3054286305039996099c22a" released="2017-09-23" stability="stable" version="2017.9.24">
+      <manifest-digest sha1new="655e4c48c08b4741b3054286305039996099c22a" sha256="1f26b755529a844fc66c9b919136a364409a68b58dcc19a4eace6b9a7a937fd6" sha256new="D4TLOVKSTKCE7RTMTOIZCNVDMRAJU2FVRXGBTJHKZZVZU6UTP7LA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.09.24/youtube-dl" size="1582485"/>
+    </implementation>
+    <implementation id="sha1new=d81273cf31ec5418d6a3328d8e516f31ec2776b5" released="2017-10-01" stability="stable" version="2017.10.1">
+      <manifest-digest sha256new="LUFNPBJVH7OD5FSNWJHLAW6E4CKR3RLEDGQA5UTZPDMWHKEAO2PQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.10.01/youtube-dl" size="1584198"/>
+    </implementation>
+    <implementation id="sha1new=7e1a2728bef04671ffb9b5731bb2ae91b05606e5" released="2017-10-11" stability="stable" version="2017.10.12">
+      <manifest-digest sha256new="U5WFNZDR2W7L26O5J7AAZ5RCR6VK4GGMLOTBT2FCBMJKPAJBJ6HA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.10.12/youtube-dl" size="1587592"/>
+    </implementation>
+    <implementation id="sha1new=0478a6069ae37c72d8a86a0d7c8f1e7496bd3a95" released="2017-10-14" stability="stable" version="2017.10.15.1">
+      <manifest-digest sha256new="EKOPHDKNQLSOQMI2FVVXDD66DZJEBFK73VC2PYTHZUFCJUB3I2TA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.10.15.1/youtube-dl" size="1588299"/>
+    </implementation>
+    <implementation id="sha1new=34608f02ee294d8dab780cd6ed995f41b0a3c29f" released="2017-10-14" stability="stable" version="2017.10.15">
+      <manifest-digest sha256new="QYDMNZEQWGDQQK3OVWNIAYNK5TDK35LBOOVPO6HUVZ3GPEZGOVFA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.10.15/youtube-dl" size="1587970"/>
+    </implementation>
+    <implementation id="sha1new=baf4f6f4586159225b5917110c20a400faae6ac1" released="2017-10-20" stability="stable" version="2017.10.20">
+      <manifest-digest sha256new="HZDKJJFEV5O6XY2NQZQW2N2CKV3C4E2RCBFR7DHOX3F4FE4LF7GQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.10.20/youtube-dl" size="1590490"/>
+    </implementation>
+    <implementation id="sha1new=6cfcc80d3709c9cece8e2c0d189c67669e83a0d2" released="2017-10-29" stability="stable" version="2017.10.29">
+      <manifest-digest sha256new="3EP5XLHDVLEWLYIW26N2LA32SEDWCIUOBMKNNDA2VYI53UQIV33A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.10.29/youtube-dl" size="1594656"/>
+    </implementation>
+    <implementation id="sha1new=f25444ecc03d4079c77f109c2157f6ccb696cbdb" released="2017-10-06" stability="stable" version="2017.10.7">
+      <manifest-digest sha256new="UFOP3XVN77EYLORNNV2NUU6T5ZIHXVFZ2MJN4QUR7IDM4XTFGINQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.10.07/youtube-dl" size="1585656"/>
+    </implementation>
+    <implementation id="sha1new=538cbf84013519c0094d0928d77945ece5fd118c" released="2017-11-14" stability="stable" version="2017.11.15">
+      <manifest-digest sha256new="JCQPVOC6FY2UKNVRS6OMPPNBAMHDCP7LIFDRI2FDSHMYLRXKIYOA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.11.15/youtube-dl" size="1595297"/>
+    </implementation>
+    <implementation id="sha1new=d3111622a906f0f31d548c72fb1b64f5f8237ff2" released="2017-11-06" stability="stable" version="2017.11.6">
+      <manifest-digest sha256new="QCWT5AYYTI2XTBQSGFD6QXFEPL3SO6V7SC43ZSGRMG5T67KGTJWQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.11.06/youtube-dl" size="1594421"/>
+    </implementation>
+    <implementation id="sha1new=4404087f979c374a7e5998eb6bbd881409d589a4" released="2017-12-02" stability="stable" version="2017.12.2">
+      <manifest-digest sha256new="YSG6TDQQPRVJFCV2XZKYSGO6QNRSGAVP7CEBA3JDO6IJ4YMA6GYA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.12.02/youtube-dl" size="1598646"/>
+    </implementation>
+    <implementation id="sha1new=74862a9d50bce70f39051c1eb16f265dfc8507bc" released="2017-11-26" stability="stable" version="2017.11.26">
+      <manifest-digest sha256new="4Z5Y6WEM2XDJOIEIU6DVWM2IFDRPX7USHPNPLBMBACMQ4GKVZADA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.11.26/youtube-dl" size="1596414"/>
+    </implementation>
+    <implementation id="sha1new=0fed16c25704881f09bb90a4960ec08254f998fc" released="2017-12-10" stability="stable" version="2017.12.10">
+      <manifest-digest sha256new="TXJWGDOSUB75SE4AT6YNA54RAWGQZUNNOZPKVFJXCIWPRRMBRPLQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.12.10/youtube-dl" size="1599965"/>
+    </implementation>
+    <implementation id="sha1new=c1f667a386b7290eda42226e616a206ef565eb91" released="2017-12-13" stability="stable" version="2017.12.14">
+      <manifest-digest sha256new="B5S73GFXQTDVJ2GRMDZOGEE6N5FEFKFPRIP4LTW2JQRMQ7V3B36A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.12.14/youtube-dl" size="1600930"/>
+    </implementation>
+    <implementation id="sha1new=f2ab8180265550d878cd9dca99f2602ec28be071" released="2017-12-23" stability="stable" version="2017.12.23">
+      <manifest-digest sha256new="UHZA3AXW7LVOSBZ3IBXGWWMR3RUO5Z3L7MH4CUJBK4ILYOZZUPEA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.12.23/youtube-dl" size="1604339"/>
+    </implementation>
+    <implementation id="sha1new=a3d6b1437e8b1cabaca6e0d7042496f410e0dd8b" released="2017-12-28" stability="stable" version="2017.12.28">
+      <manifest-digest sha256new="WEPYLGXWZ4HANQ7752FDASXVZBQ33XIPQYOGEUK6Q2UKZY6Z3NCQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.12.28/youtube-dl" size="1609977"/>
+    </implementation>
+    <implementation id="sha1new=ea0f823c4e09e961f037b67b054fe4ebdaeb1a21" released="2017-12-30" stability="stable" version="2017.12.31">
+      <manifest-digest sha256new="JQAGAOHBQIWJBOOKQGBWYCCI6L2UDVEVVMD4EKXM4M6Z24G633WA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2017.12.31/youtube-dl" size="1612474"/>
+    </implementation>
+    <implementation id="sha1new=7a18732f7a26e8c49e9448d9cc531687e1585140" released="2018-01-13" stability="stable" version="2018.1.14">
+      <manifest-digest sha256new="RYYOZLWYGSD7EMJ5YICB3SJ4R7TSCGR2IO2FGZCOZLXZWOCLPHHQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.01.14/youtube-dl" size="1619302"/>
+    </implementation>
+    <implementation id="sha1new=6b787a413360888cff829f16dfb6d2a02369a2ca" released="2018-01-18" stability="stable" version="2018.1.18">
+      <manifest-digest sha256new="TJDWXGYFI7W6U537I3GS6I32IK372RQFPIZ6GC23TQC7OK43FJGQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.01.18/youtube-dl" size="1618523"/>
+    </implementation>
+    <implementation id="sha1new=ebbaa6be1fd41d0a9e2355ab5e0e817ac180dcea" released="2018-01-21" stability="stable" version="2018.1.21">
+      <manifest-digest sha256new="DEC2JHWNQHIEVZBIHD3OZ6OYSH74QWCEXEBYV4PGICHD2FRUPT4A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.01.21/youtube-dl" size="1620403"/>
+    </implementation>
+    <implementation id="sha1new=769736a22dc98ad7b9feae69109bea98404bba64" released="2018-01-07" stability="stable" version="2018.1.7">
+      <manifest-digest sha256new="6UAWBWFVFM3IO36AGL7BGPWA4UPQNX4NZ3VBXKVTEU2UFAEEQ4BA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.01.07/youtube-dl" size="1614357"/>
+    </implementation>
+    <implementation id="sha1new=5005aaed4ce0692eaafa7637a51bb3e1d42ce506" released="2018-01-27" stability="stable" version="2018.1.27">
+      <manifest-digest sha256new="SYNL4FM7XFBWOKIIUUYOCAFJAEA35UKNC3YXZKJ6TKTIPHXA2N5A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.01.27/youtube-dl" size="1622946"/>
+    </implementation>
+    <implementation id="sha1new=10f048311751e31b78a4a35176e80c2f0794a217" released="2018-02-03" stability="stable" version="2018.2.3">
+      <manifest-digest sha256new="ARKGI6MY4KJCCGBGMERTYVZIBN7F3EN4ZLLH5SZVAM47CTJ6OZWQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.02.03/youtube-dl" size="1622980"/>
+    </implementation>
+    <implementation id="sha1new=7b6a0c708d5e213baf4657240de28d4827d1d3db" released="2018-02-04" stability="stable" version="2018.2.4">
+      <manifest-digest sha256new="T6DAFEN25FLEEMDMRTJ5YVPWGKHLZKNU37MLVM6VRKDTTMU5UNLA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.02.04/youtube-dl" size="1623215"/>
+    </implementation>
+    <implementation id="sha1new=78142cecfdcd61e7aae39424f09d85cb3e509fe7" released="2018-02-08" stability="stable" version="2018.2.8">
+      <manifest-digest sha256new="PBRTWSGYEO3IRRZNMOTOQFJTYJNMCUGS76GUBATAUZVG7EYV7E3A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.02.08/youtube-dl" size="1624171"/>
+    </implementation>
+    <implementation id="sha1new=a81f8ce638b89e1e1536b3e17208f40ce56c64e7" released="2018-02-11" stability="stable" version="2018.2.11">
+      <manifest-digest sha256new="CRGGZAFU3YS5H2LIM5F7DN4ZWPE5TAW4M37ZGKQ76SP6FLW4DLYQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.02.11/youtube-dl" size="1625851"/>
+    </implementation>
+    <implementation id="sha1new=f25e5a9e2397a018aa92810af70527a6a52e5b73" released="2018-02-22" stability="stable" version="2018.2.22">
+      <manifest-digest sha256new="J2OLXITXPW22ENIVKCGCC7ISLDSGCIJXXSVUBPQK7HXCBRSIMLYA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.02.22/youtube-dl" size="1626334"/>
+    </implementation>
+    <implementation id="sha1new=4eefc4353e426f501b32aaccd7d7161f7d4a8b1c" released="2018-02-25" stability="stable" version="2018.2.25">
+      <manifest-digest sha256new="URKHLA7K35FR46XPZPZLNZYLHFZEIBAH53MYTWSNOY5RY4JTQ6WA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.02.25/youtube-dl" size="1630780"/>
+    </implementation>
+    <implementation id="sha1new=173aec7eda8d2cf76277fec228ae344c92aec67e" released="2018-02-25" stability="stable" version="2018.2.26">
+      <manifest-digest sha256new="7WRL3SJHIZ7QBKBJAHUZS5EFDVFKPJSYJTAZDBSBRMIMPLZWIAQQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.02.26/youtube-dl" size="1630929"/>
+    </implementation>
+    <implementation id="sha1new=9482b1545d7659873753cf9584e4b833ea21d1b8" released="2018-03-09" stability="stable" version="2018.3.10">
+      <manifest-digest sha256new="WDIJPHOF6GAXUZW7WYWX2L5M4VOALWRFI6X5TGPGFVM2KDEE532A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.03.10/youtube-dl" size="1638366"/>
+    </implementation>
+    <implementation id="sha1new=19ea982a14da6a9559d3e479824183467b2f37af" released="2018-03-02" stability="stable" version="2018.3.3">
+      <manifest-digest sha256new="F5EX2IYYQUHIRE3PUVAISHGETART72KXD5QRF77IF4U24A3BURBQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.03.03/youtube-dl" size="1633018"/>
+    </implementation>
+    <implementation id="sha1new=5e929017e1ebe2b84a04a4e2d142b31e6cda60af" released="2018-03-14" stability="stable" version="2018.3.14">
+      <manifest-digest sha256new="HP2IQDKBHUL5FNUI3NUTICI43WXVQ67DXGNCD6I2GIX5HBGGW73A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.03.14/youtube-dl" size="1642009"/>
+    </implementation>
+    <implementation id="sha1new=08a54cff054a3dd3423cc25152bd84665dabb1e8" released="2018-03-19" stability="stable" version="2018.3.20">
+      <manifest-digest sha256new="XAJYAXB24FNKHM3GE5DVIRSMXFZIUIQPRKFMBASDKWDROYTIORUA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.03.20/youtube-dl" size="1643405"/>
+    </implementation>
+    <implementation id="sha1new=8efd88efae88143eeab84d8c79bbb72f5834d3c1" released="2018-03-26" stability="stable" version="2018.3.26.1">
+      <manifest-digest sha256new="BFFLTUNDBHM7L4Y5VT2USWV5HFYFUN3JUQBLFWLRAFLU2YZRSP6Q"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.03.26.1/youtube-dl" size="1644849"/>
+    </implementation>
+    <implementation id="sha1new=ef8db7fbdaf3cbfdbf43eeb6a46bab9431a41341" released="2018-04-02" stability="stable" version="2018.4.3">
+      <manifest-digest sha256new="6GD4DEMYHXBTJOCY6ACGLQDI56WZLTBXHLWV3ZUUWIL5SYYI6URQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.04.03/youtube-dl" size="1647080"/>
+    </implementation>
+    <implementation id="sha1new=b7140838505d9177f4d57479d7259c73fa90a256" released="2018-04-08" stability="stable" version="2018.4.9">
+      <manifest-digest sha256new="ZM64QESMRVDMV2QDWW722QL7P3S4ULVND3PFGYWCOOUBXWAUY3RQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.04.09/youtube-dl" size="1648788"/>
+    </implementation>
+    <implementation id="sha1new=5eb56ba9a51d5d7a9cf91fed45a16e243d48041e" released="2018-04-15" stability="stable" version="2018.4.16">
+      <manifest-digest sha256new="YTWSQOXDKF5BHWISO6B362H22A6KQDQHC6EKKYLPLFGYN3JTP3GA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.04.16/youtube-dl" size="1651227"/>
+    </implementation>
+    <implementation id="sha1new=ae636e2a442dda4246c006eb0ae36820583341cb" released="2018-04-24" stability="stable" version="2018.4.25">
+      <manifest-digest sha256new="QEH6QISXC43C3DLQBGEFHEBE3PJOJCWVGPFCDIPYEV3EUWUBIQLA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.04.25/youtube-dl" size="1651034"/>
+    </implementation>
+    <implementation id="sha1new=5a52317a8c3bf1b15329f3fb420cd0f0ace8280c" released="2018-04-30" stability="stable" version="2018.5.1">
+      <manifest-digest sha256new="GJSK7LTKZSAVJYI5WKHL6ECBBZEMHRQ5WDGKZUWGUQEOZERNIB3A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.05.01/youtube-dl" size="1655185"/>
+    </implementation>
+    <implementation id="sha1new=bb280bf18bc643643e6425dc468514794fe27f6a" released="2018-05-08" stability="stable" version="2018.5.9">
+      <manifest-digest sha256new="5HTI7DZLPTCYPHCXHQATO6G2CQU6QXWQKPLZNYNJETB5ZQOWZ7TA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.05.09/youtube-dl" size="1658791"/>
+    </implementation>
+    <implementation id="sha1new=1a6fb7b5d416bca0bcadf1d138f59db77b39ce93" released="2018-05-17" stability="stable" version="2018.5.18">
+      <manifest-digest sha256new="FQZOHRRK5LQCZRESC4AW7PRUNF4ER3VZGXMEPM6SFKFNHNFWTKIA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.05.18/youtube-dl" size="1658647"/>
+    </implementation>
+    <implementation id="sha1new=d29a6e1b50ba9438b342f581264a53f7d5c0abde" released="2018-05-26" stability="stable" version="2018.5.26">
+      <manifest-digest sha256new="WECIZG2PPJ7O3NJDJGYYWZ6YWAPQHYXLTOGEOL3ZIPMXHKPWB4HQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.05.26/youtube-dl" size="1660847"/>
+    </implementation>
+    <implementation id="sha1new=7d0328dd6e935a934e85846bc8f8c74607f36793" released="2018-05-30" stability="stable" version="2018.5.30">
+      <manifest-digest sha256new="XPMIH6LVT3ROXDVEXH5PMHOAS7VZ3VTYVE73TCV5CQEDGJKJC5JA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.05.30/youtube-dl" size="1664465"/>
+    </implementation>
+    <implementation id="sha1new=ab0265f72661999759f46c11931335c25467fc80" released="2018-06-10" stability="stable" version="2018.6.11">
+      <manifest-digest sha256new="3YGARTU2LY3AB4NTQH46VORSYWLDON5US2TCPBAONEVK3CW4QZCA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.06.11/youtube-dl" size="1665655"/>
+    </implementation>
+    <implementation id="sha1new=cc4a2857d8e939f7e0c09af8d4633e496a704c7a" released="2018-06-01" stability="stable" version="2018.6.2">
+      <manifest-digest sha256new="CNS525VDZ5XBVZFBBWSYJZN5UNPZL3TEIL2NSVWSQ4RAT2I7HZ3A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.06.02/youtube-dl" size="1662208"/>
+    </implementation>
+    <implementation id="sha1new=cf175486c02e043fb55f9a4824cb6f82b4fabcec" released="2018-06-03" stability="stable" version="2018.6.4">
+      <manifest-digest sha256new="JHNB7KROOOSGDRI6X5DYHGOYLTT74GZ2P3EM7GPEA76KIFE4NYRQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.06.04/youtube-dl" size="1664518"/>
+    </implementation>
+    <implementation id="sha1new=ef5bfc78b2d676400feedeea707c9f5f7b7e11dc" released="2018-06-13" stability="stable" version="2018.6.14">
+      <manifest-digest sha256new="WOUMB7MUX67KPNVZZID6GUSYLZGUWGCKKAI2RFVYJQPTSGP6UD5A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.06.14/youtube-dl" size="1668084"/>
+    </implementation>
+    <implementation id="sha1new=31052c2429e751bd7f0ac2aecb8146cef5b2e838" released="2018-06-17" stability="stable" version="2018.6.18">
+      <manifest-digest sha256new="WMWCWO4JS7XFRPOG4RFQ4BYUA6MSHCZ5BGXJCUUW67COTTRXIGOQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.06.18/youtube-dl" size="1672166"/>
+    </implementation>
+    <implementation id="sha1new=c67490d3c9ff42444f4b816c0c4e483bf86c14d0" released="2018-06-19" stability="stable" version="2018.6.19">
+      <manifest-digest sha256new="5XOWVPRJGWU7DVXC63IA6IVSANN7TBQAUVQIB7EU5VLOBKLBVBBA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.06.19/youtube-dl" size="1673565"/>
+    </implementation>
+    <implementation id="sha1new=e2edfd5310093212d96969ae5e428ca98260ebed" released="2018-06-24" stability="stable" version="2018.6.25">
+      <manifest-digest sha256new="LCOV7D25T2GITDV2XRDL45CMRDNB7RUMOW4FCUGECHDQKDFYYH5Q"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.06.25/youtube-dl" size="1674084"/>
+    </implementation>
+    <implementation id="sha1new=cf67395562c80fbc360dabd552581f0cc72ffaa2" released="2018-07-03" stability="stable" version="2018.7.4">
+      <manifest-digest sha256new="V3XTXAZ3WA466DZJ4MBVTHHKCHI6FPXQA7BNV4ZYXKAR3FXTTVEQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.07.04/youtube-dl" size="1676093"/>
+    </implementation>
+    <implementation id="sha1new=9e4ed2623499c863421df2057d46d95451215bc7" released="2018-07-09" stability="stable" version="2018.7.10">
+      <manifest-digest sha256new="6RNNQE6R6HCFXT2PGRSMCOR7RMENMJUSCWXQL2JH3WSLKUPKXE7A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.07.10/youtube-dl" size="1680446"/>
+    </implementation>
+    <implementation id="sha1new=0659d6210e7c882f62af3630e081eb6fdf4b9314" released="2018-07-21" stability="stable" version="2018.7.21">
+      <manifest-digest sha256new="HNYP5PLVDC2QNFR4EAWZHSC4RYUDCA3FK7YBQDGZE5V6JI7KI6BA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.07.21/youtube-dl" size="1681927"/>
+    </implementation>
+    <implementation id="sha1new=1fe51958610561f4fdd9564deec8f8d0d7760c83" released="2018-07-29" stability="stable" version="2018.7.29">
+      <manifest-digest sha256new="PC5PCJXZV532OP2ITHTC2FWGGNAD6EXYJLECDNMZMT47EZ2NG75A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.07.29/youtube-dl" size="1685943"/>
+    </implementation>
+    <implementation id="sha1new=a3446ac75ead666af510ed084f87cfc07ba4a0de" released="2018-08-03" stability="stable" version="2018.8.4">
+      <manifest-digest sha256new="UM3XNE2TLKSPRXL4NXHKGVHS5A62GUQUFGHDRRQCAU6YI5WITALA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.08.04/youtube-dl" size="1687753"/>
+    </implementation>
+    <implementation id="sha1new=8d73c90cbe52c3ac725bc5e476c437f648c58f17" released="2018-08-21" stability="stable" version="2018.8.22">
+      <manifest-digest sha256new="VU6FU2KBHAX53WHDWZTJ5Y2B2OPQPK7B2RC5AC4LURYZRNKA3UPA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.08.22/youtube-dl" size="1693575"/>
+    </implementation>
+    <implementation id="sha1new=ba174a706c4b8ea86880f0b9f5ccfc4bf2686a37" released="2018-08-27" stability="stable" version="2018.8.28">
+      <manifest-digest sha256new="NONI4XJL7B2CQVFJGR6OXTICER6RS4NDWOR6CPQFYIL643227BAA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.08.28/youtube-dl" size="1695041"/>
+    </implementation>
+    <implementation id="sha1new=7af474747a1261bae62bef0aa19f91e9ac6c4700" released="2018-09-01" stability="stable" version="2018.9.1">
+      <manifest-digest sha256new="D2KVXMCCTLYOKH2OSBO5VLTL57K5BE4REJTT5WU4C4GNSEDSPSPA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.09.01/youtube-dl" size="1697581"/>
+    </implementation>
+    <implementation id="sha1new=b39baa0ee4389dc1e345e1f077b9915f400dc4c8" released="2018-09-07" stability="stable" version="2018.9.8">
+      <manifest-digest sha256new="QH3FWKY5LQO3FMHMNOKJSX5JF44TNJPK44DTY2SBPIXM7QYDJZSA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.09.08/youtube-dl" size="1698030"/>
+    </implementation>
+    <implementation id="sha1new=3641e979faa3ab1df917ec36375ec4b22481f425" released="2018-09-09" stability="stable" version="2018.9.10">
+      <manifest-digest sha256new="AOO2D4ZWLERBIHQKJRFRLUFLHTBJWO2T24FCIWAGUX4VVCX347MA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.09.10/youtube-dl" size="1699181"/>
+    </implementation>
+    <implementation id="sha1new=3da4042b63b8c2b91f992d6f3d16fa66f162c271" released="2018-09-17" stability="stable" version="2018.9.18">
+      <manifest-digest sha256new="AR4PAD7NWSGRZ2AXG2AWT642J26ZXQD5EZDRDLMFDWXIPV2EK5TA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.09.18/youtube-dl" size="1701149"/>
+    </implementation>
+    <implementation id="sha1new=cf33b6997e9a3904f17267403720dfb9be19a952" released="2018-09-26" stability="stable" version="2018.9.26">
+      <manifest-digest sha256new="QW34K6X3RUNAMAOUAURSRAUXO2TV5B5QYERN3PXEZTF2HJSANQ6Q"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.09.26/youtube-dl" size="1701941"/>
+    </implementation>
+    <implementation id="sha1new=11856f2f3c27491613c962fe913ed0a1e1a1aced" released="2018-10-04" stability="stable" version="2018.10.5">
+      <manifest-digest sha256new="OJBUYPMOL53RJ2UF2V65NGTGH4KZSVMV4WL5RVF3GSOAPQ2R4PEQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.10.05/youtube-dl" size="1702856"/>
+    </implementation>
+    <implementation id="sha1new=18d886f24b23e00663de329ff33f26f775ea2fc9" released="2018-10-28" stability="stable" version="2018.10.29">
+      <manifest-digest sha256new="WX2SIDJF6RQEILGVRQCPSZ3OUJZKMTBVAJMZF6ZXIDVMTOKDGUEA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.10.29/youtube-dl" size="1702949"/>
+    </implementation>
+    <implementation id="sha1new=b86a1fb8b97a57b59fb5555013b6969371ce840a" released="2018-11-02" stability="stable" version="2018.11.3">
+      <manifest-digest sha256new="ABDJ5IPURSMO62SEPEUOZ3AM3LDUHAORGIFPD3H2ZKHSF2FT5VKA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.11.03/youtube-dl" size="1706612"/>
+    </implementation>
+    <implementation id="sha1new=071223ede88cb24cdbad3366a6c469bbc15ab41c" released="2018-11-07" stability="stable" version="2018.11.7">
+      <manifest-digest sha256new="65DXB4UXFQC2A7GOGVSYBYZW2KBLBDUVAB64DMGTLFLM4IKHSKNA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.11.07/youtube-dl" size="1706857"/>
+    </implementation>
+    <implementation id="sha1new=f9c087912355f2eae6a717a8fc12b494c509d15e" released="2018-11-17" stability="stable" version="2018.11.18">
+      <manifest-digest sha256new="B4NYFKEKC5LSJWFEGFJFCVILXQOYVR3ZKBP5CLBZBJF3NNFC3B2A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.11.18/youtube-dl" size="1710305"/>
+    </implementation>
+    <implementation id="sha1new=52363b9a52be81caa639ef6d2c862333c6c44ff7" released="2018-11-22" stability="stable" version="2018.11.23">
+      <manifest-digest sha256new="HZTFQYLGHIK4WIGY4TRJHTERIRR2XB3C5UYUE2ER6L65BTSXIH3A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.11.23/youtube-dl" size="1712356"/>
+    </implementation>
+    <implementation id="sha1new=b921de3112f8aeb203b90c0fba7cc165efe39b03" released="2018-12-02" stability="stable" version="2018.12.3">
+      <manifest-digest sha256new="JGIYOAFPGFGQ2U2F3IUJIRAVO4GV4TKKRJSTTKL3OB2522NBALMQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.12.03/youtube-dl" size="1714863"/>
+    </implementation>
+    <implementation id="sha1new=2f507d7528d64d11d2ef27a1b65c602d3cc645d5" released="2018-12-09" stability="stable" version="2018.12.9">
+      <manifest-digest sha256new="75NAGBNO35M2LJG2ZGZXFDPRMAU427C3YVWKVEX2C3X77O5IOKLQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.12.09/youtube-dl" size="1718730"/>
+    </implementation>
+    <implementation id="sha1new=02152fdde5101518a7b3a3af1bcb9376f0df929d" released="2018-12-16" stability="stable" version="2018.12.17">
+      <manifest-digest sha256new="INVXZOZMKJYARY724IXVQP5F4NSZBB4TNA4FMPMKGXBLXKXWGHNQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.12.17/youtube-dl" size="1719567"/>
+    </implementation>
+    <implementation id="sha1new=d804ffaa916c29e6e9268de21b38db17390e68f2" released="2018-12-31" stability="stable" version="2018.12.31">
+      <manifest-digest sha256new="BM5HV4S6NWHGZFTWHJNPM6L7HWMUTOV5CCSL2GTQCDSMUBWESNMA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2018.12.31/youtube-dl" size="1720261"/>
+    </implementation>
+    <implementation id="sha1new=9e1510a379763ec6be63b58b38eb72122b048e0d" released="2019-01-02" stability="stable" version="2019.1.2">
+      <manifest-digest sha256new="GH5UB3THN5APIFQPZRNL6AOMNWBQYYEOKCAYEKQMDAIWTALCSH2Q"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.01.02/youtube-dl" size="1721012"/>
+    </implementation>
+    <implementation id="sha1new=33b2b7bc6a9be697ff594897aead9123880713ea" released="2019-01-10" stability="stable" version="2019.1.10">
+      <manifest-digest sha256new="CQKIRPGFTVMIHC7WDZSDA7P3Q25JE2FHSPA7DZZFG56DGHG4ZLXA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.01.10/youtube-dl" size="1725985"/>
+    </implementation>
+    <implementation id="sha1new=99cc3c036d048ba1773dc060b6f7f438c1be4138" released="2019-01-15" stability="stable" version="2019.1.16">
+      <manifest-digest sha256new="DR5TCTARQIUAGTOG4ILYHARCXS42S3W5LN5ALNS2RMDXBZQDM32A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.01.16/youtube-dl" size="1726661"/>
+    </implementation>
+    <implementation id="sha1new=cbc385b7df55afc4b45cf83cd17b616b910d8d7f" released="2019-01-17" stability="stable" version="2019.1.17">
+      <manifest-digest sha256new="P5Q3R4OK3LHBDKCJ737GOSWIUWZUG6P5HI4KNMRH6GLUDVBKQQAQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.01.17/youtube-dl" size="1726682"/>
+    </implementation>
+    <implementation id="sha1new=f16638c23603e312668bdfd9de9a6f7bb859fded" released="2019-01-22" stability="stable" version="2019.1.23">
+      <manifest-digest sha256new="DKSCUECOEWGSTXRMTAHBFADFIECF3MXIERBXY3TBMZRV2YUGDB3Q"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.01.23/youtube-dl" size="1731969"/>
+    </implementation>
+    <implementation id="sha1new=a2e79adcc859d236240e4af945e27c8ca2cb96d9" released="2019-01-23" stability="stable" version="2019.1.24">
+      <manifest-digest sha256new="XKCEJ5EBJTDYDC4FAD64OLCTYVGOMMDQK6VU4SIHIUI2XQOD2TTQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.01.24/youtube-dl" size="1731971"/>
+    </implementation>
+    <implementation id="sha1new=82133a1aa31bb0b377265f052b7de63fef7d8b5d" released="2019-01-27" stability="stable" version="2019.1.27">
+      <manifest-digest sha256new="Y7WFZFF7XZVJQ4TVC77GSTYQGEOWUBB5VPSNR5QL7NNJUMW6VPKA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.01.27/youtube-dl" size="1733727"/>
+    </implementation>
+    <implementation id="sha1new=3d6446614ce22f469c0aabca1599c239aa1dcda8" released="2019-01-29" stability="stable" version="2019.1.30.1">
+      <manifest-digest sha256new="YNRKV7FU2YVEMMGYIDXNVEZLAI52MLWNUJHA6QPHPQO2FMESWVDA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.01.30.1/youtube-dl" size="1734898"/>
+    </implementation>
+    <implementation id="sha1new=0736d2bd043890136fb78c1bd1db0961f79ad4d9" released="2019-01-29" stability="stable" version="2019.1.30">
+      <manifest-digest sha256new="7V2O4NUDHIVQX45ERKVCNRNJSIYD7M7UGPIIU773OWC75AT7TI4A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.01.30/youtube-dl" size="1734868"/>
+    </implementation>
+    <implementation id="sha1new=213d62907a7f0fe7d45cde7a1c9ad81b14b75f51" released="2019-02-07" stability="stable" version="2019.2.8">
+      <manifest-digest sha256new="NXXPIRGPKUZFDHQ45TOJSR7NGWPA6NXB74S5ZAYJ6QBWBIDEOWPA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.02.08/youtube-dl" size="1734752"/>
+    </implementation>
+    <implementation id="sha1new=ff37047fe8a7cbcba8db3aee694be86094733059" released="2019-02-17" stability="stable" version="2019.2.18">
+      <manifest-digest sha256new="KA7ITBMVU4CFMJVMBH6VPKBD36PBBGCEYH4Q3P5Y5KBVKE6Q7GRQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.02.18/youtube-dl" size="1739645"/>
+    </implementation>
+    <implementation id="sha1new=258b3bb9ca4a64ce60e7829edca8b6553025fce8" released="2019-02-28" stability="stable" version="2019.3.1">
+      <manifest-digest sha256new="ODJCZEKIJDJK6FOC76FNJQO4VV7SDPNPOOAFZ2EGOG47CAE2WGGA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.03.01/youtube-dl" size="1741102"/>
+    </implementation>
+    <implementation id="sha1new=013d6c606b2982e919c1974b9be5029f1005092f" released="2019-03-17" stability="stable" version="2019.3.18">
+      <manifest-digest sha256new="VONHZ6S74CML5DIB7MZM5Z56GWH7WCAI7Y3F74NMWQNU2QMQXJIA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.03.18/youtube-dl" size="1740691"/>
+    </implementation>
+    <implementation id="sha1new=e71989358bc873b67892376e71f002bed5e1426f" released="2019-03-08" stability="stable" version="2019.3.9">
+      <manifest-digest sha256new="Q7PGT6VHMD5DRULVHV5OO52P5YLTGTXZCIKVQTXTL34TDCCUG3OA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.03.09/youtube-dl" size="1742383"/>
+    </implementation>
+    <implementation id="sha1new=6be7efc2ccf181ca7ee3f97159fc94858f355fd7" released="2019-04-01" stability="stable" version="2019.4.1">
+      <manifest-digest sha256new="4XZWUMEWVMF7ILOUWADMJ7UAFFQKMPTN6KJEG7JMK4CAR7VNKHMA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.04.01/youtube-dl" size="1744681"/>
+    </implementation>
+    <implementation id="sha1new=ccde4cd7a9f0bb940e4b43a4b32806c2828702a7" released="2019-04-06" stability="stable" version="2019.4.7">
+      <manifest-digest sha256new="YCALI2YRVFCKAT2XZENRQOSG5NZBDJZUWVKJU2UCYJFR3CQ7QBYA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.04.07/youtube-dl" size="1750838"/>
+    </implementation>
+    <implementation id="sha1new=a421fd19397c1b40bbcc5bb93807bb9a9506fc3c" released="2019-04-16" stability="stable" version="2019.4.17">
+      <manifest-digest sha256new="3NCYMQ264OVH3WV4BCHB5VOOT5DVYFM3P7TDP4UBZHQNZVAWV2UA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.04.17/youtube-dl" size="1754730"/>
+    </implementation>
+    <implementation id="sha1new=47bed07f869f7f4813225a337d8fbf27d85fac53" released="2019-04-24" stability="stable" version="2019.4.24">
+      <manifest-digest sha256new="ZLWIE5Q33MILP62MFTX3H54VXPDPYEQBSSKWX5BJYK3XHMWVLLWA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.04.24/youtube-dl" size="1758665"/>
+    </implementation>
+    <implementation id="sha1new=097a4deaef213489d2c779b9dd7655cc3a661778" released="2019-04-29" stability="stable" version="2019.4.30">
+      <manifest-digest sha256new="S4T3UNB4ZX7F7XL7YJNOJUMT7IA4IMLFYVYSCTDMPN627XARGX7Q"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.04.30/youtube-dl" size="1762422"/>
+    </implementation>
+    <implementation id="sha1new=c25de5feea018f226b9f87b530fdd0c5abc1fe41" released="2019-05-10" stability="stable" version="2019.5.11">
+      <manifest-digest sha256new="T2ZZNJH4IW2R37CMP7ZLKUVMG4VPCLVOUPYTKQCL6DZDSBUJXYBQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.05.11/youtube-dl" size="1764455"/>
+    </implementation>
+    <implementation id="sha1new=fd79582ac9d372940a40e24e1091dc9f8c384c4d" released="2019-05-20" stability="stable" version="2019.5.20">
+      <manifest-digest sha256new="VX6KEOGUNZPGYS3F3Q6NV23FW4OVCBQN6WB3YHIKU5ZKIZRSTTJQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.05.20/youtube-dl" size="1764611"/>
+    </implementation>
+    <implementation id="sha1new=0637ffc7e1ee65a5c65f00ecc9f56869696f722a" released="2019-06-07" stability="stable" version="2019.6.8">
+      <manifest-digest sha256new="SESU7ECOROKRVVCNBTUOZUAE53V5Y5FWPC5E2WRWKJSSFMQKUUGQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.06.08/youtube-dl" size="1764177"/>
+    </implementation>
+    <implementation id="sha1new=651a51d46b6d2d057196005fd4ed0ee78461c7a8" released="2019-06-21" stability="stable" version="2019.6.21">
+      <manifest-digest sha256new="KPGLRYRQUKQHHFBW3E3TA43TB3HQMKQURK6A6NJAKLVW72FIPF7A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.06.21/youtube-dl" size="1764418"/>
+    </implementation>
+    <implementation id="sha1new=6be18815d7b3c086cef56d7b0eae9c04981e382f" released="2019-06-27" stability="stable" version="2019.6.27">
+      <manifest-digest sha256new="IZF3V6DS2CRQTRETIC4RIWOBOLR2JK2VASZAF4LTPS4AIEWOFRRA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.06.27/youtube-dl" size="1764524"/>
+    </implementation>
+    <implementation id="sha1new=c0ebb80dd7c7f6a0287f97f8353f534a89deb415" released="2019-07-01" stability="stable" version="2019.7.2">
+      <manifest-digest sha256new="SHJRAISZDNQZVCGL7DYTSXO4KXYKGOBUNARXH2M7EHQXM6WCCZZQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.07.02/youtube-dl" size="1764944"/>
+    </implementation>
+    <implementation id="sha1new=3d0dea3eb46e1181bdf225f4a0e97970a2f9a51f" released="2019-07-11" stability="stable" version="2019.7.12">
+      <manifest-digest sha256new="2D2T66IWFCPFHZA2ZQS3NPBNNST6QVM4DVM3FQHVOVIDDQMXM64A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.07.12/youtube-dl" size="1759658"/>
+    </implementation>
+    <implementation id="sha1new=83b2c2bfa8fcd9fdca0bfe299b38cc65ae66fe0c" released="2019-07-13" stability="stable" version="2019.7.14">
+      <manifest-digest sha256new="5NBOMFSIWE43AO26DZ6XK3CN7BN5AJ4LNHP63KWJ4RJEPT3LLXTA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.07.14/youtube-dl" size="1762300"/>
+    </implementation>
+    <implementation id="sha1new=c5364808e36427840505e2b46cca48fb36badffe" released="2019-07-15" stability="stable" version="2019.7.16">
+      <manifest-digest sha256new="F5A6JUR7CEOQAEULUBTLUD4MGBJYPDCZEMFVMSAHKMNN2LVRNBAQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.07.16/youtube-dl" size="1762885"/>
+    </implementation>
+    <implementation id="sha1new=18bf5ee16a46ebe752f60bc9df487c4f2618c3cd" released="2019-07-26" stability="stable" version="2019.7.27">
+      <manifest-digest sha256new="3HVQ43VTVMW3SWUSMHTICPNEVBM7EAUDFKYRNWGLEQ34FLEFWN4Q"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.07.27/youtube-dl" size="1764844"/>
+    </implementation>
+    <implementation id="sha1new=faa7ebc85b402600952f45e8a0962ae6b3171fe3" released="2019-07-30" stability="stable" version="2019.7.30">
+      <manifest-digest sha256new="SSZHX4SSUZJU2YTTAJZG3ZGQ4OKLUGLACOKD2NZY26HVBZYONWRA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.07.30/youtube-dl" size="1764798"/>
+    </implementation>
+    <implementation id="sha1new=4e437af50f2acbade6ee0a5552799ca79506edfa" released="2019-08-01" stability="stable" version="2019.8.2">
+      <manifest-digest sha256new="HRN5GVQLONBCS76AQLR3ZIIUVCM3QID2SJASXIMZRDJY6L7DR27Q"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.08.02/youtube-dl" size="1765320"/>
+    </implementation>
+    <implementation id="sha1new=a27d82565d803ad8b18e872082858236114a084d" released="2019-08-13" stability="stable" version="2019.8.13">
+      <manifest-digest sha256new="2IK4RSQGIC7LHQGNJDPZPOY6OJAEH4K5Z42FULV6VX42FNQ2V2XA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.08.13/youtube-dl" size="1766380"/>
+    </implementation>
+    <implementation id="sha1new=625eab19e7453748e11cc8fd1ede879a9be6ec14" released="2019-08-31" stability="stable" version="2019.9.1">
+      <manifest-digest sha256new="TFS6WVL625ZBYGDSLC77DOXSAQANN2GGUUK6ZEX7HW5TZYKJZ6QQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.09.01/youtube-dl" size="1767366"/>
+    </implementation>
+    <implementation id="sha1new=0bf51177d4cb78d1afec6e3c1ee42dcde1265bd7" released="2019-09-11" stability="stable" version="2019.9.12.1">
+      <manifest-digest sha256new="IIXLS7S56DDCLS6MC5VJNHFRV7OW5QUGNL6N4KREGAQRL4SD6P2A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.09.12.1/youtube-dl" size="1767860"/>
+    </implementation>
+    <implementation id="sha1new=6052bc531f3442b8f27f0cea9c63fe5c6edff6f4" released="2019-09-11" stability="stable" version="2019.9.12">
+      <manifest-digest sha256new="WZMXFUEGPT4GZRKW3PARG3RATZMCZLTWULXEEV3HOWPR7CW4KNQQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.09.12/youtube-dl" size="1767892"/>
+    </implementation>
+    <implementation id="sha1new=6b876a1dd4a5f97695c5c8711888db2876fc3219" released="2019-09-27" stability="stable" version="2019.9.28">
+      <manifest-digest sha256new="JLVFQK6A3BALG45CUMUPUI5VCV6QU4E3PHX5663FMF44G25OFEHQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.09.28/youtube-dl" size="1768611"/>
+    </implementation>
+    <implementation id="sha1new=bec2ccad6ff9be70664ca891fee3c83887716287" released="2019-10-15" stability="stable" version="2019.10.16">
+      <manifest-digest sha256new="35JFWXGBQYMF5G7OOXJN2T4W4UZQJFFPCLPA2AVOLE5NCSYV2VNA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.10.16/youtube-dl" size="1767501"/>
+    </implementation>
+    <implementation id="sha1new=4faed77a05a6dd02b98f65a670f0dd8b786dea9c" released="2019-10-21" stability="stable" version="2019.10.22">
+      <manifest-digest sha256new="IFVYMQHFP5QEJYMOUAOEZB2DIPQTT5O4OUJ75C7MZCEMWJMJYSEA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.10.22/youtube-dl" size="1764011"/>
+    </implementation>
+    <implementation id="sha1new=50913f32b7e508b146d6d7d2ccc2072e5a862659" released="2019-10-28" stability="stable" version="2019.10.29">
+      <manifest-digest sha256new="VRG4TGR4DQXIM7WVBMJH4WIZBDB4BBXPWPKKOXXGB37HASUHZ23A"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.10.29/youtube-dl" size="1760437"/>
+    </implementation>
+    <implementation id="sha1new=05507233a74a4e2e6caa12e7f4d5d6586958fdb7" released="2019-11-21" stability="stable" version="2019.11.22">
+      <manifest-digest sha256new="FMGQC4Z553FC6BXL6ID4JJ6CK4HJDO3LRSSOAHIECLGHQ36FV3FA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.11.22/youtube-dl" size="1748039"/>
+    </implementation>
+    <implementation id="sha1new=909d57ed15070d1e8f46447b21b1fba6f45fb7f2" released="2019-11-28" stability="stable" version="2019.11.28">
+      <manifest-digest sha256new="P4S4P6IFRWTSWZDMGI5KYTVH3UMIRRWJC2HYGXXVDNOYIV6MROPQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.11.28/youtube-dl" size="1743965"/>
+    </implementation>
+    <implementation id="sha1new=35536fae56acadbdbcbfa9217d8daa2bdb5361f8" released="2019-11-04" stability="stable" version="2019.11.5">
+      <manifest-digest sha256new="AECIQXEFL5PISUXZBDQWY5ET7HUUB2EYSQ6H7Q2ZSPRMNJZRC6FQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.11.05/youtube-dl" size="1752560"/>
+    </implementation>
+    <implementation id="sha1new=ae80fab43c1b60fc47af584b5d66f31e70952bf7" released="2019-12-24" stability="stable" version="2019.12.25">
+      <manifest-digest sha256new="WPP2T2PTJLTYLXFWEPHP5H5JWHEKMWDPNTJKJXOLCNOQTCX7EYYQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2019.12.25/youtube-dl" size="1745730"/>
+    </implementation>
+    <implementation id="sha1new=edea506f3aef88e052a04d53551ded8ad1b4cc76" released="2019-12-31" stability="stable" version="2020.1.1">
+      <manifest-digest sha256new="PQJX325O3VGD4RT6BQDK4SQP7YJEAKHSYNJOWVRLTZR6ZBM572MA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2020.01.01/youtube-dl" size="1747257"/>
+    </implementation>
+    <implementation id="sha1new=61020a1a77c5ec1b2602fcb7544dc94ff354b673" released="2020-01-14" stability="stable" version="2020.1.15">
+      <manifest-digest sha256new="QHTFCGPTOKW2KOTTTPTMCHSTAAIZ4NVVYTFTYRS6JHSICTK7W3CQ"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2020.01.15/youtube-dl" size="1747598"/>
+    </implementation>
+    <implementation id="sha1new=1124c250b7272ef49ad21f938146880ecfe87bea" released="2020-01-23" stability="stable" version="2020.1.24">
+      <manifest-digest sha256new="ZI2LJ37GBOAEQGS3SVO7WBTXCQXC6D6IYJXNLAZXEAY4BWSTHLGA"/>
+      <file dest="youtube-dl" href="https://github.com/rg3/youtube-dl/releases/download/2020.01.24/youtube-dl" size="1747838"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl5BqB4ACgkQWao5J8JOTh7tOQf9Gec5
+04OORWOViqv0K3QtXBuGTN/6euueBL2daOS2wOF49ZzqYJZG3vem7lcZcwljBKOOGjMoz5fwdBJw
+Dmu7vqPG/lHnrq1Bg6pyoKQnteIlm1lrbucoEudncxZuQBv0mPqNMqOc+QDmGmTS3LuhKvcES12B
+82Ig+wzRvcsCFIeYKal6dTSzQr+9jcZZ61WgYzAMaShAjgPgIn1eeGnwNaX8aSF2N3pf1PPFMjpS
+7JD0N59gPbBAAD6RgZBrHhJiNiAT2qnSXRKXowJA2CdjR5HYBKBUmkVj84Hd+3LlzelOT5f+xM7W
+NXyGFj3nmxVa6VDDzBQA0YO/0b9ORBr0Fw==
+
+-->

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Dependencies</name>
+  <summary>open-source modern Dependency Walker</summary>
+  <description>Dependencies is a rewrite of the legacy software Dependency Walker which was shipped along Windows SDK. It can help developers troubleshooting their DLL load dependencies issues.</description>
+  <homepage>https://github.com/lucasg/Dependencies</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/dependencies.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/dependencies.png" type="image/png"/>
+
+  <feed-for interface="https://apps.0install.net/gui/dependencies.xml"/>
+
+  <group license="MIT License">
+    <command name="run" path="DependenciesGui.exe">
+      <runner interface="https://apps.0install.net/dotnet/clr.xml" command="run-gui"/>
+    </command>
+    <command name="run-cli" path="Dependencies.exe">
+      <runner interface="https://apps.0install.net/dotnet/clr.xml" command="run"/>
+    </command>
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/lucasg/Dependencies/releases/download/v{version}/Dependencies_x64_Release.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/lucasg/Dependencies/releases/download/v{version}/Dependencies_x86_Release.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

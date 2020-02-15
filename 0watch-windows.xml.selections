@@ -1,23 +1,14 @@
 <?xml version="1.0"?>
-<selections interface="http://0install.de/feeds/0watch.xml" source="false" command="run" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<selections interface="https://apps.0install.net/0install/0watch.xml" source="false" command="run" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>0watch</name>
-  <selection version="0.2" released="2018-04-11" license="OSI Approved :: GNU Lesser General Public License (LGPL)" id="sha1new=9d8767e96e63369eeeb2ec4bad6ce5b585ace97e" interface="http://0install.de/feeds/0watch.xml" from-feed="https://apps.0install.net/0install/0watch.xml">
-    <requires interface="http://0install.net/tools/0template.xml">
-      <executable-in-path name="0template" />
-    </requires>
-    <command name="run" path="0watch.py">
-      <runner interface="https://apps.0install.net/python/python.xml" version="..!3.7" />
-    </command>
-    <manifest-digest sha1new="9d8767e96e63369eeeb2ec4bad6ce5b585ace97e" sha256new="2RKM7UD6XQYPSJE7OLSLXVRDZDXDHIWD5AHCL7DOSPQQLM2HZKSQ" />
-  </selection>
-  <selection version="2.16.7" released="2019-07-25" license="LGPL v3 (GNU Lesser General Public License)" id="sha1new=4ef83ca118c827c0682367070988b25bbabfff17" interface="http://0install.de/feeds/ZeroInstall_Tools.xml" from-feed="https://apps.0install.net/0install/0publish-win.xml">
+  <selection version="2.17.2" released="2020-02-15" license="LGPL v3 (GNU Lesser General Public License)" id="sha1new=d36f412be314b981ec0537e673ddfe09b15d4cdd" interface="https://apps.0install.net/0install/0publish-win.xml">
     <requires interface="https://apps.0install.net/utils/gnupg.xml">
       <environment name="PATH" insert="." />
     </requires>
     <command name="0publish" path="0publish.exe">
       <runner interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.." command="run" />
     </command>
-    <manifest-digest sha1new="4ef83ca118c827c0682367070988b25bbabfff17" sha256new="D4Y77ARPDVTDJLUNYK4OJIH2PL25KNHSSOHB2D5BYXXVPU3YEODQ" />
+    <manifest-digest sha1new="d36f412be314b981ec0537e673ddfe09b15d4cdd" sha256new="D7VY6YMMJ24RKVNBSUP6DW6JDS34NGJZNK6VL4DVE7SX45J6MXBA" />
   </selection>
   <selection version="2.3.10" released="2020-01-15" license="OSI Approved :: GNU Lesser General Public License (LGPL)" id="sha1new=31091e7ac1dde3fbfaeecae391db0ba7dbadd507" interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
     <requires interface="https://apps.0install.net/utils/gnupg.xml">
@@ -38,13 +29,22 @@
     <requires interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
       <environment name="PYTHONPATH" insert="" />
     </requires>
-    <requires os="Windows" interface="http://0install.de/feeds/ZeroInstall_Tools.xml">
+    <requires os="Windows" interface="https://apps.0install.net/0install/0publish-win.xml">
       <executable-in-var command="0publish" name="0TEMPLATE_EXTERNAL_TOOL" />
     </requires>
     <command name="run" path="0template.py">
       <runner interface="https://apps.0install.net/python/python.xml" />
     </command>
     <manifest-digest sha1new="03a80899236770b139c3c4be1d2255e4644a1a32" sha256new="GHJMUQA4THAAAG62R4R55U2CLFGHNVIRH2TTBLKYH4SKBMZF7JPQ" />
+  </selection>
+  <selection version="0.2" released="2018-04-11" license="OSI Approved :: GNU Lesser General Public License (LGPL)" id="sha1new=9d8767e96e63369eeeb2ec4bad6ce5b585ace97e" interface="https://apps.0install.net/0install/0watch.xml">
+    <requires interface="http://0install.net/tools/0template.xml">
+      <executable-in-path name="0template" />
+    </requires>
+    <command name="run" path="0watch.py">
+      <runner interface="https://apps.0install.net/python/python.xml" version="..!3.7" />
+    </command>
+    <manifest-digest sha1new="9d8767e96e63369eeeb2ec4bad6ce5b585ace97e" sha256new="2RKM7UD6XQYPSJE7OLSLXVRDZDXDHIWD5AHCL7DOSPQQLM2HZKSQ" />
   </selection>
   <selection distributions="Windows" package="netfx" version="4.5" id="package:windows:netfx:4.5:x86_64" interface="https://apps.0install.net/dotnet/clr.xml" from-feed="distribution:https://apps.0install.net/dotnet/framework.xml">
     <command name="run" path="" />

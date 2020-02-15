@@ -94,6 +94,7 @@ def upload_archives(archives):
 	else:
 		from urllib import request
 		for archive in archives:
+			print("Uploading " + archive.rel_url)
 			with open(archive.source_path, 'br') as file:
 				request.urlopen(request.Request(
 					'https://uploads.github.com/repos/0install/apps/releases/22408464/assets?name=' + archive.rel_url,

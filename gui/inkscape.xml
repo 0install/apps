@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<interface uri="https://apps.0install.net/gui/inkscape.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Inkscape</name>
+  <summary>SVG graphics editor</summary>
+  <description>An Open Source vector graphics editor, with capabilities similar to Illustrator, CorelDraw, or Xara X, using the W3C standard Scalable Vector Graphics (SVG) file format.
+Inkscape supports many advanced SVG features (markers, clones, alpha blending, etc.) and great care is taken in designing a streamlined interface. It is very easy to edit nodes, perform complex path operations, trace bitmaps and much more. We also aim to maintain a thriving user and developer community by using open, community-oriented development.</description>
+  <homepage>http://inkscape.org/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/inkscape.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/inkscape.ico" type="image/vnd.microsoft.icon"/>
+  <category>Graphics</category>
+
+  <group license="GPL v2 (GNU General Public License)">
+    <command name="run" path="inkscape.exe"/>
+    <command name="inkview" path="inkview.exe"/>
+
+    <implementation arch="Windows-x86_64" id="sha1new=c7574e3dcd38911b9bc14beb98018b3e35444508" released="2018-03-23" version="0.92.3">
+      <manifest-digest sha256new="QH5EO4ENJJXUVKRH6BB4OMQGCUUGQ6YR7L2225LYG5G6F3HFJQZA"/>
+      <archive extract="inkscape" href="https://media.inkscape.org/dl/resources/file/inkscape-0.92.3-x64.7z" size="64533141" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=fd981e96911f92d42656460a3f8edac0bb46ab58" released="2018-03-23" version="0.92.3">
+      <manifest-digest sha256new="6HFGS2NTHR5KH6E5IMF7C24NAL7K7T35T6NTEHCJ7INU7JJCF53Q"/>
+      <archive extract="inkscape" href="https://media.inkscape.org/dl/resources/file/inkscape-0.92.3-x86.7z" size="63695350" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=9c7531c487309cbc7309ac4a7540d8d2876fad68" released="2019-01-16" version="0.92.4">
+      <manifest-digest sha256new="JL5SA2SVFSYVVJPIUDATCJFRXBRA5BEU7GQ6UDF64BGKNK4Y77HQ"/>
+      <archive extract="inkscape" href="https://media.inkscape.org/dl/resources/file/inkscape-0.92.4-x64.7z" size="63666130" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=7ec89d5d971fcceb04ed7f411193016015120dea" released="2019-01-16" version="0.92.4">
+      <manifest-digest sha256new="JOXHX6OA2WUQ26LW2J2SAFZP7D3JTSVW4GW3RZS3JE6SWTFXGKSQ"/>
+      <archive extract="inkscape" href="https://media.inkscape.org/dl/resources/file/inkscape-0.92.4-x86.7z" size="63336919" type="application/x-7z-compressed"/>
+    </implementation>
+  </group>
+
+  <entry-point binary-name="inkscape" command="run"/>
+  <entry-point binary-name="inkview" command="inkview">
+    <name>Inkview</name>
+    <summary>slideshow program</summary>
+  </entry-point>
+  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
+    <file-type id="svgfile">
+      <description>Scalable Vector Graphics file</description>
+      <verb args="&quot;%1&quot;" command="inkview" name="open"/>
+      <verb args="&quot;%1&quot;" name="edit"/>
+      <extension value=".svg"/>
+    </file-type>
+    <file-type id="svgzfile">
+      <description>Scalable Vector Graphics file</description>
+      <verb args="&quot;%1&quot;" command="inkview" name="open"/>
+      <verb args="&quot;%1&quot;" name="edit"/>
+      <extension value=".svgz"/>
+    </file-type>
+  </capabilities>
+</interface>

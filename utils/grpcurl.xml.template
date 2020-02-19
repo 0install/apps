@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>gRPCurl</name>
+  <summary>command-line tool that lets you interact with gRPC servers</summary>
+  <description>grpcurl is a command-line tool that lets you interact with gRPC servers. It's basically curl for gRPC servers.</description>
+  <homepage>https://github.com/fullstorydev/grpcurl</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/utils/grpcurl.xml"/>
+
+  <group license="MIT License">
+    <command name="run" path="grpcurl"/>
+    <implementation arch="Linux-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/fullstorydev/grpcurl/releases/download/v{version}/grpcurl_{version}_linux_x86_64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i486" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/fullstorydev/grpcurl/releases/download/v{version}/grpcurl_{version}_linux_x86_32.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/fullstorydev/grpcurl/releases/download/v{version}/grpcurl_{version}_osx_x86_64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-i486" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/fullstorydev/grpcurl/releases/download/v{version}/grpcurl_{version}_osx_x86_32.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="MIT License">
+    <command name="run" path="grpcurl.exe"/>
+    <implementation arch="Windows-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/fullstorydev/grpcurl/releases/download/v{version}/grpcurl_{version}_windows_x86_64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/fullstorydev/grpcurl/releases/download/v{version}/grpcurl_{version}_windows_x86_32.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

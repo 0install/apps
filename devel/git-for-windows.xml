@@ -459,13 +459,40 @@
       </verb>
     </context-menu>
   </capabilities>
+  <group>
+    <requires importance="recommended" interface="https://apps.0install.net/gui/putty.xml">
+      <environment insert="plink.exe" mode="replace" name="GIT_SSH"/>
+      <environment insert="plink.exe" mode="replace" name="SVN_SSH"/>
+    </requires>
+    <command name="gpg" path="usr/bin/gpg.exe"/>
+    <command name="git-cmd" path="git-cmd.exe"/>
+    <command name="bash" path="usr/bin/bash.exe"/>
+    <command name="ssh" path="usr/bin/ssh.exe"/>
+    <command name="gitk" path="cmd/gitk.exe"/>
+    <command name="run-gui" path="cmd/git-gui.exe"/>
+    <command name="scp" path="usr/bin/scp.exe"/>
+    <command name="git-bash" path="git-bash.exe"/>
+    <command name="gpgsplit" path="usr/bin/gpgsplit.exe"/>
+    <command name="gpgv" path="usr/bin/gpgv.exe"/>
+    <command name="sh" path="usr/bin/sh.exe"/>
+    <command name="start-ssh-agent" path="cmd/start-ssh-agent.cmd"/>
+    <command name="run" path="cmd/git.exe"/>
+    <implementation arch="Windows-x86_64" id="sha1new=f968b3dffdfd2101819047dc3c964112fe02306e" license="GPL v2 (GNU General Public License)" released="2020-02-19" stability="stable" version="2.25.1">
+      <manifest-digest sha256new="QLL6DKGU23A62Y3SW6BIV6LOGCU2CHTRX6AOMNXPIRJ6X2KNVKLQ"/>
+      <archive href="https://github.com/git-for-windows/git/releases/download/v2.25.1.windows.1/Git-2.25.1-64-bit.tar.bz2" size="88609700" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=ff4d3564217b2f8925ea3786a712632614e23377" license="GPL v2 (GNU General Public License)" released="2020-02-19" stability="stable" version="2.25.1">
+      <manifest-digest sha256new="6EL6MFUJVG36XWVRBWVEG2ESE4LBLUGWERARTHT3ZXVJIMWRGC6Q"/>
+      <archive href="https://github.com/git-for-windows/git/releases/download/v2.25.1.windows.1/Git-2.25.1-32-bit.tar.bz2" size="84556962" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+  </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl4oRvsACgkQWao5J8JOTh4dPgf7BJzF
-Bv8xShZ5GcIzzrAFoe/3XuXceVEMQE7rgj2yJj4YfWRbgwhxf14EzJv6yJqiFRyHqILM7TvJ1Q1b
-i4XG9DkcDdLYZQnsHLqH7t2nqCIoOYJORIvH5/dehHgnekLZAbZX6SYmn1foF2FN9AKqJLm7Fcmk
-VPv6gPrf/zxYXvq+hrs9hLnNDXWQbQ9BE744et2Cfpje9yd2rii/xUz0AN+fhQEeJVr/t/TiTpcO
-uCnUwBgS0xXi+FB67T47YCY6gZojcD1CY0MXqYQgSLU1ox80H083w4egMLDykLM2Rgtas32Kg/vk
-4nSHwRNqx2NbBmp+KQLOUbcspRAeR0M7iA==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl5ORKkACgkQWao5J8JOTh5mGQgApxJX
+ghA3G6cBODX55x3jphuyFljZNyB57L1NHSwFNDTqv+NCa8ug3z2xK3P2IckfphbK0iJZY3bR+4/M
+fmlfg026yCPMfAieZee9LuOOkqm+D3py0oILkKb0TXwaWVUPtu/Wy3mFpzogYv9ncpnHmVVTjt+n
+Em3FGxInkaK8RSzubo1thpHGu6bfqdr8FF/q0EResZ7enRxSFsn2ogfCztnLs/KWgMICTu+GXmzs
+RttlxXiu/weKlKtvWT/W/AU3NZshwEh0rgkBLJxvXmYIOlHjGyHQKwcu8YALzFRscbnDrCv+m4n8
+qynV65NKJMO187iRgWC/Q43sg81e2UV49w==
 
 -->

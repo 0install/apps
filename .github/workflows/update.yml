@@ -32,7 +32,7 @@ jobs:
     needs: windows
     steps:
       - name: Set up 0install
-        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends 0install-core python-gobject rpm2cpio
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends 0install-core python-gobject rpm2cpio binutils
       - name: Clone feeds
         uses: actions/checkout@v2
         with:

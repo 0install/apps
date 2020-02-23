@@ -8,7 +8,7 @@ if (!(Test-Path "..\incoming" -PathType Container)) {
 cp *\*.zip ..\incoming\
 
 # Exclude feeds with archives that cannot be extracted correctly on Windows
-$files = (ls -Recurse -Filter *.watch.py -Exclude go-linux.watch.py,go-darwin.watch.py,nmap.watch.py).FullName
+$files = (ls -Recurse -Filter *.watch.py -Exclude go-linux.watch.py,go-darwin.watch.py,nmap.watch.py,gdisk.watch.py,fixparts.watch.py).FullName
 
 # Run watch scripts
 foreach ($file in $files) {

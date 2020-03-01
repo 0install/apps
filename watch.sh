@@ -20,5 +20,5 @@ fi
 # Run watch scripts
 for FILE in $FILES; do
     echo "Running $FILE"
-    0install run https://apps.0install.net/0install/0watch.xml --output ../incoming $FILE || true
+    0install run http://0install.net/tools/0install.xml run https://apps.0install.net/0install/0watch.xml --output ../incoming $FILE || true
 done

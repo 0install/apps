@@ -158,10 +158,20 @@
       <manifest-digest sha256new="6YQQJC7PWZZNLUJ5BOGDFDE3BW6Z34LIS3XJI3XBPHDGTQSIVVLQ"/>
       <archive href="https://github.com/PowerShell/PowerShell/releases/download/v6.2.4/PowerShell-6.2.4-win-x86.zip" size="52943198" type="application/zip"/>
     </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=9bff0d3a3627403ef7cd26c230e627c325492821" released="2020-03-04" stability="stable" version="7.0.0">
+      <manifest-digest sha256new="UFYBF3X7GATDZTRW2E2XQBKZQJLPVZBWXJDTYIOGV5DWS4GOP4XQ"/>
+      <archive href="https://github.com/PowerShell/PowerShell/releases/download/v7.0.0/PowerShell-7.0.0-win-x64.zip" size="93014038" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=b46bee1a1e93cadf07914aab2d9309a3ecd7eba3" released="2020-03-04" stability="stable" version="7.0.0">
+      <manifest-digest sha256new="6KELB65KOISUXRIA437K4VWI4QGDNNTETDVE4LVK6B4QNNQISV4A"/>
+      <archive href="https://github.com/PowerShell/PowerShell/releases/download/v7.0.0/PowerShell-7.0.0-win-x86.zip" size="84403015" type="application/zip"/>
+    </implementation>
   </group>
+
   <group license="MIT License" main="pwsh">
     <requires interface="https://apps.0install.net/lib/curl.xml"/>
     <requires interface="https://apps.0install.net/lib/unwind.xml"/>
+
     <implementation arch="Linux-x86_64" id="sha1new=029dd1d8bd0d019815035dd11d525178f2c7c42c" released="2017-12-14" stability="testing" version="6.0.0-rc2">
       <manifest-digest sha256new="KPRMKFWKGS7Z5PG4TIJOT436FS5ZDHHG5MOATNSS6GOFJLSXUFQQ"/>
       <archive href="https://github.com/PowerShell/PowerShell/releases/download/v6.0.0-rc.2/powershell-6.0.0-rc.2-linux-x64.tar.gz" size="51899076" type="application/x-compressed-tar"/>
@@ -186,9 +196,6 @@
       <manifest-digest sha256new="CCOUZ6TMHQOW5I7XEF6ODBY6LF7HYAZGG5YCXRVHKJW2GUL6F3EQ"/>
       <archive href="https://github.com/PowerShell/PowerShell/releases/download/v6.0.4/powershell-6.0.4-linux-x64.tar.gz" size="52538500" type="application/x-compressed-tar"/>
     </implementation>
-  </group>
-  <group license="MIT License" main="pwsh">
-    <requires interface="https://apps.0install.net/lib/curl.xml"/>
     <implementation arch="Linux-x86_64" id="sha1new=082dd853049b265049bbbe08d4bb17ea958e47f0" released="2018-09-13" stability="stable" version="6.1.0">
       <manifest-digest sha256new="BLLVDOJLWRQKD72AHEYKWCQFI7T4XNQYZFVR2LRO264P7NYJSIHQ"/>
       <archive href="https://github.com/PowerShell/PowerShell/releases/download/v6.1.0/powershell-6.1.0-linux-x64.tar.gz" size="58271981" type="application/x-compressed-tar"/>
@@ -243,14 +250,23 @@
     </implementation>
   </group>
 
+  <group license="MIT License" main="pwsh">
+    <requires interface="https://apps.0install.net/lib/curl.xml"/>
+
+    <implementation arch="Linux-x86_64" id="sha1new=ef64a534ef2f20d62dd281acfb31ab094f743a27" released="2020-03-04" stability="stable" version="7.0.0">
+      <manifest-digest sha256new="3CY5GIDNIM7GK6F4ZLLAJFB72YIALR2BZC4WSN2UOAULDB6DZA7Q"/>
+      <archive href="https://github.com/PowerShell/PowerShell/releases/download/v7.0.0/powershell-7.0.0-linux-x64.tar.gz" size="61068005" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
   <entry-point binary-name="pwsh" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl4wtZoACgkQWao5J8JOTh5cIwf/c4Nw
-920SuUmjNdqlFErGVaNibzFr4q5EdT7JvKyoqZazBgqTIfy0RBJaHUCrOnUPkeRPps58CXILcqQH
-NaL7vNrDUr9rDKPWE85ohcQyIGM3EmZJR6/ImLKi2OoxC8rCtoRprQ/8QajgfdpGwWKYjvE002t2
-ONk/S65mZsixzdT7oH0U2froUywC4A2s5cFSQkoCyawFDVW06O0JAGlIOJk3lI6yHLLkdKk+cnc0
-919mx3Jn/T49Ct8rPtfwmDcEqMmoOs0SJunLUytvQcXhNcwFmIJil4JqyZoO93di2lYCi/Ij8S+0
-KmvpeHp7BCK10we99Z0bcoFoLQk4edJggQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl5gtZ4ACgkQWao5J8JOTh7fMAf+O1xf
+dmGG+RbKJeT9YXzFfPXmB+WHSl5RsACeOSL6YxyxXoIFQEf2vPoRtdGMsqYZeDvh56svaAtVT/Vc
++TolxbnbXHWq2M8MXfXvpgqxYcXTg6C3E5N9YP88bxybgnzZDUxByCt0sUbXIOwF73o8chh893Qx
+eN176kWwGKznNNTTH28IxawWgd3GsFicQH3iPEPPOTnCB4dg/HjXz8TD8arcOZNLR6ayiPxLzDwi
+xKrsIDu0TiraqcFq6UbPie90DqD2WUid9qvAbz4lH+Ku7L4ip7Ka6vX6G7TmtmztwiSLl3H4bKBr
+x+t4uY36uG6UmGu8hyKDw7B8ikfIptewTQ==
 
 -->

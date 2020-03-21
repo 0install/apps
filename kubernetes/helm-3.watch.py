@@ -8,5 +8,5 @@ def convert(release):
     stability = 'developer' if 'alpha' in original_version else ('testing' if release['prerelease'] else 'stable')
     return {'version': version, 'original-version': original_version, 'stability': stability, 'released': released}
 
-data = request.urlopen('https://api.github.com/repos/kubernetes/helm/releases').read().decode('utf-8')
+data = request.urlopen('https://api.github.com/repos/helm/helm/releases').read().decode('utf-8')
 releases = [convert(release) for release in json.loads(data) if release['tag_name'].startswith('v3.')]

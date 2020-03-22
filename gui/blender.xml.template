@@ -13,13 +13,13 @@
   <feed-for interface="https://apps.0install.net/gui/blender.xml"/>
 
   <group license="GPL v2 (GNU General Public License)">
-    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable" main="blender.exe">
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="{stability}" main="blender.exe">
       <manifest-digest/>
-      <archive href="https://download.blender.org/release/Blender{version}/blender-{version}-windows64.zip" type="application/zip" extract="blender-{version}-windows64"/>
+      <archive href="https://download.blender.org/release/Blender{version-main}/blender-{version-full}-windows64.zip" type="application/zip" extract="blender-{version-full}-windows64"/>
     </implementation>
-    <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="stable" main="blender">
+    <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="{stability}" main="blender">
       <manifest-digest/>
-      <archive href="https://download.blender.org/release/Blender{version}/blender-{version}-linux64.tar.xz" type="application/x-xz-compressed-tar" extract="blender-{version}-linux64"/>
+      <archive href="https://download.blender.org/release/Blender{version-main}/blender-{version-full}-linux64.tar.xz" type="application/x-xz-compressed-tar" extract="blender-{version-full}-linux64"/>
     </implementation>
   </group>
 </interface>

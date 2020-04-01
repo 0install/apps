@@ -19,8 +19,6 @@ jobs:
         with:
           path: public
           ref: gh-pages
-          # Remove this once https://github.community/t5/GitHub-Actions/Github-action-not-triggering-gh-pages-upon-push/m-p/26869 is resolved
-          token: ${{ secrets.GITHUB_PAT }}
       - name: Set up repo
         run: |
           cp feeds/0repo-config.py .

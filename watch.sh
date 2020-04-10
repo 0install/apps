@@ -7,15 +7,11 @@ if [ ! -d "../incoming" ]; then
 fi
 cp */*.zip ../incoming/
 
-if [[ -v CI ]]; then
-    # Only feeds not handled on Windows
-    FILES="golang/go-linux.watch.py golang/go-darwin.watch.py utils/nmap.watch.py utils/gdisk.watch.py utils/fixparts.watch.py"
-else
-    # Exclude feeds currently not supported by 0template on Linux
-    FILES=$(ls */*.watch.py | grep -v cmake | grep -v gitextensions | grep -v go-windows | grep -v jq | grep -v kotlin | grep -v libreoffice | grep -v node | grep -v vagrant | grep -v vlc)
-fi
-
-for FILE in $FILES; do
-    echo "Running $FILE"
-    0install run https://apps.0install.net/0install/0watch.xml --output ../incoming $FILE
+for FILE in $(ls */*.watch.py); do
+    header=$(head -n 1 $FILE)
+    #if [[ $header == "#os=$(uname)" ]] || [[ $header != \#os=* ]]; then
+    if [[ $header == "#os=$(uname)" ]]; then
+        echo $FILE
+        0install run https://apps.0install.net/0install/0watch.xml --output ../incoming $FILE
+    fi
 done

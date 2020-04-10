@@ -1,3 +1,4 @@
+#os=Linux
 from urllib import request
 import re
 

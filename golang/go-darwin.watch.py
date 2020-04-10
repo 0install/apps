@@ -1,3 +1,4 @@
+#os=Darwin
 from urllib import request
 import re
 

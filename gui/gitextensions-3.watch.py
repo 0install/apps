@@ -1,3 +1,4 @@
+#os=Windows
 from urllib import request
 import json
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/gui/blender.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
-  <name>Blender</name>
+<interface uri="https://apps.0install.net/gui/blender-macos.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Blender - MacOS builds</name>
   <summary xml:lang="de">vielfältige 3D Animationserstellungs-Suite</summary>
   <summary xml:lang="en">versatile 3D animation creation suite</summary>
   <description xml:lang="de">Blender ist eine voll integrierte 3D Animations-Suite für den Einsatz bei Animation, Standbildern, wissenschaftliche und ingenieurstechnische Visualisierung und Erstellung von Spieleinhalten. Sie enthält Tools zum Modellieren, Texturieren, UV mappen, Rigging und Constraints, Weight Painting, Partikelsysteme, Simulationen (Flüssigkeiten, Physik und Dynamik weicher Körper sowie einen externen crowd (Menschenmengen) Simulator), Rendering, Node-basiertes Zusammenstellen und nicht-lineare Videobearbeitung, sowie eine integrierte Spielengine für Echtzeit interaktives 3D und Spielerstellung und -wiedergabe mit Plattform-übergreifender Kompatibilität.</description>
@@ -11,27 +11,27 @@
   <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/blender.ico" type="image/vnd.microsoft.icon"/>
   <category>Video</category>
 
-  <feed arch="Linux-*" src="https://apps.0install.net/gui/blender-linux.xml"/>
-  <feed arch="MacOSX-*" src="https://apps.0install.net/gui/blender-macos.xml"/>
-  <feed arch="Windows-*" src="https://apps.0install.net/gui/blender-windows.xml"/>
+  <feed-for interface="https://apps.0install.net/gui/blender.xml"/>
 
-  <entry-point binary-name="blender" command="run"/>
+  <group>
+    <command name="run" path="Blender/Blender.app/Contents/MacOS/blender"/>
 
-  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
-    <file-type id="blendfile">
-      <description xml:lang="en">Blender File</description>
-      <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/blender.doc.ico" type="image/vnd.microsoft.icon" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
-      <verb args="&quot;%1&quot;" name="open"/>
-      <extension value=".blend"/>
-    </file-type>
-  </capabilities>
+    <implementation arch="MacOSX-x86_64" id="sha1new=b112dc1a29421931f9ca6aeab13a728269ae7b8a" released="2020-03-12" stability="stable" version="2.82-1">
+      <manifest-digest sha256new="R22JWU7PQ6KIIRZBIMDMJK43YKNI4XDWWOFTKMNV3OPSCNMEHFCA"/>
+      <archive href="https://download.blender.org/release/Blender2.82/blender-2.82a-macOS.dmg" size="200092649" type="application/x-apple-diskimage"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" id="sha1new=2f8bdf2974f194fc940500f21388ff56d681dc24" released="2020-02-13" stability="stable" version="2.82">
+      <manifest-digest sha256new="M4STWVYTH3PTU6QF3F3GNN4RLOW25CLOXCLAQPK34OB4P2MAHLNQ"/>
+      <archive href="https://download.blender.org/release/Blender2.82/blender-2.82-macOS.dmg" size="200076848" type="application/x-apple-diskimage"/>
+    </implementation>
+  </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl6RD5MACgkQWao5J8JOTh5AiAgAjSmc
-JhTBROFU5BQvViCg/tMO4sIKW16PhiJ5qoezVvlkbxVTLUzbMO/OQIq3wT1IPu32fpaEuQ7oztMB
-vzTXEa3QEmeUMrvSt1ZwKUEibaQiF8PhkUo01f2wNqYU2yIfgsrD39+LJHGIpcqZJh0nqwXX+W15
-teHkcbRF0PRJZep45mepIQGLHN56HmnU9t7Iswq1RhPh+PCGlb09ZkZo4r20pn6VlC6i8GL7/1y8
-sRir0UU42oZCJNB1Kizyp45aMk8mopvxT3lKLcx5ag0N7sKI5fbi3xj0dREuFPgl2t611RZ4D+rg
-m98xYfosZ4YkThHWl25zJbBK1CyoPFrDdA==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl6RD5MACgkQWao5J8JOTh46cggAoA+V
+L98E5Wcb751nViHZRzk6ujMspKoEZ9e51xUe8yW+xvx1xzqOuMSeev0VuD5EUMnjQcMjU6F0p4k6
+03vy66sQ81dySXz7UY+KdUQv5vWX2sYtImubGc8tmCQBlIIRH8kvZKhrKkhsyzWDVgJv1M//Oga1
+zdG0M8hT77SIFToUi0uWBWU7FOpm6ae9rlIRumisJ5bX3MrXdjjOqrFwMqYSIZ5D3Ozj5E7SQnw0
+C0GuaSzPVqgGXtqAJ9gXchOWqP+lHE8JTkbwP+XAZuj/KtjVGDo3lA2HQhQSrzZAkoZI93MnuTqg
+0jdmbnfSN5qlyOproYPRSUyOeemMsQDi2g==
 
 -->

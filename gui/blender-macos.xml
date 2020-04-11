@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
-  <name>Blender</name>
+<?xml version="1.0" ?>
+<interface uri="https://apps.0install.net/gui/blender-macos.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Blender - MacOS builds</name>
   <summary xml:lang="de">vielfältige 3D Animationserstellungs-Suite</summary>
   <summary xml:lang="en">versatile 3D animation creation suite</summary>
   <description xml:lang="de">Blender ist eine voll integrierte 3D Animations-Suite für den Einsatz bei Animation, Standbildern, wissenschaftliche und ingenieurstechnische Visualisierung und Erstellung von Spieleinhalten. Sie enthält Tools zum Modellieren, Texturieren, UV mappen, Rigging und Constraints, Weight Painting, Partikelsysteme, Simulationen (Flüssigkeiten, Physik und Dynamik weicher Körper sowie einen externen crowd (Menschenmengen) Simulator), Rendering, Node-basiertes Zusammenstellen und nicht-lineare Videobearbeitung, sowie eine integrierte Spielengine für Echtzeit interaktives 3D und Spielerstellung und -wiedergabe mit Plattform-übergreifender Kompatibilität.</description>
@@ -12,14 +12,16 @@
 
   <feed-for interface="https://apps.0install.net/gui/blender.xml"/>
 
-  <group license="GPL v2 (GNU General Public License)">
-    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="{stability}" main="blender.exe">
-      <manifest-digest/>
-      <archive href="https://download.blender.org/release/Blender{version-main}/blender-{version-full}-windows64.zip" type="application/zip" extract="blender-{version-full}-windows64"/>
+  <group>
+    <command name="run" path="Blender/Blender.app/Contents/MacOS/blender"/>
+
+    <implementation arch="MacOSX-x86_64" id="sha1new=b112dc1a29421931f9ca6aeab13a728269ae7b8a" released="2020-03-12" stability="stable" version="2.82-1">
+      <manifest-digest sha256new="R22JWU7PQ6KIIRZBIMDMJK43YKNI4XDWWOFTKMNV3OPSCNMEHFCA"/>
+      <archive href="https://download.blender.org/release/Blender2.82/blender-2.82a-macOS.dmg" size="200092649" type="application/x-apple-diskimage"/>
     </implementation>
-    <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="{stability}" main="blender">
-      <manifest-digest/>
-      <archive href="https://download.blender.org/release/Blender{version-main}/blender-{version-full}-linux64.tar.xz" type="application/x-xz-compressed-tar" extract="blender-{version-full}-linux64"/>
+    <implementation arch="MacOSX-x86_64" id="sha1new=2f8bdf2974f194fc940500f21388ff56d681dc24" released="2020-02-13" stability="stable" version="2.82">
+      <manifest-digest sha256new="M4STWVYTH3PTU6QF3F3GNN4RLOW25CLOXCLAQPK34OB4P2MAHLNQ"/>
+      <archive href="https://download.blender.org/release/Blender2.82/blender-2.82-macOS.dmg" size="200076848" type="application/x-apple-diskimage"/>
     </implementation>
   </group>
 </interface>

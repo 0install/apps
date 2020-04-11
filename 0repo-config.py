@@ -115,11 +115,6 @@ CHECK_DIGESTS = False
 # When adding a new implementation to the repository, this function is called to check that
 # it meets the repository policies. Return a string explaining the problem, if any.
 def check_new_impl(impl):
-	# Disallow in-progress version numbers (e.g. "1.2-pre")
-	version = impl.get_version()
-	if not version[-1].isdigit():
-		return "Version number must end in a digit (got {version})".format(version = version)
-
 	# Must have a release date
 	released = impl.metadata.get('released', None)
 	if not released:

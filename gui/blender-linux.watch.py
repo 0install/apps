@@ -7,13 +7,16 @@ def regex(url, pattern):
     return re.findall(pattern, request.urlopen(url).read().decode('utf-8'))
 
 def to_zi_version(input):
-    if input.endswith('alpha'):
-        return input.replace('alpha', 'pre-pre')
-    if input.endswith('beta'):
-        return input.replace('beta', 'pre')
+    suffix = ''
+    if input.endswith('-alpha'):
+        input = input.replace('-alpha', '')
+        suffix = '-pre-pre'
+    if input.endswith('-beta'):
+        input = input.replace('-beta', '')
+        suffix = '-pre'
     if not input[-1].isdigit():
-        return input[:-1] + '-' + str(ord(input[-1]) - 96)
-    return input
+        input = input[:-1] + '-' + str(ord(input[-1]) - 96)
+    return input + suffix
 
 releases = []
 

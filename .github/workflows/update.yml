@@ -27,9 +27,34 @@ jobs:
           name: windows-feeds
           path: incoming
 
+  macos:
+    runs-on: macos-latest
+    steps:
+      - name: Set up 0install
+        run: |
+          set -e
+          curl -slO https://0install.de/files/0install-macos-latest.zip
+          unzip 0install-macos-latest.zip -d 0install
+          chmod +x 0install/files/0install
+          echo "::add-path::$GITHUB_WORKSPACE/0install/files"
+      - name: Clone feeds
+        uses: actions/checkout@v2
+        with:
+          path: feeds
+      - name: Set up repo
+        run: mkdir incoming
+      - name: Run 0watch
+        env: {'CI': '1'}
+        run: feeds/watch.sh
+      - name: Upload generated feeds
+        uses: actions/upload-artifact@v1
+        with:
+          name: macos-feeds
+          path: incoming
+
   linux:
     runs-on: ubuntu-latest
-    needs: windows
+    needs: [windows, macos]
     steps:
       - name: Set up 0install
         run: |
@@ -54,6 +79,11 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: windows-feeds
+          path: incoming
+      - name: Download feeds generated on MacOS
+        uses: actions/download-artifact@v1
+        with:
+          name: macos-feeds
           path: incoming
       - name: Run 0watch
         env: {'CI': '1'}

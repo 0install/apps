@@ -32,7 +32,11 @@ jobs:
     needs: windows
     steps:
       - name: Set up 0install
-        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends 0install-core python-gobject rpm2cpio binutils
+        run: |
+          set -e
+          sudo apt-get update && sudo apt-get install -y python-gobject unzip rpm2cpio binutils
+          curl -L https://downloads.sourceforge.net/zero-install/0install-linux-x86_64-2.15.2.tar.bz2 | tar xj
+          sudo 0install-linux-x86_64-2.15.2/install.sh local
       - name: Clone feeds
         uses: actions/checkout@v2
         with:

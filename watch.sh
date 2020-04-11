@@ -1,8 +1,6 @@
 #!/bin/bash
-set -e
 cd `dirname $0`
 
-# Prepare directory for generated feeds
 if [ ! -d "../incoming" ]; then
     echo "Directory ../incoming does not exist."
     exit 1
@@ -17,8 +15,7 @@ else
     FILES=$(ls */*.watch.py | grep -v cmake | grep -v gitextensions | grep -v go-windows | grep -v jq | grep -v kotlin | grep -v libreoffice | grep -v node | grep -v vagrant | grep -v vlc)
 fi
 
-# Run watch scripts
 for FILE in $FILES; do
     echo "Running $FILE"
-    0install run http://0install.net/tools/0install.xml run https://apps.0install.net/0install/0watch.xml --output ../incoming $FILE || true
+    0install run https://apps.0install.net/0install/0watch.xml --output ../incoming $FILE
 done

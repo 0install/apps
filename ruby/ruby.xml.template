@@ -12,7 +12,7 @@
   <feed-for interface="https://apps.0install.net/ruby/ruby.xml"/>
 
   <group license="Ruby License">
-    <environment name="RUBY_BIN" insert="bin" mode="replace"/>
+    <environment insert="bin" mode="replace" name="RUBY_BIN"/>
     <command name="run" path="bin/ruby.exe"/>
     <command name="run-gui" path="bin/rubyw.exe"/>
     <command name="irb" path="bin/ruby.exe">
@@ -33,13 +33,14 @@
     <command name="ri" path="bin/ruby.exe">
       <arg>$RUBY_BIN/ri</arg>
     </command>
-    <implementation arch="Windows-x86_64" version="{version}" stability="stable" released="{released}">
+
+    <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
       <manifest-digest/>
-      <archive href="https://dl.bintray.com/oneclick/rubyinstaller/ruby-{version}-x64-mingw32.7z" type="application/x-7z-compressed" extract="ruby-{version}-x64-mingw32"/>
+      <archive extract="rubyinstaller-{version}-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-{version}/rubyinstaller-{version}-x64.7z" type="application/x-7z-compressed"/>
     </implementation>
-    <implementation arch="Windows-i486" version="{version}" stability="stable" released="{released}">
+    <implementation arch="Windows-i486" released="{released}" stability="stable" version="{version}">
       <manifest-digest/>
-      <archive href="https://dl.bintray.com/oneclick/rubyinstaller/ruby-{version}-i386-mingw32.7z" type="application/x-7z-compressed" extract="ruby-{version}-i386-mingw32"/>
+      <archive extract="rubyinstaller-{version}-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-{version}/rubyinstaller-{version}-x86.7z" type="application/x-7z-compressed"/>
     </implementation>
   </group>
 </interface>

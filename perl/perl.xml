@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/perl/perl.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Perl</name>
+  <summary>Practical Extraction and Report Language</summary>
+  <description>Perl is a highly capable, feature-rich programming language with over 30 years of development.</description>
+  <homepage>https://www.perl.org/</homepage>
+  <needs-terminal/>
+
+  <package-implementation main="/usr/bin/perl" package="perl"/>
+
+  <entry-point binary-name="perl" command="run"/>
+
+  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
+    <file-type id="Perl.File">
+      <description>Perl File</description>
+      <verb args="&quot;%1&quot; %*" name="open"/>
+      <extension mime-type="text/plain" value=".pl"/>
+    </file-type>
+  </capabilities>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl6Uq28ACgkQWao5J8JOTh51fggArfu1
+biCoOrr1zEYCn1lrafXG/Pvsm4V01+Vv7EL9Cx0jq4twjLw6j6FTNLxA6LwkgWTTwm9hY/upZUls
+fLCZY2DE17HDbQOp+cLT0sofDwWqRHC+t2wITICbxKlwostFR07Y6MEJ+hTsMfZUiVsJ3cWRBmN1
+wMb7Zp1P0N0o25zzrbZRCcHBrzq0wCjJZjr2BRIkQKOdLea3IgNjJ5eElA3da1DG+kl6a12ptc09
+7o8hFYTV1qUKxgdCgBr9lmurbeD7N1JLzklvok8T7ipfHUwuRqodYDH2g7bygiOqznL081Vb9a3i
+LWlR1WbJ+EVzPvBWX/6KrFPW3gLyBoOQmQ==
+
+-->

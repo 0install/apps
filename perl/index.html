@@ -28,12 +28,32 @@
     </nav>
 
     <main>
+      <p>Perl is an interpreted programming language. You can use Zero Install to:</p>
+      <ul>
+        <li>Get Perl itself</li>
+        <li>Run apps that need Perl and Perl libraries as dependencies</li>
+      </ul>
+
       <div class="card mb-4">
         <div class="card-header">Feeds</div>
         <div class="card-body tab-body" id="featured-tab">
           <iframe src="catalog.xml"></iframe>
         </div>
       </div>
+
+      <p>To add <code>perl</code> to your <code>PATH</code>:<br>
+        <code>
+          <input type="text" readonly class="form-control-plaintext" value="0install add perl https://apps.0install.net/perl/perl.xml">
+        </code>
+      </p>
+
+      <p>To specify Perl as the runner in a feed:<br>
+        <code>
+          <textarea readonly style="resize: none;" class="form-control-plaintext" rows="3">&lt;command name="run" path="myapp.py"&gt;
+  &lt;runner interface="https://apps.0install.net/perl/perl.xml"/&gt;
+&lt;/command&gt;</textarea>
+        </code>
+      </p>
     </main>
 
     <footer>

@@ -1,12 +1,12 @@
-<?xml version="1.0"?>
-<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
-  <name>OpenJDK 13</name>
-  <summary>OpenJDK Development Kit 13</summary>
+<?xml version="1.0" ?>
+<interface uri="https://apps.0install.net/java/openjdk-14.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>OpenJDK 14</name>
+  <summary>OpenJDK Development Kit 14</summary>
   <description>OpenJDK is a development environment for building applications, applets, and components using the Java programming language.</description>
-  <homepage>http://jdk.java.net/13/</homepage>
+  <homepage>http://jdk.java.net/14/</homepage>
   <category>Development</category>
 
-  <feed-for interface="https://apps.0install.net/java/openjdk-13.xml"/>
+  <feed-for interface="https://apps.0install.net/java/jdk.xml"/>
 
   <group arch="Linux-x86_64" license="GNU General Public License, version 2, with the Classpath Exception">
     <command name="run" path="bin/javac"/>
@@ -43,9 +43,9 @@
     <command name="rmic" path="bin/rmic"/>
     <command name="serialver" path="bin/serialver"/>
 
-    <implementation version="{version}" stability="stable">
-      <manifest-digest/>
-      <archive href="https://download.oracle.com/java/GA/jdk{version}/{release-id}/GPL/openjdk-{version}_linux-x64_bin.tar.gz" type="application/x-compressed-tar" extract="jdk-{version}"/>
+    <implementation id="sha1new=50b027f8be8c0ef350f293024b123714a7133ba1" released="2020-04-16" stability="stable" version="14.0.1">
+      <manifest-digest sha256new="KIEP6DDJ7K66GAX53ZFUBOMCA2BW22WWN7YHWZELD3XJ7OJ3A6HA"/>
+      <archive extract="jdk-14.0.1" href="https://download.oracle.com/java/GA/jdk14.0.1/664493ef4a6946b186ff29eb326336a2/7/GPL/openjdk-14.0.1_linux-x64_bin.tar.gz" size="198665889" type="application/x-compressed-tar"/>
     </implementation>
   </group>
 
@@ -91,9 +91,9 @@
     <command name="jaccessinspector" path="bin/jaccessinspector.exe"/>
     <command name="jaccesswalker" path="bin/jaccesswalker.exe"/>
 
-    <implementation version="{version}" stability="stable">
-      <manifest-digest/>
-      <archive href="https://download.oracle.com/java/GA/jdk{version}/{release-id}/GPL/openjdk-{version}_windows-x64_bin.zip" type="application/zip" extract="jdk-{version}"/>
+    <implementation id="sha1new=72bb4167c9558d11e1f22911a0de360632a48b9c" released="2020-04-16" stability="stable" version="14.0.1">
+      <manifest-digest sha256new="PO3RFRDFRFZJ6K5NRKSEZCEMMNWVIIDVVOOSYA4IIBJGL5BIC5GQ"/>
+      <archive extract="jdk-14.0.1" href="https://download.oracle.com/java/GA/jdk14.0.1/664493ef4a6946b186ff29eb326336a2/7/GPL/openjdk-14.0.1_windows-x64_bin.zip" size="198729845" type="application/zip"/>
     </implementation>
   </group>
 </interface>

@@ -5,11 +5,17 @@
   <summary>Practical Extraction and Report Language</summary>
   <description>Perl is a highly capable, feature-rich programming language with over 30 years of development.</description>
   <homepage>https://www.perl.org/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/perl/perl.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/perl/perl.png" type="image/png"/>
   <needs-terminal/>
 
-  <package-implementation main="/usr/bin/perl" package="perl"/>
-
   <entry-point binary-name="perl" command="run"/>
+  <entry-point binary-name="perldoc" command="doc">
+    <needs-terminal/>
+  </entry-point>
+  <entry-point binary-name="cpan" command="cpan">
+    <needs-terminal/>
+  </entry-point>
 
   <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
     <file-type id="Perl.File">
@@ -18,13 +24,21 @@
       <extension mime-type="text/plain" value=".pl"/>
     </file-type>
   </capabilities>
+
+  <package-implementation package="perl">
+    <command name="run" path="/usr/bin/perl"/>
+    <command name="doc" path="/usr/bin/perldoc"/>
+    <command name="cpan" path="/usr/bin/cpan"/>
+  </package-implementation>
+
+  <feed arch="Windows-*" src="https://apps.0install.net/perl/strawberry.xml"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl6Uq28ACgkQWao5J8JOTh51fggArfu1
-biCoOrr1zEYCn1lrafXG/Pvsm4V01+Vv7EL9Cx0jq4twjLw6j6FTNLxA6LwkgWTTwm9hY/upZUls
-fLCZY2DE17HDbQOp+cLT0sofDwWqRHC+t2wITICbxKlwostFR07Y6MEJ+hTsMfZUiVsJ3cWRBmN1
-wMb7Zp1P0N0o25zzrbZRCcHBrzq0wCjJZjr2BRIkQKOdLea3IgNjJ5eElA3da1DG+kl6a12ptc09
-7o8hFYTV1qUKxgdCgBr9lmurbeD7N1JLzklvok8T7ipfHUwuRqodYDH2g7bygiOqznL081Vb9a3i
-LWlR1WbJ+EVzPvBWX/6KrFPW3gLyBoOQmQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl6bbKEACgkQWao5J8JOTh7qoggAgSaY
+ikaPe0xScLBg1jMaRGUvj3Y/oNWbq7xk5xBFYx1GS3ZwWc7Mycx4vY/dfTBzR7+hNgINnyX5lqYB
+JnoOe0VODbmTjOrTNaT8L8ON7Gg/3KX0Xo4cawCYIhPPLyxL+bjR4MlGbgRchSSu8wY4goJoIb0C
+BKmFZNI9sddmm4WFYmqsiWcqslctXFiq5shmfYRzP9fiCO9+PuFY223SQXqPe/QYAkVCcvjaEJez
+A0uY5EbX96N3AixDXtynWPxiRSig9EWNtEdS3uabkdxegsZur4erNB1aO4RnWcJhSdcKpIkQiZEJ
+Gfzf2iGhbr1noSFng4CAp8eVusfsXHwLHQ==
 
 -->

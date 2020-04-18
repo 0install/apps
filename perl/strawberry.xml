@@ -1,0 +1,374 @@
+<?xml version="1.0" ?>
+<interface uri="https://apps.0install.net/perl/strawberry.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Strawberry Perl</name>
+  <summary>Perl environment for Windows</summary>
+  <description>Strawberry Perl is a Perl environment for Windows containing all you need to run and develop Perl applications. It is designed to be as close as possible to Perl environment on UNIX systems.</description>
+  <homepage>http://strawberryperl.com//</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/perl/strawberry.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/perl/strawberry.png" type="image/png"/>
+  <needs-terminal/>
+
+  <entry-point binary-name="perl" command="run"/>
+  <entry-point binary-name="wperl" command="run-gui"/>
+  <entry-point binary-name="perldoc" command="doc">
+    <needs-terminal/>
+  </entry-point>
+  <entry-point binary-name="cpan" command="cpan">
+    <needs-terminal/>
+  </entry-point>
+
+  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
+    <file-type id="Perl.File">
+      <description>Perl File</description>
+      <verb args="&quot;%1&quot; %*" name="open"/>
+      <extension mime-type="text/plain" value=".pl"/>
+    </file-type>
+  </capabilities>
+
+  <group license="GPL v2 (GNU General Public License)">
+    <environment insert="perl\bin" name="PATH"/>
+    <environment insert="perl\site\bin" name="PATH"/>
+    <environment insert="c\bin" name="PATH"/>
+    <command name="run" path="perl/bin/perl.exe"/>
+    <command name="run-gui" path="perl/bin/wperl.exe"/>
+    <command name="doc" path="perl/bin/perl.exe">
+      <arg>-x</arg>
+      <arg>-S</arg>
+      <arg>perldoc</arg>
+    </command>
+    <command name="cpan" path="perl/bin/perl.exe">
+      <arg>-x</arg>
+      <arg>-S</arg>
+      <arg>cpan</arg>
+    </command>
+
+    <implementation arch="Windows-x86_64" id="sha1new=2bc72c295d67620b8a9b026c2a20463b815a40bb" released="2012-05-20" stability="stable" version="5.14.2.1">
+      <manifest-digest sha256new="ARKNPLFVEHC7IFHVFKXJGZMVQZPVQ3IH2VGE6AVJLHKFSK5YHMHA"/>
+      <archive href="http://strawberryperl.com/download/5.14.2.1/strawberry-perl-5.14.2.1-64bit-portable.zip" size="64071220" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=16373340ff8ec501607ae6591367fd4dcad2f6b9" released="2012-05-20" stability="stable" version="5.14.2.1">
+      <manifest-digest sha256new="SCWEY3AKBWI2P5G4P5ELLH23RJKBRYPKOKWGSHWSHCII6VKVFKNA"/>
+      <archive href="http://strawberryperl.com/download/5.14.2.1/strawberry-perl-5.14.2.1-32bit-portable.zip" size="59824660" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=ff5a99583b81c5bb4d20d9bfc2e8db58e4a9e5d1" released="2012-10-18" stability="stable" version="5.14.3.1">
+      <manifest-digest sha256new="ZK62W7D7Q7BQ4ATCH7D6WWSVLFFTGL23TILGAFKBEYQWVH7TFQWA"/>
+      <archive href="http://strawberryperl.com/download/5.14.3.1/strawberry-perl-5.14.3.1-64bit-portable.zip" size="97049921" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=bf0abe4ab67958ce265fda79d69b86ef6c16e2b5" released="2012-10-18" stability="stable" version="5.14.3.1">
+      <manifest-digest sha256new="LUIZZXVCLUQ2VM5TDEFFBBK7OQOT77U62A3ZDT6SZP6S6UG34R5A"/>
+      <archive href="http://strawberryperl.com/download/5.14.3.1/strawberry-perl-5.14.3.1-32bit-portable.zip" size="90223841" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=1eb565ee7b25803fe1e9042c689246a3ec00105f" released="2013-03-13" stability="stable" version="5.14.4.1">
+      <manifest-digest sha256new="NOZT3HOXURHJQHZTYAQFCR3GCWUPO66O5P72AU745RSZMFG3NIBA"/>
+      <archive href="http://strawberryperl.com/download/5.14.4.1/strawberry-perl-5.14.4.1-64bit-portable.zip" size="97878276" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=2b1232ff4952200dfd5f4d6a29653f5f09ac3dfe" released="2013-03-13" stability="stable" version="5.14.4.1">
+      <manifest-digest sha256new="ETD6UX6YK3TKMQS7CQQP7NQHQKAEEMWKQHIKVJSPZZNTGOHYMJMA"/>
+      <archive href="http://strawberryperl.com/download/5.14.4.1/strawberry-perl-5.14.4.1-32bit-portable.zip" size="91015804" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=f2033b5fbc3d66f04a299cd277cf1d2089c8041f" released="2012-05-22" stability="stable" version="5.16.0.1">
+      <manifest-digest sha256new="PWO23E7QP6ETKFUMPX2UQBOVYG3KNGKEYS3XLHWRZAVE44KXHUNA"/>
+      <archive href="http://strawberryperl.com/download/5.16.0.1/strawberry-perl-5.16.0.1-64bit-portable.zip" size="94919282" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=d453c09dc09ae413640c65c13041d195926de542" released="2012-05-22" stability="stable" version="5.16.0.1">
+      <manifest-digest sha256new="LEKH27QUTYL7UUKRYI73N5GU6QVVHCAMNW2FQWKK7Z2QLGJFREJA"/>
+      <archive href="http://strawberryperl.com/download/5.16.0.1/strawberry-perl-5.16.0.1-32bit-portable.zip" size="88236738" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=5b0d241299b5218dcf486152c28ad41d15ec701d" released="2012-08-09" stability="stable" version="5.16.1.1">
+      <manifest-digest sha256new="PJXKWQZVNWEF3IIJZP2MXRAXZAHZWYVXLMUYHPO36F3VGSBOSSJQ"/>
+      <archive href="http://strawberryperl.com/download/5.16.1.1/strawberry-perl-5.16.1.1-64bit-portable.zip" size="95187499" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=38eff1f0e4c3aa25150dea32da7772e53fe46073" released="2012-08-09" stability="stable" version="5.16.1.1">
+      <manifest-digest sha256new="CPLECYTUSMBZCX5262Z4AAT2YNC3JQLEUHQHNDSCU7RRQV7V53IQ"/>
+      <archive href="http://strawberryperl.com/download/5.16.1.1/strawberry-perl-5.16.1.1-32bit-portable.zip" size="88510131" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=7e3ddbe1b484e9cacdc03551150804c73e8f028e" released="2012-11-01" stability="stable" version="5.16.2.1">
+      <manifest-digest sha256new="SMHPFL73C3OFX3HJOLGFP2PXKBM7JUMKQUAKPRSI2ZTTA26CKLWQ"/>
+      <archive href="http://strawberryperl.com/download/5.16.2.1/strawberry-perl-5.16.2.1-64bit-portable.zip" size="97451098" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=a6ef0120791e354cbe7f6633a538ed4b3f799212" released="2012-11-01" stability="stable" version="5.16.2.1">
+      <manifest-digest sha256new="YYNW7LPNIVNOWZLNAQTI6LZZPT6W7WDHJ42R5EGBQ45ZAMD5ZF4A"/>
+      <archive href="http://strawberryperl.com/download/5.16.2.1/strawberry-perl-5.16.2.1-32bit-portable.zip" size="90614399" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=df6b3d204baf39f997edf833ff05f412ca9d7adb" released="2013-02-24" stability="stable" version="5.16.2.2">
+      <manifest-digest sha256new="QJUZ5H3EUGPH74BMELEYDILV4BUZOBCI4OSPZ5NFXBVHYFVXSWJQ"/>
+      <archive href="http://strawberryperl.com/download/5.16.2.2/strawberry-perl-5.16.2.2-64bit-portable.zip" size="97816167" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=54db911da7e4a254403dd6147748c1d788bc9679" released="2013-02-24" stability="stable" version="5.16.2.2">
+      <manifest-digest sha256new="S57GVLFV5QGFJODHDTQ7VEHHI3DSFRVPZZWWGPZLQEVKKCTMNHWA"/>
+      <archive href="http://strawberryperl.com/download/5.16.2.2/strawberry-perl-5.16.2.2-32bit-portable.zip" size="90951879" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=2c6f13ddddfbf917440a29afa4a8df80c97ebc36" released="2013-03-13" stability="stable" version="5.16.3.1">
+      <manifest-digest sha256new="JN43525S5IP6PSHSVGCIJ44QNG5Y5O4FJW5BRZHHC62CZH7VMC4A"/>
+      <archive href="http://strawberryperl.com/download/5.16.3.1/strawberry-perl-5.16.3.1-64bit-portable.zip" size="97855869" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=dda2d5aa42a315741de1c49d2c219cd497f34075" released="2013-03-13" stability="stable" version="5.16.3.1">
+      <manifest-digest sha256new="XFLXQ3AQK2FM2GFFZUMG24S7P63VSNKLWDHZYU7CKTNTFIR66P4Q"/>
+      <archive href="http://strawberryperl.com/download/5.16.3.1/strawberry-perl-5.16.3.1-32bit-portable.zip" size="90991932" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=04d3e2cf7061249ef825290500c8719db9a341b5" released="2013-05-18" stability="stable" version="5.18.0.1">
+      <manifest-digest sha256new="QD443GZ2HEC35PB74KF2UHAVGAASMX23K4VA6KBMBSKKPRZDOCXQ"/>
+      <archive href="http://strawberryperl.com/download/5.18.0.1/strawberry-perl-5.18.0.1-64bit-portable.zip" size="98259506" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=be2c3534eef7a737d4f063b1a928c98acbf1338c" released="2013-05-18" stability="stable" version="5.18.0.1">
+      <manifest-digest sha256new="CIFV3FTFZZCKA6RZIDLUUHMEVEACN2I6CPMF42BBJ7JEQJMEBSOA"/>
+      <archive href="http://strawberryperl.com/download/5.18.0.1/strawberry-perl-5.18.0.1-32bit-portable.zip" size="91326135" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=37d6fef978e29eb96a7cc3458c48c913d081fba7" released="2013-08-13" stability="stable" version="5.18.1.1">
+      <manifest-digest sha256new="6PEGDGGYME3ETF5AYN5CMZMQE2PA5Z42RSYHMBNOSM3IQ3N5IPNA"/>
+      <archive href="http://strawberryperl.com/download/5.18.1.1/strawberry-perl-5.18.1.1-64bit-portable.zip" size="112767013" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=f0da09d9ea4a7bded7903b01d053c4e141c8313a" released="2013-08-13" stability="stable" version="5.18.1.1">
+      <manifest-digest sha256new="W2VHVCOKOZKL5P3M45LRYTVGNOZQD6NI7MI3A62GJSLZK7LRC2MQ"/>
+      <archive href="http://strawberryperl.com/download/5.18.1.1/strawberry-perl-5.18.1.1-32bit-portable.zip" size="105236534" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=0a1434ac8e773582b08861dc9b33ffdcccc5106a" released="2014-01-08" stability="stable" version="5.18.2.1">
+      <manifest-digest sha256new="J4H2TMUMK2ZPUTGFSIKPJT73B5FMZQ2CQ64BTH235DKO7GK2PVOA"/>
+      <archive href="http://strawberryperl.com/download/5.18.2.1/strawberry-perl-5.18.2.1-64bit-portable.zip" size="112309197" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=d44fc9b19d5b0df6edc328befcdd2ba1e1ba7481" released="2014-01-08" stability="stable" version="5.18.2.1">
+      <manifest-digest sha256new="6GUVBJ7UED5KIXP42PDWLPBNPGQAKTYKPI42WLEA2QXSRC3UIAPA"/>
+      <archive href="http://strawberryperl.com/download/5.18.2.1/strawberry-perl-5.18.2.1-32bit-portable.zip" size="104984752" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=ea7a9cbcd57167be578d9bd7768ab20ddbc9f57a" released="2014-04-15" stability="stable" version="5.18.2.2">
+      <manifest-digest sha256new="TC54RJP62R6ILAXIW3T7UDVKXN43ZKZCNSOGZTMMEDSUHRR5ZK5A"/>
+      <archive href="http://strawberryperl.com/download/5.18.2.2/strawberry-perl-5.18.2.2-64bit-portable.zip" size="111347428" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=cf215d2771029b79bc6b79b1ee5f5422543a37f7" released="2014-04-15" stability="stable" version="5.18.2.2">
+      <manifest-digest sha256new="I4FBE3RMBU2P77X3TMRWNZS234UKGQK7OUIWEHTDGP5WY3KMF2KA"/>
+      <archive href="http://strawberryperl.com/download/5.18.2.2/strawberry-perl-5.18.2.2-32bit-portable.zip" size="102508204" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=870ef25c6b4153390efd2e1a92bed8e9f1faa25c" released="2014-10-02" stability="stable" version="5.18.4.1">
+      <manifest-digest sha256new="4UPXG7FJS62BGE7HPFPJGK5QBE5MSJFZVUGM2PNSX7EDHG6FEBNA"/>
+      <archive href="http://strawberryperl.com/download/5.18.4.1/strawberry-perl-5.18.4.1-64bit-portable.zip" size="111680546" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=87cf35fea70d1a669cc13adc5fb4e38a02d33e60" released="2014-10-02" stability="stable" version="5.18.4.1">
+      <manifest-digest sha256new="DED2EIBMY2CU2HEXISFXMKLF2TJWOU56BQ7HGTUIFB52YKIVR6HA"/>
+      <archive href="http://strawberryperl.com/download/5.18.4.1/strawberry-perl-5.18.4.1-32bit-portable.zip" size="102857580" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=47dd714ca1df607de5d776d43a8e4862f182ce68" released="2014-05-31" stability="stable" version="5.20.0.1">
+      <manifest-digest sha256new="BTOLZBCPUDA2GC6SR5STWREZSZZNHIYEMD4QAGWN36OTODFPGKWQ"/>
+      <archive href="http://strawberryperl.com/download/5.20.0.1/strawberry-perl-5.20.0.1-64bit-portable.zip" size="113017137" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=6b49a95a27b9263d279cdb47774816f7c26a719f" released="2014-05-31" stability="stable" version="5.20.0.1">
+      <manifest-digest sha256new="HM34WHMJ5WAH4SWQQ5Z4OML54GI6X6PFMB67Z5PUOXLLPWBXSLRQ"/>
+      <archive href="http://strawberryperl.com/download/5.20.0.1/strawberry-perl-5.20.0.1-32bit-portable.zip" size="105874398" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=0359b3169c04ba7fbba63ede867f1b9cc113ac8d" released="2014-09-15" stability="stable" version="5.20.1.1">
+      <manifest-digest sha256new="563EZDTM44C42TOK6OKCMP7XJOGDOZM2OJ7WVIFEOTEQKVLIO7QA"/>
+      <archive href="http://strawberryperl.com/download/5.20.1.1/strawberry-perl-5.20.1.1-64bit-portable.zip" size="113555330" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=a0c81b1eb58a24b572cb0dda2b686aed465e2606" released="2014-09-15" stability="stable" version="5.20.1.1">
+      <manifest-digest sha256new="UK54IEJHFYTOL4OUCU7S66FDCCSFXWLPNQEMZX2X4CNQP2GZQHAA"/>
+      <archive href="http://strawberryperl.com/download/5.20.1.1/strawberry-perl-5.20.1.1-32bit-portable.zip" size="106492411" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=11cb54541fd740efc18d616f7fbafeca048c019b" released="2015-02-22" stability="stable" version="5.20.2.1">
+      <manifest-digest sha256new="GDH6FXSI3FKTUD7U22EV3LGFCQ6SQDGXAJJDTGZXTETRMW6C3DYQ"/>
+      <archive href="http://strawberryperl.com/download/5.20.2.1/strawberry-perl-5.20.2.1-64bit-portable.zip" size="114472095" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=b7f4dd9eee95b6c04c3aa0840a22b7654b9d8fa8" released="2015-02-22" stability="stable" version="5.20.2.1">
+      <manifest-digest sha256new="WZLZ73BSCNEZ6XHFZDE4TA45WFGG3Q6QDRPQKDDQ4NDHL7HXCKRQ"/>
+      <archive href="http://strawberryperl.com/download/5.20.2.1/strawberry-perl-5.20.2.1-32bit-portable.zip" size="107194520" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=4d2e15161885401c712a381077ac6d61e0f9aa46" released="2015-09-15" stability="stable" version="5.20.3.1">
+      <manifest-digest sha256new="EBDKMGQMXDUAUMYPKXC4JZL6DUJXPZEJAZFDD7H4BQOHMTFAIHVA"/>
+      <archive href="http://strawberryperl.com/download/5.20.3.1/strawberry-perl-5.20.3.1-64bit-portable.zip" size="114558984" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=c7d68d3890cfdeaebef7e10c6c0f9d3ff0fedfb7" released="2015-09-15" stability="stable" version="5.20.3.1">
+      <manifest-digest sha256new="4WEDORG3DME3TMZG4TPNNLQX74GGUSPDKPGPQKX2WD4DDBXSVOZQ"/>
+      <archive href="http://strawberryperl.com/download/5.20.3.1/strawberry-perl-5.20.3.1-32bit-portable.zip" size="107304907" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=10e3564545139a1322644cc1abb195a4193c7a1d" released="2016-01-06" stability="stable" version="5.20.3.2">
+      <manifest-digest sha256new="DMZM42DWN4DEGA72SUZKVA57EGMF643KDWUSV4SB4DZJZPS53ZHQ"/>
+      <archive href="http://strawberryperl.com/download/5.20.3.2/strawberry-perl-5.20.3.2-64bit-portable.zip" size="115220939" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=5ce2e04e3ad87509348e1fff72fb0c8077e755bb" released="2016-01-06" stability="stable" version="5.20.3.2">
+      <manifest-digest sha256new="GO23TRCBK4UHOYRMVMLQVLR6QK2D6MKUQ7KX5AT4VNHS2IPMZ7LQ"/>
+      <archive href="http://strawberryperl.com/download/5.20.3.2/strawberry-perl-5.20.3.2-32bit-portable.zip" size="108052729" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=a37ce91d32109b661728017fc2ced290d0520e33" released="2016-03-08" stability="stable" version="5.20.3.3">
+      <manifest-digest sha256new="A3EOOSHZ2GB7NUNM2IH6A37JNB5ISSJFKUPTKXVXDQIBW5PAM6LQ"/>
+      <archive href="http://strawberryperl.com/download/5.20.3.3/strawberry-perl-5.20.3.3-64bit-portable.zip" size="115463604" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=8d2c7ba1faa6851514e68b08f2a57db172f70eb9" released="2016-03-08" stability="stable" version="5.20.3.3">
+      <manifest-digest sha256new="7H6SSH3Q4QGEJ5MICEQQSJYSWWDKFCUZZVNF4DBHFBQMSKJXHMLA"/>
+      <archive href="http://strawberryperl.com/download/5.20.3.3/strawberry-perl-5.20.3.3-32bit-portable.zip" size="108296097" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=abd42d0880597e7c1e659a5d53707458bdb35694" released="2015-10-01" stability="stable" version="5.22.0.1">
+      <manifest-digest sha256new="VAIXN5ENRA2WT2LQHYRCDPERVRNBO4PNJSTGHYBEB3FSG4EZCVMQ"/>
+      <archive href="http://strawberryperl.com/download/5.22.0.1/strawberry-perl-5.22.0.1-64bit-portable.zip" size="125851194" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=096992fa1490b10c1b29fca68c1d3b7b5d3b5e3a" released="2015-10-01" stability="stable" version="5.22.0.1">
+      <manifest-digest sha256new="ZHHMICYE6LXEM7CZKQTQALD4INYPVM2PE5XXUMGMKZIWCLSKIFZQ"/>
+      <archive href="http://strawberryperl.com/download/5.22.0.1/strawberry-perl-5.22.0.1-32bit-portable.zip" size="117364033" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=0ee49850bbb626f6538b34a0d0b5f3e4633a1ec0" released="2015-12-15" stability="stable" version="5.22.1.1">
+      <manifest-digest sha256new="XBLMCODIO6FSKJ7RC2T2BMYQO2GVB654EKXJBQPXB3FBMQJ3USXQ"/>
+      <archive href="http://strawberryperl.com/download/5.22.1.1/strawberry-perl-5.22.1.1-64bit-portable.zip" size="127532708" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=a9bc60db1bed8937975ddaff5b84c837d432851f" released="2015-12-15" stability="stable" version="5.22.1.1">
+      <manifest-digest sha256new="M7VIARBGH3NY3VZCFSK6UNY7MHGTBLBNPDOO6STDF43S57ERMKAA"/>
+      <archive href="http://strawberryperl.com/download/5.22.1.1/strawberry-perl-5.22.1.1-32bit-portable.zip" size="119035833" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=0e5f7a41bedf3e92144aaa364d81dbd83df41b0e" released="2016-01-06" stability="stable" version="5.22.1.2">
+      <manifest-digest sha256new="L6KNYQBCHGYWOIXXJWA2GB36KEIHYPNYJ2U5ULPR5T7SWYBSM3XQ"/>
+      <archive href="http://strawberryperl.com/download/5.22.1.2/strawberry-perl-5.22.1.2-64bit-portable.zip" size="127607586" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=bd4a3e2085a573564f2abd707626ef65e696caeb" released="2016-01-06" stability="stable" version="5.22.1.2">
+      <manifest-digest sha256new="YFXRI54CQCA65ZKFFX5EXWIU7DIE576SIQG3S3DD5YTHWM5QELEA"/>
+      <archive href="http://strawberryperl.com/download/5.22.1.2/strawberry-perl-5.22.1.2-32bit-portable.zip" size="119108350" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=ba840395d0d2a9e29cae6467de45fc8879872dcd" released="2016-03-07" stability="stable" version="5.22.1.3">
+      <manifest-digest sha256new="Y2R6CXTPXYMMR7OVORSC4KNJ7Q6N6VN7ZQNVRLKUKQUFG4UM6VFQ"/>
+      <archive href="http://strawberryperl.com/download/5.22.1.3/strawberry-perl-5.22.1.3-64bit-portable.zip" size="127829914" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=d0259825a7ce5c64e01fbeed78be4ab91b593530" released="2016-03-07" stability="stable" version="5.22.1.3">
+      <manifest-digest sha256new="HT3ZXGQHGAQGESLK7X7T6AZHVDV45IRPLCJOZDO4QWV75DJVRTCQ"/>
+      <archive href="http://strawberryperl.com/download/5.22.1.3/strawberry-perl-5.22.1.3-32bit-portable.zip" size="119347639" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=dd8af86b29b2b2c064a0cc58b85b0ca7d79d07f7" released="2016-05-14" stability="stable" version="5.22.2.1">
+      <manifest-digest sha256new="XXEQ67BC3F2UZKDBWFKAC2IC3BCEGQPDHYYYHEKVKREGQCAEPXPQ"/>
+      <archive href="http://strawberryperl.com/download/5.22.2.1/strawberry-perl-5.22.2.1-64bit-portable.zip" size="127873063" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=131a8f2a31550046c7ddb77834163858a074662e" released="2016-05-14" stability="stable" version="5.22.2.1">
+      <manifest-digest sha256new="TMCNJ2PTR2BHACMQYWD4SDSU3GRM72W4QK4GPUNRNH7X663XVTEA"/>
+      <archive href="http://strawberryperl.com/download/5.22.2.1/strawberry-perl-5.22.2.1-32bit-portable.zip" size="119390505" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=7b0be07ca6f5343f9af75c3223759eb7e04c5b12" released="2017-01-15" stability="stable" version="5.22.3.1">
+      <manifest-digest sha256new="MM5RUWJOU6HJZ7ES7XZK4FRHIQUHAW2K63U7S6V6EULR5PLP4CDQ"/>
+      <archive href="http://strawberryperl.com/download/5.22.3.1/strawberry-perl-5.22.3.1-64bit-portable.zip" size="129236078" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=042efbadc07694ded380807f0288132ef828b561" released="2017-01-15" stability="stable" version="5.22.3.1">
+      <manifest-digest sha256new="WIR2Y5CIQPRNCFJNMT3KHHOYBHKD3XOL4DLZJHGQWVLWNPGNJVCQ"/>
+      <archive href="http://strawberryperl.com/download/5.22.3.1/strawberry-perl-5.22.3.1-32bit-portable.zip" size="120772270" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=11d0a21f25a8cb9af08876219af5fa59d135f28d" released="2016-05-11" stability="stable" version="5.24.0.1">
+      <manifest-digest sha256new="WPZEN4M4PEAN7Y5GG7CLM4EJNCOXLDXGSVR24UEPFJTFVEIH6MQQ"/>
+      <archive href="http://strawberryperl.com/download/5.24.0.1/strawberry-perl-5.24.0.1-64bit-portable.zip" size="128047273" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=fdbf76efad6b15df22b7043fb9643c05dbfe1ce0" released="2016-05-11" stability="stable" version="5.24.0.1">
+      <manifest-digest sha256new="V4W5E7O34GGBMT4SXSU3MPZSGTLSJKBU3UEJ44MD5G4S3A34GARQ"/>
+      <archive href="http://strawberryperl.com/download/5.24.0.1/strawberry-perl-5.24.0.1-32bit-portable.zip" size="119553208" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=0380d0acae59ffde94abee87fb8bf6d09f07aa56" released="2017-01-16" stability="stable" version="5.24.1.1">
+      <manifest-digest sha256new="3QVKNCGJUZRQTTEMLTZO53JUCJSDSCR73NSRO3EYLI3S4MGMFFKA"/>
+      <archive href="http://strawberryperl.com/download/5.24.1.1/strawberry-perl-5.24.1.1-64bit-portable.zip" size="129443099" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=2f274dc6740ead123c86821008f63995905c5735" released="2017-01-16" stability="stable" version="5.24.1.1">
+      <manifest-digest sha256new="BOJUGNDOH5SXXCFTNJRTGDK4CAZN7UH3TKFJVWNGEF2TZUUK7IZQ"/>
+      <archive href="http://strawberryperl.com/download/5.24.1.1/strawberry-perl-5.24.1.1-32bit-portable.zip" size="120982168" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=8d9e1ad0c515e21036fd001b5d0e93580c06d3bc" released="2017-07-17" stability="stable" version="5.24.2.1">
+      <manifest-digest sha256new="NHL4STJVIOVKQTHCF4NXQI73TD3E4LTT6FUNTZUABNYCYUTXELIA"/>
+      <archive href="http://strawberryperl.com/download/5.24.2.1/strawberry-perl-5.24.2.1-64bit-portable.zip" size="130505589" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=7376273665a7d43f1740845f9783fca844b49700" released="2017-07-17" stability="stable" version="5.24.2.1">
+      <manifest-digest sha256new="FWOQIP5D75DO3JBNDRDMGEAIZS6AVDW4MJVQHDKGYW7BA6N254UA"/>
+      <archive href="http://strawberryperl.com/download/5.24.2.1/strawberry-perl-5.24.2.1-32bit-portable.zip" size="122043863" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=b476143a8c48d00848c48eff21290dc4e7c0714d" released="2017-09-25" stability="stable" version="5.24.3.1">
+      <manifest-digest sha256new="64U44CIYHYWWYTRCTCR5TQ553KOMC6MW36K5RWCYDUQY27AT5H5A"/>
+      <archive href="http://strawberryperl.com/download/5.24.3.1/strawberry-perl-5.24.3.1-64bit-portable.zip" size="130667545" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=606ecf5d912ce44e8661cb687b319ce3aa824c86" released="2017-09-25" stability="stable" version="5.24.3.1">
+      <manifest-digest sha256new="4IAO4HCOP5K6VKL2DO2RUISJVB6ZBB7ELY4VRRVAIUZ7QIUKKS5Q"/>
+      <archive href="http://strawberryperl.com/download/5.24.3.1/strawberry-perl-5.24.3.1-32bit-portable.zip" size="122198237" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=b65830e6f7cba78704203afac6ef19861490b542" released="2018-04-15" stability="stable" version="5.24.4.1">
+      <manifest-digest sha256new="L7SAHH6AYJZG36WKKSXKLIZ5BIW23DZ7H5XTPJWIPVPQYA5JQ3UQ"/>
+      <archive href="http://strawberryperl.com/download/5.24.4.1/strawberry-perl-5.24.4.1-64bit-portable.zip" size="131411317" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=6c5887e57c1a3ef12efad2127a524ae2e224d7cd" released="2018-04-15" stability="stable" version="5.24.4.1">
+      <manifest-digest sha256new="N4HJYYLB6YWFPVJ2JRCZRFNVJ2DB5GBWQXIMVW7SWVTJ4CPFV5QA"/>
+      <archive href="http://strawberryperl.com/download/5.24.4.1/strawberry-perl-5.24.4.1-32bit-portable.zip" size="122943769" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=49f42028102e4c6d65d9cdd2751eb9cca05b015f" released="2017-05-31" stability="stable" version="5.26.0.1">
+      <manifest-digest sha256new="CTK3XWNVP2VOC4JKP6UUSKLDFK4N3TZJ2KVONTH4EFZNHZDXPGEA"/>
+      <archive href="http://strawberryperl.com/download/5.26.0.1/strawberry-perl-5.26.0.1-64bit-portable.zip" size="146372652" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=47c6b1ba8f6ee7662eba1d412ec35f56eed25d47" released="2017-05-31" stability="stable" version="5.26.0.1">
+      <manifest-digest sha256new="3G7HTCOJ4OKG443SR6MLEQJQ42FCCBCYTQ7RUAY5ZFZ6ZJFIU3SQ"/>
+      <archive href="http://strawberryperl.com/download/5.26.0.1/strawberry-perl-5.26.0.1-32bit-portable.zip" size="141025134" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=8a01796068201423c94ce97aeee40051e40909a2" released="2017-09-03" stability="stable" version="5.26.0.2">
+      <manifest-digest sha256new="D6GYYWGJFDRJIPG5KBCMZBLXKIYWTRPVGDOH5FU2BYO3IO2CALWQ"/>
+      <archive href="http://strawberryperl.com/download/5.26.0.2/strawberry-perl-5.26.0.2-64bit-portable.zip" size="146570648" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=cec44041d90d32bf44bc0ed8667d759c392beb2d" released="2017-09-03" stability="stable" version="5.26.0.2">
+      <manifest-digest sha256new="W773HZKRLHEBM6CAXFZZGO2GMCVKSADX664CRSKNKHKELQ4SAGBQ"/>
+      <archive href="http://strawberryperl.com/download/5.26.0.2/strawberry-perl-5.26.0.2-32bit-portable.zip" size="141223342" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=f6d6fda218e78fe35495b1b0dfd2e486c4722b13" released="2017-09-24" stability="stable" version="5.26.1.1">
+      <manifest-digest sha256new="XIYJWNCCIWZZRWRWMCIIH6673AWKOYB3XPS2NYKTLWHZ56ZSTFCQ"/>
+      <archive href="http://strawberryperl.com/download/5.26.1.1/strawberry-perl-5.26.1.1-64bit-portable.zip" size="146593916" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=a0b76b36f726bbd50a58d02667e7eb95505df970" released="2017-09-24" stability="stable" version="5.26.1.1">
+      <manifest-digest sha256new="V65NHREAPK3WBO7XEWOGBNZ5KHT6AVBMJKGGC2E7MYUYLCAWIYCA"/>
+      <archive href="http://strawberryperl.com/download/5.26.1.1/strawberry-perl-5.26.1.1-32bit-portable.zip" size="141250167" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=1e9226a6cd33c57a5627e08802bd13701aae0a24" released="2018-04-15" stability="stable" version="5.26.2.1">
+      <manifest-digest sha256new="TV5VAYS7NDDTUK66MHLDSIZYOU7OCQZXG63SX4OVIO5LK7UUH7DQ"/>
+      <archive href="http://strawberryperl.com/download/5.26.2.1/strawberry-perl-5.26.2.1-64bit-portable.zip" size="147408956" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=42dcb58f63ff704cb3f7dca7c6a6fc0018ee3644" released="2018-04-15" stability="stable" version="5.26.2.1">
+      <manifest-digest sha256new="SZPK7X6JBD5HEZV3XU5FERGVN6DJKRMH2TMA7456NU5CACEIGLHA"/>
+      <archive href="http://strawberryperl.com/download/5.26.2.1/strawberry-perl-5.26.2.1-32bit-portable.zip" size="142073646" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=2ba5b0b83abce5739ba5e610ee35952da94e3ba0" released="2018-12-02" stability="stable" version="5.26.3.1">
+      <manifest-digest sha256new="AM46PHIYFJ445RJ5NEFZFLDL43ZIM3VXF72JY6VP7DNU35NLKFRQ"/>
+      <archive href="http://strawberryperl.com/download/5.26.3.1/strawberry-perl-5.26.3.1-64bit-portable.zip" size="148004692" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=681c5fb353b96e85f3fb9a27955907d15241a26c" released="2018-12-02" stability="stable" version="5.26.3.1">
+      <manifest-digest sha256new="O7OZF4VEGVUVIJNXVZ3PAMSCP7A66HBMUE5CI75UHI4C5BGNPV4A"/>
+      <archive href="http://strawberryperl.com/download/5.26.3.1/strawberry-perl-5.26.3.1-32bit-portable.zip" size="142669955" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=406b572220e4524ecdffcbaa1c90f88bf101942b" released="2018-06-23" stability="stable" version="5.28.0.1">
+      <manifest-digest sha256new="AKWJ7V6FBPYEOE4H6WNL6VBKFLVUFPAKJSJQJIDHOVOVQ4FEVWYQ"/>
+      <archive href="http://strawberryperl.com/download/5.28.0.1/strawberry-perl-5.28.0.1-64bit-portable.zip" size="148105977" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=b501279b4aafa686be75eafb223b032d24b63d0b" released="2018-06-23" stability="stable" version="5.28.0.1">
+      <manifest-digest sha256new="YAT3ZM2DUG7KYLSOPUT6GSLPQDTPQRGTEAMOJPJ5SMXTJILWHFXA"/>
+      <archive href="http://strawberryperl.com/download/5.28.0.1/strawberry-perl-5.28.0.1-32bit-portable.zip" size="142753767" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=89561fea1e803edd07a8938cb570266f6449a799" released="2018-12-02" stability="stable" version="5.28.1.1">
+      <manifest-digest sha256new="BRJK4FPRSVDGJT5M6SYIPCYQSPQQLOLX2WQJPGUUBTE7EBZ7NTHQ"/>
+      <archive href="http://strawberryperl.com/download/5.28.1.1/strawberry-perl-5.28.1.1-64bit-portable.zip" size="148591915" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=17bec2597f35c8e3df58de9b2e9bb0ae20890bcb" released="2018-12-02" stability="stable" version="5.28.1.1">
+      <manifest-digest sha256new="QDOYDTSCV7TUSKIDIPVHW3NIFOBYBT5IXU2I5TXMY763LOMUIJ2A"/>
+      <archive href="http://strawberryperl.com/download/5.28.1.1/strawberry-perl-5.28.1.1-32bit-portable.zip" size="143242779" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=eabdf994200721da19297f05874d959fd901937e" released="2019-05-02" stability="stable" version="5.28.2.1">
+      <manifest-digest sha256new="EHBWIZ4AH5DK333M4SWSMEUBNXU7E7K5DEU4N6OM6TYGJDAR55QQ"/>
+      <archive href="http://strawberryperl.com/download/5.28.2.1/strawberry-perl-5.28.2.1-64bit-portable.zip" size="148876035" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=04cbd217b5e7b8ec4fbb3cae937a98f71976059a" released="2019-05-02" stability="stable" version="5.28.2.1">
+      <manifest-digest sha256new="DSVFD4GSPPAZUJD5Z3MAQSGCB2C4P5A5EYLLUZSLA62ARW3ZBV3A"/>
+      <archive href="http://strawberryperl.com/download/5.28.2.1/strawberry-perl-5.28.2.1-32bit-portable.zip" size="143524343" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=675ae033993b6992466d4c450c63a42d6ab0c58d" released="2019-05-23" stability="stable" version="5.30.0.1">
+      <manifest-digest sha256new="2ZWZIAJKPT7MHS5NM2RC2ICNEHIS6TBQEYR2Q6EBS22IFX5GMP5Q"/>
+      <archive href="http://strawberryperl.com/download/5.30.0.1/strawberry-perl-5.30.0.1-64bit-portable.zip" size="155036983" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=b8ba1b8db35c8069ceb7614af0cfe257d8387a74" released="2019-05-23" stability="stable" version="5.30.0.1">
+      <manifest-digest sha256new="SADSTZ5NZGAWNKSGJ3TN7PDXHUAHCAL535FC5EEL3YFZ5A2UNCZA"/>
+      <archive href="http://strawberryperl.com/download/5.30.0.1/strawberry-perl-5.30.0.1-32bit-portable.zip" size="150743342" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=7c5ddb2b85d71e67f5b5a7ae50d2ef2546d8472c" released="2019-11-22" stability="stable" version="5.30.1.1">
+      <manifest-digest sha256new="FPLHY6QXPPFW5EP255DFL3DFHKXWS67SIT4VW5L4Q2O4Q3R6LFWA"/>
+      <archive href="http://strawberryperl.com/download/5.30.1.1/strawberry-perl-5.30.1.1-64bit-portable.zip" size="155699082" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=eb3c738518bc18ecc4e0de58a0550772352f96a0" released="2019-11-22" stability="stable" version="5.30.1.1">
+      <manifest-digest sha256new="6UPS4EPPSI3KOTKN7WSYM6GM7COW2HB4KRYRCC6JW7UXV4ZROTXQ"/>
+      <archive href="http://strawberryperl.com/download/5.30.1.1/strawberry-perl-5.30.1.1-32bit-portable.zip" size="151406065" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=6498511b12c44b7be634023f72d3b5ff9221998a" released="2020-03-17" stability="stable" version="5.30.2.1">
+      <manifest-digest sha256new="ICGUPNN2X3ZLAHUFJ77AACU4JQQWRW7UH462H7J4D3QY7YN6ITMQ"/>
+      <archive href="http://strawberryperl.com/download/5.30.2.1/strawberry-perl-5.30.2.1-64bit-portable.zip" size="155593767" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=ee34fe6f369991920934c653b40b402256abd9fd" released="2020-03-17" stability="stable" version="5.30.2.1">
+      <manifest-digest sha256new="BKFV73JSISI6S7CPSW7OTZZAMO5ASIEMSS66UDUNIJWLVUSFJ5YQ"/>
+      <archive href="http://strawberryperl.com/download/5.30.2.1/strawberry-perl-5.30.2.1-32bit-portable.zip" size="151316783" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

@@ -4,11 +4,17 @@
   <summary>Practical Extraction and Report Language</summary>
   <description>Perl is a highly capable, feature-rich programming language with over 30 years of development.</description>
   <homepage>https://www.perl.org/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/perl/perl.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/perl/perl.png" type="image/png"/>
   <needs-terminal/>
 
-  <package-implementation package="perl" main="/usr/bin/perl"/>
-
   <entry-point binary-name="perl" command="run"/>
+  <entry-point binary-name="perldoc" command="doc">
+    <needs-terminal/>
+  </entry-point>
+  <entry-point binary-name="cpan" command="cpan">
+    <needs-terminal/>
+  </entry-point>
 
   <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
     <file-type id="Perl.File">
@@ -17,4 +23,12 @@
       <extension mime-type="text/plain" value=".pl"/>
     </file-type>
   </capabilities>
+
+  <package-implementation package="perl">
+    <command name="run" path="/usr/bin/perl"/>
+    <command name="doc" path="/usr/bin/perldoc"/>
+    <command name="cpan" path="/usr/bin/cpan"/>
+  </package-implementation>
+
+  <feed arch="Windows-*" src="https://apps.0install.net/perl/strawberry.xml"/>
 </interface>

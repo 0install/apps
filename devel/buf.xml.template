@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Buf</name>
+  <summary>a new way of working with Protocol Buffers</summary>
+  <description>Buf's goal is for Protobuf to not only be a good choice on the technical merits, but to be so easy to use that the decision is trivial.</description>
+  <homepage>https://buf.build/</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/devel/buf.xml"/>
+
+  <group license="Apache License 2.0">
+    <command name="run" path="bin/buf"/>
+
+    <implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}">
+      <manifest-digest/>
+      <archive extract="buf" href="https://github.com/bufbuild/buf/releases/download/v{version}/buf-Linux-x86_64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" stability="{stability}" released="{released}">
+      <manifest-digest/>
+      <archive extract="buf" href="https://github.com/bufbuild/buf/releases/download/v{version}/buf-Darwin-x86_64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

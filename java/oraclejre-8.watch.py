@@ -19,4 +19,3 @@ releases = [{
     'bundle-id-windows-i586': str(bundle_id_base + 1),
     'bundle-id-windows-x64': str(bundle_id_base + 3)
 }]
-print(releases)

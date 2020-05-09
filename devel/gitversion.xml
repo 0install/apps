@@ -209,23 +209,28 @@
       <manifest-digest sha256new="T573U2EL73QR7BGZPCBCYS2II7BC3PJWBSCCM7XQ6YGF33IEPXEA"/>
       <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.0/gitversion-win-x64-5.3.0.tar.gz" size="18386083" type="application/x-compressed-tar"/>
     </implementation>
-    <implementation arch="Windows-i486" id="sha1new=2acce51648df691d5bb0980dade9cddfb9317da8" released="2020-05-04" stability="stable" version="5.3.0">
-      <manifest-digest sha256new="UPUFTVZ2FRU5EGJFPJ2VDVUXP7H6WWARULOMIASXYSRMXFB263NA"/>
-      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.0/gitversion-win-x86-5.3.0.tar.gz" size="16846534" type="application/x-compressed-tar"/>
-    </implementation>
     <implementation id="sha1new=e6b70baffcad2f9db973e319c0650af1b00de86f" released="2020-05-05" stability="stable" version="5.3.1">
       <manifest-digest sha256new="MUR6DHUM4XU77P7X7PKFM5C6I4WJ7L3ZG3I7R77BIM45RWRBNIIA"/>
       <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.1/gitversion-win-x64-5.3.1.tar.gz" size="18386129" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation arch="Windows-i486" id="sha1new=ee8ab7088386a9d7cc123083e503bf5b15be75a3" released="2020-05-05" stability="stable" version="5.3.1">
-      <manifest-digest sha256new="LVZ2MIT2WYIWWVCLB7EHWBESCSUUZ6WZBGL4VCJO6MCYAX75RETQ"/>
-      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.1/gitversion-win-x86-5.3.1.tar.gz" size="16846572" type="application/x-compressed-tar"/>
     </implementation>
     <implementation id="sha1new=f98174efcb05dd6b7db16afe9ff50266f8824714" released="2020-05-05" stability="stable" version="5.3.2">
       <manifest-digest sha256new="KESXQNLOFT3C4SUR4U6AG4WC3IUVMQJLXH2GLDDOXD3HQNZNOTVA"/>
       <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.2/gitversion-win-x64-5.3.2.tar.gz" size="18397194" type="application/x-compressed-tar"/>
     </implementation>
-    <implementation arch="Windows-i486" id="sha1new=4caf1406dc082fa88470632d76035c1501a8bdf4" released="2020-05-05" stability="stable" version="5.3.2">
+  </group>
+
+  <group arch="Windows-i486" license="MIT License">
+    <command name="run" path="GitVersion.exe"/>
+
+    <implementation id="sha1new=2acce51648df691d5bb0980dade9cddfb9317da8" released="2020-05-04" stability="stable" version="5.3.0">
+      <manifest-digest sha256new="UPUFTVZ2FRU5EGJFPJ2VDVUXP7H6WWARULOMIASXYSRMXFB263NA"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.0/gitversion-win-x86-5.3.0.tar.gz" size="16846534" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=ee8ab7088386a9d7cc123083e503bf5b15be75a3" released="2020-05-05" stability="stable" version="5.3.1">
+      <manifest-digest sha256new="LVZ2MIT2WYIWWVCLB7EHWBESCSUUZ6WZBGL4VCJO6MCYAX75RETQ"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.1/gitversion-win-x86-5.3.1.tar.gz" size="16846572" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=4caf1406dc082fa88470632d76035c1501a8bdf4" released="2020-05-05" stability="stable" version="5.3.2">
       <manifest-digest sha256new="6JOFYCHNKZTFVKO5N22YGT27IWVE3EGSH4PEZV6HLIZZ34RRWDSQ"/>
       <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.2/gitversion-win-x86-5.3.2.tar.gz" size="16870052" type="application/x-compressed-tar"/>
     </implementation>
@@ -282,14 +287,6 @@
     </implementation>
   </group>
 
-  <group arch="Windows-i486" license="MIT License">
-    <command name="run" path="GitVersion.exe"/>
-
-    <implementation released="{released}" stability="{stability}" version="{version}">
-      <archive href="https://github.com/GitTools/GitVersion/releases/download/{original-version}/gitversion-win-x86-{original-version}.tar.gz" type="application/x-compressed-tar"/>
-    </implementation>
-  </group>
-
   <group arch="Darwin-x86_64" license="MIT License">
     <command name="run" path="GitVersion"/>
 
@@ -342,11 +339,11 @@
   <entry-point binary-name="GitVersion" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl6yYbEACgkQWao5J8JOTh6Qgwf/XrUc
-+XqS92oIuxLn7nmqLZzQEV1WfnsL6BbYmwU2cbdJb4IfFZNXwyTc/bIJgXU1RJM5E9xqjy76X8Y3
-J8pNcoUPVlTmXyAXOESXrFQA44XBowQyyIWD0eNiDNp3AtSwQDZAtbSbPc2V2Ocila5DkL7pUvGO
-33B6dCq0YwEKDOL8lPbAn/Aa5SAnu3BU9W5XYQSDPNCdW0JZxuGC9A1XWt4tBWAzIaaNQ7dStjaR
-NvScmuapRIP0LHY+QvyDcwdLe0wc9RrqAxWbceZEsG9keWseP20qF3xNRT41yPowmuovmDqkJz1m
-llD6YOvz+EQ7JikGY5DmgHVwGSOvp20fIQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl63Dv4ACgkQWao5J8JOTh4WPwgAhfmn
+V04u0P5pOBEli0YpYpa/PqzMv85I1LLUORlvf3c+K9D5boZgIQO2lbPiuEXXeyvJiStGNIH+FHV5
+h8qRRPEOr743qmIHRsbA2YAxp3V80lEIHPiFl6eZjcOtEKKbaNcwhlxREWICrlY6KvcobEfc+4W1
+LjtXQInrioo/cFYmvvB0xOtKfvz4QE6jrXHmQ1Cpuh4ySBGhNu6ZTZ/YbmqYqpO24Bopkx1WjH0Z
+5knBqzz7NfR3NeggqaR6MzfSHXXH3MyvIUlJMmiw98ecRrajfc4TkFx0IXjJC/hWj3k8r3sQUMxN
+crXPbAG0aqOO7SRaoNgEOykfivYhpWCGHQ==
 
 -->

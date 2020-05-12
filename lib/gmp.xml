@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/elements/1.1/" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd" uri="https://apps.0install.net/lib/gmp.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <name>gmp</name>
+  <summary xml:lang="en">A free library for arbitrary precision arithmetic (mingw-w64)</summary>
+  <description xml:lang="en" />
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/lib/gmp.png" type="image/png" />
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/lib/gmp.ico" type="image/vnd.microsoft.icon" />
+  <homepage>https://gmplib.org/</homepage>
+  <package-implementation package="gmp" />
+  <package-implementation package="dev-libs/gmp" distributions="Gentoo" />
+  <package-implementation package="math/gmp" distributions="Ports" />
+  <group license="LGPL3, GPL">
+    <group version="6.1.2-1" released="2017-01-12">
+      <implementation arch="Windows-i686" id="sha1new=202127badbbf73020e047b7cd746272fa898c22e">
+        <manifest-digest sha256new="2QKO666TTOCECXIRGACE26BOTQIUTLUEFSXB3EQLUCJWXPU6LA3A" />
+        <archive href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-gmp-6.1.2-1-any.pkg.tar.xz" size="482992" type="application/x-xz-compressed-tar" extract="mingw32" />
+      </implementation>
+      <implementation arch="Windows-x86_64" id="sha1new=18cca1453ce1038965e94c665c879164b0423021">
+        <manifest-digest sha256new="BXZVDF3DOC4Y44YRPJDUILYVIBVTTHO5TEZE4RHUKMX3RYAED6KQ" />
+        <archive href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-gmp-6.1.2-1-any.pkg.tar.xz" size="497700" type="application/x-xz-compressed-tar" extract="mingw64" />
+      </implementation>
+    </group>
+    <group version="6.2.0-1">
+      <dc:creator>Alexey Pavlov &lt;alexpux@gmail.com&gt;,</dc:creator>
+      <implementation arch="Windows-x86_64" id="sha1new=cb1b2877077a4806152114e82c4a2a5dbbd2e1c3" released="2020-02-26">
+        <dc:available>2020-02-10</dc:available>
+	<manifest-digest sha256new="4JTC7H2TKBHSCEDDBN3U7QR4DFWL4YNE562B6MBEJON7BIFU4NCQ"/>
+        <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-gmp-6.2.0-1-any.pkg.tar.xz" size="502596"/>
+      </implementation>
+      <implementation arch="Windows-i686" id="sha1new=08a41ac3986a451ed4505b4e117180d076a88f29" released="2020-02-26">
+        <dc:available>2020-02-10</dc:available>
+	<manifest-digest sha256new="WUVEOG37FG4E6VHM4QPOPVENOOVVGVCYBTPAJ7GHOTR7CJ6MVTPA"/>
+        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-gmp-6.2.0-1-any.pkg.tar.xz" size="489640"/>
+      </implementation>
+    </group>
+  </group>
+</interface>

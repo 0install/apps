@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="https://apps.0install.net/utils/pngcrush.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface uri="https://apps.0install.net/utils/pngcrush.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/elements/1.1/" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>pngcrush</name>
-  <summary xml:lang="en">Pngcrush is an optimizer for PNG (Portable Network Graphics) files.</summary>
+  <summary>A tool for optimizing the compression of PNG files</summary>
   <summary xml:lang="fr">Pngcrush est un optimiseur de fichiers PNG (Portable Network Graphics).</summary>
   <summary xml:lang="pl">Pngcrush jest optymalizator dla PNG (Portable Network Graphics) plików.</summary>
   <summary xml:lang="pt">O Pngcrush é um otimizador para arquivos PNG (Portable Network Graphics). </summary>
@@ -21,8 +21,12 @@
   <description xml:lang="sv">Först och främst använder man den för att reducera storlek på PNG IDAT dataströmmen tack olika sorters kompimeringsgrader och filter för PNG. Man kan också använda den inom eliminering av oönskade underordnade bitar eller tilläggning av vissa bitar inklusive gAMA, tRNS, iCCP, och textbitar. </description>
   <description xml:lang="uk">Його основною метою є зменшення розміру потоку даних PNG IDAT за допомогою різних рівнів стиснення і методів фільтра PNG. Оптимізатор також може використовуватися для видалення небажаних допоміжних блоків або додавання певних шматків, враховуючи gAMA, tRNS, iCCP і текстових шматків. </description>
   <category>Graphics</category>
-  <homepage>https://pmt.sourceforge.io/pngcrush/</homepage>
+  <homepage>https://pmt.sourceforge.io/pngcrush</homepage>
   <needs-terminal/>
+  <package-implementation distributions="Gentoo" package="media-gfx/pngcrush"/>
+  <package-implementation package="pngcrush"/>
+  <package-implementation package="graphics/pngcrush" distributions="Ports" />
+  <package-implementation package="graphics/pngcrush" distributions="Slack" />
   <group arch="Windows-*" license="zlib/libpng License" released="2017-01-16" version="1.8.11">
       <command name="run" path="pngcrush.exe"/>
 
@@ -35,8 +39,26 @@
       <file dest="pngcrush.exe" href="https://sourceforge.net/projects/pmt/files/pngcrush-executables/1.8.11/pngcrush_1_8_11_w32.exe" size="388608"/>
     </implementation>
   </group>
-  <package-implementation distributions="Gentoo" package="media-gfx/pngcrush"/>
-  <package-implementation package="pngcrush"/>
+  <group license="custom">
+    <requires interface="https://apps.0install.net/lib/gcc-libs.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/png16-0.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/zlib.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/pngcrush.exe"/>
+    <group released="2018-05-10" version="1.8.13-1">
+      <implementation arch="Windows-i686" id="sha1new=a0a3addb0526a1a119c01a07a21091f7c3763c3e">
+        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-pngcrush-1.8.13-1-any.pkg.tar.xz" size="71732"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" id="sha1new=c9263cc45904d9a2f48f170f1c7e1726399a7a01">
+        <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-pngcrush-1.8.13-1-any.pkg.tar.xz" size="75168"/>
+      </implementation>
+    </group>
+  </group>
   <entry-point binary-name="pngcrush" command="run">
     <needs-terminal/>
   </entry-point>

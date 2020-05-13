@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/pngnq.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/elements/1.1/" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>pngnq</name>
+  <summary>Pngnq is a tool for quantizing PNG images in RGBA format</summary>
+  <description>Quantizes a 32-bit RGBA PNG image to an 8 bit RGBA palette PNG 
+using the neuquant algorithm. The output file name is the 
+input file name extended with &quot;-nq8.png&quot; or a specified extension.
+  </description>
+  <category>Graphics</category>
+  <homepage>http://pngnq.sourceforge.net/</homepage>
+  <needs-terminal/>
+  <package-implementation package="pngnq"/>
+  <package-implementation package="graphics/pngnq" distributions="Ports" />
+  <package-implementation package="media-gfx/pngnq" distributions="Gentoo" />
+  <group license="BSD">
+    <requires interface="https://apps.0install.net/lib/gcc-libs.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/png16-0.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/zlib.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/pngnq.exe"/>
+  
+    <command name="pngcomp" path="bin/pngcomp.exe"/>
+    <group released="2015-07-20" version="1.1-2">
+      <implementation arch="Windows-x86_64" id="sha1new=9f3cc572679cd3e2ca55992c6a50d293b06bc06c">
+        <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-pngnq-1.1-2-any.pkg.tar.xz" size="42896"/>
+      </implementation>
+      <implementation arch="Windows-i686" id="sha1new=1b4b23b97f42bd8c99cee7fad9a33798c11e2d0d">
+        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-pngnq-1.1-2-any.pkg.tar.xz" size="40172"/>
+      </implementation>
+    </group>
+  </group>
+
+  <entry-point binary-name="pngnq" command="run">
+    <needs-terminal/>
+  </entry-point>
+  
+  <entry-point binary-name="pngcomp" command="pngcomp">
+    <name>pngcomp</name>
+    <summary>This program give some basic statistics about the difference between two images.</summary>
+    <description>This program give some basic statistics about the difference between two images.
+It was created as a measure of various color quantization methods.
+
+The statistics given include individual pixel differences and also
+block statistics averaged over blocks of pixels. The latter is a better measure
+when images have been dithered.
+
+The use of these statistics is limited in that they do not contain a model of human vision.
+    </description>
+    <needs-terminal/>
+  </entry-point>
+  
+</interface>

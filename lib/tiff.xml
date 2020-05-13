@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/lib/tiff" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface uri="https://apps.0install.net/lib/tiff.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Tiff</name>
   <summary xml:lang="en">Tiff: library and tools for TIFF images</summary>
   <description xml:lang="en">This software provides support for the Tag Image File Format (TIFF), a widely used format for storing image data. The latest version of the TIFF specification is available on-line in several different formats, as are a number of Technical Notes (TTN's). 
@@ -11,16 +11,16 @@ The library, along with associated tool programs, should handle most of your nee
 
 The GnuWin32 distribution comes in two versions. The ordinary version uses the standard Unix equivalents, such as fopen and read, for input and output, the other version (Tiff-win32&lt;http://gnuwin32.sourceforge.net/packages/tiff-win32.htm&gt;) uses the Win32 API functions, such as CreateFile and ReadFile, for input and output. The ordinary version (Tiff&lt;http://gnuwin32.sourceforge.net/packages/tiff.htm&gt;) is more suitable for porting Unix programs, the Win32-API version is more suitable for writing Win32 programs. 
 </description>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/tiff.ico" type="image/vnd.microsoft.icon"/>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/tiff.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/lib/tiff.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/lib/tiff.png" type="image/png"/>
   <category>Graphics</category>
   <homepage>http://gnuwin32.sourceforge.net/packages/tiff.htm</homepage>
   <needs-terminal/>
   <group arch="Windows-i486" license="libtiff" released="2006-03-28" version="3.8.2-1">
-    <requires interface="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/jpeg.xml" version="6-4-1">
+    <requires interface="https://apps.0install.net/lib/jpeg.xml" version="6-4-1">
       <environment insert="bin" name="PATH"/>
     </requires>
-    <requires interface="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/zlib.xml">
+    <requires interface="https://apps.0install.net/lib/zlib.xml">
       <environment insert="bin" name="PATH"/>
     </requires>
     <command name="run" path="bin/tiffinfo.exe"/>
@@ -54,17 +54,17 @@ The GnuWin32 distribution comes in two versions. The ordinary version uses the s
     <command name="ycbcr" path="bin/ycbcr.exe"/>
   <implementation id="sha1new=604da8a5ebc2bb6faef79a2d4c31472ab44d1bc9" version="3.8.2-1-3">
     <command name="fax2png" path="bin/fax2png.exe">
-    <requires interface="http://repo.roscidus.com/lib/png12-0" version="1.2.8..!1.2.37">
+    <requires interface="https://apps.0install.net/lib/png12-0.xml" version="1.2.8..!1.2.37">
       <environment insert="bin" name="PATH"/>
     </requires>
     </command>
     <!--command name="sgi2tiff" path="bin/sgi2tiff.exe">
-    <requires interface="http://repo.roscidus.com/utils/sgitools">
+    <requires interface="https://apps.0install.net/utils/sgitools.xml">
       <environment insert="bin" name="PATH"/>
     </requires>
     </command-->
     <command name="tiffgt" path="bin/tiffgt.exe">
-      <requires interface="http://repo.roscidus.com/lib/glut">
+      <requires interface="https://apps.0install.net/lib/glut.xml">
         <environment insert="." name="PATH"/>
       </requires>
     </command>

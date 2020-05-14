@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/lib/gd" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface uri="https://apps.0install.net/lib/gd.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Gd</name>
   <summary xml:lang="en">Gd: graphics library for fast image creation</summary>
   <description xml:lang="en">gd is a graphics library. It allows your code to quickly draw images complete with lines, arcs, text, multiple colors, cut and paste from other images, and flood fills, and write out the result as a PNG or JPEG file. This is particularly useful in World Wide Web applications, where PNG and JPEG are two of the formats accepted for inline images by most browsers. 
@@ -9,28 +9,28 @@ gd is not a paint program. If you are looking for a paint program, you are looki
 
 gd does not provide for every possible desirable graphics operation. It is not necessary or desirable for gd to become a kitchen-sink graphics package, but version 2.0 does include most frequently requested features, including both truecolor and palette images, resampling (smooth resizing of truecolor images) and so forth. 
 </description>
-  <icon href="http://repo.roscidus.com/lib/gd.ico" type="image/vnd.microsoft.icon"/>
-  <icon href="http://repo.roscidus.com/lib/gd.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/lib/gd.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/lib/gd.png" type="image/png"/>
   <category>Graphics</category>
   <homepage>http://gnuwin32.sourceforge.net/packages/gd.htm</homepage>
   <needs-terminal/>
   <implementation arch="Windows-i486" id="sha1new=8b9b94c0478d296b8b88d7d12642014d45895494" license="gd, IJG, HPND, BSD License (revised)" released="2005-08-26" version="2.0.33-1-3">
-    <requires interface="http://repo.roscidus.com/devel/freetype">
+    <requires interface="https://apps.0install.net/devel/freetype.xml">
       <environment insert="bin" name="PATH"/>
     </requires>
-    <requires interface="http://repo.roscidus.com/lib/jpeg"  version="6-4-1">
+    <requires interface="https://apps.0install.net/lib/jpeg.xml"  version="6-4-1">
       <environment insert="bin" name="PATH"/>
     </requires>
-    <requires interface="http://repo.roscidus.com/lib/libiconv">
+    <requires interface="https://apps.0install.net/lib/libiconv.xml">
       <environment insert="bin" name="PATH"/>
     </requires>
-    <requires interface="http://repo.roscidus.com/lib/png12-0" version="1.2.8..!1.2.37">
+    <requires interface="https://apps.0install.net/lib/png12-0.xml" version="1.2.8..!1.2.37">
       <environment insert="bin" name="PATH"/>
     </requires>
-    <!--requires interface="http://repo.roscidus.com/lib/xpm">
+    <!--requires interface="https://apps.0install.net/lib/xpm.xml">
       <environment insert="bin" name="PATH"/>
     </requires-->
-    <requires interface="http://repo.roscidus.com/lib/zlib">
+    <requires interface="https://apps.0install.net/lib/zlib.xml">
       <environment insert="bin" name="PATH"/>
     </requires>
     <command name="run" path="bin/gdtest.exe"/>

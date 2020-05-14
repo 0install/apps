@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/utils/findutils" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface uri="https://apps.0install.net/utils/findutils.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>FindUtils</name>
   <summary xml:lang="en">FindUtils: find and then operate on files</summary>
   <description xml:lang="en">`find' is a program which searches a directory tree to find a file or group of files. It walks the directory tree and reports all occurences of a file matching the user's specifications. 
@@ -20,13 +20,13 @@
     <command name="run" path="bin/find.exe" />
     <command name="locate" path="bin/locate.exe" />
     <command name="updatedb" path="bin/updatedb">
-      <requires interface="https://pmiess.gitlab.io/0install-feeds/gnuwin32/coreutils.xml">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <environment name="PATH" insert="bin" />
       </requires>
-      <requires interface="https://pmiess.gitlab.io/0install-feeds/gnuwin32/mktemp.xml">
+      <requires interface="https://apps.0install.net/utils/mktemp.xml">
         <executable-in-path name="mktemp" />
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/bash">
+      <requires interface="https://apps.0install.net/utils/bash.xml">
         <executable-in-var name="SHELL" />
       </requires>
       <requires interface="https://pmiess.gitlab.io/0install-feeds/gnuwin32/sed.xml">
@@ -35,8 +35,8 @@
       <runner interface="http://repo.roscidus.com/utils/bash" />
     </command>
     <command name="updatedbbat" path="bin/updatedb.bat">
-      <executable-in-path name="https://pmiess.gitlab.io/0install-feeds/gnuwin32/gawk.xml" />
-      <requires interface="https://pmiess.gitlab.io/0install-feeds/gnuwin32/coreutils.xml">
+      <executable-in-path name="https://apps.0install.net/utils/gawk.xml" />
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <executable-in-path command="sort" name="sort" />
         <executable-in-path command="tr" name="tr" />
         <executable-in-path command="uniq" name="uniq" />
@@ -52,7 +52,7 @@
       <archive href="https://sourceforge.net/projects/ezwinports/files/findutils-4.2.30-5-w32-bin.zip" size="325597" type="application/zip" />
     </implementation>
     <implementation arch="Windows-i486" id="sha1new=6996e25456413b9e8b43c4b336e0c05d5e2509d9" langs="be ca da de el es et fi fr ga gl hr hu id it ja ko ms nl pl pt pt_BR ro ru sk sl sr sv tr vi zh_CN" license="GPL v2 (GNU General Public License)" released="2005-04-18" version="4.2.20-2-3">
-      <requires interface="http://repo.roscidus.com/devel/gettext">
+      <requires interface="http://repo.roscidus.com/devel/gettext.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
       <manifest-digest sha256new="H566RWTE65EKXIXPAQ3SWIEEWT3HCONC5GKS6PJ2D4YJINEC5FAA"/>

@@ -1,15 +1,15 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/utils/help2man" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface uri="https://apps.0install.net/utils/help2man.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Help2Man</name>
   <summary xml:lang="en">Help2Man: generate man page from help text of program</summary>
   <homepage>http://gnuwin32.sourceforge.net/packages/help2man.htm</homepage>
   <implementation arch="Windows-*" id="sha1new=21b11641e79283ad42b7d8479203c8e4d3c947d9" langs="fr pl" license="GPL v2 (GNU General Public License)" released="2005-04-24" version="1.35.1">
-    <requires interface="http://repo.roscidus.com/devel/gettext">
+    <requires interface="https://apps.0install.net/devel/gettext.xml">
       <environment insert="bin" name="PATH"/>
     </requires>
     <command name="run" path="bin\help2man">
-      <runner interface="http://repo.roscidus.com/perl/perl">
+      <runner interface="https://apps.0install.net/perl/perl.xml">
         <arg>-w</arg>
       </runner>
     </command>

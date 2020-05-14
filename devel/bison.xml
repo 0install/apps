@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/devel/bison" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface uri="https://apps.0install.net/devel/bison.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Bison</name>
   <summary xml:lang="en">Bison: Yacc-compatible parser generator</summary>
   <description xml:lang="en">Bison is a general purpose parser generator that converts a grammar description for an LALR(1) context-free grammar into a C program to parse that grammar. Bison can be used to develop a wide range of language parsers, from ones used in simple desk calculators to complex programming languages. Bison is upwardly compatible with Yacc, so any correctly written Yacc grammar should work with Bison without any changes. If you know Yacc, you shouldn't have any trouble using Bison. You do need to be very proficient in C programming to be able to use Bison. Bison is only needed on systems that are used for development. 
@@ -16,16 +16,16 @@ The package contains also the -ly library sometimes used by programs using Bison
   <package-implementation distributions="Gentoo" package="sys-devel/bison"/>
   <package-implementation package="bison" main="/usr/bin/bison"/>
   <implementation arch="Windows-i486" id="sha1new=c7830b5b2d11c89fc32c3c514f071d50e5ebe173" langs="da de el es et fi fr ga hr id it ja ky lt ms nb nl pl pt_BR ro ru sl sv th tr uk vi zh_CN zh_TW" released="2009-05-04" version="2.4.1-3">
-    <requires interface="http://repo.roscidus.com/devel/gettext">
+    <requires interface="https://apps.0install.net/devel/gettext.xml">
       <environment insert="bin" name="PATH"/>
     </requires>
-    <requires interface="http://repo.roscidus.com/lib/libiconv">
+    <requires interface="https://apps.0install.net/lib/libiconv.xml">
       <environment insert="bin" name="PATH"/>
     </requires>
-    <requires interface="http://repo.roscidus.com/lib/regex">
+    <requires interface="https://apps.0install.net/lib/regex.xml">
       <environment insert="bin" name="PATH"/>
     </requires>
-    <requires interface="http://repo.roscidus.com/devel/m4">
+    <requires interface="https://apps.0install.net/devel/m4.xml">
       <executable-in-path name="m4"/>
     </requires>
     <command name="run" path="bin/bison.exe"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/lib/jpeg" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface uri="https://apps.0install.net/lib/jpeg.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Jpeg</name>
   <summary xml:lang="en">Jpeg: library and tools for JPEG images</summary>
   <description xml:lang="en">This package contains C software to implement JPEG image compression and decompression. JPEG is a standardized compression method for full-color and gray-scale images. JPEG is intended for &quot;real-world&quot; scenes; cartoons and other non-realistic images are not its strong suit. JPEG is lossy, meaning that the output image is not identical to the input image. The user can trade off output image quality against compressed file size by adjusting a compression parameter. 
@@ -10,10 +10,10 @@ The distributed programs provide conversion between JPEG &quot;JFIF&quot; format
 Includes EXIF patches from: 
 http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=106060 http://sylvana.net/jpegcrop/exifpatch.html 
 </description>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/jpeg.ico" type="image/vnd.microsoft.icon"/>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/jpeg.ico" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/lib/jpeg.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/lib/jpeg.png" type="image/png"/>
   <category>Graphics</category>
-  <homepage>https://web.archive.org/web/20171208102837/http://gnuwin32.sourceforge.net/packages/jpeg.htm</homepage>
+  <homepage>http://gnuwin32.sourceforge.net/packages/jpeg.htm</homepage>
   <needs-terminal/>
   <group arch="Windows-i486" license="BSD License (original)" version="6-4">
     <command name="jpegexiforient" path="bin/jpegexiforient.exe"/>
@@ -23,21 +23,21 @@ http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=106060 http://sylvana.net/jp
     <command name="exifautotran" path="bin/exifautotran">
       <executable-in-path command="jpegexiforient" name="jpegexiforient"/>
       <executable-in-path command="jpegtran" name="jpegtran"/>
-      <requires interface="http://repo.roscidus.com/utils/coreutils">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <executable-in-path command="rm" name="rm"/>
         <executable-in-path command="mv" name="mv"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <implementation id="sha1new=5a950b76f802d59d7a031c601e724c250125818e" version="6-4-3">
       <environment insert="bin" name="PATH"/>
       <!--command name="cjpeg" path="bin/cjpeg.exe">
-        <requires interface="http://repo.roscidus.com/lib/urt.xml" version="3.1.2.1-2-1">
+        <requires interface="https://apps.0install.net/lib/urt.xml" version="3.1.2.1-2-1">
           <environment insert="bin" name="PATH"/>
         </requires>
       </command>
       <command name="djpeg" path="bin/djpeg.exe">
-        <requires interface="http://repo.roscidus.com/lib/urt.xml" version="3.1.2.1-2-1">
+        <requires interface="https://apps.0install.net/lib/urt.xml" version="3.1.2.1-2-1">
           <environment insert="bin" name="PATH"/>
         </requires>
       </command-->

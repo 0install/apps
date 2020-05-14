@@ -1,22 +1,22 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/utils/file" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface uri="https://apps.0install.net/utils/file.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>File</name>
   <summary xml:lang="en">File: determine file type</summary>
   <description xml:lang="en">The latest GnuWin32 port is of version 5.03, released in May 2009.
   It has a subtle bug that breaks libtool, and also a few Windows
   specific gotcha's (e.g., try "file NUL" or "file -").  This port of
   the latest upstream release fixes those bugs.</description>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/file.ico" type="image/vnd.microsoft.icon"/>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/file.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/file.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/file.png" type="image/png"/>
   <category>Utility</category>
   <homepage>https://sourceforge.net/projects/ezwinports/files/</homepage>
   <needs-terminal/>
   <implementation arch="Windows-i486" id="sha1new=507a0447a9fb60da8fc5b34b2d5b968b2dd8de62" license="BSD License (revised)" released="2009-05-07" version="5.03">
-    <requires interface="http://repo.roscidus.com/lib/regex">
+    <requires interface="https://apps.0install.net/lib/regex.xml">
       <environment insert="bin" name="PATH"/>
     </requires>
-    <requires interface="http://repo.roscidus.com/lib/zlib"> 
+    <requires interface="https://apps.0install.net/lib/zlib.xml"> 
       <environment insert="bin" name="PATH"/>
     </requires>
     <command name="run" path="bin/file.exe"/>

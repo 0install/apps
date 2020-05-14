@@ -42,7 +42,7 @@ the Debian Free Software Guidelines, and has been removed from this package.</de
       </implementation>
 
     </group>
-    <implementation arch="Windows-i486" license="GPL v2 (GNU General Public License)" id="withdeps" released="2006-11-25" version="3.81-3">
+    <implementation arch="Windows-i486" langs="be da de es fi fr ga gl he hr id ja ko nl pl pt_BR ru rw sv tr uk vi zh_CN" id="withdeps" released="2006-11-25" version="3.81-3">
       <requires interface="https://apps.0install.net/lib/libiconv.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
@@ -53,6 +53,11 @@ the Debian Free Software Guidelines, and has been removed from this package.</de
       <manifest-digest sha1new="90f22a15896ea14db005aa13b922b187f9fa8067" sha256new="MO6M47HEJ4I6YOFT63O4L53QXP74K5SP5PQ6R63FXH4LFGY5QM3A"/>
       <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/make-bin.zip?raw=true" size="495645" type="application/zip"/>
       <archive href="https://sourceforge.net/projects/gnuwin32/files/make/3.81/make-3.81-bin.zip" size="495645" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-*" version="4.2.1" released="2016-10-07" id="sha1new=d24fcfe0db838ccdb6607585a6b6d8a4c9fcdc38">
+      <command name="run" path="bin/make.exe" />
+      <manifest-digest sha256new="FRVI2OG3V7HQP7S3D2M6D3VGDK2D5H25NVNMSRE3YFP53OHLM77Q" />
+      <archive href="https://sourceforge.net/projects/ezwinports/files/make-4.2.1-without-guile-w32-bin.zip" size="344543" type="application/zip" />
     </implementation>
   </group>
   <entry-point binary-name="make" command="run"/>

@@ -1,11 +1,11 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/lib/giflib" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface uri="https://apps.0install.net/lib/giflib.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>GifLib</name>
   <summary xml:lang="en">GifLib: library and tools for GIF images</summary>
   <description xml:lang="en">The giflib package contains a shared library of functions for loading and saving GIF format image files. </description>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/giflib.ico" type="image/vnd.microsoft.icon"/>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/giflib.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/lib/giflib.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/lib/giflib.png" type="image/png"/>
   <category>Graphics</category>
   <homepage>http://gnuwin32.sourceforge.net/packages/giflib.htm</homepage>
   <needs-terminal/>
@@ -40,23 +40,23 @@
     <command name="gifburst" path="bin/gifburst">
       <executable-in-path command="giftext" name="giftext"/>
       <executable-in-path command="gifclip" name="gifclip"/>
-      <requires interface="http://repo.roscidus.com/utils/coreutils">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <executable-in-path command="head" name="head"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/grep">
+      <requires interface="https://apps.0install.net/utils/grep.xml">
         <executable-in-path name="grep"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/perl/perl4-corelibs">
+      <requires interface="https://apps.0install.net/perl/perl4-corelibs.xml">
         <environment insert="lib" name="PERL5LIB"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/perl/perl" version="5.6..!6">
+      <runner interface="https://apps.0install.net/perl/perl.xml" version="5.6..!6">
         <arg>-I</arg>
         <arg>$PERL5LIB</arg>
       </runner>
     </command>
 
     <implementation id="sha1new=eb4c60e150674ccf33aafb4c2e37d550bfa46550" version="4.1.4-1-3">
-      <requires interface="https://gitlab.com/pmiess/0install-feeds/raw/test/public/gnuwin32/urt.xml">
+      <requires interface="hhttps://apps.0install.net/lib/urt.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
       <command name="gif2rle" path="bin/gif2rle.exe"/>
@@ -71,13 +71,13 @@
         <executable-in-path command="gifflip" name="gifflip"/>
         <executable-in-path command="gifasm" name="gifasm"/>
         <executable-in-path command="gifovly" name="gifovly"/>
-        <requires interface="http://repo.roscidus.com/utils/coreutils">
+        <requires interface="https://apps.0install.net/utils/coreutils.xml">
           <executable-in-path command="rm" name="rm"/>
           <executable-in-path command="cat" name="cat"/>
           <executable-in-path command="mv" name="mv"/>
           <executable-in-path command="mkdir" name="mkdir"/>
         </requires>
-        <runner interface="http://repo.roscidus.com/utils/bash"/>
+        <runner interface="https://apps.0install.net/utils/bash.xml"/>
       </command>
       <manifest-digest sha256new="2X6M52YE5VE2APLBDF7PWZXNE26OFFAJOZL3PZK6ASOZI4SQCMSA"/>
       <archive href="https://sourceforge.net/projects/gnuwin32/files/giflib/4.1.4-1/giflib-4.1.4-1-bin.zip" size="286723" type="application/zip"/>

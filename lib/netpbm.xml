@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/lib/netpbm" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface uri="https://apps.0install.net/lib/netpbm.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>NetPbm</name>
   <summary xml:lang="en">NetPbm: tools for manipulating images</summary>
   <description xml:lang="en">Netpbm is a package of graphics programs and programming libraries. There are over 220 separate programs in the package, most of which have &quot;pbm&quot;, &quot;pgm&quot;, &quot;ppm&quot;, or &quot;pnm&quot; in their names. For example, pnmscale and giftopnm. For example, you might use pnmscale to shrink an image by 10%. Or use pnmcomp to overlay one image on top of another. Or use pbmtext to create an image of text. Or reduce the number of colors in an image with ppmquant.</description>
@@ -10,27 +10,27 @@
   <homepage>http://gnuwin32.sourceforge.net/packages/netpbm.htm</homepage>
   <needs-terminal/>
   <group arch="Windows-i486" license="GPL v2 (GNU General Public License)">
-    <requires interface="http://repo.roscidus.com/lib/zlib">
+    <requires interface="https://apps.0install.net/lib/zlib.xml">
       <environment insert="bin" name="PATH"/>
     </requires>
     <command name="run" path="bin/pbmtoascii.exe"/>
     <command name="anytopnm" path="bin/anytopnm">
-      <requires interface="http://repo.roscidus.com/utils/coreutils">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/mktemp">
+      <requires interface="https://apps.0install.net/utils/mktemp.xml">
         <executable-in-path name="mktemp"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/gawk">
+      <requires interface="https://apps.0install.net/utils/gawk.xml">
         <executable-in-path command="awk" name="awk"/>
       </requires>
-      <requires importance="recommended" interface="http://repo.roscidus.com/utils/nawk">
+      <requires importance="recommended" interface="https://apps.0install.net/utils/nawk.xml">
         <executable-in-path name="nawk"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/file">
+      <requires interface="https://apps.0install.net/utils/file.xml">
         <executable-in-path name="file"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <command name="411toppm" path="bin/411toppm.exe"/>
     <command name="asciitopgm" path="bin/asciitopgm.exe"/>
@@ -52,23 +52,23 @@
     <command name="hdifftopam" path="bin/hdifftopam.exe"/>
     <command name="hipstopgm" path="bin/hipstopgm.exe"/>
     <command name="hpcdtoppm" path="bin/hpcdtoppm">
-      <requires interface="http://repo.roscidus.com/utils/coreutils">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <executable-in-path command="cat" name="cat"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <command name="icontopbm" path="bin/icontopbm.exe"/>
     <command name="ilbmtoppm" path="bin/ilbmtoppm.exe"/>
     <command name="imgtoppm" path="bin/imgtoppm.exe"/>
     <command name="jbigtopnm" path="bin/jbigtopnm.exe">
-      <requires interface="http://repo.roscidus.com/lib/jbigkit">
+      <requires interface="https://apps.0install.net/lib/jbigkit.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
     </command>
     <command name="jpeg2ktopam" path="bin/jpeg2ktopam.exe"/>
     <command name="jpegtopnm" path="bin/jpegtopnm.exe">
       <environment insert="bin" name="PATH"/>
-      <requires interface="http://repo.roscidus.com/lib/jpeg" version="6-4-1">
+      <requires interface="https://apps.0install.net/lib/jpeg.xml" version="6-4-1">
         <environment insert="bin" name="PATH"/>
       </requires>
     </command>
@@ -76,7 +76,7 @@
     <command name="lispmtopgm" path="bin/lispmtopgm.exe"/>
     <command name="macptopbm" path="bin/macptopbm.exe"/>
     <command name="manweb" path="bin/manweb">
-      <runner interface="http://repo.roscidus.com/perl/perl">
+      <runner interface="https://apps.0install.net/perl/perl.xml">
         <arg>-w</arg>
       </runner>
     </command>
@@ -107,16 +107,16 @@
       <executable-in-path command="pamstretch" name="pamstretch"/>
       <executable-in-path command="pamscale" name="pamscale"/>
       <executable-in-path command="pnmfile" name="pnmfile"/>
-      <requires interface="http://repo.roscidus.com/utils/mktemp">
+      <requires interface="https://apps.0install.net/utils/mktemp.xml">
         <executable-in-path name="mktemp"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/coreutils">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/lib/gawk">
+      <requires interface="https://apps.0install.net/lib/gawk.xml">
         <executable-in-path command="awk" name="awk"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <command name="pamtohdiff" path="bin/pamtohdiff.exe"/>
     <command name="pamtohtmltbl" path="bin/pamtohtmltbl.exe"/>
@@ -171,11 +171,11 @@
       <executable-in-path command="hpcdtoppm" name="dpcdtoppm"/>
       <executable-in-path command="ppmquant" name="ppmquant"/>
       <executable-in-path command="pnmmargin" name="pnmmargin"/>
-      <requires interface="http://repo.roscidus.com/utils/coreutils">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <executable-in-path command="cat" name="cat"/>
         <executable-in-path command="rm" name="rm"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <command name="pcxtoppm" path="bin/pcxtoppm.exe"/>
     <command name="pgmabel" path="bin/pgmabel.exe"/>
@@ -199,7 +199,7 @@
     <command name="pjtoppm" path="bin/pjtoppm.exe"/>
     <command name="pktopbm" path="bin/pktopbm.exe"/>
     <command name="pngtopnm" path="bin/pngtopnm.exe">
-      <requires interface="http://repo.roscidus.com/lib/png12-0" version="1.2.8..!1.2.37">
+      <requires interface="https://apps.0install.net/lib/png12-0.xml" version="1.2.8..!1.2.37">
         <environment insert="bin" name="PATH"/>
       </requires>
     </command>
@@ -213,7 +213,7 @@
     <command name="pnmdepth" path="bin/pnmdepth.exe"/>
     <command name="pnmenlarge" path="bin/pnmenlarge.exe"/>
     <command name="pnmflip" path="bin/pnmflip">
-      <runner interface="http://repo.roscidus.com/perl/perl">
+      <runner interface="https://apps.0install.net/perl/perl.xml">
         <arg>-w</arg>
       </runner>
     </command>
@@ -228,10 +228,10 @@
       <executable-in-path command="pbmtext" name="pbmtext"/>
       <executable-in-path command="pnminvert" name="pnminvert"/>
       <executable-in-path command="pnmcat" name="pnmcat"/>
-      <requires interface="http://repo.roscidus.com/utils/coreutils">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash"/>
     </command>
     <command name="pnminvert" path="bin/pnminvert.exe"/>
     <command name="pnmmargin" path="bin/pnmmargin">
@@ -240,14 +240,14 @@
       <executable-in-path command="ppmmake" name="ppmmake"/>
       <executable-in-path command="pamflip" name="pamflip"/>
       <executable-in-path command="pnmcat" name="pnmcat"/>
-      <requires interface="http://repo.roscidus.com/utils/mktemp">
+      <requires interface="https://apps.0install.net/utils/mktemp.xml">
         <executable-in-path name="mktemp"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/coreutils">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <executable-in-path command="rm" name="rm"/>
         <executable-in-path command="cat" name="cat"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <command name="pnmmontage" path="bin/pnmmontage.exe"/>
     <command name="pnmnlfilt" path="bin/pnmnlfilt.exe"/>
@@ -258,7 +258,7 @@
     <command name="pnmquant" path="bin/pnmquant">
       <executable-in-path command="pnmcolormap" name="pnmcolormap"/>
       <executable-in-path command="pnmremap" name="pnmremap"/>
-      <runner interface="http://repo.roscidus.com/perl/perl">
+      <runner interface="https://apps.0install.net/perl/perl.xml">
         <arg>-w</arg>
       </runner>
     </command>
@@ -276,13 +276,13 @@
     <command name="pnmtofits" path="bin/pnmtofits.exe"/>
     <command name="pnmtojbig" path="bin/pnmtojbig.exe">
       <environment insert="bin" name="PATH"/>
-      <requires interface="http://repo.roscidus.com/lib/jbigkit">
+      <requires interface="https://apps.0install.net/lib/jbigkit.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
     </command>
     <command name="pnmtojpeg" path="bin/pnmtojpeg.exe">
       <environment insert="bin" name="PATH"/>
-      <requires interface="http://repo.roscidus.com/lib/jpeg" version="6-4-1">
+      <requires interface="https://apps.0install.net/lib/jpeg.xml" version="6-4-1">
         <environment insert="bin" name="PATH"/>
       </requires>
     </command>
@@ -290,29 +290,29 @@
     <command name="pnmtopclxl" path="bin/pnmtopclxl.exe"/>
     <command name="pnmtoplainpnm" path="bin/pnmtoplainpnm">
       <executable-in-path command="pnmtopnm" name="pnmtopnm"/>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <command name="pnmtopng" path="bin/pnmtopng.exe">
-      <requires interface="http://repo.roscidus.com/lib/png12-0" version="1.2.8..!1.2.37">
+      <requires interface="https://apps.0install.net/lib/png12-0.xml" version="1.2.8..!1.2.37">
         <environment insert="bin" name="PATH"/>
       </requires>
     </command>
     <command name="pnmtops" path="bin/pnmtops.exe"/>
     <command name="pnmtorast" path="bin/pnmtorast.exe"/>
     <command name="pnmtorle" path="bin/pnmtorle.exe">
-      <requires interface="http://repo.roscidus.com/lib/urt">
+      <requires interface="https://apps.0install.net/lib/urt.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
     </command>
     <command name="pnmtosgi" path="bin/pnmtosgi.exe"/>
     <command name="pnmtosir" path="bin/pnmtosir.exe"/>
     <command name="pnmtotiff" path="bin/pnmtotiff.exe">
-      <requires interface="http://repo.roscidus.com/lib/tiff" version="3.8.2-1-1">
+      <requires interface="https://apps.0install.net/lib/tiff.xml" version="3.8.2-1-1">
         <environment insert="bin" name="PATH"/>
       </requires>
     </command>
     <command name="pnmtotiffcmyk" path="bin/pnmtotiffcmyk.exe">
-      <requires interface="http://repo.roscidus.com/lib/tiff" version="3.8.2-1-1">
+      <requires interface="https://apps.0install.net/lib/tiff.xml" version="3.8.2-1-1">
         <environment insert="bin" name="PATH"/>
       </requires>
     </command>
@@ -339,11 +339,11 @@
       <executable-in-path command="pgmedge" name="pgmedge"/>
       <executable-in-path command="pgmbentley" name="pgmbentley"/>
       <executable-in-path command="pamscale" name="pamscale"/>
-      <requires interface="http://repo.roscidus.com/utils/coreutils">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <executable-in-path command="rm" name="rm"/>
         <executable-in-path command="cp" name="cp"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/perl/perl">
+      <runner interface="https://apps.0install.net/perl/perl.xml">
         <arg>-w</arg>
       </runner>
     </command>
@@ -360,25 +360,25 @@
       <executable-in-path command="pnmcat" name="pnmcat"/>
       <executable-in-path command="pnmquant" name="pnmquant"/>
       <executable-in-path command="pnmcut" name="pnmcut"/>
-      <requires interface="http://repo.roscidus.com/utils/coreutils">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <executable-in-path command="rm" name="rm"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/mktemp">
+      <requires interface="https://apps.0install.net/utils/mktemp.xml">
         <executable-in-path name="mktemp"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/sed">
+      <requires interface="https://apps.0install.net/utils/sed.xml">
         <executable-in-path name="sed"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/grep">
+      <requires interface="https://apps.0install.net/utils/grep.xml">
         <executable-in-path name="grep"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <command name="ppmrainbow" path="bin/ppmrainbow">
       <executable-in-path command="pgmramp" name="pgmramp"/>
       <executable-in-path command="pgmtoppm" name="pgmtoppm"/>
       <executable-in-path command="pnmcat" name="pnmcat"/>
-      <runner interface="http://repo.roscidus.com/perl/perl">
+      <runner interface="https://apps.0install.net/perl/perl.xml">
         <arg>-wl</arg>
       </runner>
     </command>
@@ -395,10 +395,10 @@
       <executable-in-path command="pnmconvol" name="pnmconvol"/>
       <executable-in-path command="pnmsmooth" name="pnmsmooth"/>
       <executable-in-path command="pnmpaste" name="pnmpaste"/>
-      <requires interface="http://repo.roscidus.com/utils/mktemp">
+      <requires interface="https://apps.0install.net/utils/mktemp.xml">
         <executable-in-path name="mktemp"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/perl/perl">
+      <runner interface="https://apps.0install.net/perl/perl.xml">
         <arg>-w</arg>
       </runner>
     </command>
@@ -415,7 +415,7 @@
     <command name="ppmtolj" path="bin/ppmtolj.exe"/>
     <command name="ppmtomitsu" path="bin/ppmtomitsu.exe"/>
     <command name="ppmtompeg" path="bin/ppmtompeg.exe">
-      <requires interface="http://repo.roscidus.com/lib/jpeg.xml" version="6-4-1">
+      <requires interface="https://apps.0install.net/lib/jpeg.xml.xml" version="6-4-1">
         <environment insert="bin" name="PATH"/>
       </requires>
     </command>
@@ -445,7 +445,7 @@
     <command name="rawtoppm" path="bin/rawtoppm.exe"/>
     <command name="rgb3toppm" path="bin/rgb3toppm.exe"/>
     <command name="rletopnm" path="bin/rletopnm.exe">
-      <requires interface="http://repo.roscidus.com/lib/urt">
+      <requires interface="https://apps.0install.net/lib/urt.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
     </command>
@@ -459,7 +459,7 @@
     <command name="tgatoppm" path="bin/tgatoppm.exe"/>
     <command name="thinkjettopbm" path="bin/thinkjettopbm.exe"/>
     <command name="tifftopnm" path="bin/tifftopnm.exe">
-      <requires interface="http://repo.roscidus.com/lib/tiff" version="3.8.2-1-1">
+      <requires interface="https://apps.0install.net/lib/tiff.xml" version="3.8.2-1-1">
         <environment insert="bin" name="PATH"/>
       </requires>
     </command>
@@ -510,25 +510,25 @@
       <command name="pnminterp" path="bin/pnminterp.exe"/>
       <command name="pnmnoraw" path="bin/pnmnoraw">
         <executable-in-path command="pnmtopnm" name="pnmtopnm"/>
-        <runner interface="http://repo.roscidus.com/utils/bash"/>
+        <runner interface="https://apps.0install.net/utils/bash.xml"/>
       </command>
       <command name="pnmtopnm" path="bin/pnmtopnm.exe"/>
       <command name="ppmnorm" path="bin/ppmnorm.exe"/>
       <command name="ppmquant" path="bin/ppmquant">
         <executable-in-path command="pnmquant" name="pnmquant"/>
         <executable-in-path command="pnmremap" name="pnmremap"/>
-        <runner interface="http://repo.roscidus.com/perl/perl">
+        <runner interface="https://apps.0install.net/perl/perl.xml">
           <arg>-w</arg>
         </runner>
       </command>
       <command name="ppmtojpeg" path="bin/ppmtojpeg.exe">
-        <requires interface="http://repo.roscidus.com/lib/jpeg" version="6-4-1">
+        <requires interface="https://apps.0install.net/lib/jpeg.xml" version="6-4-1">
           <environment insert="bin" name="PATH"/>
         </requires>
       </command>
       <command name="ppmtomap" path="bin/ppmtomap">
         <executable-in-path command="pnmcolormap" name="pnmcolormap"/>
-        <runner interface="http://repo.roscidus.com/utils/bash"/>
+        <runner interface="https://apps.0install.net/utils/bash.xml"/>
       </command>
       <command name="ppmtouil" path="bin/ppmtouil.exe"/>
       <command name="rgbpalettetoppm" path="bin/rgbpalettetoppm.exe"/>
@@ -551,7 +551,7 @@
       <command name="ppmnorm" path="bin/ppmnorm"/>
       <command name="ppmtojpeg" path="bin/ppmtojpeg">
         <command name="ppmtouil" path="bin/ppmtouil" />
-        <requires interface="http://repo.roscidus.com/lib/jpeg" version="6-4-1">
+        <requires interface="https://apps.0install.net/lib/jpeg.xml" version="6-4-1">
           <environment insert="bin" name="PATH"/>
         </requires>
       </command>
@@ -559,7 +559,7 @@
       <archive href="https://sourceforge.net/projects/gnuwin32/files/netpbm/10.18.4/netpbm-10.18.4-bin.zip" size="1935690" type="application/zip"/>
     </implementation>
   </group>
-  <package-implementation distributions="Gentoo" package="media-libs/netpbm"/>
+  <package-implementation distributions="Gentoo" package="media-libs/netpbm.xml"/>
   <package-implementation package="netpbm"/>
   <entry-point binary-name="pbmtoascii" command="run">
     <needs-terminal/>

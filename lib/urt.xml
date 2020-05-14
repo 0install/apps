@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/lib/urt" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface uri="https://apps.0install.net/lib/urt.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>URT</name>
   <summary xml:lang="en">URT: library and tools for URT images</summary>
   <description xml:lang="en">The Utah Raster Toolkit is a collection of programs and C routines for dealing with raster images commonly encountered in computer graphics. It provides the following major functions: 
@@ -10,8 +10,8 @@
 
 The programs (tools) currently included in the toolkit are listed above, together with a short description of each one. Most of the tools read one or more input RLE files and produce an output RLE file. Some generate RLE files from other information, and some read RLE files and produce output of a different form. 
 </description>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/urt.ico" type="image/vnd.microsoft.icon"/>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/urt.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/lib/urt.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/lib/urt.png" type="image/png"/>
   <category>Graphics</category>
   <homepage>http://gnuwin32.sourceforge.net/packages/urt.htm</homepage>
   <needs-terminal/>
@@ -80,27 +80,27 @@ The programs (tools) currently included in the toolkit are listed above, togethe
     <command name="xbmtorle" path="bin/xbmtorle.exe"/>
     <implementation id="sha1new=b7686f0eb105b3ac5a9ac29faeb00d048c431997" version="3.1.2.1-2-3">
     <command name="pgmtorle" path="bin/pgmtorle.exe">
-      <requires interface="http://repo.roscidus.com/lib/netpbm">
+      <requires interface="https://apps.0install.net/lib/netpbm.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
 	</command>
     <command name="ppmtorle" path="bin/ppmtorle.exe">
-      <requires interface="http://repo.roscidus.com/lib/netpbm">
+      <requires interface="https://apps.0install.net/lib/netpbm.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
 	</command>
     <command name="rletoppm" path="bin/rletoppm.exe">
-      <requires interface="http://repo.roscidus.com/lib/netpbm">
+      <requires interface="https://apps.0install.net/lib/netpbm.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
 	</command>
     <command name="rletotiff" path="bin/rletotiff.exe">
-      <requires interface="http://repo.roscidus.com/lib/tiff" version="3.8.2-1-1">
+      <requires interface="https://apps.0install.net/lib/tiff.xml" version="3.8.2-1-1">
         <environment insert="bin" name="PATH"/>
       </requires>
 	</command>
     <command name="tifftorle" path="bin/tifftorle.exe">
-      <requires interface="http://repo.roscidus.com/lib/tiff" version="3.8.2-1-1">
+      <requires interface="https://apps.0install.net/lib/tiff.xml" version="3.8.2-1-1">
         <environment insert="bin" name="PATH"/>
       </requires>
 	</command>

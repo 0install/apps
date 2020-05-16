@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/devel/awka.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Awka</name>
+  <summary xml:lang="en">Awka: AWK to C translator and library</summary>
+  <description xml:lang="en">Awka is an open-source implementation of the AWK programming language. 
+Awka is not an interpreter like Gawk, Mawk or Nawk, but instead it converts the program to ANSI-C, then compiles this using gcc or a native C compiler to create a binary executable. This means you must have an ANSI C compiler present on your system for Awka to work.</description>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/devel/awaka.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/devel/awaka.png" type="image/png"/>
+  <category>Development</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/awka.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=a2a74bdd007af0d0aed46640693acd85b73c6aec" license="GPL v2 (GNU General Public License)" released="2005-10-27" version="0.7.5-1">
+    <command name="run" path="bin/awka.exe"/>
+    <manifest-digest sha256new="GYHSRKRGHYX3JQA4QQZHXIOCVVNNEFLSHMO6Y3FSKGJHOVRYIM5Q"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/awka/0.7.5-1/awka-0.7.5-1-bin.zip" size="174553" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/awka-bin.zip?raw=true" size="174553" type="application/zip"/>
+  </implementation>
+  <package-implementation package="awka" />
+  <package-implementation package="dev-util/awka" distributions="Gentoo" />
+  <entry-point binary-name="awka" command="run">
+    <summary xml:lang="en">AWK language to ANSI C translator and library</summary>
+  </entry-point>
+</interface>

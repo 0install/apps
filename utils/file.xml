@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/file.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>File</name>
+  <summary xml:lang="en">File: determine file type</summary>
+  <description xml:lang="en">The latest GnuWin32 port is of version 5.03, released in May 2009.
+  It has a subtle bug that breaks libtool, and also a few Windows
+  specific gotcha's (e.g., try "file NUL" or "file -").  This port of
+  the latest upstream release fixes those bugs.</description>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/file.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/file.png" type="image/png"/>
+  <category>Utility</category>
+  <homepage>https://sourceforge.net/projects/ezwinports/files/</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-i486" id="sha1new=507a0447a9fb60da8fc5b34b2d5b968b2dd8de62" license="BSD License (revised)" released="2009-05-07" version="5.03">
+    <requires interface="https://apps.0install.net/lib/regex.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/zlib.xml"> 
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/file.exe"/>
+    <manifest-digest sha256new="IS34PRCL3BXH4QKZ5W3YP637X6PPNTIIQOTOJUFBPR4FOGAOJA4Q"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/file/5.03/file-5.03-bin.zip" size="442585" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/file-5.03-bin.zip?raw=true" size="442585" type="application/zip"/>
+  </implementation>
+  <implementation arch="Windows-*"  license="BSD License (revised), zlib/libpng license, LGPL (GNU Lesser General Public License)" released="2012-01-06"  version="5.9" id="sha1new=92f09c596a997f8a948511b66b2627b0c425d064">
+    <command name="run" path="bin/file.exe" />
+    <manifest-digest sha256new="YKAAAMFC7O5J3RZJJR36QSBKUQCPKP5D43M5K33SEK57GWHM4BDA" />
+    <archive href="https://sourceforge.net/projects/ezwinports/files/file-5.09-w32-bin.zip" size="371683" type="application/zip" />
+  </implementation>
+  <package-implementation distributions="Gentoo" package="sys-apps/file"/>
+  <package-implementation package="file" main="/usr/bin/file"/>
+  <entry-point binary-name="file" command="run"/>
+</interface>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/devel/byacc.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>BYacc</name>
+  <summary xml:lang="en">Yacc SPECS Yacc: LALR(1) parser generator</summary>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/>
+  <category>Development</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/byacc.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=3020e85c89793acc1eb86b40219406991a388699" license="Public Domain" released="2003-10-04" version="1.9-1">
+    <command name="run" path="bin/yacc.exe"/>
+    <manifest-digest sha256new="P5VGQOFU5MFWFZ5ICY6V2FB5DPED5JRMP3M3XZJW3YG2DWHXS76A"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/byacc/1.9-1/byacc-1.9-1-bin.zip" size="49414" type="application/zip"/>
+  </implementation>
+  <entry-point binary-name="yacc" command="run">
+    <needs-terminal/>
+  </entry-point>
+</interface>

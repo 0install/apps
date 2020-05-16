@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/lib/xpm.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Xpm</name>
+  <summary xml:lang="en">Xpm: library for X PixMap images</summary>
+  <category>Development</category>
+  <description xml:lang="en">XPixMap (XPM) consists of an ASCII image format and a C library. The format defines how to store color images (X Pixmap) in a portable and powerful way. The library provides a set of functions to store and retrieve images to and from XPM format data, being either files, buffers (files in memory), or data (included files). 
+
+While XPM is not an X Consortium standard, it is already a de facto standard. It is used in many applications both commercial and non-commercial. Several vendors distribute the XPM library, as contributed software, on the platforms they sell. Moreover, the Common Desktop Environment specifies that icons must be stored either in XBM or XPM format. Finally, Motif 2.0 from OSF includes the XPM library, allowing XPM to be used in addition to XBM. 
+</description>
+  <homepage>http://gnuwin32.sourceforge.net/packages/xpm.htm</homepage>
+  <implementation arch="Windows-i486" id="sha1new=c95702c6471ec556af10d047a64dcda5ad7e3b77" license="MIT/X Consortium License" released="2005-02-14" version="3.5.1-1">
+    <manifest-digest sha256new="WXAQX4SPHMOQFEKV2SVTNO4USINLKRXC3BXGL5FYOTBQF5DYHIVQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/xpm/3.5.1-1/xpm-3.5.1-1-bin.zip" size="35884" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/xpm-bin.zip?raw=true" size="35884" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="x11-libs/libXpm"/>
+  <package-implementation package="libXpm"/>
+</interface>

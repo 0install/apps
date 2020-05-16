@@ -7,16 +7,16 @@
   <category>Development</category>
   <needs-terminal/>
 
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/java/scala.png" type="image/png"/>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/java/scala.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/java/scala.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/java/scala.ico" type="image/vnd.microsoft.icon"/>
 
-  <feed-for interface="http://repo.roscidus.com/java/scala"/>
+  <feed-for interface="https://apps.0install.net/java/scala.xml"/>
 
   <group license="BSD License">
     <environment name="SCALA_HOME" insert="." mode="replace"/>
     <environment name="SCALA_LIB" insert="lib" mode="replace"/>
     <command name="run">
-      <runner interface="http://repo.roscidus.com/java/openjdk-jre">
+      <runner interface="https://apps.0install.net/java/jre.xml">
         <arg>-Xmx256M</arg>
         <arg>-Xms32M</arg>
         <arg>-Dscala.home=$SCALA_HOME</arg>
@@ -27,7 +27,7 @@
       </runner>
     </command>
     <command name="scalac">
-      <runner interface="http://repo.roscidus.com/java/openjdk-jre">
+      <runner interface="https://apps.0install.net/java/jre.xml">
         <arg>-Xmx256M</arg>
         <arg>-Xms32M</arg>
         <arg>-Dscala.home=$SCALA_HOME</arg>
@@ -38,7 +38,7 @@
       </runner>
     </command>
     <command name="scaladoc">
-      <runner interface="http://repo.roscidus.com/java/openjdk-jre">
+      <runner interface="https://apps.0install.net/java/jre.xml">
         <arg>-Xmx256M</arg>
         <arg>-Xms32M</arg>
         <arg>-Dscala.home=$SCALA_HOME</arg>
@@ -49,7 +49,7 @@
       </runner>
     </command>
     <command name="scalap">
-      <runner interface="http://repo.roscidus.com/java/openjdk-jre">
+      <runner interface="https://apps.0install.net/java/jre.xml">
         <arg>-Xmx256M</arg>
         <arg>-Xms32M</arg>
         <arg>-Dscala.home=$SCALA_HOME</arg>

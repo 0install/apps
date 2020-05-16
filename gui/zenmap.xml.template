@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Zenmap</name>
+  <summary xml:lang="en">Nmap frontend and results viewer</summary>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/nmap.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/nmap.png" type="image/png"/>
+  <category>Network</category>
+  <category>Utility</category>
+
+  <feed-for interface="https://apps.0install.net/gui/zenmap.xml"/>
+
+  <group doc-dir="usr/share/zenmap/doc" license="modfied GPL">
+    <command name="run" path="zenmap.py">
+      <runner interface="https://apps.0install.net/python/python.xml" version="2..!3"/>
+    </command>
+    <requires interface="https://apps.0install.net/python/pygtk.xml"/>
+    <requires interface="https://apps.0install.net/utils/nmap.xml">
+      <executable-in-path name="nmap"/>
+      <executable-in-path command="ncat" name="ncat"/>
+      <executable-in-path command="nping" name="nping"/>
+      <executable-in-path command="ndiff" name="ndiff"/>
+    </requires>
+    <environment insert="." name="ZENMAP_PREFIX"/>
+    <environment insert="usr/lib/python2.6/site-packages" name="PYTHONPATH"/>
+
+    <implementation version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="zenmap-{version}.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

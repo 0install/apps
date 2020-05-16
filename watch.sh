@@ -1,18 +1,17 @@
 #!/bin/bash
 cd `dirname $0`
 
-if [[ "$(basename $(pwd))" != "feeds" ]]; then 
-  echo "This Git repo must be cloned into a directory named 'feeds' in order for 0repo to work."; exit 1
+if [ ! -d "../incoming" ]; then
+    echo "Directory ../incoming does not exist."
+    exit 1
 fi
-
-# Prepare directory for generated feeds
-mkdir -p ../incoming
 cp */*.zip ../incoming/
 
-# Run watch scripts
-#FILES=$(ls */*.watch.py | grep -v cmake | grep -v gitextensions | grep -v go-windows | grep -v jq | grep -v kotlin | grep -v libreoffice | grep -v node | grep -v vagrant | grep -v vlc) # Exclude feeds currently not supported by 0template on Linux
-FILES="golang/go-linux.watch.py golang/go-darwin.watch.py security/nmap.watch.py" # Only feeds not handled on Windows
-for FILE in $FILES; do
-    echo "Running $FILE"
-    0install run http://0install.de/feeds/0watch.xml --output ../incoming $FILE
+for FILE in $(ls */*.watch.py); do
+    header=$(head -n 1 $FILE)
+    #if [[ $header == "#os=$(uname)" ]] || [[ $header != \#os=* ]]; then
+    if [[ $header == "#os=$(uname)" ]]; then
+        echo $FILE
+        0install run --version-for=http://0install.net/2007/interfaces/ZeroInstall.xml 2.3.12.. https://apps.0install.net/0install/0watch.xml --output ../incoming $FILE
+    fi
 done

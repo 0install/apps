@@ -1,0 +1,179 @@
+<?xml version="1.0" ?>
+<interface uri="https://apps.0install.net/gui/naps2.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>NAPS2</name>
+  <summary>PDF document scanning application</summary>
+  <description>NAPS2 is a document scanning application with a focus on simplicity and ease of use. Scan your documents from WIA- and TWAIN-compatible scanners, organize the pages as you like, and save them as PDF, TIFF, JPEG, PNG, and other file formats.</description>
+  <homepage>https://www.naps2.com/</homepage>
+  <category>Utility</category>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/naps2.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/naps2.ico" type="image/vnd.microsoft.icon"/>
+
+  <entry-point binary-name="NAPS2" command="run"/>
+  <entry-point binary-name="NAPS2.Console" command="run-cli">
+    <needs-terminal/>
+    <name>NAPS2 (Not Another PDF Scanner 2)</name>
+    <summary>NAPS2 (Not Another PDF Scanner 2)</summary>
+  </entry-point>
+
+  <group license="GPL v2 (GNU General Public License)">
+    <command name="NAPS2.Console" path="NAPS2.Console.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.0.."/>
+    </command>
+    <command name="run" path="NAPS2.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.0.."/>
+    </command>
+
+    <implementation id="sha1new=caadb3fb4a35c59cbac52b6612a306f7019e2f66" released="2015-08-30" stability="stable" version="4.2.2">
+      <manifest-digest sha256new="MFLE2RBT66QFU4VDQX77UFH567RDWG3RCUXS7H3X75T7ETM4OQ3A"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v4.2.2/naps2-4.2.2-setup.msi" size="1339392" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=957bae0dfdada445d74e48bcbf4727e15f8535b5" released="2015-09-30" stability="stable" version="4.2.3">
+      <manifest-digest sha256new="NG5REYNHRC6PHV72FKZOX2W6X4IMX4SQ2BSJVHM2APPCFEWYL5NA"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v4.2.3/naps2-4.2.3-setup.msi" size="1363968" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=36a2a45216fab115b204d934ced8a26e6717d7a5" released="2015-12-19" stability="stable" version="4.3.0">
+      <manifest-digest sha256new="XXEW4YYY4EHWUXTXMRF3BYLPWYQNTGUCESD5LZLLHI4T2A4NU7OQ"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v4.3.0/naps2-4.3.0-setup.msi" size="1433600" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=1ebe503c716a95a9b874c1c3928fd1a84db24159" released="2015-12-19" stability="stable" version="4.3.1">
+      <manifest-digest sha256new="PFCL2PZ2QYQGCQV4P54SIK4NKVSLBQ5TESKZ3WNUH6HN2QVZ7UVA"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v4.3.1/naps2-4.3.1-setup.msi" size="1433600" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=f4b1219ce8287216250515e8f9993d589bff2fb4" released="2016-01-01" stability="stable" version="4.4.0">
+      <manifest-digest sha256new="ZZS5T6SR2YYLU4R4Y7Q5Z6H7J5SFJQT357SZW25FMJTJGQL7NLGA"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v4.4.0/naps2-4.4.0-setup.msi" size="1449984" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=5aef32eb6544a62cadfc55202eefe99992cefe2b" released="2016-01-01" stability="stable" version="4.4.1">
+      <manifest-digest sha256new="M6DY6O6MGUIJGYJAVA4GTO5OA5LCRV7LHWPHEW6WLNUCJSZVS2PA"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v4.4.1/naps2-4.4.1-setup.msi" size="1449984" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=880573dd5eb730089f030fa2f8b21e2fb95b41b1" released="2016-01-09" stability="stable" version="4.5.0">
+      <manifest-digest sha256new="LW52QDMMXRM3NKML7HXXC3XY3YGDVIS2XG6H4U5PU4QERVQW2UHA"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v4.5.0/naps2-4.5.0-setup.msi" size="1482752" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=824e5bc03bdec26e49d1baf3312f95e825a3ba32" released="2016-01-13" stability="stable" version="4.5.1">
+      <manifest-digest sha256new="QTBHEY3D7WP7MEEMFR44GOS7K3GGM56VYKWCGLIHPLQR4PNPBQQA"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v4.5.1/naps2-4.5.1-setup.msi" size="1486848" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=3ca0f6aed7f3beb4ce64b9fa51ce2d7588a9d369" released="2016-01-24" stability="stable" version="4.6.0">
+      <manifest-digest sha256new="RZ4XMYZXIPYPWE2QXKTHAKQKVDBYPI5XSBU6RES7XRQ3QFWOASZA"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v4.6.0/naps2-4.6.0-setup.msi" size="1531904" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=85d574de531d7e02049356a2e70884eb11d2f50a" released="2016-01-30" stability="stable" version="4.6.1">
+      <manifest-digest sha256new="B4RIZOEHVQFPUTYXNSGQPMS6QV7CZ47ZB5B6T6IDKUPOQ7ZDT5GA"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v4.6.1/naps2-4.6.1-setup.msi" size="1540096" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=83bb9eeb029cb966385c42df2b6d765febe0db6d" released="2016-02-29" stability="stable" version="4.7.0">
+      <manifest-digest sha256new="7A2SOJ7QMRDVAGTZ4WTUTAOD65UYTDQVMP5VDQS627JIWJSLTB6A"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v4.7.0/naps2-4.7.0-setup.msi" size="1556480" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=43e947be0a032800f56ec1d62053db1dd7ae3f85" released="2016-03-02" stability="stable" version="4.7.1">
+      <manifest-digest sha256new="4HVUGPWXZZBCYFPSXFC6JNKGCRYUNVO57BAEYR4NQYNKXU2MPZ5Q"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v4.7.1/naps2-4.7.1-setup.msi" size="1556480" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=2935ba999ebcfefe00f4ef3e41c6e9d8af143ae3" released="2016-03-04" stability="stable" version="4.7.2">
+      <manifest-digest sha256new="RXZ344ET7OGP5BOGWZQEK3PRMVKHNTWIEXJZV4NE3ONSU54CUFPA"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v4.7.2/naps2-4.7.2-setup.msi" size="1556480" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=cd4d71dca5650298c4ab1f9b7eb0268ac01cf04f" released="2016-03-27" stability="stable" version="5.1.0">
+      <manifest-digest sha256new="32ZXGMLEBWZCLPZJBMSO2DVP2XS7XDCQ7PXQOQYPEVN3VUHLFZ4Q"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v5.1.0/naps2-5.1.0-setup.msi" size="1679360" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=693354ffc465e9432fd535549bc3a4f46a5caef3" released="2016-03-28" stability="stable" version="5.1.1">
+      <manifest-digest sha256new="R7MYSMX6QNK5I6MV5JMUXV7XO373UWFEWGZIXSLLVN7Q6WOZPYHA"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v5.1.1/naps2-5.1.1-setup.msi" size="1683456" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=1ccfff0221c42f0082b580057d2f055b961892e4" released="2016-04-27" stability="stable" version="5.2.0">
+      <manifest-digest sha256new="2GZZTJGEKZD3J6EUYZKZVXL3HKGMVKI47226VLWG25OI32GBCZWA"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v5.2.0/naps2-5.2.0-setup.msi" size="1748992" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=3aade642dbfb0cfcffff71cd5ce9e751557023d9" released="2016-04-29" stability="stable" version="5.2.1">
+      <manifest-digest sha256new="YCHY662PYCF276ULIRA3M2YKBAYKWK5YU5UBUMZYG2MQMQJTXOTA"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v5.2.1/naps2-5.2.1-setup.msi" size="1748992" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=df5497777e086495af8c908c0e65cfe654b09e35" released="2016-07-03" stability="stable" version="5.3.0">
+      <manifest-digest sha256new="DDNM7V7DCJSBHKD576QII7BU7A7KDRUE4SQFLBSQV3ZSYTFRGJ3A"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v5.3.0/naps2-5.3.0-setup.msi" size="1957888" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=8cf4697fcc3153493ba98ce628b7145d998dd6f5" released="2016-09-25" stability="stable" version="5.3.1">
+      <manifest-digest sha256new="WSGMOW3OWJALWHRQN45F7ZRT4YRNE3NPPTEZVJA4OJTWONZEVUNQ"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v5.3.1/naps2-5.3.1-setup.msi" size="1982464" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=239caba7fb2d5ac7030b13dddbb3705662ff2c7f" released="2016-10-28" stability="stable" version="5.3.2">
+      <manifest-digest sha256new="WR2EB7IJPOLNISW4I72F6Y46ZLG52W4FOTWFH7WASPR6KWML44VQ"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v5.3.2/naps2-5.3.2-setup.msi" size="1994752" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=35367a5868aafa93aaaf72f6bf02e6f403dd2974" released="2016-11-15" stability="stable" version="5.3.3">
+      <manifest-digest sha256new="R7WY4AJBKYZUBIWR4UEU3TMWZZXXLQN6QRAXQST3KY6FTVPPF2TQ"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v5.3.3/naps2-5.3.3-setup.msi" size="1998848" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=3fc4ea14b8bd39d564708d56feefeb4ebed0a671" released="2017-05-14" stability="stable" version="5.4.0">
+      <manifest-digest sha256new="EXAAGTBKTPYBVGWASXTCLI2NVTEF2ZCT5LPSKLATKDANIV2F2RMQ"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v5.4.0/naps2-5.4.0-setup.msi" size="2039808" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=ee53054d99f7bb206a368a99c98bf621c0de0cb6" released="2017-06-09" stability="stable" version="5.5.0">
+      <manifest-digest sha256new="M77GYTD74GWQ2WZOVSP57PEF5ZSGV3WQU3J2X22GWNN3OQPQGCKA"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v5.5.0/naps2-5.5.0-setup.msi" size="2105344" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=dfc7209cceb1bdcd379badcb1a4f0fb487d2e380" released="2017-11-12" stability="stable" version="5.6.0">
+      <manifest-digest sha256new="FFHKHO4VRZQWXKSMG7MDACYCM7RFXG4R6LYBJ3M7KT7AOMDR6NFQ"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v5.6.0/naps2-5.6.0-setup.msi" size="2134016" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=c428f650113d6e43736439ace5e9e4674cfb6f63" released="2017-11-13" stability="stable" version="5.6.1">
+      <manifest-digest sha256new="67RVVTDVTAELSAS7KV7BLWQMZSGDDW3O2WUHLNBGLUKSK3C5KJAQ"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v5.6.1/naps2-5.6.1-setup.msi" size="2134016" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=1dbc496e967f5dbef6d00b183854f9f22440ed6c" released="2017-11-22" stability="stable" version="5.6.2">
+      <manifest-digest sha256new="6PA37TUEOWZEDZR3CFLI4PMQ4524FS3VCCJZ22CTW5QCV5LZE7FQ"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v5.6.2/naps2-5.6.2-setup.msi" size="2138112" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=08d97edaf67d2d23f507bd30be6b6da2a1a860f2" released="2018-02-17" stability="stable" version="5.7.0">
+      <manifest-digest sha256new="FOC7KS2D6SR324HJZDU66DGLNDPIM5SFG5XWZS2KQURROXERE5CQ"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v5.7.0/naps2-5.7.0-setup.msi" size="2150400" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=bb5e2f85bb555309fafd2e0c4381e820c02420dd" released="2018-03-04" stability="stable" version="5.7.1">
+      <manifest-digest sha256new="FJDRF2EWT27KCXCAZUJP4BX4YNLPP7MLH54HVY44IODMSV52NHEA"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v5.7.1/naps2-5.7.1-setup.msi" size="2154496" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=e5b4511118f958f4510699d542c73c957bfc9070" released="2018-03-23" stability="stable" version="5.8.0">
+      <manifest-digest sha256new="7O3WYUADKMFXM52CHQCCJNBEQS2TEIEFGMD2PA23MMMVC7TFHYEQ"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v5.8.0/naps2-5.8.0-setup.msi" size="2166784" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=68fd6fec8f6b099a219728f6e2bc3d041a0b03ee" released="2018-03-23" stability="stable" version="5.8.1">
+      <manifest-digest sha256new="AYMXVEH6GCFDLV5M2QAXJA5UTIHWSDFK5R6TK4UUPABGH3P7S76Q"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v5.8.1/naps2-5.8.1-setup.msi" size="2166784" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=258f0c09af4aedef573fe09469c6435ec9de6525" released="2018-07-02" stability="stable" version="5.8.2">
+      <manifest-digest sha256new="IA7ZTKXRKRY4WMOFXASPXITZK564JGO3Z7IYT4HGXOC6YXXL6K5Q"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v5.8.2/naps2-5.8.2-setup.msi" size="2191360" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=194f5547be8bcfbd0dc880263bed6bd23784afbe" released="2018-09-18" stability="testing" version="6.0-pre1">
+      <manifest-digest sha256new="MB7N7FZBYPPCQIESBYVSWILYFH7ZPAWGN2P235C6253R3OLSV4GQ"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v6.0b1/naps2-6.0b1-setup.msi" size="2633728" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=06c059421473122ae83deb1ca2b6a47d90f6155e" released="2018-09-21" stability="testing" version="6.0-pre2">
+      <manifest-digest sha256new="RYV4XGVTPCSKTR2VHNIXUA2ATAKRA7AOFKZZFZND3H4CYFLA4NFA"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v6.0b2/naps2-6.0b2-setup.msi" size="2637824" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=8a0afc46256135c97bd32532d672a9cd0665f160" released="2018-09-29" stability="testing" version="6.0-pre3">
+      <manifest-digest sha256new="PDH26EUYKTGCUYVXXJ755YTWBYAYUD2XGCDMN2FJOL4POWOAU7RQ"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v6.0b3/naps2-6.0b3-setup.msi" size="2654208" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=bddcfffa8aecfd84d4396fc6aa6251eefa136b1d" released="2018-12-06" stability="testing" version="6.0-pre4">
+      <manifest-digest sha256new="PUWFGTCSDMNJ7YZTQAMZXH37Q52Z4LZGT2EZL5HT2C3XNECCTQ4Q"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v6.0b4/naps2-6.0b4-setup.msi" size="2637824" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=ca2407c03f5d0e8f65c7ca4527b440dc7b6b6c2d" released="2019-05-23" stability="stable" version="6.1.0">
+      <manifest-digest sha256new="CVLBBLUS6H5YUIUXT4HSWPI2XT5Q4GDTWWLE6SD6FNB2YB64GHCQ"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v6.1.0/naps2-6.1.0-setup.msi" size="2641920" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=8d8008999fa11645b6098490b8ba38d8b13d33fe" released="2019-06-17" stability="stable" version="6.1.1">
+      <manifest-digest sha256new="NQKBEIZ6JQOOGEJ35JMHKFI2XSCLS3R2BKUJWHQS4H3FLDLYSCWA"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v6.1.1/naps2-6.1.1-setup.msi" size="2646016" type="application/x-msi"/>
+    </implementation>
+    <implementation id="sha1new=31c6da23703b54570844926a9cd27de2569c0efc" released="2019-07-27" stability="stable" version="6.1.2">
+      <manifest-digest sha256new="CR2AI2VCFYZVZS7ZH2LIOAAJLHP62FRJD33UKHP4Z7YEBVAUWW2Q"/>
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v6.1.2/naps2-6.1.2-setup.msi" size="2650112" type="application/x-msi"/>
+    </implementation>
+  </group>
+</interface>

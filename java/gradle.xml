@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="http://repo.roscidus.com/java/gradle" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="https://apps.0install.net/java/gradle.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>Gradle</name>
   <summary>modern open source build tool for continuous delivery</summary>
   <homepage>http://www.gradle.org/</homepage>
@@ -7,12 +7,12 @@
   <needs-terminal/>
 
   <group license="Apache License 2.0">
-    <requires interface="http://repo.roscidus.com/java/openjdk-jdk">
+    <requires interface="https://apps.0install.net/java/jdk.xml">
       <environment insert="" mode="replace" name="JAVA_HOME"/>
     </requires>
     <environment insert="lib/*" name="CLASSPATH"/>
     <command name="run">
-      <runner command="java" interface="http://repo.roscidus.com/java/openjdk-jdk">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
         <for-each item-from="GRADLE_OPTS" separator=" ">
           <arg>$item</arg>
         </for-each>
@@ -481,12 +481,12 @@
     </implementation>
   </group>
   <group license="Apache License 2.0">
-    <requires interface="http://repo.roscidus.com/java/openjdk-jdk" version="7..">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="7..">
       <environment insert="" mode="replace" name="JAVA_HOME"/>
     </requires>
     <environment insert="lib/*" name="CLASSPATH"/>
     <command name="run">
-      <runner command="java" interface="http://repo.roscidus.com/java/openjdk-jdk">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
         <for-each item-from="GRADLE_OPTS" separator=" ">
           <arg>$item</arg>
         </for-each>
@@ -984,6 +984,106 @@
     <implementation id="sha1new=7a50a4e8c8815ad1a820737f16ee3f6e195c2baf" released="2019-11-28" stability="developer" version="6.1-pre-2">
       <manifest-digest sha256new="F5XUXYQRNJD5TOU32I3QNW42Q2CX4I4JMX7SICGYBP5XGTQNMAKQ"/>
       <archive extract="gradle-6.1-milestone-2" href="https://services.gradle.org/distributions/gradle-6.1-milestone-2-bin.zip" size="97318492" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d683436ba2af618b2a6e37bf8eec845fdb2b37b1" released="2019-12-03" stability="developer" version="6.1-pre-3">
+      <manifest-digest sha256new="NCMN4ZZLFU2R3BYRGFY2CSJ4BD7V5TNWU7RGI4N4MZAFHHLFU2FA"/>
+      <archive extract="gradle-6.1-milestone-3" href="https://services.gradle.org/distributions/gradle-6.1-milestone-3-bin.zip" size="97408547" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=bbac377462023990db95a9bf0732354f335dfed7" released="2019-12-19" stability="testing" version="6.1-rc-1">
+      <manifest-digest sha256new="WJHRGO22CW275FJJXTHPHUYP7MMS3PVMSCY4HB7DGHSZCBK6JYYQ"/>
+      <archive extract="gradle-6.1-rc-1" href="https://services.gradle.org/distributions/gradle-6.1-rc-1-bin.zip" size="97472873" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=15d6a47f00f840c926b5270d4638344fcf6f636a" released="2020-01-07" stability="testing" version="6.1-rc-2">
+      <manifest-digest sha256new="ILENWJWZLVUCVQSYNDE73RKLWKN7FM7SHEM6H7VKP2EG3FIFBM3A"/>
+      <archive extract="gradle-6.1-rc-2" href="https://services.gradle.org/distributions/gradle-6.1-rc-2-bin.zip" size="97473030" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=f47ebf2d50e757a5901985231d08e020d8fb7f64" released="2020-01-13" stability="testing" version="6.1-rc-3">
+      <manifest-digest sha256new="VTPIKWX7FNLHPWBUPRYCGZ3HPFMASF72TYJSCPG3PGTJVCMA67YA"/>
+      <archive extract="gradle-6.1-rc-3" href="https://services.gradle.org/distributions/gradle-6.1-rc-3-bin.zip" size="97473000" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=89a8fe764a9a3b4b55fab71fafdf42bc28b64faf" released="2020-01-16" stability="stable" version="6.1">
+      <manifest-digest sha256new="JH2HJTS4CXDNKWMBNR2IJTR7522LNI2FZHBY4K3BMBGUEZ6LA7PQ"/>
+      <archive extract="gradle-6.1" href="https://services.gradle.org/distributions/gradle-6.1-bin.zip" size="97470714" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=131b4e0518d6d7ffc5740861d7273ce7d9e69c0e" released="2020-01-24" stability="stable" version="6.1.1">
+      <manifest-digest sha256new="X2QXGEWKFTWZXFFDYOBKHH3EVOIAZVRGPI3IKNWH4536M3CI522A"/>
+      <archive extract="gradle-6.1.1" href="https://services.gradle.org/distributions/gradle-6.1.1-bin.zip" size="97472434" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=6b50510ea4491f5979fc5fa85b0aa1f3f3c97b8e" released="2020-02-03" stability="testing" version="6.2-rc-1">
+      <manifest-digest sha256new="EYEJYM7XUAYSISR4GZ5YAR25SCCPVBI4UYIV4ARU44H6ZIVFJFOQ"/>
+      <archive extract="gradle-6.2-rc-1" href="https://services.gradle.org/distributions/gradle-6.2-rc-1-bin.zip" size="97729443" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=d20f04d1f78ef7fb80e73eeff570a565c6c74d13" released="2020-02-11" stability="testing" version="6.2-rc-2">
+      <manifest-digest sha256new="4SZFEKPMJYGAADXIC4SHD7QWGOVHYGHIDSPK2IPPDWJKRUTEUNLA"/>
+      <archive extract="gradle-6.2-rc-2" href="https://services.gradle.org/distributions/gradle-6.2-rc-2-bin.zip" size="97730057" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=b1199fd0a6b7bd560ab560f46376bf190df0febd" released="2020-02-13" stability="testing" version="6.2-rc-3">
+      <manifest-digest sha256new="C7RDAZIQ2KPX22N7OVBYRIV2BN7766ZPAIYFULBJYENR5MT6P7UQ"/>
+      <archive extract="gradle-6.2-rc-3" href="https://services.gradle.org/distributions/gradle-6.2-rc-3-bin.zip" size="97727112" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=b7c0cdeea92c86472807c2bd25402c6f81611fa2" released="2020-02-17" stability="stable" version="6.2">
+      <manifest-digest sha256new="VVSMOYHKONU4HNYRX63OJCHL7EYK73VTOT5H72QJDO3QKRTYP4LA"/>
+      <archive extract="gradle-6.2" href="https://services.gradle.org/distributions/gradle-6.2-bin.zip" size="97724809" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=70e2a3241585390d91368b7bfa0815dceb16ecaf" released="2020-02-24" stability="stable" version="6.2.1">
+      <manifest-digest sha256new="FNUT7NPSBXU3CURXECVLUIR5422SG24M366NYFQENCVBRNAWNLGQ"/>
+      <archive extract="gradle-6.2.1" href="https://services.gradle.org/distributions/gradle-6.2.1-bin.zip" size="97715086" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=75170014c748a8cfe27f90536096ba0ae5fceaa5" released="2020-03-04" stability="stable" version="6.2.2">
+      <manifest-digest sha256new="DJQKKNENFTV2N74YCB6U33KGFF7NW6DBJ3BBVRFB4CPOCWRWGT7Q"/>
+      <archive extract="gradle-6.2.2" href="https://services.gradle.org/distributions/gradle-6.2.2-bin.zip" size="97719334" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=78ea0593937c13a29eb115e6e5e981a2f79a90a1" released="2020-03-11" stability="testing" version="6.3-rc-1">
+      <manifest-digest sha256new="4EZ5S64GNOXRK5LOVBWVXEX37X7YVWPHQK5IAL7IJ3EP43O3S57A"/>
+      <archive extract="gradle-6.3-rc-1" href="https://services.gradle.org/distributions/gradle-6.3-rc-1-bin.zip" size="101757354" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=832733503df931008b1a6ced0f36819a8cf64e2b" released="2020-03-17" stability="testing" version="6.3-rc-2">
+      <manifest-digest sha256new="D3ZV34C2VP5QPJ6YSBPOKS4N2VQDWQ5P5CZUVKKW35R5H5K5HEOA"/>
+      <archive extract="gradle-6.3-rc-2" href="https://services.gradle.org/distributions/gradle-6.3-rc-2-bin.zip" size="101757868" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=df6b191e673439a9fcc97adb8fb4729ca6932b49" released="2020-03-18" stability="testing" version="6.3-rc-3">
+      <manifest-digest sha256new="Z2D4WABWV7V7DH6V7VE7BTB4TM5SLAIE6SIDIMKJJQAIADALUVSQ"/>
+      <archive extract="gradle-6.3-rc-3" href="https://services.gradle.org/distributions/gradle-6.3-rc-3-bin.zip" size="101757902" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=aa798795ed075cf80fdbce948a6428fca2fb3a1e" released="2020-03-20" stability="testing" version="6.3-rc-4">
+      <manifest-digest sha256new="NYFHMNIRSWRCTU2NJOP4W5EEPO354CZV2PNEL2DZJEYWUN24REJA"/>
+      <archive extract="gradle-6.3-rc-4" href="https://services.gradle.org/distributions/gradle-6.3-rc-4-bin.zip" size="101757859" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=cd5a236ad40c31deb9aff5765dc069b384fd9e9a" released="2020-03-24" stability="stable" version="6.3">
+      <manifest-digest sha256new="E7OYSHZ6HKA6CN5GBATPCN7SIFZ4WDKBNRUWTKF4ZGBDKZ6MNR6A"/>
+      <archive extract="gradle-6.3" href="https://services.gradle.org/distributions/gradle-6.3-bin.zip" size="101755602" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=51e8937d6242dc88f098b3045b54103c73f0770f" released="2020-04-15" stability="testing" version="6.4-rc-1">
+      <manifest-digest sha256new="DJY3FHHLFOFFSMOEVBSYQJYW4XUVURDAXNNVQQW4FLYCZEONDJAA"/>
+      <archive extract="gradle-6.4-rc-1" href="https://services.gradle.org/distributions/gradle-6.4-rc-1-bin.zip" size="102373770" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=4ec334fed4190d3256e716d03b47cbeb5c43510f" released="2020-04-22" stability="testing" version="6.4-rc-2">
+      <manifest-digest sha256new="FUGPL2CMKFJ5L6J6NFYTEFYWHE27FKARMPBYKVH64QJNIH6JOK6A"/>
+      <archive extract="gradle-6.4-rc-2" href="https://services.gradle.org/distributions/gradle-6.4-rc-2-bin.zip" size="102376778" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=be77f26e7f2a9990889067a67eed4a97ee551827" released="2020-04-28" stability="testing" version="6.4-rc-3">
+      <manifest-digest sha256new="KLPJCDMK7LAGHV25MV7RHQOIQZBDVGVQWKWTK2K52WHJNYW6YPMQ"/>
+      <archive extract="gradle-6.4-rc-3" href="https://services.gradle.org/distributions/gradle-6.4-rc-3-bin.zip" size="102376811" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=50e910f755faa8236a26f9b7e74f0e5d3dda25f6" released="2020-04-30" stability="testing" version="6.4-rc-4">
+      <manifest-digest sha256new="VXNYDNH3B3WHKABNMNAHSODX4BURFZ2YDT3E6XDOT4LIQFGPBJUA"/>
+      <archive extract="gradle-6.4-rc-4" href="https://services.gradle.org/distributions/gradle-6.4-rc-4-bin.zip" size="102376875" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=3ca6cb375d71c3171224e037aa8ed491b48cc912" released="2020-05-05" stability="stable" version="6.4">
+      <manifest-digest sha256new="ULE5GISSFXH5DNVT77KQUETBZIZLX2NHWVSQUK5CG7RTWW7TXBWQ"/>
+      <archive extract="gradle-6.4" href="https://services.gradle.org/distributions/gradle-6.4-bin.zip" size="102374614" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=fcd6afd3115e2895f4b9cf29b901fd111019a89b" released="2020-05-07" stability="developer" version="6.5-pre-1">
+      <manifest-digest sha256new="I53YVCMD4CUJIKTKMEWIOD6ND6C7PGJF2PL2M34ZDSU7WBBN4HMA"/>
+      <archive extract="gradle-6.5-milestone-1" href="https://services.gradle.org/distributions/gradle-6.5-milestone-1-bin.zip" size="102361793" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=819a9ece268e1b18c878d39e0c81be0d3d4dc5e6" released="2020-05-15" stability="stable" version="6.4.1">
+      <manifest-digest sha256new="QRUN5OWQH42GY5C3UKU56DBNSEIQ4U6BPPPXYPMHHA556NYGGNLQ"/>
+      <archive extract="gradle-6.4.1" href="https://services.gradle.org/distributions/gradle-6.4.1-bin.zip" size="102375999" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=aa4b5f09cb032658a07a1c3188b4299bb90601f4" released="2020-05-15" stability="developer" version="6.5-pre-2">
+      <manifest-digest sha256new="DT2R5WNFEWVBRV5XDU6NOVN5JEU37P5PYBR5KRXAH5F5O4YZLZYQ"/>
+      <archive extract="gradle-6.5-milestone-2" href="https://services.gradle.org/distributions/gradle-6.5-milestone-2-bin.zip" size="102395181" type="application/zip"/>
     </implementation>
   </group>
   <entry-point binary-name="gradle" command="run"/>

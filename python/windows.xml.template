@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Python for Windows</name>
+  <summary>interactive high-level object-oriented language</summary>
+  <description>
+Python is an interpreted, interactive, object-oriented programming language. It
+combines remarkable power with very clear syntax, and isn't difficult to learn.
+It has modules, classes, exceptions, very high level data types, and dynamic
+typing. There are interfaces to many system calls and libraries, as well as to
+various windowing systems (Tk, Mac, MFC, GTK+, Qt, wxWindows). New built-in
+modules are easily written in C or C++. Python is also usable as an extension
+language for applications that need a programmable interface.</description>
+  <homepage>https://www.python.org/</homepage>
+  <needs-terminal/>
+
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/python/python.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/python/python.ico" type="image/vnd.microsoft.icon"/>
+
+  <feed-for interface="https://apps.0install.net/python/windows.xml"/>
+
+  <group license="Python License">
+    <command name="run" path="python.exe"/>
+    <command name="run-gui" path="pythonw.exe"/>
+    <requires importance="recommended" interface="https://apps.0install.net/python/pywin32.xml"/>
+    <environment insert="." name="PATH"/>
+
+    <implementation arch="Windows-x86_64" released="{released}" stability="{stability}" version="{version}">
+      <recipe>
+        <archive href="https://www.python.org/ftp/python/{version-main}/python-{version-full}-embed-amd64.zip" type="application/zip"/>
+        <remove path="python3{version-minor}._pth" />
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-i486" released="{released}" stability="{stability}" version="{version}">
+      <recipe>
+        <archive href="https://www.python.org/ftp/python/{version-main}/python-{version-full}-embed-win32.zip" type="application/zip"/>
+        <remove path="python3{version-minor}._pth" />
+      </recipe>
+    </implementation>
+  </group>
+</interface>

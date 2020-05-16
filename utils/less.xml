@@ -1,11 +1,11 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/utils/less" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/utils/less.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Less</name>
   <summary xml:lang="en">file viewer</summary>
   <description xml:lang="en">Less is a pager. A pager is a program that displays text files. Other pagers commonly in use are more and pg. Less is similar to more, but allows backward movement in the file as well as forward movement. Also, less does not have to read the entire input file before starting, so with large input files it starts up faster than text editors like vi. </description>
-  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
-  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/>
   <category>System</category>
   <homepage>http://gnuwin32.sourceforge.net/packages/less.htm</homepage>
   <needs-terminal/>
@@ -17,34 +17,34 @@
     <command name="lessecho" path="bin/lessecho.exe"/>
     <command name="lesskey" path="bin/lesskey.exe"/>
     <command name="lessfile" path="bin/lessfile">
-      <requires interface="http://repo.roscidus.com/utils/coreutils">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/libarchive">
+      <requires interface="https://apps.0install.net/utils/libarchive.xml">
         <executable-in-path name="tar"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/gzip">
+      <requires interface="https://apps.0install.net/utils/gzip.xml">
         <executable-in-path name="gzip"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/grep">
+      <requires interface="https://apps.0install.net/utils/grep.xml">
         <executable-in-path name="grep"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <command name="lesspipe" path="bin/lesspipe">
-      <requires interface="http://repo.roscidus.com/utils/coreutils">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/libarchive">
+      <requires interface="https://apps.0install.net/utils/libarchive.xml">
         <executable-in-path name="tar"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/gzip">
+      <requires interface="https://apps.0install.net/utils/gzip.xml">
         <executable-in-path name="gzip"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/grep">
+      <requires interface="https://apps.0install.net/utils/grep.xml">
         <executable-in-path name="grep"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <manifest-digest sha256new="EW3ZLGAGM3EKN4EPV3PWATK5F23UNNAOIJCG4U2DFWJYB4HAW32A"/>
     <archive href="https://sourceforge.net/projects/gnuwin32/files/less/394/less-394-bin.zip" size="176349" type="application/zip"/>

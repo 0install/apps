@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/devel/bc.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Bc</name>
+  <summary xml:lang="en">Bc: arbitrary precision calculator language</summary>
+  <description xml:lang="en">bc is an arbitrary precision numeric processing language. Syntax is similar to C, but differs in many substantial areas. It supports interactive execution of statements. bc is a language that supports arbitrary precision numbers with interactive execution of statements. There are some similarities in the syntax to the C programming language. A standard math library is available by command line option. If requested, the math library is defined before processing any files. bc starts by processing code from all the files listed on the command line in the order listed. After all files have been processed, bc reads from the standard input. All code is executed as it is read. (If a file contains a command to halt the processor, bc will never read from the standard input.) </description>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/>
+  <category>System</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/bc.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=cd7927ba401cf2a2c925d955794a048191ac4101" license="GPL v2 (GNU General Public License)" released="2005-03-06" version="1.6-2-3">
+    <requires interface="https://apps.0install.net/lib/readline5.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/bc.exe"/>
+    <command name="dc" path="bin/dc.exe"/>
+    <manifest-digest sha256new="IJ7W4RGXTV6FASWA7PYFX7UVJZBQHOTS7ORI3DK5NZOHMAFIUK4A"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/bc/1.06-2/bc-1.06-2-bin.zip" size="112855" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/bc-bin.zip?raw=true" size="112855" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="sys-devel/bc"/>
+  <package-implementation package="bc" main="/usr/bin/bc"/>
+  <entry-point binary-name="bc" command="run">
+    <needs-terminal/>
+    <summary xml:lang="en">An arbitrary precision calculator language</summary>
+    <description xml:lang="en">bc  is a language that supports arbitrary precision num-
+       bers with interactive execution  of  statements.   There
+       are some similarities in the syntax to the C programming
+       language.  A standard math library is available by  com-
+       mand  line  option.   If  requested, the math library is
+       defined before processing any files.  bc starts by  pro-
+       cessing  code  from  all the files listed on the command
+       line in the order listed.  After  all  files  have  been
+       processed,  bc  reads from the standard input.  All code
+       is executed as it is read.  (If a file contains  a  com-
+       mand  to halt the processor, bc will never read from the
+       standard input.)
+
+       This version of bc contains  several  extensions  beyond
+       traditional bc implementations and the POSIX draft stan-
+       dard.  Command line options can cause  these  extensions
+       to  print  a  warning  or to be rejected.  This document
+       describes  the  language  accepted  by  this  processor.
+       Extensions will be identified as such.</description>
+  </entry-point>
+  <entry-point binary-name="dc" command="dc">
+    <needs-terminal/>
+    <name xml:lang="en">Dc</name>
+    <summary xml:lang="en">a reverse-polish arbitrary precision calculator</summary>
+    <description xml:lang="en">Dc is a reverse-polish desk  calculator  which  supports
+       unlimited  precision  arithmetic.  It also allows you to
+       define and call macros.   Normally  dc  reads  from  the
+       standard  input;  if  any command arguments are given to
+       it, they are filenames, and dc reads  and  executes  the
+       contents  of  the  files  before  reading  from standard
+       input.  All normal output is  to  standard  output;  all
+       error output is to standard error.
+
+       A  reverse-polish  calculator stores numbers on a stack.
+       Entering a number pushes it on  the  stack.   Arithmetic
+       operations  pop  arguments  off  the  stack and push the
+       results.
+
+       To enter a  number  in  dc,  type  the  digits  with  an
+       optional  decimal  point.   Exponential  notation is not
+       supported.  To enter a negative number, begin the number
+       with  ``_''.   ``-'' cannot be used for this, as it is a
+       binary operator for subtraction instead.  To  enter  two
+       numbers in succession, separate them with spaces or new-
+       lines.  These have no meaning as commands.</description>
+  </entry-point>
+</interface>

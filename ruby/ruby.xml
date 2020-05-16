@@ -1,19 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/ruby/ruby" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<?xml version="1.0" ?>
+<interface uri="https://apps.0install.net/ruby/ruby.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>Ruby</name>
   <summary>dynamic, open source programming language</summary>
   <description>A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.</description>
   <homepage>http://www.ruby-lang.org/</homepage>
   <needs-terminal/>
 
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/ruby/ruby.ico" type="image/vnd.microsoft.icon"/>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/ruby/ruby.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/ruby/ruby.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/ruby/ruby.png" type="image/png"/>
 
-  <package-implementation package="ruby" main="/usr/bin/ruby"/>
+  <package-implementation main="/usr/bin/ruby" package="ruby"/>
 
   <group license="Ruby License">
-    <environment name="RUBY_BIN" insert="bin" mode="replace"/>
+    <environment insert="bin" mode="replace" name="RUBY_BIN"/>
     <command name="run" path="bin/ruby.exe"/>
     <command name="run-gui" path="bin/rubyw.exe"/>
     <command name="irb" path="bin/ruby.exe">
@@ -34,69 +33,302 @@
     <command name="ri" path="bin/ruby.exe">
       <arg>$RUBY_BIN/ri</arg>
     </command>
-    <implementation arch="Windows-x86_64" version="2.1.9" released="2016-03-30" stability="stable" id="sha1new=29f964ed4f83ac9164fd6b6fab0095d089768236">
+
+    <implementation arch="Windows-x86_64" id="sha1new=29f964ed4f83ac9164fd6b6fab0095d089768236" released="2016-03-30" stability="stable" version="2.1.9">
       <manifest-digest sha1new="29f964ed4f83ac9164fd6b6fab0095d089768236" sha256="f9618c2b8962397f8a738184aaf5429d00aecbce21e937bae130e9bdb51c1552" sha256new="7FQYYK4JMI4X7CTTQGCKV5KCTUAK5S6OEHUTPOXBGDU33NI4CVJA"/>
-      <archive href="https://dl.bintray.com/oneclick/rubyinstaller/ruby-2.1.9-x64-mingw32.7z" size="10468827" type="application/x-7z-compressed" extract="ruby-2.1.9-x64-mingw32"/>
+      <archive extract="ruby-2.1.9-x64-mingw32" href="https://dl.bintray.com/oneclick/rubyinstaller/ruby-2.1.9-x64-mingw32.7z" size="10468827" type="application/x-7z-compressed"/>
     </implementation>
-    <implementation arch="Windows-i486" version="2.1.9" released="2016-03-30" stability="stable" id="sha1new=a49222187954595e05dd5c79e65108768ca6075b">
+    <implementation arch="Windows-i486" id="sha1new=a49222187954595e05dd5c79e65108768ca6075b" released="2016-03-30" stability="stable" version="2.1.9">
       <manifest-digest sha1new="a49222187954595e05dd5c79e65108768ca6075b" sha256="8c1e289ab1a5ee45d1006ea34373522907926ce09a4cc681f137d657ef7459a5" sha256new="RQPCRGVRUXXELUIAN2RUG42SFEDZE3HATJGMNAPRG7LFP33ULGSQ"/>
-      <archive href="https://dl.bintray.com/oneclick/rubyinstaller/ruby-2.1.9-i386-mingw32.7z" size="9823850" type="application/x-7z-compressed" extract="ruby-2.1.9-i386-mingw32"/>
+      <archive extract="ruby-2.1.9-i386-mingw32" href="https://dl.bintray.com/oneclick/rubyinstaller/ruby-2.1.9-i386-mingw32.7z" size="9823850" type="application/x-7z-compressed"/>
     </implementation>
-    <implementation arch="Windows-x86_64" version="2.2.6" released="2016-11-15" stability="stable" id="sha1new=69070d7f2bf575a0215f13a65540e0c2c25cb33d">
+    <implementation arch="Windows-x86_64" id="sha1new=69070d7f2bf575a0215f13a65540e0c2c25cb33d" released="2016-11-15" stability="stable" version="2.2.6">
       <manifest-digest sha1new="69070d7f2bf575a0215f13a65540e0c2c25cb33d" sha256="450e0f11eba23e8aac5b2a8159d89757f8d9419ff4d3df66dd3c9e9ee403f3f5" sha256new="IUHA6EPLUI7IVLC3FKAVTWEXK74NSQM76TJ56ZW5HSPJ5ZAD6P2Q"/>
-      <archive href="https://dl.bintray.com/oneclick/rubyinstaller/ruby-2.2.6-x64-mingw32.7z" size="10642163" type="application/x-7z-compressed" extract="ruby-2.2.6-x64-mingw32"/>
+      <archive extract="ruby-2.2.6-x64-mingw32" href="https://dl.bintray.com/oneclick/rubyinstaller/ruby-2.2.6-x64-mingw32.7z" size="10642163" type="application/x-7z-compressed"/>
     </implementation>
-    <implementation arch="Windows-i486" version="2.2.6" released="2016-11-15" stability="stable" id="sha1new=6fd16ce894e4476d21a719c71ef43ea61ccffa3e">
+    <implementation arch="Windows-i486" id="sha1new=6fd16ce894e4476d21a719c71ef43ea61ccffa3e" released="2016-11-15" stability="stable" version="2.2.6">
       <manifest-digest sha1new="6fd16ce894e4476d21a719c71ef43ea61ccffa3e" sha256="d522cf492a024393e4775fc57ee4f75105cb55c842cccba675d46593a51dfe2f" sha256new="2URM6SJKAJBZHZDXL7CX5ZHXKEC4WVOIILGMXJTV2RSZHJI57YXQ"/>
-      <archive href="https://dl.bintray.com/oneclick/rubyinstaller/ruby-2.2.6-i386-mingw32.7z" size="9887744" type="application/x-7z-compressed" extract="ruby-2.2.6-i386-mingw32"/>
+      <archive extract="ruby-2.2.6-i386-mingw32" href="https://dl.bintray.com/oneclick/rubyinstaller/ruby-2.2.6-i386-mingw32.7z" size="9887744" type="application/x-7z-compressed"/>
     </implementation>
-    <implementation arch="Windows-x86_64" version="2.3.3" released="2016-11-21" stability="stable" id="sha1new=46d7f593f3be160ec567a51b701226c205479761">
+    <implementation arch="Windows-x86_64" id="sha1new=46d7f593f3be160ec567a51b701226c205479761" released="2016-11-21" stability="stable" version="2.3.3">
       <manifest-digest sha1new="46d7f593f3be160ec567a51b701226c205479761" sha256="f4f501298978a63327da571c59f4075da82a34c5b4cdb02d7b5cf85ad9aec078" sha256new="6T2QCKMJPCTDGJ62K4OFT5AHLWUCUNGFWTG3ALL3LT4FVWNOYB4A"/>
-      <archive href="https://dl.bintray.com/oneclick/rubyinstaller/ruby-2.3.3-x64-mingw32.7z" size="11570011" type="application/x-7z-compressed" extract="ruby-2.3.3-x64-mingw32"/>
+      <archive extract="ruby-2.3.3-x64-mingw32" href="https://dl.bintray.com/oneclick/rubyinstaller/ruby-2.3.3-x64-mingw32.7z" size="11570011" type="application/x-7z-compressed"/>
     </implementation>
-    <implementation arch="Windows-i486" version="2.3.3" released="2016-11-21" stability="stable" id="sha1new=267ffa30eb4f3b120198623ee9e562e1594ecb04">
+    <implementation arch="Windows-i486" id="sha1new=267ffa30eb4f3b120198623ee9e562e1594ecb04" released="2016-11-21" stability="stable" version="2.3.3">
       <manifest-digest sha1new="267ffa30eb4f3b120198623ee9e562e1594ecb04" sha256="5a46a5df366c5dfe153461af08340c0afb6e3ecc31c6eec7ce32ca3ebf776462" sha256new="LJDKLXZWNRO74FJUMGXQQNAMBL5W4PWMGHDO5R6OGLFD5P3XMRRA"/>
-      <archive href="https://dl.bintray.com/oneclick/rubyinstaller/ruby-2.3.3-i386-mingw32.7z" size="10763749" type="application/x-7z-compressed" extract="ruby-2.3.3-i386-mingw32"/>
+      <archive extract="ruby-2.3.3-i386-mingw32" href="https://dl.bintray.com/oneclick/rubyinstaller/ruby-2.3.3-i386-mingw32.7z" size="10763749" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=ebab6ee23b989f5840d20c011bb432d79e49850b" released="2017-09-15" stability="stable" version="2.4.2-1">
+      <manifest-digest sha256new="TK5PATP5IXEI5WSZZHH4YX5FRPCWGB7IUWLRBAZVWRPOBRMJVRJQ"/>
+      <archive extract="rubyinstaller-2.4.2-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.4.2-1/rubyinstaller-2.4.2-1-x64.7z" size="8974251" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=6a889ef41b0d51dc10c69eaa46132a3cee7bb503" released="2017-09-15" stability="stable" version="2.4.2-1">
+      <manifest-digest sha256new="LJESO3HPJY73PH5GERGM3YYTBBJNGIHBBNW6EHRW7MYG64M2TSMA"/>
+      <archive extract="rubyinstaller-2.4.2-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.4.2-1/rubyinstaller-2.4.2-1-x86.7z" size="8767406" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=2e394b0f69c1012afd1d12603ad2d7f0daba1b4f" released="2017-09-15" stability="stable" version="2.4.2-2">
+      <manifest-digest sha256new="J5ERFZTR36TBMFHVUKXZR663X6CYFXFHB3PXBAGACXHEPZ4JUSNQ"/>
+      <archive extract="rubyinstaller-2.4.2-2-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.4.2-2/rubyinstaller-2.4.2-2-x64.7z" size="8973913" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=076f1d8d406cceaae378cc0318cc1050964b8e0a" released="2017-09-15" stability="stable" version="2.4.2-2">
+      <manifest-digest sha256new="45VUUKIKRVCQRDSJH6OU5BEHV4Z5EMINJQKJDMTI5LU2Y3CR4BTQ"/>
+      <archive extract="rubyinstaller-2.4.2-2-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.4.2-2/rubyinstaller-2.4.2-2-x86.7z" size="8767916" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=9f376086815672b058dded85175f60eaab6d49d4" released="2017-12-20" stability="stable" version="2.4.3-1">
+      <manifest-digest sha256new="GRB7W63DCCMPN54J7FD4DN7B7QHFLOVZFTM4YDUVJCZ4BLJ2G55A"/>
+      <archive extract="rubyinstaller-2.4.3-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.4.3-1/rubyinstaller-2.4.3-1-x64.7z" size="8988033" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=cdd2f9fc83fe44e7b8eb0d402df3f46f0f92edbe" released="2017-12-20" stability="stable" version="2.4.3-1">
+      <manifest-digest sha256new="PR5OZA6AHXI27C4HNTOUB3VDEU6HZH5XKN6WMSRRJSUMJTLIBDDA"/>
+      <archive extract="rubyinstaller-2.4.3-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.4.3-1/rubyinstaller-2.4.3-1-x86.7z" size="8757940" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=27b5eff022a5e2edfd38d2908852bebd5236d07e" released="2018-02-27" stability="stable" version="2.4.3-2">
+      <manifest-digest sha256new="5M6C6EFUJMHL2RNIQANMJ3SN5PDCY3UB6KBEEV5QWHEYG66IIQNA"/>
+      <archive extract="rubyinstaller-2.4.3-2-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.4.3-2/rubyinstaller-2.4.3-2-x64.7z" size="8979574" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=e4083d2abdb2bcfa3e60741d24310867f95c3857" released="2018-02-27" stability="stable" version="2.4.3-2">
+      <manifest-digest sha256new="KCYPC6TV5MWUAL7DOHFJTYXK5TY5IN2EEEP7LDOCRH5G57V3AJ3A"/>
+      <archive extract="rubyinstaller-2.4.3-2-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.4.3-2/rubyinstaller-2.4.3-2-x86.7z" size="8750169" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=69c75d2dc809165e626144ef5a381d0ecc3cac87" released="2018-03-29" stability="stable" version="2.4.4-1">
+      <manifest-digest sha256new="L2DH44ZZPFBNK2WY42QJJTPBFKMZN6HJD7BMT3GECKQYKM473I2A"/>
+      <archive extract="rubyinstaller-2.4.4-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.4.4-1/rubyinstaller-2.4.4-1-x64.7z" size="8984708" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=b0c9706bdae5324340ae13de96f4100520ad23b8" released="2018-03-29" stability="stable" version="2.4.4-1">
+      <manifest-digest sha256new="OQ6IJPTU5AUC3EE2T7Z4WYXOKPH2WFQMSEIH5JDKBQAYYMSNRQOQ"/>
+      <archive extract="rubyinstaller-2.4.4-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.4.4-1/rubyinstaller-2.4.4-1-x86.7z" size="8758723" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=b932a58d0a8dd6120c13bed749e21b0683ecfba9" released="2018-06-24" stability="stable" version="2.4.4-2">
+      <manifest-digest sha256new="USK4UZACA3XMSN6FPL4NTVJMIKL3OBDRG6VUVBLPSUYKBJ2ELGKA"/>
+      <archive extract="rubyinstaller-2.4.4-2-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.4.4-2/rubyinstaller-2.4.4-2-x64.7z" size="8986323" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=4d7f424ee15c3e12a4f56ab049375f855b9d6f1e" released="2018-06-24" stability="stable" version="2.4.4-2">
+      <manifest-digest sha256new="AE3V2JCWHQ7NLORTD2T5NOCSS6V24XMJSOU5X2OID4URUHEJFZGQ"/>
+      <archive extract="rubyinstaller-2.4.4-2-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.4.4-2/rubyinstaller-2.4.4-2-x86.7z" size="8755407" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=d13e17dbb76e11ec7c09b1bc7e9221e5831d2516" released="2018-10-21" stability="stable" version="2.4.5-1">
+      <manifest-digest sha256new="UYP3YLRJU3GC4AQESNVVWHEIGXUZHP6VSXN7PE4GKS5UWFN7BLLA"/>
+      <archive extract="rubyinstaller-2.4.5-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.4.5-1/rubyinstaller-2.4.5-1-x64.7z" size="8957030" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=00e11b44703993b6f5ba540780095ef34897ae95" released="2018-10-21" stability="stable" version="2.4.5-1">
+      <manifest-digest sha256new="YP25MUEBAEDPDCZRILTGWAS5HVVRCQRGKKGLCDSJKI4I7CBYSBIA"/>
+      <archive extract="rubyinstaller-2.4.5-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.4.5-1/rubyinstaller-2.4.5-1-x86.7z" size="8717962" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=05ab8462518bebf0797cfd2ffd97178bae9acc0b" released="2019-04-16" stability="stable" version="2.4.6-1">
+      <manifest-digest sha256new="QVRRIJQN5LDNRN5ILFQP55VWK2V6RMGB67OPIMBH7Q65TMNTWEGA"/>
+      <archive extract="rubyinstaller-2.4.6-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.4.6-1/rubyinstaller-2.4.6-1-x64.7z" size="9114127" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=0b3d5453c9a14a46518a87df3124c046cec7e281" released="2019-04-16" stability="stable" version="2.4.6-1">
+      <manifest-digest sha256new="4CCN3K2OCSRHXSPQNMG7CEI3FVGU3Z3X2EUAYSHXMLX6AU2EAZQA"/>
+      <archive extract="rubyinstaller-2.4.6-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.4.6-1/rubyinstaller-2.4.6-1-x86.7z" size="8901286" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=585bed43f068ad6464acdb355d97adc042959555" released="2019-09-10" stability="stable" version="2.4.7-1">
+      <manifest-digest sha256new="MJ74P5YAYRYZKVUB2TWJR3LUBN4TKKD4Y3ONKGGHMPWCDYOGGFRQ"/>
+      <archive extract="rubyinstaller-2.4.7-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.4.7-1/rubyinstaller-2.4.7-1-x64.7z" size="9124447" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=24adbd00641cf66044590584cb034a8529f97b1f" released="2019-09-10" stability="stable" version="2.4.7-1">
+      <manifest-digest sha256new="373Y2KHXYKYCO57GTSBITRR6VD63HX5TZYWTRXN7AQKTGBEI57TA"/>
+      <archive extract="rubyinstaller-2.4.7-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.4.7-1/rubyinstaller-2.4.7-1-x86.7z" size="8847994" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=e756b093d49b3c90455b386ef126a4394124f767" released="2019-10-02" stability="stable" version="2.4.9-1">
+      <manifest-digest sha256new="34G47LXB6VKKBSMPDRJD5YTEMWMNMVTRKMGWT4IQ5MZMOTYZEZPQ"/>
+      <archive extract="rubyinstaller-2.4.9-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.4.9-1/rubyinstaller-2.4.9-1-x64.7z" size="9124683" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=539f303098bb5654e4ea6af8b29ac660825b318c" released="2019-10-02" stability="stable" version="2.4.9-1">
+      <manifest-digest sha256new="CGARK6XL5DWWNCRHHQAW44HXN6AQKMI64V3AOOVE2QHJR2VGG2QA"/>
+      <archive extract="rubyinstaller-2.4.9-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.4.9-1/rubyinstaller-2.4.9-1-x86.7z" size="8849429" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=27f9e6e34a3df9104bf1805d2d0381497a3f00ee" released="2020-04-03" stability="stable" version="2.4.10-1">
+      <manifest-digest sha256new="QB7HIQPWTQNNJZNZGDGZNF35D3NLNYYDT3TOXRB7BI4PP5T6CXXQ"/>
+      <archive extract="rubyinstaller-2.4.10-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.4.10-1/rubyinstaller-2.4.10-1-x64.7z" size="9096027" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=7fd743abcbf112c108c2c4d4729227a7a186ff4b" released="2020-04-03" stability="stable" version="2.4.10-1">
+      <manifest-digest sha256new="7WEQSVUVMKRLGYTAOWXBUP7QL5WSFUVEEX6B6ON57JZRZP77AUOA"/>
+      <archive extract="rubyinstaller-2.4.10-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.4.10-1/rubyinstaller-2.4.10-1-x86.7z" size="8829332" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=2c0f1c735d98dc32dffe2858932eb575a568facb" released="2017-12-25" stability="stable" version="2.5.0-1">
+      <manifest-digest sha256new="U2W7LLWWDLFRVPTYNDRG4JS2C64U3FSTKMCDNXTQYBMA373VHAOA"/>
+      <archive extract="rubyinstaller-2.5.0-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.5.0-1/rubyinstaller-2.5.0-1-x64.7z" size="9170571" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=3ef20639715e46dc77ad7a17c03d574187df6cb0" released="2017-12-25" stability="stable" version="2.5.0-1">
+      <manifest-digest sha256new="MOIOW7IZ3E2VHDHK56Y6FO5RBGUB3IW2LHBUUFHDNHJC2D3AJ3TA"/>
+      <archive extract="rubyinstaller-2.5.0-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.5.0-1/rubyinstaller-2.5.0-1-x86.7z" size="9218406" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=d6f58e33529539d9a2e501a2801136fe1bbfaea6" released="2018-02-27" stability="stable" version="2.5.0-2">
+      <manifest-digest sha256new="USOG7LWUHXCO6QZPKUBVTRLIY6VWNCBTAATTPIBIYHBYOIUIXFOQ"/>
+      <archive extract="rubyinstaller-2.5.0-2-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.5.0-2/rubyinstaller-2.5.0-2-x64.7z" size="9173458" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=0769d36a29e444a5aaa64b9ebc6a88bf5a21a043" released="2018-02-27" stability="stable" version="2.5.0-2">
+      <manifest-digest sha256new="4TBSNPM4J3IPRBK6N73OYAHP6JRSFXHEOKJ3HW7TFUJDLQQXVHYA"/>
+      <archive extract="rubyinstaller-2.5.0-2-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.5.0-2/rubyinstaller-2.5.0-2-x86.7z" size="9216016" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=73f76172f542d9b40ae6070d104f117a972d912b" released="2018-03-29" stability="stable" version="2.5.1-1">
+      <manifest-digest sha256new="VBSVZTIWVC7L3FODN4V43IOZN4JYBY3YGEBIQB2WWSJWQI4CTWPQ"/>
+      <archive extract="rubyinstaller-2.5.1-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.5.1-1/rubyinstaller-2.5.1-1-x64.7z" size="9180691" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=f974e6f45777428989009d74a316004960f11c9c" released="2018-03-29" stability="stable" version="2.5.1-1">
+      <manifest-digest sha256new="TZXDYEYOEF62UFYSM2Y3MX7WOCPYFCKUU7RYK5ZMEYMFXLUDSFEA"/>
+      <archive extract="rubyinstaller-2.5.1-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.5.1-1/rubyinstaller-2.5.1-1-x86.7z" size="9220655" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=8cb5c6edeca5e68ffd0c9d3dd33ef32857e74d6d" released="2018-06-24" stability="stable" version="2.5.1-2">
+      <manifest-digest sha256new="C3SJA75P4PQA4D2OLPMB2ZREPJMJKCFQHNYV6LL2GUAU4VXQE2GQ"/>
+      <archive extract="rubyinstaller-2.5.1-2-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.5.1-2/rubyinstaller-2.5.1-2-x64.7z" size="9178104" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=6047437c173e800f3acbf0480ed44aed005db26f" released="2018-06-24" stability="stable" version="2.5.1-2">
+      <manifest-digest sha256new="KUBHC5YLPCOKSUCHR5TFT76T4LWLJFA4PKTJTJ7VWXWCN7LWHMFQ"/>
+      <archive extract="rubyinstaller-2.5.1-2-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.5.1-2/rubyinstaller-2.5.1-2-x86.7z" size="9221059" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=7c7ef468cd4f62367ae6ac34451cdc06d3e1d304" released="2018-10-21" stability="stable" version="2.5.3-1">
+      <manifest-digest sha256new="TG5K7J3ZU6JG2WD6CA5WKYMDB4HDQ6NMJIMD65ZDNAG2667S5YSQ"/>
+      <archive extract="rubyinstaller-2.5.3-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.5.3-1/rubyinstaller-2.5.3-1-x64.7z" size="9296795" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=16d9d2dc81c1c93c588c609e5ebf614adbccd326" released="2018-10-21" stability="stable" version="2.5.3-1">
+      <manifest-digest sha256new="KON46B4LFI27C4ELOUZUPW2NL5A4XVNUINKP7PYGWQ2K7KZACS4Q"/>
+      <archive extract="rubyinstaller-2.5.3-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/rubyinstaller-2.5.3-1/rubyinstaller-2.5.3-1-x86.7z" size="9342058" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=ce4ffb0037ceaca37a355032dfdd0148d41c9d62" released="2019-04-16" stability="stable" version="2.5.5-1">
+      <manifest-digest sha256new="LMD7QIDUUJEMMT4J4IUUWMVVEIAVOXHJBKNIVC6BHSKYKUCDEEZA"/>
+      <archive extract="rubyinstaller-2.5.5-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.5.5-1/rubyinstaller-2.5.5-1-x64.7z" size="9469860" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=8cce98aa1bc92ea6d3a1ac91c9de4ad07adacd37" released="2019-04-16" stability="stable" version="2.5.5-1">
+      <manifest-digest sha256new="OBOW4TZOYOPFL5PAVGVLKBL33EX6ZETO7RCPRUIMXLODBXWFQ3IA"/>
+      <archive extract="rubyinstaller-2.5.5-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.5.5-1/rubyinstaller-2.5.5-1-x86.7z" size="9548308" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=e8b80ed1701e880027c091d91596846ebb8331ee" released="2019-09-10" stability="stable" version="2.5.6-1">
+      <manifest-digest sha256new="WOTR3L7Y45XMBDIL6WQJZGBQKTCW5GLBNXFX5R7R4XXKQ2CRJG7A"/>
+      <archive extract="rubyinstaller-2.5.6-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.5.6-1/rubyinstaller-2.5.6-1-x64.7z" size="9475879" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=2dc919ff8e648d31772a774d2983ae2487845db6" released="2019-09-10" stability="stable" version="2.5.6-1">
+      <manifest-digest sha256new="NWAGNYKBEDN5SX6XW36LIHBXIV5VZ5XLWPB2YDGYA6VKNJ72EORQ"/>
+      <archive extract="rubyinstaller-2.5.6-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.5.6-1/rubyinstaller-2.5.6-1-x86.7z" size="9433086" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=459ac1e1d54398a581f335bcbfc86f79be8297d3" released="2019-10-02" stability="stable" version="2.5.7-1">
+      <manifest-digest sha256new="KLN5H2GABD62SOYL4HLFYR6SMZDK4MAMVD5SNOOZA6RHIHDE7BOA"/>
+      <archive extract="rubyinstaller-2.5.7-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.5.7-1/rubyinstaller-2.5.7-1-x64.7z" size="9484224" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=5960c9537ea3d396a924c648be3f973355ba1303" released="2019-10-02" stability="stable" version="2.5.7-1">
+      <manifest-digest sha256new="BVLL7SKGUNRESGW7732YZLWGQKVVWDWDMM3FQYBEMRIKPXMTS2KQ"/>
+      <archive extract="rubyinstaller-2.5.7-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.5.7-1/rubyinstaller-2.5.7-1-x86.7z" size="9449916" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=a59738de5e5d902f4d1af353dcfaaa23111a2c50" released="2020-04-03" stability="stable" version="2.5.8-1">
+      <manifest-digest sha256new="DPALK3DW3ZZFGF4JC2RUZLWWNAWELL65RZZDLQNPDGHTFYTIOZVQ"/>
+      <archive extract="rubyinstaller-2.5.8-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.5.8-1/rubyinstaller-2.5.8-1-x64.7z" size="9470869" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=093d6aabc731355bf5dc881a95eb336e0e95f760" released="2020-04-03" stability="stable" version="2.5.8-1">
+      <manifest-digest sha256new="LUCAXAY6KFPE2WLK64VWRRKUACQNUGQ3NMKM2SITBHFGL75XPEHQ"/>
+      <archive extract="rubyinstaller-2.5.8-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.5.8-1/rubyinstaller-2.5.8-1-x86.7z" size="9425510" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=a63539f9d5f8abe0310a2b7b41cf106bf7322fdb" released="2019-01-03" stability="stable" version="2.6.0-1">
+      <manifest-digest sha256new="2X5WSVAEESSRPHNTCX5W4QMDSQ3KXEPKHLDGAYCFAYHZW26ETT5Q"/>
+      <archive extract="rubyinstaller-2.6.0-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.0-1/rubyinstaller-2.6.0-1-x64.7z" size="10625084" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=fc98c3a48cf8bd179ab53b515971345a33e41c7c" released="2019-01-03" stability="stable" version="2.6.0-1">
+      <manifest-digest sha256new="KWRCUQKMGJZWBENLW7JJ43G4JAUJDXVFSDW6QOR5ZW2NRNES4GHQ"/>
+      <archive extract="rubyinstaller-2.6.0-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.0-1/rubyinstaller-2.6.0-1-x86.7z" size="10586914" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=a6d1f340c34805983f73b84ad5c84c24ebad0901" released="2019-01-31" stability="stable" version="2.6.1-1">
+      <manifest-digest sha256new="EVGPKISMG4RWHIINXGVUQVNJ6VERSRATVQND4ZC7PYHAW3GRMFOA"/>
+      <archive extract="rubyinstaller-2.6.1-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.1-1/rubyinstaller-2.6.1-1-x64.7z" size="10626622" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=17cab57c512efe3bf498f1a20aee005a3bf56541" released="2019-01-31" stability="stable" version="2.6.1-1">
+      <manifest-digest sha256new="UDZ5MTLE6OXHW7NAURPHKY2OEUMC6CGUQLMJ6RF6L5LLY5ZHN2PA"/>
+      <archive extract="rubyinstaller-2.6.1-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.1-1/rubyinstaller-2.6.1-1-x86.7z" size="10590799" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=a1e8c79a8966a4094ffa724f711ac80ee0f0b3b0" released="2019-04-16" stability="stable" version="2.6.2-1">
+      <manifest-digest sha256new="OF5GTUBXGSRYHGKSE7FIUXHNSIPJQAAJYNX6W4ATVUB326AOOMDA"/>
+      <archive extract="rubyinstaller-2.6.2-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.2-1/rubyinstaller-2.6.2-1-x64.7z" size="10796229" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=6922fb9326c149eadbc9bbf56b6b2d6ce5c30c04" released="2019-04-16" stability="stable" version="2.6.2-1">
+      <manifest-digest sha256new="HYSQBQV3WMBWFYYP3J2TUGN7WQYRZVHGEOJZ4F4XL6UFAMPOIFEQ"/>
+      <archive extract="rubyinstaller-2.6.2-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.2-1/rubyinstaller-2.6.2-1-x86.7z" size="10793119" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=401c24fb2e76c151261f8c00897a572727bffd22" released="2019-04-18" stability="stable" version="2.6.3-1">
+      <manifest-digest sha256new="AO5ITCYLE5JNAIPYCXYFOQ6EAVS6SJXFCC2Q24LNBXJXHKBR7CUA"/>
+      <archive extract="rubyinstaller-2.6.3-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.3-1/rubyinstaller-2.6.3-1-x64.7z" size="10802104" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=5343a77a653f18b4064a5bb2b171bb10994f574c" released="2019-04-18" stability="stable" version="2.6.3-1">
+      <manifest-digest sha256new="NJNGW37RNYTTD3ZDW5XGGIX36CWBZLEZYR33P7C33GTHERIHZBMQ"/>
+      <archive extract="rubyinstaller-2.6.3-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.3-1/rubyinstaller-2.6.3-1-x86.7z" size="10806051" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=5462097622a757eb7e077add294508645eb2405f" released="2019-09-10" stability="stable" version="2.6.4-1">
+      <manifest-digest sha256new="AVCJ3BSLT4BSVRAIUREK57VC2TCYIGWA5WBFCKLEBCACFKYDDZ4A"/>
+      <archive extract="rubyinstaller-2.6.4-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.4-1/rubyinstaller-2.6.4-1-x64.7z" size="10824897" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=a0bb014edc3954f39f7e29aaa8f8c3971bb52b2d" released="2019-09-10" stability="stable" version="2.6.4-1">
+      <manifest-digest sha256new="5X7N4GFDBRK6BSYDX4RYXTCOA5DWKOIHFKUGP7OYK6Y6MIR46PDA"/>
+      <archive extract="rubyinstaller-2.6.4-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.4-1/rubyinstaller-2.6.4-1-x86.7z" size="10701966" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=e2c982510c8db51dc19b3b359abdd0067d04e020" released="2019-10-02" stability="stable" version="2.6.5-1">
+      <manifest-digest sha256new="SYPES2M6N443HXH4BYOMJC4HOIMKKRITOE4UIEB5LHKKS6UGJSRQ"/>
+      <archive extract="rubyinstaller-2.6.5-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.5-1/rubyinstaller-2.6.5-1-x64.7z" size="10829600" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=f5d8f72ed511cd39a14dc1aab3f88dfcc883ae9f" released="2019-10-02" stability="stable" version="2.6.5-1">
+      <manifest-digest sha256new="JGEA2JOQBN46AAVMJGI5C5RQNLWXAJ2A4S4GLYRXFAF36MPBVY2A"/>
+      <archive extract="rubyinstaller-2.6.5-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.5-1/rubyinstaller-2.6.5-1-x86.7z" size="10716695" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=dc84f8480c249ef94c85105238cd6f95aa0125bc" released="2020-04-03" stability="stable" version="2.6.6-1">
+      <manifest-digest sha256new="OVZQ2LQ3YDHWU3G6ZKM2BFTONJWSQOL5FQYJ4US4K6P735NOK24Q"/>
+      <archive extract="rubyinstaller-2.6.6-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.6-1/rubyinstaller-2.6.6-1-x64.7z" size="10817796" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=f7e0c35beb13086930012536d7bed7bfe551bbda" released="2020-04-03" stability="stable" version="2.6.6-1">
+      <manifest-digest sha256new="4WOWKX43CMUTG6OJH3O37G5UDXJB27BDFW7UQ64X2JM5ZYG6AXIQ"/>
+      <archive extract="rubyinstaller-2.6.6-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.6-1/rubyinstaller-2.6.6-1-x86.7z" size="10693265" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=b703ba4cdd6fab90bb2d338ada93b485b83eb3a3" released="2020-01-05" stability="stable" version="2.7.0-1">
+      <manifest-digest sha256new="NDKYUVTGSXOK4GLURKAAHW5S255GV7BTOBF5I2RHOY2QWIO4CJ5A"/>
+      <archive extract="rubyinstaller-2.7.0-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.7.0-1/rubyinstaller-2.7.0-1-x64.7z" size="11132597" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=e94b656745402d14a0fbcb9f1bc27e3f7bf41322" released="2020-01-05" stability="stable" version="2.7.0-1">
+      <manifest-digest sha256new="B7662IRPYTZVAVRR6O46UPH2GAIPZTVFICHNNYWGOXKPSTKDT6FQ"/>
+      <archive extract="rubyinstaller-2.7.0-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.7.0-1/rubyinstaller-2.7.0-1-x86.7z" size="11005849" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=5d3d4294fee443aabaa28c1db5761d37241c8ad8" released="2020-04-03" stability="stable" version="2.7.1-1">
+      <manifest-digest sha256new="3CRWHO5WDYU7RD3Z2L5A6FGQ3YAFL5IIRZZR747DGE5NQID2QX7A"/>
+      <archive extract="rubyinstaller-2.7.1-1-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.7.1-1/rubyinstaller-2.7.1-1-x64.7z" size="11120321" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=bf4db4d81c2bb1d510ee8f7025c1bfcff8f03d93" released="2020-04-03" stability="stable" version="2.7.1-1">
+      <manifest-digest sha256new="4C2I3JPXGWBZ4WRZRQKRCSM4ROICRQ7VVU3G4QP7TKYUF5X5IRAQ"/>
+      <archive extract="rubyinstaller-2.7.1-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.7.1-1/rubyinstaller-2.7.1-1-x86.7z" size="10985211" type="application/x-7z-compressed"/>
     </implementation>
   </group>
 
-  <entry-point command="run" binary-name="ruby">
+  <entry-point binary-name="ruby" command="run">
     <needs-terminal/>
     <name>Ruby command-line runner</name>
-    <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/ruby/ruby.ico" type="image/vnd.microsoft.icon"/>
-    <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/ruby/ruby.png" type="image/png"/>
+    <icon href="https://raw.githubusercontent.com/0install/apps/master/ruby/ruby.ico" type="image/vnd.microsoft.icon"/>
+    <icon href="https://raw.githubusercontent.com/0install/apps/master/ruby/ruby.png" type="image/png"/>
   </entry-point>
-  <entry-point command="run-gui" binary-name="rubyw">
+  <entry-point binary-name="rubyw" command="run-gui">
     <name>Ruby GUI runner</name>
-    <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/ruby/ruby.gui.ico" type="image/vnd.microsoft.icon"/>
-    <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/ruby/ruby.gui.png" type="image/png"/>
+    <icon href="https://raw.githubusercontent.com/0install/apps/master/ruby/ruby.gui.ico" type="image/vnd.microsoft.icon"/>
+    <icon href="https://raw.githubusercontent.com/0install/apps/master/ruby/ruby.gui.png" type="image/png"/>
   </entry-point>
-  <entry-point command="irb" binary-name="irb">
+  <entry-point binary-name="irb" command="irb">
     <needs-terminal/>
     <name>Interactive Ruby</name>
     <summary>interactively execute Ruby expressions read from the standard input</summary>
   </entry-point>
-  <entry-point command="erb" binary-name="erb">
+  <entry-point binary-name="erb" command="erb">
     <needs-terminal/>
     <name>Embedded Ruby</name>
     <summary>templating language based on Ruby</summary>
   </entry-point>
-  <entry-point command="gem" binary-name="gem">
+  <entry-point binary-name="gem" command="gem">
     <needs-terminal/>
     <name>RubyGems</name>
     <summary>package management framework for Ruby</summary>
   </entry-point>
-  <entry-point command="rake" binary-name="rake">
+  <entry-point binary-name="rake" command="rake">
     <needs-terminal/>
     <name>RAKE</name>
     <summary>make-like build utility for Ruby</summary>
   </entry-point>
-  <entry-point command="rdoc" binary-name="rdoc">
+  <entry-point binary-name="rdoc" command="rdoc">
     <needs-terminal/>
     <name>RDoc</name>
     <summary>produces HTML and online documentation for Ruby project</summary>
   </entry-point>
-  <entry-point command="ri" binary-name="ri">
+  <entry-point binary-name="ri" command="ri">
     <needs-terminal/>
     <name>Ruby Index</name>
     <summary>view the Ruby documentation off-line</summary>
@@ -105,14 +337,14 @@
   <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
     <file-type id="RubyFile">
       <description>Ruby File</description>
-      <verb name="open" args="&quot;%1&quot; %*"/>
+      <verb args="&quot;%1&quot; %*" name="open"/>
       <extension value=".rb"/>
     </file-type>
     <file-type id="RubyWFile">
       <description>RubyW File</description>
-      <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/ruby/ruby.gui.ico" type="image/vnd.microsoft.icon" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
-      <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/ruby/ruby.gui.png" type="image/png" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
-      <verb name="open" command="run-gui" args="&quot;%1&quot; %*"/>
+      <icon href="https://raw.githubusercontent.com/0install/apps/master/ruby/ruby.gui.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://raw.githubusercontent.com/0install/apps/master/ruby/ruby.gui.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb args="&quot;%1&quot; %*" command="run-gui" name="open"/>
       <extension value=".rbw"/>
     </file-type>
   </capabilities>

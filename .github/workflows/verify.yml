@@ -1,0 +1,27 @@
+# Verify feeds in Pull Requests are valid
+name: Verify
+on: pull_request
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up 0install
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends 0install-core python-gobject rpm2cpio
+      - name: Clone feeds
+        uses: actions/checkout@v2
+        with:
+          path: feeds
+      - name: Clone public
+        uses: actions/checkout@v2
+        with:
+          path: public
+          ref: gh-pages
+      - name: Set up repo
+        run: |
+          cp feeds/0repo-config.py .
+          cp public/archives.db .
+          mkdir incoming
+      - name: Run 0repo
+        env: {'NO_SIGN': '1'}
+        run: 0install run --not-before 0.10 http://0install.net/tools/0repo.xml

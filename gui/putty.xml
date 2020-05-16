@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<interface uri="https://apps.0install.net/gui/putty.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>PuTTY</name>
+  <summary xml:lang="en">Telnet and SSH client</summary>
+  <summary xml:lang="de">Telnet und SSH Klient</summary>
+  <description xml:lang="en">PuTTY is a free implementation of Telnet and SSH for Windows and Unix platforms, along with an xterm terminal emulator.</description>
+  <description xml:lang="de">PuTTY ist eine freie Implementierung von Telnet und SSH für Windows und Unix Plattformen kombiniert mit einem xterm Terminal Emulator.</description>
+  <homepage>https://www.chiark.greenend.org.uk/~sgtatham/putty/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/putty.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/putty.ico" type="image/vnd.microsoft.icon"/>
+  <category>Network</category>
+  <category>Utility</category>
+
+  <group license="MIT/X Consortium License">
+    <command name="run" path="PUTTY.EXE"/>
+    <command name="putty" path="PUTTY.EXE"/>
+    <command name="puttygen" path="PUTTYGEN.EXE"/>
+    <command name="pageant" path="PAGEANT.EXE"/>
+    <command name="plink" path="PLINK.EXE"/>
+    <command name="pscp" path="PSCP.EXE"/>
+    <command name="psftp" path="PSFTP.EXE"/>
+
+    <environment insert="plink.exe" mode="replace" name="GIT_SSH"/>
+    <environment insert="plink.exe" mode="replace" name="SVN_SSH"/>
+
+    <implementation arch="Windows-*" id="sha1new=ce6a5d72a64d6e97f48f2af30026ef5024202055" released="2007-04-29" stability="stable" version="0.60">
+      <manifest-digest sha256new="KHJI4BVFZ7QOULIQA42JQXLXGRK7WOX4BQMSLUU6K7H3RE4NX36A"/>
+      <archive href="http://the.earth.li/~sgtatham/putty/0.60/x86/putty.zip" size="1518921" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-*" id="sha1new=74b6556c01524becd8df4019c0f75a77aa6ea7b1" released="2011-07-12" stability="stable" version="0.61">
+      <manifest-digest sha256new="VYJPOXMDDTI4XNSLNUGZ657RDGGAKMF3KIKX2SKUR3GJC7MFQQ3A"/>
+      <archive href="https://the.earth.li/~sgtatham/putty/0.61/x86/putty.zip" size="1596372" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-*" id="sha1new=af9a405d5c4fb6963d8e55555854ebd92deb1d56" released="2011-12-10" stability="stable" version="0.62">
+      <manifest-digest sha256new="XTIUG2IGVCWEXFEA2OGAC6G4PTNP4ME4BUVIUJJBLDQIHYNMH6KA"/>
+      <archive href="https://the.earth.li/~sgtatham/putty/0.62/x86/putty.zip" size="1597060" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-*" id="sha1new=97df9f1181912882c5a378e76fbef4a0ac671b71" released="2013-08-06" stability="stable" version="0.63">
+      <manifest-digest sha256new="CBYJZQGP7CZMOAAB4R34VXYN53EUXAJJHOGDK3EJVPKALAJFWBYQ"/>
+      <archive href="https://the.earth.li/~sgtatham/putty/0.63/x86/putty.zip" size="1621853" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-*" id="sha1new=ec351426fb48da79a00d77a0bea5a43015db7f15" released="2015-11-07" stability="stable" version="0.66">
+      <manifest-digest sha256new="XOM5567OCQS27QEMVOK5K35ZWTRHTSJXG7VLWBWV4VTMUOZYLOKA"/>
+      <archive href="https://the.earth.li/~sgtatham/putty/0.66/x86/putty.zip" size="1708829" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-*" id="sha1new=7276713a5925ce4c24076d4eb8719db013760c2c" released="2016-03-05" stability="stable" version="0.67">
+      <manifest-digest sha256new="FTNGP73ZRVH5FVWWP7CRRCBJ3Z5K6DMKLABEZNOKJXVO7VDYXRQQ"/>
+      <archive href="https://the.earth.li/~sgtatham/putty/0.67/x86/putty.zip" size="1547346" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=1bb2dd335d09feda7f085c7ac0216367405de2ce" released="2017-02-21" stability="stable" version="0.68">
+      <manifest-digest sha256new="QQM2S2R6VLEGGY55GSM4HV72EPPYH3F3BS5PDRC2W7KGHTK7IKKA"/>
+      <archive href="https://the.earth.li/~sgtatham/putty/0.68/w64/putty.zip" size="2256695" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=625ca99be5e30f07f92ef5cbc7dbb3689588db70" released="2017-02-21" stability="stable" version="0.68">
+      <manifest-digest sha256new="HNI4HRASWY3SPZI7ROGOSD7HWF34C6QV4OJHYHAYAZJZUT5HPQ5A"/>
+      <archive href="https://the.earth.li/~sgtatham/putty/0.68/w32/putty.zip" size="2099771" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=950d9a758cda2cba1339250e71c894d198e00732" released="2017-04-29" stability="stable" version="0.69">
+      <manifest-digest sha256new="434KNQO2CMCUNHUQZCZYZSCBBYK4QTPT6J7P42UBTN7HJQHS2AEQ"/>
+      <archive href="https://the.earth.li/~sgtatham/putty/0.69/w64/putty.zip" size="2272931" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=b5dae0437b8d98edfe4231fb0d79cf6a977129c2" released="2017-04-29" stability="stable" version="0.69">
+      <manifest-digest sha256new="SFUYAVA2PLKZAFIFKM253Y25ZCOABVFJWLDDHWLM3AQDVJ26B5ZA"/>
+      <archive href="https://the.earth.li/~sgtatham/putty/0.69/w32/putty.zip" size="2115021" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=d81678cc4da6f5c400271b112c021dd8c5f2b474" released="2017-07-08" stability="stable" version="0.70">
+      <manifest-digest sha256new="2NW6LBAGJDSSSXHXPPMCPUKQOYX7MLWKSMWA5ALHXT2GPK4QKRJQ"/>
+      <archive href="https://the.earth.li/~sgtatham/putty/0.70/w64/putty.zip" size="2266446" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=440e468b9ab0775645385a09aac0d83647d1d04b" released="2017-07-08" stability="stable" version="0.70">
+      <manifest-digest sha256new="J7WG2SYQ5LJJXGHQNEMBCEU5TMZ7FX5XU5Q6SRKJN6F4QSD2AE5Q"/>
+      <archive href="https://the.earth.li/~sgtatham/putty/0.70/w32/putty.zip" size="2169029" type="application/zip"/>
+    </implementation>
+  </group>
+  <entry-point binary-name="putty" command="run"/>
+  <entry-point command="puttygen">
+    <name xml:lang="en">PuTTY Key Generator</name>
+    <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/putty/puttygen.png" type="image/png"/>
+    <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/putty/puttygen.ico" type="image/vnd.microsoft.icon"/>
+  </entry-point>
+  <entry-point command="pageant">
+    <name xml:lang="en">PuTTY authentication agent</name>
+    <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/putty/pageant.png" type="image/png"/>
+    <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/putty/pageant.ico" type="image/vnd.microsoft.icon"/>
+  </entry-point>
+  <entry-point command="plink">
+    <needs-terminal/>
+    <name xml:lang="en">PuTTY Plink</name>
+    <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/putty/plink.png" type="image/png"/>
+    <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/putty/plink.ico" type="image/vnd.microsoft.icon"/>
+  </entry-point>
+  <entry-point command="pscp">
+    <needs-terminal/>
+    <name xml:lang="en">PuTTY Secure Copy</name>
+    <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/putty/pscp.png" type="image/png"/>
+    <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/putty/pscp.ico" type="image/vnd.microsoft.icon"/>
+  </entry-point>
+  <entry-point command="psftp">
+    <needs-terminal/>
+    <name xml:lang="en">PuTTY SFTP</name>
+    <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/putty/psftp.png" type="image/png"/>
+    <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/putty/psftp.ico" type="image/vnd.microsoft.icon"/>
+  </entry-point>
+</interface>

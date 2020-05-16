@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>ScreenToGif</name>
+  <summary>screen, webcam and sketchboard recorder, with integrated editor</summary>
+  <description>This tool allows you to record a selected area of your screen, live feed from your webcam or live drawings from a sketchboard. Afterwards, you can edit and save the animation as a gif or video.</description>
+  <icon href="https://raw.githubusercontent.com/NickeManarin/ScreenToGif/master/ScreenToGif/Resources/Logo.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/NickeManarin/ScreenToGif-Website/master/img/ms-icon-150x150.png" type="image/png"/>
+  <category>Graphics</category>
+  <homepage>https://www.screentogif.com/</homepage>
+
+  <feed-for interface="https://apps.0install.net/gui/screentogif.xml"/>
+
+  <group arch="Windows-*" license="Microsoft Public License (Ms-PL)">
+    <command name="run" path="ScreenToGif.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/framework.xml" version="4.6.1.."/>
+    </command>
+    <implementation released="{released}" stability="stable" version="{version}">
+      <archive href="https://github.com/NickeManarin/ScreenToGif/releases/download/{version}/ScreenToGif.{version}.Portable.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

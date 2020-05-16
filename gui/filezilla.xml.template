@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>FileZilla</name>
+  <summary xml:lang="en">cross-platform FTP, FTPS and SFTP client</summary>
+  <summary xml:lang="de">Plattform-übergreifender FTP, FTPS and SFTP Klient</summary>
+  <description xml:lang="en">FileZilla Client is a fast and reliable cross-platform FTP, FTPS and SFTP client with lots of useful features and an intuitive graphical user interface.</description>
+  <description xml:lang="de">FileZilla Client ist ein schneller und zuverlässiger Plattform-übergreifender FTP, FTPS und SFTP Klient mit vielen nützlichen Features und einer intuitiven graphischen Benutzerschnittstelle.</description>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/filezilla.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/filezilla.ico" type="image/vnd.microsoft.icon"/>
+  <category>Network</category>
+  <category>Utility</category>
+  <homepage>http://filezilla-project.org/</homepage>
+
+  <feed-for interface="https://apps.0install.net/gui/filezilla.xml"/>
+
+  <group license="GPL v2 (GNU General Public License)">
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable" main="filezilla.exe">
+      <manifest-digest/>
+      <recipe>
+        <archive href="https://download.filezilla-project.org/client/FileZilla_{version}_win64.zip" type="application/zip" extract="FileZilla-{version}"/>
+        <archive href="filezilla.config.zip" type="application/zip"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" released="{released}" stability="stable" main="filezilla.exe">
+      <manifest-digest/>
+      <recipe>
+        <archive href="https://download.filezilla-project.org/client/FileZilla_{version}_win32.zip" type="application/zip" extract="FileZilla-{version}"/>
+        <archive href="filezilla.config.zip" type="application/zip"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="stable" main="bin/filezilla">
+      <manifest-digest/>
+      <archive href="https://download.filezilla-project.org/client/FileZilla_{version}_x86_64-linux-gnu.tar.bz2" type="application/x-bzip-compressed-tar" extract="FileZilla3"/>
+    </implementation>
+    <implementation arch="MacOSX-i686" version="{version}" released="{released}" stability="stable" main="Contents/MacOS/filezilla">
+      <manifest-digest/>
+      <archive href="https://download.filezilla-project.org/client/FileZilla_{version}_macosx-x86.app.tar.bz2" type="application/x-bzip-compressed-tar" extract="FileZilla.app"/>
+    </implementation>
+  </group>
+</interface>

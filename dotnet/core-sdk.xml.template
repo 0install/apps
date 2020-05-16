@@ -2,10 +2,10 @@
 <interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>.NET Core SDK</name>
   <summary>tools for building .NET Core applications</summary>
-  <homepage>https://www.microsoft.com/net/core</homepage>
+  <homepage>https://dotnet.microsoft.com/</homepage>
   <needs-terminal/>
 
-  <feed-for interface="http://repo.roscidus.com/dotnet/core-sdk"/>
+  <feed-for interface="https://apps.0install.net/dotnet/core-sdk.xml"/>
 
   <group license="MIT License">
     <command name="run" path="dotnet.exe"/>
@@ -14,11 +14,11 @@
 
     <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
       <manifest-digest/>
-      <archive href="{windows-x64-download-uri}" type="application/zip"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/{version}/dotnet-sdk-{version}-win-x64.zip" type="application/zip"/>
     </implementation>
     <implementation arch="Windows-i486" version="{version}" released="{released}" stability="stable">
       <manifest-digest/>
-      <archive href="{windows-x86-download-uri}" type="application/zip"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/{version}/dotnet-sdk-{version}-win-x86.zip" type="application/zip"/>
     </implementation>
   </group>
 
@@ -26,11 +26,11 @@
     <command name="run" path="dotnet"/>
     <environment mode="replace" name="DOTNET_ROOT" insert="."/>
     <environment mode="replace" name="DOTNET_SKIP_FIRST_TIME_EXPERIENCE" value="true"/><!-- Prevent extraction of NuGet packages into implementation dir (which is read-only) -->
-    <requires interface="http://repo.roscidus.com/lib/curl"/>
+    <requires interface="https://apps.0install.net/lib/curl.xml"/>
 
     <implementation version="{version}" released="{released}" stability="stable">
       <manifest-digest/>
-      <archive href="{linux-x64-download-uri}" type="application/x-compressed-tar"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/{version}/dotnet-sdk-{version}-linux-x64.tar.gz" type="application/x-compressed-tar"/>
     </implementation>
   </group>
 
@@ -40,7 +40,7 @@
 
     <implementation version="{version}" released="{released}" stability="stable">
       <manifest-digest/>
-      <archive href="{macos-x64-download-uri}" type="application/x-compressed-tar"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/{version}/dotnet-sdk-{version}-osx-x64.tar.gz" type="application/x-compressed-tar"/>
     </implementation>
   </group>
 </interface>

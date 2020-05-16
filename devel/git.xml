@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/devel/git.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>git-core</name>
+  <summary>fast, scalable, distributed revision control system</summary>
+  <description>
+Git is popular version control system designed to handle very large projects
+with speed and efficiency; it is used mainly for various open source projects,
+most notably the Linux kernel.
+
+Git falls in the category of distributed source code management tools. Every Git
+working directory is a full-fledged repository with full revision tracking
+capabilities, not dependent on network access or a central server.
+
+This package provides the git main components with minimal dependencies.
+Additional functionality, e.g. a graphical user interface and revision tree
+visualizer, tools for interoperating with other VCS's, or a web interface, is
+provided as separate git* packages.</description>
+  <category>Development</category>
+  <needs-terminal/>
+
+  <feed arch="Windows-*" src="https://apps.0install.net/devel/git-for-windows.xml"/>
+
+  <package-implementation main="/usr/bin/git" package="git-core"/>
+  <package-implementation main="/usr/bin/git" package="git"/>
+  <group doc-dir="usr/share/doc" main="usr/bin/git">
+  </group>
+  <group>
+    <requires interface="https://apps.0install.net/lib/curl3-gnutls.xml">
+      <environment insert="lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/expat1.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <implementation arch="Linux-i386" id="sha1new=4ec5c577aab003f0f5e3a7728061a5def17176a8" main="usr/bin/git" released="2010-04-04" version="1.5.6.5-3">
+      <archive href="git-core-i386-1_1.5.6.5-3+lenny3.tar.bz2" size="2297187"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=6f5d6acc5b9736ff757e7bda820806f0fc52e01b" main="usr/bin/git" released="2010-04-04" version="1.5.6.5-3">
+      <archive href="git-core-amd64-1_1.5.6.5-3+lenny3.tar.bz2" size="2512585"/>
+    </implementation>
+  </group>
+  <group>
+    <requires interface="https://apps.0install.net/lib/curl3-gnutls.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/expat1.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+    <implementation arch="Linux-i386" id="sha1new=c89043aa88c264e0d38186133f1402ccaae2eb88" main="usr/bin/git" released="2011-05-29" version="1.7.2.5-1">
+      <archive href="git-i386-1_1.7.2.5-1.tar.bz2" size="3920091"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=2aa4e2d7a3a832bdee632bc65e13119b602bdb54" main="usr/bin/git" released="2011-05-29" version="1.7.2.5-1">
+      <archive href="git-amd64-1_1.7.2.5-1.tar.bz2" size="4438520"/>
+    </implementation>
+    <implementation arch="Linux-i386" id="sha1new=edfee8eb96ce0096b5ad2279c5d1c79be5d95856" main="usr/bin/git" released="2011-09-17" version="1.7.2.5-2">
+      <archive href="git-i386-1_1.7.2.5-2.tar.bz2" size="3920349"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=dd3a3e7b45a695cf9997303151a49c8118912904" main="usr/bin/git" released="2011-09-17" version="1.7.2.5-2">
+      <archive href="git-amd64-1_1.7.2.5-2.tar.bz2" size="4438560"/>
+    </implementation>
+    <group>
+      <requires interface="https://apps.0install.net/lib/zlib1g.xml">
+      <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
+    </requires>
+      <implementation arch="Linux-i386" id="sha1new=d3b355aa19b2cebf7d6d4f7b090d20ec66abc920" main="usr/bin/git" released="2012-03-27" version="1.7.2.5-3">
+      <archive href="git-i386-1_1.7.2.5-3.tar.bz2" size="3921640"/>
+    </implementation>
+      <implementation arch="Linux-x86_64" id="sha1new=886961d0c4b894d2fae2c7209577fb617b40bfef" main="usr/bin/git" released="2012-03-27" version="1.7.2.5-3">
+      <archive href="git-amd64-1_1.7.2.5-3.tar.bz2" size="4440339"/>
+    </implementation>
+    </group>
+  </group>
+</interface>

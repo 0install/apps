@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="http://repo.roscidus.com/devel/gitversion" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="https://apps.0install.net/devel/gitversion.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>GitVersion</name>
   <summary>versioning when using git, solved</summary>
   <description>Versioning when using git, solved. GitVersion looks at your git history and works out the semantic version of the commit being built.</description>
@@ -9,7 +9,7 @@
 
   <group license="MIT License">
     <command name="run" path="GitVersion.exe">
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/clr" version="4.0.."/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.0.."/>
     </command>
 
     <implementation id="sha1new=5c46d21ee73a5d055f295b64b47d6bfb89810724" released="2015-08-26" stability="stable" version="3.1.1">
@@ -132,7 +132,7 @@
 
   <group arch="Windows-*" license="MIT License">
     <command name="run" path="GitVersion.exe">
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/clr" version="4.0.."/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.0.."/>
     </command>
 
     <implementation id="sha1new=b136b60860de70c7e3453de9bd9662e49872bd51" released="2018-08-21" stability="testing" version="4.0.0-pre14">
@@ -151,10 +151,10 @@
 
   <group arch="POSIX-*" license="MIT License">
     <command name="run" path="GitVersion.dll">
-      <runner command="run" interface="http://repo.roscidus.com/dotnet/core" version="2.0.."/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/core.xml" version="2.0.."/>
     </command>
-    <requires interface="http://repo.roscidus.com/lib/icu"/>
-    <requires interface="http://repo.roscidus.com/lib/curl"/>
+    <requires interface="https://apps.0install.net/lib/icu.xml"/>
+    <requires interface="https://apps.0install.net/lib/curl.xml"/>
 
     <implementation id="sha1new=ff2ab061486866b0ead2ad5d0374329b9b4d3592" released="2018-08-21" stability="testing" version="4.0.0-pre14">
       <manifest-digest sha256new="K3YQ26RZBG5YURR57DIM6SSZ6GQO3OKARPTDXFKOSAHWSIZKFBKA"/>
@@ -180,12 +180,73 @@
       <manifest-digest sha256new="MBFBHALKFYB4QC56BA2S5WXHY2ZKNYLZRXGXZSJ3OUP56UPGBB7A"/>
       <archive href="https://github.com/GitTools/GitVersion/releases/download/5.1.2/gitversion-windows-5.1.2.tar.gz" size="18972111" type="application/x-compressed-tar"/>
     </implementation>
+    <implementation id="sha1new=ce32e9ac20bf8b27f4eab526c0148194e8ffeaf8" released="2019-12-22" stability="stable" version="5.1.3">
+      <manifest-digest sha256new="ZDR52MDV4KQGQZGDC6CRH677ALETI6HVIHDPNQRXJR2C5F6G5IIQ"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.1.3/gitversion-windows-5.1.3.tar.gz" size="18988812" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=eef2113bf8bc804b7c81260c5cf67405edb33347" released="2020-03-07" stability="stable" version="5.2.0">
+      <manifest-digest sha256new="JRMWTFPHWZMMELG7OPOGGXAUUWUDVJGFY23ASM7ZIYAECNHXZLYQ"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.2.0/gitversion-windows-5.2.0.tar.gz" size="18375089" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=481915c65dee10845877e146ffcb334d08efa9b5" released="2020-03-12" stability="stable" version="5.2.1">
+      <manifest-digest sha256new="4UXLBMENUMOF2IKTF7WWSJ2YTQUUDDKNJQEJHRDPVW3I3CIA5NJA"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.2.1/gitversion-windows-5.2.1.tar.gz" size="18374727" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=42261b4454ec475275fb67c19f5fa3b098ef5839" released="2020-03-12" stability="stable" version="5.2.2">
+      <manifest-digest sha256new="FJIFRS4HP2NZ3AZPOWMWEIGVWXM5IKFG5N6R4VTEU5FIPXQZPUBA"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.2.2/gitversion-windows-5.2.2.tar.gz" size="18374786" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=391408d2a8ed95b513eb559455032d3dcec81a4b" released="2020-03-13" stability="stable" version="5.2.3">
+      <manifest-digest sha256new="E7WXAYHFRIV2GTZETA5IMCTQC2624OLEGRUH6J6Q4UATBZN7FPLQ"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.2.3/gitversion-windows-5.2.3.tar.gz" size="18374974" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=263c010f9afa6a8afe1d355abaea2330fb4ffb6d" released="2020-03-17" stability="stable" version="5.2.4">
+      <manifest-digest sha256new="47KEM5OVIASAIB3XYRG4XPXDICRRZZYVYG7UNYMNKQHDVWYGOZIA"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.2.4/gitversion-windows-5.2.4.tar.gz" size="18374951" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=37946856957a1b5d0fd969ed1772ef9195a31acf" released="2020-05-04" stability="stable" version="5.3.0">
+      <manifest-digest sha256new="T573U2EL73QR7BGZPCBCYS2II7BC3PJWBSCCM7XQ6YGF33IEPXEA"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.0/gitversion-win-x64-5.3.0.tar.gz" size="18386083" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=e6b70baffcad2f9db973e319c0650af1b00de86f" released="2020-05-05" stability="stable" version="5.3.1">
+      <manifest-digest sha256new="MUR6DHUM4XU77P7X7PKFM5C6I4WJ7L3ZG3I7R77BIM45RWRBNIIA"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.1/gitversion-win-x64-5.3.1.tar.gz" size="18386129" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=f98174efcb05dd6b7db16afe9ff50266f8824714" released="2020-05-05" stability="stable" version="5.3.2">
+      <manifest-digest sha256new="KESXQNLOFT3C4SUR4U6AG4WC3IUVMQJLXH2GLDDOXD3HQNZNOTVA"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.2/gitversion-win-x64-5.3.2.tar.gz" size="18397194" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=3ca4cb87607dcf77dc2d04e52f20e5ca7f1d1fad" released="2020-05-12" stability="stable" version="5.3.3">
+      <manifest-digest sha256new="RR7UUKMXIFJBNWMCDWKXA2FD77HHOXZGWJY2PFKXQMUIJBEABBXQ"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.3/gitversion-win-x64-5.3.3.tar.gz" size="18398626" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=149d082b24e1a8363662274857800687d8533f02" released="2020-05-12" stability="stable" version="5.3.3">
+      <manifest-digest sha256new="FRRSCPX3CAH5A2L2FHP4BKV5J3RTKRCLPH666XSSISWFXMYPRBDA"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.3/gitversion-win-x86-5.3.3.tar.gz" size="16872650" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group arch="Windows-i486" license="MIT License">
+    <command name="run" path="GitVersion.exe"/>
+
+    <implementation id="sha1new=2acce51648df691d5bb0980dade9cddfb9317da8" released="2020-05-04" stability="stable" version="5.3.0">
+      <manifest-digest sha256new="UPUFTVZ2FRU5EGJFPJ2VDVUXP7H6WWARULOMIASXYSRMXFB263NA"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.0/gitversion-win-x86-5.3.0.tar.gz" size="16846534" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=ee8ab7088386a9d7cc123083e503bf5b15be75a3" released="2020-05-05" stability="stable" version="5.3.1">
+      <manifest-digest sha256new="LVZ2MIT2WYIWWVCLB7EHWBESCSUUZ6WZBGL4VCJO6MCYAX75RETQ"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.1/gitversion-win-x86-5.3.1.tar.gz" size="16846572" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=4caf1406dc082fa88470632d76035c1501a8bdf4" released="2020-05-05" stability="stable" version="5.3.2">
+      <manifest-digest sha256new="6JOFYCHNKZTFVKO5N22YGT27IWVE3EGSH4PEZV6HLIZZ34RRWDSQ"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.2/gitversion-win-x86-5.3.2.tar.gz" size="16870052" type="application/x-compressed-tar"/>
+    </implementation>
   </group>
 
   <group arch="Linux-x86_64" license="MIT License">
     <command name="run" path="GitVersion"/>
-    <requires interface="http://repo.roscidus.com/lib/icu"/>
-    <requires interface="http://repo.roscidus.com/lib/curl"/>
+    <requires interface="https://apps.0install.net/lib/icu.xml"/>
+    <requires interface="https://apps.0install.net/lib/curl.xml"/>
 
     <implementation id="sha1new=04c51a41fa9430285095468363413b5feb6f2195" released="2019-10-28" stability="stable" version="5.1.1">
       <manifest-digest sha256new="5ATXUA6ILV3Q7VRO7GP7M6FZVKFSDHSO6H6AO4QUVGR7T4WETSXA"/>
@@ -194,6 +255,46 @@
     <implementation id="sha1new=18c1ad545ba98a815b30adef4335937da3cf1722" released="2019-11-07" stability="stable" version="5.1.2">
       <manifest-digest sha256new="EYSALPABXORDCTGCYRS2ARFGU2TQOSKWQ3ANL2QYUNENI5GHZOLQ"/>
       <archive href="https://github.com/GitTools/GitVersion/releases/download/5.1.2/gitversion-linux-5.1.2.tar.gz" size="18078446" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=0a4afbeedc1c1769219f2604d154f0fa3f42e36e" released="2019-12-22" stability="stable" version="5.1.3">
+      <manifest-digest sha256new="64POD6HLOKJSDK7737V4RA5WGOUPQHH4NBPSWRUMGO2UFG4NWBXQ"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.1.3/gitversion-linux-5.1.3.tar.gz" size="18123045" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=88a8d4caf7d16204cb999ee7f4ae22d7ff8c23bb" released="2020-03-07" stability="stable" version="5.2.0">
+      <manifest-digest sha256new="2G5SRWA6J3BQA63AM55F5N4KXSYHH2OV2B6JGXOO6R55O6CTGKPQ"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.2.0/gitversion-linux-5.2.0.tar.gz" size="17514928" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=19bae8abf501e20bca0ebe8df02c11ca8d2e0161" released="2020-03-12" stability="stable" version="5.2.1">
+      <manifest-digest sha256new="N7LBVLXBAFNMW6FZ52ERI3RJ5HOOAEW5QVQJPBEEUZTEOUCQ6H4Q"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.2.1/gitversion-linux-5.2.1.tar.gz" size="17515315" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=308afac51429f62e8ce8c324b85a91323b33d8c1" released="2020-03-12" stability="stable" version="5.2.2">
+      <manifest-digest sha256new="WIVNRMYEJALUL2WCMWZS2LRM27J7KFCKAV27XAEB3D4EPD6RKSOA"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.2.2/gitversion-linux-5.2.2.tar.gz" size="17515238" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=fc89c21bffe0fc5bdcc73c16a879e9900354e35b" released="2020-03-13" stability="stable" version="5.2.3">
+      <manifest-digest sha256new="G5TGPSJOCGMHFNGTIGHYTAYIF5PS7XFYI5QCUN4F4NMXBYQIO6CA"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.2.3/gitversion-linux-5.2.3.tar.gz" size="17514456" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=6baaca375c076b40916bde07c2ab3c8077fc27a8" released="2020-03-17" stability="stable" version="5.2.4">
+      <manifest-digest sha256new="QGAUOTZVRY2PJW22V2VTOS7CY45D2IF7GEOJFJOBKZZW52SWKJMA"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.2.4/gitversion-linux-5.2.4.tar.gz" size="17514938" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=fc9ebf3914a35e78320f638ace18a19cbee3387b" released="2020-05-04" stability="stable" version="5.3.0">
+      <manifest-digest sha256new="XVQAGFGPY4OKCJFSGJNIVE4HNMWVQXHA7FE757TF5KBHVS7M5E4Q"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.0/gitversion-ubuntu.16.04-x64-5.3.0.tar.gz" size="17517916" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=05e8e03ba0c5d0b4c8e685958d4f21219b519c10" released="2020-05-05" stability="stable" version="5.3.1">
+      <manifest-digest sha256new="AKAK4MUHME5ATIQXFRHDG4ZQPMZNZQJVRQX5BDILUDV6W34OVCXQ"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.1/gitversion-ubuntu.16.04-x64-5.3.1.tar.gz" size="17517931" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=b0a06c6df0ce8d9d475212216db21b0aeeae8de8" released="2020-05-05" stability="stable" version="5.3.2">
+      <manifest-digest sha256new="2MMCPXBP4YQN6FLLXHQXAR4SK44ABSFC6NBNW6D3GJHO7VBOUBTA"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.2/gitversion-ubuntu.16.04-x64-5.3.2.tar.gz" size="17596093" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=ba0fe1a496c6526d27792f26ebde3788f271ba58" released="2020-05-12" stability="stable" version="5.3.3">
+      <manifest-digest sha256new="63QKF5PZUC4XDIUDOBQYNKCCSCKTJSD3AF4VVMAKXPCDLANLLFYA"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.3/gitversion-ubuntu.16.04-x64-5.3.3.tar.gz" size="17600474" type="application/x-compressed-tar"/>
     </implementation>
   </group>
 
@@ -207,6 +308,46 @@
     <implementation id="sha1new=1478330e79539986df2a5c93a6bff7c595571ee7" released="2019-11-07" stability="stable" version="5.1.2">
       <manifest-digest sha256new="TQT4I3HZPR7QKTKU2IHVK6OMM2Y75JJH5U252B4PYZ2KSR4LPX5A"/>
       <archive href="https://github.com/GitTools/GitVersion/releases/download/5.1.2/gitversion-osx-5.1.2.tar.gz" size="17921285" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=1e3ebc761ce3119f8015f84c905a7856b0d9849f" released="2019-12-22" stability="stable" version="5.1.3">
+      <manifest-digest sha256new="QD5SND5ZCUKJYJDL62MD3UMNYC2WHUR4AZ6YFX3XHKMR5W4RSKBQ"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.1.3/gitversion-osx-5.1.3.tar.gz" size="17941491" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=fcb55a07c59bc665d8bfc47b27b60808bad2bc7e" released="2020-03-07" stability="stable" version="5.2.0">
+      <manifest-digest sha256new="I7ANHFQGAKKFNI5E64ZACXP6QYDPUCVLY74WPVVFNUK3WX3TXCBQ"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.2.0/gitversion-osx-5.2.0.tar.gz" size="17407016" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=b1b7b03f2054a4518162f4c9ba47abcb04b26faa" released="2020-03-12" stability="stable" version="5.2.1">
+      <manifest-digest sha256new="BMUW5GUOJIOOIVW3AJCHD5DH7WO6NYVISFEQNPUDXZLIN22CHTRQ"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.2.1/gitversion-osx-5.2.1.tar.gz" size="17407083" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=f8f95db910b6eb266e699f143316963cc6ae33b1" released="2020-03-12" stability="stable" version="5.2.2">
+      <manifest-digest sha256new="VW7UIMTHOTGVSDEDSU7DAIL3X3QAZ3DAZCQGN6M2B4GEV7TE4HOQ"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.2.2/gitversion-osx-5.2.2.tar.gz" size="17407126" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=57b3efc8b88d7ecd6f54d6c7825bc9a86ea4cd26" released="2020-03-13" stability="stable" version="5.2.3">
+      <manifest-digest sha256new="CT5U2TVNJOEIIJ7F44XAHVJEJU26CSACVV7BJB7Q6XOS7GNYS5WQ"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.2.3/gitversion-osx-5.2.3.tar.gz" size="17407010" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=6d868e7fa73415618a37bc0bede65e2cb9fb8e88" released="2020-03-17" stability="stable" version="5.2.4">
+      <manifest-digest sha256new="7BVCAQJH3YFNVKIK3D7IC3GTLSZ3CPPXQ5XLEDOCSLAKEZI22UJA"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.2.4/gitversion-osx-5.2.4.tar.gz" size="17406390" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=4d4f6b447a38d4fc9165e540040c71e13c895783" released="2020-05-04" stability="stable" version="5.3.0">
+      <manifest-digest sha256new="46MAR34N3X4APQAAUKOCLVEXQEA2GLSD5FXG7TOGVNBROBVTPJSQ"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.0/gitversion-osx-x64-5.3.0.tar.gz" size="17418525" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=2557d783ab04c3f4109cf79c0a759f50f5dfadbb" released="2020-05-05" stability="stable" version="5.3.1">
+      <manifest-digest sha256new="S4CM4PIOC7T2RTBULP4ZE3DFOQXORJ2X7M3XHCLCKQCGWVY24C2Q"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.1/gitversion-osx-x64-5.3.1.tar.gz" size="17418508" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=423c531ccefba852aef5b6be8704eca9b376bdf7" released="2020-05-05" stability="stable" version="5.3.2">
+      <manifest-digest sha256new="CQAKKWHVSFGFM7PGAY5HW5HBDSOJBWPJKISSAKUTQ3DUDKXVA63A"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.2/gitversion-osx-x64-5.3.2.tar.gz" size="17452848" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation id="sha1new=ddece2d20c05d82c8a796cfb97b673339fcb0fee" released="2020-05-12" stability="stable" version="5.3.3">
+      <manifest-digest sha256new="BHPY5WFSPOVKKVCVJV3E75N4XRVM32FMZWLS2AYHQE7DXNTVMUIA"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.3.3/gitversion-osx-x64-5.3.3.tar.gz" size="17455531" type="application/x-compressed-tar"/>
     </implementation>
   </group>
 

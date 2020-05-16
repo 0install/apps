@@ -1,16 +1,15 @@
 <?xml version="1.0" ?>
-<interface uri="http://repo.roscidus.com/golang/go-windows" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="https://apps.0install.net/golang/go-windows.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>Go - Windows builds</name>
   <summary>tool for managing Go source code</summary>
   <description>This is a tool for managing Go source code. Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.</description>
   <homepage>https://golang.org/</homepage>
   <needs-terminal/>
 
-  <feed-for interface="http://repo.roscidus.com/golang/go"/>
+  <feed-for interface="https://apps.0install.net/golang/go.xml"/>
 
   <group license="BSD License">
     <command name="run" path="bin/go.exe"/>
-    <command name="godoc" path="bin/godoc.exe"/>
     <command name="gofmt" path="bin/gofmt.exe"/>
     <implementation arch="Windows-x86_64" id="sha1new=b89f427845a3579bcb1c640c7df3adc3cd403d2a" released="2018-03-28" stability="stable" version="1.10.1">
       <manifest-digest sha256new="EEI2EASTY6DHKVGZJROAZU4SMAGVMEZBYQ6TKRKMGTHTM4Z2EVDA"/>
@@ -675,6 +674,110 @@
     <implementation arch="Windows-i486" id="sha1new=dcef0ca9377e673a1e8e78f0a57d254c0170a9e8" released="2019-10-31" stability="stable" version="1.13.4">
       <manifest-digest sha256new="LO3IVOMBN6K43NJFAZOXNSZ2XLPP2WLKE5FXBE7CPUVTKOACGBRQ"/>
       <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.13.4.windows-386.msi" size="100302848" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=34a635ce9bb8601e494e3599f724fb0dbfe4a636" released="2019-12-04" stability="stable" version="1.12.14">
+      <manifest-digest sha256new="VN5J73C7ZIJYW3YWXWH3YCLISFGED4QNSBTZOOTCJF7JV2E7HXMA"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.12.14.windows-amd64.msi" size="122384384" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=ed57d1bd97861cb057e38a6cb8900f33bf5f2919" released="2019-12-04" stability="stable" version="1.12.14">
+      <manifest-digest sha256new="XTNVKKFMT5U2DCBWS2JLAJCZ36BATCQOFYFA7NG43WXYTQNPH4FQ"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.12.14.windows-386.msi" size="105558016" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=d15c8fec15ae4867888f452bdc993ff115657f64" released="2019-12-04" stability="stable" version="1.13.5">
+      <manifest-digest sha256new="DZST73RFV4UUZ5RBI3O3BKZHRLUOFGIJYX5G6D47LAYZEEIZUY6A"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.13.5.windows-amd64.msi" size="117338112" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=f2e7262a4c8310a6bea5bf644d2bee9cac0a1969" released="2019-12-04" stability="stable" version="1.13.5">
+      <manifest-digest sha256new="UO4WZTASBB2A3DPMRDBVF3I6LY6DIFNV43UHAMDJSGUVLIW73NOQ"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.13.5.windows-386.msi" size="100315136" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=8b7e72caf976f16289ba08f47690e4aa9e661e56" released="2020-01-09" stability="stable" version="1.12.15">
+      <manifest-digest sha256new="D7Q6MHWWX2HMVAMQQ4RPO2BNRXRGHTYGQKFAL4ZT7CQGBQCGFLJA"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.12.15.windows-amd64.msi" size="122580992" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=6875f9a0be6ceacd35789d65d56406b066b48e74" released="2020-01-09" stability="stable" version="1.12.15">
+      <manifest-digest sha256new="IUUUX26GW4B765CD3MKMWN7INY3IIZR46PIR5PXYNPQ7KCUMLKLQ"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.12.15.windows-386.msi" size="105730048" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=51230e3e948de794e4211f6b94116b8b29514688" released="2020-01-09" stability="stable" version="1.13.6">
+      <manifest-digest sha256new="4KT5FBMEJ7P7Z4U3N64FG6RJHSU5YIO5CXRMPU44BEJXRNLNIRMA"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.13.6.windows-amd64.msi" size="117358592" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=933b1ad6c00696ac90044d26a899517ac4e4e348" released="2020-01-09" stability="stable" version="1.13.6">
+      <manifest-digest sha256new="BDD2N3MTDMTGDHEMFHN4ATSSUAXCN6W4FUXQUQLKUYPN4ESYUK4Q"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.13.6.windows-386.msi" size="100311040" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=1dd32d6386886247605e0fb303948b91db9edc3b" released="2020-01-28" stability="stable" version="1.12.16">
+      <manifest-digest sha256new="THOYVO67K4GLKFSWAHAVKDF6NF4PAJ26WFH224DVW5KGSGNE5YHA"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.12.16.windows-amd64.msi" size="122576896" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=bf4697049c95aa5fca70b74484f793184a3448f8" released="2020-01-28" stability="stable" version="1.12.16">
+      <manifest-digest sha256new="RMNW2TCOPKMLEOLEP5OWMSSPVO75XSKHTCYWGLRQUGO66M5YQTNQ"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.12.16.windows-386.msi" size="105725952" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=191bb3c73ec6ee10940cba2fed97f88ab0370d29" released="2020-01-28" stability="stable" version="1.13.7">
+      <manifest-digest sha256new="2WWA4L6JOZUPPW6HHVY35LPUBBAS4GIZA7UOGCJRIPMRKJPS4EUA"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.13.7.windows-amd64.msi" size="117366784" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=f3995df77299477607eceb9d6c4dee1439deb8e5" released="2020-01-28" stability="stable" version="1.13.7">
+      <manifest-digest sha256new="7G3KTOUIGBTUXDCEH2DXLTAXZPMMD5BVBSKPWTQXVT77Z4DFBYUA"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.13.7.windows-386.msi" size="100311040" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=4035dc5d74ede6b3a8b7a7693d8663842a521c1e" released="2020-02-12" stability="stable" version="1.12.17">
+      <manifest-digest sha256new="RJCTJOYOAGBEREPBNYK2C5MW3Y3THVQNTYI5NIWB2BDORAO5GQTA"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.12.17.windows-amd64.msi" size="122560512" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=9f5df74158fbd753bf7954fa27f221a2beea675e" released="2020-02-12" stability="stable" version="1.12.17">
+      <manifest-digest sha256new="PFAMQ2OAT4P5VL3FQ4RJ6PLN7AB5PCMIXE76YXVOWQTGGTFPZFBA"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.12.17.windows-386.msi" size="105721856" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=9a15b7a50f70740c9b0a3ae9a3e1125e2bfde78c" released="2020-02-12" stability="stable" version="1.13.8">
+      <manifest-digest sha256new="PLYBFUSTJZW2RAXJZDSMY6544P7BLTJWV54SND7EUZAPGBBHO7FA"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.13.8.windows-amd64.msi" size="117370880" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=754789a3fe7c6d782d52ad51f15eb91fa273607b" released="2020-02-12" stability="stable" version="1.13.8">
+      <manifest-digest sha256new="YSIN7MMLQBSJXNIFYKRLKVKQL7KXKZVCMALGN5WVGYTF754IW5WA"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.13.8.windows-386.msi" size="100327424" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=d67e3b7b7f73ef0b4b9ffe3aa48b12e91aa3ff15" released="2020-02-25" stability="stable" version="1.14">
+      <manifest-digest sha256new="HMGFUWAMYU2VFCE52PJO6XW4QL7PZKS7YFPORDSYMLH5UZFX6BJA"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.14.windows-amd64.msi" size="120561664" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=e842ff95884daa9927f04b6425cd806a1631fb38" released="2020-02-25" stability="stable" version="1.14">
+      <manifest-digest sha256new="D4LA452VG3YNT54Y4UXHVDEQ5LUPPCDVW2ML6JHTVZS2ZNVGC5CA"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.14.windows-386.msi" size="103469056" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=91647d428fafafc3ef15aa4390020a1e888ac52a" released="2020-03-19" stability="stable" version="1.13.9">
+      <manifest-digest sha256new="QPG6BNCA4WT4TDUBXSQQUVU4LYPRHWLTALWMYLIWCKTTLPM7RZBQ"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.13.9.windows-amd64.msi" size="117420032" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=5f4d9fe5a7fab9bb7412535e52b651c894db74f9" released="2020-03-19" stability="stable" version="1.13.9">
+      <manifest-digest sha256new="A2U257ZI724GY6UY6YJIFT3NR27CD3OJAODN3PZFO7356HCT4MJQ"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.13.9.windows-386.msi" size="100384768" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=54ef6100ddfa67479ac2699b679e54faece5ccc6" released="2020-03-19" stability="stable" version="1.14.1">
+      <manifest-digest sha256new="EVEJTHEHJXPZRM6YFOJMMRBH7FFUBU4H6YIM45VRCGONGKNWAA7Q"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.14.1.windows-amd64.msi" size="120623104" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=dbcee4a431c6e36709fa0f3f3cdb9c6e78454de0" released="2020-03-19" stability="stable" version="1.14.1">
+      <manifest-digest sha256new="SADD3QHBECCBWBDOAAPMFXZF3SPWFGQHQ74KYF7UATI5VX7HUIZQ"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.14.1.windows-386.msi" size="103530496" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=1cbdf854acd1c131940a503591ec84f7afef1541" released="2020-04-08" stability="stable" version="1.13.10">
+      <manifest-digest sha256new="PYGCJXG2CEWVSQVRDSCPDSUW5EBDGEFS5MIOV6YBMSR5HBGPUJFA"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.13.10.windows-amd64.msi" size="117424128" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=ee56970c42e0849dd37b4e66ceb0d863bdc459d6" released="2020-04-08" stability="stable" version="1.13.10">
+      <manifest-digest sha256new="KLXLEA5DLYAUQH372Y65IHNLYFKMFGGTFCTYHNF6XWUO2X5RX55Q"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.13.10.windows-386.msi" size="100397056" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=0363ef3633f229ec107804135e95375ce51f7562" released="2020-04-08" stability="stable" version="1.14.2">
+      <manifest-digest sha256new="DYA47I6TAYSAXRKSVJH5LV4LO4MAJI64AQBWIJCPHFQOJTEC7XSA"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.14.2.windows-amd64.msi" size="120680448" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=30d45a802ba2cc0e3bfc11ad62d8d7385b24ca0a" released="2020-04-08" stability="stable" version="1.14.2">
+      <manifest-digest sha256new="4YE2TEEXY63CEDUORU5V66IJAW4NNN3LTW6HZMD5UGYGUQ45E55A"/>
+      <archive extract="SourceDir/Go" href="https://dl.google.com/go/go1.14.2.windows-386.msi" size="103583744" type="application/x-msi"/>
     </implementation>
   </group>
 </interface>

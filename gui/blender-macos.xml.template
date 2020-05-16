@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Blender - MacOS builds</name>
+  <summary>versatile 3D animation creation suite</summary>
+  <description>Blender is a fully integrated 3D animation suite for use in animation, still graphics, scientific and engineering visualization, and game content creation. It includes tools for modeling, texturing (node based materials or UV mapped), uv mapping, rigging and constraints, weight painting, particle systems, simulation (fluids, physics, and soft body dynamics and an external crowd simulator), rendering, node based compositing, and non linear video editing, as well as an integrated game engine for real-time interactive 3D, and game creation and playback with cross-platform compatibility.</description>
+  <homepage>http://www.blender.org/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/blender.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/blender.ico" type="image/vnd.microsoft.icon"/>
+  <category>Video</category>
+
+  <feed-for interface="https://apps.0install.net/gui/blender-macos.xml"/>
+
+  <group license="GPL v2 (GNU General Public License)">
+    <command name="run" path="Blender.app/Contents/MacOS/blender"/>
+
+    <implementation arch="MacOSX-x86_64" version="{version}" released="{released}" stability="{stability}">
+      <manifest-digest/>
+      <archive href="https://download.blender.org/release/Blender{version-main}/blender-{version-full}-macOS.dmg" type="application/x-apple-diskimage"/>
+    </implementation>
+  </group>
+</interface>

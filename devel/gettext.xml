@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/devel/gettext" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/devel/gettext.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>GetText</name>
   <summary xml:lang="en">GetText: library and tools for native language support</summary>
   <description xml:lang="en">A well integrated set of tools and documentation to help programmers, translators, and users make other GNU packages produce multi-lingual messages. The tools include a set of conventions about how programs should be written to support message catalogs, a directory and file naming organzation for those message catalogs, a runtime library that supports retrieval of translated messages, and a few stand-alone programs to manipulate sets of strings. A special GNU Emacs mode also helps work with these strings. 
@@ -10,15 +10,15 @@ Libintl is a library that provides native language support to programs. It is pa
 •LibIntl-2 is in Libintl-0.11-.. 
 •LibIntl-3 is in LibIntl-0.14-.. and in Gettext-0.14-.. 
 </description>
-  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
-  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/>
   <category>Development</category>
   <homepage>http://gnuwin32.sourceforge.net/packages/gettext.htm</homepage>
   <needs-terminal/>
   <package-implementation distributions="Gentoo" package="sys-devel/gettext"/>
   <package-implementation package="gettext"/>
   <implementation arch="Windows-i486" id="sha1new=88e89c8b2adc839d16bf89710f76e9e2436b34b2" langs="be ca cs da de el es et fi fr ga gl id it ja ko nl nn no pl pt pt_BR ro ru sk sl sr sv tr uk vi zh_CN zh_TW" license="GPL v3+ (GNU General Public License), LGPLv2.1+ (GNU Lesser General Public License)" released="2005-05-06" version="0.14.4-3">
-    <requires interface="http://repo.roscidus.com/lib/libiconv" version="1.9.2-1-3">
+    <requires interface="https://apps.0install.net/lib/libiconv.xml" version="1.9.2-1-3">
       <environment insert="bin" name="PATH"/>
     </requires>
     <command name="run" path="bin/gettext.exe"/>
@@ -40,7 +40,7 @@ Libintl is a library that provides native language support to programs. It is pa
     <command name="ngettext" path="bin/ngettext.exe"/>
     <command name="urlget" path="bin/urlget.exe"/>
     <command name="xgettext" path="bin/xgettext.exe">
-      <requires interface="http://repo.roscidus.com/lib/expat1" version="1.95.0">
+      <requires interface="https://apps.0install.net/lib/expat1.xml" version="1.95.0">
         <environment insert="." name="PATH"/>
       </requires>
     </command>
@@ -48,10 +48,10 @@ Libintl is a library that provides native language support to programs. It is pa
       <executable-in-path name="gettext"/>
       <executable-in-path command="ngettext" name="ngettext"/>
       <executable-in-path command="envsubst" name="envsubst"/>
-      <requires interface="http://repo.roscidus.com/utils/coreutils">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <command name="msgfilter" path="bin/msgfilter.exe"/>
     <manifest-digest sha256new="VJG4ZEAYQCHTTLH232KEDSKFE7ZWOV3EVRWSKJ7J37MJKSHQCJBA"/>

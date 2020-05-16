@@ -1,0 +1,185 @@
+<?xml version="1.0" ?>
+<interface uri="https://apps.0install.net/0install/0install-win.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Zero Install for Windows</name>
+  <summary>Windows version of 0install, the decentralized installation system</summary>
+  <description>This is the Windows version of Zero Install. Zero Install is a cross-platform, decentralized installation system. Instead of having a central repository in which all software is placed under a naming scheme managed by some central authority, programs and libraries in Zero Install are identified by URIs. Anyone who can create a web-page can publish software. Anyone can install software (not just administrators).</description>
+  <icon href="https://raw.githubusercontent.com/0install/0install-win/master/icon.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install-win/master/icon.png" type="image/vnd.microsoft.icon"/>
+  <homepage>http://0install.de/</homepage>
+
+  <group license="LGPL v3 (GNU Lesser General Public License)">
+    <command name="run" path="0install.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml"/>
+    </command>
+    <command name="run-gui" path="0install-win.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml"/>
+    </command>
+    <command name="central" path="ZeroInstall.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml"/>
+    </command>
+    <command name="update" path="0install-win.exe">
+      <arg>maintenance</arg>
+      <arg>deploy</arg>
+      <arg>--batch</arg>
+    </command>
+
+    <implementation id="sha1new=01b77dca81d3b0bab7cdde9c0c92604f129f33d1" released="2016-03-06" stability="stable" version="2.11.0">
+      <manifest-digest sha1new="01b77dca81d3b0bab7cdde9c0c92604f129f33d1" sha256="132e2a031979f7036bb8a604cf9d7d6d7780b7cd81c5b173fa464152d8eef125" sha256new="CMXCUAYZPH3QG25YUYCM7HL5NV3YBN6NQHC3C472IZAVFWHO6ESQ"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.11.0/ZeroInstall-2.11.0.tar.gz" size="3295058"/>
+    </implementation>
+    <implementation id="sha1new=119d63aeafffe88bf2d66c50c538f8acba1c9107" released="2016-03-27" stability="stable" version="2.11.1">
+      <manifest-digest sha1new="119d63aeafffe88bf2d66c50c538f8acba1c9107" sha256="616da23d922dc2c5ce52bc296fae5583ae7a5ec07182bea7654d4309b236940a" sha256new="MFW2EPMSFXBMLTSSXQUW7LSVQOXHUXWAOGBL5J3FJVBQTMRWSQFA"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.11.1/ZeroInstall-2.11.1.tar.gz" size="3295024"/>
+    </implementation>
+    <implementation id="sha1new=be0c72fd002532931d5e5b030a7997035dcdee09" released="2016-04-05" stability="stable" version="2.11.2">
+      <manifest-digest sha1new="be0c72fd002532931d5e5b030a7997035dcdee09" sha256="3420993e460a0dde364fe90b318dfc574169702e2d5e8c232fad20e7f545f173" sha256new="GQQJSPSGBIG54NSP5EFTDDP4K5AWS4BOFVPIYIZPVUQOP5KF6FZQ"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.11.2/ZeroInstall-2.11.2.tar.gz" size="3295253"/>
+    </implementation>
+    <implementation id="sha1new=3c0a05c07c76b3c3e67a9ed12b9ba0bd97acce2a" released="2016-04-18" stability="stable" version="2.11.3">
+      <manifest-digest sha1new="3c0a05c07c76b3c3e67a9ed12b9ba0bd97acce2a" sha256="9ceca13ef410332a3dc940536becbe8115261c9af882c9c3c101cb0e00c1216f" sha256new="TTWKCPXUCAZSUPOJIBJWX3F6QEKSMHE27CBMTQ6BAHFQ4AGBEFXQ"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.11.3/ZeroInstall-2.11.3.tar.gz" size="3293868"/>
+    </implementation>
+    <implementation id="sha1new=7e89468b85837cb0ef8dc18855e1b1b2839b3671" released="2016-05-16" stability="stable" version="2.11.5">
+      <manifest-digest sha1new="7e89468b85837cb0ef8dc18855e1b1b2839b3671" sha256="426c09e7066d81cf5a22af30874f25d20a6c69a22e299d60eaa013e104533001" sha256new="IJWATZYGNWA46WRCV4YIOTZF2IFGY2NCFYUZ2YHKUAJ6CBCTGAAQ"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.11.5/ZeroInstall-2.11.5.tar.gz" size="3296782"/>
+    </implementation>
+    <implementation id="sha1new=747faf95ee4cffdd4eb71f3234cd9bccfd75137c" released="2016-07-08" stability="stable" version="2.11.6">
+      <manifest-digest sha1new="747faf95ee4cffdd4eb71f3234cd9bccfd75137c" sha256="064fdedb88a7eec135fe1513b7ebce99bda4d77fe3380aff4f830bfc72198145" sha256new="AZH55W4IU7XMCNP6CUJ3P26OTG62JV374M4AV72PQMF7Y4QZQFCQ"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.11.6/ZeroInstall-2.11.6.tar.gz" size="3227413"/>
+    </implementation>
+    <implementation id="sha1new=d904eca7d0355d92669e9c4601303de25de2b950" released="2016-07-19" stability="stable" version="2.11.7">
+      <manifest-digest sha1new="d904eca7d0355d92669e9c4601303de25de2b950" sha256="4ab8cc3a762ae1d43e260981e45bf38536e236a64e16b33ffe551a851879c804" sha256new="JK4MYOTWFLQ5IPRGBGA6IW7TQU3OENVGJYLLGP76KUNIKGDZZACA"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.11.7/ZeroInstall-2.11.7.tar.gz" size="3227998"/>
+    </implementation>
+    <implementation id="sha1new=d117a84ae63aed506843c78d49eb8e4415e11cca" released="2016-08-31" stability="stable" version="2.11.8">
+      <manifest-digest sha1new="d117a84ae63aed506843c78d49eb8e4415e11cca" sha256="bf721c9a39466cadb228f92ed33c09cd4388a0c00121ec27f7df703827211571" sha256new="X5ZBZGRZIZWK3MRI7EXNGPAJZVBYRIGAAEQ6YJ7X35YDQJZBCVYQ"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.11.8/ZeroInstall-2.11.8.tar.gz" size="3247492"/>
+    </implementation>
+    <implementation id="sha1new=d886da500fe087563961fe8223d2ff31502513fe" released="2016-09-04" stability="stable" version="2.11.9">
+      <manifest-digest sha1new="d886da500fe087563961fe8223d2ff31502513fe" sha256="8330378a8f6ab83b1a37e9aedb268262b561486fe6406c3a33b7f1e1e2b5a84a" sha256new="QMYDPCUPNK4DWGRX5GXNWJUCMK2WCSDP4ZAGYORTW7Y6DYVVVBFA"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.11.9/ZeroInstall-2.11.9.tar.gz" size="3247401"/>
+    </implementation>
+    <implementation id="sha1new=e626b611434c35c0a6602908bb814c3feaf8ea0e" released="2016-10-07" stability="stable" version="2.11.10">
+      <manifest-digest sha1new="e626b611434c35c0a6602908bb814c3feaf8ea0e" sha256="e3d6379fc78f841ee30b47ee4b75e8fa1a98a47950e3bd7e56736f33e9c01274" sha256new="4PLDPH6HR6CB5YYLI7XEW5PI7INJRJDZKDR327SWONXTH2OACJ2A"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.11.10/ZeroInstall-2.11.10.tar.gz" size="3250167"/>
+    </implementation>
+    <implementation id="sha1new=e7a88354631090b4efd5bae30e5bbb0fee3fe5d5" released="2016-10-20" stability="stable" version="2.12.0">
+      <manifest-digest sha1new="e7a88354631090b4efd5bae30e5bbb0fee3fe5d5" sha256="08f7972a7a4a9f259a0908d569eaf3fa9586eaed108734de8fa0e1e145f2e39d" sha256new="BD3ZOKT2JKPSLGQJBDKWT2XT7KKYN2XNCCDTJXUPUDQ6CRPS4OOQ"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.12.0/ZeroInstall-2.12.0.tar.gz" size="3239447"/>
+    </implementation>
+    <implementation id="sha1new=e8e84686b1afd50e11e8ffcb1e831817311e5c28" released="2016-12-19" stability="stable" version="2.12.1">
+      <manifest-digest sha1new="e8e84686b1afd50e11e8ffcb1e831817311e5c28" sha256="f706a036e15b06fe81a04809a9c14268e8d15264af0f2c1743fc8a33b6db53d4" sha256new="64DKANXBLMDP5ANAJAE2TQKCNDUNCUTEV4HSYF2D7SFDHNW3KPKA"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.12.1/ZeroInstall-2.12.1.tar.gz" size="3239745"/>
+    </implementation>
+    <implementation id="sha1new=b4d1a3b4f2ce233b9d148df65a59f3495da37345" released="2017-05-04" stability="stable" version="2.13.0">
+      <manifest-digest sha1new="b4d1a3b4f2ce233b9d148df65a59f3495da37345" sha256="d562f780b171746b3965fad2b0e4792e747ef0a63500a830fa6e3a4d513f42bd" sha256new="2VRPPAFROF2GWOLF7LJLBZDZFZ2H54FGGUAKQMH2NY5E2UJ7IK6Q"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.13.0/ZeroInstall-2.13.0.tar.gz" size="3292289"/>
+    </implementation>
+    <implementation id="sha1new=e7abd5db5c387f7c1c57f24dde925c29ec328259" released="2017-06-21" stability="stable" version="2.13.1">
+      <manifest-digest sha1new="e7abd5db5c387f7c1c57f24dde925c29ec328259" sha256="68e1ce624f28a64d0f5606298e51b03055b0bc17dc3ee495ac7a1d7f20e7d9e2" sha256new="NDQ44YSPFCTE2D2WAYUY4UNQGBK3BPAX3Q7OJFNMPIOX6IHH3HRA"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.13.1/ZeroInstall-2.13.1.tar.gz" size="3210287"/>
+    </implementation>
+    <implementation id="sha1new=947a8d5ef0da70d9b3dcf5c268d936ed0898aeb9" released="2017-08-07" stability="stable" version="2.13.2">
+      <manifest-digest sha1new="947a8d5ef0da70d9b3dcf5c268d936ed0898aeb9" sha256="6938255c9c68ce9a2e7042c9e382d26261cc581c97d3aae4310a5b6aa5c8d261" sha256new="NE4CKXE4NDHJULTQILE6HAWSMJQ4YWA4S7J2VZBRBJNWVJOI2JQQ"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.13.2/ZeroInstall-2.13.2.tar.gz" size="3210596"/>
+    </implementation>
+    <implementation id="sha1new=0b8c512904b691f7e90010c474f77d31c5f28363" released="2017-08-07" stability="stable" version="2.13.3">
+      <manifest-digest sha1new="0b8c512904b691f7e90010c474f77d31c5f28363" sha256="87ddbbe15f6123ab64eeba8b4e7dae58eb4da24c95f927f2914e47e95a360b05" sha256new="Q7O3XYK7MER2WZHOXKFU47NOLDVU3ISMSX4SP4URJZD6SWRWBMCQ"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.13.3/ZeroInstall-2.13.3.tar.gz" size="3210763"/>
+    </implementation>
+    <implementation id="sha1new=2aeb6f2e89849dacee3759770d19071c3bc8bc3c" released="2017-09-19" stability="stable" version="2.13.6">
+      <manifest-digest sha1new="2aeb6f2e89849dacee3759770d19071c3bc8bc3c" sha256="b9dc07d8396c5a1a0c6da3cd575b1dbb21bb92d5c346dde9165aa275bcbcb476" sha256new="XHOAPWBZNRNBUDDNUPGVOWY5XMQ3XEWVYNDN32IWLKRHLPF4WR3A"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.13.6/ZeroInstall-2.13.6.tar.gz" size="3199607"/>
+    </implementation>
+    <implementation id="sha1new=beb69201ce4e0a1e25401602416a30f801d1f23e" released="2017-10-27" stability="stable" version="2.13.8">
+      <manifest-digest sha1new="beb69201ce4e0a1e25401602416a30f801d1f23e" sha256="88832ee83cd7048f3e51d1cf5c4c69d5ca61a7e048f0de741547fb6af562002b" sha256new="RCBS52B424CI6PSR2HHVYTDJ2XFGDJ7AJDYN45AVI75WV5LCAAVQ"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.13.8/ZeroInstall-2.13.8.tar.gz" size="3202032"/>
+    </implementation>
+    <implementation id="sha1new=994232f948b9364c15e951e5be4b76670ac98d21" released="2017-11-13" stability="stable" version="2.14.0">
+      <manifest-digest sha1new="994232f948b9364c15e951e5be4b76670ac98d21" sha256="4009b7d3d233fb21dc428b3e645640e58163d02524a6c0349f996f3eac75fd31" sha256new="IAE3PU6SGP5SDXCCRM7GIVSA4WAWHUBFESTMANE7TFXT5LDV7UYQ"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.14.0/ZeroInstall-2.14.0.tar.gz" size="3189211"/>
+    </implementation>
+    <implementation id="sha1new=3e9d2d6cb82cfda70b107175b2c910ba2e5659cd" released="2017-11-30" stability="stable" version="2.14.2">
+      <manifest-digest sha1new="3e9d2d6cb82cfda70b107175b2c910ba2e5659cd" sha256="c3bec657994537b93575bb8580901f35e631e24ae2118a186269f9b086e8d185" sha256new="YO7MMV4ZIU33SNLVXOCYBEA7GXTDDYSK4IIYUGDCNH43BBXI2GCQ"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.14.2/ZeroInstall-2.14.2.tar.gz" size="3192312"/>
+    </implementation>
+    <implementation id="sha1new=a4962a525c0c01c3218c37ed6d4bc4e6ae752fe4" released="2017-12-04" stability="stable" version="2.14.3">
+      <manifest-digest sha1new="a4962a525c0c01c3218c37ed6d4bc4e6ae752fe4" sha256="8a2249e7b81b786490c3e87b2b3b82a2217172d2d6fcc4e07338001c41cd4f6d" sha256new="RIRETZ5YDN4GJEGD5B5SWO4CUIQXC4WS236MJYDTHAABYQONJ5WQ"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.14.3/ZeroInstall-2.14.3.tar.gz" size="3195758"/>
+    </implementation>
+    <implementation id="sha1new=8990d33557a438fa4c948a643a0fe875e3543591" released="2018-01-08" stability="stable" version="2.14.5">
+      <manifest-digest sha1new="8990d33557a438fa4c948a643a0fe875e3543591" sha256="18dda18242feb50680467c7b176d581eb960eed302bc3c1fcbf60081d72c9521" sha256new="DDO2DASC722QNACGPR5RO3KYD24WB3WTAK6DYH6L6YAIDVZMSUQQ"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.14.5/ZeroInstall-2.14.5.tar.gz" size="3195089"/>
+    </implementation>
+    <implementation id="sha1new=de7e05f4f042d580ba7cbb7dadcd2647cbc72988" released="2018-01-21" stability="stable" version="2.14.6">
+      <manifest-digest sha1new="de7e05f4f042d580ba7cbb7dadcd2647cbc72988" sha256="4daf5c31c74c3efff96715001e34b1e5d285473c68fff85223d86e32ba41ad82" sha256new="JWXVYMOHJQ7P76LHCUAB4NFR4XJIKRZ4ND77QURD3BXDFOSBVWBA"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.14.6/ZeroInstall-2.14.6.tar.gz" size="3195520"/>
+    </implementation>
+    <implementation id="sha1new=0822ea5d2d4a4db488f810628a94e887fc77dc10" released="2018-03-02" stability="stable" version="2.14.7">
+      <manifest-digest sha1new="0822ea5d2d4a4db488f810628a94e887fc77dc10" sha256="6c07e89086bdd9c7cb1f0dfba240de3a38a5af6eed891b2989eb05ebf0a8a0fe" sha256new="NQD6REEGXXM4PSY7BX52EQG6HI4KLL3O5WERWKMJ5MC6X4FIUD7A"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.14.7/ZeroInstall-2.14.7.tar.gz" size="3195677"/>
+    </implementation>
+    <implementation id="sha1new=0c1fe308823e2aa5f45e24c3363fb861574f4354" released="2018-06-08" stability="stable" version="2.15.1">
+      <manifest-digest sha256new="3JKRZKCHDH7BU452SYYOOZXEYX6UU462XV6LUBM5LF4O7AK5QS7A"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.15.1/ZeroInstall-2.15.1.tar.gz" size="3244131"/>
+    </implementation>
+    <implementation id="sha1new=71563cbe8a73fb6ecbbdca8559c482de63b8d050" released="2018-12-07" stability="stable" version="2.16.0">
+      <manifest-digest sha256new="WTL42EGGBNY2ANB7P4ODAQJTE6GEH4TDHGPZ7R77BCP6PAWQ4WFA"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.16.0/ZeroInstall-2.16.0.tar.gz" size="3224731"/>
+    </implementation>
+    <implementation id="sha1new=128f978f0bb855e5a79b9058ee1c4704f134a657" released="2018-12-21" stability="stable" version="2.16.1">
+      <manifest-digest sha256new="HM4GGUNCBPWBNA3WC423U3L62QWYPP4KGZGVG2O5EF46GCPNACBQ"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.16.1/ZeroInstall-2.16.1.tar.gz" size="3100866"/>
+    </implementation>
+    <implementation id="sha1new=7de60d52ba134a79e6fc4755855d528efd05776e" released="2019-02-04" stability="stable" version="2.16.2">
+      <manifest-digest sha256new="FWDG2TMMCHW4PF5ARGXTLW2Q3M4GJU3KS775DRMDV6QMJCEAGV7Q"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.16.2/ZeroInstall-2.16.2.tar.gz" size="3101074"/>
+    </implementation>
+    <implementation id="sha1new=2915fee2be52eebeb66b93f135e48ddd4cfba2ff" released="2019-02-11" stability="stable" version="2.16.3">
+      <manifest-digest sha256new="BZYTPFUKP3GGHZBN3B55PDOA3L2Q4IHMDPDTA4QY7LMXCKMMZUGQ"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.16.3/ZeroInstall-2.16.3.tar.gz" size="3287783"/>
+    </implementation>
+    <implementation id="sha1new=d0e835603e0695da208faaefc1d35966b6764a75" released="2019-04-04" stability="stable" version="2.16.4">
+      <manifest-digest sha256new="MQKCVRZTAVLOAWCIJCE4VMVQV672DYH4ESODT5LQAQD6JDKOFV2A"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.16.4/ZeroInstall-2.16.4.tar.gz" size="3289580"/>
+    </implementation>
+    <implementation id="sha1new=43175f66e6296ecfb10c858f2402a477006af3e3" released="2019-05-24" stability="stable" version="2.16.5">
+      <manifest-digest sha256new="5E2PZYBI4YWR4XZRK2IDKJMESAH3D3BFGVAV267Z6AOAOMKEWAHQ"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.16.5/ZeroInstall-2.16.5.tar.gz" size="3289331"/>
+    </implementation>
+    <implementation id="sha1new=7032242290b7281f34180fda88baaabe45107914" released="2019-05-24" stability="stable" version="2.16.6">
+      <manifest-digest sha256new="Z7MMJYZMBDNZMQKRUNOA3IEWGB7AXITJWCLK7RRXFIQ2EVBUX5JQ"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.16.6/ZeroInstall-2.16.6.tar.gz" size="3288996"/>
+    </implementation>
+    <implementation id="sha1new=4ef9630767df5ae60ebe6a66ee2f70fd4bf62903" released="2019-07-25" stability="stable" version="2.16.7">
+      <manifest-digest sha256new="ASNUZCPQNYLB3D3Z76WOFZ6AKWUDFF5ENTX4U3HYFRVXNYKB43VA"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.16.7/ZeroInstall-2.16.7.tar.gz" size="3289509"/>
+    </implementation>
+    <implementation id="sha1new=2fa60cdd6cbaf869cb11c9d671bcf9457436813c" released="2019-10-15" stability="stable" version="2.16.8">
+      <manifest-digest sha256new="O6C2HJ5UUAEEGAM2CZQQFJBCZQUJC7OU3FQDMBF3F7LMBLWB5NGQ"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.16.8/ZeroInstall-2.16.8.tar.gz" size="3287749"/>
+    </implementation>
+    <implementation id="sha1new=cbebec5435c25612290ddfb2acd2f7f7989312d2" released="2020-01-29" stability="buggy" version="2.17.0">
+      <manifest-digest sha256new="FJ6UT3UOMMBXN7LDP3O2I5DLSQAUMHNUATMOVE3Y3L5IHBH7IQJA"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.17.0/0install-win-2.17.0.tar.gz" size="3295688"/>
+    </implementation>
+    <implementation id="sha1new=15dba153ddd81cf56e66633336bb225d52cbd9db" released="2020-02-03" stability="stable" version="2.17.2">
+      <manifest-digest sha256new="NSXK5K7RQOR4JN6AXIQYLSLSDNDM6RVNTRUJ4M6PUKWRLIQIA3WQ"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.17.2/0install-win-2.17.2.tar.gz" size="3295873"/>
+    </implementation>
+  </group>
+
+  <entry-point binary-name="0install" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">Zero Install Command command-line interface</name>
+    <summary xml:lang="en">command-line interface for Zero Install, for installing and launching applications, managing caches, etc.</summary>
+  </entry-point>
+  <entry-point binary-name="0install-win" command="run-gui">
+    <name xml:lang="en">Zero Install Command GUI</name>
+    <summary xml:lang="en">WinForms-based GUI for Zero Install, for installing and launching applications, managing caches, etc.</summary>
+  </entry-point>
+  <entry-point binary-name="ZeroInstall" command="central">
+    <name xml:lang="en">Zero Install Central</name>
+    <summary xml:lang="en">the main graphical user interface</summary>
+  </entry-point>
+</interface>

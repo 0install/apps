@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/utils/libarchive" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/utils/libarchive.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>LibArchive</name>
   <summary xml:lang="en">library for reading and writing streaming archives </summary>
   <description xml:lang="en">Libarchive is a programming library that can create and read several different streaming archive formats, including most popular tar variants, several cpio formats, and both BSD and GNU ar variants. It can also write shar archives and read ISO9660 CDROM images and ZIP archives. The bsdtar program is an implementation of tar(1) that is built on top of libarchive. It started as a test harness, but has grown into a feature-competitive replacement for GNU tar. 
@@ -25,16 +25,16 @@ The bsdtar archiving program is built on libarchive, so offers a variety of mode
 •GNU tar support. Libarchive reads most GNU tar archives. If there is demand, this can be improved further. 
 •BSD license. 
 </description>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/libarchive.ico" type="image/vnd.microsoft.icon"/>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/utils/libarchive.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/libarchive.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/libarchive.png" type="image/png"/>
   <category>System</category>
   <homepage>http://gnuwin32.sourceforge.net/packages/libarchive.htm</homepage>
   <needs-terminal/>
   <implementation arch="Windows-i486" id="sha1new=efaade1e475a4b90934407118837bd7759007f79" license="BSD License (revised)" released="2008-06-27" version="2.4.12-1-3">
-    <requires interface="http://repo.roscidus.com/utils/bzip2">
+    <requires interface="https://apps.0install.net/utils/bzip2.xml" version="1.0.5">
       <environment insert="bin" name="PATH"/>
     </requires>
-    <requires interface="http://repo.roscidus.com/lib/zlib">
+    <requires interface="https://apps.0install.net/lib/zlib.xml">
       <environment insert="bin" name="PATH"/>
     </requires>
     <command name="run" path="bin/bsdtar.exe"/>

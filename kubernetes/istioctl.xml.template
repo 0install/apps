@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>istioctl</name>
+  <summary>command line utility to debug and diagnose Istio</summary>
+  <description>Istio configuration command line utility for service operators to debug and diagnose their Istio mesh.</description>
+  <homepage>https://istio.io/docs/reference/commands/istioctl/</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/kubernetes/istioctl.xml"/>
+
+  <group license="Apache License 2.0">
+    <implementation arch="Linux-x86_64" main="istioctl" released="{released}" stability="{stability}" version="{version}">
+      <manifest-digest/>
+      <archive href="https://github.com/istio/istio/releases/download/{original-version}/istioctl-{original-version}-linux-amd64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" main="istioctl" released="{released}" stability="{stability}" version="{version}">
+      <manifest-digest/>
+      <archive href="https://github.com/istio/istio/releases/download/{original-version}/istioctl-{original-version}-osx.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="istioctl.exe" released="{released}" stability="{stability}" version="{version}">
+      <manifest-digest/>
+      <archive href="https://github.com/istio/istio/releases/download/{original-version}/istioctl-{original-version}-win.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

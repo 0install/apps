@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/lib/xml2" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/lib/xml2.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>libxml2</name>
   <summary>GNOME XML library</summary>
   <description>XML is a metalanguage to let you design your own markup language.
@@ -12,8 +12,8 @@ metalanguage for markup languages.
 
 This package provides a library providing an extensive API to handle
 such XML data files.</description>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/xml2.ico" type="image/vnd.microsoft.icon"/>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/lib/xml2.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/lib/xml2.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/lib/xml2.png" type="image/png"/>
   <category>Development</category>
   <homepage>http://xmlsoft.org/</homepage>
   <package-implementation distributions="Gentoo" package="media-libs/libxml2"/>
@@ -26,7 +26,7 @@ such XML data files.</description>
       <archive href="libxml2-amd64-2.7.8.dfsg-2+squeeze1.tar.bz2" size="861925"/>
     </implementation>
     <group>
-      <requires interface="http://repo.roscidus.com/lib/zlib1g">
+      <requires interface="https://apps.0install.net/lib/zlib1g.xml">
         <environment insert="usr/lib" name="LD_LIBRARY_PATH"/>
       </requires>
       <implementation id="sha1new=a7e5d754ed506f4e567fabeae05884d073a69433" released="2012-03-27" version="2.7.8">
@@ -42,6 +42,12 @@ such XML data files.</description>
     <command name="xmlcatalog" path="bin/xmlcatalog.exe"/>
     <manifest-digest sha256new="IOQHINFBGVOZDQTIZMG5VMB64HZBUAVXE4OBWFE4G3CSWDCNWHQQ"/>
     <archive href="https://sourceforge.net/projects/gnuwin32/files/libxml/2.4.12-1/libxml2-2.4.12-bin.zip" size="385904" type="application/zip"/>
+  </implementation>
+  <implementation license="LGPL (GNU Lesser General Public License), GPL v3 (GNU General Public License), zlib/libpng license" arch="Windows-i486" version="2.7.8" released="2012-01-15" id="sha1new=6af93a5742bded27d4160d475b2086a6c576cbe9">
+    <command name="xmllint" path="bin/xmllint.exe" />
+    <command name="xmlcatalog" path="bin/xmlcatalog.exe" />
+    <manifest-digest sha256new="JPEFD64HLS3IXJUKMXXWUUUQDFEPBCPJUUR2JONWQSELEIEAR3GA" />
+    <archive href="https://sourceforge.net/projects/ezwinports/files/libxml2-2.7.8-w32-bin.zip" size="3104172" type="application/zip" />
   </implementation>
   <entry-point binary-name="xmllint" command="xmllint">
     <needs-terminal/>

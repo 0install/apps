@@ -1,0 +1,1544 @@
+<?xml version="1.0" ?>
+<interface uri="https://apps.0install.net/gui/vlc.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>VLC media player</name>
+  <summary xml:lang="en">powerful media player, playing most of the media codecs and video formats out there</summary>
+  <summary xml:lang="de">mächtiger Media Player, der die meissten Mediencodecs und Videoformate abspielen kann</summary>
+  <description xml:lang="en">The media player that fills all your needs. It can handle DVDs, (S)VCDs, Audio CDs, web streams, TV cards and much more. You don't need to keep track of a dozen codec packs you need to have installed. VLC has all codecs built-in. It comes with support for nearly all codec there is. And what is more it can even play back the file or media if it is damaged! Missing or broken pieces are no stop to VLC, it plays all the video and audio information that's still intact.</description>
+  <description xml:lang="de">Der Media Player der alle Ihre Wünsche abdeckt. Er kann mit DVDs, (S)VCDs, Audio CDs, Web Streams, TV Karten und vielem mehr umgehen. Sie brauchen nicht dutzende Codec Packs zu installieren. VLC hat alle Codecs bereits eingebaut. Zusätzlich kann VLC Dateien sogar wiedergeben wenn sie beschädigt sind! Fehlende oder beschädigte Teile halten VLC nicht auf, es gibt einfach alle Video- und Audio-Informationen die noch intakt sind wieder.</description>
+  <homepage>http://www.videolan.org/vlc/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/vlc.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/vlc.ico" type="image/vnd.microsoft.icon"/>
+  <category>AudioVideo</category>
+
+  <entry-point binary-name="vlc" command="run"/>
+
+  <package-implementation arch="Linux-*" main="/usr/bin/vlc" package="vlc"/>
+
+  <group license="GPL v2 (GNU General Public License)">
+    <implementation arch="Windows-x86_64" id="sha1new=4918919d75ec696161a901165d72cd8425dee60d" main="vlc.exe" released="2012-09-03" stability="stable" version="2.0.2">
+      <manifest-digest sha1new="4918919d75ec696161a901165d72cd8425dee60d" sha256="0ea7774bd860203489a6f66ca6275c1eaba4411cf0af6e8977780445f9358d1a" sha256new="B2TXOS6YMAQDJCNG6ZWKMJ24D2V2IQI46CXW5CLXPACEL6JVRUNA"/>
+      <archive extract="vlc-2.0.2" href="https://get.videolan.org/vlc/2.0.2/win64/vlc-2.0.2-win64.7z" size="20848687" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=125145d469de1c4b6947026b41646ed2f25783f3" main="vlc.exe" released="2012-09-03" stability="stable" version="2.0.2">
+      <manifest-digest sha1new="125145d469de1c4b6947026b41646ed2f25783f3" sha256="48ad8d1d6c0befa35c23038790fa658d60a0bec6850186ba9288f049b8b9fa3d" sha256new="JCWY2HLMBPX2GXBDAODZB6TFRVQKBPWGQUAYNOUSRDYETOFZ7I6Q"/>
+      <archive extract="vlc-2.0.2" href="https://get.videolan.org/vlc/2.0.2/win32/vlc-2.0.2-win32.7z" size="19501743" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=d3d55ee2a1e0735515bf19ab7a8e23f35c975114" main="vlc.exe" released="2013-01-10" stability="stable" version="2.0.4">
+      <manifest-digest sha1new="d3d55ee2a1e0735515bf19ab7a8e23f35c975114" sha256="225c05206a207827888eb70d2bc0c2754926d3d6034131fe28ee669d6d31b85c" sha256new="EJOAKIDKEB4CPCEOW4GSXQGCOVESNU6WANATD7RI5ZTJ23JRXBOA"/>
+      <archive extract="vlc-2.0.4" href="https://get.videolan.org/vlc/2.0.4/win64/vlc-2.0.4-win64.7z" size="21174659" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=189274b9e200cf8e14edda0302aacdf260446584" main="vlc.exe" released="2013-01-10" stability="stable" version="2.0.4">
+      <manifest-digest sha1new="189274b9e200cf8e14edda0302aacdf260446584" sha256="e53332fdd7872f714674b13fd2924f3c1b87a832c1ac8979be643455f740e80d" sha256new="4UZTF7OXQ4XXCRTUWE75FESPHQNYPKBSYGWIS6N6MQ2FL52A5AGQ"/>
+      <archive extract="vlc-2.0.4" href="https://get.videolan.org/vlc/2.0.4/win32/vlc-2.0.4-win32.7z" size="20189200" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=441b5772a606bbf77de42d5f84a29e8f18405a50" main="vlc.exe" released="2012-12-29" stability="stable" version="2.0.5">
+      <manifest-digest sha1new="441b5772a606bbf77de42d5f84a29e8f18405a50" sha256="35f207dea4e1f707f2daa69f8bad19a8be34f1d5c716a88b42ca33cc1f622895" sha256new="GXZAPXVE4H3QP4W2U2PYXLIZVC7DJ4OVY4LKRC2CZIZ4YH3CFCKQ"/>
+      <archive extract="vlc-2.0.5" href="https://get.videolan.org/vlc/2.0.5/win64/vlc-2.0.5-win64.7z" size="21103439" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=500f669e49bd0d32f14b1baa713640be236e1dd9" main="vlc.exe" released="2012-12-29" stability="stable" version="2.0.5">
+      <manifest-digest sha1new="500f669e49bd0d32f14b1baa713640be236e1dd9" sha256="8f488bc84c602ea8163cdd4ac34cd80f162059a96d84c2d0a2a43b0a30668a14" sha256new="R5EIXSCMMAXKQFR43VFMGTGYB4LCAWNJNWCMFUFCUQ5QUMDGRIKA"/>
+      <archive extract="vlc-2.0.5" href="https://get.videolan.org/vlc/2.0.5/win32/vlc-2.0.5-win32.7z" size="20135918" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=a41529801a7e1e0a4dddb04f5da3b3378f089311" main="vlc.exe" released="2013-06-14" stability="stable" version="2.0.6">
+      <manifest-digest sha1new="a41529801a7e1e0a4dddb04f5da3b3378f089311" sha256="2e68d4717918e9fbf8eceba6d4d31315806f8551c7693be79fed8f20e7ac308d" sha256new="FZUNI4LZDDU7X6HM5OTNJUYTCWAG7BKRY5UTXZ475WHSBZ5MGCGQ"/>
+      <archive extract="vlc-2.0.6" href="https://get.videolan.org/vlc/2.0.6/win64/vlc-2.0.6-win64.7z" size="20724037" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=d6345c5ab202259dcf7d9686d8db4a526d690c60" main="vlc.exe" released="2013-06-14" stability="stable" version="2.0.6">
+      <manifest-digest sha1new="d6345c5ab202259dcf7d9686d8db4a526d690c60" sha256="11a1500f45449d02dd1f9bea07924ab85263d21eaa0119828a13a96a60e3c1ca" sha256new="CGQVAD2FISOQFXI7TPVAPESKXBJGHUQ6VIARTAUKCOUWUYHDYHFA"/>
+      <archive extract="vlc-2.0.6" href="https://get.videolan.org/vlc/2.0.6/win32/vlc-2.0.6-win32.7z" size="20599467" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=ecee07b648cb7ac87e135d702d6f7a671c8e7c13" main="vlc.exe" released="2013-06-11" stability="stable" version="2.0.7">
+      <manifest-digest sha1new="ecee07b648cb7ac87e135d702d6f7a671c8e7c13" sha256="ade17f0333e2c3909b6c6bb5ee83267e3e6ec847212fc61286c02c89ed64b923" sha256new="VXQX6AZT4LBZBG3MNO265AZGPY7G5SCHEEX4MEUGYAWIT3LEXERQ"/>
+      <archive extract="vlc-2.0.7" href="https://get.videolan.org/vlc/2.0.7/win64/vlc-2.0.7-win64.7z" size="21300819" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=a467141242bcf470854867650b33fc185d3560aa" main="vlc.exe" released="2013-06-11" stability="stable" version="2.0.7">
+      <manifest-digest sha1new="a467141242bcf470854867650b33fc185d3560aa" sha256="d5da06493ba21c81d189bac496b732b153e920ac4ef4466b6e2f02d2f88359b6" sha256new="2XNAMSJ3UIOIDUMJXLCJNNZSWFJ6SIFMJ32EM23OF4BNF6EDLG3A"/>
+      <archive extract="vlc-2.0.7" href="https://get.videolan.org/vlc/2.0.7/win32/vlc-2.0.7-win32.7z" size="20664759" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=67e48b6e928bf619eb0977e397146c4231818a09" main="vlc.exe" released="2013-09-26" stability="stable" version="2.0.8">
+      <manifest-digest sha1new="67e48b6e928bf619eb0977e397146c4231818a09" sha256="486ae80a25afa303e14d31de71f3a951ff16fa9fb24957d9d0c480482157cb74" sha256new="JBVOQCRFV6RQHYKNGHPHD45JKH7RN6U7WJEVPWOQYSAEQIKXZN2A"/>
+      <archive extract="vlc-2.0.8" href="https://get.videolan.org/vlc/2.0.8/win64/vlc-2.0.8-win64.7z" size="20840938" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=03b13ab4376643125055fa74f189092430bce90d" main="vlc.exe" released="2013-09-26" stability="stable" version="2.0.8">
+      <manifest-digest sha1new="03b13ab4376643125055fa74f189092430bce90d" sha256="734b8f849fa3f88545f49f539d11e1e622672870bbd91f3160f0b5b6466f381e" sha256new="ONFY7BE7UP4IKRPUT5JZ2EPB4YRGOKDQXPMR6MLA6C23MRTPHAPA"/>
+      <archive extract="vlc-2.0.8" href="https://get.videolan.org/vlc/2.0.8/win32/vlc-2.0.8-win32.7z" size="20728563" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=1962ece449d1a800a63a00a62b71cf424cc177df" main="vlc.exe" released="2013-09-25" stability="stable" version="2.1.0">
+      <manifest-digest sha1new="1962ece449d1a800a63a00a62b71cf424cc177df" sha256="6aec0edea3fbb43c7aa00e7866d221bf02ac94d00c07da83e1f60ed49946868a" sha256new="NLWA5XVD7O2DY6VABZ4GNURBX4BKZFGQBQD5VA7B6YHNJGKGQ2FA"/>
+      <archive extract="vlc-2.1.0" href="https://get.videolan.org/vlc/2.1.0/win64/vlc-2.1.0-win64.7z" size="20641844" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=0b05cceaabc000a84aaf4519bd0ecbc38af5c400" main="vlc.exe" released="2013-09-25" stability="stable" version="2.1.0">
+      <manifest-digest sha1new="0b05cceaabc000a84aaf4519bd0ecbc38af5c400" sha256="daf5d02794431ab21b7afbb6ab362903490c126f044654037990f2600bd74204" sha256new="3L25AJ4UIMNLEG327O3KWNRJANEQYETPARDFIA3ZSDZGAC6XIICA"/>
+      <archive extract="vlc-2.1.0" href="https://get.videolan.org/vlc/2.1.0/win32/vlc-2.1.0-win32.7z" size="21317835" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=5f6d918120b7c1ad854f276d81f1cda478729cd9" main="vlc.exe" released="2013-11-13" stability="stable" version="2.1.1">
+      <manifest-digest sha1new="5f6d918120b7c1ad854f276d81f1cda478729cd9" sha256="4fba6e167c794b1ca3878376af3fe90d4aec94e91c6789387e05dff8ac8794e3" sha256new="J65G4FT4PFFRZI4HQN3K6P7JBVFOZFHJDRTYSOD6AXP7RLEHSTRQ"/>
+      <archive extract="vlc-2.1.1" href="https://get.videolan.org/vlc/2.1.1/win64/vlc-2.1.1-win64.7z" size="20717900" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=a24fff88615c66610a74a01a65cefec073f1b3a4" main="vlc.exe" released="2013-11-13" stability="stable" version="2.1.1">
+      <manifest-digest sha1new="a24fff88615c66610a74a01a65cefec073f1b3a4" sha256="fd3973dc7022c6fc8ba1600cc96e06011f5b1fd60899b2aaa4f13e7b2ec72daa" sha256new="7U4XHXDQELDPZC5BMAGMS3QGAEPVWH6WBCM3FKVE6E7HWLWHFWVA"/>
+      <archive extract="vlc-2.1.1" href="https://get.videolan.org/vlc/2.1.1/win32/vlc-2.1.1-win32.7z" size="21531930" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=c8488bc5a330045b053941b3945b36ca713a629b" main="vlc.exe" released="2014-02-11" stability="stable" version="2.1.2">
+      <manifest-digest sha1new="c8488bc5a330045b053941b3945b36ca713a629b" sha256="4ee314434826ec8a65235f8bb582c203c1e783cbfa33b07fc20f414d39df7702" sha256new="J3RRIQ2IE3WIUZJDL6F3LAWCAPA6PA6L7IZ3A76CB5AU2OO7O4BA"/>
+      <archive extract="vlc-2.1.2" href="https://get.videolan.org/vlc/2.1.2/win64/vlc-2.1.2-win64.7z" size="20899707" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=7f64c2438f4deddd981fcdd140634f22307fd13d" main="vlc.exe" released="2014-02-11" stability="stable" version="2.1.2">
+      <manifest-digest sha1new="7f64c2438f4deddd981fcdd140634f22307fd13d" sha256="9d907f1044faff0c30bcdca46d31d96c3f97ce1116cbf01343b5656a6479c4ec" sha256new="TWIH6ECE7L7QYMF43SSG2MOZNQ7ZPTQRC3F7AE2DWVSWUZDZYTWA"/>
+      <archive extract="vlc-2.1.2" href="https://get.videolan.org/vlc/2.1.2/win32/vlc-2.1.2-win32.7z" size="21160797" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=4795511656a5415e91651df0c63ca5ee8f94c2dd" main="vlc.exe" released="2014-07-30" stability="stable" version="2.1.3">
+      <manifest-digest sha1new="4795511656a5415e91651df0c63ca5ee8f94c2dd" sha256="e4aa516aba5be11bf7eabe4d76ce1d7874298374a5043925a2e00b052f8c33b0" sha256new="4SVFC2V2LPQRX57KXZGXNTQ5PB2CTA3UUUCDSJNC4AFQKL4MGOYA"/>
+      <archive extract="vlc-2.1.3" href="https://get.videolan.org/vlc/2.1.3/win64/vlc-2.1.3-win64.7z" size="21837260" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=b966c431e0acb530ca620104efff74649875f4aa" main="vlc.exe" released="2014-07-30" stability="stable" version="2.1.3">
+      <manifest-digest sha1new="b966c431e0acb530ca620104efff74649875f4aa" sha256="ef2f25e04f8dc7f03df7b0ca7feee62557e06ae9bda233fa0af8ca423b4e8a90" sha256new="54XSLYCPRXD7APPXWDFH73XGEVL6A2XJXWRDH6QK7DFEEO2ORKIA"/>
+      <archive extract="vlc-2.1.3" href="https://get.videolan.org/vlc/2.1.3/win32/vlc-2.1.3-win32.7z" size="21562639" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=394d4ab47c5ee99b67c6495dd001905bfb1e2d05" main="vlc.exe" released="2014-02-28" stability="stable" version="2.1.4">
+      <manifest-digest sha1new="394d4ab47c5ee99b67c6495dd001905bfb1e2d05" sha256="02352c1af063623c47d703b62cb8eed2f35c502218cfeec0f8682c561400375b" sha256new="AI2SYGXQMNRDYR6XAO3CZOHO2LZVYUBCDDH65QHYNAWFMFAAG5NQ"/>
+      <archive extract="vlc-2.1.4" href="https://get.videolan.org/vlc/2.1.4/win64/vlc-2.1.4-win64.7z" size="21853996" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=9f7c40cf72df3b4f99190a4637a5be6fc104c313" main="vlc.exe" released="2014-07-26" stability="stable" version="2.1.5">
+      <manifest-digest sha1new="9f7c40cf72df3b4f99190a4637a5be6fc104c313" sha256="863b0b6947657b4bfc9fa670c84dd2fa2799b7af308599c6f7aa77816ab7b616" sha256new="QY5QW2KHMV5UX7E7UZYMQTOS7ITZTN5PGCCZTRXXVJ3YC2VXWYLA"/>
+      <archive extract="vlc-2.1.5" href="https://get.videolan.org/vlc/2.1.5/win64/vlc-2.1.5-win64.7z" size="21936564" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=b891d31937de59592f23403eacdf2c3ef6341970" main="vlc.exe" released="2014-07-26" stability="stable" version="2.1.5">
+      <manifest-digest sha1new="b891d31937de59592f23403eacdf2c3ef6341970" sha256="41d5d189798f7e33ab43553978322be6caeb3a2d40516d25bb0a00f481126a94" sha256new="IHK5DCLZR57DHK2DKU4XQMRL43FOWORNIBIW2JN3BIAPJAISNKKA"/>
+      <archive extract="vlc-2.1.5" href="https://get.videolan.org/vlc/2.1.5/win32/vlc-2.1.5-win32.7z" size="21501464" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=64717904351e062da59e31519620626ef39dc5d5" main="vlc.exe" released="2015-02-27" stability="stable" version="2.2.0">
+      <manifest-digest sha1new="64717904351e062da59e31519620626ef39dc5d5" sha256="1b801712f6c2db6da684e5647df3dd518b6ad5b0cfb01bfa53a4b7d33090609e" sha256new="DOABOEXWYLNW3JUE4VSH3465KGFWVVNQZ6YBX6STUS35GMEQMCPA"/>
+      <archive extract="vlc-2.2.0" href="https://get.videolan.org/vlc/2.2.0/win64/vlc-2.2.0-win64.7z" size="26126237" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=dd223eac66a4ada0b2dc278cd8e908cd7ee2fa7c" main="vlc.exe" released="2015-02-27" stability="stable" version="2.2.0">
+      <manifest-digest sha1new="dd223eac66a4ada0b2dc278cd8e908cd7ee2fa7c" sha256="292de16bef1d1a0a84b8e7a1269997fcaea0600798d502d3435b31b45e4bf198" sha256new="FEW6C27PDUNAVBFY46QSNGMX7SXKAYAHTDKQFU2DLMY3IXSL6GMA"/>
+      <archive extract="vlc-2.2.0" href="https://get.videolan.org/vlc/2.2.0/win32/vlc-2.2.0-win32.7z" size="26307015" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=2e6facd9a82ea5f8cd14aa04fb73f5709caaa41a" main="vlc.exe" released="2015-04-16" stability="stable" version="2.2.1">
+      <manifest-digest sha1new="2e6facd9a82ea5f8cd14aa04fb73f5709caaa41a" sha256="763091816dffce4adeb598cb301a6438a7322de0585966dc7d1d72884e9bf5f9" sha256new="OYYJDALN77HEVXVVTDFTAGTEHCTTELPALBMWNXD5DVZIQTU36X4Q"/>
+      <archive extract="vlc-2.2.1" href="https://get.videolan.org/vlc/2.2.1/win64/vlc-2.2.1-win64.7z" size="26086803" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=ff12345664c4ad2623991a2b4084217213a2ba03" main="vlc.exe" released="2015-04-16" stability="stable" version="2.2.1">
+      <manifest-digest sha1new="ff12345664c4ad2623991a2b4084217213a2ba03" sha256="f3776b137a13f028c3253816de28d1ab0a291d75fa964eda6c02038d75ced7a4" sha256new="6N3WWE32CPYCRQZFHALN4KGRVMFCSHLV7KLE5WTMAIBY25OO26SA"/>
+      <archive extract="vlc-2.2.1" href="https://get.videolan.org/vlc/2.2.1/win32/vlc-2.2.1-win32.7z" size="26495352" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=91b2bb7507c794a820eb184111c2c5d7453f3ff9" main="vlc.exe" released="2016-02-06" stability="stable" version="2.2.2">
+      <manifest-digest sha1new="91b2bb7507c794a820eb184111c2c5d7453f3ff9" sha256="96c59ddca8742a6f922fed231cabc5b7608cb151de313fec6ec529a2dfe5eff6" sha256new="S3CZ3XFIOQVG7ERP5URRZK6FW5QIZMKR3YYT73DOYUU2FX7F573A"/>
+      <archive extract="vlc-2.2.2" href="https://get.videolan.org/vlc/2.2.2/win64/vlc-2.2.2-win64.7z" size="27669808" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=6c53280901e070a0461aa7de2a755f01210a4ec4" main="vlc.exe" released="2016-02-06" stability="stable" version="2.2.2">
+      <manifest-digest sha1new="6c53280901e070a0461aa7de2a755f01210a4ec4" sha256="30ae9d09a55a40232811584a3bf5edf8ecb9eb9c649a4607202835ef98810da2" sha256new="GCXJ2CNFLJACGKARLBFDX5PN7DWLT244MSNEMBZAFA267GEBBWRA"/>
+      <archive extract="vlc-2.2.2" href="https://get.videolan.org/vlc/2.2.2/win32/vlc-2.2.2-win32.7z" size="28143865" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=4ef783f5bd118bbe0d50d395297e3e58b67063d8" main="vlc.exe" released="2016-05-03" stability="stable" version="2.2.3">
+      <manifest-digest sha1new="4ef783f5bd118bbe0d50d395297e3e58b67063d8" sha256="e53c5088d50053fd5ae2fa9c37223d89c452e031aba694c3e27eeaba91743fd6" sha256new="4U6FBCGVABJ72WXC7KODOIR5RHCFFYBRVOTJJQ7CP3VLVELUH7LA"/>
+      <archive extract="vlc-2.2.3" href="https://get.videolan.org/vlc/2.2.3/win64/vlc-2.2.3-win64.7z" size="29343962" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=9e92a00414037d38801265f40a697a1de50ae40f" main="vlc.exe" released="2016-05-03" stability="stable" version="2.2.3">
+      <manifest-digest sha1new="9e92a00414037d38801265f40a697a1de50ae40f" sha256="2af496ebc2bf131120dba47c67c0f34e3d79cee3f4eee3b051f67093f1c0c723" sha256new="FL2JN26CX4JRCIG3UR6GPQHTJY6XTTXD6TXOHMCR6ZYJH4OAY4RQ"/>
+      <archive extract="vlc-2.2.3" href="https://get.videolan.org/vlc/2.2.3/win32/vlc-2.2.3-win32.7z" size="28236760" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=b20905445c153b796fec93ce477f94eec3dc5812" main="vlc.exe" released="2016-06-05" stability="stable" version="2.2.4">
+      <manifest-digest sha1new="b20905445c153b796fec93ce477f94eec3dc5812" sha256="42fdb51c0fb403d081fe43f733c9d99870df26452287910e49ebd261c7b76de5" sha256new="IL63KHAPWQB5BAP6IP3THSOZTBYN6JSFEKDZCDSJ5PJGDR5XNXSQ"/>
+      <archive extract="vlc-2.2.4" href="https://get.videolan.org/vlc/2.2.4/win64/vlc-2.2.4-win64.7z" size="29383741" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=f55975fcc0a63e09a182386fb46c98ee2b12252b" main="vlc.exe" released="2016-06-05" stability="stable" version="2.2.4">
+      <manifest-digest sha1new="f55975fcc0a63e09a182386fb46c98ee2b12252b" sha256="d77299b3ff7c097f3e7ea0a4c642af392187f737e72563819d3358f20b864193" sha256new="25ZJTM77PQEX6PT6UCSMMQVPHEQYP5ZX44SWHAM5GNMPEC4GIGJQ"/>
+      <archive extract="vlc-2.2.4" href="https://get.videolan.org/vlc/2.2.4/win32/vlc-2.2.4-win32.7z" size="28277486" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=bea5a11e07a0dad97fecc4ddf0d88f5afcb5561d" if-0install-version="2.6.6.." main="vlc.exe" released="2017-05-03" stability="stable" version="2.2.5.1">
+      <manifest-digest sha256new="NV7YUE5R77CIIMWQ4KKNCAKG4H323QHL32OZZVI3G7QWOLBP4N6Q"/>
+      <archive extract="vlc-2.2.5.1" href="https://get.videolan.org/vlc/2.2.5.1/win64/vlc-2.2.5.1-win64.7z" size="29778564" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=53f2be78e3d9d5747a511309f16598b44ca54635" if-0install-version="2.6.6.." main="vlc.exe" released="2017-05-03" stability="stable" version="2.2.5.1">
+      <manifest-digest sha256new="UF52OCMUQHUCGMKDVJFQWXNBOAX22MMQBQHCCEFPWLPHEEY5EKSQ"/>
+      <archive extract="vlc-2.2.5.1" href="https://get.videolan.org/vlc/2.2.5.1/win32/vlc-2.2.5.1-win32.7z" size="28569222" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=504888ffa8c6f1bab814c7bc52de31d71bd86cc9" if-0install-version="2.6.6.." main="vlc.exe" released="2017-05-24" stability="stable" version="2.2.6">
+      <manifest-digest sha256new="25OLBDW3LXHEQVWUN2F6XCD5CGBV7UVP4SJDGJSC75B3KOHUIBYQ"/>
+      <archive extract="vlc-2.2.6" href="https://get.videolan.org/vlc/2.2.6/win64/vlc-2.2.6-win64.7z" size="29674939" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=9acd19e56f22ccd8a29d086a8107411d53f6f0a3" if-0install-version="2.6.6.." main="vlc.exe" released="2017-05-24" stability="stable" version="2.2.6">
+      <manifest-digest sha256new="6RXEG3B7RAPM4HSHOSAFR7RTY6XSU5TZIJQFHJVAX5ITIJYTU7HA"/>
+      <archive extract="vlc-2.2.6" href="https://get.videolan.org/vlc/2.2.6/win32/vlc-2.2.6-win32.7z" size="28672759" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=9c009b1738a9b7f5583371a536e84d29d2a34aba" if-0install-version="2.6.6.." main="vlc.exe" released="2017-11-30" stability="stable" version="2.2.8">
+      <manifest-digest sha256new="UR5NIGQVG72J22FO7FQFERB7T25PR3ZUHVIH6WW6TJ54ZEP4KOHQ"/>
+      <archive extract="vlc-2.2.8" href="https://get.videolan.org/vlc/2.2.8/win64/vlc-2.2.8-win64.7z" size="29550606" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=822b24c29bcad1763769349b487f640137035260" if-0install-version="2.6.6.." main="vlc.exe" released="2017-11-30" stability="stable" version="2.2.8">
+      <manifest-digest sha256new="QMDUOLQ5KQHRZFEJZ6CR52NYEXZMMYFTVZGSBXZHTB2QU54VSBXA"/>
+      <archive extract="vlc-2.2.8" href="https://get.videolan.org/vlc/2.2.8/win32/vlc-2.2.8-win32.7z" size="28454821" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=b11dd2b0275ce174df3dd19db133de3ff1ff1969" if-0install-version="2.6.6.." main="vlc.exe" released="2018-02-10" stability="stable" version="3.0.0">
+      <manifest-digest sha256new="PCXVC4ZGJ5QB4TX3WGVO6KOAPLH5AINKGLQZGHVO7RIER6RW5U7Q"/>
+      <archive extract="vlc-3.0.0" href="https://get.videolan.org/vlc/3.0.0/win64/vlc-3.0.0-win64.7z" size="34683981" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=fbe4b73f8eced348290a0be1cbe39113b63603b0" if-0install-version="2.6.6.." main="vlc.exe" released="2018-02-10" stability="stable" version="3.0.0">
+      <manifest-digest sha256new="OFAK67OPKCY52Y64SLT5NK7ILX77CINE6ENYEW2U22HPTXF2QLPA"/>
+      <archive extract="vlc-3.0.0" href="https://get.videolan.org/vlc/3.0.0/win32/vlc-3.0.0-win32.7z" size="33116238" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=f250c7368f650ca841fc3d5a87b207866b3d7c7b" if-0install-version="2.6.6.." main="vlc.exe" released="2018-02-27" stability="stable" version="3.0.1">
+      <manifest-digest sha256new="HI3USLNWFQUBQEUEU2YS73AWRXHZJMZSZJVM5PMGEOJTV4YCMJEQ"/>
+      <archive extract="vlc-3.0.1" href="https://get.videolan.org/vlc/3.0.1/win64/vlc-3.0.1-win64.7z" size="34699042" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=e889fee52f40264b5b6967e5a5fe92df7434261a" if-0install-version="2.6.6.." main="vlc.exe" released="2018-02-27" stability="stable" version="3.0.1">
+      <manifest-digest sha256new="S7RA4435XRKTPQ7ZHQ5CYEH2TK5M3OUU3ADUMY3SH5F45EY3QW6A"/>
+      <archive extract="vlc-3.0.1" href="https://get.videolan.org/vlc/3.0.1/win32/vlc-3.0.1-win32.7z" size="33119993" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=9eda64daf71ef86e7cba27bd54d0b0b59ff4ce8c" if-0install-version="2.6.6.." main="vlc.exe" released="2018-04-22" stability="stable" version="3.0.2">
+      <manifest-digest sha256new="Q7BDLLMYJAWOWIADGMKHODLE6DPLWWRVNJWTTNHIDTI4Y4HDDQGA"/>
+      <archive extract="vlc-3.0.2" href="https://get.videolan.org/vlc/3.0.2/win64/vlc-3.0.2-win64.7z" size="34746950" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=be779543531b22662b8e36cce9c499aca230e33a" if-0install-version="2.6.6.." main="vlc.exe" released="2018-04-22" stability="stable" version="3.0.2">
+      <manifest-digest sha256new="4NPASIDQMGXGGZPCS7QXR6HPZEYIVUIQVABHLE4DS2ZAYPVEEF4A"/>
+      <archive extract="vlc-3.0.2" href="https://get.videolan.org/vlc/3.0.2/win32/vlc-3.0.2-win32.7z" size="33176599" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=bca95f2f4fd8f1770a87c18fbc3d8bc5c301e25e" if-0install-version="2.6.6.." main="vlc.exe" released="2018-05-30" stability="stable" version="3.0.3">
+      <manifest-digest sha256new="OT4TULHUEDJU7UUZFT4FVWVLNUGSSBB4WJU5BIJQIXK2DEMMGBAA"/>
+      <archive extract="vlc-3.0.3" href="https://get.videolan.org/vlc/3.0.3/win64/vlc-3.0.3-win64.7z" size="35410317" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=70a90d847e28a8eb346f5920ede86f79d0669c39" if-0install-version="2.6.6.." main="vlc.exe" released="2018-05-30" stability="stable" version="3.0.3">
+      <manifest-digest sha256new="3KQWURW3XMEK3ODQO5WJER5FMXYTXJV7BQVJEJFHVF352ZQ2S6VQ"/>
+      <archive extract="vlc-3.0.3" href="https://get.videolan.org/vlc/3.0.3/win32/vlc-3.0.3-win32.7z" size="33991416" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=c306e88a0f157e23f8266da5801d08d527ad6b12" if-0install-version="2.6.6.." main="vlc.exe" released="2018-08-31" stability="stable" version="3.0.4">
+      <manifest-digest sha256new="AF4K4NGACPDXLX2APWQ2HEFELSOU2VANSAUWGOORGPP5CSBIOR5A"/>
+      <archive extract="vlc-3.0.4" href="https://get.videolan.org/vlc/3.0.4/win64/vlc-3.0.4-win64.7z" size="35445149" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=3957d36dccee1b9970fad908fad4d9dcc0157c80" if-0install-version="2.6.6.." main="vlc.exe" released="2018-08-31" stability="stable" version="3.0.4">
+      <manifest-digest sha256new="IW2N233T25FMTXIHRJFTPYTYUXEL43KN4EBSUZQGS6Q3Y4GGD2BQ"/>
+      <archive extract="vlc-3.0.4" href="https://get.videolan.org/vlc/3.0.4/win32/vlc-3.0.4-win32.7z" size="34025563" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=7c238a5df4bcedd4030f4c3b05698c8b35f9f615" if-0install-version="2.6.6.." main="vlc.exe" released="2018-12-26" stability="stable" version="3.0.5">
+      <manifest-digest sha256new="FGYFAF44P45XJGUM4JPWZZIMZMJVMYCMLV4KVCCB5JSLG3A36SRA"/>
+      <archive extract="vlc-3.0.5" href="https://get.videolan.org/vlc/3.0.5/win64/vlc-3.0.5-win64.7z" size="36510522" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=a7adf97229932063f8f6a7b3f639cddda9b6e795" if-0install-version="2.6.6.." main="vlc.exe" released="2018-12-26" stability="stable" version="3.0.5">
+      <manifest-digest sha256new="EN7WBJAPFQZ427LXNXIPB6BXOABX2X3HLGZVUM33XQWSFK4YTBZA"/>
+      <archive extract="vlc-3.0.5" href="https://get.videolan.org/vlc/3.0.5/win32/vlc-3.0.5-win32.7z" size="34933702" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=82cfb76b4baac7baba1c16cc117a02e71b1b1442" if-0install-version="2.6.6.." main="vlc.exe" released="2019-01-10" stability="stable" version="3.0.6">
+      <manifest-digest sha256new="K44G7XQ4SOWRHVVFSXDW737RFQAKICZE6MAX35OJ7DJHABZKSLVQ"/>
+      <archive extract="vlc-3.0.6" href="https://get.videolan.org/vlc/3.0.6/win64/vlc-3.0.6-win64.7z" size="36454993" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=00ac098d9f927ce1c989dec5411f3b5b253fda70" if-0install-version="2.6.6.." main="vlc.exe" released="2019-01-10" stability="stable" version="3.0.6">
+      <manifest-digest sha256new="WSRPXK4IPCYWUBUMKUTKT4KSZXOLYVC64UHDV46PMICSBCSCEXCQ"/>
+      <archive extract="vlc-3.0.6" href="https://get.videolan.org/vlc/3.0.6/win32/vlc-3.0.6-win32.7z" size="34873757" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=252c5e733457e9995f3b0357c77cd5f63a8a4c4b" if-0install-version="2.6.6.." main="vlc.exe" released="2019-06-06" stability="stable" version="3.0.7">
+      <manifest-digest sha256new="CPLK27EV7T3RCNPCXCW2C2VQFQYVBU2I3PFJBM6BX6DXMNOOQT5Q"/>
+      <archive extract="vlc-3.0.7" href="https://get.videolan.org/vlc/3.0.7/win64/vlc-3.0.7-win64.7z" size="36613750" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=6d47d89ac2e3f166e31de8352c919f091d281622" if-0install-version="2.6.6.." main="vlc.exe" released="2019-06-06" stability="stable" version="3.0.7">
+      <manifest-digest sha256new="YUGJV5ZKFVGFNKYVOTV6EX44HJIVZM42EIRG2YSJUZA6SZ2TKGOQ"/>
+      <archive extract="vlc-3.0.7" href="https://get.videolan.org/vlc/3.0.7/win32/vlc-3.0.7-win32.7z" size="35071584" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=1d005e97953cb8191bd4feaf534a947fae797475" if-0install-version="2.6.6.." main="vlc.exe" released="2019-06-12" stability="stable" version="3.0.7.1">
+      <manifest-digest sha256new="27VIT6QZE2E5EB23E5XCKD2UJM2WLEBV676C322W7WCH5CRJZKPA"/>
+      <archive extract="vlc-3.0.7.1" href="https://get.videolan.org/vlc/3.0.7.1/win64/vlc-3.0.7.1-win64.7z" size="36614786" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=b286e975991e1bc5856d429b25439daf68998fe6" if-0install-version="2.6.6.." main="vlc.exe" released="2019-06-12" stability="stable" version="3.0.7.1">
+      <manifest-digest sha256new="Q6SDXN2W6WFN4OS7GPMQNQ57FR5GDSQENJPMXCORLFPRUOGYZMHA"/>
+      <archive extract="vlc-3.0.7.1" href="https://get.videolan.org/vlc/3.0.7.1/win32/vlc-3.0.7.1-win32.7z" size="35066083" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=7e7b61498d984164d67b40e8efcb3fb358be2cb5" if-0install-version="2.6.6.." main="vlc.exe" released="2019-08-19" stability="stable" version="3.0.8">
+      <manifest-digest sha256new="E4JGSBR4B22RHZMQTZ3Q52ZW36OETADPU524XOEBHKXXPY4CEZAA"/>
+      <archive extract="vlc-3.0.8" href="https://get.videolan.org/vlc/3.0.8/win64/vlc-3.0.8-win64.7z" size="36602941" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=bbc83b60a370f82adfcb88cfcf6aee28d7aef672" if-0install-version="2.6.6.." main="vlc.exe" released="2019-08-19" stability="stable" version="3.0.8">
+      <manifest-digest sha256new="33GSTQUIT5S4KDMD6DFHYAAUCPNSJID26S2XEIOODTTJPOQL67OQ"/>
+      <archive extract="vlc-3.0.8" href="https://get.videolan.org/vlc/3.0.8/win32/vlc-3.0.8-win32.7z" size="35137874" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=c5dff433b892f0c4a8752d6e56c65f3f430aa4f5" if-0install-version="2.6.6.." main="vlc.exe" released="2020-04-09" stability="stable" version="3.0.9.2">
+      <manifest-digest sha256new="I6R5MBOOTIWC5UOVQJ22RMGPYSZHN4Y2G4UAOXYJY5ZIHGXSYQ6A"/>
+      <archive extract="vlc-3.0.9.2" href="https://get.videolan.org/vlc/3.0.9.2/win64/vlc-3.0.9.2-win64.7z" size="36853380" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=4140154647d4f3ce0888686edcdcb58dd6c24ddf" if-0install-version="2.6.6.." main="vlc.exe" released="2020-04-09" stability="stable" version="3.0.9.2">
+      <manifest-digest sha256new="QBWEJRJT655M4SNRTWR6J65LVEELGNCVSFUHAVMMELVUYSKEQ5TQ"/>
+      <archive extract="vlc-3.0.9.2" href="https://get.videolan.org/vlc/3.0.9.2/win32/vlc-3.0.9.2-win32.7z" size="35344884" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=e5562a1a61401ad7861bf0de7873e0f510227787" if-0install-version="2.6.6.." main="vlc.exe" released="2020-04-26" stability="stable" version="3.0.10">
+      <manifest-digest sha256new="NZG4FJ7MQTZP6QMTQKKYMIIVK6Q7IEIYH5QOVZABRHBNIEGESPBA"/>
+      <archive extract="vlc-3.0.10" href="https://get.videolan.org/vlc/3.0.10/win64/vlc-3.0.10-win64.7z" size="37017465" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=b0f6952eb56c60343cf15c9f865049adf55c0075" if-0install-version="2.6.6.." main="vlc.exe" released="2020-04-26" stability="stable" version="3.0.10">
+      <manifest-digest sha256new="SVYUQ2U2WK7SUDPM3DUXVBDIARV3UFDC2OPDON223OR2GO6MB7YA"/>
+      <archive extract="vlc-3.0.10" href="https://get.videolan.org/vlc/3.0.10/win32/vlc-3.0.10-win32.7z" size="35605379" type="application/x-7z-compressed"/>
+    </implementation>
+  </group>
+
+  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
+    <default-program id="VLC" service="Media">
+      <install-commands hide-icons="spad-setup.exe" hide-icons-args="/HideIcons /S" reinstall="spad-setup.exe" reinstall-args="/Reinstall /S" show-icons="spad-setup.exe" show-icons-args="/ShowIcons /S"/>
+    </default-program>
+    <registration capability-reg-path="Software\Clients\Media\VLC\Capabilities" id="VLC"/>
+    <file-type id="VLC.3g2">
+      <description xml:lang="en">VLC media file (.3g2)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/3gpp2" perceived-type="video" value=".3g2"/>
+    </file-type>
+    <file-type id="VLC.3gp">
+      <description xml:lang="en">VLC media file (.3gp)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/3gpp" perceived-type="video" value=".3gp"/>
+    </file-type>
+    <file-type id="VLC.3gp2">
+      <description xml:lang="en">VLC media file (.3gp2)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/3gpp2" perceived-type="video" value=".3gp2"/>
+    </file-type>
+    <file-type id="VLC.3gpp">
+      <description xml:lang="en">VLC media file (.3gpp)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/3gpp" perceived-type="video" value=".3gpp"/>
+    </file-type>
+    <file-type id="VLC.a52">
+      <description xml:lang="en">VLC media file (.a52)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".a52"/>
+    </file-type>
+    <file-type id="VLC.aac">
+      <description xml:lang="en">VLC media file (.aac)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="audio/vnd.dlna.adts" perceived-type="audio" value=".AAC"/>
+    </file-type>
+    <file-type id="VLC.ac3">
+      <description xml:lang="en">VLC media file (.ac3)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".ac3"/>
+    </file-type>
+    <file-type id="VLC.adt">
+      <description xml:lang="en">VLC media file (.adt)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="audio/vnd.dlna.adts" perceived-type="audio" value=".ADT"/>
+    </file-type>
+    <file-type id="VLC.adts">
+      <description xml:lang="en">VLC media file (.adts)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="audio/vnd.dlna.adts" perceived-type="audio" value=".ADTS"/>
+    </file-type>
+    <file-type id="VLC.aif">
+      <description xml:lang="en">VLC media file (.aif)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="audio/aiff" perceived-type="audio" value=".aif"/>
+    </file-type>
+    <file-type id="VLC.aifc">
+      <description xml:lang="en">VLC media file (.aifc)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="audio/aiff" perceived-type="audio" value=".aifc"/>
+    </file-type>
+    <file-type id="VLC.aiff">
+      <description xml:lang="en">VLC media file (.aiff)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="audio/aiff" perceived-type="audio" value=".aiff"/>
+    </file-type>
+    <file-type id="VLC.amr">
+      <description xml:lang="en">VLC media file (.amr)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".amr"/>
+    </file-type>
+    <file-type id="VLC.amv">
+      <description xml:lang="en">VLC media file (.amv)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".amv"/>
+    </file-type>
+    <file-type id="VLC.aob">
+      <description xml:lang="en">VLC media file (.aob)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".aob"/>
+    </file-type>
+    <file-type id="VLC.ape">
+      <description xml:lang="en">VLC media file (.ape)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".ape"/>
+    </file-type>
+    <file-type id="VLC.asf">
+      <description xml:lang="en">VLC media file (.asf)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/x-ms-asf" perceived-type="video" value=".asf"/>
+    </file-type>
+    <file-type id="VLC.asx">
+      <description xml:lang="en">VLC media file (.asx)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/x-ms-asf" perceived-type="video" value=".asx"/>
+    </file-type>
+    <file-type id="VLC.au">
+      <description xml:lang="en">VLC media file (.au)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="audio/basic" perceived-type="audio" value=".au"/>
+    </file-type>
+    <file-type id="VLC.avi">
+      <description xml:lang="en">VLC media file (.avi)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/avi" perceived-type="video" value=".avi"/>
+    </file-type>
+    <file-type id="VLC.b4s">
+      <description xml:lang="en">VLC media file (.b4s)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".b4s"/>
+    </file-type>
+    <file-type id="VLC.bin">
+      <description xml:lang="en">VLC media file (.bin)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".bin"/>
+    </file-type>
+    <file-type id="VLC.cda">
+      <description xml:lang="en">VLC media file (.cda)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".cda"/>
+    </file-type>
+    <file-type id="VLC.cue">
+      <description xml:lang="en">VLC media file (.cue)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".cue"/>
+    </file-type>
+    <file-type id="VLC.divx">
+      <description xml:lang="en">VLC media file (.divx)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".divx"/>
+    </file-type>
+    <file-type id="VLC.dts">
+      <description xml:lang="en">VLC media file (.dts)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".dts"/>
+    </file-type>
+    <file-type id="VLC.dv">
+      <description xml:lang="en">VLC media file (.dv)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".dv"/>
+    </file-type>
+    <file-type id="VLC.flac">
+      <description xml:lang="en">VLC media file (.flac)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".flac"/>
+    </file-type>
+    <file-type id="VLC.flv">
+      <description xml:lang="en">VLC media file (.flv)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".flv"/>
+    </file-type>
+    <file-type id="VLC.gxf">
+      <description xml:lang="en">VLC media file (.gxf)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".gxf"/>
+    </file-type>
+    <file-type id="VLC.ifo">
+      <description xml:lang="en">VLC media file (.ifo)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".ifo"/>
+    </file-type>
+    <file-type id="VLC.it">
+      <description xml:lang="en">VLC media file (.it)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".it"/>
+    </file-type>
+    <file-type id="VLC.m1v">
+      <description xml:lang="en">VLC media file (.m1v)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/mpeg" perceived-type="video" value=".m1v"/>
+    </file-type>
+    <file-type id="VLC.m2t">
+      <description xml:lang="en">VLC media file (.m2t)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/vnd.dlna.mpeg-tts" perceived-type="video" value=".m2t"/>
+    </file-type>
+    <file-type id="VLC.m2ts">
+      <description xml:lang="en">VLC media file (.m2ts)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/vnd.dlna.mpeg-tts" perceived-type="video" value=".m2ts"/>
+    </file-type>
+    <file-type id="VLC.m2v">
+      <description xml:lang="en">VLC media file (.m2v)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/mpeg" perceived-type="video" value=".m2v"/>
+    </file-type>
+    <file-type id="VLC.m3u">
+      <description xml:lang="en">VLC media file (.m3u)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="audio/x-mpegurl" perceived-type="audio" value=".m3u"/>
+    </file-type>
+    <file-type id="VLC.m3u8">
+      <description xml:lang="en">VLC media file (.m3u8)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".m3u8"/>
+    </file-type>
+    <file-type id="VLC.m4a">
+      <description xml:lang="en">VLC media file (.m4a)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="audio/mp4" perceived-type="audio" value=".m4a"/>
+    </file-type>
+    <file-type id="VLC.m4p">
+      <description xml:lang="en">VLC media file (.m4p)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension perceived-type="audio" value=".m4p"/>
+    </file-type>
+    <file-type id="VLC.m4v">
+      <description xml:lang="en">VLC media file (.m4v)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/mp4" perceived-type="video" value=".m4v"/>
+    </file-type>
+    <file-type id="VLC.mid">
+      <description xml:lang="en">VLC media file (.mid)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="audio/mid" perceived-type="audio" value=".mid"/>
+    </file-type>
+    <file-type id="VLC.mka">
+      <description xml:lang="en">VLC media file (.mka)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".mka"/>
+    </file-type>
+    <file-type id="VLC.mkv">
+      <description xml:lang="en">VLC media file (.mkv)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".mkv"/>
+    </file-type>
+    <file-type id="VLC.mlp">
+      <description xml:lang="en">VLC media file (.mlp)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".mlp"/>
+    </file-type>
+    <file-type id="VLC.mod">
+      <description xml:lang="en">VLC media file (.mod)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/mpeg" perceived-type="video" value=".mod"/>
+    </file-type>
+    <file-type id="VLC.mov">
+      <description xml:lang="en">VLC media file (.mov)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/quicktime" perceived-type="video" value=".mov"/>
+    </file-type>
+    <file-type id="VLC.mp1">
+      <description xml:lang="en">VLC media file (.mp1)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".mp1"/>
+    </file-type>
+    <file-type id="VLC.mp2">
+      <description xml:lang="en">VLC media file (.mp2)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="audio/mpeg" perceived-type="audio" value=".mp2"/>
+    </file-type>
+    <file-type id="VLC.mp2v">
+      <description xml:lang="en">VLC media file (.mp2v)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/mpeg" perceived-type="video" value=".mp2v"/>
+    </file-type>
+    <file-type id="VLC.mp3">
+      <description xml:lang="en">VLC media file (.mp3)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="audio/mpeg" perceived-type="audio" value=".mp3"/>
+    </file-type>
+    <file-type id="VLC.mp4">
+      <description xml:lang="en">VLC media file (.mp4)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/mp4" perceived-type="video" value=".mp4"/>
+    </file-type>
+    <file-type id="VLC.mp4v">
+      <description xml:lang="en">VLC media file (.mp4v)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/mp4" perceived-type="video" value=".mp4v"/>
+    </file-type>
+    <file-type id="VLC.mpa">
+      <description xml:lang="en">VLC media file (.mpa)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/mpeg" perceived-type="video" value=".mpa"/>
+    </file-type>
+    <file-type id="VLC.mpc">
+      <description xml:lang="en">VLC media file (.mpc)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".mpc"/>
+    </file-type>
+    <file-type id="VLC.mpe">
+      <description xml:lang="en">VLC media file (.mpe)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/mpeg" perceived-type="video" value=".mpe"/>
+    </file-type>
+    <file-type id="VLC.mpeg">
+      <description xml:lang="en">VLC media file (.mpeg)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/mpeg" perceived-type="video" value=".mpeg"/>
+    </file-type>
+    <file-type id="VLC.mpeg1">
+      <description xml:lang="en">VLC media file (.mpeg1)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".mpeg1"/>
+    </file-type>
+    <file-type id="VLC.mpeg2">
+      <description xml:lang="en">VLC media file (.mpeg2)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".mpeg2"/>
+    </file-type>
+    <file-type id="VLC.mpeg4">
+      <description xml:lang="en">VLC media file (.mpeg4)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".mpeg4"/>
+    </file-type>
+    <file-type id="VLC.mpg">
+      <description xml:lang="en">VLC media file (.mpg)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/mpeg" perceived-type="video" value=".mpg"/>
+    </file-type>
+    <file-type id="VLC.mpv2">
+      <description xml:lang="en">VLC media file (.mpv2)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/mpeg" perceived-type="video" value=".mpv2"/>
+    </file-type>
+    <file-type id="VLC.mts">
+      <description xml:lang="en">VLC media file (.mts)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/vnd.dlna.mpeg-tts" perceived-type="video" value=".mts"/>
+    </file-type>
+    <file-type id="VLC.mxf">
+      <description xml:lang="en">VLC media file (.mxf)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".mxf"/>
+    </file-type>
+    <file-type id="VLC.nsv">
+      <description xml:lang="en">VLC media file (.nsv)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".nsv"/>
+    </file-type>
+    <file-type id="VLC.nuv">
+      <description xml:lang="en">VLC media file (.nuv)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".nuv"/>
+    </file-type>
+    <file-type id="VLC.oga">
+      <description xml:lang="en">VLC media file (.oga)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".oga"/>
+    </file-type>
+    <file-type id="VLC.ogg">
+      <description xml:lang="en">VLC media file (.ogg)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".ogg"/>
+    </file-type>
+    <file-type id="VLC.ogm">
+      <description xml:lang="en">VLC media file (.ogm)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".ogm"/>
+    </file-type>
+    <file-type id="VLC.ogv">
+      <description xml:lang="en">VLC media file (.ogv)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".ogv"/>
+    </file-type>
+    <file-type id="VLC.ogx">
+      <description xml:lang="en">VLC media file (.ogx)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".ogx"/>
+    </file-type>
+    <file-type id="VLC.oma">
+      <description xml:lang="en">VLC media file (.oma)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".oma"/>
+    </file-type>
+    <file-type id="VLC.pls">
+      <description xml:lang="en">VLC media file (.pls)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".pls"/>
+    </file-type>
+    <file-type id="VLC.ram">
+      <description xml:lang="en">VLC media file (.ram)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".ram"/>
+    </file-type>
+    <file-type id="VLC.rec">
+      <description xml:lang="en">VLC media file (.rec)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".rec"/>
+    </file-type>
+    <file-type id="VLC.rm">
+      <description xml:lang="en">VLC media file (.rm)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".rm"/>
+    </file-type>
+    <file-type id="VLC.rmi">
+      <description xml:lang="en">VLC media file (.rmi)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="audio/mid" perceived-type="audio" value=".rmi"/>
+    </file-type>
+    <file-type id="VLC.rmvb">
+      <description xml:lang="en">VLC media file (.rmvb)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".rmvb"/>
+    </file-type>
+    <file-type id="VLC.s3m">
+      <description xml:lang="en">VLC media file (.s3m)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".s3m"/>
+    </file-type>
+    <file-type id="VLC.sdp">
+      <description xml:lang="en">VLC media file (.sdp)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".sdp"/>
+    </file-type>
+    <file-type id="VLC.snd">
+      <description xml:lang="en">VLC media file (.snd)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="audio/basic" perceived-type="audio" value=".snd"/>
+    </file-type>
+    <file-type id="VLC.spx">
+      <description xml:lang="en">VLC media file (.spx)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".spx"/>
+    </file-type>
+    <file-type id="VLC.tod">
+      <description xml:lang="en">VLC media file (.tod)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".tod"/>
+    </file-type>
+    <file-type id="VLC.ts">
+      <description xml:lang="en">VLC media file (.ts)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/vnd.dlna.mpeg-tts" perceived-type="video" value=".ts"/>
+    </file-type>
+    <file-type id="VLC.tta">
+      <description xml:lang="en">VLC media file (.tta)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".tta"/>
+    </file-type>
+    <file-type id="VLC.tts">
+      <description xml:lang="en">VLC media file (.tts)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/vnd.dlna.mpeg-tts" perceived-type="video" value=".tts"/>
+    </file-type>
+    <file-type id="VLC.vlc">
+      <description xml:lang="en">VLC media file (.vlc)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".vlc"/>
+    </file-type>
+    <file-type id="VLC.vob">
+      <description xml:lang="en">VLC media file (.vob)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension perceived-type="video" value=".vob"/>
+    </file-type>
+    <file-type id="VLC.voc">
+      <description xml:lang="en">VLC media file (.voc)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".voc"/>
+    </file-type>
+    <file-type id="VLC.vqf">
+      <description xml:lang="en">VLC media file (.vqf)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".vqf"/>
+    </file-type>
+    <file-type id="VLC.vro">
+      <description xml:lang="en">VLC media file (.vro)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".vro"/>
+    </file-type>
+    <file-type id="VLC.w64">
+      <description xml:lang="en">VLC media file (.w64)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".w64"/>
+    </file-type>
+    <file-type id="VLC.wav">
+      <description xml:lang="en">VLC media file (.wav)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="audio/wav" perceived-type="audio" value=".wav"/>
+    </file-type>
+    <file-type id="VLC.webm">
+      <description xml:lang="en">VLC media file (.webm)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".webm"/>
+    </file-type>
+    <file-type id="VLC.wma">
+      <description xml:lang="en">VLC media file (.wma)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="audio/x-ms-wma" perceived-type="audio" value=".wma"/>
+    </file-type>
+    <file-type id="VLC.wmv">
+      <description xml:lang="en">VLC media file (.wmv)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension mime-type="video/x-ms-wmv" perceived-type="video" value=".wmv"/>
+    </file-type>
+    <file-type id="VLC.wv">
+      <description xml:lang="en">VLC media file (.wv)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".wv"/>
+    </file-type>
+    <file-type id="VLC.wtv">
+      <description xml:lang="en">VLC media file (.wtv)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".wtv"/>
+    </file-type>
+    <file-type id="VLC.dvr-ms">
+      <description xml:lang="en">VLC media file (.dvr-ms)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".dvr-ms"/>
+    </file-type>
+    <file-type id="VLC.xa">
+      <description xml:lang="en">VLC media file (.xa)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".xa"/>
+    </file-type>
+    <file-type id="VLC.xm">
+      <description xml:lang="en">VLC media file (.xm)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".xm"/>
+    </file-type>
+    <file-type id="VLC.xspf">
+      <description xml:lang="en">VLC media file (.xspf)</description>
+      <verb args="--started-from-file &quot;%1&quot;" name="open">
+        <description xml:lang="en">Play</description>
+        <description xml:lang="de">Abspielen</description>
+      </verb>
+      <verb args="--started-from-file --playlist-enqueue &quot;%1&quot;" name="AddToPlaylistVLC">
+        <description xml:lang="en">Add to VLC's Playlist</description>
+        <description xml:lang="de">Zu VLC's Playlist hinzufügen</description>
+      </verb>
+      <extension value=".xspf"/>
+    </file-type>
+    <auto-play id="VLCPlayCDAudioOnArrival" prog-id="VLC.CDAudio" provider="VideoLAN VLC media player">
+      <description xml:lang="en">Play audio CD</description>
+      <description xml:lang="de">Audio CD abspielen</description>
+      <verb args="--started-from-file cdda:///%1" name="open"/>
+      <event name="PlayCDAudioOnArrival"/>
+    </auto-play>
+    <auto-play id="VLCPlayDVDAudioOnArrival" prog-id="VLC.DVDAudio" provider="VideoLAN VLC media player">
+      <description xml:lang="en">Play audio DVD</description>
+      <description xml:lang="de">Audio DVD abspielen</description>
+      <verb args="%1" name="open"/>
+      <event name="PlayDVDAudioOnArrival"/>
+    </auto-play>
+    <auto-play id="VLCPlayDVDMovieOnArrival" prog-id="VLC.DVDMovie" provider="VideoLAN VLC media player">
+      <description xml:lang="en">Play DVD movie</description>
+      <description xml:lang="de">DVD Film abspielen</description>
+      <verb args="--started-from-file dvd:///%1" name="open"/>
+      <event name="PlayDVDMovieOnArrival"/>
+    </auto-play>
+    <auto-play id="VLCPlayMusicFilesOnArrival" prog-id="VLC.MusicFiles" provider="VideoLAN VLC media player">
+      <description xml:lang="en">Play audio files</description>
+      <description xml:lang="de">Audio Dateien abspielen</description>
+      <verb args="%1" name="open"/>
+      <event name="PlayMusicFilesOnArrival"/>
+    </auto-play>
+    <auto-play id="VLCPlaySVCDMovieOnArrival" prog-id="VLC.SVCDMovie" provider="VideoLAN VLC media player">
+      <description xml:lang="en">Play SVCD movie</description>
+      <description xml:lang="de">SVCD Film abspielen</description>
+      <verb args="--started-from-file vcd:///%1" name="open"/>
+      <event name="PlaySuperVideoCDMovieOnArrival"/>
+    </auto-play>
+    <auto-play id="VLCPlayVCDMovieOnArrival" prog-id="VLC.VCDMovie" provider="VideoLAN VLC media player">
+      <description xml:lang="en">Play VCD movie</description>
+      <description xml:lang="de">VCD Film abspielen</description>
+      <verb args="--started-from-file vcd:///%1" name="open"/>
+      <event name="PlayVideoCDMovieOnArrival"/>
+    </auto-play>
+    <auto-play id="VLCPlayVideoFilesOnArrival" prog-id="VLC.VideoFiles" provider="VideoLAN VLC media player">
+      <description xml:lang="en">Play video files</description>
+      <description xml:lang="de">Video Dateien abspielen</description>
+      <verb args="%1" name="open"/>
+      <event name="PlayVideoFilesOnArrival"/>
+    </auto-play>
+  </capabilities>
+</interface>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Pidgin</name>
+  <summary xml:lang="en">multi-protocol instant messaging application</summary>
+  <summary xml:lang="de">multi-protokoll Instant-Messenger Anwendung</summary>
+  <description xml:lang="en">Pidgin is an instant messaging application that supports multiple protocols (AIM, MSN, ICQ, XMPP, YIM and others).</description>
+  <description xml:lang="de">Pidgin ist eine Instant-Messenger Anwendung die mehrere Protokolle (AIM, MSN, ICQ, XMPP, YIM und andere) unterstützt.</description>
+  <homepage>https://www.pidgin.im/</homepage>
+  <category>Network</category>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/pidgin.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/pidgin.ico" type="image/vnd.microsoft.icon"/>
+
+  <feed-for interface="https://apps.0install.net/gui/pidgin.xml"/>
+
+  <group license="GPL v2 (GNU General Public License)">
+    <requires interface="https://apps.0install.net/lib/gtk.xml" version="2.16..!2.17"/>
+    <implementation arch="Windows-i486" version="{version}" released="{released}" stability="stable" main="pidgin.exe">
+      <manifest-digest/>
+      <archive href="https://downloads.sourceforge.net/pidgin/Pidgin/{version}/pidgin-{version}-win32-bin.zip" type="application/zip" extract="pidgin-{version}-win32bin"/>
+    </implementation>
+  </group>
+</interface>

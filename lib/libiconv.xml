@@ -1,20 +1,20 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/lib/libiconv" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/lib/libiconv.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>LibIconv</name>
   <summary xml:lang="en">LibIconv: convert between character encodings</summary>
   <description xml:lang="en">LibIconv converts from one character encoding to another through Unicode conversion (see Web page for full list of supported encodings). It has also limited support for transliteration, i.e. when a character cannot be represented in the target character set, it is approximated through one or several similar looking characters. It is useful if your application needs to support multiple character encodings, but that support lacks from your system. 
 •Libiconv-1 is in Libiconv-1.7 
 </description>
-  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
-  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/>
   <category>Development</category>
   <homepage>http://gnuwin32.sourceforge.net/packages/libiconv.htm</homepage>
   <needs-terminal/>
   <group arch="Windows-i486">
     <implementation id="sha1new=206996fa8ec1a460c1d470e92024a32aba400616" langs="ca da de es et fi fr ga gl hr hu id it nl pl pt_BR ro ru sk sl sr sv tr uk zh_CN" license="GPL v3 (GNU General Public License)" released="2004-10-14" version="1.9.2-1-3">
       <command name="run" path="bin/iconv.exe">
-        <requires interface="http://repo.roscidus.com/devel/gettext" version="0.14.4-3">
+        <requires interface="https://apps.0install.net/devel/gettext.xml" version="0.14.4-3">
           <environment insert="bin" name="PATH"/>
         </requires>
       </command>
@@ -25,7 +25,7 @@
     </implementation>
     <implementation id="sha1new=7004c42542a838ab6f5c23b151e98f355200718c" langs="de" license="GPL v2 (GNU General Public License)" released="2003-02-08" version="1.8-1-3">
       <command name="run" path="bin/iconv.exe">
-        <requires interface="http://repo.roscidus.com/devel/libintl" version="0.11">
+        <requires interface="https://apps.0install.net/devel/libintl.xml" version="0.11">
           <environment insert="bin" name="PATH"/>
         </requires>
       </command>      

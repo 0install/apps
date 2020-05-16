@@ -3,23 +3,24 @@
   <name>Minikube</name>
   <summary>run Kubernetes locally</summary>
   <description>Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day.</description>
-  <homepage>https://github.com/kubernetes/minikube</homepage>
+  <homepage>https://minikube.sigs.k8s.io/docs/</homepage>
+  <icon href="https://raw.githubusercontent.com/kubernetes/minikube/master/images/logo/minikube-logo.png" type="image/png"/>
   <needs-terminal/>
 
-  <feed-for interface="http://repo.roscidus.com/kubernetes/minikube"/>
+  <feed-for interface="https://apps.0install.net/kubernetes/minikube.xml"/>
 
   <group license="Apache License 2.0">
-    <implementation arch="Windows-x86_64" version="{version}" stability="{stability}" released="{released}" main="minikube.exe">
+    <implementation arch="Windows-x86_64" version="{version}" stability="{stability}" released="{released}" main="minikube-windows-amd64.exe">
       <manifest-digest/>
-      <file href="https://storage.googleapis.com/minikube/releases/v{original-version}/minikube-windows-amd64.exe" dest="minikube.exe"/>
+      <archive extract="out" href="https://storage.googleapis.com/minikube/releases/v{original-version}/minikube-windows-amd64.tar.gz" type="application/x-compressed-tar"/>
     </implementation>
-    <implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}" main="minikube">
+    <implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}" main="minikube-linux-amd64">
       <manifest-digest/>
-      <file href="https://storage.googleapis.com/minikube/releases/v{original-version}/minikube-linux-amd64" dest="minikube" executable="true"/>
+      <archive extract="out" href="https://storage.googleapis.com/minikube/releases/v{original-version}/minikube-linux-amd64.tar.gz" type="application/x-compressed-tar"/>
     </implementation>
-    <implementation arch="Darwin-x86_64" version="{version}" stability="{stability}" released="{released}" main="minikube">
+    <implementation arch="Darwin-x86_64" version="{version}" stability="{stability}" released="{released}" main="minikube-darwin-amd64">
       <manifest-digest/>
-      <file href="https://storage.googleapis.com/minikube/releases/v{original-version}/minikube-darwin-amd64" dest="minikube" executable="true"/>
+      <archive extract="out" href="https://storage.googleapis.com/minikube/releases/v{original-version}/minikube-darwin-amd64.tar.gz" type="application/x-compressed-tar"/>
     </implementation>
   </group>
 </interface>

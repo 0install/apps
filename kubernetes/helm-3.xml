@@ -1,15 +1,15 @@
 <?xml version="1.0" ?>
-<interface uri="http://repo.roscidus.com/kubernetes/helm-3" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="https://apps.0install.net/kubernetes/helm-3.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>Kubernetes Helm 3.x</name>
   <summary>the Kubernetes package manager</summary>
   <description>Helm is a tool for managing Kubernetes charts. Charts are packages of pre-configured Kubernetes resources.</description>
   <homepage>https://helm.sh/</homepage>
   <needs-terminal/>
 
-  <feed-for interface="http://repo.roscidus.com/kubernetes/helm"/>
+  <feed-for interface="https://apps.0install.net/kubernetes/helm.xml"/>
 
   <group license="Apache License 2.0">
-    <environment name="HELMFILE_HELM3" mode="replace" value="1"/>
+    <environment mode="replace" name="HELMFILE_HELM3" value="1"/>
     <group>
       <command name="run" path="helm"/>
       <implementation arch="Linux-x86_64" id="sha1new=df92ce0014042f7786e506f25ef0a2d22798a480" released="2019-05-15" stability="developer" version="3.0.0-pre-pre1">
@@ -108,6 +108,110 @@
         <manifest-digest sha256new="VBECZBPI3DY2KA2BFAEU566F2J3USCPAX2UCPA7RVC6BX4M7TKKA"/>
         <archive extract="darwin-amd64" href="https://get.helm.sh/helm-v3.0.0-darwin-amd64.tar.gz" size="12688660" type="application/x-compressed-tar"/>
       </implementation>
+      <implementation arch="Linux-x86_64" id="sha1new=c3ad3a4529c2b3dbff88203745fac710e2e4ebf6" released="2019-12-05" stability="stable" version="3.0.1">
+        <manifest-digest sha256new="POBQDCPCB6BWIXFQC3YSZS3NSMGQZ2CDBDFHH7O2AVCC5KH3N7MA"/>
+        <archive extract="linux-amd64" href="https://get.helm.sh/helm-v3.0.1-linux-amd64.tar.gz" size="12082746" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" id="sha1new=ee1cd338d0b1767d3e20dc4b8bb9fc1bb1018683" released="2019-12-05" stability="stable" version="3.0.1">
+        <manifest-digest sha256new="UCLDLSMAYAWEJHLWTKPOWNWKBXDCSHJXW75DKT2B2RI4BFQTTCIQ"/>
+        <archive extract="darwin-amd64" href="https://get.helm.sh/helm-v3.0.1-darwin-amd64.tar.gz" size="12689379" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" id="sha1new=fe9f00ddb65e7cb75c662e922f14745c445bc55f" released="2019-12-17" stability="stable" version="3.0.2">
+        <manifest-digest sha256new="AY3WOQHYLROBRXW4MKG3SKV7IWYT7HS44HV3UDEJ64AWQX2ZSDEA"/>
+        <archive extract="linux-amd64" href="https://get.helm.sh/helm-v3.0.2-linux-amd64.tar.gz" size="12101232" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" id="sha1new=0050e7b1116d659f91bc24f4441845d7632ed03d" released="2019-12-17" stability="stable" version="3.0.2">
+        <manifest-digest sha256new="5DJJFFVQ4Y47MPDG7BKAAY6I3CN3HKILLLI2PKBSLAGBNM6D5FNA"/>
+        <archive extract="darwin-amd64" href="https://get.helm.sh/helm-v3.0.2-darwin-amd64.tar.gz" size="12712282" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" id="sha1new=b2ea76dda57ea2a1e53a0203a8041496880bdf5b" released="2020-01-29" stability="stable" version="3.0.3">
+        <manifest-digest sha256new="6GWLI6X5GO2HXF3VEJ6ASPV2BKQRBSXVVKZLYBWVEVGKJXALKMVQ"/>
+        <archive extract="linux-amd64" href="https://get.helm.sh/helm-v3.0.3-linux-amd64.tar.gz" size="12102556" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" id="sha1new=14241e52db88a22b631aca9c8460186c12a00751" released="2020-01-29" stability="stable" version="3.0.3">
+        <manifest-digest sha256new="QLGVX6BZ6LEBAVRFKZ7HZVJK5QZZ3VZCPO3ELF6KBRKXN7ICQ2YA"/>
+        <archive extract="darwin-amd64" href="https://get.helm.sh/helm-v3.0.3-darwin-amd64.tar.gz" size="12716418" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" id="sha1new=293528bc4b87b8a61b1591d54b676beffe8a40cf" released="2020-02-07" stability="testing" version="3.1.0-rc1">
+        <manifest-digest sha256new="SRH7L4DUWQIPQZTIOFWRELWSQAMCAD24D6HJD3GR2ETXRB2EGITQ"/>
+        <archive extract="linux-amd64" href="https://get.helm.sh/helm-v3.1.0-rc.1-linux-amd64.tar.gz" size="12268364" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" id="sha1new=04d3c77428aa56f237140cab5ce45f6b9b1bcc3c" released="2020-02-07" stability="testing" version="3.1.0-rc1">
+        <manifest-digest sha256new="WCUAKOQI6BXD4TDHRBPMSSLPGZRAQR2YSRTGR2FTKLYPE2AJFPFQ"/>
+        <archive extract="darwin-amd64" href="https://get.helm.sh/helm-v3.1.0-rc.1-darwin-amd64.tar.gz" size="12891303" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" id="sha1new=8aa3904845031633a5278b7e1c861361a426a3fb" released="2020-02-11" stability="testing" version="3.1.0-rc2">
+        <manifest-digest sha256new="2QZCRKVUEPMODNBNG33OWWMBWOMIHYLKCGC7HBSL5HHSIPDVFEOA"/>
+        <archive extract="linux-amd64" href="https://get.helm.sh/helm-v3.1.0-rc.2-linux-amd64.tar.gz" size="12268261" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" id="sha1new=32cd1c719f369d66546252d65900cdee24792c7b" released="2020-02-11" stability="testing" version="3.1.0-rc2">
+        <manifest-digest sha256new="CBGUB6CCYSRTN2CED633JFBEMKSVEHAV45E4YGADIKMMCYNJZTYA"/>
+        <archive extract="darwin-amd64" href="https://get.helm.sh/helm-v3.1.0-rc.2-darwin-amd64.tar.gz" size="12890554" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" id="sha1new=ac6f7512673af378988a447166292328a8bf61c8" released="2020-02-11" stability="testing" version="3.1.0-rc3">
+        <manifest-digest sha256new="QU4BY3BFVMAKATKTMO6FP3Q3ZXSDQLYWIRJQPE3FJUFASUAPS6LQ"/>
+        <archive extract="linux-amd64" href="https://get.helm.sh/helm-v3.1.0-rc.3-linux-amd64.tar.gz" size="12267486" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" id="sha1new=d3d1efbfbef4d18fe97754600289615e5eabee84" released="2020-02-11" stability="testing" version="3.1.0-rc3">
+        <manifest-digest sha256new="5JXEIFI5Z6UHCLXS4RAZASJXHZ7UKGEMY3SFN3OWQLKGOSFGWT4A"/>
+        <archive extract="darwin-amd64" href="https://get.helm.sh/helm-v3.1.0-rc.3-darwin-amd64.tar.gz" size="12890598" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" id="sha1new=20b192bae297f17fec1f1635db5478ccc3e3d174" released="2020-02-13" stability="stable" version="3.1.0">
+        <manifest-digest sha256new="7C6JK66ZET4LO7XGPBRM4P6UQVMRWDIX2QUNT43WPUF5OADJNQQA"/>
+        <archive extract="linux-amd64" href="https://get.helm.sh/helm-v3.1.0-linux-amd64.tar.gz" size="12267464" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" id="sha1new=2ec6001a7785b6fd859ff4932191a8219245e07e" released="2020-02-13" stability="stable" version="3.1.0">
+        <manifest-digest sha256new="CUTP5XYHWRUPF7G3KVMU2QONNQYHQWMZJWOMMTUPS3C3OYQZIAQA"/>
+        <archive extract="darwin-amd64" href="https://get.helm.sh/helm-v3.1.0-darwin-amd64.tar.gz" size="12890697" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" id="sha1new=efb711e7d00c0a3c6b14a141a66ebb87b0cd2f4e" released="2020-02-20" stability="stable" version="3.1.1">
+        <manifest-digest sha256new="ZHKP5TQKYKX52DXXBK4PYSCYMWWTNNM7OUR6DJENEDK6UXI3DHWQ"/>
+        <archive extract="linux-amd64" href="https://get.helm.sh/helm-v3.1.1-linux-amd64.tar.gz" size="12270615" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" id="sha1new=0d726570b537e6a5702b40e4a671f1594d55ebc6" released="2020-02-20" stability="stable" version="3.1.1">
+        <manifest-digest sha256new="CULBWYRTXHZUMWUCBHFPPBIBR3YIXQXS7MICASRAJ2ZY5D67HY6A"/>
+        <archive extract="darwin-amd64" href="https://get.helm.sh/helm-v3.1.1-darwin-amd64.tar.gz" size="12889373" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" id="sha1new=998c46d337ba40a6e8bf66410637687c3609a6ea" released="2020-03-12" stability="stable" version="3.1.2">
+        <manifest-digest sha256new="RCBHJ5LBSXWLKF36D666PZLKMKK2ILXTTVXCHLR3HJD2FMAXH4PA"/>
+        <archive extract="linux-amd64" href="https://get.helm.sh/helm-v3.1.2-linux-amd64.tar.gz" size="12269190" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" id="sha1new=9a854cf89a4ea450c5e4e4cf3dd845290aace97e" released="2020-03-12" stability="stable" version="3.1.2">
+        <manifest-digest sha256new="F5CMK75Y5SSEEGD5BL3K2PSUQ3BKFUABVWTYGXY7ZB46Y7UX7DJA"/>
+        <archive extract="darwin-amd64" href="https://get.helm.sh/helm-v3.1.2-darwin-amd64.tar.gz" size="12892991" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" id="sha1new=9f725e4bc8d045b1af29070d80e807d7014989df" released="2020-04-16" stability="testing" version="3.2.0-rc1">
+        <manifest-digest sha256new="B2XYAXWE4YWPEH45BXZK5ST3DKC7SFLFVBMCESGPQ2VO4H6PWWYQ"/>
+        <archive extract="linux-amd64" href="https://get.helm.sh/helm-v3.2.0-rc.1-linux-amd64.tar.gz" size="12926128" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" id="sha1new=666ff143675b97d213f46cdc68a4004844972472" released="2020-04-16" stability="testing" version="3.2.0-rc1">
+        <manifest-digest sha256new="BHDPDPOHD2JFXV57X2TWF6IZYDFLYWYDYWF5M3P25D62T4DUIGDQ"/>
+        <archive extract="darwin-amd64" href="https://get.helm.sh/helm-v3.2.0-rc.1-darwin-amd64.tar.gz" size="13578273" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" id="sha1new=e33ef7a91b16e1a13e6dbbb4e8a527130998f48c" released="2020-04-22" stability="stable" version="3.1.3">
+        <manifest-digest sha256new="U6ZZGUBGWK5TUD4LJSHTOBSLKNT2KI76GNCGPSHWP3OWVECCNQ5A"/>
+        <archive extract="linux-amd64" href="https://get.helm.sh/helm-v3.1.3-linux-amd64.tar.gz" size="12273434" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" id="sha1new=e1f6fcdfd3d5bae582afb4776befe6fc1b4304c4" released="2020-04-22" stability="stable" version="3.1.3">
+        <manifest-digest sha256new="JUDW4QNGF3BOWV4NDKPVOHLWPJNWAQHJFLSYAFZ7C6QVTPVWZFTA"/>
+        <archive extract="darwin-amd64" href="https://get.helm.sh/helm-v3.1.3-darwin-amd64.tar.gz" size="12891820" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" id="sha1new=7c310af1e7806b1a3fa4ba4ec61adf7f5ac0b511" released="2020-04-22" stability="stable" version="3.2.0">
+        <manifest-digest sha256new="JICM5QD2VXA4HVOBVVAILA4LSTXJDCI7TJTT6FLEGOQG72HYEP7A"/>
+        <archive extract="linux-amd64" href="https://get.helm.sh/helm-v3.2.0-linux-amd64.tar.gz" size="12925372" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" id="sha1new=99fb43124ca28fcb82ce0d87b661a46d012c3ff7" released="2020-04-22" stability="stable" version="3.2.0">
+        <manifest-digest sha256new="X6RNJO2Y5DTTGT5RWVT4QPBQQSS2L3M7MGYUIBDHDSIQKRJSAGIQ"/>
+        <archive extract="darwin-amd64" href="https://get.helm.sh/helm-v3.2.0-darwin-amd64.tar.gz" size="13577405" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" id="sha1new=696705bc661a3096c9b6524d46541887889dcaee" released="2020-05-07" stability="stable" version="3.2.1">
+        <manifest-digest sha256new="XRXE5WFGHHM2G57TDL6TAUFREHZIWPXSZETV4CBL5BSOEEAKT53Q"/>
+        <archive extract="linux-amd64" href="https://get.helm.sh/helm-v3.2.1-linux-amd64.tar.gz" size="12927632" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" id="sha1new=38b3c0839a96851d22131c55c9a21a0199311022" released="2020-05-07" stability="stable" version="3.2.1">
+        <manifest-digest sha256new="JJWIGOGW76NG3WN6G4L3PC6D4WGEK4JP57VWOQJYVLWBAHTC6CHQ"/>
+        <archive extract="darwin-amd64" href="https://get.helm.sh/helm-v3.2.1-darwin-amd64.tar.gz" size="13580457" type="application/x-compressed-tar"/>
+      </implementation>
     </group>
     <group>
       <command name="run" path="helm.exe"/>
@@ -158,6 +262,58 @@
       <implementation arch="Windows-x86_64" id="sha1new=b25ed43b89b306406a7e20a814bb78d26ee6d067" released="2019-11-13" stability="stable" version="3.0.0">
         <manifest-digest sha256new="WY3YP4SFNMKYJNRZYAVL6Z73LSI3B4SLB4H2W674XW3F7SCJ7VYA"/>
         <archive extract="windows-amd64" href="https://get.helm.sh/helm-v3.0.0-windows-amd64.tar.gz" size="11953944" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" id="sha1new=5e54ab911363af2fc93c1d1e8158a7d1e2c31b27" released="2019-12-05" stability="stable" version="3.0.1">
+        <manifest-digest sha256new="RQHJDIE7HMNDHUWGSAGWIOQZCPWDFIB7DAXUF2JVDCCTLNXUMKMQ"/>
+        <archive extract="windows-amd64" href="https://get.helm.sh/helm-v3.0.1-windows-amd64.tar.gz" size="11956262" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" id="sha1new=8a3358d4a954b5955063596b03b2a5457232ebd3" released="2019-12-17" stability="stable" version="3.0.2">
+        <manifest-digest sha256new="2ER6RNMIX73B7OKGF5SS2RS4C6ZWQTZA5GD36QRPOAVFITM2GGDQ"/>
+        <archive extract="windows-amd64" href="https://get.helm.sh/helm-v3.0.2-windows-amd64.tar.gz" size="11973300" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" id="sha1new=697c834028d0dbc7a1805b23e9d12380433713b2" released="2020-01-29" stability="stable" version="3.0.3">
+        <manifest-digest sha256new="XA2FIQDLZ4F44EFDVHYNBWBRLM4E3NOAAG4TXRQ7WEGAGK5YSVMQ"/>
+        <archive extract="windows-amd64" href="https://get.helm.sh/helm-v3.0.3-windows-amd64.tar.gz" size="11973325" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" id="sha1new=340fa316aff7c07eb7e9917a8db00b36a130448d" released="2020-02-07" stability="testing" version="3.1.0-rc1">
+        <manifest-digest sha256new="AWDBZUG3ZN2QH5POGV6GDMCB4IAF6KE5OXCIV2EUMQ6JKYXIVD2A"/>
+        <archive extract="windows-amd64" href="https://get.helm.sh/helm-v3.1.0-rc.1-windows-amd64.tar.gz" size="12155651" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" id="sha1new=a4ed941fc5edef5dc7d75f0e1d2ad85988b70cd1" released="2020-02-11" stability="testing" version="3.1.0-rc2">
+        <manifest-digest sha256new="DSMR6YQEYP7RO6EHK3FMVJCEXCDMUNAFDNFLARMOTE5QLJIA3LPA"/>
+        <archive extract="windows-amd64" href="https://get.helm.sh/helm-v3.1.0-rc.2-windows-amd64.tar.gz" size="12153578" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" id="sha1new=8873c4d4ba75806fe5a8f5fae3f493cfef6b776f" released="2020-02-11" stability="testing" version="3.1.0-rc3">
+        <manifest-digest sha256new="4ZSFVJTM5XKCC3YGEOFZI6SOIARHOVYAGNEOJRETJ5BDYNQTN6WA"/>
+        <archive extract="windows-amd64" href="https://get.helm.sh/helm-v3.1.0-rc.3-windows-amd64.tar.gz" size="12157750" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" id="sha1new=64126aa21885d27437f504d51b60e16ee8161fc2" released="2020-02-13" stability="stable" version="3.1.0">
+        <manifest-digest sha256new="4JG5AVJ73NSTCEDVZNDH3Q4OWRTZ7P4MP6OJZKBEKSIUJAX7JLEA"/>
+        <archive extract="windows-amd64" href="https://get.helm.sh/helm-v3.1.0-windows-amd64.tar.gz" size="12156412" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" id="sha1new=ac715546818279ac5c8c93ef57709efd8433486d" released="2020-02-20" stability="stable" version="3.1.1">
+        <manifest-digest sha256new="JJBUMF6IEUGHQ3NPVF56Z4VZFKT2ESMOKDWFEIUAD3HT2Y4KTTLA"/>
+        <archive extract="windows-amd64" href="https://get.helm.sh/helm-v3.1.1-windows-amd64.tar.gz" size="12157809" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" id="sha1new=b39148da5d93f76a18a93243b6f23e919ed16363" released="2020-03-12" stability="stable" version="3.1.2">
+        <manifest-digest sha256new="53QFXIP2MGDRKVTH3MYNALTDMDMQVHDM3EN4GCOPCQP3WMPYUIHA"/>
+        <archive extract="windows-amd64" href="https://get.helm.sh/helm-v3.1.2-windows-amd64.tar.gz" size="12158797" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" id="sha1new=2c7009c8b86f7858258add59df1c0c8f2d2e8597" released="2020-04-16" stability="testing" version="3.2.0-rc1">
+        <manifest-digest sha256new="QZU57SJ2PSWW4ZDDS2TWV2DNIBIW5KKTEIIFZT5K2GRUMRSGRN7A"/>
+        <archive extract="windows-amd64" href="https://get.helm.sh/helm-v3.2.0-rc.1-windows-amd64.tar.gz" size="12814394" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" id="sha1new=d52ad5f531e53903f402c4cbaab338b65fa87ba3" released="2020-04-22" stability="stable" version="3.1.3">
+        <manifest-digest sha256new="C3OGC7CB7C4L2YQMJWDFNSN7RTQX2CFZJCKQ2ZIPY5IOPHJ6KAFA"/>
+        <archive extract="windows-amd64" href="https://get.helm.sh/helm-v3.1.3-windows-amd64.tar.gz" size="12162003" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" id="sha1new=254ef3ed99d3a526bb1aa57fc38736d70d87678e" released="2020-04-22" stability="stable" version="3.2.0">
+        <manifest-digest sha256new="4RBENQQWR3EOSMCUWJG7TE5P276E3E5AFLODBK3I6XDKMXU6WPCA"/>
+        <archive extract="windows-amd64" href="https://get.helm.sh/helm-v3.2.0-windows-amd64.tar.gz" size="12815070" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" id="sha1new=d0e41fa0fb8be4d545563b2e0cc1d470fe8f6313" released="2020-05-07" stability="stable" version="3.2.1">
+        <manifest-digest sha256new="5A5LEGJRUYMGVCOISEBHBKFXQPBOK2BJJHM4SRLBSFJKTWJLVRAA"/>
+        <archive extract="windows-amd64" href="https://get.helm.sh/helm-v3.2.1-windows-amd64.tar.gz" size="12815806" type="application/x-compressed-tar"/>
       </implementation>
     </group>
   </group>

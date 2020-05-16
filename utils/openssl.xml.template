@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>OpenSSL</name>
+  <summary>command-line toolkit for TLS and SSL protocols</summary>
+  <description>OpenSSL is a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols.</description>
+  <homepage>https://www.openssl.org/</homepage>
+  <category>Utility</category>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/utils/openssl.xml"/>
+
+  <group license="OpenSSL License" main="openssl.exe">
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}">
+      <manifest-digest/>
+      <archive extract="openssl-{version-original}-win64-mingw" href="https://bintray.com/vszakats/generic/download_file?file_path=openssl-{version-original}-win64-mingw.tar.xz" type="application/x-xz-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" released="{released}">
+      <manifest-digest/>
+      <archive extract="openssl-{version-original}-win32-mingw" href="https://bintray.com/vszakats/generic/download_file?file_path=openssl-{version-original}-win32-mingw.tar.xz" type="application/x-xz-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

@@ -10,5 +10,5 @@ def convert(release):
     released = release['published_at'][0:10]
     return {'version': version, 'original-version': original_version, 'stability': stability, 'released': released}
 
-data = request.urlopen('https://api.github.com/repos/kubernetes-incubator/service-catalog/releases').read().decode('utf-8')
+data = request.urlopen('https://api.github.com/repos/kubernetes-sigs/service-catalog/releases').read().decode('utf-8')
 releases = [convert(release) for release in json.loads(data) if not release['tag_name'] in excluded_versions]

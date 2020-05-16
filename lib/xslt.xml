@@ -1,16 +1,16 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/lib/xslt" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/lib/xslt.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>LibXslt</name>
   <summary xml:lang="en">LibXslt: library and tools for applying XSLT to XML-documents</summary>
   <description xml:lang="en">LibXslt is a library and tools for applying XSLT (Extensible Styleheets Transformations) to XML-documents. XML (Extensible Markup Language) is the universal format for data on the Web. XML is a metalanguage to design markup languages, i.e. text language where semantic and structure are added to the content using extra &quot;markup&quot; information enclosed between angle bracket. HTML is the most well-known markup language. </description>
-  <icon href="https://gitlab.com/pmiess/0install-feeds/raw/test/public/gnuwin32/libxml.ico" type="image/vnd.microsoft.icon"/>
-  <icon href="https://gitlab.com/pmiess/0install-feeds/raw/test/public/gnuwin32/libxml.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/lib/xml2.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/lib/xml2.png" type="image/png"/>
   <category>Development</category>
   <homepage>http://gnuwin32.sourceforge.net/packages/libxslt.htm</homepage>
   <needs-terminal/>
   <implementation arch="Windows-i486" id="sha1new=7bcb55f4519daf867981e4d03d042f4ac3d7f32a" license="GPL v2 (GNU General Public License), LGPL (GNU Lesser General Public License)" released="2001-12-23" version="1.0.9">
-    <requires interface="http://repo.roscidus.com/lib/xml2">
+    <requires interface="https://apps.0install.net/lib/xml2.xml" version="2.4.12">
       <environment insert="bin" name="PATH"/>
     </requires>
     <command name="run" path="bin/xsltproc.exe"/>

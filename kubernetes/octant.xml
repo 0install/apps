@@ -1,14 +1,39 @@
 <?xml version="1.0" ?>
-<interface uri="http://repo.roscidus.com/kubernetes/octant" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface uri="https://apps.0install.net/kubernetes/octant.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>Octant</name>
   <summary>web-based tool for visualizing Kubernetes clusters</summary>
   <description>A web-based, highly extensible platform for developers to better understand the complexity of Kubernetes clusters.</description>
   <homepage>https://github.com/vmware/octant</homepage>
-  <needs-terminal/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/kubernetes/octant.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/kubernetes/octant.png" type="image/png"/>
 
   <entry-point binary-name="octant" command="run"/>
 
   <group license="Apache License 2.0">
+    <implementation arch="Windows-x86_64" id="sha1new=089d8eca954b4ad727aff0de41e6d5413e6487e2" main="octant.exe" released="2020-01-24" stability="stable" version="0.10.0">
+      <manifest-digest sha256new="FZIGCXM6XYFAHF2XP6FDNYXC2TSS7XAPPS5W2G2WTTHMVPTIFXOQ"/>
+      <archive extract="octant_0.10.0_Windows-64bit" href="https://github.com/vmware/octant/releases/download/v0.10.0/octant_0.10.0_Windows-64bit.zip" size="24723771" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=6dbbae409300c1de846c9532fbfba0480ac5af01" main="octant" released="2020-01-24" stability="stable" version="0.10.0">
+      <manifest-digest sha256new="C4FMKAEWCHZGHJ3AFYFZ6ACSNCS6CEIS4B4RO27WV6VELNLSSYTA"/>
+      <archive extract="octant_0.10.0_Linux-64bit" href="https://github.com/vmware/octant/releases/download/v0.10.0/octant_0.10.0_Linux-64bit.tar.gz" size="24585323" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" id="sha1new=e9ecc3d3c2507341a18c9c1f0fc113891712b342" main="octant" released="2020-01-24" stability="stable" version="0.10.0">
+      <manifest-digest sha256new="LLGEVE5VNXERQWRNG2MQC5LHGO4HDN5P34U66KALKZUNSJZW6ZGQ"/>
+      <archive extract="octant_0.10.0_macOS-64bit" href="https://github.com/vmware/octant/releases/download/v0.10.0/octant_0.10.0_macOS-64bit.tar.gz" size="24384316" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=efeeb2dc9480827212e3fb3b4d3581b83120435f" main="octant.exe" released="2020-01-30" stability="stable" version="0.10.1">
+      <manifest-digest sha256new="SDC5CM3C37ONHJCACAXTSXYZYAZY22E55TKV5G3R5OVAU3B6WLCQ"/>
+      <archive extract="octant_0.10.1_Windows-64bit" href="https://github.com/vmware/octant/releases/download/v0.10.1/octant_0.10.1_Windows-64bit.zip" size="24740542" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=ad222c26294071541003df9e617dc8dd0385c17f" main="octant" released="2020-01-30" stability="stable" version="0.10.1">
+      <manifest-digest sha256new="DRPXRKLAZTCC2AIYDILFHHRBABNAEYX7YUL6OD6WYBA2YOLQTI7A"/>
+      <archive extract="octant_0.10.1_Linux-64bit" href="https://github.com/vmware/octant/releases/download/v0.10.1/octant_0.10.1_Linux-64bit.tar.gz" size="24604668" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" id="sha1new=3187ea5b9644a194501ba42148f28cd6bef41936" main="octant" released="2020-01-30" stability="stable" version="0.10.1">
+      <manifest-digest sha256new="IXH4AKQEV7YJDZ3ZFM5OOYS2MSDA3QZ25S2YVBJYJFODAEFXZWVA"/>
+      <archive extract="octant_0.10.1_macOS-64bit" href="https://github.com/vmware/octant/releases/download/v0.10.1/octant_0.10.1_macOS-64bit.tar.gz" size="24399918" type="application/x-compressed-tar"/>
+    </implementation>
     <implementation arch="Windows-x86_64" id="sha1new=cb3d0b366de729d352bc095ea1b7d78626729b47" main="octant.exe" released="2019-07-19" stability="stable" version="0.4.0">
       <manifest-digest sha256new="LAHO4KFDJZ2QAL5FQTKVYW4Z4NEPZNDQFVQDWGQQINXP2USJUNWQ"/>
       <archive extract="octant_0.4.0_Windows-64bit" href="https://github.com/vmware/octant/releases/download/v0.4.0/octant_0.4.0_Windows-64bit.zip" size="21427875" type="application/zip"/>
@@ -21,8 +46,8 @@
       <manifest-digest sha256new="CWYKUAVYBQEPZUBEKV3F7BSPV7PMKFWTPYEV72YDACE3AX34T2FQ"/>
       <archive extract="octant_0.4.0_macOS-64bit" href="https://github.com/vmware/octant/releases/download/v0.4.0/octant_0.4.0_macOS-64bit.tar.gz" size="21341569" type="application/x-compressed-tar"/>
     </implementation>
-    <implementation arch="Windows-x86_64" id="sha1new=8a0315e8d5e314c35d1c8c5125994e5c3678837e" main="octant.exe" released="2019-07-29" stability="stable" version="0.4.1">
-      <manifest-digest sha256new="ZFIFAJR5EU3FPOXGBONN27OPLKOLU7HCKYYXM62NLATF77NSP6HA"/>
+    <implementation arch="Windows-x86_64" id="sha1new=2aad4a74dad7604d7cc5334900cb0f71f16f3120" main="octant.exe" released="2019-07-29" stability="stable" version="0.4.1">
+      <manifest-digest sha256new="MUJ4B3UHVWHDCHIEDJWORXZ2FW2FJZA2UCWW66AVMKX5JRTH7SUA"/>
       <archive extract="octant_0.4.1_Windows-64bit" href="https://github.com/vmware/octant/releases/download/v0.4.1/octant_0.4.1_Windows-64bit.zip" size="22053777" type="application/zip"/>
     </implementation>
     <implementation arch="Linux-x86_64" id="sha1new=18e3f3aea888b6c0ef57d0adfcd01c794864cdb8" main="octant" released="2019-07-29" stability="stable" version="0.4.1">
@@ -45,8 +70,8 @@
       <manifest-digest sha256new="RV5KEXUAVSIS5CZBX4HF7IIWHLJCHRC5AUCLRLR54OAXLULJYIDA"/>
       <archive extract="octant_0.5.0_macOS-64bit" href="https://github.com/vmware/octant/releases/download/v0.5.0/octant_0.5.0_macOS-64bit.tar.gz" size="21955279" type="application/x-compressed-tar"/>
     </implementation>
-    <implementation arch="Windows-x86_64" id="sha1new=f47819e7f3d4eebe2e4c22c26ec6c746b8ce7934" main="octant.exe" released="2019-08-06" stability="stable" version="0.5.1">
-      <manifest-digest sha256new="B5Y5DGBY3C5C7RRQDYYJOT4J5SCMFE5UWNXIVZG7VVCKOBGRRHJA"/>
+    <implementation arch="Windows-x86_64" id="sha1new=7f8091d2b1bf3d7ea2fb3765c2e58e770e7a4616" main="octant.exe" released="2019-08-06" stability="stable" version="0.5.1">
+      <manifest-digest sha256new="SNXK3Z6PPSIFLS32LC3N5WKM7KL67DN4WX5H3GU5KU6ERIVONE7Q"/>
       <archive extract="octant_0.5.1_Windows-64bit" href="https://github.com/vmware/octant/releases/download/v0.5.1/octant_0.5.1_Windows-64bit.zip" size="22045079" type="application/zip"/>
     </implementation>
     <implementation arch="Linux-x86_64" id="sha1new=4b2df81f9d3f1b53039ee50a637af0cf08b46369" main="octant" released="2019-08-06" stability="stable" version="0.5.1">
@@ -57,8 +82,8 @@
       <manifest-digest sha256new="AVNUS2WBDOGQ7AENNFTCZKAUVSN7ZF6CUCPLE2PV37PJDAWTAEEQ"/>
       <archive extract="octant_0.5.1_macOS-64bit" href="https://github.com/vmware/octant/releases/download/v0.5.1/octant_0.5.1_macOS-64bit.tar.gz" size="21955268" type="application/x-compressed-tar"/>
     </implementation>
-    <implementation arch="Windows-x86_64" id="sha1new=f1d6aef6b4b789cc45d98a32c9727e3cb733f71d" main="octant.exe" released="2019-08-21" stability="stable" version="0.6.0">
-      <manifest-digest sha256new="KVXS5MZQAN4SHDOHQ7OFC3FFWOZFVVEICMCRG5YG2IUPA6QW7NWA"/>
+    <implementation arch="Windows-x86_64" id="sha1new=e5c61dc0a3a50ad19df3e3336d83349b5659affc" main="octant.exe" released="2019-08-21" stability="stable" version="0.6.0">
+      <manifest-digest sha256new="VAI42BDNLQAFZ7CEM25SX5YKJ6RR77UKTU22IXYSS2HXDVGZTXVQ"/>
       <archive extract="octant_0.6.0_Windows-64bit" href="https://github.com/vmware/octant/releases/download/v0.6.0/octant_0.6.0_Windows-64bit.zip" size="22121287" type="application/zip"/>
     </implementation>
     <implementation arch="Linux-x86_64" id="sha1new=523d8cb8178cebeaeea2cc39e96531bb6ffc5bb9" main="octant" released="2019-08-21" stability="stable" version="0.6.0">
@@ -69,8 +94,8 @@
       <manifest-digest sha256new="TUAXCY6OKK3IM7JPXXMAIX2TVHCBLMLUZK665KCAZUUNLMMYN4AQ"/>
       <archive extract="octant_0.6.0_macOS-64bit" href="https://github.com/vmware/octant/releases/download/v0.6.0/octant_0.6.0_macOS-64bit.tar.gz" size="22020539" type="application/x-compressed-tar"/>
     </implementation>
-    <implementation arch="Windows-x86_64" id="sha1new=56ad2b1968603da9d5a9d6dca5aa3f927a64840a" main="octant.exe" released="2019-09-18" stability="stable" version="0.7.0">
-      <manifest-digest sha256new="VBUVXXJHPOZMWFZVYSQWHAYEWFS52RONF5CNZ6XEBFH6MNJSXXDA"/>
+    <implementation arch="Windows-x86_64" id="sha1new=f34c43e22788ba4cb7130d5b56abc7ac6e229a7e" main="octant.exe" released="2019-09-18" stability="stable" version="0.7.0">
+      <manifest-digest sha256new="AYARHC7KZL7RDDCZDRCPLKCY3PEBMQRNOY6BDNGZDYM33JYBZ2PA"/>
       <archive extract="octant_0.7.0_Windows-64bit" href="https://github.com/vmware/octant/releases/download/v0.7.0/octant_0.7.0_Windows-64bit.zip" size="22832318" type="application/zip"/>
     </implementation>
     <implementation arch="Linux-x86_64" id="sha1new=011ffe876db8ee94dfc95e669f1ef0263517018e" main="octant" released="2019-09-18" stability="stable" version="0.7.0">
@@ -81,8 +106,8 @@
       <manifest-digest sha256new="3FAWQ5JOIAO2CZZUNROIWC4NS7OF5RXNE6BZDPZCZRVHQGE3747A"/>
       <archive extract="octant_0.7.0_macOS-64bit" href="https://github.com/vmware/octant/releases/download/v0.7.0/octant_0.7.0_macOS-64bit.tar.gz" size="22731430" type="application/x-compressed-tar"/>
     </implementation>
-    <implementation arch="Windows-x86_64" id="sha1new=7c919ce7902a4f5091209700aeec132ebec288fb" main="octant.exe" released="2019-10-15" stability="stable" version="0.8.0">
-      <manifest-digest sha256new="ZLRAGTBC6O4LTCTAO6BJRSZBLV52X43QNQVM3DIIB3DDA2PCPPYQ"/>
+    <implementation arch="Windows-x86_64" id="sha1new=ae16be1369f29f4c2a2af510274860d072453e3c" main="octant.exe" released="2019-10-15" stability="stable" version="0.8.0">
+      <manifest-digest sha256new="T6FPCOOA6KASEK5H3KZ4D3Z7775WRNBDKP6YY7GHBYWJEEJGHRCA"/>
       <archive extract="octant_0.8.0_Windows-64bit" href="https://github.com/vmware/octant/releases/download/v0.8.0/octant_0.8.0_Windows-64bit.zip" size="24374108" type="application/zip"/>
     </implementation>
     <implementation arch="Linux-x86_64" id="sha1new=7c678179b61f33a9abb402d8b8d2657a6b40759e" main="octant" released="2019-10-15" stability="stable" version="0.8.0">
@@ -116,6 +141,66 @@
     <implementation arch="MacOSX-x86_64" id="sha1new=52baa656cd31dce4d44ac55d64853f2f843e0153" main="octant" released="2019-11-01" stability="stable" version="0.9.1">
       <manifest-digest sha256new="WIIPVMRRNES3KRGA5T2UOUIVEVIWGFK2LK3WVGLW43C4C7JRTJHA"/>
       <archive extract="octant_0.9.1_macOS-64bit" href="https://github.com/vmware/octant/releases/download/v0.9.1/octant_0.9.1_macOS-64bit.tar.gz" size="24232249" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=24d9d51584f1c71ecdb38ec5c78c8477049be5b4" main="octant.exe" released="2020-02-14" stability="stable" version="0.10.2">
+      <manifest-digest sha256new="EFK67QJKE56PENBQ76A2LOMKYNA3R32QKLM6RT772GSHO6WGT6UQ"/>
+      <archive extract="octant_0.10.2_Windows-64bit" href="https://github.com/vmware/octant/releases/download/v0.10.2/octant_0.10.2_Windows-64bit.zip" size="24744909" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=6b75a0db18b6fcd66fc01dabdc57fa0f625e9e84" main="octant" released="2020-02-14" stability="stable" version="0.10.2">
+      <manifest-digest sha256new="E3BNCASTDSDRMXUNINTEOUPZRQUAABOAVX6U23SEOEPBUXLP77SQ"/>
+      <archive extract="octant_0.10.2_Linux-64bit" href="https://github.com/vmware/octant/releases/download/v0.10.2/octant_0.10.2_Linux-64bit.tar.gz" size="24597661" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" id="sha1new=f3e27e82c71877a6a8e3cdbfc2ee9cfc76ffa2bf" main="octant" released="2020-02-14" stability="stable" version="0.10.2">
+      <manifest-digest sha256new="IRAZW2L5NLBD2D67NYSZYBL5UPMAAGOFAKFIQDSDMZBWWUO2C4MA"/>
+      <archive extract="octant_0.10.2_macOS-64bit" href="https://github.com/vmware/octant/releases/download/v0.10.2/octant_0.10.2_macOS-64bit.tar.gz" size="24400211" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=1d5bb0a58555e28e1dbcfa41dcf345fb73e0c986" main="octant.exe" released="2020-03-20" stability="stable" version="0.11.0">
+      <manifest-digest sha256new="OJ7XWXN4X4V26KV3MVLURSUWIL37N5BALBH2PGGIKJFLXDBXI5KA"/>
+      <archive extract="octant_0.11.0_Windows-64bit" href="https://github.com/vmware/octant/releases/download/v0.11.0/octant_0.11.0_Windows-64bit.zip" size="27809652" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=9365bae96adfbeb07fe92f1ca226f125c2c92491" main="octant" released="2020-03-20" stability="stable" version="0.11.0">
+      <manifest-digest sha256new="NHVRASNOKRZIXNJWGFFQCQ263K46Y65LE4BJMQ22QGZY5G2Z7RBA"/>
+      <archive extract="octant_0.11.0_Linux-64bit" href="https://github.com/vmware/octant/releases/download/v0.11.0/octant_0.11.0_Linux-64bit.tar.gz" size="27672631" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" id="sha1new=3df8e1e610a11c14082bc20a6ada1df70bebd468" main="octant" released="2020-03-20" stability="stable" version="0.11.0">
+      <manifest-digest sha256new="CGFYYUPQAKGEFFSTCKGHOWQBEWQGGHPUOPR4TOFLOFW4YVWN3BYQ"/>
+      <archive extract="octant_0.11.0_macOS-64bit" href="https://github.com/vmware/octant/releases/download/v0.11.0/octant_0.11.0_macOS-64bit.tar.gz" size="27456286" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=79ef921051794bbe57351022ed40d8b7ed21d0ff" main="octant.exe" released="2020-03-30" stability="stable" version="0.11.1">
+      <manifest-digest sha256new="CJACPXJAO3444KFF7IFLAK3HQOQGEXGTOYS4RJJDK3Q5GEZTH4UA"/>
+      <archive extract="octant_0.11.1_Windows-64bit" href="https://github.com/vmware/octant/releases/download/v0.11.1/octant_0.11.1_Windows-64bit.zip" size="27813919" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=882a984059f9941613229d442f39c5fc1deb55c8" main="octant" released="2020-03-30" stability="stable" version="0.11.1">
+      <manifest-digest sha256new="WIDNM2J6H53VZILAKAK3KLKBOQRB6Y47X6OBMZFVO5IFKO3B4EYA"/>
+      <archive extract="octant_0.11.1_Linux-64bit" href="https://github.com/vmware/octant/releases/download/v0.11.1/octant_0.11.1_Linux-64bit.tar.gz" size="27672284" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" id="sha1new=dd97627d7e96631b8bf86e9fee384f94251d776d" main="octant" released="2020-03-30" stability="stable" version="0.11.1">
+      <manifest-digest sha256new="H4YWE3OMHYMBFITRKBTWG653WL6CN4XTERPLTJR5NO4KAJM2HTWQ"/>
+      <archive extract="octant_0.11.1_macOS-64bit" href="https://github.com/vmware/octant/releases/download/v0.11.1/octant_0.11.1_macOS-64bit.tar.gz" size="27456514" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=79f3d8bfc0fa4d503b75ff5c044d614c5e42bc95" main="octant.exe" released="2020-04-22" stability="stable" version="0.12.0">
+      <manifest-digest sha256new="3IKDGWJZNRMT4HNJENIVOE6QJWQ555DK23Z473WJPE4JPMUGAC7Q"/>
+      <archive extract="octant_0.12.0_Windows-64bit" href="https://github.com/vmware/octant/releases/download/v0.12.0/octant_0.12.0_Windows-64bit.zip" size="27056971" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=7d8080d0c42b086d7ac1e2d11107b150cc93f61c" main="octant" released="2020-04-22" stability="stable" version="0.12.0">
+      <manifest-digest sha256new="V7TKSSUAQM7RXFYEKY2BOH3TNWL2SKFZOJL2WTXVYYLIQPFACJPQ"/>
+      <archive extract="octant_0.12.0_Linux-64bit" href="https://github.com/vmware/octant/releases/download/v0.12.0/octant_0.12.0_Linux-64bit.tar.gz" size="26925345" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" id="sha1new=10f2843bab4874224445c4fa07cb65506d7ad769" main="octant" released="2020-04-22" stability="stable" version="0.12.0">
+      <manifest-digest sha256new="2MIJ7GCOCIGE67QMEWOABBBLWK7ZHSOJOLVOCWC3ML4QPV2JM52A"/>
+      <archive extract="octant_0.12.0_macOS-64bit" href="https://github.com/vmware/octant/releases/download/v0.12.0/octant_0.12.0_macOS-64bit.tar.gz" size="26708661" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=cb45942764e930522225abab0587add105e151b7" main="octant.exe" released="2020-04-22" stability="stable" version="0.12.1">
+      <manifest-digest sha256new="OZTF7GTING6UI37VVVM7NSLF2LTKRZVELYUSD5Y24VPW5XMSBWSQ"/>
+      <archive extract="octant_0.12.1_Windows-64bit" href="https://github.com/vmware/octant/releases/download/v0.12.1/octant_0.12.1_Windows-64bit.zip" size="27057197" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=7891e318d7a3be8f16e7acaead7982cf5523a037" main="octant" released="2020-04-22" stability="stable" version="0.12.1">
+      <manifest-digest sha256new="TJT7OUR65GT24P4NWRAT6N7GCVK276FK67IRDQ2742DYMRMPZ2CQ"/>
+      <archive extract="octant_0.12.1_Linux-64bit" href="https://github.com/vmware/octant/releases/download/v0.12.1/octant_0.12.1_Linux-64bit.tar.gz" size="26927763" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" id="sha1new=2ffe12c3909906f854f95b37463a07ed173d6704" main="octant" released="2020-04-22" stability="stable" version="0.12.1">
+      <manifest-digest sha256new="GCR226INSDJ557EIOK73OELUTUF7GDBHBGQJLJLXN55K4LVXAUXQ"/>
+      <archive extract="octant_0.12.1_macOS-64bit" href="https://github.com/vmware/octant/releases/download/v0.12.1/octant_0.12.1_macOS-64bit.tar.gz" size="26709459" type="application/x-compressed-tar"/>
     </implementation>
   </group>
 </interface>

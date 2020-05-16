@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface uri="https://apps.0install.net/gui/celestia.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Celestia</name>
+  <summary>free space simulation</summary>
+  <description>The free space simulation that lets you explore our universe in three dimensions.</description>
+  <homepage>https://celestia-ebook.com/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/celestia.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/celestia.ico" type="image/vnd.microsoft.icon"/>
+  <category>Education</category>
+
+  <group arch="Windows-*" license="GPL v3 (GNU General Public License)">
+    <environment name="CELESTIA_DIR" insert="."/>
+    <command name="run" path="celestia.exe">
+      <arg>--dir</arg>
+      <arg>$CELESTIA_DIR</arg>
+    </command>
+
+    <implementation version="1.6.0" released="2009-07-09" stability="stable" id="sha1new=24d1b81ed9232a20cd6e3a66ac2be9b25463fad5">
+      <manifest-digest sha256new="3MPKJRUCHU2A6GAU4NTRBPCJKTIH4ZLMMA2TGPN4XWTPLBH2BZ5Q"/>
+      <archive href="celestia-win32-1.6.0.tar.bz2" size="38113928" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+    <implementation version="1.6.1" released="2011-06-10" stability="stable" id="sha1new=da64ac42bc62fdc38d7c1eaf917b8f40d8d1f5d6">
+      <manifest-digest sha256new="K5NSHXNUJ5PFKNYDLXRNWV7LYPLLXN2FQNQA5QM37BOTYBHPJHMA"/>
+      <archive href="celestia-win32-1.6.1.tar.bz2" size="38332626" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+    <implementation version="1.6.2-pre1" released="2019-10-04" stability="testing" id="sha1new=d1479ec411023317aabb45764d28d1804a4d109e">
+      <manifest-digest sha256new="O2BF7JNG4K57EWI3FDW245UEPQ24FESTJINLQVQ34BGTMAIIMOQQ"/>
+      <archive href="celestia-win32-1.6.2-beta1.tar.bz2" size="37328494" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+    <implementation version="1.6.2-pre2" released="2020-02-20" stability="testing" id="sha1new=b8e98ae922cfc3f3335a8b65f5bbbff4b3b7fa5f">
+      <manifest-digest sha256new="DKHOEBDQW35IPFYW4CSYBDR23NQFXL2DCGGVX4HLMTIVJPCTYUTQ"/>
+      <archive href="celestia-win32-1.6.2-beta2.tar.bz2" size="39459969" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group arch="MacOSX-*" license="GPL v3 (GNU General Public License)">
+    <command name="run" path="Celestia.app/Contents/MacOS/Celestia"/>
+
+    <implementation version="1.6.2-pre1" released="2019-10-04" stability="testing" id="sha1new=e2e3e4c0ebcf5ef8f2ec4c956e6fa32739d0c14e">
+      <manifest-digest sha256new="5BAEKNTQCQXW2EQWYUCAIHUSELMGGW27ZNUPWIRXOW72ANJUIPLA"/>
+      <archive href="https://github.com/CelestiaProject/Celestia/releases/download/1.6.2-beta1/celestia-1.6.2-beta1-macOS.zip" size="37951155" type="application/zip"/>
+    </implementation>
+    <implementation version="1.6.2-pre2" released="2020-02-20" stability="testing" id="sha1new=56181cb84cd35fadc8597c922e347b6940422580">
+      <manifest-digest sha256new="3BVEIXKWWQGCQXONKX2JXHJVNRZYAEE7Y6WEBWMY4Q5BLBYAKFBQ"/>
+      <archive href="https://github.com/CelestiaProject/Celestia/releases/download/1.6.2-beta2/celestia-1.6.2-beta2-macOS.zip" size="41367460" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <entry-point command="run" binary-name="celestia"/>
+
+  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
+    <url-protocol id="cel">
+      <description>Celestia protocol</description>
+      <verb name="open" args="--once -u &quot;%1&quot;"/>
+    </url-protocol>
+    <file-type id="celestia_script">
+      <description>Celestia script</description>
+      <verb name="open" args="--once -u &quot;%1&quot;"/>
+      <extension value=".cel"/>
+      <extension value=".celx"/>
+      <extension value=".clx"/>
+    </file-type>
+  </capabilities>
+</interface>

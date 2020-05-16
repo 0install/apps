@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>protoc</name>
+  <summary>compiler/generator for Protocol Buffers (protobuf)</summary>
+  <description>Generates source code in various languages (e.g. C++, Java, Python, C#) from protobuf files (.proto).</description>
+  <homepage>https://developers.google.com/protocol-buffers/</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/devel/protoc.xml"/>
+
+  <group license="BSD License">
+    <command name="run" path="bin/protoc"/>
+    <implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/protocolbuffers/protobuf/releases/download/{tag}/protoc-{archive-version}-linux-x86_64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-i486" version="{version}" stability="{stability}" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/protocolbuffers/protobuf/releases/download/{tag}/protoc-{archive-version}-linux-x86_32.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="{version}" stability="{stability}" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/protocolbuffers/protobuf/releases/download/{tag}/protoc-{archive-version}-osx-x86_64.zip" type="application/zip"/>
+    </implementation>
+  </group>
+  <group license="BSD License">
+    <command name="run" path="bin/protoc.exe"/>
+    <implementation arch="Windows-x86_64" version="{version}" stability="{stability}" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/protocolbuffers/protobuf/releases/download/{tag}/protoc-{archive-version}-win64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" stability="{stability}" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/protocolbuffers/protobuf/releases/download/{tag}/protoc-{archive-version}-win32.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

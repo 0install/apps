@@ -6,16 +6,16 @@
   <category>Development</category>
   <needs-terminal/>
 
-  <feed-for interface="http://repo.roscidus.com/java/maven"/>
+  <feed-for interface="https://apps.0install.net/java/maven.xml"/>
 
   <group license="Apache License 2.0">
-    <requires interface="http://repo.roscidus.com/java/openjdk-jdk" version="7..">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="7..">
       <environment insert="" mode="replace" name="JAVA_HOME"/>
     </requires>
     <environment insert="" mode="replace" name="M2_HOME"/>
     <environment insert="boot/*" name="CLASSPATH"/>
     <command name="run">
-      <runner command="java" interface="http://repo.roscidus.com/java/openjdk-jdk">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
         <for-each item-from="MAVEN_OPTS" separator=" ">
           <arg>$item</arg>
         </for-each>

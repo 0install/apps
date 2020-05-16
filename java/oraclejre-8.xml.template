@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Oracle JRE 8.x</name>
+  <summary>Oracle Java Runtime Environment 8.x</summary>
+
+  <feed-for interface="https://apps.0install.net/java/oraclejre-8.xml"/>
+
+  <group license="Oracle Technology Network License Agreement for Oracle Java SE">
+    <command name="run" path="bin/java"/>
+    <command name="javaws" path="bin/javaws"/>
+    <command name="jcontrol" path="bin/jcontrol"/>
+    <command name="keytool" path="bin/keytool"/>
+    <command name="servertool" path="bin/servertool"/>
+    <command name="pack200" path="bin/pack200"/>
+    <command name="unpack200" path="bin/unpack200"/>
+    <command name="rmid" path="bin/rmid"/>
+    <command name="rmiregistry" path="bin/rmiregistry"/>
+    <command name="jjs" path="bin/jjs"/>
+    <implementation arch="Linux-i586" stability="stable" released="{released}" version="{version}">
+      <manifest-digest/>
+      <archive extract="jre1.8.0_{patch-level}" href="https://javadl.oracle.com/webapps/download/AutoDL?BundleId={bundle-id-linux-i586}_{bundle-suffix}" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" stability="stable" released="{released}" version="{version}">
+      <manifest-digest/>
+      <archive extract="jre1.8.0_{patch-level}" href="https://javadl.oracle.com/webapps/download/AutoDL?BundleId={bundle-id-linux-x64}_{bundle-suffix}" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="Oracle Technology Network License Agreement for Oracle Java SE">
+    <command name="run" path="bin/java.exe"/>
+    <command name="run-gui" path="bin/javaw.exe"/>
+    <command name="javaws" path="bin/javaws.exe"/>
+    <command name="javacpl" path="bin/javacpl.exe"/>
+    <command name="keytool" path="bin/keytool.exe"/>
+    <command name="servertool" path="bin/servertool.exe"/>
+    <command name="pack200" path="bin/pack200.exe"/>
+    <command name="unpack200" path="bin/unpack200.exe"/>
+    <command name="rmid" path="bin/rmid.exe"/>
+    <command name="rmiregistry" path="bin/rmiregistry.exe"/>
+    <command name="jjs" path="bin/jjs.exe"/>
+    <command name="kinit" path="bin/kinit.exe"/>
+    <command name="klist" path="bin/klist.exe"/>
+    <command name="ktab" path="bin/ktab.exe"/>
+    <command name="jabswitch" path="bin/jabswitch.exe"/>
+    <implementation arch="Windows-i486" stability="stable" released="{released}" version="{version}">
+      <manifest-digest/>
+      <archive extract="jre1.8.0_{patch-level}" href="https://javadl.oracle.com/webapps/download/AutoDL?BundleId={bundle-id-windows-i586}_{bundle-suffix}" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" stability="stable" released="{released}" version="{version}">
+      <manifest-digest/>
+      <archive extract="jre1.8.0_{patch-level}" href="https://javadl.oracle.com/webapps/download/AutoDL?BundleId={bundle-id-windows-x64}_{bundle-suffix}" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

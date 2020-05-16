@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/lib/zlib" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/lib/zlib.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>zlib</name>
   <summary xml:lang="en">Zlib: general purpose data compression / decompression library</summary>
   <description xml:lang="en">zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system. The zlib data format is itself portable across platforms. Unlike the LZW compression method used in Unix compress(1) and in the GIF image format, the compression method currently used in zlib essentially never expands the data. (LZW can double or triple the file size in extreme cases.) zlib's memory footprint is also independent of the input data and can be reduced, if necessary, at some cost in compression. </description>
@@ -11,6 +11,10 @@
     <manifest-digest sha256new="5HFJYEWPB7EJFFCFGDEBV5XWKKWZYUN4IM23JXKWFYLTWXG52HRA"/>
     <archive href="https://sourceforge.net/projects/gnuwin32/files/zlib/1.2.3/zlib-1.2.3-bin.zip" size="99777" type="application/zip"/>
     <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/zlib-bin.zip?raw=true" size="99777" type="application/zip"/>
+  </implementation>
+  <implementation arch="Windows-i386" version="1.2.8-2" released="2013-11-23" id="sha1new=ccaa167be666dd956d13009d951ceeda8eaffff7">
+    <manifest-digest sha256new="RIFH7BBMOWLPA4CVTA52XEXTIL3XEQCFIBNWFD5X4DQ3MALUILNA" />
+    <archive href="https://sourceforge.net/projects/ezwinports/files/zlib-1.2.8-2-w32-bin.zip" size="144691" type="application/zip" />
   </implementation>
   <package-implementation package="zlib"/>
   <package-implementation distributions="Gentoo" package="sys-libs/zlib"/>

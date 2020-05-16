@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>GolangCI-Lint</name>
+  <summary>linters runner for Go</summary>
+  <description>Linters Runner for Go. Nice colored output. Can report only new issues. Fewer false-positives. Yaml/toml config.</description>
+  <homepage>https://github.com/golangci/golangci-lint</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/golang/golangci-lint.xml"/>
+
+  <group license="GPL v3 (GNU General Public License">
+    <command name="run" path="golangci-lint"/>
+
+    <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="golangci-lint-{version}-linux-amd64" href="https://github.com/golangci/golangci-lint/releases/download/v{version}/golangci-lint-{version}-linux-amd64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="golangci-lint-{version}-linux-386" href="https://github.com/golangci/golangci-lint/releases/download/v{version}/golangci-lint-{version}-linux-386.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="golangci-lint-{version}-darwin-amd64" href="https://github.com/golangci/golangci-lint/releases/download/v{version}/golangci-lint-{version}-darwin-amd64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="GPL v3 (GNU General Public License">
+    <command name="run" path="golangci-lint.exe"/>
+
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="golangci-lint.exe-{version}-windows-amd64" href="https://github.com/golangci/golangci-lint/releases/download/v{version}/golangci-lint.exe-{version}-windows-amd64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="golangci-lint.exe-{version}-windows-386" href="https://github.com/golangci/golangci-lint/releases/download/v{version}/golangci-lint.exe-{version}-windows-386.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

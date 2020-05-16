@@ -1,11 +1,11 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="http://repo.roscidus.com/utils/gzip" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
+<interface uri="https://apps.0install.net/utils/gzip.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Gzip</name>
   <summary xml:lang="en">Gzip: compress files</summary>
   <description xml:lang="en">gzip (GNU zip) is a compression utility designed to be a replacement for compress. Its main advantages over compress are much better compression and freedom from patented algorithms. </description>
-  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.ico" type="image/vnd.microsoft.icon"/>
-  <icon href="https://raw.githubusercontent.com/0install/0install.de-feeds/master/Gow.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/>
   <category>Utility</category>
   <homepage>http://gnuwin32.sourceforge.net/packages/gzip.htm</homepage>
   <needs-terminal/>
@@ -13,122 +13,122 @@
     <environment insert="bin" name="GZIP_BINDIR"/>
     <command name="run" path="bin/gzip.exe"/>
     <command name="gunzip" path="bin/gunzip">
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <command name="gzexe" path="bin/gzexe">
-      <requires interface="http://repo.roscidus.com/utils/sed">
+      <requires interface="https://apps.0install.net/utils/sed.xml">
         <executable-in-path name="sed"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/grep">
+      <requires interface="https://apps.0install.net/utils/grep.xml">
         <executable-in-path name="grep"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/coreutils">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <command name="uncompress" path="bin/uncompress">
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <command name="zcat" path="bin/zcat">
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <command name="zdiff" path="bin/zdiff">
-      <requires interface="http://repo.roscidus.com/utils/diffutils">
+      <requires interface="https://apps.0install.net/utils/diffutils.xml">
         <executable-in-path name="diff"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/sed">
+      <requires interface="https://apps.0install.net/utils/sed.xml">
         <executable-in-path name="sed"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/coreutils">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <command name="zcmp" path="bin/zdiff">
       <arg>--__cmp</arg>
-      <requires interface="http://repo.roscidus.com/utils/diffutils">
+      <requires interface="https://apps.0install.net/utils/diffutils.xml">
         <executable-in-path command="cmp" name="cmp"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/sed">
+      <requires interface="https://apps.0install.net/utils/sed.xml">
         <executable-in-path name="sed"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/coreutils">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <command name="zgrep" path="bin/zgrep">
-      <requires interface="http://repo.roscidus.com/utils/grep">
+      <requires interface="https://apps.0install.net/utils/grep.xml">
         <executable-in-var name="GREP"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/sed">
+      <requires interface="https://apps.0install.net/utils/sed.xml">
         <executable-in-path name="sed"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/coreutils">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <command name="zegrep" path="bin/zgrep">
       <arg>-E</arg>
-      <requires interface="http://repo.roscidus.com/utils/grep">
+      <requires interface="https://apps.0install.net/utils/grep.xml">
         <executable-in-var name="GREP"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/sed">
+      <requires interface="https://apps.0install.net/utils/sed.xml">
         <executable-in-path name="sed"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/coreutils">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <command name="zfgrep" path="bin/zgrep">
       <arg>-F</arg>
-      <requires interface="http://repo.roscidus.com/utils/grep">
+      <requires interface="https://apps.0install.net/utils/grep.xml">
         <executable-in-var name="GREP"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/sed">
+      <requires interface="https://apps.0install.net/utils/sed.xml">
         <executable-in-path name="sed"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/coreutils">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <command name="zforce" path="bin/zforce">
-      <requires interface="http://repo.roscidus.com/utils/grep">
+      <requires interface="https://apps.0install.net/utils/grep.xml">
         <executable-in-var name="GREP"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/coreutils">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <command name="zless" path="bin/zless">
-      <requires interface="http://repo.roscidus.com/utils/less">
+      <requires interface="https://apps.0install.net/utils/less.xml">
         <executable-in-path name="less"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <command name="zmore" path="bin/zmore">
       <environment name="LESS_IS_MORE" value="1"/>
-      <requires interface="http://repo.roscidus.com/utils/less">
+      <requires interface="https://apps.0install.net/utils/less.xml">
         <executable-in-path name="more"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/coreutils">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <command name="znew" path="bin/znew">
-      <requires interface="http://repo.roscidus.com/utils/sed">
+      <requires interface="https://apps.0install.net/utils/sed.xml">
         <executable-in-path name="sed"/>
       </requires>
-      <requires interface="http://repo.roscidus.com/utils/coreutils">
+      <requires interface="https://apps.0install.net/utils/coreutils.xml">
         <environment insert="bin" name="PATH"/>
       </requires>
-      <runner interface="http://repo.roscidus.com/utils/bash"/>
+      <runner interface="https://apps.0install.net/utils/bash.xml"/>
     </command>
     <manifest-digest sha256new="A6FIVMODJYHSF3H5HLNUKDZW4PIYM2HLKW7OFJNPT5QATXMFYGTQ"/>
     <archive href="https://sourceforge.net/projects/gnuwin32/files/gzip/1.3.12-1/gzip-1.3.12-1-bin.zip" size="135350" type="application/zip"/>

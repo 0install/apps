@@ -7,18 +7,18 @@
   <category>Development</category>
   <needs-terminal/>
 
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/dotnet/ironpython.png" type="image/png"/>
-  <icon href="https://raw.githubusercontent.com/0install/repo.roscidus.com/master/dotnet/ironpython.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/dotnet/ironpython.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/dotnet/ironpython.ico" type="image/vnd.microsoft.icon"/>
 
-  <feed-for interface="http://repo.roscidus.com/dotnet/ironpython"/>
+  <feed-for interface="https://apps.0install.net/dotnet/ironpython.xml"/>
 
   <!-- .NET Framework 4.0 -->
   <group arch="Windows-x86_64" license="The Apache License v2">
     <command name="run" path="net40/ipy.exe">
-      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run" version="4.0..!4.5" />
+      <runner interface="https://apps.0install.net/dotnet/clr.xml" command="run" version="4.0..!4.5" />
     </command>
     <command name="run-gui" path="net40/ipyw.exe">
-      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run-gui" version="4.0..!4.5" />
+      <runner interface="https://apps.0install.net/dotnet/clr.xml" command="run-gui" version="4.0..!4.5" />
     </command>
     <implementation version="{version}" released="{released}" id="v{version}-net40-x64">
       <manifest-digest/>
@@ -27,10 +27,10 @@
   </group>
   <group arch="Windows-i486" license="The Apache License v2">
     <command name="run" path="net40/ipy32.exe">
-      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run" version="4.0..!4.5" />
+      <runner interface="https://apps.0install.net/dotnet/clr.xml" command="run" version="4.0..!4.5" />
     </command>
     <command name="run-gui" path="net40/ipyw32.exe">
-      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run-gui" version="4.0..!4.5" />
+      <runner interface="https://apps.0install.net/dotnet/clr.xml" command="run-gui" version="4.0..!4.5" />
     </command>
     <implementation version="{version}" released="{released}" id="v{version}-net40-x86">
       <manifest-digest/>
@@ -41,10 +41,10 @@
   <!-- .NET Framework 4.5 -->
   <group arch="Windows-x86_64" license="The Apache License v2">
     <command name="run" path="net45/ipy.exe">
-      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run" version="4.5.." />
+      <runner interface="https://apps.0install.net/dotnet/clr.xml" command="run" version="4.5.." />
     </command>
     <command name="run-gui" path="net45/ipyw.exe">
-      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run-gui" version="4.5.." />
+      <runner interface="https://apps.0install.net/dotnet/clr.xml" command="run-gui" version="4.5.." />
     </command>
     <implementation version="{version}" released="{released}" id="v{version}-net45-x64">
       <manifest-digest/>
@@ -53,10 +53,10 @@
   </group>
   <group arch="Windows-i486" license="The Apache License v2">
     <command name="run" path="net45/ipy32.exe">
-      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run" version="4.5.." />
+      <runner interface="https://apps.0install.net/dotnet/clr.xml" command="run" version="4.5.." />
     </command>
     <command name="run-gui" path="net45/ipyw32.exe">
-      <runner interface="http://repo.roscidus.com/dotnet/clr" command="run-gui" version="4.5.." />
+      <runner interface="https://apps.0install.net/dotnet/clr.xml" command="run-gui" version="4.5.." />
     </command>
     <implementation version="{version}" released="{released}" id="v{version}-net45-x86">
       <manifest-digest/>
@@ -67,7 +67,7 @@
   <!-- .NET Core 2.0 -->
   <group arch="POSIX-*" license="The Apache License v2">
     <command name="run" path="netcoreapp2.0/ipy.dll">
-      <runner interface="http://repo.roscidus.com/dotnet/core" command="run" version="2.0.." />
+      <runner interface="https://apps.0install.net/dotnet/core.xml" command="run" version="2.0.." />
     </command>
     <implementation version="{version}" released="{released}" id="v{version}-netcoreapp2.0">
       <manifest-digest/>

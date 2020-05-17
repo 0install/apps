@@ -25,7 +25,7 @@
     <requires interface="https://apps.0install.net/devel/gettext.xml">
       <environment insert="bin" name="PATH"/>
     </requires>
-    <command name="run" path="bin/whereis.exe"/>
+    <command name="whereis" path="bin/whereis.exe"/>
     <command name="col" path="bin/col.exe"/>
     <command name="colcrt" path="bin/colcrt.exe"/>
     <command name="colrm" path="bin/colrm.exe"/>
@@ -42,7 +42,7 @@
   </implementation>
   <package-implementation distributions="Gentoo" package="sys-apps/util-linux"/>
   <package-implementation package="util-linux" main="/usr/bin/whereis"/>
-  <entry-point binary-name="whereis" command="run">
+  <entry-point binary-name="whereis" command="whereis">
     <needs-terminal/>
     <name xml:lang="en">whereis</name>
     <summary xml:lang="en">whereis: locate the binary, source, and manual page files for a command</summary>

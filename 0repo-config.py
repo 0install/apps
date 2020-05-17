@@ -161,18 +161,16 @@ def get_public_rel_path(feeds_rel_path):
 def is_excluded_from_catalog(feed_root, dir_rel_path):
 	def get_tag(tag_name):
 		return feed_root.getElementsByTagName(tag_name)
-
 	def has_tag(tag_name):
 		return get_tag(tag_name).length > 0
-
 	def has_main(tag_name):
 		return any(tag.hasAttribute('main') for tag in get_tag(tag_name))
-
 	def has_command(command_name):
 		return any(tag.getAttribute('name') == command_name for tag in get_tag('command'))
-
+	def is_executable():
+		return has_main('group') or has_main('implementation') or has_main('package-implementation') or has_command('run')
 	def is_library():
-		return not (has_main('group') or has_main('implementation') or has_main('package-implementation') or has_command('run'))
+		return 'lib/' in feed_root.getAttribute('uri') or not is_executable()
 
 	return has_tag('replaced-by') or has_tag('feed-for') or (dir_rel_path == '' and is_library())
 

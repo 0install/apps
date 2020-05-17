@@ -23,10 +23,8 @@ The Win32 port has some limitations, In particular the ‘|&amp;’ operator and
   <homepage>http://gnuwin32.sourceforge.net/packages/gawk.htm</homepage>
   <needs-terminal/>
   <implementation arch="Windows-*" id="sha1new=e4a41316d15e4177e67f9028fd8a2b9c56d9279a" license="GPL v3 (GNU General Public License)" released="2008-02-10" version="3.1.6-1">
-    <command name="gawk-3.1.6" path="bin/gawk-3.1.6.exe"/>
     <command name="awk" path="bin/awk.exe"/>
     <command name="run" path="bin/gawk.exe"/>
-    <command name="pgawk-3.1.6" path="bin/pgawk-3.1.6.exe"/>
     <command name="pgawk" path="bin/pgawk.exe"/>
     <manifest-digest sha256new="VR2W42AWDDLK3K3HES6A7BCFQJHHHHCFWJOGDRGBRSKBG6S4TOZQ"/>
     <archive href="https://sourceforge.net/projects/gnuwin32/files/gawk/3.1.6-1/gawk-3.1.6-1-bin.zip" size="1448542" type="application/zip"/>
@@ -34,11 +32,6 @@ The Win32 port has some limitations, In particular the ‘|&amp;’ operator and
   </implementation>
   <package-implementation distributions="Gentoo" package="sys-apps/gawk"/>
   <package-implementation package="gawk" main="/usr/bin/gawk"/>
-  <entry-point binary-name="gawk-3.1.6" command="gawk-3.1.6">
-    <needs-terminal/>
-    <name xml:lang="en">Gawk</name>
-    <summary xml:lang="en">Gawk: pattern scanning and processing language</summary>
-  </entry-point>
   <entry-point binary-name="awk" command="awk">
     <needs-terminal/>
     <name xml:lang="en">awk</name>
@@ -48,12 +41,6 @@ The Win32 port has some limitations, In particular the ‘|&amp;’ operator and
     <needs-terminal/>
     <name xml:lang="en">Gawk</name>
     <summary xml:lang="en">Gawk: pattern scanning and processing language</summary>
-  </entry-point>
-  <entry-point binary-name="pgawk-3.1.6" command="pgawk-3.1.6">
-    <needs-terminal/>
-    <name xml:lang="en">Pgawk-3.1.6</name>
-    <summary xml:lang="en">Pgawk: the profiling version of gawk.</summary>
-    <description xml:lang="en">Pgawk: the profiling version of gawk. It is identical in every way to gawk , except that programs run more slowly, and it automatically in the file awkprof.out when done.</description>
   </entry-point>
   <entry-point binary-name="pgawk" command="pgawk">
     <needs-terminal/>

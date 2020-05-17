@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/units.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Units</name>
+  <summary xml:lang="en">Units: unit conversion and calculation</summary>
+  <description xml:lang="en">Units is a program for units conversion and units calculation. The program converts quantities expressed in various scales to their equivalents in other scales. Units can only handle multiplicative scale changes. For example, it cannot convert Celsius to Fahrenheit but it can convert temperature differences between those temperature scales. 
+
+The units are defined in an external data file. Units comes with an extensive, well annotated data file that defines over 2000 units. Alternatively you can provide your own data file to suit your needs. 
+
+The Units database includes scientific values, historical units, and useful day to day values such as the densities of cooking ingredients, needed to convert between European and American recipes. 
+</description>
+  <category>Science</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/units.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=4ba627fdf2a7e6c34f6e8f2302c78878490f8363" license="GPL v3 (GNU General Public License)" released="2008-09-28" version="1.87-3">
+    <requires interface="https://apps.0install.net/utils/less.xml">
+      <executable-in-path name="less"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/readline5.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/units.exe"/>
+    <manifest-digest sha256new="XHU7YSEKWTQW7FUMEGKCUDXS2CJCYCMJX6UGBQX5EVJS3XGAMNYQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/units/1.87/units-1.87-bin.zip" size="157588" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/units-1.87-bin.zip?raw=true" size="157588" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="sci-calculators/units"/>
+  <package-implementation package="units"/>
+  <entry-point binary-name="units" command="run">
+    <needs-terminal/>
+  </entry-point>
+</interface>

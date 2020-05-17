@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/fatattr.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>FatAttr</name>
+  <summary xml:lang="en">Fatattr: Display or change attributes on a filesystem</summary>
+  <description xml:lang="en">fatattr displays or changes attributes on an MS-DOS FAT
+       filesystem. If only a list of files (or directories)
+       are given, it displays the attributes for those files or
+       directories. If given a list of attributes, it will add
+       (+) or remove (-) the  specified attributes from the
+       given list of files or directories.</description>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/util-linux-ng.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/util-linux-ng.png" type="image/png"/>
+  <category>System</category>
+  <homepage>https://sourceforge.net/projects/gnuwin32/files/fatattr/</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=650b94fa55cfab16ac1a8555f59b329678946d38" license="GPL v2 (GNU General Public License)" released="2009-02-01" version="1.0">
+    <command name="run" path="bin/fatattr.exe"/>
+    <manifest-digest sha256new="NRUP27RHG52P5YMTSTY6H6Z4ZKBNIUKEJM2CUXKTCRJZRHCIKDSQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/fatattr/1.0/fatattr-1.0-bin.zip" size="10245" type="application/zip"/>
+  </implementation>
+  <entry-point binary-name="fatattr" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">Fatattr</name>
+  </entry-point>
+</interface>

@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/lib/ncurses.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>ncurses</name>
+  <summary xml:lang="en">terminal-independent  text-based user interface library</summary>
+  <description xml:lang="en">The ncurses (new curses) library is a free software emulation of curses in System V Release 4.0 (SVr4), and more. It uses terminfo format, supports pads and color and multiple highlights and forms characters and function-key mapping, and has all the other SVr4-curses enhancements over BSD curses. SVr4 curses became the basis of X/Open Curses.</description>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/>
+  <category>Development</category>
+  <homepage>https://sourceforge.net/projects/ezwinports/files/</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-i486" doc-dir="share/man" id="sha1new=68968061b2fbd255688172377f4a0778515b5855" license="MIT/X Consortium License, LGPL (GNU Lesser General Public License)" released="2012-04-07" version="5.9">
+    <command name="captoinfo" path="bin/captoinfo.exe"/>
+    <command name="clear" path="bin/clear.exe"/>
+    <command name="infocmp" path="bin/infocmp.exe"/>
+    <command name="infotocap" path="bin/infotocap.exe"/>
+    <command name="reset" path="bin/reset.exe"/>
+    <command name="tabs" path="bin/tabs.exe"/>
+    <command name="tic" path="bin/tic.exe"/>
+    <command name="toe" path="bin/toe.exe"/>
+    <command name="tput" path="bin/tput.exe"/>
+    <command name="tset" path="bin/tset.exe"/>
+    <manifest-digest sha256new="ICPRNY33GO7DTEB6EMALMXXTW744I52P2UBWVBXBDYGNLKYSW43Q"/>
+    <archive href="https://sourceforge.net/projects/ezwinports/files/ncurses-5.9-w32-bin.zip" size="10698909" type="application/zip"/>
+  </implementation>
+  <package-implementation package="ncurses"/>
+  <package-implementation distributions="Gentoo" package="sys-libs/ncurses"/>
+  <package-implementation distributions="RPM" package="ncurses-libs"/>
+  <entry-point binary-name="captoinfo" command="captoinfo">
+    <name xml:lang="en">captoinfo</name>
+    <summary xml:lang="en"> a termcap conversion tool</summary>
+  </entry-point>
+  <entry-point binary-name="clear" command="clear">
+    <needs-terminal/>
+    <name xml:lang="en">clear</name>
+    <summary xml:lang="en">utility for clearing the screen</summary>
+  </entry-point>
+  <entry-point binary-name="infocmp" command="infocmp">
+    <needs-terminal/>
+    <name xml:lang="en">infocmp</name>
+    <summary xml:lang="en">the terminfo decompiler</summary>
+  </entry-point>
+  <entry-point binary-name="infotocap" command="infotocap">
+    <needs-terminal/>
+    <name xml:lang="en">infotocap</name>
+  </entry-point>
+  <entry-point binary-name="reset" command="reset">
+    <needs-terminal/>
+    <name xml:lang="en">reset</name>
+  </entry-point>
+  <entry-point binary-name="tabs" command="tabs">
+    <needs-terminal/>
+    <name xml:lang="en">tabs</name>
+    <summary xml:lang="en">set tabs on a terminal</summary>
+  </entry-point>
+  <entry-point binary-name="tic" command="tic">
+    <needs-terminal/>
+    <name xml:lang="en">tic</name>
+    <summary xml:lang="en">the terminfo compiler</summary>
+  </entry-point>
+  <entry-point binary-name="toe" command="toe">
+    <needs-terminal/>
+    <name xml:lang="en">toe</name>
+    <summary xml:lang="en">list (table of) terminfo entries</summary>
+  </entry-point>
+  <entry-point binary-name="tput" command="tput">
+    <needs-terminal/>
+    <name xml:lang="en">tput</name>
+    <summary xml:lang="en">utility for retrieving terminal capabilities in shell scripts</summary>
+  </entry-point>
+  <entry-point binary-name="tset" command="tset">
+    <needs-terminal/>
+    <name xml:lang="en">tset</name>
+    <summary xml:lang="en">to initialize the terminal</summary>
+  </entry-point>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7A9soACgkQWao5J8JOTh5AKAgAq+kh
+M9SyNlljTaQnAjruHdzoyhW4vVVyvnomzHD1GzsyeCpVHUVG6dw0hgJcSW9CyIbn+lhuCr/VE8hf
+Ca5xrtXXN6MFT3NCsxq3hsXi8yqFcDaeETUfAT+JOUdQTR7nBVyk8TA1xwCZgtBEPJzgI4XbLHl+
+d+pHhh9dArdh/4tPM2zuHf5jg29pUfQSuYO05N6OCzOJrcugWKG/wkYGNE4d5+Am4KLhUyVZASj+
+wkfhey7aZqbwgVZSczxYeUDprKcu9f38HFpEjugLrCHsGUKCplAq2dP+AvBiA+Sp/8NgYtrYHA9p
+DNwwOaNwrRpYixYO0+4PhjFE5bw037rGog==
+
+-->

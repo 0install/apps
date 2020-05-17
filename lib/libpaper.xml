@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/lib/libpaper.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>libpaper</name>
+  <summary xml:lang="en">LibPaper: library and tools for handling papersize</summary>
+  <description xml:lang="en">The paper library and accompanying files are intended to provide a simple way for applications to take actions based on a system- or user-specified paper size. It lets program automatically recognize a lot of different papers with their properties (actually their size). It also includes a program for accessing paper information from shell scripts. 
+
+This release is quite minimal, its purpose being to provide really basic functions (obtaining the system paper name and getting the height and width of a given kond of paper) that applications can immediately integrate. 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/lib/libpaper.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/lib/libpaper.png" type="image/png"/>
+  <category>Development</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/libpaper.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-i486" id="sha1new=55149abac15da0bcee8f35970ba0cf3954239d3a" version="1.1.21">
+    <command name="run" path="bin/paperconf.exe"/>
+    <manifest-digest sha256new="KPFS5FFFKTNHHXEM3534JCUHAPDR474IBOZM4KMBKU3NISJ4XOWQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/libpaper/1.1.21/libpaper-1.1.21-bin.zip" size="54911" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/libpaper-bin.zip?raw=true" size="54911" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="app-text/libpaper"/>
+  <entry-point binary-name="paperconf" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">Paperconf</name>
+    <summary xml:lang="en">Paperconf: print paper configuration informations</summary>
+  </entry-point>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7A+GgACgkQWao5J8JOTh6GVwf/XIUr
+c1DE2rB6F6Jggiv4ubX6xxJi5rSeC1WFSruMZsXpn/0HLMNYWBeWLwSmgYRAb59D7FFATlKJJcAS
+uEne4iA6xQSHmLYiF5Ozn5pot9XjdxyuH7OgnWv0CmlFNfoxypxWjsuPtkocVkW2TdTPrOmGeP2d
+did05YH2GhUxsaD+YmoLda9FXP/AxJCMVKbZdZZQeGqjxlw8vtf/vxReX+JwltEIQKcFJ2+44H/8
+6VoL8EiMaSPHmw6A9RdNJNCsyEaTz0uCNDlP4iBkya7SpeXJURtRDHUqoiaBhCtQ8AoITGyK+qxE
+2cxK43zzEjOTzPN2ZM+MMvgzXGy8koOKbw==
+
+-->

@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/devel/bison.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Bison</name>
+  <summary xml:lang="en">Bison: Yacc-compatible parser generator</summary>
+  <description xml:lang="en">Bison is a general purpose parser generator that converts a grammar description for an LALR(1) context-free grammar into a C program to parse that grammar. Bison can be used to develop a wide range of language parsers, from ones used in simple desk calculators to complex programming languages. Bison is upwardly compatible with Yacc, so any correctly written Yacc grammar should work with Bison without any changes. If you know Yacc, you shouldn't have any trouble using Bison. You do need to be very proficient in C programming to be able to use Bison. Bison is only needed on systems that are used for development. 
+
+If your system will be used for C development, you should install Bison. 
+
+The package contains also the -ly library sometimes used by programs using Bison-generated parsers. If you are developing programs using Bison, you might want to link with this library. This library is not required by all Bison-generated parsers, but may be employed by simple programs to supply minimal support for the generated parsers. 
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/>
+  <homepage>http://gnuwin32.sourceforge.net/packages/bison.htm</homepage>
+  <needs-terminal/>
+  <package-implementation distributions="Gentoo" package="sys-devel/bison"/>
+  <package-implementation main="/usr/bin/bison" package="bison"/>
+  <implementation arch="Windows-i486" id="sha1new=c7830b5b2d11c89fc32c3c514f071d50e5ebe173" langs="da de el es et fi fr ga hr id it ja ky lt ms nb nl pl pt_BR ro ru sl sv th tr uk vi zh_CN zh_TW" released="2009-05-04" version="2.4.1-3">
+    <requires interface="https://apps.0install.net/devel/gettext.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/libiconv.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/regex.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/devel/m4.xml">
+      <executable-in-path name="m4"/>
+    </requires>
+    <command name="run" path="bin/bison.exe"/>
+    <command name="yacc" path="bin/bison">
+      <arg>-y</arg>
+    </command>
+    <manifest-digest sha256new="ZLVAXN77VEY3KSIHHSDH4QKJHI2A5M2L544WYUSSOV73LDWLD3OA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/bison/2.4.1/bison-2.4.1-bin.zip" size="963729" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/bison-2.4.1-bin.zip?raw=true" size="963729" type="application/zip"/>
+  </implementation>
+  <entry-point binary-name="bison" command="run">
+    <needs-terminal/>
+    <summary xml:lang="en">GNU Project parser generator (yacc replacement)</summary>
+    <description xml:lang="en">Bison is a parser generator in the style of yacc(1).  It
+       should be upwardly compatible with input files  designed
+       for yacc.</description>
+  </entry-point>
+  <entry-point binary-name="yacc" command="yacc">
+    <name xml:lang="en">yacc</name>
+    <summary xml:lang="en">GNU Project parser generator</summary>
+    <description xml:lang="en">Yacc (Yet Another Compiler Compiler) is a parser genera-
+       tor.  This version is a simple wrapper around  bison(1).
+       It  passes option -y, --yacc to activate the upward com-
+       patibility mode.</description>
+  </entry-point>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7A+KQACgkQWao5J8JOTh4vSwgAi0sl
+YfONaSsncdHi6C7yzJdwdSuWeRCmv++5gKYho+95JcsvNHv+W89RGmRQWkozL5+dljyGvg14wZ5P
+YkplbVmCcn2zIDWMFu1G9H3bhZm1oFHEGNoXywm3nWFzh/Ajl6mDrpALaI4FRgb8sg2fwyJKjUrE
+7UKgLmL/yRYEpn4F7wMiIodIckARzdbEA5XoNlumgm0uH1gMdvVWxPKcTcVyqto7F+PYs/fvOZGG
+x5KR6R6KlRk5FZMekOdGbPGP1fr/QA0VH5Tqyv+RnGEGwgIzWs24M8sW6QIfdm7Ij8xhNVOFhD+v
+cG5HEVFIKelSjotwpj0UET9lwk9KmsJnVw==
+
+-->

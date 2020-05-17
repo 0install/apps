@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/utils/help2man.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Help2Man</name>
+  <summary xml:lang="en">Help2Man: generate man page from help text of program</summary>
+  <homepage>http://gnuwin32.sourceforge.net/packages/help2man.htm</homepage>
+  <implementation id="sha1new=21b11641e79283ad42b7d8479203c8e4d3c947d9" langs="fr pl" license="GPL v2 (GNU General Public License)" released="2005-04-24" version="1.35.1">
+    <requires interface="https://apps.0install.net/devel/gettext.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin\help2man">
+      <runner interface="https://apps.0install.net/perl/perl.xml">
+        <arg>-w</arg>
+      </runner>
+    </command>
+    <manifest-digest sha256new="EHCF2JPW23VUGWVBIFS4U3WBMNRSBAQIVUSB7YVS4YUDUQ364KTQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/help2man/1.35.1/help2man-1.35.1-bin.zip" size="41013" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/help2man-bin.zip?raw=true" size="41013" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="sys-apps/help2man"/>
+  <package-implementation package="help2man"/>
+  <entry-point binary-name="help2man" command="run">
+    <needs-terminal/>
+  </entry-point>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7A9soACgkQWao5J8JOTh6l8ggAo/Hg
+biL9a/eZ4GCvBTXH4H6CA3iRgKqFI+vVCcqPo3p/zUqdERAQ1INDDvH8fTKIOP7/EBbwg87Va0jw
+HFXIaq9P9plAh6zutIMYRbpG60CGwuLgXlqWjL2E4HRmXZFYWVK7CYqM8o858f1ahmO0e31u4aOX
+QFadmqmGWgyXbujeXtmlLDuIv6rafqHFFwN+E7EibZTt0HA7vE+2n3Wo5RVkfQl7HxeZ5HAOS3FK
+8a7tnZTUSz6q061pN7ycfFim5pzkiZoyrGG1e8miOm3Uov2bJkHZ5r4A4xm7dfPPQUrutbJNwFHt
+KliH8XAIlUTG6xna/LB0alroQ74aEdv84A==
+
+-->

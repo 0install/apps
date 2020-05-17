@@ -4,7 +4,30 @@
 
 GLUT (and hence FreeGLUT) takes care of all the system-specific chores required for creating windows, initializing OpenGL contexts, and handling input events, to allow for trully portable OpenGL programs.</description><category>Graphics</category><homepage>http://freeglut.sourceforge.net/</homepage></interface><interface uri="https://apps.0install.net/lib/glib.xml"><name>GLib</name><summary>low-level system libraries written in C</summary><description>GLib provides the core application building blocks for libraries and applications written in C. It provides the core object system used in GNOME, the main loop implementation, and a large set of utility functions for strings and common data structures.</description><homepage>https://wiki.gnome.org/Projects/GLib</homepage></interface><interface uri="https://apps.0install.net/lib/readline4.xml"><name>GNU Readline Library</name><summary xml:lang="en">Get a line from a user with editing.</summary><description xml:lang="en">Readline offers editing capabilities while the user is entering the line. By default, the line editing commands are similar to those of emacs.</description><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/><category>System</category><homepage>http://mingwrep.sourceforge.net/</homepage><entry-point binary-name="rl" command="run"/><entry-point binary-name="rlversion" command="rlversion">
     <needs-terminal/>
-  </entry-point></interface><interface uri="https://apps.0install.net/lib/gtk.xml"><name>GTK+ Runtime</name><summary>runtime components of GTK+</summary><description>This package contains the runtime components for GTK+.</description><homepage>http://www.gtk.org/</homepage></interface><interface uri="https://apps.0install.net/lib/libiconv.xml"><name>LibIconv</name><summary xml:lang="en">LibIconv: convert between character encodings</summary><description xml:lang="en">LibIconv converts from one character encoding to another through Unicode conversion (see Web page for full list of supported encodings). It has also limited support for transliteration, i.e. when a character cannot be represented in the target character set, it is approximated through one or several similar looking characters. It is useful if your application needs to support multiple character encodings, but that support lacks from your system. 
+  </entry-point></interface><interface uri="https://apps.0install.net/lib/gtk.xml"><name>GTK+ Runtime</name><summary>runtime components of GTK+</summary><description>This package contains the runtime components for GTK+.</description><homepage>http://www.gtk.org/</homepage></interface><interface uri="https://apps.0install.net/lib/gdbm.xml"><name>Gdbm</name><summary xml:lang="en">Gdbm: GNU database manager</summary><description xml:lang="en">The GNU `dbm' is a library of database functions that use extendible hashing and works similar to the standard UNIX `dbm' functions. These routines are provided to a programmer needing to create and manipulate a hashed database. </description><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/><category>System</category><homepage>http://gnuwin32.sourceforge.net/packages/gdbm.htm</homepage><entry-point binary-name="testgdbm" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">testgdbm</name>
+    <summary xml:lang="en">A simple test program</summary>
+  </entry-point><entry-point binary-name="conv2gdbm" command="conv2gdbm">
+    <needs-terminal/>
+    <name xml:lang="en">conv2gdbm</name>
+    <summary xml:lang="en">A dbm database conversion program</summary>
+  </entry-point><entry-point binary-name="tdbm" command="tdbm">
+    <needs-terminal/>
+    <name xml:lang="en">tdbm</name>
+  </entry-point><entry-point binary-name="testdbm" command="testdbm">
+    <needs-terminal/>
+    <name xml:lang="en">testdbm</name>
+    <summary xml:lang="en">A simple test program</summary>
+  </entry-point><entry-point binary-name="testndbm" command="testndbm">
+    <needs-terminal/>
+    <name xml:lang="en">testndbm</name>
+    <summary xml:lang="en">A simple test program</summary>
+  </entry-point><entry-point binary-name="tndbm" command="tndbm">
+    <needs-terminal/>
+    <name xml:lang="en">tndbm</name>
+    <summary xml:lang="en">the gndbm test program</summary>
+  </entry-point></interface><interface uri="https://apps.0install.net/lib/libiconv.xml"><name>LibIconv</name><summary xml:lang="en">LibIconv: convert between character encodings</summary><description xml:lang="en">LibIconv converts from one character encoding to another through Unicode conversion (see Web page for full list of supported encodings). It has also limited support for transliteration, i.e. when a character cannot be represented in the target character set, it is approximated through one or several similar looking characters. It is useful if your application needs to support multiple character encodings, but that support lacks from your system. 
 •Libiconv-1 is in Libiconv-1.7 
 </description><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/><category>Development</category><homepage>http://gnuwin32.sourceforge.net/packages/libiconv.htm</homepage><entry-point binary-name="iconv" command="run">
     <needs-terminal/>
@@ -24,7 +47,15 @@ GLUT (and hence FreeGLUT) takes care of all the system-specific chores required 
   </entry-point><entry-point binary-name="run_tests" command="test">
     <needs-terminal/>
     <name xml:lang="en">run_tests</name>
-  </entry-point></interface><interface uri="https://apps.0install.net/lib/pcre.xml"><name>Pcre</name><summary xml:lang="en">Pcregrep: a grep with Perl-compatible regular expressions </summary><description xml:lang="en">The PCRE library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5. PCRE has its own native API, as well as a set of wrapper functions that correspond to the POSIX regular expression API. The PCRE library is free, even for building commercial software. </description><icon href="https://raw.githubusercontent.com/0install/apps/master/lib/pcre.ico" type="image/vnd.microsoft.icon"/><icon href="https://raw.githubusercontent.com/0install/apps/master/lib/pcre.png" type="image/png"/><category>Development</category><homepage>http://gnuwin32.sourceforge.net/packages/pcre.htm</homepage><entry-point binary-name="pcregrep" command="run">
+  </entry-point></interface><interface uri="https://apps.0install.net/lib/pcre.xml"><name>Pcre</name><summary xml:lang="en">Library of Perl-compatible regular expressions.</summary><description xml:lang="en">Library of Perl-compatible regular expressions.  I needed this to
+  build Grep capable of &quot;grep -P&quot; mode.  (A newer version is available
+  below, but this one is still required for the ported Grep.)
+
+Version 8.36 of the library of Perl-compatible regular expressions.
+  I needed this to build wget (below).
+
+  The C++ bindings of this library is provided only as a static
+  library, to avoid dependency on libstdc++ DLL.</description><icon href="https://raw.githubusercontent.com/0install/apps/master/lib/pcre.ico" type="image/vnd.microsoft.icon"/><icon href="https://raw.githubusercontent.com/0install/apps/master/lib/pcre.png" type="image/png"/><category>Development</category><homepage>https://sourceforge.net/projects/ezwinports/files/</homepage><entry-point binary-name="pcregrep" command="run">
     <needs-terminal/>
     <name xml:lang="en">pcregrep</name>
     <summary xml:lang="en">a grep with Perl-compatible regular expressions.    </summary>
@@ -100,7 +131,10 @@ Using the Regex library, you can:
 •search within a string for a substring matching a specified pattern. 
 
 Regex provides three groups of functions with which you can operate on regular expressions. One group--the GNU group--is more powerful but not completely compatible with the other two, namely the POSIX and Berkeley UNIX groups; its interface was designed specifically for GNU. The other groups have the same interfaces as do the regular expression functions in POSIX and Berkeley UNIX. 
-</description><homepage>http://www.gnu.org/directory/regex.html</homepage></interface><interface uri="https://apps.0install.net/lib/curl3-gnutls.xml"><name>curl3-gnutls</name><summary>Multi-protocol file transfer library (GnuTLS)</summary><description>libcurl is designed to be a solid, usable, reliable and portable
+</description><homepage>http://www.gnu.org/directory/regex.html</homepage></interface><interface uri="https://apps.0install.net/lib/xpm.xml"><name>Xpm</name><summary xml:lang="en">Xpm: library for X PixMap images</summary><category>Development</category><description xml:lang="en">XPixMap (XPM) consists of an ASCII image format and a C library. The format defines how to store color images (X Pixmap) in a portable and powerful way. The library provides a set of functions to store and retrieve images to and from XPM format data, being either files, buffers (files in memory), or data (included files). 
+
+While XPM is not an X Consortium standard, it is already a de facto standard. It is used in many applications both commercial and non-commercial. Several vendors distribute the XPM library, as contributed software, on the platforms they sell. Moreover, the Common Desktop Environment specifies that icons must be stored either in XBM or XPM format. Finally, Motif 2.0 from OSF includes the XPM library, allowing XPM to be used in addition to XBM. 
+</description><homepage>http://gnuwin32.sourceforge.net/packages/xpm.htm</homepage></interface><interface uri="https://apps.0install.net/lib/curl3-gnutls.xml"><name>curl3-gnutls</name><summary>Multi-protocol file transfer library (GnuTLS)</summary><description>libcurl is designed to be a solid, usable, reliable and portable
 multi-protocol file transfer library.
 
 SSL support is provided by GnuTLS.
@@ -161,7 +195,14 @@ Access Protocol) servers and clients.</description></interface><interface uri="h
 MPFR provides a library for multiple-precision floating-point computation with
 correct rounding. The computation is both efficient and has a well-defined
 semantics. It copies the good ideas from the ANSI/IEEE-754 standard for double-
-precision floating-point arithmetic (53-bit mantissa).</description><homepage>http://www.mpfr.org/</homepage></interface><interface uri="https://apps.0install.net/lib/png12-0.xml"><name>libpng12-0</name><summary>PNG library - runtime</summary><description>libpng is a library implementing an interface for reading and writing
+precision floating-point arithmetic (53-bit mantissa).</description><homepage>http://www.mpfr.org/</homepage></interface><interface uri="https://apps.0install.net/lib/libpaper.xml"><name>libpaper</name><summary xml:lang="en">LibPaper: library and tools for handling papersize</summary><description xml:lang="en">The paper library and accompanying files are intended to provide a simple way for applications to take actions based on a system- or user-specified paper size. It lets program automatically recognize a lot of different papers with their properties (actually their size). It also includes a program for accessing paper information from shell scripts. 
+
+This release is quite minimal, its purpose being to provide really basic functions (obtaining the system paper name and getting the height and width of a given kond of paper) that applications can immediately integrate. 
+</description><icon href="https://raw.githubusercontent.com/0install/apps/master/lib/libpaper.ico" type="image/vnd.microsoft.icon"/><icon href="https://raw.githubusercontent.com/0install/apps/master/lib/libpaper.png" type="image/png"/><category>Development</category><homepage>http://gnuwin32.sourceforge.net/packages/libpaper.htm</homepage><entry-point binary-name="paperconf" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">Paperconf</name>
+    <summary xml:lang="en">Paperconf: print paper configuration informations</summary>
+  </entry-point></interface><interface uri="https://apps.0install.net/lib/png12-0.xml"><name>libpng12-0</name><summary>PNG library - runtime</summary><description>libpng is a library implementing an interface for reading and writing
 PNG (Portable Network Graphics) format files.
 
 This package contains the runtime library files needed to run software
@@ -231,6 +272,43 @@ such XML data files.</description><icon href="https://raw.githubusercontent.com/
        the  command  line, or it can perform multiple functions
        in interactive mode. It can operate on both XML and SGML
        files.</description>
+  </entry-point></interface><interface uri="https://apps.0install.net/lib/ncurses.xml"><name>ncurses</name><summary xml:lang="en">terminal-independent  text-based user interface library</summary><description xml:lang="en">The ncurses (new curses) library is a free software emulation of curses in System V Release 4.0 (SVr4), and more. It uses terminfo format, supports pads and color and multiple highlights and forms characters and function-key mapping, and has all the other SVr4-curses enhancements over BSD curses. SVr4 curses became the basis of X/Open Curses.</description><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/><category>Development</category><homepage>https://sourceforge.net/projects/ezwinports/files/</homepage><entry-point binary-name="captoinfo" command="captoinfo">
+    <name xml:lang="en">captoinfo</name>
+    <summary xml:lang="en"> a termcap conversion tool</summary>
+  </entry-point><entry-point binary-name="clear" command="clear">
+    <needs-terminal/>
+    <name xml:lang="en">clear</name>
+    <summary xml:lang="en">utility for clearing the screen</summary>
+  </entry-point><entry-point binary-name="infocmp" command="infocmp">
+    <needs-terminal/>
+    <name xml:lang="en">infocmp</name>
+    <summary xml:lang="en">the terminfo decompiler</summary>
+  </entry-point><entry-point binary-name="infotocap" command="infotocap">
+    <needs-terminal/>
+    <name xml:lang="en">infotocap</name>
+  </entry-point><entry-point binary-name="reset" command="reset">
+    <needs-terminal/>
+    <name xml:lang="en">reset</name>
+  </entry-point><entry-point binary-name="tabs" command="tabs">
+    <needs-terminal/>
+    <name xml:lang="en">tabs</name>
+    <summary xml:lang="en">set tabs on a terminal</summary>
+  </entry-point><entry-point binary-name="tic" command="tic">
+    <needs-terminal/>
+    <name xml:lang="en">tic</name>
+    <summary xml:lang="en">the terminfo compiler</summary>
+  </entry-point><entry-point binary-name="toe" command="toe">
+    <needs-terminal/>
+    <name xml:lang="en">toe</name>
+    <summary xml:lang="en">list (table of) terminfo entries</summary>
+  </entry-point><entry-point binary-name="tput" command="tput">
+    <needs-terminal/>
+    <name xml:lang="en">tput</name>
+    <summary xml:lang="en">utility for retrieving terminal capabilities in shell scripts</summary>
+  </entry-point><entry-point binary-name="tset" command="tset">
+    <needs-terminal/>
+    <name xml:lang="en">tset</name>
+    <summary xml:lang="en">to initialize the terminal</summary>
   </entry-point></interface><interface uri="https://apps.0install.net/lib/pthreads-win32.xml"><name>pthreads-win32</name><summary xml:lang="en">Open Source POSIX Threads for Win32</summary><description xml:lang="en">GNUC/not dependent on exceptions version
 The POSIX 1003.1-2001 standard defines an application programming interface (API) for writing multithreaded applications. This interface is known more commonly as pthreads. A good number of modern operating systems include a threading library of some kind: Solaris (UI) threads, Win32 threads, DCE threads, DECthreads, or any of the draft revisions of the pthreads standard. The trend is that most of these systems are slowly adopting the pthreads standard API, with application developers following suit to reduce porting woes.  
 Win32 does not, and is unlikely to ever, support pthreads natively. This project seeks to provide a freely available and high-quality solution to this problem. 
@@ -249,11 +327,11 @@ More information about X.Org can be found at: &lt;URL:http://www.X.org&gt;
 This package is built from the X.org xproto proto module.</description></interface><interface uri="https://apps.0install.net/lib/zlib.xml"><name>zlib</name><summary xml:lang="en">Zlib: general purpose data compression / decompression library</summary><description xml:lang="en">zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system. The zlib data format is itself portable across platforms. Unlike the LZW compression method used in Unix compress(1) and in the GIF image format, the compression method currently used in zlib essentially never expands the data. (LZW can double or triple the file size in extreme cases.) zlib's memory footprint is also independent of the input data and can be reduced, if necessary, at some cost in compression. </description><icon href="http://www.zlib.net/favicon.ico" type="image/vnd.microsoft.icon"/><icon href="http://www.zlib.net/images/zlib3d-b1.png" type="image/png"/><homepage>http://gnuwin32.sourceforge.net/packages/zlib.htm</homepage></interface><interface uri="https://apps.0install.net/lib/zlib1g.xml"><name>zlib1g</name><summary>compression library - runtime</summary><description>zlib is a library implementing the deflate compression method found
 in gzip and PKZIP. This package includes the shared library.</description></interface></c:catalog>
 <!-- Base64 Signature
-iQEcBAABAgAGBQJeQLiuAAoJEFmqOSfCTk4eCAAH/3yNnPFSw0sumYeomJtD77zXWZGHWjXiFx3q
-UeByrZQPvsKfoPrQDrMtvINSDKRyFNbd8lYI2FR28aLoiC7yutzpStI2p4rOzQfntoMveIs/hObu
-z6WVu+aQEgIx6RIdJ3mldwfeqxan6Kfp7MnSIR/8eo5/xlmTZocGUwFteUtClGcTiaBjf1aOSG/h
-KD+t01uCgT6FqYl81NV7pxSwY6AZjr4tTYrXghZWkVX7rJCRaANtsvVcmd4tVsAw7FECmeS3G9YD
-xwQnbdPymY4SmFfzoYzZiLoEk04M8KzUAkyQbBx5u7amKT/ouOl7Y0EMb8j4bkW5dDaIdoxv57jI
-sfw=
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7A+MIACgkQWao5J8JOTh4cNwf7BCUY
+irS8AEuxcz/QzfdNJdExODRbhoRPyE36jriQZjIK9zUxGz8KzB3STZWmfTTLb1Jj/z2J/X4Zqnf1
+MMer2ax5CNf2RRQzXHKYTpNKN5pmb/X58KG6G75/D4duvh5qPwWMtFkOw2U+qZLmrHI+yQqlNRUO
+uxVxpjfW2lJEdWOBgbt9VtHFwPLWeb8qRhwLGVUTR5rV72aBLxN4YMhEfTBwQMmqrt+sdmgNUodU
+M6+eXHn5KK5DqGVSElcLoSz+TcpAdtA3CJ91qZaUYGV7ewdl3Yu66KVg2KB2FbTEgrQAS5BY7TUr
+AAQvxSI0fublVL4N0wNdiK6MJ5enGjzInA==
 
 -->

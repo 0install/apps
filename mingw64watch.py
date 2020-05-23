@@ -138,7 +138,8 @@ def fix_version(version):
         DottedList:= (Integer ("." Integer)*)
         Modifier:= "pre" | "rc" | "post"
     """
-    versionpattern = r'(\d+([.]\d+)*)(-(pre|rc|post)?(\d+([.]\d+)*)?)*'
+    numlist = r'(\d{1,10}([.]\d{1,10})*)'
+    versionpattern =  numlist + '(-(pre|rc|post)?' + numlist + '?)*'
     versionregex = re.compile(versionpattern)
     if versionregex.fullmatch(version):
         return version
@@ -152,7 +153,14 @@ def fix_version(version):
     if hggit:
         match = hggit.expand(r'\2')
         find_string = r'r(\d{2, 5})[+]?[.]' + match + r'[+]?-'
-        version = re.sub(find_string, r'\1.' + int(match, 16) + '-', version)
+        value = int(match, 16)
+        replacement = f'{value}'
+        if value > 2147483648:
+            replacement = ""
+            subMatches = [match[i:i + 3] for i in range(0, len(match), 3)]
+            subReplacements = [f'{int(x,16)}' for x in subMatches]
+            replacement = '.'.join(subReplacements)
+        version = re.sub(find_string, r'\1.' + replacement + '-', version)
 
     if re.search(r'[.]r\d', version):
         version = re.sub(r'[.]r(\d)', r'.\1', version)
@@ -160,7 +168,14 @@ def fix_version(version):
     hexstringmatch = re.search(r'[0-9]*[A-Fa-f][0-9A-Fa-f]+', version)
     if hexstringmatch:
         match = hexstringmatch.group(0)
-        version = re.sub(match, f'{int(match, 16)}', version)
+        value = int(match, 16)
+        replacement = f'{value}'
+        if value > 2147483648:
+            replacement = ""
+            subMatches = [match[i:i + 3] for i in range(0, len(match), 3)]
+            subReplacements = [f'{int(x,16)}' for x in subMatches]
+            replacement = '.'.join(subReplacements)
+        version = re.sub(match, replacement, version)
 
     if versionregex.fullmatch(version):
         return version

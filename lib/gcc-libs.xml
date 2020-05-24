@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/lib/gcc-libs.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>gcc-libs</name>
+  <summary>GNU Compiler Collection (libraries) for MinGW-w64</summary>
+  <description/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/>
+  <category>Development</category>
+  <homepage>https://gcc.gnu.org</homepage>
+  <package-implementation package="gcc-libs"/>
+  <group license="GPL3+, partial:GCCRLE, partial:LGPL2+">
+    <requires interface="https://apps.0install.net/lib/gmp.xml">
+      <environment insert="lib" name="LD_LIBRARY_PATH"/>
+
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/mpc.xml">
+      <environment insert="lib" name="LD_LIBRARY_PATH"/>
+
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/mpfr.xml">
+      <environment insert="lib" name="LD_LIBRARY_PATH"/>
+
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/libwinpthread.xml">
+      <environment insert="lib" name="LD_LIBRARY_PATH"/>
+
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <group  released="2017-08-15" version="7.2.0-1">
+      <implementation arch="Windows-x86_64" id="sha1new=f722c40fc72c7b9937fcbf25b84bec22c2f54034">
+        <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-gcc-libs-7.2.0-1-any.pkg.tar.xz" size="580676"/>
+      </implementation>
+      <implementation arch="Windows-i686" id="sha1new=3ab4c471544a3fd3fe5efce2c944400a366f7418">
+        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-gcc-libs-7.2.0-1-any.pkg.tar.xz" size="648056"/>
+      </implementation>
+    </group>
+    <implementation arch="Windows-i686" id="sha1new=a84323e1366ab184ddb7070538fa7eb0bc59294f" released="2018-04-25" version="7.3.0-2">
+      <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-gcc-libs-7.3.0-2-any.pkg.tar.xz" size="651440"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=dd1b97d23349af5c12d0472ff9fc12a5dbe2c01c" released="2018-09-30" version="8.2.0-3">
+      <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-gcc-libs-8.2.0-3-any.pkg.tar.xz" size="578888"/>
+    </implementation>
+    <group version="9.3.0-2">
+      <dc:creator>Alexey Pavlov &lt;alexpux@gmail.com&gt;</dc:creator>
+      <implementation arch="Windows-x86_64" id="sha1new=3cb2b272dd4059d8bb75ea9d9b42d84fd2f85cf3" released="2020-05-04">
+        <dc:available>2020-04-06</dc:available>
+	<manifest-digest sha256new="T66XIBEOJVY4FBHVPOFPKJ4INCWPY4TXUR2CZPZXFDLSNH6NVWPQ"/>
+      <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-gcc-libs-9.3.0-2-any.pkg.tar.xz" size="704272"/>
+      </implementation>
+      <implementation arch="Windows-i686" id="sha1new=0524a43b3840c4ed76db20b70de916dc80d361ba" released="2020-05-04">
+        <dc:available>2020-04-07</dc:available>
+	<manifest-digest sha256new="GHUI3YNY7Y4SPVUQJ2CUT66HQUMXS62FP57EAB7S2KJU4RZS3I4Q"/>
+        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-gcc-libs-9.3.0-2-any.pkg.tar.xz" size="784008"/>
+      </implementation>
+    </group>
+  </group>
+
+</interface>

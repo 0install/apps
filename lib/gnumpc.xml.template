@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<interface uri="https://apps.0install.net/lib/gnumpc.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <name>{name}</name>
+  <summary>{desc}</summary>
+  <description/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/>
+  <homepage>{url}</homepage>
+  <group license="{license}">
+    <group version="{version}">
+      <dc:creator>{packager}</dc:creator>
+      <implementation arch="Windows-x86_64">
+        <dc:available>{released}</dc:available>
+	<manifest-digest/>
+        <archive extract="mingw64" href="{pkg_url}"/>
+      </implementation>
+      <implementation arch="Windows-i686">
+        <dc:available>{released32}</dc:available>
+	<manifest-digest/>
+        <archive extract="mingw32" href="{pkg_url32}"/>
+      </implementation>
+    </group>
+  </group>
+</interface>

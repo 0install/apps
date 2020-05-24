@@ -45,4 +45,4 @@ RELEASE64['released32'] = RELEASE32['released']
 RELEASE64['pkg_url32'] = RELEASE32['pkg_url']
 
 releases = [RELEASE64]
-print(releases)
+# print(releases)

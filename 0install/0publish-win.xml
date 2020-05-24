@@ -78,6 +78,20 @@ und der New Feed Wizard (leitet Sie durch den kompletten Feed-Erstellungsprozess
     </implementation>
   </group>
 
+  <group license="LGPL v3 (GNU Lesser General Public License)">
+    <command name="0publish" path="0publish.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.6.1.."/>
+    </command>
+    <command name="run" path="0publish-win.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.6.1.."/>
+    </command>
+ 
+    <implementation id="sha1new=88af9eac0066c60a54b53d02cd5550108e2743da" released="2020-05-24" stability="stable" version="2.17.3">
+      <manifest-digest sha256new="7AFYYLUAWNW7B2P2EECDNA3CT62RRQNGE4ANWMS24UF33CMD237A"/>
+      <archive href="https://github.com/0install/0publish-win/releases/download/2.17.3/0publish-win-2.17.3.tar.gz" size="3340582"/>
+    </implementation>
+  </group>
+
   <entry-point binary-name="0publish-win" command="run">
     <name xml:lang="en">Zero Install Publishing Tools</name>
   </entry-point>

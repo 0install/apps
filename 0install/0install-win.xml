@@ -9,18 +9,13 @@
 
   <group license="LGPL v3 (GNU Lesser General Public License)">
     <command name="run" path="0install.exe">
-      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml"/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="2.0.."/>
     </command>
     <command name="run-gui" path="0install-win.exe">
-      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml"/>
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="2.0.."/>
     </command>
     <command name="central" path="ZeroInstall.exe">
-      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml"/>
-    </command>
-    <command name="update" path="0install-win.exe">
-      <arg>maintenance</arg>
-      <arg>deploy</arg>
-      <arg>--batch</arg>
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="2.0.."/>
     </command>
 
     <implementation id="sha1new=01b77dca81d3b0bab7cdde9c0c92604f129f33d1" released="2016-03-06" stability="stable" version="2.11.0">
@@ -166,6 +161,23 @@
     <implementation id="sha1new=15dba153ddd81cf56e66633336bb225d52cbd9db" released="2020-02-03" stability="stable" version="2.17.2">
       <manifest-digest sha256new="NSXK5K7RQOR4JN6AXIQYLSLSDNDM6RVNTRUJ4M6PUKWRLIQIA3WQ"/>
       <archive href="https://github.com/0install/0install-win/releases/download/2.17.2/0install-win-2.17.2.tar.gz" size="3295873"/>
+    </implementation>
+  </group>
+
+  <group license="LGPL v3 (GNU Lesser General Public License)">
+    <command name="run" path="0install.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.."/>
+    </command>
+    <command name="run-gui" path="0install-win.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.."/>
+    </command>
+    <command name="central" path="ZeroInstall.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.."/>
+    </command>
+
+    <implementation id="sha1new=03413674d4f96d29cb3a887162253ef1bdc2698f" released="2020-05-24" stability="stable" version="2.17.3">
+      <manifest-digest sha256new="GCMZBNSW7GBWRWTCW2DJOKSOEIY3CCCJQV3W2RG4T72K5GAK6V5Q"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.17.3/0install-win-2.17.3.tar.gz" size="3306451"/>
     </implementation>
   </group>
 

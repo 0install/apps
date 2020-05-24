@@ -1,30 +1,73 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/lib/zlib.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface uri="https://apps.0install.net/lib/zlib.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>zlib</name>
-  <summary xml:lang="en">Zlib: general purpose data compression / decompression library</summary>
+  <summary xml:lang="en">Compression library implementing the deflate compression method found in gzip and PKZIP</summary>
   <description xml:lang="en">zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system. The zlib data format is itself portable across platforms. Unlike the LZW compression method used in Unix compress(1) and in the GIF image format, the compression method currently used in zlib essentially never expands the data. (LZW can double or triple the file size in extreme cases.) zlib's memory footprint is also independent of the input data and can be reduced, if necessary, at some cost in compression. </description>
   <icon href="http://www.zlib.net/favicon.ico" type="image/vnd.microsoft.icon"/>
   <icon href="http://www.zlib.net/images/zlib3d-b1.png" type="image/png"/>
-  <homepage>http://gnuwin32.sourceforge.net/packages/zlib.htm</homepage>
-  <implementation arch="Windows-i486" id="sha1new=f4e37148eb07e136af8967bbe338281203809f95" released="2005-07-25" version="1.2.3">
-    <manifest-digest sha256new="5HFJYEWPB7EJFFCFGDEBV5XWKKWZYUN4IM23JXKWFYLTWXG52HRA"/>
-    <archive href="https://sourceforge.net/projects/gnuwin32/files/zlib/1.2.3/zlib-1.2.3-bin.zip" size="99777" type="application/zip"/>
-    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/zlib-bin.zip?raw=true" size="99777" type="application/zip"/>
-  </implementation>
-  <implementation arch="Windows-i386" id="sha1new=ccaa167be666dd956d13009d951ceeda8eaffff7" released="2013-11-23" version="1.2.8-2">
-    <manifest-digest sha256new="RIFH7BBMOWLPA4CVTA52XEXTIL3XEQCFIBNWFD5X4DQ3MALUILNA"/>
-    <archive href="https://sourceforge.net/projects/ezwinports/files/zlib-1.2.8-2-w32-bin.zip" size="144691" type="application/zip"/>
-  </implementation>
+  <homepage>http://www.zlib.net/</homepage>
+  <group license="ZLIB">
+    <implementation arch="Windows-i486" id="sha1new=f4e37148eb07e136af8967bbe338281203809f95" released="2005-07-25" version="1.2.3">
+      <manifest-digest sha256new="5HFJYEWPB7EJFFCFGDEBV5XWKKWZYUN4IM23JXKWFYLTWXG52HRA"/>
+      <archive href="https://sourceforge.net/projects/gnuwin32/files/zlib/1.2.3/zlib-1.2.3-bin.zip" size="99777" type="application/zip"/>
+      <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/zlib-bin.zip?raw=true" size="99777" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i386" id="sha1new=ccaa167be666dd956d13009d951ceeda8eaffff7" released="2013-11-23" version="1.2.8-2">
+      <manifest-digest sha256new="RIFH7BBMOWLPA4CVTA52XEXTIL3XEQCFIBNWFD5X4DQ3MALUILNA"/>
+      <archive href="https://sourceforge.net/projects/ezwinports/files/zlib-1.2.8-2-w32-bin.zip" size="144691" type="application/zip"/>
+    </implementation>
+  </group>
+  <group license="ZLIB">
+
+    <requires interface="https://apps.0install.net/lib/gcc-libs.xml">
+      <environment insert="lib" name="LD_LIBRARY_PATH"/>
+
+      <environment insert="bin" name="PATH"/>
+    </requires>
+
+    <group released="2015-08-17" version="1.2.8-9">
+      <implementation arch="Windows-x86_64" id="sha1new=6b646cedcb0384aa807613219168bb4e62ee97fb">
+        <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-zlib-1.2.8-9-any.pkg.tar.xz" size="152136"/>
+      </implementation>
+      <implementation arch="Windows-i686" id="sha1new=087eb6cf0c4e6d3211b0a1afd09cace9ad3d9e98">
+        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-zlib-1.2.8-9-any.pkg.tar.xz" size="156864"/>
+      </implementation>
+    </group>
+    <group released="2019-01-04" version="1.2.11-5">
+      <implementation arch="Windows-x86_64" id="sha1new=b9fd7f933f7d793dc523e619bf801bff64fba523">
+        <manifest-digest sha256new="Z2PIKR3SEMKJEX3JQNWAEPDB36UN2BMFJU7AZDLW3HMEXWDRB33A"/>
+        <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-zlib-1.2.11-5-any.pkg.tar.xz" size="182024"/>
+      </implementation>
+      <implementation arch="Windows-i686" id="sha1new=82e954cc9efe79f94646cf6990a2cb1b8d7a631d">
+        <manifest-digest sha256new="KMMTBZNHLOJ6UFIFDAX4JBAMJAOFZB3SMHPKQSSC5GOPR6QKKUMQ"/>
+        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-zlib-1.2.11-5-any.pkg.tar.xz" size="190460"/>
+      </implementation>
+    </group>
+    <group version="1.2.11-7">
+      <dc:creator>Alexey Pavlov &lt;alexpux@gmail.com&gt;</dc:creator>
+      <implementation arch="Windows-x86_64" id="sha1new=fcfcef73c8f44304c0e6ea05202c577ee34ee4cd" released="2020-05-04">
+        <dc:available>2019-05-22</dc:available>
+	<manifest-digest sha256new="WANV2SBBLL6575W7MFQP3EVEBT5W2SSE4JV3TIED5HP4YT3SEJQQ"/>
+      <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-zlib-1.2.11-7-any.pkg.tar.xz" size="104588"/>
+      </implementation>
+      <implementation arch="Windows-i686" id="sha1new=3cda39e65519a6f4df2f3fe56336f4e831109b3a" released="2020-05-04">
+        <dc:available>2019-05-22</dc:available>
+	<manifest-digest sha256new="YFBKORJJC5FCX3KQ2XFR6PS7T6W5RPHOHBMTC54EESWX4DZ6SCQQ"/>
+        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-zlib-1.2.11-7-any.pkg.tar.xz" size="105532"/>
+      </implementation>
+    </group>
+    
+  </group>
   <package-implementation package="zlib"/>
   <package-implementation distributions="Gentoo" package="sys-libs/zlib"/>
 </interface>
 <!-- Base64 Signature
-iQEcBAABAgAGBQJeA338AAoJEFmqOSfCTk4eTWMIAKA8W82o8xiDwVoeSvbXVXow2tLQZCGndyDk
-wV45kFItescQa7WAGiizz8zL7DlfcG7pphg8xSRjB7tke4wzp1vrocCGJOFcQ/W4lPIHhNsI21Vf
-GI4qTEHlHCeU50FdoV+FpkCmfwb+6hEkjRK53eDKDcIQ9XR4EiybXMga1Blx55PT9sBvhomg2+Ij
-Fj+74UXhJz4PsBd6Lo1Dc6eWtQvX1if62TSzrrWWamHhaABXcIjGhUNX1cLHRAf2HOm1fxCwKTq/
-oh/itYkj7OOwfFjeOOW74eQe5wffiEW/pZsfwvLYnqeUizShE76GesvW0JiCV8sCjzWbcZU/kIYK
-QGw=
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7KU6cACgkQWao5J8JOTh4OHwf8CUni
+oDOcOhsMFGsWJ8kMZ6cvy1/xjzLdSSbEeMIWJq42Mp0O7HlQCUZEA/4wW4hvPEhSZ1ATFscEWWFO
+4ijicl8zemxtOJ1oED+yvICJ7/PfpE19QO91kaB72XS3Cn7EO8qEF1R5rSJ2KWqc9Q3kyY0CTaac
+GPLjMw+qylGBEFZdIK8qnu//+VOcUrFIu0xCu2phX4mdaWrvwJT+Qp1Zb5rpp/DstLGTvV4+gJnH
+1+PobsoOG2is1T8y4E3JXs7iDJOcOiJsyUVj/o48e+lkdzPXoKbmC7TVTYN/BheWCf/hMxGzKic5
+cguobQBTo+0ojSHlvvIdEOqUm/5LTuWeOA==
 
 -->

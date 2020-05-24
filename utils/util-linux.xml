@@ -40,8 +40,32 @@
     <archive href="https://sourceforge.net/projects/gnuwin32/files/util-linux/2.14.1/util-linux-ng-2.14.1-bin.zip" size="1588160" type="application/zip"/>
     <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/util-linux-ng-2.14.1-bin.zip?raw=true" size="1588160" type="application/zip"/>
   </implementation>
-  <package-implementation distributions="Gentoo" package="sys-apps/util-linux"/>
-  <package-implementation main="/usr/bin/whereis" package="util-linux"/>
+  <package-implementation distributions="Gentoo" package="sys-apps/util-linux">
+    <command name="whereis" path="/usr/bin/whereis"/>
+    <command name="col" path="/usr/bin/col"/>
+    <command name="colcrt" path="/usr/bin/colcrt"/>
+    <command name="colrm" path="/usr/bin/colrm"/>
+    <command name="ddate" path="/usr/bin/ddate"/>
+    <command name="getopt" path="/usr/bin/getopt"/>
+    <command name="hexdump" path="/usr/bin/hexdump"/>
+    <command name="line" path="/usr/bin/line"/>
+    <command name="rename" path="/usr/bin/rename"/>
+    <command name="rev" path="/usr/bin/rev"/>
+    <command name="tailf" path="/usr/bin/tailf"/>
+  </package-implementation>
+  <package-implementation package="util-linux">
+    <command name="whereis" path="/usr/bin/whereis"/>
+    <command name="col" path="/usr/bin/col"/>
+    <command name="colcrt" path="/usr/bin/colcrt"/>
+    <command name="colrm" path="/usr/bin/colrm"/>
+    <command name="ddate" path="/usr/bin/ddate"/>
+    <command name="getopt" path="/usr/bin/getopt"/>
+    <command name="hexdump" path="/usr/bin/hexdump"/>
+    <command name="line" path="/usr/bin/line"/>
+    <command name="rename" path="/usr/bin/rename"/>
+    <command name="rev" path="/usr/bin/rev"/>
+    <command name="tailf" path="/usr/bin/tailf"/>
+  </package-implementation>
   <entry-point binary-name="whereis" command="whereis">
     <needs-terminal/>
     <name xml:lang="en">whereis</name>
@@ -99,11 +123,11 @@
   </entry-point>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7A9mgACgkQWao5J8JOTh62CwgArgTV
-lszSDF7i4r+aYsrxYRjNY+7OJtdUXNj5UEbygJ+MF0atCLZL2qFxeQS4TIeqKCK4vx4kzN5dFzSf
-xpqbSxbBRAGtCRXRAhQ3bDZ7MUn14CkC7hzzFh7KIl7ymA1R5tUyTrMddcHrhFl9lVW8CJKRFDdp
-rV9IB1MhtdRF8aeEGB24DKqBrRlKsB3B3sJto53bDvW16cusWFED2d9+SP6odjzm8fkt2GoIe1qp
-r1W0MieW/thIj6c71kHHa6z7Nak98DU5aRlevEbO6hQIjpi3ueUbBdpituUyR09q6bJHfGdAmAgc
-pnrEM/DeiXhUbpsXg3x78rnWdDNh3wKkVA==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7KaEAACgkQWao5J8JOTh5MbQgAq0Hi
+d5b4zumnyQTFhVnnCLPwjbEml0nBU93U0CW5c5Gi/muiNCqin5qvsh9Y4XMWhLfepvuVDMbRwlDb
+IJLagTadreu50e0ILCKnS/KlKK/iw9HSNAcN7TYqrjmjuzpX/T2vaqKd5bkE38uZ1DJfqcLeRJuP
+YYlY/coNVrQV2NRZIF+K1ncHacPlUgwIKXSriocnHAJsWC2vEkK+pk+1i2hzFNyHfUqBW4WW8EKe
+MnG5be0NTAbLYshtUDpSkyKmzG59uxa2Bw8hc5n51V17Ra1fbj1oBynqEalXGLrmCXQ/4w4RLW9u
+jUqpOy/BFnu52FgBz93Qp/70MnYOC1HZdw==
 
 -->

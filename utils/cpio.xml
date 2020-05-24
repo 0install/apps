@@ -1,30 +1,15 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="https://apps.0install.net/utils/cpio.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
-  <name>Cpio</name>
-  <summary xml:lang="en">Cpio: copy files to and from archives</summary>
-  <description xml:lang="en">GNU cpio copies files into or out of a cpio or tar archive. The archive can be another file on the disk, a magnetic tape, or a pipe. 
-
-GNU cpio supports the following archive formats: binary, old ASCII, new ASCII, crc, HPUX binary, HPUX old ASCII, old tar, and POSIX.1 tar. The tar format is provided for compatibility with the tar program. By default, cpio creates binary format archives for compatibility with older cpio programs. When extracting from archives, cpio automatically recognizes which kind of archive it is reading and can read archives created on machines with a different byte-order. 
-</description>
-  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/>
-  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/>
+  <name>cpio</name>
+  <summary>copies files between archives and directories</summary>
   <category>Utility</category>
-  <homepage>http://gnuwin32.sourceforge.net/packages/cpio.htm</homepage>
   <needs-terminal/>
-  <implementation arch="Windows-i486" id="sha1new=3642d0c8cd39a5e5153fc26857cba9b57284ca42" langs="da de es fr gl hu ko nl pl pt_BR ro ru sv tr zh_CN" license="GPL v2 (GNU General Public License)" released="2006-03-09" version="2.6.2-2-3">
-    <requires interface="https://apps.0install.net/lib/libiconv.xml">
-      <environment insert="bin" name="PATH"/>
-    </requires>
-    <requires interface="https://apps.0install.net/devel/gettext.xml">
-      <environment insert="bin" name="PATH"/>
-    </requires>
-    <command name="run" path="bin/cpio.exe"/>
-    <manifest-digest sha256new="6LM5DLKCADZW646FCHD67W5SKMD72PZWD6IPUIKDVM7JIHENQLXQ"/>
-    <archive href="https://sourceforge.net/projects/gnuwin32/files/cpio/2.6-2/cpio-2.6-2-bin.zip" size="194249" type="application/zip"/>
-    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/cpio-bin.zip?raw=true" size="194249" type="application/zip"/>
+  <implementation arch="Windows-*" version="1" license="BSD License (revised)" id="sha1new=da39a3ee5e6b4b0d3255bfef95601890afd80709">
+    <command name="run" path="bin/cpio.exe">
+      <runner interface="https://apps.0install.net/utils/bsdtar.xml" command="cpio"/>
+    </command>
+    <manifest-digest sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+    <recipe/>
   </implementation>
-  <package-implementation distributions="Gentoo" package="app-arch/cpio"/>
-  <package-implementation package="cpio" main="/bin/cpio"/>
-  <entry-point binary-name="cpio" command="run"/>
 </interface>

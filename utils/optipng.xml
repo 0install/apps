@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/utils/optipng.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>OptiPNG</name>
+  <summary>Compresses PNG files to a smaller size, without losing any information</summary>
+  <description>The OptiPNG
+program shall attempt to optimize PNG files, i.e. reduce their size to
+a minimum, without losing semantic information. In addition, this program shall
+perform a suite of auxiliary functions like integrity checks, metadata recovery
+and pixmap-to-PNG conversion.
+  </description>
+  <category>Graphics</category>
+  <homepage>https://optipng.sourceforge.io/</homepage>
+  <needs-terminal/>
+  <package-implementation distributions="Gentoo" package="media-gfx/optipng"/>
+  <package-implementation package="optipng"/>
+  <package-implementation distributions="Slack" package="graphics/optipng"/>
+  <implementation arch="Windows-*" id="sha1new=54a5a176f8c7ca6312ea96fb9eb4424af811f388" license="zlib/libpng License" released="2017-12-27" version="0.7.7">
+    <command name="run" path="optipng.exe"/>
+    <manifest-digest sha256new="HGJUTGTH3T5WQMO6XOCRTRMPBKSBL5RPDSULJQK3UNHUL2YJDV5A"/>
+    <archive extract="optipng-0.7.7-win32" href="http://prdownloads.sourceforge.net/optipng/optipng-0.7.7-win32.zip" size="138730" type="application/zip"/>
+  </implementation>
+  <entry-point binary-name="optipng" command="run">
+  <needs-terminal/>
+  </entry-point>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7KbgkACgkQWao5J8JOTh7EpggArDeR
+Z76PcDWERcf1P4huB9Mpa5XZmUs7kkeZMXNSoj5QM3Z2eR8+TgHdHk8OsS8H2Oxldf+RoHXbIi5p
+mqBJTjyufdAjoWOyWqbO9RF5P98ARGnB5igeF31PknbvtBm22nsM+ff1mqn6gxA4QD8P6sd+6Gdt
+8dGP+zIcRGdPPGj4S6MDs+TjZlSP+tTudnycvH9Jo2T4+t0n0IhiM/btR2ujZNVKyNq1JUxNZH7/
++IvyJBYSSfmFSgX5LPXZAmLO1IrboA7VU/cZg+LS/9qa7grVM0+fZyAif+QZewGsc79preqY4S/i
+lXVy5kO2VJMlwDmMVwt3+qbDQBMk9NmG3g==
+
+-->

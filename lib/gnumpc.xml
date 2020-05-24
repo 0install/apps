@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/lib/gnumpc.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>mpc</name>
+  <summary>Multiple precision complex arithmetic library (mingw-w64)</summary>
+  <description/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/>
+  <homepage>http://www.multiprecision.org</homepage>
+  <package-implementation package="libmpc"/>
+  <package-implementation distributions="Gentoo" package="dev-libs/mpc"/>
+  <package-implementation distributions="Cygwin" package="mpclib"/>
+  <package-implementation distributions="Cygwin" package="libmpc3"/>
+  <package-implementation distributions="Debian" package="mpclib3"/>
+  <package-implementation distributions="Ports" package="math/mpc"/>
+  <group license="LGPL">
+    <group released="2015-06-29" version="1.0.3-2">
+      <implementation arch="Windows-i686" id="sha1new=8ba5ecd059daacfa523687080b96991a7cd32d24">
+        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-mpc-1.0.3-2-any.pkg.tar.xz" size="63820"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" id="sha1new=676130adcc139827cd52c848e3d44ea2d581aec0">
+        <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-mpc-1.0.3-2-any.pkg.tar.xz" size="63776"/>
+      </implementation>
+    </group>
+    <group released="2018-01-12" version="1.0.1.0-1">
+      <dc:creator>Alexey Pavlov &lt;alexpux@gmail.com&gt;</dc:creator>
+      <implementation arch="Windows-x86_64" id="sha1new=2948c09e4cf35303f5208614207e7feec56c9155">
+	<manifest-digest sha256new="37H7IXCA2LPNRRC2LBFICBUPWDQQR4UJ3Z3EEKIOD7YGC2EMAHZA"/>
+        <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-mpc-1.1.0-1-any.pkg.tar.xz" size="80760"/>
+      </implementation>
+      <implementation arch="Windows-i686" id="sha1new=40c8bcfa2e2a2c143d694b02c008405186fb1562">
+	<manifest-digest sha256new="6QV6DP6XQBRJ2OWXVAO6OCDUAI4MPF7XOHFP6PVCGZP47JT3LIEQ"/>
+        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-mpc-1.1.0-1-any.pkg.tar.xz" size="80964"/>
+      </implementation>
+    </group>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7KZXQACgkQWao5J8JOTh51rQgAtlHO
+i0TB7vN2MUH3NiJuIyUTS59UNrrRpNwK39WKauutfG2qF/dHLmHQ/Rf0hdnxxQw0laoc2/haG5T5
++wFyaRZKCHRwNo37K5J009lo9+JfkQF2wlYzNdlZQarNsjdqbKLqZEwokk0KMXu5uEVHmEk7ldP3
+PVjX/m4+EXM8dbct7v671P4uU/yZGnVITxnDpV+xK7zhdBZ2YA1a2Ewy5id+ZIHe7TWP0l33V8Eq
+m6XPvxUDSF0DW4ipW4phSb72shjT2+uTLMS/PzsmssUtodTpj9oT6LJAd9k7BLMBOqW+F5TruYQW
+wF1DXKnBdqGM7rOfTUw4ayGCnRKH+742Ww==
+
+-->

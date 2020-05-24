@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/lib/mpfr4.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>mpfr</name>
+  <summary xml:lang="en">Multiple-precision floating-point library (mingw-w64)</summary>
+  <description/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/lib/mpfr.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/lib/mpfr.ico" type="image/vnd.microsoft.icon"/>
+  <home>https://www.mpfr.org/index.html</home>
+  <package-implementation package="mpfr" version="4.0.0.."/>
+  <package-implementation distributions="Gentoo" package="dev-libs/mpfr" version="4.0.0.."/>
+  <package-implementation distributions="Debian" package="mpfr4"/>
+  <package-implementation distributions="Ports" package="math/mpfr" version="4.0.0.."/>
+  <group license="LGPL">
+    <requires interface="https://apps.0install.net/lib/gmp.xml">
+      <environment insert="lib" name="LD_LIBRARY_PATH"/>
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <group released="2017-12-26" version="4.0.0-1">
+      <implementation arch="Windows-x86_64" id="sha1new=a22aa54fc629355ad18877b84175ceafec2f21cf">
+        <manifest-digest/>
+        <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-mpfr-4.0.0-1-any.pkg.tar.xz" size="343488"/>
+      </implementation>
+      <implementation arch="Windows-i686" id="sha1new=3513bac584df646fec8b3a03bdd47ba6d9a9b2db">
+        <manifest-digest/>
+        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-mpfr-4.0.0-1-any.pkg.tar.xz" size="327748"/>
+      </implementation>
+    </group>
+    <group released="2018-07-07" version="4.0.1-2">
+      <implementation arch="Windows-i686" id="sha1new=5710d6e5cea0627d66c0d08d42640276247077b3">
+        <manifest-digest/>
+        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-mpfr-4.0.1-2-any.pkg.tar.xz" size="331036"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" id="sha1new=a85780d6e56cfb3acae7090761326f8637b84001">
+        <manifest-digest/>
+        <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-mpfr-4.0.1-2-any.pkg.tar.xz" size="346392"/>
+      </implementation>
+    </group>
+    <group version="4.0.2-2">
+      <dc:creator>Alexey Pavlov &lt;alexpux@gmail.com&gt;</dc:creator>
+      <implementation arch="Windows-x86_64" id="sha1new=4de64dcbc11561e403edfaa228c16e107cbfd132" released="2020-04-29">
+        <dc:available>2019-02-08</dc:available>
+	<manifest-digest sha256new="PM5JMF6VBE4OSRCSRWZQDLD5TYEO7FJGD6UABAWBRXO5TMK7DNSQ"/>
+        <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-mpfr-4.0.2-2-any.pkg.tar.xz" size="354244"/>
+      </implementation>
+      <implementation arch="Windows-i686" id="sha1new=c260af20c3566c6afb5ffb19d11f7d1571809177" released="2020-04-29">
+        <dc:available>2019-02-08</dc:available>
+	<manifest-digest sha256new="JZYT3VSGXIHQW5ZMONV66LNZ5JCOKZPMQ27IHAH66IUW3FZMHD2Q"/>
+        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-mpfr-4.0.2-2-any.pkg.tar.xz" size="333592"/>
+      </implementation>
+    </group>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7KZXQACgkQWao5J8JOTh5flgf+KgP2
+2jdAl6IsnRnQL/p+8l4q4tmOZgR3IVJqjYSHIMaxtFRqH8cQ7ilrL0A5Q9aCOK14LFzt1iKkydal
+zl5gRZzOT+kQacDYtbBitHJOnPyPsm1qkO8WSVYOW7xvlHHKHPX6tk4XCIV4RMK6wcbgsQJgY1CR
+DiyBagIC37yzy+CebboPLAXkK8vLiQQDD7vorp1jDBkyh9FM7C5cThwoJeY9sWkKrSt0b5HuTv0N
+9fItePRR2ilNuf05wvgGsA4pcbP21aFLmKtQgqTzdKoKBznNaxGiLdbtaaKiv62mMM+vM4QJc73E
+kbfkTb8JrfNZTuYtwrzrXaNIxVRJutOAPQ==
+
+-->

@@ -40,8 +40,32 @@
     <archive href="https://sourceforge.net/projects/gnuwin32/files/util-linux/2.14.1/util-linux-ng-2.14.1-bin.zip" size="1588160" type="application/zip"/>
     <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/util-linux-ng-2.14.1-bin.zip?raw=true" size="1588160" type="application/zip"/>
   </implementation>
-  <package-implementation distributions="Gentoo" package="sys-apps/util-linux"/>
-  <package-implementation package="util-linux" main="/usr/bin/whereis"/>
+  <package-implementation distributions="Gentoo" package="sys-apps/util-linux">
+    <command name="whereis" path="/usr/bin/whereis"/>
+    <command name="col" path="/usr/bin/col"/>
+    <command name="colcrt" path="/usr/bin/colcrt"/>
+    <command name="colrm" path="/usr/bin/colrm"/>
+    <command name="ddate" path="/usr/bin/ddate"/>
+    <command name="getopt" path="/usr/bin/getopt"/>
+    <command name="hexdump" path="/usr/bin/hexdump"/>
+    <command name="line" path="/usr/bin/line"/>
+    <command name="rename" path="/usr/bin/rename"/>
+    <command name="rev" path="/usr/bin/rev"/>
+    <command name="tailf" path="/usr/bin/tailf"/>
+  </package-implementation>
+  <package-implementation package="util-linux">
+    <command name="whereis" path="/usr/bin/whereis"/>
+    <command name="col" path="/usr/bin/col"/>
+    <command name="colcrt" path="/usr/bin/colcrt"/>
+    <command name="colrm" path="/usr/bin/colrm"/>
+    <command name="ddate" path="/usr/bin/ddate"/>
+    <command name="getopt" path="/usr/bin/getopt"/>
+    <command name="hexdump" path="/usr/bin/hexdump"/>
+    <command name="line" path="/usr/bin/line"/>
+    <command name="rename" path="/usr/bin/rename"/>
+    <command name="rev" path="/usr/bin/rev"/>
+    <command name="tailf" path="/usr/bin/tailf"/>
+  </package-implementation>
   <entry-point binary-name="whereis" command="whereis">
     <needs-terminal/>
     <name xml:lang="en">whereis</name>

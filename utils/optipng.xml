@@ -20,26 +20,6 @@ and pixmap-to-PNG conversion.
     <manifest-digest sha256new="HGJUTGTH3T5WQMO6XOCRTRMPBKSBL5RPDSULJQK3UNHUL2YJDV5A"/>
     <archive extract="optipng-0.7.7-win32" href="http://prdownloads.sourceforge.net/optipng/optipng-0.7.7-win32.zip" size="138730" type="application/zip"/>
   </implementation>
-  <group arch="Windows-*" license="ZLIB">
-    <requires interface="https://apps.0install.net/lib/gcc-libs.xml">
-      <environment insert="bin" name="PATH"/>
-    </requires>
-    <requires interface="https://apps.0install.net/lib/png16-0.xml">
-      <environment insert="bin" name="PATH"/>
-    </requires>
-    <requires interface="https://apps.0install.net/lib/zlib.xml">
-      <environment insert="bin" name="PATH"/>
-    </requires>
-    <command name="run" path="bin/optipng.exe"/>
-    <group released="2018-01-09" version="0.7.7-1">    
-      <implementation arch="Windows-x86_64" id="sha1new=a0982ac83134467cc38a8638b83763fbe553a877">
-        <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-optipng-0.7.7-1-any.pkg.tar.xz" size="76044"/>
-      </implementation>
-      <implementation arch="Windows-i686" id="sha1new=7de87c8b3824f7b09880cfa1e3d65b3b27269b83">
-        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-optipng-0.7.7-1-any.pkg.tar.xz" size="75180"/>
-      </implementation>
-    </group>
-  </group>
   <entry-point binary-name="optipng" command="run">
   <needs-terminal/>
   </entry-point>

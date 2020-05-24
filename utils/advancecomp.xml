@@ -1,0 +1,139 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/utils/advancecomp.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>AdvanceCOMP</name>
+  <summary xml:lang="en">AdvanceCOMP is a collection of recompression utilities for your .ZIP archives, .PNG snapshots, .MNG video clips and .GZ files. </summary>
+  <description xml:lang="en">It's mainly intended for recompressing your rom, snapshot and clip collection of emulated games. 
+
+The main features are : 
+•Recompress ZIP, GZ, PNG and MNG files using the Deflate 7-Zip implementation. 
+•Recompress MNG files using Delta and Move optimization. 
+</description>
+  <category>Graphics</category>
+  <homepage>http://www.advancemame.it/comp-readme</homepage>
+  <needs-terminal/>
+  <group arch="Windows-*" license="GPL v3 (GNU General Public License)">
+    <command name="run" path="advdef.exe"/>
+    <command name="advmng" path="advmng.exe"/>
+    <command name="advpng" path="advpng.exe"/>
+    <command name="advzip" path="advzip.exe"/>
+    <group arch="Windows-*" released="2018-02-12" version="2.1">
+      <implementation arch="Windows-x86_64" id="sha1new=968c6b3cbc60f4336f2111ea4913c35de41d3262">
+        <manifest-digest sha256new="MQ5FCVZDVIOR45BDXV4G6GJADP6AL6STMSUW5IJDHJ4NN3YNXFOA"/>
+        <archive href="https://github.com/amadvance/advancecomp/releases/download/v2.1/advancecomp-2.1-windows-x64.zip" size="1476852" type="application/zip"/>
+      </implementation>
+      <implementation arch="Windows-i386" id="sha1new=a093e8be66c894c02a634308651ab7bedf8ad323">
+        <manifest-digest sha256new="6D2NLKSMCWKBBGIYCDKBJVOJ2N7SIVEFPD257UZA4P5MWUZUGYWQ"/>
+        <archive href="https://github.com/amadvance/advancecomp/releases/download/v2.1/advancecomp-2.1-windows-x86.zip" size="1418329" type="application/zip"/>
+      </implementation>
+    </group>
+    <group released="2017-06-04" version="2.0">
+      <implementation arch="Windows-x86_64" id="sha1new=badb126dcd07706ceba78c870c94b47238de7077">
+        <manifest-digest sha256new="AIEJIZFPZZMJYPC33DQ4RJINTZAQ5LJRVBCH7ORTD6FLF4FFRH2Q"/>
+        <archive href="https://github.com/amadvance/advancecomp/releases/download/v2.0/advancecomp-2.0-windows-x64.zip" size="1476566" type="application/zip"/>
+      </implementation>
+      <implementation arch="Windows-i386" id="sha1new=4a8ca06c73362450275acabe057e8ed07cfdf0a1">
+        <manifest-digest sha256new="KMA3GM5LXY6SFHTXX5KR4JKCG7NBOAUCTL5RUOBDZYBALRREOCUQ"/>
+        <archive href="https://github.com/amadvance/advancecomp/releases/download/v2.0/advancecomp-2.0-windows-x86.zip" size="1417991" type="application/zip"/>
+      </implementation>
+    </group>
+    <implementation arch="Windows-i386" id="sha1new=dfe0d5741efd4a18ffa60806586bf557d9accdaf" released="2016-11-21" version="1.23">
+      <manifest-digest sha256new="MQBN2USIC42RFS6Z7U5NBI74WGBHQ55VXFTSVKXJMI7G3DGGUAOQ"/>
+      <archive href="https://github.com/amadvance/advancecomp/releases/download/v1.23/advancecomp-1.23-windows-x86.zip" size="1445615" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i386" id="sha1new=12290dde8f84f94fc30e82e4c3be0f85c013a94a" released="2016-11-13" version="1.22">
+      <manifest-digest sha256new="KFLOTOTCIRPXNB4AEV6RXS6RJTXCVSNPG5JGG46VBJJKOHHNA4MA"/>
+      <archive href="https://github.com/amadvance/advancecomp/releases/download/v1.22/advancecomp-1.22-windows-x86.zip" size="1445552" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i386" id="sha1new=156eb6d5951e204f43cb5bc79d5ddd5600bb996f" released="2016-11-06" version="1.21">
+      <manifest-digest sha256new="4XIN5KNOMADMX2FFUIMWQMLRBYBX4ZSV7UMWZBDLJPXORW3LT5RQ"/>
+      <archive href="https://github.com/amadvance/advancecomp/releases/download/v1.21/advancecomp-1.21-windows-x86.zip" size="1445446" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i386" id="sha1new=cb392b50cb769ab5cdb616ab64cda810f9c1125f" released="2015-08-10" version="1.20">
+      <manifest-digest sha256new="KGGJPAVC7JGYTJF4PN63UBEW3LG74RWZEHGRKRPFKU6TYHFKX77A"/>
+      <archive href="https://github.com/amadvance/advancecomp/releases/download/v1.20/advancecomp-1.20-windows-x86.zip" size="1398259" type="application/zip"/>
+    </implementation>
+  </group>
+  <package-implementation package="advancecomp"/>
+  <package-implementation distributions="Ports" package="archivers/advancecomp"/>
+  <package-implementation distributions="Gentoo" package="app-arch/advancecomp"/>
+  <entry-point binary-name="advdef" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">advdef</name>
+    <summary xml:lang="en">AdvanceCOMP Deflate Compression Utility</summary>
+    <description xml:lang="en">The main purpose of this utility is to recompress the
+data present in the .png, .mng, .gz, .tgz and .svgz
+files.
+
+The internal structure of the files isn't changed.
+Only the compressed data is modified.</description>
+  </entry-point>
+  <entry-point binary-name="advmng" command="advmng">
+    <needs-terminal/>
+    <name xml:lang="en">advmng</name>
+    <summary xml:lang="en">AdvanceCOMP MNG Compression Utility</summary>
+    <description xml:lang="en">The main purpose of this utility is to recompress MNG
+files to get the smallest possible size.
+
+Please note that this utility is not able to read
+a generic file. It's granted to be able to read only
+the files generated by the AdvanceMAME emulator.
+
+To compress the files this utility uses the following
+strategies:
+
+* Remove all ancillary chunks.
+* Use the MNG Delta feature to compress video clips with
+  only small changes between frames.
+* Use the MNG Move feature to compress video clips with
+  a scrolling background (option -s).
+* Reduce the color depth to 8 bit (option -r).
+* Use the 7zip Deflate implementation.</description>
+  </entry-point>
+  <entry-point binary-name="advpng" command="advpng">
+    <needs-terminal/>
+    <name xml:lang="en">advpng</name>
+    <summary xml:lang="en">AdvanceCOMP PNG Compression Utility</summary>
+    <description xml:lang="en">The main purpose of this utility is to recompress png
+files to get the smallest possible size.
+
+Please note that this utility is not able to read
+a generic file. It's granted to be able to read only
+the files generated by the AdvanceMAME emulator.
+
+To compress the files this utility uses the following
+strategies:
+
+* Remove all ancillary chunks.
+* Concatenate all the IDAT chunks.
+* Use the 7zip Deflate implementation.</description>
+  </entry-point>
+  <entry-point binary-name="advzip" command="advzip">
+    <needs-terminal/>
+    <name xml:lang="en">advzip</name>
+    <summary xml:lang="en">AdvanceCOMP ZIP Compression Utility</summary>
+    <description xml:lang="en">The main purpose of this utility is to recompress and test
+the zip archives to get the smallest possible size.
+
+For recompression the libdeflate implementation is used.
+This implementation generally gives 5-10% more compression
+than the zLib Deflate implementation, and it's also
+generally faster.
+
+For experimental purpose also the 7-Zip LZMA algorithm is
+available with the -N option. In this case, the generated
+zips WILL NOT BE USABLE by any other program. To make
+them usable you need to recompress them without the -N
+option. Generally this algorithm gives 10-20% more
+compression than the zLib Deflate implementation.</description>
+  </entry-point>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7KXoMACgkQWao5J8JOTh65LggAsu2E
+WSpQ1SBn4ZeXQn4MHKNi8pCxInV7u6vuTQfsO45F32ayiMPjswy9joRJY/WjZhnaWRMaM+Bnrmzg
+ndfEqkYWPIibMZAGYKYk/PH2WzgayPFIOCl92icKrnNSZpcs58GrjRMkPbHpEQ8rgPXQoPEpzzbC
+24yG+H941nQnzPf0Y7iEAiCC1gaq6+T8Oda1cenJQlnchDF/8mEapdy7RXt9s2gW+x8N6TqvGaK0
+nOTLDqUbv/n7uFtDlSSKBOmewNNNZBI+sffCVRMum73vhL9Z72pxGYQ2pzd4mPnkPSmLP1q8KHSx
+z0I1cafsIT9rVdESi+9cJQ216bSJY8owdQ==
+
+-->

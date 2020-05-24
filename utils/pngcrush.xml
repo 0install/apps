@@ -39,26 +39,6 @@
       <file dest="pngcrush.exe" href="https://sourceforge.net/projects/pmt/files/pngcrush-executables/1.8.11/pngcrush_1_8_11_w32.exe" size="388608"/>
     </implementation>
   </group>
-  <group license="custom">
-    <requires interface="https://apps.0install.net/lib/gcc-libs.xml">
-      <environment insert="bin" name="PATH"/>
-    </requires>
-    <requires interface="https://apps.0install.net/lib/png16-0.xml">
-      <environment insert="bin" name="PATH"/>
-    </requires>
-    <requires interface="https://apps.0install.net/lib/zlib.xml">
-      <environment insert="bin" name="PATH"/>
-    </requires>
-    <command name="run" path="bin/pngcrush.exe"/>
-    <group released="2018-05-10" version="1.8.13-1">
-      <implementation arch="Windows-i686" id="sha1new=a0a3addb0526a1a119c01a07a21091f7c3763c3e">
-        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-pngcrush-1.8.13-1-any.pkg.tar.xz" size="71732"/>
-      </implementation>
-      <implementation arch="Windows-x86_64" id="sha1new=c9263cc45904d9a2f48f170f1c7e1726399a7a01">
-        <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-pngcrush-1.8.13-1-any.pkg.tar.xz" size="75168"/>
-      </implementation>
-    </group>
-  </group>
   <entry-point binary-name="pngcrush" command="run">
     <needs-terminal/>
   </entry-point>

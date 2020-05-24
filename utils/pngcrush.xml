@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/pngcrush.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/elements/1.1/" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>pngcrush</name>
+  <summary>A tool for optimizing the compression of PNG files</summary>
+  <summary xml:lang="fr">Pngcrush est un optimiseur de fichiers PNG (Portable Network Graphics).</summary>
+  <summary xml:lang="pl">Pngcrush jest optymalizator dla PNG (Portable Network Graphics) plików.</summary>
+  <summary xml:lang="pt">O Pngcrush é um otimizador para arquivos PNG (Portable Network Graphics). </summary>
+  <summary xml:lang="ru">Pngcrush - это оптимизатор для PNG (Portable Network Graphics) файлов.</summary>
+  <summary xml:lang="sk">Pngcrush je optimalizátor pre PNG (Portable Network Graphics) súbory.</summary>
+  <summary xml:lang="es">Pngcrush es un optimizador de archivos PNG (Portable Network Graphics). </summary>
+  <summary xml:lang="sv">Pngcrush är en optimerare för PNG (Portable Network Graphics) filer.</summary>
+  <summary xml:lang="uk">Pngcrush – це оптимізатор для PNG (Portable Network Graphics) файлів.</summary>
+  <description xml:lang="en">Reduce the size of the PNG IDAT datastream by trying various compression levels and PNG filter methods. It also can be used to remove unwanted ancillary chunks, or to add certain chunks including gAMA, tRNS, iCCP, and textual chunks. </description>
+  <description xml:lang="fr">Son objectif principal est de réduire la taille du flux de données PNG IDAT en essayant différents niveaux de compression et méthodes de filtrage PNG. Il peut également être utilisé pour enlever des morceaux auxiliaires indésirables ou ajouter certains fragments de fichier dont gAMA, tRNS, iCCP , et d'autres informations textuelles. </description>
+  <description xml:lang="pl">Jego podstawowym celem jest zmniejszenie rozmiaru strumienia danych PNG IDAT próbując różne poziomy kompresji i metody filtrujące PNG. To również może być stosowany do usuwania niechcianych fragmentów pomocniczych, lub dodać niektóre kawałki w tym Gama, tRNS ICCP i kawałki tekstowych.</description>
+  <description xml:lang="pt">Seu objetivo principal é reduzir o tamanho do fluxo de dados IDG do PNG ao tentar vários níveis de compressão e métodos de filtro PNG. Ele também pode ser usado para remover pedaços auxiliares indesejados, ou para adicionar alguns pedaços incluindo gAMA, tRNS, iCCP, e pedaços textuais. </description>
+  <description xml:lang="ru">Его основной целью является уменьшение размера потока данных PNG IDAT, пробуя различные уровни сжатия и методы фильтра PNG. Она также может быть использована для удаления нежелательных вспомогательных блоков или добавления определенных кусков, включая gAMA, tRNS, iCCP и текстовых кусков.</description>
+  <description xml:lang="sk">Jej hlavným cieľom je znížiť veľkosť PNG IDAT dátový tok že sa snažia rôzne úrovne kompresie a PNG metódy filtra. To tiež môže byť použitý na odstránenie nežiaducich vedľajších kúsky, alebo sa pridať niektoré kúsky, vrátane gAMA, tRNS, iCCP, i textové kúsky.</description>
+  <description xml:lang="es">Su propósito principal es reducir el tamaño de la corriente de datos PNG IDAT probando varios niveles de compresión y métodos de filtro PNG. También se puede utilizar para quitar fragmentos auxiliares no deseados, o añadir ciertos fragmentos incluyendo gAMA, tRNS, iCCP, y fragmentos de texto.</description>
+  <description xml:lang="sv">Först och främst använder man den för att reducera storlek på PNG IDAT dataströmmen tack olika sorters kompimeringsgrader och filter för PNG. Man kan också använda den inom eliminering av oönskade underordnade bitar eller tilläggning av vissa bitar inklusive gAMA, tRNS, iCCP, och textbitar. </description>
+  <description xml:lang="uk">Його основною метою є зменшення розміру потоку даних PNG IDAT за допомогою різних рівнів стиснення і методів фільтра PNG. Оптимізатор також може використовуватися для видалення небажаних допоміжних блоків або додавання певних шматків, враховуючи gAMA, tRNS, iCCP і текстових шматків. </description>
+  <category>Graphics</category>
+  <homepage>https://pmt.sourceforge.io/pngcrush</homepage>
+  <needs-terminal/>
+  <package-implementation distributions="Gentoo" package="media-gfx/pngcrush"/>
+  <package-implementation package="pngcrush"/>
+  <package-implementation package="graphics/pngcrush" distributions="Ports" />
+  <package-implementation package="graphics/pngcrush" distributions="Slack" />
+  <group arch="Windows-*" license="zlib/libpng License" released="2017-01-16" version="1.8.11">
+      <command name="run" path="pngcrush.exe"/>
+
+    <implementation arch="Windows-x86_64" id="sha1new=8f69a1d3976bb707232d4aa0a69df7a30cfeafda"> 
+    <manifest-digest sha256new="6FOVJQPF4QT7V7EQHMNQLZILD7CJ44VPWLJ4WF3J3GLQZ6VDBSAQ"/>
+      <file dest="pngcrush.exe" href="https://sourceforge.net/projects/pmt/files/pngcrush-executables/1.8.11/pngcrush_1_8_11_w64.exe" size="447488"/>
+    </implementation>
+    <implementation arch="Windows-i386" id="sha1new=30b64bfeafee1552a6b8a1c0bac3023e8c5d617e">
+      <manifest-digest sha256new="HGOB3BLM62RY3J3USM3ELBPEGPT5WY56RGORMSCCHJNF3AKD3Q5A"/>
+      <file dest="pngcrush.exe" href="https://sourceforge.net/projects/pmt/files/pngcrush-executables/1.8.11/pngcrush_1_8_11_w32.exe" size="388608"/>
+    </implementation>
+  </group>
+  <entry-point binary-name="pngcrush" command="run">
+    <needs-terminal/>
+  </entry-point>
+</interface>

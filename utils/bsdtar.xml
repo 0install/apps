@@ -9,7 +9,7 @@
 •Pax Interchange Format Support. This is a POSIX/SUSv3 extension to the old &quot;ustar&quot; tar format that adds arbitrary extended attributes to each entry. Does everything that GNU tar format does, only better. 
 •Handles file flags, ACLs, arbitrary pathnames, etc. Pax interchange format supports key/value attributes using an easily-extensible technique. Arbitrary pathnames, group names, user names, file sizes are part of the POSIX standard; libarchive extends this with support for file flags, ACLs, and arbitrary device numbers. 
 •GNU tar support. Libarchive reads most GNU tar archives. If there is demand, this can be improved further.</description>
-  <category>System</category>
+  <category>Utility</category>
   <homepage>https://www.libarchive.org/</homepage>
   <needs-terminal/>
   <implementation arch="Windows-i486" id="sha1new=efaade1e475a4b90934407118837bd7759007f79" license="BSD License (revised)" released="2008-06-27" version="2.4.12-1-3">
@@ -27,35 +27,35 @@
   </implementation>
   <implementation arch="Windows-x86_64" id="sha1new=f63b9d7bdbee5511bbaec6b65729c0f867a5b1c2" license="BSD License (revised)" released="2020-05-20" stability="stable" version="3.4.3">
     <command name="run" path="bin/bsdtar.exe"/>
-    <command name="bsdcpio" path="bin/bsdcpio.exe"/>
-    <command name="bsdcat" path="bin/bsdcat.exe"/>
+    <command name="cpio" path="bin/bsdcpio.exe"/>
+    <command name="cat" path="bin/bsdcat.exe"/>
     <manifest-digest sha256new="P4TWNY4NS4JFF5I4M4HPMKVA3MQOTKSMNAOAGAX4N5AO4VZJF7EQ"/>
     <archive extract="libarchive" href="https://www.libarchive.org/downloads/libarchive-v3.4.3-win64.zip" size="2366188" type="application/zip"/>
   </implementation>
   <package-implementation package="libarchive">
     <command name="run" path="/usr/bin/bsdtar"/>
-    <command name="bsdcpio" path="/usr/bin/bsdcpio"/>
-    <command name="bsdcat" path="/usr/bin/bsdcat"/>
+    <command name="cpio" path="/usr/bin/bsdcpio"/>
+    <command name="cat" path="/usr/bin/bsdcat"/>
   </package-implementation>
   <entry-point binary-name="bsdtar" command="run">
     <needs-terminal/>
     <summary>creates and manipulates streaming archive files</summary>
   </entry-point>
-  <entry-point binary-name="bsdcpio" command="bsdcpio">
+  <entry-point binary-name="bsdcpio" command="cpio">
     <needs-terminal/>
     <summary>copies files between archives and directories</summary>
   </entry-point>
-  <entry-point binary-name="bsdcat" command="bsdcat">
+  <entry-point binary-name="bsdcat" command="cat">
     <needs-terminal/>
     <summary>expands files to standard output</summary>
   </entry-point>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7KbgkACgkQWao5J8JOTh7KRggAuaVZ
-dKU/YmwAYINeaU7hmZhg4BL30ilSqXFT9qSxNaM8TvJNfBMV5yKadoAKHxMx7fyVnwJ9akv/9rDh
-cPaUHF08sKUahc6fioPgCOGolSdjFXrYUf6sb+5fXGWyfxuRqiBZL4UakdwFv3to3bqz8SxzhN65
-X7XoTm+r0FFyOh8i0rpdmjaYsMbieeer6mAKsCRSsWi0+bYjMPIcTjxf7bMfvkpHPNwU3pF5b35u
-pmyySKjj1CVWz/rUfKyYWZzA0E5urPz5IQ/ftcOsD/e1wrFOVngIdYZsuFu5bpq+XQcusmVMbmHN
-NPPBJf6vqIlRVvYoGYfCm8VZCs6TU2UruQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7Kc1wACgkQWao5J8JOTh5zlQf+NnKF
+5qSXKVnvGvgTtjZl+BR1ffzC9cRKbUL3gYi0jT0qVEKP7ahdMILcOyysbIVBnxW1NDM15BLKEY4D
+pd5+AF+z7H8fcNHDlzQ9mrwbmpraCU365qpczddKSAVrbMkvIG2r38p5KRJa37CLrMyJTwmUdila
+nAdedD8YtDRhrujU+AJxgidaj+kejI9umc1FYEmvgH2Do6jSHAjSSTGzZ9YVMIw31JkxvUIbOv29
+ndo2WmV/RU46AArRybyx2Qg5MypNWOZUkgIbEqUcVWCKMZa4W9BBw1cfs0drRzQno4fBkOLeLfWM
+9sIXmrjenxbUSCGnHRDIUrUovhZRlkx2fw==
 
 -->

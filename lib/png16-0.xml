@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface uri="https://apps.0install.net/lib/png16-0.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <name>libpng16-0</name>
+  <summary>A collection of routines used to create PNG format graphics</summary>
+  <description>libpng is a library implementing an interface for reading and writing
+PNG (Portable Network Graphics) format files.
+
+This package contains the runtime library files needed to run software
+using libpng.</description>
+  <category>Graphics</category>
+  <homepage>http://www.libpng.org/pub/png/libpng.html</homepage>
+  <needs-terminal/>
+  <package-implementation package="libpng"/>
+  <package-implementation package="libpng16-0"/>
+  <package-implementation package="libpng16"/>
+  <package-implementation distributions="Gentoo" package="media-libs/libpng"/>
+  <package-implementation distributions="Debian" package="libpng1.6"/>
+  <package-implementation distributions="Ports" package="graphics/png"/>
+  <group license="zlib/libpng License">
+    <requires interface="https://apps.0install.net/lib/gcc-libs.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/zlib.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/pngfix.exe"/>
+  
+    <command name="png-fix-itxt" path="bin/png-fix-itxt.exe"/>
+  
+    <command name="libpng16-config" path="bin/libpng16-config"/>
+  
+    <command name="libpng-config" path="bin/libpng-config"/>
+  
+    <group released="2018-12-03" version="1.6.36-1">
+      <implementation arch="Windows-x86_64" id="sha1new=e3c20cee2dff3e6330542739374811f680da0c96">
+        <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-libpng-1.6.36-1-any.pkg.tar.xz" size="298024"/>
+      </implementation>
+      <implementation arch="Windows-i686" id="sha1new=8944d6543025943fbaf6c501cc5070cb71ca3707">
+        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-libpng-1.6.36-1-any.pkg.tar.xz" size="300048"/>
+      </implementation>
+    </group>
+    <group version="1.6.37-3">
+      <dc:creator>Alexey Pavlov &lt;alexpux@gmail.com&gt;</dc:creator>
+      <implementation arch="Windows-x86_64" id="sha1new=0d1541417b6859b9e1b2543e03875c678b9d2271" released="2020-05-06">
+        <dc:available>2019-04-23</dc:available>
+	<manifest-digest sha256new="3XMBWJUUBNLOTACQ3VXF6XRDTCVTZW6QHRCKPZN4LRHYYVBLNZ4A"/>
+      <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-libpng-1.6.37-3-any.pkg.tar.xz" size="355436"/>
+      </implementation>
+      <implementation arch="Windows-i686" id="sha1new=613bb705b38ebd634991de362b94ef00db50dc8d" released="2020-05-06">
+        <dc:available>2019-04-23</dc:available>
+	<manifest-digest sha256new="BKBOVWAUP5DDGSFQYCYEJRNZM4J5T4Z6W352UCSPF56X7HTGNZLQ"/>
+        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-libpng-1.6.37-3-any.pkg.tar.xz" size="355156"/>
+      </implementation>
+    </group>
+  </group>
+
+    <entry-point binary-name="pngfix" command="run">
+  <needs-terminal/>
+    <name>pngfix</name>
+    <summary xml:lang="en">Tests, optimizes and optionally fixes the zlib header in PNG files.</summary>
+    </entry-point>
+  
+    <entry-point binary-name="png-fix-itxt" command="png-fix-itxt">
+  <needs-terminal/>
+        <name>png-fix-itxt</name>
+    	<summary xml:lang="en">Fixes a PNG file written with libpng-1.6.0 or 1.6.1 that has one or more uncompressed iTXt chunks.</summary>
+    </entry-point>
+
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7KrdoACgkQWao5J8JOTh5FCwf/eZDY
+zrJa6FxK1AMKXOp5hfmpm3oiMMaDcJPigRxg0tHnTvWn08cH7ciSeK2CauIal7o87Rp3KqNKj7kc
+XgV9luKkoHxEzhxOleWSySWQPQGeU2Ty/tJk+ZFD5pf4NTh93TtbZxTl/Tekc7FAeYpl3Q0zyhku
+TY3imENgh9/2xsrJCubbd20AkEpVEYEtS0ICPJZholQcA7PNPNrHGnj4X6cVo0qSDHG7colL6N2X
+FWR38h1br7rQn229STu++YrP5oVlTGUyiiI8RxSZuH4wx4GOZ6w1deHnrglB9NzPanxjV0MkwOIz
+tZAnwFmQMxRzRyfiHAtXZaUl1lC7wjfMEg==
+
+-->

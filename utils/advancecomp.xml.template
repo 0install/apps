@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd" uri="https://apps.0install.net/utils/advancecomp.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>AdvanceCOMP</name>
+  <summary xml:lang="en">AdvanceCOMP is a collection of recompression utilities for your .ZIP archives, .PNG snapshots, .MNG video clips and .GZ files. </summary>
+  <description xml:lang="en">It's mainly intended for recompressing your rom, snapshot and clip collection of emulated games. 
+
+The main features are : 
+•Recompress ZIP, GZ, PNG and MNG files using the Deflate 7-Zip implementation. 
+•Recompress MNG files using Delta and Move optimization. 
+</description>
+  <category>Graphics</category>
+  <homepage>http://www.advancemame.it/comp-readme</homepage>
+  <needs-terminal />
+  <group arch="Windows-*" license="GPL v3 (GNU General Public License)">
+    <command name="run" path="advdef.exe" />
+    <command name="advmng" path="advmng.exe" />
+    <command name="advpng" path="advpng.exe" />
+    <command name="advzip" path="advzip.exe" />
+    <group version="{version}" released="{released}">
+      <implementation arch="Windows-x86_64" released="{released}">
+        <manifest-digest/>
+        <archive href="https://github.com/amadvance/advancecomp/releases/download/v{version}/advancecomp-{version}-windows-x64.zip" size="1476852" type="application/zip" />
+      </implementation>
+      <implementation arch="Windows-i386" released="{released}">
+        <manifest-digest/>
+        <archive href="https://github.com/amadvance/advancecomp/releases/download/v{version}/advancecomp-{version}-windows-x86.zip" size="1418329" type="application/zip" />
+      </implementation>
+    </group>
+  </group>
+</interface>

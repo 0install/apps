@@ -169,10 +169,10 @@ def is_excluded_from_catalog(feed_root, dir_rel_path):
 		return any(tag.getAttribute('name') == command_name for tag in get_tag('command'))
 	def is_executable():
 		return has_main('group') or has_main('implementation') or has_main('package-implementation') or has_command('run')
-	def is_library():
-		return 'lib/' in feed_root.getAttribute('uri') or not is_executable()
+	def excluded_from_toplevel():
+		return not is_executable() or feed_root.getAttribute('uri').startswith('https://apps.0install.net/lib/') or feed_root.getAttribute('uri').startswith('https://apps.0install.net/dotnet/clr') or feed_root.getAttribute('uri').startswith('https://apps.0install.net/0install/')
 
-	return has_tag('replaced-by') or has_tag('feed-for') or (dir_rel_path == '' and is_library())
+	return has_tag('replaced-by') or has_tag('feed-for') or (dir_rel_path == '' and excluded_from_toplevel())
 
 # When 0install fetches a feed http://.../prog.xml, it looks for the GPG key
 # at http://.../KEY.gpg.

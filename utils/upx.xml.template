@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>UPX</name>
+  <summary xml:lang="en">UPX executable packer</summary>
+  <description xml:lang="en">the Ultimate Packer for eXecutables</description>
+  <category>Utility</category>
+  <homepage>https://upx.github.io/</homepage>
+  <needs-terminal/>
+  <group license="GPL v2+ (GNU General Public License)">
+    <command name="run" path="upx"/>
+    <group version="{version}">
+      <implementation arch="Windows-x86_64" released="{released}">
+        <manifest-digest/>
+        <archive extract="upx-{version}-win64" href="https://github.com/upx/upx/releases/download/v{version}/upx-{version}-win64.zip" type="application/zip"/>
+      </implementation>
+      <implementation arch="Windows-i486" released="{released}">
+        <manifest-digest/>
+        <archive extract="upx-{version}-win32" href="https://github.com/upx/upx/releases/download/v{version}/upx-{version}-win32.zip" type="application/zip"/>
+      </implementation>
+      <implementation arch="Linux-ppc64" released="{released}">
+        <manifest-digest/>
+        <archive extract="upx-{version}-powerpc64le_linux" href="https://github.com/upx/upx/releases/download/v{version}/upx-{version}-powerpc64le_linux.tar.xz" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-ppc" released="{released}">
+        <manifest-digest/>
+        <archive extract="upx-{version}-powerpc_linux" href="https://github.com/upx/upx/releases/download/v{version}/upx-{version}-powerpc_linux.tar.xz" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-i386" released="{released}">
+        <manifest-digest/>
+        <archive extract="upx-{version}-i386_linux" href="https://github.com/upx/upx/releases/download/v{version}/upx-{version}-i386_linux.tar.xz" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-unknown" released="{released}">
+        <manifest-digest/>
+        <archive extract="upx-{version}-arm_linux" href="https://github.com/upx/upx/releases/download/v{version}/upx-{version}-arm_linux.tar.xz" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" released="{released}">
+        <manifest-digest/>
+        <archive extract="upx-{version}-amd64_linux" href="https://github.com/upx/upx/releases/download/v{version}/upx-{version}-amd64_linux.tar.xz" type="application/x-xz-compressed-tar"/>
+      </implementation>
+    </group>
+  </group>
+  <feed-for interface="https://apps.0install.net/utils/upx.xml"/>
+</interface>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Azure CLI</name>
+  <summary>set of commands used to create and manage Azure resources</summary>
+  <description>The Azure command-line interface (Azure CLI) is a set of commands used to create and manage Azure resources. The Azure CLI is available across Azure services and is designed to get you working quickly with Azure, with an emphasis on automation.</description>
+  <homepage>https://docs.microsoft.com/en-us/cli/azure/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/devel/azure.png" type="image/png"/>
+  <needs-terminal/>
+  <feed-for interface="https://apps.0install.net/devel/azure-cli.xml"/>
+  <group license="MIT License">
+    <command name="run" path="python.exe">
+      <arg>-IBm</arg>
+      <arg>azure.cli</arg>
+    </command>
+    <implementation arch="Windows-*" released="{released}" version="{version}">
+      <archive extract="SourceDir/Microsoft SDKs/Azure/CLI2" href="https://azurecliprod.blob.core.windows.net/msi/azure-cli-{version}.msi" type="application/x-msi"/>
+    </implementation>
+  </group>
+</interface>

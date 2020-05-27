@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>AWS CLI</name>
+  <summary>unified tool to manage your AWS services</summary>
+  <description>The AWS Command Line Interface (CLI) is a unified tool to manage your AWS services. With just one tool to download and configure, you can control multiple AWS services from the command line and automate them through scripts.</description>
+  <homepage>https://aws.amazon.com/cli/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/devel/aws.png" type="image/png"/>
+  <needs-terminal/>
+  <feed-for interface="https://apps.0install.net/devel/aws-cli.xml"/>
+  <group license="Apache License 2.0">
+    <command name="run" path="aws.exe"/>
+    <implementation arch="Windows-x86_64" version="{version}">
+      <manifest-digest/>
+      <archive extract="SourceDir/Amazon/AWSCLIV2" href="https://awscli.amazonaws.com/AWSCLIV2-{version}.msi" type="application/x-msi"/>
+    </implementation>
+  </group>
+</interface>

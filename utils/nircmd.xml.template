@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>NirCmd</name>
+  <summary xml:lang="en">NirCmd is a small command-line utility that allows you to do some useful tasks without displaying any user interface.</summary>
+  <description xml:lang="en">By running NirCmd with simple command-line option, you can write and delete values and keys in the Registry, write values into INI file, dial to your internet account or connect to a VPN network, restart windows or shut down the computer, create shortcut to a file, change the created/modified date of a file, change your display settings, turn off your monitor, open the door of your CD-ROM drive, and more...</description>
+  <category>Utility</category>
+  <homepage>http://www.nirsoft.net/utils/nircmd.html</homepage>
+  <needs-terminal/>
+  <group license="freeware">
+    <command name="run-gui" path="nircmd.exe"/>
+    <command name="run" path="nircmdc.exe"/>
+    
+    <group version="{version}">
+      <implementation arch="Windows-i486" released="{released}">
+        <manifest-digest/>
+        <archive href="http://www.nirsoft.net/utils/nircmd.zip" type="application/zip"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" released="{released}">
+        <manifest-digest/>
+        <archive href="http://www.nirsoft.net/utils/nircmd-x64.zip" type="application/zip"/>
+      </implementation>
+    </group>
+  </group>
+
+  <feed-for interface="https://apps.0install.net/utils/nircmd.xml"/>
+</interface>

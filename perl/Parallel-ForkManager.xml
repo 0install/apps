@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="https://apps.0install.net/perl/Parallel-ForkManager.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface uri="https://apps.0install.net/perl/Parallel-ForkManager.xml" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Parallel-ForkManager</name>
   <summary xml:lang="en">A simple parallel processing fork manager</summary>
   <icon href="https://raw.githubusercontent.com/0install/apps/master/perl/perl.ico" type="image/vnd.microsoft.icon"/>
@@ -9,7 +9,7 @@
   <category>Development</category>
   <homepage>https://metacpan.org/pod/Parallel::ForkManager</homepage>
   <needs-terminal/>
-  <implementation id="sha1new=bd5a98facadf236f8e9dc90b51a5f47efa531155" license="Perl License" released="2018-10-08" version="2.2">
+  <group license="Perl License">
     <command name="run" path="examples/parallel_get.pl">
       <environment insert="lib" name="PERL5LIB"/>
       <runner command="perl" interface="https://apps.0install.net/perl/perl.xml" version="5.6..!6"/>
@@ -25,9 +25,11 @@
       <environment insert="lib" name="PERL5LIB"/>
       <runner command="perl" interface="https://apps.0install.net/perl/perl.xml" use="5.6..!6"/>
     </command>
-    <manifest-digest sha256new="WSHHU7CBRH4BHOXZAGULISBQHK5QIEQJVU4RKMRACFFI36LDFOFQ"/>
-    <archive extract="Parallel-ForkManager-2.02" href="https://cpan.metacpan.org/authors/id/Y/YA/YANICK/Parallel-ForkManager-2.02.tar.gz" size="33457" type="application/x-compressed-tar"/>
-  </implementation>
+    <implementation id="sha1new=bd5a98facadf236f8e9dc90b51a5f47efa531155" released="2018-10-08" version="2.02">
+      <dc:creator>YANICK</dc:creator>
+      <archive extract="Parallel-ForkManager-2.02" href="https://cpan.metacpan.org/authors/id/Y/YA/YANICK/Parallel-ForkManager-2.02.tar.gz" size="33457" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
   <package-implementation distributions="Gentoo" package="dev-perl/Parallel-ForkManager"/>
   <package-implementation distributions="Arch" package="perl-parallel-forkmanager"/>
   <package-implementation package="libparallel-forkmanager-perl"/>

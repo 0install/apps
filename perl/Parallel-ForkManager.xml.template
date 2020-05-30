@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:dc="http://purl.org/dc/elements/1.1/" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>{name}</name>
+  <summary xml:lang="en">{summary}</summary>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/perl/perl.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/perl/perl.png" type="image/png"/>
+  <description xml:lang="en">This module is intended for use in operations that can be done in parallel where the number of processes to be forked off should be limited. Typical use is a downloader which will be retrieving hundreds/thousands of files.</description>
+  <category>Development</category>
+  <homepage>https://metacpan.org/release/Parallel-ForkManager</homepage>
+  <needs-terminal/>
+  <group license="Perl License">
+    <command name="run" path="examples/parallel_get.pl">
+      <environment insert="lib" name="PERL5LIB"/>
+      <runner command="perl" interface="https://apps.0install.net/perl/perl.xml" version="5.6..!6"/>
+    </command>
+    <command name="Makefile" path="Makefile.PL">
+      <runner command="perl" interface="https://apps.0install.net/perl/perl.xml" version="5.6..!6"/>
+    </command>
+    <command name="callback" path="examples/callback.pl">
+      <environment insert="lib" name="PERL5LIB"/>
+      <runner command="perl" interface="https://apps.0install.net/perl/perl.xml" version="5.6..!6"/>
+    </command>
+    <command name="callback_data" path="examples/callback_data.pl">
+      <environment insert="lib" name="PERL5LIB"/>
+      <runner command="perl" interface="https://apps.0install.net/perl/perl.xml" use="5.6..!6"/>
+    </command>
+
+    <implementation released="{released}" version="{version}">
+      <dc:creator>{creator}</dc:creator>
+      <archive extract="Parallel-ForkManager-{version}" href="{url}" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+  <feed-for interface="https://apps.0install.net/perl/Parallel-ForkManager.xml"/>
+</interface>

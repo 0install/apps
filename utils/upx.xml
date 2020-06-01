@@ -1,5 +1,4 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="https://apps.0install.net/utils/upx.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>UPX</name>
   <summary xml:lang="en">UPX executable packer</summary>
@@ -9,11 +8,11 @@
   <needs-terminal/>
   <group license="GPL v2+ (GNU General Public License)">
     <command name="run" path="upx"/>
-    <implementation version="3.91" arch="Windows-i486" id="sha1new=272b9ccdb482cec7469cea1c3e35aec0a1daecb5" released="2016-09-09">
+    <implementation arch="Windows-i486" id="sha1new=272b9ccdb482cec7469cea1c3e35aec0a1daecb5" released="2016-09-09" version="3.91">
       <manifest-digest sha256new="H6MBC7HZUCGXHFCLD7U22PXSZ4URFNDFJCTSLKXQOBNVWZZCEQKA"/>
       <archive extract="upx391w" href="https://github.com/upx/upx/releases/download/v3.91/upx391w.zip" size="362972" type="application/zip"/>
     </implementation>
-    <group version="3.92" released="2016-12-11">
+    <group released="2016-12-11" version="3.92">
       <implementation arch="Windows-i486" id="sha1new=f47a268adeb79a0158d6e8e48d74e7e912552411">
         <manifest-digest sha256new="WFWCL3QEGPBEKXUX536AGSGOBR6FQA4GHJTQVJUUHROEJEQ7VDWA"/>
         <archive extract="upx392w" href="https://github.com/upx/upx/releases/download/v3.92/upx392w.zip" size="408454" type="application/zip"/>
@@ -27,7 +26,7 @@
         <archive extract="upx-3.92-amd64_linux" href="https://github.com/upx/upx/releases/download/v3.92/upx-3.92-amd64_linux.tar.xz" size="389376" type="application/x-xz-compressed-tar"/>
       </implementation>
     </group>
-    <group version="3.93" released="2017-01-29">
+    <group released="2017-01-29" version="3.93">
       <implementation arch="Windows-i486" id="sha1new=25be999c53a5dc8a15f38dbb253f457ebc684fb0">
         <manifest-digest sha256new="MO6WGHJQNTTMKGAOORLLSMKE2UXR7UTE3OG466HOZFN6EBZ5OQDQ"/>
         <archive extract="upx393w" href="https://github.com/upx/upx/releases/download/v3.93/upx393w.zip" size="408120" type="application/zip"/>
@@ -41,7 +40,29 @@
         <archive extract="upx-3.93-amd64_linux" href="https://github.com/upx/upx/releases/download/v3.93/upx-3.93-amd64_linux.tar.xz" size="388796" type="application/x-xz-compressed-tar"/>
       </implementation>
     </group>
-    <group version="3.95" released="2018-08-25">
+    <group released="2017-05-12" version="3.94">
+      <implementation arch="Windows-*" id="sha1new=ae1a5147ea334e0e8aff69516aac8cd46c31bfa8">
+        <manifest-digest sha256new="3Y5BVIKLR5GASIR3RKZDHK4U4RUD5B3ZIKINVPZKWTQCBZCHFYLQ"/>
+        <archive extract="upx394w" href="https://github.com/upx/upx/releases/download/v3.94/upx394w.zip" size="420652" type="application/zip"/>
+      </implementation>
+      <implementation arch="Linux-ppc" id="sha1new=754ba16a060e143e47e2c18f18d4ba5570ab651f">
+        <manifest-digest sha256new="EOYLEJ66BH7OIFW3U7NRNP4XFJWTWH5WREOIM5EAVTQNG3W5GZTQ"/>
+        <archive extract="upx-3.94-powerpc_linux" href="https://github.com/upx/upx/releases/download/v3.94/upx-3.94-powerpc_linux.tar.xz" size="512044" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-i386" id="sha1new=f0fb327290a2614205530843154317f306842bd1">
+        <manifest-digest sha256new="E7NZGWH3W4TEBSUE5Z6W5GPE3GSO2PNDOOA4ZZQSPNR4CZ6CW74A"/>
+        <archive extract="upx-3.94-i386_linux" href="https://github.com/upx/upx/releases/download/v3.94/upx-3.94-i386_linux.tar.xz" size="455984" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-unknown" id="sha1new=db9e96bd5c951a3b438c8c72d6bce351797361d3">
+        <manifest-digest sha256new="OHKMOR2PUWGG4Y2JTWZ35K7DPAXIDCAX5UZ4OA7U6MMTTKLFMVUA"/>
+        <archive extract="upx-3.94-armeb_linux" href="https://github.com/upx/upx/releases/download/v3.94/upx-3.94-armeb_linux.tar.xz" size="387572" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" id="sha1new=5b04a93509b3d3edc982792dbc2973ab797e2700">
+        <manifest-digest sha256new="XUDRECI66PRA42JE7AYE3ZJ7ELZW3ANSHM3IO2RGURXXTPRWIQNQ"/>
+        <archive extract="upx-3.94-amd64_linux" href="https://github.com/upx/upx/releases/download/v3.94/upx-3.94-amd64_linux.tar.xz" size="401592" type="application/x-xz-compressed-tar"/>
+      </implementation>
+    </group>
+    <group released="2018-08-25" version="3.95">
       <implementation arch="Windows-x86_64" id="sha1new=1bf2480ef0e60f61c9133d609b14bf36b53a1eba">
         <manifest-digest sha256new="LOEX77G3GCKACC4OXU4OJAJZNRUJZZ7IUN3IAFBIXNW2FVN6GDWA"/>
         <archive extract="upx-3.95-win64" href="https://github.com/upx/upx/releases/download/v3.95/upx-3.95-win64.zip" size="462820" type="application/zip"/>
@@ -105,4 +126,3 @@
 
   <entry-point binary-name="upx" command="run"/>
 </interface>
-

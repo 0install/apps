@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type='text/xsl' href='../resources/catalog.xsl'?>
-<c:catalog xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:c="http://0install.de/schema/injector/catalog"><interface uri="https://apps.0install.net/java/ant.xml"><name>Apache Ant</name><summary>pure Java build tool</summary><homepage>http://ant.apache.org/</homepage><category>Development</category><entry-point binary-name="ant" command="run"/></interface><interface uri="https://apps.0install.net/java/maven.xml"><name>Apache Maven</name><summary>build manager for Java projects</summary><homepage>http://maven.apache.org/</homepage><category>Development</category><entry-point binary-name="mvn" command="run"/></interface><interface uri="https://apps.0install.net/java/gradle.xml"><name>Gradle</name><summary>modern open source build tool for continuous delivery</summary><homepage>http://www.gradle.org/</homepage><category>Development</category><entry-point binary-name="gradle" command="run"/></interface><interface uri="https://apps.0install.net/java/hsqldb.xml"><name>HyperSQL</name><summary>100% Java Database </summary><description>
+<c:catalog xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:c="http://0install.de/schema/injector/catalog"><interface uri="https://apps.0install.net/java/ant.xml"><name>Apache Ant</name><summary>pure Java build tool</summary><homepage>http://ant.apache.org/</homepage><category>Development</category><icon href="https://raw.githubusercontent.com/0install/apps/master/java/ant.png" type="image/png"/><entry-point binary-name="ant" command="run"/></interface><interface uri="https://apps.0install.net/java/maven.xml"><name>Apache Maven</name><summary>build manager for Java projects</summary><homepage>http://maven.apache.org/</homepage><category>Development</category><icon href="https://raw.githubusercontent.com/0install/apps/master/java/maven.png" type="image/png"/><entry-point binary-name="mvn" command="run"/></interface><interface uri="https://apps.0install.net/java/gradle.xml"><name>Gradle</name><summary>modern open source build tool for continuous delivery</summary><homepage>http://www.gradle.org/</homepage><category>Development</category><entry-point binary-name="gradle" command="run"/></interface><interface uri="https://apps.0install.net/java/hsqldb.xml"><name>HyperSQL</name><summary>100% Java Database </summary><description>
 HSQLDB (HyperSQL DataBase) is an SQL relational database engine written in Java.
 It has a JDBC driver and supports nearly full ANSI-92 SQL (BNF tree format) plus
 many SQL:2008 enhancements. It offers a small, fast database engine which offers
@@ -10,7 +10,7 @@ tools.</description><homepage>http://hsqldb.org/</homepage></interface><interfac
 IRIS is an open-source Datalog reasoner that can evaluate safe or unsafe datalog
 extended with function symbols, XML schema data types, built-in predicates and
 (locally) stratified or well-founded negation as failure.</description><homepage>http://www.iris-reasoner.org/</homepage></interface><interface uri="https://apps.0install.net/java/jar-launcher.xml"><name>JAR Launcher</name><summary>launcher that starts the main class while preserving the CLASSPATH</summary><description>A launcher that starts the main class specified in a JAR while preserving the CLASSPATH.
-Workaround for java -classpath ... -jar ... which does not work.</description><homepage>https://github.com/0install/jar-launcher</homepage></interface><interface uri="https://apps.0install.net/java/jdk.xml"><name>Java Development Kit (JDK)</name><summary>SDK for Java</summary><description>Development environment for building applications, applets, and components using the Java programming language.</description><category>Development</category><entry-point binary-name="javac" command="run">
+Workaround for java -classpath ... -jar ... which does not work.</description><homepage>https://github.com/0install/jar-launcher</homepage></interface><interface uri="https://apps.0install.net/java/jdk.xml"><name>Java Development Kit (JDK)</name><summary>SDK for Java</summary><description>Development environment for building applications, applets, and components using the Java programming language.</description><category>Development</category><icon href="https://raw.githubusercontent.com/0install/apps/master/java/java.png" type="image/png"/><entry-point binary-name="javac" command="run">
     <name>Java compiler</name>
   </entry-point><entry-point binary-name="java" command="java">
     <needs-terminal/>
@@ -100,7 +100,7 @@ Workaround for java -classpath ... -jar ... which does not work.</description><h
   </entry-point><entry-point binary-name="jabswitch" command="jabswitch">
     <needs-terminal/>
     <name>Java Access Bridge Switch</name>
-  </entry-point><entry-point binary-name="jaccessinspector" command="jaccessinspector"/><entry-point binary-name="jaccesswalker" command="jaccesswalker"/></interface><interface uri="https://apps.0install.net/java/jre.xml"><name>Java Runtime Environment (JRE)</name><summary>Runtime for Java</summary><description>A Java runtime allows you to run applications built for Java.</description><entry-point binary-name="java" command="run">
+  </entry-point><entry-point binary-name="jaccessinspector" command="jaccessinspector"/><entry-point binary-name="jaccesswalker" command="jaccesswalker"/></interface><interface uri="https://apps.0install.net/java/jre.xml"><name>Java Runtime Environment (JRE)</name><summary>Runtime for Java</summary><description>A Java runtime allows you to run applications built for Java.</description><icon href="https://raw.githubusercontent.com/0install/apps/master/java/java.png" type="image/png"/><entry-point binary-name="java" command="run">
     <needs-terminal/>
     <name>Java command-line runner</name>
   </entry-point><entry-point binary-name="javaw" command="run-gui">
@@ -197,11 +197,11 @@ On OS X, an extra argument needs to be passed to Java. To support OS X, please u
 &lt;/runner&gt;
 </description><homepage>http://www.eclipse.org/swt/</homepage><category>Development</category></interface></c:catalog>
 <!-- Base64 Signature
-iQEcBAABAgAGBQJeQLhwAAoJEFmqOSfCTk4ejzgH/RIOL14/96QQDh6UP5J8SKXqP6YzxFrYgbOL
-jzyx7QKRWNj/vuecMqg8mNuM50OsSZKWZsD9pBV7zBLzaNg4HWyU9lqrITC7bBBZHoXV1xZ1mmev
-y1RY29UqIf4BVjbcoEB6qlXJ11GVp7J4735jsGCxPDlg2fF+fAqqxnyLGeYFQ1ARIzjTwgiTF98S
-pC79khV0xCm55f6/wtOHLquVuelEWak3y2jawUQpj5G6jdsqqDj2pKNjlyzmsUJXNFoMOvkpXhHF
-pGifK26c/4sQtJHzJ9WU47qVGy6yLB+SveF82+LshrK5TxzMxVLOi5hl5e/EueIFtDOsgrmCv90s
-WLU=
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7ULOAACgkQWao5J8JOTh6wgggAt9Gj
+BQLHkyNPrx+ZNd2mV9QTmzU/sm+hLi5QcNZpkrLcd4ioOe4D4p7xAE19+VvoXx4geiMHv7JQt1W5
+/jMhttRLFbx/nd4Jhxp7T7rgXZRwF5r+GwaClTZ/OZD1FrCbRigF2rE4K+DqR5cnK+cjFl1pgkss
+6nlyp1J+fqCQWu3ex6ttLHSL6cbobHPovHfX3Xd7abFcZTBmnDKKLNK9L1zGjPbVPRkttJxm+mKu
+orVQTJa8UYRDSzFxaQL1uIA2+Pf0HknslHRNUPS9BlthJUFUaVOlKo6OpDO8wc+aGHW2EduC76xj
+axAzuHP7Z6aiRyDevoJyzBVmIVO+cDVi7g==
 
 -->

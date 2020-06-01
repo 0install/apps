@@ -290,7 +290,19 @@ user's environment.</description>
 created English PO file, or a PO Template file (generally created by
 xgettext).  Untranslated entries are assigned a translation that is
 identical to the msgid.</description>
-  </entry-point></interface><interface uri="https://apps.0install.net/devel/git-ssh.xml"><name>Git SSH</name><summary>virtual feed for user-specified SSH implementation to be used by Git</summary><description>This virtual feed allows users to register a custom SSH implemention to be used by Git.
+  </entry-point></interface><interface uri="https://apps.0install.net/devel/git.xml"><name>Git</name><summary>fast, scalable, distributed revision control system</summary><description>
+Git is popular version control system designed to handle very large projects
+with speed and efficiency; it is used mainly for various open source projects,
+most notably the Linux kernel.
+
+Git falls in the category of distributed source code management tools. Every Git
+working directory is a full-fledged repository with full revision tracking
+capabilities, not dependent on network access or a central server.
+
+This package provides the git main components with minimal dependencies.
+Additional functionality, e.g. a graphical user interface and revision tree
+visualizer, tools for interoperating with other VCS's, or a web interface, is
+provided as separate git* packages.</description><category>Development</category><icon href="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" type="image/png"/></interface><interface uri="https://apps.0install.net/devel/git-ssh.xml"><name>Git SSH</name><summary>virtual feed for user-specified SSH implementation to be used by Git</summary><description>This virtual feed allows users to register a custom SSH implemention to be used by Git.
 
   For example to use PuTTY plink: 0install add-feed https://apps.0install.net/devel/git-ssh.xml https://apps.0install.net/gui/putty.xml</description></interface><interface uri="https://apps.0install.net/devel/git-for-windows.xml"><name>Git for Windows</name><summary>decentralized version control system</summary><description>Git is a powerful version control system aiming to be the fastest decentralized source code management tool on this planet.</description><category>Development</category><homepage>https://gitforwindows.org/</homepage><icon href="https://gitforwindows.org/img/gwindows_logo.png" type="image/png"/><entry-point binary-name="git" command="run">
     <needs-terminal/>
@@ -317,7 +329,7 @@ identical to the msgid.</description>
     <needs-terminal/>
     <name>scp</name>
     <summary>Secure remote file copy</summary>
-  </entry-point></interface><interface uri="https://apps.0install.net/devel/gitversion.xml"><name>GitVersion</name><summary>versioning when using git, solved</summary><description>Versioning when using git, solved. GitVersion looks at your git history and works out the semantic version of the commit being built.</description><category>Development</category><homepage>https://github.com/GitTools/GitVersion</homepage><entry-point binary-name="GitVersion" command="run"/></interface><interface uri="https://apps.0install.net/devel/glade.xml"><name>Glade</name><summary>a User Interface Designer</summary><description>
+  </entry-point></interface><interface uri="https://apps.0install.net/devel/gitversion.xml"><name>GitVersion</name><summary>versioning when using git, solved</summary><description>Versioning when using git, solved. GitVersion looks at your git history and works out the semantic version of the commit being built.</description><category>Development</category><homepage>https://github.com/GitTools/GitVersion</homepage><icon href="https://raw.githubusercontent.com/GitTools/GitVersion/master/docs/input/docs/img/package_icon.png" type="image/png"/><entry-point binary-name="GitVersion" command="run"/></interface><interface uri="https://apps.0install.net/devel/glade.xml"><name>Glade</name><summary>a User Interface Designer</summary><description>
 Glade is a RAD tool to enable quick &amp; easy development of user interfaces for
 the GTK+ toolkit and the GNOME desktop environment.
 
@@ -350,19 +362,7 @@ It can also be used as either a front-end to a compiler or as a macro processor 
     <needs-terminal/>
   </entry-point></interface><interface uri="https://apps.0install.net/devel/re2c.xml"><name>Re2C</name><summary xml:lang="en">Re2C: convert regular expressions to C/C++</summary><description xml:lang="en">re2c is a free and open-source lexer generator for C and C++. Its main goal is generating fast lexers: at least as fast as their reasonably optimized hand-coded counterparts. Instead of using traditional table-driven approach, re2c encodes the generated finite state automata directly in the form of conditional jumps and comparisons. The resulting programs are faster and often smaller than their table-driven analogues, and they are much easier to debug and understand. re2c applies quite a few optimizations in order to speed up and compress the generated code. Another distinctive feature is its flexible interface: instead of assuming a fixed program template, re2c lets the programmer write most of the interface code and adapt the generated lexer to any particular environment.</description><category>Development</category><homepage>http://gnuwin32.sourceforge.net/packages/re2c.htm</homepage><entry-point binary-name="re2c" command="run">
     <name xml:lang="en">Re2C</name>
-  </entry-point></interface><interface uri="https://apps.0install.net/devel/terraform.xml"><name>Terraform</name><summary>write, plan, and create infrastructure as code</summary><description>Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently. Terraform can manage existing and popular service providers as well as custom in-house solutions.</description><homepage>https://www.terraform.io/</homepage><entry-point binary-name="terraform" command="run"/></interface><interface uri="https://apps.0install.net/devel/vagrant.xml"><name>Vagrant</name><summary>tool for building and distributing development environments</summary><description>Development environments managed by Vagrant can run on local virtualized platforms such as VirtualBox or VMware, in the cloud via AWS or OpenStack, or in containers such as with Docker or raw LXC.</description><homepage>https://www.vagrantup.com/</homepage><entry-point binary-name="vagrant" command="run"/></interface><interface uri="https://apps.0install.net/devel/cloc.xml"><name>cloc</name><summary>count lines of code</summary><description>cloc counts blank lines, comment lines, and physical lines of source code in many programming languages..</description><homepage>https://github.com/AlDanial/cloc</homepage><entry-point binary-name="cloc" command="run"/></interface><interface uri="https://apps.0install.net/devel/gcc-c.xml"><name>gcc-c</name><summary>gcc C compiler</summary><description/><homepage>https://gcc.gnu.org/</homepage></interface><interface uri="https://apps.0install.net/devel/gcc-c++.xml"><name>gcc-c++</name><summary>gcc C++ compiler</summary><description/><homepage>https://gcc.gnu.org/</homepage></interface><interface uri="https://apps.0install.net/devel/git.xml"><name>git-core</name><summary>fast, scalable, distributed revision control system</summary><description>
-Git is popular version control system designed to handle very large projects
-with speed and efficiency; it is used mainly for various open source projects,
-most notably the Linux kernel.
-
-Git falls in the category of distributed source code management tools. Every Git
-working directory is a full-fledged repository with full revision tracking
-capabilities, not dependent on network access or a central server.
-
-This package provides the git main components with minimal dependencies.
-Additional functionality, e.g. a graphical user interface and revision tree
-visualizer, tools for interoperating with other VCS's, or a web interface, is
-provided as separate git* packages.</description><category>Development</category></interface><interface uri="https://apps.0install.net/devel/libintl.xml"><name>libintl</name><summary xml:lang="en">library for native language support</summary><description xml:lang="en">Libintl is a library that provides native language support to programs. It is part of Gettext. </description><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/><category>Development</category><homepage>http://gnuwin32.sourceforge.net/packages/libintl.htm</homepage></interface><interface uri="https://apps.0install.net/devel/make.xml"><name>make</name><summary>The GNU version of the &quot;make&quot; utility.</summary><description>
+  </entry-point></interface><interface uri="https://apps.0install.net/devel/terraform.xml"><name>Terraform</name><summary>write, plan, and create infrastructure as code</summary><description>Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently. Terraform can manage existing and popular service providers as well as custom in-house solutions.</description><homepage>https://www.terraform.io/</homepage><entry-point binary-name="terraform" command="run"/></interface><interface uri="https://apps.0install.net/devel/vagrant.xml"><name>Vagrant</name><summary>tool for building and distributing development environments</summary><description>Development environments managed by Vagrant can run on local virtualized platforms such as VirtualBox or VMware, in the cloud via AWS or OpenStack, or in containers such as with Docker or raw LXC.</description><homepage>https://www.vagrantup.com/</homepage><entry-point binary-name="vagrant" command="run"/></interface><interface uri="https://apps.0install.net/devel/cloc.xml"><name>cloc</name><summary>count lines of code</summary><description>cloc counts blank lines, comment lines, and physical lines of source code in many programming languages..</description><homepage>https://github.com/AlDanial/cloc</homepage><entry-point binary-name="cloc" command="run"/></interface><interface uri="https://apps.0install.net/devel/gcc-c.xml"><name>gcc-c</name><summary>gcc C compiler</summary><description/><homepage>https://gcc.gnu.org/</homepage></interface><interface uri="https://apps.0install.net/devel/gcc-c++.xml"><name>gcc-c++</name><summary>gcc C++ compiler</summary><description/><homepage>https://gcc.gnu.org/</homepage></interface><interface uri="https://apps.0install.net/devel/libintl.xml"><name>libintl</name><summary xml:lang="en">library for native language support</summary><description xml:lang="en">Libintl is a library that provides native language support to programs. It is part of Gettext. </description><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/><category>Development</category><homepage>http://gnuwin32.sourceforge.net/packages/libintl.htm</homepage></interface><interface uri="https://apps.0install.net/devel/make.xml"><name>make</name><summary>The GNU version of the &quot;make&quot; utility.</summary><description>
 GNU Make is a program that determines which pieces of a large program need to be
 recompiled and issues the commands to recompile them, when necessary.
 
@@ -375,11 +375,11 @@ with automake and autoconf.
 Increasingly libraries ship with &quot;.pc&quot; files that allow querying of the compiler
 and linker flags needed to use them through the pkg-config(1) program.</description><category>Development</category><homepage>http://pkg-config.freedesktop.org/</homepage></interface><interface uri="https://apps.0install.net/devel/protoc.xml"><name>protoc</name><summary>compiler/generator for Protocol Buffers (protobuf)</summary><description>Generates source code in various languages (e.g. C++, Java, Python, C#) from protobuf files (.proto).</description><homepage>https://developers.google.com/protocol-buffers/</homepage><entry-point binary-name="protoc" command="run"/></interface></c:catalog>
 <!-- Base64 Signature
-iQEcBAABAgAGBQJezqxSAAoJEFmqOSfCTk4e95UH/ReJTkT/t8sHkZ/VSLwUT1VP/u756/ZKIjMn
-DSs98jy4v7imi3xSbGykFprjiShaFWJY3+hhw3gR6wgQ7LELXsh9Fm7iIka8SA8jheyXcgiXDXFR
-j2fhQ8kMRo9c2aXQpBMedD1UHNzZKb4OOIC8AIpyqU8DzRtT1L+5LpICFulX7GVE04o8IqhbGlf2
-nI9HanA1M7t/dZr7hCoQjNt2r8qJ7awS/cAds5UHpok54L+srsj84kRPUdkk/Ac5m3syj3WoGCy6
-S8jVvUbVzIKPdVDwQSk6O+XPkBIsCcxggBrAJTHER5zseUp0mvEguD2oR2vhSdixyNLlGAy7B7eO
-OdU=
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7UMG8ACgkQWao5J8JOTh7C3Qf8C6U8
+6ZjRi+ONkXEIoi+Crqki+FL3OtXV5t8Jkq9/780aYnbFInhDEyfi6lHKZrmFnmXNLjyJVM/GoSYT
+hWkMHucIiEV4rCg5Va8kppWDEKpCshp5UgXowjh1r0j6L8+g7Yf/IE/YWBW/cr6RPXG7cBXDj7SR
+pn9KQPpbhDE0M88SxPW3G0vfQOk/nBxSMqO0a4kr1MpmsKX7Fw/p9ggZb/DV6NycPOrNFrQQUX7+
+/hnbM1A3p2yG636JnT10I1aBNY0ZosO0DZu+I0bBHYoRZtBweJICdFh7cFVTclvvJTenOfYhACWk
+xNJ7K+9a6RfBMALz3MaNwG1Cik6Nd5ruAg==
 
 -->

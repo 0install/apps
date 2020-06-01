@@ -24,6 +24,10 @@ def get_valid_db(db_url, dst_file):
     """
     sig = io.BytesIO(urlopen(urllib.request.Request(f'{db_url}.sig')).read())
     gpg = gnupg.GPG()
+    with open('../Alexey.pubkey') as key_file:
+        pkg_key = key_file.read()
+        gpg.import_keys(pkg_key)
+
     result = gpg.verify_file(sig, data_filename=dst_file, close_file=False)
     if result.trust_level is None or result.trust_level <= result.TRUST_NEVER:
         print('downloading new db file')
@@ -139,7 +143,7 @@ def fix_version(version):
         Modifier:= "pre" | "rc" | "post"
     """
     numlist = r'(\d{1,10}([.]\d{1,10})*)'
-    versionpattern =  numlist + '(-(pre|rc|post)?' + numlist + '?)*'
+    versionpattern = numlist + '(-(pre|rc|post)?' + numlist + '?)*'
     versionregex = re.compile(versionpattern)
     if versionregex.fullmatch(version):
         return version
@@ -157,9 +161,9 @@ def fix_version(version):
         replacement = f'{value}'
         if value > 2147483648:
             replacement = ""
-            subMatches = [match[i:i + 3] for i in range(0, len(match), 3)]
-            subReplacements = [f'{int(x,16)}' for x in subMatches]
-            replacement = '.'.join(subReplacements)
+            sub_matches = [match[i:i + 3] for i in range(0, len(match), 3)]
+            sub_replacements = [f'{int(x,16)}' for x in sub_matches]
+            replacement = '.'.join(sub_replacements)
         version = re.sub(find_string, r'\1.' + replacement + '-', version)
 
     if re.search(r'[.]r\d', version):
@@ -172,9 +176,9 @@ def fix_version(version):
         replacement = f'{value}'
         if value > 2147483648:
             replacement = ""
-            subMatches = [match[i:i + 3] for i in range(0, len(match), 3)]
-            subReplacements = [f'{int(x,16)}' for x in subMatches]
-            replacement = '.'.join(subReplacements)
+            sub_matches = [match[i:i + 3] for i in range(0, len(match), 3)]
+            sub_replacements = [f'{int(x,16)}' for x in sub_matches]
+            replacement = '.'.join(sub_replacements)
         version = re.sub(match, replacement, version)
 
     if versionregex.fullmatch(version):

@@ -1,3 +1,4 @@
+#os=Linux
 """
     libwinpthread 0watch script for mingw64 projects libwinpthread feed
 """

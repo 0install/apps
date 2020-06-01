@@ -1,3 +1,4 @@
+#os=Linux
 """
     mpfr v4 0watch script for packages from the mingw64 project
 """

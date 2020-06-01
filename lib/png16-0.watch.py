@@ -1,3 +1,4 @@
+#os=Linux
 """
     libpng v1.6 0watch script for packages from the mingw64 project
 """

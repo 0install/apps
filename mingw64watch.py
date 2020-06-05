@@ -9,6 +9,7 @@
 import urllib
 from urllib.request import urlopen
 import io
+from os import path
 import tarfile
 from datetime import datetime
 import hashlib
@@ -24,7 +25,7 @@ def get_valid_db(db_url, dst_file):
     """
     sig = io.BytesIO(urlopen(urllib.request.Request(f'{db_url}.sig')).read())
     gpg = gnupg.GPG()
-    with open('../Alexey.pubkey') as key_file:
+    with open(path.join(path.dirname(__file__), 'Alexey.pubkey')) as key_file:
         pkg_key = key_file.read()
         gpg.import_keys(pkg_key)
 

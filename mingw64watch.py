@@ -127,7 +127,7 @@ def validate_package(url, file_path, md5, sha256, pgp):
         gpg = gnupg.GPG()
         result = gpg.verify_file(sig, data_filename=file_path, close_file=True)
         trust_level = result.trust_level
-        if trust_level is None or trust_level <= result.TRUST_NEVER:
+        if trust_level is None or result.status != 'signature valid':
             raise Exception(f"Invalid pgp signature for file!")
         print(f'{path} has valid pgp signature')
         validated = True

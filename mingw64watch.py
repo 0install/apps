@@ -37,7 +37,7 @@ def get_valid_db(db_url, dst_file):
         sig.seek(0)
         result = gpg.verify_file(sig, data_filename=dst_file)
 
-    if result.trust_level is None or result.trust_level <= result.TRUST_NEVER:
+    if result.trust_level is None or result.status != 'signature valid':
         print(f'''database {db_url} invalid signature
                 {result.trust_level}, {result.status}''')
         exit(1)
@@ -87,14 +87,14 @@ def get_package_info(dbfilename, base_url, dst_folder, pkg_name):
     return package_item_map
 
 
-def save_file(url, path):
+def save_file(url, file_path):
     """ download the file @ url to the local path
     """
-    with urlopen(url) as in_file, open(path, 'wb') as out_file:
+    with urlopen(url) as in_file, open(file_path, 'wb') as out_file:
         out_file.write(in_file.read())
 
 
-def validate_package(url, path, md5, sha256, pgp):
+def validate_package(url, file_path, md5, sha256, pgp):
     """ download the file @ url to the local path
     and check it against hashes and pgp key
     """
@@ -104,7 +104,7 @@ def validate_package(url, path, md5, sha256, pgp):
 
     if md5 is not None:
         hash_md5 = hashlib.md5()
-        hash_md5.update(open(path, 'rb').read())
+        hash_md5.update(open(file_path, 'rb').read())
         actual = hash_md5.hexdigest()
         if md5 != actual:
             msg = f"bad md5 for package! Was {actual}, but expected {md5}"
@@ -114,7 +114,7 @@ def validate_package(url, path, md5, sha256, pgp):
 
     if sha256 is not None:
         hash_sha256 = hashlib.sha256()
-        hash_sha256.update(open(path, 'rb').read())
+        hash_sha256.update(open(file_path, 'rb').read())
         actual = hash_sha256.hexdigest()
         if sha256 != actual:
             msg = f"bad sha256 for file! Was {actual}, but expected {sha256}"
@@ -125,7 +125,7 @@ def validate_package(url, path, md5, sha256, pgp):
     if pgp is not None:
         sig = io.BytesIO(base64.b64decode(pgp))
         gpg = gnupg.GPG()
-        result = gpg.verify_file(sig, data_filename=path, close_file=True)
+        result = gpg.verify_file(sig, data_filename=file_path, close_file=True)
         trust_level = result.trust_level
         if trust_level is None or trust_level <= result.TRUST_NEVER:
             raise Exception(f"Invalid pgp signature for file!")

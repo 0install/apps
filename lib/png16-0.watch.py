@@ -10,7 +10,7 @@ from mingw64watch import get_new_version, \
                          get_mingw32_valid_new_package_item_map  # noqa: E402
 
 NAME = 'libpng'
-FEED = 'png16-0.xml'
+FEED = join(dirname(__file__), 'png16-0.xml')
 
 PKG_MAP_64 = get_mingw64_valid_new_package_item_map(NAME, FEED)
 RELEASE64 = get_new_version(PKG_MAP_64)

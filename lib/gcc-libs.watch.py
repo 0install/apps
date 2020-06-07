@@ -11,7 +11,7 @@ from mingw64watch import get_new_version, \
                          get_mingw32_valid_new_package_item_map  # noqa: E402
 
 NAME = 'gcc-libs'
-FEED = 'gcc-libs.xml'
+FEED = join(dirname(__file__), 'gcc-libs.xml')
 
 PKG_MAP_64 = get_mingw64_valid_new_package_item_map(NAME, FEED)
 RELEASE64 = get_new_version(PKG_MAP_64)

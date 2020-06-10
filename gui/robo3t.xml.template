@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Robo 3T</name>
+  <summary>MongoDB management tool (formerly Robomongo)</summary>
+  <description>Robo 3T (formerly Robomongo) is a shell-centric cross-platform MongoDB management tool.</description>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/robo3t.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/robo3t.png" type="image/png"/>
+  <category>Development</category>
+  <homepage>https://robomongo.org/</homepage>
+
+  <feed-for interface="https://apps.0install.net/gui/robo3t.xml"/>
+
+  <group arch="Windows-x86_64" license="GPL v3 (GNU General Public License)">
+    <command name="run" path="robo3t.exe"/>
+    <implementation released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="robo3t-{version}-windows-x86_64-{commit}" href="https://github.com/Studio3T/robomongo/releases/download/v{version}/robo3t-{version}-windows-x86_64-{commit}.zip" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group arch="Linux-x86_64" license="GPL v3 (GNU General Public License)">
+    <command name="run" path="bin/robo3t"/>
+    <implementation released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="robo3t-{version}-linux-x86_64-{commit}" href="https://github.com/Studio3T/robomongo/releases/download/v{version}/robo3t-{version}-linux-x86_64-{commit}.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

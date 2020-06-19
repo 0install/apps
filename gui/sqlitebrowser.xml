@@ -14,7 +14,7 @@
     <name>DB Browser for SQLCipher</name>
   </entry-point>
   <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
-    <file-type id="SQLiteDB">
+    <file-type id="SQLiteBrowser.Db">
       <description xml:lang="en">SQLite database file</description>
       <description xml:lang="de">SQLite Datanbankdatei</description>
       <verb args="&quot;%1&quot;" name="open"/>
@@ -22,6 +22,12 @@
       <extension mime-type="application/vnd.sqlite3" value=".db3"/>
       <extension mime-type="application/vnd.sqlite3" value=".sqlite"/>
       <extension mime-type="application/vnd.sqlite3" value=".sqlite3"/>
+    </file-type>
+    <file-type id="SQLiteBrowser.Proj">
+      <description xml:lang="en">DB Browser for SQLite project file</description>
+      <description xml:lang="de">DB Browser für SQLite Projektdatei</description>
+      <verb args="&quot;%1&quot;" name="open"/>
+      <extension value=".sqlbpro"/>
     </file-type>
   </capabilities>
 
@@ -86,14 +92,22 @@
       <manifest-digest sha256new="J4Y27XV6AQLPY6SJNXBNM4EOKAWCW7576TEP57VDRZZ7PUH2P2UA"/>
       <archive extract="DB Browser for SQLite" href="https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v3.12.0-rc1/DB.Browser.for.SQLite-3.12.0-rc1-win32.zip" size="17493283" type="application/zip"/>
     </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=be38320ef8acd0741cb334ddbbf9fb93f3bb3ef0" released="2020-06-16" stability="stable" version="3.12.0">
+      <manifest-digest sha256new="HPKIIIVGRRW6FBADBNXUYDKB24OETMIOACXA6U6ONAYGXGPX7JWA"/>
+      <archive extract="DB Browser for SQLite" href="https://github.com/sqlitebrowser/sqlitebrowser/releases/download/3.12.0/DB.Browser.for.SQLite-3.12.0-win64.zip" size="20131463" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=2c3a5b67732c922aacb9f240cba81eb06fa5d8dc" released="2020-06-16" stability="stable" version="3.12.0">
+      <manifest-digest sha256new="SYXPKAPZVT2YLPIF5AC773C3XZSE3OX7TT36PB4N3JBDBQZWWCLA"/>
+      <archive extract="DB Browser for SQLite" href="https://github.com/sqlitebrowser/sqlitebrowser/releases/download/3.12.0/DB.Browser.for.SQLite-3.12.0-win32.zip" size="17503832" type="application/zip"/>
+    </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEcBAABAgAGBQJe4PafAAoJEFmqOSfCTk4e6tYIALHoP6wkFU2IZiaiaaOFhuPcsZncm+kqvk3e
-4NzEFIfmlwM7Lfh3+VYzsKkDvt6NUxoghMFMSoVXkpJK69bKtIbpYd9IvcYNETDb7/C/3sci53KW
-gZ+2ARsaSaRdjKO8d2aInbijUo+Sm0TjTBlniGqsP3rjydNveppl0t+s6FTkjiHlFJ2Ke/0/Jz58
-HliuIa8x91VVR7zthrcc4DOUbIsegUjoW4UxRV8TAWhr+rEC81s3UTDRLF9l05qssPO/2nNC6Y50
-CWOWjAZ8+Nbmp0L8KYydeswXi8OFf9XoM24jZ2A+KgjfxhbV+xaKsb4M+MflrLN1WrOZzKRDA2eb
-9mE=
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7s5e4ACgkQWao5J8JOTh4WCwf/Toex
+h7IosGPXK0sFgdXYUAZ6bGiDdd9IQPwzsh//Af0aaxRRGOMo4movuDTk5UrY0/HaVc0oB9f+atT0
+izFLWdasuN2QSToReoIYk0TZCr1kmuYbDKcAsYq9FWcXoyFTETm6vQvX1z6UQnU8oFQcPSQw/N0L
+Jkx1ar+XVB802qxQUZg7MiCkkYKXhSyZaBDBRAmuLFax6l2fLohKMnJSCm1537bxywTsuVQRWO1u
+HjY7wgErlXEnEjOYE3VE46kIOkQ8JiCXleKxipWJt4KPC5WG2bJvEJ231UojTC98UB4hlfKR9t2F
+FaWXcO3G1PM4q9ERo/ZLlCVI/I2Y/Navrg==
 
 -->

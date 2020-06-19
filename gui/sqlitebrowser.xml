@@ -13,14 +13,20 @@
     <name>DB Browser for SQLCipher</name>
   </entry-point>
   <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
-    <file-type id="SQLiteDB">
+    <file-type id="SQLiteBrowser.Db">
       <description xml:lang="en">SQLite database file</description>
       <description xml:lang="de">SQLite Datanbankdatei</description>
-      <verb name="open" args="&quot;%1&quot;"/>
-      <extension value=".db" mime-type="application/vnd.sqlite3"/>
-      <extension value=".db3" mime-type="application/vnd.sqlite3"/>
-      <extension value=".sqlite" mime-type="application/vnd.sqlite3"/>
-      <extension value=".sqlite3" mime-type="application/vnd.sqlite3"/>
+      <verb args="&quot;%1&quot;" name="open"/>
+      <extension mime-type="application/vnd.sqlite3" value=".db"/>
+      <extension mime-type="application/vnd.sqlite3" value=".db3"/>
+      <extension mime-type="application/vnd.sqlite3" value=".sqlite"/>
+      <extension mime-type="application/vnd.sqlite3" value=".sqlite3"/>
+    </file-type>
+    <file-type id="SQLiteBrowser.Proj">
+      <description xml:lang="en">DB Browser for SQLite project file</description>
+      <description xml:lang="de">DB Browser für SQLite Projektdatei</description>
+      <verb args="&quot;%1&quot;" name="open"/>
+      <extension value=".sqlbpro"/>
     </file-type>
   </capabilities>
 
@@ -84,6 +90,14 @@
     <implementation arch="Windows-i486" id="sha1new=caaeead23dc4276d8869c6f7410a108fd675b6e3" released="2020-06-08" stability="testing" version="3.12.0-rc1">
       <manifest-digest sha256new="J4Y27XV6AQLPY6SJNXBNM4EOKAWCW7576TEP57VDRZZ7PUH2P2UA"/>
       <archive extract="DB Browser for SQLite" href="https://github.com/sqlitebrowser/sqlitebrowser/releases/download/v3.12.0-rc1/DB.Browser.for.SQLite-3.12.0-rc1-win32.zip" size="17493283" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=be38320ef8acd0741cb334ddbbf9fb93f3bb3ef0" released="2020-06-16" stability="stable" version="3.12.0">
+      <manifest-digest sha256new="HPKIIIVGRRW6FBADBNXUYDKB24OETMIOACXA6U6ONAYGXGPX7JWA"/>
+      <archive extract="DB Browser for SQLite" href="https://github.com/sqlitebrowser/sqlitebrowser/releases/download/3.12.0/DB.Browser.for.SQLite-3.12.0-win64.zip" size="20131463" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=2c3a5b67732c922aacb9f240cba81eb06fa5d8dc" released="2020-06-16" stability="stable" version="3.12.0">
+      <manifest-digest sha256new="SYXPKAPZVT2YLPIF5AC773C3XZSE3OX7TT36PB4N3JBDBQZWWCLA"/>
+      <archive extract="DB Browser for SQLite" href="https://github.com/sqlitebrowser/sqlitebrowser/releases/download/3.12.0/DB.Browser.for.SQLite-3.12.0-win32.zip" size="17503832" type="application/zip"/>
     </implementation>
   </group>
 </interface>

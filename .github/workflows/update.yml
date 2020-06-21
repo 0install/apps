@@ -75,6 +75,15 @@ jobs:
         run: |
           cp feeds/0repo-config.py .
           cp public/archives.db .
+          mkdir incoming
+      - name: Run 0watch
+        env: {'CI': '1'}
+        run: feeds/watch.sh
+      - name: Upload generated feeds
+        uses: actions/upload-artifact@v1
+        with:
+          name: linux-feeds
+          path: incoming
       - name: Download feeds generated on Windows
         uses: actions/download-artifact@v1
         with:
@@ -85,11 +94,8 @@ jobs:
         with:
           name: macos-feeds
           path: incoming
-      - name: Run 0watch
-        env: {'CI': '1'}
-        run: |
-          feeds/watch.sh
-          if ls incoming/*.xml; then echo "::set-env name=NEW_INCOMING::true"; fi
+      - name: Check if there are new feeds
+        run: if ls incoming/*.xml; then echo "::set-env name=NEW_INCOMING::true"; fi
       - name: Run 0repo
         if: env.NEW_INCOMING
         env: {'NO_SIGN': '1'}

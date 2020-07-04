@@ -13,7 +13,7 @@
     <command name="ffprobe" path="/usr/bin/ffprobe"/>
   </package-implementation>
 
-  <group license="LGPL (GNU Lesser General Public License)">
+  <group license="GPL (GNU General Public License)">
     <command name="run" path="bin/ffmpeg.exe"/>
     <command name="ffplay" path="bin/ffplay.exe"/>
     <command name="ffprobe" path="bin/ffprobe.exe"/>
@@ -177,13 +177,39 @@
       <manifest-digest sha256new="DRI7QDNWTYQ3DIQIW7N3SAP372CQIQ6LITR26N3PKVEH46E4F2AQ"/>
       <archive extract="ffmpeg-4.2.3-win32-static" href="https://ffmpeg.zeranoe.com/builds/win32/static/ffmpeg-4.2.3-win32-static.zip" size="60803242" type="application/zip"/>
     </implementation>
-    <implementation arch="Windows-x86_64" id="sha1new=a7cadf070a362aad467ea4c1efe1b5fe24af023e" released="2020-06-24" stability="stable" version="4.3">
-      <manifest-digest sha256new="6SZPDUY2YRREJJ5Q556XSV3GGMNJIS2GJOUFYGVGQSVN3Y2MVFUQ"/>
-      <archive extract="ffmpeg-4.3-win64-static" href="https://ffmpeg.zeranoe.com/builds/win64/static/ffmpeg-4.3-win64-static.zip" size="74012454" type="application/zip"/>
+    <implementation arch="Windows-x86_64" id="sha1new=0d1086bf38722e12713b7e98f130d0696cf7df7c" released="2020-06-29" stability="stable" version="4.3">
+      <manifest-digest sha256new="YGRJ7KYRZVIEYIHIOASJLVRKPKFASOL3TTAZGQZTPLP3EZFVLQEQ"/>
+      <archive extract="ffmpeg-4.3-win64-static" href="https://ffmpeg.zeranoe.com/builds/win64/static/ffmpeg-4.3-win64-static.zip" size="74012393" type="application/zip"/>
     </implementation>
-    <implementation arch="Windows-i486" id="sha1new=7365b9bd9e3c05ff7e88f3103b0def95bfb77f46" released="2020-06-24" stability="stable" version="4.3">
-      <manifest-digest sha256new="3H3FDOKUMI33JVIIHBGLAOEP62JGCIJAJDB42PQFCK6UM55OE7RQ"/>
-      <archive extract="ffmpeg-4.3-win32-static" href="https://ffmpeg.zeranoe.com/builds/win32/static/ffmpeg-4.3-win32-static.zip" size="64765851" type="application/zip"/>
+    <implementation arch="Windows-i486" id="sha1new=cefe6467fc3448302a2fecff6fb5fda73fbc9b99" released="2020-06-29" stability="stable" version="4.3">
+      <manifest-digest sha256new="G6HPJF7JESB3IDIGWOF5TRCOAYUGH7PPRKYNK5GTCHFCAGSLI4NQ"/>
+      <archive extract="ffmpeg-4.3-win32-static" href="https://ffmpeg.zeranoe.com/builds/win32/static/ffmpeg-4.3-win32-static.zip" size="64765798" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group arch="MacOSX-x86_64" license="GPL (GNU General Public License)">
+    <command name="run" path="bin/ffmpeg"/>
+    <command name="ffplay" path="bin/ffplay"/>
+    <command name="ffprobe" path="bin/ffprobe"/>
+    <implementation id="sha1new=da39a3ee5e6b4b0d3255bfef95601890afd80709" released="2019-08-08" stability="stable" version="4.2">
+      <manifest-digest sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <archive extract="ffmpeg-4.2-win64-static" href="https://ffmpeg.zeranoe.com/builds/macos64/static/ffmpeg-4.2-macos64-static.zip" size="69012907" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=3dac0427583f1f428d60549e4727de6762c1bd70" released="2019-09-16" stability="stable" version="4.2.1">
+      <manifest-digest sha256new="6OUU4MHKSEVREDXKUIA5CNVJ53VJN4CAHJDCZQU2T4DAPGGTIHYA"/>
+      <archive extract="ffmpeg-4.2.1-macos64-static" href="https://ffmpeg.zeranoe.com/builds/macos64/static/ffmpeg-4.2.1-macos64-static.zip" size="69467236" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=5e17e737be50d4ca89bbf64530c8aeb7c6f8b3bc" released="2020-01-27" stability="stable" version="4.2.2">
+      <manifest-digest sha256new="BPQJJBM2WV74I2ETCT7QDQQKVT2OPWRPSLNUIDASSFNV5J7XLPVQ"/>
+      <archive extract="ffmpeg-4.2.2-macos64-static" href="https://ffmpeg.zeranoe.com/builds/macos64/static/ffmpeg-4.2.2-macos64-static.zip" size="69038221" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=3e75773f0ef5eab5c2ed38621557a58db95a16bd" released="2020-05-27" stability="stable" version="4.2.3">
+      <manifest-digest sha256new="DB4ICBUIAUJCXMDPUSY6DV46N7PGOQDDWH3KVIP3KVGBEWS2HMAA"/>
+      <archive extract="ffmpeg-4.2.3-macos64-static" href="https://ffmpeg.zeranoe.com/builds/macos64/static/ffmpeg-4.2.3-macos64-static.zip" size="70347058" type="application/zip"/>
+    </implementation>
+    <implementation id="sha1new=6ffcde5a07e52d692faf943b81be500891ea25f2" released="2020-06-29" stability="stable" version="4.3">
+      <manifest-digest sha256new="4CFQU774RCMFP4RQUFW4IWZPYEQWGK2N5CQ5AXR3MHRDPQFYCQEQ"/>
+      <archive extract="ffmpeg-4.3-macos64-static" href="https://ffmpeg.zeranoe.com/builds/macos64/static/ffmpeg-4.3-macos64-static.zip" size="74008592" type="application/zip"/>
     </implementation>
   </group>
 

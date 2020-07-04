@@ -10,7 +10,7 @@
 
   <feed-for interface="https://apps.0install.net/utils/ffmpeg.xml"/>
 
-  <group license="LGPL (GNU Lesser General Public License)">
+  <group license="GPL (GNU General Public License)">
     <command name="run" path="bin/ffmpeg.exe"/>
     <command name="ffplay" path="bin/ffplay.exe"/>
     <command name="ffprobe" path="bin/ffprobe.exe"/>
@@ -21,6 +21,16 @@
     <implementation arch="Windows-i486" released="{released}" stability="stable" version="{version}">
       <manifest-digest/>
       <archive extract="ffmpeg-{version}-win32-static" href="https://ffmpeg.zeranoe.com/builds/win32/static/ffmpeg-{version}-win32-static.zip" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group arch="MacOSX-x86_64" license="GPL (GNU General Public License)">
+    <command name="run" path="bin/ffmpeg"/>
+    <command name="ffplay" path="bin/ffplay"/>
+    <command name="ffprobe" path="bin/ffprobe"/>
+    <implementation released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="ffmpeg-{version}-macos64-static" href="https://ffmpeg.zeranoe.com/builds/macos64/static/ffmpeg-{version}-macos64-static.zip" type="application/zip"/>
     </implementation>
   </group>
 </interface>

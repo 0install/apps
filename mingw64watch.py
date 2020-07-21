@@ -98,7 +98,7 @@ def validate_package(url, file_path, md5, sha256, pgp):
     """ download the file @ url to the local path
     and check it against hashes and pgp key
     """
-    save_file(url, path)
+    save_file(url, file_path)
 
     validated = False
 
@@ -109,7 +109,7 @@ def validate_package(url, file_path, md5, sha256, pgp):
         if md5 != actual:
             msg = f"bad md5 for package! Was {actual}, but expected {md5}"
             raise Exception(msg)
-        print(f'{path} has valid md5')
+        print(f'{file_path} has valid md5')
         validated = True
 
     if sha256 is not None:
@@ -119,7 +119,7 @@ def validate_package(url, file_path, md5, sha256, pgp):
         if sha256 != actual:
             msg = f"bad sha256 for file! Was {actual}, but expected {sha256}"
             raise Exception(msg)
-        print(f'{path} has valid sha256')
+        print(f'{file_path} has valid sha256')
         validated = True
 
     if pgp is not None:
@@ -129,7 +129,7 @@ def validate_package(url, file_path, md5, sha256, pgp):
         trust_level = result.trust_level
         if trust_level is None or result.status != 'signature valid':
             raise Exception(f"Invalid pgp signature for file!")
-        print(f'{path} has valid pgp signature')
+        print(f'{file_path} has valid pgp signature')
         validated = True
 
     return validated

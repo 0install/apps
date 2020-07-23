@@ -42,13 +42,13 @@ http://creativecommons.org/licenses/by-sa/2.5/
 
 								<div class="what-is-this">
 									<xsl:if test="//zi:implementation[@main] | //zi:group[@main] | //zi:command[@name='run'] | //zi:package-implementation[@main]">
-										<form action="https://0install.de/bootstrap/" method="get" style="float: left; margin-right: 4px;">
+										<form action="https://get.0install.net/bootstrap/" method="get" style="float: left; margin-right: 4px;">
 											<input type="hidden" name="name" value="{zi:name}"/>
 											<input type="hidden" name="uri" value="{/zi:interface/@uri}"/>
 											<input type="hidden" name="mode" value="run"/>
 											<input type="submit" value="Run {zi:name}"/>
 										</form>
-										<form action="https://0install.de/bootstrap/" method="get" style="clear: right;">
+										<form action="https://get.0install.net/bootstrap/" method="get" style="clear: right;">
 											<input type="hidden" name="name" value="{zi:name}"/>
 											<input type="hidden" name="uri" value="{/zi:interface/@uri}"/>
 											<input type="hidden" name="mode" value="integrate"/>

@@ -6,6 +6,9 @@
   <needs-terminal/>
 
   <group arch="Linux-x86_64" license="GPL v2 (GNU General Public License)">
+    <requires interface="https://apps.0install.net/lib/tinfo5.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
     <command name="run" path="bin/doxygen"/>
     <command name="doxyindexer" path="bin/doxyindexer"/>
 

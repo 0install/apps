@@ -11,6 +11,6 @@ foreach ($uri in Get-Content "$PSScriptRoot\list.txt") {
   Invoke-WebRequest $uri -OutFile "$workDir\$encodedUri"
 }
 
-0install run --command=0publish http://0install.de/feeds/ZeroInstall_Tools.xml --xmlsign --key=apps.0install.net --catalog="$PSScriptRoot\catalog.xml" "$workDir\*"
+0install run --command=0publish https://apps.0install.net/0install/0publish-win.xml --xmlsign --key=apps.0install.net --catalog="$PSScriptRoot\catalog.xml" "$workDir\*"
 
 rm -Recurse -Force $workDir

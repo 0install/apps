@@ -12,10 +12,14 @@
   <feed-for interface="https://apps.0install.net/javascript/node.xml"/>
 
   <group license="MIT License">
-    <environment name="NPM_CLI_JS" insert="lib/node_modules/npm/bin/npm-cli.js" mode="replace"/>
+    <environment insert="lib/node_modules/npm/bin/npm-cli.js" mode="replace" name="NPM_CLI_JS"/>
+    <environment insert="lib/node_modules/npm/bin/npx-cli.js" mode="replace" name="NPX_CLI_JS"/>
     <command name="run" path="bin/node"/>
     <command name="npm" path="bin/node">
       <arg>$NPM_CLI_JS</arg>
+    </command>
+    <command name="npx" path="bin/node">
+      <arg>$NPX_CLI_JS</arg>
     </command>
     <implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}">
       <manifest-digest/>
@@ -28,10 +32,14 @@
   </group>
 
   <group license="MIT License">
-    <environment name="NPM_CLI_JS" insert="node_modules/npm/bin/npm-cli.js" mode="replace"/>
+    <environment insert="node_modules/npm/bin/npm-cli.js" mode="replace" name="NPM_CLI_JS"/>
+    <environment insert="node_modules/npm/bin/npx-cli.js" mode="replace" name="NPX_CLI_JS"/>
     <command name="run" path="node.exe"/>
     <command name="npm" path="node.exe">
       <arg>$NPM_CLI_JS</arg>
+    </command>
+    <command name="npx" path="node.exe">
+      <arg>$NPX_CLI_JS</arg>
     </command>
     <implementation arch="Windows-x86_64" version="{version}" stability="{stability}" released="{released}">
       <manifest-digest/>

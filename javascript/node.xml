@@ -473,6 +473,18 @@
       <manifest-digest sha1new="dfc44baa03b936160ef53fb7b09a9912fa10e5a3" sha256="a539fb4cab044f2249485f0b828a99839f5d1400ff8dca3f9856cf24b4ff8975" sha256new="UU47WTFLARHSESKIL4FYFCUZQOPV2FAA76G4UP4YK3HSJNH7RF2Q"/>
       <archive extract="node-v5.1.1-darwin-x64" href="https://nodejs.org/dist/v5.1.1/node-v5.1.1-darwin-x64.tar.gz" size="9689089" type="application/x-compressed-tar"/>
     </implementation>
+  </group>
+
+  <group license="MIT License">
+    <environment insert="lib/node_modules/npm/bin/npm-cli.js" mode="replace" name="NPM_CLI_JS"/>
+    <environment insert="lib/node_modules/npm/bin/npx-cli.js" mode="replace" name="NPX_CLI_JS"/>
+    <command name="run" path="bin/node"/>
+    <command name="npm" path="bin/node">
+      <arg>$NPM_CLI_JS</arg>
+    </command>
+    <command name="npx" path="bin/node">
+      <arg>$NPX_CLI_JS</arg>
+    </command>
     <implementation arch="Linux-x86_64" id="sha1new=b67d2ba6ebb9f01853853219866015b9d8bc11b2" released="2015-12-09" stability="testing" version="5.2.0">
       <manifest-digest sha1new="b67d2ba6ebb9f01853853219866015b9d8bc11b2" sha256="a4b75fc505ef636bde922bc66823757c367a202e59bac2f4386beadf35a284b1" sha256new="US3V7RIF55RWXXUSFPDGQI3VPQ3HUIBOLG5MF5BYNPVN6NNCQSYQ"/>
       <archive extract="node-v5.2.0-linux-x64" href="https://nodejs.org/dist/v5.2.0/node-v5.2.0-linux-x64.tar.xz" size="8157076" type="application/x-xz-compressed-tar"/>
@@ -3193,6 +3205,18 @@
       <manifest-digest sha1new="246db5a25da76dc95bec6893537bb466d2b08c9f" sha256="42260da2769957e23208d7a8ebe5777a9a73ac709e19ac70de81c78b2db428ef" sha256new="IITA3ITWTFL6EMQI26UOXZLXPKNHHLDQTYM2Y4G6QHDYWLNUFDXQ"/>
       <archive extract="SourceDir/nodejs" href="https://nodejs.org/dist/v5.1.1/node-v5.1.1-x86.msi" size="9256960" type="application/x-msi"/>
     </implementation>
+  </group>
+
+  <group license="MIT License">
+    <environment insert="node_modules/npm/bin/npm-cli.js" mode="replace" name="NPM_CLI_JS"/>
+    <environment insert="node_modules/npm/bin/npx-cli.js" mode="replace" name="NPX_CLI_JS"/>
+    <command name="run" path="node.exe"/>
+    <command name="npm" path="node.exe">
+      <arg>$NPM_CLI_JS</arg>
+    </command>
+    <command name="npx" path="node.exe">
+      <arg>$NPX_CLI_JS</arg>
+    </command>
     <implementation arch="Windows-x86_64" id="sha1new=45a8d144a4d3a8dc841637b5177cba01599a8fc7" released="2015-12-09" stability="testing" version="5.2.0">
       <manifest-digest sha1new="45a8d144a4d3a8dc841637b5177cba01599a8fc7" sha256="4a0dceb0fa1a79b4df49254b51b3580205982c7814387dab699c1d9da49f1269" sha256new="JIG45MH2DJ43JX2JEVFVDM2YAICZQLDYCQ4H3K3JTQOZ3JE7CJUQ"/>
       <archive extract="SourceDir/nodejs" href="https://nodejs.org/dist/v5.2.0/node-v5.2.0-x64.msi" size="10366976" type="application/x-msi"/>
@@ -5160,5 +5184,10 @@
     <needs-terminal/>
     <name>Node Package Manager</name>
     <summary>package manager for JavaScript</summary>
+  </entry-point>
+  <entry-point binary-name="npx" command="npx">
+    <needs-terminal/>
+    <name>Node Package Executor</name>
+    <summary>execute binaries from npm packages</summary>
   </entry-point>
 </interface>

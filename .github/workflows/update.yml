@@ -32,7 +32,6 @@ jobs:
     steps:
       - name: Set up 0install
         run: |
-          set -e
           curl -slO https://get.0install.net/0install-macos-x86_64-latest.zip
           unzip 0install-macos-x86_64-latest.zip -d 0install
           chmod +x 0install/files/0install
@@ -58,7 +57,6 @@ jobs:
     steps:
       - name: Set up 0install
         run: |
-          set -e
           sudo apt-get update && sudo apt-get install -y python-gobject python3-gnupg unzip rpm2cpio binutils
           curl -L https://downloads.sourceforge.net/zero-install/0install-linux-x86_64-2.15.2.tar.bz2 | tar xj
           sudo 0install-linux-x86_64-2.15.2/install.sh local

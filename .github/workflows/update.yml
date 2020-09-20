@@ -8,10 +8,6 @@ jobs:
   windows:
     runs-on: windows-latest
     steps:
-      - name: Set up 0install
-        run: |
-          Invoke-WebRequest https://0install.de/files/0install.exe -OutFile 0install.exe
-          echo "::add-path::$env:GITHUB_WORKSPACE"
       - name: Clone feeds
         uses: actions/checkout@v2
         with:
@@ -55,11 +51,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: [windows, macos]
     steps:
-      - name: Set up 0install
-        run: |
-          sudo apt-get update && sudo apt-get install -y python-gobject python3-gnupg unzip rpm2cpio binutils
-          curl -L https://downloads.sourceforge.net/zero-install/0install-linux-x86_64-2.15.2.tar.bz2 | tar xj
-          sudo 0install-linux-x86_64-2.15.2/install.sh local
       - name: Clone feeds
         uses: actions/checkout@v2
         with:
@@ -76,7 +67,9 @@ jobs:
           mkdir incoming
       - name: Run 0watch
         env: {'CI': '1'}
-        run: feeds/watch.sh
+        run: |
+          sudo apt-get install -y python3-gnupg
+          feeds/watch.sh
       - name: Upload generated feeds
         uses: actions/upload-artifact@v1
         with:
@@ -97,7 +90,7 @@ jobs:
       - name: Run 0repo
         if: env.NEW_INCOMING
         env: {'NO_SIGN': '1'}
-        run: 0install run --not-before 0.10 http://0install.net/tools/0repo.xml
+        run: ./feeds/0install.sh run --not-before 0.10 http://0install.net/tools/0repo.xml
       - name: Create Pull Request
         if: env.NEW_INCOMING
         uses: peter-evans/create-pull-request@v2

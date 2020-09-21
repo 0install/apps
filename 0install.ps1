@@ -11,7 +11,7 @@ function download {
 }
 
 if (Get-Command 0install -ErrorAction SilentlyContinue) {
-    0install @args
+    0install @args | %{ "$_" }
 } else {
-    . "$(download)\0install.exe" @args
+    . "$(download)\0install.exe" @args | %{ "$_" }
 }

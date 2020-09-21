@@ -1,4 +1,4 @@
-#os=Linux
+#os=MinGW
 """
     zlib 0watch script for packages from the mingw64 project
 """

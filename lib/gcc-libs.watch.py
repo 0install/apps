@@ -1,4 +1,4 @@
-#os=Linux
+#os=MinGW
 """
     gcc-libs 0watch script for packages from the mingw64 project
 

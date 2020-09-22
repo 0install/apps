@@ -10,7 +10,8 @@ function download {
     return $downloadDir
 }
 
-if (Get-Command 0install -ErrorAction SilentlyContinue) {
+$ErrorActionPreference = "SilentlyContinue"
+if (Get-Command 0install) {
     0install @args | %{ "$_" }
 } else {
     . "$(download)\0install.exe" @args | %{ "$_" }

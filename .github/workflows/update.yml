@@ -18,6 +18,7 @@ jobs:
         env: {'CI': '1'}
         run: feeds\watch.ps1
       - name: Upload generated feeds
+        if: always()
         uses: actions/upload-artifact@v1
         with:
           name: windows-feeds
@@ -42,6 +43,7 @@ jobs:
         env: {'CI': '1'}
         run: feeds/watch.sh
       - name: Upload generated feeds
+        if: always()
         uses: actions/upload-artifact@v1
         with:
           name: macos-feeds
@@ -71,6 +73,7 @@ jobs:
           sudo apt-get install -y python3-gnupg
           feeds/watch.sh
       - name: Upload generated feeds
+        if: always()
         uses: actions/upload-artifact@v1
         with:
           name: linux-feeds

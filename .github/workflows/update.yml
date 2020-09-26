@@ -27,12 +27,6 @@ jobs:
   macos:
     runs-on: macos-latest
     steps:
-      - name: Set up 0install
-        run: |
-          curl -slO https://get.0install.net/0install-macos-x86_64-latest.zip
-          unzip 0install-macos-x86_64-latest.zip -d 0install
-          chmod +x 0install/files/0install
-          echo "::add-path::$GITHUB_WORKSPACE/0install/files"
       - name: Clone feeds
         uses: actions/checkout@v2
         with:

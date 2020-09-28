@@ -17,15 +17,15 @@
     <implementation version="{version}" released="{released}" stability="stable">
       <manifest-digest/>
       <recipe>
-        <archive href="http://download.notepad-plus-plus.org/repository/7.x/{version}/npp.{version}.bin.x64.zip" type="application/zip"/>
-        <rename source="doLocalConf.xml" dest="allowAppDataPlugins.xml"/>
+        <archive href="https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v{version}/npp.{version}.portable.x64.zip" type="application/zip"/>
+        <remove path="doLocalConf.xml"/>
       </recipe>
     </implementation>
     <implementation arch="Windows-i486" version="{version}" released="{released}" stability="stable">
       <manifest-digest/>
       <recipe>
-        <archive href="http://download.notepad-plus-plus.org/repository/7.x/{version}/npp.{version}.bin.zip" type="application/zip"/>
-        <rename source="doLocalConf.xml" dest="allowAppDataPlugins.xml"/>
+        <archive href="https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v{version}/npp.{version}.portable.zip" type="application/zip"/>
+        <remove path="doLocalConf.xml"/>
       </recipe>
     </implementation>
   </group>

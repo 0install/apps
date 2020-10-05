@@ -9,13 +9,17 @@
   <feed-for interface="https://apps.0install.net/docker/client.xml"/>
 
   <group license="Apache License 2.0">
-    <implementation arch="Windows-x86_64" version="{version}" stability="{stability}" released="{released}" main="docker.exe">
+    <implementation arch="Linux-x86_64" main="docker" stability="{stability}" version="{version}">
       <manifest-digest/>
-      <archive href="docker-{version}-ce-win-x86_64.zip" type="application/zip" extract="docker"/>
+      <archive extract="docker" href="https://download.docker.com/linux/static/{channel}/x86_64/docker-{version-original}.tgz" type="application/x-compressed-tar"/>
     </implementation>
-    <implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}" main="docker">
+    <implementation arch="Darwin-x86_64" main="docker" stability="{stability}" version="{version}">
       <manifest-digest/>
-      <archive href="docker-{version}-ce-linux-x86_64.tar.gz" type="application/x-compressed-tar" extract="docker"/>
+      <archive extract="docker" href="https://download.docker.com/mac/static/{channel}/x86_64/docker-{version-original}.tgz" type="application/x-compressed-tar"/>
     </implementation>
+    <!--<implementation arch="Windows-x86_64" main="docker.exe" stability="{stability}" version="{version}">
+      <manifest-digest/>
+      <archive extract="docker" href="docker-{version-original}-win-x86_64.zip" type="application/zip"/>
+    </implementation>-->
   </group>
 </interface>

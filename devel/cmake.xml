@@ -520,6 +520,10 @@ workspaces that can be used in the compiler environment of your choice.</descrip
       <manifest-digest sha256new="4R5VGF2E23YX4FMDWM7A477TB6KKRE66MSM76AO7OJH2RN65NWIQ"/>
       <archive extract="cmake-3.18.3-Linux-x86_64" href="http://www.cmake.org/files/v3.18/cmake-3.18.3-Linux-x86_64.tar.gz" size="41761465" type="application/x-compressed-tar"/>
     </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=a5b9ae9724987bb7acf5b6b91c0f0cdc1f908fba" released="2020-10-06" stability="stable" version="3.18.4">
+      <manifest-digest sha256new="Q3HMF33NDZ6MUGNDYRVRINVZDX4TY4XBRH2Z3ZHESIWN7HMDCUMQ"/>
+      <archive extract="cmake-3.18.4-Linux-x86_64" href="http://www.cmake.org/files/v3.18/cmake-3.18.4-Linux-x86_64.tar.gz" size="41760790" type="application/x-compressed-tar"/>
+    </implementation>
   </group>
 
   <group license="BSD License (revised)">
@@ -1023,6 +1027,10 @@ workspaces that can be used in the compiler environment of your choice.</descrip
     <implementation arch="MacOSX-x86_64" id="sha1new=e4286427b94c35141493fd39c1b85b2e4b68ab1f" released="2020-09-22" stability="stable" version="3.18.3">
       <manifest-digest sha256new="7SZDV3JZB324E4BEDCQJNTTPX7CT2GLY4FICSHJ74D42K4DFS3TQ"/>
       <archive extract="cmake-3.18.3-Darwin-x86_64" href="http://www.cmake.org/files/v3.18/cmake-3.18.3-Darwin-x86_64.tar.gz" size="38102669" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" id="sha1new=eb07b3427cc3af006300dd2b851e76bd4c11b7f5" released="2020-10-06" stability="stable" version="3.18.4">
+      <manifest-digest sha256new="GEGFC5UGGFX5TKAY5VC2RMDCOQSDTBFFG3EPCMM4EVMVFKLQGUXQ"/>
+      <archive extract="cmake-3.18.4-Darwin-x86_64" href="http://www.cmake.org/files/v3.18/cmake-3.18.4-Darwin-x86_64.tar.gz" size="37892408" type="application/x-compressed-tar"/>
     </implementation>
   </group>
 
@@ -2019,6 +2027,14 @@ workspaces that can be used in the compiler environment of your choice.</descrip
       <manifest-digest sha256new="PSQ6JVOG3XJYMHOUUUM54V7NQJCDBK4ULPV3RHTCFGYY5XSHR22A"/>
       <archive extract="SourceDir/CMake" href="http://www.cmake.org/files/v3.18/cmake-3.18.3-win32-x86.msi" size="24657920" type="application/x-msi"/>
     </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=93e6b87b7f2a47543abbbf1ffb82298298bc769a" released="2020-10-06" stability="stable" version="3.18.4">
+      <manifest-digest sha256new="TY24OQ2Q3ILTTTU6L5RT5DHSLS4WYMCDDCFKFY4XNLJYAPHBIOMQ"/>
+      <archive extract="SourceDir/CMake" href="http://www.cmake.org/files/v3.18/cmake-3.18.4-win64-x64.msi" size="26521600" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-i486" id="sha1new=4360a6f65c890dd089ff1f1e11ad0b25bf1bf677" released="2020-10-06" stability="stable" version="3.18.4">
+      <manifest-digest sha256new="DX3HKTWBXYH44GTVWKSMELKXXTZGVTPDHG2ETYFMF5AIWRW5SIYQ"/>
+      <archive extract="SourceDir/CMake" href="http://www.cmake.org/files/v3.18/cmake-3.18.4-win32-x86.msi" size="24662016" type="application/x-msi"/>
+    </implementation>
   </group>
 
   <group arch="*-src" license="BSD License (revised)">
@@ -2518,6 +2534,10 @@ workspaces that can be used in the compiler environment of your choice.</descrip
       <manifest-digest sha256new="QONPZ33UYR5VOOLMGLKUYOQZHVDHSJQSPSWSKBYVU5IEFWBUJPHA"/>
       <archive extract="cmake-3.18.3" href="http://www.cmake.org/files/v3.18/cmake-3.18.3.tar.gz" size="8976093" type="application/x-compressed-tar"/>
     </implementation>
+    <implementation compile:binary-main="bin/cmake" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" compile:dup-src="true" id="sha1new=bcf8ee084bee4f8341c8cfc758c749d76a5df965" released="2020-10-06" stability="stable" version="3.18.4">
+      <manifest-digest sha256new="NSSLCUM6KDNTBEBSCEEJBASFRUDPEY7BCCHSPJBRVESG5OR5UAEA"/>
+      <archive extract="cmake-3.18.4" href="http://www.cmake.org/files/v3.18/cmake-3.18.4.tar.gz" size="8976659" type="application/x-compressed-tar"/>
+    </implementation>
   </group>
 
   <entry-point binary-name="cmake" command="run">
@@ -2541,11 +2561,11 @@ workspaces that can be used in the compiler environment of your choice.</descrip
   </entry-point>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl9q+DsACgkQWao5J8JOTh7O0AgAvSGb
-wA2rFHDL76/0OKMR3MS5ClA2zJooOAf7JlDHry6EOi+rJ0TWWaQ8dLo7XyEcUvTT/vmHaR7tLd0L
-QCYZJjIfjuQyZ/QzHSPIK6IFMoKuIEttS+KOygaMhz/lHRGGfZ6R8D812kcYK0A/BOW2Qhh7V/vd
-IOukoNjixi+bcbFaF6uRE/zypUKtJV+Z4/530VCCpibVbuI7xOSZ4MQxLmOPr4/Tf01igTLY/cDo
-rdr6wFCgpbzX03GEXIWy+FGIvDp32bgs0QpHBPLhDf92wZpSD+mCb2KQ8qebcj6EkZjY9F43KF13
-XuVdWS1X1TbcCxv7fZx+ryYriUhiQHofiQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl99kkAACgkQWao5J8JOTh4VZwf8DZoj
+LZICwdu3MsC39qbl/QOHGhPIsS1C/xFDfFft6C4HJlkn1MZ+LAmrWN/+DRDbzZg6NWms96kKPw73
+QvxOQLoxcjIuejgS0UgRdo9Xd0Wyp8rKRNuJZmmMFHQHQ6Cooyv4D4wUosOhlzgroJWDWk7td69v
+VfjnQ034trD2hwg35gc7WRrx2+OwTtXJP0kfDz67jAnOcfmkbeBlDRdpk8XBwJw8t2qvVUPb/vOl
+Hn+mLxbDCD1nDWJlu1Zswt32oS/eP/sGq3TldYouz4SrtpYsVwOe7Vaq8TZ/xrlxy47nNKG33Mdb
+sY20R7nslcQf7nDm1Ms2suJ5tB+WoyflYA==
 
 -->

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>zbctl</name>
+  <summary>command line interface to interact with Zeebe</summary>
+  <description>zbctl is the command line interface to interact with Zeebe.</description>
+  <homepage>https://docs.cloud.camunda.io/docs/cli-zbctl</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/devel/zeebe.png" type="image/png"/>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/devel/zbctl.xml"/>
+
+  <group license="Zeebe Community License Version 1.0">
+    <implementation arch="Linux-x86_64" main="zbctl" released="{released}" stability="{stability}" version="{version}">
+      <manifest-digest/>
+      <file executable="true" href="https://github.com/zeebe-io/zeebe/releases/download/{version-original}/zbctl" dest="zbctl"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" main="zbctl" released="{released}" stability="{stability}" version="{version}">
+      <manifest-digest/>
+      <file executable="true" href="https://github.com/zeebe-io/zeebe/releases/download/{version-original}/zbctl.darwin" dest="zbctl"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="zbctl.exe" released="{released}" stability="{stability}" version="{version}">
+      <manifest-digest/>
+      <file href="https://github.com/zeebe-io/zeebe/releases/download/{version-original}/zbctl.exe" dest="zbctl.exe"/>
+    </implementation>
+  </group>
+</interface>

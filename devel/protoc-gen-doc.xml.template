@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>protoc-gen-doc</name>
+  <summary>documentation generator plugin for protoc</summary>
+  <description>This is a documentation generator plugin for the Protocol Buffers compiler (protoc). Running this feed will run protoc with the plugin added to the PATH.</description>
+  <homepage>https://github.com/pseudomuto/protoc-gen-doc</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/devel/protoc-gen-doc.xml"/>
+
+  <group license="MIT License">
+    <environment insert="." name="PATH"/>
+    <command name="run">
+      <runner interface="https://apps.0install.net/devel/protoc.xml"/>
+    </command>
+
+    <implementation arch="Linux-x86_64" stability="stable" released="{released}" version="{version}">
+      <manifest-digest/>
+      <archive extract="protoc-gen-doc-{version}.linux-amd64.go{go-version}" href="https://github.com/pseudomuto/protoc-gen-doc/releases/download/v{version}/protoc-gen-doc-{version}.linux-amd64.go{go-version}.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" stability="stable" released="{released}" version="{version}">
+      <manifest-digest/>
+      <archive extract="protoc-gen-doc-{version}.darwin-amd64.go{go-version}" href="https://github.com/pseudomuto/protoc-gen-doc/releases/download/v{version}/protoc-gen-doc-{version}.darwin-amd64.go{go-version}.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" stability="stable" released="{released}" version="{version}">
+      <manifest-digest/>
+      <archive extract="protoc-gen-doc-{version}.windows-amd64.go{go-version}" href="https://github.com/pseudomuto/protoc-gen-doc/releases/download/v{version}/protoc-gen-doc-{version}.windows-amd64.go{go-version}.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+</interface>

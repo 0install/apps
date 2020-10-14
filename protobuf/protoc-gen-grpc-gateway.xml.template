@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>protoc-gen-grpc-gateway</name>
+  <summary>gRPC gateway plugin for protoc</summary>
+  <description>This is a gRPC gateway plugin for the Protocol Buffers compiler (protoc). Running this feed will run protoc with the plugin added to the PATH.</description>
+  <homepage>https://github.com/grpc-ecosystem/grpc-gateway</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/protobuf/protoc-gen-grpc-gateway.xml"/>
+
+  <group license="BSD-3-Clause License">
+    <environment insert="." name="PATH"/>
+    <command name="run">
+      <runner interface="https://apps.0install.net/protobuf/protoc.xml"/>
+    </command>
+
+    <implementation arch="Linux-x86_64" stability="stable" released="{released}" version="{version}">
+      <manifest-digest/>
+      <file dest="protoc-gen-grpc-gateway" executable="true" href="https://github.com/grpc-ecosystem/grpc-gateway/releases/download/v{version}/protoc-gen-grpc-gateway-v{version}-linux-x86_64"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" stability="stable" released="{released}" version="{version}">
+      <manifest-digest/>
+      <file dest="protoc-gen-grpc-gateway" executable="true" href="https://github.com/grpc-ecosystem/grpc-gateway/releases/download/v{version}/protoc-gen-grpc-gateway-v{version}-darwin-x86_64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" stability="stable" released="{released}" version="{version}">
+      <manifest-digest/>
+      <file dest="protoc-gen-grpc-gateway.exe" href="https://github.com/grpc-ecosystem/grpc-gateway/releases/download/v{version}/protoc-gen-grpc-gateway-v{version}-windows-x86_64.exe"/>
+    </implementation>
+  </group>
+</interface>

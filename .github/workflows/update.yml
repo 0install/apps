@@ -83,11 +83,11 @@ jobs:
           name: macos-feeds
           path: incoming
       - name: Check if there are new feeds
-        run: if ls incoming/*.xml; then echo "::set-env name=NEW_INCOMING::true"; fi
+        run: if ls incoming/*.xml; then echo "NEW_INCOMING=true" >> $GITHUB_ENV; fi
       - name: Run 0repo
         if: env.NEW_INCOMING
         env: {'NO_SIGN': '1'}
-        run: ./feeds/0install.sh run --not-before 0.10 http://0install.net/tools/0repo.xml
+        run: ./feeds/0install.sh run http://0install.net/tools/0repo.xml
       - name: Create Pull Request
         if: env.NEW_INCOMING
         uses: peter-evans/create-pull-request@v2

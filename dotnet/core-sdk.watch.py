@@ -8,4 +8,4 @@ def get_releases(channel):
         'released': release['release-date']
     } for release in json.loads(data)['releases'] if not '-' in release['release-version']]
 
-releases = get_releases('2.1') + get_releases('2.2') + get_releases('3.0') + get_releases('3.1')
+releases = get_releases('2.1') + get_releases('3.1') + get_releases('5.0')

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>InfluxDB Client</name>
+  <summary>command line interface to interact with InfluxDB</summary>
+  <description>The influx command line interface (CLI) includes commands to manage many aspects of InfluxDB, including buckets, organizations, users, tasks, etc.</description>
+  <homepage>https://docs.influxdata.com/influxdb/v2.0/reference/cli/influx/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/devel/influxdb.png" type="image/png"/>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/devel/influxdb-client.xml"/>
+
+  <group license="MIT License">
+    <implementation arch="Linux-x86_64" main="influx" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="influxdb_client_{version}_linux_amd64" href="https://dl.influxdata.com/influxdb/releases/influxdb_client_{version}_linux_amd64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" main="influx" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="influxdb_client_{version}_darwin_amd64" href="https://dl.influxdata.com/influxdb/releases/influxdb_client_{version}_darwin_amd64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<interface uri="https://apps.0install.net/devel/influxdb-client.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>InfluxDB Client</name>
+  <summary>command line interface to interact with InfluxDB</summary>
+  <description>The influx command line interface (CLI) includes commands to manage many aspects of InfluxDB, including buckets, organizations, users, tasks, etc.</description>
+  <homepage>https://docs.influxdata.com/influxdb/v2.0/reference/cli/influx/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/devel/influxdb.png" type="image/png"/>
+  <needs-terminal/>
+
+  <entry-point binary-name="influx" command="run"/>
+
+  <group license="MIT License">
+    <implementation arch="Linux-x86_64" id="sha1new=a4c9465ae1f3fda33c35f869a5ec3defbc9c309f" main="influx" released="2020-11-10" stability="stable" version="2.0.0">
+      <manifest-digest sha256new="Z2WB45FC7ZIF4363APWLRUF5VLOKN23DG7NWR3IHV4Y7YCJCBXCQ"/>
+      <archive extract="influxdb_client_2.0.0_linux_amd64" href="https://dl.influxdata.com/influxdb/releases/influxdb_client_2.0.0_linux_amd64.tar.gz" size="11811171" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=e9ada667aa9929faaa8a2781c0d9d9098ee12b76" main="influx" released="2020-11-10" stability="stable" version="2.0.0">
+      <manifest-digest sha256new="FC4CMZ4Q27ETKEFHNQSUN6ZJBVYHLFN54MQKQYMTD725AHVG52AQ"/>
+      <archive extract="influxdb_client_2.0.0_darwin_amd64" href="https://dl.influxdata.com/influxdb/releases/influxdb_client_2.0.0_darwin_amd64.tar.gz" size="13073545" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=3b9a12d018714d86ba8358ce63741bbd73d52b4f" main="influx" released="2020-11-11" stability="stable" version="2.0.1">
+      <manifest-digest sha256new="2RQK5MWQZJD6AEQJYIEFMOAUMS5LGLEYTLLJRTEEQNKAYH7TPICA"/>
+      <archive extract="influxdb_client_2.0.1_linux_amd64" href="https://dl.influxdata.com/influxdb/releases/influxdb_client_2.0.1_linux_amd64.tar.gz" size="11811160" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=c9991a747b6a16b4d5e984ead3e881f0fb7442b4" main="influx" released="2020-11-11" stability="stable" version="2.0.1">
+      <manifest-digest sha256new="UMXHVVW3AE7GWFUA7YNZEZIF4XM3DDVYLFCADJXJ2NFINNTF3BYQ"/>
+      <archive extract="influxdb_client_2.0.1_darwin_amd64" href="https://dl.influxdata.com/influxdb/releases/influxdb_client_2.0.1_darwin_amd64.tar.gz" size="13073544" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=9c0621011ae76bcc0ec5d17cd3a649a59c7566c9" main="influx" released="2020-11-19" stability="stable" version="2.0.2">
+      <manifest-digest sha256new="2WAUSWJG5GRTDK6PIUNAUGZDZ7MIQCRDJ6UKQRTSODY6UFEFLZFA"/>
+      <archive extract="influxdb_client_2.0.2_linux_amd64" href="https://dl.influxdata.com/influxdb/releases/influxdb_client_2.0.2_linux_amd64.tar.gz" size="11894791" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=36b4c6c2d157429a14d6153144932c307cffcfda" main="influx" released="2020-11-19" stability="stable" version="2.0.2">
+      <manifest-digest sha256new="TDYG3F3LVTDV5BB5SZCFDDACORCMGE4GBPZ4L64IZ3QWAR4KHRJQ"/>
+      <archive extract="influxdb_client_2.0.2_darwin_amd64" href="https://dl.influxdata.com/influxdb/releases/influxdb_client_2.0.2_darwin_amd64.tar.gz" size="13159345" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

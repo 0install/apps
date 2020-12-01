@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<interface uri="https://apps.0install.net/gui/audacity.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Audacity</name>
+  <summary xml:lang="en">fast multi-track audio editor and recorder</summary>
+  <summary xml:lang="de">schneller Mehrspur-Audio-Editor und -Aufzeichner</summary>
+  <description xml:lang="en">A fast multi-track audio editor and recorder. Supports WAV, AIFF, Ogg, and MP3 formats. Features include envelope editing, mixing, built-in effects and plug-ins, all with unlimited undo.</description>
+  <description xml:lang="de">Ein schneller Mehrspur-Audio-Editor und -Aufzeichner. Unterstützt die WAV, AIFF, Ogg, und MP3 Formate.</description>
+  <homepage>https://www.audacityteam.org/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/audacity.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/audacity.ico" type="image/vnd.microsoft.icon"/>
+  <category>Audio</category>
+
+  <package-implementation arch="Linux-*" distributions="Debian Gentoo Ports RPM Slack" main="/usr/bin/audacity" package="audacity"/>
+
+  <group license="GPL v2 (GNU General Public License)">
+    <requires importance="recommended" interface="https://apps.0install.net/utils/ffmpeg.xml" version="2.0..!3.0"/>
+
+    <implementation arch="Windows-*" id="sha1new=26b7b3149490848e9c120b19b6ea0d0b8f81cd5a" main="audacity.exe" released="2020-06-26" stability="stable" version="2.4.2">
+      <manifest-digest sha256new="2XOHG6GHIHQZ3OADCJZSDGCWRXPS32UN73LIEG42DG4HQZNK26RA"/>
+      <archive href="https://fossies.org/windows/misc/audacity-2.4.2.zip" size="11713880" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <entry-point binary-name="audacity" command="run"/>
+
+  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
+    <file-type id="Audacity.Project">
+      <description xml:lang="en">Audacity Project File</description>
+      <verb args="&quot;%1&quot;" name="open"/>
+      <extension value=".AUP"/>
+    </file-type>
+    <file-type explicit-only="true" id="Audacity.wav">
+      <description xml:lang="en">Audio File (.wav)</description>
+      <verb args="&quot;%1&quot;" name="edit"/>
+      <extension mime-type="audio/wav" perceived-type="audio" value=".wav"/>
+    </file-type>
+    <file-type explicit-only="true" id="Audacity.mp3">
+      <description xml:lang="en">Audio File (.mp3)</description>
+      <verb args="&quot;%1&quot;" name="edit"/>
+      <extension mime-type="audio/mpeg" perceived-type="audio" value=".mp3"/>
+    </file-type>
+    <file-type explicit-only="true" id="Audacity.ogg">
+      <description xml:lang="en">Audio File (.ogg)</description>
+      <verb args="&quot;%1&quot;" name="edit"/>
+      <extension value=".ogg"/>
+    </file-type>
+  </capabilities>
+</interface>

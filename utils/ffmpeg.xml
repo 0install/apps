@@ -13,15 +13,23 @@
     <command name="ffprobe" path="/usr/bin/ffprobe"/>
   </package-implementation>
 
+  <implementation arch="Windows-i486" id="sha1new=6e410565dc636d9319c6e457a1986da165484b10" license="GPL (GNU General Public License)" released="2014-05-23" stability="stable" version="2.2.2">
+  <environment insert="." name="PATH"/>
+  <command name="run" path="ffmpeg.exe"/>
+    <manifest-digest sha256new="W6LY5U7SP573ZUHMG224OAQ5AJ5JVJ5OT2B2R4J4JJUE6YV2G2DQ"/>
+    <archive href="ffmpeg-win-2.2.2.zip" size="12255437" type="application/zip"/>
+  </implementation>
+
   <group license="GPL (GNU General Public License)">
     <command name="run" path="bin/ffmpeg.exe"/>
     <command name="ffplay" path="bin/ffplay.exe"/>
     <command name="ffprobe" path="bin/ffprobe.exe"/>
-    <implementation arch="Windows-x86_64" version="4.3.1" released="2020-08-04" stability="stable" id="sha1new=9a5d277f34837475884c503d8e41183e88308df1">
+    <environment insert="bin" name="PATH"/>
+    <implementation arch="Windows-x86_64" id="sha1new=9a5d277f34837475884c503d8e41183e88308df1" released="2020-08-04" stability="stable" version="4.3.1">
       <manifest-digest sha256new="UYMIC4C75C2G6H4OTY22VRQFAFZKDWSZW4O6SGDT3YVKBH3KKRLA"/>
       <archive extract="ffmpeg-4.3.1-win64-static" href="ffmpeg-4.3.1-win64-static_x64.zip" size="74911704" type="application/zip"/>
     </implementation>
-    <implementation arch="Windows-i486" version="4.3.1" released="2020-08-04" stability="stable" id="sha1new=8c2a6a47c5087645032596a00e2ad7bc8228b32a">
+    <implementation arch="Windows-i486" id="sha1new=8c2a6a47c5087645032596a00e2ad7bc8228b32a" released="2020-08-04" stability="stable" version="4.3.1">
       <manifest-digest sha256new="KUXUAOQG4SMWSLQ66ZFFVOHLOJQ6LBQN6NJGPNJX7OXHTM56U4MA"/>
       <archive extract="ffmpeg-4.3.1-win32-static" href="ffmpeg-4.3.1-win32-static_x32.zip" size="66777981" type="application/zip"/>
     </implementation>

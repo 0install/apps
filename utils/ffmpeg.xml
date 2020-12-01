@@ -14,10 +14,18 @@
     <command name="ffprobe" path="/usr/bin/ffprobe"/>
   </package-implementation>
 
+  <implementation arch="Windows-i486" id="sha1new=6e410565dc636d9319c6e457a1986da165484b10" license="GPL (GNU General Public License)" released="2014-05-23" stability="stable" version="2.2.2">
+  <environment insert="." name="PATH"/>
+  <command name="run" path="ffmpeg.exe"/>
+    <manifest-digest sha256new="W6LY5U7SP573ZUHMG224OAQ5AJ5JVJ5OT2B2R4J4JJUE6YV2G2DQ"/>
+    <archive href="https://github.com/0install/apps/releases/download/archives/ffmpeg-win-2.2.2.zip" size="12255437" type="application/zip"/>
+  </implementation>
+
   <group license="GPL (GNU General Public License)">
     <command name="run" path="bin/ffmpeg.exe"/>
     <command name="ffplay" path="bin/ffplay.exe"/>
     <command name="ffprobe" path="bin/ffprobe.exe"/>
+    <environment insert="bin" name="PATH"/>
     <implementation arch="Windows-x86_64" id="sha1new=9a5d277f34837475884c503d8e41183e88308df1" released="2020-08-04" stability="stable" version="4.3.1">
       <manifest-digest sha256new="UYMIC4C75C2G6H4OTY22VRQFAFZKDWSZW4O6SGDT3YVKBH3KKRLA"/>
       <archive extract="ffmpeg-4.3.1-win64-static" href="https://github.com/0install/apps/releases/download/archives/ffmpeg-4.3.1-win64-static_x64.zip" size="74911704" type="application/zip"/>
@@ -43,11 +51,11 @@
   </entry-point>
 </interface>
 <!-- Base64 Signature
-iQEcBAABAgAGBQJfZ5o0AAoJEFmqOSfCTk4eG4IH/2iosPtqlw6mvNZ7ktBqGy9zZX+7sgPJtIk2
-5wGaeuKglD/4eXcaC1l8GOUK2vJGfzPhAM1F0LdYtLws1VUBwey2UIFSkOM/rbTpqEZ21RY9Ae5K
-rDhBf8MldU96q5sVSWbgcivv2M14LIjLvAVLGI2tyJ+DlVPH7DsTY0qcyRCA2vxr+oeINPjd9nVK
-mhUPdenO79fhDlXBzc3TyIGxUL48pP1oxGghu2tuk/hHUot3g+NEWPCmsJXXISsTG/NORTXjnvxs
-iEbsUlhooFBAi1b358hU2QTsSFJlmhQEvLyX1pRR9JUYul6D+ZqM75oAGsNlwPRiU0OtKGaTXKax
-wKg=
+iQEcBAABAgAGBQJfxgbSAAoJEFmqOSfCTk4euioH/ixcF0m0fijCUvO/r54xuc8qsrZbogzWhnhG
+3wxeNLa/OgTJFt2tGuc/euasd8fVsQnB8bixLRilm5NGl4R+IhrBTZavmRasXBxpTv+GORD2iWRR
+8AVHKyjjvYznuvCTDy5L58Qdk3htONFZzRVNta5hUcTQZEIdE/iLR3NiBOv087Mcu05AlR8mVAsu
+0f6KJTjV3aLZ6KsnMgS1fJSAl0uJd5iffA82l4bFv8Japz3y/NnFiMJT7xADH3ZdYZ7ehU4mxm3m
+2r78R1dU+DP36Nb5fOrk8ltQhjzi+emhcB84d+8xJJu6bRtNjm32wffjPh5Kc/exV+IJAdjT7166
+71Q=
 
 -->

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Zero Install - .NET Core version</name>
+  <summary>.NET Core version of 0install, the decentralized installation system</summary>
+  <description>This is the .NET Core version of Zero Install. Zero Install is a cross-platform, decentralized installation system. Instead of having a central repository in which all software is placed under a naming scheme managed by some central authority, programs and libraries in Zero Install are identified by URIs. Anyone who can create a web-page can publish software. Anyone can install software (not just administrators).</description>
+  <icon href="https://raw.githubusercontent.com/0install/0install-dotnet/master/icon.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install-dotnet/master/icon.ico" type="image/vnd.microsoft.icon"/>
+  <homepage>https://github.com/0install/0install-dotnet</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/0install/0install-dotnet.xml"/>
+
+  <group license="LGPL v3 (GNU Lesser General Public License)">
+    <command name="run" path="0install.dll">
+      <runner interface="https://apps.0install.net/dotnet/core.xml" version="5.0..!5.1"/>
+    </command>
+
+    <implementation released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive href="https://github.com/0install/0install-dotnet/releases/download/{version}/0install-dotnet-{version}.tar.gz"/>
+    </implementation>
+  </group>
+</interface>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Zero Install Publishing Tools</name>
+  <summary xml:lang="en">helps you create and update Zero Install feeds</summary>
+  <summary xml:lang="de">hilft Ihnen beim Erstellen und Aktualisieren von Zero Install Feeds</summary>
+  <description xml:lang="en">Zero Install uses feeds, XML files on the internet, to describe applications and how to download them. The Zero Install Publishing Tools allow you to create your own feeds. It consists of two main components:
+the Feed Editor (split with screen graphical and XML view)
+and the New Feed Wizard (walks you through the entire feed creation process, automatically extracts metadata when possible)</description>
+  <description xml:lang="de">Zero Install verwendet Feeds, XML Dateien im Internet, um Anwendungen sowie deren Download zu beschreiben. Die Zero Install Publishing Tools ermöglichen es Ihnen, Ihre eigenen Feeds zu erstellen. Sie bestehen aus zwei Hauptkomponenten:
+Der Feed Editor (Split Screen mit grafischer und XML Ansicht)
+und der New Feed Wizard (leitet Sie durch den kompletten Feed-Erstellungsprozess, extrahiert automatisch Metadaten wenn möglich)</description>
+  <icon href="https://raw.githubusercontent.com/0install/0publish-win/master/icon.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/0publish-win/master/icon.ico" type="image/vnd.microsoft.icon"/>
+  <homepage>https://docs.0install.net/tools/0publish-win/</homepage>
+
+  <feed-for interface="https://apps.0install.net/0install/0publish-win.xml"/>
+
+  <group license="LGPL v3 (GNU Lesser General Public License)">
+    <requires interface="https://apps.0install.net/utils/gnupg.xml">
+      <environment insert="." name="PATH"/>
+    </requires>
+    <command name="0publish" path="0publish.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.."/>
+    </command>
+    <command name="run" path="0publish-win.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.."/>
+    </command>
+
+    <implementation released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive href="https://github.com/0install/0publish-win/releases/download/{version}/0publish-win-{version}.tar.gz"/>
+    </implementation>
+  </group>
+</interface>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Zero Install for Windows</name>
+  <summary>Windows version of 0install, the decentralized installation system</summary>
+  <description>This is the Windows version of Zero Install. Zero Install is a cross-platform, decentralized installation system. Instead of having a central repository in which all software is placed under a naming scheme managed by some central authority, programs and libraries in Zero Install are identified by URIs. Anyone who can create a web-page can publish software. Anyone can install software (not just administrators).</description>
+  <icon href="https://raw.githubusercontent.com/0install/0install-win/master/icon.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/0install-win/master/icon.png" type="image/vnd.microsoft.icon"/>
+  <homepage>https://0install.net/</homepage>
+
+  <feed-for interface="https://apps.0install.net/0install/0install-win.xml"/>
+
+  <group license="LGPL v3 (GNU Lesser General Public License)">
+    <command name="run" path="0install.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.."/>
+    </command>
+    <command name="run-gui" path="0install-win.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.."/>
+    </command>
+    <command name="central" path="ZeroInstall.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.."/>
+    </command>
+
+    <implementation released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive href="https://github.com/0install/0install-win/releases/download/{version}/0install-win-{version}.tar.gz"/>
+    </implementation>
+  </group>
+</interface>

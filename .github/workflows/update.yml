@@ -19,7 +19,7 @@ jobs:
         run: feeds\watch.ps1
       - name: Upload generated feeds
         if: always()
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: windows-feeds
           path: incoming
@@ -38,7 +38,7 @@ jobs:
         run: feeds/watch.sh
       - name: Upload generated feeds
         if: always()
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: macos-feeds
           path: incoming
@@ -68,7 +68,7 @@ jobs:
           feeds/watch.sh
       - name: Upload generated feeds
         if: always()
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: linux-feeds
           path: incoming
@@ -92,7 +92,7 @@ jobs:
         if: env.NEW_INCOMING
         uses: peter-evans/create-pull-request@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{github.token}}
           path: feeds
           branch: automatic-updates
           title: Automatic updates

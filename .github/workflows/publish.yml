@@ -24,7 +24,7 @@ jobs:
           mkdir incoming
           git config --global user.name "apps.0install.net"
           git config --global user.email "webmaster@0install.net"
-          echo "${{ secrets.GPG_KEY }}" | gpg --import -
+          echo "${{secrets.GPG_KEY}}" | gpg --import -
       - name: Run 0repo
         run: ./feeds/0install.sh run http://0install.net/tools/0repo.xml
       - name: Push public

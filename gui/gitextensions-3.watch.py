@@ -1,8 +1,7 @@
 #os=Windows
-from urllib import request
-import json
-
-skipped_versions = ['v3.2']
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from github import releases
 
 def convert(release):
     version = release['tag_name'].strip('v').replace('.0', '.').replace('..', '.0.').replace('RC', 'rc').replace('beta', 'pre')
@@ -11,5 +10,4 @@ def convert(release):
     download_url = next(asset['browser_download_url'] for asset in release['assets'] if str.endswith(asset['name'], '.msi'))
     return {'version': version, 'download-url': download_url, 'stability': stability, 'released': released}
 
-data = request.urlopen('https://api.github.com/repos/gitextensions/gitextensions/releases').read().decode('utf-8')
-releases = [convert(release) for release in json.loads(data) if str.startswith(release['tag_name'], 'v3.') and not release['tag_name'] in skipped_versions]
+releases = [convert(release) for release in releases('gitextensions/gitextensions') if str.startswith(release['tag_name'], 'v3.')]

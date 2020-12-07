@@ -1,5 +1,8 @@
-from urllib import request
-import json
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from github import releases
 
-data = request.urlopen('https://api.github.com/repos/0install/0install-dotnet/releases').read().decode('utf-8')
-releases = [{'version': release['tag_name'], 'released': release['published_at'][0:10]} for release in json.loads(data) if any('0install-dotnet' in asset['name'] for asset in release['assets'])]
+releases = [{
+    'version': release['tag_name'],
+    'released': release['published_at'][0:10]
+} for release in releases('0install/0install-dotnet') if any('0install-dotnet' in asset['name'] for asset in release['assets'])]

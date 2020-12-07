@@ -1,7 +1,10 @@
-from urllib import request
-import json
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from github import releases
 
 excluded_versions = ['v7.6', 'v7.6.5']
 
-data = request.urlopen('https://api.github.com/repos/notepad-plus-plus/notepad-plus-plus/releases').read().decode('utf-8')
-releases = [{'version': release['tag_name'].strip('v'), 'released': release['published_at'][0:10]} for release in json.loads(data) if release['tag_name'] not in excluded_versions]
+releases = [{
+    'version': release['tag_name'].strip('v'),
+    'released': release['published_at'][0:10]
+} for release in releases('notepad-plus-plus/notepad-plus-plus') if release['tag_name'] not in excluded_versions]

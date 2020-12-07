@@ -1,5 +1,8 @@
-from urllib import request
-import json
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from github import releases
 
-data = request.urlopen('https://api.github.com/repos/hashicorp/packer/tags').read().decode('utf-8')
-releases = [{'version': tag['name'].strip('v')} for tag in json.loads(data) if not '-' in tag['name']]
+releases = [{
+    'version': release['tag_name'].strip('v'),
+    'released': release['published_at'][0:10]
+} for release in releases('hashicorp/packer') if not release['prerelease'] and not '-' in release['tag_name']]

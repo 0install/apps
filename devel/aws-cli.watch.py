@@ -1,8 +1,8 @@
 #os=Windows
-from urllib import request
-import json
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from github import tags
 
-data = request.urlopen('https://api.github.com/repos/aws/aws-cli/tags').read().decode('utf-8')
 releases = [{
-    'version': release['name']
-} for release in json.loads(data) if release['name'][0:2] == '2.' and release['name'] != '2.0.32' and not 'dev' in release['name']]
+    'version': tag['name']
+} for tag in tags('aws/aws-cli') if tag['name'][0:2] == '2.' and tag['name'] != '2.0.32' and not 'dev' in tag['name']]

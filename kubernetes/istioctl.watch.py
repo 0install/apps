@@ -1,5 +1,6 @@
-from urllib import request
-import json
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from github import releases
 
 def convert(release):
     original_version = release['tag_name'].strip('v')
@@ -8,5 +9,4 @@ def convert(release):
     released = release['published_at'][0:10]
     return {'version': version, 'original-version': original_version, 'stability': stability, 'released': released}
 
-data = request.urlopen('https://api.github.com/repos/istio/istio/releases').read().decode('utf-8')
-releases = [convert(release) for release in json.loads(data) if any(str.startswith(asset['name'], 'istioctl-') for asset in release['assets'])]
+releases = [convert(release) for release in releases('istio/istio') if any(str.startswith(asset['name'], 'istioctl-') for asset in release['assets'])]

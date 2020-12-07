@@ -1,5 +1,6 @@
-from urllib import request
-import json
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from github import releases
 
 def convert(release):
     tag = release['tag_name']
@@ -9,5 +10,4 @@ def convert(release):
     released = release['published_at'][0:10]
     return {'tag': tag, 'version': version, 'archive-version': archive_version, 'stability': stability, 'released': released}
 
-data = request.urlopen('https://api.github.com/repos/protocolbuffers/protobuf/releases').read().decode('utf-8')
-releases = [convert(release) for release in json.loads(data) if any(str.startswith(asset['name'], 'protoc-') for asset in release['assets'])]
+releases = [convert(release) for release in releases('protocolbuffers/protobuf') if any(str.startswith(asset['name'], 'protoc-') for asset in release['assets'])]

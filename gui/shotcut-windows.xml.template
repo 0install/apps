@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Shotcut - Windows builds</name>
+  <summary>a free, open source, cross-platform video editor</summary>
+  <description>Shotcut is a free, open source, cross-platform video editor.</description>
+  <homepage>https://shotcut.org/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/shotcut.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/shotcut.ico" type="image/vnd.microsoft.icon"/>
+  <category>Video</category>
+
+  <feed-for interface="https://apps.0install.net/gui/shotcut-windows.xml"/>
+
+  <group license="GPL v3 (GNU General Public License)">
+    <command name="run" path="shotcut.exe"/>
+
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="{stability}">
+      <manifest-digest/>
+      <archive extract="Shotcut" href="https://github.com/mltframework/shotcut/releases/download/v{version}/shotcut-win64-{version-short}.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

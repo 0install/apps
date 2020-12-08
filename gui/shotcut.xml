@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<interface uri="https://apps.0install.net/gui/shotcut.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Shotcut</name>
+  <summary>free, open source, cross-platform video editor</summary>
+  <description>Shotcut is a free, open source, cross-platform video editor.</description>
+  <homepage>https://shotcut.org/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/shotcut.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/shotcut.ico" type="image/vnd.microsoft.icon"/>
+  <category>Video</category>
+
+  <feed arch="Linux-*" src="https://apps.0install.net/gui/shotcut-linux.xml"/>
+  <feed arch="MacOSX-*" src="https://apps.0install.net/gui/shotcut-macos.xml"/>
+  <feed arch="Windows-*" src="https://apps.0install.net/gui/shotcut-windows.xml"/>
+  <package-implementation distributions="Virtual" package="shotcut" main="/usr/bin/shotcut"/><!-- Prevent this virtual feed from being seen as a library feed -->
+
+  <entry-point binary-name="shotcut" command="run"/>
+
+  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
+    <file-type id="mltfile">
+      <description xml:lang="en">Shotcut Project File</description>
+      <verb args="&quot;%V&quot;" name="open"/>
+      <extension mime-type="application/vnd.mlt+xml" value=".mlt"/>
+    </file-type>
+  </capabilities>
+</interface>

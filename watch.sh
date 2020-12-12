@@ -2,10 +2,7 @@
 set -e
 cd `dirname $0`
 
-if [ ! -d "../incoming" ]; then
-    echo "Directory ../incoming does not exist."
-    exit 1
-fi
+mkdir -p ../incoming
 cp */*.zip ../incoming/
 
 for FILE in $(ls */*.watch.py); do

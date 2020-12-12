@@ -1,9 +1,7 @@
 $ErrorActionPreference = "Stop"
 pushd $PSScriptRoot
 
-if (-not (Test-Path "..\incoming" -PathType Container)) {
-    throw "Directory ..\incoming does not exist."
-}
+mkdir -Force ..\incoming | Out-Null
 cp *\*.zip ..\incoming\
 
 foreach ($file in (ls -Recurse -Filter *.watch.py).FullName) {

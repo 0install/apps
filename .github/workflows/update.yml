@@ -13,11 +13,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: feeds
-      - name: Set up repo
-        run: mkdir incoming | Out-Null
       - name: Run 0watch
         env:
-          CI: '1'
           GITHUB_TOKEN: ${{github.token}}
         run: feeds\watch.ps1
       - name: Upload generated feeds
@@ -34,11 +31,8 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: feeds
-      - name: Set up repo
-        run: mkdir incoming
       - name: Run 0watch
         env:
-          CI: '1'
           GITHUB_TOKEN: ${{github.token}}
         run: feeds/watch.sh
       - name: Upload generated feeds
@@ -61,14 +55,8 @@ jobs:
         with:
           path: public
           ref: gh-pages
-      - name: Set up repo
-        run: |
-          cp feeds/0repo-config.py .
-          cp public/archives.db .
-          mkdir incoming
       - name: Run 0watch
         env:
-          CI: '1'
           GITHUB_TOKEN: ${{github.token}}
         run: |
           sudo apt-get install -y python3-gnupg
@@ -93,8 +81,11 @@ jobs:
         run: if ls incoming/*.xml; then echo "NEW_INCOMING=true" >> $GITHUB_ENV; fi
       - name: Run 0repo
         if: env.NEW_INCOMING
-        env: {'NO_SIGN': '1'}
-        run: ./feeds/0install.sh run http://0install.net/tools/0repo.xml
+        run: |
+          ln -s feeds/0repo-config.py .
+          ln -s public/archives.db .
+          export NO_SIGN=1
+          ./feeds/0install.sh run http://0install.net/tools/0repo.xml
       - name: Create Pull Request
         if: env.NEW_INCOMING
         uses: peter-evans/create-pull-request@v3

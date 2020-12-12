@@ -24,8 +24,8 @@ To work with this repository on your own machine run these commands inside an em
 
     git clone https://github.com/0install/apps.git feeds
     git clone https://github.com/0install/apps.git --single-branch --branch=gh-pages public
-    cp feeds/0repo-config.py .
-    cp public/archives.db .
+    ln -s feeds/0repo-config.py .
+    ln -s public/archives.db .
     mkdir incoming
     0install add 0repo https://github.com/0install/0repo
 

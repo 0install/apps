@@ -17,15 +17,14 @@ jobs:
         with:
           path: public
           ref: gh-pages
-      - name: Set up repo
-        run: |
-          cp feeds/0repo-config.py .
-          cp public/archives.db .
-          mkdir incoming
-          git config --global user.name "apps.0install.net"
-          git config --global user.email "webmaster@0install.net"
-          echo "${{secrets.GPG_KEY}}" | gpg --import -
       - name: Run 0repo
-        run: ./feeds/0install.sh run http://0install.net/tools/0repo.xml
+        run: |
+          mkdir incoming
+          ln -s feeds/0repo-config.py .
+          ln -s public/archives.db .
+          echo "${{secrets.GPG_KEY}}" | gpg --import -
+          ./feeds/0install.sh run http://0install.net/tools/0repo.xml
       - name: Push public
-        run: cd public && git push
+        run: |
+          cd public
+          git push

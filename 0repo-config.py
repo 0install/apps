@@ -33,17 +33,15 @@ TRACK_TESTING_IMPLS = False
 # also the current directory.
 # 'message' can be used if you want to log the reason for the update.
 def upload_public_dir(files, message):
-	if os.getenv('NO_SIGN'):
-		print("Feeds not signed; not committing public")
+	subprocess.check_call(['git', 'config', 'user.name', 'apps.0install.net'])
+	subprocess.check_call(['git', 'config', 'user.email', 'webmaster@0install.net'])
+	subprocess.check_call(['git', 'add', '--', 'archives.db'] + files)
+	changed = subprocess.call(['git', 'diff', '--exit-code', '--stat', 'HEAD'])
+	if changed:
+		subprocess.check_call(['git', 'commit', '-m', message])
+		print("Changes to public committed. Remember to push!")
 	else:
-		shutil.copyfile('../archives.db', 'archives.db')
-		subprocess.check_call(['git', 'add', '--', 'archives.db'] + files)
-		changed = subprocess.call(['git', 'diff', '--exit-code', '--stat', 'HEAD', '--'] + files)
-		if changed:
-			subprocess.check_call(['git', 'commit', '-m', message, '--', 'archives.db'] + files)
-			print("Changes to public committed. Remember to push!")
-		else:
-			print("No changes to public.")
+		print("No changes to public.")
 
 #### Archive hosting ####
 

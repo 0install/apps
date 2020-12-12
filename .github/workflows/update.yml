@@ -1,9 +1,6 @@
 # Create branches with automatic 0watch updates
 name: Update
-on:
-  workflow_dispatch: {}
-  schedule:
-    - cron: '0 2 * * *'
+on: [push]
 
 jobs:
   windows:
@@ -62,10 +59,9 @@ jobs:
           path: public
           ref: gh-pages
       - name: Set up repo
-        run: |
-          cp feeds/0repo-config.py .
-          cp public/archives.db .
-          mkdir incoming
+        uses: 0install/0repo-action@master
+        with:
+          run: false
       - name: Run 0watch
         env:
           CI: '1'
@@ -89,14 +85,14 @@ jobs:
         with:
           name: macos-feeds
           path: incoming
-      - name: Check if there are new feeds
-        run: if ls incoming/*.xml; then echo "NEW_INCOMING=true" >> $GITHUB_ENV; fi
       - name: Run 0repo
-        if: env.NEW_INCOMING
+        id: repo
+        uses: 0install/0repo-action@master
+        with:
+          setup: false
         env: {'NO_SIGN': '1'}
-        run: ./feeds/0install.sh run http://0install.net/tools/0repo.xml
       - name: Create Pull Request
-        if: env.NEW_INCOMING
+        if: steps.repo.outputs.new-feeds
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{github.token}}

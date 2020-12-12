@@ -1,6 +1,6 @@
 # Verify feeds in Pull Requests are valid
 name: Verify
-on: pull_request
+on: [push]
 
 jobs:
   verify:
@@ -15,11 +15,5 @@ jobs:
         with:
           path: public
           ref: gh-pages
-      - name: Set up repo
-        run: |
-          cp feeds/0repo-config.py .
-          cp public/archives.db .
-          mkdir incoming
-      - name: Run 0repo
+      - uses: 0install/0repo-action@master
         env: {'NO_SIGN': '1'}
-        run: ./feeds/0install.sh run http://0install.net/tools/0repo.xml

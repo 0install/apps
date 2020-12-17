@@ -33,9 +33,9 @@ workspaces that can be used in the compiler environment of your choice.</descrip
     <command name="run-curses" path="CMake.app/Contents/bin/ccmake"/>
     <command name="cpack" path="CMake.app/Contents/bin/cpack"/>
     <command name="ctest" path="CMake.app/Contents/bin/ctest"/>
-    <implementation arch="MacOSX-x86_64" version="{version}" released="{released}" stability="{stability}">
+    <implementation arch="MacOSX-*" version="{version}" released="{released}" stability="{stability}">
       <manifest-digest/>
-      <archive href="http://www.cmake.org/files/v{minor-version}/cmake-{version}-Darwin-x86_64.tar.gz" type="application/x-compressed-tar" extract="cmake-{version}-Darwin-x86_64"/>
+      <archive href="http://www.cmake.org/files/v{minor-version}/cmake-{version}-macos-universal.tar.gz" type="application/x-compressed-tar" extract="cmake-{version}-macos-universal"/>
     </implementation>
   </group>
 

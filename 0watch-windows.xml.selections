@@ -1,16 +1,7 @@
 <?xml version="1.0"?>
 <selections interface="https://apps.0install.net/0install/0watch.xml" source="false" command="run" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>0watch</name>
-  <selection version="2.17.2" released="2020-02-15" license="LGPL v3 (GNU Lesser General Public License)" id="sha1new=d36f412be314b981ec0537e673ddfe09b15d4cdd" interface="https://apps.0install.net/0install/0publish-win.xml">
-    <requires interface="https://apps.0install.net/utils/gnupg.xml">
-      <environment name="PATH" insert="." />
-    </requires>
-    <command name="0publish" path="0publish.exe">
-      <runner interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.." command="run" />
-    </command>
-    <manifest-digest sha1new="d36f412be314b981ec0537e673ddfe09b15d4cdd" sha256new="D7VY6YMMJ24RKVNBSUP6DW6JDS34NGJZNK6VL4DVE7SX45J6MXBA" />
-  </selection>
-  <selection version="2.3.10" released="2020-01-15" license="OSI Approved :: GNU Lesser General Public License (LGPL)" id="sha1new=31091e7ac1dde3fbfaeecae391db0ba7dbadd507" interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
+  <selection version="2.3.11" released="2020-02-23" license="OSI Approved :: GNU Lesser General Public License (LGPL)" id="sha1new=38db1113baf7ef5a352d406a51231687844098b2" interface="http://0install.net/2007/interfaces/ZeroInstall.xml">
     <requires interface="https://apps.0install.net/utils/gnupg.xml">
       <executable-in-var name="ZEROINSTALL_GPG" />
     </requires>
@@ -19,7 +10,7 @@
     <requires os="Windows" interface="http://0install.net/2012/interfaces/0install-runenv-cli.xml">
       <environment name="ZEROINSTALL_CLI_TEMPLATE" insert="runenv.cli.template" mode="replace" />
     </requires>
-    <manifest-digest sha1new="31091e7ac1dde3fbfaeecae391db0ba7dbadd507" sha256new="5UEHT6NYXFXRDGHVMMSOWGJF35EDILQE7ZMS4LHLY2ZQCK72YANA" />
+    <manifest-digest sha1new="38db1113baf7ef5a352d406a51231687844098b2" sha256new="W63ETHPBDGDIEGHCLLZYU3MGWALIWOTVS4B5G6HSMTLSF36BOKFA" />
   </selection>
   <selection version="2.0.2" released="2013-03-18" id="sha1new=78f12032eb296233909aa5f6ec4aae8cbb9c121a" interface="http://0install.net/2012/interfaces/0install-runenv-cli.xml">
     <manifest-digest sha1new="78f12032eb296233909aa5f6ec4aae8cbb9c121a" sha256new="XMEYQHKYT7CNDYAWDQHGDIDJK2QORBV5KRFQX6BQ7RNXTANR6PGQ" />
@@ -37,32 +28,41 @@
     </command>
     <manifest-digest sha1new="03a80899236770b139c3c4be1d2255e4644a1a32" sha256new="GHJMUQA4THAAAG62R4R55U2CLFGHNVIRH2TTBLKYH4SKBMZF7JPQ" />
   </selection>
-  <selection version="0.2" released="2018-04-11" license="OSI Approved :: GNU Lesser General Public License (LGPL)" id="sha1new=9d8767e96e63369eeeb2ec4bad6ce5b585ace97e" interface="https://apps.0install.net/0install/0watch.xml">
+  <selection version="2.18.2" released="2020-10-01" license="LGPL v3 (GNU Lesser General Public License)" id="sha1new=7ed4b3a18af3d27adc3476a1a40094e4941790e5" interface="https://apps.0install.net/0install/0publish-win.xml">
+    <requires interface="https://apps.0install.net/utils/gnupg.xml">
+      <environment name="PATH" insert="." />
+    </requires>
+    <command name="0publish" path="0publish.exe">
+      <runner interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.." command="run" />
+    </command>
+    <manifest-digest sha1new="7ed4b3a18af3d27adc3476a1a40094e4941790e5" sha256new="DMQHOVADVSAAN2HZ5NUEUXXJSSVOKFIQFXBEP4XCFKLBICEPM5IA" />
+  </selection>
+  <selection version="0.3.0" released="2020-03-01" license="OSI Approved :: GNU Lesser General Public License (LGPL)" id="sha1new=fd6c7fc38284a7ccae1d2713db6844171718da3e" interface="https://apps.0install.net/0install/0watch.xml">
     <requires interface="http://0install.net/tools/0template.xml">
       <executable-in-path name="0template" />
     </requires>
     <command name="run" path="0watch.py">
-      <runner interface="https://apps.0install.net/python/python.xml" version="..!3.7" />
+      <runner interface="https://apps.0install.net/python/python.xml" />
     </command>
-    <manifest-digest sha1new="9d8767e96e63369eeeb2ec4bad6ce5b585ace97e" sha256new="2RKM7UD6XQYPSJE7OLSLXVRDZDXDHIWD5AHCL7DOSPQQLM2HZKSQ" />
+    <manifest-digest sha1new="fd6c7fc38284a7ccae1d2713db6844171718da3e" sha256new="SJNT3OYBVMS7U33JOGIHOQCNEYMCFMPOUUTDC572JBKJ6Y5YMZKQ" />
   </selection>
   <selection distributions="Windows" package="netfx" version="4.5" id="package:windows:netfx:4.5:x86_64" interface="https://apps.0install.net/dotnet/clr.xml" from-feed="distribution:https://apps.0install.net/dotnet/framework.xml">
     <command name="run" path="" />
     <manifest-digest />
   </selection>
-  <selection arch="Windows-x86_64" version="3.6.8" released="2018-12-24" license="Python License" id="sha1new=dd2444f49b5df880c8ada7976b328d1b336f66ed" interface="https://apps.0install.net/python/python.xml" from-feed="https://apps.0install.net/python/windows.xml">
+  <selection arch="Windows-x86_64" version="3.7.9" released="2020-08-17" license="Python License" id="sha1new=cfeb1d26327c6b6d6768f5300321eaa274b18935" interface="https://apps.0install.net/python/python.xml" from-feed="https://apps.0install.net/python/windows.xml">
     <requires interface="https://apps.0install.net/python/pywin32.xml" importance="recommended" />
     <environment name="PATH" insert="." />
     <command name="run" path="python.exe" />
-    <manifest-digest sha1new="dd2444f49b5df880c8ada7976b328d1b336f66ed" sha256new="ZVPQNZ3M4EQKXV6JYVK64XBWKIA235PWDGZ6GXXHDKUN5ONRN3BQ" />
+    <manifest-digest sha1new="cfeb1d26327c6b6d6768f5300321eaa274b18935" sha256new="3PN24AKZV2U66L25PKBFKLXMRX73Z3TG7EBIRJ35T4BE7TX5Y2CQ" />
   </selection>
-  <selection arch="Windows-x86_64" version="227" released="2019-11-14" license="Python License" id="sha1new=b0546e7f7c7d7d40e18e43a71f9be10fc11e8a59" interface="https://apps.0install.net/python/pywin32.xml">
+  <selection arch="Windows-x86_64" version="227" released="2019-11-14" license="Python License" id="sha1new=e88a1765400d15dc637679b5faa284e14f159e2d" interface="https://apps.0install.net/python/pywin32.xml">
     <environment name="PATH" insert="pywin32_system32" />
     <environment name="PYTHONPATH" insert="." />
     <environment name="PYTHONPATH" insert="win32" />
     <environment name="PYTHONPATH" insert="win32/lib" />
     <environment name="PYTHONPATH" insert="pythonwin" />
-    <manifest-digest sha1new="b0546e7f7c7d7d40e18e43a71f9be10fc11e8a59" sha256new="6RQAUJJUW4DKUFQB4U26KFPBO6J4NULWB3CB5GL7KI7CUVJNWY2Q" />
+    <manifest-digest sha1new="e88a1765400d15dc637679b5faa284e14f159e2d" sha256new="OHCC6AZUPF5QX4ZW4XNNCYJGY34WAVLZMQ5RBKZ5N2DCRTBTV67A" />
   </selection>
   <selection arch="Windows-*" version="1.4.23" released="2018-06-11" license="GPL v3 (GNU General Public License)" id="sha1new=5b1e973aee2f6be3fa4af2a4ffc6d37342a334aa" interface="https://apps.0install.net/utils/gnupg.xml">
     <command name="run" path="gpg.exe" />

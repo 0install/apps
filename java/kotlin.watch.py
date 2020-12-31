@@ -8,4 +8,4 @@ releases = [{
     'stability': 'testing' if release['prerelease'] else 'stable',
     'released': release['published_at'][0:10],
     'download-url': [asset['browser_download_url'] for asset in release['assets'] if asset['name'].startswith('kotlin-compiler-')][0]
-} for release in releases('JetBrains/kotlin')]
+} for release in releases('JetBrains/kotlin') if len(release['assets']) > 0]

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="catalog.xsl"?>
-<catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://0install.de/schema/injector/catalog http://0install.de/schema/injector/catalog/catalog.xsd" xmlns="http://0install.de/schema/injector/catalog">
+<catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://0install.de/schema/injector/catalog https://docs.0install.net/specifications/catalog.xsd" xmlns="http://0install.de/schema/injector/catalog">
   <interface uri="http://0install.net/2006/interfaces/0compile.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
     <name>0compile</name>
     <summary xml:lang="en">create a binary release from source code</summary>
@@ -173,7 +173,7 @@ interfere with those provided by the distribution.
     <description xml:lang="en">This is the Windows version of Zero Install. Zero Install is a cross-platform, decentralized installation system. Instead of having a central repository in which all software is placed under a naming scheme managed by some central authority, programs and libraries in Zero Install are identified by URIs. Anyone who can create a web-page can publish software. Anyone can install software (not just administrators).</description>
     <icon href="https://raw.githubusercontent.com/0install/0install-win/master/icon.png" type="image/png" />
     <icon href="https://raw.githubusercontent.com/0install/0install-win/master/icon.png" type="image/vnd.microsoft.icon" />
-    <homepage>http://0install.de/</homepage>
+    <homepage>https://0install.net/</homepage>
     <entry-point command="run" binary-name="0install">
       <needs-terminal />
       <name xml:lang="en">Zero Install Command command-line interface</name>
@@ -183,7 +183,7 @@ interfere with those provided by the distribution.
       <name xml:lang="en">Zero Install Command GUI</name>
       <summary xml:lang="en">WinForms-based GUI for Zero Install, for installing and launching applications, managing caches, etc.</summary>
     </entry-point>
-    <entry-point command="central" binary-name="ZeroInstall">
+    <entry-point command="central" binary-name="ZeroInstall" app-id="ZeroInstall">
       <name xml:lang="en">Zero Install Central</name>
       <summary xml:lang="en">the main graphical user interface</summary>
     </entry-point>
@@ -200,8 +200,8 @@ Der Feed Editor (Split Screen mit grafischer und XML Ansicht)
 und der New Feed Wizard (leitet Sie durch den kompletten Feed-Erstellungsprozess, extrahiert automatisch Metadaten wenn möglich)</description>
     <icon href="https://raw.githubusercontent.com/0install/0publish-win/master/icon.png" type="image/png" />
     <icon href="https://raw.githubusercontent.com/0install/0publish-win/master/icon.ico" type="image/vnd.microsoft.icon" />
-    <homepage>https://docs.0install.de/tools/0publish-win/</homepage>
-    <entry-point command="run" binary-name="0publish-win">
+    <homepage>https://docs.0install.net/tools/0publish-win/</homepage>
+    <entry-point command="run" binary-name="0publish-win" app-id="ZeroInstall.Publishing">
       <name xml:lang="en">Zero Install Publishing Tools</name>
     </entry-point>
     <entry-point command="0publish">
@@ -222,6 +222,6 @@ und der New Feed Wizard (leitet Sie durch den kompletten Feed-Erstellungsprozess
   </interface>
 </catalog>
 <!-- Base64 Signature
-iQEcBAABAgAGBQJeymhlAAoJEFmqOSfCTk4eTywH/2BKMxRND08IsNylYbmXU4t1+giWKQ7ufX0IIeX3QcbvY9ez9coh/lYW0EEybwHuzNvD6c7ukVcH08T/xAFuFnM4LC2pV8Rg4rSntXREoHTgmE7JEFO5+6z07/Cu8DBFFK0IE7cZfIBVCiSPpA4EE6Uxl44GVBL1T0s+nV9Ih7T+6ANmr2wtKGPqUVDuSrSY+LcxsKn4fh2iP9PvoI6QMf1iItLOZZCEODOpc7bCCEo6I1SNfcHpJjQxYjlILVfYRWBq9ZKr/HF6ICtWOy74LIFjR1nyt5Jdw2tXk+SJLqkicGUQLHcqLEZxcPNRKbzlQPluV4RU0dnC3DzwABKqH34=
+iQEcBAABAgAGBQJf8mnuAAoJEFmqOSfCTk4ezIEH/1JltW/eWnkI9jv3gjaXN73JHXNWKO/ClHJIuTHSbOzK7DohRKNZjs+keFSrmWtx6k78Tqv+3tuEV0AmLdV/SPC5zozo7Ak//MntaAJWD4MMCuoOro7mShcUWDc4f8m4DR/DmryvVC2XvE4WgucCOMScPkTwvhjlnD7vgHGha6jRUYG/AIaHbQIzoB8SdTX5L9jONg5K0FY1CqT5Oc0e+SrqmpyJPZQBqZcLXjmvU53wGYtGpfty4L1Fon3xy6cEjjF7d6dBG3/NF5OFir0sDkDaXjR1bq58H8Pp1HF7LcVrihpzExuUg3pY/7k2Yq2LRlUoImi76X7Yw2BoI/u+gU8=
 
 -->

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type='text/xsl' href='../resources/catalog.xsl'?>
-<c:catalog xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:c="http://0install.de/schema/injector/catalog"><interface uri="https://apps.0install.net/java/ant.xml"><name>Apache Ant</name><summary>pure Java build tool</summary><homepage>http://ant.apache.org/</homepage><category>Development</category><icon href="https://raw.githubusercontent.com/0install/apps/master/java/ant.png" type="image/png"/><entry-point binary-name="ant" command="run"/></interface><interface uri="https://apps.0install.net/java/maven.xml"><name>Apache Maven</name><summary>build manager for Java projects</summary><homepage>http://maven.apache.org/</homepage><category>Development</category><icon href="https://raw.githubusercontent.com/0install/apps/master/java/maven.png" type="image/png"/><entry-point binary-name="mvn" command="run"/></interface><interface uri="https://apps.0install.net/java/gradle.xml"><name>Gradle</name><summary>modern open source build tool for continuous delivery</summary><homepage>http://www.gradle.org/</homepage><category>Development</category><icon href="https://raw.githubusercontent.com/0install/apps/master/java/gradle.png" type="image/png"/><entry-point binary-name="gradle" command="run"/></interface><interface uri="https://apps.0install.net/java/hsqldb.xml"><name>HyperSQL</name><summary>100% Java Database </summary><description>
+<c:catalog xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:c="http://0install.de/schema/injector/catalog"><interface uri="https://apps.0install.net/java/ant.xml"><name>Apache Ant</name><summary>pure Java build tool</summary><homepage>http://ant.apache.org/</homepage><category>Development</category><needs-terminal/><icon href="https://raw.githubusercontent.com/0install/apps/master/java/ant.png" type="image/png"/><entry-point binary-name="ant" command="run"/></interface><interface uri="https://apps.0install.net/java/maven.xml"><name>Apache Maven</name><summary>build manager for Java projects</summary><homepage>http://maven.apache.org/</homepage><category>Development</category><needs-terminal/><icon href="https://raw.githubusercontent.com/0install/apps/master/java/maven.png" type="image/png"/><entry-point binary-name="mvn" command="run"/></interface><interface uri="https://apps.0install.net/java/gradle.xml"><name>Gradle</name><summary>modern open source build tool for continuous delivery</summary><homepage>http://www.gradle.org/</homepage><category>Development</category><needs-terminal/><icon href="https://raw.githubusercontent.com/0install/apps/master/java/gradle.png" type="image/png"/><entry-point binary-name="gradle" command="run"/></interface><interface uri="https://apps.0install.net/java/hsqldb.xml"><name>HyperSQL</name><summary>100% Java Database </summary><description>
 HSQLDB (HyperSQL DataBase) is an SQL relational database engine written in Java.
 It has a JDBC driver and supports nearly full ANSI-92 SQL (BNF tree format) plus
 many SQL:2008 enhancements. It offers a small, fast database engine which offers
@@ -150,7 +150,7 @@ Workaround for java -classpath ... -jar ... which does not work.</description><h
   </entry-point><entry-point binary-name="jabswitch" command="jabswitch">
     <needs-terminal/>
     <name>Java Access Bridge Switch</name>
-  </entry-point><entry-point binary-name="jaccessinspector" command="jaccessinspector"/><entry-point binary-name="jaccesswalker" command="jaccesswalker"/></interface><interface uri="https://apps.0install.net/java/kotlin.xml"><name>Kotlin</name><summary>statically typed programming language for modern multiplatform applications</summary><description>Kotlin is a statically typed programming language for modern multiplatform applications. 100% interoperable with Java and Android.</description><homepage>http://kotlinlang.org/</homepage><category>Development</category><icon href="https://raw.githubusercontent.com/0install/apps/master/java/kotlin.png" type="image/png"/><icon href="https://raw.githubusercontent.com/0install/apps/master/java/kotlin.ico" type="image/vnd.microsoft.icon"/><entry-point binary-name="kotlin" command="run">
+  </entry-point><entry-point binary-name="jaccessinspector" command="jaccessinspector"/><entry-point binary-name="jaccesswalker" command="jaccesswalker"/></interface><interface uri="https://apps.0install.net/java/kotlin.xml"><name>Kotlin</name><summary>statically typed programming language for modern multiplatform applications</summary><description>Kotlin is a statically typed programming language for modern multiplatform applications. 100% interoperable with Java and Android.</description><homepage>http://kotlinlang.org/</homepage><category>Development</category><needs-terminal/><icon href="https://raw.githubusercontent.com/0install/apps/master/java/kotlin.png" type="image/png"/><icon href="https://raw.githubusercontent.com/0install/apps/master/java/kotlin.ico" type="image/vnd.microsoft.icon"/><entry-point binary-name="kotlin" command="run">
     <needs-terminal/>
     <name>Kotlin interpreter</name>
   </entry-point><entry-point command="kotlinc">
@@ -171,7 +171,7 @@ frameworks for building compilers, interpreters and other text parsers. In
 particular, generated frameworks include intuitive strictly-typed abstract
 syntax trees and tree walkers. SableCC also keeps a clean separation between
 machine-generated code and user-written code which leads to a shorter
-development cycle.</description><homepage>http://sablecc.org/</homepage><category>Development</category></interface><interface uri="https://apps.0install.net/java/scala.xml"><name>Scala</name><summary>functional and object-oriented programming language</summary><description>Scala is a functional and object-oriented programming language based on the Java Virtual Machine.</description><homepage>http://www.scala-lang.org/</homepage><category>Development</category><icon href="https://raw.githubusercontent.com/0install/apps/master/java/scala.png" type="image/png"/><icon href="https://raw.githubusercontent.com/0install/apps/master/java/scala.ico" type="image/vnd.microsoft.icon"/><entry-point binary-name="scala" command="run">
+development cycle.</description><homepage>http://sablecc.org/</homepage><category>Development</category></interface><interface uri="https://apps.0install.net/java/scala.xml"><name>Scala</name><summary>functional and object-oriented programming language</summary><description>Scala is a functional and object-oriented programming language based on the Java Virtual Machine.</description><homepage>http://www.scala-lang.org/</homepage><category>Development</category><needs-terminal/><icon href="https://raw.githubusercontent.com/0install/apps/master/java/scala.png" type="image/png"/><icon href="https://raw.githubusercontent.com/0install/apps/master/java/scala.ico" type="image/vnd.microsoft.icon"/><entry-point binary-name="scala" command="run">
     <needs-terminal/>
     <name>Scala interpreter</name>
   </entry-point><entry-point command="scalac">
@@ -197,11 +197,11 @@ On OS X, an extra argument needs to be passed to Java. To support OS X, please u
 &lt;/runner&gt;
 </description><homepage>http://www.eclipse.org/swt/</homepage><category>Development</category></interface></c:catalog>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7YsW0ACgkQWao5J8JOTh6qeQf7B0N9
-yOtvIxNZcBBeYNE+hvpAegIA3MEZETK5VFlSHTR84oVNgykN9w+lnBXHVvGdHzvYJR/WeRH2VXiS
-VoALT4jaiu71yucvxYDYjvVxQG56Umxb6xOui5Iba0MItvI9bH1IN1pXqGNxxZ8FdW0MhsadWpGj
-yQLg4WfyEeC66acvzZMh54gztkAkgtnXj9omg8XfDgqjp5mnH918MEuPrdsaOA03IBgG+5Wt6WH8
-uqEtf3wp+Ai3fAmk6zFA9HccyahayEZKyYN+1J4EV4f/2G+QHAPpzU9YN+2K/CCWLqj1AMAf7eaD
-4IO6D33WrXIHW7lTLBzY8Ey7pqXR34Pcwg==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl/4XCgACgkQWao5J8JOTh6l2wf+IiD7
+pFw7b2oWM/niU/FTqEsrSM/4llJDIFlQhb1Tu+kZx1buidmKq3Ou7u70oNVGeWv3Neym7fp3ywdy
+heet6IgfItBxTp3dBmx6KvfepjXAV1gdLERbNoDH34P7UGGS0KekOBDxH6iiGYic4rjYp+B6Dzk9
+5FIa5u8fuX9Ho9Tf/GSxK8ybTf0s0c+PLJ0wYt+uNE7U/OmidtCzmOIMuhYEtzATLO4Z1xx2UIJH
+zYLAXPiN22Em0o9ynP3gYaDHJVvZjxCmTayuFbL+q14tStay9Z1gwjOm1Vtd2o6Ktjrgam9dV3vX
+f/lB2F5IHkfb+PP4ziiZLNmVwRafHSGKWA==
 
 -->

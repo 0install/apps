@@ -23,7 +23,7 @@ jobs:
           ln -s feeds/0repo-config.py .
           ln -s public/archives.db .
           echo "${{secrets.GPG_KEY}}" | gpg --import -
-          ./feeds/0install.sh run http://0install.net/tools/0repo.xml
+          ./feeds/0install.sh run --version=0.12.. http://0install.net/tools/0repo.xml
       - name: Push public
         run: |
           cd public

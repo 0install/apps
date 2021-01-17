@@ -22,7 +22,7 @@ We use [GitHub Actions](.github/workflows/) to automate these processes.
 
 To work with this repository on your own machine run these commands inside an empty directory:
 
-    git clone https://github.com/0install/apps.git feeds
+    git clone https://github.com/0install/apps.git --single-branch feeds
     git clone https://github.com/0install/apps.git --single-branch --branch=gh-pages public
     ln -s feeds/0repo-config.py .
     ln -s public/archives.db .

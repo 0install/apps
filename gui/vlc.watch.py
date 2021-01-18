@@ -8,4 +8,4 @@ matches = re.findall(r'/">([0-9\.]+)/</a>\s+(..-...-....)', data)
 releases = [{
     'version': match[0],
     'released': datetime.strftime(datetime.strptime(match[1], '%d-%b-%Y'), '%Y-%m-%d')
-} for match in matches if match[0].startswith('3.') and match[0] not in ['3.0.11.1']]
+} for match in matches if match[0].startswith('3.') and match[0] not in ['3.0.11.1', '3.0.12.1']]

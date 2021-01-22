@@ -9,17 +9,16 @@ The command line tools allow you to annotate, edit, and convert documents to oth
   <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/mupdf.png" type="image/png"/>
   <category>Utility</category>
   <homepage>https://mupdf.com/</homepage>
-  <group license="AGPL v3 (Affero General Public License)">
-    <group arch="Windows-*">
-      <command name="run" path="mupdf.exe"/>
-      <command name="mutool" path="mutool.exe"/>
-      <group>
-        <command name="mupdf-gl" path="mupdf-gl.exe"/>
-        <implementation released="{released}" version="{version}">
-	  <manifest-digest/>
-          <archive extract="mupdf-{version}-windows" href="https://mupdf.com/downloads/archive/mupdf-{version}-windows.zip" type="application/zip"/>
-        </implementation>
-      </group>
-    </group>
+
+  <feed-for interface="https://apps.0install.net/mupdf.xml"/>
+
+  <group arch="Windows-*" license="AGPL v3 (Affero General Public License)">
+    <command name="run" path="mupdf.exe"/>
+    <command name="mutool" path="mutool.exe"/>
+    <command name="mupdf-gl" path="mupdf-gl.exe"/>
+    <implementation released="{released}" version="{version}">
+      <manifest-digest/>
+      <archive extract="mupdf-{version}-windows" href="https://mupdf.com/downloads/archive/mupdf-{version}-windows.zip" type="application/zip"/>
+    </implementation>
   </group>
 </interface>

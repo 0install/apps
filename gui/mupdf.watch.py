@@ -7,7 +7,7 @@ releases = []
 REGEX = r'>mupdf-([0-9\.]+)-windows.zip<'
 HOME = 'https://www.mupdf.com/downloads/index.html'
 HIST = 'https://www.mupdf.com/release_history.html'
-today = datetime.datetime.today().date().isoformat()
+today = datetime.today().date().isoformat()
 
 matches = re.findall(
     REGEX,
@@ -22,3 +22,4 @@ for match in matches:
         'version': match,
         'released': release_match[1] if release_match else today
     })
+releases

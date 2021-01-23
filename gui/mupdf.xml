@@ -209,9 +209,11 @@ The command line tools allow you to annotate, edit, and convert documents to oth
     </implementation>
   </group>
 
-  <package-implementation distributions="Gentoo" package="app-text/mupdf"/>
-  <package-implementation distributions="Ports" package="graphics/mupdf"/>
-  <package-implementation package="mupdf"/>
+  <group main="/usr/bin/mupdf">
+    <package-implementation distributions="Gentoo" package="app-text/mupdf"/>
+    <package-implementation distributions="Ports" package="graphics/mupdf"/>
+    <package-implementation package="mupdf"/>
+  </group>
 
   <entry-point app-id="mupdf" binary-name="mupdf-gl" command="mupdf-gl">
     <name>mupdf-gl</name>

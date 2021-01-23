@@ -1387,7 +1387,21 @@ Install the mktemp package if you need to use shell scripts or other programs wh
      appended to it, for example /tmp/tfile.XXXXXXXXXX.  If no
      template is specified a default of tmp.XXXXXXXXXX is used
      and the -t flag is implied (see below).</description>
-  </entry-point></interface><interface uri="https://apps.0install.net/dotnet/mono.xml"><name>Mono</name><summary>open-source cross-platform implementation of the Common Language Runtime (.NET Framework compatible)</summary><homepage>http://www.mono-project.com/</homepage><icon href="https://raw.githubusercontent.com/0install/apps/master/dotnet/mono.png" type="image/png"/><entry-point binary-name="mono" command="run"/></interface><interface uri="https://apps.0install.net/gui/naps2.xml"><name>NAPS2</name><summary>PDF document scanning application</summary><description>NAPS2 is a document scanning application with a focus on simplicity and ease of use. Scan your documents from WIA- and TWAIN-compatible scanners, organize the pages as you like, and save them as PDF, TIFF, JPEG, PNG, and other file formats.</description><homepage>https://www.naps2.com/</homepage><category>Utility</category><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/naps2.png" type="image/png"/><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/naps2.ico" type="image/vnd.microsoft.icon"/><entry-point binary-name="NAPS2" command="run"/><entry-point binary-name="NAPS2.Console" command="run-cli">
+  </entry-point></interface><interface uri="https://apps.0install.net/dotnet/mono.xml"><name>Mono</name><summary>open-source cross-platform implementation of the Common Language Runtime (.NET Framework compatible)</summary><homepage>http://www.mono-project.com/</homepage><icon href="https://raw.githubusercontent.com/0install/apps/master/dotnet/mono.png" type="image/png"/><entry-point binary-name="mono" command="run"/></interface><interface uri="https://apps.0install.net/gui/mupdf.xml"><name>MuPDF</name><summary>lightweight PDF, XPS, and E-book viewer</summary><description>MuPDF is small, fast, yet complete. It supports many document formats, such as PDF, XPS, OpenXPS, CBZ, EPUB, and FictionBook 2. You can annotate PDF documents and fill out forms with the mobile viewers (this feature is coming soon to the desktop viewer as well).
+
+The command line tools allow you to annotate, edit, and convert documents to other formats such as HTML, SVG, PDF, and CBZ. You can also write scripts to manipulate documents using Javascript.</description><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/mupdf.ico" type="image/vnd.microsoft.icon"/><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/mupdf.png" type="image/png"/><category>Utility</category><homepage>https://mupdf.com/</homepage><entry-point app-id="mupdf" binary-name="mupdf-gl" command="mupdf-gl">
+    <name>mupdf-gl</name>
+    <summary>read PDF, XPS, CBZ, EPUB, and FB2 documents.</summary>
+    <description>requires OpenGL</description>
+  </entry-point><entry-point app-id="mupdf" binary-name="mupdf" command="run">
+    <name>mupdf</name>
+    <summary>read PDF, XPS, CBZ, EPUB, and FB2 documents.</summary>
+    <description>a very basic viewer using x11 and win32, respectively</description>
+  </entry-point><entry-point binary-name="mutool" command="mutool">
+    <needs-terminal/>
+    <summary>The command line tools are all gathered into one umbrella command</summary>
+    <description>For rendering and converting documents or working with PDF files</description>
+  </entry-point></interface><interface uri="https://apps.0install.net/gui/naps2.xml"><name>NAPS2</name><summary>PDF document scanning application</summary><description>NAPS2 is a document scanning application with a focus on simplicity and ease of use. Scan your documents from WIA- and TWAIN-compatible scanners, organize the pages as you like, and save them as PDF, TIFF, JPEG, PNG, and other file formats.</description><homepage>https://www.naps2.com/</homepage><category>Utility</category><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/naps2.png" type="image/png"/><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/naps2.ico" type="image/vnd.microsoft.icon"/><entry-point binary-name="NAPS2" command="run"/><entry-point binary-name="NAPS2.Console" command="run-cli">
     <needs-terminal/>
     <name>NAPS2 (Not Another PDF Scanner 2)</name>
     <summary>NAPS2 (Not Another PDF Scanner 2)</summary>
@@ -1778,21 +1792,7 @@ recompiled and issues the commands to recompile them, when necessary.
 
 The upstream sources for this package are available at the location
 ftp://ftp.gnu.org/gnu/make/. The documentation for this package does not meet
-the Debian Free Software Guidelines, and has been removed from this package.</description><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/><category>Development</category><needs-terminal/><homepage>http://www.gnu.org/software/make/</homepage><entry-point binary-name="make" command="run"/></interface><interface uri="https://apps.0install.net/gui/mupdf.xml"><name>mupdf</name><summary xml:lang="en">MuPDF is a lightweight PDF, XPS, and E-book viewer.</summary><description xml:lang="en">The viewer is small, fast, yet complete. It supports many document formats, such as PDF, XPS, OpenXPS, CBZ, EPUB, and FictionBook 2. You can annotate PDF documents and fill out forms with the mobile viewers (this feature is coming soon to the desktop viewer as well).
-
-The command line tools allow you to annotate, edit, and convert documents to other formats such as HTML, SVG, PDF, and CBZ. You can also write scripts to manipulate documents using Javascript.</description><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/mupdf.ico" type="image/vnd.microsoft.icon"/><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/mupdf.png" type="image/png"/><category>Utility</category><homepage>https://mupdf.com/</homepage><entry-point app-id="mupdf" binary-name="mupdf-gl" command="mupdf-gl">
-    <name xml:lang="en">mupdf-gl</name>
-    <summary xml:lang="en"> read PDF, XPS, CBZ, EPUB, and FB2 documents. </summary>
-    <description xml:lang="en">requires OpenGL</description>
-  </entry-point><entry-point app-id="mupdf" binary-name="mupdf" command="run">
-    <name xml:lang="en">mupdf</name>
-    <summary xml:lang="en"> read PDF, XPS, CBZ, EPUB, and FB2 documents. </summary>
-    <description xml:lang="en">a very basic viewer using x11 and win32, respectively</description>
-  </entry-point><entry-point binary-name="mutool" command="mutool">
-    <needs-terminal/>
-    <summary xml:lang="en">The command line tools are all gathered into one umbrella command</summary>
-    <description xml:lang="en">For rendering and converting documents or working with PDF files</description>
-  </entry-point></interface><interface uri="https://apps.0install.net/devel/pkg-config.xml"><name>pkg-config</name><summary>manage compile and link flags for libraries</summary><description>
+the Debian Free Software Guidelines, and has been removed from this package.</description><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/><category>Development</category><needs-terminal/><homepage>http://www.gnu.org/software/make/</homepage><entry-point binary-name="make" command="run"/></interface><interface uri="https://apps.0install.net/devel/pkg-config.xml"><name>pkg-config</name><summary>manage compile and link flags for libraries</summary><description>
 pkg-config is a system for managing library compile and link flags that works
 with automake and autoconf.
 
@@ -1804,11 +1804,11 @@ and linker flags needed to use them through the pkg-config(1) program.</descript
 Version 1.4 is the fast, small sed originally distributed in the GNU toolkit and still distributed with Minix -- but it's still better for some uses (in particular, faster and less memory-intensive). 
 </description><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/><category>Utility</category><homepage>http://gnuwin32.sourceforge.net/packages/sed.htm</homepage><needs-terminal/><entry-point binary-name="sed" command="run"/></interface><interface uri="https://apps.0install.net/kubernetes/svcat.xml"><name>svcat</name><summary>CLI for interacting with Kubernetes Service Catalog</summary><description>This is a command-line interface (CLI) for interacting with Service Catalog resources. svcat is a domain-specific tool to make interacting with the Service Catalog easier. While many of its commands have analogs to kubectl, our goal is to streamline and optimize the operator experience.</description><homepage>https://svc-cat.io/docs/cli/</homepage><needs-terminal/><entry-point binary-name="svcat" command="run"/></interface><interface uri="https://apps.0install.net/utils/youtube-dl.xml"><name>youtube-dl</name><summary xml:lang="en">command-line program to download videos from YouTube</summary><summary xml:lang="de">Befehlszeilenprogramm zum Runterladen von Videos von YouTube</summary><description xml:lang="en">youtube-dl is a command-line program to download videos from YouTube.com and a few more sites.</description><description xml:lang="de">youtube-dl ist ein Befehlszeilenprogramm zum Runterladen von Videos von YouTube und ein paar weiteren Seiten.</description><category>Utility</category><homepage>https://yt-dl.org</homepage><needs-terminal/><entry-point binary-name="youtube-dl" command="run"/></interface><interface uri="https://apps.0install.net/devel/zbctl.xml"><name>zbctl</name><summary>command line interface to interact with Zeebe</summary><description>zbctl is the command line interface to interact with Zeebe.</description><homepage>https://docs.cloud.camunda.io/docs/cli-zbctl</homepage><icon href="https://raw.githubusercontent.com/0install/apps/master/devel/zeebe.png" type="image/png"/><needs-terminal/><entry-point binary-name="zbctl" command="run"/></interface></c:catalog>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmAL+iQACgkQWao5J8JOTh4gVQf/T9ds
-oTKAVRxfMBOo0qxF5G4C8y+GnhnBJmW2hndOv/DAWYgCNv0c44QcyDI1ymHKmEfVBqjyhnK75FoR
-u0+Kfvfj4Ce3uyr7gnCJn8F9USbYRw9GGkQrUtwwep9LJ3BmFO58OcYMZ7+BoJ7dD7ZICJM2vdVm
-3LfnOTugl22STKs1mKFgANC02ePgyMQiMcbdRFuBc4FmOZg+n29CuM1uNe1aSMl/NKamQEvCDFsI
-17kmuLKlk4YZEcUlibXTvQ8kz/rhqqhh917JUBAfsfZsjfl6uFZ9HWn8aGC6BUXm8sVKMk3se3C4
-OtIXy981YkoOSwmxK3+QOz87si1pzsJaMQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmAMAT4ACgkQWao5J8JOTh5lIgf/Y+D+
+7swrnAoUNPT1R4AmyZn+ZXBTeX8jrlIE4YJgFiUcFiu07P4+AsKR2rFFgUkSGvKnIKPdh/1EiNYj
+S/jJ+NEeYw+aU98wwlpxqZToK6eLYciJ0kBcTlkJPWT7m0gO268dlaR9fpDzXMGmC30zj/HHaTDZ
+rrRZhwKTVB5ZO7d3/Mj+QglhciBgVHVgNIMgFFbc87sINJzcPLoo/i7tZ4ESwREB4hfLhOPEU6SB
+qxa5aZT+e1ArtOeLjLVurUEzGtnKu2V7FVM4fLmON9QxT/+3vq7WOVQjpzvXzBFjzc/AKzyzKu5e
+rRHBFGMmln1Obte7XmhnB/BcgGb/mmNbHA==
 
 -->

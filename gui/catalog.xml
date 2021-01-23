@@ -62,7 +62,21 @@ Professional runs on Microsoft .NET 2.0 and Mono 2.6 or newer.</description><hom
     <name xml:lang="en">LibreOffice Base</name>
     <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/libreoffice/base.png" type="image/png"/>
     <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/libreoffice/base.ico" type="image/vnd.microsoft.icon"/>
-  </entry-point></interface><interface uri="https://apps.0install.net/gui/mpc-hc.xml"><name>Media Player Classic Home Cinema</name><summary xml:lang="en">free audio and video player for Windows</summary><summary xml:lang="de">kostenloser Audio- und Video-Player für Windows</summary><description xml:lang="en">Media Player Classic mimics the look and feel of the old, lightweight Windows Media Player 6.4 but provides modern features. Media Player Classic Home Cinema is a fork that updates the original player and adds many useful features and additional video decoders.</description><description xml:lang="de">Media Player Classic ahmt den Stil des alten, leichtgewichtigen Windows Media Player 6.4 nach, bietet aber moderne Features. Media Player Classic Home Cinema ist ein Fork, der den ursprünglicher Player aktualisiert und viele nützliche Features sowie zusätzliche Video-Decoder hinzufügt.</description><homepage>http://mpc-hc.sourceforge.net/</homepage><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/mpc-hc.png" type="image/png"/><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/mpc-hc.ico" type="image/vnd.microsoft.icon"/><category>AudioVideo</category><entry-point binary-name="mpc-hc" command="run"/></interface><interface uri="https://apps.0install.net/gui/naps2.xml"><name>NAPS2</name><summary>PDF document scanning application</summary><description>NAPS2 is a document scanning application with a focus on simplicity and ease of use. Scan your documents from WIA- and TWAIN-compatible scanners, organize the pages as you like, and save them as PDF, TIFF, JPEG, PNG, and other file formats.</description><homepage>https://www.naps2.com/</homepage><category>Utility</category><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/naps2.png" type="image/png"/><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/naps2.ico" type="image/vnd.microsoft.icon"/><entry-point binary-name="NAPS2" command="run"/><entry-point binary-name="NAPS2.Console" command="run-cli">
+  </entry-point></interface><interface uri="https://apps.0install.net/gui/mpc-hc.xml"><name>Media Player Classic Home Cinema</name><summary xml:lang="en">free audio and video player for Windows</summary><summary xml:lang="de">kostenloser Audio- und Video-Player für Windows</summary><description xml:lang="en">Media Player Classic mimics the look and feel of the old, lightweight Windows Media Player 6.4 but provides modern features. Media Player Classic Home Cinema is a fork that updates the original player and adds many useful features and additional video decoders.</description><description xml:lang="de">Media Player Classic ahmt den Stil des alten, leichtgewichtigen Windows Media Player 6.4 nach, bietet aber moderne Features. Media Player Classic Home Cinema ist ein Fork, der den ursprünglicher Player aktualisiert und viele nützliche Features sowie zusätzliche Video-Decoder hinzufügt.</description><homepage>http://mpc-hc.sourceforge.net/</homepage><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/mpc-hc.png" type="image/png"/><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/mpc-hc.ico" type="image/vnd.microsoft.icon"/><category>AudioVideo</category><entry-point binary-name="mpc-hc" command="run"/></interface><interface uri="https://apps.0install.net/gui/mupdf.xml"><name>MuPDF</name><summary>lightweight PDF, XPS, and E-book viewer</summary><description>MuPDF is small, fast, yet complete. It supports many document formats, such as PDF, XPS, OpenXPS, CBZ, EPUB, and FictionBook 2. You can annotate PDF documents and fill out forms with the mobile viewers (this feature is coming soon to the desktop viewer as well).
+
+The command line tools allow you to annotate, edit, and convert documents to other formats such as HTML, SVG, PDF, and CBZ. You can also write scripts to manipulate documents using Javascript.</description><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/mupdf.ico" type="image/vnd.microsoft.icon"/><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/mupdf.png" type="image/png"/><category>Utility</category><homepage>https://mupdf.com/</homepage><entry-point app-id="mupdf" binary-name="mupdf-gl" command="mupdf-gl">
+    <name>mupdf-gl</name>
+    <summary>read PDF, XPS, CBZ, EPUB, and FB2 documents.</summary>
+    <description>requires OpenGL</description>
+  </entry-point><entry-point app-id="mupdf" binary-name="mupdf" command="run">
+    <name>mupdf</name>
+    <summary>read PDF, XPS, CBZ, EPUB, and FB2 documents.</summary>
+    <description>a very basic viewer using x11 and win32, respectively</description>
+  </entry-point><entry-point binary-name="mutool" command="mutool">
+    <needs-terminal/>
+    <summary>The command line tools are all gathered into one umbrella command</summary>
+    <description>For rendering and converting documents or working with PDF files</description>
+  </entry-point></interface><interface uri="https://apps.0install.net/gui/naps2.xml"><name>NAPS2</name><summary>PDF document scanning application</summary><description>NAPS2 is a document scanning application with a focus on simplicity and ease of use. Scan your documents from WIA- and TWAIN-compatible scanners, organize the pages as you like, and save them as PDF, TIFF, JPEG, PNG, and other file formats.</description><homepage>https://www.naps2.com/</homepage><category>Utility</category><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/naps2.png" type="image/png"/><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/naps2.ico" type="image/vnd.microsoft.icon"/><entry-point binary-name="NAPS2" command="run"/><entry-point binary-name="NAPS2.Console" command="run-cli">
     <needs-terminal/>
     <name>NAPS2 (Not Another PDF Scanner 2)</name>
     <summary>NAPS2 (Not Another PDF Scanner 2)</summary>
@@ -94,27 +108,13 @@ Professional runs on Microsoft .NET 2.0 and Mono 2.6 or newer.</description><hom
   </entry-point><entry-point binary-name="WinSCP" command="run-cli">
     <needs-terminal/>
     <name>WinSCP command-line</name>
-  </entry-point></interface><interface uri="https://apps.0install.net/gui/zeebe-modeler.xml"><name>Zeebe Modeler</name><summary>visual workflow editor for Zeebe</summary><description>The visual workflow editor for Zeebe based on bpmn.io.</description><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/zeebe-modeler.ico" type="image/vnd.microsoft.icon"/><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/zeebe-modeler.png" type="image/png"/><category>Development</category><homepage>https://github.com/zeebe-io/zeebe-modeler</homepage><entry-point binary-name="Zeebe Modeler" command="run"/></interface><interface uri="https://apps.0install.net/gui/zenmap.xml"><name>Zenmap</name><summary>Nmap frontend and results viewer</summary><homepage>https://nmap.org/zenmap/</homepage><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/nmap.ico" type="image/vnd.microsoft.icon"/><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/nmap.png" type="image/png"/><category>Network</category><category>Utility</category></interface><interface uri="https://apps.0install.net/gui/mupdf.xml"><name>mupdf</name><summary xml:lang="en">MuPDF is a lightweight PDF, XPS, and E-book viewer.</summary><description xml:lang="en">The viewer is small, fast, yet complete. It supports many document formats, such as PDF, XPS, OpenXPS, CBZ, EPUB, and FictionBook 2. You can annotate PDF documents and fill out forms with the mobile viewers (this feature is coming soon to the desktop viewer as well).
-
-The command line tools allow you to annotate, edit, and convert documents to other formats such as HTML, SVG, PDF, and CBZ. You can also write scripts to manipulate documents using Javascript.</description><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/mupdf.ico" type="image/vnd.microsoft.icon"/><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/mupdf.png" type="image/png"/><category>Utility</category><homepage>https://mupdf.com/</homepage><entry-point app-id="mupdf" binary-name="mupdf-gl" command="mupdf-gl">
-    <name xml:lang="en">mupdf-gl</name>
-    <summary xml:lang="en"> read PDF, XPS, CBZ, EPUB, and FB2 documents. </summary>
-    <description xml:lang="en">requires OpenGL</description>
-  </entry-point><entry-point app-id="mupdf" binary-name="mupdf" command="run">
-    <name xml:lang="en">mupdf</name>
-    <summary xml:lang="en"> read PDF, XPS, CBZ, EPUB, and FB2 documents. </summary>
-    <description xml:lang="en">a very basic viewer using x11 and win32, respectively</description>
-  </entry-point><entry-point binary-name="mutool" command="mutool">
-    <needs-terminal/>
-    <summary xml:lang="en">The command line tools are all gathered into one umbrella command</summary>
-    <description xml:lang="en">For rendering and converting documents or working with PDF files</description>
-  </entry-point></interface></c:catalog>
+  </entry-point></interface><interface uri="https://apps.0install.net/gui/zeebe-modeler.xml"><name>Zeebe Modeler</name><summary>visual workflow editor for Zeebe</summary><description>The visual workflow editor for Zeebe based on bpmn.io.</description><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/zeebe-modeler.ico" type="image/vnd.microsoft.icon"/><icon href="https://raw.githubusercontent.com/0install/apps/master/gui/zeebe-modeler.png" type="image/png"/><category>Development</category><homepage>https://github.com/zeebe-io/zeebe-modeler</homepage><entry-point binary-name="Zeebe Modeler" command="run"/></interface><interface uri="https://apps.0install.net/gui/zenmap.xml"><name>Zenmap</name><summary>Nmap frontend and results viewer</summary><homepage>https://nmap.org/zenmap/</homepage><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/nmap.ico" type="image/vnd.microsoft.icon"/><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/nmap.png" type="image/png"/><category>Network</category><category>Utility</category></interface></c:catalog>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmAL+iMACgkQWao5J8JOTh4iYAf/fHlE
-YUZYuiDJL5kTDOVMHEihR2oTdIL/tVTcC4JD0o4+uPCJGvvjpZHSnAMQhC/UfzzzBA+GxwGIcsp1
-xHdXRxAV6/uH2Bp8TqMzhqziYt2UxXLWcCFlE+ALfKZQes5y0qeyn0WtRrINzzTNhP9bJ2zwv+Gz
-eWPPYFe24GyvA2r8WososFL9KVUN+mZafhaxw3W5KntOkwdQcK6ZQBU4CvJBV3wB21cAnwB0I78c
-liDj/d1GXO15UFQkNIrZQMErXHUQGAfNF9soLlsfnlP/1A/HZlMrPunB4IASYtpD5ghTJ9ubuaBb
-lfftl/XZlRpXfD6Ef8w8OzXRtoSH6VVuuw==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmAMAT0ACgkQWao5J8JOTh7auwf+Lf3k
+onNt1ZEWmycCvHBtaLh8KPOCrMb91bo8zMbbQ+kQhsn3jmwfYufPvdOkj4sDlkPSYzT1PumZRDpg
+uv69BPvxQ0zM0ee7pu9XbfCkh4SS5R/mcqy5zTDrBhMBbFpSMmDuHg03MuN9FTUU2WHwFmxRto4c
+A0nPiqR4tN4npzYKKqPWKXwn9sUrjSwuYhDSwQjwtgveDOkf8hFEOUiPc2Gd3GKlRCxF2oHCvfD9
+EjS3t+BZNXD62x47JKpgrPbtBIoQoJtk6nXODu+OLFv29lk2/rpggkkbFMgncuGci/LXM8Ee5azU
+fqE1sdIUgrAyObLOU7FG/zzjuBD4tIbaDg==
 
 -->

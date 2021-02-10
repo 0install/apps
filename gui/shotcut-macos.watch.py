@@ -9,4 +9,4 @@ releases = [{
     'date': release['tag_name'].strip('v').replace('.', ''),
     'stability': 'testing' if release['prerelease'] else 'stable',
     'released': release['published_at'][0:10]
-} for release in releases('mltframework/shotcut') if any(str.startswith(asset['name'], 'shotcut-macos-signed-') for asset in release['assets'])]
+} for release in releases('mltframework/shotcut') if not 'UNSTABLE' in release['name'] and any(str.startswith(asset['name'], 'shotcut-macos-signed-') for asset in release['assets'])]

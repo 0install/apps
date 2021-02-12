@@ -23,7 +23,7 @@ workspaces that can be used in the compiler environment of your choice.</descrip
     <command name="ctest" path="bin/ctest"/>
     <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="{stability}">
       <manifest-digest/>
-      <archive href="http://www.cmake.org/files/v{minor-version}/cmake-{version}-Linux-x86_64.tar.gz" type="application/x-compressed-tar" extract="cmake-{version}-Linux-x86_64"/>
+      <archive href="https://cmake.org/files/v{minor-version}/cmake-{version}-Linux-x86_64.tar.gz" type="application/x-compressed-tar" extract="cmake-{version}-Linux-x86_64"/>
     </implementation>
   </group>
 
@@ -33,9 +33,9 @@ workspaces that can be used in the compiler environment of your choice.</descrip
     <command name="run-curses" path="CMake.app/Contents/bin/ccmake"/>
     <command name="cpack" path="CMake.app/Contents/bin/cpack"/>
     <command name="ctest" path="CMake.app/Contents/bin/ctest"/>
-    <implementation arch="MacOSX-*" version="{version}" released="{released}" stability="{stability}">
+    <implementation arch="Darwin-x86_64" version="{version}" released="{released}" stability="{stability}">
       <manifest-digest/>
-      <archive href="http://www.cmake.org/files/v{minor-version}/cmake-{version}-macos-universal.tar.gz" type="application/x-compressed-tar" extract="cmake-{version}-macos-universal"/>
+      <archive href="https://cmake.org/files/v{minor-version}/cmake-{version}-Darwin-x86_64.tar.gz" type="application/x-compressed-tar" extract="/cmake-{version}-Darwin-x86_64"/>
     </implementation>
   </group>
 
@@ -46,18 +46,18 @@ workspaces that can be used in the compiler environment of your choice.</descrip
     <command name="ctest" path="bin/ctest.exe"/>
     <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="{stability}">
       <manifest-digest/>
-      <archive href="http://www.cmake.org/files/v{minor-version}/cmake-{version}-win64-x64.msi" type="application/x-msi" extract="SourceDir/CMake"/>
+      <archive href="https://cmake.org/files/v{minor-version}/cmake-{version}-win64-x64.msi" type="application/x-msi" extract="SourceDir/CMake"/>
     </implementation>
     <implementation arch="Windows-i486" version="{version}" released="{released}" stability="{stability}">
       <manifest-digest/>
-      <archive href="http://www.cmake.org/files/v{minor-version}/cmake-{version}-win32-x86.msi" type="application/x-msi" extract="SourceDir/CMake"/>
+      <archive href="https://cmake.org/files/v{minor-version}/cmake-{version}-win32-x86.msi" type="application/x-msi" extract="SourceDir/CMake"/>
     </implementation>
   </group>
 
   <group arch="*-src" license="BSD License (revised)">
     <implementation compile:binary-main="bin/cmake" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" compile:dup-src="true" version="{version}" released="{released}" stability="{stability}" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
       <manifest-digest/>
-      <archive href="http://www.cmake.org/files/v{minor-version}/cmake-{version}.tar.gz" type="application/x-compressed-tar" extract="cmake-{version}"/>
+      <archive href="https://cmake.org/files/v{minor-version}/cmake-{version}.tar.gz" type="application/x-compressed-tar" extract="cmake-{version}"/>
     </implementation>
   </group>
 </interface>

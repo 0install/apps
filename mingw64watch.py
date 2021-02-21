@@ -25,7 +25,8 @@ def get_valid_db(db_url, dst_file):
     """
     sig = io.BytesIO(urlopen(urllib.request.Request(f'{db_url}.sig')).read())
     gpg = gnupg.GPG()
-    with open(path.join(path.dirname(__file__), 'Alexey.pubkey')) as key_file:
+
+    with open(path.join(path.dirname(__file__), 'msys2.gpg')) as key_file:
         pkg_key = key_file.read()
         gpg.import_keys(pkg_key)
 

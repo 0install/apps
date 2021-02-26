@@ -5,4 +5,4 @@ from github import releases
 releases = [{
     'version': release['tag_name'].strip('v'),
     'released': release['published_at'][0:10]
-} for release in releases('dotnet/docfx')]
+} for release in releases('dotnet/docfx') if not release['prerelease']]

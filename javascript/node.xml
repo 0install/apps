@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/javascript/node.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/javascript/node.xml">
   <name>Node.js</name>
   <summary>open-source, cross-platform JavaScript runtime environment</summary>
   <description>Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.</description>
@@ -3230,6 +3230,14 @@
       <manifest-digest sha256new="WAT43J4HHC77Q3JBCKUJJTDO63PTS27M3WH2T5LZBCVHRX6DHHMQ"/>
       <archive extract="node-v15.10.0-darwin-x64" href="https://nodejs.org/dist/v15.10.0/node-v15.10.0-darwin-x64.tar.gz" size="30609730" type="application/x-compressed-tar"/>
     </implementation>
+    <implementation arch="Linux-x86_64" version="15.11.0" released="2021-03-03" stability="testing" id="sha1new=82213d3916ef704bc8c9cc63d5311b5ebe2d2f97">
+      <manifest-digest sha256new="NJQB4X7NCKYIYDJPDPVETOXJS72CJQZV54J2HZC7T44C3HGLOCTQ"/>
+      <archive href="https://nodejs.org/dist/v15.11.0/node-v15.11.0-linux-x64.tar.xz" size="21997268" type="application/x-xz-compressed-tar" extract="node-v15.11.0-linux-x64"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="15.11.0" released="2021-03-03" stability="testing" id="sha1new=700f0529f4dba6e247b4e38b93e36adc1e590080">
+      <manifest-digest sha256new="KAZXPHHCODPZB3XXRSARWDMO2IUZZ3I7ZMHHFX7J243EPZDBBOQA"/>
+      <archive href="https://nodejs.org/dist/v15.11.0/node-v15.11.0-darwin-x64.tar.gz" size="30774151" type="application/x-compressed-tar" extract="node-v15.11.0-darwin-x64"/>
+    </implementation>
   </group>
 
   <group license="MIT License">
@@ -5850,6 +5858,14 @@
       <manifest-digest sha256new="PHUJXXYQQNJACBEUUOHULZ5BJS3OHNZIUXTV6LRIKDBKWL6HK3YQ"/>
       <archive extract="SourceDir/nodejs" href="https://nodejs.org/dist/v15.10.0/node-v15.10.0-x86.msi" size="27389952" type="application/x-msi"/>
     </implementation>
+    <implementation arch="Windows-x86_64" version="15.11.0" released="2021-03-03" stability="testing" id="sha1new=fb4af3e6b352e766656c8bac9f11871146c35bbf">
+      <manifest-digest sha256new="QCWCILYYGQHDJ7BL3MTM7Q6VSZ7E3CLAC3U6YV4VDVFSTVNBTFOA"/>
+      <archive href="https://nodejs.org/dist/v15.11.0/node-v15.11.0-x64.msi" size="29274112" type="application/x-msi" extract="SourceDir/nodejs"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="15.11.0" released="2021-03-03" stability="testing" id="sha1new=9043eb4cd694f1d39041cb014f4b2a71f3442d14">
+      <manifest-digest sha256new="T7FJEPM7XJK6LNZP24BBWXFHV4CL6BCS7GR7KIYQ5HEZOCMFHUAA"/>
+      <archive href="https://nodejs.org/dist/v15.11.0/node-v15.11.0-x86.msi" size="27508736" type="application/x-msi" extract="SourceDir/nodejs"/>
+    </implementation>
   </group>
 
   <entry-point binary-name="node" command="run"/>
@@ -5865,11 +5881,11 @@
   </entry-point>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmA3Y6UACgkQWao5J8JOTh4iiQf9FM8v
-MgSM7zznNnOa28TP+WOOGqPAv0ZDkdoumFU3zYH5E2+tn2YtBUGHU6d1b15jZ0/zIt1d+Q/OeRLR
-4LzRa7qHpC6MADHnS/kdk8J9d0Lsv5Ruu615I/lvIOFKzCy5zOYBGtbh49/Rg4DqICP4tZTQMpGL
-hQnTFlEZjy3a0a1VYkpelt7M0wiDhoSMo6qm0GvFE6RBSSznKjF4XnGO247YM8hFHOZwSFwDJzyV
-purNqJt9NEFQmLpN6yN7QJIDe5czxxk4rcJ3rmIiqFMAqNkAx1iRXl37r7etfa7x8FuqzQw3iDNU
-TzEyP5uQlifAhRFdZQD47NCWktzz1hL0hg==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmA/UNoACgkQWao5J8JOTh7+1Af+JzER
+6H5FbcHfA3+HDS2nqn/3dEK5Jv8BLV53gRv3aVGQDJ968zA4kxWY0YAIX64xconsgsSVjRrJ0bft
+EKoOfxAACaymaL9YnUJzrIktVclV9v1wr0hLniaVx7u/5lESLzfOLOfHIoV3RRHt+8Vu2iDs6Qan
+eqeg/xWAuRsEpEdJu6/Rp5CHP07eIyL/FuH3ehNC2Vj7Y+7emdWfXKyZ2NRMpM9PsKyIYXvlQ8A8
+/oALO61uMhFu4dWbHKOJ01kF3VVqeFSlYpFf87eLUmVCk4Q86Osdh8tyIw+swM472sDnN3iNKN8N
+iXPVLlXyzlud1UwiCdwxPMi7oZqlgWYNHw==
 
 -->

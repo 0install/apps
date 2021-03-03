@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/dotnet/core-sdk.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/dotnet/core-sdk.xml">
   <name>.NET Core SDK</name>
   <summary>tools for building .NET Core applications</summary>
   <homepage>https://dotnet.microsoft.com/</homepage>
@@ -772,6 +772,14 @@
       <manifest-digest sha256new="TQIKFLPPY3VJT6XO6QQQ56NG552ZKGKL7PD2KRR357TRMMPEWN3A"/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.103/dotnet-sdk-5.0.103-win-x86.zip" size="178970865" type="application/zip"/>
     </implementation>
+    <implementation arch="Windows-x86_64" version="5.0.200" released="2021-03-02" stability="stable" id="sha1new=fa3549893813693a16f97b29d49df93336547368">
+      <manifest-digest sha256new="QAE4YCDFRVJARM7ISUW7DRLA65VHWIEFLBNHVXBKVFISVMFIVACQ"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.200/dotnet-sdk-5.0.200-win-x64.zip" size="194629987" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="5.0.200" released="2021-03-02" stability="stable" id="sha1new=0aba94fa353391b469b16eb4c7af7cf879183c3b">
+      <manifest-digest sha256new="4K3C4BXCG347DMBJFB3FRSJHGOHQC7YQ5HAL6ODV7BQ6QQBHWCEA"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.200/dotnet-sdk-5.0.200-win-x86.zip" size="182574194" type="application/zip"/>
+    </implementation>
   </group>
 
   <group arch="Linux-x86_64" license="MIT License" main="dotnet">
@@ -1145,6 +1153,10 @@
       <manifest-digest sha256new="A3LK2DMWFQB3RB2LCRZ5T2NNTQBNHKXJHRPM36OGBU5U6QOHDJNQ"/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.103/dotnet-sdk-5.0.103-linux-x64.tar.gz" size="136760686" type="application/x-compressed-tar"/>
     </implementation>
+    <implementation version="5.0.200" released="2021-03-02" stability="stable" id="sha1new=0a6054b26ef300338e6a35cc16ebc56e2deac553">
+      <manifest-digest sha256new="G7IARZ22GTVQMHTWGW443P6SXARHNTNG54IADJ4KXASIWGEIAZEQ"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.200/dotnet-sdk-5.0.200-linux-x64.tar.gz" size="140062843" type="application/x-compressed-tar"/>
+    </implementation>
   </group>
 
   <group arch="MacOSX-x86_64" license="MIT License">
@@ -1351,16 +1363,20 @@
       <manifest-digest sha256new="WV577LY72GZTQVSTPB6FPA2DJJBOPPRJSW2B3YIINCKORHCPHBEA"/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.103/dotnet-sdk-5.0.103-osx-x64.tar.gz" size="131930469" type="application/x-compressed-tar"/>
     </implementation>
+    <implementation version="5.0.200" released="2021-03-02" stability="stable" id="sha1new=4df2a1d16e0ec6884ee6ecd30c36e9244e523f14">
+      <manifest-digest sha256new="RFFIXLBLKND5Z3UHUCA7UIMFTY7ZQMXH26XB2WW5J6IMBHSHSFNA"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.200/dotnet-sdk-5.0.200-osx-x64.tar.gz" size="135045096" type="application/x-compressed-tar"/>
+    </implementation>
   </group>
 
   <entry-point binary-name="dotnet" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmAjv7cACgkQWao5J8JOTh6/Wwf/T9FL
-Xk3TLVcew8MVH8mYs7HtcFPfWho8pHroq62d9FoTnmdPdw+6zb/IKFub9U+cgHV3DGIYqbxm7nQ1
-XxQhHViSxfimwbwWG7gpLCSOTMNjIZkMAGxLE2nv6uI+z/fNN0e1aVt5bbLsQcQlT5Vv45euJgBx
-hvGWuwXPc3vi6KTYcnFEXojc4GiQFk3vlQYmAJUC0d0RfwLtb0unqJJqDi2BycV5UValZU2ZPfK2
-AW5vw4JObzMypACq/N72PCs+MloWuS5eCCuY6vjbIaOEPbktuiE+oGuhWl8agd2eeVei3WJQEx6i
-pKLVzDSe1F4eAVeYEKVFQ10V5NhRYokxyA==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmA/UNkACgkQWao5J8JOTh4ooAgAh9JA
+CSGvOyc8DhkP789l292WYHb1WDSnhIHBh0Lw0xf8/qCeuxFH15F/Nbfmm1eIwGs6CiUOXTwueS00
+wqXPPCKBUTu/7FHnyFyjKyQLceoOVHS8qQ8TkBT83ERCXUgdfLoOxPdVOD5F/hLi6jXdBcYM0rtx
+2N91yFJS3x5aavSl2PsaTBUf/HA6DWkJoJn3wZwadYokWKSoVS7Dp0HmMYr2pbNoJkZ65mWV6/GG
+d427v+wpNhTyQA4CeZkEWLVljXN/UqSFguggKV2gbvq1NDv5Km02HNTi5gqU9+RxxnLDoK3FhFnQ
+F5BeZUm0PSrbqwMJBEjGgResndQvUhJBoA==
 
 -->

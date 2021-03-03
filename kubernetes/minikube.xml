@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/kubernetes/minikube.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/kubernetes/minikube.xml">
   <name>Minikube</name>
   <summary>run Kubernetes locally</summary>
   <description>Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day.</description>
@@ -1257,16 +1257,28 @@
       <manifest-digest sha256new="LGPWJA4Y567W2LHUKG7BER5TVXLUR72A3CU3YHKPWO4XKBUG5MQQ"/>
       <archive extract="out" href="https://storage.googleapis.com/minikube/releases/v1.18.0-beta.0/minikube-darwin-amd64.tar.gz" size="29263735" type="application/x-compressed-tar"/>
     </implementation>
+    <implementation arch="Windows-x86_64" version="1.18.0" released="2021-03-02" stability="stable" main="minikube-windows-amd64.exe" id="sha1new=59523c8c54281e1c068cd88f7971481f51823ca3">
+      <manifest-digest sha256new="BXXOJUIRT7OUEICZC5DGC2KJ746TP2F67E42NQWBW4FOXUUWTH3Q"/>
+      <archive href="https://storage.googleapis.com/minikube/releases/v1.18.0/minikube-windows-amd64.tar.gz" size="25498872" type="application/x-compressed-tar" extract="out"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.18.0" released="2021-03-02" stability="stable" main="minikube-linux-amd64" id="sha1new=d05a0f5b71e8f129647f0ed33eadd665bae0fd7a">
+      <manifest-digest sha256new="NXNTIQAI4LS5TDQEB72T6PUILPO3SQ2KKS4JLKFH4TTLHVDP6S4Q"/>
+      <archive href="https://storage.googleapis.com/minikube/releases/v1.18.0/minikube-linux-amd64.tar.gz" size="32103646" type="application/x-compressed-tar" extract="out"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.18.0" released="2021-03-02" stability="stable" main="minikube-darwin-amd64" id="sha1new=7580c097a2c4b2374b4d375ec587511a2bde16ed">
+      <manifest-digest sha256new="3R5EXMA2S2HIEFLOGIXV2OLY42SDMN7CBIB6XG4CCJ7KBOMU2YRA"/>
+      <archive href="https://storage.googleapis.com/minikube/releases/v1.18.0/minikube-darwin-amd64.tar.gz" size="29267201" type="application/x-compressed-tar" extract="out"/>
+    </implementation>
   </group>
 
   <entry-point binary-name="minikube" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmA5/4EACgkQWao5J8JOTh4ClAf9ETtm
-9QqYtiKrmvIfxVO7C9IPbkTDkf4tEdUfX1lP+tQZ0xRzvm4svY9Q48tNQhjlJAywZXJmXTh1ymUq
-tKAU/a5VAs8x0c4LfCXWbyKhvr2xaPZOhIphGARQytIQtT3AWcQqMaJTdydvbDnnWEODRetv+cnP
-LRD7tNf2fbibOibp5kjOmzcC8dQ2EZvTrBdFYXcUM8NTxGgfeqBwQ3AVMlLyQbEc+bx08quqNznp
-o35Evo3PrY6fvlHS9+MFp+M0LQbyH43utsJNoHEANLdG8pX6V14LR47cJwnqLmVJkiWBy5AgB0hg
-Yk6DYUAVLZiflVJuxgPUIdx6d1AAYfE6jw==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmA/UNkACgkQWao5J8JOTh7XiggAvwd4
+kLud4uTvpG8CtGptn3njlsSduSJqoJTE4n+eD9mW7bIjOlsMqiAyu8sV72PjbXFLiX8b8RprRazD
+rDeMGANve789fCrrEcmU3dVAXDY2wtwm+P0MzSvFEvJNOC2Wve+OhCfNe6iVFk3HcEtStA+hEfdf
+aL7pZWkg20cPAlMTohdtfV/E6S3b5YIrnjEJ8rYq8AiyYnRjPsljSDeSZjBsZKk6A7yhWKiYL0OT
+crNECw8Wezz1NkNk82sHD5ZyqOMf+rjDnbGMcwfU8x25PFdRD/YK4apNKadTL0dR5O7q6m3YXQ8h
+07wJaDnLbXKNQp/W3HEdkQPDC+n8KtSL+g==
 
 -->

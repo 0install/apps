@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="https://apps.0install.net/devel/azure-cli.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uri="https://apps.0install.net/devel/azure-cli.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Azure CLI</name>
   <summary>set of commands used to create and manage Azure resources</summary>
   <description>The Azure command-line interface (Azure CLI) is a set of commands used to create and manage Azure resources. The Azure CLI is available across Azure services and is designed to get you working quickly with Azure, with an emphasis on automation.</description>
@@ -199,6 +199,10 @@
     <implementation arch="Windows-*" id="sha1new=9cced6b7a43e2af000e84da81e6f88a31708f01b" released="2021-02-10" version="2.19.1">
       <manifest-digest sha256new="6MCD5NI47BEZLSL3HED6ELS4HH2FCSRDV4CXNO4HXY3TM7JYJCHA"/>
       <archive extract="SourceDir/Microsoft SDKs/Azure/CLI2" href="https://azurecliprod.blob.core.windows.net/msi/azure-cli-2.19.1.msi" size="50663424" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-*" version="2.20.0" released="2021-03-02" id="sha1new=9b6258e4cdf0e11ebf28d0cdb1d8c85b09a512d2">
+      <manifest-digest sha256new="2WPG6VW455BNUDG2CNQJ7OS22K2E2ZFK4YMCJYZAKUWJ45E5A7WA"/>
+      <archive href="https://azurecliprod.blob.core.windows.net/msi/azure-cli-2.20.0.msi" size="52436992" type="application/x-msi" extract="SourceDir/Microsoft SDKs/Azure/CLI2"/>
     </implementation>
   </group>
 </interface>

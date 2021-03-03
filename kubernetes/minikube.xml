@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="https://apps.0install.net/kubernetes/minikube.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/kubernetes/minikube.xml">
   <name>Minikube</name>
   <summary>run Kubernetes locally</summary>
   <description>Minikube is a tool that makes it easy to run Kubernetes locally. Minikube runs a single-node Kubernetes cluster inside a VM on your laptop for users looking to try out Kubernetes or develop with it day-to-day.</description>
@@ -1255,6 +1255,18 @@
     <implementation arch="Darwin-x86_64" id="sha1new=280b6418f4fac05b69b8d59e838a4bf5e51c2169" main="minikube-darwin-amd64" released="2021-02-26" stability="testing" version="1.18.0-pre2-0">
       <manifest-digest sha256new="LGPWJA4Y567W2LHUKG7BER5TVXLUR72A3CU3YHKPWO4XKBUG5MQQ"/>
       <archive extract="out" href="https://storage.googleapis.com/minikube/releases/v1.18.0-beta.0/minikube-darwin-amd64.tar.gz" size="29263735" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.18.0" released="2021-03-02" stability="stable" main="minikube-windows-amd64.exe" id="sha1new=59523c8c54281e1c068cd88f7971481f51823ca3">
+      <manifest-digest sha256new="BXXOJUIRT7OUEICZC5DGC2KJ746TP2F67E42NQWBW4FOXUUWTH3Q"/>
+      <archive href="https://storage.googleapis.com/minikube/releases/v1.18.0/minikube-windows-amd64.tar.gz" size="25498872" type="application/x-compressed-tar" extract="out"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.18.0" released="2021-03-02" stability="stable" main="minikube-linux-amd64" id="sha1new=d05a0f5b71e8f129647f0ed33eadd665bae0fd7a">
+      <manifest-digest sha256new="NXNTIQAI4LS5TDQEB72T6PUILPO3SQ2KKS4JLKFH4TTLHVDP6S4Q"/>
+      <archive href="https://storage.googleapis.com/minikube/releases/v1.18.0/minikube-linux-amd64.tar.gz" size="32103646" type="application/x-compressed-tar" extract="out"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.18.0" released="2021-03-02" stability="stable" main="minikube-darwin-amd64" id="sha1new=7580c097a2c4b2374b4d375ec587511a2bde16ed">
+      <manifest-digest sha256new="3R5EXMA2S2HIEFLOGIXV2OLY42SDMN7CBIB6XG4CCJ7KBOMU2YRA"/>
+      <archive href="https://storage.googleapis.com/minikube/releases/v1.18.0/minikube-darwin-amd64.tar.gz" size="29267201" type="application/x-compressed-tar" extract="out"/>
     </implementation>
   </group>
 

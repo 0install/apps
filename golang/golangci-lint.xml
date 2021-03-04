@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/golang/golangci-lint.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/golang/golangci-lint.xml">
   <name>GolangCI-Lint</name>
   <summary>linters runner for Go</summary>
   <description>Linters Runner for Go. Nice colored output. Can report only new issues. Fewer false-positives. Yaml/toml config.</description>
@@ -793,6 +793,18 @@
       <manifest-digest sha256new="CUIZ2MZM2VCWBHBAW5U3GAJIGMKIR3WA5XX2TOZ5VDANJEZCUHDQ"/>
       <archive extract="golangci-lint-1.37.1-darwin-amd64" href="https://github.com/golangci/golangci-lint/releases/download/v1.37.1/golangci-lint-1.37.1-darwin-amd64.tar.gz" size="7762532" type="application/x-compressed-tar"/>
     </implementation>
+    <implementation arch="Linux-x86_64" version="1.38.0" released="2021-03-03" stability="stable" id="sha1new=d5c6fe2fa53c05e34caba37401e2aceea3047bfa">
+      <manifest-digest sha256new="WDYLIIJUBCGC6RY5FTHGKXUZHIS4BZUJMVUPV4GLFXEEM6Z2EIPQ"/>
+      <archive href="https://github.com/golangci/golangci-lint/releases/download/v1.38.0/golangci-lint-1.38.0-linux-amd64.tar.gz" size="7255084" type="application/x-compressed-tar" extract="golangci-lint-1.38.0-linux-amd64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="1.38.0" released="2021-03-03" stability="stable" id="sha1new=f21eebf19abe315eb5b0c90791dc48e76997b5be">
+      <manifest-digest sha256new="KRXYVRCTTPUT6SHOSZSAB2JV367CFTDVD4THBORQOIBFT2WOJU7A"/>
+      <archive href="https://github.com/golangci/golangci-lint/releases/download/v1.38.0/golangci-lint-1.38.0-linux-386.tar.gz" size="6746791" type="application/x-compressed-tar" extract="golangci-lint-1.38.0-linux-386"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.38.0" released="2021-03-03" stability="stable" id="sha1new=6121ddb34f498d04bab92a9cfe65f41389a0b520">
+      <manifest-digest sha256new="XZWPYALZUVL74J3W4PVKH7GCMOHFYFS6DTBZ6IFFMTBJ4JNSOBXQ"/>
+      <archive href="https://github.com/golangci/golangci-lint/releases/download/v1.38.0/golangci-lint-1.38.0-darwin-amd64.tar.gz" size="7816348" type="application/x-compressed-tar" extract="golangci-lint-1.38.0-darwin-amd64"/>
+    </implementation>
   </group>
 
   <group license="GPL v3 (GNU General Public License">
@@ -1238,14 +1250,22 @@
       <manifest-digest sha256new="OCUWO6B3UQVARMN6JJM6NSI4BKCSZB5RRFLOFZRQ3GNKMQWECMOQ"/>
       <archive extract="golangci-lint-1.37.1-windows-386" href="https://github.com/golangci/golangci-lint/releases/download/v1.37.1/golangci-lint-1.37.1-windows-386.zip" size="6990437" type="application/zip"/>
     </implementation>
+    <implementation arch="Windows-x86_64" version="1.38.0" released="2021-03-03" stability="stable" id="sha1new=e05e88a589a0ae30b75becb93b57265cdb040142">
+      <manifest-digest sha256new="SJZJMZ7VXOTXNC5ABY5BN5J3JCCVTOBJD7IS5NB3DQEJOASYXCBA"/>
+      <archive href="https://github.com/golangci/golangci-lint/releases/download/v1.38.0/golangci-lint-1.38.0-windows-amd64.zip" size="7371632" type="application/zip" extract="golangci-lint-1.38.0-windows-amd64"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.38.0" released="2021-03-03" stability="stable" id="sha1new=4b2dd67ed27b4ee18f9057293c12161a5ef12334">
+      <manifest-digest sha256new="SHH6MJULGOWR6NUCIAK4MOCPBXVXZ3E5HE22ZSO7LW4UNE6OMQGQ"/>
+      <archive href="https://github.com/golangci/golangci-lint/releases/download/v1.38.0/golangci-lint-1.38.0-windows-386.zip" size="7041151" type="application/zip" extract="golangci-lint-1.38.0-windows-386"/>
+    </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmA0xEkACgkQWao5J8JOTh6+owf/TR+Q
-JinzqGAuCzTv1tLwiXRitb5Rp2itOLMRyhI9c9Al2KzRqO0wN3Wha5TBk6tbIVGivnEc8Gdn7oDe
-FX8/d8O5y5I9+Mkk5TKvanW12TwksKFgEmxgG6nbi7r/0Lbk3ii4wg4cJTH/Mk6PKoLy0QQzoAWp
-eB/GD5tQi9Qgbs4EPm1b3g547NfEMh55aWeGdEscIrWE8/0xB595XQSJC1/9S9d/XUJua6S2ZJ8f
-3E2+6IuECl8IJd3EQWE9bH36qhyvJp9E9XC8m3urmS2OxWUyupx5FmnSId7VkjsnPr5CDaD05ccX
-ZcrY53S0IYTLeI2yq4QnZJZq9YAoQTdgJA==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmBAnsIACgkQWao5J8JOTh7JEQf/X6DR
+drPYI7o9PLdvCqLnWh9dc4SDeLlPHIE6tqzGVUZGVvmsKyqH2zD2vxM73cxG0jR+nCuf/U29d8tK
+WVqYjof5qjIPJnM624m1Ju3s2mdhEQLK4PZmatAbDNB2zpuTttqu9pTZFEr63ktdVINhvYAD/Gb1
+dPxXd0duGQLezyoyejNEXCRsUtresndDSEHDdZKhu4f+CjDqMa5gH0IT7u3E6K05I7rFfij4iGgr
+Z1n22QBbKSGP1pQg6MyJKAl936EPdWE4uOXmvjCiExKyB9NgZJcqpllCEpTtdn1Vr/kavtyzPjDi
+Vwoa9kTYCdsKyDxmWJ3we4yVP8rhVBYnNw==
 
 -->

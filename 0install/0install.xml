@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<interface uri="https://apps.0install.net/0install/0install.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Zero Install</name>
+  <summary>0install, the decentralized installation system</summary>
+  <description>Zero Install is a cross-platform, decentralized installation system. Instead of having a central repository in which all software is placed under a naming scheme managed by some central authority, programs and libraries in Zero Install are identified by URIs. Anyone who can create a web-page can publish software. Anyone can install software (not just administrators).</description>
+  <homepage>https://0install.net/</homepage>
+  <needs-terminal/>
+
+  <icon href="https://0install.net/feed_icons/ZeroInstall.png" type="image/png"/>
+  <category>System</category>
+
+  <feed src="https://apps.0install.net/0install/0install-ocaml.xml" arch="POSIX-*"/>
+  <feed src="https://apps.0install.net/0install/0install-python.xml" arch="POSIX-*"/>
+  <feed src="https://apps.0install.net/0install/0install-win.xml" arch="Windows-*"/>
+  <package-implementation distributions="Virtual" package="go" main="/usr/bin/0install"/><!-- Prevent this virtual feed from being seen as a library feed -->
+
+  <entry-point binary-name="0install" command="run"/>
+</interface>

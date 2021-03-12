@@ -5,4 +5,4 @@ from github import tags
 
 releases = [{
     'version': tag['name']
-} for tag in tags('aws/aws-cli') if tag['name'][0:2] == '2.' and tag['name'] != '2.1.29' and not 'dev' in tag['name']]
+} for tag in tags('aws/aws-cli') if tag['name'][0:2] == '2.' and tag['name'] != '2.1.29' and tag['name'] != '2.1.30' and not 'dev' in tag['name']]

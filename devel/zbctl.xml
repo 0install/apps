@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="https://apps.0install.net/devel/zbctl.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/devel/zbctl.xml">
   <name>zbctl</name>
   <summary>command line interface to interact with Zeebe</summary>
   <description>zbctl is the command line interface to interact with Zeebe.</description>
@@ -489,6 +489,18 @@
     <implementation arch="Windows-x86_64" id="sha1new=7d9a9fe3f02e63d66822f66604f1152b2a551d0a" main="zbctl.exe" released="2021-02-18" stability="stable" version="0.26.1">
       <manifest-digest sha256new="HDNEAI2YX7XNJQU7GCWYE2PB25VMQKXAB3FRHP3AZHWMCAJRVDCQ"/>
       <file dest="zbctl.exe" href="https://github.com/zeebe-io/zeebe/releases/download/0.26.1/zbctl.exe" size="13255680"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.0.0-pre2" released="2021-03-09" stability="testing" main="zbctl" id="sha1new=746b82386d997b99f3a58adea14da77b0c893de3">
+      <manifest-digest sha256new="YQCJP72JHHV5HFN4J75RPFRHFDKWT3UP5QIJGKBQ6AG7JVMCONHQ"/>
+      <file href="https://github.com/zeebe-io/zeebe/releases/download/1.0.0-alpha2/zbctl" size="13685410" dest="zbctl" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.0.0-pre2" released="2021-03-09" stability="testing" main="zbctl" id="sha1new=0e7a245e796d2d2cdc901865d5b96113fbbca85e">
+      <manifest-digest sha256new="F5Y5CLRBGRZ6IJXTPHRDL75EKDABQE52XXCGESIRFUSGYU3FRK6Q"/>
+      <file href="https://github.com/zeebe-io/zeebe/releases/download/1.0.0-alpha2/zbctl.darwin" size="13582096" dest="zbctl" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.0.0-pre2" released="2021-03-09" stability="testing" main="zbctl.exe" id="sha1new=74f6cd5441074d0fba413ea16c9e3cd4c7a9b379">
+      <manifest-digest sha256new="E6NDN7GLC5EVM4REKBVPMBSVCDHGVU5VZGX2CFN4XU7MVR73E6GA"/>
+      <file href="https://github.com/zeebe-io/zeebe/releases/download/1.0.0-alpha2/zbctl.exe" size="13510144" dest="zbctl.exe"/>
     </implementation>
   </group>
 </interface>

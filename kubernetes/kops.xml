@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/kubernetes/kops.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/kubernetes/kops.xml">
   <name>Kubernetes Operations (kops)</name>
   <summary>production grade Kubernetes installation, upgrades, and management</summary>
   <description>kops helps you create, destroy, upgrade and maintain production-grade, highly available, Kubernetes clusters from the command line.</description>
@@ -857,16 +857,24 @@
       <manifest-digest sha256new="U5TSANVMCCXQ6ATDYCD4SUKAPQJHY5GC42ILLW6BLSFNO4YBVVCQ"/>
       <file dest="kops" executable="true" href="https://github.com/kubernetes/kops/releases/download/v1.20.0-beta.1/kops-darwin-amd64" size="151728800"/>
     </implementation>
+    <implementation arch="Linux-x86_64" version="1.20.0-pre2-2" released="2021-03-12" stability="testing" main="kops" id="sha1new=e86eb360f714517f4cd58c99ae615bcbf4c1503e">
+      <manifest-digest sha256new="H42PMHZMPZ5MMD54IF6WIHJLJIEZXJAV7OIRXXW36NLLY4H5UHSA"/>
+      <file href="https://github.com/kubernetes/kops/releases/download/v1.20.0-beta.2/kops-linux-amd64" size="153262254" dest="kops" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.20.0-pre2-2" released="2021-03-12" stability="testing" main="kops" id="sha1new=b91c8727225e6d672a3cad04167ce82bc824062b">
+      <manifest-digest sha256new="RMDZPBH4WNZZVF5VFGZGWK2DWHYQJ7QOZGAS3RGJ6WPFKHOJDF3Q"/>
+      <file href="https://github.com/kubernetes/kops/releases/download/v1.20.0-beta.2/kops-darwin-amd64" size="152969424" dest="kops" executable="true"/>
+    </implementation>
   </group>
 
   <entry-point binary-name="kops" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmA3Y6QACgkQWao5J8JOTh7LPwf9HGa6
-URn1mSmQ8YL85xSw52Dk9/J/CfRGdaZTfdqaGPvMJp/C/Al3KHYtESKPlk8ZP8QQkg5G79Amjf6k
-G9Jr2fo/GGuOxTSLz/D61GxigGMSowEukUaHhJcZPfSfxyhjyogCBfENou4l6sJ7QBIPdff9XhhD
-PBMwiPI/5dFSokGzIFFoOimpRGvJV+IdgnhnGgp0NdYwRwLRRI+4q8Dw43L14qgVQ0s1xORBY8Ba
-enZbri0XKPHcX7vhlSVP9GbnxhLfFeqMlckEyKteIm9ooL9yoljXf6UYfB6trH6XcnaGY6WL7xGU
-/i5o7jnUO1DctG5YOm3FmOF7Q8GMjr+leg==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmBMbTwACgkQWao5J8JOTh7qVQf/VYVi
+DG1jwj1lfk2ICG0XiUV3ZNPVMjVy7Oa4lctpuXeODc5JkHrN67VR3Lt3uit8/Fi+tonTJOII2pGj
+R7Dp36C6j/p2MiuKH56WZ2oe/09v2zpnOBuML4D6Xkd5dwpALHXR4Ak3+cKNVCc38yD0/PYBo8l3
+9ujw4/I4Dx9A02t6pfCAn6G++EGgCMM+QzJCy+puj+1eDWHj+XkxkXSMNRkRZlDgUE6hHYFH9u4v
+QGT43PrbGpsi4edND6J2Au3UiA2gp6rtkdLSOuvipnUNLxIqQbNoE2jwIBaTjm7nQ66Ee4J+LPtb
+1X64vsykswlBPA0/EYOCZa0bduPiQspRYA==
 
 -->

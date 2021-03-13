@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/kubernetes/helm-3.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/kubernetes/helm-3.xml">
   <name>Kubernetes Helm 3.x</name>
   <summary>the Kubernetes package manager</summary>
   <description>Helm is a tool for managing Kubernetes charts. Charts are packages of pre-configured Kubernetes resources.</description>
@@ -366,6 +366,14 @@
         <manifest-digest sha256new="ICOS7VFUF5WMBTPG3OUKJV57GWBEMRNHX7JAKNX3XM24OPNR4XVA"/>
         <archive extract="darwin-amd64" href="https://get.helm.sh/helm-v3.5.2-darwin-amd64.tar.gz" size="13042733" type="application/x-compressed-tar"/>
       </implementation>
+      <implementation arch="Linux-x86_64" version="3.5.3" released="2021-03-10" stability="stable" id="sha1new=1c81eaff21d71fbafb7881f48678c3454987e022">
+        <manifest-digest sha256new="ZRYTKXPXOXQEFEVOQJBOG4YCG2U66HQGWSVZEU6BEBDMXI3Y7AIA"/>
+        <archive href="https://get.helm.sh/helm-v3.5.3-linux-amd64.tar.gz" size="12373244" type="application/x-compressed-tar" extract="linux-amd64"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" version="3.5.3" released="2021-03-10" stability="stable" id="sha1new=ad35d77905ed5fad57f2eb974b03e86047992f18">
+        <manifest-digest sha256new="FKTKVGFZMB6KPQVMV74FWYSUKXR4EWETYX3LTHN5MA2CXMTT6RVQ"/>
+        <archive href="https://get.helm.sh/helm-v3.5.3-darwin-amd64.tar.gz" size="13047199" type="application/x-compressed-tar" extract="darwin-amd64"/>
+      </implementation>
     </group>
     <group>
       <command name="run" path="helm.exe"/>
@@ -545,15 +553,19 @@
         <manifest-digest sha256new="PFXREMRTRE7YXLXUYCSTEQTWC6I656PTWJ4GVS6JHGX4MKDL7EDQ"/>
         <archive extract="windows-amd64" href="https://get.helm.sh/helm-v3.5.2-windows-amd64.tar.gz" size="12532935" type="application/x-compressed-tar"/>
       </implementation>
+      <implementation arch="Windows-x86_64" version="3.5.3" released="2021-03-10" stability="stable" id="sha1new=277424c43ed10d77cf9106b68159ccf6708c809e">
+        <manifest-digest sha256new="JYANU6JID33BJ4PKQVULGTGLPH7GPKPG3DAS4GHUOFDTXA2DT42Q"/>
+        <archive href="https://get.helm.sh/helm-v3.5.3-windows-amd64.tar.gz" size="12537914" type="application/x-compressed-tar" extract="windows-amd64"/>
+      </implementation>
     </group>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmAdATUACgkQWao5J8JOTh4Jmwf/Ze0y
-5hG53UaByXp1Wm39n/tsnXaDJuuTwnUSyYkMrZWRNBFXFfKOH2GGiiCuyFQyt4OWNcRi3WmSNfCG
-8XNnKoalblr6c1MXFZo/bbE5mARv/p/EAPOEChK4bOZXu5LBwr/rMkEjB0pz+RRaVhmI+Z9fu7oI
-s30zYurFYnioHnXmNQ5C1jTRxwgE+KqsnCFcwS6/E9eVRT9PowSVrYr8PaMQuoaLOa4yNxdnqLqq
-LzsXDOyxdN1qQGpf6a5liAn0xFsP6RrwfYWxaiPu0mu4TVjJV2XFloWkD4UzzdEiwS81n2ChmYjw
-pyjHQbtsah77VB1cCcsZ8Po/GbqLVEVEPw==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmBMbTwACgkQWao5J8JOTh7FiQf/YkDl
+5Yfg79xEATvdFA/raAs3NSEICfhGLJh4frLEyB8njgb9YUnHpRxTa59n3TK8sh4mktZEa4H8SNVJ
+4BzdBeMU43KrcqiPOLN4p7CLdAwOPdDFb4lbKN3VU1AZIn05cqmfv+2uqlaC+hgRTaHjFKmtjzb+
+27mJg2W0Gm5emFdifqjK9cJ6g/zmIHARoCqxkchMZnO8BuZcbbplMykWLH4lgrcm1Mt5h4CYmgeG
+c9oJZVVT4hDmfnW4olZu0XGuAJSGInBKWEy25hzXyMIl+CeeW2zg28UKbbtoLJDYMlMgyDvsMLRG
+nzhP2oUwU9gOkLR8QVauUmK2JHGDihZtgw==
 
 -->

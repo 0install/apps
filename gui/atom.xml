@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/gui/atom.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/gui/atom.xml">
   <name>Atom</name>
   <summary>the hackable text editor</summary>
   <description>Atom is a hackable text editor for the 21st century, built on Electron, and based on everything we love about our favorite editors. We designed it to be deeply customizable, but still approachable using the default configuration.</description>
@@ -779,11 +779,27 @@
       <manifest-digest sha256new="IT2U7LAGGOARL7ZU65VLD4JJCYLZ3RJ6Y2XSR2FWZMHTEKEE2QWQ"/>
       <archive extract="Atom.app" href="https://github.com/atom/atom/releases/download/v1.54.0/atom-mac.zip" size="203683411" type="application/zip"/>
     </implementation>
+    <implementation arch="Windows-x86_64" version="1.55.0" released="2021-03-09" stability="stable" main="Atom.exe" id="sha1new=bd6dd8fdc7e8494f4ed105d6acc3d7be8772cbb5">
+      <manifest-digest sha256new="222V6D4WFWVVOF2AZ7NHQWXL5JMKPC4XF6XMXN44R43MSU5RFGUA"/>
+      <archive href="https://github.com/atom/atom/releases/download/v1.55.0/atom-x64-windows.zip" size="193766768" type="application/zip" extract="Atom x64"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.55.0" released="2021-03-09" stability="stable" main="Atom.exe" id="sha1new=deeb53bced26ec709efbc1f36da99463dbd4e350">
+      <manifest-digest sha256new="IPY7JKRD642YBPVY3COE7L7PDHN6KEJ5AZUUUKQ6OV23GEKPSINA"/>
+      <archive href="https://github.com/atom/atom/releases/download/v1.55.0/atom-windows.zip" size="188101733" type="application/zip" extract="Atom"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.55.0" released="2021-03-09" stability="stable" main="atom" id="sha1new=7b4d403cb95a3ef3c75bddc170bcff024f190ea4">
+      <manifest-digest sha256new="5737ZCVVIVVTQFMW7LWGJHTJ5I2JNBACH2XMRFLZISRW2U54U2FQ"/>
+      <archive href="https://github.com/atom/atom/releases/download/v1.55.0/atom-amd64.tar.gz" size="193419030" type="application/x-compressed-tar" extract="atom-1.55.0-amd64"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="1.55.0" released="2021-03-09" stability="stable" main="Contents/MacOS/Atom" id="sha1new=60db57a6cf723c06c943766ad021310d0a99d5d2">
+      <manifest-digest sha256new="WCBASAYY7ONEDSJQHGKIL2RR5MH5Z2KNEOFCL7SHCQRHFLEG2KXQ"/>
+      <archive href="https://github.com/atom/atom/releases/download/v1.55.0/atom-mac.zip" size="205375762" type="application/zip" extract="Atom.app"/>
+    </implementation>
   </group>
 
   <entry-point app-id="com.squirrel.atom.x64" binary-name="atom" command="run"/>
 
-  <capabilities os="Windows" xmlns="http://0install.de/schema/desktop-integration/capabilities">
+  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities" os="Windows">
     <url-protocol id="atom">
       <description>Atom URL</description>
       <verb args="--uri-handler -- &quot;%V&quot;" command="atom" name="open"/>
@@ -801,11 +817,11 @@
   </capabilities>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmAAGssACgkQWao5J8JOTh7c1gf7BxZY
-eurtUOWUI1o90i6G2rulklYtK0mr6DQ6jXcivhv3gMIgjbWm+rRq4zzwSIvNlhnVXR/9EawZS715
-ce+66XHFwZFLp+U9RL7fWqP6Rv4/CF7kn2rLz5w4ztFMYnxVD5ckfu12AarDXv8Raycu9J7OXQYn
-OXq+0/skIj0SpelEBeO2Swm144NDFBvw3Po3uqe1As8sZqMfdZ2remVgdUqe/1FKY6fER/AHuuul
-d/GBEbqqMz8mA32RHLDiPVNH/yR2BnMxfXsWBp7wDx1Xj/jobUK16JdFaoDpHml3zQF6E72Kic0O
-39GVIi7L8vS1lZi5u4SSAmXAed8zDUdP+w==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmBMbTwACgkQWao5J8JOTh6HcAf/ReKK
+MdMaeK0Mu2Og7aHNNGbpuP+18trZbdrA+SKhcH4pCoyz2MVWgTVTiA9VJPxMsluPYEVFiafN5IiV
+wLUil/9MZxR3Ed7r6GRNH+CCbkgBgUUwF6niqWOKMapNQ40o4wtVYRKdcJtEnXyH3m3R4z/eoCsx
+NzYwcg39iUIkykwI7BMDiWeeCbe27RkMVbZVX2etFL3FtBwQA+lXrmv4+bmHoiDAovFCIwjjaPbO
+Sm+d1QIg5KdUeBVAjBigXaUbBfR/bLSFZiCWk2qLhVlmWUgvieGQrkgokp4xaTE7zDHLz3ylMDgs
+qX/Bn0CeFDL4RQI4ReXXkbN8qiG5yzT52A==
 
 -->

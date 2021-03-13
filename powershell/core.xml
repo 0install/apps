@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/powershell/core.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/powershell/core.xml">
   <name>PowerShell Core</name>
   <summary>cross-platform version of PowerShell</summary>
   <homepage>https://github.com/PowerShell/PowerShell</homepage>
@@ -255,6 +255,22 @@
       <manifest-digest sha256new="ZIUWHDLK7JYOGMW72UZUZNMNNRHDHPBCBMIIN275WC5JWQSX7IOQ"/>
       <archive href="https://github.com/PowerShell/PowerShell/releases/download/v7.1.2/PowerShell-7.1.2-win-x86.zip" size="91476931" type="application/zip"/>
     </implementation>
+    <implementation arch="Windows-x86_64" version="7.0.6" released="2021-03-11" stability="stable" id="sha1new=1ee9ec97693fbc7c84edb5294026e29d7331adf4">
+      <manifest-digest sha256new="5GNTY33YAGXRILIKT5XYAV3A6LQ25N7RJE2TU7MHURJTXRHNWCZQ"/>
+      <archive href="https://github.com/PowerShell/PowerShell/releases/download/v7.0.6/PowerShell-7.0.6-win-x64.zip" size="93031618" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="7.0.6" released="2021-03-11" stability="stable" id="sha1new=e4b98e4adbe3c2807d4779ee022cd720928ecf9b">
+      <manifest-digest sha256new="ESRMIX6FGZMTJC2BYJN27SBUG3PZNN767ELUAB7MXZPN24ZFFK2Q"/>
+      <archive href="https://github.com/PowerShell/PowerShell/releases/download/v7.0.6/PowerShell-7.0.6-win-x86.zip" size="84412541" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="7.1.3" released="2021-03-11" stability="stable" id="sha1new=6f949e807d991380b51ac9e5d9bc5713e2525ab9">
+      <manifest-digest sha256new="XASE2KVEFDPYQONKHJ45KTOFCWVK74OBH4CRAMQQ7AMDHFVX2AZQ"/>
+      <archive href="https://github.com/PowerShell/PowerShell/releases/download/v7.1.3/PowerShell-7.1.3-win-x64.zip" size="101225165" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="7.1.3" released="2021-03-11" stability="stable" id="sha1new=346450a5a673c62683b255871a805619a5f29dcc">
+      <manifest-digest sha256new="TMO3T5VZ2KTXA7E7FX7RAMXGLAXWNDUWFIL4BFNF6NYPAIRS5I6Q"/>
+      <archive href="https://github.com/PowerShell/PowerShell/releases/download/v7.1.3/PowerShell-7.1.3-win-x86.zip" size="91468404" type="application/zip"/>
+    </implementation>
   </group>
 
   <group license="MIT License" main="pwsh">
@@ -390,16 +406,24 @@
       <manifest-digest sha256new="IHLKTY6SO4MYJQOKVPYX2ZIISYPTT2KWNK7DT24J5GPQZ3MENAJA"/>
       <archive href="https://github.com/PowerShell/PowerShell/releases/download/v7.1.2/powershell-7.1.2-linux-x64.tar.gz" size="68259723" type="application/x-compressed-tar"/>
     </implementation>
+    <implementation arch="Linux-x86_64" version="7.0.6" released="2021-03-11" stability="stable" id="sha1new=fbd46805f909296ebfeaba5f6585af91ab7c4a79">
+      <manifest-digest sha256new="5QP4MNYLPIATTIF7GISS4SPKGICT3FII3L5KVB5FNG5HKIP62IBA"/>
+      <archive href="https://github.com/PowerShell/PowerShell/releases/download/v7.0.6/powershell-7.0.6-linux-x64.tar.gz" size="58284673" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="7.1.3" released="2021-03-11" stability="stable" id="sha1new=f430247811a87f4b6267bee8931e929350f9a05c">
+      <manifest-digest sha256new="ECSOP3E4Z27X77U2UWVD7YWX6Z4PLJQ5OQS63EIVKKBQZDLXYR2A"/>
+      <archive href="https://github.com/PowerShell/PowerShell/releases/download/v7.1.3/powershell-7.1.3-linux-x64.tar.gz" size="68289291" type="application/x-compressed-tar"/>
+    </implementation>
   </group>
 
   <entry-point binary-name="pwsh" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmAnmjwACgkQWao5J8JOTh5bIQf+MSJt
-xPHpaUC6NB08hbbbb+uiN9AeelUMKLLxjnFGfgYYXyENhttnZlYY8XRKGgEpzRnxikiozx2pXFKq
-HacTp6jlETvOPMaveQX3Mwt8qU8QocDSKC9b/gf5WEJPMdLW5bPomk/wJDsAXoHe/cEqaVMHKTn6
-dbqmiFx0ZHiFfsP2nEjlw61RNc8HbWqTnwmfG4VGsJzGhVifYQ4I0vKcOFQpUKf8gdRlUBNF6kWr
-cCfpAUvUyBVr6KgyGnvOCFWG3b4G8zTUihEHIjxgpL+abfO3GqWEOP7Op91VNVGWYhoBusprNYf2
-KOF+kWgOnmBNbEv0zDWmTPaWrEyLycwI0w==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmBMbTwACgkQWao5J8JOTh7gqQf/SvnM
+XNiw0eDu7t04/EhQK85we3oHM6oLOrygNRDM/7dzaSbgjHuAP9dPCbtqxgbpdXBUD1W5788UHAxb
+sFq6DmBvnGBWrrHMNa19OO0CaykoUKiui8D1Ts91Azve95HLVqaY4RykZwpZykH+V3HAJQq0P8oM
+X9QMTPdjnVru6SD1ebMmu5VRUoytNxQ1pG6epLzaBCcTNhVjoY/LuIhOF4ARX1qiER3XFRdKusK8
+ywWTFB2y7XQWNAoCdXMX3u9b7h/bkCD6bT3ww8KEohzLc2OaRyebq4w6g5eu4kt7qYJ9fHBwnAk9
+1bkgMyfmmdTHBdpIt4n9ong1OhOvMEHpSQ==
 
 -->

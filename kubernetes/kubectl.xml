@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/kubernetes/kubectl.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/kubernetes/kubectl.xml">
   <name>kubectl</name>
   <summary>controls the Kubernetes cluster manager</summary>
   <description>Command-line client that controls the Kubernetes cluster manager.</description>
@@ -2987,6 +2987,18 @@
         <manifest-digest sha256new="LQZ2XKJBHLY7UITCJYXNP3RBGSZFM6P3DN26SA644RLFSA6KPMAA"/>
         <archive extract="kubernetes" href="https://dl.k8s.io/v1.21.0-beta.0/kubernetes-client-darwin-amd64.tar.gz" size="24261399" type="application/x-compressed-tar"/>
       </implementation>
+      <implementation arch="Linux-x86_64" version="1.21.0-pre2-1" released="2021-03-09" stability="testing" id="sha1new=e1bd0af743082a98e2da1b4fcc4ea0b723ab37ed">
+        <manifest-digest sha256new="BX6NVOW46WUBK5LOPSBAGX4OXZJVUJSMCYRLDUAMLF542YAAZSWQ"/>
+        <archive href="https://dl.k8s.io/v1.21.0-beta.1/kubernetes-client-linux-amd64.tar.gz" size="28498890" type="application/x-compressed-tar" extract="kubernetes"/>
+      </implementation>
+      <implementation arch="Linux-i486" version="1.21.0-pre2-1" released="2021-03-09" stability="testing" id="sha1new=d4e1701cae5d69210bff96e1e89aa0ec0a06c0a5">
+        <manifest-digest sha256new="6QM5FHMWZZPW6IMFKY7KQNX55NHWAIKIQF5ZMXZ4LE7ILY3HAEGA"/>
+        <archive href="https://dl.k8s.io/v1.21.0-beta.1/kubernetes-client-linux-386.tar.gz" size="23499478" type="application/x-compressed-tar" extract="kubernetes"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" version="1.21.0-pre2-1" released="2021-03-09" stability="testing" id="sha1new=dce10952d610763f7030897a42f71470fc63b915">
+        <manifest-digest sha256new="3VZSNULRGHXMKLYI2QAUFS3BK6VW46L7SYEHW65NH2CHZA6TXWHQ"/>
+        <archive href="https://dl.k8s.io/v1.21.0-beta.1/kubernetes-client-darwin-amd64.tar.gz" size="28097519" type="application/x-compressed-tar" extract="kubernetes"/>
+      </implementation>
     </group>
     <group>
       <command name="run" path="client/bin/kubectl.exe"/>
@@ -4974,17 +4986,25 @@
         <manifest-digest sha256new="WAVGOAALJFCRKYZNR2SP5JA6C64DJ7H7XP5AK2HZQNEAC5DCKE7Q"/>
         <archive extract="kubernetes" href="https://dl.k8s.io/v1.21.0-beta.0/kubernetes-client-windows-386.tar.gz" size="22889414" type="application/x-compressed-tar"/>
       </implementation>
+      <implementation arch="Windows-x86_64" version="1.21.0-pre2-1" released="2021-03-09" stability="testing" id="sha1new=9d41ce71fd259dd4384db523b7f14cfdea4bcb50">
+        <manifest-digest sha256new="6AHPLRDC6HSEFGUKXGE7TZ4HNMQXMHTBY3Q5PCILP2KKJLLRJPMA"/>
+        <archive href="https://dl.k8s.io/v1.21.0-beta.1/kubernetes-client-windows-amd64.tar.gz" size="25997120" type="application/x-compressed-tar" extract="kubernetes"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="1.21.0-pre2-1" released="2021-03-09" stability="testing" id="sha1new=84b524a1fb81e7b5320cba2d02cedbe95827c73f">
+        <manifest-digest sha256new="KUJKA3FHUNSFYXOFOUPUQZJWWOP3FEEQ2AKNOELFYRNSIPYWZ66Q"/>
+        <archive href="https://dl.k8s.io/v1.21.0-beta.1/kubernetes-client-windows-386.tar.gz" size="24827297" type="application/x-compressed-tar" extract="kubernetes"/>
+      </implementation>
     </group>
   </group>
 
   <entry-point binary-name="kubectl" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmA3Y6QACgkQWao5J8JOTh5OkQf9G51j
-nRrDXnapve24fCIsADcz70yDVvJ4Rb+1mapMtuD01vGa5HWwgAlpmjSOVhpgmH9Vyu+BlyHDM24x
-oejViPiTXo4vSCtsI0F2y0EvE6gFGbmLtwgTXDsdpXbHm59X7M4E+VdHA/q31lAOSTdR763wCTSe
-mhWuJyvTHTOG7/TtgxlGjRNG0QV2soAS8GCAki+7NcqPRjlfhs8lu3tMpMnuOd73FUQWBO40taOG
-QtTPWQ5x9qCjKMYSUD/9lOr4rp74dE/M9pu/u7W+2Xs4uIWBFf9NbFzNLpaiitlhtpL7Fb25Z6hn
-aiDptmQG1r7CIJUjVkf779fqO1r0wtUAPQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmBMbTwACgkQWao5J8JOTh7QPAgAjqN3
+KecLMeR20jk9fGb6v/3z06eKyjvDbyNKwAn92R4oz5IEyeBmHqKSmZRyO4kv879voL657HjAY4tg
+V3hEc4tNYfoUrGEzDwPli55ZkyxH1viC4GsMXhvxzVmOJJn7na6uMoliH+8AFVcWT76RF77I7Gx8
+CiV+bqTC256Q2q3yPQ/9suadVp5HuPTwdmwYVXFL+mHjwJKsPxFio1fHeTYKvbNE/BemoPrafyu5
+KM5y0xvFfWYNYj5kbSfuWTizUYzmSJT80Gm0zcMKQmntT3U35cYszKhPzb0KL1a3KUb6QMtSOFIM
+65A8VlZR7MWJu7+MTtr7Ur12c5OFFqULXg==
 
 -->

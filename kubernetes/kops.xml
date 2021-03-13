@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="https://apps.0install.net/kubernetes/kops.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/kubernetes/kops.xml">
   <name>Kubernetes Operations (kops)</name>
   <summary>production grade Kubernetes installation, upgrades, and management</summary>
   <description>kops helps you create, destroy, upgrade and maintain production-grade, highly available, Kubernetes clusters from the command line.</description>
@@ -855,6 +855,14 @@
     <implementation arch="Darwin-x86_64" id="sha1new=208eb345130f2330460f43e724e017c2a2e193b6" main="kops" released="2021-02-23" stability="testing" version="1.20.0-pre2-1">
       <manifest-digest sha256new="U5TSANVMCCXQ6ATDYCD4SUKAPQJHY5GC42ILLW6BLSFNO4YBVVCQ"/>
       <file dest="kops" executable="true" href="https://github.com/kubernetes/kops/releases/download/v1.20.0-beta.1/kops-darwin-amd64" size="151728800"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.20.0-pre2-2" released="2021-03-12" stability="testing" main="kops" id="sha1new=e86eb360f714517f4cd58c99ae615bcbf4c1503e">
+      <manifest-digest sha256new="H42PMHZMPZ5MMD54IF6WIHJLJIEZXJAV7OIRXXW36NLLY4H5UHSA"/>
+      <file href="https://github.com/kubernetes/kops/releases/download/v1.20.0-beta.2/kops-linux-amd64" size="153262254" dest="kops" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.20.0-pre2-2" released="2021-03-12" stability="testing" main="kops" id="sha1new=b91c8727225e6d672a3cad04167ce82bc824062b">
+      <manifest-digest sha256new="RMDZPBH4WNZZVF5VFGZGWK2DWHYQJ7QOZGAS3RGJ6WPFKHOJDF3Q"/>
+      <file href="https://github.com/kubernetes/kops/releases/download/v1.20.0-beta.2/kops-darwin-amd64" size="152969424" dest="kops" executable="true"/>
     </implementation>
   </group>
 

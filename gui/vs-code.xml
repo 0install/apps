@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="https://apps.0install.net/gui/vs-code.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uri="https://apps.0install.net/gui/vs-code.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Visual Studio Code</name>
   <summary>lightweight but powerful source code editor</summary>
   <description>Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Python, PHP, Go) and runtimes (such as .NET and Unity).</description>
@@ -1465,6 +1465,22 @@
     <implementation arch="MacOSX-*" id="sha1new=0785ff30b24a7b9a55cc78ae81777f624422607f" main="Contents/MacOS/Electron" released="2021-03-05" stability="stable" version="1.54.1">
       <manifest-digest sha256new="NQP2QYLLB3I6W3FEJDMZXVMNUYDMOWGLSCTFRKZHPF26GBAEBDMQ"/>
       <archive extract="Visual Studio Code.app" href="https://update.code.visualstudio.com/1.54.1/darwin/stable" size="105540197" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.54.2" released="2021-03-12" stability="stable" main="Code.exe" id="sha1new=728e9bf37f756dc56dbbc50f7845ddac072bb7d1">
+      <manifest-digest sha256new="KQDTXKHI4SBEZJSGTCA6NQA2V5ZIHTOVW6ZXLMJDZTD4AO6D2GKA"/>
+      <archive href="https://update.code.visualstudio.com/1.54.2/win32-x64-archive/stable" size="100280019" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.54.2" released="2021-03-12" stability="stable" main="Code.exe" id="sha1new=0e44ad9feb0a851571c2a94605a79aec946b638d">
+      <manifest-digest sha256new="R2VEI3UXKA3T727BEUFV4S7S4XUE7WOJA7GQB3CDDQ6I5QHMHYYQ"/>
+      <archive href="https://update.code.visualstudio.com/1.54.2/win32-archive/stable" size="95859250" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.54.2" released="2021-03-12" stability="stable" main="bin/code" id="sha1new=8513cbaadb93c46f4acb72e312891ce0df9d2e4f">
+      <manifest-digest sha256new="CBWK566SHEDJPLAE2Y4CH4J5IIQMN2GDQ2IRPY3RR4MEHWFLO4XQ"/>
+      <archive href="https://update.code.visualstudio.com/1.54.2/linux-x64/stable" size="98888733" type="application/x-compressed-tar" extract="VSCode-linux-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="1.54.2" released="2021-03-12" stability="stable" main="Contents/MacOS/Electron" id="sha1new=649c815b76f0ee65c278f838dce17c582cf94a65">
+      <manifest-digest sha256new="V2VCWDFOHJ7QHVSLRRXNQ2B5S2CPKHWQNP5KZ6APBHGSYELNSAQA"/>
+      <archive href="https://update.code.visualstudio.com/1.54.2/darwin/stable" size="105542546" type="application/zip" extract="Visual Studio Code.app"/>
     </implementation>
   </group>
 

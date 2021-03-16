@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="https://apps.0install.net/gui/filezilla.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/gui/filezilla.xml">
   <name>FileZilla</name>
   <summary xml:lang="en">cross-platform FTP, FTPS and SFTP client</summary>
   <summary xml:lang="de">Plattform-übergreifender FTP, FTPS and SFTP Klient</summary>
@@ -719,6 +719,28 @@
     <implementation arch="MacOSX-i686" id="sha1new=b12649f6f193684a6948f4db170bf2f3dd519f0b" main="Contents/MacOS/filezilla" released="2021-01-18" stability="stable" version="3.52.2">
       <manifest-digest sha256new="UAZLBAABDMCSXJNHJDDT2KH6C3BAMS6MAI3HD35R2IPEAJTMGEYQ"/>
       <archive extract="FileZilla.app" href="https://download.filezilla-project.org/client/FileZilla_3.52.2_macosx-x86.app.tar.bz2" size="14204514" type="application/x-bzip-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="3.53.0" released="2021-03-15" stability="stable" main="filezilla.exe" id="sha1new=39141f9925b2ce58d1834141df8cdf055de3e3f3">
+      <manifest-digest sha256new="2SR3RINOMH4BDUPRRYVFQ5HM7OWUOQNLEGVVNZLSFDOEX236TEMA"/>
+      <recipe>
+        <archive href="https://download.filezilla-project.org/client/FileZilla_3.53.0_win64.zip" size="16214600" type="application/zip" extract="FileZilla-3.53.0"/>
+        <archive href="filezilla.config.zip" size="332" type="application/zip"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-i486" version="3.53.0" released="2021-03-15" stability="stable" main="filezilla.exe" id="sha1new=fc680c41d46f55e4814b5ce8e5e667739674c760">
+      <manifest-digest sha256new="R6VS6SJLIS2HMRC3HU3JMEWBRLFSQEEJMSXIWOUJG3DXLWQF2PLA"/>
+      <recipe>
+        <archive href="https://download.filezilla-project.org/client/FileZilla_3.53.0_win32.zip" size="16169503" type="application/zip" extract="FileZilla-3.53.0"/>
+        <archive href="filezilla.config.zip" size="332" type="application/zip"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="3.53.0" released="2021-03-15" stability="stable" main="bin/filezilla" id="sha1new=e00e9fe4b7434a1eff833ce5021b29e18b68740e">
+      <manifest-digest sha256new="FBFGH5NLX2CZF7ZMUOGHBQC34LZ64PJA5NZJFTBW6YQJRZVT64FA"/>
+      <archive href="https://download.filezilla-project.org/client/FileZilla_3.53.0_x86_64-linux-gnu.tar.bz2" size="14614246" type="application/x-bzip-compressed-tar" extract="FileZilla3"/>
+    </implementation>
+    <implementation arch="MacOSX-i686" version="3.53.0" released="2021-03-15" stability="stable" main="Contents/MacOS/filezilla" id="sha1new=713b4d76ecd68ff63115115a6fe2ad10170cdf1f">
+      <manifest-digest sha256new="BDHCXOL4GOYPY7I64TNAEAAYJSIR5VVYTKTPQHQGWDAIQVNYPT5Q"/>
+      <archive href="https://download.filezilla-project.org/client/FileZilla_3.53.0_macosx-x86.app.tar.bz2" size="14349627" type="application/x-bzip-compressed-tar" extract="FileZilla.app"/>
     </implementation>
   </group>
 </interface>

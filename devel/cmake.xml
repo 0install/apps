@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="https://apps.0install.net/devel/cmake.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile" uri="https://apps.0install.net/devel/cmake.xml">
   <name>CMake</name>
   <summary>cross platform make</summary>
   <description>CMake is a family of tools designed to build, test and package software. CMake is
@@ -571,6 +571,10 @@ workspaces that can be used in the compiler environment of your choice.</descrip
       <manifest-digest sha256new="5BVABW3GFADOQLEDVOVTD5ADKQIRDAW3FMIZWBYZ54MI6UGUJ3MA"/>
       <archive extract="cmake-3.19.6-Linux-x86_64" href="https://cmake.org/files/v3.19/cmake-3.19.6-Linux-x86_64.tar.gz" size="42650953" type="application/x-compressed-tar"/>
     </implementation>
+    <implementation arch="Linux-x86_64" version="3.19.7" released="2021-03-15" stability="stable" id="sha1new=ea19470c2bcafadee3d78d153273ae14dd01b9fe">
+      <manifest-digest sha256new="ZUJPWCYKAP6D25A6TXDGT5ICTJVSPYMYBQPNSFWIUVGDWHDDCSSA"/>
+      <archive href="https://cmake.org/files/v3.19/cmake-3.19.7-Linux-x86_64.tar.gz" size="42654194" type="application/x-compressed-tar" extract="cmake-3.19.7-Linux-x86_64"/>
+    </implementation>
   </group>
 
   <group license="BSD License (revised)">
@@ -1126,6 +1130,10 @@ workspaces that can be used in the compiler environment of your choice.</descrip
     <implementation arch="MacOSX-*" id="sha1new=7c124d86bf8ecefa1dd494f30c8d9be790ce8d9e" released="2021-02-24" stability="stable" version="3.19.6">
       <manifest-digest sha256new="JYPJHSPFAB3LKR2YPUUGDIWCRGZ7KAZHSFXPWZGVJKLRDKNA74DQ"/>
       <archive extract="cmake-3.19.6-macos-universal" href="https://cmake.org/files/v3.19/cmake-3.19.6-macos-universal.tar.gz" size="64439805" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="3.19.7" released="2021-03-15" stability="stable" id="sha1new=6df821da82a72bddd216b648a49a769dad5bedff">
+      <manifest-digest sha256new="5OTYUY6VDUUDO5XSZYABPKFPZKF5AZDSRHAH3FBUR53FG5RRXRRA"/>
+      <archive href="https://cmake.org/files/v3.19/cmake-3.19.7-macos-universal.tar.gz" size="64448325" type="application/x-compressed-tar" extract="cmake-3.19.7-macos-universal"/>
     </implementation>
   </group>
 
@@ -2226,6 +2234,14 @@ workspaces that can be used in the compiler environment of your choice.</descrip
       <manifest-digest sha256new="XPGPR7QCDAPAPZ3NPNWQL72KVUAEKMM746R7YEZIFQV4HDXSKLDA"/>
       <archive extract="SourceDir/CMake" href="https://cmake.org/files/v3.19/cmake-3.19.6-win32-x86.msi" size="25219072" type="application/x-msi"/>
     </implementation>
+    <implementation arch="Windows-x86_64" version="3.19.7" released="2021-03-15" stability="stable" id="sha1new=40ecc93853f4916551c82041a3714a5b62c1c045">
+      <manifest-digest sha256new="J7PLRIMHKI4PKLJ6JUT4KBTPRNIM43GYMVNB2B7LDE22N7EFNCXA"/>
+      <archive href="https://cmake.org/files/v3.19/cmake-3.19.7-win64-x64.msi" size="27181056" type="application/x-msi" extract="SourceDir/CMake"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="3.19.7" released="2021-03-15" stability="stable" id="sha1new=702d2ef70ca1ea0815bf10dc72a80672b6efa1a3">
+      <manifest-digest sha256new="XX677BHRR4XFDRQS2MY3RTCZ32XGVLYAJVZFDI7PSSGUGPDRXW2Q"/>
+      <archive href="https://cmake.org/files/v3.19/cmake-3.19.7-win32-x86.msi" size="25227264" type="application/x-msi" extract="SourceDir/CMake"/>
+    </implementation>
   </group>
 
   <group arch="*-src" license="BSD License (revised)">
@@ -2776,6 +2792,10 @@ workspaces that can be used in the compiler environment of your choice.</descrip
     <implementation compile:binary-main="bin/cmake" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" compile:dup-src="true" id="sha1new=4643263a9f6aab744ab71144065d50ef8a7ab33d" released="2021-02-24" stability="stable" version="3.19.6">
       <manifest-digest sha256new="ZO6HHLUJTUZFD23WI7HVVMQKQGQC5XSSHXVONQXB7MV3MJNQZVCQ"/>
       <archive extract="cmake-3.19.6" href="https://cmake.org/files/v3.19/cmake-3.19.6.tar.gz" size="9270931" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation version="3.19.7" released="2021-03-15" stability="stable" id="sha1new=574d7712136fc28fad779c9d8666986a8eb72022" compile:binary-main="bin/cmake" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" compile:dup-src="true">
+      <manifest-digest sha256new="GCPYE7T5ODEWFVOFYXD6ONEVORMEXBVUKUY5QOZ6VLNJBO75AY4A"/>
+      <archive href="https://cmake.org/files/v3.19/cmake-3.19.7.tar.gz" size="9271358" type="application/x-compressed-tar" extract="cmake-3.19.7"/>
     </implementation>
   </group>
 

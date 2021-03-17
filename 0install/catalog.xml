@@ -1,9 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type='text/xsl' href='../resources/catalog.xsl'?>
-<c:catalog xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:c="http://0install.de/schema/injector/catalog"><interface uri="https://apps.0install.net/0install/0watch.xml"><name>0watch</name><summary>scans websites for new releases and triggers 0template if required</summary><description>
+<c:catalog xmlns:c="http://0install.de/schema/injector/catalog" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"><interface uri="https://apps.0install.net/0install/0compile.xml"><name>0compile</name><summary>create a binary release from source code</summary><description>
+0compile creates a binary from source code, either for your own use or ready for
+publishing on the web through Zero Install. It can use Zero Install to download
+any build dependencies (compilers, header files, build tools, etc).
+
+This is useful if there is no binary for your platform, or if you wish to modify
+the program in some way.
+
+If plash is installed, it is used to sandbox the build so that it can't
+accidentally modifiy any files outside of the build directory.
+
+For a full tutorial, see 0compile's homepage.</description><homepage>https://docs.0install.net/tools/0compile/</homepage><category>Development</category><needs-terminal/></interface><interface uri="https://apps.0install.net/0install/0install-runenv-cli.xml"><name>0install-runenv-cli</name><summary>0install .NET helper for Windows</summary><description>
+    When 0install needs to add a new program to %PATH% on Windows, it uses this
+    package to creates a .NET launcher application.
+</description><homepage>https://0install.net/</homepage><category>System</category></interface><interface uri="https://apps.0install.net/0install/0publish.xml"><name>0publish</name><summary>utility to make creating injector interfaces easier</summary><description>
+0publish makes creating and modifying injector interface files easier. It can
+create a new commented template for you or edit an existing one.
+
+Various editing operations are available, the most basic being to let you edit
+it in your preferred text editor. It automatically removes the signature when
+loading an interface and creates a new one when writing it back out. It will
+also validate the new version before saving it.
+
+A tutorial on 0publish can be found at https://docs.0install.net/packaging/.</description><homepage>https://docs.0install.net/tools/0publish/</homepage><needs-terminal/></interface><interface uri="https://apps.0install.net/0install/0publish-gui.xml"><name>0publish-gui</name><summary>GTK editor for Zero Install feeds</summary><description>
+Publishing a program using Zero Install requires you to create an XML file
+listing the available versions, where to get them, and what other software they
+depend on.
+
+This program provides a simple graphical interface for creating and editing
+these feeds.</description><homepage>https://docs.0install.net/packaging/</homepage><icon href="https://0install.net/feed_icons/0publish-gui.png" type="image/png"/><category>Development</category></interface><interface uri="https://apps.0install.net/0install/0release.xml"><name>0release</name><summary>manage new releases with Zero Install</summary><description>
+If you have a local feed in the development version of your program, 0release
+can help you to create new releases easily.</description><homepage>https://docs.0install.net/tools/0release/</homepage><category>Development</category><needs-terminal/></interface><interface uri="https://apps.0install.net/0install/0repo.xml"><name>0repo</name><summary>manage a repository of 0install feeds</summary><description>
+    0repo allows a group of developers to publish a set of feeds. It can be
+    used by a single developer, generating a set of static files to publish on
+    a web-server, or as a service which accepts signed updates from a group
+    of developers.
+  </description><homepage>https://docs.0install.net/tools/0repo/</homepage><needs-terminal/></interface><interface uri="https://apps.0install.net/0install/0template.xml"><name>0template</name><summary>utility to make creating feeds easier</summary><description>
+    0template takes a template XML file (e.g. with place-holders for the version),
+    fills in the place-holders, and then fills in everything else it can. For example,
+    it will download the archive, fill in the size, calculate the digests, etc.
+  </description><homepage>https://docs.0install.net/tools/0template/</homepage><needs-terminal/><entry-point binary-name="0template" command="run"/></interface><interface uri="https://apps.0install.net/0install/0test.xml"><name>0test</name><summary>test Zero Install programs</summary><description>
+Use 0test to run the unit tests for a Zero Install program. You can use this to
+test released versions or developer snapshots. You can give a selection of
+versions to test, and you can test against different versions of dependencies to
+create a matrix of test results.</description><homepage>https://docs.0install.net/tools/0test/</homepage><category>Development</category><needs-terminal/></interface><interface uri="https://apps.0install.net/0install/0watch.xml"><name>0watch</name><summary>scans websites for new releases and triggers 0template if required</summary><description>
     0watch scans websites for new releases using arbritary Python code snippets.
     When new releases are detected 0template is used to create/update a Zero Install feed.
-  </description><homepage>https://github.com/0install/0watch</homepage><needs-terminal/><entry-point binary-name="0watch" command="run"/></interface><interface uri="https://apps.0install.net/0install/0install-dotnet.xml"><name>Zero Install - .NET Core version</name><summary>.NET Core version of 0install, the decentralized installation system</summary><description>This is the .NET Core version of Zero Install. Zero Install is a cross-platform, decentralized installation system. Instead of having a central repository in which all software is placed under a naming scheme managed by some central authority, programs and libraries in Zero Install are identified by URIs. Anyone who can create a web-page can publish software. Anyone can install software (not just administrators).</description><icon href="https://raw.githubusercontent.com/0install/0install-dotnet/master/icon.png" type="image/png"/><icon href="https://raw.githubusercontent.com/0install/0install-dotnet/master/icon.ico" type="image/vnd.microsoft.icon"/><homepage>https://github.com/0install/0install-dotnet</homepage><needs-terminal/></interface><interface uri="https://apps.0install.net/0install/0publish-win.xml"><name>Zero Install Publishing Tools</name><summary xml:lang="en">helps you create and update Zero Install feeds</summary><summary xml:lang="de">hilft Ihnen beim Erstellen und Aktualisieren von Zero Install Feeds</summary><description xml:lang="en">Zero Install uses feeds, XML files on the internet, to describe applications and how to download them. The Zero Install Publishing Tools allow you to create your own feeds. It consists of two main components:
+  </description><homepage>https://github.com/0install/0watch</homepage><needs-terminal/><entry-point binary-name="0watch" command="run"/></interface><interface uri="https://apps.0install.net/0install/feedlint.xml"><name>FeedLint</name><summary>check your Zero Install feeds</summary><description>
+FeedLint is a tool for Zero Install feed authors. It checks that your Zero
+Install feed can be downloaded, that it is valid and that all the links in it
+still work.
+
+Run this on all your feeds from time-to-time to make sure they still work.</description><homepage>https://docs.0install.net/tools/feedlint/</homepage><category>Development</category><needs-terminal/></interface><interface uri="https://apps.0install.net/0install/0install.xml"><name>Zero Install</name><summary>0install, the decentralized installation system</summary><description>Zero Install is a cross-platform, decentralized installation system. Instead of having a central repository in which all software is placed under a naming scheme managed by some central authority, programs and libraries in Zero Install are identified by URIs. Anyone who can create a web-page can publish software. Anyone can install software (not just administrators).</description><homepage>https://0install.net/</homepage><needs-terminal/><icon href="https://0install.net/feed_icons/ZeroInstall.png" type="image/png"/><category>System</category><entry-point binary-name="0install" command="run"/></interface><interface uri="https://apps.0install.net/0install/0install-dotnet.xml"><name>Zero Install - .NET Core version</name><summary>.NET Core version of 0install, the decentralized installation system</summary><description>This is the .NET Core version of Zero Install. Zero Install is a cross-platform, decentralized installation system. Instead of having a central repository in which all software is placed under a naming scheme managed by some central authority, programs and libraries in Zero Install are identified by URIs. Anyone who can create a web-page can publish software. Anyone can install software (not just administrators).</description><icon href="https://raw.githubusercontent.com/0install/0install-dotnet/master/icon.png" type="image/png"/><icon href="https://raw.githubusercontent.com/0install/0install-dotnet/master/icon.ico" type="image/vnd.microsoft.icon"/><homepage>https://github.com/0install/0install-dotnet</homepage><needs-terminal/></interface><interface uri="https://apps.0install.net/0install/0install-ocaml.xml"><name>Zero Install - OCaml version</name><summary>OCaml version of 0install, the decentralized installation system</summary><description>This is the OCaml version of Zero Install. Zero Install is a cross-platform, decentralized installation system. Instead of having a central repository in which all software is placed under a naming scheme managed by some central authority, programs and libraries in Zero Install are identified by URIs. Anyone who can create a web-page can publish software. Anyone can install software (not just administrators).</description><homepage>https://0install.net/</homepage><icon href="https://0install.net/feed_icons/ZeroInstall.png" type="image/png"/><category>System</category></interface><interface uri="https://apps.0install.net/0install/0install-python.xml"><name>Zero Install - Python version</name><summary>Python version of 0install, the decentralized installation system</summary><description>This is the Python version of Zero Install. Zero Install is a cross-platform, decentralized installation system. Instead of having a central repository in which all software is placed under a naming scheme managed by some central authority, programs and libraries in Zero Install are identified by URIs. Anyone who can create a web-page can publish software. Anyone can install software (not just administrators).</description><homepage>https://0install.net/</homepage><icon href="https://0install.net/feed_icons/ZeroInstall.png" type="image/png"/><category>System</category></interface><interface uri="https://apps.0install.net/0install/0publish-win.xml"><name>Zero Install Publishing Tools</name><summary xml:lang="en">helps you create and update Zero Install feeds</summary><summary xml:lang="de">hilft Ihnen beim Erstellen und Aktualisieren von Zero Install Feeds</summary><description xml:lang="en">Zero Install uses feeds, XML files on the internet, to describe applications and how to download them. The Zero Install Publishing Tools allow you to create your own feeds. It consists of two main components:
 the Feed Editor (split with screen graphical and XML view)
 and the New Feed Wizard (walks you through the entire feed creation process, automatically extracts metadata when possible)</description><description xml:lang="de">Zero Install verwendet Feeds, XML Dateien im Internet, um Anwendungen sowie deren Download zu beschreiben. Die Zero Install Publishing Tools ermöglichen es Ihnen, Ihre eigenen Feeds zu erstellen. Sie bestehen aus zwei Hauptkomponenten:
 Der Feed Editor (Split Screen mit grafischer und XML Ansicht)
@@ -24,11 +73,11 @@ und der New Feed Wizard (leitet Sie durch den kompletten Feed-Erstellungsprozess
     <summary xml:lang="en">the main graphical user interface</summary>
   </entry-point></interface></c:catalog>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl/4XCcACgkQWao5J8JOTh46aQf+Nhfy
-M1/+VjB2bN+UJqEo649AmycjDbqajzjqO/K7EHLdMBvvblSWPANv26ePO0D+JiTHxVSnhJaiRv+p
-/6PudOElOYjHIH/QtWIYHNNv8pIhgj+B3/SPDFf5ohoRlxG9q1haFn3Ijnv9Dsw8NoHMe+/I/IsE
-80NBFUT64FxxwFoh87iFGhueqPBcw/KPlHV+SDaq6gPM7ZlBCbGTKf5wjuw87JRvHF2VTbSDMBUJ
-WMwM08ySzgiRyX0zm7XgeWQAKcWIrTBVo1iP1S5RKLTHHUHYWHCwf0VSxdacBxi9bWZH5zPP189c
-MjOIHJ9hSBZ4f6QCGE+LtBQSmfxdwmQDYQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmBSFscACgkQWao5J8JOTh7IMQf+LQDF
+E0QwgHMCR9ZPNlccMqWzUsCjhocFBs5+57f2gtYI2nQMbvpjtMaDHrq1zQ/droAAZOK2+W3xGe4i
+23Ea5OEyEjlfe2Yq/LYtlECTvDH23t8mHeAzTj/0id5ML2j168twNAu/nlJYaqwArkQ2n3LvW580
+sGJnLTnSYWGAqwnJ6dq1gtcRHFSH62BexLGshWDTCyPhpeau7lkScRSpDMv0pl0boULF/qoxV1NV
+gs/U1EpTR172hkqsqgSQar6GRkKpA1FD7sF/1E54vQTDiJKZdHHTPtoTHKat+BmoYhpCGTtN3KIK
+s9KM3Gu8tSO51A1gRf0u0TL17VlahTz9ZQ==
 
 -->

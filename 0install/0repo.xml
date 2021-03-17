@@ -1,0 +1,177 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/0install/0repo.xml">
+  <name>0repo</name>
+  <summary>manage a repository of 0install feeds</summary>
+  <description>
+    0repo allows a group of developers to publish a set of feeds. It can be
+    used by a single developer, generating a set of static files to publish on
+    a web-server, or as a service which accepts signed updates from a group
+    of developers.
+  </description>
+  <homepage>https://docs.0install.net/tools/0repo/</homepage>
+  <needs-terminal/>
+
+  <release:management xmlns:release="http://zero-install.sourceforge.net/2007/namespaces/0release"><!-- Update the copy of the version number in the code -->
+    <release:action phase="commit-release">sed -i &quot;s/^version = '.*'$/version = '$RELEASE_VERSION'/&quot; 0repo.py</release:action>
+  </release:management>
+
+  <group license="OSI Approved :: GNU Lesser General Public License (LGPL)">
+    <command name="run" path="0repo.py">
+      <runner interface="https://apps.0install.net/python/python.xml"/>
+    </command>
+
+    <requires interface="https://apps.0install.net/python/python.xml">
+      <version before="3" not-before="2.7"/>
+    </requires>
+
+    <group>
+      <command name="test" path="tests/test0repo.py">
+        <runner interface="https://apps.0install.net/python/python.xml"/>
+        <executable-in-path name="0repo"/>
+      </command>
+
+      <requires interface="https://apps.0install.net/0install/0publish.xml">
+        <executable-in-var name="ZEROPUBLISH"/>
+      </requires>
+
+      <requires interface="https://apps.0install.net/0install/0install-python.xml">
+        <environment insert="" mode="prepend" name="PYTHONPATH"/>
+        <version before="2.2-post" not-before="2.2"/>
+      </requires>
+
+      <implementation id="sha1new=83e04487e2691fc722be397d673bd284bd09723d" released="2013-05-02" version="0.1">
+        <manifest-digest sha256new="TRQFEPTMXP7NMDA53PKEATAI5AZ7ALMLXRVNWVZ5S7V4KWDWE4UA"/>
+        <archive extract="0repo-0.1" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.1/0repo-0.1.tar.bz2" size="42276"/>
+      </implementation>
+    </group>
+
+    <group>
+      <requires interface="https://apps.0install.net/0install/0install-python.xml">
+        <environment insert="" mode="prepend" name="PYTHONPATH"/>
+        <version before="2.2-post" not-before="2.2"/>
+      </requires>
+      <command name="test" path="tests/runall.py">
+        <runner interface="https://apps.0install.net/python/python.xml"/>
+        <executable-in-path name="0repo"/>
+      </command>
+      <implementation id="sha1new=dd216a0f13d28e3559040673748375eeb3892274" released="2013-05-05" stability="stable" version="0.2">
+        <manifest-digest sha256new="GQP2DQNZV3T6NVFU6EEPXE6GNR2PZ2YMWPM5NN64GW3N2EVH4YSA"/>
+        <archive extract="0repo-0.2" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.2/0repo-0.2.tar.bz2" size="52074"/>
+      </implementation>
+    </group>
+    <group>
+      <requires interface="https://apps.0install.net/0install/0install-python.xml">
+        <environment insert="" mode="prepend" name="PYTHONPATH"/>
+        <version not-before="2.2-post"/>
+      </requires>
+      <command name="test" path="tests/runall.py">
+        <runner interface="https://apps.0install.net/python/python.xml"/>
+        <executable-in-path name="0repo"/>
+      </command>
+      <implementation id="sha1new=3b8029c925e7e9d1543ec252065ee6f337e7987d" released="2014-01-20" stability="stable" version="0.3">
+        <manifest-digest sha256new="X6EYKYV4E5GAXHMNI47Y46BYSCUUV5GEE4BR4MZFCACU4BN3U6OA"/>
+        <archive extract="0repo-0.3" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.3/0repo-0.3.tar.bz2" size="54945"/>
+      </implementation>
+      <group>
+        <requires interface="https://apps.0install.net/devel/git.xml">
+          <environment insert="." name="PATH"/>
+        </requires>
+        <implementation id="sha1new=a1f0d2f4759ff228559568ea124427c4c75574eb" released="2015-07-11" stability="stable" version="0.4">
+          <manifest-digest sha256new="WPNAAW4FQJUM2NMWUYLUJBKEC2WMYXT4A5V753G2YFTSPNWQQNDQ"/>
+          <archive extract="0repo-0.4" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.4/0repo-0.4.tar.bz2" size="55279"/>
+        </implementation>
+      </group>
+      <group>
+        <requires interface="https://apps.0install.net/devel/git.xml">
+          <executable-in-path name="git"/>
+        </requires>
+        <requires interface="https://apps.0install.net/utils/gnupg.xml">
+          <executable-in-path name="gpg"/>
+        </requires>
+        <implementation id="sha1new=b576684699a8e727bfbe45ae449661cc29306dfa" released="2017-08-14" version="0.5">
+          <manifest-digest sha256new="63XKKNZSMUBASPULZ6Q2ERZ426S5WVIV2IRIQXOZLGXPSASHWZZA"/>
+          <archive extract="0repo-0.5" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.5/0repo-0.5.tar.bz2" size="58335"/>
+        </implementation>
+        <implementation id="sha1new=0eb126c57deb114c090872448efc251670409702" released="2017-08-22" stability="stable" version="0.5.1">
+          <manifest-digest sha256new="66YRLRC3WXU2NUFZQERWDFY6BEVAKQKRRA7V6RNDHKUKL4GSOQLQ"/>
+          <archive extract="0repo-0.5.1" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.5.1/0repo-0.5.1.tar.bz2" size="58353"/>
+        </implementation>
+        <implementation id="sha1new=53736211bf0dd28dbc899388c1b5d17decd12f00" released="2017-11-15" stability="stable" version="0.5.2">
+          <manifest-digest sha256new="U66D7DUIZWSAW7ONV4JMNVXACF7V6WRNCWKLPMBYCHE5W3GGQ7CA"/>
+          <archive extract="0repo-0.5.2" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.5.2/0repo-0.5.2.tar.bz2" size="58499"/>
+        </implementation>
+        <implementation id="sha1new=16473af76756d848e4450019d6c258253109d09d" released="2018-03-25" stability="stable" version="0.6">
+          <manifest-digest sha256new="3EOPKU4SDDHPOODDQKAYH7XFEV5LRZ3S2QDC4PGFITKHF3KUN37Q"/>
+          <archive extract="0repo-0.6" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.6/0repo-0.6.tar.bz2" size="58909"/>
+        </implementation>
+        <implementation id="sha1new=df0b8df17a63b478b1482909b4b7d6b09fdb6b5b" released="2019-03-02" stability="stable" version="0.7">
+          <manifest-digest sha256new="3P62CQ6EU36QZNIOBDJKYBWC7RZB7OHRYFY4L3MZFNDYWN24Z2ZQ"/>
+          <archive extract="0repo-0.7" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.7/0repo-0.7.tar.bz2" size="59067"/>
+        </implementation>
+        <implementation id="sha1new=c93cece6c5c9e053fd4c7052658597f4da316707" released="2019-05-14" stability="stable" version="0.8">
+          <manifest-digest sha256new="XDR7YKN7A5Q4DBIFI6MXIAF2MJN6GCNK5LGNHER2RYNSIBE656NA"/>
+          <archive extract="0repo-0.8" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.8/0repo-0.8.tar.bz2" size="59122"/>
+        </implementation>
+      </group>
+      <group>
+        <requires interface="https://apps.0install.net/devel/git.xml">
+          <executable-in-path name="git"/>
+        </requires>
+        <requires interface="https://apps.0install.net/utils/gnupg.xml">
+          <executable-in-path name="gpg"/>
+          <executable-in-var name="GNUPG_PATH"/>
+        </requires>
+        <implementation id="sha1new=61000364299225fe3d9c3a5e53ea655a4f0b8d33" released="2019-09-04" stability="stable" version="0.9">
+          <manifest-digest sha256new="JZWXPIFZKJWO5NW2GN6OLRMM6DV3WHK336T4YJX24ZE5POX5YCDQ"/>
+          <archive extract="0repo-0.9" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.9/0repo-0.9.tar.bz2" size="59315"/>
+        </implementation>
+        <implementation id="sha1new=264a0f1aaa31f827b49eee3ea67ef6a3859b778a" released="2019-11-09" stability="stable" version="0.9.1">
+          <manifest-digest sha256new="FMEE2SQV3DPM76KYDK7VJVS7HSY2DPEYXDQ76C2NQHBVVJPEI72A"/>
+          <archive extract="0repo-0.9.1" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.9.1/0repo-0.9.1.tar.bz2" size="59337"/>
+        </implementation>
+        <implementation id="sha1new=63a566c625f6572e988279039d15bb8ede5637e2" released="2020-01-05" stability="stable" version="0.10">
+          <manifest-digest sha256new="HLRXJNHXYBHV2ZEIJN7N7NI3HITKRSQFX5IGJY5PCRVHLFEI2GVA"/>
+          <archive extract="0repo-0.10" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.10/0repo-0.10.tar.bz2" size="59665"/>
+        </implementation>
+      </group>
+    </group>
+  </group>
+  <group>
+    <requires interface="https://apps.0install.net/python/python.xml" version="3.6.."/>
+    <requires interface="https://apps.0install.net/0install/0install-python.xml" version="2.3.8..">
+      <environment insert="" mode="prepend" name="PYTHONPATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/devel/git.xml">
+      <executable-in-path name="git"/>
+    </requires>
+    <requires interface="https://apps.0install.net/utils/gnupg.xml">
+      <executable-in-path name="gpg"/>
+      <executable-in-var name="GNUPG_PATH"/>
+    </requires>
+    <command name="run" path="0repo.py">
+      <runner interface="https://apps.0install.net/python/python.xml"/>
+    </command>
+    <command name="test" path="tests/runall.py">
+      <runner interface="https://apps.0install.net/python/python.xml"/>
+      <executable-in-path name="0repo"/>
+    </command>
+    <implementation id="sha1new=a6cddf09966e1a58fe3956f868c1eb31f725d30a" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2020-01-15" stability="stable" version="0.11">
+      <manifest-digest sha256new="ZIVRKJSQLU3WN6XS32DEOS6MST7PNM5QP6XS6WGIL7H37C4WXCPA"/>
+      <archive extract="0repo-0.11" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.11/0repo-0.11.tar.bz2" size="60513"/>
+    </implementation>
+    <implementation id="sha1new=a1f086db322e1667028299c0785d7118d276b689" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2021-01-08" version="0.12">
+      <manifest-digest sha256new="UEJWVNB6OVQ7QKQO3O4KL642GZRGGFTL2IJAJCETJENOBQMTDHAA"/>
+      <archive extract="0repo-0.12" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.12/0repo-0.12.tar.bz2" size="60556"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmBSFscACgkQWao5J8JOTh5/NAf/VpS4
+Rs2TY7UflV6l9oYJk4BfbkFO1avMlx68kFJApybnQsq3ZKvHGyF0qIY9wsO1fOruH8qiE5ziboO7
+zQ1Z7kKGBVOGdHlV1c/oM0xDsK0CIayvU9hVdwMnWOdEIOvNqM4lfP+ZID0qjJLxeMiht21yo7bp
+fDu50JPCwjdWlqdWpiNYW0ZfswPmhQsbehPEuZKD79gXuQ3i1ZMdizwkXxo0RNuqwBDXqcFQ/0p5
+RgCIirho+sRbH2qCEvoKTecyLPREl3BorLPnARmAKU/AwpzAL3gyi2slCiCIQZSGTIA27IQpWA1q
+LyxNxuU9f3B1XNT5weVmcbkK7ybC7YvM7A==
+
+-->

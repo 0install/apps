@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/gui/audacity.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uri="https://apps.0install.net/gui/audacity.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Audacity</name>
   <summary xml:lang="en">fast multi-track audio editor and recorder</summary>
   <summary xml:lang="de">schneller Mehrspur-Audio-Editor und -Aufzeichner</summary>
@@ -13,12 +13,12 @@
 
   <package-implementation arch="Linux-*" distributions="Debian Gentoo Ports RPM Slack" main="/usr/bin/audacity" package="audacity"/>
 
-  <group license="GPL v2 (GNU General Public License)">
+  <group license="GPL v2 (GNU General Public License)" main="audacity.exe">
     <requires importance="recommended" interface="https://apps.0install.net/utils/ffmpeg.xml" version="2.0..!3.0"/>
 
-    <implementation arch="Windows-*" id="sha1new=26b7b3149490848e9c120b19b6ea0d0b8f81cd5a" main="audacity.exe" released="2020-06-26" stability="stable" version="2.4.2">
-      <manifest-digest sha256new="2XOHG6GHIHQZ3OADCJZSDGCWRXPS32UN73LIEG42DG4HQZNK26RA"/>
-      <archive href="https://fossies.org/windows/misc/audacity-2.4.2.zip" size="11713880" type="application/zip"/>
+    <implementation arch="Windows-*" id="sha1new=e4967c9eed4ee13edbe2e5801afa73aa139e0129" version="3.0.0" released="2021-03-17" stability="stable">
+      <manifest-digest sha256new="SIZHNIHQTGLD3CIVJEOK4FHOCGIB5B7UVJPBOGLGZQ7QQYNM6FAQ"/>
+      <archive href="https://fossies.org/windows/misc/audacity-win-3.0.0.zip" size="12507745" type="application/zip"/>
     </implementation>
   </group>
 
@@ -48,11 +48,11 @@
   </capabilities>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl/GCFEACgkQWao5J8JOTh4TWgf/QjlO
-t3ZrNRZjkdz5D18f6AACTaQ6apUXDTwp7kas8kjdA5miA2zHiJ64SgD2YSEUT4sohFTZAsg2Ddca
-wZXBIMUXaaN2t64iw4s89yPYyFXZkWW2NqU9YI/3GLQe22+jDoXndIEvtpm/fYYzPfqu2XszlzXG
-jOsVnecqLCBEB0fY5i8EAFj6ouVkJgCvrHzcnQqRmjK7k+qqNwewd98eACBEJXl/k0JT357o3mQh
-A1i+ARwSsj9pndc55J1YX6xpz6n9nwqVMuw3A38O7KaPmghdFGc1VWeS0z6R+jw5EY82SD5jZRGG
-YliE/m1Iljz5AuzWrIICiGE82jTGi+NnvQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmBTYZkACgkQWao5J8JOTh7UVwgAksXq
+O8rrzznK2XYgwvscQNjjIYcd8vVdZg3bnkXxdJjvcXmMl/8UKM90z8E6FoJvSdj7i/epbGraUkfn
+i3Lo9gSV5qrEggPtKuoG9uAPj+tpz5LXJvhwuqLIhSXOg8t/GgmcoOnWeKmsoSsInGMJYRWW+Ydw
+yei5XkIhU12dpwkqXM12QGISdW+hwdFRu+IvBAYPTkQtvoQLtbuldciP5D8ec19hbvMC5FVMplXJ
+ioeowltawNd7PkLlmpp+xCJ2gEq9e0HlzgEpv1ScVHapJk9FlxxNPvrnffZ+FMY6jlAlKlNLO77N
+71Pyf2FCNuEOsZdAKQ8CM5uGzyp7HTxHVg==
 
 -->

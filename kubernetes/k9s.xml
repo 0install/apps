@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/kubernetes/k9s.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/kubernetes/k9s.xml">
   <name>k9s</name>
   <summary>curses based terminal UI to interact with Kubernetes</summary>
   <description>K9s provides a curses based terminal UI to interact with your Kubernetes clusters. The aim of this project is to make it easier to navigate, observe and manage your applications. This command line app continually watches Kubernetes for changes and offers subsequent commands to interact with observed resources.</description>
@@ -3065,16 +3065,28 @@
       <manifest-digest sha256new="IDEWPLU2IYCWSWYWC2NEY2YHVER5Y3YNSBOUPNKQBGHHFTJKPL7Q"/>
       <archive href="https://github.com/derailed/k9s/releases/download/v0.24.2/k9s_Darwin_x86_64.tar.gz" size="15578967" type="application/x-compressed-tar"/>
     </implementation>
+    <implementation arch="Windows-x86_64" version="0.24.3" released="2021-03-19" stability="stable" main="k9s.exe" id="sha1new=7c87cfdc9a3e75aaa25b5e11e8fa254b37f4968d">
+      <manifest-digest sha256new="EFWDAX25T73DYWXGWRPGPKWQNV42AAP4SHOLJ3BVULYBAQBVBLAQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/v0.24.3/k9s_Windows_x86_64.tar.gz" size="14768679" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.24.3" released="2021-03-19" stability="stable" main="k9s" id="sha1new=f83337ce32b9550f0d7bc2f81e1cf95dc6336444">
+      <manifest-digest sha256new="5CYVZ4VKEXRR63VRY3WOL3E3HARLRVIC7G7XCB3PD6HTGJQTZR6A"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/v0.24.3/k9s_Linux_x86_64.tar.gz" size="14596264" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.24.3" released="2021-03-19" stability="stable" main="k9s" id="sha1new=5b52c438a355dc4c116caf8051435ccf00d09297">
+      <manifest-digest sha256new="IQCDR4OG44TUMKLB4DGKYTRGOEDUHBEK6I75MOBPZ5QJSND3IIVQ"/>
+      <archive href="https://github.com/derailed/k9s/releases/download/v0.24.3/k9s_Darwin_x86_64.tar.gz" size="15364107" type="application/x-compressed-tar"/>
+    </implementation>
   </group>
 
   <entry-point binary-name="k9s" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl/Oc/EACgkQWao5J8JOTh6YcggAlB1e
-KVnTShbGlkkbAev2gnnrgmsvHp4/djpbZq77c0uua+WIhjZtF6ZZevKjgZM2nk3aX7hFupU1cCYf
-L1npe59zeRcnA6Z5FP90TUDW7hnuwWO0BnVKQSv6AukUSDBMC1x0b0b4B19vUij8Jy9b2uqWuUD1
-yp7zAVmtMB+Qh8DqhkG6N5IeRPeWkAXUggMj4AQ3F5PEUcB0qoDpo08eZREvoHsSjCxS3PbtUM05
-1TbwXDplCEk9qu9zQ0okrmLaD13htrqFYDmsCSUIaUwhgTUEhuXc8wJtV1ZyhbHe8oont+mZTghi
-pUVbxqpM4mE0YGYTvmzvu89X9ugAZYIkzg==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmBZqBAACgkQWao5J8JOTh4VjQf/WeLP
+A+KBlU8aXfYpnUW8Q1cHcaW8YkaH6xArb5DmkEsbJL4AqMk7TXr9WWSGBMrpzrgo+fKnAQjT8b8l
+yhqobokY9K70ULe4UVkc5a+JpZmoP2IERulr/dJjtB7yA/cDSesv6jl5ccnkj2NydbZpapVUORnW
+3/2Z/vrGfvYiiNfuJ6ZaR6HyHJlSiaCEH6A3XQGMFcYYBcAvjQbkc3TR3530mbFFgB6erDO41efe
+2NSTFTg+3L0DWJa+fXqZYMcwd0am4WS0423uuH3bnXsjLv3et4Lo1LwnBdeuGvZ2e8SBvolZ8nbo
+pUMsFkLkDOHr0EWZ2jQ30gNAicNeF8Ga6A==
 
 -->

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="https://apps.0install.net/docker/compose.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/docker/compose.xml">
   <name>Docker Compose</name>
   <summary>define and run multi-container applications with Docker</summary>
   <description>Compose is a tool for defining and running multi-container Docker applications.</description>
@@ -1160,6 +1160,18 @@
     <implementation arch="Darwin-x86_64" id="sha1new=d63b69dc116ef9830dd530c3f52dc58998cf12fc" main="docker-compose" released="2021-02-26" stability="stable" version="1.28.5">
       <manifest-digest sha256new="NUQ2ZGIB3JS7RLC5LDQJRV3NAYH7NU7YQGEHXM3TWM3B44HEZXNA"/>
       <file dest="docker-compose" executable="true" href="https://github.com/docker/compose/releases/download/1.28.5/docker-compose-Darwin-x86_64" size="10268967"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.28.6" released="2021-03-23" stability="stable" main="docker-compose.exe" id="sha1new=b2be98483b46b7b1f9b3654da6d05a55c33eb106">
+      <manifest-digest sha256new="GQMPICAD7UMU4YRYM72C7V64D5MDDU65W4OHRLVYIRIMDD7ESRXA"/>
+      <file href="https://github.com/docker/compose/releases/download/1.28.6/docker-compose-Windows-x86_64.exe" size="10443291" dest="docker-compose.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.28.6" released="2021-03-23" stability="stable" main="docker-compose" id="sha1new=4ca887f316387383cbc38cafcb7e0657c0750855">
+      <manifest-digest sha256new="SD6DRLVV4GKWBJUCDMIWXYJKFLRWDPEBQXE2MIBOCPJGLWBFCQCA"/>
+      <file href="https://github.com/docker/compose/releases/download/1.28.6/docker-compose-Linux-x86_64" size="12212176" dest="docker-compose" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.28.6" released="2021-03-23" stability="stable" main="docker-compose" id="sha1new=b7fb138b9045f1a2316b8128ae0ef1c70c00e79f">
+      <manifest-digest sha256new="RW5UQZHSQID5QAB56AQ64IP5PC7MDUCZHVAUES35XU4FXK2XUWGA"/>
+      <file href="https://github.com/docker/compose/releases/download/1.28.6/docker-compose-Darwin-x86_64" size="10267154" dest="docker-compose" executable="true"/>
     </implementation>
   </group>
 

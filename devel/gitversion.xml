@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/devel/gitversion.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/devel/gitversion.xml">
   <name>GitVersion</name>
   <summary>versioning when using git, solved</summary>
   <description>Versioning when using git, solved. GitVersion looks at your git history and works out the semantic version of the commit being built.</description>
@@ -190,6 +190,14 @@
       <implementation arch="Windows-i486" id="sha1new=1a23857b7f8a8d66f20c5708ee3d8d89041d8a6d" released="2021-02-08" stability="stable" version="5.6.6">
         <manifest-digest sha256new="SYHNQPKUQ4FIWO56S4CRYKHWEOVBPNLHECH4TGG5GIKDIH3CZJFA"/>
         <archive href="https://github.com/GitTools/GitVersion/releases/download/5.6.6/gitversion-win-x86-5.6.6.tar.gz" size="27411715" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="5.6.7" released="2021-03-25" stability="stable" id="sha1new=b3629ab665aad69d03fabb7ec6a890a9a0183ac5">
+        <manifest-digest sha256new="OCASE6WX7LKKY5DWOYTWNKMZKSSHFKGXGWFY6GAN5ISIHXKZICFQ"/>
+        <archive href="https://github.com/GitTools/GitVersion/releases/download/5.6.7/gitversion-win-x64-5.6.7.tar.gz" size="30579269" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="5.6.7" released="2021-03-25" stability="stable" id="sha1new=028f1f449b8ce976203fadf8afbdbc18e61ddd32">
+        <manifest-digest sha256new="2Q4AEGELN7RHDCE7FAAYUGEYP2B7IEIXYI7RZDGK7ED3GUKMXRYQ"/>
+        <archive href="https://github.com/GitTools/GitVersion/releases/download/5.6.7/gitversion-win-x86-5.6.7.tar.gz" size="27490831" type="application/x-compressed-tar"/>
       </implementation>
     </group>
   </group>
@@ -452,6 +460,10 @@
       <manifest-digest sha256new="GLF2HPNZTMZFK5XI5I6ZFTJESVO254RSEMUTDGPDBAJVLZHUNMPQ"/>
       <archive href="https://github.com/GitTools/GitVersion/releases/download/5.6.6/gitversion-linux-x64-5.6.6.tar.gz" size="28245480" type="application/x-compressed-tar"/>
     </implementation>
+    <implementation version="5.6.7" released="2021-03-25" stability="stable" id="sha1new=258f9b765cdde6090c15a807d301a8165a2157bd">
+      <manifest-digest sha256new="FPMXOSRXK54BUU7RZ35SLPXURKUI5AWWHWGQDNYYNDX7EKKCC57A"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.6.7/gitversion-linux-x64-5.6.7.tar.gz" size="28327825" type="application/x-compressed-tar"/>
+    </implementation>
   </group>
 
   <group arch="Darwin-x86_64" license="MIT License">
@@ -557,16 +569,20 @@
       <manifest-digest sha256new="ACWWVJSBT53NHKXEQOF6QOLSH2BQW5PQ4J3QED7RHAEYUMR5U6JQ"/>
       <archive href="https://github.com/GitTools/GitVersion/releases/download/5.6.6/gitversion-osx-x64-5.6.6.tar.gz" size="28878001" type="application/x-compressed-tar"/>
     </implementation>
+    <implementation version="5.6.7" released="2021-03-25" stability="stable" id="sha1new=9075f27c0d77f6a2f6b0c337aab767e21d220162">
+      <manifest-digest sha256new="7H2IKPO7WBCFQ55BKUBGQVGJOW5RPNTV2NIFGK3UGTPCFXIKI27A"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/5.6.7/gitversion-osx-x64-5.6.7.tar.gz" size="28960523" type="application/x-compressed-tar"/>
+    </implementation>
   </group>
 
   <entry-point binary-name="GitVersion" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmAimaUACgkQWao5J8JOTh7LKwf+K4yq
-Q04Tfnv0Kl/7z/qCexFqC6RRKkovml0fGCVYobg+Gk4zhywl/HlvMWQ2hBsxNrtZZQYwnoijkgBC
-TsHQo24DrgEI5WhKjrSJfq6Na8yvhUSgtjrKsu9KBk+J37TxwZGJeqgy1RJZLGn7rcjc0G7rtq0B
-RdKFOBuDLQJ3ZLVed9FdzpQQj/XpVJsuvkQQOyCeD+pkSLXKStKCl2AOD57gJDf7/X8nxn5JEEN7
-BY6e07fQ5q44hmvT16kTUnbrEsV8de7+UoISdXhT08X7lGUBWngKlqud8i938bbSz07SsoZoeDz8
-WeIYhtJuUDILCmjksvTKQ93BcDgSfSozeQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmBfJBYACgkQWao5J8JOTh7Wagf/V/gi
+qprvxSMtRF9RYyn5eIBOk0v/y+Izli+gIi+bU1CyTd5uakrZVpe1Mkat62YP9/UF4myNmgqZI+j6
+HLHCeFGTD/cd4i1ngxXeRAZnaamoCCf7YIUN1+pWgEGjRooqARey/i1F6aWTnibl1eXYgZN9FNjW
+ZMMtasKSWlrzS/4rb0b3hCs6CXy/onOqmFiNyqrQe2/tz+xpOOnsadV7mXv/tPug+IuJibCprtfk
+7Ygzvr4zGZ/Ghp2Qs+gjhpw0yLHwe8LdUcGUnpU7qqyviq5Y7jtUknD9jo9JCb10zJDmCLexXyqX
+YlMSA6k/GG2xBpj8kBUeb7uVRlSbB8+TEA==
 
 -->

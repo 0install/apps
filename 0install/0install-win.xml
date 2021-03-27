@@ -213,6 +213,23 @@
     </implementation>
   </group>
 
+  <group license="LGPL v3 (GNU Lesser General Public License)">
+    <command name="run" path="0install.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.7.2.."/>
+    </command>
+    <command name="run-gui" path="0install-win.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.7.2.."/>
+    </command>
+    <command name="central" path="ZeroInstall.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.7.2.."/>
+    </command>
+
+    <implementation id="sha1new=58ceef10872f8f9ad28c0589600c8b118b872629" released="2021-03-27" stability="stable" version="2.19.0">
+      <manifest-digest sha256new="GZH3BZLKCHLQ4ERO2KLN7326ZUVRW53UCHUN7SAF47VGRBECNRVQ"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.19.0/0install-win-2.19.0.tar.gz" size="5000909" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
   <entry-point binary-name="0install" command="run">
     <needs-terminal/>
     <name xml:lang="en">Zero Install Command command-line interface</name>

@@ -112,6 +112,20 @@ und der New Feed Wizard (leitet Sie durch den kompletten Feed-Erstellungsprozess
     </implementation>
   </group>
 
+  <group license="LGPL v3 (GNU Lesser General Public License)">
+    <command name="0publish" path="0publish.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.7.2.."/>
+    </command>
+    <command name="run" path="0publish-win.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.7.2.."/>
+    </command>
+
+    <implementation id="sha1new=ceaa2a39c0e8581f79039ff01ef27c2daf1f5e3d" released="2021-03-27" stability="stable" version="2.19.0">
+      <manifest-digest sha256new="E3NUOK24LHRHEGCSKOHWK6Q4TEHSHWKL3AOL77NNIHD4RXBQLDUQ"/>
+      <archive href="https://github.com/0install/0publish-win/releases/download/2.19.0/0publish-win-2.19.0.tar.gz" size="4095069" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
   <entry-point app-id="ZeroInstall.Publishing" binary-name="0publish-win" command="run">
     <name xml:lang="en">Zero Install Publishing Tools</name>
   </entry-point>

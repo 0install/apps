@@ -137,8 +137,15 @@
       </group>
     </group>
   </group>
-  <group>
-    <requires interface="https://apps.0install.net/python/python.xml" version="3.6.."/>
+
+  <group license="OSI Approved :: GNU Lesser General Public License (LGPL)">
+    <command name="run" path="0repo.py">
+      <runner interface="https://apps.0install.net/python/python.xml" version="3.6.."/>
+    </command>
+    <command name="test" path="tests/runall.py">
+      <runner interface="https://apps.0install.net/python/python.xml" version="3.6.."/>
+      <executable-in-path name="0repo"/>
+    </command>
     <requires interface="https://apps.0install.net/0install/0install-python.xml" version="2.3.8..">
       <environment insert="" mode="prepend" name="PYTHONPATH"/>
     </requires>
@@ -149,29 +156,22 @@
       <executable-in-path name="gpg"/>
       <executable-in-var name="GNUPG_PATH"/>
     </requires>
-    <command name="run" path="0repo.py">
-      <runner interface="https://apps.0install.net/python/python.xml"/>
-    </command>
-    <command name="test" path="tests/runall.py">
-      <runner interface="https://apps.0install.net/python/python.xml"/>
-      <executable-in-path name="0repo"/>
-    </command>
-    <implementation id="sha1new=a6cddf09966e1a58fe3956f868c1eb31f725d30a" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2020-01-15" stability="stable" version="0.11">
+    <implementation id="sha1new=a6cddf09966e1a58fe3956f868c1eb31f725d30a" released="2020-01-15" stability="stable" version="0.11">
       <manifest-digest sha256new="ZIVRKJSQLU3WN6XS32DEOS6MST7PNM5QP6XS6WGIL7H37C4WXCPA"/>
       <archive extract="0repo-0.11" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.11/0repo-0.11.tar.bz2" size="60513"/>
     </implementation>
-    <implementation id="sha1new=a1f086db322e1667028299c0785d7118d276b689" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2021-01-08" stability="stable" version="0.12">
+    <implementation id="sha1new=a1f086db322e1667028299c0785d7118d276b689" released="2021-01-08" stability="stable" version="0.12">
       <manifest-digest sha256new="UEJWVNB6OVQ7QKQO3O4KL642GZRGGFTL2IJAJCETJENOBQMTDHAA"/>
       <archive extract="0repo-0.12" href="https://downloads.sourceforge.net/project/zero-install/0repo/0.12/0repo-0.12.tar.bz2" size="60556"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmBYZAMACgkQWao5J8JOTh7nFgf/atmL
-r8VdTNsPpmu53HvqykGxdFrakI+caycdAl3pENCBzKVGgnEhNmJ5MKbbn0zZheAmeOWuLts9gOP7
-93k0RQB6VxPQr+prKka7gXuwlaPxRBBxRll13DW2PpgBzjQC8t38VEU+uONF9ihXSlR2Mdci52GL
-xSShCbDhbo+sEgFB5X3ZmzW03NQT9kpdokzBHmbMUL+1VR8yEsWkMQbnLrXVEg/+95E4JfXVnI71
-qYND8r3nm7qSFBgBNPMTrzKbNJpgpxJ7/laB9jyxxYccG+kfqwGglIQNPPokTv51/HJMiEDDaJCg
-Ozf/kvbj9q6PpJJEu5QWG1SKF62QTRwqHA==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmBfdVcACgkQWao5J8JOTh6I6Af8Dk5X
+ElJe6ZKxZWLibWn5UG1GGd17wP12KLszFH2Ox8FdNgaXAehMHbBphoG7Ea8NJZ9rKP0S4gv1owKu
+Cl6SYAXEJ2j9b+tSyrvJc4UNeaY9uJEteqe8upc2sJTFzp5dOySSedJSv26fNeORQKAvUKvXYXh2
+FjHO4c9oCKGs79zqWlOmNg3POCzooBd8o/6N1nripAB02SZNupSQzErQdhXCGMTnkPsRd6Z53fGG
+BVbzyaioOdFtlhB9A3gVpZZXTudJh+JfV73EwKD5JTVmS2q303r6eZZJuc/yRrKiDbbsMMUq9gWp
+bplrUYWgZZY4fx/Yg4k9FSuVNzY6qoz7eA==
 
 -->

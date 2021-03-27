@@ -15,26 +15,14 @@
     <environment insert="pythonwin" name="PYTHONPATH"/>
 
     <group>
-      <restricts interface="https://apps.0install.net/python/python.xml" version="2.7..!2.8"/>
-      <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
-        <manifest-digest/>
-        <archive href="pywin32-{version}.win-amd64-py2.7.tar.gz" type="application/x-compressed-tar"/>
-      </implementation>
-      <implementation arch="Windows-i486" released="{released}" stability="stable" version="{version}">
-        <manifest-digest/>
-        <archive href="pywin32-{version}.win32-py2.7.tar.gz" type="application/x-compressed-tar"/>
-      </implementation>
-    </group>
-
-    <group>
       <restricts interface="https://apps.0install.net/python/python.xml" version="3.5..!3.6"/>
       <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
         <manifest-digest/>
-        <archive href="pywin32-{version}.win-amd64-py3.5.tar.gz" type="application/x-compressed-tar"/>
+        <archive href="{cp35m-win_amd64}" type="application/zip"/>
       </implementation>
       <implementation arch="Windows-i486" released="{released}" stability="stable" version="{version}">
         <manifest-digest/>
-        <archive href="pywin32-{version}.win32-py3.5.tar.gz" type="application/x-compressed-tar"/>
+        <archive href="{cp35m-win32}" type="application/zip"/>
       </implementation>
     </group>
 
@@ -42,11 +30,11 @@
       <restricts interface="https://apps.0install.net/python/python.xml" version="3.6..!3.7"/>
       <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
         <manifest-digest/>
-        <archive href="pywin32-{version}.win-amd64-py3.6.tar.gz" type="application/x-compressed-tar"/>
+        <archive href="{cp36m-win_amd64}" type="application/zip"/>
       </implementation>
       <implementation arch="Windows-i486" released="{released}" stability="stable" version="{version}">
         <manifest-digest/>
-        <archive href="pywin32-{version}.win32-py3.6.tar.gz" type="application/x-compressed-tar"/>
+        <archive href="{cp36m-win32}" type="application/zip"/>
       </implementation>
     </group>
 
@@ -54,11 +42,11 @@
       <restricts interface="https://apps.0install.net/python/python.xml" version="3.7..!3.8"/>
       <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
         <manifest-digest/>
-        <archive href="pywin32-{version}.win-amd64-py3.7.tar.gz" type="application/x-compressed-tar"/>
+        <archive href="{cp37m-win_amd64}" type="application/zip"/>
       </implementation>
       <implementation arch="Windows-i486" released="{released}" stability="stable" version="{version}">
         <manifest-digest/>
-        <archive href="pywin32-{version}.win32-py3.7.tar.gz" type="application/x-compressed-tar"/>
+        <archive href="{cp37m-win32}" type="application/zip"/>
       </implementation>
     </group>
 
@@ -66,11 +54,23 @@
       <restricts interface="https://apps.0install.net/python/python.xml" version="3.8..!3.9"/>
       <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
         <manifest-digest/>
-        <archive href="pywin32-{version}.win-amd64-py3.8.tar.gz" type="application/x-compressed-tar"/>
+        <archive href="{cp38-win_amd64}" type="application/zip"/>
       </implementation>
       <implementation arch="Windows-i486" released="{released}" stability="stable" version="{version}">
         <manifest-digest/>
-        <archive href="pywin32-{version}.win32-py3.8.tar.gz" type="application/x-compressed-tar"/>
+        <archive href="{cp38-win32}" type="application/zip"/>
+      </implementation>
+    </group>
+
+    <group>
+      <restricts interface="https://apps.0install.net/python/python.xml" version="3.9..!3.10"/>
+      <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
+        <manifest-digest/>
+        <archive href="{cp39-win_amd64}" type="application/zip"/>
+      </implementation>
+      <implementation arch="Windows-i486" released="{released}" stability="stable" version="{version}">
+        <manifest-digest/>
+        <archive href="{cp39-win32}" type="application/zip"/>
       </implementation>
     </group>
   </group>

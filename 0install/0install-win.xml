@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/0install/0install-win.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uri="https://apps.0install.net/0install/0install-win.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Zero Install for Windows</name>
   <summary>Windows version of 0install, the decentralized installation system</summary>
   <description>This is the Windows version of Zero Install. Zero Install is a cross-platform, decentralized installation system. Instead of having a central repository in which all software is placed under a naming scheme managed by some central authority, programs and libraries in Zero Install are identified by URIs. Anyone who can create a web-page can publish software. Anyone can install software (not just administrators).</description>
@@ -214,6 +214,23 @@
     </implementation>
   </group>
 
+  <group license="LGPL v3 (GNU Lesser General Public License)">
+    <command name="run" path="0install.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.7.2.."/>
+    </command>
+    <command name="run-gui" path="0install-win.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.7.2.."/>
+    </command>
+    <command name="central" path="ZeroInstall.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.7.2.."/>
+    </command>
+
+    <implementation id="sha1new=58ceef10872f8f9ad28c0589600c8b118b872629" released="2021-03-27" stability="stable" version="2.19.0">
+      <manifest-digest sha256new="GZH3BZLKCHLQ4ERO2KLN7326ZUVRW53UCHUN7SAF47VGRBECNRVQ"/>
+      <archive href="https://github.com/0install/0install-win/releases/download/2.19.0/0install-win-2.19.0.tar.gz" size="5000909" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
   <entry-point binary-name="0install" command="run">
     <needs-terminal/>
     <name xml:lang="en">Zero Install Command command-line interface</name>
@@ -229,11 +246,11 @@
   </entry-point>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmAgDjkACgkQWao5J8JOTh4G0ggAmG3K
-XRZPwxpKVg2aYltHpORyTnDwGSl+YtbmO6NuVQyabpxPvZwZN7R3NFm44xDeWNqgGpUYaeNYjO+Z
-rRtPVTaKwAY6tSInYnPWbfYNuZWo16M/dF6o318wdoxUJVj4mt42KcEfMQTZUSp5tWmped17gX/x
-yUHIgj47I8fgHTF/61OaV/6H/V+OpEfJl5Zx3AoCYoaz9Ja+m5Jv6RX02xph7CwfB7epuQ3neNfW
-pWHRDYWpExXXEChdmZ/Hf+QTtt65ZvNLR9ndEM4NJW5HqgMcW9B2+VtZVes4uRXxCi+okrbqYm7I
-Q1M/VVRRqDjVpbjJR0AF7ycK2n7gbaCEDw==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmBfNEQACgkQWao5J8JOTh58pAf/SCLk
+FI1jcVu9EnKBSWVlqJ5x+46l8FrGE0XfZ0yt2M8poxEeiuQTYDiUEfCJaznYVMN11Ee5bH+o+Hmr
+mwF4I/4xgr2w5JLuX+UyMlIiCz5Sd5H7DIAXljuhukmTvV8XBg2bQH+Ol7W6i1iuKeM1/ysM8DjA
+HnjFLpBo8rHu0RHlQcnasOkzawGp30utOtAKT0J8YoBNyiAr0iqXHW4ZbdyKuC9QllSOkBMG09We
+4bGfxvOkNTC6KgHPNgjHkWgnX5n3eo28jS5aMZoCev29oppZ/4zo9byrotottA18U4PDA71AGylq
+Bby2NBjoZZgJhkean5Fag1+mtE28Wox4CA==
 
 -->

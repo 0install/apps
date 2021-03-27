@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/0install/0publish-win.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uri="https://apps.0install.net/0install/0publish-win.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Zero Install Publishing Tools</name>
   <summary xml:lang="en">helps you create and update Zero Install feeds</summary>
   <summary xml:lang="de">hilft Ihnen beim Erstellen und Aktualisieren von Zero Install Feeds</summary>
@@ -113,6 +113,20 @@ und der New Feed Wizard (leitet Sie durch den kompletten Feed-Erstellungsprozess
     </implementation>
   </group>
 
+  <group license="LGPL v3 (GNU Lesser General Public License)">
+    <command name="0publish" path="0publish.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.7.2.."/>
+    </command>
+    <command name="run" path="0publish-win.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.7.2.."/>
+    </command>
+
+    <implementation id="sha1new=ceaa2a39c0e8581f79039ff01ef27c2daf1f5e3d" released="2021-03-27" stability="stable" version="2.19.0">
+      <manifest-digest sha256new="E3NUOK24LHRHEGCSKOHWK6Q4TEHSHWKL3AOL77NNIHD4RXBQLDUQ"/>
+      <archive href="https://github.com/0install/0publish-win/releases/download/2.19.0/0publish-win-2.19.0.tar.gz" size="4095069" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
   <entry-point app-id="ZeroInstall.Publishing" binary-name="0publish-win" command="run">
     <name xml:lang="en">Zero Install Publishing Tools</name>
   </entry-point>
@@ -130,11 +144,11 @@ und der New Feed Wizard (leitet Sie durch den kompletten Feed-Erstellungsprozess
   </capabilities>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmAgDjkACgkQWao5J8JOTh4oTggArkQ2
-Uwtd/wdn4lWxOLkg60jBfSj2upZi5jSsNPLV52EuE/avC7t3KzDlcrlT5jrTnrIAoETnEq7FoLMI
-4XzuqwnMBtF+cIfgVM94AcHxdaY8KZP7NmslI70Mcz05mP5DfHuIepMck2SLFgAlvR1G9wJLDRRY
-GQMSCPvEe1qSCiQw5J2MwozUbe5c9slX0ZSF6yU4OYzsfWduvodYd1jfvcqPoz8YQXbdt16NxPQ0
-yiVQRWPV1c82gvrBKNoFjRP3cDKzXKOB5v1TFa5PHwVVlx8h4BmlXLP7roCBtcMbTDnOCr9SlDDg
-rLUQ53t0hA3Vk3LdHOMk/b3/MY3xKeUbgQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmBfNEQACgkQWao5J8JOTh5Wqgf+O3VC
+WLNd1lK7DuQNufyyPtESAyifh9XkLXAKbOWoA06vESwOeniDM7gsWAzWYcbxN+L5xemlROQCyy5F
+CZQk8AC36hfrfzzNwZ5p71B0ZYvR8VJv3NRJydIAmZAnyshho7sSGrZfMGzEfM6xRvwP1xmxSYxw
+RtkL7omaQyE3Cg4dIps+H/IVA1omLCV3WeTgiVSk9bhAMDkuAQaBoYjgX513bn1OQnnD/3SvdzMZ
+jIqGWHm9fFaKHzxOQwOTPb2mE0zNyoYfmULO7CsYNc5OKAIKGzy13Kcw49MMseZwNwaxkL5CnHID
+H2V54cwqVYY8KfysQt2yosrpuPnKwnPO0w==
 
 -->

@@ -136,8 +136,15 @@
       </group>
     </group>
   </group>
-  <group>
-    <requires interface="https://apps.0install.net/python/python.xml" version="3.6.."/>
+
+  <group license="OSI Approved :: GNU Lesser General Public License (LGPL)">
+    <command name="run" path="0repo.py">
+      <runner interface="https://apps.0install.net/python/python.xml" version="3.6.."/>
+    </command>
+    <command name="test" path="tests/runall.py">
+      <runner interface="https://apps.0install.net/python/python.xml" version="3.6.."/>
+      <executable-in-path name="0repo"/>
+    </command>
     <requires interface="https://apps.0install.net/0install/0install-python.xml" version="2.3.8..">
       <environment insert="" mode="prepend" name="PYTHONPATH"/>
     </requires>
@@ -148,18 +155,11 @@
       <executable-in-path name="gpg"/>
       <executable-in-var name="GNUPG_PATH"/>
     </requires>
-    <command name="run" path="0repo.py">
-      <runner interface="https://apps.0install.net/python/python.xml"/>
-    </command>
-    <command name="test" path="tests/runall.py">
-      <runner interface="https://apps.0install.net/python/python.xml"/>
-      <executable-in-path name="0repo"/>
-    </command>
-    <implementation id="sha1new=a6cddf09966e1a58fe3956f868c1eb31f725d30a" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2020-01-15" stability="stable" version="0.11">
+    <implementation id="sha1new=a6cddf09966e1a58fe3956f868c1eb31f725d30a" released="2020-01-15" stability="stable" version="0.11">
       <manifest-digest sha256new="ZIVRKJSQLU3WN6XS32DEOS6MST7PNM5QP6XS6WGIL7H37C4WXCPA"/>
       <archive extract="0repo-0.11" href="0repo-0.11.tar.bz2" size="60513"/>
     </implementation>
-    <implementation id="sha1new=a1f086db322e1667028299c0785d7118d276b689" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2021-01-08" stability="stable" version="0.12">
+    <implementation id="sha1new=a1f086db322e1667028299c0785d7118d276b689" released="2021-01-08" stability="stable" version="0.12">
       <manifest-digest sha256new="UEJWVNB6OVQ7QKQO3O4KL642GZRGGFTL2IJAJCETJENOBQMTDHAA"/>
       <archive extract="0repo-0.12" href="0repo-0.12.tar.bz2" size="60556"/>
     </implementation>

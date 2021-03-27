@@ -231,40 +231,36 @@ can help you to create new releases easily.</description>
       <archive extract="0release-0.16" href="0release-0.16.tar.bz2" size="47898"/>
     </implementation>
   </group>
-  <group main="0release">
-    <requires interface="https://apps.0install.net/python/python.xml" version="3.6.."/>
-    <requires interface="https://apps.0install.net/0install/0repo.xml">
+
+  <group license="OSI Approved :: GNU Lesser General Public License (LGPL)">
+    <command name="run" path="0release">
+      <runner interface="https://apps.0install.net/python/python.xml" version="3.6.."/>
+    </command>
+    <command name="test" path="tests/testall.py">
+      <runner interface="https://apps.0install.net/python/python.xml" version="3.6.."/>
+      <executable-in-path name="0release"/>
+      <requires interface="https://apps.0install.net/devel/make.xml">
+        <executable-in-path name="make"/>
+      </requires>
+    </command>
+    <requires interface="https://apps.0install.net/0install/0repo.xml" version="0.2..">
       <environment insert="." mode="replace" name="RELEASE_0REPO"/>
-      <version not-before="0.2"/>
     </requires>
-    <requires interface="https://apps.0install.net/0install/0publish.xml">
-      <version not-before="0.17"/>
+    <requires interface="https://apps.0install.net/0install/0publish.xml" version="0.17..">
       <environment if-0install-version="..!1.13" insert="0publish" mode="replace" name="ZI_PUBLISH"/>
       <executable-in-var name="ZI_PUBLISH"/>
     </requires>
     <requires interface="https://apps.0install.net/0install/0install-python.xml" version="2.3.7..">
       <environment insert="" mode="replace" name="ZI_RELEASE_ZEROINSTALL"/>
     </requires>
-    <requires interface="https://apps.0install.net/0install/0test.xml">
-      <version not-before="0.4-post"/>
+    <requires interface="https://apps.0install.net/0install/0test.xml" version="0.4-post..">
       <environment if-0install-version="..!1.13" insert="0test" mode="replace" name="ZI_TEST"/>
       <executable-in-var name="ZI_TEST"/>
     </requires>
-    <requires interface="https://apps.0install.net/0install/0compile.xml">
-      <version not-before="1.2"/>
+    <requires interface="https://apps.0install.net/0install/0compile.xml" version="1.2..">
       <executable-in-var name="ZI_COMPILE"/>
     </requires>
-    <command name="run" path="0release">
-      <runner interface="https://apps.0install.net/python/python.xml"/>
-    </command>
-    <command name="test" path="tests/testall.py">
-      <runner interface="https://apps.0install.net/python/python.xml"/>
-      <executable-in-path name="0release"/>
-      <requires interface="https://apps.0install.net/devel/make.xml">
-        <executable-in-path name="make"/>
-      </requires>
-    </command>
-    <implementation id="sha1new=cb5ed3155aca6b73173cc767c74e7221213aec90" license="OSI Approved :: GNU Lesser General Public License (LGPL)" released="2020-01-17" stability="stable" version="0.17">
+    <implementation id="sha1new=cb5ed3155aca6b73173cc767c74e7221213aec90" released="2020-01-17" stability="stable" version="0.17">
       <manifest-digest sha256new="VX4GQZTM3MPMEAICR7OC5ZUKKJY4E4I7H5LSIKFN7E6NB2DLRW6Q"/>
       <archive extract="0release-0.17" href="0release-0.17.tar.bz2" size="48081"/>
     </implementation>

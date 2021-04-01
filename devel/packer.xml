@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/devel/packer.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/devel/packer.xml">
   <name>Packer</name>
   <summary>build automated machine images</summary>
   <description>Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.</description>
@@ -346,6 +346,14 @@
       <manifest-digest sha256new="GUSH4XJWUQRIVZQ2UGFWM7WF6P6ZUHMQPPN7PYKZXTZTROZZWYUQ"/>
       <archive href="https://releases.hashicorp.com/packer/1.7.0/packer_1.7.0_darwin_amd64.zip" size="33609055" type="application/zip"/>
     </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=6a8dfeb760d76bf3454884f42b4abbba878d2102" released="2021-03-31" stability="stable" version="1.7.1">
+      <manifest-digest sha256new="LSMX5ZBU3WMTLKHK63KZTBCFOBQLNBJ5J67OZGCZORLSZU2VUAKQ"/>
+      <archive href="https://releases.hashicorp.com/packer/1.7.1/packer_1.7.1_linux_amd64.zip" size="28734868" type="application/zip"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=cf031d5157226a72f6d5ef4871b6b78efdccd3fe" released="2021-03-31" stability="stable" version="1.7.1">
+      <manifest-digest sha256new="YWPG4NN7FOFCDWUSLIO43QAAHJMXJRJ6TLU6IUHA5UODGJO5URUA"/>
+      <archive href="https://releases.hashicorp.com/packer/1.7.1/packer_1.7.1_darwin_amd64.zip" size="32183132" type="application/zip"/>
+    </implementation>
   </group>
 
   <group license="Mozilla Public License 2.0">
@@ -518,16 +526,20 @@
       <manifest-digest sha256new="YYNFIXINTQPOSCO3NMWTSVMLUFLSTZPSFD6EEOTQJARJHD6SDBUQ"/>
       <archive href="https://releases.hashicorp.com/packer/1.7.0/packer_1.7.0_windows_amd64.zip" size="30034988" type="application/zip"/>
     </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=9fd82d48e146855aca35c64054dcd7f412269f15" released="2021-03-31" stability="stable" version="1.7.1">
+      <manifest-digest sha256new="MFPTJBS6GOYOEUD72WCAQDR6BEYZYBBE6UJDSINJM4J7ZQJI3BBQ"/>
+      <archive href="https://releases.hashicorp.com/packer/1.7.1/packer_1.7.1_windows_amd64.zip" size="28915208" type="application/zip"/>
+    </implementation>
   </group>
 
   <entry-point binary-name="packer" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmAuIBcACgkQWao5J8JOTh71cggAtzCt
-ZNhFoVwFQ/tFJPlOmAWPbvdx33ew+h/RslLLoOjlj1IQuFKj/ayniMXEzUF/5T9x2gfR9fC8IzsA
-reb6VgbRcguyQrI4jjbS6IEJ77ROo5ZEBfoI4B00X7aXNDQtKknWlF/+jjPWroULYZHeWLl3KJdv
-QQ+QulDPPfTS8EQloHzaxX3h6/XGBLeOSGvP74Gd4Is0Kh+whh9j+1TeAJRo86AUAZBEp9kOQ6Am
-u7mmp368C17ehhsQKHQJT8YWLhALfipQFvjqrkvUhfEOi7nCCWu6v6k3a/huydsiM8U8zavk08t0
-uYXQQQwAbrcvpHfbbvVDqCJ4bYpCtteVTw==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmBljyYACgkQWao5J8JOTh7u+QgAtgRw
+645TKnKULP9p2XfuMGW3ByihVi8Upj+gxD4lb8yJWKetWGB0IZoJ4W9ZZs6nN3AWRUb30gMKzpvD
+QlekoTbQdT3kyH7qEXGka/8f1FE/qI0dUd4a1AUHUKTyHeNL98GVpE1xlIRBHp8m1z8VDw2FWzH4
+7Jv433cG2jSwsYFOz+8AiL8nRR9PbSPIfrT/Q7mrOqMlldhMQvt5NbOpFA0xZLkmUfBfMeNqd9IS
+i7y6wszzoDYVhFV+iQU/OG2dkGnTc9dar5T+ur2hqraezpd2pK6pmDMVjZkTrKcQQiw1dZZrK2fE
+9cqoBjbU+qtZ7ylbrlD25Ai3q8mZEQZvRg==
 
 -->

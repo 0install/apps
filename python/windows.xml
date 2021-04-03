@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="https://apps.0install.net/python/windows.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/python/windows.xml">
   <name>Python for Windows</name>
   <summary>interactive high-level object-oriented language</summary>
   <description>
@@ -942,6 +942,20 @@ language for applications that need a programmable interface.</description>
       <recipe>
         <archive href="https://www.python.org/ftp/python/3.9.2/python-3.9.2-embed-win32.zip" size="7578904" type="application/zip"/>
         <remove path="python39._pth"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="3.8.9" released="2021-04-02" stability="stable" id="sha1new=592c82ab45d629f1c33fcdaf38111fffbe18e2ad">
+      <manifest-digest sha256new="ZGH3JUGE6B2TEUCNPX3YPN4NXNQH64ISEL5WQQHECQRLCCPVG5LQ"/>
+      <recipe>
+        <archive href="https://www.python.org/ftp/python/3.8.9/python-3.8.9-embed-amd64.zip" size="8204092" type="application/zip"/>
+        <remove path="python38._pth"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-i486" version="3.8.9" released="2021-04-02" stability="stable" id="sha1new=9fec4daf34adc7188d85a2b86d3131e31aab4545">
+      <manifest-digest sha256new="ZLVUQ7VCDHY7GEEWO7Q2JA3G7JVHOGEXBE742KW2S74LGSKD7F5A"/>
+      <recipe>
+        <archive href="https://www.python.org/ftp/python/3.8.9/python-3.8.9-embed-win32.zip" size="7352526" type="application/zip"/>
+        <remove path="python38._pth"/>
       </recipe>
     </implementation>
   </group>

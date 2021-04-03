@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="https://apps.0install.net/devel/github-cli.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/devel/github-cli.xml">
   <name>GitHub CLI</name>
   <summary>GitHub's official command line tool</summary>
   <description>gh is GitHub on the command line. It brings pull requests, issues, and other GitHub concepts to the terminal next to where you are already working with git and your code.</description>
@@ -361,6 +361,18 @@
         <manifest-digest sha256new="EL4FFJOSLU3UDJROS4W6NVKYQHV42INKEXS7OKWQXTZ6FFQLUYYQ"/>
         <archive extract="gh_1.8.0_macOS_amd64" href="https://github.com/cli/cli/releases/download/v1.8.0/gh_1.8.0_macOS_amd64.tar.gz" size="6673621" type="application/x-compressed-tar"/>
       </implementation>
+      <implementation arch="Linux-x86_64" version="1.8.1" released="2021-04-02" stability="stable" id="sha1new=d4474e75135d47d7ce75294f9e824b60b64c1191">
+        <manifest-digest sha256new="N76C3VDTYP4FQFBOVRZMBFH6EAT4OPKOVUAGNEC33QC6JQSEMCHQ"/>
+        <archive href="https://github.com/cli/cli/releases/download/v1.8.1/gh_1.8.1_linux_amd64.tar.gz" size="6456614" type="application/x-compressed-tar" extract="gh_1.8.1_linux_amd64"/>
+      </implementation>
+      <implementation arch="Linux-i386" version="1.8.1" released="2021-04-02" stability="stable" id="sha1new=3c1b8513ee8657c7deac965255e13a40d2c7bb11">
+        <manifest-digest sha256new="E4PTDLMZUK4OWLT35YQWG7UJDFS5DHKE2FYAHRSKJQIWBPKJTSDA"/>
+        <archive href="https://github.com/cli/cli/releases/download/v1.8.1/gh_1.8.1_linux_386.tar.gz" size="5921549" type="application/x-compressed-tar" extract="gh_1.8.1_linux_386"/>
+      </implementation>
+      <implementation arch="MacOSX-x86_64" version="1.8.1" released="2021-04-02" stability="stable" id="sha1new=e16e0843883e340a0640e89aa813eeec091b7a14">
+        <manifest-digest sha256new="BGVXRXMO3CGLICLWTLHB2FDRLONES6SNI3KU7GWWY7SX4X2VAWIQ"/>
+        <archive href="https://github.com/cli/cli/releases/download/v1.8.1/gh_1.8.1_macOS_amd64.tar.gz" size="6674073" type="application/x-compressed-tar" extract="gh_1.8.1_macOS_amd64"/>
+      </implementation>
     </group>
     <group>
       <command name="run" path="gh.exe"/>
@@ -411,6 +423,14 @@
       <implementation arch="Windows-i486" id="sha1new=30a8f617f47829102991ead41e1eacd10c92a306" released="2021-03-30" stability="stable" version="1.8.0">
         <manifest-digest sha256new="JP2XYSMVJJMUSTOBWUD47DYMPENRJUFNT6IN4EWFBB57FWCHONHQ"/>
         <archive href="https://github.com/cli/cli/releases/download/v1.8.0/gh_1.8.0_windows_386.zip" size="6197806" type="application/zip"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="1.8.1" released="2021-04-02" stability="stable" id="sha1new=ccb810c866f1d380ef95e7a5c63be23106262119">
+        <manifest-digest sha256new="Q7IIEC5G3GWW4X2S6M2AX6HU3DZN3MW2HDPEVNZYICMG6PRSOOUA"/>
+        <archive href="https://github.com/cli/cli/releases/download/v1.8.1/gh_1.8.1_windows_amd64.zip" size="6480748" type="application/zip"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="1.8.1" released="2021-04-02" stability="stable" id="sha1new=d2dd48d87d1c9bafe8eb60ae81632f13d5326fe5">
+        <manifest-digest sha256new="N6MHYDRV7EOUQLJEVOZCTS37VIO2XRY36SKDD6DCCYI6EBNFZFAQ"/>
+        <archive href="https://github.com/cli/cli/releases/download/v1.8.1/gh_1.8.1_windows_386.zip" size="6198581" type="application/zip"/>
       </implementation>
     </group>
   </group>

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="https://apps.0install.net/ruby/ruby.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/ruby/ruby.xml">
   <name>Ruby</name>
   <summary>dynamic, open source programming language</summary>
   <description>A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.</description>
@@ -322,6 +322,14 @@
       <manifest-digest sha256new="JXRP52W43ZJAWE7O4P7WSUZTBNQ3G5H3SCJFKJ66RVTTE3HKETIA"/>
       <archive extract="rubyinstaller-3.0.0-1-x86" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.0.0-1/rubyinstaller-3.0.0-1-x86.7z" size="13254844" type="application/x-7z-compressed"/>
     </implementation>
+    <implementation arch="Windows-x86_64" version="2.5.9-1" released="2021-04-19" stability="stable" id="sha1new=02ffcf24e2d77308d28e93f681e20ef6bd5209ad">
+      <manifest-digest sha256new="IUH4C627DJOGOW4KUILRTIEPLCJ6RIKLBGMPXTGGIDKL6KJTJFPA"/>
+      <archive href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.5.9-1/rubyinstaller-2.5.9-1-x64.7z" size="10740740" type="application/x-7z-compressed" extract="rubyinstaller-2.5.9-1-x64"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="2.5.9-1" released="2021-04-19" stability="stable" id="sha1new=1736d56ebb03d33f7f2bfe496ef8518af6166e52">
+      <manifest-digest sha256new="THKMRYMCXU4FYLFTDIVCFADGMWMCT5TSIXLO7Z3FAIALI2ANRLNQ"/>
+      <archive href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.5.9-1/rubyinstaller-2.5.9-1-x86.7z" size="10724935" type="application/x-7z-compressed" extract="rubyinstaller-2.5.9-1-x86"/>
+    </implementation>
   </group>
 
   <entry-point binary-name="ruby" command="run">
@@ -372,7 +380,7 @@
     </file-type>
     <file-type id="RubyWFile">
       <description>RubyW File</description>
-      <icon href="https://raw.githubusercontent.com/0install/apps/master/ruby/ruby.gui.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon xmlns="http://zero-install.sourceforge.net/2004/injector/interface" href="https://raw.githubusercontent.com/0install/apps/master/ruby/ruby.gui.ico" type="image/vnd.microsoft.icon.xml"/>
       <verb args="&quot;%V&quot; %*" command="run-gui" name="open"/>
       <extension value=".rbw"/>
     </file-type>

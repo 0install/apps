@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/java/jdk.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/java/jdk.xml">
   <name>Java Development Kit (JDK)</name>
   <summary>SDK for Java</summary>
   <description>Development environment for building applications, applets, and components using the Java programming language.</description>
@@ -13,6 +13,8 @@
   <feed src="https://apps.0install.net/java/openjdk-12.xml"/>
   <feed src="https://apps.0install.net/java/openjdk-13.xml"/>
   <feed src="https://apps.0install.net/java/openjdk-14.xml"/>
+  <feed src="https://apps.0install.net/java/openjdk-15.xml"/>
+  <feed src="https://apps.0install.net/java/openjdk-16.xml"/>
 
   <package-implementation distributions="Darwin Windows" package="openjdk-7-jdk"/>
   <package-implementation distributions="Darwin Windows" package="openjdk-8-jdk"/>
@@ -22,6 +24,8 @@
   <package-implementation distributions="Darwin Windows" package="openjdk-12-jdk"/>
   <package-implementation distributions="Darwin Windows" package="openjdk-13-jdk"/>
   <package-implementation distributions="Darwin Windows" package="openjdk-14-jdk"/>
+  <package-implementation distributions="Darwin Windows" package="openjdk-15-jdk"/>
+  <package-implementation distributions="Darwin Windows" package="openjdk-16-jdk"/>
 
   <group>
     <!-- Some versions of JDK bundle their own copy of the JRE. For those that don't we refer back the regular JRE. -->
@@ -29,7 +33,7 @@
       <runner interface="https://apps.0install.net/java/jre.xml"/>
     </command>
     <command name="java-gui">
-      <runner command="run-gui" interface="https://apps.0install.net/java/jre.xml"/>
+      <runner interface="https://apps.0install.net/java/jre.xml" command="run-gui"/>
     </command>
 
     <package-implementation distributions="Debian" main="/usr/bin/javac" package="openjdk-7-jdk"/>
@@ -40,6 +44,8 @@
     <package-implementation distributions="Debian" main="/usr/bin/javac" package="openjdk-12-jdk"/>
     <package-implementation distributions="Debian" main="/usr/bin/javac" package="openjdk-13-jdk"/>
     <package-implementation distributions="Debian" main="/usr/bin/javac" package="openjdk-14-jdk"/>
+    <package-implementation distributions="Debian" main="/usr/bin/javac" package="openjdk-15-jdk"/>
+    <package-implementation distributions="Debian" main="/usr/bin/javac" package="openjdk-16-jdk"/>
     <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-1_7_0-openjdk-devel"/>
     <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-1.7.0-openjdk-devel"/>
     <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-1.8.0-openjdk-devel"/>
@@ -49,6 +55,8 @@
     <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-12-openjdk-devel"/>
     <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-13-openjdk-devel"/>
     <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-14-openjdk-devel"/>
+    <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-15-openjdk-devel"/>
+    <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-16-openjdk-devel"/>
   </group>
 
   <entry-point binary-name="javac" command="run">
@@ -61,19 +69,19 @@
   <entry-point binary-name="javaw" command="run-gui">
     <name>Java GUI runner</name>
   </entry-point>
-  <entry-point binary-name="javadoc" command="javadoc">
+  <entry-point command="javadoc" binary-name="javadoc">
     <needs-terminal/>
     <name>Java API Documentation Generator</name>
   </entry-point>
-  <entry-point binary-name="javap" command="javap">
+  <entry-point command="javap" binary-name="javap">
     <needs-terminal/>
     <name>Java Class File Disassembler</name>
   </entry-point>
-  <entry-point binary-name="jar" command="jar">
+  <entry-point command="jar" binary-name="jar">
     <needs-terminal/>
     <name>Java Archive Tool</name>
   </entry-point>
-  <entry-point binary-name="jarsigner" command="jarsigner">
+  <entry-point command="jarsigner" binary-name="jarsigner">
     <needs-terminal/>
     <name>Java Archive Signer</name>
   </entry-point>
@@ -105,62 +113,62 @@
     <needs-terminal/>
     <name>Java command line script shell</name>
   </entry-point>
-  <entry-point binary-name="jaotc" command="jaotc">
+  <entry-point command="jaotc" binary-name="jaotc">
     <needs-terminal/>
     <name>Java Ahead-of-Time Compilation</name>
   </entry-point>
-  <entry-point binary-name="jcmd" command="jcmd">
+  <entry-point command="jcmd" binary-name="jcmd">
     <needs-terminal/>
   </entry-point>
 
-  <entry-point binary-name="jconsole" command="jconsole"/>
-  <entry-point binary-name="jdb" command="jdb">
+  <entry-point command="jconsole" binary-name="jconsole"/>
+  <entry-point command="jdb" binary-name="jdb">
     <needs-terminal/>
   </entry-point>
-  <entry-point binary-name="jdeprscan" command="jdeprscan">
+  <entry-point command="jdeprscan" binary-name="jdeprscan">
     <needs-terminal/>
   </entry-point>
-  <entry-point binary-name="jdeps" command="jdeps">
+  <entry-point command="jdeps" binary-name="jdeps">
     <needs-terminal/>
   </entry-point>
-  <entry-point binary-name="jfr" command="jfr">
+  <entry-point command="jfr" binary-name="jfr">
     <needs-terminal/>
     <name>Tool for working with Flight Recorder files (.jfr)</name>
   </entry-point>
-  <entry-point binary-name="jhsdb" command="jhsdb">
+  <entry-point command="jhsdb" binary-name="jhsdb">
     <needs-terminal/>
   </entry-point>
-  <entry-point binary-name="jimage" command="jimage">
+  <entry-point command="jimage" binary-name="jimage">
     <needs-terminal/>
   </entry-point>
-  <entry-point binary-name="jinfo" command="jinfo">
+  <entry-point command="jinfo" binary-name="jinfo">
     <needs-terminal/>
   </entry-point>
-  <entry-point binary-name="jlink" command="jlink">
+  <entry-point command="jlink" binary-name="jlink">
     <needs-terminal/>
   </entry-point>
-  <entry-point binary-name="jmap" command="jmap">
+  <entry-point command="jmap" binary-name="jmap">
     <needs-terminal/>
   </entry-point>
-  <entry-point binary-name="jmod" command="jmod">
+  <entry-point command="jmod" binary-name="jmod">
     <needs-terminal/>
   </entry-point>
-  <entry-point binary-name="jps" command="jps">
+  <entry-point command="jps" binary-name="jps">
     <needs-terminal/>
   </entry-point>
-  <entry-point binary-name="jshell" command="jshell">
+  <entry-point command="jshell" binary-name="jshell">
     <needs-terminal/>
   </entry-point>
-  <entry-point binary-name="jstack" command="jstack">
+  <entry-point command="jstack" binary-name="jstack">
     <needs-terminal/>
   </entry-point>
-  <entry-point binary-name="jstat" command="jstat">
+  <entry-point command="jstat" binary-name="jstat">
     <needs-terminal/>
   </entry-point>
-  <entry-point binary-name="jstatd" command="jstatd">
+  <entry-point command="jstatd" binary-name="jstatd">
     <needs-terminal/>
   </entry-point>
-  <entry-point binary-name="serialver" command="serialver">
+  <entry-point command="serialver" binary-name="serialver">
     <needs-terminal/>
   </entry-point>
   <entry-point binary-name="kinit" command="kinit">
@@ -183,11 +191,11 @@
   <entry-point binary-name="jaccesswalker" command="jaccesswalker"/>
 </interface>
 <!-- Base64 Signature
-iQEyBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7ULN8ACgkQWao5J8JOTh7OsAf4xXK4
-AF6/Kn73RQbQcA0GO1GwWNpXs0weWtzpGcF6KYuHB0eCzmEC04vMISL4yOokMGpdLIdriE1ZjUge
-qeI/gcLFGdojs3DMNOAAD/v5XObKciWNFew4esHYzLNxiff3YoYJ5vERZI974nVkK27aDl15JkF8
-IFZI2eH+jzloknGYocdyg5yXb4OA30PyKv90Uoq18rxNyLUyyCZST9csmFHp+bqT3jlVkYKsra/W
-l8FTtnaoEXwKlVMPRe4A1jaN+U04i9eHAa1ss8s5IDcd4Y2cjNdwIVv/Q5OIxbeo8NX9MQiGhbZD
-+EO4YCK+lIxm8J7x+GDnovoxyGLYgPL1
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmCAAhkACgkQWao5J8JOTh7zrAgAryOd
+xM6iO04PkIY6tbVSqqcrpfOGGnwnG3jxOZDv9g1VBCnaMPupbv4dtS81yC4a6KL8Ewj2ujL0Dc/Z
+kHCJ866i8QttpXI/6u7FAXMF0FWU9wIafgYAMmUdSNfI0kIa9Lln1knTeOcbxFGPWK9lr9ov02m8
+kvoMLGVP2nyInYYtjYsWX13Zop0nFk6KE2MBgzA5AqN/8OABTulLrNkspAVFMJvAWVJWufQAb9hN
+OCtTDp3L7yiXnKxIjtEXoLJKJd9xPivV0KqNX1PZtrTbKBcslOkY9rnGH/AIe5jxK1IFV7M4ZMpt
+O7W2tu4Uk5XKQYBNwZsW1u1TmKDM+FemLw==
 
 -->

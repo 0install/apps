@@ -1,12 +1,12 @@
-<?xml version="1.0"?>
-<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
-  <name>OpenJDK 15.x</name>
-  <summary>OpenJDK Development Kit 15.x</summary>
+<?xml version="1.0" ?>
+<interface uri="https://apps.0install.net/java/openjdk-16.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>OpenJDK 16.x</name>
+  <summary>OpenJDK Development Kit 16.x</summary>
   <description>OpenJDK is a development environment for building applications, applets, and components using the Java programming language.</description>
-  <homepage>http://jdk.java.net/15/</homepage>
+  <homepage>http://jdk.java.net/16/</homepage>
   <category>Development</category>
 
-  <feed-for interface="https://apps.0install.net/java/openjdk-15.xml"/>
+  <feed-for interface="https://apps.0install.net/java/jdk.xml"/>
 
   <group arch="Linux-x86_64" license="GNU General Public License, version 2, with the Classpath Exception">
     <command name="run" path="bin/javac"/>
@@ -43,9 +43,9 @@
     <command name="rmic" path="bin/rmic"/>
     <command name="serialver" path="bin/serialver"/>
 
-    <implementation version="{version}" stability="stable">
-      <manifest-digest/>
-      <archive href="https://download.oracle.com/java/GA/jdk{version}/{release-id}/GPL/openjdk-{version}_linux-x64_bin.tar.gz" type="application/x-compressed-tar" extract="jdk-{version}"/>
+    <implementation id="sha1new=252b7208e021412f01c6057772fb79fdb5f34071" released="2021-04-21" stability="stable" version="16.0.1">
+      <manifest-digest sha256new="II6FX26IEVRCEBLPWL3OFWJCBWVZELBPVCPXZ7XENFOAJ34AM3YA"/>
+      <archive extract="jdk-16.0.1" href="https://download.oracle.com/java/GA/jdk16.0.1/7147401fd7354114ac51ef3e1328291f/9/GPL/openjdk-16.0.1_linux-x64_bin.tar.gz" size="184332972" type="application/x-compressed-tar"/>
     </implementation>
   </group>
 
@@ -91,9 +91,9 @@
     <command name="jaccessinspector" path="bin/jaccessinspector.exe"/>
     <command name="jaccesswalker" path="bin/jaccesswalker.exe"/>
 
-    <implementation version="{version}" stability="stable">
-      <manifest-digest/>
-      <archive href="https://download.oracle.com/java/GA/jdk{version}/{release-id}/GPL/openjdk-{version}_windows-x64_bin.zip" type="application/zip" extract="jdk-{version}"/>
+    <implementation id="sha1new=fd0e34e918aab6f0db05266437cc3ba252f18c56" released="2021-04-21" stability="stable" version="16.0.1">
+      <manifest-digest sha256new="7XX2VC22KU737SG2MOLEKMFFY55KUXZ3RAG3C2UOLHZYA6B6CYPA"/>
+      <archive extract="jdk-16.0.1" href="https://download.oracle.com/java/GA/jdk16.0.1/7147401fd7354114ac51ef3e1328291f/9/GPL/openjdk-16.0.1_windows-x64_bin.zip" size="183657432" type="application/zip"/>
     </implementation>
   </group>
 </interface>

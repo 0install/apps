@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/devel/gcloud.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/devel/gcloud.xml">
   <name>Google Cloud SDK</name>
   <summary>set of tools for Google Cloud Platform</summary>
   <description>The Google Cloud SDK is a set of tools for the Google Cloud Platform. It contains gcloud, gsutil, and bq, which you can use to access Google Compute Engine, Google Cloud Storage, Google BigQuery, and other products and services from the command-line.</description>
@@ -1842,6 +1842,18 @@
       <manifest-digest sha256new="AUTYX5SZIBRGZR52BTU5Y2XP5BPY7H5CXLJXLX3WYEWTZCLLVRGA"/>
       <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-273.0.0-windows-x86.zip" size="163653821" type="application/zip"/>
     </implementation>
+  </group>
+
+  <group license="Apache License 2.0">
+    <command name="run" path="lib/gcloud.py">
+      <runner interface="https://apps.0install.net/python/python.xml" version="2..!3.7"/>
+    </command>
+    <command name="gsutil" path="bin/bootstrapping/gsutil.py">
+      <runner interface="https://apps.0install.net/python/python.xml" version="2..!3.7"/>
+    </command>
+    <command name="bq" path="bin/bootstrapping/bq.py">
+      <runner interface="https://apps.0install.net/python/python.xml" version="2..!3.7"/>
+    </command>
     <implementation arch="Linux-x86_64" id="sha1new=14bea6f2147c234beab8f154a9e3798fb5c509a8" released="2019-12-17" stability="stable" version="274.0.0">
       <manifest-digest sha256new="QGNJ6NOMFOOTG5CTXKOGF2VATQTOTPVCDK3C6AG4ICV6X3Z64D5Q"/>
       <archive extract="google-cloud-sdk" href="https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-274.0.0-linux-x86_64.tar.gz" size="30476091" type="application/x-compressed-tar"/>
@@ -2601,11 +2613,11 @@
   </entry-point>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl78NnkACgkQWao5J8JOTh49yAf/ZqSG
-r/dLvfeTkf3+SZNQ1sJe5wIKA1/7FW0xjqJcSTMz0vCuSy/GQ/Q3XuWTAmBjTLYqtk4mbdOhrer8
-Gk4bDbdKYOgjNFHULWJ/eIFU/KuugCdUuWp6D0aFgK8ZcJR3/1uB/X7CGn3UqVuaV6qiNFs3Cqx8
-qoDRCfnWUNI1kLHL3JTB7yhjyyWt3oNja+u2ZJnEIakLRnJsgKSe8uFVCnHPwWpDkmFq3qEg6JkL
-zfHMIUaCGXqpA1z1O3zamvJ9JKfZ5Ai4NdDmthuvxqS/mHfz8IP1nr8G57YHkVGiLousAlrdqWZF
-qXWMrHy/HWjOvPoZ+yBDmAi0QDjC5foexw==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmCBot4ACgkQWao5J8JOTh52hwgAi6Ml
+EffToyVHF+YLlu0HO6mqHa7iMoz4KKPl4oItzgNcPekj8lycDv+B7ygIDmu5VwTQhm70N7VQeyR/
+xzw5eTWrQ9xsbIRq88fGGhC/lxivQAkHBSxuPEiUJ8+4kzbg8pEQ/9v5/OW8rPtJTcz+ra7/QrrZ
+60HK0UjRWPgH1/OX7exdiL2Q8XxL9TJ/puA2igfJn9TgGlueJDXySpWJgs8BZviX3WXlvyuewGTE
+d1BMEc8Kn2+JsipbbjDPUfz+203Rhd1ICC01gZFcrRWyQnJFFfWyn87sfbl2DPNZR3aKvMJsDMDl
+WilMT4/6+Io+Yg+uMxTWQUTvc1KU2MdHCw==
 
 -->

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="https://apps.0install.net/devel/vagrant.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/devel/vagrant.xml">
   <name>Vagrant</name>
   <summary>tool for building and distributing development environments</summary>
   <description>Development environments managed by Vagrant can run on local virtualized platforms such as VirtualBox or VMware, in the cloud via AWS or OpenStack, or in containers such as with Docker or raw LXC.</description>
@@ -108,6 +108,10 @@
     <implementation arch="Linux-x86_64" id="sha1new=029d37dc2cee516dee4364ab5fb203e0a45c7b3b" released="2021-04-01" stability="stable" version="2.2.15">
       <manifest-digest sha256new="25JCWOH3AHHPB4MRQGV3UQWN3LSJUYF57SOMWN5FRGVGOP3VBTZQ"/>
       <archive href="https://releases.hashicorp.com/vagrant/2.2.15/vagrant_2.2.15_linux_amd64.zip" size="14764505" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.2.16" released="2021-04-30" stability="stable" id="sha1new=d186689fe955446f5ab421403d0b3725226341d4">
+      <manifest-digest sha256new="MDQ3DZFMQXNIRPYHZZHK5NAMEGPIH3WAZ65QMQ2IUH4UBMEO6DPQ"/>
+      <archive href="https://releases.hashicorp.com/vagrant/2.2.16/vagrant_2.2.16_linux_amd64.zip" size="15007193" type="application/zip"/>
     </implementation>
   </group>
 
@@ -328,6 +332,14 @@
     <implementation arch="Windows-i486" id="sha1new=ac40f74d9ba694fe21b05b166103dafda650bd5b" released="2021-04-01" stability="stable" version="2.2.15">
       <manifest-digest sha256new="5F2AWS7DRCO7NMBE5VMD25C3ANGT2CC3NBBXE32YAWSLZL5N7DAA"/>
       <archive extract="SourceDir/HashiCorp/Vagrant" href="https://releases.hashicorp.com/vagrant/2.2.15/vagrant_2.2.15_i686.msi" size="243093504" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.2.16" released="2021-04-30" stability="stable" id="sha1new=6b00dd2cdd1b457c9d3be3437b2a429efb843af9">
+      <manifest-digest sha256new="N7EVR4LKC523I6PUXS7JO7N4YINLKZIT6NPTEI2IT77X7HB65OOQ"/>
+      <archive href="https://releases.hashicorp.com/vagrant/2.2.16/vagrant_2.2.16_x86_64.msi" size="251432960" type="application/x-msi" extract="SourceDir/HashiCorp/Vagrant"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="2.2.16" released="2021-04-30" stability="stable" id="sha1new=ea929b6840b5ad5b4138265b41540f642599028a">
+      <manifest-digest sha256new="K3LMCHKW3WH2YT5D6SIBADMU4N6MMY4AC3WBW55XJS3WONZAZHJA"/>
+      <archive href="https://releases.hashicorp.com/vagrant/2.2.16/vagrant_2.2.16_i686.msi" size="246435840" type="application/x-msi" extract="SourceDir/HashiCorp/Vagrant"/>
     </implementation>
   </group>
 

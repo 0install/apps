@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="https://apps.0install.net/kubernetes/kubectl.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/kubernetes/kubectl.xml">
   <name>kubectl</name>
   <summary>controls the Kubernetes cluster manager</summary>
   <description>Command-line client that controls the Kubernetes cluster manager.</description>
@@ -3094,6 +3094,18 @@
         <manifest-digest sha256new="NCYGZ5GUVSOLCGB2PCWSJJDAFQ3UBBVAIPLM4ZFX37PHSQSRFN5A"/>
         <archive extract="kubernetes" href="https://dl.k8s.io/v1.20.6/kubernetes-client-darwin-amd64.tar.gz" size="12588586" type="application/x-compressed-tar"/>
       </implementation>
+      <implementation arch="Linux-x86_64" version="1.22.0-pre1-1" released="2021-04-28" stability="testing" id="sha1new=0ab5cfda18397c2163fca5528ec71453cd7aad7e">
+        <manifest-digest sha256new="BMDFZLVJJCUUPUE5P34X6KQEMBBOPCEXKB67SD4AR75TLWLIMULQ"/>
+        <archive href="https://dl.k8s.io/v1.22.0-alpha.1/kubernetes-client-linux-amd64.tar.gz" size="29615173" type="application/x-compressed-tar" extract="kubernetes"/>
+      </implementation>
+      <implementation arch="Linux-i486" version="1.22.0-pre1-1" released="2021-04-28" stability="testing" id="sha1new=2b2c2198db1b78d9f1d68192167697c835e615a1">
+        <manifest-digest sha256new="ILK5FYZYFXPINUV6LO5TOBSBYN36NYYV266IHNPJZC7WC2UYC75A"/>
+        <archive href="https://dl.k8s.io/v1.22.0-alpha.1/kubernetes-client-linux-386.tar.gz" size="24392817" type="application/x-compressed-tar" extract="kubernetes"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" version="1.22.0-pre1-1" released="2021-04-28" stability="testing" id="sha1new=42828c1a0ceb9d684aeafe4a78d0c3a91632a4f1">
+        <manifest-digest sha256new="WJ72PYW7UZVMKSFAVCNUYHM4ZNWJN5DAZH47MRVKUW2DKNDP3YHQ"/>
+        <archive href="https://dl.k8s.io/v1.22.0-alpha.1/kubernetes-client-darwin-amd64.tar.gz" size="29162833" type="application/x-compressed-tar" extract="kubernetes"/>
+      </implementation>
     </group>
     <group>
       <command name="run" path="client/bin/kubectl.exe"/>
@@ -5152,6 +5164,14 @@
       <implementation arch="Windows-i486" id="sha1new=441180d55fffc26b3ee5704c07df09c4f0a34773" released="2021-04-15" stability="stable" version="1.20.6">
         <manifest-digest sha256new="YZ2DXGV34ZNQ5HEYX7FTS52LWICXUJIY2Z7CFALE7HQFZDP7V4IQ"/>
         <archive extract="kubernetes" href="https://dl.k8s.io/v1.20.6/kubernetes-client-windows-386.tar.gz" size="11871341" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="1.22.0-pre1-1" released="2021-04-28" stability="testing" id="sha1new=acb8f7eb63fb4765892d4a8dba34e5854e03cb11">
+        <manifest-digest sha256new="YGLUYRXI2LUUSGXHW4SOZPSYNWAGMFSWKWOYRY6MNPHKONCSEQPA"/>
+        <archive href="https://dl.k8s.io/v1.22.0-alpha.1/kubernetes-client-windows-amd64.tar.gz" size="26862850" type="application/x-compressed-tar" extract="kubernetes"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="1.22.0-pre1-1" released="2021-04-28" stability="testing" id="sha1new=2875f3cb8bf1947313e66240db4f7a2a73dbab3d">
+        <manifest-digest sha256new="KFVUVVZL6HM65CRTO2HEFIXEAFGZUJAHRVQMSWRNUGQAKWHK2ISA"/>
+        <archive href="https://dl.k8s.io/v1.22.0-alpha.1/kubernetes-client-windows-386.tar.gz" size="25647577" type="application/x-compressed-tar" extract="kubernetes"/>
       </implementation>
     </group>
   </group>

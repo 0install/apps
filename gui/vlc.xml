@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="https://apps.0install.net/gui/vlc.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uri="https://apps.0install.net/gui/vlc.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>VLC media player</name>
   <summary xml:lang="en">powerful media player, playing most of the media codecs and video formats out there</summary>
   <summary xml:lang="de">mächtiger Media Player, der die meissten Mediencodecs und Videoformate abspielen kann</summary>
@@ -290,6 +290,14 @@
     <implementation arch="Windows-i486" id="sha1new=d19f96dee00ffa03ae9d5cfb00edc291d2dbbc08" main="vlc.exe" released="2021-05-09" stability="stable" version="3.0.13">
       <manifest-digest sha256new="JSJQXJTURIZDE5AOVLMEY2R5Y5TC66ZJ7NJXCNEP3PBPIHH4MB4Q"/>
       <archive extract="vlc-3.0.13" href="https://get.videolan.org/vlc/3.0.13/win32/vlc-3.0.13-win32.7z" size="35586605" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="3.0.14" released="2021-05-10" stability="stable" main="vlc.exe" id="sha1new=939a2b458a4b8ff789329c46e43d238ce4a14548">
+      <manifest-digest sha256new="BHKLWKNFSUV577JMFBMRU3LNK5LTHK3QFH5JWXT7YFRFGZZLW2KQ"/>
+      <archive href="https://get.videolan.org/vlc/3.0.14/win64/vlc-3.0.14-win64.7z" size="36863786" type="application/x-7z-compressed" extract="vlc-3.0.14"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="3.0.14" released="2021-05-10" stability="stable" main="vlc.exe" id="sha1new=bc569a4e3e0277bed3e901b11821529bbeaf5ca3">
+      <manifest-digest sha256new="USN45WMQT7SJGB2K74XSGIKSJJFVWLM2QRD7FPE36YMEH7EQJHFQ"/>
+      <archive href="https://get.videolan.org/vlc/3.0.14/win32/vlc-3.0.14-win32.7z" size="35600565" type="application/x-7z-compressed" extract="vlc-3.0.14"/>
     </implementation>
   </group>
 

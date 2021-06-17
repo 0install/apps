@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="https://apps.0install.net/gui/notepad-plus-plus.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/gui/notepad-plus-plus.xml">
   <name>Notepad++</name>
   <summary xml:lang="en">free source code editor and Notepad replacement that supports several languages</summary>
   <summary xml:lang="de">freier Quellcode-Editor und Notepad-Ersatz mit Unterstützung für mehrere Sprachen</summary>
@@ -912,6 +912,20 @@
       <manifest-digest sha256new="SX3SLIT42OPXCXUUAJW4QIILQQ3IOUROHRDYA6H44CSSYJ7J2AAQ"/>
       <recipe>
         <archive href="https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8/npp.8.0.portable.7z" size="3032790" type="application/x-7z-compressed"/>
+        <remove path="doLocalConf.xml"/>
+      </recipe>
+    </implementation>
+    <implementation version="8.1" released="2021-06-17" stability="stable" id="sha1new=ee38f402d22b11635babde5aafdb3b88ab83903f" arch="Windows-x86_64">
+      <manifest-digest sha256new="WE6Q4SGBJU6POROJIAHWWHWKND2HZ2I6742QJT46J5WNPPDP7R6A"/>
+      <recipe>
+        <archive href="https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.1/npp.8.1.portable.x64.7z" size="3317513" type="application/x-7z-compressed"/>
+        <remove path="doLocalConf.xml"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-i486" version="8.1" released="2021-06-17" stability="stable" id="sha1new=9f3c8b0cf49d717ae14c6f4bb1ca897da355c13d">
+      <manifest-digest sha256new="OGK4AJWTSMPDOXBSYNWU3CO432SE5ZVA3Q4IBEAE27YVXAP245FA"/>
+      <recipe>
+        <archive href="https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.1/npp.8.1.portable.7z" size="3037241" type="application/x-7z-compressed"/>
         <remove path="doLocalConf.xml"/>
       </recipe>
     </implementation>

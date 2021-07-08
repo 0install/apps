@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/gui/gitextensions.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/gui/gitextensions.xml">
   <name>GitExtensions</name>
   <summary xml:lang="en">GitExtensions is a graphical interface for Git</summary>
   <summary xml:lang="de">GitExtensions ist eine grafische Oberfläche für Git</summary>
@@ -10,8 +10,8 @@
   <category>Development</category>
 
   <feed src="https://apps.0install.net/gui/gitextensions-2.xml"/>
-  <feed arch="Windows-*" src="https://apps.0install.net/gui/gitextensions-3.xml"/>
-  <package-implementation distributions="Virtual" main="/usr/bin/gitextensions" package="gitextensions"/><!-- Prevent this virtual feed from being seen as a library feed -->
+  <feed src="https://apps.0install.net/gui/gitextensions-3.xml" arch="Windows-*"/>
+  <package-implementation distributions="Virtual" package="gitextensions" main="/usr/bin/gitextensions"/><!-- Prevent this virtual feed from being seen as a library feed -->
 
   <entry-point app-id="GitExtensions" binary-name="GitExtensions" command="run">
     <name>GitExtensions</name>
@@ -22,6 +22,11 @@
   </entry-point>
 
   <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
+    <file-type id="GitExtensions">
+      <description xml:lang="en">Git Extentions Shortcut</description>
+      <verb args="openrepo &quot;%1&quot;" name="open"/>
+      <extension value=".gitext"/>
+    </file-type>
     <url-protocol id="github-windows">
       <description xml:lang="en">URL: Github for Windows Protocol</description>
       <verb args="%1" name="open"/>
@@ -31,13 +36,13 @@
       <verb args="%1" name="open"/>
     </url-protocol>
     <context-menu id="gitex-browse" target="directories">
-      <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/gitextensions/browse.ico" type="image/vnd.microsoft.icon" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon xmlns="http://zero-install.sourceforge.net/2004/injector/interface" href="https://raw.githubusercontent.com/0install/apps/master/gui/gitextensions/browse.ico" type="image/vnd.microsoft.icon"/>
       <verb args="browse &quot;%V&quot;" name="gitex_browse">
         <description xml:lang="en">GitExtensions Browse</description>
       </verb>
     </context-menu>
     <context-menu id="gitex-clone" target="directories">
-      <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/gitextensions/clone.ico" type="image/vnd.microsoft.icon" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon xmlns="http://zero-install.sourceforge.net/2004/injector/interface" href="https://raw.githubusercontent.com/0install/apps/master/gui/gitextensions/clone.ico" type="image/vnd.microsoft.icon"/>
       <verb args="clone &quot;%V&quot;" name="gitex_clone">
         <description xml:lang="en">GitExtensions Clone</description>
       </verb>
@@ -45,11 +50,11 @@
   </capabilities>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl9wlyAACgkQWao5J8JOTh6GIwf9ESOV
-S0ETFzh0soqCkfNITnvog595KiLM4CpMqg9vL2qidQwhpqOp6fPloMlRO9AO1t1DGyHcO8M7QIwe
-qiNZxlWIh5vFMnRhmVliSnuzzbE+gK1WakoCbul2Bnho5ZfHZjM3Bojr7n2noSyWE8lLxOHn2pF6
-fxIE67aRPjzCryYlzVJJyr9Et5OYZ7pirpr+KTw3lsMVj7+RRysTCfBt53gU69th42XCRGyGjaiH
-jUjSv3nm6JFweGywP7DBQtCawWHouETQObriXEqcKI6giAg2j1KcJJyXBzpm/qCnkikGXQzZIJU6
-1pcgtWJfTxdmAgQoOHAWiXLGXLD8hzkJbQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmDm45MACgkQWao5J8JOTh4n4wgAknUD
+rwXrVeuYJWKKRs7KX3RtPvvTB/CZT+xqtO0jTAzsgtBt6OVFisWFBiaS3lO2vWPVGUxWd8lcpONW
+JsytZB5LEmUayH1PamMXxJb87/kIf+bS7b0JC+CRqBt9B/7IN2W4paEu4hM0JM0XTY9FvUSTrTya
+iXjJluG0+5rB1MhMh71/WBTWXwQiOHFF2830/9hPg640RkUK0KYh1tBJV3wZF+ws+uzIs4QWv13G
+eJWCoj6R5brzrGAzEQDC9rfNcUCf3+mdf1oopdubydjifAiXRLti1wn9Ai0Z+BIFswO/Fc/3Tlmd
+XtFXi+ksXQvJDEPsHSxoDV2rrnpzMxMszw==
 
 -->

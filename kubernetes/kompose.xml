@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/kubernetes/kompose.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/kubernetes/kompose.xml">
   <name>Kompose</name>
   <summary>go from Docker Compose to Kubernetes</summary>
   <description>Kompose is a tool to help users who are familiar with docker-compose move to Kubernetes. kompose takes a Docker Compose file and translates it into Kubernetes resources.</description>
@@ -388,16 +388,28 @@
       <manifest-digest sha256new="WJRCQJTX2OVBF755335XIGGV7OKRQCHJYTQVWCNLQOJQGFSHO3VQ"/>
       <file dest="kompose" executable="true" href="https://github.com/kubernetes/kompose/releases/download/v1.22.0/kompose-darwin-amd64" size="27594008"/>
     </implementation>
+    <implementation arch="Windows-x86_64" id="sha1new=af0ae4c9254e3116f5da8ba7989715902dd4970e" main="kompose.exe" released="2021-07-13" stability="stable" version="1.23.0">
+      <manifest-digest sha256new="BLK3EHKI65KUJ6TMAKMG7EGXVRKCFFQBQ6L2HQGAGOE7ZNAUEQWQ"/>
+      <file dest="kompose.exe" href="https://github.com/kubernetes/kompose/releases/download/v1.23.0/kompose-windows-amd64" size="22554112"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha1new=4cd5803c1b37dcc5e9167daf7a455bc82a2ac372" main="kompose" released="2021-07-13" stability="stable" version="1.23.0">
+      <manifest-digest sha256new="BSWBHL6LI6PELRQDO5JDPFDV37BZGD6ACCB4TYMCCSSWJXKWVJ6A"/>
+      <file dest="kompose" executable="true" href="https://github.com/kubernetes/kompose/releases/download/v1.23.0/kompose-linux-amd64" size="21942272"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" id="sha1new=d59f00c51e4a27b8b54b55cae54e89b01546207b" main="kompose" released="2021-07-13" stability="stable" version="1.23.0">
+      <manifest-digest sha256new="L5NTNPQGLD633OVF5IRPF4XFSFRWDZSQEVWJFEWQCR2CZXRTO45Q"/>
+      <file dest="kompose" executable="true" href="https://github.com/kubernetes/kompose/releases/download/v1.23.0/kompose-darwin-amd64" size="23986384"/>
+    </implementation>
   </group>
 
   <entry-point binary-name="kompose" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl+b49sACgkQWao5J8JOTh6stQf8DwFa
-hfcBV1fykXrrHBEJpbMBikPxUWszPtJtsiDyNtZH0t4nWIj+uqZVDaggecjfbEkoOijau9k6RTk7
-M9mBM2fj2M2SjwXYY4WuWFxKC+39ZEJUeurSNgMz1TXsINZRBMABZ237uxhBY6JsiTTPnEWCq6QE
-vGiVJx6XiVZ6vDuV0CEO2C5uay5bL95c7XbaYD3gaZuqkoAXa5o66Iot61z8JZQaSEQiww9BIoWA
-DL51Hl8CMxNS2NtYHjNNo/Vm1g9QiB9h1/EoIG/Fa8ybY5hXJg6VRvLoukpKSvZe6kvqBsxv6qCI
-VMnwnOSBjbV0cdZAg5ZRjsgw0V65D2WJwQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmDvOo4ACgkQWao5J8JOTh5F2wgAlHtB
+bbnnBoxSB0Gz505y4j+mRX++o+Y/4hKvwE0FgHRlVCuGZBGmojl+Ppl5KwEq/YZX+FgTeiFEulf7
+xi1z7h8TDe4LZxRCq6hLcITFtP+SZC+AXlKdwl7RRxNwXvVKgAhdMt+U0pICiWYMmp1Xnfu8Q3Bx
+U0iZ5RH/PChq4Ogp5zXKp6pe4Fj7riorEHd5ubKmQ0e3A7P4p0waI/fd1+K6vdvuBC9mjolQFzeh
+si55kHi+n6FUVuZlCj1tSQu6PX5mctUNoeQEz3IXHEjpO2ATA2dHjapYWrp0l/H5GzUJvK4MQPww
+DXqWi9SGSwLAuU5lKI95YhtganHX6ue6tw==
 
 -->

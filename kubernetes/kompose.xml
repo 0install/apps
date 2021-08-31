@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="https://apps.0install.net/kubernetes/kompose.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/kubernetes/kompose.xml">
   <name>Kompose</name>
   <summary>go from Docker Compose to Kubernetes</summary>
   <description>Kompose is a tool to help users who are familiar with docker-compose move to Kubernetes. kompose takes a Docker Compose file and translates it into Kubernetes resources.</description>
@@ -398,6 +398,18 @@
     <implementation arch="Darwin-x86_64" id="sha1new=d59f00c51e4a27b8b54b55cae54e89b01546207b" main="kompose" released="2021-07-13" stability="stable" version="1.23.0">
       <manifest-digest sha256new="L5NTNPQGLD633OVF5IRPF4XFSFRWDZSQEVWJFEWQCR2CZXRTO45Q"/>
       <file dest="kompose" executable="true" href="https://github.com/kubernetes/kompose/releases/download/v1.23.0/kompose-darwin-amd64" size="23986384"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.24.0" released="2021-08-29" stability="stable" main="kompose.exe" id="sha1new=af4efe2fb7632da5f33ce9ee2af7235bf3124619">
+      <manifest-digest sha256new="6IR7NURXKPETLHN5IUXGORDU6H2SCSJ5XA4PDQOP5FJQIPZ4GP2A"/>
+      <file href="https://github.com/kubernetes/kompose/releases/download/v1.24.0/kompose-windows-amd64" size="25871360" dest="kompose.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.24.0" released="2021-08-29" stability="stable" main="kompose" id="sha1new=b830e2d64dbc4713ac646d2d153daeabb01168aa">
+      <manifest-digest sha256new="MIIZVDZMDHCAPCGV4H55I7OVSRT56MSKIBQ5ZGJ6HGH3GD2W7VNA"/>
+      <file href="https://github.com/kubernetes/kompose/releases/download/v1.24.0/kompose-linux-amd64" size="25767936" dest="kompose" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.24.0" released="2021-08-29" stability="stable" main="kompose" id="sha1new=0c0b4965b70c97be0a00231e08516a1bcf318551">
+      <manifest-digest sha256new="BJRUNUJ3R7LDWGRWR6C3O6XW6673W3EO54KA2JOBPSPPGBTB2C3Q"/>
+      <file href="https://github.com/kubernetes/kompose/releases/download/v1.24.0/kompose-darwin-amd64" size="28333368" dest="kompose" executable="true"/>
     </implementation>
   </group>
 

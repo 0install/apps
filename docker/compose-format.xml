@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/docker/compose-format.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/docker/compose-format.xml">
   <name>Docker Compose file format</name>
   <summary>empty dependency describing the versioning of the Docker Compose file format</summary>
   <description>Lists all versions of the Docker Compose file format and their compatibility with specific Docker and Docker Compose versions. Useful to ensure Docker Compose files from different feeds to be merged all share the same file format version and are passed to a suitable Docker (Compose) implementation.</description>
@@ -8,90 +8,102 @@
 
   <icon href="https://raw.githubusercontent.com/docker/compose/master/logo.png" type="image/png"/>
 
-  <implementation id="1.0" released="2013-12-20" stability="stable" version="1.0">
+  <implementation id="1.0" version="1.0" released="2013-12-20" stability="stable">
     <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709"/>
     <recipe/>
-	<restricts interface="https://apps.0install.net/docker/client.xml" version="1.9.1.."/>
+    <restricts interface="https://apps.0install.net/docker/client.xml" version="1.9.1.."/>
   </implementation>
-  <implementation id="2.0" released="2016-01-18" stability="stable" version="2.0">
+  <implementation id="2.0" version="2.0" released="2016-01-18" stability="stable">
     <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709"/>
     <recipe/>
-	<restricts interface="https://apps.0install.net/docker/client.xml" version="1.10.0.."/>
-	<restricts interface="https://apps.0install.net/docker/compose.xml" version="1.6.0-rc1.."/>
+    <restricts interface="https://apps.0install.net/docker/client.xml" version="1.10.0.."/>
+    <restricts interface="https://apps.0install.net/docker/compose.xml" version="1.6.0-rc1.."/>
   </implementation>
-  <implementation id="2.1" released="2016-10-20" stability="stable" version="2.1">
+  <implementation id="2.1" version="2.1" released="2016-10-20" stability="stable">
     <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709"/>
     <recipe/>
-	<restricts interface="https://apps.0install.net/docker/client.xml" version="1.12.0.."/>
-	<restricts interface="https://apps.0install.net/docker/compose.xml" version="1.9.0-rc1.."/>
+    <restricts interface="https://apps.0install.net/docker/client.xml" version="1.12.0.."/>
+    <restricts interface="https://apps.0install.net/docker/compose.xml" version="1.9.0-rc1.."/>
   </implementation>
-  <implementation id="2.2" released="2017-05-02" stability="stable" version="2.2">
+  <implementation id="2.2" version="2.2" released="2017-05-02" stability="stable">
     <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709"/>
     <recipe/>
-	<restricts interface="https://apps.0install.net/docker/client.xml" version="1.13.0.."/>
-	<restricts interface="https://apps.0install.net/docker/compose.xml" version="1.13.0.."/>
+    <restricts interface="https://apps.0install.net/docker/client.xml" version="1.13.0.."/>
+    <restricts interface="https://apps.0install.net/docker/compose.xml" version="1.13.0.."/>
   </implementation>
-  <implementation id="2.3" released="2017-08-21" stability="stable" version="2.3">
+  <implementation id="2.3" version="2.3" released="2017-08-21" stability="stable">
     <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709"/>
     <recipe/>
-	<restricts interface="https://apps.0install.net/docker/client.xml" version="17.6.0.."/>
-	<restricts interface="https://apps.0install.net/docker/compose.xml" version="1.16.0-rc1.."/>
+    <restricts interface="https://apps.0install.net/docker/client.xml" version="17.6.0.."/>
+    <restricts interface="https://apps.0install.net/docker/compose.xml" version="1.16.0-rc1.."/>
   </implementation>
-  <implementation id="3.0" released="2017-01-18" stability="stable" version="3.0">
+  <implementation id="2.4" version="2.4" released="2018-07-18" stability="stable">
     <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709"/>
     <recipe/>
-	<restricts interface="https://apps.0install.net/docker/client.xml" version="1.13.0.."/>
-	<restricts interface="https://apps.0install.net/docker/compose.xml" version="1.10.0.."/>
+    <restricts interface="https://apps.0install.net/docker/client.xml" version="17.12.0.."/>
+    <restricts interface="https://apps.0install.net/docker/compose.xml" version="1.22.0.."/>
   </implementation>
-  <implementation id="3.1" released="2017-02-07" stability="stable" version="3.1">
+  <implementation id="3.0" version="3.0" released="2017-01-18" stability="stable">
     <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709"/>
     <recipe/>
-	<restricts interface="https://apps.0install.net/docker/client.xml" version="1.13.1.."/>
-	<restricts interface="https://apps.0install.net/docker/compose.xml" version="1.11.0-rc1.."/>
+    <restricts interface="https://apps.0install.net/docker/client.xml" version="1.13.0.."/>
+    <restricts interface="https://apps.0install.net/docker/compose.xml" version="1.10.0.."/>
   </implementation>
-  <implementation id="3.2" released="2017-03-20" stability="stable" version="3.2">
+  <implementation id="3.1" version="3.1" released="2017-02-07" stability="stable">
     <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709"/>
     <recipe/>
-	<restricts interface="https://apps.0install.net/docker/client.xml" version="17.4.0.."/>
-	<restricts interface="https://apps.0install.net/docker/compose.xml" version="1.12.0-rc1.."/>
+    <restricts interface="https://apps.0install.net/docker/client.xml" version="1.13.1.."/>
+    <restricts interface="https://apps.0install.net/docker/compose.xml" version="1.11.0-rc1.."/>
   </implementation>
-  <implementation id="3.3" released="2017-05-31" stability="stable" version="3.3">
+  <implementation id="3.2" version="3.2" released="2017-03-20" stability="stable">
     <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709"/>
     <recipe/>
-	<restricts interface="https://apps.0install.net/docker/client.xml" version="17.6.0.."/>
-	<restricts interface="https://apps.0install.net/docker/compose.xml" version="1.14.0-rc1.."/>
+    <restricts interface="https://apps.0install.net/docker/client.xml" version="17.4.0.."/>
+    <restricts interface="https://apps.0install.net/docker/compose.xml" version="1.12.0-rc1.."/>
   </implementation>
-  <implementation id="3.4" released="2017-08-21" stability="stable" version="3.4">
+  <implementation id="3.3" version="3.3" released="2017-05-31" stability="stable">
     <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709"/>
     <recipe/>
-	<restricts interface="https://apps.0install.net/docker/client.xml" version="17.6.0.."/>
-	<restricts interface="https://apps.0install.net/docker/compose.xml" version="1.16.0-rc1.."/>
+    <restricts interface="https://apps.0install.net/docker/client.xml" version="17.6.0.."/>
+    <restricts interface="https://apps.0install.net/docker/compose.xml" version="1.14.0-rc1.."/>
   </implementation>
-  <implementation id="3.5" released="2017-12-07" stability="stable" version="3.5">
+  <implementation id="3.4" version="3.4" released="2017-08-21" stability="stable">
     <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709"/>
     <recipe/>
-	<restricts interface="https://apps.0install.net/docker/client.xml" version="17.12.0.."/>
-	<restricts interface="https://apps.0install.net/docker/compose.xml" version="1.18.0-rc1"/>
+    <restricts interface="https://apps.0install.net/docker/client.xml" version="17.6.0.."/>
+    <restricts interface="https://apps.0install.net/docker/compose.xml" version="1.16.0-rc1.."/>
   </implementation>
-  <implementation id="3.6" released="2018-02-28" stability="stable" version="3.6">
+  <implementation id="3.5" version="3.5" released="2017-12-07" stability="stable">
     <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709"/>
     <recipe/>
-	<restricts interface="https://apps.0install.net/docker/client.xml" version="18.2.0.."/>
-	<restricts interface="https://apps.0install.net/docker/compose.xml" version="1.20.0-rc1"/>
+    <restricts interface="https://apps.0install.net/docker/client.xml" version="17.12.0.."/>
+    <restricts interface="https://apps.0install.net/docker/compose.xml" version="1.18.0-rc1"/>
   </implementation>
-  <implementation id="3.7" released="2018-06-21" stability="stable" version="3.7">
+  <implementation id="3.6" version="3.6" released="2018-02-28" stability="stable">
     <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709"/>
     <recipe/>
-	<restricts interface="https://apps.0install.net/docker/client.xml" version="18.6.0.."/>
-	<restricts interface="https://apps.0install.net/docker/compose.xml" version="1.22.0-rc1.."/>
+    <restricts interface="https://apps.0install.net/docker/client.xml" version="18.2.0.."/>
+    <restricts interface="https://apps.0install.net/docker/compose.xml" version="1.20.0-rc1"/>
+  </implementation>
+  <implementation id="3.7" version="3.7" released="2018-06-21" stability="stable">
+    <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709"/>
+    <recipe/>
+    <restricts interface="https://apps.0install.net/docker/client.xml" version="18.6.0.."/>
+    <restricts interface="https://apps.0install.net/docker/compose.xml" version="1.22.0-rc1.."/>
+  </implementation>
+  <implementation id="3.8" version="3.8" released="2020-06-12" stability="stable">
+    <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709"/>
+    <recipe/>
+    <restricts interface="https://apps.0install.net/docker/client.xml" version="19.3.0.."/>
+    <restricts interface="https://apps.0install.net/docker/compose.xml" version="1.25.5.."/>
   </implementation>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7YsWwACgkQWao5J8JOTh59QAf+Mire
-GDX62ByjVB61fg9wELSRowRpQYYvG4IGl6QirtJCN7vyHfxBxl5xUrc3bDvzKfs1JsCgp22eFLvc
-jiKVi8q+bJTlZSQrN/QRFepOoRE1+5OuoDuWe4QYgmz5Ok58VC7xRz28BbnvXaXWQOVafLGIXMO/
-iGFyhkXLfpT7rUyYwpAVPj6MxoGi1SkrBM8zoLUc3hcm5nvloruNYSHEN81u1b05cfC1jX1fK0fJ
-HFSO7t6iBh9DnaIvq4ENf4g3VaMk1RZjVfC3I6XmSZ2Sspx+zp4ImJUKYP2abWGmAT1tOl2Qwv41
-KoZDxRcg1o3bdMQf347y0X0hotooGECkKQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmEzvBcACgkQWao5J8JOTh7i5wf+Mkjh
+dGoc9PYsifGY29xDtMJzitjR5o+0Ay1lVjysXTXHGUXHA88j2Qh4fq3PqUPKNZyWPslRFc5tyTJq
+ljPYqlFuvAw3kEBc/geTrzwx4lmwH1dRDzlVJbKCMQu0kVNblMiQsnyreB3gj9aXYS+CFOHG+991
+zd8/On5pT6yaN3LtQTR0kyxOP7cIdRHAquDf3F5sQh+kKsCQE2y0r3PEUSoEoEu4/mPi2II7LVaK
+1xJrW6me/rsqHHGyfpY/HNeaZmxf2yb9KcY6ZwP/cBdbj/WEQC5l7CXEKgaAloWmmWT+W92jN8qm
+8PYnbiSlvomXfK23359bsCy7oynbeixoGg==
 
 -->

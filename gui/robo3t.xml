@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/gui/robo3t.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uri="https://apps.0install.net/gui/robo3t.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Robo 3T</name>
   <summary>MongoDB management tool (formerly Robomongo)</summary>
   <description>Robo 3T (formerly Robomongo) is a shell-centric cross-platform MongoDB management tool.</description>
@@ -9,70 +9,19 @@
   <category>Development</category>
   <homepage>https://robomongo.org/</homepage>
 
+  <feed arch="Linux-*" src="https://apps.0install.net/gui/robo3t-linux.xml"/>
+  <feed arch="MacOSX-*" src="https://apps.0install.net/gui/robo3t-macos.xml"/>
+  <feed arch="Windows-*" src="https://apps.0install.net/gui/robo3t-windows.xml"/>
+  <package-implementation distributions="Virtual" package="robo3t" main="/usr/bin/robo3t"/><!-- Prevent this virtual feed from being seen as a library feed -->
+
   <entry-point binary-name="robo3t" command="run"/>
-
-  <group arch="Windows-x86_64" license="GPL v3 (GNU General Public License)">
-    <command name="run" path="robo3t.exe"/>
-    <implementation id="sha1new=5a80e387dc34c4fe276f1273cbfe4f1b98e042cf" released="2018-02-22" stability="stable" version="1.2.1">
-      <manifest-digest sha256new="Y4SMAW5YINIEH6FHDQ4QGDDSQCA2U3F2PI5PU62ITU7U3QLQGHCQ"/>
-      <archive extract="robo3t-1.2.1-windows-x86_64-2e371d2" href="https://github.com/Studio3T/robomongo/releases/download/v1.2.1/robo3t-1.2.1-windows-x86_64-2e371d2.zip" size="15894435" type="application/zip"/>
-    </implementation>
-    <implementation id="sha1new=0cf7ce03b1675f9bd9d3835da5dc94983d045897" released="2019-04-04" stability="stable" version="1.3.1">
-      <manifest-digest sha256new="M72RLSXZLA37WP4JHIRVONUY3DAE7NXSM5V77ZUDHTOH566GZ7CQ"/>
-      <archive extract="robo3t-1.3.1-windows-x86_64-7419c406" href="https://github.com/Studio3T/robomongo/releases/download/v1.3.1/robo3t-1.3.1-windows-x86_64-7419c406.zip" size="22108564" type="application/zip"/>
-    </implementation>
-    <implementation id="sha1new=5c3578d6068fa6a0367097650f5da295c8922eb5" released="2020-08-27" stability="stable" version="1.4.0">
-      <manifest-digest sha256new="XKKAPB37DFFDIUMSHMUYZMGPUXIIHBKGK2AKZABQUZYQUFUNVC2A"/>
-      <archive extract="robo3t-1.4.0-windows-x86_64-a61e33c" href="https://github.com/Studio3T/robomongo/releases/download/v1.4.0/robo3t-1.4.0-windows-x86_64-a61e33c.zip" size="25671442" type="application/zip"/>
-    </implementation>
-    <implementation id="sha1new=a5420a7478b183a8f48d76218bba6fb7b66fd28f" released="2020-09-10" stability="stable" version="1.4.1">
-      <manifest-digest sha256new="G7OTRQ3N5DQSNQ57U6AXHQAFV2TT54OBMEKHMSY5IC2S7RVM6XTQ"/>
-      <archive extract="robo3t-1.4.1-windows-x86_64-122dbd9" href="https://github.com/Studio3T/robomongo/releases/download/v1.4.1/robo3t-1.4.1-windows-x86_64-122dbd9.zip" size="25740477" type="application/zip"/>
-    </implementation>
-    <implementation id="sha1new=3fc814c8c81b14e055d7591236e54d8630d2e531" released="2020-10-20" stability="stable" version="1.4.2">
-      <manifest-digest sha256new="JKQALYE6JFYZ74Y3MCRLRC7CFSL3BPLNJMJ5GPL3MUXH2WGO7QSQ"/>
-      <archive extract="robo3t-1.4.2-windows-x86_64-8650949" href="https://github.com/Studio3T/robomongo/releases/download/v1.4.2/robo3t-1.4.2-windows-x86_64-8650949.zip" size="25742077" type="application/zip"/>
-    </implementation>
-    <implementation id="sha1new=2c4790c255e064f069c870632b947e6b9f6f49d8" released="2020-12-10" stability="stable" version="1.4.3">
-      <manifest-digest sha256new="3PZONOXEL35COR6ERULH3GVEXG47I4DAWFKD65NCPPMZA4O5NSCQ"/>
-      <archive extract="robo3t-1.4.3-windows-x86_64-48f7dfde" href="https://github.com/Studio3T/robomongo/releases/download/v1.4.3/robo3t-1.4.3-windows-x86_64-48f7dfde.zip" size="82875636" type="application/zip"/>
-    </implementation>
-  </group>
-
-  <group arch="Linux-x86_64" license="GPL v3 (GNU General Public License)">
-    <command name="run" path="bin/robo3t"/>
-    <implementation id="sha1new=4e75c0b013dae30613e39626be0b1949ed5f3c74" released="2018-02-22" stability="stable" version="1.2.1">
-      <manifest-digest sha256new="UMYJE7Q6QFBBXOWYEOLQSGLCLJOOKACWGZ6UZTQBBC4CU6L65ALQ"/>
-      <archive extract="robo3t-1.2.1-linux-x86_64-3e50a65" href="https://github.com/Studio3T/robomongo/releases/download/v1.2.1/robo3t-1.2.1-linux-x86_64-3e50a65.tar.gz" size="36665361" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation id="sha1new=2d8cb7ad863c5c80e7b4abb56350f12227a9e169" released="2019-04-04" stability="stable" version="1.3.1">
-      <manifest-digest sha256new="VKANXL36CLAWRVO7RLGBYO5RWP7JRHSMCIQU6SMRGFAFJYDQE6BA"/>
-      <archive extract="robo3t-1.3.1-linux-x86_64-7419c406" href="https://github.com/Studio3T/robomongo/releases/download/v1.3.1/robo3t-1.3.1-linux-x86_64-7419c406.tar.gz" size="40672296" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation id="sha1new=d40adb73fdf41d8c0469907c3b73753e198f36d5" released="2020-08-27" stability="stable" version="1.4.0">
-      <manifest-digest sha256new="EZRF7R5V2GX6BPXHDN4LIEHNRQ2PEB3XY2ITM22FO3OUHRA7V7EA"/>
-      <archive extract="robo3t-1.4.0-linux-x86_64-a61e33c" href="https://github.com/Studio3T/robomongo/releases/download/v1.4.0/robo3t-1.4.0-linux-x86_64-a61e33c.tar.gz" size="41014335" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation id="sha1new=9fd9d64565879668b531fd61c1984943e1c9257e" released="2020-09-10" stability="stable" version="1.4.1">
-      <manifest-digest sha256new="RPDT7TPAPEEMG2SH2ZO7DBQTJ7HCFLSV3I2WXQSUIIY34H3PXTHQ"/>
-      <archive extract="robo3t-1.4.1-linux-x86_64-122dbd9" href="https://github.com/Studio3T/robomongo/releases/download/v1.4.1/robo3t-1.4.1-linux-x86_64-122dbd9.tar.gz" size="41651883" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation id="sha1new=a00d3d7aec924bfb700ca21d209a33f9b12bc557" released="2020-10-20" stability="stable" version="1.4.2">
-      <manifest-digest sha256new="TKHJOXLTNP7D3HHOCI7K2PWDTCY3HZ5NBG6WUP6K5LZT6DFMYERQ"/>
-      <archive extract="robo3t-1.4.2-linux-x86_64-8650949" href="https://github.com/Studio3T/robomongo/releases/download/v1.4.2/robo3t-1.4.2-linux-x86_64-8650949.tar.gz" size="41656635" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation id="sha1new=80b7419fc2e90b887ecc13ba7942750dfb7afe9d" released="2020-12-10" stability="stable" version="1.4.3">
-      <manifest-digest sha256new="YO3KVIPBUWQL4HOH53VYNYNC352ZVL4XYYBBTNIDSHYVEGVL3TJA"/>
-      <archive extract="robo3t-1.4.3-linux-x86_64-48f7dfd" href="https://github.com/Studio3T/robomongo/releases/download/v1.4.3/robo3t-1.4.3-linux-x86_64-48f7dfd.tar.gz" size="41660580" type="application/x-compressed-tar"/>
-    </implementation>
-  </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmA2GwwACgkQWao5J8JOTh61BQf8DKoI
-q8giRK8+PX0XWH4YQGhnUMCk4Tn5gYgW8qs4FFIfq9IiNvy1VR4lLwSyLPB1tzlm4+VfuXMZumGL
-IZXia0yiFDCj0d52f6TH//wQngHo6P0IzJMiowC1B06gi5aUInS52+0gIO8CctYoAQ7ZdP3KW69S
-f4jTO6CJDqvS7M3jeJuFudbcVxzfhHZVo6zg9Lr36tCdYcgW7pqhLGASHu4H/x8gLHUV7OT6YQCK
-QKx9WxV5MHL1afAEl/yDZWbXjlCtfMdxxz2eStJh857PaIAR6KZVvCYE5FKFWRATn657tEA/2NLF
-DlqE0a7VGcAjJWLxGmS8gvqvL1t5SDKwog==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmE3YpQACgkQWao5J8JOTh7s7QgAuAv3
+LnKOpsIsiWP3M0cCz7wWdmnRVq/tvYzWGP6c3vQqXomFwUpxZuacwayXwCeDgfVV6pSB1qq75GOV
+947UXLvZJxxg7j4eZzd+SDbFU7kJDduVIpewEVwkPKTwKSyAuOeKsD3cvweG6qXxO0McnqX5HbDY
+MRQvsh24psnttsSUCsMPc/vkbcKNZeLwYXScDy/zZRQd98BPeLqpnrv/bEu6raRip2I8QvSmN8Xb
+qN9rDNDHBid+y5wy/fqsxk3iLxFotPSBs+jAjU0skWIuxn9IOxbFtEs4SLsIQ8/0lFoBII2z+fXF
++pKkL2gq3kxmqAm+JZb3BC/X3ChihkCWLA==
 
 -->

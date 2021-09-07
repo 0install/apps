@@ -1,6 +1,6 @@
 import sys, os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from github import releases
+import github
 
 def convert(release):
     original_version = release['tag_name'].strip('v')
@@ -9,4 +9,4 @@ def convert(release):
     stability = 'developer' if 'alpha' in original_version else ('testing' if release['prerelease'] else 'stable')
     return {'version': version, 'original-version': original_version, 'stability': stability, 'released': released}
 
-releases = [convert(release) for release in releases('helm/helm') if release['tag_name'].startswith('v3.')]
+releases = [convert(release) for release in github.releases('helm/helm') if release['tag_name'].startswith('v3.')]

@@ -1,7 +1,7 @@
 #os=Windows
 import sys, os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from github import releases
+import github
 
 def convert(release):
     original_version = release['tag_name'].strip('v')
@@ -10,4 +10,4 @@ def convert(release):
     released = release['published_at'][0:10]
     return {'version': version, 'original-version': original_version, 'stability': stability, 'released': released}
 
-releases = [convert(release) for release in releases('gitextensions/gitextensions') if str.startswith(release['tag_name'], 'v2.') and len(release['assets']) > 0]
+releases = [convert(release) for release in github.releases('gitextensions/gitextensions') if str.startswith(release['tag_name'], 'v2.') and len(release['assets']) > 0]

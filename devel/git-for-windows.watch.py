@@ -1,7 +1,7 @@
 #os=Windows
 import sys, os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from github import releases
+import github
 
 def convert(release):
     tag = release['tag_name']
@@ -11,4 +11,4 @@ def convert(release):
     released = release['published_at'][0:10]
     return {'version': version, 'main-version': main_version, 'build': build, 'released': released}
 
-releases = [convert(release) for release in releases('git-for-windows/git') if not release['prerelease']]
+releases = [convert(release) for release in github.releases('git-for-windows/git') if not release['prerelease']]

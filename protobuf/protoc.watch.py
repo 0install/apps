@@ -1,6 +1,6 @@
 import sys, os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from github import releases
+import github
 
 def convert(release):
     tag = release['tag_name']
@@ -10,4 +10,4 @@ def convert(release):
     released = release['published_at'][0:10]
     return {'tag': tag, 'version': version, 'archive-version': archive_version, 'stability': stability, 'released': released}
 
-releases = [convert(release) for release in releases('protocolbuffers/protobuf') if any(str.startswith(asset['name'], 'protoc-') for asset in release['assets'])]
+releases = [convert(release) for release in github.releases('protocolbuffers/protobuf') if any(str.startswith(asset['name'], 'protoc-') for asset in release['assets'])]

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>gojq</name>
+  <summary>pure Go implementation of jq</summary>
+  <description>This is an implementation of jq command written in Go language.</description>
+  <homepage>https://github.com/itchyny/gojq</homepage>
+  <category>Utility</category>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/utils/gojq.xml"/>
+
+  <group license="MIT License">
+    <implementation arch="Linux-x86_64" main="gojq" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="gojq_v{version}_linux_amd64" href="https://github.com/itchyny/gojq/releases/download/v{version}/gojq_v{version}_linux_amd64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="gojq" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="gojq_v{version}_linux_arm64" href="https://github.com/itchyny/gojq/releases/download/v{version}/gojq_v{version}_linux_arm64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" main="gojq" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="gojq_v{version}_darwin_amd64" href="https://github.com/itchyny/gojq/releases/download/v{version}/gojq_v{version}_darwin_amd64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" main="gojq" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="gojq_v{version}_darwin_arm64" href="https://github.com/itchyny/gojq/releases/download/v{version}/gojq_v{version}_darwin_arm64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="gojq.exe" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="gojq_v{version}_windows_amd64" href="https://github.com/itchyny/gojq/releases/download/v{version}/gojq_v{version}_windows_amd64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="gojq.exe" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="gojq_v{version}_windows_arm64" href="https://github.com/itchyny/gojq/releases/download/v{version}/gojq_v{version}_windows_arm64.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

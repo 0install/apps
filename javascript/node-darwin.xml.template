@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Node.js - Darwin/macOS builds</name>
+  <summary>open-source, cross-platform JavaScript runtime environment</summary>
+  <description>Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.</description>
+  <homepage>http://nodejs.org/</homepage>
+  <needs-terminal/>
+
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/javascript/node.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/javascript/node.ico" type="image/vnd.microsoft.icon"/>
+
+  <feed-for interface="https://apps.0install.net/javascript/node-darwin.xml"/>
+
+  <group license="MIT License">
+    <environment insert="lib/node_modules/npm/bin/npm-cli.js" mode="replace" name="NPM_CLI_JS"/>
+    <environment insert="lib/node_modules/npm/bin/npx-cli.js" mode="replace" name="NPX_CLI_JS"/>
+    <command name="run" path="bin/node"/>
+    <command name="npm" path="bin/node">
+      <arg>$NPM_CLI_JS</arg>
+    </command>
+    <command name="npx" path="bin/node">
+      <arg>$NPX_CLI_JS</arg>
+    </command>
+
+    <implementation arch="Darwin-x86_64" version="{version}" stability="{stability}" released="{released}">
+      <manifest-digest/>
+      <archive extract="node-v{version}-darwin-x64" href="https://nodejs.org/dist/v{version}/node-v{version}-darwin-x64.tar.gz" type="application/x-compressed-tar" />
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="{version}" stability="{stability}" released="{released}">
+      <manifest-digest/>
+      <archive extract="node-v{version}-darwin-arm64" href="https://nodejs.org/dist/v{version}/node-v{version}-darwin-arm64.tar.gz" type="application/x-compressed-tar" />
+    </implementation>
+  </group>
+</interface>

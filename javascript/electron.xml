@@ -7,6 +7,11 @@
   <homepage>https://electronjs.org/</homepage>
   <icon href="https://raw.githubusercontent.com/0install/apps/master/javascript/electron.png" type="image/png"/>
 
+  <feed src="https://apps.0install.net/javascript/electron-linux.xml" arch="Linux-*"/>
+  <feed src="https://apps.0install.net/javascript/electron-macos.xml" arch="MacOSX-*"/>
+  <feed src="https://apps.0install.net/javascript/electron-windows.xml" arch="Windows-*"/>
+  <package-implementation distributions="Virtual" package="electron" main="/usr/bin/electron"/><!-- Prevent this virtual feed from being seen as a library feed -->
+
   <group license="MIT License">
     <implementation arch="Linux-x86_64" id="sha1new=c357ae42d2d3120ef32c4691ee415e28fe2b3d80" main="electron" released="2017-04-21" stability="stable" version="1.3.15">
       <manifest-digest sha256new="FOE4I6P6T6OFNZOIVPV67LFWKOR6P6W4EOO5MSRBY5IVQ46QT7MQ"/>
@@ -6333,11 +6338,11 @@
   <entry-point binary-name="electron" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmFLDPgACgkQWao5J8JOTh6FDgf9HduT
-R2u6ocxspCQobc50HbIKYdSx34otRXicVfIZdPAIGAEfY5S+LMrJd1igIMos0apnGmkZsHkWBRrA
-utOtndfPR+uGccvS8dPF3jefARHyEaVkwEOf4Je6yMKdDqIMUn3tuRL5bY/wJTwhC5WPUpW00KLd
-YxjQZPPyHXHsVBwb/H5ve6gQHJBo7TIYPkL47ZJy1U5t6mi6FzoQMFTQaObCGhX9Ios2e59AWQ9u
-VfH6cqqJ8PU19xJ0ZlIU1qiDpfJojM7onm2wELbDeYzfQrT1UBAGgXyft8AiUoD5Uge3PKCNWrtA
-wtzWWSfoYmpdrsAJniA+/WOB1bP18FcvCA==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmFLOLkACgkQWao5J8JOTh7XNgf/Wk7w
+ys64JUeY3Kf98jCxMS7lNctVKEq0+/h0rV+rU9TEs5spOeCdTQNlV8kU7FaYlXzCUxaw+oXTX0Fn
+fP+pul9fr/ylqMoOHO88HuSDASVVm6TsgpzqOOvUSGPWdQzbNLmt3BKzoVcE6P24g76JeF8oOwKQ
+6lVVzEhBHpj4QdywCoDZlzfcw613jQKQVzKcJ2fBfuiLIFxbTwIbyCw0IYhRJ81o+MvdSIl6/qch
+nHi6p9ge45SK2sparJgjzQKKpmxulPmTYA3dBbyqaAF0c70h6cjhIQuthdpgZOVmljPNJLdubJgL
+8B4X6wU7nqQYiLaInUkhPG+U6TIqM33OeA==
 
 -->

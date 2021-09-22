@@ -6,6 +6,11 @@
   <homepage>https://electronjs.org/</homepage>
   <icon href="https://raw.githubusercontent.com/0install/apps/master/javascript/electron.png" type="image/png"/>
 
+  <feed src="https://apps.0install.net/javascript/electron-linux.xml" arch="Linux-*"/>
+  <feed src="https://apps.0install.net/javascript/electron-macos.xml" arch="MacOSX-*"/>
+  <feed src="https://apps.0install.net/javascript/electron-windows.xml" arch="Windows-*"/>
+  <package-implementation distributions="Virtual" package="electron" main="/usr/bin/electron"/><!-- Prevent this virtual feed from being seen as a library feed -->
+
   <group license="MIT License">
     <implementation arch="Linux-x86_64" id="sha1new=c357ae42d2d3120ef32c4691ee415e28fe2b3d80" main="electron" released="2017-04-21" stability="stable" version="1.3.15">
       <manifest-digest sha256new="FOE4I6P6T6OFNZOIVPV67LFWKOR6P6W4EOO5MSRBY5IVQ46QT7MQ"/>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Electron - macOS builds</name>
+  <summary>framework for creating native applications with web technologies</summary>
+  <description>Electron is a framework for creating native applications with web technologies like JavaScript, HTML, and CSS.</description>
+  <homepage>https://electronjs.org/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/javascript/electron.png" type="image/png"/>
+
+  <feed-for interface="https://apps.0install.net/javascript/electron-macos.xml"/>
+
+  <group license="MIT License">
+    <command name="run" path="Electron.app/Contents/MacOS/Electron"/>
+
+    <implementation arch="MacOSX-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/electron/electron/releases/download/v{version}/electron-v{version}-darwin-x64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/electron/electron/releases/download/v{version}/electron-v{version}-darwin-arm64.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

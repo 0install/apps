@@ -1,31 +1,6 @@
 #os=Windows
-from urllib import request
-import re
-from datetime import datetime
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
+import blender
 
-def regex(url, pattern):
-    return re.findall(pattern, request.urlopen(url).read().decode('utf-8'))
-
-def to_zi_version(input):
-    suffix = ''
-    if input.endswith('-alpha'):
-        input = input.replace('-alpha', '')
-        suffix = '-pre-pre'
-    if input.endswith('-beta'):
-        input = input.replace('-beta', '')
-        suffix = '-pre'
-    if not input[-1].isdigit():
-        input = input[:-1] + '-' + str(ord(input[-1]) - 96)
-    return input + suffix
-
-releases = []
-
-for version_main in regex('https://download.blender.org/release/', r'>Blender([\d\.a-z]+)\/<\/a>'):
-    for match in regex('https://download.blender.org/release/Blender' + version_main + '/', r'>blender-([\d\.\-a-z]+)-windows-x64\.zip<\/a>\s+(..-...-....)'):
-        releases.append({
-            'version': to_zi_version(match[0].replace('-release', '').replace('rc', '-rc')),
-            'version-main': version_main,
-            'version-full': match[0],
-            'stability': 'testing' if 'alpha' in match[0] or 'beta' in match[0] or 'rc' in match[0] else 'stable',
-            'released': datetime.strftime(datetime.strptime(match[1], '%d-%b-%Y'), '%Y-%m-%d')
-        })
+releases = blender.releases('windows-x64.zip')

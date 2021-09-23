@@ -21,7 +21,7 @@ def to_zi_version(input):
 releases = []
 
 for version_main in regex('https://download.blender.org/release/', r'>Blender([\d\.a-z]+)\/<\/a>'):
-    for match in regex('https://download.blender.org/release/Blender' + version_main + '/', r'>blender-([\d\.\-a-z]+)-macOS\.dmg<\/a>\s+(..-...-....)'):
+    for match in regex('https://download.blender.org/release/Blender' + version_main + '/', r'>blender-([\d\.\-a-z]+)-macos-x64\.dmg<\/a>\s+(..-...-....)'):
         releases.append({
             'version': to_zi_version(match[0].replace('-release', '').replace('rc', '-rc')),
             'version-main': version_main,

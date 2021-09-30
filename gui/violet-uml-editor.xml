@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<interface uri="https://apps.0install.net/gui/violet-uml-editor.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Violet UML Editor</name>
+  <summary>UML editor</summary>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/violet-uml-editor.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/violet-uml-editor.png" type="image/png"/>
+  <category>Graphics</category>
+
+  <group license="OSI Approved :: GNU General Public License (GPL)">
+    <command name="run" path="violetumleditor.jar">
+      <runner interface="https://apps.0install.net/java/jre.xml" version="6.." command="run-gui">
+        <arg>-jar</arg>
+      </runner>
+    </command>
+
+    <implementation id="sha256new_FC4UD3BFHWOOC3MY4HXJDNJI7CC567737EMZYUKHFJYL737VSBGA" released="2013-10-20" version="2.0.0">
+      <manifest-digest sha256new="FC4UD3BFHWOOC3MY4HXJDNJI7CC567737EMZYUKHFJYL737VSBGA"/>
+      <file dest="violetumleditor.jar" href="https://downloads.sourceforge.net/project/violet/violetumleditor/2.0.0/violetumleditor-2.0.0.jar" size="3616351"/>
+    </implementation>
+    <implementation id="sha256new_SNYPSXBDFWNXF7JBBLPGYQH3GJKM27VRXA4YSCMHHCWMWZFFI7DQ" released="2014-02-09" version="2.0.1">
+      <manifest-digest sha256new="SNYPSXBDFWNXF7JBBLPGYQH3GJKM27VRXA4YSCMHHCWMWZFFI7DQ"/>
+      <file dest="violetumleditor.jar" href="https://downloads.sourceforge.net/project/violet/violetumleditor/2.0.1/violetumleditor-2.0.1.jar" size="3618687"/>
+    </implementation>
+    <implementation id="sha256new_GC356BZK3YHUILHO3O2BU46A57XATTV7JBLIUFW6N5RYL5L5DUXQ" released="2015-01-21" version="2.1.0">
+      <manifest-digest sha256new="GC356BZK3YHUILHO3O2BU46A57XATTV7JBLIUFW6N5RYL5L5DUXQ"/>
+      <file dest="violetumleditor.jar" href="https://downloads.sourceforge.net/project/violet/violetumleditor/2.1.0/violetumleditor-2.1.0.jar" size="3776719"/>
+    </implementation>
+    <implementation id="sha256new_CTDVKKWOIRLETQCZZKK6PY3FZ4X6GGB3DFP5L366B6Z47X7VOZUQ" released="2018-09-24" version="3.0.0">
+      <manifest-digest sha256new="CTDVKKWOIRLETQCZZKK6PY3FZ4X6GGB3DFP5L366B6Z47X7VOZUQ"/>
+      <file dest="violetumleditor.jar" href="https://downloads.sourceforge.net/project/violet/violetumleditor/3.0.0/violetumleditor-3.0.0.jar" size="5909391"/>
+    </implementation>
+  </group>
+
+  <entry-point command="run" binary-name="violetumleditor-3.0.0"/>
+
+  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
+    <file-type id="Violet">
+      <description>Violet UML file</description>
+      <extension value=".violet"/>
+      <verb args="&quot;%V&quot;" name="open"/>
+    </file-type>
+  </capabilities>
+</interface>

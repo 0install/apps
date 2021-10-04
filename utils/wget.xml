@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="https://apps.0install.net/utils/wget.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd.xml">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uri="https://apps.0install.net/utils/wget.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd.xml">
   <name>GNU Wget</name>
   <summary xml:lang="en">A command-line utility for retrieving files using HTTP, HTTPS and FTP protocols.</summary>
   <description xml:lang="en">GNU Wget is a free software package for retrieving files using HTTP, HTTPS, FTP and FTPS the most widely-used Internet protocols. It is a non-interactive commandline tool, so it may easily be called from scripts, cron jobs, terminals without X-Windows support, etc. 
@@ -31,6 +31,14 @@ GNU Wget has many features to make retrieving large files or mirroring entire we
     <implementation arch="Windows-i486" id="sha1new=2669a4f7cb0843c91a297036b3588a768b04bd4a" released="2021-03-25" version="1.21.1-1">
       <manifest-digest sha256new="VT7AESPTXHGPUOZ3325KHBKUUDYD7VO4KSYCFMZVCGP2TOKY6OCA"/>
       <archive href="https://eternallybored.org/misc/wget/releases/wget-1.21.1-1-win32.zip" size="4090749" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.21.2" released="2021-10-02" id="sha256new_INP3J3FBPAG23TJF5J6KWGTA2ITG5XOCRV62YQKFJQWJGDBRWKLQ">
+      <manifest-digest sha256new="INP3J3FBPAG23TJF5J6KWGTA2ITG5XOCRV62YQKFJQWJGDBRWKLQ"/>
+      <archive href="https://eternallybored.org/misc/wget/releases/wget-1.21.2-win64.zip" size="3959598" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.21.2" released="2021-10-02" id="sha256new_UIZU32TFFGDSA7W34U4YGGADUCXLADG4GHZOYMUEWUEF4LKUICFQ">
+      <manifest-digest sha256new="UIZU32TFFGDSA7W34U4YGGADUCXLADG4GHZOYMUEWUEF4LKUICFQ"/>
+      <archive href="https://eternallybored.org/misc/wget/releases/wget-1.21.2-win32.zip" size="3739417" type="application/zip"/>
     </implementation>
   </group>
   <package-implementation distributions="Gentoo" main="/usr/bin/wget" package="net-misc/wget"/>

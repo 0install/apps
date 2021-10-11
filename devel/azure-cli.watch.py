@@ -6,4 +6,4 @@ import github
 releases = [{
     'version': release['tag_name'][len('azure-cli-'):],
     'released': release['published_at'][0:10]
-} for release in github.releases('Azure/azure-cli') if not release['prerelease'] and int(release['published_at'][0:4]) >= 2020]
+} for release in github.releases('Azure/azure-cli') if not release['prerelease'] and int(release['published_at'][0:4]) >= 2020 and len(release['assets']) > 0]

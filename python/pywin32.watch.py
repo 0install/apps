@@ -12,5 +12,5 @@ for version, downloads in data['releases'].items():
         'released': downloads[0]['upload_time'][0:10]
     }
     for download in downloads:
-        release[re.findall(r'-(cp\d\dm?-win.+)\.', download['url'])[0]] = download['url']
+        release[re.findall(r'-(cp\d+m?-win.+)\.', download['url'])[0]] = download['url']
     releases.append(release)

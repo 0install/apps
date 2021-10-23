@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="https://apps.0install.net/0install/0template.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/0install/0template.xml">
   <name>0template</name>
   <summary>utility to make creating feeds easier</summary>
   <description>
@@ -36,7 +36,7 @@
       <runner interface="https://apps.0install.net/python/python.xml"/>
     </command>
     <command name="test" path="tests/test0template.py">
-      <runner interface="https://apps.0install.net/python/python.xml" version="2.7.." />
+      <runner interface="https://apps.0install.net/python/python.xml" version="2.7.."/>
       <executable-in-path name="0template"/>
     </command>
     <requires interface="https://apps.0install.net/0install/0install-python.xml" version="2.2-post..">
@@ -64,6 +64,10 @@
     <implementation id="sha1new=03a80899236770b139c3c4be1d2255e4644a1a32" released="2018-11-17" stability="stable" version="0.6">
       <manifest-digest sha256new="GHJMUQA4THAAAG62R4R55U2CLFGHNVIRH2TTBLKYH4SKBMZF7JPQ"/>
       <archive extract="0template-0.6" href="0template-0.6.tar.bz2" size="17585"/>
+    </implementation>
+    <implementation id="sha1new=bfd883e8387d5a1fff3fb9d716738d82ef6bfcd7" version="0.7" released="2021-10-23">
+      <manifest-digest sha256new="V73HJ3OIZK766OAJVLK73UCVWQQWGGDZTBANOSMT6IGANWS2HZAQ"/>
+      <archive href="0template-0.7.tar.bz2" size="17570" extract="0template-0.7"/>
     </implementation>
   </group>
 

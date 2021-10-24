@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<interface uri="https://apps.0install.net/gui/rambox.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Rambox CE</name>
+  <summary>messaging app that combines common web applications</summary>
+  <description>Free, Open Source and Cross Platform messaging and emailing app that combines common web applications into one.</description>
+  <homepage>https://rambox.app/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/rambox.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/rambox.png" type="image/png"/>
+  <category>Network</category>
+
+  <feed arch="Linux-*" src="https://apps.0install.net/gui/rambox-linux.xml"/>
+  <feed arch="MacOSX-*" src="https://apps.0install.net/gui/rambox-macos.xml"/>
+  <feed arch="Windows-*" src="https://apps.0install.net/gui/rambox-windows.xml"/>
+  <package-implementation distributions="Virtual" package="rambox" main="/usr/bin/rambox"/><!-- Prevent this virtual feed from being seen as a library feed -->
+
+  <entry-point binary-name="rambox" command="run"/>
+</interface>

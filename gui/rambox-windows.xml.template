@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Rambox CE - Windows builds</name>
+  <summary>messaging app that combines common web applications</summary>
+  <description>Free, Open Source and Cross Platform messaging and emailing app that combines common web applications into one.</description>
+  <homepage>https://rambox.app/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/rambox.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/rambox.png" type="image/png"/>
+  <category>Network</category>
+
+  <feed-for interface="https://apps.0install.net/gui/rambox-windows.xml"/>
+
+  <group license="GPL v3 (GNU General Public License)">
+    <command name="run" path="rambox.exe"/>
+    <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive href="https://github.com/ramboxapp/community-edition/releases/download/{version}/Rambox-{version}-win-x64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive href="https://github.com/ramboxapp/community-edition/releases/download/{version}/Rambox-{version}-win-ia32.zip" type="application/zip"/>
+    </implementation>
+  </group>
+
+</interface>

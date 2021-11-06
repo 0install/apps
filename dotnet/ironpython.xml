@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/dotnet/ironpython.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/dotnet/ironpython.xml">
   <name>IronPython</name>
   <summary>implementation of Python running under .NET/Mono</summary>
   <description>IronPython is an implementation of the Python programming language running under .NET/Mono and Silverlight/Moonlight. It supports an interactive console with fully dynamic compilation. It's well integrated with the rest of the .NET Framework and makes all .NET libraries easily available to Python programmers, while maintaining compatibility with the Python language. There also is Visual Studio tooling integration.</description>
@@ -110,7 +110,7 @@
   <!-- .NET Core 2.0 -->
   <group arch="POSIX-*" license="The Apache License v2">
     <command name="run" path="netcoreapp2.0/ipy.dll">
-      <runner command="run" interface="https://apps.0install.net/dotnet/core.xml" version="2.0.."/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/runtime.xml" version="2.0.."/>
     </command>
     <implementation id="v2.7.8-netcoreapp2.0" released="2018-02-17" version="2.7.8">
       <manifest-digest sha256new="BCD52QF3XFKJM4ASZBUVZ6LLXKNMWPXBABCO3JDYUICP2W3EVJ4Q"/>
@@ -133,18 +133,18 @@
   <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
     <file-type id="IronPython.File">
       <description>Python source code file</description>
-      <icon href="https://raw.githubusercontent.com/0install/apps/master/dotnet/ironpython.doc.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon xmlns="http://zero-install.sourceforge.net/2004/injector/interface" href="https://raw.githubusercontent.com/0install/apps/master/dotnet/ironpython.doc.ico" type="image/vnd.microsoft.icon.xml"/>
       <verb args="&quot;%V&quot;" name="open"/>
       <extension value=".py"/>
     </file-type>
   </capabilities>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl8FvvMACgkQWao5J8JOTh4vSwf/Xu4H
-XrhTBnZqQgpwO5Nv+4KKwykhCPTtTAgSW+cov+qGUm9EABBx112U6mkvBjcIn2Jz8J5xFOQy658s
-sGyRKGC32OfryVCmm4dW7nhfmGKv2yfzgnLoPBBjBAV2dqbxILmHdMDf7/q7HX8GJTSLufJDa4Jc
-YHzZdP1r6XbNLoBR1ceLJtv7Z+WfgI7bUzQ2U2JMMk+Y7R2JI7VwvFFmL3wnJxpc1xpUeYD76Qek
-25jPGj44qUAmvDC1UYQ5/1OZlw+D3xHOWlRrjf6WmeEZiOnXo5MzOpsZszBKkvRtKfuOSJvGKwih
-V8qwmYDjB1ZHm3sjqq0d8CfmGvo6PleuxQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmGFdysACgkQWao5J8JOTh6dDwf/euEn
+L3Cnaxh5g8Y+1VJAIbGEHO1fUPcbc96CN2OYA27fwM344cmv3vVdq69s8eKiOvPvLkHF3D4+79th
+7vnkx5MY2U/hzEnKGytfIQGF+VB7MXGOcWQnlhPfCZ44PKPF1pyOAM2MjMIMsNNqLUqNxMizwOg3
+Hvd0dfpNT8xZEBOIQyu4Syr8WRJVKivKSnCt0li6+ncU0N1qR+30WGGyQiKbpaPyd8dpvz2fCQw+
+IJvt9w6RI2MRerZbkYgnsMAKtlpP5oXA70oCMewSQmi9ExCafl/ID3tpcsDH/rl5cKSMVq4TU0a2
+EuGoBDWCWLsTWSQxvncxfpExjwM8xYVM2A==
 
 -->

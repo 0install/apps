@@ -12,22 +12,41 @@
     <command name="run" path="dotnet.exe"/>
     <environment mode="replace" name="DOTNET_ROOT" insert="."/>
 
+    <implementation arch="Windows-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/{version}/dotnet-runtime-{version}-win-arm64.zip" type="application/zip"/>
+    </implementation>
     <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
       <manifest-digest/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/{version}/dotnet-runtime-{version}-win-x64.zip" type="application/zip"/>
     </implementation>
-    <implementation arch="Windows-i486" version="{version}" released="{released}" stability="stable">
+  </group>
+
+  <group arch="Windows-i486" license="MIT License">
+    <command name="run" path="dotnet.exe"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
+    <environment mode="replace" name="DOTNET_ROOT(x86)" insert="."/>
+
+    <implementation version="{version}" released="{released}" stability="stable">
       <manifest-digest/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/{version}/dotnet-runtime-{version}-win-x86.zip" type="application/zip"/>
     </implementation>
   </group>
 
-  <group arch="Linux-x86_64" license="MIT License">
+  <group license="MIT License">
     <command name="run" path="dotnet"/>
     <environment mode="replace" name="DOTNET_ROOT" insert="."/>
     <requires interface="https://apps.0install.net/lib/curl.xml"/>
 
-    <implementation version="{version}" released="{released}" stability="stable">
+    <implementation arch="Linux-armv7l" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/{version}/dotnet-runtime-{version}-linux-arm.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/{version}/dotnet-runtime-{version}-linux-arm64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="stable">
       <manifest-digest/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/{version}/dotnet-runtime-{version}-linux-x64.tar.gz" type="application/x-compressed-tar"/>
     </implementation>

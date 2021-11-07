@@ -1,0 +1,380 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/dotnet/windowsdesktop-runtime.xml">
+  <name>.NET Windows Desktop Runtime</name>
+  <summary>version of the .NET runtime with Windows desktop dependencies included</summary>
+  <homepage>https://dotnet.microsoft.com/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/dotnet/core.png" type="image/png"/>
+
+  <group license="MIT License">
+    <command name="run" path="dotnet.exe"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
+
+    <implementation arch="Windows-aarch64" version="5.0.0" released="2020-11-10" stability="stable" id="sha256new_MZEG7SWFZALU72NJ5VBGJ7VZ7GPNKUSF2L6TOLUYLI446UNDTCVQ">
+      <manifest-digest sha256new="MZEG7SWFZALU72NJ5VBGJ7VZ7GPNKUSF2L6TOLUYLI446UNDTCVQ"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.100/dotnet-sdk-5.0.100-win-arm64.zip" size="139918413" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="5.0.0" released="2020-11-10" stability="stable" id="sha256new_TA2A7LJYD5EZFSKJU4IPMQ5B5RKK6QTHFUABN5JWRBGFIRBMJ37Q">
+      <manifest-digest sha256new="TA2A7LJYD5EZFSKJU4IPMQ5B5RKK6QTHFUABN5JWRBGFIRBMJ37Q"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.100/dotnet-sdk-5.0.100-win-x64.zip" size="191699827" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="5.0.1" released="2020-12-08" stability="stable" id="sha256new_CQSCJAAIV3SLEETVDNDE7YEVQEBYOS6SATX6JY4DMF3CON66ZI3A">
+      <manifest-digest sha256new="CQSCJAAIV3SLEETVDNDE7YEVQEBYOS6SATX6JY4DMF3CON66ZI3A"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.101/dotnet-sdk-5.0.101-win-arm64.zip" size="139236570" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="5.0.1" released="2020-12-08" stability="stable" id="sha256new_IQBDQ7AS3QLOFZW5TCK2AN444DGMNYSTQKFU6ZBWCEZ24IYW2E6Q">
+      <manifest-digest sha256new="IQBDQ7AS3QLOFZW5TCK2AN444DGMNYSTQKFU6ZBWCEZ24IYW2E6Q"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.101/dotnet-sdk-5.0.101-win-x64.zip" size="191021529" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="5.0.2" released="2021-01-12" stability="stable" id="sha256new_DUT3IFXFIX2EC5AULRNOOBQA33QRD3IMKUZV2NKXYIUZWJFQUOPQ">
+      <manifest-digest sha256new="DUT3IFXFIX2EC5AULRNOOBQA33QRD3IMKUZV2NKXYIUZWJFQUOPQ"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.102/dotnet-sdk-5.0.102-win-arm64.zip" size="139228550" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="5.0.2" released="2021-01-12" stability="stable" id="sha256new_BZO7UHI574DOBSQ5IWFCVF2HGMZ7XF3DIKO2IKVX4EPQ6IBJ5FPA">
+      <manifest-digest sha256new="BZO7UHI574DOBSQ5IWFCVF2HGMZ7XF3DIKO2IKVX4EPQ6IBJ5FPA"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.102/dotnet-sdk-5.0.102-win-x64.zip" size="191011624" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="5.0.3" released="2021-03-02" stability="stable" id="sha256new_ASDMQ3WQR6RMELGSL5CFXI63U7HUTEZ7PVPSRV3BA3VNSTVXR6YA">
+      <manifest-digest sha256new="ASDMQ3WQR6RMELGSL5CFXI63U7HUTEZ7PVPSRV3BA3VNSTVXR6YA"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.200/dotnet-sdk-5.0.200-win-arm64.zip" size="142901354" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="5.0.3" released="2021-03-02" stability="stable" id="sha256new_OR4R3ESIKN7P4HGK23W37LCUT6CYLOOOBMWFE6V424IJCUSYZ6BA">
+      <manifest-digest sha256new="OR4R3ESIKN7P4HGK23W37LCUT6CYLOOOBMWFE6V424IJCUSYZ6BA"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.200/dotnet-sdk-5.0.200-win-x64.zip" size="194629987" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="5.0.4" released="2021-03-09" stability="stable" id="sha256new_5EUZDO4A5HIUZQTF3IV7Y5PA6HE34QOIPT2CYGY5KJH3EPXQVTPQ">
+      <manifest-digest sha256new="5EUZDO4A5HIUZQTF3IV7Y5PA6HE34QOIPT2CYGY5KJH3EPXQVTPQ"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.201/dotnet-sdk-5.0.201-win-arm64.zip" size="143035350" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="5.0.4" released="2021-03-09" stability="stable" id="sha256new_ODBZT4QL5X6KEENFYHTCUYLEAG5CEY6YSUTSD6OICXA44IDD67SQ">
+      <manifest-digest sha256new="ODBZT4QL5X6KEENFYHTCUYLEAG5CEY6YSUTSD6OICXA44IDD67SQ"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.201/dotnet-sdk-5.0.201-win-x64.zip" size="194776890" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="5.0.5" released="2021-04-06" stability="stable" id="sha256new_FLLAI3A5H2XT7PHOEGLBW2HTQU22HMWIW2XORBNLZSC5X7JVATHQ">
+      <manifest-digest sha256new="FLLAI3A5H2XT7PHOEGLBW2HTQU22HMWIW2XORBNLZSC5X7JVATHQ"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.202/dotnet-sdk-5.0.202-win-arm64.zip" size="142851350" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="5.0.5" released="2021-04-06" stability="stable" id="sha256new_SCJPGK375XKLJVBXIW6ADHJ24ZW3EVFX6PBB2V46Q4D2Q4PXNYVQ">
+      <manifest-digest sha256new="SCJPGK375XKLJVBXIW6ADHJ24ZW3EVFX6PBB2V46Q4D2Q4PXNYVQ"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.202/dotnet-sdk-5.0.202-win-x64.zip" size="194587430" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="5.0.6" released="2021-05-25" stability="stable" id="sha256new_WZBIYNKSMTPJ2JUDU5VBLCQKCNUO6MCDC3VX3VYUVQGJVZVIQAAQ">
+      <manifest-digest sha256new="WZBIYNKSMTPJ2JUDU5VBLCQKCNUO6MCDC3VX3VYUVQGJVZVIQAAQ"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.300/dotnet-sdk-5.0.300-win-arm64.zip" size="144681604" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="5.0.6" released="2021-05-25" stability="stable" id="sha256new_4XGW772HS4DOUFC5UVWH7HLM53MHEJ33SN6F3IUFR3L7PJFWCVYQ">
+      <manifest-digest sha256new="4XGW772HS4DOUFC5UVWH7HLM53MHEJ33SN6F3IUFR3L7PJFWCVYQ"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.300/dotnet-sdk-5.0.300-win-x64.zip" size="195941449" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="5.0.7" released="2021-06-08" stability="stable" id="sha256new_YAJCRQM3DFUZNDP7RAO5X2S5ZL74TCTGTSETQR3JU46WWYEYDXQQ">
+      <manifest-digest sha256new="YAJCRQM3DFUZNDP7RAO5X2S5ZL74TCTGTSETQR3JU46WWYEYDXQQ"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.301/dotnet-sdk-5.0.301-win-arm64.zip" size="144694354" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="5.0.7" released="2021-06-08" stability="stable" id="sha256new_PIM3CZFKMNX34GSFODRJLPHDXSFHJSJ7ODJU4PBRRBXI2YPFNLAQ">
+      <manifest-digest sha256new="PIM3CZFKMNX34GSFODRJLPHDXSFHJSJ7ODJU4PBRRBXI2YPFNLAQ"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.301/dotnet-sdk-5.0.301-win-x64.zip" size="195955462" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="5.0.8" released="2021-07-13" stability="stable" id="sha256new_UX3F6GQMOVBGM2NQ7HBVKVYRHAJF2P2NNAAJRSWSVWKAW2SENSSA">
+      <manifest-digest sha256new="UX3F6GQMOVBGM2NQ7HBVKVYRHAJF2P2NNAAJRSWSVWKAW2SENSSA"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.302/dotnet-sdk-5.0.302-win-arm64.zip" size="180218914" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="5.0.8" released="2021-07-13" stability="stable" id="sha256new_GCAQLNMU52EMOPEUZ2WHNFJJEOXHDS6IDUFBFFDXLRZGWTLTCVWQ">
+      <manifest-digest sha256new="GCAQLNMU52EMOPEUZ2WHNFJJEOXHDS6IDUFBFFDXLRZGWTLTCVWQ"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.302/dotnet-sdk-5.0.302-win-x64.zip" size="195946191" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="5.0.9" released="2021-08-10" stability="stable" id="sha256new_TUHMDFHEGDKUMIGJD2L5GJCXAAXOIEMKKC3NTHNJI3YRF7YCMH7Q">
+      <manifest-digest sha256new="TUHMDFHEGDKUMIGJD2L5GJCXAAXOIEMKKC3NTHNJI3YRF7YCMH7Q"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.400/dotnet-sdk-5.0.400-win-arm64.zip" size="144808644" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="5.0.9" released="2021-08-10" stability="stable" id="sha256new_ODOMA2VII7ZLUMPGF5VJPR6NHXHGHEXX4Z2MAWS5LBIM7TR5KLUQ">
+      <manifest-digest sha256new="ODOMA2VII7ZLUMPGF5VJPR6NHXHGHEXX4Z2MAWS5LBIM7TR5KLUQ"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.400/dotnet-sdk-5.0.400-win-x64.zip" size="196178080" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="5.0.10" released="2021-09-14" stability="stable" id="sha256new_P3LCC66LCTK3GVYSJ37NT6U6M4FH5DPKVZQ3TGRNIPQETQLI6CHA">
+      <manifest-digest sha256new="P3LCC66LCTK3GVYSJ37NT6U6M4FH5DPKVZQ3TGRNIPQETQLI6CHA"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.401/dotnet-sdk-5.0.401-win-arm64.zip" size="180369635" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="5.0.10" released="2021-09-14" stability="stable" id="sha256new_RXKPWBVNZB7VYZNY5NP2CWU2EOZGXBQDZHQ53F4FPPZ7KVZER6AA">
+      <manifest-digest sha256new="RXKPWBVNZB7VYZNY5NP2CWU2EOZGXBQDZHQ53F4FPPZ7KVZER6AA"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.401/dotnet-sdk-5.0.401-win-x64.zip" size="196213564" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="5.0.11" released="2021-10-12" stability="stable" id="sha256new_GP2F5NJKEO277XBHM3TTASO2SMTB6PX6FDOBVSVYMQRAUWV4MFXA">
+      <manifest-digest sha256new="GP2F5NJKEO277XBHM3TTASO2SMTB6PX6FDOBVSVYMQRAUWV4MFXA"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.402/dotnet-sdk-5.0.402-win-arm64.zip" size="180244657" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="5.0.11" released="2021-10-12" stability="stable" id="sha256new_LVEHCQECSSW7JNWP3JNYDCH4VAXA5QIGANJHUT46UGRAWG66CUPQ">
+      <manifest-digest sha256new="LVEHCQECSSW7JNWP3JNYDCH4VAXA5QIGANJHUT46UGRAWG66CUPQ"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.402/dotnet-sdk-5.0.402-win-x64.zip" size="196081884" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+  </group>
+
+  <group arch="Windows-i486" license="MIT License">
+    <command name="run" path="dotnet.exe"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
+    <environment mode="replace" name="DOTNET_ROOT(x86)" insert="."/>
+
+    <implementation version="5.0.0" released="2020-11-10" stability="stable" id="sha256new_SCYW22PRT7PVNYOPLJPZWRZBGQTO2AQWFKVZDHGAWFU4MSKDZX4Q">
+      <manifest-digest sha256new="SCYW22PRT7PVNYOPLJPZWRZBGQTO2AQWFKVZDHGAWFU4MSKDZX4Q"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.100/dotnet-sdk-5.0.100-win-x86.zip" size="179696433" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation version="5.0.1" released="2020-12-08" stability="stable" id="sha256new_KMA3U4KACPY3AZ7UT2D4Q3TUWFUPHENDX6ZKOKGHFZ4K3X24S2PQ">
+      <manifest-digest sha256new="KMA3U4KACPY3AZ7UT2D4Q3TUWFUPHENDX6ZKOKGHFZ4K3X24S2PQ"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.101/dotnet-sdk-5.0.101-win-x86.zip" size="179011535" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation version="5.0.2" released="2021-01-12" stability="stable" id="sha256new_BGSYASDAMNKEMBU6SORNJAD7OJ7UUN6AFXUZOQZAUYJUMXOUHFZA">
+      <manifest-digest sha256new="BGSYASDAMNKEMBU6SORNJAD7OJ7UUN6AFXUZOQZAUYJUMXOUHFZA"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.102/dotnet-sdk-5.0.102-win-x86.zip" size="178999814" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation version="5.0.3" released="2021-03-02" stability="stable" id="sha256new_QOC4IWW5YY4O2XPZ6YHYZ4EP4WX5KBBQWBTJYEDJTSY6RMJBP2NA">
+      <manifest-digest sha256new="QOC4IWW5YY4O2XPZ6YHYZ4EP4WX5KBBQWBTJYEDJTSY6RMJBP2NA"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.200/dotnet-sdk-5.0.200-win-x86.zip" size="182574194" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation version="5.0.4" released="2021-03-09" stability="stable" id="sha256new_VO2RG42F4GABQDFRMRU7LK2UMR75EN3JBXDLRH6Y62ZPXIFHL7UQ">
+      <manifest-digest sha256new="VO2RG42F4GABQDFRMRU7LK2UMR75EN3JBXDLRH6Y62ZPXIFHL7UQ"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.201/dotnet-sdk-5.0.201-win-x86.zip" size="182713506" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation version="5.0.5" released="2021-04-06" stability="stable" id="sha256new_FOHN5RLBMCR6DBLLN6RJKIDWVVYVQI6SQXO63KMZF5MYKTPZCMHA">
+      <manifest-digest sha256new="FOHN5RLBMCR6DBLLN6RJKIDWVVYVQI6SQXO63KMZF5MYKTPZCMHA"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.202/dotnet-sdk-5.0.202-win-x86.zip" size="182522727" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation version="5.0.6" released="2021-05-25" stability="stable" id="sha256new_TZAUOOMBUPLFYSXUGG7HGCKVBSQWFYM6XDVDH64LG5HGRICWKZ4A">
+      <manifest-digest sha256new="TZAUOOMBUPLFYSXUGG7HGCKVBSQWFYM6XDVDH64LG5HGRICWKZ4A"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.300/dotnet-sdk-5.0.300-win-x86.zip" size="183749639" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation version="5.0.7" released="2021-06-08" stability="stable" id="sha256new_PTE4VD2GVXXCBO5JJAQ5SEJE5I63F6ZT3KPZYT5M4A4QMVAW4WOQ">
+      <manifest-digest sha256new="PTE4VD2GVXXCBO5JJAQ5SEJE5I63F6ZT3KPZYT5M4A4QMVAW4WOQ"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.301/dotnet-sdk-5.0.301-win-x86.zip" size="183764429" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation version="5.0.8" released="2021-07-13" stability="stable" id="sha256new_JYQMGW5BJ4EY6ZCX5XKWOWKMYVLQUOOB2VGZJLPWTALFM433NYIA">
+      <manifest-digest sha256new="JYQMGW5BJ4EY6ZCX5XKWOWKMYVLQUOOB2VGZJLPWTALFM433NYIA"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.302/dotnet-sdk-5.0.302-win-x86.zip" size="183743516" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation version="5.0.9" released="2021-08-10" stability="stable" id="sha256new_I4ORTU5VPYVIUEFFCGN6MWNMNUC5JEUOJ33LPX4DZ2YL5JH25IMQ">
+      <manifest-digest sha256new="I4ORTU5VPYVIUEFFCGN6MWNMNUC5JEUOJ33LPX4DZ2YL5JH25IMQ"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.400/dotnet-sdk-5.0.400-win-x86.zip" size="183925314" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation version="5.0.10" released="2021-09-14" stability="stable" id="sha256new_RBMRKXUOSDBO4ARNV6W5XIKZCL4RMC5MDKSCMEUINF5GVC6TUYFA">
+      <manifest-digest sha256new="RBMRKXUOSDBO4ARNV6W5XIKZCL4RMC5MDKSCMEUINF5GVC6TUYFA"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.401/dotnet-sdk-5.0.401-win-x86.zip" size="183959226" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation version="5.0.11" released="2021-10-12" stability="stable" id="sha256new_EZK6EO44BZD5SGDQB5RCXSCLFC6353REUWVDTHFIR4X7QBFYXWBA">
+      <manifest-digest sha256new="EZK6EO44BZD5SGDQB5RCXSCLFC6353REUWVDTHFIR4X7QBFYXWBA"/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/5.0.402/dotnet-sdk-5.0.402-win-x86.zip" size="183844160" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+  </group>
+</interface>

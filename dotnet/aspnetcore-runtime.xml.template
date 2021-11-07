@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>ASP.NET Core Runtime</name>
+  <summary>version of the .NET runtime with APS.NET Core dependencies included</summary>
+  <homepage>https://dotnet.microsoft.com/</homepage>
+  <needs-terminal/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/dotnet/core.png" type="image/png"/>
+
+  <feed-for interface="https://apps.0install.net/dotnet/aspnetcore-runtime.xml"/>
+
+  <group license="MIT License">
+    <command name="run" path="dotnet.exe"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
+
+    <implementation arch="Windows-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/aspnetcore/Runtime/{version}/aspnetcore-runtime-{version}-win-arm64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/aspnetcore/Runtime/{version}/aspnetcore-runtime-{version}-win-x64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/aspnetcore/Runtime/{version}/aspnetcore-runtime-{version}-win-x86.zip" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group license="MIT License">
+    <command name="run" path="dotnet"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
+    <requires interface="https://apps.0install.net/lib/curl.xml"/>
+
+    <implementation arch="Linux-armv7l" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/aspnetcore/Runtime/{version}/aspnetcore-runtime-{version}-linux-arm.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/aspnetcore/Runtime/{version}/aspnetcore-runtime-{version}-linux-arm64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/aspnetcore/Runtime/{version}/aspnetcore-runtime-{version}-linux-x64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group arch="MacOSX-x86_64" license="MIT License">
+    <command name="run" path="dotnet"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
+
+    <implementation version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/aspnetcore/Runtime/{version}/aspnetcore-runtime-{version}-osx-x64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>.NET Windows Desktop Runtime</name>
+  <summary>version of the .NET runtime with Windows desktop dependencies included</summary>
+  <homepage>https://dotnet.microsoft.com/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/dotnet/core.png" type="image/png"/>
+
+  <feed-for interface="https://apps.0install.net/dotnet/windowsdesktop-runtime.xml"/>
+
+  <group license="MIT License">
+    <command name="run" path="dotnet.exe"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
+
+    <implementation arch="Windows-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/{sdk-version}/dotnet-sdk-{sdk-version}-win-arm64.zip" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/{sdk-version}/dotnet-sdk-{sdk-version}-win-x64.zip" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+  </group>
+
+  <group arch="Windows-i486" license="MIT License">
+    <command name="run" path="dotnet.exe"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
+    <environment mode="replace" name="DOTNET_ROOT(x86)" insert="."/>
+
+    <implementation version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <recipe>
+        <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/{sdk-version}/dotnet-sdk-{sdk-version}-win-x86.zip" type="application/zip"/>
+        <remove path="sdk"/>
+        <remove path="templates"/>
+        <remove path="packs"/>
+        <remove path="shared/Microsoft.AspNetCore.App"/>
+      </recipe>
+    </implementation>
+  </group>
+</interface>

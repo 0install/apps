@@ -42,15 +42,7 @@
 
       <h4>.NET</h4>
       <p>
-        .NET (known as .NET Core up until version 3.1) is a light-weight cross-platform runtime environment. To use .NET as the runner in a feed:<br>
-        <code>
-          <textarea readonly style="resize: none;" class="form-control-plaintext" rows="3">&lt;command name="run" path="myapp.dll"&gt;
-  &lt;runner interface="https://apps.0install.net/dotnet/runtime.xml"/&gt;
-&lt;/command&gt;</textarea>
-        </code>
-      </p>
-      <p>
-        To add <code>dotnet</code> (.NET SDK) to your <code>PATH</code>:<br>
+        .NET (known as .NET Core up until version 3.1) is a light-weight cross-platform runtime environment. To add <code>dotnet</code> (.NET SDK) to your <code>PATH</code>:<br>
         <code>
           <input type="text" readonly class="form-control-plaintext" value="0install add dotnet https://apps.0install.net/dotnet/sdk.xml">
         </code>
@@ -59,6 +51,26 @@
         To add <code>nuget</code> (.NET Package Manager) to your <code>PATH</code>:<br>
         <code>
           <input type="text" readonly class="form-control-plaintext" value="0install add nuget https://apps.0install.net/dotnet/nuget.xml">
+        </code>
+      </p>
+      <p>
+        To use .NET as the runner in a feed:<br>
+        <code>
+          <textarea readonly style="resize: none;" class="form-control-plaintext" rows="3">&lt;command name="run" path="myapp.dll"&gt;
+  &lt;runner interface="https://apps.0install.net/dotnet/runtime.xml"/&gt;
+&lt;/command&gt;</textarea>
+        </code>
+        To use .NET with the ASP.NET Core Runtime as the runner in a feed:<br>
+        <code>
+          <textarea readonly style="resize: none;" class="form-control-plaintext" rows="3">&lt;command name="run" path="myapp.dll"&gt;
+  &lt;runner interface="https://apps.0install.net/dotnet/aspnetcore-runtime.xml"/&gt;
+&lt;/command&gt;</textarea>
+        </code>
+        To use .NET with the Windows Desktop Runtime as a dependency in a feed:<br>
+        <code>
+          <textarea readonly style="resize: none;" class="form-control-plaintext" rows="3">&lt;command name="run" path="myapp.exe"&gt;
+  &lt;requires interface="https://apps.0install.net/dotnet/windowsdesktop-runtime.xml"/&gt;
+&lt;/command&gt;</textarea>
         </code>
       </p>
 
@@ -71,8 +83,6 @@
   &lt;runner interface="https://apps.0install.net/dotnet/clr.xml"/&gt;
 &lt;/command&gt;</textarea>
         </code>
-      </p>
-      <p>
         If you wish to use the <code>MONO_PATH</code> variable to specify external dependencies in a feed you can use <a href="https://github.com/0install/monopath-emulator">monopath-emulator</a>:<br>
         <code>
           <textarea readonly style="resize: none;" class="form-control-plaintext" rows="6">&lt;command name="run" path="myapp.exe"&gt;
@@ -82,24 +92,18 @@
   &lt;environment name="MONO_PATH" insert="."/&gt;
 &lt;/requires&gt;</textarea>
         </code>
-      </p>
-      <p>
         To use the full version of .NET Framework as the runner in a feed:<br>
         <code>
           <textarea readonly style="resize: none;" class="form-control-plaintext" rows="3">&lt;command name="run" path="myapp.exe"&gt;
   &lt;runner interface="https://apps.0install.net/dotnet/framework.xml"/&gt;
 &lt;/command&gt;</textarea>
         </code>
-      </p>
-      <p>
         To use either the Client Profile or the full version of .NET Framework as the runner in a feed:<br>
         <code>
           <textarea readonly style="resize: none;" class="form-control-plaintext" rows="3">&lt;command name="run" path="myapp.exe"&gt;
   &lt;runner interface="https://apps.0install.net/dotnet/framework-client-profile.xml"/&gt;
 &lt;/command&gt;</textarea>
         </code>
-      </p>
-      <p>
         To use Mono as the runner in a feed:<br>
         <code>
           <textarea readonly style="resize: none;" class="form-control-plaintext" rows="3">&lt;command name="run" path="myapp.exe"&gt;

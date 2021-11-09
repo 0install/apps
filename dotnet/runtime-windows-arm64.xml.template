@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>.NET Runtime - Windows ARM64 builds</name>
+  <summary>modular and high performance implementation of .NET</summary>
+  <homepage>https://dotnet.microsoft.com/</homepage>
+  <needs-terminal/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/dotnet/core.png" type="image/png"/>
+
+  <feed-for interface="https://apps.0install.net/dotnet/runtime-windows-arm64.xml"/>
+
+  <group arch="Windows-aarch64" license="MIT License">
+    <command name="run" path="dotnet.exe"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
+
+    <implementation version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/{version}/dotnet-runtime-{version}-win-arm64.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

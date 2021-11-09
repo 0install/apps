@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>.NET SDK - Windows ARM64 builds</name>
+  <summary>tools for building .NET applications</summary>
+  <homepage>https://dotnet.microsoft.com/</homepage>
+  <needs-terminal/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/dotnet/core.png" type="image/png"/>
+
+  <feed-for interface="https://apps.0install.net/dotnet/sdk-windows-arm64.xml"/>
+
+  <group arch="Windows-aarch64" license="MIT License">
+    <command name="run" path="dotnet.exe"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
+    <environment mode="replace" name="DOTNET_SKIP_FIRST_TIME_EXPERIENCE" value="true"/><!-- Prevent extraction of NuGet packages into implementation dir (which is read-only) -->
+
+    <implementation version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/{version}/dotnet-sdk-{version}-win-arm64.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

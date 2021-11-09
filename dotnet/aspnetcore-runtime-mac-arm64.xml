@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/dotnet/aspnetcore-runtime-mac-arm64.xml">
+  <name>ASP.NET Core Runtime - Apple Silicon builds</name>
+  <summary>version of the .NET runtime with APS.NET Core dependencies included</summary>
+  <homepage>https://dotnet.microsoft.com/</homepage>
+  <needs-terminal/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/dotnet/core.png" type="image/png"/>
+
+  <feed-for interface="https://apps.0install.net/dotnet/aspnetcore-runtime.xml"/>
+
+  <group arch="MacOSX-aarch64" license="MIT License">
+    <command name="run" path="dotnet"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
+
+    <implementation version="6.0.0" released="2021-11-08" stability="stable" id="sha256new_2GQZ2A5T5F36667M6ZTOWCMZKTH3NLSH2FDXEUG7RAPEWF6I7TIA">
+      <manifest-digest sha256new="2GQZ2A5T5F36667M6ZTOWCMZKTH3NLSH2FDXEUG7RAPEWF6I7TIA"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/aspnetcore/Runtime/6.0.0/aspnetcore-runtime-6.0.0-osx-arm64.tar.gz" size="36889239" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

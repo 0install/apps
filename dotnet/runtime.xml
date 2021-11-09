@@ -7,10 +7,12 @@
   <icon href="https://raw.githubusercontent.com/0install/apps/master/dotnet/core.png" type="image/png"/>
 
   <package-implementation package="dotnet-runtime" distributions="Windows"/>
+  <feed src="https://apps.0install.net/dotnet/runtime-windows-arm64.xml" arch="Window-aarch64"/>
+  <feed src="https://apps.0install.net/dotnet/runtime-mac-arm64.xml" arch="MacOSX-aarch64"/>
 
   <group license="MIT License">
     <command name="run" path="dotnet.exe"/>
-    <environment insert="." mode="replace" name="DOTNET_ROOT"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
 
     <implementation arch="Windows-x86_64" id="sha1new=3b6b553323faed5bc5d5ab48f3d06336ec97961e" stability="stable" version="1.0.5">
       <manifest-digest sha256new="APBU2X4R24EOJVK2ZDAC4YT5BDUSMDYOBSCA337MKZWJPE5KCQLQ"/>
@@ -336,101 +338,65 @@
       <manifest-digest sha256new="JF46OLAHPCZWGE4CRHKEE4A34ZZDKN5GCU3NY6KYWLVA4MNO64KA"/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/3.1.20/dotnet-runtime-3.1.20-win-x64.zip" size="30948010" type="application/zip"/>
     </implementation>
-    <implementation arch="Windows-aarch64" version="5.0.0" released="2020-11-10" stability="stable" id="sha256new_MZEG7SWFZALU72NJ5VBGJ7VZ7GPNKUSF2L6TOLUYLI446UNDTCVQ">
-      <manifest-digest sha256new="MZEG7SWFZALU72NJ5VBGJ7VZ7GPNKUSF2L6TOLUYLI446UNDTCVQ"/>
-      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.0/dotnet-runtime-5.0.0-win-arm64.zip" size="28914648" type="application/zip"/>
-    </implementation>
     <implementation arch="Windows-x86_64" version="5.0.0" released="2020-11-10" stability="stable" id="sha256new_TRVECYBB6V5UX5YAWN4D37GWSYTCZG6AD7HCD5LFDPSXQ3JPWZFQ">
       <manifest-digest sha256new="TRVECYBB6V5UX5YAWN4D37GWSYTCZG6AD7HCD5LFDPSXQ3JPWZFQ"/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.0/dotnet-runtime-5.0.0-win-x64.zip" size="30635089" type="application/zip"/>
-    </implementation>
-    <implementation arch="Windows-aarch64" version="5.0.1" released="2020-12-08" stability="stable" id="sha256new_CQSCJAAIV3SLEETVDNDE7YEVQEBYOS6SATX6JY4DMF3CON66ZI3A">
-      <manifest-digest sha256new="CQSCJAAIV3SLEETVDNDE7YEVQEBYOS6SATX6JY4DMF3CON66ZI3A"/>
-      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.1/dotnet-runtime-5.0.1-win-arm64.zip" size="28917380" type="application/zip"/>
     </implementation>
     <implementation arch="Windows-x86_64" version="5.0.1" released="2020-12-08" stability="stable" id="sha256new_N3HO2QKKLA5XAOD7R4KBGIEVM4DUAEPUW55CVKN7YUAKMGK74IKA">
       <manifest-digest sha256new="N3HO2QKKLA5XAOD7R4KBGIEVM4DUAEPUW55CVKN7YUAKMGK74IKA"/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.1/dotnet-runtime-5.0.1-win-x64.zip" size="30637429" type="application/zip"/>
     </implementation>
-    <implementation arch="Windows-aarch64" version="5.0.2" released="2021-01-12" stability="stable" id="sha256new_DUT3IFXFIX2EC5AULRNOOBQA33QRD3IMKUZV2NKXYIUZWJFQUOPQ">
-      <manifest-digest sha256new="DUT3IFXFIX2EC5AULRNOOBQA33QRD3IMKUZV2NKXYIUZWJFQUOPQ"/>
-      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.2/dotnet-runtime-5.0.2-win-arm64.zip" size="28920940" type="application/zip"/>
-    </implementation>
     <implementation arch="Windows-x86_64" version="5.0.2" released="2021-01-12" stability="stable" id="sha256new_JIOSHQJADBGQPUPCYBPUOBO4BMXD3BOEFYC4CJJVYZBUIQIKTSJQ">
       <manifest-digest sha256new="JIOSHQJADBGQPUPCYBPUOBO4BMXD3BOEFYC4CJJVYZBUIQIKTSJQ"/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.2/dotnet-runtime-5.0.2-win-x64.zip" size="30641747" type="application/zip"/>
-    </implementation>
-    <implementation arch="Windows-aarch64" version="5.0.3" released="2021-03-02" stability="stable" id="sha256new_ASDMQ3WQR6RMELGSL5CFXI63U7HUTEZ7PVPSRV3BA3VNSTVXR6YA">
-      <manifest-digest sha256new="ASDMQ3WQR6RMELGSL5CFXI63U7HUTEZ7PVPSRV3BA3VNSTVXR6YA"/>
-      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.3/dotnet-runtime-5.0.3-win-arm64.zip" size="28921975" type="application/zip"/>
     </implementation>
     <implementation arch="Windows-x86_64" version="5.0.3" released="2021-03-02" stability="stable" id="sha256new_HFGSFOTYSUWFIRYFMNEEWVZIL5UFEUVJV6GP3WJQESUN2CXLRJAA">
       <manifest-digest sha256new="HFGSFOTYSUWFIRYFMNEEWVZIL5UFEUVJV6GP3WJQESUN2CXLRJAA"/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.3/dotnet-runtime-5.0.3-win-x64.zip" size="30642602" type="application/zip"/>
     </implementation>
-    <implementation arch="Windows-aarch64" version="5.0.4" released="2021-03-09" stability="stable" id="sha256new_5EUZDO4A5HIUZQTF3IV7Y5PA6HE34QOIPT2CYGY5KJH3EPXQVTPQ">
-      <manifest-digest sha256new="5EUZDO4A5HIUZQTF3IV7Y5PA6HE34QOIPT2CYGY5KJH3EPXQVTPQ"/>
-      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.4/dotnet-runtime-5.0.4-win-arm64.zip" size="28926582" type="application/zip"/>
-    </implementation>
     <implementation arch="Windows-x86_64" version="5.0.4" released="2021-03-09" stability="stable" id="sha256new_ZTNMNTKXOYUONVDMK2FMEODFWOFBUB5Y3FWBJ5LGNFLP3EA6TKAA">
       <manifest-digest sha256new="ZTNMNTKXOYUONVDMK2FMEODFWOFBUB5Y3FWBJ5LGNFLP3EA6TKAA"/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.4/dotnet-runtime-5.0.4-win-x64.zip" size="30647257" type="application/zip"/>
-    </implementation>
-    <implementation arch="Windows-aarch64" version="5.0.5" released="2021-04-06" stability="stable" id="sha256new_FLLAI3A5H2XT7PHOEGLBW2HTQU22HMWIW2XORBNLZSC5X7JVATHQ">
-      <manifest-digest sha256new="FLLAI3A5H2XT7PHOEGLBW2HTQU22HMWIW2XORBNLZSC5X7JVATHQ"/>
-      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.5/dotnet-runtime-5.0.5-win-arm64.zip" size="28926109" type="application/zip"/>
     </implementation>
     <implementation arch="Windows-x86_64" version="5.0.5" released="2021-04-06" stability="stable" id="sha256new_BFL5TEHGWT7RPHFYNZBQES2UJWEZKR62BP2XGH7VY76BTMCJFG3Q">
       <manifest-digest sha256new="BFL5TEHGWT7RPHFYNZBQES2UJWEZKR62BP2XGH7VY76BTMCJFG3Q"/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.5/dotnet-runtime-5.0.5-win-x64.zip" size="30645199" type="application/zip"/>
     </implementation>
-    <implementation arch="Windows-aarch64" version="5.0.6" released="2021-05-25" stability="stable" id="sha256new_WZBIYNKSMTPJ2JUDU5VBLCQKCNUO6MCDC3VX3VYUVQGJVZVIQAAQ">
-      <manifest-digest sha256new="WZBIYNKSMTPJ2JUDU5VBLCQKCNUO6MCDC3VX3VYUVQGJVZVIQAAQ"/>
-      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.6/dotnet-runtime-5.0.6-win-arm64.zip" size="28767212" type="application/zip"/>
-    </implementation>
     <implementation arch="Windows-x86_64" version="5.0.6" released="2021-05-25" stability="stable" id="sha256new_V3GSS4Y5ZSVBZ3AWRDO5GYJTEVHSECMUH6RRSU27NZRJLCIBRHJQ">
       <manifest-digest sha256new="V3GSS4Y5ZSVBZ3AWRDO5GYJTEVHSECMUH6RRSU27NZRJLCIBRHJQ"/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.6/dotnet-runtime-5.0.6-win-x64.zip" size="30422686" type="application/zip"/>
-    </implementation>
-    <implementation arch="Windows-aarch64" version="5.0.7" released="2021-06-08" stability="stable" id="sha256new_YAJCRQM3DFUZNDP7RAO5X2S5ZL74TCTGTSETQR3JU46WWYEYDXQQ">
-      <manifest-digest sha256new="YAJCRQM3DFUZNDP7RAO5X2S5ZL74TCTGTSETQR3JU46WWYEYDXQQ"/>
-      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.7/dotnet-runtime-5.0.7-win-arm64.zip" size="28767300" type="application/zip"/>
     </implementation>
     <implementation arch="Windows-x86_64" version="5.0.7" released="2021-06-08" stability="stable" id="sha256new_OSTA6QXNNC3SMBQ3IEILWRILI53ZIKMI6HQY35KFCQUC6SMMMBXQ">
       <manifest-digest sha256new="OSTA6QXNNC3SMBQ3IEILWRILI53ZIKMI6HQY35KFCQUC6SMMMBXQ"/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.7/dotnet-runtime-5.0.7-win-x64.zip" size="30422198" type="application/zip"/>
     </implementation>
-    <implementation arch="Windows-aarch64" version="5.0.8" released="2021-07-13" stability="stable" id="sha256new_INZEHMDD4RTRUIVJ4BE25O4ZBG7UGLKN2KTLAAZBKGZUFFTEBPKA">
-      <manifest-digest sha256new="INZEHMDD4RTRUIVJ4BE25O4ZBG7UGLKN2KTLAAZBKGZUFFTEBPKA"/>
-      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.8/dotnet-runtime-5.0.8-win-arm64.zip" size="28767978" type="application/zip"/>
-    </implementation>
     <implementation arch="Windows-x86_64" version="5.0.8" released="2021-07-13" stability="stable" id="sha256new_PZKIKSWUAURJRI3AEANGR5AAGSFFPZESZNSWX2ZBH2UQXXK6P6RA">
       <manifest-digest sha256new="PZKIKSWUAURJRI3AEANGR5AAGSFFPZESZNSWX2ZBH2UQXXK6P6RA"/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.8/dotnet-runtime-5.0.8-win-x64.zip" size="30423996" type="application/zip"/>
-    </implementation>
-    <implementation arch="Windows-aarch64" version="5.0.9" released="2021-08-10" stability="stable" id="sha256new_TUHMDFHEGDKUMIGJD2L5GJCXAAXOIEMKKC3NTHNJI3YRF7YCMH7Q">
-      <manifest-digest sha256new="TUHMDFHEGDKUMIGJD2L5GJCXAAXOIEMKKC3NTHNJI3YRF7YCMH7Q"/>
-      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.9/dotnet-runtime-5.0.9-win-arm64.zip" size="28759910" type="application/zip"/>
     </implementation>
     <implementation arch="Windows-x86_64" version="5.0.9" released="2021-08-10" stability="stable" id="sha256new_TYDZXE2BT75VIETYY75FHCP2VRNEUQCJF52FUD63LUJ2RTKTVRSQ">
       <manifest-digest sha256new="TYDZXE2BT75VIETYY75FHCP2VRNEUQCJF52FUD63LUJ2RTKTVRSQ"/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.9/dotnet-runtime-5.0.9-win-x64.zip" size="30463645" type="application/zip"/>
     </implementation>
-    <implementation arch="Windows-aarch64" version="5.0.10" released="2021-09-14" stability="stable" id="sha256new_FWIBK3ZHIC4NQ5QJNZ7TO44UM227PZ6HTC7CCBC7JK2YFNNVH5TQ">
-      <manifest-digest sha256new="FWIBK3ZHIC4NQ5QJNZ7TO44UM227PZ6HTC7CCBC7JK2YFNNVH5TQ"/>
-      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.10/dotnet-runtime-5.0.10-win-arm64.zip" size="28764913" type="application/zip"/>
-    </implementation>
     <implementation arch="Windows-x86_64" version="5.0.10" released="2021-09-14" stability="stable" id="sha256new_3WZKCTID46SZLTPGGNLGRBXKXAJDVSJTR6OV4E6OD3AVEHLISNOA">
       <manifest-digest sha256new="3WZKCTID46SZLTPGGNLGRBXKXAJDVSJTR6OV4E6OD3AVEHLISNOA"/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.10/dotnet-runtime-5.0.10-win-x64.zip" size="30468467" type="application/zip"/>
     </implementation>
-    <implementation arch="Windows-aarch64" version="5.0.11" released="2021-10-12" stability="stable" id="sha256new_HKP7THRNXA4N5SRJCVDIDGE7F6PF4MMIEKDPBEBM2MVLYPZJ7ISA">
-      <manifest-digest sha256new="HKP7THRNXA4N5SRJCVDIDGE7F6PF4MMIEKDPBEBM2MVLYPZJ7ISA"/>
-      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.11/dotnet-runtime-5.0.11-win-arm64.zip" size="28766073" type="application/zip"/>
-    </implementation>
     <implementation arch="Windows-x86_64" version="5.0.11" released="2021-10-12" stability="stable" id="sha256new_BWC7ILEK7P2TIQNQEORHVVBIUZXT7WZYEKXIU4XIMAMBTELG4TSA">
       <manifest-digest sha256new="BWC7ILEK7P2TIQNQEORHVVBIUZXT7WZYEKXIU4XIMAMBTELG4TSA"/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.11/dotnet-runtime-5.0.11-win-x64.zip" size="30469207" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="3.1.21" released="2021-11-08" stability="stable" id="sha256new_6OFMYL7OPKOIZWNDIZFBNOO4WHLFR2LC7DWSFRSXRDXAHBVRNJBQ">
+      <manifest-digest sha256new="6OFMYL7OPKOIZWNDIZFBNOO4WHLFR2LC7DWSFRSXRDXAHBVRNJBQ"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/3.1.21/dotnet-runtime-3.1.21-win-x64.zip" size="30950477" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="5.0.12" released="2021-11-08" stability="stable" id="sha256new_3CTVBEJZ3RCXWHZMVPMYRHDKKFWSA4QXXBHP2XDOTARJ6HHFTUCQ">
+      <manifest-digest sha256new="3CTVBEJZ3RCXWHZMVPMYRHDKKFWSA4QXXBHP2XDOTARJ6HHFTUCQ"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.12/dotnet-runtime-5.0.12-win-x64.zip" size="30466411" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="6.0.0" released="2021-11-08" stability="stable" id="sha256new_ZPCG5RJV6ZBXT2FXGNMTCTK5GNVE4WVEOJPUSN4KW4JKOVAJYULQ">
+      <manifest-digest sha256new="ZPCG5RJV6ZBXT2FXGNMTCTK5GNVE4WVEOJPUSN4KW4JKOVAJYULQ"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/6.0.0/dotnet-runtime-6.0.0-win-x64.zip" size="32516454" type="application/zip"/>
     </implementation>
   </group>
 
@@ -811,11 +777,23 @@
       <manifest-digest sha256new="A45YGW2SENY6HER5H45HWDRUUWRNP7XMHYVWCD2EK4FMXM5JJPQQ"/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.11/dotnet-runtime-5.0.11-win-x86.zip" size="27306924" type="application/zip"/>
     </implementation>
+    <implementation version="3.1.21" released="2021-11-08" stability="stable" id="sha256new_OOG2FXIWH7JCJAP4X5ZFYE4AFK357EAWLKRIESD2ZP4J6UCIY6TQ">
+      <manifest-digest sha256new="OOG2FXIWH7JCJAP4X5ZFYE4AFK357EAWLKRIESD2ZP4J6UCIY6TQ"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/3.1.21/dotnet-runtime-3.1.21-win-x86.zip" size="27636339" type="application/zip"/>
+    </implementation>
+    <implementation version="5.0.12" released="2021-11-08" stability="stable" id="sha256new_K7QJRNZUZIFZD3ABHOBDAQBESY5K745VY6NGIBIULMXSK7T5Z6WQ">
+      <manifest-digest sha256new="K7QJRNZUZIFZD3ABHOBDAQBESY5K745VY6NGIBIULMXSK7T5Z6WQ"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.12/dotnet-runtime-5.0.12-win-x86.zip" size="27304396" type="application/zip"/>
+    </implementation>
+    <implementation version="6.0.0" released="2021-11-08" stability="stable" id="sha256new_LLFFGVTLDBPWHC44CMADCF655E6NU2YMTNUO7OMLHITU6YL6KAEQ">
+      <manifest-digest sha256new="LLFFGVTLDBPWHC44CMADCF655E6NU2YMTNUO7OMLHITU6YL6KAEQ"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/6.0.0/dotnet-runtime-6.0.0-win-x86.zip" size="29628846" type="application/zip"/>
+    </implementation>
   </group>
 
   <group arch="Linux-x86_64" license="MIT License">
     <command name="run" path="dotnet"/>
-    <environment insert="." mode="replace" name="DOTNET_ROOT"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
     <requires interface="https://apps.0install.net/lib/curl.xml"/>
     <requires interface="https://apps.0install.net/lib/unwind.xml"/>
 
@@ -847,7 +825,7 @@
 
   <group license="MIT License">
     <command name="run" path="dotnet"/>
-    <environment insert="." mode="replace" name="DOTNET_ROOT"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
     <requires interface="https://apps.0install.net/lib/curl.xml"/>
 
     <implementation arch="Linux-x86_64" id="sha1new=e24b80194c902f0f6a05c40f18c06c0c968e7819" released="2018-05-30" stability="stable" version="2.1.0">
@@ -1254,11 +1232,47 @@
       <manifest-digest sha256new="O2NVMH34SBWRPOHFQQMY7WTFKKDXMGLTHSGW6IBD2N46YZIWJUTA"/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.11/dotnet-runtime-5.0.11-linux-x64.tar.gz" size="30858984" type="application/x-compressed-tar"/>
     </implementation>
+    <implementation arch="Linux-armv7l" version="3.1.21" released="2021-11-08" stability="stable" id="sha256new_UKR4EQXHYO7GHJOMHJGSLSKV6QQJ24WVIPZD2INXVMJQG36FO25A">
+      <manifest-digest sha256new="UKR4EQXHYO7GHJOMHJGSLSKV6QQJ24WVIPZD2INXVMJQG36FO25A"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/3.1.21/dotnet-runtime-3.1.21-linux-arm.tar.gz" size="31841222" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="3.1.21" released="2021-11-08" stability="stable" id="sha256new_7Q2T5F5RDGFOTNGX5MV4MJMOHL4VC2COXNL6DTJZRBOL5QEKZUYA">
+      <manifest-digest sha256new="7Q2T5F5RDGFOTNGX5MV4MJMOHL4VC2COXNL6DTJZRBOL5QEKZUYA"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/3.1.21/dotnet-runtime-3.1.21-linux-arm64.tar.gz" size="30279362" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="3.1.21" released="2021-11-08" stability="stable" id="sha256new_LLVERDNYT4WZGXQE3ORMFOLIHLGLPYENGQLYLFX7UUA5MTEOCXDA">
+      <manifest-digest sha256new="LLVERDNYT4WZGXQE3ORMFOLIHLGLPYENGQLYLFX7UUA5MTEOCXDA"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/3.1.21/dotnet-runtime-3.1.21-linux-x64.tar.gz" size="30436396" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" version="5.0.12" released="2021-11-08" stability="stable" id="sha256new_AMVELZYC2N47HO6ZP5LO64RNYWIMF63UYURQJITPNDDHRVE5FIEQ">
+      <manifest-digest sha256new="AMVELZYC2N47HO6ZP5LO64RNYWIMF63UYURQJITPNDDHRVE5FIEQ"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.12/dotnet-runtime-5.0.12-linux-arm.tar.gz" size="28946176" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="5.0.12" released="2021-11-08" stability="stable" id="sha256new_PNDO24EXDVVYWQ6SN5S6HECPKV3YHZIHILCR7ZDPC6BOJAA6MPKA">
+      <manifest-digest sha256new="PNDO24EXDVVYWQ6SN5S6HECPKV3YHZIHILCR7ZDPC6BOJAA6MPKA"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.12/dotnet-runtime-5.0.12-linux-arm64.tar.gz" size="28657946" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="5.0.12" released="2021-11-08" stability="stable" id="sha256new_RABHB4AFMBHMMWD277UKIUQM3WODF6ESOHNXFPFJ7MXOY7ZAOEWQ">
+      <manifest-digest sha256new="RABHB4AFMBHMMWD277UKIUQM3WODF6ESOHNXFPFJ7MXOY7ZAOEWQ"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.12/dotnet-runtime-5.0.12-linux-x64.tar.gz" size="30858905" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" version="6.0.0" released="2021-11-08" stability="stable" id="sha256new_6XWJEVY5H3JIMZKHI7BUG2ZVCNMNS46E3UE7KBUYH5GEDGJ63DXA">
+      <manifest-digest sha256new="6XWJEVY5H3JIMZKHI7BUG2ZVCNMNS46E3UE7KBUYH5GEDGJ63DXA"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/6.0.0/dotnet-runtime-6.0.0-linux-arm.tar.gz" size="28611051" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="6.0.0" released="2021-11-08" stability="stable" id="sha256new_ZLQKHFQSEHZSBASN6527ELBXJOTPYGGF6F3PMT3SNF5LMLYVGYFQ">
+      <manifest-digest sha256new="ZLQKHFQSEHZSBASN6527ELBXJOTPYGGF6F3PMT3SNF5LMLYVGYFQ"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/6.0.0/dotnet-runtime-6.0.0-linux-arm64.tar.gz" size="28373916" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="6.0.0" released="2021-11-08" stability="stable" id="sha256new_UUOT6ITLJNH5RNGYHCS32753E6A653W4437HS7TAJXS6HLHBBDPA">
+      <manifest-digest sha256new="UUOT6ITLJNH5RNGYHCS32753E6A653W4437HS7TAJXS6HLHBBDPA"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/6.0.0/dotnet-runtime-6.0.0-linux-x64.tar.gz" size="30657112" type="application/x-compressed-tar"/>
+    </implementation>
   </group>
 
   <group arch="MacOSX-x86_64" license="MIT License">
     <command name="run" path="dotnet"/>
-    <environment insert="." mode="replace" name="DOTNET_ROOT"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
 
     <implementation id="sha1new=198366e0f8aeba19d0301dbd446df1c38df98646" released="2018-05-30" stability="stable" version="2.1.0">
       <manifest-digest sha256new="LME5QVGLLGPYKHK3SECXY2DFXEEZRPN6FLFKVEK3DWLWX2URWUKQ"/>
@@ -1567,6 +1581,18 @@
     <implementation version="5.0.11" released="2021-10-12" stability="stable" id="sha256new_3R66BLCO4NY7FMEVR7CUJM42RBCE25HPYBWIPK5BZP3HHKSLJB7Q">
       <manifest-digest sha256new="3R66BLCO4NY7FMEVR7CUJM42RBCE25HPYBWIPK5BZP3HHKSLJB7Q"/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.11/dotnet-runtime-5.0.11-osx-x64.tar.gz" size="30419334" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation version="3.1.21" released="2021-11-08" stability="stable" id="sha256new_56FFFDBFORYZ5ZTH36ITUX4ITY5VWOLZG75PH2Q7GI5SMAZBI2ZA">
+      <manifest-digest sha256new="56FFFDBFORYZ5ZTH36ITUX4ITY5VWOLZG75PH2Q7GI5SMAZBI2ZA"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/3.1.21/dotnet-runtime-3.1.21-osx-x64.tar.gz" size="29669802" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation version="5.0.12" released="2021-11-08" stability="stable" id="sha256new_4WPTPSMTIALTKDETVTHXWTC43FOTSFAFEFCIFDDD2RCCXG5KWMAQ">
+      <manifest-digest sha256new="4WPTPSMTIALTKDETVTHXWTC43FOTSFAFEFCIFDDD2RCCXG5KWMAQ"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/5.0.12/dotnet-runtime-5.0.12-osx-x64.tar.gz" size="30417887" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation version="6.0.0" released="2021-11-08" stability="stable" id="sha256new_VGTWQGSQ4Y5ISWOJGWFUCJB5MZ7RAHYC2JXQR73YCVYAVKFYGXWA">
+      <manifest-digest sha256new="VGTWQGSQ4Y5ISWOJGWFUCJB5MZ7RAHYC2JXQR73YCVYAVKFYGXWA"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Runtime/6.0.0/dotnet-runtime-6.0.0-osx-x64.tar.gz" size="30076573" type="application/x-compressed-tar"/>
     </implementation>
   </group>
 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>.NET SDK - Apple Silicon builds</name>
+  <summary>tools for building .NET applications</summary>
+  <homepage>https://dotnet.microsoft.com/</homepage>
+  <needs-terminal/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/dotnet/core.png" type="image/png"/>
+
+  <feed-for interface="https://apps.0install.net/dotnet/sdk-mac-arm64.xml"/>
+
+  <group arch="MacOSX-aarch64" license="MIT License">
+    <command name="run" path="dotnet"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
+
+    <implementation version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/{version}/dotnet-sdk-{version}-osx-arm64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/dotnet/sdk-mac-arm64.xml">
+  <name>.NET SDK - Apple Silicon builds</name>
+  <summary>tools for building .NET applications</summary>
+  <homepage>https://dotnet.microsoft.com/</homepage>
+  <needs-terminal/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/dotnet/core.png" type="image/png"/>
+
+  <feed-for interface="https://apps.0install.net/dotnet/sdk.xml"/>
+
+  <group arch="MacOSX-aarch64" license="MIT License">
+    <command name="run" path="dotnet"/>
+    <environment mode="replace" name="DOTNET_ROOT" insert="."/>
+
+    <implementation version="6.0.100" released="2021-11-08" stability="stable" id="sha256new_BBTKUJMGGL6FLO3BXW3LMZXZRPKPSM3GFEDV6DKOOTQZZ4FVVGYQ">
+      <manifest-digest sha256new="BBTKUJMGGL6FLO3BXW3LMZXZRPKPSM3GFEDV6DKOOTQZZ4FVVGYQ"/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/6.0.100/dotnet-sdk-6.0.100-osx-arm64.tar.gz" size="166459916" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmGKLhAACgkQWao5J8JOTh5SbQf+PE69
+/mvMiY9g96j75wwBzwnUS+jTDMJNbmjP9OQb6saGZtvoxhiKjIHRcNu5hzErQQILB2zIwrehPI6A
+NS8av2bn0zeXQKpT9MAPAU04sHy0qdF2uE85wdbwj8KMKC4pB6e3nuxyKPnv6guO4DvY86lmWBq7
+e4pr22k8lvESoBo8nG8b4TDN2Q54vslSF6BPCkEA19b+bRLyRfqrG7Y80+Uo9BiVJO6bzLuEGgFj
+QKn20wXB7ShHE8scwL+5PBtHsZJJhaYtRwl+rhlxpjczoHK0oTITC52BjmosNcdVYjB+gGvrfBRP
+2nMzo6OGQWXaEG+Z6eV0TXOf8YSKjw3ZFg==
+
+-->

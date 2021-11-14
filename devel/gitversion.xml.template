@@ -14,10 +14,12 @@
     <command name="run" path="GitVersion.exe"/>
 
     <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="{stability}">
-      <archive href="https://github.com/GitTools/GitVersion/releases/download/{original-version}/gitversion-win-x64-{original-version}.tar.gz" type="application/x-compressed-tar"/>
+      <manifest-digest/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/{original-version}/gitversion-win-x64-{original-version}.zip" type="application/zip"/>
     </implementation>
     <implementation arch="Windows-i486" version="{version}" released="{released}" stability="{stability}">
-      <archive href="https://github.com/GitTools/GitVersion/releases/download/{original-version}/gitversion-win-x86-{original-version}.tar.gz" type="application/x-compressed-tar"/>
+      <manifest-digest/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/{original-version}/gitversion-win-x86-{original-version}.zip" type="application/zip"/>
     </implementation>
   </group>
 
@@ -27,6 +29,7 @@
     <requires interface="https://apps.0install.net/lib/curl.xml"/>
 
     <implementation version="{version}" released="{released}" stability="{stability}">
+      <manifest-digest/>
       <archive href="https://github.com/GitTools/GitVersion/releases/download/{original-version}/gitversion-linux-x64-{original-version}.tar.gz" type="application/x-compressed-tar"/>
     </implementation>
   </group>
@@ -35,6 +38,7 @@
     <command name="run" path="GitVersion"/>
 
     <implementation version="{version}" released="{released}" stability="{stability}">
+      <manifest-digest/>
       <archive href="https://github.com/GitTools/GitVersion/releases/download/{original-version}/gitversion-osx-x64-{original-version}.tar.gz" type="application/x-compressed-tar"/>
     </implementation>
   </group>

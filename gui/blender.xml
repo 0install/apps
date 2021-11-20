@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/gui/blender.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uri="https://apps.0install.net/gui/blender.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Blender</name>
   <summary xml:lang="de">vielfältige 3D Animationserstellungs-Suite</summary>
   <summary xml:lang="en">versatile 3D animation creation suite</summary>
@@ -9,30 +9,32 @@
   <homepage>http://www.blender.org/</homepage>
   <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/blender.png" type="image/png"/>
   <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/blender.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/blender.icns" type="image/x-icns"/>
   <category>Video</category>
 
   <feed arch="Linux-*" src="https://apps.0install.net/gui/blender-linux.xml"/>
   <feed arch="MacOSX-*" src="https://apps.0install.net/gui/blender-macos.xml"/>
   <feed arch="Windows-*" src="https://apps.0install.net/gui/blender-windows.xml"/>
-  <package-implementation distributions="Virtual" main="/usr/bin/blender" package="blender"/><!-- Prevent this virtual feed from being seen as a library feed -->
+  <package-implementation distributions="Virtual" package="blender" main="/usr/bin/blender"/><!-- Prevent this virtual feed from being seen as a library feed -->
 
   <entry-point binary-name="blender" command="run"/>
 
-  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
+  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities" xmlns:zi="http://zero-install.sourceforge.net/2004/injector/interface">
     <file-type id="blendfile">
       <description xml:lang="en">Blender File</description>
-      <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/blender.doc.ico" type="image/vnd.microsoft.icon" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <zi:icon href="https://raw.githubusercontent.com/0install/apps/master/gui/blender.doc.ico" type="image/vnd.microsoft.icon"/>
+      <zi:icon href="https://raw.githubusercontent.com/0install/apps/master/gui/blender.doc.icns" type="image/x-icns"/>
       <verb args="&quot;%V&quot;" name="open"/>
       <extension value=".blend"/>
     </file-type>
   </capabilities>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl8FvvMACgkQWao5J8JOTh55oAf/RwiW
-fhd6hvefucnlc7dNCk6SPhNT2Gs9ndz/KH6V1UMVXfAC6LcRyQeUESEDf4u7NaeT+liaMcLIgBHe
-DYRO0J6FylT255Lq9MqBQOqj5pNqoz8cgMhihO5iRPdYv3WaFY2FiRaHfmWIoA8Y1pAv/UFz0TV0
-U7ML/8RCltH0Zh2ZPjf/tiUHXkvjpQgwEc3srbRCnZHDlRfu7BfbLAt4neZg3Fj0krSGKEPR1Kow
-KaQHqohUt2osRlCDOzRLj0i+nuUvCd4gOEbCrF4Um8y2fZVV6QUzCbEMd1WPWd27t5alujxNWlmJ
-tdW4Uc2muasTvNbg1iZaZftTyKNTXPf0Ww==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmGY5wwACgkQWao5J8JOTh4/bwf/Wbwv
+nEc7e7iEYj1ACy0TFPJkkGbXGQf/7yWkfrXwU2JgOpcjeYdwFjDD6r1kZ2AuCOk3fTNrvPUgnCkf
+fK5DEwOM8eoUGXz16maApQhrQ5CfcJcD0vPS3vBwPR+bxhQZEd9UgRbSeqIW5C7wO/km2+3fmIHF
+heieF7TN/f+itWqevlzJ6SERjIez3t7wi31AnQdkQJg++tGRrkK6xeR3hCq+Zwdg2OfzL66zR9+6
+f8r0jFF67PUv5IO9ffM6UWo1BjPXWOHsbxcybCRfR75mvHGCgHBp2ieU72hbdnqveFsDLAU2Nt4F
+RmHKq2aJaKD+bJQziRGpFMazlvK5+JwaHw==
 
 -->

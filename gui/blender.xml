@@ -8,6 +8,7 @@
   <homepage>http://www.blender.org/</homepage>
   <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/blender.png" type="image/png"/>
   <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/blender.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/blender.icns" type="image/x-icns"/>
   <category>Video</category>
 
   <feed arch="Linux-*" src="https://apps.0install.net/gui/blender-linux.xml"/>
@@ -17,10 +18,11 @@
 
   <entry-point binary-name="blender" command="run"/>
 
-  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
+  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities" xmlns:zi="http://zero-install.sourceforge.net/2004/injector/interface">
     <file-type id="blendfile">
       <description xml:lang="en">Blender File</description>
-      <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/blender.doc.ico" type="image/vnd.microsoft.icon" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <zi:icon href="https://raw.githubusercontent.com/0install/apps/master/gui/blender.doc.ico" type="image/vnd.microsoft.icon"/>
+      <zi:icon href="https://raw.githubusercontent.com/0install/apps/master/gui/blender.doc.icns" type="image/x-icns"/>
       <verb args="&quot;%V&quot;" name="open"/>
       <extension value=".blend"/>
     </file-type>

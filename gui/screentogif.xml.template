@@ -10,12 +10,16 @@
 
   <feed-for interface="https://apps.0install.net/gui/screentogif.xml"/>
 
-  <group arch="Windows-*" license="Microsoft Public License (Ms-PL)">
-    <command name="run" path="ScreenToGif.exe">
-      <runner command="run-gui" interface="https://apps.0install.net/dotnet/framework.xml" version="4.6.1.."/>
-    </command>
-    <implementation released="{released}" stability="stable" version="{version}">
-      <archive href="https://github.com/NickeManarin/ScreenToGif/releases/download/{version}/ScreenToGif.{version}.Portable.zip" type="application/zip"/>
+  <group license="Microsoft Public License (Ms-PL)">
+    <command name="run" path="ScreenToGif.exe"/>
+    <implementation arch="Windows-aarch64" released="{released}" stability="stable" version="{version}">
+      <archive href="https://github.com/NickeManarin/ScreenToGif/releases/download/{version}/ScreenToGif.{version}.Portable.Arm64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
+      <archive href="https://github.com/NickeManarin/ScreenToGif/releases/download/{version}/ScreenToGif.{version}.Portable.x64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" released="{released}" stability="stable" version="{version}">
+      <archive href="https://github.com/NickeManarin/ScreenToGif/releases/download/{version}/ScreenToGif.{version}.Portable.x86.zip" type="application/zip"/>
     </implementation>
   </group>
 </interface>

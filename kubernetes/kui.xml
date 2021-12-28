@@ -1,0 +1,588 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/kubernetes/kui.xml">
+  <name>Kui</name>
+  <summary>takes your normal kubectl command line requests and responds with graphics</summary>
+  <description>Kui takes your normal kubectl command line requests and responds with graphics. Instead of ASCII tables, you are presented with sortable ones. Instead of copying and pasting long auto-generated resource names, in Kui you just click.</description>
+  <homepage>https://kui.tools/</homepage>
+
+  <entry-point binary-name="Kui" command="run"/>
+  <entry-point binary-name="kubectl-kui" command="kubectl-kui">
+    <needs-terminal/>
+  </entry-point>
+
+  <group license="Apache License 2.0">
+    <command name="run" path="Kui.exe"/>
+    <command name="kubectl-kui" path="kubectl-kui.ps1">
+      <runner interface="https://apps.0install.net/powershell/windows.xml"/>
+    </command>
+
+    <implementation arch="Windows-x86_64" version="10.1.3" released="2021-02-06" stability="stable" id="sha256new_FEZOR5EFZD43STCGD2C4YNAKRMHXBECHJOSSZ7PJCPIV2V3AXLSA">
+      <manifest-digest sha256new="FEZOR5EFZD43STCGD2C4YNAKRMHXBECHJOSSZ7PJCPIV2V3AXLSA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.1.3/Kui-win32-x64.zip" size="90978828" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.1.4" released="2021-02-08" stability="stable" id="sha256new_6VCMD4QNTKNKKDM4JSL4MU34BUR2FHBSGABK4HJWCQAQL4WEZEQA">
+      <manifest-digest sha256new="6VCMD4QNTKNKKDM4JSL4MU34BUR2FHBSGABK4HJWCQAQL4WEZEQA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.1.4/Kui-win32-x64.zip" size="90979516" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.2.0" released="2021-02-24" stability="stable" id="sha256new_FT4NPAZ6HBLJB46UDYW7SGBAPTUEUDJVRGVQSZRE5JKQLE4K6OUQ">
+      <manifest-digest sha256new="FT4NPAZ6HBLJB46UDYW7SGBAPTUEUDJVRGVQSZRE5JKQLE4K6OUQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.2.0/Kui-win32-x64.zip" size="91344340" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.2.1" released="2021-03-04" stability="stable" id="sha256new_C3QPAGYTFLXR65WRQM7QK2NQNWRVDEWWLMSYB3UVY3H2HOZCZ2ZA">
+      <manifest-digest sha256new="C3QPAGYTFLXR65WRQM7QK2NQNWRVDEWWLMSYB3UVY3H2HOZCZ2ZA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.2.1/Kui-win32-x64.zip" size="91344533" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.3.6" released="2021-05-29" stability="stable" id="sha256new_NYOC72YRPLO23SK6BZMKTTNBGM6QSN4U6F6XR25VO5VOFPM7NZOQ">
+      <manifest-digest sha256new="NYOC72YRPLO23SK6BZMKTTNBGM6QSN4U6F6XR25VO5VOFPM7NZOQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.3.6/Kui-win32-x64.zip" size="93263690" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.3.12" released="2021-06-01" stability="stable" id="sha256new_POPOJCQTWVQG5YLFEDQLHXW3J5PPBIG2I7ITOGWWOAOSCXJL3GWQ">
+      <manifest-digest sha256new="POPOJCQTWVQG5YLFEDQLHXW3J5PPBIG2I7ITOGWWOAOSCXJL3GWQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.3.12/Kui-win32-x64.zip" size="93262392" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.4.0" released="2021-06-17" stability="stable" id="sha256new_W53DZL5VHOYGYNTX55SI3WL5MSDFLGYMWAYAY5UWDVBSMSDVCC7A">
+      <manifest-digest sha256new="W53DZL5VHOYGYNTX55SI3WL5MSDFLGYMWAYAY5UWDVBSMSDVCC7A"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.0/Kui-win32-x64.zip" size="90744983" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.4.1" released="2021-06-21" stability="stable" id="sha256new_YG5XRBKY6YP647TBEAVGPZWBHIPDTQEVKA7RHA6JJDJ7IKO5WONQ">
+      <manifest-digest sha256new="YG5XRBKY6YP647TBEAVGPZWBHIPDTQEVKA7RHA6JJDJ7IKO5WONQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.1/Kui-win32-x64.zip" size="90757801" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.4.2" released="2021-06-24" stability="stable" id="sha256new_3OBN4TWDHJDXIM3I4DDCFGEXR2YRHQHRRCXB4QHE34H7T4QWQLEQ">
+      <manifest-digest sha256new="3OBN4TWDHJDXIM3I4DDCFGEXR2YRHQHRRCXB4QHE34H7T4QWQLEQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.2/Kui-win32-x64.zip" size="90757201" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.4.3" released="2021-06-25" stability="stable" id="sha256new_GL6VNHTNUYOY2FSOECL3KHAGGO2X6BH4AXFZSF4FNAL2K5M6N3VQ">
+      <manifest-digest sha256new="GL6VNHTNUYOY2FSOECL3KHAGGO2X6BH4AXFZSF4FNAL2K5M6N3VQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.3/Kui-win32-x64.zip" size="90756961" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.4.5" released="2021-07-01" stability="stable" id="sha256new_ZFC4Q3RH2NJ75EWLUJ3XHRCZSKLUOLNPWOPPWKLH5BOJC6PBATSQ">
+      <manifest-digest sha256new="ZFC4Q3RH2NJ75EWLUJ3XHRCZSKLUOLNPWOPPWKLH5BOJC6PBATSQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.5/Kui-win32-x64.zip" size="90761899" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.4.6" released="2021-07-06" stability="stable" id="sha256new_VQOHK2O5ZBWIHFSMUM3TZKFAD3EGGLI2NXTXPJI5RJTONP4RWPWA">
+      <manifest-digest sha256new="VQOHK2O5ZBWIHFSMUM3TZKFAD3EGGLI2NXTXPJI5RJTONP4RWPWA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.6/Kui-win32-x64.zip" size="90892853" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.4.12" released="2021-08-22" stability="stable" id="sha256new_A3TDQNMUAFZAVYP3YXJYGO3MVY3FQB6EKQLSQLMGIM4GWOS63T7A">
+      <manifest-digest sha256new="A3TDQNMUAFZAVYP3YXJYGO3MVY3FQB6EKQLSQLMGIM4GWOS63T7A"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.12/Kui-win32-x64.zip" size="91415952" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.5.0" released="2021-09-13" stability="stable" id="sha256new_HXY6Q2NF6NPB4WWXKVWDA4TIAUYRVLF6PMOH2SWJFGX36WZWYPAA">
+      <manifest-digest sha256new="HXY6Q2NF6NPB4WWXKVWDA4TIAUYRVLF6PMOH2SWJFGX36WZWYPAA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.0/Kui-win32-x64.zip" size="91891379" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.5.2" released="2021-09-13" stability="stable" id="sha256new_OP35WBV55Q53BV6R262OA7DW4WAMGU4YFYO2TD6PBTP6BNNLAFDQ">
+      <manifest-digest sha256new="OP35WBV55Q53BV6R262OA7DW4WAMGU4YFYO2TD6PBTP6BNNLAFDQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.2/Kui-win32-x64.zip" size="91892400" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.5.3" released="2021-09-14" stability="stable" id="sha256new_47TNJ6DQMJ5MCDBWMTURI2XW3VDW2WA62X4I5TAKXLUAECSOPZPQ">
+      <manifest-digest sha256new="47TNJ6DQMJ5MCDBWMTURI2XW3VDW2WA62X4I5TAKXLUAECSOPZPQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.3/Kui-win32-x64.zip" size="91892419" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.5.4" released="2021-09-15" stability="stable" id="sha256new_C7PL3JN6E4DG5OF3QT7S4LIWDRDBIJE2XALH5D3U7YHSZGOUG74Q">
+      <manifest-digest sha256new="C7PL3JN6E4DG5OF3QT7S4LIWDRDBIJE2XALH5D3U7YHSZGOUG74Q"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.4/Kui-win32-x64.zip" size="91894376" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.5.5" released="2021-09-15" stability="stable" id="sha256new_7E6U72JJNTRRSPI66MGGDTS5S676RX6HDO3452WR5U2RE4OF4AJA">
+      <manifest-digest sha256new="7E6U72JJNTRRSPI66MGGDTS5S676RX6HDO3452WR5U2RE4OF4AJA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.5/Kui-win32-x64.zip" size="91450056" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.5.6" released="2021-09-17" stability="stable" id="sha256new_XBNU4MOARUHPKJGOZVYW26TEJ2RROZVJZ2L3MIFOKVCNBUH5PAUA">
+      <manifest-digest sha256new="XBNU4MOARUHPKJGOZVYW26TEJ2RROZVJZ2L3MIFOKVCNBUH5PAUA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.6/Kui-win32-x64.zip" size="91448476" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.5.8" released="2021-09-21" stability="stable" id="sha256new_6IIH542N3YVACMQE5GUX3IRLXFOLQFPJQPAHC7RJVHK6WQN72Q4A">
+      <manifest-digest sha256new="6IIH542N3YVACMQE5GUX3IRLXFOLQFPJQPAHC7RJVHK6WQN72Q4A"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.8/Kui-win32-x64.zip" size="91490773" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.5.13" released="2021-09-25" stability="stable" id="sha256new_JCSB43PP5ZST2FPHCBBAJBF6NFWCZFSET57IAW25XAU52RUCQOGQ">
+      <manifest-digest sha256new="JCSB43PP5ZST2FPHCBBAJBF6NFWCZFSET57IAW25XAU52RUCQOGQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.13/Kui-win32-x64.zip" size="91500306" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.6.0" released="2021-09-27" stability="stable" id="sha256new_CNXRYH2MLQQ6HYVLWNYI6CW6ZMR4TLXUV7CIWOZHYMBGCDLA7BTQ">
+      <manifest-digest sha256new="CNXRYH2MLQQ6HYVLWNYI6CW6ZMR4TLXUV7CIWOZHYMBGCDLA7BTQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.6.0/Kui-win32-x64.zip" size="91894881" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.6.4" released="2021-10-01" stability="stable" id="sha256new_WJJKQA5AZOEDPPYE7HLOMJWGXGWFQVP6CVILKQIAYOW3B6UMIXEA">
+      <manifest-digest sha256new="WJJKQA5AZOEDPPYE7HLOMJWGXGWFQVP6CVILKQIAYOW3B6UMIXEA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.6.4/Kui-win32-x64.zip" size="91900357" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.7.0" released="2021-10-12" stability="stable" id="sha256new_B7OHQ3LEBNKD33ANVIRGTZEHO3BPJLGRTAQ5V5FEDFVECTU2BE2Q">
+      <manifest-digest sha256new="B7OHQ3LEBNKD33ANVIRGTZEHO3BPJLGRTAQ5V5FEDFVECTU2BE2Q"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.7.0/Kui-win32-x64.zip" size="92064927" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.7.5" released="2021-10-14" stability="stable" id="sha256new_SDPHK3C4T6JL7MSO7EWWHEGUMSAPK5NGVPOCTY6N2VJZYL2QPS4Q">
+      <manifest-digest sha256new="SDPHK3C4T6JL7MSO7EWWHEGUMSAPK5NGVPOCTY6N2VJZYL2QPS4Q"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.7.5/Kui-win32-x64.zip" size="91600935" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.7.6" released="2021-10-14" stability="stable" id="sha256new_W3D5WS6OD44QBNXYOOHRNOZSJWOJFLGF6FMYJTWTZMMYYPHBH7KA">
+      <manifest-digest sha256new="W3D5WS6OD44QBNXYOOHRNOZSJWOJFLGF6FMYJTWTZMMYYPHBH7KA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.7.6/Kui-win32-x64.zip" size="91601497" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.8.0" released="2021-10-15" stability="stable" id="sha256new_NCDNTBHBY5S7NJ7IQP3KA5DLEUTBCSKBWJTYXAJ7GXLCU2BJBBIQ">
+      <manifest-digest sha256new="NCDNTBHBY5S7NJ7IQP3KA5DLEUTBCSKBWJTYXAJ7GXLCU2BJBBIQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.8.0/Kui-win32-x64.zip" size="91111601" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.8.1" released="2021-10-19" stability="stable" id="sha256new_3QZKI4UH3RR2NPXZX5254AYLACFQD4THD5VRB4FKXSHWPB5BSJSA">
+      <manifest-digest sha256new="3QZKI4UH3RR2NPXZX5254AYLACFQD4THD5VRB4FKXSHWPB5BSJSA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.8.1/Kui-win32-x64.zip" size="91115266" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.8.2" released="2021-10-21" stability="stable" id="sha256new_UL6UCYRSPUPO3U3X4S4ZND3S4ASUHICTNWWCG7KC7M64NIJXOKSQ">
+      <manifest-digest sha256new="UL6UCYRSPUPO3U3X4S4ZND3S4ASUHICTNWWCG7KC7M64NIJXOKSQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.8.2/Kui-win32-x64.zip" size="91143344" type="application/zip" extract="Kui-win32-x64"/>
+    </implementation>
+  </group>
+
+  <group license="Apache License 2.0">
+    <command name="run" path="Kui"/>
+    <command name="kubectl-kui" path="kubectl-kui"/>
+
+    <implementation arch="Linux-x86_64" version="10.1.3" released="2021-02-06" stability="stable" id="sha256new_RFLNTVGGQFRAG3L6L2Y5XZAYWQZIJU6KOQRW4ODUDWUNVHCNA6QA">
+      <manifest-digest sha256new="RFLNTVGGQFRAG3L6L2Y5XZAYWQZIJU6KOQRW4ODUDWUNVHCNA6QA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.1.3/Kui-linux-x64.zip" size="85798848" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.1.3" released="2021-02-06" stability="stable" id="sha256new_XC46HP52O7SQFOMXEWQ2DZNCJWY6AJWHCFASQ6BTZ5I6RD3CYSIQ">
+      <manifest-digest sha256new="XC46HP52O7SQFOMXEWQ2DZNCJWY6AJWHCFASQ6BTZ5I6RD3CYSIQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.1.3/Kui-linux-arm64.zip" size="90779689" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.1.4" released="2021-02-08" stability="stable" id="sha256new_BPA52FZD4QBRYJUCC3E5AOWG76SS74OJ4NNNHZOOSVQPOOLBBOQQ">
+      <manifest-digest sha256new="BPA52FZD4QBRYJUCC3E5AOWG76SS74OJ4NNNHZOOSVQPOOLBBOQQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.1.4/Kui-linux-x64.zip" size="85800382" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.1.4" released="2021-02-08" stability="stable" id="sha256new_MVZS6W3B6C4LTSBIABQYSHE2ICD6MIYQGKP7ZKPV25GV3GZZDBXA">
+      <manifest-digest sha256new="MVZS6W3B6C4LTSBIABQYSHE2ICD6MIYQGKP7ZKPV25GV3GZZDBXA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.1.4/Kui-linux-arm64.zip" size="90782047" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.2.0" released="2021-02-24" stability="stable" id="sha256new_FMK7S2QG6RU2GF3HXRVZM4YVOHT57H5HZC2WB6UNLPCCZW4LJ2ZQ">
+      <manifest-digest sha256new="FMK7S2QG6RU2GF3HXRVZM4YVOHT57H5HZC2WB6UNLPCCZW4LJ2ZQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.2.0/Kui-linux-x64.zip" size="86081271" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.2.0" released="2021-02-24" stability="stable" id="sha256new_KK2DUVSYD5XBDFDJG5G22MIIO5H2NKFWIPDKLUBCVHA4RHYGXS2Q">
+      <manifest-digest sha256new="KK2DUVSYD5XBDFDJG5G22MIIO5H2NKFWIPDKLUBCVHA4RHYGXS2Q"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.2.0/Kui-linux-arm64.zip" size="91062981" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.2.1" released="2021-03-04" stability="stable" id="sha256new_D4GJ36AHCHG64KLIYYO4522DYST2CWAZVADROSDLQR5PVA7TITOQ">
+      <manifest-digest sha256new="D4GJ36AHCHG64KLIYYO4522DYST2CWAZVADROSDLQR5PVA7TITOQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.2.1/Kui-linux-x64.zip" size="86081705" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.2.1" released="2021-03-04" stability="stable" id="sha256new_4WLSUDSGE6OE5IJF7MHYQB75BREMSAYRWGD5OTGPUZFWOFSR76BQ">
+      <manifest-digest sha256new="4WLSUDSGE6OE5IJF7MHYQB75BREMSAYRWGD5OTGPUZFWOFSR76BQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.2.1/Kui-linux-arm64.zip" size="91062640" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.3.6" released="2021-05-29" stability="stable" id="sha256new_JH65DQI64BI3O5PAOE5F7OETZJQAHZCIRIMIVRCJJ5SLIITA5FCA">
+      <manifest-digest sha256new="JH65DQI64BI3O5PAOE5F7OETZJQAHZCIRIMIVRCJJ5SLIITA5FCA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.3.6/Kui-linux-x64.zip" size="91028845" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.3.6" released="2021-05-29" stability="stable" id="sha256new_WVIHMHJX5EJQPGP45VGR4K4EPT4L4NIP74WU5XPGHVVAXRXMCKXA">
+      <manifest-digest sha256new="WVIHMHJX5EJQPGP45VGR4K4EPT4L4NIP74WU5XPGHVVAXRXMCKXA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.3.6/Kui-linux-arm64.zip" size="96016027" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.3.12" released="2021-06-01" stability="stable" id="sha256new_TAZ7TJOAA5W3NPRVY76PV5VH6OMRSZLRDLMTMAMGM4PWTCIKLXDQ">
+      <manifest-digest sha256new="TAZ7TJOAA5W3NPRVY76PV5VH6OMRSZLRDLMTMAMGM4PWTCIKLXDQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.3.12/Kui-linux-x64.zip" size="91027203" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.3.12" released="2021-06-01" stability="stable" id="sha256new_DLIMLKWFZYSB63QAM4LDWVY5R6PVLNR4HWBIFU7YWLBAPKHKIELQ">
+      <manifest-digest sha256new="DLIMLKWFZYSB63QAM4LDWVY5R6PVLNR4HWBIFU7YWLBAPKHKIELQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.3.12/Kui-linux-arm64.zip" size="96014386" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.4.0" released="2021-06-17" stability="stable" id="sha256new_MOHU23RJWDF4L35GMAE5O3YLZVCN2ZAUQUITFQZXSL5MCYTPCENA">
+      <manifest-digest sha256new="MOHU23RJWDF4L35GMAE5O3YLZVCN2ZAUQUITFQZXSL5MCYTPCENA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.0/Kui-linux-x64.zip" size="88192369" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.4.0" released="2021-06-17" stability="stable" id="sha256new_VKHCOXU4LIIDJFZYHEZKRHXY3OWD5TQ5R7JWFD7TPZEGACCZ3AKQ">
+      <manifest-digest sha256new="VKHCOXU4LIIDJFZYHEZKRHXY3OWD5TQ5R7JWFD7TPZEGACCZ3AKQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.0/Kui-linux-arm64.zip" size="93294093" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.4.1" released="2021-06-21" stability="stable" id="sha256new_HIJQRQQATTMD2YQZMUZGUV2OB5KR6ZBRWATXTDAXE5OZPJX3DWTA">
+      <manifest-digest sha256new="HIJQRQQATTMD2YQZMUZGUV2OB5KR6ZBRWATXTDAXE5OZPJX3DWTA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.1/Kui-linux-x64.zip" size="88204639" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.4.1" released="2021-06-21" stability="stable" id="sha256new_R3YY5QG7CS2N5LBJRZ252JTDHTIDAGAFBTFYDONFVNGUQHDGI7EA">
+      <manifest-digest sha256new="R3YY5QG7CS2N5LBJRZ252JTDHTIDAGAFBTFYDONFVNGUQHDGI7EA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.1/Kui-linux-arm64.zip" size="93306368" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.4.2" released="2021-06-24" stability="stable" id="sha256new_VRD5QLQMPOLJ4V3WF3VKERXUJRLO4QEWJDFYKVVSBR6BHLZ6PLIA">
+      <manifest-digest sha256new="VRD5QLQMPOLJ4V3WF3VKERXUJRLO4QEWJDFYKVVSBR6BHLZ6PLIA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.2/Kui-linux-x64.zip" size="88202731" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.4.2" released="2021-06-24" stability="stable" id="sha256new_4SV3AIOPYFUG5MGSNT2URECG5L6JQVU333PPZCLCUNGJBHXXAKIA">
+      <manifest-digest sha256new="4SV3AIOPYFUG5MGSNT2URECG5L6JQVU333PPZCLCUNGJBHXXAKIA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.2/Kui-linux-arm64.zip" size="93305443" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.4.3" released="2021-06-25" stability="stable" id="sha256new_6R6H6RA2KHLIHKUDXAWF6PHCOM7RO53WZKJEIFOA54FW4DIOASLQ">
+      <manifest-digest sha256new="6R6H6RA2KHLIHKUDXAWF6PHCOM7RO53WZKJEIFOA54FW4DIOASLQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.3/Kui-linux-x64.zip" size="88202602" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.4.3" released="2021-06-25" stability="stable" id="sha256new_7WVK4B3BHMI6SIN5VGZSRNNBEM4XH7JLW7SLUQMLA2KGPZ6V6T5A">
+      <manifest-digest sha256new="7WVK4B3BHMI6SIN5VGZSRNNBEM4XH7JLW7SLUQMLA2KGPZ6V6T5A"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.3/Kui-linux-arm64.zip" size="93305309" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.4.5" released="2021-07-01" stability="stable" id="sha256new_YW6TTSINDEKIEKAPRKYMITJOLDENNQS4RH7D2U4FPN2Z64V2PAKA">
+      <manifest-digest sha256new="YW6TTSINDEKIEKAPRKYMITJOLDENNQS4RH7D2U4FPN2Z64V2PAKA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.5/Kui-linux-x64.zip" size="88208017" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.4.5" released="2021-07-01" stability="stable" id="sha256new_4ZE4AV4QF6XGLQZ4UI4Z3IPNW6NNVPAKVKXUFGYTA2OOKGDC7NWA">
+      <manifest-digest sha256new="4ZE4AV4QF6XGLQZ4UI4Z3IPNW6NNVPAKVKXUFGYTA2OOKGDC7NWA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.5/Kui-linux-arm64.zip" size="93310727" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.4.6" released="2021-07-06" stability="stable" id="sha256new_P2NWQPKOK5MVFFKZDFIPJPT6HCXLHGCGLDILWZJBLRGTSDRMUY4Q">
+      <manifest-digest sha256new="P2NWQPKOK5MVFFKZDFIPJPT6HCXLHGCGLDILWZJBLRGTSDRMUY4Q"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.6/Kui-linux-x64.zip" size="88343647" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.4.6" released="2021-07-06" stability="stable" id="sha256new_JLVX376Q23C3ZOFEAEZN6BQLWVKQFYGCW5TX7CRFTMZ24WR3BWNA">
+      <manifest-digest sha256new="JLVX376Q23C3ZOFEAEZN6BQLWVKQFYGCW5TX7CRFTMZ24WR3BWNA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.6/Kui-linux-arm64.zip" size="93452489" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.4.12" released="2021-08-22" stability="stable" id="sha256new_TJDXPKB5JOXBOYJ3PTX2R6DMI24WJDSPSNOVISHBRU3UO7NNIKTA">
+      <manifest-digest sha256new="TJDXPKB5JOXBOYJ3PTX2R6DMI24WJDSPSNOVISHBRU3UO7NNIKTA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.12/Kui-linux-x64.zip" size="88871812" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.4.12" released="2021-08-22" stability="stable" id="sha256new_HVDFZZ7TKEHHEBCH3G64XIGY2TTGK7AOIU4R26S77DZ2BZUHRJ7A">
+      <manifest-digest sha256new="HVDFZZ7TKEHHEBCH3G64XIGY2TTGK7AOIU4R26S77DZ2BZUHRJ7A"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.12/Kui-linux-arm64.zip" size="93978338" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.5.0" released="2021-09-13" stability="stable" id="sha256new_FYQ4JTPZJ3R5PFH7RFB6WALAKIARZJ4XMENUF4HIP66ALVGFQCLQ">
+      <manifest-digest sha256new="FYQ4JTPZJ3R5PFH7RFB6WALAKIARZJ4XMENUF4HIP66ALVGFQCLQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.0/Kui-linux-x64.zip" size="89341166" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.5.0" released="2021-09-13" stability="stable" id="sha256new_MYXEHCTUII6M2NWWG2SRVQ2LK46FUZPDOBZ4PZ3LWNFRUSTEGYUA">
+      <manifest-digest sha256new="MYXEHCTUII6M2NWWG2SRVQ2LK46FUZPDOBZ4PZ3LWNFRUSTEGYUA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.0/Kui-linux-arm64.zip" size="94448207" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.5.2" released="2021-09-13" stability="stable" id="sha256new_ASNNR3CSA4NVSWEXSYYJM7F5SLQ7NYLK6UGVXW6HU6Y4XNGMX7NA">
+      <manifest-digest sha256new="ASNNR3CSA4NVSWEXSYYJM7F5SLQ7NYLK6UGVXW6HU6Y4XNGMX7NA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.2/Kui-linux-x64.zip" size="89342922" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.5.2" released="2021-09-13" stability="stable" id="sha256new_7JVN4OYALBG5VZ6QB4KSO6VSVGBQLV3STA6AA3BSUKNTW3C5WEJQ">
+      <manifest-digest sha256new="7JVN4OYALBG5VZ6QB4KSO6VSVGBQLV3STA6AA3BSUKNTW3C5WEJQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.2/Kui-linux-arm64.zip" size="94449976" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.5.3" released="2021-09-14" stability="stable" id="sha256new_VA4TF4E4SSEUY7LROPK6OIBPLLAS42MCHJIGCFIO4T6BLLEERMNA">
+      <manifest-digest sha256new="VA4TF4E4SSEUY7LROPK6OIBPLLAS42MCHJIGCFIO4T6BLLEERMNA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.3/Kui-linux-x64.zip" size="89345679" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.5.3" released="2021-09-14" stability="stable" id="sha256new_4CLYGZWOOMBMGLPE52XGYMSHX46XN42K6VCZBUJKRC3LSMXSNT3A">
+      <manifest-digest sha256new="4CLYGZWOOMBMGLPE52XGYMSHX46XN42K6VCZBUJKRC3LSMXSNT3A"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.3/Kui-linux-arm64.zip" size="94452743" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.5.4" released="2021-09-15" stability="stable" id="sha256new_N6N47Y3B33UFOBOYDBPUIVYABP44WOI5TSKGZZ65JZVGBJJYMQKQ">
+      <manifest-digest sha256new="N6N47Y3B33UFOBOYDBPUIVYABP44WOI5TSKGZZ65JZVGBJJYMQKQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.4/Kui-linux-x64.zip" size="89346740" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.5.4" released="2021-09-15" stability="stable" id="sha256new_QDLTQYMBQSVQTF7MGQY7VLBKAIFCED72LXY57KUV2KC4OLF5XJIA">
+      <manifest-digest sha256new="QDLTQYMBQSVQTF7MGQY7VLBKAIFCED72LXY57KUV2KC4OLF5XJIA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.4/Kui-linux-arm64.zip" size="94453794" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.5.5" released="2021-09-15" stability="stable" id="sha256new_GESXNZFLMP5XIIK2N76PCDC6NH5654FLG5W2MAPXB3LFYCO4I72A">
+      <manifest-digest sha256new="GESXNZFLMP5XIIK2N76PCDC6NH5654FLG5W2MAPXB3LFYCO4I72A"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.5/Kui-linux-x64.zip" size="88899077" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.5.5" released="2021-09-15" stability="stable" id="sha256new_7LCVEXIZVGGD5ZO3SR54FZYZ5GBIAZF56NLXBSLEN3CI3KKDUNEQ">
+      <manifest-digest sha256new="7LCVEXIZVGGD5ZO3SR54FZYZ5GBIAZF56NLXBSLEN3CI3KKDUNEQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.5/Kui-linux-arm64.zip" size="94006180" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.5.6" released="2021-09-17" stability="stable" id="sha256new_PSSQLUH75BAZNI434SO65WY5GXGLUHF7OSP2GTUPCBBYFKM4GHCA">
+      <manifest-digest sha256new="PSSQLUH75BAZNI434SO65WY5GXGLUHF7OSP2GTUPCBBYFKM4GHCA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.6/Kui-linux-x64.zip" size="88898887" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.5.6" released="2021-09-17" stability="stable" id="sha256new_JG3L4D7EXSTMNUJ553YM5YZWEPUG2A4TWZXYST6EX2ZVCT6LZMVA">
+      <manifest-digest sha256new="JG3L4D7EXSTMNUJ553YM5YZWEPUG2A4TWZXYST6EX2ZVCT6LZMVA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.6/Kui-linux-arm64.zip" size="94005932" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.5.8" released="2021-09-21" stability="stable" id="sha256new_67MH7O7EL4GFTLAJD3I2NUD6JROZB4YNLXEMPO3HJCHLLGHGLPOA">
+      <manifest-digest sha256new="67MH7O7EL4GFTLAJD3I2NUD6JROZB4YNLXEMPO3HJCHLLGHGLPOA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.8/Kui-linux-x64.zip" size="88940185" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.5.8" released="2021-09-21" stability="stable" id="sha256new_QECO4HYA4RNFGTTIIODD22PZXL4PSUFYJ7U2362L4TPHLGRGTUXQ">
+      <manifest-digest sha256new="QECO4HYA4RNFGTTIIODD22PZXL4PSUFYJ7U2362L4TPHLGRGTUXQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.8/Kui-linux-arm64.zip" size="94047235" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.5.13" released="2021-09-25" stability="stable" id="sha256new_DGQYOKUAIHJ76ATSRQ2AAVPIABLKB6BXCNMDXIQNB7OM5ERBTM6A">
+      <manifest-digest sha256new="DGQYOKUAIHJ76ATSRQ2AAVPIABLKB6BXCNMDXIQNB7OM5ERBTM6A"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.13/Kui-linux-x64.zip" size="88947835" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.5.13" released="2021-09-25" stability="stable" id="sha256new_CZRIEDWRB6DTG5IC3C3GZPX5CRDRJIT2SYT27F7FOMPAKKHFFL6Q">
+      <manifest-digest sha256new="CZRIEDWRB6DTG5IC3C3GZPX5CRDRJIT2SYT27F7FOMPAKKHFFL6Q"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.13/Kui-linux-arm64.zip" size="94054892" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.6.0" released="2021-09-27" stability="stable" id="sha256new_LX27CH3HSGIOOEH6ISOAMTCH6JPA32S3IIWTDY33UIVCT3N3DOBA">
+      <manifest-digest sha256new="LX27CH3HSGIOOEH6ISOAMTCH6JPA32S3IIWTDY33UIVCT3N3DOBA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.6.0/Kui-linux-x64.zip" size="89344980" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.6.0" released="2021-09-27" stability="stable" id="sha256new_NJDCEF4KFII7EFMUQW3NZG5WTESBX5W3WC36I5QZUZVD6D3MFETA">
+      <manifest-digest sha256new="NJDCEF4KFII7EFMUQW3NZG5WTESBX5W3WC36I5QZUZVD6D3MFETA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.6.0/Kui-linux-arm64.zip" size="94451873" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.6.4" released="2021-10-01" stability="stable" id="sha256new_Z6723BK4SCC4YWASRCDLIWY5RVQZDVWJDZ3KCBK4JQEH6CFHSDMQ">
+      <manifest-digest sha256new="Z6723BK4SCC4YWASRCDLIWY5RVQZDVWJDZ3KCBK4JQEH6CFHSDMQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.6.4/Kui-linux-x64.zip" size="89349915" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.6.4" released="2021-10-01" stability="stable" id="sha256new_QR7Q67WR6VZLXVZGUS3H4P4Y5THP5JUSAIEYMYXGMOQRWFCK5LKQ">
+      <manifest-digest sha256new="QR7Q67WR6VZLXVZGUS3H4P4Y5THP5JUSAIEYMYXGMOQRWFCK5LKQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.6.4/Kui-linux-arm64.zip" size="94456963" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.7.0" released="2021-10-12" stability="stable" id="sha256new_OABCX2DIVZKHSEKU5FVRLX6XDJ2WWKC6VMXRXWSPL4GES5Y43IUQ">
+      <manifest-digest sha256new="OABCX2DIVZKHSEKU5FVRLX6XDJ2WWKC6VMXRXWSPL4GES5Y43IUQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.7.0/Kui-linux-x64.zip" size="89519199" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.7.0" released="2021-10-12" stability="stable" id="sha256new_IEBPMR4OJE77QJ4GF5ZULEGEZ3Z65NRXMIKXFCNWNA4NL6BCGNMQ">
+      <manifest-digest sha256new="IEBPMR4OJE77QJ4GF5ZULEGEZ3Z65NRXMIKXFCNWNA4NL6BCGNMQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.7.0/Kui-linux-arm64.zip" size="94626251" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.7.5" released="2021-10-14" stability="stable" id="sha256new_3N35GAMDIE45OSHVZLR47AJXU6HIFOYE3HO47C2KAN5GAQ3NNNNQ">
+      <manifest-digest sha256new="3N35GAMDIE45OSHVZLR47AJXU6HIFOYE3HO47C2KAN5GAQ3NNNNQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.7.5/Kui-linux-x64.zip" size="89051661" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.7.5" released="2021-10-14" stability="stable" id="sha256new_VI5C5R7SFGFBPZXG6HFEX3SLQSTTHFJ535MA7WWX2JNYHOCBDCUA">
+      <manifest-digest sha256new="VI5C5R7SFGFBPZXG6HFEX3SLQSTTHFJ535MA7WWX2JNYHOCBDCUA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.7.5/Kui-linux-arm64.zip" size="94158716" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.7.6" released="2021-10-14" stability="stable" id="sha256new_24JI3Z3IS2WKWBTEPYAT3JE6ZC3UJHTIHV3AXIM7RZFUCRTGR7BQ">
+      <manifest-digest sha256new="24JI3Z3IS2WKWBTEPYAT3JE6ZC3UJHTIHV3AXIM7RZFUCRTGR7BQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.7.6/Kui-linux-x64.zip" size="89053258" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.7.6" released="2021-10-14" stability="stable" id="sha256new_EZO6RBQQCSOD75KXORPOXTWBV4AXCYGUFYUUFPPU25B6B7E7Z7ZA">
+      <manifest-digest sha256new="EZO6RBQQCSOD75KXORPOXTWBV4AXCYGUFYUUFPPU25B6B7E7Z7ZA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.7.6/Kui-linux-arm64.zip" size="94160312" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.8.0" released="2021-10-15" stability="stable" id="sha256new_ZZ6P24HUBAUHNHOLBTAUCCGNHB5DNQOHR3LNHTUGAUUHHOG6YTCA">
+      <manifest-digest sha256new="ZZ6P24HUBAUHNHOLBTAUCCGNHB5DNQOHR3LNHTUGAUUHHOG6YTCA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.8.0/Kui-linux-x64.zip" size="88562319" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.8.0" released="2021-10-15" stability="stable" id="sha256new_7OKFS7QFEGVCL236LGGSOYQYFTJL2EF5RCQ34I5JUSTNU57TM7NQ">
+      <manifest-digest sha256new="7OKFS7QFEGVCL236LGGSOYQYFTJL2EF5RCQ34I5JUSTNU57TM7NQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.8.0/Kui-linux-arm64.zip" size="93669375" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.8.1" released="2021-10-19" stability="stable" id="sha256new_NCEJRGW2UYZUG6J66IUKHEB45SBN37BQ45P32Q7KCDDYRY4ZVRDA">
+      <manifest-digest sha256new="NCEJRGW2UYZUG6J66IUKHEB45SBN37BQ45P32Q7KCDDYRY4ZVRDA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.8.1/Kui-linux-x64.zip" size="88565617" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.8.1" released="2021-10-19" stability="stable" id="sha256new_XIOLCFGZKHTP4AXZ3Y63KUM26NX7QCMB22TPI5OQE3FW55FLOHKA">
+      <manifest-digest sha256new="XIOLCFGZKHTP4AXZ3Y63KUM26NX7QCMB22TPI5OQE3FW55FLOHKA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.8.1/Kui-linux-arm64.zip" size="93672670" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="10.8.2" released="2021-10-21" stability="stable" id="sha256new_HY4H7NT2ZKV4LSEWU4XS4MVNACH7HVX4N75MXHWETS3BJ7LB2BDQ">
+      <manifest-digest sha256new="HY4H7NT2ZKV4LSEWU4XS4MVNACH7HVX4N75MXHWETS3BJ7LB2BDQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.8.2/Kui-linux-x64.zip" size="88593236" type="application/zip" extract="Kui-linux-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="10.8.2" released="2021-10-21" stability="stable" id="sha256new_ZVXM3BS5ZD3OIGTG3BXFLKDBCOV2ABS644A4XBW4IFIHXNU2H4LQ">
+      <manifest-digest sha256new="ZVXM3BS5ZD3OIGTG3BXFLKDBCOV2ABS644A4XBW4IFIHXNU2H4LQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.8.2/Kui-linux-arm64.zip" size="93700386" type="application/zip" extract="Kui-linux-arm64"/>
+    </implementation>
+  </group>
+
+  <group license="Apache License 2.0">
+    <command name="run" path="Kui.app/Contents/MacOS/Kui"/>
+    <command name="kubectl-kui" path="Kui.app/Contents/Resources/kubectl-kui"/>
+
+    <implementation arch="MacOSX-x86_64" version="10.1.3" released="2021-02-06" stability="stable" id="sha256new_OILY32V6E5Q3AOL24TKXUV5RKHGH2UFRO4MKW54E3NGV5FE3KZ7A">
+      <manifest-digest sha256new="OILY32V6E5Q3AOL24TKXUV5RKHGH2UFRO4MKW54E3NGV5FE3KZ7A"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.1.3/Kui-darwin-x64.tar.bz2" size="77154680" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="unknown-x86_64" version="10.1.4" released="2021-02-08" stability="stable" id="sha256new_B4L7BWYX6ASH7XAKZV4NGRR5C3Z3DPQDGEUWZXXUYNQRQZ2KA2DA">
+      <manifest-digest sha256new="B4L7BWYX6ASH7XAKZV4NGRR5C3Z3DPQDGEUWZXXUYNQRQZ2KA2DA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.1.4/Kui-darwin-x64.tar.bz2" size="77155971" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.2.0" released="2021-02-24" stability="stable" id="sha256new_FDTYKKS5MQ7YJPCAV2K532S27EP7XCMCUJM777SLDK3UYMVDYPFQ">
+      <manifest-digest sha256new="FDTYKKS5MQ7YJPCAV2K532S27EP7XCMCUJM777SLDK3UYMVDYPFQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.2.0/Kui-darwin-x64.tar.bz2" size="77344213" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.2.1" released="2021-03-04" stability="stable" id="sha256new_ZMEJRYTD55OTVONONW5VW4IOTTLVBR32K6LIKVBHAYGO4EHUVUSA">
+      <manifest-digest sha256new="ZMEJRYTD55OTVONONW5VW4IOTTLVBR32K6LIKVBHAYGO4EHUVUSA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.2.1/Kui-darwin-x64.tar.bz2" size="77344755" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.3.6" released="2021-05-29" stability="stable" id="sha256new_JZ74H2AXXPIBUUEFODMAIMR3TA5I22OKBZHXC5THSXU57XMKFQAA">
+      <manifest-digest sha256new="JZ74H2AXXPIBUUEFODMAIMR3TA5I22OKBZHXC5THSXU57XMKFQAA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.3.6/Kui-darwin-x64.tar.bz2" size="81275576" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.3.12" released="2021-06-01" stability="stable" id="sha256new_3GWQKGAUAPKBPDTQ7KKXZDX5GHX6X5EYDBKA23Y4YYNLNMWSYQIA">
+      <manifest-digest sha256new="3GWQKGAUAPKBPDTQ7KKXZDX5GHX6X5EYDBKA23Y4YYNLNMWSYQIA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.3.12/Kui-darwin-x64.tar.bz2" size="81266178" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.4.0" released="2021-06-17" stability="stable" id="sha256new_OK7ETLMYQHOWSN7GP6J3JGXTAOMRBHFMDNFXFMNJ6X2RIXOGDNUA">
+      <manifest-digest sha256new="OK7ETLMYQHOWSN7GP6J3JGXTAOMRBHFMDNFXFMNJ6X2RIXOGDNUA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.0/Kui-darwin-x64.tar.bz2" size="80387196" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="10.4.0" released="2021-06-17" stability="stable" id="sha256new_VX4KYT7OQI4JVIQBFGG4BHQU3FK3U6VAT4QCWZIHTCGP6HSBD7QQ">
+      <manifest-digest sha256new="VX4KYT7OQI4JVIQBFGG4BHQU3FK3U6VAT4QCWZIHTCGP6HSBD7QQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.0/Kui-darwin-arm64.tar.bz2" size="83345163" type="application/x-bzip-compressed-tar" extract="Kui-darwin-arm64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.4.1" released="2021-06-21" stability="stable" id="sha256new_BGW4BOHOZWH3TIJ3Z74ESNK4LUGW3UTE7AAH7OORYRETZ63Z6QYQ">
+      <manifest-digest sha256new="BGW4BOHOZWH3TIJ3Z74ESNK4LUGW3UTE7AAH7OORYRETZ63Z6QYQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.1/Kui-darwin-x64.tar.bz2" size="80434100" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="10.4.1" released="2021-06-21" stability="stable" id="sha256new_MEDDFNBFEZEWV2M5RKKCRPEBONWCXWLGGVNA5QHCVX3XN7NYHU3Q">
+      <manifest-digest sha256new="MEDDFNBFEZEWV2M5RKKCRPEBONWCXWLGGVNA5QHCVX3XN7NYHU3Q"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.1/Kui-darwin-arm64.tar.bz2" size="83408089" type="application/x-bzip-compressed-tar" extract="Kui-darwin-arm64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.4.2" released="2021-06-24" stability="stable" id="sha256new_ADGV4JAT2KAMCL5DMHZXB2OLGP26ZRBL64GBOCNINVXFL2JWW2WQ">
+      <manifest-digest sha256new="ADGV4JAT2KAMCL5DMHZXB2OLGP26ZRBL64GBOCNINVXFL2JWW2WQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.2/Kui-darwin-x64.tar.bz2" size="80442591" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="10.4.2" released="2021-06-24" stability="stable" id="sha256new_P2VLJW27NQEZ6Z374FINYG3T4RPITUSYJUCKLZD56RB3HYVSM2OA">
+      <manifest-digest sha256new="P2VLJW27NQEZ6Z374FINYG3T4RPITUSYJUCKLZD56RB3HYVSM2OA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.2/Kui-darwin-arm64.tar.bz2" size="83402442" type="application/x-bzip-compressed-tar" extract="Kui-darwin-arm64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.4.3" released="2021-06-25" stability="stable" id="sha256new_VCJWBDA7HGGBK62WVCULJRFUX7GHNL65N36B66IP3VYS6XRHI7LA">
+      <manifest-digest sha256new="VCJWBDA7HGGBK62WVCULJRFUX7GHNL65N36B66IP3VYS6XRHI7LA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.3/Kui-darwin-x64.tar.bz2" size="80419382" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="10.4.3" released="2021-06-25" stability="stable" id="sha256new_SIFJFCHKQVCTYLHU2MZ5QEI6RWAH34NLEBTX2CLCNFIIWRDC2NFA">
+      <manifest-digest sha256new="SIFJFCHKQVCTYLHU2MZ5QEI6RWAH34NLEBTX2CLCNFIIWRDC2NFA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.3/Kui-darwin-arm64.tar.bz2" size="83371890" type="application/x-bzip-compressed-tar" extract="Kui-darwin-arm64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.4.5" released="2021-07-01" stability="stable" id="sha256new_4A6DGPEBCGSL47X7PWD4RM4ST5TQYM4LVYJZJIWP434UFKOV7ODA">
+      <manifest-digest sha256new="4A6DGPEBCGSL47X7PWD4RM4ST5TQYM4LVYJZJIWP434UFKOV7ODA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.5/Kui-darwin-x64.tar.bz2" size="80419171" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="10.4.5" released="2021-07-01" stability="stable" id="sha256new_HSVLQSR5Q2N6ZGYKB4V3VZIOIREZI64H6RO3JN2UDDVV33KYKWQQ">
+      <manifest-digest sha256new="HSVLQSR5Q2N6ZGYKB4V3VZIOIREZI64H6RO3JN2UDDVV33KYKWQQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.5/Kui-darwin-arm64.tar.bz2" size="83340644" type="application/x-bzip-compressed-tar" extract="Kui-darwin-arm64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.4.6" released="2021-07-06" stability="stable" id="sha256new_LVPBG3MVWZRVRV6Y3WRLBT4QURR2RLCIO5U5UXQCDOGI3KB2DSWA">
+      <manifest-digest sha256new="LVPBG3MVWZRVRV6Y3WRLBT4QURR2RLCIO5U5UXQCDOGI3KB2DSWA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.6/Kui-darwin-x64.tar.bz2" size="80468751" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="10.4.6" released="2021-07-06" stability="stable" id="sha256new_WXPS5FISMOLXTQ4O5UYSLAM4FHTX7RGGO4WZ4AT2IZRPIJ7UVNFQ">
+      <manifest-digest sha256new="WXPS5FISMOLXTQ4O5UYSLAM4FHTX7RGGO4WZ4AT2IZRPIJ7UVNFQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.6/Kui-darwin-arm64.tar.bz2" size="83350035" type="application/x-bzip-compressed-tar" extract="Kui-darwin-arm64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.4.12" released="2021-08-22" stability="stable" id="sha256new_2ILJUPUTNCCCSALPFNHRMFHPH2QTVKEWPX6NWJWYOMPYPNUGQP2A">
+      <manifest-digest sha256new="2ILJUPUTNCCCSALPFNHRMFHPH2QTVKEWPX6NWJWYOMPYPNUGQP2A"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.12/Kui-darwin-x64.tar.bz2" size="81052478" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="10.4.12" released="2021-08-22" stability="stable" id="sha256new_3Y5NUAOTP5HCKN27TQUTY5OXNHFCO7ZICKAHFNOTL3OADQ2IW72A">
+      <manifest-digest sha256new="3Y5NUAOTP5HCKN27TQUTY5OXNHFCO7ZICKAHFNOTL3OADQ2IW72A"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.4.12/Kui-darwin-arm64.tar.bz2" size="83901604" type="application/x-bzip-compressed-tar" extract="Kui-darwin-arm64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.5.0" released="2021-09-13" stability="stable" id="sha256new_SDRFIHCI74U4YRHK2EVQTDVV4PIMPBXMLVJQWVALAB7H2QRUSTVQ">
+      <manifest-digest sha256new="SDRFIHCI74U4YRHK2EVQTDVV4PIMPBXMLVJQWVALAB7H2QRUSTVQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.0/Kui-darwin-x64.tar.bz2" size="81586196" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="10.5.0" released="2021-09-13" stability="stable" id="sha256new_HSVMCRJIZSPT6X6NVVNYYS5QLYL5UIQ6GAWDNJ2HPBSXTQAVJI6A">
+      <manifest-digest sha256new="HSVMCRJIZSPT6X6NVVNYYS5QLYL5UIQ6GAWDNJ2HPBSXTQAVJI6A"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.0/Kui-darwin-arm64.tar.bz2" size="84164099" type="application/x-bzip-compressed-tar" extract="Kui-darwin-arm64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.5.2" released="2021-09-13" stability="stable" id="sha256new_ZJ355Y22HG2CJFIZDPPISY6IDN5JXEAXQSHYQZ7REM5XGVNQXWHQ">
+      <manifest-digest sha256new="ZJ355Y22HG2CJFIZDPPISY6IDN5JXEAXQSHYQZ7REM5XGVNQXWHQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.2/Kui-darwin-x64.tar.bz2" size="81571432" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="10.5.2" released="2021-09-13" stability="stable" id="sha256new_EUIULPWENANCPJRXMZXXQN3QGVQB3ROBK426URJBD2R67CJIQUEA">
+      <manifest-digest sha256new="EUIULPWENANCPJRXMZXXQN3QGVQB3ROBK426URJBD2R67CJIQUEA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.2/Kui-darwin-arm64.tar.bz2" size="84148513" type="application/x-bzip-compressed-tar" extract="Kui-darwin-arm64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.5.3" released="2021-09-14" stability="stable" id="sha256new_6TDEJX7364HJA4SI4UXC4PPFJJHWZNR5EDDMWBMCYKVQNKXGBBPA">
+      <manifest-digest sha256new="6TDEJX7364HJA4SI4UXC4PPFJJHWZNR5EDDMWBMCYKVQNKXGBBPA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.3/Kui-darwin-x64.tar.bz2" size="81573396" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="10.5.3" released="2021-09-14" stability="stable" id="sha256new_ILJWYC6DBVMMI6SCY6IM3GBRXGYKXVIBYSTDXGDGILFWIB46IK3A">
+      <manifest-digest sha256new="ILJWYC6DBVMMI6SCY6IM3GBRXGYKXVIBYSTDXGDGILFWIB46IK3A"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.3/Kui-darwin-arm64.tar.bz2" size="84167761" type="application/x-bzip-compressed-tar" extract="Kui-darwin-arm64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.5.4" released="2021-09-15" stability="stable" id="sha256new_EHVK5SYK6WEY3JQL4CNRBIFMWFLDX7N7M5JKXGAU3YE2SA5H7TBQ">
+      <manifest-digest sha256new="EHVK5SYK6WEY3JQL4CNRBIFMWFLDX7N7M5JKXGAU3YE2SA5H7TBQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.4/Kui-darwin-x64.tar.bz2" size="81574023" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="10.5.4" released="2021-09-15" stability="stable" id="sha256new_5YD2LR2ITKFSXLQMYWHF6OZ67R2RHYLLPRSUVIVW6M4KXU2JDLDQ">
+      <manifest-digest sha256new="5YD2LR2ITKFSXLQMYWHF6OZ67R2RHYLLPRSUVIVW6M4KXU2JDLDQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.4/Kui-darwin-arm64.tar.bz2" size="84165919" type="application/x-bzip-compressed-tar" extract="Kui-darwin-arm64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.5.5" released="2021-09-15" stability="stable" id="sha256new_TXUW3KKR5N3UHH2VW6YH6GQXFPKQP2T2A7J45JZUOGLLRH2LKV4Q">
+      <manifest-digest sha256new="TXUW3KKR5N3UHH2VW6YH6GQXFPKQP2T2A7J45JZUOGLLRH2LKV4Q"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.5/Kui-darwin-x64.tar.bz2" size="81095605" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="10.5.5" released="2021-09-15" stability="stable" id="sha256new_BPCMOP5WS3LXNJN7O7MFGYUYJ67MEYWLZQHQRFYQ2Y5SPRQ3RV2Q">
+      <manifest-digest sha256new="BPCMOP5WS3LXNJN7O7MFGYUYJ67MEYWLZQHQRFYQ2Y5SPRQ3RV2Q"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.5/Kui-darwin-arm64.tar.bz2" size="83871527" type="application/x-bzip-compressed-tar" extract="Kui-darwin-arm64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.5.6" released="2021-09-17" stability="stable" id="sha256new_QHOCI4YHBZ6XXXFTLJMZ2MA4VB33GS3QS5U23KA62MQTWOLM2VPA">
+      <manifest-digest sha256new="QHOCI4YHBZ6XXXFTLJMZ2MA4VB33GS3QS5U23KA62MQTWOLM2VPA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.6/Kui-darwin-x64.tar.bz2" size="81090476" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="10.5.6" released="2021-09-17" stability="stable" id="sha256new_NX4D7J3LEJTZVA6ET4QYD4OO6JGJDQ3UMPQLETP3DSJJHJYPG6EQ">
+      <manifest-digest sha256new="NX4D7J3LEJTZVA6ET4QYD4OO6JGJDQ3UMPQLETP3DSJJHJYPG6EQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.6/Kui-darwin-arm64.tar.bz2" size="83878082" type="application/x-bzip-compressed-tar" extract="Kui-darwin-arm64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.5.8" released="2021-09-21" stability="stable" id="sha256new_MLRZYOPA7UVHYC4BFQIBJWRYJFGX33ZNXQKYGFMCVHXGPEBUZ6GA">
+      <manifest-digest sha256new="MLRZYOPA7UVHYC4BFQIBJWRYJFGX33ZNXQKYGFMCVHXGPEBUZ6GA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.8/Kui-darwin-x64.tar.bz2" size="81063845" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="10.5.8" released="2021-09-21" stability="stable" id="sha256new_5IGFRXERAM4XJSB6VKHKPIRCVWWEZRNBHB4U43MD4EV34Q3JRA7Q">
+      <manifest-digest sha256new="5IGFRXERAM4XJSB6VKHKPIRCVWWEZRNBHB4U43MD4EV34Q3JRA7Q"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.8/Kui-darwin-arm64.tar.bz2" size="83938180" type="application/x-bzip-compressed-tar" extract="Kui-darwin-arm64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.5.13" released="2021-09-25" stability="stable" id="sha256new_IJMZZBUN46QG4URAVOJ7ECASNDYFT55LGVY6DFJQJWYJOVRNVW7Q">
+      <manifest-digest sha256new="IJMZZBUN46QG4URAVOJ7ECASNDYFT55LGVY6DFJQJWYJOVRNVW7Q"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.13/Kui-darwin-x64.tar.bz2" size="81110247" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="10.5.13" released="2021-09-25" stability="stable" id="sha256new_7AH3CX43IFES65GW6TEHVBIDIUIXMMJWQ2DWBVIZUKB3YYPQH53A">
+      <manifest-digest sha256new="7AH3CX43IFES65GW6TEHVBIDIUIXMMJWQ2DWBVIZUKB3YYPQH53A"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.5.13/Kui-darwin-arm64.tar.bz2" size="83959014" type="application/x-bzip-compressed-tar" extract="Kui-darwin-arm64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.6.0" released="2021-09-27" stability="stable" id="sha256new_535V4Z7CAP7DNVHYR6ILXI3UZXHUWFCRBLOTBXSRCWS6NVDN47PQ">
+      <manifest-digest sha256new="535V4Z7CAP7DNVHYR6ILXI3UZXHUWFCRBLOTBXSRCWS6NVDN47PQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.6.0/Kui-darwin-x64.tar.bz2" size="81547984" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="10.6.0" released="2021-09-27" stability="stable" id="sha256new_6DDKE2PXRRIVKJF3UD43BKXWUD2AILLUGOLJTVGSKABVXPLB3LTQ">
+      <manifest-digest sha256new="6DDKE2PXRRIVKJF3UD43BKXWUD2AILLUGOLJTVGSKABVXPLB3LTQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.6.0/Kui-darwin-arm64.tar.bz2" size="84377965" type="application/x-bzip-compressed-tar" extract="Kui-darwin-arm64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.6.4" released="2021-10-01" stability="stable" id="sha256new_ZMGAB2H4RVE3AMSMKEIXA2VH6HQPFQLREZ2FL7VL36P6OHRJZP5Q">
+      <manifest-digest sha256new="ZMGAB2H4RVE3AMSMKEIXA2VH6HQPFQLREZ2FL7VL36P6OHRJZP5Q"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.6.4/Kui-darwin-x64.tar.bz2" size="81573917" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="10.6.4" released="2021-10-01" stability="stable" id="sha256new_JC77YTL2JYWJ5C26YRLXYOVJRVKIL6QWHA3X3BQ7MZ2M2O2F474Q">
+      <manifest-digest sha256new="JC77YTL2JYWJ5C26YRLXYOVJRVKIL6QWHA3X3BQ7MZ2M2O2F474Q"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.6.4/Kui-darwin-arm64.tar.bz2" size="84268272" type="application/x-bzip-compressed-tar" extract="Kui-darwin-arm64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.7.0" released="2021-10-12" stability="stable" id="sha256new_MUPKTLRGTEZZNX7ERFN65QF75U26FVDK73J7YZCREIRHDU5WZYPQ">
+      <manifest-digest sha256new="MUPKTLRGTEZZNX7ERFN65QF75U26FVDK73J7YZCREIRHDU5WZYPQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.7.0/Kui-darwin-x64.tar.bz2" size="81631638" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="10.7.0" released="2021-10-12" stability="stable" id="sha256new_I2VP3HI2CH6EVRJCFUMQNA5AQCTJ7CEJU5XQ6XSOMAKSFZ7LB5TA">
+      <manifest-digest sha256new="I2VP3HI2CH6EVRJCFUMQNA5AQCTJ7CEJU5XQ6XSOMAKSFZ7LB5TA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.7.0/Kui-darwin-arm64.tar.bz2" size="84608135" type="application/x-bzip-compressed-tar" extract="Kui-darwin-arm64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.7.5" released="2021-10-14" stability="stable" id="sha256new_2CDLT7OEUJAT3PD3UCP3S7SKR3IFTO7CHGAUGFKCD4MMT4T4AQGA">
+      <manifest-digest sha256new="2CDLT7OEUJAT3PD3UCP3S7SKR3IFTO7CHGAUGFKCD4MMT4T4AQGA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.7.5/Kui-darwin-x64.tar.bz2" size="81214552" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="10.7.5" released="2021-10-14" stability="stable" id="sha256new_TCLOYLCRIXZCE3PYNOB573YOP4LKECFK4KUTJSVZCM6EVOVOZQEA">
+      <manifest-digest sha256new="TCLOYLCRIXZCE3PYNOB573YOP4LKECFK4KUTJSVZCM6EVOVOZQEA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.7.5/Kui-darwin-arm64.tar.bz2" size="84165860" type="application/x-bzip-compressed-tar" extract="Kui-darwin-arm64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.7.6" released="2021-10-14" stability="stable" id="sha256new_X7CRGG6YDWGA4OGX7AQT6EWJJ776TGNQDJ6CKWBTJJGRGJTVPR3A">
+      <manifest-digest sha256new="X7CRGG6YDWGA4OGX7AQT6EWJJ776TGNQDJ6CKWBTJJGRGJTVPR3A"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.7.6/Kui-darwin-x64.tar.bz2" size="81217858" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="10.7.6" released="2021-10-14" stability="stable" id="sha256new_SBOOY3THNLRJMILLWZFLLNVW7FNIHGBKMGHDV74KMEFLADVVG6UA">
+      <manifest-digest sha256new="SBOOY3THNLRJMILLWZFLLNVW7FNIHGBKMGHDV74KMEFLADVVG6UA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.7.6/Kui-darwin-arm64.tar.bz2" size="84165891" type="application/x-bzip-compressed-tar" extract="Kui-darwin-arm64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.8.0" released="2021-10-15" stability="stable" id="sha256new_J6OSQO5DY53L4IDERIYH3JKSZVJIIEZYTEUEEAYILC7NBF2E3BQA">
+      <manifest-digest sha256new="J6OSQO5DY53L4IDERIYH3JKSZVJIIEZYTEUEEAYILC7NBF2E3BQA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.8.0/Kui-darwin-x64.tar.bz2" size="80790966" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="10.8.0" released="2021-10-15" stability="stable" id="sha256new_MDOGYOIDDSTQWZNUAANSXV7FHQK4BQOXEREAS5DYQIX3HG6BACZA">
+      <manifest-digest sha256new="MDOGYOIDDSTQWZNUAANSXV7FHQK4BQOXEREAS5DYQIX3HG6BACZA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.8.0/Kui-darwin-arm64.tar.bz2" size="83626202" type="application/x-bzip-compressed-tar" extract="Kui-darwin-arm64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.8.1" released="2021-10-19" stability="stable" id="sha256new_JSBMGZDCIPOKGUNREQWWQOMQ5BA5NIVBVB44BS4AQTQ3LOB273ZQ">
+      <manifest-digest sha256new="JSBMGZDCIPOKGUNREQWWQOMQ5BA5NIVBVB44BS4AQTQ3LOB273ZQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.8.1/Kui-darwin-x64.tar.bz2" size="80790864" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="10.8.1" released="2021-10-19" stability="stable" id="sha256new_CASUHL4ZRYXTJMJLPHIN3MGG7RATC66XS2HZJ4EC3BTIYENPIGSQ">
+      <manifest-digest sha256new="CASUHL4ZRYXTJMJLPHIN3MGG7RATC66XS2HZJ4EC3BTIYENPIGSQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.8.1/Kui-darwin-arm64.tar.bz2" size="83627198" type="application/x-bzip-compressed-tar" extract="Kui-darwin-arm64"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" version="10.8.2" released="2021-10-21" stability="stable" id="sha256new_UGJMJSKMJMKQULDTHSM4A6TCDCZSERGW5ZQXW4NQ4UZD4ETTZ5EA">
+      <manifest-digest sha256new="UGJMJSKMJMKQULDTHSM4A6TCDCZSERGW5ZQXW4NQ4UZD4ETTZ5EA"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.8.2/Kui-darwin-x64.tar.bz2" size="80781464" type="application/x-bzip-compressed-tar" extract="Kui-darwin-x64"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="10.8.2" released="2021-10-21" stability="stable" id="sha256new_VRGPUZLQ4TLM4F5GKBC3LK4VHY66U7P5WGW7BN325F4E3BK74HTQ">
+      <manifest-digest sha256new="VRGPUZLQ4TLM4F5GKBC3LK4VHY66U7P5WGW7BN325F4E3BK74HTQ"/>
+      <archive href="https://github.com/kubernetes-sigs/kui/releases/download/v10.8.2/Kui-darwin-arm64.tar.bz2" size="83629546" type="application/x-bzip-compressed-tar" extract="Kui-darwin-arm64"/>
+    </implementation>
+  </group>
+</interface>

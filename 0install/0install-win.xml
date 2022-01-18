@@ -9,15 +9,9 @@
   <homepage>https://0install.net/</homepage>
 
   <group license="LGPL v3 (GNU Lesser General Public License)">
-    <command name="run" path="0install.exe">
-      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="2.0.."/>
-    </command>
-    <command name="run-gui" path="0install-win.exe">
-      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="2.0.."/>
-    </command>
-    <command name="central" path="ZeroInstall.exe">
-      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="2.0.."/>
-    </command>
+    <command name="run" path="0install.exe"/>
+    <command name="run-gui" path="0install-win.exe"/>
+    <command name="central" path="ZeroInstall.exe"/>
 
     <implementation id="sha1new=01b77dca81d3b0bab7cdde9c0c92604f129f33d1" released="2016-03-06" stability="stable" version="2.11.0">
       <manifest-digest sha1new="01b77dca81d3b0bab7cdde9c0c92604f129f33d1" sha256="132e2a031979f7036bb8a604cf9d7d6d7780b7cd81c5b173fa464152d8eef125" sha256new="CMXCUAYZPH3QG25YUYCM7HL5NV3YBN6NQHC3C472IZAVFWHO6ESQ"/>
@@ -163,19 +157,6 @@
       <manifest-digest sha256new="NSXK5K7RQOR4JN6AXIQYLSLSDNDM6RVNTRUJ4M6PUKWRLIQIA3WQ"/>
       <archive href="https://github.com/0install/0install-win/releases/download/2.17.2/0install-win-2.17.2.tar.gz" size="3295873"/>
     </implementation>
-  </group>
-
-  <group license="LGPL v3 (GNU Lesser General Public License)">
-    <command name="run" path="0install.exe">
-      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.."/>
-    </command>
-    <command name="run-gui" path="0install-win.exe">
-      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.."/>
-    </command>
-    <command name="central" path="ZeroInstall.exe">
-      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.."/>
-    </command>
-
     <implementation id="sha1new=03413674d4f96d29cb3a887162253ef1bdc2698f" released="2020-05-24" stability="stable" version="2.17.3">
       <manifest-digest sha256new="GCMZBNSW7GBWRWTCW2DJOKSOEIY3CCCJQV3W2RG4T72K5GAK6V5Q"/>
       <archive href="https://github.com/0install/0install-win/releases/download/2.17.3/0install-win-2.17.3.tar.gz" size="3306451"/>
@@ -212,19 +193,6 @@
       <manifest-digest sha256new="4U3R6SRHV5ZNJR2MNH2LQDV6F3OWQSW6MZ7GFPZCQ6BMOAHXVZIQ"/>
       <archive href="https://github.com/0install/0install-win/releases/download/2.18.7/0install-win-2.18.7.tar.gz" size="3989221" type="application/x-compressed-tar"/>
     </implementation>
-  </group>
-
-  <group license="LGPL v3 (GNU Lesser General Public License)">
-    <command name="run" path="0install.exe">
-      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.7.2.."/>
-    </command>
-    <command name="run-gui" path="0install-win.exe">
-      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.7.2.."/>
-    </command>
-    <command name="central" path="ZeroInstall.exe">
-      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.7.2.."/>
-    </command>
-
     <implementation id="sha1new=58ceef10872f8f9ad28c0589600c8b118b872629" released="2021-03-27" stability="stable" version="2.19.0">
       <manifest-digest sha256new="GZH3BZLKCHLQ4ERO2KLN7326ZUVRW53UCHUN7SAF47VGRBECNRVQ"/>
       <archive href="https://github.com/0install/0install-win/releases/download/2.19.0/0install-win-2.19.0.tar.gz" size="5000909" type="application/x-compressed-tar"/>
@@ -262,11 +230,11 @@
   </entry-point>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmGVRA4ACgkQWao5J8JOTh68Bgf/S5JA
-Qsxtz8PqLV6pjWsLhbwxJiXKgsl/SYA5UFZoZ7dqhTaiFyWnFh3k6uSVYIUyIXKqNMt6z9DaHrTw
-NHF2IYtuy9Xlm+gGwA2SNkErfK2zYnx0CXB6xGExr1/wORCSzr2chpXTstViZkuvuLQcHiOwz9HJ
-T6NcZ0jlsopH10iaYyPgyti1ovt3UiryDXLNRx/Y0yeody0F9K/lLwb+8aBpsuzNE0xC/Lag0hHu
-cANYojUeyrwiOU3jZT4a2dAS1GP45NovpK1DZs22WSGrXwpodzp46dcgaClSj4LqD+8MELuYBzfw
-YB2Zwc2HJcFp0P3XVakHAQFWMQ+QOiZy9A==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmHnCQkACgkQWao5J8JOTh75mggAipTd
+2Y+WMJaBli4sjd/Iqv24NJuHyK/QfiPy3SZ36WdMRA8LuySKLppygyTasP0reQHhnRhDK6ZbcMB6
+wVGPpXUySxxxzaJZI+O8kMSI15JatiV4mJTBZXEXhB6yVmReNiLmK7Nf9cZoBqbPV1KddJ+yAJN3
+df40PCbB+YYa+c8mUG16l9jVTjcSKyuX5cn02g6ryTmtITXKhjQQZdSX9WNbhY22Nvm4MmfD4AwQ
+8fbRgXoC1Zz1CRJSIrCLI23kgczEH9mPqU6UnU93fsySivTmMipgGEIuB3YH5RYBQMPtlrt9QnJf
+pvH74uaosBbO/Edj2AZ22kQyeXQArnSTGQ==
 
 -->

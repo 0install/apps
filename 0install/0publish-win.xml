@@ -151,27 +151,31 @@ und der New Feed Wizard (leitet Sie durch den kompletten Feed-Erstellungsprozess
   </group>
 
   <entry-point app-id="ZeroInstall.Publishing" binary-name="0publish-win" command="run">
-    <name xml:lang="en">Zero Install Publishing Tools</name>
+    <name>Zero Install Publishing Tools</name>
   </entry-point>
   <entry-point command="0publish">
     <needs-terminal/>
-    <name xml:lang="en">Feed Editor command-line</name>
+    <name>Zero Install Publishing command-line</name>
   </entry-point>
 
   <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
-    <file-type explicit-only="true" id="ZeroInstallFeed">
-      <description xml:lang="en">Zero Install Feed</description>
-      <verb args="&quot;%V&quot;" name="edit"/>
+    <context-menu id="ZeroInstallFeed">
       <extension value=".xml"/>
-    </file-type>
+      <extension value=".template"/>
+      <verb args="&quot;%V&quot;" name="FeedEditor">
+        <description xml:lang="en">Open with Feed Editor</description>
+        <description xml:lang="de">Öffnen mit Feed Editor</description>
+        <description xml:lang="fr">Ouvrir avec Feed Editor</description>
+      </verb>
+    </context-menu>
   </capabilities>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmHuhwwACgkQWao5J8JOTh4dRwf5Aehm
-xbF1cL9bL9zLqMlK1gGPyydtIuRgpPVeA6vd5MAR68ddxqLC9cnlkEgp0Hbfgqj7co53XZkv1gLJ
-t7Hy9T+Xg3pBkDNT7nKROjSFtk3mfBu/cZALW0lFlvt8/l4RMdWHBbIe9/KbvI8/Z0Ks7mS+3roT
-s6gNIRfSLgLggBeKQC7sBfo1q7Nd/WJK8FWzyMEC8vfi9EEIBLr5vZrR63eBOEYkYuaiESdVpUFo
-rDdqiNuuYhrczoE+MoYiKqn5rmwiRg6nAK8n0rbg1qzVnxAfQU+p1Dxdai5RyW/c5KXpvwowE/LI
-FhyObfbTa7hP/HUeRUrkehblce9h8S0jGw==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmH1kU4ACgkQWao5J8JOTh6goggAthKa
+uIosxcI+7zUB5veg+v/4X7Q/6eCQG4xIAgOYrx2tovk/J9MawxmO29weIAULRZCitQHzPkYeXdAb
+AWJcE5Q7m7FS6Ck7J7mN7MJsswFo/7kyw5OIXU1lYV+LvwPZIVlNAZxf1f+2r6v0FTKXePf2VkxS
+HNwLK4BOqitNln0cSvhKmQOa347jwjTdHkkB1KPyWZYjVaF/sEcQTY/dE/U6bNH/nm4D1GDZVXzb
+6fukWwTAzXtfWZ84VOkfByiTSLYfeCu8AF/Wbm5lNO8QnPqL2IJs8mqHlRTS7geNrddtAft+G0uq
+HwhAw4Z2OQqPa19BdBdl1xiJyCQOIaq7Hg==
 
 -->

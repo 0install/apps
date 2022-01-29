@@ -158,10 +158,14 @@ und der New Feed Wizard (leitet Sie durch den kompletten Feed-Erstellungsprozess
   </entry-point>
 
   <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
-    <file-type explicit-only="true" id="ZeroInstallFeed">
-      <description xml:lang="en">Zero Install Feed</description>
-      <verb args="&quot;%V&quot;" name="edit"/>
+    <context-menu id="ZeroInstallFeed">
       <extension value=".xml"/>
-    </file-type>
+      <extension value=".template"/>
+      <verb args="&quot;%V&quot;" name="FeedEditor">
+        <description xml:lang="en">Open with Feed Editor</description>
+        <description xml:lang="de">Öffnen mit Feed Editor</description>
+        <description xml:lang="fr">Ouvrir avec Feed Editor</description>
+      </verb>
+    </context-menu>
   </capabilities>
 </interface>

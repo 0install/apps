@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>ShellCheck</name>
+  <summary>a static analysis tool for shell scripts</summary>
+  <description>ShellCheck is a GPLv3 tool that gives warnings and suggestions for bash/sh shell scripts.</description>
+  <homepage>https://www.shellcheck.net/</homepage>
+  <category>Development</category>
+  <category>Utility</category>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/devel/shellcheck.xml"/>
+
+  <group license="GPL v3 (GNU General Public License)">
+    <command name="run" path="shellcheck"/>
+    <implementation arch="Linux-x86_64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="shellcheck-v{version}" href="https://github.com/koalaman/shellcheck/releases/download/v{version}/shellcheck-v{version}.linux.x86_64.tar.xz" type="application/x-xz-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="shellcheck-v{version}" href="https://github.com/koalaman/shellcheck/releases/download/v{version}/shellcheck-v{version}.linux.aarch64.tar.xz" type="application/x-xz-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="shellcheck-v{version}" href="https://github.com/koalaman/shellcheck/releases/download/v{version}/shellcheck-v{version}.darwin.x86_64.tar.xz" type="application/x-xz-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="GPL v3 (GNU General Public License)">
+    <command name="run" path="shellcheck.exe"/>
+    <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive href="https://github.com/koalaman/shellcheck/releases/download/v{version}/shellcheck-v{version}.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

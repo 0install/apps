@@ -5,4 +5,4 @@ import github
 releases = [{
     'version': release['tag_name'].strip('v'),
     'released': release['published_at'][0:10]
-} for release in github.releases('roboll/helmfile') if len(release['assets']) > 0]
+} for release in github.releases('roboll/helmfile') if release['assets']]

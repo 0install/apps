@@ -13,4 +13,4 @@ def convert(release):
     released = release['published_at'][0:10]
     return {'version': version, 'original-version': original_version, 'stability': stability, 'released': released}
 
-releases = [convert(release) for release in github.releases('GitTools/GitVersion') if len(release['assets']) > 0 and not '+' in release['tag_name']]
+releases = [convert(release) for release in github.releases('GitTools/GitVersion') if release['assets'] and not '+' in release['tag_name']]

@@ -6,4 +6,4 @@ releases = [{
     'version': release['tag_name'].replace('.0', '.'),
     'version-original': release['tag_name'],
     'released': release['published_at'][0:10]
-} for release in github.releases('rg3/youtube-dl') if len(release['assets']) > 0]
+} for release in github.releases('rg3/youtube-dl') if release['assets']]

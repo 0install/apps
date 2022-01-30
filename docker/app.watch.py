@@ -7,4 +7,4 @@ releases = [{
     'version': release['tag_name'].strip('v').replace('beta', 'pre').replace('zeta', 'rc'),
     'stability': 'testing' if release['prerelease'] else 'stable',
     'released': release['published_at'][0:10]
-} for release in github.releases('docker/app') if release['tag_name'][0] == 'v' and len(release['assets']) > 0]
+} for release in github.releases('docker/app') if release['tag_name'][0] == 'v' and release['assets']]

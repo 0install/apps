@@ -18,7 +18,10 @@ Professional runs on Microsoft .NET 2.0 and Mono 2.6 or newer.</description>
     </command>
     <implementation version="{version}" released="{released}" stability="stable">
       <manifest-digest/>
-      <archive href="http://downloads.sourceforge.net/keepass/KeePass-{version}.zip" type="application/zip"/>
+      <recipe>
+        <archive href="http://downloads.sourceforge.net/keepass/KeePass-{version}.zip" type="application/zip"/>
+        <archive href="keepass-pro.config.zip" type="application/zip"/>
+      </recipe>
     </implementation>
   </group>
 </interface>

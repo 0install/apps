@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/golang/go.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/golang/go.xml">
   <name>Go</name>
   <summary>tool for managing Go source code</summary>
   <description>This is a tool for managing Go source code. Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.</description>
@@ -8,10 +8,9 @@
   <needs-terminal/>
   <icon href="https://raw.githubusercontent.com/0install/apps/master/golang/go.png" type="image/png"/>
 
-  <feed arch="Linux-*" src="https://apps.0install.net/golang/go-linux.xml"/>
-  <feed arch="Darwin-*" src="https://apps.0install.net/golang/go-darwin.xml"/>
-  <feed arch="Windows-*" src="https://apps.0install.net/golang/go-windows.xml"/>
-  <package-implementation distributions="Virtual" main="/usr/bin/go" package="go"/><!-- Prevent this virtual feed from being seen as a library feed -->
+  <feed src="https://apps.0install.net/golang/go-linux.xml" arch="Linux-*"/>
+  <feed src="https://apps.0install.net/golang/go-darwin.xml" arch="Darwin-*"/>
+  <feed src="https://apps.0install.net/golang/go-windows.xml" arch="Windows-*"/>
 
   <entry-point binary-name="go" command="run"/>
   <entry-point binary-name="gofmt" command="gofmt">
@@ -21,11 +20,11 @@
   </entry-point>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7ULN8ACgkQWao5J8JOTh5l8AgAu42j
-Puh/HVEs+3RjHBD78CpYWpEfVxoDuD8Zyo7Aau6bQuqxW22TL+lRdwF9a8JM6vcc/4ipo5dWMuZI
-gx/I2iLeucwcCz/dx8M1iIucEJ5ct4+XDmQ9VxWqp1xXdDLYNNxQrhtA95RVe4LfIATwLlr/emOq
-GfAGuBZOAU2vSsZu5y1O52PyAW4iLBhCJ5Prw4kRp6WBCghKlsf7Za5rNNajJOCiPXw+xBkT6sjF
-AnFVYJxq8NfRp1uJhkgzjAP60XDp26yzIIevVUvXo4c1Io5gIuof5YpB98AALdPSZD9fDaLVExZO
-Zm1TdMXI5io4RG1m4twcegLg7KgmL0z3YQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmIATKoACgkQWao5J8JOTh7O2gf+NPud
+mRr/BCB5ZFMh9bjq3Z6x2FD6mKsFWChop0O5rNYy2+/lJw9d0NV37p/mz2jnXDxhP5PeoojjaI7u
+7/Rr5pJIOmoMPIl9zYyE4fTXqkuFIHQ+fHuzC4Y32UG56hMxYPJwOhEHl8JKTIq0IXq+1EIh82xB
+Cp2W6J3MGWW+GuwIs+GddPhygyN9HW2keWmUl7WuH6fGVCF0YLI5hv9qoJrbAmApkdJxSIuASGQs
+iEIazzlblU7bLmTpOThaK/zkiKBlvNzj3VT5ZTUJnXFTbD9uOCxE22DLj6k4ktNjYdNga9xbiQbu
+mCH89fU69dpov7XdZevxUJVVf9J0UB0uBQ==
 
 -->

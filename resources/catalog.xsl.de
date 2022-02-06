@@ -14,14 +14,14 @@
         <meta http-equiv="Content-Language" content="de" />
         <title>Zero Install - Software Katalog</title>
         <link rel="stylesheet" href="https://apps.0install.net/resources/catalog.css" type="text/css" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
         <script>
-          window.addEventListener("keydown",function (e) {
+          window.addEventListener("keydown", function (e) {
             if (e.keyCode === 114 || (e.ctrlKey &amp;&amp; e.keyCode === 70)) { 
               document.getElementById("search").focus();
               e.preventDefault();
             }
-          })
+          });
         </script>
         <base target="_parent" />
       </head>
@@ -49,11 +49,16 @@
                       <xsl:value-of select="interface:name"/>
                     </a>
                   </h2>
+                  <p class="categories" hidden="true">
+                    <xsl:for-each select="interface:category">
+                      <xsl:value-of select="text()"/>
+                    </xsl:for-each>
+                  </p> 
                   <p class="summary">
-                    <xsl:if test="interface:summary[@xml:lang='de']">
-                      <xsl:value-of select="interface:summary[@xml:lang='de']"/>
+                    <xsl:if test="interface:summary[@lang='de']">
+                      <xsl:value-of select="interface:summary[@lang='de']"/>
                     </xsl:if>
-                    <xsl:if test="not(interface:summary[@xml:lang='de'])">
+                    <xsl:if test="not(interface:summary[@lang='de'])">
                       <xsl:value-of select="interface:summary"/>
                     </xsl:if>
                   </p>
@@ -76,7 +81,7 @@
             </xsl:for-each>
           </div>
         </div>
-        <script>new List('main', {valueNames: ['name']});</script>
+        <script>new List('main', {valueNames: ['name', 'categories', 'summary']});</script>
       </body>
     </html>
   </xsl:template>

@@ -27,7 +27,7 @@ To work with this repository on your own machine run these commands inside an em
     ln -s feeds/0repo-config.py .
     ln -s public/archives.db .
     mkdir incoming
-    0install add 0repo https://github.com/0install/0repo
+    0install add 0repo https://apps.0install.net/0install/0repo.xml
 
 You can now run `feeds/watch.sh` (on Linux) or `feeds\watch.ps1` (on Windows) to search for new releases and `0repo` to update the feeds.
 

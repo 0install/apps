@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type='text/xsl' href='../resources/catalog.xsl'?>
-<c:catalog xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:c="http://0install.de/schema/injector/catalog"><interface uri="https://apps.0install.net/lib/glut.xml"><name>FreeGLUT</name><summary xml:lang="en">FreeGLUT is a free-software/open-source alternative to the OpenGL Utility Toolkit (GLUT) library.</summary><description xml:lang="en">GLUT was originally written by Mark Kilgard to support the sample programs in the second edition OpenGL 'RedBook'. Since then, GLUT has been used in a wide variety of practical applications because it is simple, widely available and highly portable.
+<c:catalog xmlns:c="http://0install.de/schema/injector/catalog" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"><interface uri="https://apps.0install.net/lib/glut.xml"><name>FreeGLUT</name><summary xml:lang="en">FreeGLUT is a free-software/open-source alternative to the OpenGL Utility Toolkit (GLUT) library.</summary><description xml:lang="en">GLUT was originally written by Mark Kilgard to support the sample programs in the second edition OpenGL 'RedBook'. Since then, GLUT has been used in a wide variety of practical applications because it is simple, widely available and highly portable.
 
 GLUT (and hence FreeGLUT) takes care of all the system-specific chores required for creating windows, initializing OpenGL contexts, and handling input events, to allow for trully portable OpenGL programs.</description><category>Graphics</category><homepage>http://freeglut.sourceforge.net/</homepage></interface><interface uri="https://apps.0install.net/lib/glib.xml"><name>GLib</name><summary>low-level system libraries written in C</summary><description>GLib provides the core application building blocks for libraries and applications written in C. It provides the core object system used in GNOME, the main loop implementation, and a large set of utility functions for strings and common data structures.</description><homepage>https://wiki.gnome.org/Projects/GLib</homepage></interface><interface uri="https://apps.0install.net/lib/readline4.xml"><name>GNU Readline Library</name><summary xml:lang="en">Get a line from a user with editing.</summary><description xml:lang="en">Readline offers editing capabilities while the user is entering the line. By default, the line editing commands are similar to those of emacs.</description><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/><category>System</category><homepage>http://mingwrep.sourceforge.net/</homepage><needs-terminal/><entry-point binary-name="rl" command="run"/><entry-point binary-name="rlversion" command="rlversion">
     <needs-terminal/>
@@ -211,14 +211,14 @@ PNG (Portable Network Graphics) format files.
 
 This package contains the runtime library files needed to run software
 using libpng.</description><category>Graphics</category><homepage>http://www.libpng.org/pub/png/libpng.html</homepage><needs-terminal/><entry-point binary-name="pngfix" command="run">
-  <needs-terminal/>
+    <needs-terminal/>
     <name>pngfix</name>
-    <summary xml:lang="en">Tests, optimizes and optionally fixes the zlib header in PNG files.</summary>
-    </entry-point><entry-point binary-name="png-fix-itxt" command="png-fix-itxt">
-  <needs-terminal/>
-        <name>png-fix-itxt</name>
-    	<summary xml:lang="en">Fixes a PNG file written with libpng-1.6.0 or 1.6.1 that has one or more uncompressed iTXt chunks.</summary>
-    </entry-point></interface><interface uri="https://apps.0install.net/lib/popt.xml"><name>libpopt0</name><summary>lib for parsing cmdline parameters</summary><description>Popt was heavily influenced by the getopt() and getopt_long() functions,
+    <summary>Tests, optimizes and optionally fixes the zlib header in PNG files.</summary>
+  </entry-point><entry-point binary-name="png-fix-itxt" command="png-fix-itxt">
+    <needs-terminal/>
+    <name>png-fix-itxt</name>
+    <summary>Fixes a PNG file written with libpng-1.6.0 or 1.6.1 that has one or more uncompressed iTXt chunks.</summary>
+  </entry-point></interface><interface uri="https://apps.0install.net/lib/popt.xml"><name>libpopt0</name><summary>lib for parsing cmdline parameters</summary><description>Popt was heavily influenced by the getopt() and getopt_long() functions,
 but it allows more powerful argument expansion. It can parse arbitrary
 argv[] style arrays and automatically set variables based on command
 line arguments. It also allows command line arguments to be aliased via
@@ -284,40 +284,40 @@ such XML data files.</description><icon href="https://raw.githubusercontent.com/
        the  command  line, or it can perform multiple functions
        in interactive mode. It can operate on both XML and SGML
        files.</description>
-  </entry-point></interface><interface uri="https://apps.0install.net/lib/gnumpc.xml"><name>mpc</name><summary>Multiple precision complex arithmetic library (mingw-w64)</summary><description/><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/><homepage>http://www.multiprecision.org</homepage></interface><interface uri="https://apps.0install.net/lib/mpfr4.xml"><name>mpfr</name><summary xml:lang="en">Multiple-precision floating-point library (mingw-w64)</summary><description/><icon href="https://raw.githubusercontent.com/0install/apps/master/lib/mpfr.png" type="image/png"/><icon href="https://raw.githubusercontent.com/0install/apps/master/lib/mpfr.ico" type="image/vnd.microsoft.icon"/></interface><interface uri="https://apps.0install.net/lib/ncurses.xml"><name>ncurses</name><summary xml:lang="en">terminal-independent  text-based user interface library</summary><description xml:lang="en">The ncurses (new curses) library is a free software emulation of curses in System V Release 4.0 (SVr4), and more. It uses terminfo format, supports pads and color and multiple highlights and forms characters and function-key mapping, and has all the other SVr4-curses enhancements over BSD curses. SVr4 curses became the basis of X/Open Curses.</description><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/><category>Development</category><homepage>https://sourceforge.net/projects/ezwinports/files/</homepage><needs-terminal/><entry-point binary-name="captoinfo" command="captoinfo">
+  </entry-point></interface><interface uri="https://apps.0install.net/lib/gnumpc.xml"><name>mpc</name><summary>Multiple precision complex arithmetic library (mingw-w64)</summary><description/><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/><homepage>http://www.multiprecision.org</homepage></interface><interface uri="https://apps.0install.net/lib/mpfr4.xml"><name>mpfr</name><summary xml:lang="en">Multiple-precision floating-point library (mingw-w64)</summary><description/><icon href="https://raw.githubusercontent.com/0install/apps/master/lib/mpfr.png" type="image/png"/><icon href="https://raw.githubusercontent.com/0install/apps/master/lib/mpfr.ico" type="image/vnd.microsoft.icon"/></interface><interface uri="https://apps.0install.net/lib/ncurses.xml"><name>ncurses</name><summary xml:lang="en">terminal-independent  text-based user interface library</summary><description xml:lang="en">The ncurses (new curses) library is a free software emulation of curses in System V Release 4.0 (SVr4), and more. It uses terminfo format, supports pads and color and multiple highlights and forms characters and function-key mapping, and has all the other SVr4-curses enhancements over BSD curses. SVr4 curses became the basis of X/Open Curses.</description><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/><icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/><category>Development</category><homepage>https://sourceforge.net/projects/ezwinports/files/</homepage><needs-terminal/><entry-point command="captoinfo" binary-name="captoinfo">
     <name xml:lang="en">captoinfo</name>
     <summary xml:lang="en"> a termcap conversion tool</summary>
-  </entry-point><entry-point binary-name="clear" command="clear">
+  </entry-point><entry-point command="clear" binary-name="clear">
     <needs-terminal/>
     <name xml:lang="en">clear</name>
     <summary xml:lang="en">utility for clearing the screen</summary>
-  </entry-point><entry-point binary-name="infocmp" command="infocmp">
+  </entry-point><entry-point command="infocmp" binary-name="infocmp">
     <needs-terminal/>
     <name xml:lang="en">infocmp</name>
     <summary xml:lang="en">the terminfo decompiler</summary>
-  </entry-point><entry-point binary-name="infotocap" command="infotocap">
+  </entry-point><entry-point command="infotocap" binary-name="infotocap">
     <needs-terminal/>
     <name xml:lang="en">infotocap</name>
-  </entry-point><entry-point binary-name="reset" command="reset">
+  </entry-point><entry-point command="reset" binary-name="reset">
     <needs-terminal/>
     <name xml:lang="en">reset</name>
-  </entry-point><entry-point binary-name="tabs" command="tabs">
+  </entry-point><entry-point command="tabs" binary-name="tabs">
     <needs-terminal/>
     <name xml:lang="en">tabs</name>
     <summary xml:lang="en">set tabs on a terminal</summary>
-  </entry-point><entry-point binary-name="tic" command="tic">
+  </entry-point><entry-point command="tic" binary-name="tic">
     <needs-terminal/>
     <name xml:lang="en">tic</name>
     <summary xml:lang="en">the terminfo compiler</summary>
-  </entry-point><entry-point binary-name="toe" command="toe">
+  </entry-point><entry-point command="toe" binary-name="toe">
     <needs-terminal/>
     <name xml:lang="en">toe</name>
     <summary xml:lang="en">list (table of) terminfo entries</summary>
-  </entry-point><entry-point binary-name="tput" command="tput">
+  </entry-point><entry-point command="tput" binary-name="tput">
     <needs-terminal/>
     <name xml:lang="en">tput</name>
     <summary xml:lang="en">utility for retrieving terminal capabilities in shell scripts</summary>
-  </entry-point><entry-point binary-name="tset" command="tset">
+  </entry-point><entry-point command="tset" binary-name="tset">
     <needs-terminal/>
     <name xml:lang="en">tset</name>
     <summary xml:lang="en">to initialize the terminal</summary>
@@ -339,11 +339,11 @@ More information about X.Org can be found at: &lt;URL:http://www.X.org&gt;
 This package is built from the X.org xproto proto module.</description></interface><interface uri="https://apps.0install.net/lib/zlib.xml"><name>zlib</name><summary xml:lang="en">Compression library implementing the deflate compression method found in gzip and PKZIP</summary><description xml:lang="en">zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system. The zlib data format is itself portable across platforms. Unlike the LZW compression method used in Unix compress(1) and in the GIF image format, the compression method currently used in zlib essentially never expands the data. (LZW can double or triple the file size in extreme cases.) zlib's memory footprint is also independent of the input data and can be reduced, if necessary, at some cost in compression. </description><icon href="http://www.zlib.net/favicon.ico" type="image/vnd.microsoft.icon"/><icon href="http://www.zlib.net/images/zlib3d-b1.png" type="image/png"/><homepage>http://www.zlib.net/</homepage></interface><interface uri="https://apps.0install.net/lib/zlib1g.xml"><name>zlib1g</name><summary>compression library - runtime</summary><description>zlib is a library implementing the deflate compression method found
 in gzip and PKZIP. This package includes the shared library.</description></interface></c:catalog>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl/4XCgACgkQWao5J8JOTh79XwgAgB+w
-XaF+lI5sUT1JeGDFlLxE/wwhU8kkYdHsAe62lhoPH+slTRjH0+iAt8eKziJm/mXynjR/se1UYW1q
-Wuv1+YjFjPfoiQCDREWHZdHz0pmg/CwW95cwQCmyqL/Oe/b/5eSEIRKJF5EqdQoVgR3tlQD3ofbN
-/rVonv+kKan7Z9r9ROCw9Rx0eMWnUYMojQCbEdHPPX0zgDxuWy7NkAHBI45h0lIkPxuEFEZxNLEm
-WafKRBcLdfdOGo+fOmG4X23Gf8r50KA5WUn5S9v4oZoeNwzp7zDCY64c0JzJn7+G/29B1S91sVOz
-ZjVzsDg6QGUdFM0TmFMj+V8JQCijvGMZdA==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmIjIiUACgkQWao5J8JOTh5q7Qf9E10R
+2E8QVKTeIah12nWJPEhCSyjUJHe3haLYRkufbdZRe7PT9NCZGdch8WNycvCgH4kIrCW/E5PkarWX
+KVcP+BfQHetQUQalQMZyod097rXbhxL96HhYzBTAu5fpUn5nsHePch8UUniiAXONEijyUD40V3NW
+tM6eGpC8P1SHEwuGz8S1jRinILxjZAV83cxvU3IKBk40z4Vc8PVkCiNxZYCsZhyi+4DEQM8l4hb9
+YEnZ/rLLSyx4bkc4dXw1QAaePGuGHcWNFd0y2aHoxTEWi4t8X5Y1yA1A+08amD/UGxmaqMbqDwXu
+NhpO7i+gHfULAggNeLLiREcP49eopoBwPQ==
 
 -->

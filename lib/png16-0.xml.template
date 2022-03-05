@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <name>{name}</name>
   <summary>{desc}</summary>
   <description>libpng is a library implementing an interface for reading and writing
@@ -11,6 +11,8 @@ using libpng.</description>
   <homepage>{url}</homepage>
   <needs-terminal/>
 
+  <feed-for interface="https://apps.0install.net/lib/png16-0.xml"/>
+
   <group license="{license}">
     <requires interface="https://apps.0install.net/lib/gcc-libs.xml">
       <environment insert="bin" name="PATH"/>
@@ -19,30 +21,22 @@ using libpng.</description>
       <environment insert="bin" name="PATH"/>
     </requires>
     <command name="run" path="bin/pngfix.exe"/>
-
     <command name="png-fix-itxt" path="bin/png-fix-itxt.exe"/>
-
     <command name="libpng16-config" path="bin/libpng16-config"/>
-
     <command name="libpng-config" path="bin/libpng-config"/>
 
     <group version="{version}">
       <dc:creator>{packager}</dc:creator>
       <implementation arch="Windows-x86_64">
         <dc:available>{released}</dc:available>
-	<manifest-digest/>
-      <archive extract="mingw64" href="{pkg_url}"/>
+        <manifest-digest/>
+        <archive extract="mingw64" href="{pkg_url}"/>
       </implementation>
       <implementation arch="Windows-i686">
         <dc:available>{released32}</dc:available>
-	<manifest-digest/>
+        <manifest-digest/>
         <archive extract="mingw32" href="{pkg_url32}"/>
       </implementation>
     </group>
   </group>
-
-
-
-  <feed-for interface="https://apps.0install.net/lib/png16-0.xml"/>
 </interface>
-

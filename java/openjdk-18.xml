@@ -1,12 +1,12 @@
-<?xml version="1.0"?>
-<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
-  <name>OpenJDK 17.x</name>
-  <summary>OpenJDK Development Kit 17.x</summary>
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/java/openjdk-18.xml">
+  <name>OpenJDK 18.x</name>
+  <summary>OpenJDK Development Kit 18.x</summary>
   <description>OpenJDK is a development environment for building applications, applets, and components using the Java programming language.</description>
-  <homepage>http://jdk.java.net/17/</homepage>
+  <homepage>http://jdk.java.net/18/</homepage>
   <category>Development</category>
 
-  <feed-for interface="https://apps.0install.net/java/openjdk-17.xml"/>
+  <feed-for interface="https://apps.0install.net/java/jdk.xml"/>
 
   <group arch="Linux-x86_64" license="GNU General Public License, version 2, with the Classpath Exception">
     <command name="run" path="bin/javac"/>
@@ -43,9 +43,9 @@
     <command name="rmic" path="bin/rmic"/>
     <command name="serialver" path="bin/serialver"/>
 
-    <implementation version="{version}" stability="stable">
-      <manifest-digest/>
-      <archive href="https://download.oracle.com/java/GA/jdk{version}/{release-id}/GPL/openjdk-{version}_linux-x64_bin.tar.gz" type="application/x-compressed-tar" extract="jdk-{version}"/>
+    <implementation version="18" released="2022-03-23" stability="stable" id="sha256new_YQ2A7ACTIIW2X3L3VB2EEYCSFM2OW6J4UCDZ4Z2FJT5QKY7C55NQ">
+      <manifest-digest sha256new="YQ2A7ACTIIW2X3L3VB2EEYCSFM2OW6J4UCDZ4Z2FJT5QKY7C55NQ"/>
+      <archive href="https://download.oracle.com/java/GA/jdk18/43f95e8614114aeaa8e8a5fcf20a682d/36/GPL/openjdk-18_linux-x64_bin.tar.gz" size="188173501" type="application/x-compressed-tar" extract="jdk-18"/>
     </implementation>
   </group>
 
@@ -91,9 +91,9 @@
     <command name="jaccessinspector" path="bin/jaccessinspector.exe"/>
     <command name="jaccesswalker" path="bin/jaccesswalker.exe"/>
 
-    <implementation version="{version}" stability="stable">
-      <manifest-digest/>
-      <archive href="https://download.oracle.com/java/GA/jdk{version}/{release-id}/GPL/openjdk-{version}_windows-x64_bin.zip" type="application/zip" extract="jdk-{version}"/>
+    <implementation version="18" released="2022-03-23" stability="stable" id="sha256new_MFAVMGTUNYZ6JF4UYWDDKCVNCFRTISUEV36YJVQBD5SW6B57VIXA">
+      <manifest-digest sha256new="MFAVMGTUNYZ6JF4UYWDDKCVNCFRTISUEV36YJVQBD5SW6B57VIXA"/>
+      <archive href="https://download.oracle.com/java/GA/jdk18/43f95e8614114aeaa8e8a5fcf20a682d/36/GPL/openjdk-18_windows-x64_bin.zip" size="187504061" type="application/zip" extract="jdk-18"/>
     </implementation>
   </group>
 </interface>

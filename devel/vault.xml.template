@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>HashiCorp Vault</name>
+  <summary>manage secrets &amp; protect sensitive data</summary>
+  <description>Secure, store and tightly control access to tokens, passwords, certificates, encryption keys for protecting secrets and other sensitive data using a UI, CLI, or HTTP API.</description>
+  <homepage>https://www.vaultproject.io/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/devel/vault.png" type="image/png"/>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/devel/vault.xml"/>
+
+  <group license="Mozilla Public License 2.0">
+    <command name="run" path="vault"/>
+    <implementation arch="Linux-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://releases.hashicorp.com/vault/{version}/vault_{version}_linux_amd64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://releases.hashicorp.com/vault/{version}/vault_{version}_linux_386.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://releases.hashicorp.com/vault/{version}/vault_{version}_linux_arm64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://releases.hashicorp.com/vault/{version}/vault_{version}_darwin_amd64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://releases.hashicorp.com/vault/{version}/vault_{version}_darwin_arm64.zip" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group license="Mozilla Public License 2.0">
+    <command name="run" path="vault.exe"/>
+    <implementation arch="Windows-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://releases.hashicorp.com/vault/{version}/vault_{version}_windows_amd64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://releases.hashicorp.com/vault/{version}/vault_{version}_windows_386.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
 <interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/devel/packer.xml">
-  <name>Packer</name>
+  <name>HashiCorp Packer</name>
   <summary>build automated machine images</summary>
   <description>Packer is a tool for creating identical machine images for multiple platforms from a single source configuration.</description>
   <homepage>https://www.packer.io/</homepage>
@@ -430,9 +430,21 @@
       <manifest-digest sha256new="3ZIYFRTY4P2PIETYXJ7RS34WLFBCUA3B3ZNIBD4YFJTAPPV2DDVA"/>
       <archive href="https://releases.hashicorp.com/packer/1.8.0/packer_1.8.0_linux_amd64.zip" size="32195429" type="application/zip"/>
     </implementation>
+    <implementation arch="Linux-i386" version="1.8.0" released="2022-03-04" stability="stable" id="sha256new_XFEWFMRYP4XPCBR3T66NJUPM7WLLFQXRAQWWNGLUCBS6P2TEWAQQ">
+      <manifest-digest sha256new="XFEWFMRYP4XPCBR3T66NJUPM7WLLFQXRAQWWNGLUCBS6P2TEWAQQ"/>
+      <archive href="https://releases.hashicorp.com/packer/1.8.0/packer_1.8.0_linux_386.zip" size="29100117" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.8.0" released="2022-03-04" stability="stable" id="sha256new_AEL2BS6M5WAQFVSXVHOA4RRAIDEMSETLIFYGCR6MRAC73H3XTN2A">
+      <manifest-digest sha256new="AEL2BS6M5WAQFVSXVHOA4RRAIDEMSETLIFYGCR6MRAC73H3XTN2A"/>
+      <archive href="https://releases.hashicorp.com/packer/1.8.0/packer_1.8.0_linux_arm64.zip" size="29668845" type="application/zip"/>
+    </implementation>
     <implementation arch="Darwin-x86_64" version="1.8.0" released="2022-03-04" stability="stable" id="sha256new_DV5QA32SWITQBMXT42QQQ67IPP4S75F4QMTWTR3J2YTYBIR3KUAA">
       <manifest-digest sha256new="DV5QA32SWITQBMXT42QQQ67IPP4S75F4QMTWTR3J2YTYBIR3KUAA"/>
       <archive href="https://releases.hashicorp.com/packer/1.8.0/packer_1.8.0_darwin_amd64.zip" size="36436039" type="application/zip"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.8.0" released="2022-03-04" stability="stable" id="sha256new_7OMNCBZHLXSR2MTYACH5VRJYX3BPAEGG6CNB7FAB6WIDJ44UQRUA">
+      <manifest-digest sha256new="7OMNCBZHLXSR2MTYACH5VRJYX3BPAEGG6CNB7FAB6WIDJ44UQRUA"/>
+      <archive href="https://releases.hashicorp.com/packer/1.8.0/packer_1.8.0_darwin_arm64.zip" size="35772719" type="application/zip"/>
     </implementation>
   </group>
 
@@ -650,16 +662,20 @@
       <manifest-digest sha256new="G2CDJKCBNVS5WEC7GL67XZLXKCA5IHHP42E2UC7YWAVBCG33LLQQ"/>
       <archive href="https://releases.hashicorp.com/packer/1.8.0/packer_1.8.0_windows_amd64.zip" size="32330500" type="application/zip"/>
     </implementation>
+    <implementation arch="Windows-i486" version="1.8.0" released="2022-03-04" stability="stable" id="sha256new_WIBIP7GYLJDSHOYGNGBI2IIXFDXTTIMSG6ELKUY4KTBZS2GOU5WA">
+      <manifest-digest sha256new="WIBIP7GYLJDSHOYGNGBI2IIXFDXTTIMSG6ELKUY4KTBZS2GOU5WA"/>
+      <archive href="https://releases.hashicorp.com/packer/1.8.0/packer_1.8.0_windows_386.zip" size="30456036" type="application/zip"/>
+    </implementation>
   </group>
 
   <entry-point binary-name="packer" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmIjH7gACgkQWao5J8JOTh5eVgf/ckaG
-WkUoE9LRJX2FRjGnlBVjWV5kWFzg+yv5z4k8CJxhyCCaf7JlKaethBCwCwyaMFpm8DhWPYsaGUhI
-CHf/tcvSP98IaG2OJE/OnrAP110G59Kd1tOmnUObkVZpHYPxC2fWwXESO349AluwbTnz7AaOKQTL
-N8vPHlEfvJTaKW1Nm/FCRFc2yEpolDGMO3hJXIBVSAanIfbToMtZuLAYe3j3oHf63Q/RfbA/J3/U
-zZbQD54NrahNOdq2I/2Qb5jtjEhHGeVt3YhGBuRAFPRCEhPXXmSBmo/OABenERKMbwBh8wnhV8xt
-SI7Pw/ftDOpnjgm9s+tqndioBUIS/RR8YQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmJPBFsACgkQWao5J8JOTh5OJAgAuyBV
+KLSbGOlk6swh0Mxks5Wjh2ugba+ebOxjZEh7jexYky6oHHKgDireG+oUdQDoJNGluFau/oPBadoY
+mFDIMT4sjGmVAButDVuP8aCsp+OfD2QuzGgJRi7By2R7BPEVLbxB0af8zXv3V5yalj8JowJ0iqy4
+TT24iBJaql+2V7aw8NP6/HFooAeVF8vwG095WNXdp8msXMIOpHmHr7LQqh1UPeauKK9xr4Nim3GC
+jNE3yW4H0BGo1jAW/pjUDp7bvh5hu5zA/jryGdtdqTCMddsKk5S9Dze+csZg6Uc0OSAXAPEBtfIh
+IjY4Vu5M8ycbqCNEpqIyd0YqsH2ODfOf1g==
 
 -->

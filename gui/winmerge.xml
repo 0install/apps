@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="https://apps.0install.net/gui/winmerge.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uri="https://apps.0install.net/gui/winmerge.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>WinMerge</name>
   <summary xml:lang="en">differencing and merging tool for Windows</summary>
   <summary xml:lang="de">Programm zum Vergleichen und Zusammenführen von Dateien sowie Ordner</summary>
@@ -10,17 +10,7 @@
   <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/winmerge.ico" type="image/vnd.microsoft.icon"/>
   <category>Development</category>
   <category>Utility</category>
-  <group license="GPL v2 (GNU General Public License)">
-    <requires interface="https://apps.0install.net/lib/msvc90.xml" />
-    <implementation arch="Windows-i486" id="sha1new=e26983ef702f773dd8d0177e6372b0f61972aabf" main="WinMergeU.exe" released="2013-02-03" stability="stable" version="2.14.0">
-      <manifest-digest sha256new="DKZW2SYSUDTQZJKMUHQXDZDC6QGSDTPS2S3NNWBLW67PL4PGLKFQ"/>
-      <archive extract="WinMerge-2.14.0-exe" href="http://downloads.sourceforge.net/winmerge/stable/2.14.0/WinMerge-2.14.0-exe.zip" size="2764125" type="application/zip"/>
-    </implementation>
-    <implementation arch="Windows-src" id="sha1new=cc08580f384bcb00839387cd59e3922f5c3e2bcd" released="2013-02-03" stability="stable" version="2.14.0">
-      <manifest-digest sha256new="FSXAHZG6ZHS4LK4RJVSHTCZCO56ZKFLRRM7BWS7HJMNPPGVKCVYQ"/>
-      <archive extract="WinMerge-2.14.0-src" href="http://downloads.sourceforge.net/winmerge/stable/2.14.0/WinMerge-2.14.0-src.zip" size="6949845" type="application/zip"/>
-    </implementation>
-  </group>
+
   <entry-point binary-name="WinMergeU" command="run"/>
   <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
     <file-type id="WinMerge.Project.File">
@@ -29,4 +19,139 @@
       <extension value=".WinMerge"/>
     </file-type>
   </capabilities>
+
+  <group license="GPL v2 (GNU General Public License)">
+    <requires interface="https://apps.0install.net/lib/msvc90.xml"/>
+    <implementation arch="Windows-i486" id="sha1new=e26983ef702f773dd8d0177e6372b0f61972aabf" main="WinMergeU.exe" released="2013-02-03" stability="stable" version="2.14.0">
+      <manifest-digest sha256new="DKZW2SYSUDTQZJKMUHQXDZDC6QGSDTPS2S3NNWBLW67PL4PGLKFQ"/>
+      <archive extract="WinMerge-2.14.0-exe" href="http://downloads.sourceforge.net/winmerge/stable/2.14.0/WinMerge-2.14.0-exe.zip" size="2764125" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group license="GPL v2 (GNU General Public License)">
+    <implementation arch="Windows-i486" version="2.16.10" released="2021-01-30" stability="stable" main="WinMergeU.exe" id="sha256new_F5O3LWI3BDONMNHLBZMRZZTKYPPK4OHK3E2CX7CLTUE5LIN3L73A">
+      <manifest-digest sha256new="F5O3LWI3BDONMNHLBZMRZZTKYPPK4OHK3E2CX7CLTUE5LIN3L73A"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.10/winmerge-2.16.10-exe.zip" size="8865106" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.16.10" released="2021-01-30" stability="stable" main="WinMergeU.exe" id="sha256new_I5QAXJV5OWDTAH2J2D2UXQ7V4VGRP2REDMBX6UQTXNXDDIYI7E7A">
+      <manifest-digest sha256new="I5QAXJV5OWDTAH2J2D2UXQ7V4VGRP2REDMBX6UQTXNXDDIYI7E7A"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.10/winmerge-2.16.10-x64-exe.zip" size="9809938" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="2.16.11" released="2021-03-28" stability="stable" main="WinMergeU.exe" id="sha256new_UZ25HDMQLSYE6UNG3S4GU2FET74FHIGNKIUYDMUFASX5S5RJ6GCQ">
+      <manifest-digest sha256new="UZ25HDMQLSYE6UNG3S4GU2FET74FHIGNKIUYDMUFASX5S5RJ6GCQ"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.11/winmerge-2.16.11-exe.zip" size="8904076" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.16.11" released="2021-03-28" stability="stable" main="WinMergeU.exe" id="sha256new_4APSR7SKHQP7QTASN6MVZNPAQU3WE4GWLVFSTJGIRKUL6R3EXE2Q">
+      <manifest-digest sha256new="4APSR7SKHQP7QTASN6MVZNPAQU3WE4GWLVFSTJGIRKUL6R3EXE2Q"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.11/winmerge-2.16.11-x64-exe.zip" size="9847130" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="2.16.12" released="2021-04-29" stability="stable" main="WinMergeU.exe" id="sha256new_P4JMLBZTLIKMRE6YPIFFR4UKFHEZGZCTGCB5STIMZYZM5MPEQWWA">
+      <manifest-digest sha256new="P4JMLBZTLIKMRE6YPIFFR4UKFHEZGZCTGCB5STIMZYZM5MPEQWWA"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.12/winmerge-2.16.12-exe.zip" size="8679789" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.16.12" released="2021-04-29" stability="stable" main="WinMergeU.exe" id="sha256new_H4AVJ6L3XN3IKV3WT4IHV3QBXBC626VFO2JPF633P6WCJYNH7MYA">
+      <manifest-digest sha256new="H4AVJ6L3XN3IKV3WT4IHV3QBXBC626VFO2JPF633P6WCJYNH7MYA"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.12/winmerge-2.16.12-x64-exe.zip" size="9557846" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.16.12" released="2021-04-29" stability="stable" main="WinMergeU.exe" id="sha256new_YMFQIJ7OAT6OHYNIMY2QCSUUUOZYNZB7RY632SXCVNFRU2XELLPQ">
+      <manifest-digest sha256new="YMFQIJ7OAT6OHYNIMY2QCSUUUOZYNZB7RY632SXCVNFRU2XELLPQ"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.12/winmerge-2.16.12-ARM64-exe.zip" size="8945757" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="2.16.13" released="2021-06-22" stability="stable" main="WinMergeU.exe" id="sha256new_MRPIQDBO7WZRA5SCSHAIBKHUWG7FLK3XQKRBI5WUV7PDYGL22K5Q">
+      <manifest-digest sha256new="MRPIQDBO7WZRA5SCSHAIBKHUWG7FLK3XQKRBI5WUV7PDYGL22K5Q"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.13/winmerge-2.16.13-exe.zip" size="9193403" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.16.13" released="2021-06-22" stability="stable" main="WinMergeU.exe" id="sha256new_X7MZZR2RYHHTOJNBTWI4SPUXYQ4WJMQQKCYOCK56H2CNVNKV7KRQ">
+      <manifest-digest sha256new="X7MZZR2RYHHTOJNBTWI4SPUXYQ4WJMQQKCYOCK56H2CNVNKV7KRQ"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.13/winmerge-2.16.13-x64-exe.zip" size="10010775" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.16.13" released="2021-06-22" stability="stable" main="WinMergeU.exe" id="sha256new_76IQ63GC2HCAUW5VG3VMMPTC66I7EGGBCIK7DMOQDAPGGGT65PEQ">
+      <manifest-digest sha256new="76IQ63GC2HCAUW5VG3VMMPTC66I7EGGBCIK7DMOQDAPGGGT65PEQ"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.13/winmerge-2.16.13-ARM64-exe.zip" size="9735299" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="2.16.14" released="2021-07-25" stability="stable" main="WinMergeU.exe" id="sha256new_KW23C26APLU54R6YGU4GA7ZPJNSG4APICY3B74V2JFQXDP3WZPOQ">
+      <manifest-digest sha256new="KW23C26APLU54R6YGU4GA7ZPJNSG4APICY3B74V2JFQXDP3WZPOQ"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.14/winmerge-2.16.14-exe.zip" size="9273788" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.16.14" released="2021-07-25" stability="stable" main="WinMergeU.exe" id="sha256new_TVJHFRC2MI3QP56YYKZGFDM2XW27LEHM2ARM2SVEB3MTT27F5Z3Q">
+      <manifest-digest sha256new="TVJHFRC2MI3QP56YYKZGFDM2XW27LEHM2ARM2SVEB3MTT27F5Z3Q"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.14/winmerge-2.16.14-x64-exe.zip" size="10094753" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.16.14" released="2021-07-25" stability="stable" main="WinMergeU.exe" id="sha256new_7NFH4N2KKMNUCNVJCK64LMAGCQZMJFSVYQ2OXSJIETOYPD3IMMMQ">
+      <manifest-digest sha256new="7NFH4N2KKMNUCNVJCK64LMAGCQZMJFSVYQ2OXSJIETOYPD3IMMMQ"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.14/winmerge-2.16.14-ARM64-exe.zip" size="9819147" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="2.16.15" released="2021-09-20" stability="stable" main="WinMergeU.exe" id="sha256new_Q5IJIRANVMPZHXYUEGAXO4N3JGHCM2VX27T3EVMG6HO76I6Z6EHQ">
+      <manifest-digest sha256new="Q5IJIRANVMPZHXYUEGAXO4N3JGHCM2VX27T3EVMG6HO76I6Z6EHQ"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.15/winmerge-2.16.15-exe.zip" size="9757464" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.16.15" released="2021-09-20" stability="stable" main="WinMergeU.exe" id="sha256new_T2F3ENINWOGXMQBPUN42JYHZR2YVKRFFUVJBTPMGATSM6NFN5WBA">
+      <manifest-digest sha256new="T2F3ENINWOGXMQBPUN42JYHZR2YVKRFFUVJBTPMGATSM6NFN5WBA"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.15/winmerge-2.16.15-x64-exe.zip" size="10317259" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.16.15" released="2021-09-20" stability="stable" main="WinMergeU.exe" id="sha256new_ZRTYRHZMZ2KUTEKCMB2L2ZPZKWMO73E6H63WOECAJPKL3NCHZD5Q">
+      <manifest-digest sha256new="ZRTYRHZMZ2KUTEKCMB2L2ZPZKWMO73E6H63WOECAJPKL3NCHZD5Q"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.15/winmerge-2.16.15-ARM64-exe.zip" size="10002618" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="2.16.16" released="2021-10-28" stability="stable" main="WinMergeU.exe" id="sha256new_U3IIPRETUAYUBLISDKP5BYXHSJRCSCYZZTIFJ4VDEUHHT6MPKITQ">
+      <manifest-digest sha256new="U3IIPRETUAYUBLISDKP5BYXHSJRCSCYZZTIFJ4VDEUHHT6MPKITQ"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.16/winmerge-2.16.16-exe.zip" size="9870790" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.16.16" released="2021-10-28" stability="stable" main="WinMergeU.exe" id="sha256new_HQIX7SUTBC725CBN7C33LAJKFRYCKD5KYUSAP5JKOUXM5L4JPVDA">
+      <manifest-digest sha256new="HQIX7SUTBC725CBN7C33LAJKFRYCKD5KYUSAP5JKOUXM5L4JPVDA"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.16/winmerge-2.16.16-x64-exe.zip" size="10441762" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.16.16" released="2021-10-28" stability="stable" main="WinMergeU.exe" id="sha256new_HTZQNIAEV2CSFXPYTUGH7TOYJ5K2OCDRU4JUKNTPXZ7ZYC7ICXYQ">
+      <manifest-digest sha256new="HTZQNIAEV2CSFXPYTUGH7TOYJ5K2OCDRU4JUKNTPXZ7ZYC7ICXYQ"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.16/winmerge-2.16.16-ARM64-exe.zip" size="10112618" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="2.16.17" released="2021-12-19" stability="stable" main="WinMergeU.exe" id="sha256new_MZC54XICYHG32O7ZZLLQZDKNVT56T7IMVX23ECEGCVRUVE4EXNSA">
+      <manifest-digest sha256new="MZC54XICYHG32O7ZZLLQZDKNVT56T7IMVX23ECEGCVRUVE4EXNSA"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.17/winmerge-2.16.17-exe.zip" size="9970040" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.16.17" released="2021-12-19" stability="stable" main="WinMergeU.exe" id="sha256new_JR5SPVP3FGXXYZQJSHVYGUEDWDBUJ7J4HKKQ5XPBP66BK4RU6PRQ">
+      <manifest-digest sha256new="JR5SPVP3FGXXYZQJSHVYGUEDWDBUJ7J4HKKQ5XPBP66BK4RU6PRQ"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.17/winmerge-2.16.17-x64-exe.zip" size="10542986" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.16.17" released="2021-12-19" stability="stable" main="WinMergeU.exe" id="sha256new_WY3G5FZKSBWQJFDJGF7SAQ55FCL66I4553OYXLNOWCALHCM7MR6A">
+      <manifest-digest sha256new="WY3G5FZKSBWQJFDJGF7SAQ55FCL66I4553OYXLNOWCALHCM7MR6A"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.17/winmerge-2.16.17-ARM64-exe.zip" size="9984606" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="2.16.18" released="2022-01-27" stability="stable" main="WinMergeU.exe" id="sha256new_4MB5GQOUZ77H6GYZVSWOFBG6TSD2IIGDQ4NX5KFK3OHB5B7OFMGA">
+      <manifest-digest sha256new="4MB5GQOUZ77H6GYZVSWOFBG6TSD2IIGDQ4NX5KFK3OHB5B7OFMGA"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.18/winmerge-2.16.18-exe.zip" size="10047316" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.16.18" released="2022-01-27" stability="stable" main="WinMergeU.exe" id="sha256new_DRHUMJX443RLEGHFIRYDSNNJNJPZZYGLDGZRYQO3PRLUV4KQH3ZA">
+      <manifest-digest sha256new="DRHUMJX443RLEGHFIRYDSNNJNJPZZYGLDGZRYQO3PRLUV4KQH3ZA"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.18/winmerge-2.16.18-x64-exe.zip" size="10640322" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.16.18" released="2022-01-27" stability="stable" main="WinMergeU.exe" id="sha256new_KHTJJKQORRR422MXRHPCX6Z2UDOE5E4X5IBZQPQBCO6VVEBVBXAQ">
+      <manifest-digest sha256new="KHTJJKQORRR422MXRHPCX6Z2UDOE5E4X5IBZQPQBCO6VVEBVBXAQ"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.18/winmerge-2.16.18-ARM64-exe.zip" size="10079440" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="2.16.19" released="2022-03-20" stability="stable" main="WinMergeU.exe" id="sha256new_IU6QLYGPFSWKMJRK2QWCIHB2E6XB7PYU33UFGSC2RJQSUXXDXOFQ">
+      <manifest-digest sha256new="IU6QLYGPFSWKMJRK2QWCIHB2E6XB7PYU33UFGSC2RJQSUXXDXOFQ"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.19/winmerge-2.16.19-exe.zip" size="10086195" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.16.19" released="2022-03-20" stability="stable" main="WinMergeU.exe" id="sha256new_T3MSYORDFK7HVSKKLCQMNZX5RR7G3WFCD5RMKDA57PUBHTC4VVEA">
+      <manifest-digest sha256new="T3MSYORDFK7HVSKKLCQMNZX5RR7G3WFCD5RMKDA57PUBHTC4VVEA"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.19/winmerge-2.16.19-x64-exe.zip" size="10676615" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.16.19" released="2022-03-20" stability="stable" main="WinMergeU.exe" id="sha256new_EUW77SC7CWRMRE2ZNAAQXJR2BOCXCRN35L6FPPVWHYICDWXBNIWA">
+      <manifest-digest sha256new="EUW77SC7CWRMRE2ZNAAQXJR2BOCXCRN35L6FPPVWHYICDWXBNIWA"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.19/winmerge-2.16.19-ARM64-exe.zip" size="10116483" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="2.16.20" released="2022-04-27" stability="stable" main="WinMergeU.exe" id="sha256new_5ZAIHGFJ2QH4HV4RATB6ZE5LQFANKP5WWEFHBJ5L5INIIKPETRAA">
+      <manifest-digest sha256new="5ZAIHGFJ2QH4HV4RATB6ZE5LQFANKP5WWEFHBJ5L5INIIKPETRAA"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.20/winmerge-2.16.20-exe.zip" size="10315953" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.16.20" released="2022-04-27" stability="stable" main="WinMergeU.exe" id="sha256new_ARRZDI42FBL6ZH6M6R6SXQXM4C4YYQG3E7F3JXZKMCMBLN3CSY3A">
+      <manifest-digest sha256new="ARRZDI42FBL6ZH6M6R6SXQXM4C4YYQG3E7F3JXZKMCMBLN3CSY3A"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.20/winmerge-2.16.20-x64-exe.zip" size="10928250" type="application/zip" extract="WinMerge"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.16.20" released="2022-04-27" stability="stable" main="WinMergeU.exe" id="sha256new_XSWAAJAVPY7GMYUUEBIBUG445NW5K6X2AWMABLYRWCANH5GO6K6Q">
+      <manifest-digest sha256new="XSWAAJAVPY7GMYUUEBIBUG445NW5K6X2AWMABLYRWCANH5GO6K6Q"/>
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v2.16.20/winmerge-2.16.20-ARM64-exe.zip" size="10345192" type="application/zip" extract="WinMerge"/>
+    </implementation>
+  </group>
 </interface>

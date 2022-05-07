@@ -10,18 +10,21 @@
   <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/winmerge.ico" type="image/vnd.microsoft.icon" />
   <category>Development</category>
   <category>Utility</category>
+
   <feed-for interface="https://apps.0install.net/gui/winmerge.xml" />
+
   <group license="GPL v2 (GNU General Public License)">
-    <requires interface="https://apps.0install.net/lib/msvc90.xml">
-      <environment name="PATH" insert="." mode="append" />
-    </requires>
     <implementation arch="Windows-i486" version="{version}" released="{released}" stability="stable" main="WinMergeU.exe">
       <manifest-digest />
       <archive href="https://github.com/WinMerge/winmerge/releases/download/v{version}/winmerge-{version}-exe.zip" type="application/zip" extract="WinMerge" />
     </implementation>
-    <implementation arch="Windows-src" version="{version}" released="{released}" stability="stable">
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable" main="WinMergeU.exe">
       <manifest-digest />
-      <archive href="https://github.com/WinMerge/winmerge/releases/download/v{version}/winmerge-{version}-full-src.7z" type="application/x-7z-compressed" />
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v{version}/winmerge-{version}-x64-exe.zip" type="application/zip" extract="WinMerge" />
+    </implementation>
+    <implementation arch="Windows-aarch64" version="{version}" released="{released}" stability="stable" main="WinMergeU.exe">
+      <manifest-digest />
+      <archive href="https://github.com/WinMerge/winmerge/releases/download/v{version}/winmerge-{version}-ARM64-exe.zip" type="application/zip" extract="WinMerge" />
     </implementation>
   </group>
 </interface>

@@ -5,4 +5,4 @@ import github
 releases = [{
     'version': release['tag_name'].strip('v'),
     'released': release['published_at'][0:10]
-} for release in github.releases('ramboxapp/download') if release['tag_name'][:2] != 'v1']
+} for release in github.releases('ramboxapp/download') if not release['prerelease'] and release['tag_name'][:2] != 'v1']

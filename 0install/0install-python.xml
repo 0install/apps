@@ -146,9 +146,7 @@
       <archive extract="zeroinstall-injector-1.0" href="http://downloads.sourceforge.net/project/zero-install/injector/1.0/zeroinstall-injector-1.0.tar.bz2" size="324040"/>
     </implementation>
     <group>
-      <requires interface="https://apps.0install.net/python/python.xml">
-        <version before="3" not-before="2.6"/>
-      </requires>
+      <requires interface="https://apps.0install.net/python/python.xml" version="2.6..!3"/>
       <command name="test" path="tests/testall.py">
         <runner interface="https://apps.0install.net/python/python.xml">
           <arg>-tt</arg>
@@ -209,9 +207,8 @@
         <executable-in-var name="ZEROINSTALL_GPG"/>
       </requires>
       <requires interface="https://apps.0install.net/python/python.xml" version="2.6..!3 | 3.2.2..!3.5 | 3.7.."/>
-      <requires interface="https://apps.0install.net/0install/0install-runenv-cli.xml" os="Windows">
+      <requires interface="https://apps.0install.net/0install/0install-runenv-cli.xml" os="Windows" version="2.0.2..">
         <environment insert="runenv.cli.template" mode="replace" name="ZEROINSTALL_CLI_TEMPLATE"/>
-        <version not-before="2.0.2"/>
       </requires>
       <command name="0install" path="0install">
         <runner interface="https://apps.0install.net/python/python.xml"/>
@@ -279,9 +276,8 @@
       </implementation>
     </group>
     <group>
-      <requires interface="https://apps.0install.net/0install/0install-runenv-cli.xml" os="Windows">
+      <requires interface="https://apps.0install.net/0install/0install-runenv-cli.xml" os="Windows" version="1.12.1..">
         <environment insert="runenv.cli.template" mode="replace" name="ZEROINSTALL_CLI_TEMPLATE"/>
-        <version not-before="1.12.1"/>
       </requires>
       <implementation id="sha1new=bad7ab2fed8cbd60e18da0eea476ba4f4e97629d" released="2012-11-10" stability="stable" version="1.13">
         <manifest-digest sha256="a79cff963045d2a7e4929989d0a7b474c9a7afc58570ec49cf80e08c8ed068d9"/>
@@ -307,9 +303,8 @@
       </group>
     </group>
     <group>
-      <requires interface="https://apps.0install.net/0install/0install-runenv-cli.xml" os="Windows">
+      <requires interface="https://apps.0install.net/0install/0install-runenv-cli.xml" os="Windows" version="2.0.2..">
         <environment insert="runenv.cli.template" mode="replace" name="ZEROINSTALL_CLI_TEMPLATE"/>
-        <version not-before="2.0.2"/>
       </requires>
       <implementation id="sha1new=4f860b217bb94723ad6af9062d25dc7faee6a7ae" released="2013-04-03" stability="stable" version="2.1">
         <manifest-digest sha256new="GT7DMOHJ5UPT6H4R5EP3YKSW7M6DIR6CWEIOH3EH5KSSSS57AA6A"/>
@@ -357,9 +352,8 @@
     <requires interface="https://apps.0install.net/python/python.xml" version="3.4..!3.5|3.7.."/>
     <requires interface="https://apps.0install.net/python/python.xml" os="Windows" version="3.4..!3.5|3.7..!3.8"/>
     <requires interface="https://apps.0install.net/python/pywin32.xml" os="Windows"/>
-    <requires interface="https://apps.0install.net/0install/0install-runenv-cli.xml" os="Windows">
+    <requires interface="https://apps.0install.net/0install/0install-runenv-cli.xml" os="Windows" version="2.0.2..">
       <environment insert="runenv.cli.template" mode="replace" name="ZEROINSTALL_CLI_TEMPLATE"/>
-      <version not-before="2.0.2"/>
     </requires>
     <command name="0install" path="0install">
       <runner interface="https://apps.0install.net/python/python.xml"/>
@@ -384,9 +378,8 @@
     <requires interface="https://apps.0install.net/python/python.xml" version="3.4.."/>
     <requires interface="https://apps.0install.net/python/python.xml" os="Windows" version="3.4..!3.7"/>
     <requires interface="https://apps.0install.net/python/pywin32.xml" os="Windows"/>
-    <requires interface="https://apps.0install.net/0install/0install-runenv-cli.xml" os="Windows">
+    <requires interface="https://apps.0install.net/0install/0install-runenv-cli.xml" os="Windows" version="2.0.2..">
       <environment insert="runenv.cli.template" mode="replace" name="ZEROINSTALL_CLI_TEMPLATE"/>
-      <version not-before="2.0.2"/>
     </requires>
     <command name="0install" path="0install">
       <runner interface="https://apps.0install.net/python/python.xml"/>
@@ -430,11 +423,11 @@
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmKnPb4ACgkQWao5J8JOTh4J9QgArblv
-/RQSsABXKDh746e5hEk8dNybYWpswwqmWOHDxgQ+uFXUfn2E7h7E2SgNfqZfW5U23zfw90cMnwXW
-uqnrP9SLHjhvqOcuqTSNMeTtEGFfJR9ggomwvFjOh9q6S1vQe52nSBXOFCKVEaC4F0n8YFzKhQrh
-qIHFX2J7g0AOFKzFPFw0tk599+AOPN4RILXk1uui4eMbcEa/Cs1H1k4dUQyhhLYJXM5JbcX3+qnm
-x2Y6px2uBmwGGmN456mU9DMzzGV3cwYOQqZ+d5JIudyGsT0GFnosqcLcq8hN2EExdVslZL3hS77h
-+tfsX5IKOSCfWhvKt7d8ug3YJifX/BHv8w==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmKsakkACgkQWao5J8JOTh4DMAf/Q6Gm
+swKsc0qaTrVJ7dRGxBzDIsBcL88TUCD8GtzSrq2wdfCg5JHn5XBenCogZd8zUc/pZACs8pjpbmdp
+VP5CjlCpJz5RA3t7XLkSO2D3/ShtMr1J9lqZE1ToSkI7CvV/AC2Yhuk1IivwkJDG5MFNwq1BeF1k
+tQfvvGEu6RV9NKCqQhLfMUSRPzR7tJZAHLlSZM7lqRjHSU8o9KSbR3LNejkA7WCrF44QG4ARKmOw
+7so2AwS9k+F8YMHGKEUr7/5YKGhx9RaPlEyhSO7dM2ybMlFbLJXIYujFMA9EaZPaUYkE1/kL+M1Y
+iHLqaoxQDjGkr5D8fxESJqdURYo/1rozSw==
 
 -->

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Calibre - macOS builds</name>
+  <summary>organizing, displaying, editing, creating and converting e-books</summary>
+  <description>Calibre is a cross-platform open-source suite of e-book software. Calibre supports organizing existing e-books into virtual libraries, displaying, editing, creating and converting e-books, as well as syncing e-books with a variety of e-readers.</description>
+  <homepage>https://calibre-ebook.com/</homepage>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/calibre.png" type="image/png"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/gui/calibre.icns" type="image/x-icns"/>
+
+  <feed-for interface="https://apps.0install.net/gui/calibre-macos.xml"/>
+
+  <group license="GPL v3 (GNU General Public License)">
+    <command name="run" path="calibre.app/Contents/MacOS/calibre"/>
+    <command name="edit" path="calibre.app/Contents/MacOS/ebook-edit"/>
+    <command name="view" path="calibre.app/Contents/MacOS/ebook-viewer"/>
+    <command name="lrfview" path="calibre.app/Contents/MacOS/lrfviewer"/>
+
+    <implementation arch="MacOSX-*" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive href="https://download.calibre-ebook.com/{version}/calibre-{version}.dmg" type="application/x-apple-diskimage" />
+    </implementation>
+  </group>
+</interface>

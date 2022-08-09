@@ -5,4 +5,4 @@ import github
 
 releases = [{
     'version': tag['name'].strip('v')
-} for tag in github.tags('hashicorp/vagrant') if not str.startswith(tag['name'], 'v0.') and not str.startswith(tag['name'], 'v1.')]
+} for tag in github.tags('hashicorp/vagrant') if not str.startswith(tag['name'], 'v0.') and not str.startswith(tag['name'], 'v1.') and tag['name'] != 'v2.3.0']

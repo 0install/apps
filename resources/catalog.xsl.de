@@ -37,10 +37,10 @@
                 <a href="{@uri}">
                   <xsl:variable name="icon" select="interface:icon[@type='image/png']/@href"/>
                   <xsl:if test="$icon">
-                    <img class="icon" src="{$icon}"/>
+                    <img class="icon" src="{$icon}" referrerpolicy="no-referrer"/>
                   </xsl:if>
                   <xsl:if test="not($icon)">
-                    <img class="icon" src="https://0install.net/tango/applications-system.png"/>
+                    <img class="icon" src="https://0install.net/tango/applications-system.png" referrerpolicy="no-referrer"/>
                   </xsl:if>
                 </a>
                 <div class="info">

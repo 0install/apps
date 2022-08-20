@@ -1,26 +1,26 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/dotnet/mono.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/dotnet/mono.xml">
   <name>Mono</name>
   <summary>open-source cross-platform implementation of the Common Language Runtime (.NET Framework compatible)</summary>
   <homepage>http://www.mono-project.com/</homepage>
-  <icon href="https://raw.githubusercontent.com/0install/apps/master/dotnet/mono.png" type="image/png"/>
+  <icon href="https://apps.0install.net/dotnet/mono.png" type="image/png"/>
 
   <group main="/usr/bin/mono">
     <!-- There is a separate GUI version of the Mono executable on Windows. On POSIX systems we simply map it back to regular Mono. -->
     <command name="run-gui">
       <runner interface="https://apps.0install.net/dotnet/mono.xml"/>
     </command>
-    <package-implementation distributions="Debian" package="mono-complete"/>
-    <package-implementation distributions="RPM" package="mono-winforms"/>
-    <package-implementation distributions="Arch" package="mono"/>
-    <package-implementation distributions="Gentoo" package="dev-lang/mono"/>
+    <package-implementation package="mono-complete" distributions="Debian"/>
+    <package-implementation package="mono-winforms" distributions="RPM"/>
+    <package-implementation package="mono" distributions="Arch"/>
+    <package-implementation package="dev-lang/mono" distributions="Gentoo"/>
   </group>
 
   <group arch="Windows-*" license="MIT License">
     <command name="run" path="bin/mono.exe"/>
     <command name="run-gui" path="bin/monow.exe"/>
-    <implementation id="sha1new=5786d36753bb1f76e4d4f25b2980749ce3671aab" version="2.10.9">
+    <implementation version="2.10.9" id="sha1new=5786d36753bb1f76e4d4f25b2980749ce3671aab">
       <manifest-digest sha1new="5786d36753bb1f76e4d4f25b2980749ce3671aab" sha256="c5766eb07b242dc548e4af84671f07ad5e114f73b07317a0e96237ee553f761d" sha256new="YV3G5MD3EQW4KSHEV6CGOHYHVVPBCT3TWBZRPIHJMI364VJ7OYOQ"/>
       <archive href="https://github.com/0install/apps/releases/download/archives/mono-2.10.9-win32.tar.lzma" size="83591462" type="application/x-lzma-compressed-tar"/>
     </implementation>
@@ -29,11 +29,11 @@
   <entry-point binary-name="mono" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7YsWwACgkQWao5J8JOTh4nvQf8CJkw
-+WKJLo552D69fRqbdSVE94VfA+P5nHqQf+ippS1P4x+hXY0fdPZE3y6iSwlKmpjUGM1qpjdQqc3Z
-q7oOVaujGaNsD2r4TNLtOUc98gkCcY0zioJh/KmKNE3E4LcdpYKYy0jbyioo4aiVwtP/DmENYLNz
-Tjgeccz3npWtg7TZuvdViMT6msCGt5cdZaT3uUoc77uNOaxOqR9jvjUJ32PjpqoWuvAoXxXVZrKM
-/6E2YiHVXvz3Xti2RoWHl3Vcaehn1/IkND0fnyyQ4/iyp/8RM7TcbtojaRu5vXWVG64lkM5LqbCB
-83X8dxYWcJOpBW4KeQD4eQ/o5Xx3y3t2tw==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmMAqpkACgkQWao5J8JOTh7uQAf/SRt1
+3a8SilPofA+2lS9dkStjIzEh4J3Hur7LsB4EgIULBzWeEnKoHoy5Lox1bxhok6tdnupzmYS0TARe
+kGwHypM2vpQIqBYjOzs+xSZT3L/JFDb5+O4ZYnXl42HNiyVcJ5n6AqBfrtdKKXRT3xhu+P976VG8
+8Hj0cQOV8CgoCM9t18YzIsE46C7F9WjS9aNWAHv/RAkrGzpHu/kSelEp+zS+D0yBE85iJKRnhTMK
+m2qQkF7D0QxqbpaJPwzTyxpGUiMBtkG2/7NAwD522cgEWT/CkCD1LSqCEuT3zswoUSKf4T4boa2o
+d0czVGZTbNVnNpFX1NhsM4tQdOXtgjFzYA==
 
 -->

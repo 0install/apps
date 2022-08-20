@@ -1,24 +1,24 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/lib/gmp.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/lib/gmp.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>gmp</name>
   <summary xml:lang="en">A free library for arbitrary precision arithmetic (mingw-w64)</summary>
   <description xml:lang="en"/>
-  <icon href="https://raw.githubusercontent.com/0install/apps/master/lib/gmp.png" type="image/png"/>
-  <icon href="https://raw.githubusercontent.com/0install/apps/master/lib/gmp.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://apps.0install.net/lib/gmp.png" type="image/png"/>
+  <icon href="https://apps.0install.net/lib/gmp.ico" type="image/vnd.microsoft.icon"/>
   <homepage>https://gmplib.org/</homepage>
   <package-implementation package="gmp"/>
-  <package-implementation distributions="Gentoo" package="dev-libs/gmp"/>
-  <package-implementation distributions="Ports" package="math/gmp"/>
+  <package-implementation package="dev-libs/gmp" distributions="Gentoo"/>
+  <package-implementation package="math/gmp" distributions="Ports"/>
   <group license="LGPL3, GPL">
-    <group released="2017-01-12" version="6.1.2-1">
+    <group version="6.1.2-1" released="2017-01-12">
       <implementation arch="Windows-i686" id="sha1new=202127badbbf73020e047b7cd746272fa898c22e">
         <manifest-digest sha256new="2QKO666TTOCECXIRGACE26BOTQIUTLUEFSXB3EQLUCJWXPU6LA3A"/>
-        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-gmp-6.1.2-1-any.pkg.tar.xz" size="482992" type="application/x-xz-compressed-tar"/>
+        <archive href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-gmp-6.1.2-1-any.pkg.tar.xz" size="482992" type="application/x-xz-compressed-tar" extract="mingw32"/>
       </implementation>
       <implementation arch="Windows-x86_64" id="sha1new=18cca1453ce1038965e94c665c879164b0423021">
         <manifest-digest sha256new="BXZVDF3DOC4Y44YRPJDUILYVIBVTTHO5TEZE4RHUKMX3RYAED6KQ"/>
-        <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-gmp-6.1.2-1-any.pkg.tar.xz" size="497700" type="application/x-xz-compressed-tar"/>
+        <archive href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-gmp-6.1.2-1-any.pkg.tar.xz" size="497700" type="application/x-xz-compressed-tar" extract="mingw64"/>
       </implementation>
     </group>
     <group version="6.2.0-1">
@@ -37,11 +37,11 @@
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7KZXQACgkQWao5J8JOTh4ZAQf/WgGw
-4W5TKcbk4bQA228SsHu7HSxuEIl2YCokMJMbHO3coK4guYfXZr6w8/Gi6H7BWK8okhv8zoIHrX+D
-kjBys5YKTd/U1rrpDQCjv3A9ZkLrRsmy2b52jCj6Ox8Rlgk/LrHQw1shcA47LgwjpOqJIQMAkcqm
-5qZcJnueIXVSrqLkdadONBvpo0RzcAvp6gDvLcbiblyFK9+mlSLx8kFbAG4R3iyYVPc4MY/rfZUG
-mvB1xDxNgD1RhNNYJsLx+1W8tafcjEztEgAcLVMRT0Agf4kqRhWVkT7BlO7jnkCmHvmj4CBorhJ+
-DMxDDa5NK3QmiRh7WSXlmS8aGfdo+6mNYg==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmMAqpcACgkQWao5J8JOTh4Acgf6A8LJ
+3XvzLfq1Vu/f8pzNNqN2IfdUrt/7viig8EVANkCf27GVpWypSdZcxrS9Ye8ruun+0GtEbXPWSYKD
+SC0UmlYyC+ETSAx3AEvgg4zxVcwthZSo2u97WQcLwu3psU3m2kbqiszikx8W9kHkiJNlh5WrP/0K
+q8R/JkakvgPc6larSY7Z+w1N9yNIZ/mD1rVt/F2WZdtDUBo2faYSsMsiYo+xyvbgoZmxnyVAIuz8
+gKdZ8fXXHZPY1wsWfcV4hwcjrrO1a3e3lb0bkNmsW3KNjlfOTGczYfyf46r6AFb6xjC2kE2fUC2J
+p2irdaaWGJZkp5TEYYueCbVwVr++CNKPoA==
 
 -->

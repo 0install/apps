@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/utils/graphviz.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/utils/graphviz.xml">
   <name>graphviz</name>
   <summary>Open Source Graph Visualization Software</summary>
   <description>Open Source Graph Visualization Software</description>
   <homepage>https://www.graphviz.org/</homepage>
   <needs-terminal/>
-  <icon href="https://www.graphviz.org/Resources/app.png" type="image/png"/>
+  <icon href="https://apps.0install.net/utils/graphviz.png" type="image/png"/>
 
   <group>
     <command name="run" path="/usr/bin/dot"/>
@@ -46,47 +46,47 @@
     <command name="fdp" path="bin/fdp.exe"/>
     <command name="sfdp" path="bin/sfdp.exe"/>
 
-    <implementation id="sha1new=b9ad8643984d120799c43f3d85d58f2653f87955" released="2011-04-21" stability="stable" version="2.27.20110421.0445">
+    <implementation id="sha1new=b9ad8643984d120799c43f3d85d58f2653f87955" released="2011-04-21" version="2.27.20110421.0445" stability="stable">
       <archive extract="release" href="https://github.com/0install/apps/releases/download/archives/graphviz-bin-2.27.20110421.0445.zip" size="49035660" type="application/zip"/>
     </implementation>
-    <implementation id="sha1new=23991c6e6cf53d7b401c61aff71575ff326e3bca" released="2014-04-13" stability="stable" version="2.38">
+    <implementation id="sha1new=23991c6e6cf53d7b401c61aff71575ff326e3bca" released="2014-04-13" version="2.38" stability="stable">
       <manifest-digest sha256new="BFQPX4FKOIBNJRC34KOWGMANFIT3WNZ5N6DXUVDOUEJZMRFYLVYQ"/>
-      <archive extract="release" href="https://graphviz.gitlab.io/_pages/Download/windows/graphviz-2.38.zip" size="51904518" type="application/zip"/>
+      <archive href="https://graphviz.gitlab.io/_pages/Download/windows/graphviz-2.38.zip" size="51904518" type="application/zip" extract="release"/>
     </implementation>
   </group>
 
-  <entry-point binary-name="dot" command="run">
+  <entry-point command="run" binary-name="dot">
     <name>dot</name>
     <needs-terminal/>
     <summary>draws directed graphs</summary>
   </entry-point>
-  <entry-point binary-name="neato" command="neato">
+  <entry-point command="neato" binary-name="neato">
     <needs-terminal/>
     <summary>draws undirected graphs using 'spring' models</summary>
   </entry-point>
-  <entry-point binary-name="twopi" command="twopi">
+  <entry-point command="twopi" binary-name="twopi">
     <needs-terminal/>
     <summary>draws graphs using a radial layout</summary>
   </entry-point>
-  <entry-point binary-name="circo" command="circo">
+  <entry-point command="circo" binary-name="circo">
     <needs-terminal/>
     <summary>draws graphs using a circular layout</summary>
   </entry-point>
-  <entry-point binary-name="fdp" command="fdp">
+  <entry-point command="fdp" binary-name="fdp">
     <needs-terminal/>
     <summary>draws undirected graphs using a 'spring' model</summary>
   </entry-point>
-  <entry-point binary-name="sfdp" command="sfdp">
+  <entry-point command="sfdp" binary-name="sfdp">
     <needs-terminal/>
     <summary>draws undirected graphs using a 'spring' model and a multi-scale approach</summary>
   </entry-point>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7siywACgkQWao5J8JOTh4zAQf/Tgt0
-DeSSXjx+6o2Mpdx97PCX0XMAQRq1wFqjSCrZ7HPCoRoGulnpXW0ehXnmwlStYPMioxWS9N8M9aKs
-6birUwV/7K3sVgRxi/6rIXF8eW3QBoQF4U5/tqiYu6oTQt9ZMMGK8BwfvqrzkXShiDQyDwSEc5Q0
-Wz+ikpKHPklLr7BidfldsAvZf0wj2K+QWX+6mFPKMXpG8FdGSxUO4IvifG05blYX/64alIQdlxaY
-zwau2+bRKT2csJwILbod43u5KVfTC0op87Mx8HlI6hA8iQ2vo9WusHW4dmJ45qH1YMpDllCQtt8/
-2K4KZtZaCXvpOeHBiKF2wVLiT4efQ+BD5A==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmMAqpoACgkQWao5J8JOTh5F1Qf9GLFY
+fU47YRSIUO85I7YEp50zJtK5q4Zg/2iVsGgihrwQa29Y1pSF5uaArcjqL4yBH/vp5xQSz4jGrt9z
+YP3YOd2E2sR2NHYFK5HWKxtYIj8/ji9Kzww7fx9I1wTADiFymQHa4462+r0T+WytlWOPbbXUYV/q
+FA4rRk9Ykt8nfqEWaXBML8c4TKrhTVd+lXwos1BUfRGNDlX0kvnyNYy+T3UxtsBdsamJ4aE5z8Tj
+X9x6ZmTfC+KRj/ymYBaa5rxUvovk1mHZ9MPUm+DVtWYqVCC3lBncpWuhUNcNBv7ncowEj5vFWuEj
+c8eof3qd4GHia4n+gWMVh4fKQmTLjE4jyg==
 
 -->

@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/utils/gawk.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uri="https://apps.0install.net/utils/gawk.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Gawk</name>
   <summary xml:lang="en">Gawk: pattern scanning and processing language</summary>
   <description xml:lang="en">Several kinds of tasks occur repeatedly when working with text files. You might want to extract certain lines and discard the rest. Or you may need to make changes wherever certain patterns appear, but leave the rest of the file alone. Writing single-use programs for these tasks in languages such as C, C++ or Pascal is time-consuming and inconvenient. Such jobs are often easier with awk. The awk utility interprets a special-purpose programming language that makes it easy to handle simple data-reformatting jobs. The GNU implementation of awk is called gawk; it is fully compatible with the System V Release 4 version of awk. gawk is also compatible with the POSIX specification of the awk language. This means that all properly written awk programs should work with gawk. Thus, we usually don’t distinguish between gawk and other awk implementations. Using awk allows you to: 
@@ -17,8 +17,8 @@ In addition, gawk provides facilities that make it easy to:
 
 The Win32 port has some limitations, In particular the ‘|&amp;’ operator and TCP/IP networking are not supported. 
 </description>
-  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.ico" type="image/vnd.microsoft.icon"/>
-  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/gnu.png" type="image/png"/>
+  <icon href="https://apps.0install.net/utils/gnu.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://apps.0install.net/utils/gnu.png" type="image/png"/>
   <category>System</category>
   <homepage>http://gnuwin32.sourceforge.net/packages/gawk.htm</homepage>
   <needs-terminal/>
@@ -31,7 +31,7 @@ The Win32 port has some limitations, In particular the ‘|&amp;’ operator and
     <archive href="https://raw.githubusercontent.com/kkeybbs/gnuwin32/master/gnuwin32/gawk-bin.zip" size="1448542" type="application/zip"/>
   </implementation>
   <package-implementation distributions="Gentoo" package="sys-apps/gawk"/>
-  <package-implementation main="/usr/bin/gawk" package="gawk"/>
+  <package-implementation package="gawk" main="/usr/bin/gawk"/>
   <entry-point binary-name="awk" command="awk">
     <needs-terminal/>
     <name xml:lang="en">awk</name>
@@ -50,11 +50,11 @@ The Win32 port has some limitations, In particular the ‘|&amp;’ operator and
   </entry-point>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmAvsh0ACgkQWao5J8JOTh68ZQf+Nfxs
-mTq3EsLPnZf1IaLgyafQq35nl0d99oC3+Cju7IuapPvIM/6O3HUtX8l+fS1oUsBF9yhINCU2kYXw
-C8KOA1K30A5vPaWcNCPiLDwVyL2/sXt20xmwJg7fE1sq99yb8fdm30tVyggyB7sxQPqr+be7j7b7
-hRq+3dagUzKeT5XfNa6X+jmI1ff/PCmg9FAPFjXt+SdthzTQOspCp5JvpYAEAPWOBne795WOAzcf
-fyyPelT0mSqHCGgEKSu2UgUEuRaMtH4LZPuNfk6X/VSSgC+rpidLk/wEb4WK3QFQNn+QfAzdjkkt
-JTOAU8J1J9xG52wy4oUAiO10VkwyHSFYEQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmMAqpoACgkQWao5J8JOTh4MBQf9H8Ap
+cjoAmJgyq91q60kPczLgnkqOkeQTgK+G619x7c9kLanaIjDZ6+q2G5jmkriCAKc5YfgrVN6PGdiU
+qjP7bYzMnB0vC5ei+onibN7jN+Gr7n1T/RdTza0hhJYB0vX78KgRB3uFZtpBXIm3C59sSDk9g2dS
++5i4NZ+nUSBMGQA+OZBQFDfngbqAxdZ8sORmgx/traUPhTJunUbCHgdzjcu7KGp/c3cTC7d1HUvW
+9G0vbOo3nkuALiniqqhUbImHZyYP/sJi/WycTfYoKSXPcQE3Q3Y2yte+pyY64uokQLMd0jRbfpUq
+VhBU4hiv+kH5oWEcIZNGCkq2gkbq3f9XpQ==
 
 -->

@@ -1,151 +1,151 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/dotnet/clr-monopath.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/dotnet/clr-monopath.xml">
   <name>Common Language Runtime (CLR) with MONO_PATH support</name>
   <summary>virtual feed for .NET implementations with MONO_PATH support</summary>
   <description>Virtual feed for .NET implementations with MONO_PATH support: .NET Framework with monopath-emulator on Windows and Mono on POSIX. Uses .NET Framework profiles as version numbers.</description>
   <homepage>https://github.com/0install/monopath-emulator</homepage>
-  <icon href="https://raw.githubusercontent.com/0install/apps/master/dotnet/dotnet.png" type="image/png"/>
+  <icon href="https://apps.0install.net/dotnet/dotnet.png" type="image/png"/>
 
   <!-- Empty implementations used to map .NET Framework version numbers to roughly equivalent Mono version numbers. -->
   <feed arch="POSIX-*" src="https://apps.0install.net/dotnet/clr.xml"/>
 
   <!-- The monopath-emulator adds support for MONO_PATH to the regular .NET Framework  -->
   <group arch="Windows-*" license="MIT License">
-    <implementation id="netfx-2.0" version="2.0">
+    <implementation version="2.0" id="netfx-2.0">
       <command name="run" path="monopath-emulator.clr2.exe">
-        <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml">
-          <version before="3.0" not-before="2.0"/>
+        <runner interface="https://apps.0install.net/dotnet/framework.xml" command="run">
+          <version not-before="2.0" before="3.0"/>
         </runner>
       </command>
       <command name="run-gui" path="monopath-emulator-win.clr2.exe">
-        <runner command="run-gui" interface="https://apps.0install.net/dotnet/framework.xml">
-          <version before="3.0" not-before="2.0"/>
+        <runner interface="https://apps.0install.net/dotnet/framework.xml" command="run-gui">
+          <version not-before="2.0" before="3.0"/>
         </runner>
       </command>
       <manifest-digest sha1new="b416113cb680d304332f4ca54e27be5e0024a222" sha256="aa9a1b225d07a14d5092ecc2922a2affbd87330aec218702f0c65cefa39b1316" sha256new="VKNBWIS5A6QU2UES5TBJEKRK766YOMYK5QQYOAXQYZOO7I43CMLA"/>
       <archive href="https://github.com/0install/monopath-emulator/releases/download/1.0/monopath-emulator-1.0.zip" size="10953" type="application/zip"/>
     </implementation>
-    <implementation id="netfx-3.0" version="3.0">
+    <implementation version="3.0" id="netfx-3.0">
       <command name="run" path="monopath-emulator.clr2.exe">
-        <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml">
-          <version before="3.5" not-before="3.0"/>
+        <runner interface="https://apps.0install.net/dotnet/framework.xml" command="run">
+          <version not-before="3.0" before="3.5"/>
         </runner>
       </command>
       <command name="run-gui" path="monopath-emulator-win.clr2.exe">
-        <runner command="run-gui" interface="https://apps.0install.net/dotnet/framework.xml">
-          <version before="3.5" not-before="3.0"/>
+        <runner interface="https://apps.0install.net/dotnet/framework.xml" command="run-gui">
+          <version not-before="3.0" before="3.5"/>
         </runner>
       </command>
       <manifest-digest sha1new="b416113cb680d304332f4ca54e27be5e0024a222" sha256="aa9a1b225d07a14d5092ecc2922a2affbd87330aec218702f0c65cefa39b1316" sha256new="VKNBWIS5A6QU2UES5TBJEKRK766YOMYK5QQYOAXQYZOO7I43CMLA"/>
       <archive href="https://github.com/0install/monopath-emulator/releases/download/1.0/monopath-emulator-1.0.zip" size="10953" type="application/zip"/>
     </implementation>
-    <implementation id="netfx-3.5" version="3.5">
+    <implementation version="3.5" id="netfx-3.5">
       <command name="run" path="monopath-emulator.clr2.exe">
-        <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml">
-          <version before="4.0" not-before="3.5"/>
+        <runner interface="https://apps.0install.net/dotnet/framework.xml" command="run">
+          <version not-before="3.5" before="4.0"/>
         </runner>
       </command>
       <command name="run-gui" path="monopath-emulator-win.clr2.exe">
-        <runner command="run-gui" interface="https://apps.0install.net/dotnet/framework.xml">
-          <version before="4.0" not-before="3.5"/>
+        <runner interface="https://apps.0install.net/dotnet/framework.xml" command="run-gui">
+          <version not-before="3.5" before="4.0"/>
         </runner>
       </command>
       <manifest-digest sha1new="b416113cb680d304332f4ca54e27be5e0024a222" sha256="aa9a1b225d07a14d5092ecc2922a2affbd87330aec218702f0c65cefa39b1316" sha256new="VKNBWIS5A6QU2UES5TBJEKRK766YOMYK5QQYOAXQYZOO7I43CMLA"/>
       <archive href="https://github.com/0install/monopath-emulator/releases/download/1.0/monopath-emulator-1.0.zip" size="10953" type="application/zip"/>
     </implementation>
-    <implementation id="netfx-4.0" version="4.0">
+    <implementation version="4.0" id="netfx-4.0">
       <command name="run" path="monopath-emulator.clr4.exe">
-        <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml">
-          <version before="4.5" not-before="4.0"/>
+        <runner interface="https://apps.0install.net/dotnet/framework.xml" command="run">
+          <version not-before="4.0" before="4.5"/>
         </runner>
       </command>
       <command name="run-gui" path="monopath-emulator-win.clr4.exe">
-        <runner command="run-gui" interface="https://apps.0install.net/dotnet/framework.xml">
-          <version before="4.5" not-before="4.0"/>
+        <runner interface="https://apps.0install.net/dotnet/framework.xml" command="run-gui">
+          <version not-before="4.0" before="4.5"/>
         </runner>
       </command>
       <manifest-digest sha1new="b416113cb680d304332f4ca54e27be5e0024a222" sha256="aa9a1b225d07a14d5092ecc2922a2affbd87330aec218702f0c65cefa39b1316" sha256new="VKNBWIS5A6QU2UES5TBJEKRK766YOMYK5QQYOAXQYZOO7I43CMLA"/>
       <archive href="https://github.com/0install/monopath-emulator/releases/download/1.0/monopath-emulator-1.0.zip" size="10953" type="application/zip"/>
     </implementation>
-    <implementation id="netfx-4.5" version="4.5">
+    <implementation version="4.5" id="netfx-4.5">
       <command name="run" path="monopath-emulator.clr4.exe">
-        <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml">
+        <runner interface="https://apps.0install.net/dotnet/framework.xml" command="run">
           <version not-before="4.5"/>
         </runner>
       </command>
       <command name="run-gui" path="monopath-emulator-win.clr4.exe">
-        <runner command="run-gui" interface="https://apps.0install.net/dotnet/framework.xml">
+        <runner interface="https://apps.0install.net/dotnet/framework.xml" command="run-gui">
           <version not-before="4.5"/>
         </runner>
       </command>
       <manifest-digest sha1new="b416113cb680d304332f4ca54e27be5e0024a222" sha256="aa9a1b225d07a14d5092ecc2922a2affbd87330aec218702f0c65cefa39b1316" sha256new="VKNBWIS5A6QU2UES5TBJEKRK766YOMYK5QQYOAXQYZOO7I43CMLA"/>
       <archive href="https://github.com/0install/monopath-emulator/releases/download/1.0/monopath-emulator-1.0.zip" size="10953" type="application/zip"/>
     </implementation>
-    <implementation id="netfx-4.5.1" version="4.5.1">
+    <implementation version="4.5.1" id="netfx-4.5.1">
       <command name="run" path="monopath-emulator.clr4.exe">
-        <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml">
+        <runner interface="https://apps.0install.net/dotnet/framework.xml" command="run">
           <version not-before="4.5.1"/>
         </runner>
       </command>
       <command name="run-gui" path="monopath-emulator-win.clr4.exe">
-        <runner command="run-gui" interface="https://apps.0install.net/dotnet/framework.xml">
+        <runner interface="https://apps.0install.net/dotnet/framework.xml" command="run-gui">
           <version not-before="4.5.1"/>
         </runner>
       </command>
       <manifest-digest sha1new="b416113cb680d304332f4ca54e27be5e0024a222" sha256="aa9a1b225d07a14d5092ecc2922a2affbd87330aec218702f0c65cefa39b1316" sha256new="VKNBWIS5A6QU2UES5TBJEKRK766YOMYK5QQYOAXQYZOO7I43CMLA"/>
       <archive href="https://github.com/0install/monopath-emulator/releases/download/1.0/monopath-emulator-1.0.zip" size="10953" type="application/zip"/>
     </implementation>
-    <implementation id="netfx-4.5.2" version="4.5.2">
+    <implementation version="4.5.2" id="netfx-4.5.2">
       <command name="run" path="monopath-emulator.clr4.exe">
-        <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml">
+        <runner interface="https://apps.0install.net/dotnet/framework.xml" command="run">
           <version not-before="4.5.2"/>
         </runner>
       </command>
       <command name="run-gui" path="monopath-emulator-win.clr4.exe">
-        <runner command="run-gui" interface="https://apps.0install.net/dotnet/framework.xml">
+        <runner interface="https://apps.0install.net/dotnet/framework.xml" command="run-gui">
           <version not-before="4.5.2"/>
         </runner>
       </command>
       <manifest-digest sha1new="b416113cb680d304332f4ca54e27be5e0024a222" sha256="aa9a1b225d07a14d5092ecc2922a2affbd87330aec218702f0c65cefa39b1316" sha256new="VKNBWIS5A6QU2UES5TBJEKRK766YOMYK5QQYOAXQYZOO7I43CMLA"/>
       <archive href="https://github.com/0install/monopath-emulator/releases/download/1.0/monopath-emulator-1.0.zip" size="10953" type="application/zip"/>
     </implementation>
-    <implementation id="netfx-4.6" version="4.6">
+    <implementation version="4.6" id="netfx-4.6">
       <command name="run" path="monopath-emulator.clr4.exe">
-        <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml">
+        <runner interface="https://apps.0install.net/dotnet/framework.xml" command="run">
           <version not-before="4.6"/>
         </runner>
       </command>
       <command name="run-gui" path="monopath-emulator-win.clr4.exe">
-        <runner command="run-gui" interface="https://apps.0install.net/dotnet/framework.xml">
+        <runner interface="https://apps.0install.net/dotnet/framework.xml" command="run-gui">
           <version not-before="4.6"/>
         </runner>
       </command>
       <manifest-digest sha1new="b416113cb680d304332f4ca54e27be5e0024a222" sha256="aa9a1b225d07a14d5092ecc2922a2affbd87330aec218702f0c65cefa39b1316" sha256new="VKNBWIS5A6QU2UES5TBJEKRK766YOMYK5QQYOAXQYZOO7I43CMLA"/>
       <archive href="https://github.com/0install/monopath-emulator/releases/download/1.0/monopath-emulator-1.0.zip" size="10953" type="application/zip"/>
     </implementation>
-    <implementation id="netfx-4.6.1" version="4.6.1">
+    <implementation version="4.6.1" id="netfx-4.6.1">
       <command name="run" path="monopath-emulator.clr4.exe">
-        <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml">
+        <runner interface="https://apps.0install.net/dotnet/framework.xml" command="run">
           <version not-before="4.6.1"/>
         </runner>
       </command>
       <command name="run-gui" path="monopath-emulator-win.clr4.exe">
-        <runner command="run-gui" interface="https://apps.0install.net/dotnet/framework.xml">
+        <runner interface="https://apps.0install.net/dotnet/framework.xml" command="run-gui">
           <version not-before="4.6.1"/>
         </runner>
       </command>
       <manifest-digest sha1new="b416113cb680d304332f4ca54e27be5e0024a222" sha256="aa9a1b225d07a14d5092ecc2922a2affbd87330aec218702f0c65cefa39b1316" sha256new="VKNBWIS5A6QU2UES5TBJEKRK766YOMYK5QQYOAXQYZOO7I43CMLA"/>
       <archive href="https://github.com/0install/monopath-emulator/releases/download/1.0/monopath-emulator-1.0.zip" size="10953" type="application/zip"/>
     </implementation>
-    <implementation id="netfx-4.6.2" version="4.6.2">
+    <implementation version="4.6.2" id="netfx-4.6.2">
       <command name="run" path="monopath-emulator.clr4.exe">
-        <runner command="run" interface="https://apps.0install.net/dotnet/framework.xml">
+        <runner interface="https://apps.0install.net/dotnet/framework.xml" command="run">
           <version not-before="4.6.2"/>
         </runner>
       </command>
       <command name="run-gui" path="monopath-emulator-win.clr4.exe">
-        <runner command="run-gui" interface="https://apps.0install.net/dotnet/framework.xml">
+        <runner interface="https://apps.0install.net/dotnet/framework.xml" command="run-gui">
           <version not-before="4.6.2"/>
         </runner>
       </command>
@@ -155,11 +155,11 @@
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7YsWwACgkQWao5J8JOTh4FKQf8Ct3B
-2+imd+0vZQ1h+KwmxpSsNE42inFoyIUxIqXtvI7mBrIL0DTpWbhUUJ2IGW+iDx7AbMlqchbEZHy1
-NpgRubnW5RfRGfI+PHkUcvV1PpuWcQ8ulv/GW3w0KNQU8OmrdMDj8w2EmC82Txag50t8iGhHEGPD
-EilVzjtfo4pAQzD9k+jMkPBFkcgVqZHmk60Uq1lxFRpKIQQ05Aharhu0dfNMZSubfrnSc0WZJoit
-j9y53dIgnfTY8NyT7sjMNJkwfphinT0pfd9amGWHT+Cak2xHqQ1UKD86L9lAGF7I4HADYC6EsudB
-hSa2mHlfNLPH251avoyEcQM8wg0Ss86cZw==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmMAqpgACgkQWao5J8JOTh7ywgf/W6BM
+CRpBsa3ApWiy5b6IH9SWrEzzLMNMRbS5A61RWuHUkqgyz3yQHdp3HtD9yYRcNJ9mFzHRhIjZhLm3
+QmlRmDkAwrCSxJ/RwLSuiztf/tE1kvBSlVxrBYMC7Y1DZiMTYPpxRWEHTQI9UbMIdsLCJk+T7Exe
+Y2Xoef1OdauVTqjDmmyDEiYRfiGw3Oy5JoWoucbpUBcp/z5k9igCm3a+eYftCCkFaLR6KcUBn/jn
+RR8ocb3ZBCm0YJsrsDy2vTZRh5+BHcbIe0T380Pj2ENb3i9ez0P7apFK1dQ7LRaiZYQCAg5ClVWD
+vxGNUA4f75pTsPqWxpHNHqAy51zmaUIQjA==
 
 -->

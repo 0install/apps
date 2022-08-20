@@ -1,13 +1,13 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/dotnet/framework-client-profile.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/dotnet/framework-client-profile.xml">
   <name>.NET Framework Client Profile</name>
   <summary>subset of the .NET Framework optimized for client applications</summary>
   <description>This feed uses the version of .NET Framework already installed on the computer. It does not download new versions.</description>
   <homepage>https://docs.microsoft.com/en-us/dotnet/framework/deployment/client-profile</homepage>
-  <icon href="https://raw.githubusercontent.com/0install/apps/master/dotnet/framework.png" type="image/png"/>
+  <icon href="https://apps.0install.net/dotnet/framework.png" type="image/png"/>
 
-  <package-implementation distributions="Windows" package="netfx-client">
+  <package-implementation package="netfx-client" distributions="Windows">
     <!-- There is a seperate GUI version of the Mono executable on Windows. For .NET we treat "run" and "run-gui" exactly the same. -->
     <command name="run-gui" path=""/>
   </package-implementation>
@@ -16,11 +16,11 @@
   <feed src="https://apps.0install.net/dotnet/framework.xml"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7YsWwACgkQWao5J8JOTh6dEAf+NcAy
-0AxFBwwunssrl98vWCvumpIJLyjDAuNUVgC1tC1RFK2V4oe1kHIWw0BgsVn4VhndOco9NddPhdwl
-bTIX7S/gd/FXUgk0glIqAb3mCBbefkiy/25Q0LbfoLW5JXdbJoXqjjuYbIiJk/FZelTfMiUggpIe
-L8CEW5rYcMK+4ngVvQPBdP+smsTVggSqABxycv1kvV1OpVjoMuLzQrYyTwAk5UU+j7UQzviYxdU8
-dnmD4C8CPBi9YtoosOWjaBoArh0RcY8bbKi/Tqk/HiUktFEp1SXo99lOoQsIZRmLJ/Z2vfV+U5c+
-hXBj61dA2g9wyxZ3PnmLCgGW4vdNHBvWoA==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmMAqpgACgkQWao5J8JOTh7P1AgAvzvY
+2oSkcKwkkiW02UjT4MkuCO5qz8x7LzKhUrCzE33j9RjE+RkDJQY0yOHx/WmAk9+p0GX5OtO/JxcS
+DW03nPJSngzB6WOZGlQeY+qDA3U7GAzKbyjXYeAprNwD+Sk/oQSxRdxB5wFcK1YXWlHwwke8Cq2Q
+h+b/GRX2K+o5gLgq3biWvmoe+C9bRzDUIFf0GoInuCyBQEnmBgQsGW9FkJeCC1hiLZR764wGvf5B
+I+n6ZVQGdWIdxm866QBLLFL0BvFiROl2eZlGv6YTZ6yvDGvri4odaPJJyumQiye7A47GDrIUls8y
+rohPYfvNCD0UfLtOSuHym+odv0o7BQLxrQ==
 
 -->

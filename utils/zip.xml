@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/utils/zip.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uri="https://apps.0install.net/utils/zip.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Zip</name>
   <summary xml:lang="en">Zip: package and compress zip-archive files</summary>
   <description xml:lang="en">Zip is a compression and file packaging/archive utility. Although \highly compatible both with PKWARE's PKZIP and PKUNZIP utilities for MS-DOS and with Info-ZIP's own UnZip, our primary objectives have been portability and other-than-MSDOS functionality. Features not found in the PKWARE version include: 
@@ -13,8 +13,8 @@ Zip is useful for packaging a set of files for distribution, for archiving files
 
 Zip has one compression method (deflation) and can also store files without compression. Zip automatically chooses the better of the two for each file. Compression ratios of 2:1 to 3:1 are common for text files. 
 </description>
-  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/unzip.ico" type="image/vnd.microsoft.icon"/>
-  <icon href="https://raw.githubusercontent.com/0install/apps/master/utils/unzip.png" type="image/png"/>
+  <icon href="https://apps.0install.net/utils/unzip.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://apps.0install.net/utils/unzip.png" type="image/png"/>
   <category>Utility</category>
   <homepage>http://gnuwin32.sourceforge.net/packages/zip.htm</homepage>
   <needs-terminal/>
@@ -34,7 +34,7 @@ Zip has one compression method (deflation) and can also store files without comp
     <archive href="https://raw.githubusercontent.com/kkeybbs/gnuwin32/master/gnuwin32/zip-3.0-bin.zip" size="576934" type="application/zip"/>
   </implementation>
   <package-implementation distributions="Gentoo" package="app-arch/zip"/>
-  <package-implementation main="/usr/bin/zip" package="zip"/>
+  <package-implementation package="zip" main="/usr/bin/zip"/>
   <entry-point binary-name="zip" command="run">
     <needs-terminal/>
     <name xml:lang="en">zip</name>
@@ -70,11 +70,11 @@ Zip has one compression method (deflation) and can also store files without comp
   </entry-point>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmAvshwACgkQWao5J8JOTh4IIggAl4qj
-Dnm8pAcuScOvZSmHexGMLVq1BSbGWKTOKHMyQp3sNKwWpESD61u+1TNMu4F6c+GHoMUlJYeSHVGz
-W0hQpOuTfH12wz/r8MGdNL0HbelwIfajE08qN88ejG/4IImGzBOTVJWx0iwKa2XinkYqRo+IiOCy
-30ZTLa+a8Yk6Sp0NsOLUBSmiKrEknHccrjS6d+nsFWbBNP8ci5hiFzPBV4TdQiu9gUvB34VwBz92
-USzlrYVye5AJoqUYLz+XkP/kXolJIT74nN6KNt7uUdiEPASW/0wzcdw0HEQta2ZoLGlj2w5DDws+
-H2bJtWkXU047K4uyVHpGzgqelr07CEtOzA==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmMAqpsACgkQWao5J8JOTh5nnggAsXeW
+0Ovou8UWESnMhMM6Wy3FyQoqC13zqleood+rhLCUaFpQwAZ6+f35kQMxNnQtKSFAQokz6EdaPKlg
+MgmAIlJqw+f9dlJN9RgRrcNtbXISsrxRv1fa5/DZC0WktBbBKzlNrY+Eieh8r6c2D0Vfhc7OKCyO
+8z8JFLkWY0NeDLRYLJAL9xebSuRn7vJ9ZkmNGOZgMJcxMfgMsneFw9K3m3pjE1gNW9yhLgL5ymRT
+501xRcRz03mzcCulFDQ1o7yHBRTPN7i0mpDf6DM7n/jR2x3aoDtXytcepoh1sLqw8IqmAwoVxIA/
+jGFxaGrdNrqIJ7ZZ/+GfDPVPLqlOeIAsMg==
 
 -->

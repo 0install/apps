@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type='text/xsl' href='../resources/catalog.xsl'?>
-<c:catalog xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:c="http://0install.de/schema/injector/catalog"><interface uri="https://apps.0install.net/java/ant.xml"><name>Apache Ant</name><summary>pure Java build tool</summary><homepage>http://ant.apache.org/</homepage><category>Development</category><needs-terminal/><icon href="https://raw.githubusercontent.com/0install/apps/master/java/ant.png" type="image/png"/><entry-point binary-name="ant" command="run"/></interface><interface uri="https://apps.0install.net/java/maven.xml"><name>Apache Maven</name><summary>build manager for Java projects</summary><homepage>http://maven.apache.org/</homepage><category>Development</category><needs-terminal/><icon href="https://raw.githubusercontent.com/0install/apps/master/java/maven.png" type="image/png"/><entry-point binary-name="mvn" command="run"/></interface><interface uri="https://apps.0install.net/java/gradle.xml"><name>Gradle</name><summary>modern open source build tool for continuous delivery</summary><homepage>http://www.gradle.org/</homepage><category>Development</category><needs-terminal/><icon href="https://raw.githubusercontent.com/0install/apps/master/java/gradle.png" type="image/png"/><entry-point binary-name="gradle" command="run"/></interface><interface uri="https://apps.0install.net/java/hsqldb.xml"><name>HyperSQL</name><summary>100% Java Database </summary><description>
+<c:catalog xmlns:c="http://0install.de/schema/injector/catalog" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"><interface uri="https://apps.0install.net/java/ant.xml"><name>Apache Ant</name><summary>pure Java build tool</summary><homepage>http://ant.apache.org/</homepage><category>Development</category><needs-terminal/><icon href="https://apps.0install.net/java/ant.png" type="image/png"/><entry-point binary-name="ant" command="run"/></interface><interface uri="https://apps.0install.net/java/maven.xml"><name>Apache Maven</name><summary>build manager for Java projects</summary><homepage>http://maven.apache.org/</homepage><category>Development</category><needs-terminal/><icon href="https://apps.0install.net/java/maven.png" type="image/png"/><entry-point binary-name="mvn" command="run"/></interface><interface uri="https://apps.0install.net/java/gradle.xml"><name>Gradle</name><summary>modern open source build tool for continuous delivery</summary><homepage>http://www.gradle.org/</homepage><category>Development</category><needs-terminal/><icon href="https://apps.0install.net/java/gradle.png" type="image/png"/><entry-point binary-name="gradle" command="run"/></interface><interface uri="https://apps.0install.net/java/hsqldb.xml"><name>HyperSQL</name><summary>100% Java Database </summary><description>
 HSQLDB (HyperSQL DataBase) is an SQL relational database engine written in Java.
 It has a JDBC driver and supports nearly full ANSI-92 SQL (BNF tree format) plus
 many SQL:2008 enhancements. It offers a small, fast database engine which offers
@@ -10,23 +10,23 @@ tools.</description><homepage>http://hsqldb.org/</homepage></interface><interfac
 IRIS is an open-source Datalog reasoner that can evaluate safe or unsafe datalog
 extended with function symbols, XML schema data types, built-in predicates and
 (locally) stratified or well-founded negation as failure.</description><homepage>http://www.iris-reasoner.org/</homepage></interface><interface uri="https://apps.0install.net/java/jar-launcher.xml"><name>JAR Launcher</name><summary>launcher that starts the main class while preserving the CLASSPATH</summary><description>A launcher that starts the main class specified in a JAR while preserving the CLASSPATH.
-Workaround for java -classpath ... -jar ... which does not work.</description><homepage>https://github.com/0install/jar-launcher</homepage></interface><interface uri="https://apps.0install.net/java/jdk.xml"><name>Java Development Kit (JDK)</name><summary>SDK for Java</summary><description>Development environment for building applications, applets, and components using the Java programming language.</description><category>Development</category><icon href="https://raw.githubusercontent.com/0install/apps/master/java/java.png" type="image/png"/><entry-point binary-name="javac" command="run">
+Workaround for java -classpath ... -jar ... which does not work.</description><homepage>https://github.com/0install/jar-launcher</homepage></interface><interface uri="https://apps.0install.net/java/jdk.xml"><name>Java Development Kit (JDK)</name><summary>SDK for Java</summary><description>Development environment for building applications, applets, and components using the Java programming language.</description><category>Development</category><icon href="https://apps.0install.net/java/java.png" type="image/png"/><entry-point binary-name="javac" command="run">
     <name>Java compiler</name>
   </entry-point><entry-point binary-name="java" command="java">
     <needs-terminal/>
     <name>Java command-line runner</name>
   </entry-point><entry-point binary-name="javaw" command="run-gui">
     <name>Java GUI runner</name>
-  </entry-point><entry-point binary-name="javadoc" command="javadoc">
+  </entry-point><entry-point command="javadoc" binary-name="javadoc">
     <needs-terminal/>
     <name>Java API Documentation Generator</name>
-  </entry-point><entry-point binary-name="javap" command="javap">
+  </entry-point><entry-point command="javap" binary-name="javap">
     <needs-terminal/>
     <name>Java Class File Disassembler</name>
-  </entry-point><entry-point binary-name="jar" command="jar">
+  </entry-point><entry-point command="jar" binary-name="jar">
     <needs-terminal/>
     <name>Java Archive Tool</name>
-  </entry-point><entry-point binary-name="jarsigner" command="jarsigner">
+  </entry-point><entry-point command="jarsigner" binary-name="jarsigner">
     <needs-terminal/>
     <name>Java Archive Signer</name>
   </entry-point><entry-point binary-name="keytool" command="keytool">
@@ -50,43 +50,43 @@ Workaround for java -classpath ... -jar ... which does not work.</description><h
   </entry-point><entry-point binary-name="jrunscript" command="jrunscript">
     <needs-terminal/>
     <name>Java command line script shell</name>
-  </entry-point><entry-point binary-name="jaotc" command="jaotc">
+  </entry-point><entry-point command="jaotc" binary-name="jaotc">
     <needs-terminal/>
     <name>Java Ahead-of-Time Compilation</name>
-  </entry-point><entry-point binary-name="jcmd" command="jcmd">
+  </entry-point><entry-point command="jcmd" binary-name="jcmd">
     <needs-terminal/>
-  </entry-point><entry-point binary-name="jconsole" command="jconsole"/><entry-point binary-name="jdb" command="jdb">
+  </entry-point><entry-point command="jconsole" binary-name="jconsole"/><entry-point command="jdb" binary-name="jdb">
     <needs-terminal/>
-  </entry-point><entry-point binary-name="jdeprscan" command="jdeprscan">
+  </entry-point><entry-point command="jdeprscan" binary-name="jdeprscan">
     <needs-terminal/>
-  </entry-point><entry-point binary-name="jdeps" command="jdeps">
+  </entry-point><entry-point command="jdeps" binary-name="jdeps">
     <needs-terminal/>
-  </entry-point><entry-point binary-name="jfr" command="jfr">
+  </entry-point><entry-point command="jfr" binary-name="jfr">
     <needs-terminal/>
     <name>Tool for working with Flight Recorder files (.jfr)</name>
-  </entry-point><entry-point binary-name="jhsdb" command="jhsdb">
+  </entry-point><entry-point command="jhsdb" binary-name="jhsdb">
     <needs-terminal/>
-  </entry-point><entry-point binary-name="jimage" command="jimage">
+  </entry-point><entry-point command="jimage" binary-name="jimage">
     <needs-terminal/>
-  </entry-point><entry-point binary-name="jinfo" command="jinfo">
+  </entry-point><entry-point command="jinfo" binary-name="jinfo">
     <needs-terminal/>
-  </entry-point><entry-point binary-name="jlink" command="jlink">
+  </entry-point><entry-point command="jlink" binary-name="jlink">
     <needs-terminal/>
-  </entry-point><entry-point binary-name="jmap" command="jmap">
+  </entry-point><entry-point command="jmap" binary-name="jmap">
     <needs-terminal/>
-  </entry-point><entry-point binary-name="jmod" command="jmod">
+  </entry-point><entry-point command="jmod" binary-name="jmod">
     <needs-terminal/>
-  </entry-point><entry-point binary-name="jps" command="jps">
+  </entry-point><entry-point command="jps" binary-name="jps">
     <needs-terminal/>
-  </entry-point><entry-point binary-name="jshell" command="jshell">
+  </entry-point><entry-point command="jshell" binary-name="jshell">
     <needs-terminal/>
-  </entry-point><entry-point binary-name="jstack" command="jstack">
+  </entry-point><entry-point command="jstack" binary-name="jstack">
     <needs-terminal/>
-  </entry-point><entry-point binary-name="jstat" command="jstat">
+  </entry-point><entry-point command="jstat" binary-name="jstat">
     <needs-terminal/>
-  </entry-point><entry-point binary-name="jstatd" command="jstatd">
+  </entry-point><entry-point command="jstatd" binary-name="jstatd">
     <needs-terminal/>
-  </entry-point><entry-point binary-name="serialver" command="serialver">
+  </entry-point><entry-point command="serialver" binary-name="serialver">
     <needs-terminal/>
   </entry-point><entry-point binary-name="kinit" command="kinit">
     <needs-terminal/>
@@ -100,7 +100,7 @@ Workaround for java -classpath ... -jar ... which does not work.</description><h
   </entry-point><entry-point binary-name="jabswitch" command="jabswitch">
     <needs-terminal/>
     <name>Java Access Bridge Switch</name>
-  </entry-point><entry-point binary-name="jaccessinspector" command="jaccessinspector"/><entry-point binary-name="jaccesswalker" command="jaccesswalker"/></interface><interface uri="https://apps.0install.net/java/jre.xml"><name>Java Runtime Environment (JRE)</name><summary>Runtime for Java</summary><description>A Java runtime allows you to run applications built for Java.</description><icon href="https://raw.githubusercontent.com/0install/apps/master/java/java.png" type="image/png"/><entry-point binary-name="java" command="run">
+  </entry-point><entry-point binary-name="jaccessinspector" command="jaccessinspector"/><entry-point binary-name="jaccesswalker" command="jaccesswalker"/></interface><interface uri="https://apps.0install.net/java/jre.xml"><name>Java Runtime Environment (JRE)</name><summary>Runtime for Java</summary><description>A Java runtime allows you to run applications built for Java.</description><icon href="https://apps.0install.net/java/java.png" type="image/png"/><entry-point binary-name="java" command="run">
     <needs-terminal/>
     <name>Java command-line runner</name>
   </entry-point><entry-point binary-name="javaw" command="run-gui">
@@ -150,7 +150,7 @@ Workaround for java -classpath ... -jar ... which does not work.</description><h
   </entry-point><entry-point binary-name="jabswitch" command="jabswitch">
     <needs-terminal/>
     <name>Java Access Bridge Switch</name>
-  </entry-point><entry-point binary-name="jaccessinspector" command="jaccessinspector"/><entry-point binary-name="jaccesswalker" command="jaccesswalker"/></interface><interface uri="https://apps.0install.net/java/kotlin.xml"><name>Kotlin</name><summary>statically typed programming language for modern multiplatform applications</summary><description>Kotlin is a statically typed programming language for modern multiplatform applications. 100% interoperable with Java and Android.</description><homepage>http://kotlinlang.org/</homepage><category>Development</category><needs-terminal/><icon href="https://raw.githubusercontent.com/0install/apps/master/java/kotlin.png" type="image/png"/><icon href="https://raw.githubusercontent.com/0install/apps/master/java/kotlin.ico" type="image/vnd.microsoft.icon"/><entry-point binary-name="kotlin" command="run">
+  </entry-point><entry-point binary-name="jaccessinspector" command="jaccessinspector"/><entry-point binary-name="jaccesswalker" command="jaccesswalker"/></interface><interface uri="https://apps.0install.net/java/kotlin.xml"><name>Kotlin</name><summary>statically typed programming language for modern multiplatform applications</summary><description>Kotlin is a statically typed programming language for modern multiplatform applications. 100% interoperable with Java and Android.</description><homepage>http://kotlinlang.org/</homepage><category>Development</category><needs-terminal/><icon href="https://apps.0install.net/java/kotlin.png" type="image/png"/><icon href="https://apps.0install.net/java/kotlin.ico" type="image/vnd.microsoft.icon"/><entry-point binary-name="kotlin" command="run">
     <needs-terminal/>
     <name>Kotlin interpreter</name>
   </entry-point><entry-point command="kotlinc">
@@ -171,7 +171,7 @@ frameworks for building compilers, interpreters and other text parsers. In
 particular, generated frameworks include intuitive strictly-typed abstract
 syntax trees and tree walkers. SableCC also keeps a clean separation between
 machine-generated code and user-written code which leads to a shorter
-development cycle.</description><homepage>http://sablecc.org/</homepage><category>Development</category></interface><interface uri="https://apps.0install.net/java/scala.xml"><name>Scala</name><summary>functional and object-oriented programming language</summary><description>Scala is a functional and object-oriented programming language based on the Java Virtual Machine.</description><homepage>http://www.scala-lang.org/</homepage><category>Development</category><needs-terminal/><icon href="https://raw.githubusercontent.com/0install/apps/master/java/scala.png" type="image/png"/><icon href="https://raw.githubusercontent.com/0install/apps/master/java/scala.ico" type="image/vnd.microsoft.icon"/><entry-point binary-name="scala" command="run">
+development cycle.</description><homepage>http://sablecc.org/</homepage><category>Development</category></interface><interface uri="https://apps.0install.net/java/scala.xml"><name>Scala</name><summary>functional and object-oriented programming language</summary><description>Scala is a functional and object-oriented programming language based on the Java Virtual Machine.</description><homepage>http://www.scala-lang.org/</homepage><category>Development</category><needs-terminal/><icon href="https://apps.0install.net/java/scala.png" type="image/png"/><icon href="https://apps.0install.net/java/scala.ico" type="image/vnd.microsoft.icon"/><entry-point binary-name="scala" command="run">
     <needs-terminal/>
     <name>Scala interpreter</name>
   </entry-point><entry-point command="scalac">
@@ -197,11 +197,11 @@ On OS X, an extra argument needs to be passed to Java. To support OS X, please u
 &lt;/runner&gt;
 </description><homepage>http://www.eclipse.org/swt/</homepage><category>Development</category></interface></c:catalog>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl/4XCgACgkQWao5J8JOTh6l2wf+IiD7
-pFw7b2oWM/niU/FTqEsrSM/4llJDIFlQhb1Tu+kZx1buidmKq3Ou7u70oNVGeWv3Neym7fp3ywdy
-heet6IgfItBxTp3dBmx6KvfepjXAV1gdLERbNoDH34P7UGGS0KekOBDxH6iiGYic4rjYp+B6Dzk9
-5FIa5u8fuX9Ho9Tf/GSxK8ybTf0s0c+PLJ0wYt+uNE7U/OmidtCzmOIMuhYEtzATLO4Z1xx2UIJH
-zYLAXPiN22Em0o9ynP3gYaDHJVvZjxCmTayuFbL+q14tStay9Z1gwjOm1Vtd2o6Ktjrgam9dV3vX
-f/lB2F5IHkfb+PP4ziiZLNmVwRafHSGKWA==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmMAqpwACgkQWao5J8JOTh6D/wf/ZtRt
+921BHfv+0aROVZMxTRQ7Vcf/EON7ai9R3EJHI0ymtkQBLW9QorZYTTytdvS1o8zZa3R/6OUAaV95
+cyfWWH7yBlCNWgKg1MlkOnv9X/JyYztXnl5jgQ9laWKZoN2YT09r0nad742P5WdtoFXiqSWanCYf
+P0tHxt279iBSJ1h1RFhK33b9ejsovBSyjsgM2fbXkhMpmyZtGEceHZ1yF9px+yP2lX7C5gZ8O4vt
+tYuAWdCXN/D5LWL4cDJ+dcJSORFQxiqeBxO2sAFxF+FPZNSQNSLgEW2ltS/0UvPjLAKgQYZe7u2D
+40Blx8LZMz35PQR51r5Ae5e1fwOWi9ldzw==
 
 -->

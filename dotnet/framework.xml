@@ -1,22 +1,22 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/dotnet/framework.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/dotnet/framework.xml">
   <name>.NET Framework</name>
   <summary>.NET Framework from Microsoft</summary>
   <description>This feed uses the version of .NET Framework already installed on the computer. It does not download new versions.</description>
-  <icon href="https://raw.githubusercontent.com/0install/apps/master/dotnet/framework.png" type="image/png"/>
+  <icon href="https://apps.0install.net/dotnet/framework.png" type="image/png"/>
 
-  <package-implementation distributions="Windows" package="netfx">
+  <package-implementation package="netfx" distributions="Windows">
     <!-- There is a seperate GUI version of the Mono executable on Windows. For .NET we treat "run" and "run-gui" exactly the same. -->
     <command name="run-gui" path=""/>
   </package-implementation>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7YsWwACgkQWao5J8JOTh5Pqgf+P4qk
-M34aQhdA7Q5KC0+puPfqypw4vQZtj66IaaLfO9xnMEUMK5QOdfK3mdSYByV1cp//Yy4SG/6+VjYb
-dZIuSfAthEdgM+sr4RXMYT2iBUw/i14fAxx3mSFu+TYopftP5Se+gZXR/vu/OZId04DAgDjxhEgV
-FAtoF4w1T5IexBMvSgja7YKA9YEpY+CkitfSvyidt9gvh/qE9tBzmhdiIq7TlgPuqPy+MBVNNMwn
-gwJgjJ/qTSN0T9QPSpdNmFQsySC65tA0i+g3l1Sr2MKbPGYnPjKcwnwxy4bPT+CfT20WORSw2rXK
-pOMq9/KNDSEV8JHmAb1qDoUYAMEtDgpFJQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmMAqpgACgkQWao5J8JOTh4LPgf/Qmas
+snLBCVuGXQrlCvfEnIqjGpR36MEtbr/ELtMMctvL3CC+HsAyEN4JNSMgV4npxMFrNbw63ed/IpMU
+cB2qJDEZ+R/86ge+jJuyGIoGTEGesNf7Y3Zhqm9N12s9jZ7pWc4Ys6zpxk/QCwSkEzZ9225nUrFa
+2u/frGEs8E3JZaSfvnAjuSSKbt6kkSnMLbu7RM7iDVblToMg9epI+wM2rKoZQKzm+ZIolLJd/wex
+ZRK/XOSTH2mSLcOQlUr5mxF7JscAEsDW/p062aRSst6FUOfsR4Ou6eXcvj0JgmSH3RT5/C1og7r4
+22XrezXfKN2R8z4tywQNOWuoYU2fu0Sijw==
 
 -->

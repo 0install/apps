@@ -1,192 +1,192 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/dotnet/clr.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/dotnet/clr.xml">
   <name>Common Language Runtime (CLR)</name>
   <summary>virtual feed for .NET implementations</summary>
   <description>Virtual feed for .NET implementations: .NET Framework on Windows and Mono on POSIX. Uses .NET Framework profiles as version numbers.</description>
-  <icon href="https://raw.githubusercontent.com/0install/apps/master/dotnet/dotnet.png" type="image/png"/>
+  <icon href="https://apps.0install.net/dotnet/dotnet.png" type="image/png"/>
 
   <!-- The .NET Framework is an implementation of the Common Language Runtime. -->
   <feed arch="Windows-*" src="https://apps.0install.net/dotnet/framework.xml"/>
 
   <!-- Empty implementations used to map .NET Framework version numbers to roughly equivalent Mono version numbers. -->
   <group arch="POSIX-*" license="MIT License">
-    <implementation id="netfx-2.0-mono" version="2.0">
+    <implementation version="2.0" id="netfx-2.0-mono">
       <command name="run">
-        <runner command="run" interface="https://apps.0install.net/dotnet/mono.xml">
-          <version before="2.0" not-before="1.2"/>
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
+          <version not-before="1.2" before="2.0"/>
         </runner>
       </command>
       <command name="run-gui">
-        <runner command="run-gui" interface="https://apps.0install.net/dotnet/mono.xml">
-          <version before="2.0" not-before="1.2"/>
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
+          <version not-before="1.2" before="2.0"/>
         </runner>
       </command>
       <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
       <recipe/>
     </implementation>
-    <implementation id="netfx-3.0-mono" version="3.0">
+    <implementation version="3.0" id="netfx-3.0-mono">
       <command name="run">
-        <runner command="run" interface="https://apps.0install.net/dotnet/mono.xml">
-          <version before="2.8" not-before="2.0"/>
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
+          <version not-before="2.0" before="2.8"/>
         </runner>
       </command>
       <command name="run-gui">
-        <runner command="run-gui" interface="https://apps.0install.net/dotnet/mono.xml">
-          <version before="2.8" not-before="2.0"/>
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
+          <version not-before="2.0" before="2.8"/>
         </runner>
       </command>
       <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
       <recipe/>
     </implementation>
-    <implementation id="netfx-3.5-mono" version="3.5">
+    <implementation version="3.5" id="netfx-3.5-mono">
       <command name="run">
-        <runner command="run" interface="https://apps.0install.net/dotnet/mono.xml">
-          <version before="2.8" not-before="2.0"/>
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
+          <version not-before="2.0" before="2.8"/>
         </runner>
       </command>
       <command name="run-gui">
-        <runner command="run-gui" interface="https://apps.0install.net/dotnet/mono.xml">
-          <version before="2.8" not-before="2.0"/>
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
+          <version not-before="2.0" before="2.8"/>
         </runner>
       </command>
       <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
       <recipe/>
     </implementation>
-    <implementation id="netfx-4.0-mono" version="4.0">
+    <implementation version="4.0" id="netfx-4.0-mono">
       <command name="run">
-        <runner command="run" interface="https://apps.0install.net/dotnet/mono.xml">
-          <version before="3.0" not-before="2.8"/>
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
+          <version not-before="2.8" before="3.0"/>
         </runner>
       </command>
       <command name="run-gui">
-        <runner command="run-gui" interface="https://apps.0install.net/dotnet/mono.xml">
-          <version before="3.0" not-before="2.8"/>
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
+          <version not-before="2.8" before="3.0"/>
         </runner>
       </command>
       <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
       <recipe/>
     </implementation>
-    <implementation id="netfx-4.5-mono" version="4.5">
+    <implementation version="4.5" id="netfx-4.5-mono">
       <command name="run">
-        <runner command="run" interface="https://apps.0install.net/dotnet/mono.xml">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
           <version not-before="3.0"/>
         </runner>
       </command>
       <command name="run-gui">
-        <runner command="run-gui" interface="https://apps.0install.net/dotnet/mono.xml">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
           <version not-before="3.0"/>
         </runner>
       </command>
       <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
       <recipe/>
     </implementation>
-    <implementation id="netfx-4.5.1-mono" version="4.5.1">
+    <implementation version="4.5.1" id="netfx-4.5.1-mono">
       <command name="run">
-        <runner command="run" interface="https://apps.0install.net/dotnet/mono.xml">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
           <version not-before="3.4"/>
         </runner>
       </command>
       <command name="run-gui">
-        <runner command="run-gui" interface="https://apps.0install.net/dotnet/mono.xml">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
           <version not-before="3.4"/>
         </runner>
       </command>
       <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
       <recipe/>
     </implementation>
-    <implementation id="netfx-4.5.2-mono" version="4.5.2">
+    <implementation version="4.5.2" id="netfx-4.5.2-mono">
       <command name="run">
-        <runner command="run" interface="https://apps.0install.net/dotnet/mono.xml">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
           <version not-before="3.6"/>
         </runner>
       </command>
       <command name="run-gui">
-        <runner command="run-gui" interface="https://apps.0install.net/dotnet/mono.xml">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
           <version not-before="3.6"/>
         </runner>
       </command>
       <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
       <recipe/>
     </implementation>
-    <implementation id="netfx-4.6-mono" version="4.6">
+    <implementation version="4.6" id="netfx-4.6-mono">
       <command name="run">
-        <runner command="run" interface="https://apps.0install.net/dotnet/mono.xml">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
           <version not-before="4.0"/>
         </runner>
       </command>
       <command name="run-gui">
-        <runner command="run-gui" interface="https://apps.0install.net/dotnet/mono.xml">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
           <version not-before="4.0"/>
         </runner>
       </command>
       <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
       <recipe/>
     </implementation>
-    <implementation id="netfx-4.6.1-mono" version="4.6.1">
+    <implementation version="4.6.1" id="netfx-4.6.1-mono">
       <command name="run">
-        <runner command="run" interface="https://apps.0install.net/dotnet/mono.xml">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
           <version not-before="4.2"/>
         </runner>
       </command>
       <command name="run-gui">
-        <runner command="run-gui" interface="https://apps.0install.net/dotnet/mono.xml">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
           <version not-before="4.2"/>
         </runner>
       </command>
       <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
       <recipe/>
     </implementation>
-    <implementation id="netfx-4.6.2-mono" version="4.6.2">
+    <implementation version="4.6.2" id="netfx-4.6.2-mono">
       <command name="run">
-        <runner command="run" interface="https://apps.0install.net/dotnet/mono.xml">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
           <version not-before="4.4"/>
         </runner>
       </command>
       <command name="run-gui">
-        <runner command="run-gui" interface="https://apps.0install.net/dotnet/mono.xml">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
           <version not-before="4.4"/>
         </runner>
       </command>
       <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
       <recipe/>
     </implementation>
-    <implementation id="netfx-4.7-mono" version="4.7">
+    <implementation version="4.7" id="netfx-4.7-mono">
       <command name="run">
-        <runner command="run" interface="https://apps.0install.net/dotnet/mono.xml">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
           <version not-before="5.8"/>
         </runner>
       </command>
       <command name="run-gui">
-        <runner command="run-gui" interface="https://apps.0install.net/dotnet/mono.xml">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
           <version not-before="5.8"/>
         </runner>
       </command>
       <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
       <recipe/>
     </implementation>
-    <implementation id="netfx-4.7.1-mono" version="4.7.1">
+    <implementation version="4.7.1" id="netfx-4.7.1-mono">
       <command name="run">
-        <runner command="run" interface="https://apps.0install.net/dotnet/mono.xml">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
           <version not-before="5.8"/>
         </runner>
       </command>
       <command name="run-gui">
-        <runner command="run-gui" interface="https://apps.0install.net/dotnet/mono.xml">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
           <version not-before="5.8"/>
         </runner>
       </command>
       <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
       <recipe/>
     </implementation>
-    <implementation id="netfx-4.7.2-mono" version="4.7.2">
+    <implementation version="4.7.2" id="netfx-4.7.2-mono">
       <command name="run">
-        <runner command="run" interface="https://apps.0install.net/dotnet/mono.xml">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run">
           <version not-before="5.12"/>
         </runner>
       </command>
       <command name="run-gui">
-        <runner command="run-gui" interface="https://apps.0install.net/dotnet/mono.xml">
+        <runner interface="https://apps.0install.net/dotnet/mono.xml" command="run-gui">
           <version not-before="5.12"/>
         </runner>
       </command>
@@ -196,11 +196,11 @@
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7YsWwACgkQWao5J8JOTh4Mqgf+ONC4
-yZXI4vfBUlSdHAor90cB/SH39tffMFlhPgfVeplGk0+lxDTuvOF9uLhCeQxFZt0x46e40yK4m4lz
-72w7rMqv3ceK9DCuLEWilJYInvMl8ENcF7deBv8LdvElXBarBpa1+d1Y/PfcjV4KZLavkLw+pig7
-7+0/2bvRRI6ecMLzMMZe4Tgboa/m2XG84qx+qNrhFHrAJxSmBcyvoYRxn0TvMtcM7WSOQIt53suI
-nUW8q0Z3MuC34h2qkDP87xjuxce/VIbuHWdai6BbUO8rtqXqQwiY46YwanTzufLXprCbEq1kuiAW
-Wjs/irZoea9NGA5P+tzYB6ZwBHYwrbaXHg==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmMAqpgACgkQWao5J8JOTh6XbAf+KLOr
+WQzbTNH9EChRESuaIc0duSGCLjUTEHmxREQrWT7uBvekotMqGnUvKHvCj3dKFeCezs+nPkmSsKbO
+KjIzTAjoHAS7cyUGc423EFZnI1gCbESSuazBSdOk2a9hQSdtH1y2RhA5fKp5+sYAtQ6D0eeSgNxq
+Hf5BOn52r4wnqPIU/LCwPh0TX9WBK2nKFn7CR+lkDhJH3xQf4XzV7XL4z8RZeZQiVwgMoTqTAMiL
+Fvta/4Pg2pNX73C2l1uoHvM/IS83mvIVEeOFBt4X2E9e+L6A+5uWkZl2N7dDNBE8uvQp1M+ICehy
+aCgqk83J3B2xRdcIfzYT2MyKpPYXru/GSg==
 
 -->

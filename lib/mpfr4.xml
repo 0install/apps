@@ -1,39 +1,39 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/lib/mpfr4.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:dc="http://purl.org/dc/elements/1.1/" uri="https://apps.0install.net/lib/mpfr4.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>mpfr</name>
   <summary xml:lang="en">Multiple-precision floating-point library (mingw-w64)</summary>
   <description/>
-  <icon href="https://raw.githubusercontent.com/0install/apps/master/lib/mpfr.png" type="image/png"/>
-  <icon href="https://raw.githubusercontent.com/0install/apps/master/lib/mpfr.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://apps.0install.net/lib/mpfr.png" type="image/png"/>
+  <icon href="https://apps.0install.net/lib/mpfr.ico" type="image/vnd.microsoft.icon"/>
   <home>https://www.mpfr.org/index.html</home>
   <package-implementation package="mpfr" version="4.0.0.."/>
-  <package-implementation distributions="Gentoo" package="dev-libs/mpfr" version="4.0.0.."/>
-  <package-implementation distributions="Debian" package="mpfr4"/>
-  <package-implementation distributions="Ports" package="math/mpfr" version="4.0.0.."/>
+  <package-implementation package="dev-libs/mpfr" distributions="Gentoo" version="4.0.0.."/>
+  <package-implementation package="mpfr4" distributions="Debian"/>
+  <package-implementation package="math/mpfr" distributions="Ports" version="4.0.0.."/>
   <group license="LGPL">
     <requires interface="https://apps.0install.net/lib/gmp.xml">
-      <environment insert="lib" name="LD_LIBRARY_PATH"/>
-      <environment insert="bin" name="PATH"/>
+      <environment name="LD_LIBRARY_PATH" insert="lib"/>
+      <environment name="PATH" insert="bin"/>
     </requires>
-    <group released="2017-12-26" version="4.0.0-1">
+    <group version="4.0.0-1" released="2017-12-26">
       <implementation arch="Windows-x86_64" id="sha1new=a22aa54fc629355ad18877b84175ceafec2f21cf">
         <manifest-digest/>
-        <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-mpfr-4.0.0-1-any.pkg.tar.xz" size="343488"/>
+        <archive href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-mpfr-4.0.0-1-any.pkg.tar.xz" size="343488" extract="mingw64"/>
       </implementation>
       <implementation arch="Windows-i686" id="sha1new=3513bac584df646fec8b3a03bdd47ba6d9a9b2db">
         <manifest-digest/>
-        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-mpfr-4.0.0-1-any.pkg.tar.xz" size="327748"/>
+        <archive href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-mpfr-4.0.0-1-any.pkg.tar.xz" size="327748" extract="mingw32"/>
       </implementation>
     </group>
-    <group released="2018-07-07" version="4.0.1-2">
+    <group version="4.0.1-2" released="2018-07-07">
       <implementation arch="Windows-i686" id="sha1new=5710d6e5cea0627d66c0d08d42640276247077b3">
         <manifest-digest/>
-        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-mpfr-4.0.1-2-any.pkg.tar.xz" size="331036"/>
+        <archive href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-mpfr-4.0.1-2-any.pkg.tar.xz" size="331036" extract="mingw32"/>
       </implementation>
       <implementation arch="Windows-x86_64" id="sha1new=a85780d6e56cfb3acae7090761326f8637b84001">
         <manifest-digest/>
-        <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-mpfr-4.0.1-2-any.pkg.tar.xz" size="346392"/>
+        <archive href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-mpfr-4.0.1-2-any.pkg.tar.xz" size="346392" extract="mingw64"/>
       </implementation>
     </group>
     <group version="4.0.2-2">
@@ -52,11 +52,11 @@
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7KZXQACgkQWao5J8JOTh5flgf+KgP2
-2jdAl6IsnRnQL/p+8l4q4tmOZgR3IVJqjYSHIMaxtFRqH8cQ7ilrL0A5Q9aCOK14LFzt1iKkydal
-zl5gRZzOT+kQacDYtbBitHJOnPyPsm1qkO8WSVYOW7xvlHHKHPX6tk4XCIV4RMK6wcbgsQJgY1CR
-DiyBagIC37yzy+CebboPLAXkK8vLiQQDD7vorp1jDBkyh9FM7C5cThwoJeY9sWkKrSt0b5HuTv0N
-9fItePRR2ilNuf05wvgGsA4pcbP21aFLmKtQgqTzdKoKBznNaxGiLdbtaaKiv62mMM+vM4QJc73E
-kbfkTb8JrfNZTuYtwrzrXaNIxVRJutOAPQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmMAqpcACgkQWao5J8JOTh4ldQf+JC57
+6XJCqwd8/hHpI/Vj3LtbAiYyNqLuelRpc/3OkFKaKWIWrhi/QIBbPlWRzqR9qp8Qm6Hyg8mfusH2
+nVdNyJVTIUc0Bem/UqTahAwtyTqsy2w2I4jpI8yNue+SKK8CBEKoBKdN8yYWE9bFXJjCYYNCHPfD
+EyeElJWegjtmXK+RPW4jRr42BT+M8YNRI1Gtgw0S9hjJo7xBjLNAs26r6RFZrWhs8i8hYH/5ygJY
+SSSVhZVwcQA4+34/E9q4Jbn9mcZRUQHPSn9Xg5ImP3gpr2Cr8GAelaYG8oOR3DfvX2zFexHxBolP
+cVpA6XnDz0RneNxheBK7KVtwY6CnREuD6A==
 
 -->

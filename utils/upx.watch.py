@@ -1,8 +1,11 @@
+#os=Linux
 import sys, os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import github
 
+excluded_versions = ['v3.00', 'v3.99']
+
 releases = [{
     'version': release['tag_name'].strip('v'),
     'released': release['published_at'][0:10]
-} for release in github.releases('upx/upx') if len(release['assets']) != 0 and not  release['tag_name'] == 'v3.00']
+} for release in github.releases('upx/upx') if len(release['assets']) != 0 and not release['tag_name'] in excluded_versions]

@@ -79,7 +79,7 @@ jobs:
           path: incoming
       - name: Check if there are new feeds
         id: new-feeds
-        run: if ls incoming/*.xml; then echo "::set-output name=found::true"; fi
+        run: if ls incoming/*.xml; then echo "found=true" >> $GITHUB_OUTPUT; fi
       - name: Run 0repo
         if: steps.new-feeds.outputs.found
         run: |

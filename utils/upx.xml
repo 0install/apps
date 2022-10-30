@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="https://apps.0install.net/utils/upx.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uri="https://apps.0install.net/utils/upx.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>UPX</name>
   <summary xml:lang="en">UPX executable packer</summary>
   <description xml:lang="en">the Ultimate Packer for eXecutables</description>
@@ -24,6 +24,34 @@
       <implementation arch="Linux-x86_64" id="sha1new=413da6454354f736d41b8c98c98fbde4d1d89977">
         <manifest-digest sha256new="IJTMWCSMZID5SDPX3CC5G4V4DH62BDD4AZSMJC3ZHOTLAFUP7QSQ"/>
         <archive extract="upx-3.92-amd64_linux" href="https://github.com/upx/upx/releases/download/v3.92/upx-3.92-amd64_linux.tar.xz" size="389376" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" released="2022-10-28" id="sha1new=fdc58bba8727a9c194a10ae45591da4205d2b04f" version="4.0.0">
+        <manifest-digest sha256new="7BGROEHJNK2UQKZI4RMUUP2VXYXCO6ZBO4DSHG4RLEAQU7XOQ5BQ"/>
+        <archive extract="upx-4.0.0-win64" href="https://github.com/upx/upx/releases/download/v4.0.0/upx-4.0.0-win64.zip" type="application/zip" size="534352"/>
+      </implementation>
+      <implementation arch="Windows-i486" released="2022-10-28" id="sha1new=cb15b20e0ff38b8baa4b4aa3d43fca9c1c598291" version="4.0.0">
+        <manifest-digest sha256new="NERAYKC33IT4ABH6ZGGUB5IQZXFWSWPATG7YFX3HORRGCXBI6DKA"/>
+        <archive extract="upx-4.0.0-win32" href="https://github.com/upx/upx/releases/download/v4.0.0/upx-4.0.0-win32.zip" type="application/zip" size="531491"/>
+      </implementation>
+      <implementation arch="Linux-ppc64" released="2022-10-28" id="sha1new=930e3c7845db33c06308c8f6cca32e871bfbc3bf" version="4.0.0">
+        <manifest-digest sha256new="QKO66WL7PYIL4Y3IFZ43PSMSWR6MSFDGHSL4EPLOPTURYY5OCG2Q"/>
+        <archive extract="upx-4.0.0-powerpc64le_linux" href="https://github.com/upx/upx/releases/download/v4.0.0/upx-4.0.0-powerpc64le_linux.tar.xz" type="application/x-xz-compressed-tar" size="560504"/>
+      </implementation>
+      <implementation arch="Linux-ppc" released="2022-10-28" id="sha1new=dd8f793953932dc92b54d1ad6b7d444bffd99638" version="4.0.0">
+        <manifest-digest sha256new="SGAFM7I7PEQTGIC4IYJT5TRQVKEO66WNAK2MEGO2VOQQNSDBI52Q"/>
+        <archive extract="upx-4.0.0-powerpc_linux" href="https://github.com/upx/upx/releases/download/v4.0.0/upx-4.0.0-powerpc_linux.tar.xz" type="application/x-xz-compressed-tar" size="552572"/>
+      </implementation>
+      <implementation arch="Linux-i386" released="2022-10-28" id="sha1new=fcfc5083757e44f20d744248d0d7700ad18bbd4c" version="4.0.0">
+        <manifest-digest sha256new="6WAD3KR4QF5R5FHPLN64GLE6HZUJJNUI2ZBWYYTFBZDGM57I3LGA"/>
+        <archive extract="upx-4.0.0-i386_linux" href="https://github.com/upx/upx/releases/download/v4.0.0/upx-4.0.0-i386_linux.tar.xz" type="application/x-xz-compressed-tar" size="540496"/>
+      </implementation>
+      <implementation arch="Linux-arm6vl" released="2022-10-28" id="sha1new=de8bbe11dd3767b53aa14dc386a846f2ee980878" version="4.0.0">
+        <manifest-digest sha256new="GNVQN7YACRQBPDXXJOLOXUWXWNY5FB4CKXJMFEC2IVT6RMQP6OSQ"/>
+        <archive extract="upx-4.0.0-arm_linux" href="https://github.com/upx/upx/releases/download/v4.0.0/upx-4.0.0-arm_linux.tar.xz" type="application/x-xz-compressed-tar" size="481396"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" released="2022-10-28" id="sha1new=58943285f5fdf99187a8ac99ce00134c05ca4fb7" version="4.0.0">
+        <manifest-digest sha256new="IVE7Y3JE6GWY4PAEYQWRHTM2QOYVATZ757GWGMRSOCLZIIHHBLOA"/>
+        <archive extract="upx-4.0.0-amd64_linux" href="https://github.com/upx/upx/releases/download/v4.0.0/upx-4.0.0-amd64_linux.tar.xz" type="application/x-xz-compressed-tar" size="509584"/>
       </implementation>
     </group>
     <group released="2017-01-29" version="3.93">

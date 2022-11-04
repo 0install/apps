@@ -4319,6 +4319,18 @@
         <manifest-digest sha256new="5O6QM5K7QNLCD6C4XOJ7DAMWMBY63KTXNVSPXJJOF43MUAWO7WDQ"/>
         <archive href="https://dl.k8s.io/v1.25.3/kubernetes-client-darwin-amd64.tar.gz" size="28191703" type="application/x-compressed-tar" extract="kubernetes"/>
       </implementation>
+      <implementation arch="Linux-x86_64" version="1.26.0-pre1-3" released="2022-11-01" stability="testing" id="sha256new_F4XADP3L5DRVRADHFYTF52AYIUYQBFAQNRGSRA23S2LJ5SP5IM4A">
+        <manifest-digest sha256new="F4XADP3L5DRVRADHFYTF52AYIUYQBFAQNRGSRA23S2LJ5SP5IM4A"/>
+        <archive href="https://dl.k8s.io/v1.26.0-alpha.3/kubernetes-client-linux-amd64.tar.gz" size="32235464" type="application/x-compressed-tar" extract="kubernetes"/>
+      </implementation>
+      <implementation arch="Linux-i486" version="1.26.0-pre1-3" released="2022-11-01" stability="testing" id="sha256new_J3R3JDIVBSCROQWUWA2CWDK6AV77E2ISMCKGKKHEHQGXFMUAI45A">
+        <manifest-digest sha256new="J3R3JDIVBSCROQWUWA2CWDK6AV77E2ISMCKGKKHEHQGXFMUAI45A"/>
+        <archive href="https://dl.k8s.io/v1.26.0-alpha.3/kubernetes-client-linux-386.tar.gz" size="26382692" type="application/x-compressed-tar" extract="kubernetes"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" version="1.26.0-pre1-3" released="2022-11-01" stability="testing" id="sha256new_NVAO7IALZ6M3WGBMHNPVPBXWKGD3GDXOUK72GJDCBKJG56MCHVMA">
+        <manifest-digest sha256new="NVAO7IALZ6M3WGBMHNPVPBXWKGD3GDXOUK72GJDCBKJG56MCHVMA"/>
+        <archive href="https://dl.k8s.io/v1.26.0-alpha.3/kubernetes-client-darwin-amd64.tar.gz" size="29344250" type="application/x-compressed-tar" extract="kubernetes"/>
+      </implementation>
     </group>
     <group>
       <command name="run" path="client/bin/kubectl.exe"/>
@@ -7194,17 +7206,25 @@
         <manifest-digest sha256new="AWK5XH5G5BEAIVAAJ62RTCM2QEPWTYWTWDY6TTPBGICYVZ7ZFYPQ"/>
         <archive href="https://dl.k8s.io/v1.25.3/kubernetes-client-windows-386.tar.gz" size="26579130" type="application/x-compressed-tar" extract="kubernetes"/>
       </implementation>
+      <implementation arch="Windows-x86_64" version="1.26.0-pre1-3" released="2022-11-01" stability="testing" id="sha256new_CSJZ4OLWKMB3JX6CBETHGGFZIZ257PTBY5SQGL3GVVQ6XOFABFLA">
+        <manifest-digest sha256new="CSJZ4OLWKMB3JX6CBETHGGFZIZ257PTBY5SQGL3GVVQ6XOFABFLA"/>
+        <archive href="https://dl.k8s.io/v1.26.0-alpha.3/kubernetes-client-windows-amd64.tar.gz" size="28220347" type="application/x-compressed-tar" extract="kubernetes"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="1.26.0-pre1-3" released="2022-11-01" stability="testing" id="sha256new_BTCNHFQ6EUM2NIS5527VPY4HHH55FNEHXV5F3ZW2PSXTLGNGMK3A">
+        <manifest-digest sha256new="BTCNHFQ6EUM2NIS5527VPY4HHH55FNEHXV5F3ZW2PSXTLGNGMK3A"/>
+        <archive href="https://dl.k8s.io/v1.26.0-alpha.3/kubernetes-client-windows-386.tar.gz" size="27645285" type="application/x-compressed-tar" extract="kubernetes"/>
+      </implementation>
     </group>
   </group>
 
   <entry-point binary-name="kubectl" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmNJDjQACgkQWao5J8JOTh7xfAf+Ka55
-ga3Jv3zHvZUgz2WCOM9U9OsoIiQj2wQv80YT73wAnVtVh4azdo94dmKoDUA8AsaAVGKVKkMfY6NO
-6zItA0b+Ylffqaf9PiZXfwRmL1PMBj4XPb3E3EsyBOoKb/JfSQA1KlvKnRyWr+09oSBXafS9YItr
-v+AcLF9RuTbiVfigcMfdg8dh4Z6LfxfF9HzCgUJ7mAflMxRYUZcPHu6TgKSKLFJEGP8CGK5HqJ3B
-nrZN/4O3wZs7D23i87QVARJzmxIm5AGscDZQ6taF5nvmopQFM8I6rRclKxOY2uQ8piKsLeEtmujP
-7TBneLvFWTTMyqyIDq7zwN9POxdF1XAT7w==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmNktrMACgkQWao5J8JOTh4i5Af/UZjV
+VWxMSRgsyyJUlrFLOTr6OygAG5szlU0T8nMZn/AbzjijylGFjPajQQ4CLZGi28+D81AQvSLWPv+L
+SQmCMaP5SFedIgMb7zfgiUZ9UdkH3HYYW6Bu4lAbaf4jvTEzslBFp+Ms+QwICvQqFCI0oWx1slPJ
+lTwOiJntQ8MVC9j4pSlPdKisXy1h4LPoo/11uBTg5wmByXNRmXKmPpz469F+aEz5PcrBsy24kDnx
+Emdx+SJp2wZlOUFlAY5Sg86hT0H5DiCarCJYgIZrGLJ7RsG49umFipEvQU7NcgfEWaPSoPFlF5hD
+a8HiRGXxLqhSJiWzHy+lLsqOU/YNtlKnOQ==
 
 -->

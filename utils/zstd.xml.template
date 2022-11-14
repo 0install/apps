@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Zstandard</name>
+  <summary>fast real-time compression algorithm</summary>
+  <description>Zstandard is a fast compression algorithm, providing high compression ratios. It also offers a special mode for small data, called dictionary compression.</description>
+  <category>Utility</category>
+  <homepage>https://facebook.github.io/zstd/</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/utils/zstd.xml"/>
+
+  <group license="GPL v2 (GNU General Public License)">
+    <command name="run" path="zstd.exe"/>
+    <command name="multi-threaded" path="zstd.exe">
+      <arg>-T0</arg>
+    </command>
+    <command name="decompress" path="zstd.exe">
+      <arg>-d</arg>
+    </command>
+    <command name="cat" path="zstd.exe">
+      <arg>-dcf</arg>
+    </command>
+
+    <implementation arch="Windows-x86_64" released="{released}" version="{version}">
+      <archive extract="zstd-v{version}-win64" href="https://github.com/facebook/zstd/releases/download/v{version}/zstd-v{version}-win64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" released="{released}" version="{version}">
+      <archive extract="zstd-v{version}-win32" href="https://github.com/facebook/zstd/releases/download/v{version}/zstd-v{version}-win32.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

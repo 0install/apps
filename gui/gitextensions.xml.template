@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
-  <name>GitExtensions 2.x</name>
+  <name>GitExtensions 3.x</name>
   <summary xml:lang="en">GitExtensions is a graphical interface for Git</summary>
   <summary xml:lang="de">GitExtensions ist eine grafische Oberfläche für Git</summary>
   <homepage>https://github.com/gitextensions/gitextensions</homepage>
@@ -8,7 +8,7 @@
   <icon href="https://apps.0install.net/gui/gitextensions/gitextensions.png" type="image/png"/>
   <category>Development</category>
 
-  <feed-for interface="https://apps.0install.net/gui/gitextensions-2.xml"/>
+  <feed-for interface="https://apps.0install.net/gui/gitextensions.xml"/>
 
   <group license="GPL v3 (GNU General Public License)">
     <requires interface="https://apps.0install.net/devel/git.xml">
@@ -21,20 +21,16 @@
       <environment insert="puttygen.exe" mode="replace" name="GITEXT_PUTTYGEN"/>
       <environment insert="pageant.exe" mode="replace" name="GITEXT_PAGEANT"/>
     </requires>
-    <command name="run" path="GitExtensions.exe">
-      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml"/>
-    </command>
-    <command name="gitex" path="GitExtensions.exe">
-      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml"/>
-    </command>
 
-    <implementation arch="POSIX-*" version="{version}" released="{released}" stability="{stability}">
-      <manifest-digest/>
-      <archive href="https://github.com/gitextensions/gitextensions/releases/download/v{original-version}/GitExtensions-{original-version}-Mono.zip" type="application/zip" extract="GitExtensions"/>
-    </implementation>
-    <implementation arch="Windows-*" version="{version}" released="{released}" stability="{stability}">
-      <manifest-digest/>
-      <archive href="https://github.com/gitextensions/gitextensions/releases/download/v{original-version}/GitExtensions-{original-version}.msi" type="application/x-msi" extract="SourceDir/GitExtensions"/>
-    </implementation>
+    <group arch="Windows-*">
+      <requires interface="https://apps.0install.net/dotnet/windowsdesktop-runtime.xml" version="6.0..!7.0"/>
+      <command name="run" path="GitExtensions.exe"/>
+      <command name="gitex" path="GitExtensions.exe"/>
+
+      <implementation version="{version}" released="{released}" stability="{stability}">
+        <manifest-digest/>
+        <archive extract="SourceDir/GitExtensions" href="{download-url}" type="application/x-msi"/>
+      </implementation>
+    </group>
   </group>
 </interface>

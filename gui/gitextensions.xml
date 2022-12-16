@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="https://apps.0install.net/gui/gitextensions.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/gui/gitextensions.xml">
   <name>GitExtensions</name>
   <summary xml:lang="en">GitExtensions is a graphical interface for Git</summary>
   <summary xml:lang="de">GitExtensions ist eine grafische Oberfläche für Git</summary>
@@ -313,6 +313,10 @@
         <manifest-digest sha256new="3HWKI42SNKWYGH7NSG53AMK3W66TQ6VVV734MUW4NKOPODX4M4XQ"/>
         <archive href="https://github.com/gitextensions/gitextensions/releases/download/v4/GitExtensions-4.0.0-cba315df5.msi" size="21028864" type="application/x-msi" extract="SourceDir/GitExtensions"/>
       </implementation>
+      <implementation version="4.0.1" released="2022-12-15" stability="stable" id="sha256new_YXTXMPUZHJYWKUSPV7XFL4U3WHUH4LBIWMOCS4QPGJZ223VNZRYQ">
+        <manifest-digest sha256new="YXTXMPUZHJYWKUSPV7XFL4U3WHUH4LBIWMOCS4QPGJZ223VNZRYQ"/>
+        <archive href="https://github.com/gitextensions/gitextensions/releases/download/v4.0.1/GitExtensions-4.0.1.15887-f2567dea2.msi" size="21696512" type="application/x-msi" extract="SourceDir/GitExtensions"/>
+      </implementation>
     </group>
   </group>
 
@@ -339,13 +343,13 @@
       <verb args="%1" name="open"/>
     </url-protocol>
     <context-menu id="gitex-browse" target="directories">
-      <icon href="https://apps.0install.net/gui/gitextensions/browse.ico" type="image/vnd.microsoft.icon" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" />
+      <icon xmlns="http://zero-install.sourceforge.net/2004/injector/interface" href="https://apps.0install.net/gui/gitextensions/browse.ico" type="image/vnd.microsoft.icon"/>
       <verb args="browse &quot;%V&quot;" name="gitex_browse">
         <description>GitExtensions Browse</description>
       </verb>
     </context-menu>
     <context-menu id="gitex-clone" target="directories">
-      <icon href="https://apps.0install.net/gui/gitextensions/clone.ico" type="image/vnd.microsoft.icon" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" />
+      <icon xmlns="http://zero-install.sourceforge.net/2004/injector/interface" href="https://apps.0install.net/gui/gitextensions/clone.ico" type="image/vnd.microsoft.icon"/>
       <verb args="clone &quot;%V&quot;" name="gitex_clone">
         <description>GitExtensions Clone</description>
       </verb>

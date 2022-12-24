@@ -11,7 +11,7 @@
   <feed-for interface="https://apps.0install.net/devel/gitversion.xml"/>
 
   <group license="MIT License">
-    <command name="run" path="GitVersion.exe"/>
+    <command name="run" path="gitversion.exe"/>
 
     <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="{stability}">
       <manifest-digest/>
@@ -21,23 +21,34 @@
       <manifest-digest/>
       <archive href="https://github.com/GitTools/GitVersion/releases/download/{original-version}/gitversion-win-x86-{original-version}.zip" type="application/zip"/>
     </implementation>
-  </group>
-
-  <group arch="Linux-x86_64" license="MIT License">
-    <command name="run" path="GitVersion"/>
-    <requires interface="https://apps.0install.net/lib/icu.xml"/>
-    <requires interface="https://apps.0install.net/lib/curl.xml"/>
-
-    <implementation version="{version}" released="{released}" stability="{stability}">
+    <implementation arch="Windows-aarch64" version="{version}" released="{released}" stability="{stability}">
       <manifest-digest/>
-      <archive href="https://github.com/GitTools/GitVersion/releases/download/{original-version}/gitversion-linux-x64-{original-version}.tar.gz" type="application/x-compressed-tar"/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/{original-version}/gitversion-win-arm64-{original-version}.zip" type="application/zip"/>
     </implementation>
   </group>
 
-  <group arch="Darwin-x86_64" license="MIT License">
-    <command name="run" path="GitVersion"/>
+  <group license="MIT License">
+    <command name="run" path="gitversion"/>
+    <requires interface="https://apps.0install.net/lib/curl.xml"/>
 
-    <implementation version="{version}" released="{released}" stability="{stability}">
+    <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="{stability}">
+      <manifest-digest/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/{original-version}/gitversion-linux-x64-{original-version}.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" released="{released}" stability="{stability}">
+      <manifest-digest/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/{original-version}/gitversion-linux-arm64-{original-version}.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="MIT License">
+    <command name="run" path="gitversion"/>
+
+    <implementation arch="Darwin-x86_64" version="{version}" released="{released}" stability="{stability}">
+      <manifest-digest/>
+      <archive href="https://github.com/GitTools/GitVersion/releases/download/{original-version}/gitversion-osx-x64-{original-version}.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="{version}" released="{released}" stability="{stability}">
       <manifest-digest/>
       <archive href="https://github.com/GitTools/GitVersion/releases/download/{original-version}/gitversion-osx-x64-{original-version}.tar.gz" type="application/x-compressed-tar"/>
     </implementation>

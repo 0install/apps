@@ -4,7 +4,10 @@ import github
 
 def convert(release):
     original_version = release['tag_name'].strip('v')
-    if 'beta.' in original_version:
+    if 'alpha.' in original_version:
+        version = original_version.replace('alpha.', 'pre-pre')
+        stability = 'developer'
+    elif 'beta.' in original_version:
         version = original_version.replace('beta.', 'pre')
         stability = 'testing'
     else:

@@ -76,6 +76,18 @@
       <manifest-digest sha256new="RXZ344ET7OGP5BOGWZQEK3PRMVKHNTWIEXJZV4NE3ONSU54CUFPA"/>
       <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v4.7.2/naps2-4.7.2-setup.msi" size="1556480" type="application/x-msi"/>
     </implementation>
+    <implementation version="5.0-pre1" released="2016-03-16" stability="testing" id="sha256new_75KBXSC23D5R26CI7NHG423UPI2L2RZKKE3I3CUXHBUMA54GV6VA">
+      <manifest-digest sha256new="75KBXSC23D5R26CI7NHG423UPI2L2RZKKE3I3CUXHBUMA54GV6VA"/>
+      <archive href="https://github.com/cyanfish/naps2/releases/download/v5.0b1/naps2-5.0b1-setup.msi" size="1662976" type="application/x-msi" extract="SourceDir/NAPS2"/>
+    </implementation>
+    <implementation version="5.0-pre2" released="2016-03-19" stability="testing" id="sha256new_CPXW2EWNNW6UHM5HBM3J52P4D33FOTRCPICO7SPNBVJE4FXJSEZA">
+      <manifest-digest sha256new="CPXW2EWNNW6UHM5HBM3J52P4D33FOTRCPICO7SPNBVJE4FXJSEZA"/>
+      <archive href="https://github.com/cyanfish/naps2/releases/download/v5.0b2/naps2-5.0b2-setup.msi" size="1662976" type="application/x-msi" extract="SourceDir/NAPS2"/>
+    </implementation>
+    <implementation version="5.0-pre3" released="2016-03-23" stability="testing" id="sha256new_DUPII7XSWVMMTJUF3EVXS6VEMKT2VCNE3YZ4NJBKMD2XWAJXIAUQ">
+      <manifest-digest sha256new="DUPII7XSWVMMTJUF3EVXS6VEMKT2VCNE3YZ4NJBKMD2XWAJXIAUQ"/>
+      <archive href="https://github.com/cyanfish/naps2/releases/download/v5.0b3/naps2-5.0b3-setup.msi" size="1671168" type="application/x-msi" extract="SourceDir/NAPS2"/>
+    </implementation>
     <implementation id="sha1new=cd4d71dca5650298c4ab1f9b7eb0268ac01cf04f" released="2016-03-27" stability="stable" version="5.1.0">
       <manifest-digest sha256new="32ZXGMLEBWZCLPZJBMSO2DVP2XS7XDCQ7PXQOQYPEVN3VUHLFZ4Q"/>
       <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v5.1.0/naps2-5.1.0-setup.msi" size="1679360" type="application/x-msi"/>
@@ -176,26 +188,40 @@
       <manifest-digest sha256new="CR2AI2VCFYZVZS7ZH2LIOAAJLHP62FRJD33UKHP4Z7YEBVAUWW2Q"/>
       <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v6.1.2/naps2-6.1.2-setup.msi" size="2650112" type="application/x-msi"/>
     </implementation>
-    <implementation version="5.0-pre1" released="2016-03-16" stability="testing" id="sha256new_75KBXSC23D5R26CI7NHG423UPI2L2RZKKE3I3CUXHBUMA54GV6VA">
-      <manifest-digest sha256new="75KBXSC23D5R26CI7NHG423UPI2L2RZKKE3I3CUXHBUMA54GV6VA"/>
-      <archive href="https://github.com/cyanfish/naps2/releases/download/v5.0b1/naps2-5.0b1-setup.msi" size="1662976" type="application/x-msi" extract="SourceDir/NAPS2"/>
+  </group>
+
+  <group license="GPL v2 (GNU General Public License)">
+    <command name="run" path="NAPS2.exe">
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.6.2.."/>
+    </command>
+    <command name="NAPS2.Console" path="NAPS2.Console.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.6.2.."/>
+    </command>
+
+    <implementation arch="Windows-x86_64" version="7.0-pre1" released="2023-01-02" stability="testing" id="sha256new_6SHHJITALNPWBAUYEYP7XNECJJREQ3QGYVP52VU47T3RDBDPZVUQ">
+      <manifest-digest sha256new="6SHHJITALNPWBAUYEYP7XNECJJREQ3QGYVP52VU47T3RDBDPZVUQ"/>
+      <archive href="https://github.com/cyanfish/naps2/releases/download/v7.0b1/naps2-7.0b1-win-x64.msi" size="11576733" type="application/x-msi" extract="SourceDir/NAPS2"/>
     </implementation>
-    <implementation version="5.0-pre2" released="2016-03-19" stability="testing" id="sha256new_CPXW2EWNNW6UHM5HBM3J52P4D33FOTRCPICO7SPNBVJE4FXJSEZA">
-      <manifest-digest sha256new="CPXW2EWNNW6UHM5HBM3J52P4D33FOTRCPICO7SPNBVJE4FXJSEZA"/>
-      <archive href="https://github.com/cyanfish/naps2/releases/download/v5.0b2/naps2-5.0b2-setup.msi" size="1662976" type="application/x-msi" extract="SourceDir/NAPS2"/>
+    <implementation arch="Windows-i486" version="7.0-pre1" released="2023-01-02" stability="testing" id="sha256new_467HIIFMXK4H4G5FV363YCLWCHJ75IFDSPYUJU3SFTGCSWIAQDTQ">
+      <manifest-digest sha256new="467HIIFMXK4H4G5FV363YCLWCHJ75IFDSPYUJU3SFTGCSWIAQDTQ"/>
+      <archive href="https://github.com/cyanfish/naps2/releases/download/v7.0b1/naps2-7.0b1-win-x86.msi" size="11355547" type="application/x-msi" extract="SourceDir/NAPS2"/>
     </implementation>
-    <implementation version="5.0-pre3" released="2016-03-23" stability="testing" id="sha256new_DUPII7XSWVMMTJUF3EVXS6VEMKT2VCNE3YZ4NJBKMD2XWAJXIAUQ">
-      <manifest-digest sha256new="DUPII7XSWVMMTJUF3EVXS6VEMKT2VCNE3YZ4NJBKMD2XWAJXIAUQ"/>
-      <archive href="https://github.com/cyanfish/naps2/releases/download/v5.0b3/naps2-5.0b3-setup.msi" size="1671168" type="application/x-msi" extract="SourceDir/NAPS2"/>
+    <implementation arch="Windows-x86_64" version="7.0-pre2" released="2023-01-03" stability="testing" id="sha256new_7JSZN4QRN5GGAI3TZH6NTGA2TQRUA5AIACR4BWKS3ZA3O5I63N7Q">
+      <manifest-digest sha256new="7JSZN4QRN5GGAI3TZH6NTGA2TQRUA5AIACR4BWKS3ZA3O5I63N7Q"/>
+      <archive href="https://github.com/cyanfish/naps2/releases/download/v7.0b2/naps2-7.0b2-win-x64.msi" size="11576733" type="application/x-msi" extract="SourceDir/NAPS2"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="7.0-pre2" released="2023-01-03" stability="testing" id="sha256new_3MQ6CGKL5LVGDDMV73UWF3ORGCYXI6DOKVFKSCQFX3OWHLVXD6EA">
+      <manifest-digest sha256new="3MQ6CGKL5LVGDDMV73UWF3ORGCYXI6DOKVFKSCQFX3OWHLVXD6EA"/>
+      <archive href="https://github.com/cyanfish/naps2/releases/download/v7.0b2/naps2-7.0b2-win-x86.msi" size="11359643" type="application/x-msi" extract="SourceDir/NAPS2"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmMAqpYACgkQWao5J8JOTh5d5Qf/SsJ+
-6YL4o0M3gfLcXyvumvXbEYlaZP4ZHJHyZLofeUFIXFqfWR0YzFbJAchEZy63V6OCNfKhXy39TppG
-+e/4nrjGC3rNtDi6lpuy2fJDAqYBu3BcVslslJA0IROWkYCFdl73MieTp4eya9YEKOrOp+hBMTYU
-mCA7w+MQ3vos/0NhzelWqqlVNg4Nnu3q6e22YAy0OBwHmyeRfGTTDZ1F7IeY4Xi+XqY0LF+U93Fr
-CWUlGeihbkaQFoK2LMgUQrlYtQb2/77Z3IeKw0eS+YGXeuMYajgf2B/AZIiEvU7FXisjF/w7PQWL
-yUbIi4ZdWOWx3SSex1JUDtzG+k06oq81mQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmO2s30ACgkQWao5J8JOTh6DYgf/RxmG
+WFB9GHWy94Y5cmvYHZ8sri5l8eKbXMPz24WMH4lOYl/izgT4N1EaYK3Hr02djoefo/y9FkV4lEce
+R+e2As/9K6tKRTf9/DGIfimEap+yWKUN/1gWNHJ/80h+poGJq5eWPO4HlmlSEX5coSn0WDrCbSoW
+5s5HZ9fCExUiR/wgKLZQod28RsQHHXWzm/XgT23kh23Z1GOnRAibq4P0h5ZeYpA4g7uQjKnTAN2p
+lUv0ujYp8mBHY3JARXB9tJS+dqpM7e2Uqa/qu46g6raFXMhxuBBS73tXFQl1AHIvcHEfzbKI+iM9
++frUuP4onPS35eCptoX6lDPaNu0d2K60pQ==
 
 -->

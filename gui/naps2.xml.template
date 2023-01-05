@@ -12,14 +12,17 @@
 
   <group license="GPL v2 (GNU General Public License)">
     <command name="run" path="NAPS2.exe">
-      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.0.."/>
+      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.6.2.."/>
     </command>
     <command name="NAPS2.Console" path="NAPS2.Console.exe">
-      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.0.."/>
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.6.2.."/>
     </command>
 
-    <implementation stability="{stability}" version="{version}" released="{released}">
-      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v{original-version}/naps2-{original-version}-setup.msi" type="application/x-msi"/>
+    <implementation arch="Windows-x86_64" stability="{stability}" version="{version}" released="{released}">
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v{original-version}/naps2-{original-version}-win-x64.msi" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-i486" stability="{stability}" version="{version}" released="{released}">
+      <archive extract="SourceDir/NAPS2" href="https://github.com/cyanfish/naps2/releases/download/v{original-version}/naps2-{original-version}-win-x86.msi" type="application/x-msi"/>
     </implementation>
   </group>
 </interface>

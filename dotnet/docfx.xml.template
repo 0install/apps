@@ -11,12 +11,12 @@
   <feed-for interface="https://apps.0install.net/dotnet/docfx.xml"/>
 
   <group license="MIT License">
-    <command name="run" path="docfx.exe" version="4.6.1..">
-      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml"/>
+    <command name="run" path="net6.0/any/docfx.dll">
+      <runner interface="https://apps.0install.net/dotnet/aspnetcore-runtime.xml" version="6.0.."/>
     </command>
-    <implementation version="{version}" released="{released}" stability="stable">
+    <implementation version="{version}" released="{released}" stability="testing">
       <manifest-digest/>
-      <archive href="https://github.com/dotnet/docfx/releases/download/v{version}/docfx.zip" type="application/zip"/>
+      <archive extract="tools" href="https://www.nuget.org/api/v2/package/docfx/{version}" type="application/zip"/>
     </implementation>
   </group>
 </interface>

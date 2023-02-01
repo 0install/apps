@@ -1,0 +1,38 @@
+# Merge an incoming feed into the repository
+name: Incoming
+on:
+  workflow_dispatch:
+    inputs:
+      feed_url:
+        required: true
+        description: The URL of the feed to merge in.
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone feeds
+        uses: actions/checkout@v2
+        with:
+          path: feeds
+      - name: Clone public
+        uses: actions/checkout@v2
+        with:
+          path: public
+          ref: gh-pages
+
+      - name: Download feed
+        run: |
+          mkdir incoming
+          curl -sSfL ${{github.event.inputs.feed_url}} -o incoming/feed.xml
+      - name: Run 0repo
+        run: |
+          ln -s feeds/0repo-config.py .
+          ln -s public/archives.db .
+          git config --global user.name apps.0install.net
+          git config --global user.email webmaster@0install.net
+          NO_SIGN=1 ./feeds/0install.sh run https://apps.0install.net/0install/0repo.xml
+      - name: Push feeds
+        run: |
+          cd feeds
+          git push

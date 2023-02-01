@@ -45,13 +45,17 @@
     </implementation>
   </group>
 
-  <group arch="MacOSX-x86_64" license="MIT License">
+  <group license="MIT License">
     <command name="run" path="dotnet"/>
     <environment mode="replace" name="DOTNET_ROOT" insert="."/>
 
-    <implementation version="{version}" released="{released}" stability="stable">
+    <implementation arch="MacOSX-x86_64" version="{version}" released="{released}" stability="stable">
       <manifest-digest/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/aspnetcore/Runtime/{version}/aspnetcore-runtime-{version}-osx-x64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/aspnetcore/Runtime/{version}/aspnetcore-runtime-{version}-osx-arm64.tar.gz" type="application/x-compressed-tar"/>
     </implementation>
   </group>
 </interface>

@@ -11,11 +11,15 @@
   <group license="MIT License">
     <command name="run" path="dotnet.exe"/>
     <environment mode="replace" name="DOTNET_ROOT" insert="."/>
-    <environment mode="replace" name="DOTNET_SKIP_FIRST_TIME_EXPERIENCE" value="true"/><!-- Prevent extraction of NuGet packages into implementation dir (which is read-only) -->
+    <environment mode="replace" name="DOTNET_SKIP_FIRST_TIME_EXPERIENCE" value="true"/>
 
     <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
       <manifest-digest/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/{version}/dotnet-sdk-{version}-win-x64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/{version}/dotnet-sdk-{version}-win-arm64.zip" type="application/zip"/>
     </implementation>
   </group>
 
@@ -23,7 +27,7 @@
     <command name="run" path="dotnet.exe"/>
     <environment mode="replace" name="DOTNET_ROOT" insert="."/>
     <environment mode="replace" name="DOTNET_ROOT(x86)" insert="."/>
-    <environment mode="replace" name="DOTNET_SKIP_FIRST_TIME_EXPERIENCE" value="true"/><!-- Prevent extraction of NuGet packages into implementation dir (which is read-only) -->
+    <environment mode="replace" name="DOTNET_SKIP_FIRST_TIME_EXPERIENCE" value="true"/>
 
     <implementation version="{version}" released="{released}" stability="stable">
       <manifest-digest/>
@@ -34,7 +38,7 @@
   <group license="MIT License">
     <command name="run" path="dotnet"/>
     <environment mode="replace" name="DOTNET_ROOT" insert="."/>
-    <environment mode="replace" name="DOTNET_SKIP_FIRST_TIME_EXPERIENCE" value="true"/><!-- Prevent extraction of NuGet packages into implementation dir (which is read-only) -->
+    <environment mode="replace" name="DOTNET_SKIP_FIRST_TIME_EXPERIENCE" value="true"/>
     <requires interface="https://apps.0install.net/lib/curl.xml"/>
 
     <implementation arch="Linux-armv7l" version="{version}" released="{released}" stability="stable">
@@ -51,13 +55,18 @@
     </implementation>
   </group>
 
-  <group arch="MacOSX-x86_64" license="MIT License">
+  <group license="MIT License">
     <command name="run" path="dotnet"/>
     <environment mode="replace" name="DOTNET_ROOT" insert="."/>
+    <environment mode="replace" name="DOTNET_SKIP_FIRST_TIME_EXPERIENCE" value="true"/>
 
-    <implementation version="{version}" released="{released}" stability="stable">
+    <implementation arch="MacOSX-x86_64" version="{version}" released="{released}" stability="stable">
       <manifest-digest/>
       <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/{version}/dotnet-sdk-{version}-osx-x64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://dotnetcli.blob.core.windows.net/dotnet/Sdk/{version}/dotnet-sdk-{version}-osx-arm64.tar.gz" type="application/x-compressed-tar"/>
     </implementation>
   </group>
 </interface>

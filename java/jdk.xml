@@ -17,6 +17,7 @@
   <feed src="https://apps.0install.net/java/openjdk-16.xml"/>
   <feed src="https://apps.0install.net/java/openjdk-17.xml"/>
   <feed src="https://apps.0install.net/java/openjdk-18.xml"/>
+  <feed src="https://apps.0install.net/java/openjdk-19.xml"/>
 
   <package-implementation distributions="Darwin Windows" package="openjdk-7-jdk"/>
   <package-implementation distributions="Darwin Windows" package="openjdk-8-jdk"/>
@@ -30,6 +31,7 @@
   <package-implementation distributions="Darwin Windows" package="openjdk-16-jdk"/>
   <package-implementation distributions="Darwin Windows" package="openjdk-17-jdk"/>
   <package-implementation distributions="Darwin Windows" package="openjdk-18-jdk"/>
+  <package-implementation distributions="Darwin Windows" package="openjdk-19-jdk"/>
 
   <group>
     <!-- Some versions of JDK bundle their own copy of the JRE. For those that don't we refer back the regular JRE. -->
@@ -137,7 +139,7 @@
   </entry-point>
   <entry-point command="jfr" binary-name="jfr">
     <needs-terminal/>
-    <name>Tool for working with Flight Recorder files (.jfr)</name>
+    <summary>Tool for working with Flight Recorder files (.jfr)</summary>
   </entry-point>
   <entry-point command="jhsdb" binary-name="jhsdb">
     <needs-terminal/>
@@ -177,11 +179,11 @@
   </entry-point>
   <entry-point binary-name="kinit" command="kinit">
     <needs-terminal/>
-    <name>Obtain and cache Kerberos ticket-granting ticket</name>
+    <summary>obtain and cache Kerberos ticket-granting ticket</summary>
   </entry-point>
   <entry-point binary-name="klist" command="klist">
     <needs-terminal/>
-    <name>Kerberos display entries in credentials cache and keytab</name>
+    <summary>display Kerberos entries in credentials cache and keytab</summary>
   </entry-point>
   <entry-point binary-name="ktab" command="ktab">
     <needs-terminal/>
@@ -191,15 +193,27 @@
     <needs-terminal/>
     <name>Java Access Bridge Switch</name>
   </entry-point>
-  <entry-point binary-name="jaccessinspector" command="jaccessinspector"/>
-  <entry-point binary-name="jaccesswalker" command="jaccesswalker"/>
+  <entry-point binary-name="jaccessinspector" command="jaccessinspector">
+    <summary>accessibility evaluation tool for the Java Accessibility Utilities API</summary>
+  </entry-point>
+  <entry-point binary-name="jaccesswalker" command="jaccesswalker">
+    <summary>navigate through the component trees in a particular Java Virtual Machine and presents the hierarchy in a tree view.</summary>
+  </entry-point>
+  <entry-point binary-name="jpackage" command="jpackage">
+    <needs-terminal/>
+    <summary>tool for packaging self-contained Java applications</summary>
+  </entry-point>
+  <entry-point binary-name="jwebserver" command="jwebserver">
+    <needs-terminal/>
+    <name>Java Simple Web Server</name>
+  </entry-point>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmMAqpsACgkQWao5J8JOTh7IOQgAiS+y
-2QhEIq8V/jYwy3jBPgUIlDzLS5CH7qsmSW/AaBUQvwCNxM2wRh9eUmIdviibpaa8lHPwEZYB2pDo
-jQM761ScsNo5sFM6IvyfGx21HQz7aOqcvJglfvaRL5zWtW0x8K3Dx/M7NMZBoXiBjI3+iouiACda
-FwO/M22QVPOHzTkw1rW6CY/V2LqZo5VEflYIkvzBcj5ZrQ96j8dPlRO3K/nBJFRifB4yb1dbw7Fc
-Sn2toIYrLHPekWKBxNyAGXSbqzhXOa8GtuxTKHV5XcRriTtwamOEoGzIAhZn7W1aCB6NCainJtML
-fOprXxJ0oZ4o2rfjUYaw9hujz5/r8BeaQA==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmPjdDEACgkQWao5J8JOTh5miwf7BnNa
+8wPv75Brk3I+z2amCgYdTW7TqpiTSyARjnoIdAnCgyYe/o2GcjuUg53DizuHQWDNQ+ZYuum1VJYv
+Prkdx4Cmq7UY4Q1f2mfKzWmdtOD58thWklMzjbvGC4jMGCznrqAgJQa1jkki8k/mjPIJkx0BOG4X
+SYgFtKxGzr8xuyvzF5/Bnm78AKrRLmdCIJDmLhIG57pS+bf2EAXfMvv0SAYeVisWEdHKx/joDE9F
+onNpiscLlI8rz5AAWR3rlQ3X477oq/4e/l9BxI5prso1gabpbjemV19W1yuNfrN6caVGKT5Lc2tQ
+RM9SKkqokVQD6QBWRiuTUZXkL4k3nv1rGg==
 
 -->

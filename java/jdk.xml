@@ -17,6 +17,7 @@
   <feed src="https://apps.0install.net/java/openjdk-16.xml"/>
   <feed src="https://apps.0install.net/java/openjdk-17.xml"/>
   <feed src="https://apps.0install.net/java/openjdk-18.xml"/>
+  <feed src="https://apps.0install.net/java/openjdk-19.xml"/>
 
   <package-implementation distributions="Darwin Windows" package="openjdk-7-jdk"/>
   <package-implementation distributions="Darwin Windows" package="openjdk-8-jdk"/>
@@ -30,6 +31,7 @@
   <package-implementation distributions="Darwin Windows" package="openjdk-16-jdk"/>
   <package-implementation distributions="Darwin Windows" package="openjdk-17-jdk"/>
   <package-implementation distributions="Darwin Windows" package="openjdk-18-jdk"/>
+  <package-implementation distributions="Darwin Windows" package="openjdk-19-jdk"/>
 
   <group>
     <!-- Some versions of JDK bundle their own copy of the JRE. For those that don't we refer back the regular JRE. -->
@@ -196,5 +198,13 @@
   </entry-point>
   <entry-point binary-name="jaccesswalker" command="jaccesswalker">
     <summary>navigate through the component trees in a particular Java Virtual Machine and presents the hierarchy in a tree view.</summary>
+  </entry-point>
+  <entry-point binary-name="jpackage" command="jpackage">
+    <needs-terminal/>
+    <summary>tool for packaging self-contained Java applications</summary>
+  </entry-point>
+  <entry-point binary-name="jwebserver" command="jwebserver">
+    <needs-terminal/>
+    <name>Java Simple Web Server</name>
   </entry-point>
 </interface>

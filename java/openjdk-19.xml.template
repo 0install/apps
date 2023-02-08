@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
-  <name>OpenJDK 18.x</name>
-  <summary>OpenJDK Development Kit 18.x</summary>
+  <name>OpenJDK 19.x</name>
+  <summary>OpenJDK Development Kit 19.x</summary>
   <description>OpenJDK is a development environment for building applications, applets, and components using the Java programming language.</description>
-  <homepage>http://jdk.java.net/18/</homepage>
+  <homepage>http://jdk.java.net/19/</homepage>
   <category>Development</category>
 
-  <feed-for interface="https://apps.0install.net/java/openjdk-18.xml"/>
+  <feed-for interface="https://apps.0install.net/java/openjdk-19.xml"/>
 
   <group arch="Linux-x86_64" license="GNU General Public License, version 2, with the Classpath Exception">
     <command name="run" path="bin/javac"/>
@@ -16,13 +16,8 @@
     <command name="jarsigner" path="bin/jarsigner"/>
     <command name="javadoc" path="bin/javadoc"/>
     <command name="keytool" path="bin/keytool"/>
-    <command name="pack200" path="bin/pack200"/>
-    <command name="unpack200" path="bin/unpack200"/>
-    <command name="rmid" path="bin/rmid"/>
     <command name="rmiregistry" path="bin/rmiregistry"/>
-    <command name="jjs" path="bin/jjs"/>
     <command name="jrunscript" path="bin/jrunscript"/>
-    <command name="jaotc" path="bin/jaotc"/>
     <command name="jcmd" path="bin/jcmd"/>
     <command name="jconsole" path="bin/jconsole"/>
     <command name="jdb" path="bin/jdb"/>
@@ -40,8 +35,9 @@
     <command name="jstack" path="bin/jstack"/>
     <command name="jstat" path="bin/jstat"/>
     <command name="jstatd" path="bin/jstatd"/>
-    <command name="rmic" path="bin/rmic"/>
     <command name="serialver" path="bin/serialver"/>
+    <command name="jpackage" path="bin/jaccesswalker"/>
+    <command name="jwebserver" path="bin/jwebserver"/>
 
     <implementation version="{version}" stability="stable">
       <manifest-digest/>
@@ -58,13 +54,8 @@
     <command name="jar" path="bin/jar.exe"/>
     <command name="jarsigner" path="bin/jarsigner.exe"/>
     <command name="keytool" path="bin/keytool.exe"/>
-    <command name="pack200" path="bin/pack200.exe"/>
-    <command name="unpack200" path="bin/unpack200.exe"/>
-    <command name="rmid" path="bin/rmid.exe"/>
     <command name="rmiregistry" path="bin/rmiregistry.exe"/>
-    <command name="jjs" path="bin/jjs.exe"/>
     <command name="jrunscript" path="bin/jrunscript.exe"/>
-    <command name="jaotc" path="bin/jaotc.exe"/>
     <command name="jcmd" path="bin/jcmd.exe"/>
     <command name="jconsole" path="bin/jconsole.exe"/>
     <command name="jdb" path="bin/jdb.exe"/>
@@ -82,7 +73,6 @@
     <command name="jstack" path="bin/jstack.exe"/>
     <command name="jstat" path="bin/jstat.exe"/>
     <command name="jstatd" path="bin/jstatd.exe"/>
-    <command name="rmic" path="bin/rmic.exe"/>
     <command name="serialver" path="bin/serialver.exe"/>
     <command name="kinit" path="bin/kinit.exe"/>
     <command name="klist" path="bin/klist.exe"/>
@@ -90,6 +80,8 @@
     <command name="jabswitch" path="bin/jabswitch.exe"/>
     <command name="jaccessinspector" path="bin/jaccessinspector.exe"/>
     <command name="jaccesswalker" path="bin/jaccesswalker.exe"/>
+    <command name="jpackage" path="bin/jaccesswalker.exe"/>
+    <command name="jwebserver" path="bin/jwebserver.exe"/>
 
     <implementation version="{version}" stability="stable">
       <manifest-digest/>

@@ -8,20 +8,7 @@ jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
-      - name: Clone feeds
-        uses: actions/checkout@v2
-        with:
-          path: feeds
-      - name: Clone public
-        uses: actions/checkout@v2
-        with:
-          path: public
-          ref: gh-pages
+      - name: Set up directory structure
+        uses: 0install/apps/.github/actions/setup@master
       - name: Run 0repo
-        run: |
-          mkdir incoming
-          ln -s feeds/0repo-config.py .
-          ln -s public/archives.db .
-          git config --global user.name apps.0install.net
-          git config --global user.email webmaster@0install.net
-          NO_SIGN=1 ./feeds/0install.sh run https://apps.0install.net/0install/0repo.xml
+        uses: 0install/apps/.github/actions/0repo@master

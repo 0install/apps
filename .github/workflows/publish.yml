@@ -10,23 +10,11 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Clone feeds
-        uses: actions/checkout@v2
-        with:
-          path: feeds
-      - name: Clone public
-        uses: actions/checkout@v2
-        with:
-          path: public
-          ref: gh-pages
+      - name: Set up directory structure
+        uses: 0install/apps/.github/actions/setup@master
       - name: Run 0repo
-        run: |
-          mkdir incoming
-          ln -s feeds/0repo-config.py .
-          ln -s public/archives.db .
-          echo "${{secrets.GPG_KEY}}" | gpg --import -
-          ./feeds/0install.sh run https://apps.0install.net/0install/0repo.xml
+        uses: 0install/apps/.github/actions/0repo@master
+        with:
+          gpg_key: ${{secrets.GPG_KEY}}
       - name: Push public
-        run: |
-          cd public
-          git push
+        run: cd public; git push

@@ -1,0 +1,20 @@
+name: Run 0repo
+description: Runs 0repo
+
+inputs:
+  gpg_key:
+    required: false
+    description: ASCII-encoded GnuPG key for signing feeds
+
+runs:
+  using: composite
+  steps:
+    - name: Import GnuPG key
+      if: inputs.gpg_key
+      shell: bash
+      run: echo "${{inputs.gpg_key}}" | gpg --import -
+    - name: Run 0repo
+      shell: bash
+      run: |
+        if [ "${{inputs.gpg_key}}" == "" ]; then export NO_SIGN=1; fi
+        ./feeds/0install.sh run https://apps.0install.net/0install/0repo.xml

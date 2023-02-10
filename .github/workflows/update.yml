@@ -9,10 +9,8 @@ jobs:
   windows:
     runs-on: windows-latest
     steps:
-      - name: Clone feeds
-        uses: actions/checkout@v2
-        with:
-          path: feeds
+      - name: Set up directory structure
+        uses: 0install/apps/.github/actions/setup@master
       - name: Run 0watch
         env:
           GITHUB_TOKEN: ${{github.token}}
@@ -27,10 +25,8 @@ jobs:
   macos:
     runs-on: macos-latest
     steps:
-      - name: Clone feeds
-        uses: actions/checkout@v2
-        with:
-          path: feeds
+      - name: Set up directory structure
+        uses: 0install/apps/.github/actions/setup@master
       - name: Run 0watch
         env:
           GITHUB_TOKEN: ${{github.token}}
@@ -46,15 +42,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: [windows, macos]
     steps:
-      - name: Clone feeds
-        uses: actions/checkout@v2
-        with:
-          path: feeds
-      - name: Clone public
-        uses: actions/checkout@v2
-        with:
-          path: public
-          ref: gh-pages
+      - name: Set up directory structure
+        uses: 0install/apps/.github/actions/setup@master
       - name: Run 0watch
         env:
           GITHUB_TOKEN: ${{github.token}}
@@ -81,13 +70,8 @@ jobs:
         id: new-feeds
         run: if ls incoming/*.xml; then echo "found=true" >> $GITHUB_OUTPUT; fi
       - name: Run 0repo
+        uses: 0install/apps/.github/actions/0repo@master
         if: steps.new-feeds.outputs.found
-        run: |
-          ln -s feeds/0repo-config.py .
-          ln -s public/archives.db .
-          git config --global user.name apps.0install.net
-          git config --global user.email webmaster@0install.net
-          NO_SIGN=1 ./feeds/0install.sh run https://apps.0install.net/0install/0repo.xml
       - name: Create Pull Request
         if: steps.new-feeds.outputs.found
         uses: peter-evans/create-pull-request@v3

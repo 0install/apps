@@ -1,0 +1,23 @@
+name: Set up directory structure
+description: Sets up the 0repo directory structure
+
+runs:
+  using: composite
+  steps:
+    - name: Clone feeds
+      uses: actions/checkout@v2
+      with:
+        path: feeds
+    - name: Clone public
+      uses: actions/checkout@v2
+      with:
+        path: public
+        ref: gh-pages
+    - name: Create directories & symlinks, config Git
+      shell: bash
+      run: |
+        mkdir incoming
+        ln -s feeds/0repo-config.py .
+        ln -s public/archives.db .
+        git config --global user.name apps.0install.net
+        git config --global user.email webmaster@0install.net

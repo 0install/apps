@@ -45,22 +45,17 @@ def upload_public_dir(files, message):
 
 #### Archive hosting ####
 
-# The URL of the directory containing the archives (which will not be under REPOSITORY_BASE_URL if
-# you are hosting archives on a different server). Note that uploaders can choose whether to store
-# archives within 0repo or externally. This setting does not affect external archives, only archives
-# managed by 0repo.
+# The URL of the directory containing the archives.
+# Note that uploaders can choose whether to store archives within 0repo or externally.
+# This setting does not affect external archives, only archives managed by 0repo.
 ARCHIVES_BASE_URL = "https://github.com/0install/apps/releases/download/archives/"
 
 # Where to keep copies of the archives we upload.
 LOCAL_ARCHIVES_BACKUP_DIR = "archive-backups/"
 
 # At what URL under ARCHIVES_BASE_URL should this NEW file/archive be served?
-#
-# Note: Changing this does not affect archives which have already been uploaded;
-#	to relocate an existing archive, edit archives.db instead.
-#
-# Note: There may be multiple archives/files for a single version, so you
-#	probably want to keep archive_basename in the final URL.
+# Note: Changing this does not affect archives which have already been uploaded; to relocate an existing archive, edit archives.db instead.
+# Note: There may be multiple archives/files for a single version, so you probably want to keep archive_basename in the final URL.
 def get_archive_rel_url(archive_basename, impl):
 	return archive_basename
 
@@ -84,8 +79,7 @@ def guess_mime_type(name):
 # For each archive in the list:
 #   archive.source_path = path to local archive to be uploaded (in LOCAL_ARCHIVES_BACKUP_DIR)
 #   archive.rel_url = result from get_archive_rel_url() above
-# If any target files already exist, overwrite them (we will retry if uploading
-# fails part way through).
+# If any target files already exist, overwrite them (we will retry if uploading fails part way through).
 def upload_archives(archives):
 	if os.getenv('NO_SIGN'):
 		print("Feeds not signed; not uploading archives")
@@ -95,6 +89,8 @@ def upload_archives(archives):
 			print("Uploading " + archive.rel_url)
 			with open(archive.source_path, 'br') as file:
 				request.urlopen(request.Request(
+                    # We use a single dummy "Release" on GitHub to host archives managed by 0repo.
+                    # Note: In this repository most feeds point to externally hosted archives
 					'https://uploads.github.com/repos/0install/apps/releases/22408464/assets?name=' + archive.rel_url,
 					file.read(),
 					headers={
@@ -128,10 +124,6 @@ def check_new_impl(impl):
 
 #### Repository Layout (advanced) ####
 
-# If you're creating a new repository, you should just use the defaults here.
-# If you're switching an existing repository over to 0repo, these settings
-# allow you to keep your existing naming scheme.
-
 # uri_rel_path is the part of the feed's URL following REPOSITORY_BASE_URL.
 # Where should it be placed within "feeds"? By default, these are the same.
 # You might want to change this if you have a strange naming scheme (e.g. feed
@@ -143,11 +135,6 @@ def get_feeds_rel_path(uri_rel_path):
 # "games/my-game.xml". Where should the corresponding generated (signed) feed
 # be placed under "public"? The default (and recommended) setting is to keep it
 # the same, so we would generate "public/games/my-game.xml" in this case.
-#
-# When migrating an existing repository with a different scheme, you might need to
-# change this function. For example, some repositories save the generated feed
-# as "public/games/my-game/feed.xml" and configure Apache to make it appear as
-# "http://example.com/games/my-game".
 def get_public_rel_path(feeds_rel_path):
 	return feeds_rel_path
 
@@ -172,19 +159,8 @@ def is_excluded_from_catalog(feed_root, dir_rel_path):
 
 	return has_tag('replaced-by') or has_tag('feed-for') or (dir_rel_path == '' and excluded_from_toplevel())
 
-# When 0install fetches a feed http://.../prog.xml, it looks for the GPG key
-# at http://.../KEY.gpg.
-#
-# Normally, 0repo should place a symlink to the key in the same directory as
-# the feed file (from get_public_rel_path); use "." for that.
-#
-# If you have one feed per directory (e.g. .../prog/feed.xml with some Apache
-# configuration to make them appear as http://.../prog) then 0repo needs to
-# place the key in the parent directory ("..") instead.
-#
-# Finally, if you use mod_rewrite so that all key requests are routed to the
-# right place automatically by Apache, you can set this to None and avoid
-# generating any symlinks.
+# When 0install fetches a feed http://.../prog.xml, it looks for the GPG key at http://.../KEY.gpg.
+# Normally, 0repo should place a symlink to the key in the same directory as the feed file (from get_public_rel_path); use "." for that.
 GPG_PUBLIC_KEY_DIRECTORY = "."
 
 # This for archives uploaded and managed by 0repo itself.

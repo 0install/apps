@@ -6,6 +6,9 @@ on:
       feed_url:
         required: true
         description: URL of feed to merge in
+      archive_url:
+        required: false
+        description: URL of archive to add to archives.db
 
 jobs:
   publish:
@@ -13,11 +16,28 @@ jobs:
     steps:
       - name: Set up directory structure
         uses: 0install/apps/.github/actions/setup@master
+
       - name: Download feed
         run: curl -sSfL ${{inputs.feed_url}} -o incoming/feed.xml
+      - name: Download archive
+        if: inputs.archive_url
+        run: |
+          archive_name=$(basename ${{inputs.archive_url}})
+          curl -sSfL ${{inputs.archive_url}} -o incoming/$archive_name
+          archive_hash=($(sha1sum incoming/$archive_name))
+
+          cd public
+          echo "$archive_name $archive_hash ${{inputs.archive_url}}" >> archives.db
+          git add archives.db
+          git commit -m "Added $archive_name to archives.db"
+
       - name: Run 0repo
         uses: 0install/apps/.github/actions/0repo@master
         with:
           gpg_key: ${{secrets.GPG_KEY}}
+
+      - name: Push public
+        if: inputs.archive_url
+        run: cd public; git push
       - name: Push feeds
         run: cd feeds; git push

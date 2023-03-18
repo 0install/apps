@@ -48,7 +48,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{github.token}}
         run: |
-          sudo apt-get install -y python3-gnupg
+          sudo apt-get -qq install python3-gnupg
           feeds/watch.sh
       - name: Upload generated feeds
         if: always()

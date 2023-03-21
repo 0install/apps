@@ -7,4 +7,4 @@ matches = re.findall(r'<h2> Fixed in (\d+\.\d+\.\d+) - (\w+ \d+ \d+) <\/h2>', da
 releases = [{
     'version': match[0],
     'released': datetime.strftime(datetime.strptime(match[1], '%B %d %Y'), '%Y-%m-%d')
-} for match in matches if int(match[1][-4:]) >= 2020]
+} for match in matches if int(match[1][-4:]) >= 2023]

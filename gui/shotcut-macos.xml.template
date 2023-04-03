@@ -13,13 +13,9 @@
   <group license="GPL v3 (GNU General Public License)">
     <command name="run" path="Shotcut.app/Contents/MacOS/Shotcut"/>
 
-    <implementation arch="MacOSX-x86_64" version="{version}" released="{released}" stability="{stability}">
+    <implementation arch="MacOSX-*" version="{version}" released="{released}" stability="{stability}">
       <manifest-digest/>
       <archive href="https://github.com/mltframework/shotcut/releases/download/{tag}/shotcut-macos-{date}.dmg" type="application/x-apple-diskimage"/>
-    </implementation>
-    <implementation arch="MacOSX-aarch64" version="{version}" released="{released}" stability="{stability}">
-      <manifest-digest/>
-      <archive href="https://github.com/mltframework/shotcut/releases/download/{tag}/shotcut-macos-ARM64-{date}.dmg" type="application/x-apple-diskimage"/>
     </implementation>
   </group>
 </interface>

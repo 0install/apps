@@ -19,9 +19,17 @@
       <manifest-digest/>
       <archive extract="gh_{version}_linux_386" href="https://github.com/cli/cli/releases/download/v{version}/gh_{version}_linux_386.tar.gz" type="application/x-compressed-tar"/>
     </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive extract="gh_{version}_linux_arm64" href="https://github.com/cli/cli/releases/download/v{version}/gh_{version}_linux_arm64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
     <implementation arch="Darwin-x86_64" version="{version}" stability="stable" released="{released}">
       <manifest-digest/>
-      <archive extract="gh_{version}_macOS_amd64" href="https://github.com/cli/cli/releases/download/v{version}/gh_{version}_macOS_amd64.tar.gz" type="application/x-compressed-tar"/>
+      <archive extract="gh_{version}_macOS_amd64" href="https://github.com/cli/cli/releases/download/v{version}/gh_{version}_macOS_amd64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive extract="gh_{version}_macOS_arm64" href="https://github.com/cli/cli/releases/download/v{version}/gh_{version}_macOS_arm64.zip" type="application/zip"/>
     </implementation>
   </group>
 
@@ -34,6 +42,10 @@
     <implementation arch="Windows-i486" version="{version}" stability="stable" released="{released}">
       <manifest-digest/>
       <archive href="https://github.com/cli/cli/releases/download/v{version}/gh_{version}_windows_386.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/cli/cli/releases/download/v{version}/gh_{version}_windows_arm64.zip" type="application/zip"/>
     </implementation>
   </group>
 </interface>

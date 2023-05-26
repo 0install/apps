@@ -7,5 +7,5 @@ releases = [{
     'version': release['tag_name'][1:].replace('-RC', '-rc').replace('-M', '-rc').replace('-eap', '-pre').replace('-Beta', '-pre-pre'),
     'stability': 'testing' if release['prerelease'] else 'stable',
     'released': release['published_at'][0:10],
-    'download-url': [asset['browser_download_url'] for asset in release['assets'] if asset['name'].startswith('kotlin-compiler-')][0]
+    'download-url': [asset['browser_download_url'] for asset in release['assets'] if asset['name'].startswith('kotlin-compiler-') and asset['name'].endswith('.zip')][0]
 } for release in github.releases('JetBrains/kotlin') if release['assets']]

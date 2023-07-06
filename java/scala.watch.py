@@ -1,7 +1,7 @@
-from urllib import request
+from urllib.request import urlopen, Request
 import re
 
-data = request.urlopen('https://www.scala-lang.org/files/archive/').read().decode('utf-8')
+data = urlopen(Request('https://www.scala-lang.org/files/archive/', headers={'User-Agent': 'Mozilla'})).read().decode('utf-8')
 matches = re.findall(r'scala-([0-9\.\-M]+)\.zip<\/a>\s+<\/td><td align="right">(....-..-..)', data)
 releases = [{
     'version': match[0].replace('M', 'pre'),

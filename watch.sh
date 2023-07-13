@@ -8,6 +8,9 @@ cp */*.zip ../incoming/
 function run_watch_script() {
     echo $FILE
     ./0install.sh run https://apps.0install.net/0install/0watch.xml --output ../incoming $1
+
+    # Remove downloaded archives after generating feed
+    rm -f */*.zip */*.tar.gz
 }
 
 for FILE in $(ls */*.watch.py); do

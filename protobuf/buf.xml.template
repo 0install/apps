@@ -9,15 +9,29 @@
   <feed-for interface="https://apps.0install.net/protobuf/buf.xml"/>
 
   <group license="Apache License 2.0">
-    <command name="run" path="bin/buf"/>
-
-    <implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}">
+    <implementation main="buf.exe" arch="Windows-x86_64" version="{version}" stability="{stability}" released="{released}">
+      <manifest-digest/>
+      <file href="https://github.com/bufbuild/buf/releases/download/v{version}/buf-Windows-x86_64.exe" dest="buf.exe"/>
+    </implementation>
+    <implementation main="buf.exe" arch="Windows-aarch64" version="{version}" stability="{stability}" released="{released}">
+      <manifest-digest/>
+      <file href="https://github.com/bufbuild/buf/releases/download/v{version}/buf-Windows-arm64.exe" dest="buf.exe"/>
+    </implementation>
+    <implementation main="bin/buf" arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}">
       <manifest-digest/>
       <archive extract="buf" href="https://github.com/bufbuild/buf/releases/download/v{version}/buf-Linux-x86_64.tar.gz" type="application/x-compressed-tar"/>
     </implementation>
-    <implementation arch="Darwin-x86_64" version="{version}" stability="{stability}" released="{released}">
+    <implementation main="bin/buf" arch="Linux-aarch64" version="{version}" stability="{stability}" released="{released}">
+      <manifest-digest/>
+      <archive extract="buf" href="https://github.com/bufbuild/buf/releases/download/v{version}/buf-Linux-aarch64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation main="bin/buf" arch="Darwin-x86_64" version="{version}" stability="{stability}" released="{released}">
       <manifest-digest/>
       <archive extract="buf" href="https://github.com/bufbuild/buf/releases/download/v{version}/buf-Darwin-x86_64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation main="bin/buf" arch="Darwin-aarch64" version="{version}" stability="{stability}" released="{released}">
+      <manifest-digest/>
+      <archive extract="buf" href="https://github.com/bufbuild/buf/releases/download/v{version}/buf-Darwin-arm64.tar.gz" type="application/x-compressed-tar"/>
     </implementation>
   </group>
 </interface>

@@ -13,23 +13,31 @@
   <group license="MIT License">
     <implementation arch="Windows-x86_64" main="jq.exe" released="{released}" stability="{stability}" version="{version}">
       <manifest-digest/>
-      <file dest="jq.exe" href="https://github.com/stedolan/jq/releases/download/jq-{version-original}/jq-win64.exe"/>
+      <file dest="jq.exe" href="https://github.com/jqlang/jq/releases/download/jq-{version-original}/jq-windows-amd64.exe"/>
     </implementation>
     <implementation arch="Windows-i486" main="jq.exe" released="{released}" stability="{stability}" version="{version}">
       <manifest-digest/>
-      <file dest="jq.exe" href="https://github.com/stedolan/jq/releases/download/jq-{version-original}/jq-win32.exe"/>
+      <file dest="jq.exe" href="https://github.com/jqlang/jq/releases/download/jq-{version-original}/jq-windows-i386.exe"/>
     </implementation>
     <implementation arch="Linux-x86_64" main="jq" released="{released}" stability="{stability}" version="{version}">
       <manifest-digest/>
-      <file dest="jq" executable="true" href="https://github.com/stedolan/jq/releases/download/jq-{version-original}/jq-linux64"/>
+      <file dest="jq" executable="true" href="https://github.com/jqlang/jq/releases/download/jq-{version-original}/jq-linux-amd64"/>
     </implementation>
     <implementation arch="Linux-i486" main="jq" released="{released}" stability="{stability}" version="{version}">
       <manifest-digest/>
-      <file dest="jq" executable="true" href="https://github.com/stedolan/jq/releases/download/jq-{version-original}/jq-linux32"/>
+      <file dest="jq" executable="true" href="https://github.com/jqlang/jq/releases/download/jq-{version-original}/jq-linux-i386"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="jq" released="{released}" stability="{stability}" version="{version}">
+      <manifest-digest/>
+      <file dest="jq" executable="true" href="https://github.com/jqlang/jq/releases/download/jq-{version-original}/jq-linux-arm64"/>
     </implementation>
     <implementation arch="Darwin-x86_64" main="jq" released="{released}" stability="{stability}" version="{version}">
       <manifest-digest/>
-      <file dest="jq" executable="true" href="https://github.com/stedolan/jq/releases/download/jq-{version-original}/jq-osx-amd64"/>
+      <file dest="jq" executable="true" href="https://github.com/jqlang/jq/releases/download/jq-{version-original}/jq-macos-amd64"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" main="jq" released="{released}" stability="{stability}" version="{version}">
+      <manifest-digest/>
+      <file dest="jq" executable="true" href="https://github.com/jqlang/jq/releases/download/jq-{version-original}/jq-macos-arm64"/>
     </implementation>
   </group>
 </interface>

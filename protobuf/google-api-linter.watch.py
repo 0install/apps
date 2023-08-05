@@ -2,7 +2,7 @@ import sys, os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import github
 
-excluded_versions = ['v1.36.0']
+excluded_versions = ['v1.36.0', 'v1.55.1']
 
 releases = [{
     'version': release['tag_name'].strip('v'),

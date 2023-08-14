@@ -1,0 +1,1744 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/utils/minio-client.xml">
+  <name>MinIO Client</name>
+  <summary>command-line tool for AWS S3 API</summary>
+  <description>The MinIO Client mc command-line tool provides an alternative to commands like ls, cat, cp, mirror and diff with support for both filesystems and Amazon S3-compatible cloud storage services.</description>
+  <homepage>https://min.io/docs/minio/linux/reference/minio-mc.html</homepage>
+  <category>Utility</category>
+  <needs-terminal/>
+
+  <group stability="stable" license="AGPL v3 (GNU Affero General Public License)">
+    <implementation arch="Windows-x86_64" version="2021.4.22" released="2021-04-22" main="mc.exe" id="sha256new_PPWTDW3LOVZURXXQLJMI4TM4GOWOYCI64PX7IBD53HJ3BXXV3OSA">
+      <manifest-digest sha256new="PPWTDW3LOVZURXXQLJMI4TM4GOWOYCI64PX7IBD53HJ3BXXV3OSA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2021-04-22T17-40-00Z" size="21290216" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2021.4.22" released="2021-04-22" main="mc" id="sha256new_FMFUPOISV2LQM5XRSU53QC2Z62BCJZZDPYZNX35VTSQR6S6B7P6A">
+      <manifest-digest sha256new="FMFUPOISV2LQM5XRSU53QC2Z62BCJZZDPYZNX35VTSQR6S6B7P6A"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2021-04-22T17-40-00Z" size="20529152" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2021.4.22" released="2021-04-22" main="mc" id="sha256new_Y6T7QL6CNTOLQA5TFU6B7CGGPS6RZCQEGPL5E5AJLGBGAKGMARUQ">
+      <manifest-digest sha256new="Y6T7QL6CNTOLQA5TFU6B7CGGPS6RZCQEGPL5E5AJLGBGAKGMARUQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2021-04-22T17-40-00Z" size="18874368" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2021.4.22" released="2021-04-22" main="mc" id="sha256new_CGAMC43UX7B6J4NUNQXHCHJ47TFL3Z64EPUQ2B6NPFS4TNCPAGFQ">
+      <manifest-digest sha256new="CGAMC43UX7B6J4NUNQXHCHJ47TFL3Z64EPUQ2B6NPFS4TNCPAGFQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2021-04-22T17-40-00Z" size="22375520" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2021.4.22" released="2021-04-22" main="mc" id="sha256new_YBEYZLFCCG3UPEOQ7HAD5S7LUXAHTNQR3V4FWWTZWUQDNL5QZ5HQ">
+      <manifest-digest sha256new="YBEYZLFCCG3UPEOQ7HAD5S7LUXAHTNQR3V4FWWTZWUQDNL5QZ5HQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2021-04-22T17-40-00Z" size="21811698" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2021.5.12" released="2021-05-12" main="mc.exe" id="sha256new_AJPTQLI77X6ZP6K4DOAJZA6AXVL2EGJXN5T5D2AWF5YHR7I2ZKEA">
+      <manifest-digest sha256new="AJPTQLI77X6ZP6K4DOAJZA6AXVL2EGJXN5T5D2AWF5YHR7I2ZKEA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2021-05-12T01-29-06Z" size="21356776" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2021.5.12" released="2021-05-12" main="mc" id="sha256new_3T5B266TAPY74GXJTPUFBY2I755UG4PKG53YYWNIV2ALRH6RHLTA">
+      <manifest-digest sha256new="3T5B266TAPY74GXJTPUFBY2I755UG4PKG53YYWNIV2ALRH6RHLTA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2021-05-12T01-29-06Z" size="20590592" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2021.5.12" released="2021-05-12" main="mc" id="sha256new_Z36V64MHFUYPDOQ5CIBPPI2QJRETZJWL6VFAPRMLSHZIDDOGFXSA">
+      <manifest-digest sha256new="Z36V64MHFUYPDOQ5CIBPPI2QJRETZJWL6VFAPRMLSHZIDDOGFXSA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2021-05-12T01-29-06Z" size="18939904" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2021.5.12" released="2021-05-12" main="mc" id="sha256new_CFASC4AXJ44REHTD5TS5DUA45QCPHVT6TQSPJ5DN7BNQG7BLSEZQ">
+      <manifest-digest sha256new="CFASC4AXJ44REHTD5TS5DUA45QCPHVT6TQSPJ5DN7BNQG7BLSEZQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2021-05-12T01-29-06Z" size="22439008" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2021.5.12" released="2021-05-12" main="mc" id="sha256new_3PUCB22QI6DGEXDZ7Z7KVNRJ6MT5J7S2PDKVW674UQKFVBDD7ZNA">
+      <manifest-digest sha256new="3PUCB22QI6DGEXDZ7Z7KVNRJ6MT5J7S2PDKVW674UQKFVBDD7ZNA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2021-05-12T01-29-06Z" size="21849010" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2021.5.18" released="2021-05-18" main="mc.exe" id="sha256new_DM2KH5JH2G7AUT2AVVG2ZBONRIWZ5JV5FQTGIP4S7BQXFDVR7CCA">
+      <manifest-digest sha256new="DM2KH5JH2G7AUT2AVVG2ZBONRIWZ5JV5FQTGIP4S7BQXFDVR7CCA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2021-05-18T03-39-44Z" size="21594344" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2021.5.18" released="2021-05-18" main="mc" id="sha256new_WND7TQY36TDKNX4ETVQTIMNBSGODKHHADPJXIHLZTBSYYY4Z7ZNQ">
+      <manifest-digest sha256new="WND7TQY36TDKNX4ETVQTIMNBSGODKHHADPJXIHLZTBSYYY4Z7ZNQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2021-05-18T03-39-44Z" size="20824064" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2021.5.18" released="2021-05-18" main="mc" id="sha256new_QWISLSKRG2Q7BLAKZYJTICTYH4SMIFYD6XLBTXK4UMLTNYBKAXVQ">
+      <manifest-digest sha256new="QWISLSKRG2Q7BLAKZYJTICTYH4SMIFYD6XLBTXK4UMLTNYBKAXVQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2021-05-18T03-39-44Z" size="19202048" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2021.5.18" released="2021-05-18" main="mc" id="sha256new_YRK3WQR4MLXECSYPTDUAKTSSIONT3EDBYCUG43JOW2FOZIXZZF5Q">
+      <manifest-digest sha256new="YRK3WQR4MLXECSYPTDUAKTSSIONT3EDBYCUG43JOW2FOZIXZZF5Q"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2021-05-18T03-39-44Z" size="22687232" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2021.5.18" released="2021-05-18" main="mc" id="sha256new_L5IFT5FCFLUBKODI4X46TAOVNBNDBPN2YCF2E27B4GAQ2UY7OR3A">
+      <manifest-digest sha256new="L5IFT5FCFLUBKODI4X46TAOVNBNDBPN2YCF2E27B4GAQ2UY7OR3A"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2021-05-18T03-39-44Z" size="22105106" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2021.5.26" released="2021-05-26" main="mc.exe" id="sha256new_MCCHQBL7DXUTHDXIJRKMKMUOC6XUPXWGKDJMY4HKMXVYMPQDBLSA">
+      <manifest-digest sha256new="MCCHQBL7DXUTHDXIJRKMKMUOC6XUPXWGKDJMY4HKMXVYMPQDBLSA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2021-05-26T19-19-26Z" size="21595880" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2021.5.26" released="2021-05-26" main="mc" id="sha256new_5CYMOLXSEAINF26OTGQMOOELIDDIK7XFZ2HADZ64KWMLF3BSNFXQ">
+      <manifest-digest sha256new="5CYMOLXSEAINF26OTGQMOOELIDDIK7XFZ2HADZ64KWMLF3BSNFXQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2021-05-26T19-19-26Z" size="20824064" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2021.5.26" released="2021-05-26" main="mc" id="sha256new_U76PLCFGGI7AEBZOQHIXBXP4MRQOOZT5CHSSA4NYLPUGYACKJ2OQ">
+      <manifest-digest sha256new="U76PLCFGGI7AEBZOQHIXBXP4MRQOOZT5CHSSA4NYLPUGYACKJ2OQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2021-05-26T19-19-26Z" size="19202048" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2021.5.26" released="2021-05-26" main="mc" id="sha256new_HWVVPMFHRIXEESU3AKLDS2VJPUZ4AFB2KRZCDBR4UEXTMZUXMTNQ">
+      <manifest-digest sha256new="HWVVPMFHRIXEESU3AKLDS2VJPUZ4AFB2KRZCDBR4UEXTMZUXMTNQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2021-05-26T19-19-26Z" size="22687328" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2021.5.26" released="2021-05-26" main="mc" id="sha256new_FYKQCA43XGITCUQDKWZROYBGTHORIC5ECVFWYIJIGMEHJ6B7K73A">
+      <manifest-digest sha256new="FYKQCA43XGITCUQDKWZROYBGTHORIC5ECVFWYIJIGMEHJ6B7K73A"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2021-05-26T19-19-26Z" size="22105282" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2021.6.8" released="2021-06-08" main="mc.exe" id="sha256new_L3XY6IGEA3F2UGHAIFS6M2OZISQTJITAMNHXWAUD5Q3FT37BNHUQ">
+      <manifest-digest sha256new="L3XY6IGEA3F2UGHAIFS6M2OZISQTJITAMNHXWAUD5Q3FT37BNHUQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2021-06-08T01-29-37Z" size="21969128" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2021.6.8" released="2021-06-08" main="mc" id="sha256new_CRNY2TJFP2BVUFVLNSCZV646OWKSSFOZE6XV5QZPNUHJ2Z37QDMQ">
+      <manifest-digest sha256new="CRNY2TJFP2BVUFVLNSCZV646OWKSSFOZE6XV5QZPNUHJ2Z37QDMQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2021-06-08T01-29-37Z" size="21155840" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2021.6.8" released="2021-06-08" main="mc" id="sha256new_KTL27XFD2KPCJLB5WQGYY6MT7RQOIJVKSVOBYH5FTV4TLJBFQAHA">
+      <manifest-digest sha256new="KTL27XFD2KPCJLB5WQGYY6MT7RQOIJVKSVOBYH5FTV4TLJBFQAHA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2021-06-08T01-29-37Z" size="19464192" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2021.6.8" released="2021-06-08" main="mc" id="sha256new_LJXE6QJNBSRQ4C4FWRT42PVC6J7XWCOCL3XDE4MWY7VUQP5XKNPA">
+      <manifest-digest sha256new="LJXE6QJNBSRQ4C4FWRT42PVC6J7XWCOCL3XDE4MWY7VUQP5XKNPA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2021-06-08T01-29-37Z" size="23117680" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2021.6.8" released="2021-06-08" main="mc" id="sha256new_RYOPRCDG7JJFEIDUQIVBDSBEXLKU33P5HBT7MKOZ3ZQ67FZ2FXLA">
+      <manifest-digest sha256new="RYOPRCDG7JJFEIDUQIVBDSBEXLKU33P5HBT7MKOZ3ZQ67FZ2FXLA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2021-06-08T01-29-37Z" size="22517554" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2021.6.13" released="2021-06-13" main="mc.exe" id="sha256new_DIB6KQIHMHHWI5LBJ4OJD2XSQRM223GK7RT3QOHGFXRNJBWNGK4A">
+      <manifest-digest sha256new="DIB6KQIHMHHWI5LBJ4OJD2XSQRM223GK7RT3QOHGFXRNJBWNGK4A"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2021-06-13T17-48-22Z" size="22010600" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2021.6.13" released="2021-06-13" main="mc" id="sha256new_EFYQEYLQZA5UHRXXZ3S2HMZVBSKD2PQDE2RE7ZNVVHZIW4AAZW6Q">
+      <manifest-digest sha256new="EFYQEYLQZA5UHRXXZ3S2HMZVBSKD2PQDE2RE7ZNVVHZIW4AAZW6Q"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2021-06-13T17-48-22Z" size="21192704" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2021.6.13" released="2021-06-13" main="mc" id="sha256new_P6LJGAEJ4PTLUUOR6BXZMZQLFLJSNFN2RMQKH3JFQ43BOGYS657A">
+      <manifest-digest sha256new="P6LJGAEJ4PTLUUOR6BXZMZQLFLJSNFN2RMQKH3JFQ43BOGYS657A"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2021-06-13T17-48-22Z" size="19464192" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2021.6.13" released="2021-06-13" main="mc" id="sha256new_PKAGIEWMZSIB2P7EREPRIC43MBA3DGSE3EO5Z67KR3527Y7ZWAIQ">
+      <manifest-digest sha256new="PKAGIEWMZSIB2P7EREPRIC43MBA3DGSE3EO5Z67KR3527Y7ZWAIQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2021-06-13T17-48-22Z" size="23163520" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2021.6.13" released="2021-06-13" main="mc" id="sha256new_FSMTXFIODIAENOKANV6IUDYKYXNDYQSMZ575YR3OFWYMFZIVJZVQ">
+      <manifest-digest sha256new="FSMTXFIODIAENOKANV6IUDYKYXNDYQSMZ575YR3OFWYMFZIVJZVQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2021-06-13T17-48-22Z" size="22558002" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2021.7.27" released="2021-07-27" main="mc.exe" id="sha256new_YNAVSMXCAMES7G3V4HCRKPKDH5NTY2CWD25IH7MHPXAIGUHGZGJA">
+      <manifest-digest sha256new="YNAVSMXCAMES7G3V4HCRKPKDH5NTY2CWD25IH7MHPXAIGUHGZGJA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2021-07-27T06-46-19Z" size="22710504" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2021.7.27" released="2021-07-27" main="mc" id="sha256new_2ZHIB3EJHOHXC5FVO2PM25XQXH3UH4MYDFQOZM2UAQA65M62O5DQ">
+      <manifest-digest sha256new="2ZHIB3EJHOHXC5FVO2PM25XQXH3UH4MYDFQOZM2UAQA65M62O5DQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2021-07-27T06-46-19Z" size="21876736" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2021.7.27" released="2021-07-27" main="mc" id="sha256new_6O2PDAED4UMEWG22GAQSITD4RC3E56S3DRIQEVLAMQBO72HO6COA">
+      <manifest-digest sha256new="6O2PDAED4UMEWG22GAQSITD4RC3E56S3DRIQEVLAMQBO72HO6COA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2021-07-27T06-46-19Z" size="20119552" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2021.7.27" released="2021-07-27" main="mc" id="sha256new_W3UNZTVQ5Q3MJMOH2YSESMKVGYEIUL6WUW4HRA4NZY6KVY66LANQ">
+      <manifest-digest sha256new="W3UNZTVQ5Q3MJMOH2YSESMKVGYEIUL6WUW4HRA4NZY6KVY66LANQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2021-07-27T06-46-19Z" size="23905456" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2021.7.27" released="2021-07-27" main="mc" id="sha256new_APUPOSJBYJ2P2MK5BEAR22X7TNZF72XLOXUW42LDRDVN5W2KP6QA">
+      <manifest-digest sha256new="APUPOSJBYJ2P2MK5BEAR22X7TNZF72XLOXUW42LDRDVN5W2KP6QA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2021-07-27T06-46-19Z" size="23290466" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2021.9.2" released="2021-09-02" main="mc.exe" id="sha256new_OQZ6NPYAG7B566ZPNCMC46UNAXIKW4DFMFMLO3EWQA3FSGBCFPCA">
+      <manifest-digest sha256new="OQZ6NPYAG7B566ZPNCMC46UNAXIKW4DFMFMLO3EWQA3FSGBCFPCA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2021-09-02T09-21-27Z" size="22822120" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2021.9.2" released="2021-09-02" main="mc" id="sha256new_K6H3FACA6S5WU722RWYK2AGG465EMGIKHISHOA5POHFY56IXMBFA">
+      <manifest-digest sha256new="K6H3FACA6S5WU722RWYK2AGG465EMGIKHISHOA5POHFY56IXMBFA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2021-09-02T09-21-27Z" size="22007808" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2021.9.2" released="2021-09-02" main="mc" id="sha256new_T6NPW5KTNCRPGIARVEN3ZQ4A7GLMQKTH6SFCZHKY3MWTUH6CZNJA">
+      <manifest-digest sha256new="T6NPW5KTNCRPGIARVEN3ZQ4A7GLMQKTH6SFCZHKY3MWTUH6CZNJA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2021-09-02T09-21-27Z" size="20185088" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2021.9.2" released="2021-09-02" main="mc" id="sha256new_3AQSD5Z7CXFMHTVTI4ZICI3Z6C5JEG4VX7PHSONR2254AXTWGYTQ">
+      <manifest-digest sha256new="3AQSD5Z7CXFMHTVTI4ZICI3Z6C5JEG4VX7PHSONR2254AXTWGYTQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2021-09-02T09-21-27Z" size="24033248" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2021.9.2" released="2021-09-02" main="mc" id="sha256new_QBJULT5DR5R3NPF24YAM4NL252UFDBBNAWJWDPCFNQC56XFBE6FA">
+      <manifest-digest sha256new="QBJULT5DR5R3NPF24YAM4NL252UFDBBNAWJWDPCFNQC56XFBE6FA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2021-09-02T09-21-27Z" size="23398274" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2021.9.23" released="2021-09-23" main="mc.exe" id="sha256new_7BBCW5JIBYIKGP4YHPLIMNYYCS7GCCZT5X5HB5PU6IO7T3DGTC6Q">
+      <manifest-digest sha256new="7BBCW5JIBYIKGP4YHPLIMNYYCS7GCCZT5X5HB5PU6IO7T3DGTC6Q"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2021-09-23T05-44-03Z" size="21954280" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2021.9.23" released="2021-09-23" main="mc" id="sha256new_ZNV7UAZVMQKI2HNF4RQH2ZRGF5IBBTC3IHLNYKCXHY6NLLSNA7XQ">
+      <manifest-digest sha256new="ZNV7UAZVMQKI2HNF4RQH2ZRGF5IBBTC3IHLNYKCXHY6NLLSNA7XQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2021-09-23T05-44-03Z" size="21270528" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2021.9.23" released="2021-09-23" main="mc" id="sha256new_K75QSC3GSK4UJ5BVEKEJFLIDME23KML7G3IP43CNI6Q6K42AP2ZQ">
+      <manifest-digest sha256new="K75QSC3GSK4UJ5BVEKEJFLIDME23KML7G3IP43CNI6Q6K42AP2ZQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2021-09-23T05-44-03Z" size="20709376" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2021.9.23" released="2021-09-23" main="mc" id="sha256new_LWCQOUK2UTHN44QRVH7I4BP5EVFIIK7KTMSUIJIVALQYTPEWFNNA">
+      <manifest-digest sha256new="LWCQOUK2UTHN44QRVH7I4BP5EVFIIK7KTMSUIJIVALQYTPEWFNNA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2021-09-23T05-44-03Z" size="23376736" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2021.9.23" released="2021-09-23" main="mc" id="sha256new_POVCT5VC6SIG26FBI6LTUSWLUKRO4VMTYWTFAADPAOUCJKWDADFA">
+      <manifest-digest sha256new="POVCT5VC6SIG26FBI6LTUSWLUKRO4VMTYWTFAADPAOUCJKWDADFA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2021-09-23T05-44-03Z" size="23998546" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2021.10.7" released="2021-10-07" main="mc.exe" id="sha256new_RUG7ZIB7AJ45NNKT52QA5QYXZYTJWTNWODOJYLRCKN4PR5JZG7EA">
+      <manifest-digest sha256new="RUG7ZIB7AJ45NNKT52QA5QYXZYTJWTNWODOJYLRCKN4PR5JZG7EA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2021-10-07T04-19-58Z" size="22103784" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2021.10.7" released="2021-10-07" main="mc" id="sha256new_H5YDE5CMG4SDNKP75HOORQTUIIRJHA7UDZO274RVZIRBWD26T6AQ">
+      <manifest-digest sha256new="H5YDE5CMG4SDNKP75HOORQTUIIRJHA7UDZO274RVZIRBWD26T6AQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2021-10-07T04-19-58Z" size="21422080" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2021.10.7" released="2021-10-07" main="mc" id="sha256new_LFPLZUILWZ74WLWRILKVKD4IOM5VQH24CMD554RUSDMH74GWS7WQ">
+      <manifest-digest sha256new="LFPLZUILWZ74WLWRILKVKD4IOM5VQH24CMD554RUSDMH74GWS7WQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2021-10-07T04-19-58Z" size="20840448" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2021.10.7" released="2021-10-07" main="mc" id="sha256new_NCK4MX472EKIEC6IMC2ZJ7JHRU2TL7OC35QHH6URPNJUL5UOFR4A">
+      <manifest-digest sha256new="NCK4MX472EKIEC6IMC2ZJ7JHRU2TL7OC35QHH6URPNJUL5UOFR4A"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2021-10-07T04-19-58Z" size="23530176" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2021.10.7" released="2021-10-07" main="mc" id="sha256new_ZFZDW4T7C3PP7MECTWK2RBRMWHAK52A74IVQCOW5WLVXGEANZZHQ">
+      <manifest-digest sha256new="ZFZDW4T7C3PP7MECTWK2RBRMWHAK52A74IVQCOW5WLVXGEANZZHQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2021-10-07T04-19-58Z" size="24186802" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2021.11.5" released="2021-11-05" main="mc.exe" id="sha256new_ZRP5LTWMGAE6354EHOUCDHM75WZHYEOBV2WBIY7PBFNJ7FTZMUNQ">
+      <manifest-digest sha256new="ZRP5LTWMGAE6354EHOUCDHM75WZHYEOBV2WBIY7PBFNJ7FTZMUNQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2021-11-05T10-05-06Z" size="22475496" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2021.11.5" released="2021-11-05" main="mc" id="sha256new_NZQ2SZCMCP23R5F73KFFCY5P76SPSMMSKDN6YHORLHCCKKSBAKCQ">
+      <manifest-digest sha256new="NZQ2SZCMCP23R5F73KFFCY5P76SPSMMSKDN6YHORLHCCKKSBAKCQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2021-11-05T10-05-06Z" size="21786624" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2021.11.5" released="2021-11-05" main="mc" id="sha256new_CA62YC3W7D34BVWLQRF7N65QZKXHQCS75SHGDA4XEZYOZRX2O5JQ">
+      <manifest-digest sha256new="CA62YC3W7D34BVWLQRF7N65QZKXHQCS75SHGDA4XEZYOZRX2O5JQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2021-11-05T10-05-06Z" size="21168128" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2021.11.5" released="2021-11-05" main="mc" id="sha256new_6ANMGYWETA7U5LH3QCH63LUQMFYRFNSQ7KNW2ZRQWVP3QFAGE2TQ">
+      <manifest-digest sha256new="6ANMGYWETA7U5LH3QCH63LUQMFYRFNSQ7KNW2ZRQWVP3QFAGE2TQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2021-11-05T10-05-06Z" size="23926960" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2021.11.5" released="2021-11-05" main="mc" id="sha256new_7VUYWBQOIEJXHEXJ4WJ2YDT5MYI5OU7BD2UJ54BY4NVPADRTPK7Q">
+      <manifest-digest sha256new="7VUYWBQOIEJXHEXJ4WJ2YDT5MYI5OU7BD2UJ54BY4NVPADRTPK7Q"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2021-11-05T10-05-06Z" size="24577394" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2021.11.16" released="2021-11-16" main="mc.exe" id="sha256new_MTJN4XRF3I6TINXS4JFG46N4ZOE2E6DLHTCIHU3QLFDMFBQ7HKJA">
+      <manifest-digest sha256new="MTJN4XRF3I6TINXS4JFG46N4ZOE2E6DLHTCIHU3QLFDMFBQ7HKJA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2021-11-16T20-37-36Z" size="22484200" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2021.11.16" released="2021-11-16" main="mc" id="sha256new_UPOEJ7KTDY5WEAZVPHK4VX7MCBPHNURZBINM35FSUPH6BYV3XNUA">
+      <manifest-digest sha256new="UPOEJ7KTDY5WEAZVPHK4VX7MCBPHNURZBINM35FSUPH6BYV3XNUA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2021-11-16T20-37-36Z" size="21786624" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2021.11.16" released="2021-11-16" main="mc" id="sha256new_J5ITNS7M7HV2YZGAONE5RWF3ZR2NYSHQ2KL2OBFR2TVN67ZJE3QQ">
+      <manifest-digest sha256new="J5ITNS7M7HV2YZGAONE5RWF3ZR2NYSHQ2KL2OBFR2TVN67ZJE3QQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2021-11-16T20-37-36Z" size="21168128" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2021.11.16" released="2021-11-16" main="mc" id="sha256new_VH7OFC44CMS4MTXTARBS3UL22AZ7HPNF3HZBO4DZVGR6WG7TOKSA">
+      <manifest-digest sha256new="VH7OFC44CMS4MTXTARBS3UL22AZ7HPNF3HZBO4DZVGR6WG7TOKSA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2021-11-16T20-37-36Z" size="23923168" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2021.11.16" released="2021-11-16" main="mc" id="sha256new_2ZQJJQQAY7BIC5VWPFYNP5IOECMWXR73YXQTS3ABMWB6DU2MI47Q">
+      <manifest-digest sha256new="2ZQJJQQAY7BIC5VWPFYNP5IOECMWXR73YXQTS3ABMWB6DU2MI47Q"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2021-11-16T20-37-36Z" size="24593810" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2021.12.10" released="2021-12-10" main="mc.exe" id="sha256new_5MD7LHHYJTFVJ3ZAB3LBTJ4XQIJQCZSM2L4LNFRRBTQCV4RRFTIQ">
+      <manifest-digest sha256new="5MD7LHHYJTFVJ3ZAB3LBTJ4XQIJQCZSM2L4LNFRRBTQCV4RRFTIQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2021-12-10T00-14-28Z" size="22462184" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2021.12.10" released="2021-12-10" main="mc" id="sha256new_6JJ5NL7HEQ4LUT2VY5FK6FZDBM7SYE6GNQOQOZ6AF5IEWY3VQLTA">
+      <manifest-digest sha256new="6JJ5NL7HEQ4LUT2VY5FK6FZDBM7SYE6GNQOQOZ6AF5IEWY3VQLTA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2021-12-10T00-14-28Z" size="21762048" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2021.12.10" released="2021-12-10" main="mc" id="sha256new_OEJDSOCJU7TJPAZL4TTGCCETZWMRLZEXAZNOC4RDEATUQ7Z3TU6Q">
+      <manifest-digest sha256new="OEJDSOCJU7TJPAZL4TTGCCETZWMRLZEXAZNOC4RDEATUQ7Z3TU6Q"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2021-12-10T00-14-28Z" size="21168128" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2021.12.10" released="2021-12-10" main="mc" id="sha256new_IVQIFY3P5SWGVJ2ABI2I7HGFX25JVIMNLSUQAMLWYC46LLVLWSJA">
+      <manifest-digest sha256new="IVQIFY3P5SWGVJ2ABI2I7HGFX25JVIMNLSUQAMLWYC46LLVLWSJA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2021-12-10T00-14-28Z" size="23908720" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2021.12.10" released="2021-12-10" main="mc" id="sha256new_WK7QZYHXVTRITU5YT276ZNVIKHBQNHZ3HDSXVL54HXWJIZDQ4OCA">
+      <manifest-digest sha256new="WK7QZYHXVTRITU5YT276ZNVIKHBQNHZ3HDSXVL54HXWJIZDQ4OCA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2021-12-10T00-14-28Z" size="24591842" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2021.12.16" released="2021-12-16" main="mc.exe" id="sha256new_2KNG54C4U6GYKBBWU4PUF7VEPDF3KGVNLTW6GHAJWX2TUFD3SMHA">
+      <manifest-digest sha256new="2KNG54C4U6GYKBBWU4PUF7VEPDF3KGVNLTW6GHAJWX2TUFD3SMHA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2021-12-16T23-38-39Z" size="22471912" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2021.12.16" released="2021-12-16" main="mc" id="sha256new_W3POH2ZSLWZBM2TJL4WPJNLJ6YDF4VIPIG7SMAJUI5W3ZXBOFI5Q">
+      <manifest-digest sha256new="W3POH2ZSLWZBM2TJL4WPJNLJ6YDF4VIPIG7SMAJUI5W3ZXBOFI5Q"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2021-12-16T23-38-39Z" size="21770240" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2021.12.16" released="2021-12-16" main="mc" id="sha256new_EOLEDPD36PJ75UI4EUC5BUJYM35X7RE6GTCDWPRA3FENFQCJOXRA">
+      <manifest-digest sha256new="EOLEDPD36PJ75UI4EUC5BUJYM35X7RE6GTCDWPRA3FENFQCJOXRA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2021-12-16T23-38-39Z" size="21233664" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2021.12.16" released="2021-12-16" main="mc" id="sha256new_4LO7UMBT3AN6MW2CZ4TUJ6Z4EIMFACUC2S6KKAYHW7S7JSOVURXA">
+      <manifest-digest sha256new="4LO7UMBT3AN6MW2CZ4TUJ6Z4EIMFACUC2S6KKAYHW7S7JSOVURXA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2021-12-16T23-38-39Z" size="23917504" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2021.12.16" released="2021-12-16" main="mc" id="sha256new_O52UUNR7JOU7V3ZHEGIKR7A6EJ5VNTBR2Y7D3QO6YYJDCNSKXA7Q">
+      <manifest-digest sha256new="O52UUNR7JOU7V3ZHEGIKR7A6EJ5VNTBR2Y7D3QO6YYJDCNSKXA7Q"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2021-12-16T23-38-39Z" size="24592962" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2021.12.20" released="2021-12-20" main="mc.exe" id="sha256new_4PKIPZJG7OKEBBNR73NIEBCQLW32M52ACUNLZEOQAQ7RBFHPK4GQ">
+      <manifest-digest sha256new="4PKIPZJG7OKEBBNR73NIEBCQLW32M52ACUNLZEOQAQ7RBFHPK4GQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2021-12-20T23-43-34Z" size="22479592" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2021.12.20" released="2021-12-20" main="mc" id="sha256new_ECYXHZU44GCA3LDNINKEFTHZQGMYEOYACYEICAWX2XBGLWZSMR7A">
+      <manifest-digest sha256new="ECYXHZU44GCA3LDNINKEFTHZQGMYEOYACYEICAWX2XBGLWZSMR7A"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2021-12-20T23-43-34Z" size="21782528" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2021.12.20" released="2021-12-20" main="mc" id="sha256new_QG3LB6LMQ2MVSBIBUYCC3ECWCE25Z2MSKOB6GHKNLAVRNHKWL3GQ">
+      <manifest-digest sha256new="QG3LB6LMQ2MVSBIBUYCC3ECWCE25Z2MSKOB6GHKNLAVRNHKWL3GQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2021-12-20T23-43-34Z" size="21233664" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2021.12.20" released="2021-12-20" main="mc" id="sha256new_NGPXBNTUGLYKBUXGGGVULDZYKBXMKVKBWY4S2KMPXQGBSDQXM5JQ">
+      <manifest-digest sha256new="NGPXBNTUGLYKBUXGGGVULDZYKBXMKVKBWY4S2KMPXQGBSDQXM5JQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2021-12-20T23-43-34Z" size="23926528" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2021.12.20" released="2021-12-20" main="mc" id="sha256new_W2JEKLJLDXS2AMYRYOXAOYN45K4DRVHKMOR4TQK2DLOLCCWONIQA">
+      <manifest-digest sha256new="W2JEKLJLDXS2AMYRYOXAOYN45K4DRVHKMOR4TQK2DLOLCCWONIQA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2021-12-20T23-43-34Z" size="24593954" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2021.12.29" released="2021-12-29" main="mc.exe" id="sha256new_F4YOG7AR77EFZSWP3WECJ45RSNZT7OEZ45U5EIPMANHHS7DFDVZA">
+      <manifest-digest sha256new="F4YOG7AR77EFZSWP3WECJ45RSNZT7OEZ45U5EIPMANHHS7DFDVZA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2021-12-29T06-52-55Z" size="22482152" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2021.12.29" released="2021-12-29" main="mc" id="sha256new_LJGDEV52HLOVNEY3LNAKH7SJTBTVWL2Z4MQDLHZFDSFUVX6K5BQA">
+      <manifest-digest sha256new="LJGDEV52HLOVNEY3LNAKH7SJTBTVWL2Z4MQDLHZFDSFUVX6K5BQA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2021-12-29T06-52-55Z" size="21782528" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2021.12.29" released="2021-12-29" main="mc" id="sha256new_BMAIKZ2ADYGXXTH5FTLWHHG46S76W6XHYEAISPPKKTMK2K3D2HPQ">
+      <manifest-digest sha256new="BMAIKZ2ADYGXXTH5FTLWHHG46S76W6XHYEAISPPKKTMK2K3D2HPQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2021-12-29T06-52-55Z" size="21233664" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2021.12.29" released="2021-12-29" main="mc" id="sha256new_MTHEK4XYYXHYYFW6QW6ZLAKJU7AJSPYAY67ILJQQYD7FLP25VP5A">
+      <manifest-digest sha256new="MTHEK4XYYXHYYFW6QW6ZLAKJU7AJSPYAY67ILJQQYD7FLP25VP5A"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2021-12-29T06-52-55Z" size="23930160" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2021.12.29" released="2021-12-29" main="mc" id="sha256new_JIAYUVG6LXY4KS3GGHMKWVFNATQ22536XOIABWVG4FG37DGULSWQ">
+      <manifest-digest sha256new="JIAYUVG6LXY4KS3GGHMKWVFNATQ22536XOIABWVG4FG37DGULSWQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2021-12-29T06-52-55Z" size="24609986" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.1.5" released="2022-01-05" main="mc.exe" id="sha256new_EQYJLM2UI6OKSZXAEWJ2PHGFU3P4HNUAACZIGMGDFBRD6HDS6JCQ">
+      <manifest-digest sha256new="EQYJLM2UI6OKSZXAEWJ2PHGFU3P4HNUAACZIGMGDFBRD6HDS6JCQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-01-05T23-52-51Z" size="22559976" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.1.5" released="2022-01-05" main="mc" id="sha256new_WKID5T3GOLG3HWIMPCQP26OTJIDLMHQH4XGUPONO3DYKH7SLSN3Q">
+      <manifest-digest sha256new="WKID5T3GOLG3HWIMPCQP26OTJIDLMHQH4XGUPONO3DYKH7SLSN3Q"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-01-05T23-52-51Z" size="21843968" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.1.5" released="2022-01-05" main="mc" id="sha256new_LF5KCOFDWFQS3JIEB4IEGBF4YFGPZONG7DTDUT3XNPTOKGQFPEIQ">
+      <manifest-digest sha256new="LF5KCOFDWFQS3JIEB4IEGBF4YFGPZONG7DTDUT3XNPTOKGQFPEIQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-01-05T23-52-51Z" size="21233664" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.1.5" released="2022-01-05" main="mc" id="sha256new_FEQXCMXHAP5YO73G2IBPLHNS46DKSKCQ7MMZGYFFQ2T5IRO3ZF5Q">
+      <manifest-digest sha256new="FEQXCMXHAP5YO73G2IBPLHNS46DKSKCQ7MMZGYFFQ2T5IRO3ZF5Q"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-01-05T23-52-51Z" size="23991456" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.1.5" released="2022-01-05" main="mc" id="sha256new_L4EEHONOVK2IDJQLVDNZWSNDAA3YJDUFBK6J4EX2ADKWHEVPOIDQ">
+      <manifest-digest sha256new="L4EEHONOVK2IDJQLVDNZWSNDAA3YJDUFBK6J4EX2ADKWHEVPOIDQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-01-05T23-52-51Z" size="24649906" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.1.7" released="2022-01-07" main="mc.exe" id="sha256new_4CJSY77I6JHMWLN5EBPUSN2ZPES6BSX4AZE4MUM5KCBK3BIOENAQ">
+      <manifest-digest sha256new="4CJSY77I6JHMWLN5EBPUSN2ZPES6BSX4AZE4MUM5KCBK3BIOENAQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-01-07T06-01-38Z" size="22599400" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.1.7" released="2022-01-07" main="mc" id="sha256new_G5WFAL5CMFAEGZIGYSPYP4Y5DEXZFYERQASDTSP6MJZMCF4HZHBA">
+      <manifest-digest sha256new="G5WFAL5CMFAEGZIGYSPYP4Y5DEXZFYERQASDTSP6MJZMCF4HZHBA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-01-07T06-01-38Z" size="21884928" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.1.7" released="2022-01-07" main="mc" id="sha256new_FUARWWLW6W4MK5IMC5HK7NSFHWEM6TPUZREXFDDE2KGKJR5U7A7A">
+      <manifest-digest sha256new="FUARWWLW6W4MK5IMC5HK7NSFHWEM6TPUZREXFDDE2KGKJR5U7A7A"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-01-07T06-01-38Z" size="21299200" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.1.7" released="2022-01-07" main="mc" id="sha256new_QH6NDOFM4XBJJUK6QGB2XD7MKT4D2CHDGI5NO5PBXYKWJDXFULEQ">
+      <manifest-digest sha256new="QH6NDOFM4XBJJUK6QGB2XD7MKT4D2CHDGI5NO5PBXYKWJDXFULEQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-01-07T06-01-38Z" size="24029376" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.1.7" released="2022-01-07" main="mc" id="sha256new_A4F3FD2UWK7KOOHYJ7V2433VVMA5NL7Z5YMFNRMGHWNKZDIO354A">
+      <manifest-digest sha256new="A4F3FD2UWK7KOOHYJ7V2433VVMA5NL7Z5YMFNRMGHWNKZDIO354A"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-01-07T06-01-38Z" size="24703234" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.1.25" released="2022-01-25" main="mc.exe" id="sha256new_EQ6H5HHOIGXDRRLL4XVLTWGPSRK2KRAJV7G4ZYUUHEP7PYTCQ5MQ">
+      <manifest-digest sha256new="EQ6H5HHOIGXDRRLL4XVLTWGPSRK2KRAJV7G4ZYUUHEP7PYTCQ5MQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-01-25T21-02-01Z" size="23048424" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.1.25" released="2022-01-25" main="mc" id="sha256new_P2KFMS75T45ADWJOUFTH6FZA2IEL6CUC4IJM7VCVUE3GJL3YEPNA">
+      <manifest-digest sha256new="P2KFMS75T45ADWJOUFTH6FZA2IEL6CUC4IJM7VCVUE3GJL3YEPNA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-01-25T21-02-01Z" size="22315008" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.1.25" released="2022-01-25" main="mc" id="sha256new_NZLTFEJBMGDP4NSGGZ46LC2627W4ERQAARBPAVOJREDOXIMRTQFQ">
+      <manifest-digest sha256new="NZLTFEJBMGDP4NSGGZ46LC2627W4ERQAARBPAVOJREDOXIMRTQFQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-01-25T21-02-01Z" size="21823488" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.1.25" released="2022-01-25" main="mc" id="sha256new_2MDSSC7PXOVVLANAATWXEMFUAKLWVHC7B5ZAHGXV3YSX7WZN7P6Q">
+      <manifest-digest sha256new="2MDSSC7PXOVVLANAATWXEMFUAKLWVHC7B5ZAHGXV3YSX7WZN7P6Q"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-01-25T21-02-01Z" size="24532592" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.1.25" released="2022-01-25" main="mc" id="sha256new_HTFRTQ67XAAAKZDQ7TTSXLVS2UQ7EZIH5KYKPNZDKUTUQYYRXW2Q">
+      <manifest-digest sha256new="HTFRTQ67XAAAKZDQ7TTSXLVS2UQ7EZIH5KYKPNZDKUTUQYYRXW2Q"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-01-25T21-02-01Z" size="25213698" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.1.29" released="2022-01-29" main="mc.exe" id="sha256new_LGO43KDR3ZSAYSXXOB3TK3IZD7RLFGYZXMCYK6QWMMM7XXHDDCYQ">
+      <manifest-digest sha256new="LGO43KDR3ZSAYSXXOB3TK3IZD7RLFGYZXMCYK6QWMMM7XXHDDCYQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-01-29T01-03-27Z" size="23075560" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.1.29" released="2022-01-29" main="mc" id="sha256new_KUKOMIUHTUTQYZIOTWW2YSQBUJDA6Y4RTNBXMGIJIOMEN5UXRRLQ">
+      <manifest-digest sha256new="KUKOMIUHTUTQYZIOTWW2YSQBUJDA6Y4RTNBXMGIJIOMEN5UXRRLQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-01-29T01-03-27Z" size="22339584" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.1.29" released="2022-01-29" main="mc" id="sha256new_BLPZUTGWDPJCXSIPUQNAHGLEKRKPNUDTNY3VQ4XSZNZQXKLI4CDQ">
+      <manifest-digest sha256new="BLPZUTGWDPJCXSIPUQNAHGLEKRKPNUDTNY3VQ4XSZNZQXKLI4CDQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-01-29T01-03-27Z" size="21823488" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.1.29" released="2022-01-29" main="mc" id="sha256new_DDQA3QAVH4EUEBGIJHQKKU34EZWXXV3LPKOXPD24ME4N73SMCE3Q">
+      <manifest-digest sha256new="DDQA3QAVH4EUEBGIJHQKKU34EZWXXV3LPKOXPD24ME4N73SMCE3Q"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-01-29T01-03-27Z" size="24550528" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.1.29" released="2022-01-29" main="mc" id="sha256new_B5AWESGUKZTMKLV3LHKP25ZVF3FI4SORHJXNKPSD76LBFC474JYA">
+      <manifest-digest sha256new="B5AWESGUKZTMKLV3LHKP25ZVF3FI4SORHJXNKPSD76LBFC474JYA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-01-29T01-03-27Z" size="25233074" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.2.2" released="2022-02-02" main="mc.exe" id="sha256new_WHVDBY5HWUJC7RRVMCF74HWKTSOMY5ZTUZZSZR4656DO4L6Q4B3Q">
+      <manifest-digest sha256new="WHVDBY5HWUJC7RRVMCF74HWKTSOMY5ZTUZZSZR4656DO4L6Q4B3Q"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-02-02T02-03-24Z" size="23123176" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.2.2" released="2022-02-02" main="mc" id="sha256new_NKF3VJH7OAIJ24QLZ7EXJ4W3UI2QOQ5LN6GOUVQMEWIDUM46BFZQ">
+      <manifest-digest sha256new="NKF3VJH7OAIJ24QLZ7EXJ4W3UI2QOQ5LN6GOUVQMEWIDUM46BFZQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-02-02T02-03-24Z" size="22384640" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.2.2" released="2022-02-02" main="mc" id="sha256new_K5NLZUYLLHJRQRG5I6OSFPSXXUQC4FEB36XWQFYQFDL3BOQUH4UQ">
+      <manifest-digest sha256new="K5NLZUYLLHJRQRG5I6OSFPSXXUQC4FEB36XWQFYQFDL3BOQUH4UQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-02-02T02-03-24Z" size="21823488" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.2.2" released="2022-02-02" main="mc" id="sha256new_EF4UOGDG3KNQL6ORPBUQU63O7MWRO47AXBTPRA3SPZPOI2U5EKAA">
+      <manifest-digest sha256new="EF4UOGDG3KNQL6ORPBUQU63O7MWRO47AXBTPRA3SPZPOI2U5EKAA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-02-02T02-03-24Z" size="24605184" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.2.2" released="2022-02-02" main="mc" id="sha256new_CVOWKN6WSAJQ72KZLAIH2J7DKHWYVFHDF7DTH5ISZ3LTUORKKCMA">
+      <manifest-digest sha256new="CVOWKN6WSAJQ72KZLAIH2J7DKHWYVFHDF7DTH5ISZ3LTUORKKCMA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-02-02T02-03-24Z" size="25301826" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.2.7" released="2022-02-07" main="mc.exe" id="sha256new_MPOJWKBKG4UGITFYJXOAVJMCZD66VFYHG3FUETZN2SMRQXZJSS4A">
+      <manifest-digest sha256new="MPOJWKBKG4UGITFYJXOAVJMCZD66VFYHG3FUETZN2SMRQXZJSS4A"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-02-07T09-25-34Z" size="23124712" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.2.7" released="2022-02-07" main="mc" id="sha256new_AOLVGUOVIS6K4MAZP573ENVDCNBLILMFHBUY2GSIMTQ3LDWP7TAA">
+      <manifest-digest sha256new="AOLVGUOVIS6K4MAZP573ENVDCNBLILMFHBUY2GSIMTQ3LDWP7TAA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-02-07T09-25-34Z" size="22376448" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.2.7" released="2022-02-07" main="mc" id="sha256new_JR5YXMR3M4Y54HSZUZJEE6GHRYV2AQREGVTK5ZQUT2QMTKLU4RZQ">
+      <manifest-digest sha256new="JR5YXMR3M4Y54HSZUZJEE6GHRYV2AQREGVTK5ZQUT2QMTKLU4RZQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-02-07T09-25-34Z" size="21823488" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.2.7" released="2022-02-07" main="mc" id="sha256new_O4GVOD7WR6IZT7RBGSVNBSK6KBXV3OYHI65JJLN6O77P6ZWPK4AQ">
+      <manifest-digest sha256new="O4GVOD7WR6IZT7RBGSVNBSK6KBXV3OYHI65JJLN6O77P6ZWPK4AQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-02-07T09-25-34Z" size="24596240" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.2.7" released="2022-02-07" main="mc" id="sha256new_3TDZHA3CXQXIODDCQTUUININ7KAMTHYURQ2FUGX3SD4EP2K4W44Q">
+      <manifest-digest sha256new="3TDZHA3CXQXIODDCQTUUININ7KAMTHYURQ2FUGX3SD4EP2K4W44Q"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-02-07T09-25-34Z" size="25284498" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.2.13" released="2022-02-13" main="mc.exe" id="sha256new_TFIOLUNKDUCOUDHKNG3WFQGAL7WNZAARN6IG7Q24YTJNWYI6RITA">
+      <manifest-digest sha256new="TFIOLUNKDUCOUDHKNG3WFQGAL7WNZAARN6IG7Q24YTJNWYI6RITA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-02-13T23-26-13Z" size="23156456" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.2.13" released="2022-02-13" main="mc" id="sha256new_BN2DU7UU72VOZMZCX74CSI7TMBHRZZHIX5HTXTWASSLDMXFSVH3A">
+      <manifest-digest sha256new="BN2DU7UU72VOZMZCX74CSI7TMBHRZZHIX5HTXTWASSLDMXFSVH3A"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-02-13T23-26-13Z" size="22413312" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.2.13" released="2022-02-13" main="mc" id="sha256new_FFGFOPORR23WCET3ULNSRCBW7T2JLRTZEGVVI4BU4D3MN3IY3VNQ">
+      <manifest-digest sha256new="FFGFOPORR23WCET3ULNSRCBW7T2JLRTZEGVVI4BU4D3MN3IY3VNQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-02-13T23-26-13Z" size="21823488" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.2.13" released="2022-02-13" main="mc" id="sha256new_VFVW3GQHPH2NYO7WE2QX5RDWFOPS327QC252MJO3K5XXWSVWDGJQ">
+      <manifest-digest sha256new="VFVW3GQHPH2NYO7WE2QX5RDWFOPS327QC252MJO3K5XXWSVWDGJQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-02-13T23-26-13Z" size="24635008" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.2.13" released="2022-02-13" main="mc" id="sha256new_V4KBSTE3MXF5O2IMZPRVRSFS2ODHOXAUFRJONOWIZ6WVFM7XEE7A">
+      <manifest-digest sha256new="V4KBSTE3MXF5O2IMZPRVRSFS2ODHOXAUFRJONOWIZ6WVFM7XEE7A"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-02-13T23-26-13Z" size="25337506" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.2.16" released="2022-02-16" main="mc.exe" id="sha256new_TP6NY7MS4IIQVHGK3KAQZEXNWEUJEZCDTAU76JQ564V5RNOLHYXA">
+      <manifest-digest sha256new="TP6NY7MS4IIQVHGK3KAQZEXNWEUJEZCDTAU76JQ564V5RNOLHYXA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-02-16T05-54-01Z" size="23335656" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.2.16" released="2022-02-16" main="mc" id="sha256new_VMFC47KKRQPEUIULEBCCZ3LKN6MJJS3P4JMNTNR5ETBNDU65B57A">
+      <manifest-digest sha256new="VMFC47KKRQPEUIULEBCCZ3LKN6MJJS3P4JMNTNR5ETBNDU65B57A"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-02-16T05-54-01Z" size="22589440" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.2.16" released="2022-02-16" main="mc" id="sha256new_YF7LIIDWXJKMOPQJOLMAUIG6OBD3FNILGZRXWXLGPM4K3JN2MPIA">
+      <manifest-digest sha256new="YF7LIIDWXJKMOPQJOLMAUIG6OBD3FNILGZRXWXLGPM4K3JN2MPIA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-02-16T05-54-01Z" size="22020096" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.2.16" released="2022-02-16" main="mc" id="sha256new_ZQI7DWKUFQ52OITN5Z5L27XGQVTYQNQXSKIIUVJ6POWEKYPB227Q">
+      <manifest-digest sha256new="ZQI7DWKUFQ52OITN5Z5L27XGQVTYQNQXSKIIUVJ6POWEKYPB227Q"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-02-16T05-54-01Z" size="24821648" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.2.16" released="2022-02-16" main="mc" id="sha256new_LB6T2WP6PVR2CQV4ARP5GW2IMUBLL3D4KWOZ6BU36FQIODMFAI2Q">
+      <manifest-digest sha256new="LB6T2WP6PVR2CQV4ARP5GW2IMUBLL3D4KWOZ6BU36FQIODMFAI2Q"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-02-16T05-54-01Z" size="25528018" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.2.23" released="2022-02-23" main="mc.exe" id="sha256new_MRTEEJOFSPKSLIBCDQNKD53TWGJUGHQ7KEMBD7AUDKNQOMM42IHQ">
+      <manifest-digest sha256new="MRTEEJOFSPKSLIBCDQNKD53TWGJUGHQ7KEMBD7AUDKNQOMM42IHQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-02-23T03-15-59Z" size="23370472" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.2.23" released="2022-02-23" main="mc" id="sha256new_ZH4Q4SZ4O5HDY3UVDY43C554Y3EDN742IVEGOH53DDB7OH3ZQNOQ">
+      <manifest-digest sha256new="ZH4Q4SZ4O5HDY3UVDY43C554Y3EDN742IVEGOH53DDB7OH3ZQNOQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-02-23T03-15-59Z" size="22626304" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.2.23" released="2022-02-23" main="mc" id="sha256new_KT6FWN24EFK7EDQBJLB44NCT6FBWICBM6COCULMPLPVX56CX7SLA">
+      <manifest-digest sha256new="KT6FWN24EFK7EDQBJLB44NCT6FBWICBM6COCULMPLPVX56CX7SLA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-02-23T03-15-59Z" size="22085632" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.2.23" released="2022-02-23" main="mc" id="sha256new_BGV2XAIHKTKQY2L23VSBYYU5V63YFCL5IWC3B2KU7JZCESBJUQHQ">
+      <manifest-digest sha256new="BGV2XAIHKTKQY2L23VSBYYU5V63YFCL5IWC3B2KU7JZCESBJUQHQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-02-23T03-15-59Z" size="24866144" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.2.23" released="2022-02-23" main="mc" id="sha256new_HLPF2QJFH6VX6DLYB3XXWYFUGF6J5OELCD3KED3ZYPGVU2643O5Q">
+      <manifest-digest sha256new="HLPF2QJFH6VX6DLYB3XXWYFUGF6J5OELCD3KED3ZYPGVU2643O5Q"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-02-23T03-15-59Z" size="25561890" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.2.26" released="2022-02-26" main="mc.exe" id="sha256new_4HEL4VES7J35PAWN55YTRACEB4W6YOEBM5UTH6R6FSE2QQLGXTEA">
+      <manifest-digest sha256new="4HEL4VES7J35PAWN55YTRACEB4W6YOEBM5UTH6R6FSE2QQLGXTEA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-02-26T03-58-31Z" size="23881960" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.2.26" released="2022-02-26" main="mc" id="sha256new_WAB6BDPNHNGX3MEK6BIIITTHAKFTS62GP6RMMP2SCGTGSG4KE27A">
+      <manifest-digest sha256new="WAB6BDPNHNGX3MEK6BIIITTHAKFTS62GP6RMMP2SCGTGSG4KE27A"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-02-26T03-58-31Z" size="23252992" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.2.26" released="2022-02-26" main="mc" id="sha256new_WJY6RH3UYVYL3UZ6RCMF5EPXK3CFAH6TEUQJJQENUCFB2N3LJPBQ">
+      <manifest-digest sha256new="WJY6RH3UYVYL3UZ6RCMF5EPXK3CFAH6TEUQJJQENUCFB2N3LJPBQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-02-26T03-58-31Z" size="22675456" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.2.26" released="2022-02-26" main="mc" id="sha256new_X43YJHZI46QSSTY3JGCWQUPSQWRP4O7WLLECISAOIGGUWS3OG2VQ">
+      <manifest-digest sha256new="X43YJHZI46QSSTY3JGCWQUPSQWRP4O7WLLECISAOIGGUWS3OG2VQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-02-26T03-58-31Z" size="25545104" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.2.26" released="2022-02-26" main="mc" id="sha256new_OJBA3EBXX2YAWIYHHIEMJOBAPBBWLJD4AJSCAR6VU3AOJH4TT5WQ">
+      <manifest-digest sha256new="OJBA3EBXX2YAWIYHHIEMJOBAPBBWLJD4AJSCAR6VU3AOJH4TT5WQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-02-26T03-58-31Z" size="26271874" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.3.3" released="2022-03-03" main="mc.exe" id="sha256new_BBE2275NCWOQ42ESVDNDKREVYNODEWUB7SKX7NA7AK3HE6POF4UQ">
+      <manifest-digest sha256new="BBE2275NCWOQ42ESVDNDKREVYNODEWUB7SKX7NA7AK3HE6POF4UQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-03-03T21-12-24Z" size="23894760" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.3.3" released="2022-03-03" main="mc" id="sha256new_HYL6YKUH46G43SJ2BVBZ3J3Y2CZT3LTZSIITU3JSCWOSSB5Z6GWA">
+      <manifest-digest sha256new="HYL6YKUH46G43SJ2BVBZ3J3Y2CZT3LTZSIITU3JSCWOSSB5Z6GWA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-03-03T21-12-24Z" size="23265280" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.3.3" released="2022-03-03" main="mc" id="sha256new_K62C6WORPP54VAG5TJU72ZF6CUQLK7A6LSSEZ5CITQJYOMFDZSOA">
+      <manifest-digest sha256new="K62C6WORPP54VAG5TJU72ZF6CUQLK7A6LSSEZ5CITQJYOMFDZSOA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-03-03T21-12-24Z" size="22675456" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.3.3" released="2022-03-03" main="mc" id="sha256new_REIGH53XQGYJ4OV2MKJEDYEFWEWBKPH5GICVWU5ALVEX2HVXCTXQ">
+      <manifest-digest sha256new="REIGH53XQGYJ4OV2MKJEDYEFWEWBKPH5GICVWU5ALVEX2HVXCTXQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-03-03T21-12-24Z" size="25554176" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.3.3" released="2022-03-03" main="mc" id="sha256new_4WW73H3IESMQHRX3AL36ANZ3PE4SGCONYWNMCLY7Q3WXL4ZGROOQ">
+      <manifest-digest sha256new="4WW73H3IESMQHRX3AL36ANZ3PE4SGCONYWNMCLY7Q3WXL4ZGROOQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-03-03T21-12-24Z" size="26289234" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.3.9" released="2022-03-09" main="mc.exe" id="sha256new_HIWOTKRCWZODWHKCIRKQIBZZK2TOFKOZ6XY63G567FTSVHKO5H7Q">
+      <manifest-digest sha256new="HIWOTKRCWZODWHKCIRKQIBZZK2TOFKOZ6XY63G567FTSVHKO5H7Q"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-03-09T02-08-36Z" size="23947496" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.3.9" released="2022-03-09" main="mc" id="sha256new_T7TBTLRER5645TGA4X7KDXN4ZD2ORK7WRYCZDVCVFPPKGMPI2IBA">
+      <manifest-digest sha256new="T7TBTLRER5645TGA4X7KDXN4ZD2ORK7WRYCZDVCVFPPKGMPI2IBA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-03-09T02-08-36Z" size="23318528" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.3.9" released="2022-03-09" main="mc" id="sha256new_FALQFJED6AOODPCB736PFR2EGLVVFRGXG5JJ25HZZYIB5GYSK6DQ">
+      <manifest-digest sha256new="FALQFJED6AOODPCB736PFR2EGLVVFRGXG5JJ25HZZYIB5GYSK6DQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-03-09T02-08-36Z" size="22675456" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.3.9" released="2022-03-09" main="mc" id="sha256new_D7CZV7YMXA2EUPK6MEGL2VBEZ4PGAJH667M75IYZ77C35JW3BY2A">
+      <manifest-digest sha256new="D7CZV7YMXA2EUPK6MEGL2VBEZ4PGAJH667M75IYZ77C35JW3BY2A"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-03-09T02-08-36Z" size="25613504" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.3.9" released="2022-03-09" main="mc" id="sha256new_HQBMOPMPCSRTDM4M2HYMAYCDWZEZSIV3NXJHKMIBUNPPMGQ2KJSQ">
+      <manifest-digest sha256new="HQBMOPMPCSRTDM4M2HYMAYCDWZEZSIV3NXJHKMIBUNPPMGQ2KJSQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-03-09T02-08-36Z" size="26344802" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.3.13" released="2022-03-13" main="mc.exe" id="sha256new_D4ZIP2AP4ZDVOBXDVXACCMNOHJWZPAOOOGO4Z2AAM4ECFLIKHUNQ">
+      <manifest-digest sha256new="D4ZIP2AP4ZDVOBXDVXACCMNOHJWZPAOOOGO4Z2AAM4ECFLIKHUNQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-03-13T22-34-00Z" size="23951592" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.3.13" released="2022-03-13" main="mc" id="sha256new_RQQRUSRZKHXNNVEMSWXLNT47762AUG75NQFV42XCJ3OY6IU4HI3A">
+      <manifest-digest sha256new="RQQRUSRZKHXNNVEMSWXLNT47762AUG75NQFV42XCJ3OY6IU4HI3A"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-03-13T22-34-00Z" size="23322624" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.3.13" released="2022-03-13" main="mc" id="sha256new_QJLLHP3VFBQHBWFO2GYSJOE3OY4VU3FRAIIGJSPZHWJZCOOH3WTQ">
+      <manifest-digest sha256new="QJLLHP3VFBQHBWFO2GYSJOE3OY4VU3FRAIIGJSPZHWJZCOOH3WTQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-03-13T22-34-00Z" size="22675456" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.3.13" released="2022-03-13" main="mc" id="sha256new_S2ISTCDJDX6Q5NSLFE5V4OAPU4LVBH26KRHOJEOQL33THZC5LSSA">
+      <manifest-digest sha256new="S2ISTCDJDX6Q5NSLFE5V4OAPU4LVBH26KRHOJEOQL33THZC5LSSA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-03-13T22-34-00Z" size="25617760" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.3.13" released="2022-03-13" main="mc" id="sha256new_6ROJ44MDK2TMCN7Y2HU572RQCKAFMHFCI7A4RKM7HHHGVIB6RZRQ">
+      <manifest-digest sha256new="6ROJ44MDK2TMCN7Y2HU572RQCKAFMHFCI7A4RKM7HHHGVIB6RZRQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-03-13T22-34-00Z" size="26345202" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.3.17" released="2022-03-17" main="mc.exe" id="sha256new_FNT574KEXNYNO6QRAKBIBURBV5IZ22UIEO3U2PXLOFBQEFLZWXNQ">
+      <manifest-digest sha256new="FNT574KEXNYNO6QRAKBIBURBV5IZ22UIEO3U2PXLOFBQEFLZWXNQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-03-17T07-21-29Z" size="23963368" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.3.17" released="2022-03-17" main="mc" id="sha256new_VG3JSRULCXNE5WXPL5KEDM5NR4XFXE5QM4ASK732YGFHL7655FDA">
+      <manifest-digest sha256new="VG3JSRULCXNE5WXPL5KEDM5NR4XFXE5QM4ASK732YGFHL7655FDA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-03-17T07-21-29Z" size="23330816" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.3.17" released="2022-03-17" main="mc" id="sha256new_PSGMQUTHZEWE3KSR5BHLLRLEJLPWUOAAEV4ZGYUOKH7XJ4MPWLWA">
+      <manifest-digest sha256new="PSGMQUTHZEWE3KSR5BHLLRLEJLPWUOAAEV4ZGYUOKH7XJ4MPWLWA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-03-17T07-21-29Z" size="22806528" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.3.17" released="2022-03-17" main="mc" id="sha256new_KXJIZBUILQPQTQH3YVKE444FKD33E5ODMM7FPVYIJVR4RXCZSPCA">
+      <manifest-digest sha256new="KXJIZBUILQPQTQH3YVKE444FKD33E5ODMM7FPVYIJVR4RXCZSPCA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-03-17T07-21-29Z" size="25626496" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.3.17" released="2022-03-17" main="mc" id="sha256new_G4MX7B5VH465LG6Y7XLBE4YBWU6L7W3F5TEHT2FY3RDJGUWYDIYA">
+      <manifest-digest sha256new="G4MX7B5VH465LG6Y7XLBE4YBWU6L7W3F5TEHT2FY3RDJGUWYDIYA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-03-17T07-21-29Z" size="26346210" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.3.31" released="2022-03-31" main="mc.exe" id="sha256new_ZGFO5ADGBY3OXFLNWEYSR4RIVRFWK24AN5YJGU77Q7RB3PDQCI6Q">
+      <manifest-digest sha256new="ZGFO5ADGBY3OXFLNWEYSR4RIVRFWK24AN5YJGU77Q7RB3PDQCI6Q"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-03-31T04-55-30Z" size="23967976" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.3.31" released="2022-03-31" main="mc" id="sha256new_VO2XDM6G2XSNL7DGWIMECTQMNCZWPR7LYXIFOKGEIIIGPQKM4WZQ">
+      <manifest-digest sha256new="VO2XDM6G2XSNL7DGWIMECTQMNCZWPR7LYXIFOKGEIIIGPQKM4WZQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-03-31T04-55-30Z" size="23334912" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.3.31" released="2022-03-31" main="mc" id="sha256new_KY2VUICG7L37QWRNCHXZGFI3TYAHCRBTFF7G26RL5SKROUCGACXQ">
+      <manifest-digest sha256new="KY2VUICG7L37QWRNCHXZGFI3TYAHCRBTFF7G26RL5SKROUCGACXQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-03-31T04-55-30Z" size="22806528" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.3.31" released="2022-03-31" main="mc" id="sha256new_HEEBMOMG2LX72M7IVFLAUSUNPYAF3REG7RBE2W4HXJZZJVJRUHVQ">
+      <manifest-digest sha256new="HEEBMOMG2LX72M7IVFLAUSUNPYAF3REG7RBE2W4HXJZZJVJRUHVQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-03-31T04-55-30Z" size="25634640" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.3.31" released="2022-03-31" main="mc" id="sha256new_WB52YUBVG4LOEWQAUQNZNLMSDYI3AANH53OVT4SPIFSUO4SR4GPQ">
+      <manifest-digest sha256new="WB52YUBVG4LOEWQAUQNZNLMSDYI3AANH53OVT4SPIFSUO4SR4GPQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-03-31T04-55-30Z" size="26346226" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.4.1" released="2022-04-01" main="mc.exe" id="sha256new_VV23ZINXHTKBVMFL4DWN5HYSTUVJRPO7O6CB3Z5AW47BI6THAPXQ">
+      <manifest-digest sha256new="VV23ZINXHTKBVMFL4DWN5HYSTUVJRPO7O6CB3Z5AW47BI6THAPXQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-04-01T23-44-48Z" size="23967976" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.4.1" released="2022-04-01" main="mc" id="sha256new_J2DXOYWU5VVVKUGUHIKPNPFKDTHZEIEIYKFT2VI5E7IA2WMD3QIQ">
+      <manifest-digest sha256new="J2DXOYWU5VVVKUGUHIKPNPFKDTHZEIEIYKFT2VI5E7IA2WMD3QIQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-04-01T23-44-48Z" size="23334912" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.4.1" released="2022-04-01" main="mc" id="sha256new_CD22ITZAI3PPJSWMMDVCYYQTIVA3V63GBOD43RBVQR27HODTCDPQ">
+      <manifest-digest sha256new="CD22ITZAI3PPJSWMMDVCYYQTIVA3V63GBOD43RBVQR27HODTCDPQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-04-01T23-44-48Z" size="22806528" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.4.1" released="2022-04-01" main="mc" id="sha256new_SX62F57UXYLMOIHOXFA4K3YODMGJUDC52TOAPY7SLTD3Y6EZCJUQ">
+      <manifest-digest sha256new="SX62F57UXYLMOIHOXFA4K3YODMGJUDC52TOAPY7SLTD3Y6EZCJUQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-04-01T23-44-48Z" size="25634688" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.4.1" released="2022-04-01" main="mc" id="sha256new_BTUZSF3WXNF2OU5QZIASR7WN7SITRQLQF6ZBT4W4PQPGRV6QLV6A">
+      <manifest-digest sha256new="BTUZSF3WXNF2OU5QZIASR7WN7SITRQLQF6ZBT4W4PQPGRV6QLV6A"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-04-01T23-44-48Z" size="26346322" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.4.7" released="2022-04-07" main="mc.exe" id="sha256new_G3K5PLS3PWBPJU6JKNXC3EICWTN5CWX3CH53SNGSUP3MCYBSBZOQ">
+      <manifest-digest sha256new="G3K5PLS3PWBPJU6JKNXC3EICWTN5CWX3CH53SNGSUP3MCYBSBZOQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-04-07T21-43-27Z" size="23984872" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.4.7" released="2022-04-07" main="mc" id="sha256new_X3WACG3YSP63XFREOZQXCCBT35SEVRCY2T4HFP6WIKFB3DSDG6YA">
+      <manifest-digest sha256new="X3WACG3YSP63XFREOZQXCCBT35SEVRCY2T4HFP6WIKFB3DSDG6YA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-04-07T21-43-27Z" size="23351296" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.4.7" released="2022-04-07" main="mc" id="sha256new_ZZT56JGL56MU5P5XGOVBVSPHB5LPR5TW7375UK2CTLL75ZYJNGFA">
+      <manifest-digest sha256new="ZZT56JGL56MU5P5XGOVBVSPHB5LPR5TW7375UK2CTLL75ZYJNGFA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-04-07T21-43-27Z" size="22806528" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.4.7" released="2022-04-07" main="mc" id="sha256new_BB6OI4ZF4DVHIRGJYTRPMJWQHVHE2NVLFBXKJ2KQ7OSH6ZTNEFIQ">
+      <manifest-digest sha256new="BB6OI4ZF4DVHIRGJYTRPMJWQHVHE2NVLFBXKJ2KQ7OSH6ZTNEFIQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-04-07T21-43-27Z" size="25651984" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.4.7" released="2022-04-07" main="mc" id="sha256new_GMWJEJ64KHTKPSQFEC4IXUQQPK3YTAWQRY7V3NJOOLFHTHVMUEMA">
+      <manifest-digest sha256new="GMWJEJ64KHTKPSQFEC4IXUQQPK3YTAWQRY7V3NJOOLFHTHVMUEMA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-04-07T21-43-27Z" size="26381266" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.4.16" released="2022-04-16" main="mc.exe" id="sha256new_4TO44QRQGJGGZXMBTPHJZLGMXBQMI67BDK7MZFPTESDCJE6THFFQ">
+      <manifest-digest sha256new="4TO44QRQGJGGZXMBTPHJZLGMXBQMI67BDK7MZFPTESDCJE6THFFQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-04-16T21-11-21Z" size="23994088" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.4.16" released="2022-04-16" main="mc" id="sha256new_NK7JG52YFX46HVGST3CQC6I3IHOFXFXIFCKQAK3UCY6KIG2GPRRQ">
+      <manifest-digest sha256new="NK7JG52YFX46HVGST3CQC6I3IHOFXFXIFCKQAK3UCY6KIG2GPRRQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-04-16T21-11-21Z" size="23359488" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.4.16" released="2022-04-16" main="mc" id="sha256new_KLCVLFMGKY5OYUWGM5XKVSQXXKTRBX2MJ6TW2U2J37R2A5QY6DMQ">
+      <manifest-digest sha256new="KLCVLFMGKY5OYUWGM5XKVSQXXKTRBX2MJ6TW2U2J37R2A5QY6DMQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-04-16T21-11-21Z" size="22806528" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.4.16" released="2022-04-16" main="mc" id="sha256new_HZOUVIAID2ZYVGVVGUQYQHIZWI236RVGJF5ORX3OQX4DDOTJ5G5Q">
+      <manifest-digest sha256new="HZOUVIAID2ZYVGVVGUQYQHIZWI236RVGJF5ORX3OQX4DDOTJ5G5Q"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-04-16T21-11-21Z" size="25661792" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.4.16" released="2022-04-16" main="mc" id="sha256new_WHTWOPXL662XEXWCM56DA7BPWDSQV6OLXZHHVGSJGHPO6K57KB4A">
+      <manifest-digest sha256new="WHTWOPXL662XEXWCM56DA7BPWDSQV6OLXZHHVGSJGHPO6K57KB4A"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-04-16T21-11-21Z" size="26399794" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.4.26" released="2022-04-26" main="mc.exe" id="sha256new_BWIMKNIRTWTZ2PWSGD6X3IHBR5ZN33BCTLJCTEGRZHL3JDXTZVJA">
+      <manifest-digest sha256new="BWIMKNIRTWTZ2PWSGD6X3IHBR5ZN33BCTLJCTEGRZHL3JDXTZVJA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-04-26T18-00-22Z" size="23997672" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.4.26" released="2022-04-26" main="mc" id="sha256new_4PNVYEIE7PFGYQCGLFTQUCLW6ERX4OFSMB6LVYYWSAKNMIIOT4EQ">
+      <manifest-digest sha256new="4PNVYEIE7PFGYQCGLFTQUCLW6ERX4OFSMB6LVYYWSAKNMIIOT4EQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-04-26T18-00-22Z" size="23367680" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.4.26" released="2022-04-26" main="mc" id="sha256new_3OU6XVM5ENEDEOAU5WB6T77ERFL2CMV5S3NT7BJPA3CXR7XQCYCQ">
+      <manifest-digest sha256new="3OU6XVM5ENEDEOAU5WB6T77ERFL2CMV5S3NT7BJPA3CXR7XQCYCQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-04-26T18-00-22Z" size="22806528" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.4.26" released="2022-04-26" main="mc" id="sha256new_Y2UZWF7ET22C4ZUU7UGDKCSU6X6KT3N66BE6BH3DCPDPKHYRN3JA">
+      <manifest-digest sha256new="Y2UZWF7ET22C4ZUU7UGDKCSU6X6KT3N66BE6BH3DCPDPKHYRN3JA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-04-26T18-00-22Z" size="25666016" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.4.26" released="2022-04-26" main="mc" id="sha256new_V47NHNBMZ3BBGFRAYJYRR4FLQQKWXNURZTKWUZBYN6SPCRSUGVLQ">
+      <manifest-digest sha256new="V47NHNBMZ3BBGFRAYJYRR4FLQQKWXNURZTKWUZBYN6SPCRSUGVLQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-04-26T18-00-22Z" size="26400162" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.5.4" released="2022-05-04" main="mc.exe" id="sha256new_AE7EECGF7SSZFAGFSMAYWXCOA7574PKWUFM7OKC47NDAQVDKIUHQ">
+      <manifest-digest sha256new="AE7EECGF7SSZFAGFSMAYWXCOA7574PKWUFM7OKC47NDAQVDKIUHQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-05-04T06-07-55Z" size="24000232" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.5.4" released="2022-05-04" main="mc" id="sha256new_2WVGQ4PXNN6EUI4OFQSXKXINSG3XUVUOOI5DQM373SCQSYY5PNGA">
+      <manifest-digest sha256new="2WVGQ4PXNN6EUI4OFQSXKXINSG3XUVUOOI5DQM373SCQSYY5PNGA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-05-04T06-07-55Z" size="23367680" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.5.4" released="2022-05-04" main="mc" id="sha256new_GVUWGFJ4C46NLARHOT3LPEPST5WRH5TPMFHALOU4OCJG7BZ2ZNCQ">
+      <manifest-digest sha256new="GVUWGFJ4C46NLARHOT3LPEPST5WRH5TPMFHALOU4OCJG7BZ2ZNCQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-05-04T06-07-55Z" size="22806528" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.5.4" released="2022-05-04" main="mc" id="sha256new_XSOLXZ7RPN4YIVTDTSW7EYOUYBLRBOKLOGXDZ6TU3DKQ7V4Y2K7A">
+      <manifest-digest sha256new="XSOLXZ7RPN4YIVTDTSW7EYOUYBLRBOKLOGXDZ6TU3DKQ7V4Y2K7A"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-05-04T06-07-55Z" size="25666096" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.5.4" released="2022-05-04" main="mc" id="sha256new_OMITXONZQCAJWPU536FA3UVA73FVOGR4TAUJECARAWYXWAPXM3RA">
+      <manifest-digest sha256new="OMITXONZQCAJWPU536FA3UVA73FVOGR4TAUJECARAWYXWAPXM3RA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-05-04T06-07-55Z" size="26400290" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.5.9" released="2022-05-09" main="mc.exe" id="sha256new_BGV6A3DJKFUE52NZXED5MCFEAZDXXPCIUTAG5WYWWWS6LBZPE2NQ">
+      <manifest-digest sha256new="BGV6A3DJKFUE52NZXED5MCFEAZDXXPCIUTAG5WYWWWS6LBZPE2NQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-05-09T04-08-26Z" size="24124648" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.5.9" released="2022-05-09" main="mc" id="sha256new_7R76HD5VYK3MHCAFGAS5MZV7QCMZ3J5OYHMOPDIQJXBK76WRFZYQ">
+      <manifest-digest sha256new="7R76HD5VYK3MHCAFGAS5MZV7QCMZ3J5OYHMOPDIQJXBK76WRFZYQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-05-09T04-08-26Z" size="23490560" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.5.9" released="2022-05-09" main="mc" id="sha256new_3MREMX25O5GDSSJIXVL5W4S5NLDWSVENN4O4L5E27Y5PV7VVSNWQ">
+      <manifest-digest sha256new="3MREMX25O5GDSSJIXVL5W4S5NLDWSVENN4O4L5E27Y5PV7VVSNWQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-05-09T04-08-26Z" size="22937600" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.5.9" released="2022-05-09" main="mc" id="sha256new_AS2HCGNKAHMDOEVTPOTWAEM5WWRT6UEVT23WIYDON6B6MLFZGSEQ">
+      <manifest-digest sha256new="AS2HCGNKAHMDOEVTPOTWAEM5WWRT6UEVT23WIYDON6B6MLFZGSEQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-05-09T04-08-26Z" size="25793968" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.5.9" released="2022-05-09" main="mc" id="sha256new_EWF3EYKCPLLTCXGIWALA2P6JTOV53BMZANPW4KT3EG5NA4ZIBZKQ">
+      <manifest-digest sha256new="EWF3EYKCPLLTCXGIWALA2P6JTOV53BMZANPW4KT3EG5NA4ZIBZKQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-05-09T04-08-26Z" size="26532642" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.6.10" released="2022-06-10" main="mc.exe" id="sha256new_HPDCWE2TEKOO2ABWX77ADRCK3DJY2XAHDS4KZ6AWV4S3JR2ENIYA">
+      <manifest-digest sha256new="HPDCWE2TEKOO2ABWX77ADRCK3DJY2XAHDS4KZ6AWV4S3JR2ENIYA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-06-10T22-29-12Z" size="23408512" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.6.10" released="2022-06-10" main="mc" id="sha256new_4LGG5WXPQI5HP7KBNL4MLUCJ37G7SFO4IE7YPQMGSFLQA3XOB5QQ">
+      <manifest-digest sha256new="4LGG5WXPQI5HP7KBNL4MLUCJ37G7SFO4IE7YPQMGSFLQA3XOB5QQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-06-10T22-29-12Z" size="23113728" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.6.10" released="2022-06-10" main="mc" id="sha256new_3FID2Y7WH4ZHZFB64UUFZ6X7US2YCPY4LJESWZT74LONJTNWHOVQ">
+      <manifest-digest sha256new="3FID2Y7WH4ZHZFB64UUFZ6X7US2YCPY4LJESWZT74LONJTNWHOVQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-06-10T22-29-12Z" size="22216704" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.6.10" released="2022-06-10" main="mc" id="sha256new_H6SPXBVKDBLTGOLP5QYUHGR7OUOX6I6HN2SPNBZWFKFMMGI34TGA">
+      <manifest-digest sha256new="H6SPXBVKDBLTGOLP5QYUHGR7OUOX6I6HN2SPNBZWFKFMMGI34TGA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-06-10T22-29-12Z" size="25406464" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.6.10" released="2022-06-10" main="mc" id="sha256new_6I4W4ASAMODJLNUPI4BDPO3ZEXJGKU3T4OZJUV2CUKDK3XNOBTSQ">
+      <manifest-digest sha256new="6I4W4ASAMODJLNUPI4BDPO3ZEXJGKU3T4OZJUV2CUKDK3XNOBTSQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-06-10T22-29-12Z" size="24946770" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.6.11" released="2022-06-11" main="mc.exe" id="sha256new_ZA6SQUTJMVP32NZ5MR2CYMWRSRNC342IVG3ISNJH2DERPDM3JJVA">
+      <manifest-digest sha256new="ZA6SQUTJMVP32NZ5MR2CYMWRSRNC342IVG3ISNJH2DERPDM3JJVA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-06-11T21-10-36Z" size="23409536" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.6.11" released="2022-06-11" main="mc" id="sha256new_UMD7HDBQ2TG6HZXIMPO37UZQNJWGOTEOM3ZF3DUPSACLKXDRN6LA">
+      <manifest-digest sha256new="UMD7HDBQ2TG6HZXIMPO37UZQNJWGOTEOM3ZF3DUPSACLKXDRN6LA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-06-11T21-10-36Z" size="23113728" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.6.11" released="2022-06-11" main="mc" id="sha256new_PWBSQSMVMBLMASUMPKQEXD23FNGXKQY3JE2TR545NNW7WX3TUQKA">
+      <manifest-digest sha256new="PWBSQSMVMBLMASUMPKQEXD23FNGXKQY3JE2TR545NNW7WX3TUQKA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-06-11T21-10-36Z" size="22216704" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.6.11" released="2022-06-11" main="mc" id="sha256new_YGP5DTUYLOU3TRPB54SPFQPZETOC2DQMVCTMEEO2SRNTDD2RWLUQ">
+      <manifest-digest sha256new="YGP5DTUYLOU3TRPB54SPFQPZETOC2DQMVCTMEEO2SRNTDD2RWLUQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-06-11T21-10-36Z" size="25406464" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.6.11" released="2022-06-11" main="mc" id="sha256new_Q46KP7WPYF3AO7QWEWDSTKCBSUWP2J5NIOJBMLEHSSLEA7QCM4NQ">
+      <manifest-digest sha256new="Q46KP7WPYF3AO7QWEWDSTKCBSUWP2J5NIOJBMLEHSSLEA7QCM4NQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-06-11T21-10-36Z" size="24946770" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.6.17" released="2022-06-17" main="mc.exe" id="sha256new_V7CE3AHNAEZVUR2B6LIKE7FIGWUZVLQTWZL6II3QWHQCGWIKBPNQ">
+      <manifest-digest sha256new="V7CE3AHNAEZVUR2B6LIKE7FIGWUZVLQTWZL6II3QWHQCGWIKBPNQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-06-17T02-52-50Z" size="23398272" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.6.17" released="2022-06-17" main="mc" id="sha256new_YEBGTKTBDGKL6HXDFXN2OFPSQ7AIUYF5ECNFNYSHU2EFGOMHV4AQ">
+      <manifest-digest sha256new="YEBGTKTBDGKL6HXDFXN2OFPSQ7AIUYF5ECNFNYSHU2EFGOMHV4AQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-06-17T02-52-50Z" size="23105536" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.6.17" released="2022-06-17" main="mc" id="sha256new_OTQ3CTUCRXGVJXRBH2BCTJ3GGX74IETBP5EAF5DKFK7JPFOXE7FQ">
+      <manifest-digest sha256new="OTQ3CTUCRXGVJXRBH2BCTJ3GGX74IETBP5EAF5DKFK7JPFOXE7FQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-06-17T02-52-50Z" size="22151168" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.6.17" released="2022-06-17" main="mc" id="sha256new_FLDDDLHAFYN4CJ3TF2WIFQF6EKMUWIXA5YBP3QUCYSIHIKYVEGOA">
+      <manifest-digest sha256new="FLDDDLHAFYN4CJ3TF2WIFQF6EKMUWIXA5YBP3QUCYSIHIKYVEGOA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-06-17T02-52-50Z" size="25395888" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.6.17" released="2022-06-17" main="mc" id="sha256new_72AAQQ4FFPFEP5ROMSA3OKRJZJPAMXU6DGJ2EVIKK2I5RSYEABVA">
+      <manifest-digest sha256new="72AAQQ4FFPFEP5ROMSA3OKRJZJPAMXU6DGJ2EVIKK2I5RSYEABVA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-06-17T02-52-50Z" size="24929794" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.6.26" released="2022-06-26" main="mc.exe" id="sha256new_X3346GWTXZEG2ERKTX2G6PAVSGPRIWLBEHZ4T3LRTU4DBUSBEAKA">
+      <manifest-digest sha256new="X3346GWTXZEG2ERKTX2G6PAVSGPRIWLBEHZ4T3LRTU4DBUSBEAKA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-06-26T18-51-48Z" size="23433088" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.6.26" released="2022-06-26" main="mc" id="sha256new_76VXGKI6FXYG7UCSOAAFVJ2MZC5X7FLIKGMOJQDLXHRBP55FIZDA">
+      <manifest-digest sha256new="76VXGKI6FXYG7UCSOAAFVJ2MZC5X7FLIKGMOJQDLXHRBP55FIZDA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-06-26T18-51-48Z" size="23138304" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.6.26" released="2022-06-26" main="mc" id="sha256new_53R2WVTQG4RYS3PHVP2SLZC7FHPVA2YQOEVSBNOJZXRKDMX2NGNQ">
+      <manifest-digest sha256new="53R2WVTQG4RYS3PHVP2SLZC7FHPVA2YQOEVSBNOJZXRKDMX2NGNQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-06-26T18-51-48Z" size="22216704" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.6.26" released="2022-06-26" main="mc" id="sha256new_ZIWWBJLGJP5RPQ6AD6HNPVE5CQG2BISDTLRN3UUKHVZ5FGN3FRDA">
+      <manifest-digest sha256new="ZIWWBJLGJP5RPQ6AD6HNPVE5CQG2BISDTLRN3UUKHVZ5FGN3FRDA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-06-26T18-51-48Z" size="25431408" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.6.26" released="2022-06-26" main="mc" id="sha256new_I63RGVEWFA7JI53MBWK4PWWEXSC63DYLRCGC6GE22UPDKEDQ5IWQ">
+      <manifest-digest sha256new="I63RGVEWFA7JI53MBWK4PWWEXSC63DYLRCGC6GE22UPDKEDQ5IWQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-06-26T18-51-48Z" size="24966306" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.7.6" released="2022-07-06" main="mc.exe" id="sha256new_KGICSDBQNBM3QBWNGVAVSJOPEDPIQIKSA4SID7EWDIWR3ZOGZT3Q">
+      <manifest-digest sha256new="KGICSDBQNBM3QBWNGVAVSJOPEDPIQIKSA4SID7EWDIWR3ZOGZT3Q"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-07-06T14-54-36Z" size="23589248" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.7.6" released="2022-07-06" main="mc" id="sha256new_PVTVNNNXCUHMDRUWWGLHHGIJG6O3NLTMZB5ESINQZJ4JQUVH4J4Q">
+      <manifest-digest sha256new="PVTVNNNXCUHMDRUWWGLHHGIJG6O3NLTMZB5ESINQZJ4JQUVH4J4Q"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-07-06T14-54-36Z" size="23293952" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.7.6" released="2022-07-06" main="mc" id="sha256new_YD6YZUTFBCAGT3UMDUI635KLRI5CQO64LXKAEMES3TUAZQDSNHQA">
+      <manifest-digest sha256new="YD6YZUTFBCAGT3UMDUI635KLRI5CQO64LXKAEMES3TUAZQDSNHQA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-07-06T14-54-36Z" size="22347776" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.7.6" released="2022-07-06" main="mc" id="sha256new_XT4JLGOMMT6L35LNQ42Q7MRBQZ6T7VW5JZ4KL6O65YB63WEHK2OQ">
+      <manifest-digest sha256new="XT4JLGOMMT6L35LNQ42Q7MRBQZ6T7VW5JZ4KL6O65YB63WEHK2OQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-07-06T14-54-36Z" size="25597856" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.7.6" released="2022-07-06" main="mc" id="sha256new_VCTWB73UXPMXC5QHXZCQDU6W6XOPDC34HKAWWVXD6OO36EJFUBKA">
+      <manifest-digest sha256new="VCTWB73UXPMXC5QHXZCQDU6W6XOPDC34HKAWWVXD6OO36EJFUBKA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-07-06T14-54-36Z" size="25129106" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.7.11" released="2022-07-11" main="mc.exe" id="sha256new_UIKZHMKJSVCOHML43WWQOSGUXJ3M2FZTYCF7XLG7ZV7C6QYUXXRQ">
+      <manifest-digest sha256new="UIKZHMKJSVCOHML43WWQOSGUXJ3M2FZTYCF7XLG7ZV7C6QYUXXRQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-07-11T16-16-12Z" size="23617920" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.7.11" released="2022-07-11" main="mc" id="sha256new_ZFYTABVHQQCWU6IXPKVHYSNGHQ6CSSAOILBPCCZWF2PV4RF66IDA">
+      <manifest-digest sha256new="ZFYTABVHQQCWU6IXPKVHYSNGHQ6CSSAOILBPCCZWF2PV4RF66IDA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-07-11T16-16-12Z" size="23322624" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.7.11" released="2022-07-11" main="mc" id="sha256new_K4YAH7RGP4RPQTPP5IY5FVN5K5L5PTIUBQ4YFPJX4BDI7AC5SCVQ">
+      <manifest-digest sha256new="K4YAH7RGP4RPQTPP5IY5FVN5K5L5PTIUBQ4YFPJX4BDI7AC5SCVQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-07-11T16-16-12Z" size="22347776" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.7.11" released="2022-07-11" main="mc" id="sha256new_GQ73JNDNLNYJUWKWJUUY6AHNOMTT6KIBHECWUYMWVEKSSFTKT45A">
+      <manifest-digest sha256new="GQ73JNDNLNYJUWKWJUUY6AHNOMTT6KIBHECWUYMWVEKSSFTKT45A"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-07-11T16-16-12Z" size="25628320" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.7.11" released="2022-07-11" main="mc" id="sha256new_CO2GJTAGI5V5ZA47MJVFCOGGS76J5P5GU4DAVWINNDRPINZPF3RA">
+      <manifest-digest sha256new="CO2GJTAGI5V5ZA47MJVFCOGGS76J5P5GU4DAVWINNDRPINZPF3RA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-07-11T16-16-12Z" size="25164754" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.7.15" released="2022-07-15" main="mc.exe" id="sha256new_ON7RGQFIUZZYJU2I6CL2QMEINHNF7T6E6YPEE5XY256EPO7T44ZQ">
+      <manifest-digest sha256new="ON7RGQFIUZZYJU2I6CL2QMEINHNF7T6E6YPEE5XY256EPO7T44ZQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-07-15T09-20-55Z" size="23974272" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.7.15" released="2022-07-15" main="mc" id="sha256new_J67Y5HNO47GYPQOMALTNXPTWJSCOTPY4MSY3HLDM4B3EXAYVEADQ">
+      <manifest-digest sha256new="J67Y5HNO47GYPQOMALTNXPTWJSCOTPY4MSY3HLDM4B3EXAYVEADQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-07-15T09-20-55Z" size="23678976" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.7.15" released="2022-07-15" main="mc" id="sha256new_POR455PXXH6NEZ5BSMWTNUACFOU6KHQXSHFYR4UDY4AWNYG7VGGQ">
+      <manifest-digest sha256new="POR455PXXH6NEZ5BSMWTNUACFOU6KHQXSHFYR4UDY4AWNYG7VGGQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-07-15T09-20-55Z" size="22675456" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.7.15" released="2022-07-15" main="mc" id="sha256new_6JTNCGG3AQKHV7N2EL7YZRHVJGJFNQPEMHFTG3SICP67MQUPNEWQ">
+      <manifest-digest sha256new="6JTNCGG3AQKHV7N2EL7YZRHVJGJFNQPEMHFTG3SICP67MQUPNEWQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-07-15T09-20-55Z" size="26014544" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.7.15" released="2022-07-15" main="mc" id="sha256new_JMCHHJRQQURPFG6EUDOKVJYYI2W5AJN4LZFLRGG7JH3BOEAFAU5Q">
+      <manifest-digest sha256new="JMCHHJRQQURPFG6EUDOKVJYYI2W5AJN4LZFLRGG7JH3BOEAFAU5Q"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-07-15T09-20-55Z" size="25533778" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.7.24" released="2022-07-24" main="mc.exe" id="sha256new_ER2OTKM2GVVIDFLXKHESSLLVBW7OTKXXENGKBGCCSYWZGJ4S76CQ">
+      <manifest-digest sha256new="ER2OTKM2GVVIDFLXKHESSLLVBW7OTKXXENGKBGCCSYWZGJ4S76CQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-07-24T02-25-13Z" size="24007552" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.7.24" released="2022-07-24" main="mc" id="sha256new_U6WLZWFOX5VKZIRC3ZGA5US7GSEH7UAQYIVREBLRAD3WB7QBQJGA">
+      <manifest-digest sha256new="U6WLZWFOX5VKZIRC3ZGA5US7GSEH7UAQYIVREBLRAD3WB7QBQJGA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-07-24T02-25-13Z" size="23707648" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.7.24" released="2022-07-24" main="mc" id="sha256new_JW2EH3OTSLZY444C2GGVSIPWLU5ZKPOEWOGGOXDRI6IV4YYPPQEA">
+      <manifest-digest sha256new="JW2EH3OTSLZY444C2GGVSIPWLU5ZKPOEWOGGOXDRI6IV4YYPPQEA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-07-24T02-25-13Z" size="22740992" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.7.24" released="2022-07-24" main="mc" id="sha256new_UN6PHN6WLLDYKOMA4ZQ53BYZWVWLMBZIPTOE7F72OQCJ7UYS2YYQ">
+      <manifest-digest sha256new="UN6PHN6WLLDYKOMA4ZQ53BYZWVWLMBZIPTOE7F72OQCJ7UYS2YYQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-07-24T02-25-13Z" size="26049392" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.7.24" released="2022-07-24" main="mc" id="sha256new_Y3QE5Z5CADFXNIF6Y72QQ3IJDHCFOUO4HTNZIHYE3VHDUDHTVGFA">
+      <manifest-digest sha256new="Y3QE5Z5CADFXNIF6Y72QQ3IJDHCFOUO4HTNZIHYE3VHDUDHTVGFA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-07-24T02-25-13Z" size="25570322" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.7.29" released="2022-07-29" main="mc.exe" id="sha256new_RQPT7A36Q4EACMTFFXGNBDYR5OIN3ZLURJ4O3RGUJN432FPXFMCQ">
+      <manifest-digest sha256new="RQPT7A36Q4EACMTFFXGNBDYR5OIN3ZLURJ4O3RGUJN432FPXFMCQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-07-29T19-17-16Z" size="24019328" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.7.29" released="2022-07-29" main="mc" id="sha256new_GQ62TEFCHUFTUAY64TQIJETV2HSDAIKT7GXJ4AIIRPGUQ4MDHCJQ">
+      <manifest-digest sha256new="GQ62TEFCHUFTUAY64TQIJETV2HSDAIKT7GXJ4AIIRPGUQ4MDHCJQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-07-29T19-17-16Z" size="23719936" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.7.29" released="2022-07-29" main="mc" id="sha256new_U7SLFSOPXC4AHI6NSY723WUPWHSK6NEYOW4YVLGXGM7MG3URD4TQ">
+      <manifest-digest sha256new="U7SLFSOPXC4AHI6NSY723WUPWHSK6NEYOW4YVLGXGM7MG3URD4TQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-07-29T19-17-16Z" size="22740992" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.7.29" released="2022-07-29" main="mc" id="sha256new_DF3LQDPTBJWA7G5IP3BUDJGXDNQANYFROVQOYVGPV3B2PL6KNSDA">
+      <manifest-digest sha256new="DF3LQDPTBJWA7G5IP3BUDJGXDNQANYFROVQOYVGPV3B2PL6KNSDA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-07-29T19-17-16Z" size="26063584" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.7.29" released="2022-07-29" main="mc" id="sha256new_ZPMX2LCJHHB2BMJZLH2VIDVE4QH7IZ5XKZYHSHP6NBDHN6G4WKDQ">
+      <manifest-digest sha256new="ZPMX2LCJHHB2BMJZLH2VIDVE4QH7IZ5XKZYHSHP6NBDHN6G4WKDQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-07-29T19-17-16Z" size="25606290" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.8.5" released="2022-08-05" main="mc.exe" id="sha256new_6GM7TPEDIO5YB7TRO7YTW7LKMDZTJAR3CE6DFPP6SNXF4BH6LZFQ">
+      <manifest-digest sha256new="6GM7TPEDIO5YB7TRO7YTW7LKMDZTJAR3CE6DFPP6SNXF4BH6LZFQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-08-05T08-01-28Z" size="24041856" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.8.5" released="2022-08-05" main="mc" id="sha256new_VRTZKKIF6IOXMOJSCEJWKKESOFGXFI5WKZVTH673WI7Q6VTX57NA">
+      <manifest-digest sha256new="VRTZKKIF6IOXMOJSCEJWKKESOFGXFI5WKZVTH673WI7Q6VTX57NA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-08-05T08-01-28Z" size="23740416" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.8.5" released="2022-08-05" main="mc" id="sha256new_GT43K5JQGM35GGAFZFXU7SG6ITF7NBDSYW22KHABLN4FRABGFWUA">
+      <manifest-digest sha256new="GT43K5JQGM35GGAFZFXU7SG6ITF7NBDSYW22KHABLN4FRABGFWUA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-08-05T08-01-28Z" size="22740992" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.8.5" released="2022-08-05" main="mc" id="sha256new_YODR3KQ72M6TB5N76JWOABASZ5UDGI6DFVKLUCFDKRBZQOLLT6IA">
+      <manifest-digest sha256new="YODR3KQ72M6TB5N76JWOABASZ5UDGI6DFVKLUCFDKRBZQOLLT6IA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-08-05T08-01-28Z" size="26084816" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.8.5" released="2022-08-05" main="mc" id="sha256new_HREQVQXQHH2UY4C2XGFHQQVRJVFY6ZQLIJZYPWUYTJLWFQNHWSWA">
+      <manifest-digest sha256new="HREQVQXQHH2UY4C2XGFHQQVRJVFY6ZQLIJZYPWUYTJLWFQNHWSWA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-08-05T08-01-28Z" size="25607810" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.8.11" released="2022-08-11" main="mc.exe" id="sha256new_MQC6ZDY4J5HEMMMCWIHGBREMJB2PDGNYBJL6XTL6BXUGPMKDAPCA">
+      <manifest-digest sha256new="MQC6ZDY4J5HEMMMCWIHGBREMJB2PDGNYBJL6XTL6BXUGPMKDAPCA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-08-11T00-30-48Z" size="24337280" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.8.11" released="2022-08-11" main="mc" id="sha256new_BCU6SDAUZNH2I2QPIQMFLKRR7B2ZI3AED3WIDTUQVTFNZ5LLKS6A">
+      <manifest-digest sha256new="BCU6SDAUZNH2I2QPIQMFLKRR7B2ZI3AED3WIDTUQVTFNZ5LLKS6A"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-08-11T00-30-48Z" size="24031232" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.8.11" released="2022-08-11" main="mc" id="sha256new_I6FK2D35IMKENOICSDXFDDPCOWMGKDJ7747C6VY7RO5GQWDMRGLQ">
+      <manifest-digest sha256new="I6FK2D35IMKENOICSDXFDDPCOWMGKDJ7747C6VY7RO5GQWDMRGLQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-08-11T00-30-48Z" size="23003136" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.8.11" released="2022-08-11" main="mc" id="sha256new_U3GHPDXCT2OWZHYEJRGDELMDULM4WX2K5GEHQ3ADMBW4XPRUVN2Q">
+      <manifest-digest sha256new="U3GHPDXCT2OWZHYEJRGDELMDULM4WX2K5GEHQ3ADMBW4XPRUVN2Q"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-08-11T00-30-48Z" size="26394384" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.8.11" released="2022-08-11" main="mc" id="sha256new_AKJRYHLKIIDME67OPJXH7QTD6TFFX3DUO3HK6CC6TCD7PZ2AQX5Q">
+      <manifest-digest sha256new="AKJRYHLKIIDME67OPJXH7QTD6TFFX3DUO3HK6CC6TCD7PZ2AQX5Q"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-08-11T00-30-48Z" size="25896610" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.8.23" released="2022-08-23" main="mc.exe" id="sha256new_MXKEAYIYBGEJAZ4FLITSLLZ4FZUD3OTJ42MQ5OD4NDDQY4FOXDEQ">
+      <manifest-digest sha256new="MXKEAYIYBGEJAZ4FLITSLLZ4FZUD3OTJ42MQ5OD4NDDQY4FOXDEQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-08-23T05-45-20Z" size="24446336" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.8.23" released="2022-08-23" main="mc" id="sha256new_W7FCF2AEUZH4WXGQBEPLMUQYTBXQQJV7J3MIMOXXUPCJSEZGLC7Q">
+      <manifest-digest sha256new="W7FCF2AEUZH4WXGQBEPLMUQYTBXQQJV7J3MIMOXXUPCJSEZGLC7Q"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-08-23T05-45-20Z" size="24141824" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.8.23" released="2022-08-23" main="mc" id="sha256new_AW4YGJ4X4MZI36GUY5TBR37DPYILJI5VUXVTJMTEEEFGNUCSE4QA">
+      <manifest-digest sha256new="AW4YGJ4X4MZI36GUY5TBR37DPYILJI5VUXVTJMTEEEFGNUCSE4QA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-08-23T05-45-20Z" size="23134208" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.8.23" released="2022-08-23" main="mc" id="sha256new_QLWNEZ7SZQRUFJHQ2QLRMKTEZWDKY6QKZL76Z2KGZNOMMJAOZJAQ">
+      <manifest-digest sha256new="QLWNEZ7SZQRUFJHQ2QLRMKTEZWDKY6QKZL76Z2KGZNOMMJAOZJAQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-08-23T05-45-20Z" size="26506336" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.8.23" released="2022-08-23" main="mc" id="sha256new_JOZT6E3BETIWIQN7QHEPI2UBWZVA32GFRBAKFAXIECVHPWVXJ4NQ">
+      <manifest-digest sha256new="JOZT6E3BETIWIQN7QHEPI2UBWZVA32GFRBAKFAXIECVHPWVXJ4NQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-08-23T05-45-20Z" size="26004370" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.8.28" released="2022-08-28" main="mc.exe" id="sha256new_D43OCME4OSR725UKRCD4FZ2PHNKDTJ3WVGFASCUB3UB5BKZ32GSQ">
+      <manifest-digest sha256new="D43OCME4OSR725UKRCD4FZ2PHNKDTJ3WVGFASCUB3UB5BKZ32GSQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-08-28T20-08-11Z" size="24446848" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.8.28" released="2022-08-28" main="mc" id="sha256new_D3NJWM77KPBPCWOZX6ROMQ6QO7MKKDRBUMMECFG2FCT2BJ6YTBUQ">
+      <manifest-digest sha256new="D3NJWM77KPBPCWOZX6ROMQ6QO7MKKDRBUMMECFG2FCT2BJ6YTBUQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-08-28T20-08-11Z" size="24141824" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.8.28" released="2022-08-28" main="mc" id="sha256new_KM2ENRYNPNFFJ256SKQUJTHCMGP6Z6J3SIENNDZWKRIQNJ3YNTVQ">
+      <manifest-digest sha256new="KM2ENRYNPNFFJ256SKQUJTHCMGP6Z6J3SIENNDZWKRIQNJ3YNTVQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-08-28T20-08-11Z" size="23134208" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.8.28" released="2022-08-28" main="mc" id="sha256new_MUNBDPOR6HVD5EN57TC3MKIM2U7XZ4Q3HHIAB4FBFXDBP6KE5X7A">
+      <manifest-digest sha256new="MUNBDPOR6HVD5EN57TC3MKIM2U7XZ4Q3HHIAB4FBFXDBP6KE5X7A"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-08-28T20-08-11Z" size="26506304" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.8.28" released="2022-08-28" main="mc" id="sha256new_XJ2NCJYSQQLLGBGOKUPQCP43RUOQFYD74Q7X5AABMCMX63YNTF3A">
+      <manifest-digest sha256new="XJ2NCJYSQQLLGBGOKUPQCP43RUOQFYD74Q7X5AABMCMX63YNTF3A"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-08-28T20-08-11Z" size="26004370" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.9.16" released="2022-09-16" main="mc.exe" id="sha256new_2WW67VUX2KYYYTG5TB6NRTLCV2XYJWLJGE2YJRBKRSZW6KC3KTSA">
+      <manifest-digest sha256new="2WW67VUX2KYYYTG5TB6NRTLCV2XYJWLJGE2YJRBKRSZW6KC3KTSA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-09-16T09-16-47Z" size="24460672" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.9.16" released="2022-09-16" main="mc" id="sha256new_7ETDD3BTMHLM7BSPMBVES4YHYJAXKRLI42UWJ43XZ535W3RAYOPQ">
+      <manifest-digest sha256new="7ETDD3BTMHLM7BSPMBVES4YHYJAXKRLI42UWJ43XZ535W3RAYOPQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-09-16T09-16-47Z" size="24158208" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.9.16" released="2022-09-16" main="mc" id="sha256new_6KT2TVIWVIJNFIFSFO4GKYIZZCKO7TUMRUUJRQQWRODLSNEEKPYQ">
+      <manifest-digest sha256new="6KT2TVIWVIJNFIFSFO4GKYIZZCKO7TUMRUUJRQQWRODLSNEEKPYQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-09-16T09-16-47Z" size="23134208" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.9.16" released="2022-09-16" main="mc" id="sha256new_Q2LTGZRVU72QXGOEH4ATV4QQX6D6337EFNM75UUCBWLOWM5W7FPA">
+      <manifest-digest sha256new="Q2LTGZRVU72QXGOEH4ATV4QQX6D6337EFNM75UUCBWLOWM5W7FPA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-09-16T09-16-47Z" size="26523392" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.9.16" released="2022-09-16" main="mc" id="sha256new_BJ5ABYNTGUOXOSMKCX46LBZCYCP2FRATLFVH25KBQJJS4JKCYI7A">
+      <manifest-digest sha256new="BJ5ABYNTGUOXOSMKCX46LBZCYCP2FRATLFVH25KBQJJS4JKCYI7A"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-09-16T09-16-47Z" size="26022146" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.10.1" released="2022-10-01" main="mc.exe" id="sha256new_5T4MR6L6VMKDKSZ6RK32EPERIYOKCYNPY2UOJLURQRMM5QBUQRZQ">
+      <manifest-digest sha256new="5T4MR6L6VMKDKSZ6RK32EPERIYOKCYNPY2UOJLURQRMM5QBUQRZQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-10-01T07-56-14Z" size="24593280" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.10.1" released="2022-10-01" main="mc" id="sha256new_BGUG3DULXJMJTLNK6B26YH66NBSKLJ7GI3DBDFXRNYOF6XS4RODA">
+      <manifest-digest sha256new="BGUG3DULXJMJTLNK6B26YH66NBSKLJ7GI3DBDFXRNYOF6XS4RODA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-10-01T07-56-14Z" size="24289280" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.10.1" released="2022-10-01" main="mc" id="sha256new_BPZ2TZP3QYMPEWPRAM4TOKY5TGLQMTBMD3XW265NFCZUUWRG7RAA">
+      <manifest-digest sha256new="BPZ2TZP3QYMPEWPRAM4TOKY5TGLQMTBMD3XW265NFCZUUWRG7RAA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-10-01T07-56-14Z" size="23265280" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.10.1" released="2022-10-01" main="mc" id="sha256new_PEVP44NQEJNFADOAIF433XATVHUBYZRUIT6ERCFHMS6B4Y6XMICA">
+      <manifest-digest sha256new="PEVP44NQEJNFADOAIF433XATVHUBYZRUIT6ERCFHMS6B4Y6XMICA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-10-01T07-56-14Z" size="26665056" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.10.1" released="2022-10-01" main="mc" id="sha256new_5622SYW3UPEY66QK4PNZ2PE653KMQFES2MFGJFUTD23YFJTAWCQA">
+      <manifest-digest sha256new="5622SYW3UPEY66QK4PNZ2PE653KMQFES2MFGJFUTD23YFJTAWCQA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-10-01T07-56-14Z" size="26167938" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.10.6" released="2022-10-06" main="mc.exe" id="sha256new_HTZF3BS2NVZ2SMBOL7UM545ZYVAH3EWLVAW2G7I7YWBLCXQSGEIA">
+      <manifest-digest sha256new="HTZF3BS2NVZ2SMBOL7UM545ZYVAH3EWLVAW2G7I7YWBLCXQSGEIA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-10-06T01-20-06Z" size="24604544" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.10.6" released="2022-10-06" main="mc" id="sha256new_GHUSO3YVYWLIGOCBG76MSSQPY654DHB3P6EI6V74G5B23LM2XQQQ">
+      <manifest-digest sha256new="GHUSO3YVYWLIGOCBG76MSSQPY654DHB3P6EI6V74G5B23LM2XQQQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-10-06T01-20-06Z" size="24301568" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.10.6" released="2022-10-06" main="mc" id="sha256new_F3J5BHGBGYG4V3JZBJTMVTALQBJJXLEXDSLX7WRPYBHSZXMCWZTQ">
+      <manifest-digest sha256new="F3J5BHGBGYG4V3JZBJTMVTALQBJJXLEXDSLX7WRPYBHSZXMCWZTQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-10-06T01-20-06Z" size="23265280" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.10.6" released="2022-10-06" main="mc" id="sha256new_6RF3TIG2TKZ64AEWBQQ3H3ZJPS7IOKP5YJ36VMV4CKLADFDYQQWA">
+      <manifest-digest sha256new="6RF3TIG2TKZ64AEWBQQ3H3ZJPS7IOKP5YJ36VMV4CKLADFDYQQWA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-10-06T01-20-06Z" size="26677728" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.10.6" released="2022-10-06" main="mc" id="sha256new_4ZWMUR4FU4AEIOCZAQIGYIKEK3WPRZMIAS546KKM3ICSDDE7D62Q">
+      <manifest-digest sha256new="4ZWMUR4FU4AEIOCZAQIGYIKEK3WPRZMIAS546KKM3ICSDDE7D62Q"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-10-06T01-20-06Z" size="26168498" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.10.9" released="2022-10-09" main="mc.exe" id="sha256new_ENBLWUNHZ7XHZVRPCVRRZPOAZ3DERZVJN2QZLI3INPOZ74WLFPPQ">
+      <manifest-digest sha256new="ENBLWUNHZ7XHZVRPCVRRZPOAZ3DERZVJN2QZLI3INPOZ74WLFPPQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-10-09T21-10-59Z" size="24679808" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.10.9" released="2022-10-09" main="mc" id="sha256new_YNJBD37IEA4VF253FDRIKOGDVJBWCQ23FP22U2PPEAQU23J7E2AA">
+      <manifest-digest sha256new="YNJBD37IEA4VF253FDRIKOGDVJBWCQ23FP22U2PPEAQU23J7E2AA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-10-09T21-10-59Z" size="24367104" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.10.9" released="2022-10-09" main="mc" id="sha256new_COM27GDOKHU2BV2SSKYJMNO7HJGY6KK2UVOXCZMOK52CWGKCWWFA">
+      <manifest-digest sha256new="COM27GDOKHU2BV2SSKYJMNO7HJGY6KK2UVOXCZMOK52CWGKCWWFA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-10-09T21-10-59Z" size="23265280" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.10.9" released="2022-10-09" main="mc" id="sha256new_7ACUORRXNWSXVQLSAPE5FRXAC45IHEPVL2HSOGQNENBOIO6XPBLQ">
+      <manifest-digest sha256new="7ACUORRXNWSXVQLSAPE5FRXAC45IHEPVL2HSOGQNENBOIO6XPBLQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-10-09T21-10-59Z" size="26747616" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.10.9" released="2022-10-09" main="mc" id="sha256new_FGEI66ZF4EU6MEGXKTKQOBG4JSHKCGSJFPJBMONF7GZMCB7I37EQ">
+      <manifest-digest sha256new="FGEI66ZF4EU6MEGXKTKQOBG4JSHKCGSJFPJBMONF7GZMCB7I37EQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-10-09T21-10-59Z" size="26241346" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.10.12" released="2022-10-12" main="mc.exe" id="sha256new_UFF52TLBYAJGXE6LVD5LSBIZHT7BVTPLV64VC7I7HUWIU2FNVLOA">
+      <manifest-digest sha256new="UFF52TLBYAJGXE6LVD5LSBIZHT7BVTPLV64VC7I7HUWIU2FNVLOA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-10-12T18-12-50Z" size="24680320" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.10.12" released="2022-10-12" main="mc" id="sha256new_QXNXYW32T3ZBTQLNPOVKEB5XUHWYDBGPLECSOWCCXPIVK4XE6IOA">
+      <manifest-digest sha256new="QXNXYW32T3ZBTQLNPOVKEB5XUHWYDBGPLECSOWCCXPIVK4XE6IOA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-10-12T18-12-50Z" size="24367104" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.10.12" released="2022-10-12" main="mc" id="sha256new_2ZIQ4ENYRFGH2X4YLNWLKFZ5QIJOTYCXU3FOV5IZRX3AJW2WNBJQ">
+      <manifest-digest sha256new="2ZIQ4ENYRFGH2X4YLNWLKFZ5QIJOTYCXU3FOV5IZRX3AJW2WNBJQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-10-12T18-12-50Z" size="23265280" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.10.12" released="2022-10-12" main="mc" id="sha256new_WZQFSIEAXHVVFXRWD4U6GIZO5YWUUYFG2ORIKDXSFHXQNPAOLT2Q">
+      <manifest-digest sha256new="WZQFSIEAXHVVFXRWD4U6GIZO5YWUUYFG2ORIKDXSFHXQNPAOLT2Q"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-10-12T18-12-50Z" size="26747680" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.10.12" released="2022-10-12" main="mc" id="sha256new_UUV4VFKNBWO4XBLNJCBGXRMSXXVNYERGFFEQXOQH53W7IMAISSYA">
+      <manifest-digest sha256new="UUV4VFKNBWO4XBLNJCBGXRMSXXVNYERGFFEQXOQH53W7IMAISSYA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-10-12T18-12-50Z" size="26241522" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.10.20" released="2022-10-20" main="mc.exe" id="sha256new_SDA2HQGFJXCIAUORMMT6BJ6OVGYCXUHFSWA34HGNYFJ5OLA3GUYQ">
+      <manifest-digest sha256new="SDA2HQGFJXCIAUORMMT6BJ6OVGYCXUHFSWA34HGNYFJ5OLA3GUYQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-10-20T23-26-33Z" size="25726336" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.10.20" released="2022-10-20" main="mc" id="sha256new_U5IXXL2Q4WQDJP77SBXJOMSVV2ZJHIDITIMXRM3ZSFZU74X7G7JA">
+      <manifest-digest sha256new="U5IXXL2Q4WQDJP77SBXJOMSVV2ZJHIDITIMXRM3ZSFZU74X7G7JA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-10-20T23-26-33Z" size="25264128" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.10.20" released="2022-10-20" main="mc" id="sha256new_CRHPPFGT62G3DTQXLGSYSPL7ITK47MEPVPYRCHNIZ36WFI6XKBQA">
+      <manifest-digest sha256new="CRHPPFGT62G3DTQXLGSYSPL7ITK47MEPVPYRCHNIZ36WFI6XKBQA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-10-20T23-26-33Z" size="24051712" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.10.20" released="2022-10-20" main="mc" id="sha256new_AEGTG7OZMHWX77H74TJHD7J7MIFU5OYKKM24N4CQ56CI5NZF4K5A">
+      <manifest-digest sha256new="AEGTG7OZMHWX77H74TJHD7J7MIFU5OYKKM24N4CQ56CI5NZF4K5A"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-10-20T23-26-33Z" size="27708768" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.10.20" released="2022-10-20" main="mc" id="sha256new_R3WGWHKYPL2BFJ2LJ2NRHBXXOGKWJ2PSSWHAIQ35EYXQ6GJ6I7GA">
+      <manifest-digest sha256new="R3WGWHKYPL2BFJ2LJ2NRHBXXOGKWJ2PSSWHAIQ35EYXQ6GJ6I7GA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-10-20T23-26-33Z" size="27034562" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.10.22" released="2022-10-22" main="mc.exe" id="sha256new_ESBIGZZ6NUIWXGCB7S7MWZWIYMGG54CCO35EA2WUIHADHG3EBYPQ">
+      <manifest-digest sha256new="ESBIGZZ6NUIWXGCB7S7MWZWIYMGG54CCO35EA2WUIHADHG3EBYPQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-10-22T03-39-29Z" size="25726336" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.10.22" released="2022-10-22" main="mc" id="sha256new_WO3S6KMLOO6JZRBA7DW7LO4F5HXGI55SHIS36SXXMTPD4OU7AJIQ">
+      <manifest-digest sha256new="WO3S6KMLOO6JZRBA7DW7LO4F5HXGI55SHIS36SXXMTPD4OU7AJIQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-10-22T03-39-29Z" size="25264128" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.10.22" released="2022-10-22" main="mc" id="sha256new_74EMKLMEDENX5L6PTLM5CTMLRQE7755SV5BYM6EPPJTUXONCSW3A">
+      <manifest-digest sha256new="74EMKLMEDENX5L6PTLM5CTMLRQE7755SV5BYM6EPPJTUXONCSW3A"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-10-22T03-39-29Z" size="24051712" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.10.22" released="2022-10-22" main="mc" id="sha256new_SKM5ZDMGLUSGJXBHJI33EKCQCVO4PQ4EFGO4B4WLP3AXNCFM5VUQ">
+      <manifest-digest sha256new="SKM5ZDMGLUSGJXBHJI33EKCQCVO4PQ4EFGO4B4WLP3AXNCFM5VUQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-10-22T03-39-29Z" size="27708768" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.10.22" released="2022-10-22" main="mc" id="sha256new_3LCEAWCWPIA24BAVA43F34OAD64BMTNJSWI3TXHVDN3CMPXOALZQ">
+      <manifest-digest sha256new="3LCEAWCWPIA24BAVA43F34OAD64BMTNJSWI3TXHVDN3CMPXOALZQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-10-22T03-39-29Z" size="27034562" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.10.29" released="2022-10-29" main="mc.exe" id="sha256new_DZFMP2N4OUCYAXZFHDCBGUZUUUQQJSZ573GC255N3KR4WPCBVJFQ">
+      <manifest-digest sha256new="DZFMP2N4OUCYAXZFHDCBGUZUUUQQJSZ573GC255N3KR4WPCBVJFQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-10-29T10-09-23Z" size="25739648" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.10.29" released="2022-10-29" main="mc" id="sha256new_WNSWI7HOW5E46OXUJNQXACD2JEPLPRRHW74WBMTEOGXOGRQ5NWVA">
+      <manifest-digest sha256new="WNSWI7HOW5E46OXUJNQXACD2JEPLPRRHW74WBMTEOGXOGRQ5NWVA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-10-29T10-09-23Z" size="25276416" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.10.29" released="2022-10-29" main="mc" id="sha256new_VWMFXJATT6V2U62I4LIIAOOVFJWL7PHDOIHJTUTLBKI5523R3LBQ">
+      <manifest-digest sha256new="VWMFXJATT6V2U62I4LIIAOOVFJWL7PHDOIHJTUTLBKI5523R3LBQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-10-29T10-09-23Z" size="24051712" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.10.29" released="2022-10-29" main="mc" id="sha256new_CGQOVJKBMERP2NB4T4HTOX7OJTQBXBTBAYGV5WI5JYXUVAYBQSQA">
+      <manifest-digest sha256new="CGQOVJKBMERP2NB4T4HTOX7OJTQBXBTBAYGV5WI5JYXUVAYBQSQA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-10-29T10-09-23Z" size="27721232" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.10.29" released="2022-10-29" main="mc" id="sha256new_G6FWKVTYKDOZURZJ7HYYAAIXYOHLZ2BTS6BLR7NZYQEBADIHXQUA">
+      <manifest-digest sha256new="G6FWKVTYKDOZURZJ7HYYAAIXYOHLZ2BTS6BLR7NZYQEBADIHXQUA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-10-29T10-09-23Z" size="27051650" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.11.7" released="2022-11-07" main="mc.exe" id="sha256new_DRT5ACAD6IK25ECTFFQNYQP7KHZSFSXTMCZUPJJZMWM4QKW5TRUQ">
+      <manifest-digest sha256new="DRT5ACAD6IK25ECTFFQNYQP7KHZSFSXTMCZUPJJZMWM4QKW5TRUQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-11-07T23-47-39Z" size="25820032" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.11.7" released="2022-11-07" main="mc" id="sha256new_VPN7OE5MNF4TXRALOSD4QODXKLS3O45H32757VCCFHTEY2YFUUGQ">
+      <manifest-digest sha256new="VPN7OE5MNF4TXRALOSD4QODXKLS3O45H32757VCCFHTEY2YFUUGQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-11-07T23-47-39Z" size="25366528" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.11.7" released="2022-11-07" main="mc" id="sha256new_6CNYHDJMGDBKOIMHIAFZGUJ4NCJIF5TVMPEIE736THQR5O6SVH5Q">
+      <manifest-digest sha256new="6CNYHDJMGDBKOIMHIAFZGUJ4NCJIF5TVMPEIE736THQR5O6SVH5Q"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-11-07T23-47-39Z" size="24117248" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.11.7" released="2022-11-07" main="mc" id="sha256new_GWRIGIIDUF4QK6CW5MOFN3HNZTEDCDXGZMC275QMKSIPY4TTZRKQ">
+      <manifest-digest sha256new="GWRIGIIDUF4QK6CW5MOFN3HNZTEDCDXGZMC275QMKSIPY4TTZRKQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-11-07T23-47-39Z" size="27817312" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.11.7" released="2022-11-07" main="mc" id="sha256new_FPB7MNKNRAOFRDS2JCNOQLOYQB72TVX4BS2534R3Z4N4GQUIORJA">
+      <manifest-digest sha256new="FPB7MNKNRAOFRDS2JCNOQLOYQB72TVX4BS2534R3Z4N4GQUIORJA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-11-07T23-47-39Z" size="27142994" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.11.17" released="2022-11-17" main="mc.exe" id="sha256new_MVOKS2EW7LFJLF27PI2VDJMHJWTE7GNW4MAVIWEBCHMYGEDTADVQ">
+      <manifest-digest sha256new="MVOKS2EW7LFJLF27PI2VDJMHJWTE7GNW4MAVIWEBCHMYGEDTADVQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-11-17T21-20-39Z" size="25981312" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.11.17" released="2022-11-17" main="mc" id="sha256new_4YSO3BL6QSDQUFBNEPDR6A2QIUO3ORBGMURPUFQGJSRX2NQSGWJA">
+      <manifest-digest sha256new="4YSO3BL6QSDQUFBNEPDR6A2QIUO3ORBGMURPUFQGJSRX2NQSGWJA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-11-17T21-20-39Z" size="25522176" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.11.17" released="2022-11-17" main="mc" id="sha256new_LWXVSZYTYG3JR5FGIK7AXWWDTL257DBTIQ6LDBN726UZ2473M75Q">
+      <manifest-digest sha256new="LWXVSZYTYG3JR5FGIK7AXWWDTL257DBTIQ6LDBN726UZ2473M75Q"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-11-17T21-20-39Z" size="24248320" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.11.17" released="2022-11-17" main="mc" id="sha256new_3O7WUN4IZLBE6JPOHD6S6ACJB7TSSXOX3GNAZZBPHG2RPOTXUDIA">
+      <manifest-digest sha256new="3O7WUN4IZLBE6JPOHD6S6ACJB7TSSXOX3GNAZZBPHG2RPOTXUDIA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-11-17T21-20-39Z" size="27988320" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.11.17" released="2022-11-17" main="mc" id="sha256new_R6YU4CZ74WKHUQSE7CR7QT3LVZJKFWGGTQ53B2T2ZV7OCD4S5UJA">
+      <manifest-digest sha256new="R6YU4CZ74WKHUQSE7CR7QT3LVZJKFWGGTQ53B2T2ZV7OCD4S5UJA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-11-17T21-20-39Z" size="27330722" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.12.2" released="2022-12-02" main="mc.exe" id="sha256new_ZR6SM2WQA2F3VXNULEJS3RH34L2AGBY4FMLB4CADHZVQFB7C54GA">
+      <manifest-digest sha256new="ZR6SM2WQA2F3VXNULEJS3RH34L2AGBY4FMLB4CADHZVQFB7C54GA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-12-02T23-48-47Z" size="26062720" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.12.2" released="2022-12-02" main="mc" id="sha256new_GW7I4GDIIZFI2U4ZIS7H3KUDBUXG654ATDTA5772IZNKTRZIDONQ">
+      <manifest-digest sha256new="GW7I4GDIIZFI2U4ZIS7H3KUDBUXG654ATDTA5772IZNKTRZIDONQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-12-02T23-48-47Z" size="25608192" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.12.2" released="2022-12-02" main="mc" id="sha256new_ZI7ZYAYA4OKLU3H7PVIU3TWSUNSLOQ6BQODODZPMGI6TQII35JTA">
+      <manifest-digest sha256new="ZI7ZYAYA4OKLU3H7PVIU3TWSUNSLOQ6BQODODZPMGI6TQII35JTA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-12-02T23-48-47Z" size="24313856" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.12.2" released="2022-12-02" main="mc" id="sha256new_KNCDMPMKEROS7JPQ2FC7YO2DXWSWFRCMEQFOA65YBLPM5ENBJKBQ">
+      <manifest-digest sha256new="KNCDMPMKEROS7JPQ2FC7YO2DXWSWFRCMEQFOA65YBLPM5ENBJKBQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-12-02T23-48-47Z" size="28077248" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.12.2" released="2022-12-02" main="mc" id="sha256new_EKYH653PJY7CQIAFREC4VRLVJMNF3PTCJJV7Z57PPVSGCEMER4HA">
+      <manifest-digest sha256new="EKYH653PJY7CQIAFREC4VRLVJMNF3PTCJJV7Z57PPVSGCEMER4HA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-12-02T23-48-47Z" size="27406722" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.12.13" released="2022-12-13" main="mc.exe" id="sha256new_KMEMNIULHF256CZGD6ZFTZJWENDNVNO3SCMDBDTOHVELLH4J43VA">
+      <manifest-digest sha256new="KMEMNIULHF256CZGD6ZFTZJWENDNVNO3SCMDBDTOHVELLH4J43VA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-12-13T00-23-28Z" size="26147712" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.12.13" released="2022-12-13" main="mc" id="sha256new_5GUSD7UYTBEAN5SZVLGCFAVZZOD5F2LUA3YM3FLURX77WRNX674Q">
+      <manifest-digest sha256new="5GUSD7UYTBEAN5SZVLGCFAVZZOD5F2LUA3YM3FLURX77WRNX674Q"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-12-13T00-23-28Z" size="25690112" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.12.13" released="2022-12-13" main="mc" id="sha256new_IQOY7KUQYQUHOXDPTWJB7SXQPQ7K6K3PXYLKFT573HDTLVDOXFCQ">
+      <manifest-digest sha256new="IQOY7KUQYQUHOXDPTWJB7SXQPQ7K6K3PXYLKFT573HDTLVDOXFCQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-12-13T00-23-28Z" size="24444928" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.12.13" released="2022-12-13" main="mc" id="sha256new_5Y2HMZUO2TNYEZSYG3FMDIW3GHYYE5NLFWWBVFIVEGBKMUZXMDOQ">
+      <manifest-digest sha256new="5Y2HMZUO2TNYEZSYG3FMDIW3GHYYE5NLFWWBVFIVEGBKMUZXMDOQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-12-13T00-23-28Z" size="28173952" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.12.13" released="2022-12-13" main="mc" id="sha256new_5OPYDFOX5XK4F2DVQUTCDTCRRABSY7IDUJU33FJQKGZPERQBT46Q">
+      <manifest-digest sha256new="5OPYDFOX5XK4F2DVQUTCDTCRRABSY7IDUJU33FJQKGZPERQBT46Q"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-12-13T00-23-28Z" size="27518130" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2022.12.24" released="2022-12-24" main="mc.exe" id="sha256new_SK3ZWOP5223YVEPAOVFVW2JNSNJ5U2VQO7SNE4NMJPUMJYY4ZU6A">
+      <manifest-digest sha256new="SK3ZWOP5223YVEPAOVFVW2JNSNJ5U2VQO7SNE4NMJPUMJYY4ZU6A"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2022-12-24T15-21-38Z" size="26163072" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2022.12.24" released="2022-12-24" main="mc" id="sha256new_TSMJFB2KNWUTI5YQMBM2VGEGSOPTGZBO273FQ56OQQZLAISXBNKA">
+      <manifest-digest sha256new="TSMJFB2KNWUTI5YQMBM2VGEGSOPTGZBO273FQ56OQQZLAISXBNKA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2022-12-24T15-21-38Z" size="25706496" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2022.12.24" released="2022-12-24" main="mc" id="sha256new_YDXTGISORJHKFAXUEFHDLFXZ2D4K3VG2KEHSHQYTHIUHX53BRE6Q">
+      <manifest-digest sha256new="YDXTGISORJHKFAXUEFHDLFXZ2D4K3VG2KEHSHQYTHIUHX53BRE6Q"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2022-12-24T15-21-38Z" size="24444928" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2022.12.24" released="2022-12-24" main="mc" id="sha256new_3QIG75VC47E5CVXPLVJCQEBYE4QHDP2AFS6KDVCSGIAVABWNPKVA">
+      <manifest-digest sha256new="3QIG75VC47E5CVXPLVJCQEBYE4QHDP2AFS6KDVCSGIAVABWNPKVA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2022-12-24T15-21-38Z" size="28186448" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2022.12.24" released="2022-12-24" main="mc" id="sha256new_HLUBEIUZGOJEVZJZWL4TRNT5JREA5WU3OAHM4P5ZCO5Q7BB24MBA">
+      <manifest-digest sha256new="HLUBEIUZGOJEVZJZWL4TRNT5JREA5WU3OAHM4P5ZCO5Q7BB24MBA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2022-12-24T15-21-38Z" size="27518946" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2023.1.11" released="2023-01-11" main="mc.exe" id="sha256new_GIC66W7Q43WL3NWHWSJLRH7O2XVQSON2ZCX7CW5SMPK4SPYPTKOQ">
+      <manifest-digest sha256new="GIC66W7Q43WL3NWHWSJLRH7O2XVQSON2ZCX7CW5SMPK4SPYPTKOQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2023-01-11T03-14-16Z" size="26194304" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2023.1.11" released="2023-01-11" main="mc" id="sha256new_UFVHZGNXQJAJAM534PBHWJAHVKFB2WUARQMTAKHS7HDNYUAL6ENQ">
+      <manifest-digest sha256new="UFVHZGNXQJAJAM534PBHWJAHVKFB2WUARQMTAKHS7HDNYUAL6ENQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-01-11T03-14-16Z" size="25735168" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2023.1.11" released="2023-01-11" main="mc" id="sha256new_L2GKMVVM6J3IFLK522ZA5ONN7MFHYJVGA6ZCJDGK6VXUNILVS3TQ">
+      <manifest-digest sha256new="L2GKMVVM6J3IFLK522ZA5ONN7MFHYJVGA6ZCJDGK6VXUNILVS3TQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2023-01-11T03-14-16Z" size="24510464" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2023.1.11" released="2023-01-11" main="mc" id="sha256new_AUJIWNGQVMASZ6ENO2PAOFBFTIWR3XFOJI2T2XPUQPJSY4ACOSEQ">
+      <manifest-digest sha256new="AUJIWNGQVMASZ6ENO2PAOFBFTIWR3XFOJI2T2XPUQPJSY4ACOSEQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2023-01-11T03-14-16Z" size="28216304" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2023.1.11" released="2023-01-11" main="mc" id="sha256new_YCFQEYGMOEWZTWTGW2HPVBL4JVQRII5JGIWAIB7WVOMITTXDOYRA">
+      <manifest-digest sha256new="YCFQEYGMOEWZTWTGW2HPVBL4JVQRII5JGIWAIB7WVOMITTXDOYRA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2023-01-11T03-14-16Z" size="27553714" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2023.1.28" released="2023-01-28" main="mc.exe" id="sha256new_BFB7VNHVVA6URAJEGERM5V2PCSWUD4XMSLZ7TAH4CLBZSF2NYRGQ">
+      <manifest-digest sha256new="BFB7VNHVVA6URAJEGERM5V2PCSWUD4XMSLZ7TAH4CLBZSF2NYRGQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2023-01-28T20-29-38Z" size="26194304" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2023.1.28" released="2023-01-28" main="mc" id="sha256new_ZUF47RTFNUIB5ZAIUMNGNBHEAIHSI2OLEXUAARV6TWFZJ5SHUIPQ">
+      <manifest-digest sha256new="ZUF47RTFNUIB5ZAIUMNGNBHEAIHSI2OLEXUAARV6TWFZJ5SHUIPQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-01-28T20-29-38Z" size="25735168" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2023.1.28" released="2023-01-28" main="mc" id="sha256new_A7HZ5X6QHQXBXQ46EDOWD72FPJ37G2NH7ISGNYU32Y35MSJXO5ZQ">
+      <manifest-digest sha256new="A7HZ5X6QHQXBXQ46EDOWD72FPJ37G2NH7ISGNYU32Y35MSJXO5ZQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2023-01-28T20-29-38Z" size="24510464" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2023.1.28" released="2023-01-28" main="mc" id="sha256new_7GAZ4SQEWEV35EVWYLAV64W54RDIQOJB4ZXMSQPOPXAGADR24GYQ">
+      <manifest-digest sha256new="7GAZ4SQEWEV35EVWYLAV64W54RDIQOJB4ZXMSQPOPXAGADR24GYQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2023-01-28T20-29-38Z" size="28220272" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2023.1.28" released="2023-01-28" main="mc" id="sha256new_EDBR3CJKSRWWCP4IDIUK3WPP4MRJARGBYOEMT662JVWMH6ANRMBA">
+      <manifest-digest sha256new="EDBR3CJKSRWWCP4IDIUK3WPP4MRJARGBYOEMT662JVWMH6ANRMBA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2023-01-28T20-29-38Z" size="27553650" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2023.2.16" released="2023-02-16" main="mc.exe" id="sha256new_PKG3DQKCDPTCXYGZZR24Q5WLYMVDLOTNQPTKH5XIJ7G2L4MNMR7A">
+      <manifest-digest sha256new="PKG3DQKCDPTCXYGZZR24Q5WLYMVDLOTNQPTKH5XIJ7G2L4MNMR7A"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2023-02-16T19-20-11Z" size="26448256" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2023.2.16" released="2023-02-16" main="mc" id="sha256new_ALWFPUT7YN72OXJJC6AZHG6RU6BKHMQ3EX5KBPNERXDSALSGPKAA">
+      <manifest-digest sha256new="ALWFPUT7YN72OXJJC6AZHG6RU6BKHMQ3EX5KBPNERXDSALSGPKAA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-02-16T19-20-11Z" size="25980928" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2023.2.16" released="2023-02-16" main="mc" id="sha256new_QTWCYUP3NDHDLBODLOSMTJRK7IMRXXT2ADIPWVKU6FLHNKW6CFNA">
+      <manifest-digest sha256new="QTWCYUP3NDHDLBODLOSMTJRK7IMRXXT2ADIPWVKU6FLHNKW6CFNA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2023-02-16T19-20-11Z" size="24707072" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2023.2.16" released="2023-02-16" main="mc" id="sha256new_PYH7TIWNTAXTUGJIY466MM55JWBRLTDQOYFTK2CXR3GAP7KFLLUA">
+      <manifest-digest sha256new="PYH7TIWNTAXTUGJIY466MM55JWBRLTDQOYFTK2CXR3GAP7KFLLUA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2023-02-16T19-20-11Z" size="28508160" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2023.2.16" released="2023-02-16" main="mc" id="sha256new_WEG7AIJ533QCS63LKRE7WUWEFDNWQKDKGXQN7AQY5ZZDXUEOV72A">
+      <manifest-digest sha256new="WEG7AIJ533QCS63LKRE7WUWEFDNWQKDKGXQN7AQY5ZZDXUEOV72A"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2023-02-16T19-20-11Z" size="27846770" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2023.2.28" released="2023-02-28" main="mc.exe" id="sha256new_OOLSKU4NQUEPL3C6R7EC2IY4ZPM6WM6VYXWGVL3PSS7RMSTGTWBA">
+      <manifest-digest sha256new="OOLSKU4NQUEPL3C6R7EC2IY4ZPM6WM6VYXWGVL3PSS7RMSTGTWBA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2023-02-28T00-12-59Z" size="26491264" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2023.2.28" released="2023-02-28" main="mc" id="sha256new_6IRPR6YFMWAVAE62WCXRPQGX5XHNKKGCKJP4RAPGTA3O5OC26NOQ">
+      <manifest-digest sha256new="6IRPR6YFMWAVAE62WCXRPQGX5XHNKKGCKJP4RAPGTA3O5OC26NOQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-02-28T00-12-59Z" size="26030080" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2023.2.28" released="2023-02-28" main="mc" id="sha256new_QPRJLMONBDEZCOTZOBJR7OAG7OAJL7WBB2VWQYKQJYUEJLD3SA6A">
+      <manifest-digest sha256new="QPRJLMONBDEZCOTZOBJR7OAG7OAJL7WBB2VWQYKQJYUEJLD3SA6A"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2023-02-28T00-12-59Z" size="24772608" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2023.2.28" released="2023-02-28" main="mc" id="sha256new_YQ7DTST5M4GS5YQNKRJROCLPZWHVM5GA37RGD7TOYH3UDTMEUB4Q">
+      <manifest-digest sha256new="YQ7DTST5M4GS5YQNKRJROCLPZWHVM5GA37RGD7TOYH3UDTMEUB4Q"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2023-02-28T00-12-59Z" size="28552224" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2023.2.28" released="2023-02-28" main="mc" id="sha256new_VSCHI547C5ZUXXZ5PVAW5DCT2545MHHVEVKVZMDEHZFOCL7IIGMA">
+      <manifest-digest sha256new="VSCHI547C5ZUXXZ5PVAW5DCT2545MHHVEVKVZMDEHZFOCL7IIGMA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2023-02-28T00-12-59Z" size="27899874" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2023.3.20" released="2023-03-20" main="mc.exe" id="sha256new_WJIFYEPHKDGRILFCNVOHVGOIC4JVKK6X6BFH5CPWI6CJVZXCXF3A">
+      <manifest-digest sha256new="WJIFYEPHKDGRILFCNVOHVGOIC4JVKK6X6BFH5CPWI6CJVZXCXF3A"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2023-03-20T17-17-53Z" size="26503040" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2023.3.20" released="2023-03-20" main="mc" id="sha256new_PC3JOS5WFMBYYHN27KO7F6GN3263FSU4Y6XU4J3GNUEZAPT6EMDQ">
+      <manifest-digest sha256new="PC3JOS5WFMBYYHN27KO7F6GN3263FSU4Y6XU4J3GNUEZAPT6EMDQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-03-20T17-17-53Z" size="26042368" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2023.3.20" released="2023-03-20" main="mc" id="sha256new_TZR3QNYMRACPNY2CX5W7FLES24ZJOXGUKUY3HAPEYCP72WVOYPTQ">
+      <manifest-digest sha256new="TZR3QNYMRACPNY2CX5W7FLES24ZJOXGUKUY3HAPEYCP72WVOYPTQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2023-03-20T17-17-53Z" size="24772608" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2023.3.20" released="2023-03-20" main="mc" id="sha256new_DXJEVLOADWEC6EXRUK66KK7OCN5DOAXKYPQD3WA73HYATG5Z733A">
+      <manifest-digest sha256new="DXJEVLOADWEC6EXRUK66KK7OCN5DOAXKYPQD3WA73HYATG5Z733A"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2023-03-20T17-17-53Z" size="28565952" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2023.3.20" released="2023-03-20" main="mc" id="sha256new_TGWBSIRWR4OPFJGFXN7FXHPYIZLT32HCXSN57CO7G3QYFECYTI6A">
+      <manifest-digest sha256new="TGWBSIRWR4OPFJGFXN7FXHPYIZLT32HCXSN57CO7G3QYFECYTI6A"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2023-03-20T17-17-53Z" size="27902082" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2023.3.23" released="2023-03-23" main="mc.exe" id="sha256new_EVA3S5OQTJHJGT5DF2FUTFY43DTN6HYIPBO2Y3ROERWBMKMBYBOQ">
+      <manifest-digest sha256new="EVA3S5OQTJHJGT5DF2FUTFY43DTN6HYIPBO2Y3ROERWBMKMBYBOQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2023-03-23T20-03-04Z" size="26509184" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2023.3.23" released="2023-03-23" main="mc" id="sha256new_YPWK7GJZHEF6SUBNIW6UZN5Q2WXHKFKHPDIWSFQ6J3B5MOYUVVPQ">
+      <manifest-digest sha256new="YPWK7GJZHEF6SUBNIW6UZN5Q2WXHKFKHPDIWSFQ6J3B5MOYUVVPQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-03-23T20-03-04Z" size="26050560" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2023.3.23" released="2023-03-23" main="mc" id="sha256new_IISYXOMGMBDYHNVQJVOTCUND5BWAIXK3EZXD6SXRNXCQUSOYW7MA">
+      <manifest-digest sha256new="IISYXOMGMBDYHNVQJVOTCUND5BWAIXK3EZXD6SXRNXCQUSOYW7MA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2023-03-23T20-03-04Z" size="24772608" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2023.3.23" released="2023-03-23" main="mc" id="sha256new_HB5KSDHJDC5EWQKFH6M6QUC4WP5Y5VRITVE4GNASXUAAAX2AB5ZQ">
+      <manifest-digest sha256new="HB5KSDHJDC5EWQKFH6M6QUC4WP5Y5VRITVE4GNASXUAAAX2AB5ZQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2023-03-23T20-03-04Z" size="28570320" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2023.3.23" released="2023-03-23" main="mc" id="sha256new_OQPARORHX22CTJCF7GU7NZJWT36RIEHBDTOQIUXIBSLUZQJY3TOA">
+      <manifest-digest sha256new="OQPARORHX22CTJCF7GU7NZJWT36RIEHBDTOQIUXIBSLUZQJY3TOA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2023-03-23T20-03-04Z" size="27902418" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2023.4.6" released="2023-04-06" main="mc.exe" id="sha256new_UWQMKHWUN62IC5XOKME53HHMU5QBLA22HNYJ5PCLUOZ5BVTGS5CA">
+      <manifest-digest sha256new="UWQMKHWUN62IC5XOKME53HHMU5QBLA22HNYJ5PCLUOZ5BVTGS5CA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2023-04-06T16-51-10Z" size="26593664" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2023.4.6" released="2023-04-06" main="mc" id="sha256new_LOJK3TEPEZWNY6Z5XO7X3TBFSPJ7XBQKDQVPWNWBS5PH6R23LHIQ">
+      <manifest-digest sha256new="LOJK3TEPEZWNY6Z5XO7X3TBFSPJ7XBQKDQVPWNWBS5PH6R23LHIQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-04-06T16-51-10Z" size="26132480" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2023.4.6" released="2023-04-06" main="mc" id="sha256new_OTBD4DKXLWTJ6CJ5QNIOHHFTTZL7A52AFOIMPSTSAHHTV7YZWDWA">
+      <manifest-digest sha256new="OTBD4DKXLWTJ6CJ5QNIOHHFTTZL7A52AFOIMPSTSAHHTV7YZWDWA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2023-04-06T16-51-10Z" size="24641536" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2023.4.6" released="2023-04-06" main="mc" id="sha256new_YSLRDWCETHL34CAMLISV62XHNPF42BSVLMKEJ4F52UMRSTFUGKVA">
+      <manifest-digest sha256new="YSLRDWCETHL34CAMLISV62XHNPF42BSVLMKEJ4F52UMRSTFUGKVA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2023-04-06T16-51-10Z" size="28754208" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2023.4.6" released="2023-04-06" main="mc" id="sha256new_2WLFRAXUJQ4MIUGM4XWBTBN4HC4E33PGWCJA5O4IRQN22BH643MQ">
+      <manifest-digest sha256new="2WLFRAXUJQ4MIUGM4XWBTBN4HC4E33PGWCJA5O4IRQN22BH643MQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2023-04-06T16-51-10Z" size="28149922" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2023.4.12" released="2023-04-12" main="mc.exe" id="sha256new_7BW4PGK4NXCSLL4WHAZL4W3O6TVKZK3IHFEX5A6U2ELTTPWELQLQ">
+      <manifest-digest sha256new="7BW4PGK4NXCSLL4WHAZL4W3O6TVKZK3IHFEX5A6U2ELTTPWELQLQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2023-04-12T02-21-51Z" size="26641280" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2023.4.12" released="2023-04-12" main="mc" id="sha256new_NFY373NWHJ6ZXSTKYY4HFIG65TQRP75LIQUMRR6M3XO2RJ4SZRPA">
+      <manifest-digest sha256new="NFY373NWHJ6ZXSTKYY4HFIG65TQRP75LIQUMRR6M3XO2RJ4SZRPA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-04-12T02-21-51Z" size="26185728" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2023.4.12" released="2023-04-12" main="mc" id="sha256new_LEIQ56HUXHZOYABIZMMOPZSMMWW7ZSFDMEK2JBBUS2MBMNZ5WIDQ">
+      <manifest-digest sha256new="LEIQ56HUXHZOYABIZMMOPZSMMWW7ZSFDMEK2JBBUS2MBMNZ5WIDQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2023-04-12T02-21-51Z" size="24641536" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2023.4.12" released="2023-04-12" main="mc" id="sha256new_SHPQNM2LUYG6BC44DJAQ2F2GIJ5NR7LUH74RP6IQLU3LW5XSIVEQ">
+      <manifest-digest sha256new="SHPQNM2LUYG6BC44DJAQ2F2GIJ5NR7LUH74RP6IQLU3LW5XSIVEQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2023-04-12T02-21-51Z" size="28804096" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2023.4.12" released="2023-04-12" main="mc" id="sha256new_XRIJ4M7AG7ABEUWFT6XCLDGSYMDJMT75B2M7275R3MG4KMBYDH5A">
+      <manifest-digest sha256new="XRIJ4M7AG7ABEUWFT6XCLDGSYMDJMT75B2M7275R3MG4KMBYDH5A"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2023-04-12T02-21-51Z" size="28188802" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2023.5.4" released="2023-05-04" main="mc.exe" id="sha256new_NFBKV6VXACM7M2LJ3SEIHGLO5PV2BFVOJ2DTDPOF3EIAGY3PVIBQ">
+      <manifest-digest sha256new="NFBKV6VXACM7M2LJ3SEIHGLO5PV2BFVOJ2DTDPOF3EIAGY3PVIBQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2023-05-04T18-10-16Z" size="26656640" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2023.5.4" released="2023-05-04" main="mc" id="sha256new_KTNHJVXN4QSK7H4GLA3ADL5444C4GXFSEJEN3QGSJBIY5HYQVZEA">
+      <manifest-digest sha256new="KTNHJVXN4QSK7H4GLA3ADL5444C4GXFSEJEN3QGSJBIY5HYQVZEA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-05-04T18-10-16Z" size="26202112" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2023.5.4" released="2023-05-04" main="mc" id="sha256new_GR7OZ4NQFBFTCN2E4WVAD4L2C5ASGWVNEVNSZC375EVGYJB3Q63A">
+      <manifest-digest sha256new="GR7OZ4NQFBFTCN2E4WVAD4L2C5ASGWVNEVNSZC375EVGYJB3Q63A"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2023-05-04T18-10-16Z" size="24641536" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2023.5.4" released="2023-05-04" main="mc" id="sha256new_6CXO5ZJLNXJCMELNHQZQUTI6KXXHKMX77V45O3BJ4BU6AC5RGUUQ">
+      <manifest-digest sha256new="6CXO5ZJLNXJCMELNHQZQUTI6KXXHKMX77V45O3BJ4BU6AC5RGUUQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2023-05-04T18-10-16Z" size="28817264" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2023.5.4" released="2023-05-04" main="mc" id="sha256new_VYT3D3THNVHVRV5RIKAMTQ3ZQJGW2UASLULAFQTT3JVG5KB4MIXQ">
+      <manifest-digest sha256new="VYT3D3THNVHVRV5RIKAMTQ3ZQJGW2UASLULAFQTT3JVG5KB4MIXQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2023-05-04T18-10-16Z" size="28190146" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2023.5.18" released="2023-05-18" main="mc.exe" id="sha256new_R2PXEKCSXBD5MFYUB5SNW7DSQNODHCRRTZ3BGPJXNGTLDW6GTSOA">
+      <manifest-digest sha256new="R2PXEKCSXBD5MFYUB5SNW7DSQNODHCRRTZ3BGPJXNGTLDW6GTSOA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2023-05-18T16-59-00Z" size="26592128" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2023.5.18" released="2023-05-18" main="mc" id="sha256new_254QXEHCCAFBT34VKPQQSN5NJYK4U3WT4IY4K5AWE3ZVBJ7V3S4Q">
+      <manifest-digest sha256new="254QXEHCCAFBT34VKPQQSN5NJYK4U3WT4IY4K5AWE3ZVBJ7V3S4Q"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-05-18T16-59-00Z" size="26128384" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2023.5.18" released="2023-05-18" main="mc" id="sha256new_MLI42A3RYMBHCWE6KQZ5PMZVX5RLOIZ5EHWOOSR66TG4CCAZU57Q">
+      <manifest-digest sha256new="MLI42A3RYMBHCWE6KQZ5PMZVX5RLOIZ5EHWOOSR66TG4CCAZU57Q"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2023-05-18T16-59-00Z" size="24838144" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2023.5.18" released="2023-05-18" main="mc" id="sha256new_EUI2LR34MHBSBMPFLHSEM62T2LWTPXB5UKRL5ILJMUE7SM7JGYTA">
+      <manifest-digest sha256new="EUI2LR34MHBSBMPFLHSEM62T2LWTPXB5UKRL5ILJMUE7SM7JGYTA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2023-05-18T16-59-00Z" size="28660944" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2023.5.18" released="2023-05-18" main="mc" id="sha256new_AVWR5TXXBWCJ5WD7XEQ3CW3UPZCZGMZLBV2VMK4CQNIYYR45VSZA">
+      <manifest-digest sha256new="AVWR5TXXBWCJ5WD7XEQ3CW3UPZCZGMZLBV2VMK4CQNIYYR45VSZA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2023-05-18T16-59-00Z" size="27995858" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2023.5.26" released="2023-05-26" main="mc.exe" id="sha256new_UV47AVEYLEPBWKNOA2LQJIEITDD7HEFBHAUDAG2AWP7W4KUSOQTQ">
+      <manifest-digest sha256new="UV47AVEYLEPBWKNOA2LQJIEITDD7HEFBHAUDAG2AWP7W4KUSOQTQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2023-05-26T23-31-54Z" size="26619776" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2023.5.26" released="2023-05-26" main="mc" id="sha256new_HW3JX53LJNLBUMIQYWXBVA6LJ7XCR7RSVD7DZGXJSM33PMEL2DPA">
+      <manifest-digest sha256new="HW3JX53LJNLBUMIQYWXBVA6LJ7XCR7RSVD7DZGXJSM33PMEL2DPA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-05-26T23-31-54Z" size="26157056" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2023.5.26" released="2023-05-26" main="mc" id="sha256new_DESSMFTRMDAXORBLDSCIEOR5IIQONTM7DZPF34UBLEXOH4MSSKJA">
+      <manifest-digest sha256new="DESSMFTRMDAXORBLDSCIEOR5IIQONTM7DZPF34UBLEXOH4MSSKJA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2023-05-26T23-31-54Z" size="24838144" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2023.5.26" released="2023-05-26" main="mc" id="sha256new_VWZUYWEAVQRSMGS4YAYTNIPTZ2BDPCAOMF5V5M34C2B3JRGOIUBQ">
+      <manifest-digest sha256new="VWZUYWEAVQRSMGS4YAYTNIPTZ2BDPCAOMF5V5M34C2B3JRGOIUBQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2023-05-26T23-31-54Z" size="28690928" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2023.5.26" released="2023-05-26" main="mc" id="sha256new_XJED6OLIYHIQCHDKFUJZUNCRATEVAFTB4EP5BHT3B3ZZ4KBG5THA">
+      <manifest-digest sha256new="XJED6OLIYHIQCHDKFUJZUNCRATEVAFTB4EP5BHT3B3ZZ4KBG5THA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2023-05-26T23-31-54Z" size="27997826" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2023.5.30" released="2023-05-30" main="mc.exe" id="sha256new_KIWMVUTW6QW2GQJLWJ4CMIP5CB5IM44XWCYAHTDY6H6WYWJDXLKA">
+      <manifest-digest sha256new="KIWMVUTW6QW2GQJLWJ4CMIP5CB5IM44XWCYAHTDY6H6WYWJDXLKA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2023-05-30T22-41-38Z" size="26623360" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2023.5.30" released="2023-05-30" main="mc" id="sha256new_J6NN6JRNIMEZLHVDXT4FWRDMTQKMZF5BGPA2T6DU2NM4VI5CAQAQ">
+      <manifest-digest sha256new="J6NN6JRNIMEZLHVDXT4FWRDMTQKMZF5BGPA2T6DU2NM4VI5CAQAQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-05-30T22-41-38Z" size="26157056" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2023.5.30" released="2023-05-30" main="mc" id="sha256new_BPRHEOYXSLQJDAVVO3GEDJR5YOBRHIEHKFEVEYED2AOLBZYF6UDA">
+      <manifest-digest sha256new="BPRHEOYXSLQJDAVVO3GEDJR5YOBRHIEHKFEVEYED2AOLBZYF6UDA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2023-05-30T22-41-38Z" size="24838144" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2023.5.30" released="2023-05-30" main="mc" id="sha256new_B5PIJNTC75GKFKFYZ54QU5PC43W6YAARPOY5JBAN3B3ZMGXLUCDQ">
+      <manifest-digest sha256new="B5PIJNTC75GKFKFYZ54QU5PC43W6YAARPOY5JBAN3B3ZMGXLUCDQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2023-05-30T22-41-38Z" size="28695088" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2023.5.30" released="2023-05-30" main="mc" id="sha256new_MEHS4GTQHGK3KYJO5S3R22CRVQ7P4RKXJZ77JTZ55VX7ZGGDJ43Q">
+      <manifest-digest sha256new="MEHS4GTQHGK3KYJO5S3R22CRVQ7P4RKXJZ77JTZ55VX7ZGGDJ43Q"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2023-05-30T22-41-38Z" size="28014482" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2023.6.6" released="2023-06-06" main="mc.exe" id="sha256new_WWBDBCSK3EP4RAOZLLFYEJCI233H34QYU5CXUCV2P3QFLSTO4WXA">
+      <manifest-digest sha256new="WWBDBCSK3EP4RAOZLLFYEJCI233H34QYU5CXUCV2P3QFLSTO4WXA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2023-06-06T13-48-56Z" size="26628992" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2023.6.6" released="2023-06-06" main="mc" id="sha256new_LP5LGBZDOGWIEFPTFBULCCWBHMBJV2H62VBZUBCEGQKSAMMPHN5Q">
+      <manifest-digest sha256new="LP5LGBZDOGWIEFPTFBULCCWBHMBJV2H62VBZUBCEGQKSAMMPHN5Q"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-06-06T13-48-56Z" size="26165248" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2023.6.6" released="2023-06-06" main="mc" id="sha256new_5JUX5CCOSIWZKA2VYHMH2WAMJSC6PVVM64UVBNVZW3FENTL63YAA">
+      <manifest-digest sha256new="5JUX5CCOSIWZKA2VYHMH2WAMJSC6PVVM64UVBNVZW3FENTL63YAA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2023-06-06T13-48-56Z" size="24838144" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2023.6.6" released="2023-06-06" main="mc" id="sha256new_KRQYH5UWS24L7XNYCMNWGDLYVLUPHQHFUGZTNRHEWYOSPFNDJJZA">
+      <manifest-digest sha256new="KRQYH5UWS24L7XNYCMNWGDLYVLUPHQHFUGZTNRHEWYOSPFNDJJZA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2023-06-06T13-48-56Z" size="28699536" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2023.6.6" released="2023-06-06" main="mc" id="sha256new_ETQPXKNEEEOOMFIXPCYEZ4QPKWXUCO2VUOCH5Z5BZMJJK43YB7UQ">
+      <manifest-digest sha256new="ETQPXKNEEEOOMFIXPCYEZ4QPKWXUCO2VUOCH5Z5BZMJJK43YB7UQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2023-06-06T13-48-56Z" size="28047874" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2023.6.15" released="2023-06-15" main="mc.exe" id="sha256new_IIHMACMRCFOQZDJXV4LYRMO36BPI5YRIB3XWTINQNSDYRCYU7ETA">
+      <manifest-digest sha256new="IIHMACMRCFOQZDJXV4LYRMO36BPI5YRIB3XWTINQNSDYRCYU7ETA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2023-06-15T15-08-26Z" size="26630016" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2023.6.15" released="2023-06-15" main="mc" id="sha256new_AYDR5IC4EVXDQYWW4EEU2XSAHIDU5R32LGAUSZQ42C67WFS5IPHA">
+      <manifest-digest sha256new="AYDR5IC4EVXDQYWW4EEU2XSAHIDU5R32LGAUSZQ42C67WFS5IPHA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-06-15T15-08-26Z" size="26165248" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2023.6.15" released="2023-06-15" main="mc" id="sha256new_7QYH6MTCOGF4JSSS5KV72GXSL6Z5Q4QREL4TRALYE7M4K5GBSCGA">
+      <manifest-digest sha256new="7QYH6MTCOGF4JSSS5KV72GXSL6Z5Q4QREL4TRALYE7M4K5GBSCGA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2023-06-15T15-08-26Z" size="24838144" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2023.6.15" released="2023-06-15" main="mc" id="sha256new_TZZ3OA6NA2BFW6CWOBEPE7MJWMLJ5XLC3NTDQLBUN43KUC5GRXAQ">
+      <manifest-digest sha256new="TZZ3OA6NA2BFW6CWOBEPE7MJWMLJ5XLC3NTDQLBUN43KUC5GRXAQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2023-06-15T15-08-26Z" size="28703872" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2023.6.15" released="2023-06-15" main="mc" id="sha256new_ZGKV7YA3JREFD625SSNYBR2HNRCYRM5C5KR76WV5C7E4PXLBGYWA">
+      <manifest-digest sha256new="ZGKV7YA3JREFD625SSNYBR2HNRCYRM5C5KR76WV5C7E4PXLBGYWA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2023-06-15T15-08-26Z" size="28048146" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2023.6.19" released="2023-06-19" main="mc.exe" id="sha256new_X7RHRAOMCEYMDRB5U6OIKNRFFQ3WUCTXJYRPZSVHUM6DF3E7NYSA">
+      <manifest-digest sha256new="X7RHRAOMCEYMDRB5U6OIKNRFFQ3WUCTXJYRPZSVHUM6DF3E7NYSA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2023-06-19T19-31-19Z" size="26633088" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2023.6.19" released="2023-06-19" main="mc" id="sha256new_NJITIURDUBTREJ3A6NOBMUY7X4I2BWQMLGNFBY3TB3OWFQJPUNDA">
+      <manifest-digest sha256new="NJITIURDUBTREJ3A6NOBMUY7X4I2BWQMLGNFBY3TB3OWFQJPUNDA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-06-19T19-31-19Z" size="26169344" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2023.6.19" released="2023-06-19" main="mc" id="sha256new_UFVZTDM5CNESIW522QPLRMF5V2MXV54GT2ZJULEO7ARAAGPFYD6A">
+      <manifest-digest sha256new="UFVZTDM5CNESIW522QPLRMF5V2MXV54GT2ZJULEO7ARAAGPFYD6A"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2023-06-19T19-31-19Z" size="24838144" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2023.6.19" released="2023-06-19" main="mc" id="sha256new_KCNAMHHNJ3F2DGLQRYNDQRDQSOB2Z4CH3AT2EXWSNIVMXCVNUEZQ">
+      <manifest-digest sha256new="KCNAMHHNJ3F2DGLQRYNDQRDQSOB2Z4CH3AT2EXWSNIVMXCVNUEZQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2023-06-19T19-31-19Z" size="28707968" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2023.6.19" released="2023-06-19" main="mc" id="sha256new_OH7AVZS57UMO5E7EFYPJ7QTLQS5IXKPZADOVKRNOS225B6GO756A">
+      <manifest-digest sha256new="OH7AVZS57UMO5E7EFYPJ7QTLQS5IXKPZADOVKRNOS225B6GO756A"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2023-06-19T19-31-19Z" size="28048178" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2023.6.23" released="2023-06-23" main="mc.exe" id="sha256new_3Z2LMFTMGBXXVQTSE7QYNPP35YZIJQ3FNVW7NGNTQMTMK3B2WSUA">
+      <manifest-digest sha256new="3Z2LMFTMGBXXVQTSE7QYNPP35YZIJQ3FNVW7NGNTQMTMK3B2WSUA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2023-06-23T18-12-07Z" size="26651520" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2023.6.23" released="2023-06-23" main="mc" id="sha256new_T24WE2BGNEHLXUE5YUM6K5XWMXQ42LVOICJMD2BAFB7OAYLNUMRA">
+      <manifest-digest sha256new="T24WE2BGNEHLXUE5YUM6K5XWMXQ42LVOICJMD2BAFB7OAYLNUMRA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-06-23T18-12-07Z" size="26189824" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2023.6.23" released="2023-06-23" main="mc" id="sha256new_BKKD6GNZQMMBL6XG55ZBMRRKPXRDMJ3RDMRFEAXYE6C3BGVHHB7A">
+      <manifest-digest sha256new="BKKD6GNZQMMBL6XG55ZBMRRKPXRDMJ3RDMRFEAXYE6C3BGVHHB7A"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2023-06-23T18-12-07Z" size="24903680" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2023.6.23" released="2023-06-23" main="mc" id="sha256new_Z3IUWF6ZBDHOLOO4BWUH5BO3WLGIO3WGTCKTNIXSKNNJHUKCRAHA">
+      <manifest-digest sha256new="Z3IUWF6ZBDHOLOO4BWUH5BO3WLGIO3WGTCKTNIXSKNNJHUKCRAHA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2023-06-23T18-12-07Z" size="28725920" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2023.6.23" released="2023-06-23" main="mc" id="sha256new_L4LALTARXRYL5DBYMUVQMA3L7TAWIXT64UHXWY2UZC2WYFGI4BBQ">
+      <manifest-digest sha256new="L4LALTARXRYL5DBYMUVQMA3L7TAWIXT64UHXWY2UZC2WYFGI4BBQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2023-06-23T18-12-07Z" size="28051202" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2023.6.28" released="2023-06-28" main="mc.exe" id="sha256new_C7YSBHF3XOQPPQWMK3RXAECUZGYYWNAIYDMMYV5SMVFMMFGMB37A">
+      <manifest-digest sha256new="C7YSBHF3XOQPPQWMK3RXAECUZGYYWNAIYDMMYV5SMVFMMFGMB37A"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2023-06-28T21-54-17Z" size="26654592" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2023.6.28" released="2023-06-28" main="mc" id="sha256new_JONDNZWXFRJKE2PBZFZWTVY6AZVEC5OTNFUVQZLTGEBV3DZNCRNQ">
+      <manifest-digest sha256new="JONDNZWXFRJKE2PBZFZWTVY6AZVEC5OTNFUVQZLTGEBV3DZNCRNQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-06-28T21-54-17Z" size="26189824" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2023.6.28" released="2023-06-28" main="mc" id="sha256new_FZW3BEHVTG4FH66CEYSIKU3R6ZVU3JKMMPFVNTCWOOTWS57ILRXQ">
+      <manifest-digest sha256new="FZW3BEHVTG4FH66CEYSIKU3R6ZVU3JKMMPFVNTCWOOTWS57ILRXQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2023-06-28T21-54-17Z" size="24903680" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2023.6.28" released="2023-06-28" main="mc" id="sha256new_LGWPQAAEBO6I2UIWGGULRB7P2PWJO2ZUBUOG5P5LVRMUCPU23SVA">
+      <manifest-digest sha256new="LGWPQAAEBO6I2UIWGGULRB7P2PWJO2ZUBUOG5P5LVRMUCPU23SVA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2023-06-28T21-54-17Z" size="28730080" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2023.6.28" released="2023-06-28" main="mc" id="sha256new_UWHPOATOT2JMO2OLZDNY642SSTFLZVJZSGWNFCAJURB74OUQM2LA">
+      <manifest-digest sha256new="UWHPOATOT2JMO2OLZDNY642SSTFLZVJZSGWNFCAJURB74OUQM2LA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2023-06-28T21-54-17Z" size="28067938" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2023.7.7" released="2023-07-07" main="mc.exe" id="sha256new_ZJ22ZYRSTKBSCFUF23KVUN5Y4GCHBOVFDZK3D4PJK7ZTGD6DSA3A">
+      <manifest-digest sha256new="ZJ22ZYRSTKBSCFUF23KVUN5Y4GCHBOVFDZK3D4PJK7ZTGD6DSA3A"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2023-07-07T05-25-51Z" size="26674560" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2023.7.7" released="2023-07-07" main="mc" id="sha256new_QLWCDZDW6TELZZW2DY7DXKWI7KCFCOCCKNZGUPIFXQS6O6XJDD6A">
+      <manifest-digest sha256new="QLWCDZDW6TELZZW2DY7DXKWI7KCFCOCCKNZGUPIFXQS6O6XJDD6A"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-07-07T05-25-51Z" size="26210304" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2023.7.7" released="2023-07-07" main="mc" id="sha256new_BXTD2DW2OLOTJA64P3ZSJJTTMICY64EO6LWEGW5YUEBAA4QGZGWQ">
+      <manifest-digest sha256new="BXTD2DW2OLOTJA64P3ZSJJTTMICY64EO6LWEGW5YUEBAA4QGZGWQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2023-07-07T05-25-51Z" size="24903680" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2023.7.7" released="2023-07-07" main="mc" id="sha256new_3KDUDTXDAARZXZGDJOPLJLPXKIENG5PX74XBK2LEWJ7DUA5KMVPA">
+      <manifest-digest sha256new="3KDUDTXDAARZXZGDJOPLJLPXKIENG5PX74XBK2LEWJ7DUA5KMVPA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2023-07-07T05-25-51Z" size="28751504" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2023.7.7" released="2023-07-07" main="mc" id="sha256new_IJMOE54NQKASA7E2SRZBCJ3YZPRRQ2MDXNF227LNJRUNHVDVUQDA">
+      <manifest-digest sha256new="IJMOE54NQKASA7E2SRZBCJ3YZPRRQ2MDXNF227LNJRUNHVDVUQDA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2023-07-07T05-25-51Z" size="28086066" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2023.7.11" released="2023-07-11" main="mc.exe" id="sha256new_MX2JQWDZVBAMKATWJJOGD2W2TGH7YB762FMHDCPHLFVOIQ5ZSOJA">
+      <manifest-digest sha256new="MX2JQWDZVBAMKATWJJOGD2W2TGH7YB762FMHDCPHLFVOIQ5ZSOJA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2023-07-11T23-30-44Z" size="26674560" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2023.7.11" released="2023-07-11" main="mc" id="sha256new_ROGTGWPHLWTA74EPL2NQ7I74S5RS7G7OYQ7GPXZYMT7ZL3MN3RGQ">
+      <manifest-digest sha256new="ROGTGWPHLWTA74EPL2NQ7I74S5RS7G7OYQ7GPXZYMT7ZL3MN3RGQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-07-11T23-30-44Z" size="26210304" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2023.7.11" released="2023-07-11" main="mc" id="sha256new_KGZUTT2BVSQ3CX2CRTLZWMQTGDC2JBNBLPOZUIHZFMW4PLAOJ7WA">
+      <manifest-digest sha256new="KGZUTT2BVSQ3CX2CRTLZWMQTGDC2JBNBLPOZUIHZFMW4PLAOJ7WA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2023-07-11T23-30-44Z" size="24903680" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2023.7.11" released="2023-07-11" main="mc" id="sha256new_DBGSX3VSH4C56FCVZUIUVOI6VK6YXYSABXUEYWZF34PXRMITCM4A">
+      <manifest-digest sha256new="DBGSX3VSH4C56FCVZUIUVOI6VK6YXYSABXUEYWZF34PXRMITCM4A"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2023-07-11T23-30-44Z" size="28751472" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2023.7.11" released="2023-07-11" main="mc" id="sha256new_LESWU6YUIVK5467HL3356O6H3NLSZGCGMP3UIZXJ3PH6G47CGZZQ">
+      <manifest-digest sha256new="LESWU6YUIVK5467HL3356O6H3NLSZGCGMP3UIZXJ3PH6G47CGZZQ"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2023-07-11T23-30-44Z" size="28086034" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2023.7.18" released="2023-07-18" main="mc.exe" id="sha256new_NQF5YX2KP4QDQGC7AG62TY4QMAYI244YKTDV556XNRLMT7B45CKA">
+      <manifest-digest sha256new="NQF5YX2KP4QDQGC7AG62TY4QMAYI244YKTDV556XNRLMT7B45CKA"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2023-07-18T21-05-38Z" size="26726272" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2023.7.18" released="2023-07-18" main="mc" id="sha256new_STWU5VTZZ2JGI5IKDOJOJKARAET77RBIGHCM7DFSXM6TGAI462UA">
+      <manifest-digest sha256new="STWU5VTZZ2JGI5IKDOJOJKARAET77RBIGHCM7DFSXM6TGAI462UA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-07-18T21-05-38Z" size="26263552" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2023.7.18" released="2023-07-18" main="mc" id="sha256new_HT77R2AL66OIWA2CQ7F6J4YN2BIU6W7HUAA2XRYCHBHHOKBM4Q6A">
+      <manifest-digest sha256new="HT77R2AL66OIWA2CQ7F6J4YN2BIU6W7HUAA2XRYCHBHHOKBM4Q6A"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2023-07-18T21-05-38Z" size="24969216" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2023.7.18" released="2023-07-18" main="mc" id="sha256new_FP5DZ2S37S4U3ITINAXLTQJXMFVMXKRTEHMWPUXWHU2KBGGQH7UA">
+      <manifest-digest sha256new="FP5DZ2S37S4U3ITINAXLTQJXMFVMXKRTEHMWPUXWHU2KBGGQH7UA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2023-07-18T21-05-38Z" size="28804256" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2023.7.18" released="2023-07-18" main="mc" id="sha256new_MCDU6IUSSUORY2BBUNPO24Z7R7K7GYQRZ5JTZUHWI6ZF6PBQBFVA">
+      <manifest-digest sha256new="MCDU6IUSSUORY2BBUNPO24Z7R7K7GYQRZ5JTZUHWI6ZF6PBQBFVA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2023-07-18T21-05-38Z" size="28140674" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2023.7.21" released="2023-07-21" main="mc.exe" id="sha256new_KDLZLJIKSTKG7IGHHY4OFOUNV2FWXK35N5VMKHQJNYSOIO4RIRNQ">
+      <manifest-digest sha256new="KDLZLJIKSTKG7IGHHY4OFOUNV2FWXK35N5VMKHQJNYSOIO4RIRNQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2023-07-21T20-44-27Z" size="26731904" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2023.7.21" released="2023-07-21" main="mc" id="sha256new_GC75B2BQEYZZVIGCG5DMX7AKYO6G2XTZJJD5UK2YMXEQDQBX3A2Q">
+      <manifest-digest sha256new="GC75B2BQEYZZVIGCG5DMX7AKYO6G2XTZJJD5UK2YMXEQDQBX3A2Q"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-07-21T20-44-27Z" size="26263552" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2023.7.21" released="2023-07-21" main="mc" id="sha256new_3ZN3GT4JM4LWORUBZKJAQN3LNAFIKUPLDG4BZ3GQEBGGAACYVL2A">
+      <manifest-digest sha256new="3ZN3GT4JM4LWORUBZKJAQN3LNAFIKUPLDG4BZ3GQEBGGAACYVL2A"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2023-07-21T20-44-27Z" size="24969216" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2023.7.21" released="2023-07-21" main="mc" id="sha256new_5SHIIRKQ37P4MYUOH36HQSTW2SHMQHEQVICIE77LVFBHHV4AGLEA">
+      <manifest-digest sha256new="5SHIIRKQ37P4MYUOH36HQSTW2SHMQHEQVICIE77LVFBHHV4AGLEA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2023-07-21T20-44-27Z" size="28812512" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2023.7.21" released="2023-07-21" main="mc" id="sha256new_MIS6LS26EYEWPT74UAUIU2Q7EV7TB4VHODZ5YSPAPVRGJBP3CR4Q">
+      <manifest-digest sha256new="MIS6LS26EYEWPT74UAUIU2Q7EV7TB4VHODZ5YSPAPVRGJBP3CR4Q"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2023-07-21T20-44-27Z" size="28140882" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2023.8.1" released="2023-08-01" main="mc.exe" id="sha256new_UCKO5DIO7OK4DPWGB7KGQCWESIUQ73KPKIWYJAPKT4YMEHS5YOEQ">
+      <manifest-digest sha256new="UCKO5DIO7OK4DPWGB7KGQCWESIUQ73KPKIWYJAPKT4YMEHS5YOEQ"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2023-08-01T23-30-57Z" size="26844544" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2023.8.1" released="2023-08-01" main="mc" id="sha256new_PXELUWBBT5FOZ7SZQ3NIXCFGWCDD6TVYEF7YZWUGI6KBL5HRK2TA">
+      <manifest-digest sha256new="PXELUWBBT5FOZ7SZQ3NIXCFGWCDD6TVYEF7YZWUGI6KBL5HRK2TA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-08-01T23-30-57Z" size="26378240" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2023.8.1" released="2023-08-01" main="mc" id="sha256new_O633ODL5JUM3S5DQ7AIXAD6ZPH2OCSNA6XJMBPPBLSLXOV2XQAZA">
+      <manifest-digest sha256new="O633ODL5JUM3S5DQ7AIXAD6ZPH2OCSNA6XJMBPPBLSLXOV2XQAZA"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2023-08-01T23-30-57Z" size="25100288" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2023.8.1" released="2023-08-01" main="mc" id="sha256new_27LLEB6T7IZKGMTDQ5N3N2CBUWZXQVOOMZTDPAZSZJ2AN7SX3UKA">
+      <manifest-digest sha256new="27LLEB6T7IZKGMTDQ5N3N2CBUWZXQVOOMZTDPAZSZJ2AN7SX3UKA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2023-08-01T23-30-57Z" size="29007728" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2023.8.1" released="2023-08-01" main="mc" id="sha256new_D46MPZHX6ZDTBAWFU5ES57KAIOG3QLHRIA3BACGDZMUOF44TSQKA">
+      <manifest-digest sha256new="D46MPZHX6ZDTBAWFU5ES57KAIOG3QLHRIA3BACGDZMUOF44TSQKA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2023-08-01T23-30-57Z" size="28309554" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2023.8.8" released="2023-08-08" main="mc.exe" id="sha256new_RS7OCLZR77KQ6M7YAACS3G6LVBHBFCIAZRM33VE3P7CEDXQE6H6A">
+      <manifest-digest sha256new="RS7OCLZR77KQ6M7YAACS3G6LVBHBFCIAZRM33VE3P7CEDXQE6H6A"/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.2023-08-08T17-23-59Z" size="26846592" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2023.8.8" released="2023-08-08" main="mc" id="sha256new_25RB6JHEOMVR3BMVRGPWMLE2DSNKIORO4I7Z74UFIX4YCXELGETQ">
+      <manifest-digest sha256new="25RB6JHEOMVR3BMVRGPWMLE2DSNKIORO4I7Z74UFIX4YCXELGETQ"/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.2023-08-08T17-23-59Z" size="26382336" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2023.8.8" released="2023-08-08" main="mc" id="sha256new_ARUIQKL2CET2TVYRE2M4HDZOQ7WV2X4L7X4NJPWYDHSG4AJHXI4Q">
+      <manifest-digest sha256new="ARUIQKL2CET2TVYRE2M4HDZOQ7WV2X4L7X4NJPWYDHSG4AJHXI4Q"/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.2023-08-08T17-23-59Z" size="25100288" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2023.8.8" released="2023-08-08" main="mc" id="sha256new_VAN7OY7OXUA6C3YSPYOZ7MSRQKZDAOUZAWSD7W44EK6QLAQ54XVA">
+      <manifest-digest sha256new="VAN7OY7OXUA6C3YSPYOZ7MSRQKZDAOUZAWSD7W44EK6QLAQ54XVA"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.2023-08-08T17-23-59Z" size="29007680" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2023.8.8" released="2023-08-08" main="mc" id="sha256new_JSMHQAC7PM7T4DXXD6UGJU4QNWZQANXGCJIHQZL473W5XFIXFT6Q">
+      <manifest-digest sha256new="JSMHQAC7PM7T4DXXD6UGJU4QNWZQANXGCJIHQZL473W5XFIXFT6Q"/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.2023-08-08T17-23-59Z" size="28326034" dest="mc" executable="true"/>
+    </implementation>
+  </group>
+
+  <entry-point binary-name="mc" command="run"/>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmTaXTIACgkQWao5J8JOTh72HggAgYdo
++oDfr5XHQFg+ZNzEExAngAH60Mz94DfAkXSky8PzyIABigqlQCw85GvwwGCm4ElQDcD7eEBkBSh2
+PH8SeSKYf6AuITEJ9IGv2EhKxCIHaElEb8YFnYoFZ8E84FU2H90l9du2HBQgSiIbRg2NsxorFNYj
+jxV5i+2IHKHdXxo6lXkv0Sm2uaHBcgobXAvu3QX/rCcscxT0T9hM9ZV38Ux5sGwaRhy8cg4JIVRr
+cb1EOXV1tQpCkY/EXwGiFleSGrAw5/NQef601haVTOdvlF7VdqnlMZF9W+mdEjH8Mo7atFzLObIx
+onWvlbqr/uJJvjoOUfh4jFNOeXHnkZ3EYg==
+
+-->

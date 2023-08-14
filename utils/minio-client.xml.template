@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>MinIO Client</name>
+  <summary>command-line tool for AWS S3 API</summary>
+  <description>The MinIO Client mc command-line tool provides an alternative to commands like ls, cat, cp, mirror and diff with support for both filesystems and Amazon S3-compatible cloud storage services.</description>
+  <homepage>https://min.io/docs/minio/linux/reference/minio-mc.html</homepage>
+  <category>Utility</category>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/utils/minio-client.xml"/>
+
+  <group stability="stable" license="AGPL v3 (GNU Affero General Public License)">
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" main="mc.exe">
+      <manifest-digest/>
+      <file href="https://dl.min.io/client/mc/release/windows-amd64/archive/mc.RELEASE.{timestamp}" dest="mc.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="{version}" released="{released}" main="mc">
+      <manifest-digest/>
+      <file href="https://dl.min.io/client/mc/release/linux-amd64/archive/mc.RELEASE.{timestamp}" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" released="{released}" main="mc">
+      <manifest-digest/>
+      <file href="https://dl.min.io/client/mc/release/linux-arm64/archive/mc.RELEASE.{timestamp}" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" released="{released}" main="mc">
+      <manifest-digest/>
+      <file href="https://dl.min.io/client/mc/release/darwin-amd64/archive/mc.RELEASE.{timestamp}" dest="mc" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="{version}" released="{released}" main="mc">
+      <manifest-digest/>
+      <file href="https://dl.min.io/client/mc/release/darwin-arm64/archive/mc.RELEASE.{timestamp}" dest="mc" executable="true"/>
+    </implementation>
+  </group>
+</interface>

@@ -1342,7 +1342,7 @@
   </group>
 
   <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
-    <registration capability-reg-path="SOFTWARE\The Document Foundation\LibreOffice\4.1\Capabilities" id="LibreOffice 4.1"/>
+    <registration capability-reg-path="SOFTWARE\The Document Foundation\LibreOffice\7.6\Capabilities" id="LibreOffice 7.6"/>
     <file-type id="office.Extension.1">
       <description xml:lang="en">LibreOffice Extension</description>
       <icon href="https://apps.0install.net/gui/libreoffice/extension.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
@@ -1353,6 +1353,32 @@
       </verb>
       <extension mime-type="application/vnd.openofficeorg.extension" value=".oxt"/>
     </file-type>
+    <file-type id="LibreOffice.602">
+      <description xml:lang="en">T602 Text File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/writer.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/writer.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="writer" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="writer" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="writer" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="writer" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".602"/>
+    </file-type>
+    <file-type id="LibreOffice.Bmp">
+      <description xml:lang="en">Microsoft Windows Bitmap File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".bmp" mime-type="image/bmp" perceived-type="image"/>
+    </file-type>
     <file-type id="LibreOffice.CalcDocument.1">
       <description xml:lang="en">OpenDocument Spreadsheet</description>
       <description xml:lang="de">OpenDocument Tabellendokument</description>
@@ -1362,11 +1388,11 @@
         <description xml:lang="en">&amp;New</description>
         <description xml:lang="de">&amp;Neu</description>
       </verb>
-      <verb args="-o &quot;%V&quot;" command="calc" name="open"/>
-      <verb args="-p &quot;%V&quot;" name="print"/>
-      <verb args="-pt &quot;%2&quot; &quot;%V&quot;" name="printto"/>
-      <extension mime-type="application/vnd.oasis.opendocument.spreadsheet" value=".ods"/>
-      <extension mime-type="application/vnd.oasis.opendocument.spreadsheet" value=".fods"/>
+      <verb name="open" args="-o &quot;%1&quot;"/>
+      <verb name="print" args="-p &quot;%1&quot;"/>
+      <verb name="printto" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".fods" mime-type="application/vnd.oasis.opendocument.spreadsheet"/>
+      <extension value=".ods" mime-type="application/vnd.oasis.opendocument.spreadsheet"/>
     </file-type>
     <file-type id="LibreOffice.CalcTemplate.1">
       <description xml:lang="en">OpenDocument Spreadsheet Template</description>
@@ -1377,18 +1403,135 @@
         <description xml:lang="en">&amp;New</description>
         <description xml:lang="de">&amp;Neu</description>
       </verb>
-      <verb args="-o &quot;%V&quot;" command="calc" name="open"/>
-      <verb args="-p &quot;%V&quot;" name="print"/>
-      <verb args="-pt &quot;%2&quot; &quot;%V&quot;" name="printto"/>
-      <extension mime-type="application/vnd.oasis.opendocument.spreadsheet-template" value=".ots"/>
+      <verb name="open" args="-o &quot;%1&quot;"/>
+      <verb name="print" args="-p &quot;%1&quot;"/>
+      <verb name="printto" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".ots" mime-type="application/vnd.oasis.opendocument.spreadsheet-template"/>
+    </file-type>
+    <file-type id="LibreOffice.Cdr">
+      <description xml:lang="en">CorelDraw File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".cdr"/>
+    </file-type>
+    <file-type id="LibreOffice.Cgm">
+      <description xml:lang="en">Computer Graphics Metafile</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/impress.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/impress.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="impress" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="impress" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="impress" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="impress" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".cgm"/>
+    </file-type>
+    <file-type id="LibreOffice.Cmx">
+      <description xml:lang="en">Corel Presentation Exchange File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".cmx"/>
     </file-type>
     <file-type id="LibreOffice.DatabaseDocument.1">
       <description xml:lang="en">OpenDocument Database</description>
       <description xml:lang="de">OpenDocument Datenbank</description>
       <icon href="https://apps.0install.net/gui/libreoffice/base.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
       <icon href="https://apps.0install.net/gui/libreoffice/base.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
-      <verb args="-o &quot;%V&quot;" command="base" name="open"/>
-      <extension mime-type="application/vnd.sun.xml.base" value=".odb"/>
+      <verb name="open" command="base" args="-o &quot;%1&quot;"/>
+      <extension value=".odb" mime-type="application/vnd.sun.xml.base"/>
+    </file-type>
+    <file-type id="LibreOffice.Doc">
+      <description xml:lang="en">Microsoft Word 97-2003 Document</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/writer.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/writer.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="writer" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="writer" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="writer" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="writer" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".doc"/>
+    </file-type>
+    <file-type id="LibreOffice.Docm">
+      <description xml:lang="en">Microsoft Word Document</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/writer.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/writer.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="writer" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="writer" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="writer" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="writer" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".docm"/>
+    </file-type>
+    <file-type id="LibreOffice.Docx">
+      <description xml:lang="en">Microsoft Word Document</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/writer.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/writer.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="writer" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="writer" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="writer" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="writer" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".docx" perceived-type="document"/>
+    </file-type>
+    <file-type id="LibreOffice.Dot">
+      <description xml:lang="en">Microsoft Word 97-2003 Template</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/writer.template.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/writer.template.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="writer" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="writer" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="writer" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="writer" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".dot"/>
+    </file-type>
+    <file-type id="LibreOffice.Dotm">
+      <description xml:lang="en">Microsoft Word Template</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/writer.template.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/writer.template.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="writer" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="writer" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="writer" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="writer" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".dotm"/>
+    </file-type>
+    <file-type id="LibreOffice.Dotx">
+      <description xml:lang="en">Microsoft Word Template</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/writer.template.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/writer.template.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="writer" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="writer" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="writer" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="writer" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".dotx"/>
     </file-type>
     <file-type id="LibreOffice.DrawDocument.1">
       <description xml:lang="en">OpenDocument Drawing</description>
@@ -1399,11 +1542,11 @@
         <description xml:lang="en">&amp;New</description>
         <description xml:lang="de">&amp;Neu</description>
       </verb>
-      <verb args="-o &quot;%V&quot;" command="draw" name="open"/>
-      <verb args="-p &quot;%V&quot;" name="print"/>
-      <verb args="-pt &quot;%2&quot; &quot;%V&quot;" name="printto"/>
-      <extension mime-type="application/vnd.oasis.opendocument.graphics" value=".odg"/>
-      <extension mime-type="application/vnd.oasis.opendocument.graphics" value=".fodg"/>
+      <verb name="open" args="-o &quot;%1&quot;"/>
+      <verb name="print" args="-p &quot;%1&quot;"/>
+      <verb name="printto" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".fodg" mime-type="application/vnd.oasis.opendocument.graphics"/>
+      <extension value=".odg" mime-type="application/vnd.oasis.opendocument.graphics"/>
     </file-type>
     <file-type id="LibreOffice.DrawTemplate.1">
       <description xml:lang="en">OpenDocument Drawing Template</description>
@@ -1414,10 +1557,62 @@
         <description xml:lang="en">&amp;New</description>
         <description xml:lang="de">&amp;Neu</description>
       </verb>
-      <verb args="-o &quot;%V&quot;" command="draw" name="open"/>
-      <verb args="-p &quot;%V&quot;" name="print"/>
-      <verb args="-pt &quot;%2&quot; &quot;%V&quot;" name="printto"/>
-      <extension mime-type="application/vnd.oasis.opendocument.graphics-template" value=".otg"/>
+      <verb name="open" args="-o &quot;%1&quot;"/>
+      <verb name="print" args="-p &quot;%1&quot;"/>
+      <verb name="printto" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".otg" mime-type="application/vnd.oasis.opendocument.graphics-template"/>
+    </file-type>
+    <file-type id="LibreOffice.Dxf">
+      <description xml:lang="en">AutoCAD File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".dxf"/>
+    </file-type>
+    <file-type id="LibreOffice.Emf">
+      <description xml:lang="en">Microsoft Enhanced Metafile</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".emf" mime-type="image/x-emf" perceived-type="image"/>
+    </file-type>
+    <file-type id="LibreOffice.Eps">
+      <description xml:lang="en">Encapsulated PostScript File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".eps"/>
+    </file-type>
+    <file-type id="LibreOffice.Gif">
+      <description xml:lang="en">Graphics Interchange Format File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".gif" mime-type="image/gif" perceived-type="image"/>
     </file-type>
     <file-type id="LibreOffice.ImpressDocument.1">
       <description xml:lang="en">OpenDocument Presentation</description>
@@ -1428,15 +1623,16 @@
         <description xml:lang="en">&amp;New</description>
         <description xml:lang="de">&amp;Neu</description>
       </verb>
-      <verb args="-o &quot;%V&quot;" command="impress" name="open"/>
-      <verb args="-p &quot;%V&quot;" name="print"/>
-      <verb args="-pt &quot;%2&quot; &quot;%V&quot;" name="printto"/>
-      <verb args="-show &quot;%V&quot;" name="show">
+      <verb name="open" args="-o &quot;%1&quot;"/>
+      <verb name="print" args="-p &quot;%1&quot;"/>
+      <verb name="printto" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <verb name="show" args="-show &quot;%1&quot;">
         <description xml:lang="en">Show</description>
         <description xml:lang="de">Abspielen</description>
       </verb>
-      <extension mime-type="application/vnd.oasis.opendocument.presentation" value=".odp"/>
-      <extension mime-type="application/vnd.oasis.opendocument.presentation" value=".fodp"/>
+      <extension value=".fodp" mime-type="application/vnd.oasis.opendocument.presentation"/>
+      <extension value=".odg" mime-type="application/vnd.oasis.opendocument.graphics"/>
+      <extension value=".odp" mime-type="application/vnd.oasis.opendocument.presentation"/>
     </file-type>
     <file-type id="LibreOffice.ImpressTemplate.1">
       <description xml:lang="en">OpenDocument Presentation Template</description>
@@ -1447,10 +1643,80 @@
         <description xml:lang="en">&amp;New</description>
         <description xml:lang="de">&amp;Neu</description>
       </verb>
-      <verb args="-o &quot;%V&quot;" command="impress" name="open"/>
-      <verb args="-p &quot;%V&quot;" name="print"/>
-      <verb args="-pt &quot;%2&quot; &quot;%V&quot;" name="printto"/>
-      <extension mime-type="application/vnd.oasis.opendocument.presentation-template" value=".otp"/>
+      <verb name="open" args="-o &quot;%1&quot;"/>
+      <verb name="print" args="-p &quot;%1&quot;"/>
+      <verb name="printto" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".otp" mime-type="application/vnd.oasis.opendocument.presentation-template"/>
+    </file-type>
+    <file-type id="LibreOffice.Iqy">
+      <description xml:lang="en">Microsoft Excel Web Query File</description>
+      <verb name="open" command="calc" args="-o &quot;%1&quot;"/>
+      <extension value=".iqy" mime-type="text/x-ms-iqy"/>
+    </file-type>
+    <file-type id="LibreOffice.Jpe">
+      <description xml:lang="en">Joint Photographic Experts Group File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".jpe" mime-type="image/jpeg" perceived-type="image"/>
+    </file-type>
+    <file-type id="LibreOffice.Jpeg">
+      <description xml:lang="en">Joint Photographic Experts Group File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".jpeg" mime-type="image/jpeg" perceived-type="image"/>
+    </file-type>
+    <file-type id="LibreOffice.Jpg">
+      <description xml:lang="en">Joint Photographic Experts Group File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".jpg" mime-type="image/jpeg" perceived-type="image"/>
+    </file-type>
+    <file-type id="LibreOffice.Keynote">
+      <description xml:lang="en">Apple Keynote</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/impress.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/impress.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="impress" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="impress" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="impress" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="impress" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".key"/>
+    </file-type>
+    <file-type id="LibreOffice.Lwp">
+      <description xml:lang="en">Lotus Word Pro Document</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/writer.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/writer.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="writer" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="writer" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="writer" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="writer" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".lwp"/>
     </file-type>
     <file-type id="LibreOffice.MathDocument.1">
       <description xml:lang="en">OpenDocument Formula</description>
@@ -1461,10 +1727,517 @@
         <description xml:lang="en">&amp;New</description>
         <description xml:lang="de">&amp;Neu</description>
       </verb>
-      <verb args="-o &quot;%V&quot;" command="math" name="open"/>
-      <verb args="-p &quot;%V&quot;" name="print"/>
-      <verb args="-pt &quot;%2&quot; &quot;%V&quot;" name="printto"/>
-      <extension mime-type="application/vnd.oasis.opendocument.formula" value=".odf"/>
+      <verb name="open" args="-o &quot;%1&quot;"/>
+      <verb name="print" args="-p &quot;%1&quot;"/>
+      <verb name="printto" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".odf" mime-type="application/vnd.oasis.opendocument.formula"/>
+    </file-type>
+    <file-type id="LibreOffice.Met">
+      <description xml:lang="en">OS/2 Metafile</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".met"/>
+    </file-type>
+    <file-type id="LibreOffice.Numbers">
+      <description xml:lang="en">Apple Numbers</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/calc.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/calc.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="calc" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="calc" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="calc" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="calc" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".numbers"/>
+    </file-type>
+    <file-type id="LibreOffice.Pages">
+      <description xml:lang="en">Apple Pages</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/writer.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/writer.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="writer" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="writer" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="writer" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="writer" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".pages"/>
+    </file-type>
+    <file-type id="LibreOffice.Pbm">
+      <description xml:lang="en">Portable Bitmap Format File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".pbm"/>
+    </file-type>
+    <file-type id="LibreOffice.PCD">
+      <description xml:lang="en">Kodak Photo CD Image File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".pcd"/>
+    </file-type>
+    <file-type id="LibreOffice.Pct">
+      <description xml:lang="en">Macintosh Picture Metafile</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".pct"/>
+    </file-type>
+    <file-type id="LibreOffice.Pcx">
+      <description xml:lang="en">Personal Computer Exchange File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".pcx"/>
+    </file-type>
+    <file-type id="LibreOffice.Pdf">
+      <description xml:lang="en">PDF (Portable Document Format)</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".pdf"/>
+    </file-type>
+    <file-type id="LibreOffice.Pgm">
+      <description xml:lang="en">Portable Graymap Format File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".pgm"/>
+    </file-type>
+    <file-type id="LibreOffice.Png">
+      <description xml:lang="en">Portable Network Graphics File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".png" mime-type="image/png" perceived-type="image"/>
+    </file-type>
+    <file-type id="LibreOffice.Pot">
+      <description xml:lang="en">Microsoft PowerPoint 97-2003 Template</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/impress.template.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/impress.template.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="impress" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="impress" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="impress" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="impress" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".pot"/>
+    </file-type>
+    <file-type id="LibreOffice.Potm">
+      <description xml:lang="en">Microsoft PowerPoint Template</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/impress.template.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/impress.template.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="impress" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="impress" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="impress" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="impress" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".potm"/>
+    </file-type>
+    <file-type id="LibreOffice.Potx">
+      <description xml:lang="en">Microsoft PowerPoint Template</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/impress.template.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/impress.template.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="impress" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="impress" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="impress" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="impress" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".potx"/>
+    </file-type>
+    <file-type id="LibreOffice.Ppm">
+      <description xml:lang="en">Portable Pixmap Format File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".ppm"/>
+    </file-type>
+    <file-type id="LibreOffice.Pps">
+      <description xml:lang="en">Microsoft PowerPoint Show</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/impress.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/impress.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="impress" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="impress" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="impress" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="impress" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".pps"/>
+    </file-type>
+    <file-type id="LibreOffice.Ppsx">
+      <description xml:lang="en">Microsoft PowerPoint Show</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/impress.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/impress.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="impress" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="impress" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="impress" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="impress" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".ppsx"/>
+    </file-type>
+    <file-type id="LibreOffice.Ppt">
+      <description xml:lang="en">Microsoft PowerPoint 97-2003 Presentation</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/impress.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/impress.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="impress" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="impress" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="impress" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="impress" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".ppt"/>
+    </file-type>
+    <file-type id="LibreOffice.Pptm">
+      <description xml:lang="en">Microsoft PowerPoint Presentation</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/impress.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/impress.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="impress" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="impress" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="impress" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="impress" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".pptm"/>
+    </file-type>
+    <file-type id="LibreOffice.Pptx">
+      <description xml:lang="en">Microsoft PowerPoint Presentation</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/impress.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/impress.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="impress" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="impress" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="impress" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="impress" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".pptx"/>
+    </file-type>
+    <file-type id="LibreOffice.Psd">
+      <description xml:lang="en">Adobe Photoshop Document</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".psd"/>
+    </file-type>
+    <file-type id="LibreOffice.Pub">
+      <description xml:lang="en">Microsoft Publisher Document</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".pub"/>
+    </file-type>
+    <file-type id="LibreOffice.Ras">
+      <description xml:lang="en">Sun Raster Graphic File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".ras"/>
+    </file-type>
+    <file-type id="LibreOffice.Rtf">
+      <description xml:lang="en">Rich Text Document</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/writer.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/writer.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="writer" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="writer" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="writer" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="writer" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".rtf" perceived-type="document"/>
+    </file-type>
+    <file-type id="LibreOffice.Svg">
+      <description xml:lang="en">Scalable Vector Graphics File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".svg" mime-type="image/svg+xml"/>
+    </file-type>
+    <file-type id="LibreOffice.Tga">
+      <description xml:lang="en">Truevision TGA File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".tga"/>
+    </file-type>
+    <file-type id="LibreOffice.Tif">
+      <description xml:lang="en">Tagged Image File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".tif" mime-type="image/tiff" perceived-type="image"/>
+    </file-type>
+    <file-type id="LibreOffice.Tiff">
+      <description xml:lang="en">Tagged Image File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".tiff" mime-type="image/tiff" perceived-type="image"/>
+    </file-type>
+    <file-type id="LibreOffice.Uop">
+      <description xml:lang="en">Uniform Office Format Presentation</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/impress.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/impress.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="impress" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="impress" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="impress" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="impress" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".uop"/>
+    </file-type>
+    <file-type id="LibreOffice.Uos">
+      <description xml:lang="en">Uniform Office Format Spreadsheet</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/calc.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/calc.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="calc" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="calc" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="calc" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="calc" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".uos"/>
+    </file-type>
+    <file-type id="LibreOffice.Uot">
+      <description xml:lang="en">Uniform Office Format Text Document</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/writer.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/writer.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="writer" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="writer" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="writer" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="writer" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".uot"/>
+    </file-type>
+    <file-type id="LibreOffice.Vdx">
+      <description xml:lang="en">Microsoft Visio 2000/XP/2003 Document</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".vdx"/>
+    </file-type>
+    <file-type id="LibreOffice.Vsd">
+      <description xml:lang="en">Microsoft Visio 2000/XP/2003 Document</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".vsd"/>
+    </file-type>
+    <file-type id="LibreOffice.Vsdm">
+      <description xml:lang="en">Microsoft Visio 2000/XP/2003 Document</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".vsdm"/>
+    </file-type>
+    <file-type id="LibreOffice.Vsdx">
+      <description xml:lang="en">Microsoft Visio 2000/XP/2003 Document</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".vsdx"/>
+    </file-type>
+    <file-type id="LibreOffice.Vst">
+      <description xml:lang="en">Microsoft Visio 2000/XP/2003 Template</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.template.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.template.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".vst"/>
+    </file-type>
+    <file-type id="LibreOffice.Wb2">
+      <description xml:lang="en">Lotus Quattro Pro Spreadsheet</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/calc.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/calc.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="calc" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="calc" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="calc" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="calc" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".wb2"/>
+    </file-type>
+    <file-type id="LibreOffice.Webp">
+      <description xml:lang="en">STR_REG_VAL_WEBP</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".webp"/>
+    </file-type>
+    <file-type id="LibreOffice.Wmf">
+      <description xml:lang="en">Microsoft Windows Metafile</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".wmf" mime-type="image/x-wmf" perceived-type="image"/>
+    </file-type>
+    <file-type id="LibreOffice.Wpg">
+      <description xml:lang="en">WordPerfect Graphic File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".wpg"/>
     </file-type>
     <file-type id="LibreOffice.WriterDocument.1">
       <description xml:lang="en">OpenDocument Text</description>
@@ -1475,12 +2248,11 @@
         <description xml:lang="en">&amp;New</description>
         <description xml:lang="de">&amp;Neu</description>
       </verb>
-      <verb args="-o &quot;%V&quot;" command="writer" name="open"/>
-      <verb args="-p &quot;%V&quot;" name="print"/>
-      <verb args="-pt &quot;%2&quot; &quot;%V&quot;" name="printto"/>
-      <extension mime-type="application/vnd.oasis.opendocument.text" value=".odt"/>
-      <extension mime-type="application/vnd.oasis.opendocument.text" value=".fodt"/>
-      <extension value=".wps"/>
+      <verb name="open" args="-o &quot;%1&quot;"/>
+      <verb name="print" args="-p &quot;%1&quot;"/>
+      <verb name="printto" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".fodt" mime-type="application/vnd.oasis.opendocument.text"/>
+      <extension value=".odt" mime-type="application/vnd.oasis.opendocument.text" perceived-type="document"/>
     </file-type>
     <file-type id="LibreOffice.WriterGlobalDocument.1">
       <description xml:lang="en">OpenDocument Master Document</description>
@@ -1491,10 +2263,10 @@
         <description xml:lang="en">&amp;New</description>
         <description xml:lang="de">&amp;Neu</description>
       </verb>
-      <verb args="-o &quot;%V&quot;" command="writer" name="open"/>
-      <verb args="-p &quot;%V&quot;" name="print"/>
-      <verb args="-pt &quot;%2&quot; &quot;%V&quot;" name="printto"/>
-      <extension mime-type="application/vnd.oasis.opendocument.text-master" value=".odm"/>
+      <verb name="open" args="-o &quot;%1&quot;"/>
+      <verb name="print" args="-p &quot;%1&quot;"/>
+      <verb name="printto" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".odm" mime-type="application/vnd.oasis.opendocument.text-master"/>
     </file-type>
     <file-type id="LibreOffice.WriterTemplate.1">
       <description xml:lang="en">OpenDocument Text Template</description>
@@ -1505,31 +2277,161 @@
         <description xml:lang="en">&amp;New</description>
         <description xml:lang="de">&amp;Neu</description>
       </verb>
-      <verb args="-o &quot;%V&quot;" command="writer" name="open"/>
-      <verb args="-p &quot;%V&quot;" name="print"/>
-      <verb args="-pt &quot;%2&quot; &quot;%V&quot;" name="printto"/>
-      <extension mime-type="application/vnd.oasis.opendocument.text-template" value=".ott"/>
+      <verb name="open" args="-o &quot;%1&quot;"/>
+      <verb name="print" args="-p &quot;%1&quot;"/>
+      <verb name="printto" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".ott" mime-type="application/vnd.oasis.opendocument.text-template"/>
     </file-type>
     <file-type id="LibreOffice.WriterWebDocument.1">
       <description xml:lang="en">OpenDocument Text</description>
       <description xml:lang="de">OpenDocument Text</description>
       <icon href="https://apps.0install.net/gui/libreoffice/writer.web.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
       <icon href="https://apps.0install.net/gui/libreoffice/writer.web.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
-      <verb args="-o &quot;%V&quot;" command="writer-web" name="open"/>
+      <verb name="open" command="writer-web" args="-o &quot;%1&quot;"/>
     </file-type>
     <file-type id="LibreOffice.WriterWebTemplate.1">
       <description xml:lang="en">HTML Document Template</description>
       <description xml:lang="de">HTML-Dokumentvorlage</description>
       <icon href="https://apps.0install.net/gui/libreoffice/writer.web.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
       <icon href="https://apps.0install.net/gui/libreoffice/writer.web.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
-      <verb args="-n &quot;%V&quot;" name="new">
+      <verb args="-n &quot;%V&quot;" command="writer-web" name="new">
         <description xml:lang="en">&amp;New</description>
         <description xml:lang="de">&amp;Neu</description>
       </verb>
-      <verb args="-o &quot;%V&quot;" command="writer" name="open"/>
-      <verb args="-p &quot;%V&quot;" name="print"/>
-      <verb args="-pt &quot;%2&quot; &quot;%V&quot;" name="printto"/>
-      <extension mime-type="application/vnd.oasis.opendocument.text-web" value=".oth"/>
+      <verb name="open" command="writer-web" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="writer-web" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="writer-web" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".oth" mime-type="application/vnd.oasis.opendocument.text-web"/>
+    </file-type>
+    <file-type id="LibreOffice.Xbm">
+      <description xml:lang="en">X BitMap File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".xbm"/>
+    </file-type>
+    <file-type id="LibreOffice.Xlr">
+      <description xml:lang="en">Microsoft Works Spreadsheet with Excel format</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/calc.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/calc.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="calc" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="calc" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="calc" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="calc" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".xlr"/>
+    </file-type>
+    <file-type id="LibreOffice.Xls">
+      <description xml:lang="en">Microsoft Excel 97-2003 Worksheet</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/calc.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/calc.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="calc" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="calc" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="calc" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="calc" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".xls"/>
+    </file-type>
+    <file-type id="LibreOffice.Xlsb">
+      <description xml:lang="en">Microsoft Excel Worksheet</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/calc.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/calc.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="calc" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="calc" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="calc" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="calc" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".xlsb"/>
+    </file-type>
+    <file-type id="LibreOffice.Xlsm">
+      <description xml:lang="en">Microsoft Excel Worksheet</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/calc.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/calc.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="calc" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="calc" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="calc" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="calc" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".xlsm"/>
+    </file-type>
+    <file-type id="LibreOffice.Xlsx">
+      <description xml:lang="en">Microsoft Excel Worksheet</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/calc.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/calc.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="calc" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="calc" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="calc" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="calc" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".xlsx"/>
+    </file-type>
+    <file-type id="LibreOffice.Xlt">
+      <description xml:lang="en">Microsoft Excel 97-2003 Template</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/calc.template.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/calc.template.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="calc" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="calc" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="calc" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="calc" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".xlt"/>
+    </file-type>
+    <file-type id="LibreOffice.Xltm">
+      <description xml:lang="en">Microsoft Excel Template</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/calc.template.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/calc.template.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="calc" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="calc" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="calc" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="calc" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".xltm"/>
+    </file-type>
+    <file-type id="LibreOffice.Xltx">
+      <description xml:lang="en">Microsoft Excel Template</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/calc.template.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/calc.template.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="calc" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="calc" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="calc" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="calc" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".xltx"/>
+    </file-type>
+    <file-type id="LibreOffice.Xpm">
+      <description xml:lang="en">X Pixmap File</description>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.png" type="image/png.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <icon href="https://apps.0install.net/gui/libreoffice/draw.ico" type="image/vnd.microsoft.icon.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface"/>
+      <verb name="new" command="draw" args="-n &quot;%1&quot;">
+        <description xml:lang="en">&amp;New</description>
+        <description xml:lang="de">&amp;Neu</description>
+      </verb>
+      <verb name="open" command="draw" args="-o &quot;%1&quot;"/>
+      <verb name="print" command="draw" args="-p &quot;%1&quot;"/>
+      <verb name="printto" command="draw" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".xpm"/>
     </file-type>
     <file-type id="soffice.StarCalcDocument.6">
       <description xml:lang="en">OpenOffice.org 1.1 Spreadsheet</description>
@@ -1540,23 +2442,24 @@
         <description xml:lang="en">&amp;New</description>
         <description xml:lang="de">&amp;Neu</description>
       </verb>
-      <verb args="-o &quot;%V&quot;" command="calc" name="open"/>
-      <verb args="-p &quot;%V&quot;" name="print"/>
-      <verb args="-pt &quot;%2&quot; &quot;%V&quot;" name="printto"/>
+      <verb name="open" args="-o &quot;%1&quot;"/>
+      <verb name="print" args="-p &quot;%1&quot;"/>
+      <verb name="printto" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".htm" mime-type="text/html" perceived-type="text"/>
+      <extension value=".html" mime-type="text/html" perceived-type="text"/>
+      <extension value=".rtf" perceived-type="document"/>
+      <extension value=".sxc" mime-type="application/vnd.sun.xml.calc"/>
+      <extension value=".sxc" mime-type="application/vnd.sun.xml.calc"/>
+      <extension value=".txt" mime-type="text/plain" perceived-type="text"/>
+      <extension value=".xml" mime-type="text/xml" perceived-type="text"/>
       <extension value=".123"/>
-      <extension perceived-type="text" value=".csv"/>
+      <extension value=".csv"/>
       <extension value=".dbf"/>
       <extension value=".dif"/>
-      <extension mime-type="text/html" perceived-type="text" value=".htm"/>
-      <extension mime-type="text/html" perceived-type="text" value=".html"/>
-      <extension value=".rtf"/>
       <extension value=".slk"/>
-      <extension mime-type="application/vnd.sun.xml.calc" value=".sxc"/>
-      <extension mime-type="text/plain" perceived-type="text" value=".txt"/>
       <extension value=".wk1"/>
       <extension value=".wks"/>
       <extension value=".xlw"/>
-      <extension mime-type="text/xml" value=".xml"/>
     </file-type>
     <file-type id="soffice.StarCalcTemplate.6">
       <description xml:lang="en">OpenOffice.org 1.1 Spreadsheet Template</description>
@@ -1567,10 +2470,10 @@
         <description xml:lang="en">&amp;New</description>
         <description xml:lang="de">&amp;Neu</description>
       </verb>
-      <verb args="-o &quot;%V&quot;" command="calc" name="open"/>
-      <verb args="-p &quot;%V&quot;" name="print"/>
-      <verb args="-pt &quot;%2&quot; &quot;%V&quot;" name="printto"/>
-      <extension mime-type="application/vnd.sun.xml.calc.template" value=".stc"/>
+      <verb name="open" args="-o &quot;%1&quot;"/>
+      <verb name="print" args="-p &quot;%1&quot;"/>
+      <verb name="printto" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".stc" mime-type="application/vnd.sun.xml.calc.template"/>
     </file-type>
     <file-type id="soffice.StarDrawDocument.6">
       <description xml:lang="en">OpenOffice.org 1.1 Drawing</description>
@@ -1581,10 +2484,10 @@
         <description xml:lang="en">&amp;New</description>
         <description xml:lang="de">&amp;Neu</description>
       </verb>
-      <verb args="-o &quot;%V&quot;" command="draw" name="open"/>
-      <verb args="-p &quot;%V&quot;" name="print"/>
-      <verb args="-pt &quot;%2&quot; &quot;%V&quot;" name="printto"/>
-      <extension mime-type="application/vnd.sun.xml.draw" value=".sxd"/>
+      <verb name="open" args="-o &quot;%1&quot;"/>
+      <verb name="print" args="-p &quot;%1&quot;"/>
+      <verb name="printto" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".sxd" mime-type="application/vnd.sun.xml.draw"/>
     </file-type>
     <file-type id="soffice.StarDrawTemplate.6">
       <description xml:lang="en">OpenOffice.org 1.1 Drawing Template</description>
@@ -1595,10 +2498,10 @@
         <description xml:lang="en">&amp;New</description>
         <description xml:lang="de">&amp;Neu</description>
       </verb>
-      <verb args="-o &quot;%V&quot;" command="draw" name="open"/>
-      <verb args="-p &quot;%V&quot;" name="print"/>
-      <verb args="-pt &quot;%2&quot; &quot;%V&quot;" name="printto"/>
-      <extension mime-type="application/vnd.sun.xml.draw.template" value=".std"/>
+      <verb name="open" args="-o &quot;%1&quot;"/>
+      <verb name="print" args="-p &quot;%1&quot;"/>
+      <verb name="printto" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".std" mime-type="application/vnd.sun.xml.draw.template"/>
     </file-type>
     <file-type id="soffice.StarImpressDocument.6">
       <description xml:lang="en">OpenOffice.org 1.1 Presentation</description>
@@ -1609,15 +2512,15 @@
         <description xml:lang="en">&amp;New</description>
         <description xml:lang="de">&amp;Neu</description>
       </verb>
-      <verb args="-o &quot;%V&quot;" command="impress" name="open"/>
-      <verb args="-p &quot;%V&quot;" name="print"/>
-      <verb args="-pt &quot;%2&quot; &quot;%V&quot;" name="printto"/>
-      <verb args="-show &quot;%V&quot;" name="show">
+      <verb name="open" args="-o &quot;%1&quot;"/>
+      <verb name="print" args="-p &quot;%1&quot;"/>
+      <verb name="printto" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <verb name="show" args="-show &quot;%1&quot;">
         <description xml:lang="en">Show</description>
         <description xml:lang="de">Abspielen</description>
       </verb>
-      <extension mime-type="application/vnd.sun.xml.draw" value=".sxd"/>
-      <extension mime-type="application/vnd.sun.xml.impress" value=".sxi"/>
+      <extension value=".sxd" mime-type="application/vnd.sun.xml.draw"/>
+      <extension value=".sxi" mime-type="application/vnd.sun.xml.impress"/>
     </file-type>
     <file-type id="soffice.StarImpressTemplate.6">
       <description xml:lang="en">OpenOffice.org 1.1 Presentation Template</description>
@@ -1628,10 +2531,10 @@
         <description xml:lang="en">&amp;New</description>
         <description xml:lang="de">&amp;Neu</description>
       </verb>
-      <verb args="-o &quot;%V&quot;" command="impress" name="open"/>
-      <verb args="-p &quot;%V&quot;" name="print"/>
-      <verb args="-pt &quot;%2&quot; &quot;%V&quot;" name="printto"/>
-      <extension mime-type="application/vnd.sun.xml.impress.template" value=".sti"/>
+      <verb name="open" args="-o &quot;%1&quot;"/>
+      <verb name="print" args="-p &quot;%1&quot;"/>
+      <verb name="printto" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".sti" mime-type="application/vnd.sun.xml.impress.template"/>
     </file-type>
     <file-type id="soffice.StarMathDocument.6">
       <description xml:lang="en">OpenOffice.org 1.1 Formula</description>
@@ -1642,11 +2545,11 @@
         <description xml:lang="en">&amp;New</description>
         <description xml:lang="de">&amp;Neu</description>
       </verb>
-      <verb args="-o &quot;%V&quot;" command="math" name="open"/>
-      <verb args="-p &quot;%V&quot;" name="print"/>
-      <verb args="-pt &quot;%2&quot; &quot;%V&quot;" name="printto"/>
+      <verb name="open" args="-o &quot;%1&quot;"/>
+      <verb name="print" args="-p &quot;%1&quot;"/>
+      <verb name="printto" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".sxm" mime-type="application/vnd.sun.xml.math"/>
       <extension value=".mml"/>
-      <extension mime-type="application/vnd.sun.xml.math" value=".sxm"/>
     </file-type>
     <file-type id="soffice.StarWriterDocument.6">
       <description xml:lang="en">OpenOffice.org 1.1 Text Document</description>
@@ -1657,16 +2560,17 @@
         <description xml:lang="en">&amp;New</description>
         <description xml:lang="de">&amp;Neu</description>
       </verb>
-      <verb args="-o &quot;%V&quot;" command="writer" name="open"/>
-      <verb args="-p &quot;%V&quot;" name="print"/>
-      <verb args="-pt &quot;%2&quot; &quot;%V&quot;" name="printto"/>
-      <extension mime-type="text/html" perceived-type="text" value=".htm"/>
-      <extension mime-type="text/html" perceived-type="text" value=".html"/>
+      <verb name="open" args="-o &quot;%1&quot;"/>
+      <verb name="print" args="-p &quot;%1&quot;"/>
+      <verb name="printto" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".htm" mime-type="text/html" perceived-type="text"/>
+      <extension value=".html" mime-type="text/html" perceived-type="text"/>
+      <extension value=".sxw" mime-type="application/vnd.sun.xml.writer"/>
+      <extension value=".sxw" mime-type="application/vnd.sun.xml.writer"/>
+      <extension value=".txt" mime-type="text/plain" perceived-type="text"/>
+      <extension value=".xml" mime-type="text/xml" perceived-type="text"/>
       <extension value=".hwp"/>
-      <extension mime-type="application/vnd.sun.xml.writer" value=".sxw"/>
-      <extension mime-type="text/plain" perceived-type="text" value=".txt"/>
       <extension value=".wpd"/>
-      <extension mime-type="text/xml" value=".xml"/>
     </file-type>
     <file-type id="soffice.StarWriterGlobalDocument.6">
       <description xml:lang="en">OpenOffice.org 1.1 Master Document</description>
@@ -1677,10 +2581,10 @@
         <description xml:lang="en">&amp;New</description>
         <description xml:lang="de">&amp;Neu</description>
       </verb>
-      <verb args="-o &quot;%V&quot;" command="writer" name="open"/>
-      <verb args="-p &quot;%V&quot;" name="print"/>
-      <verb args="-pt &quot;%2&quot; &quot;%V&quot;" name="printto"/>
-      <extension mime-type="application/vnd.sun.xml.writer.global" value=".sxg"/>
+      <verb name="open" args="-o &quot;%1&quot;"/>
+      <verb name="print" args="-p &quot;%1&quot;"/>
+      <verb name="printto" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".sxg" mime-type="application/vnd.sun.xml.writer.global"/>
     </file-type>
     <file-type id="soffice.StarWriterTemplate.6">
       <description xml:lang="en">OpenOffice.org 1.1 Text Document Template</description>
@@ -1691,10 +2595,19 @@
         <description xml:lang="en">&amp;New</description>
         <description xml:lang="de">&amp;Neu</description>
       </verb>
-      <verb args="-o &quot;%V&quot;" command="writer" name="open"/>
-      <verb args="-p &quot;%V&quot;" name="print"/>
-      <verb args="-pt &quot;%2&quot; &quot;%V&quot;" name="printto"/>
-      <extension mime-type="application/vnd.sun.xml.writer.template" value=".stw"/>
+      <verb name="open" args="-o &quot;%1&quot;"/>
+      <verb name="print" args="-p &quot;%1&quot;"/>
+      <verb name="printto" args="-pt &quot;%2&quot; &quot;%1&quot;"/>
+      <extension value=".stw" mime-type="application/vnd.sun.xml.writer.template"/>
     </file-type>
+    <url-protocol id="vnd.libreoffice.command">
+      <description xml:lang="en">URL:vnd.libreoffice.command Protocol</description>
+      <verb name="open" args="&quot;%1&quot;"/>
+      <known-prefix value="ms-excel"/>
+      <known-prefix value="ms-powerpoint"/>
+      <known-prefix value="ms-visio"/>
+      <known-prefix value="ms-word"/>
+      <known-prefix value="vnd.libreoffice.command"/>
+    </url-protocol>
   </capabilities>
 </interface>

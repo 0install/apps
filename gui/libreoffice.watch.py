@@ -4,9 +4,9 @@ import re
 from datetime import datetime
 
 data = request.urlopen('https://downloadarchive.documentfoundation.org/libreoffice/old/').read().decode('utf-8')
-matches = re.findall(r'/">([0-9\.]+)/</a></td><td align="right">(..-...-....)', data)
+matches = re.findall(r'>([0-9\.]+)\/<\/a><\/td><td align="right">(..-...-....)', data)
 releases = [{
     'version': match[0].replace('.alpha', '-pre').replace('.beta', '-rc'),
     'version-original': match[0],
     'released': datetime.strftime(datetime.strptime(match[1], '%d-%b-%Y'), '%Y-%m-%d')
-} for match in matches if match[0].startswith("6")]
+} for match in matches if not (match[0].startswith("3.") or match[0].startswith("4.") or match[0].startswith("5."))]

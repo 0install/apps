@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>yt-dlp</name>
+  <summary xml:lang="en">command-line program to download videos from YouTube</summary>
+  <summary xml:lang="de">Befehlszeilenprogramm zum Runterladen von Videos von YouTube</summary>
+  <description xml:lang="en">yt-dlp is a command-line program to download videos from YouTube.com and a few more sites.</description>
+  <description xml:lang="de">yt-dlp ist ein Befehlszeilenprogramm zum Runterladen von Videos von YouTube und ein paar weiteren Seiten.</description>
+  <category>Utility</category>
+  <homepage>https://github.com/yt-dlp/yt-dlp</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/utils/yt-dlp.xml"/>
+
+  <group license="Public Domain">
+    <requires interface="https://apps.0install.net/utils/ffmpeg.xml" importance="recommended"/>
+    <command name="run" path="yt-dlp">
+      <runner interface="https://apps.0install.net/python/python.xml" version="3.8.."/>
+    </command>
+
+    <implementation version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <file href="https://github.com/yt-dlp/yt-dlp/releases/download/{version-original}/yt-dlp" dest="yt-dlp"/>
+    </implementation>
+  </group>
+</interface>

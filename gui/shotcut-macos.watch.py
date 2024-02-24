@@ -11,7 +11,7 @@ for release in github.releases('mltframework/shotcut'):
         if asset_match:
             releases.append({
                 'tag': release['tag_name'],
-                'version': release['tag_name'].strip('v').replace('.0', '.'),
+                'version': release['tag_name'].strip('v'),
                 'date': asset_match.group(1),
                 'stability': 'testing' if release['prerelease'] else 'stable',
                 'released': release['published_at'][0:10]

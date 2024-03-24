@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface uri="https://apps.0install.net/0install/0publish-dotnet.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>0publish - .NET version</name>
+  <summary>utility for creating and modifying Zero Install feeds</summary>
+  <description>0publish is a command-line tool for creating and modifying Zero Install feed files.</description>
+  <homepage>https://docs.0install.net/tools/0publish/</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/0install/0publish.xml"/>
+
+  <group license="LGPL v3 (GNU Lesser General Public License)">
+    <requires interface="https://apps.0install.net/utils/gnupg.xml">
+      <environment insert="." name="PATH"/>
+    </requires>
+    <command name="run" path="0publish.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.7.2.."/>
+    </command>
+
+  </group>
+</interface>

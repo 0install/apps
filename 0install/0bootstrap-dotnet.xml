@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface uri="https://apps.0install.net/0install/0bootstrap-dotnet.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>0bootstrap - .NET version</name>
+  <summary>generates executable that installs 0install itself along with launcher for a 0install app</summary>
+  <description>0bootstrap generates a executable that installs 0install itself along with a launcher for a 0install app.</description>
+  <homepage>https://docs.0install.net/tools/0bootstrap/</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/0install/0bootstrap.xml"/>
+
+  <group license="LGPL v3 (GNU Lesser General Public License)">
+    <command name="run" path="0bootstrap.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.7.2.."/>
+    </command>
+
+  </group>
+</interface>

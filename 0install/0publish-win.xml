@@ -11,207 +11,10 @@ Der Feed Editor (Split Screen mit grafischer und XML Ansicht)
 und der New Feed Wizard (leitet Sie durch den kompletten Feed-Erstellungsprozess, extrahiert automatisch Metadaten wenn möglich)</description>
   <icon href="https://apps.0install.net/0install/0publish.png" type="image/png"/>
   <icon href="https://apps.0install.net/0install/0publish.ico" type="image/vnd.microsoft.icon"/>
-  <homepage>https://docs.0install.net/tools/0publish-win/</homepage>
+  <homepage>https://docs.0install.net/tools/0publish-gui/</homepage>
 
-  <group license="LGPL v3 (GNU Lesser General Public License)">
-    <requires interface="https://apps.0install.net/utils/gnupg.xml">
-      <environment insert="." name="PATH"/>
-    </requires>
-    <command name="0publish" path="0publish.exe">
-      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.."/>
-    </command>
-    <command name="run" path="0publish-win.exe">
-      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.5.."/>
-    </command>
-
-    <implementation id="sha1new=4107dd240bb7b63832f14163755f1118fc8f76c3" released="2017-11-13" stability="stable" version="2.14.0">
-      <manifest-digest sha256new="3HR4BJ7RXFCN4H62HD3ODYJXOFAPWK2RZTWNRNVLAT55476RY4BA"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.14.0/ZeroInstall_Tools-2.14.0.tar.gz" size="2429286"/>
-    </implementation>
-    <implementation id="sha1new=b8582d6c52030c5791f872df54a3df90067c4ace" released="2017-11-24" stability="stable" version="2.14.2">
-      <manifest-digest sha256new="TCNXZNCGUDXJCADZSA3SUXQT3ORYSTT4DWKB7TU5GO2N7XQYSIUA"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.14.2/ZeroInstall_Tools-2.14.2.tar.gz" size="2432150"/>
-    </implementation>
-    <implementation id="sha1new=995a1f70d657b6b84dcd205d8091fca8a94b2225" released="2017-12-04" stability="stable" version="2.14.3">
-      <manifest-digest sha256new="Y4ENNVQWLZCEMMGPP4Q4FOVNOE4STURHM4ANQ3SUTDUT6YAVLEXA"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.14.3/ZeroInstall_Tools-2.14.3.tar.gz" size="2435119"/>
-    </implementation>
-    <implementation id="sha1new=6f89ab79d25e04c4cd53b3de36e76fa6c7fb218b" released="2018-01-07" stability="stable" version="2.14.5">
-      <manifest-digest sha256new="RYIPUIAPNYL3W5BXPNGVFLUF4HIMU343HZ4LFRCQUZYM56CP3PFA"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.14.5/ZeroInstall_Tools-2.14.5.tar.gz" size="2435686"/>
-    </implementation>
-    <implementation id="sha1new=b379dc49bdb0eb90bf4a45d347dd7d4a09bd98e3" released="2018-07-09" stability="stable" version="2.15.1">
-      <manifest-digest sha256new="SMPWQEM5WXSH63FR2XNFUWPAFRRMB75D2MRVH5AJL2XQBA3SBHGQ"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.15.1/ZeroInstall_Tools-2.15.1.tar.gz" size="2373166"/>
-    </implementation>
-    <implementation id="sha1new=d558cbd0da32684430aed72edca109cae0329d02" released="2019-02-04" stability="stable" version="2.16.2">
-      <manifest-digest sha256new="BNXNE5TXQXD5ONGWHWARFTDC75XZHK3LXH3O363TXIHXKNDEW53A"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.16.2/ZeroInstall_Tools-2.16.2.tar.gz" size="2228658"/>
-    </implementation>
-    <implementation id="sha1new=1c8f813bf8d4c3764ddba790ff01e6573005df65" released="2019-02-11" stability="stable" version="2.16.3">
-      <manifest-digest sha256new="TGO7XBYSPXGJLRGUICMSUKF4TBF2JBDK5LPJHYOKSEKW6EZNDA2A"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.16.3/ZeroInstall_Tools-2.16.3.tar.gz" size="2653221"/>
-    </implementation>
-    <implementation id="sha1new=cd21c979b7f05263d14317829e421e909bc2c403" released="2019-04-04" stability="stable" version="2.16.4">
-      <manifest-digest sha256new="LLIQJ5UMXUEEML4F72JZXAW6PBEBX3IGERC5PTFELHI3C42KOYOA"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.16.4/ZeroInstall_Tools-2.16.4.tar.gz" size="2653155"/>
-    </implementation>
-    <implementation id="sha1new=edcf24dfaded125738c94692b70ea537c597790c" released="2019-05-24" stability="stable" version="2.16.5">
-      <manifest-digest sha256new="IZJFVNV6QW5QG5CORP6GMB47MACBBPFSEA7FFIYOSJWAOHRQGHAA"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.16.5/ZeroInstall_Tools-2.16.5.tar.gz" size="2652601"/>
-    </implementation>
-    <implementation id="sha1new=4ef83ca118c827c0682367070988b25bbabfff17" released="2019-07-25" stability="stable" version="2.16.7">
-      <manifest-digest sha256new="D4Y77ARPDVTDJLUNYK4OJIH2PL25KNHSSOHB2D5BYXXVPU3YEODQ"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.16.7/ZeroInstall_Tools-2.16.7.tar.gz" size="2653592"/>
-    </implementation>
-    <implementation id="sha1new=9c28761a2186114cf8cb3c535752f6a7b65e5b5e" released="2019-10-15" stability="buggy" version="2.16.8">
-      <manifest-digest sha256new="XW4NO3D46N33RG6EL5NZDNWYSEBIEH7VAKQDX63WENIOD4GYK5HQ"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.16.8/ZeroInstall_Tools-2.16.8.tar.gz" size="2652723"/>
-    </implementation>
-    <implementation id="sha1new=ab7269cff832195fe7c65d01c3df0b2128593afe" released="2020-01-30" stability="buggy" version="2.17.0">
-      <manifest-digest sha256new="ATIHRE37I4VKMQX62HGUNPMGY65FYRHGGGPHQEJCS2EIOBOKGCDA"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.17.0/0publish-win-2.17.0.tar.gz" size="2654648"/>
-    </implementation>
-    <implementation id="sha1new=d36f412be314b981ec0537e673ddfe09b15d4cdd" released="2020-02-15" stability="stable" version="2.17.2">
-      <manifest-digest sha256new="D7VY6YMMJ24RKVNBSUP6DW6JDS34NGJZNK6VL4DVE7SX45J6MXBA"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.17.2/0publish-win-2.17.2.tar.gz" size="2656259"/>
-    </implementation>
-    <implementation id="sha1new=299a3b53c5fa9d4a87e23cb22a5fb1698d99585b" released="2020-07-22" stability="stable" version="2.18.0">
-      <manifest-digest sha256new="242YWQV3IDJNM6A4SBFHNRG6U2HSWYUMDC7Z2M5QOYBSSM2BDYOA"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.18.0/0publish-win-2.18.0.tar.gz" size="3143185"/>
-    </implementation>
-    <implementation id="sha1new=c506210ed46b1d739f9f6a574b76130d4fec3c0e" released="2020-08-15" stability="stable" version="2.18.1">
-      <manifest-digest sha256new="WLQ6PLH2CUYVK43FXQE4LFZHX63P2GKJWEQ32WCH2SV2N2Z77BRQ"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.18.1/0publish-win-2.18.1.tar.gz" size="3143743"/>
-    </implementation>
-    <implementation id="sha1new=7ed4b3a18af3d27adc3476a1a40094e4941790e5" released="2020-10-01" stability="stable" version="2.18.2">
-      <manifest-digest sha256new="DMQHOVADVSAAN2HZ5NUEUXXJSSVOKFIQFXBEP4XCFKLBICEPM5IA"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.18.2/0publish-win-2.18.2.tar.gz" size="3145298"/>
-    </implementation>
-    <implementation id="sha1new=3bd904901069499e96c7e757fdbd5a4ff518dc4c" released="2020-12-28" stability="stable" version="2.18.3">
-      <manifest-digest sha256new="DY27LXZTENZT6UFXF4SU2FZPWHOQUC3DDHZ2R55SAOSRASYICI6A"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.18.3/0publish-win-2.18.3.tar.gz" size="3198399" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation id="sha1new=a609ff45be4af65b8674272f407e5a9775965ce4" released="2021-02-07" stability="stable" version="2.18.7">
-      <manifest-digest sha256new="N2ZI7UOYMIOI4DX5PTN5TBDS67DRGLB24NCX7DUYOMVIL7EFAZAQ"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.18.7/0publish-win-2.18.7.tar.gz" size="3199113" type="application/x-compressed-tar"/>
-    </implementation>
-  </group>
-
-  <group license="LGPL v3 (GNU Lesser General Public License)">
-    <command name="0publish" path="0publish.exe">
-      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.6.1.."/>
-    </command>
-    <command name="run" path="0publish-win.exe">
-      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.6.1.."/>
-    </command>
-
-    <implementation id="sha1new=88af9eac0066c60a54b53d02cd5550108e2743da" released="2020-05-24" stability="stable" version="2.17.3">
-      <manifest-digest sha256new="7AFYYLUAWNW7B2P2EECDNA3CT62RRQNGE4ANWMS24UF33CMD237A"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.17.3/0publish-win-2.17.3.tar.gz" size="3340582"/>
-    </implementation>
-  </group>
-
-  <group license="LGPL v3 (GNU Lesser General Public License)">
-    <requires interface="https://apps.0install.net/utils/gnupg.xml">
-      <environment insert="." name="PATH"/>
-    </requires>
-    <command name="0publish" path="0publish.exe">
-      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.7.2.."/>
-    </command>
-    <command name="run" path="0publish-win.exe">
-      <runner command="run-gui" interface="https://apps.0install.net/dotnet/clr.xml" version="4.7.2.."/>
-    </command>
-
-    <implementation id="sha1new=ceaa2a39c0e8581f79039ff01ef27c2daf1f5e3d" released="2021-03-27" stability="stable" version="2.19.0">
-      <manifest-digest sha256new="E3NUOK24LHRHEGCSKOHWK6Q4TEHSHWKL3AOL77NNIHD4RXBQLDUQ"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.19.0/0publish-win-2.19.0.tar.gz" size="4095069" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation id="sha1new=a1ef8fbb1c19de29bac063519b8129cc9a3d511b" released="2021-03-27" stability="stable" version="2.19.1">
-      <manifest-digest sha256new="KKPX2B62MSFEWQTIFOETQ5TE2CNT2KNRZ6IGFBTMXTSG7PM3YJTQ"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.19.1/0publish-win-2.19.1.tar.gz" size="4095134" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation version="2.19.2" released="2021-05-07" stability="stable" id="sha1new=f9b5a68eb0e16ed65a15fc52a52cb8264771f485">
-      <manifest-digest sha256new="NEGTG7KMRVJATVNLJD5PXTAD7JWEM67VPMFC2IKSGPHIJ7RH3IEQ"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.19.2/0publish-win-2.19.2.tar.gz" size="4097938" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation version="2.20.0" released="2021-09-29" stability="stable" id="sha1new=50c8431f62149fe0dca4064076a5c629d8ca44bf">
-      <manifest-digest sha256new="DRIGXYVJRLXBTEY2BUU326VT2VDF6YTX3OIK5KGMRIVWETMO6XEA"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.20.0/0publish-win-2.20.0.tar.gz" size="4111601" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation version="2.21.0" released="2021-11-17" stability="stable" id="sha256new_76DI7YTZMUAXYL3XOFNWNFZLCUYIMDQJXUC76CMQVSOIULLVEAMA">
-      <manifest-digest sha256new="76DI7YTZMUAXYL3XOFNWNFZLCUYIMDQJXUC76CMQVSOIULLVEAMA"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.21.0/0publish-win-2.21.0.tar.gz" size="4137881" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation version="2.22.0" released="2022-01-24" stability="stable" id="sha256new_NYFIZZMFBIVZ4DKGCJFRQUZ4KL3UCC4EX2JFXJDW3PUN5MCNUEJA">
-      <manifest-digest sha256new="NYFIZZMFBIVZ4DKGCJFRQUZ4KL3UCC4EX2JFXJDW3PUN5MCNUEJA"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.22.0/0publish-win-2.22.0.tar.gz" size="4155450" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation version="2.23.0" released="2022-03-07" stability="stable" id="sha256new_FRU7NWAHNE7CT6MVWVXS5XSS2VT4ABWFVHXSPWJEN2AVMW65W4VA">
-      <manifest-digest sha256new="FRU7NWAHNE7CT6MVWVXS5XSS2VT4ABWFVHXSPWJEN2AVMW65W4VA"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.23.0/0publish-win-2.23.0.tar.gz" size="4305691" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation version="2.23.3" released="2022-05-18" stability="stable" id="sha256new_NBE6LL5OFRJPPVGBQTINZVD5BSHJYSFMKHEYVG37IYYBZSSPD33A">
-      <manifest-digest sha256new="NBE6LL5OFRJPPVGBQTINZVD5BSHJYSFMKHEYVG37IYYBZSSPD33A"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.23.3/0publish-win-2.23.3.tar.gz" size="4349121" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation version="2.23.4" released="2022-06-12" stability="stable" id="sha256new_OQDPVW4RJX6TYNCBTTPW67ZOVHVFEOVR33LONEJC7OAVPSKVOYDQ">
-      <manifest-digest sha256new="OQDPVW4RJX6TYNCBTTPW67ZOVHVFEOVR33LONEJC7OAVPSKVOYDQ"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.23.4/0publish-win-2.23.4.tar.gz" size="4353359" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation version="2.23.9" released="2022-07-21" stability="stable" id="sha256new_CDLWZQLQTG4LIR7BEFI7DEUTOO6GY55I6VPSI67DGP4ZHHJFYL5Q">
-      <manifest-digest sha256new="CDLWZQLQTG4LIR7BEFI7DEUTOO6GY55I6VPSI67DGP4ZHHJFYL5Q"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.23.9/0publish-win-2.23.9.tar.gz" size="10281305" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation version="2.23.11" released="2022-09-20" stability="stable" id="sha256new_MXLKTPNUVIOD4J6GN4YGYSZIAN2Z2H53U2XAJOBR4BI6ZDZM257Q">
-      <manifest-digest sha256new="MXLKTPNUVIOD4J6GN4YGYSZIAN2Z2H53U2XAJOBR4BI6ZDZM257Q"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.23.11/0publish-win-2.23.11.tar.gz" size="10368185" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation version="2.23.13" released="2022-10-16" stability="stable" id="sha256new_QTQ6AMJ73V47S4YN2M4WBKAAPZKFB3J5C3RI4R4DQBCVCNLNXTRQ">
-      <manifest-digest sha256new="QTQ6AMJ73V47S4YN2M4WBKAAPZKFB3J5C3RI4R4DQBCVCNLNXTRQ"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.23.13/0publish-win-2.23.13.tar.gz" size="10367081" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation version="2.24.0" released="2022-11-30" stability="stable" id="sha256new_LXJAXJ6IASUVHNCBI3WVVWIZNILEIBOBJHTZLWYUUWZIE4SUNKPQ">
-      <manifest-digest sha256new="LXJAXJ6IASUVHNCBI3WVVWIZNILEIBOBJHTZLWYUUWZIE4SUNKPQ"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.24.0/0publish-win-2.24.0.tar.gz" size="9840969" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation version="2.24.5" released="2023-01-30" stability="stable" id="sha256new_XLPNYOQGO3YP2CMMZYRPB5BLGSN3NEKIEPKZ6O4DEPLU5V3M5YJA">
-      <manifest-digest sha256new="XLPNYOQGO3YP2CMMZYRPB5BLGSN3NEKIEPKZ6O4DEPLU5V3M5YJA"/>
-      <archive href="https://github.com/0install/0publish-win/releases/download/2.24.5/0publish-win-2.24.5.tar.gz" size="11856687" type="application/x-compressed-tar"/>
-    </implementation>
-    <implementation version="2.24.6" released="2023-02-23" stability="stable" id="sha256new_R2SNV5VFOL5V722F4HGIR7NOJSXPKOZOM7SWO74LTECWWUHPFPOA">
-      <manifest-digest sha256new="R2SNV5VFOL5V722F4HGIR7NOJSXPKOZOM7SWO74LTECWWUHPFPOA"/>
-      <archive href="0publish-win-2.24.6.tar.zst" size="9244912" type="application/x-zstd-compressed-tar"/>
-    </implementation>
-    <implementation version="2.24.7" released="2023-04-16" stability="testing" id="sha256new_7MTQOPT4FHJKWR5GHEZ2CD57F3JAZX4O6IYPCATHH4OVOGFLEZHA">
-      <manifest-digest sha256new="7MTQOPT4FHJKWR5GHEZ2CD57F3JAZX4O6IYPCATHH4OVOGFLEZHA"/>
-      <archive href="0publish-win-2.24.7.tar.zst" size="9260873" type="application/x-zstd-compressed-tar"/>
-    </implementation>
-    <implementation version="2.24.8" released="2023-05-04" stability="testing" id="sha256new_X4FMKZ3ZHX3E7GOEZEYP7FF2YPZVHR4LQ6QAKJB3MTKVTKNXA3TQ">
-      <manifest-digest sha256new="X4FMKZ3ZHX3E7GOEZEYP7FF2YPZVHR4LQ6QAKJB3MTKVTKNXA3TQ"/>
-      <archive href="0publish-win-2.24.8.tar.zst" size="9323754" type="application/x-zstd-compressed-tar"/>
-    </implementation>
-    <implementation version="2.24.10" released="2023-05-24" stability="stable" id="sha256new_UM2TW3GD77OAPRCYH533DOZNPV6SF7YZT7Z7H7ISH7RSCR34EZGQ">
-      <manifest-digest sha256new="UM2TW3GD77OAPRCYH533DOZNPV6SF7YZT7Z7H7ISH7RSCR34EZGQ"/>
-      <archive href="0publish-win-2.24.10.tar.zst" size="9323409" type="application/x-zstd-compressed-tar"/>
-    </implementation>
-    <implementation version="2.25.0" released="2023-06-26" stability="stable" id="sha256new_CM7DN5HBJZRXILZJ3KY7QA4HXB3HCLMLAER47TU3VBMAJIOPJROQ">
-      <manifest-digest sha256new="CM7DN5HBJZRXILZJ3KY7QA4HXB3HCLMLAER47TU3VBMAJIOPJROQ"/>
-      <archive href="0publish-win-2.25.0.tar.zst" size="9400332" type="application/x-zstd-compressed-tar"/>
-    </implementation>
-    <implementation version="2.25.1" released="2023-07-13" stability="stable" id="sha256new_UMWRTYO3P66XGZYQJ4R6X3WDMN73THNSFJYYZ6RZCHXJ3GJOOXYA">
-      <manifest-digest sha256new="UMWRTYO3P66XGZYQJ4R6X3WDMN73THNSFJYYZ6RZCHXJ3GJOOXYA"/>
-      <archive href="0publish-win-2.25.1.tar.zst" size="9533301" type="application/x-zstd-compressed-tar"/>
-    </implementation>
-    <implementation version="2.25.2" released="2023-10-02" stability="stable" id="sha256new_VADRRNDIC6YHJUMFYGITDXOAHBGKGY2ERUXQBIJHMNIGT23WJ2OA">
-      <manifest-digest sha256new="VADRRNDIC6YHJUMFYGITDXOAHBGKGY2ERUXQBIJHMNIGT23WJ2OA"/>
-      <archive href="0publish-win-2.25.2.tar.zst" size="9240322" type="application/x-zstd-compressed-tar"/>
-    </implementation>
-    <implementation version="2.25.6" released="2024-03-16" id="sha256new_MQAF4J6HUWENGZNSWB4XL5FG2ESMBWROJVJZFB63TUNXCDVZRTPQ">
-      <manifest-digest sha256new="MQAF4J6HUWENGZNSWB4XL5FG2ESMBWROJVJZFB63TUNXCDVZRTPQ"/>
-      <archive href="0publish-win-2.25.6.tar.zst" size="9460434" type="application/x-zstd-compressed-tar"/>
-    </implementation>
-  </group>
+  <replaced-by interface="https://apps.0install.net/0install/0publish-gui.xml"/>
+  <feed src="https://apps.0install.net/0install/0publish-gui.xml"/>
 
   <entry-point app-id="ZeroInstall.Publishing" binary-name="0publish-win" command="run">
     <name>Zero Install Publishing Tools</name>
@@ -223,13 +26,13 @@ und der New Feed Wizard (leitet Sie durch den kompletten Feed-Erstellungsprozess
 
   <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
     <context-menu id="ZeroInstallFeed">
-      <extension mime-type="application/xml" value=".xml"/>
-      <extension mime-type="application/xml" value=".template"/>
       <verb args="&quot;%V&quot;" name="FeedEditor">
         <description xml:lang="en">Open with Feed Editor</description>
         <description xml:lang="de">Öffnen mit Feed Editor</description>
         <description xml:lang="fr">Ouvrir avec Feed Editor</description>
       </verb>
+      <extension mime-type="application/xml" value=".xml"/>
+      <extension mime-type="application/xml" value=".template"/>
     </context-menu>
   </capabilities>
 </interface>

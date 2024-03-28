@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/0install/0bootstrap-dotnet.xml">
+  <name>0bootstrap - .NET version</name>
+  <summary>generates executable that installs 0install itself along with launcher for a 0install app</summary>
+  <description>0bootstrap generates a executable that installs 0install itself along with a launcher for a 0install app.</description>
+  <homepage>https://docs.0install.net/tools/0bootstrap/</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/0install/0bootstrap.xml"/>
+
+  <group license="LGPL v3 (GNU Lesser General Public License)">
+    <command name="run" path="0bootstrap.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.7.2.."/>
+    </command>
+
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmYF+L8ACgkQWao5J8JOTh42Wwf/YzEh
+cA3Ul7+lzUdCBccn6WVpuCRZQh4b2tyLhs93RHdtc8csPeE7N9vZrq/qBSZnqRhCv6V/xEmnlKKg
+bYDuClo+qYwEN+J7hV+hxKOoxoaTKSh25JO0kfKZ5C/2lRUXH6Narf3xwr+6bO7xXY0pG9c9w/Es
+JX2GqOAYcZQ7v4vxefPIQ9ZAz0SoiLTGrFWm7znUd2RMhl5afFeJdq5AwsQf6JukA3qfveClZN15
+TuHY7+syeV8g7rASwEy60CTlBYxGOfBsE+baFap0aDrtnrf+bZe+VxIcEuoWbaB/nb3eZuskGQlw
+UjAqtGgqcrGDpHabWntCpUsngN8gUWJi7g==
+
+-->

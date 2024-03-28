@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/0install/0capture.xml">
+  <name>0capture</name>
+  <summary>captures snapshots of system state and diffs them to generate Zero Install desktop integration</summary>
+  <description>0capture is a command-line tool for generating Zero Install feeds with metadata for desktop integration. You can use it to capture the state of your system before installing an app and after. By comparing the two, 0capture can then infer which capabilities the app has and should be represented in its feed.</description>
+  <homepage>https://docs.0install.net/tools/0capture/</homepage>
+  <needs-terminal/>
+
+  <group license="LGPL v3 (GNU Lesser General Public License)">
+    <command name="run" path="0capture.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.7.2.."/>
+    </command>
+
+  </group>
+
+  <entry-point binary-name="0capture" command="run"/>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmYF+L4ACgkQWao5J8JOTh4s/gf/VqMm
+gjj5ngzY7eE5eKw1rZx7pFRAFDctzMtigos3dbkeiGqTF17rGkrcv/iLa61qyugjHyt+XN19dxv8
+qe14XkUaKAhvTQ7tdX7dXdPSjmBkqs+NzgRGW7T9+Qs2nR3UMGFEWi4lcWtOxyQWIv8A/obKdtrt
+mfEu7osSMzp+fHB2GVMg+I7Vmo8OwT6aOjHYzzFKvFAiTboI1u2FbQDPcA+0SI1XkVmXkaeHkNhJ
+xp2LFQ/allMoEym1nKQXimh2VigPV6u+L+fOiBfKrfPYDcJgWzV3ItMi+LwZfe7m6Eh5bu4VGkba
+lwZwptC1c6NK2e4xkrdvo3bOjU5MGc4ZgA==
+
+-->

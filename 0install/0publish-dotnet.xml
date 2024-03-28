@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/0install/0publish-dotnet.xml">
+  <name>0publish - .NET version</name>
+  <summary>utility for creating and modifying Zero Install feeds</summary>
+  <description>0publish is a command-line tool for creating and modifying Zero Install feed files.</description>
+  <homepage>https://docs.0install.net/tools/0publish/</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/0install/0publish.xml"/>
+
+  <group license="LGPL v3 (GNU Lesser General Public License)">
+    <requires interface="https://apps.0install.net/utils/gnupg.xml">
+      <environment insert="." name="PATH"/>
+    </requires>
+    <command name="run" path="0publish.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.7.2.."/>
+    </command>
+
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmYF+L4ACgkQWao5J8JOTh7Q3Af9Hp5e
+5ri0Ph7/7j1i604sVaVGlfI01mg8/nPUhNOPMdtOm+FCN4GDDl5qX0761nfGPQmAWd8Z8coHsDL+
+aLh9mfofFk7XmYnvqZHdQXPEohGPv07/xE2oDlB+rFoRL8QkBmcRot694u/+ua9bSQJlr4bO/Wxz
+B4BWlVPh4B96UMBPKhKfnAzGBYVDESAp7SD0iZZQ/pxSCSXeu3Rgw45v+Fdj+Ty2xxdY3KnhdnT6
+ftYagS071+Dk8jPF8vo5p59DRxAJ0j5JwUukVPnzV2lkfCyoFFuL8D6jFMVigoX010opMQQ1eHKr
+iwfpBHJbzUtITa/4Lv3s91Jw9+xc0p15ww==
+
+-->

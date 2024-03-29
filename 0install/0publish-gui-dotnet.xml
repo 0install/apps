@@ -215,13 +215,25 @@ these feeds.</description>
       <archive href="https://github.com/0install/0publish-win/releases/download/2.25.6/0publish-win-2.25.6.tar.zst" size="9460434" type="application/x-zstd-compressed-tar"/>
     </implementation>
   </group>
+  <group>
+    <requires interface="https://apps.0install.net/utils/gnupg.xml">
+      <environment name="PATH" insert="."/>
+    </requires>
+    <command name="run" path="0publish-gui.exe">
+      <runner interface="https://apps.0install.net/dotnet/clr.xml" version="4.7.2.." command="run-gui"/>
+    </command>
+    <implementation version="2.25.7" released="2024-03-29" id="sha256new_WQW6QSYPPAVHLAXXX3Q2EOCAE23XPZY3RGKJX35CZKK6F6AAFKYQ" license="LGPL v3 (GNU Lesser General Public License)">
+      <manifest-digest sha256new="WQW6QSYPPAVHLAXXX3Q2EOCAE23XPZY3RGKJX35CZKK6F6AAFKYQ"/>
+      <archive href="https://github.com/0install/0publish-gui-dotnet/releases/download/2.25.7/0publish-gui-dotnet-2.25.7.tar.zst" size="4906353" type="application/x-zstd-compressed-tar"/>
+    </implementation>
+  </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmYF+L8ACgkQWao5J8JOTh5Umgf/YPeE
-C+cmegwDSneL7ZrkDyzBgHo9GbefErkH/JdI7JaOOg7RQlBllmCki83szYUxd8CDkto14WTnqs8Z
-oKu/91uCosMqgO8foSdEz22OfENOhZXbjUWFJH7p6DPnTYYOhi4GiqTZb2mKFRQbPuq4y7CEp+OQ
-HEdP6iOjPCL0cfy0Pv96kTGvLFv57OHkoWpO/H2wP9hI7Hyo5N5gWR9IOrKGwXfCx73iB083pD7u
-PgL8ys97OXpE7rNpDR6CZWTFP065TQ9qQ/2Z8f3QrHMOH2KtbusFaZuP4zOzBMjwNhYhHLqVCNWn
-p0XnXhzVAg1h+ZVTQqsRAg49ciwWNrgA/w==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmYHTtkACgkQWao5J8JOTh779wf8CnmB
+4QMZxOLCcpBBEuaocef8pcoR/XK9abh8qM8R+AXqMVc89tlT3ie4/51A5hE+f4G+9lsJeRhjGlv7
+MaubTTO3Th8dcfemVWVTApArJKeE9dnAPssE2Sfw1XQw72nkFMnUWAAjZ23gDz70+t3Dky6rUjhg
+OQsLQpiJUtJPLO7KX9DLXdnMyR/iAUo03d8E8tvV4xHD9wB1j9uNONJYcRYe8kqHdTYWRngCVoMo
+oWZyUjzrhueiY6i9Hw9aeffmwXHs2Zv8eWa0IDYiNdqzmXCLxYVW7/AFFP1FxowsJnN8EGczNCDB
+iLlLy6bLHalaRXeRl+wWG2LNUeArfNDdYw==
 
 -->

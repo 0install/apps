@@ -5,4 +5,4 @@ import github
 releases = [{
     'version': release['tag_name'].strip('v'),
     'released': release['published_at'][0:10]
-} for release in github.releases('hashicorp/vault') if not release['prerelease'] and not '-' in release['tag_name']]
+} for release in github.releases('hashicorp/vault') if not release['prerelease'] and not '-' in release['tag_name'] and not '+ent' in release['tag_name']]

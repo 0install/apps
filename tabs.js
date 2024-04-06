@@ -14,8 +14,8 @@ function updateTabs() {
     if (window.location.hash) {
         showTab(window.location.hash.slice(1));
     } else {
-        history.replaceState({}, '', '#featured');
-        showTab('featured');
+        history.replaceState({}, '', '#catalog');
+        showTab('catalog');
     }
 }
 

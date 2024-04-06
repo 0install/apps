@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Zero Install: Apps: 0install tools</title>
+  <link rel="icon" href="https://0install.net/logo/favicon.ico" type="image/vnd.microsoft.icon" />
+  <link rel="stylesheet" href="https://0install.net/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://0install.net/css/fontawesome.min.css">
+  <link rel="stylesheet" href="../style.css">
+   <script src="https://0install.net/js/jquery.slim.min.js"></script>
+  <script src="https://0install.net/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand my-3">
+      <div class="media">
+        <a href="https://0install.net/"><img class="mr-2" src="https://0install.net/logo/zeroinstall-icon.png" width="64" height="64" alt="Zero Install Logo"></a>
+        <a class="navbar-brand text-dark media-body align-self-center" href="https://0install.net/">Zero Install</a>
+      </div>
+      <ol class="breadcrumb my-1">
+        <li class="breadcrumb-item"><a href="https://apps.0install.net/#more">Apps</a></li>
+        <li class="breadcrumb-item active" aria-current="page">0install tools</li>
+      </ol>
+    </nav>
+
+    <main>
+      <p>You can use Zero Install to:</p>
+      <ul>
+        <li>Run tools for working with Zero Install feeds</li>
+        <li>Run other versions of Zero Install itself</li>
+      </ul>
+
+      <div class="card mb-4">
+        <div class="card-body tab-body">
+          <iframe src="catalog.xml"></iframe>
+        </div>
+      </div>
+
+      <h4>Tools</h4>
+      <p>Zero Install tools can be run like any other feed. <a href="https://docs.0install.net/tools/">See the documentation</a> for more information on the available tools.</p>
+
+      <h4>Zero Install versions</h4>
+      <p>
+        To run the default version of Zero Install for your platform:<br>
+        <code>
+          <input type="text" readonly class="form-control-plaintext" value="0install run https://apps.0install.net/0install/0install.xml">
+        </code>
+      </p>
+      <p>
+        To run a .NET-based version Zero Install on any platform:<br>
+        <code>
+          <input type="text" readonly class="form-control-plaintext" value="0install run https://apps.0install.net/0install/0install-dotnet.xml">
+        </code>
+      </p>
+      <p>
+        To run a specific version of Zero Install for Windows:<br>
+        <code>
+          <input type="text" readonly class="form-control-plaintext" value="0install run --version=X.Y.Z https://apps.0install.net/0install/0install-win.xml">
+        </code>
+        The <a href="https://docs.0install.net/details/windows#bootstrapper">bootstrapper</a> and <a href="https://docs.0install.net/details/cli/#self-update">self-update feature</a> of Zero Install for Windows internally use the same feed.
+      </p>
+    </main>
+
+    <footer>
+      <hr>
+      <small class="text-muted">
+        © Copyright 2003-2024 Thomas Leonard, Bastian Eicher and others<br>
+        Permission is granted to use the site (excluding the software, which is licensed separately) in accordance with the terms of the <a href="https://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike 2.5 license</a>.
+      </small>
+    </footer>
+  </div>
+</body>
+
+</html>

@@ -23,19 +23,23 @@
     </implementation>
   </group>
 
-  <group arch="Linux-x86_64" license="MIT License">
+  <group license="MIT License">
     <command name="run" path="camunda-modeler"/>
-    <implementation released="{released}" stability="stable" version="{version}">
+    <implementation arch="Linux-x86_64" released="{released}" stability="stable" version="{version}">
       <manifest-digest/>
       <archive extract="camunda-modeler-{version}-linux-x64" href="https://github.com/camunda/camunda-modeler/releases/download/v{version}/camunda-modeler-{version}-linux-x64.tar.gz" type="application/x-compressed-tar"/>
     </implementation>
   </group>
 
-  <group arch="MacOSX-x86_64" license="MIT License">
+  <group license="MIT License">
     <command name="run" path="Camunda Modeler.app/Contents/MacOS/Camunda Modeler"/>
     <implementation released="{released}" stability="stable" version="{version}">
       <manifest-digest/>
-      <archive  href="https://github.com/camunda/camunda-modeler/releases/download/v{version}/camunda-modeler-{version}-mac.zip" type="application/zip"/>
+      <archive href="https://github.com/camunda/camunda-modeler/releases/download/v{version}/camunda-modeler-{version}-mac-x64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive href="https://github.com/camunda/camunda-modeler/releases/download/v{version}/camunda-modeler-{version}-mac-arm64.zip" type="application/zip"/>
     </implementation>
   </group>
 </interface>

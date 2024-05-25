@@ -10,6 +10,9 @@ def convert(release):
     elif 'beta.' in original_version:
         version = original_version.replace('beta.', 'pre')
         stability = 'testing'
+    elif 'rc.' in original_version:
+        version = original_version.replace('rc.', 'rc')
+        stability = 'testing'
     else:
         version = original_version
         stability = 'stable'

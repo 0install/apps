@@ -9,7 +9,7 @@
   <icon href="https://apps.0install.net/java/gradle.png" type="image/png"/>
 
   <group license="Apache License 2.0">
-    <requires interface="https://apps.0install.net/java/jdk.xml">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="7..!8">
       <environment insert="" mode="replace" name="JAVA_HOME"/>
     </requires>
     <environment insert="lib/*" name="CLASSPATH"/>
@@ -253,6 +253,21 @@
       <manifest-digest sha256new="XMD244NUCU462FRKB2ZAPJ36AU2LC4KZEOEVBQ66WNBX6KX6LRTA"/>
       <archive extract="gradle-1.12" href="https://services.gradle.org/distributions/gradle-1.12-bin.zip" size="42080843" type="application/zip"/>
     </implementation>
+  </group>
+
+  <group license="Apache License 2.0">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="7..!9">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+    <environment insert="lib/*" name="CLASSPATH"/>
+    <command name="run">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
+        <for-each item-from="GRADLE_OPTS" separator=" ">
+          <arg>$item</arg>
+        </for-each>
+        <arg>org.gradle.launcher.GradleMain</arg>
+      </runner>
+    </command>
     <implementation id="sha1new=d525e72b7f8a290f90dcf87566a78954824edf3e" released="2014-06-06" stability="testing" version="2.0-rc-1">
       <manifest-digest sha1new="d525e72b7f8a290f90dcf87566a78954824edf3e" sha256="c6464e0c4167e31d91182ac68ac3d1467abe28921cf88215ab91c266e2960113" sha256new="YZDE4DCBM7RR3EIYFLDIVQ6RIZ5L4KESDT4IEFNLSHBGNYUWAEJQ"/>
       <archive extract="gradle-2.0-rc-1" href="https://services.gradle.org/distributions/gradle-2.0-rc-1-bin.zip" size="41470537" type="application/zip"/>
@@ -482,6 +497,7 @@
       <archive extract="gradle-2.14.1" href="https://services.gradle.org/distributions/gradle-2.14.1-bin.zip" size="45038784" type="application/zip"/>
     </implementation>
   </group>
+
   <group license="Apache License 2.0">
     <requires interface="https://apps.0install.net/java/jdk.xml" version="7..">
       <environment insert="" mode="replace" name="JAVA_HOME"/>
@@ -655,6 +671,21 @@
       <manifest-digest sha256new="452TTY2DAE2GADYG3ISQEEXG7MZDFUULISLSU77BAIUU3JTWJXPA"/>
       <archive extract="gradle-4.2.1" href="https://services.gradle.org/distributions/gradle-4.2.1-bin.zip" size="71095471" type="application/zip"/>
     </implementation>
+  </group>
+
+  <group license="Apache License 2.0">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="7..!10">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+    <environment insert="lib/*" name="CLASSPATH"/>
+    <command name="run">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
+        <for-each item-from="GRADLE_OPTS" separator=" ">
+          <arg>$item</arg>
+        </for-each>
+        <arg>org.gradle.launcher.GradleMain</arg>
+      </runner>
+    </command>
     <implementation id="sha1new=d3d8f9c3fbd7ac40b1ee856b341de36741b6045d" released="2017-10-12" stability="testing" version="4.3-rc-1">
       <manifest-digest sha256new="WIDNJB2WYYY6T3LZLYLYFFVJIFHIWA4XYOGFT7V7J2Z6FXBNGWXQ"/>
       <archive extract="gradle-4.3-rc-1" href="https://services.gradle.org/distributions/gradle-4.3-rc-1-bin.zip" size="73018179" type="application/zip"/>
@@ -739,6 +770,21 @@
       <manifest-digest sha256new="CJRE3C6WR5P47HT2KNTWWFLHTCUC7ZSDXUNT5UOM3ZSASIP33LZA"/>
       <archive extract="gradle-4.6" href="https://services.gradle.org/distributions/gradle-4.6-bin.zip" size="74176889" type="application/zip"/>
     </implementation>
+  </group>
+
+  <group license="Apache License 2.0">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="7..!11">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+    <environment insert="lib/*" name="CLASSPATH"/>
+    <command name="run">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
+        <for-each item-from="GRADLE_OPTS" separator=" ">
+          <arg>$item</arg>
+        </for-each>
+        <arg>org.gradle.launcher.GradleMain</arg>
+      </runner>
+    </command>
     <implementation id="sha1new=f2a24e1ba7eaa89fb2fe9abcc9cfbbbfaa4ac723" released="2018-04-03" stability="testing" version="4.7-rc-1">
       <manifest-digest sha256new="XW5POEWHLVRF7UXHE4QJOZP7AQSHIDHBWOSDAU7DECMTUAS7QNBQ"/>
       <archive extract="gradle-4.7-rc-1" href="https://services.gradle.org/distributions/gradle-4.7-rc-1-bin.zip" size="75322312" type="application/zip"/>
@@ -807,6 +853,21 @@
       <manifest-digest sha256new="QIEF2HCCCMTX6YWJLBCIOYUQAXIGQYFQC4TVH4NQNU24YR5KXHXA"/>
       <archive extract="gradle-4.10.2" href="https://services.gradle.org/distributions/gradle-4.10.2-bin.zip" size="78420037" type="application/zip"/>
     </implementation>
+  </group>
+
+  <group license="Apache License 2.0">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="8..!12">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+    <environment insert="lib/*" name="CLASSPATH"/>
+    <command name="run">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
+        <for-each item-from="GRADLE_OPTS" separator=" ">
+          <arg>$item</arg>
+        </for-each>
+        <arg>org.gradle.launcher.GradleMain</arg>
+      </runner>
+    </command>
     <implementation id="sha1new=71d29d1af727b87831c92a3afa073813905fd05a" released="2018-10-03" stability="developer" version="5.0-pre-1">
       <manifest-digest sha256new="C6BKQRCB6FHOPSEWJYLMVVSMVBY65RCO626XF6MFTDCHJB7PQ6IQ"/>
       <archive extract="gradle-5.0-milestone-1" href="https://services.gradle.org/distributions/gradle-5.0-milestone-1-bin.zip" size="83499032" type="application/zip"/>
@@ -895,6 +956,21 @@
       <manifest-digest sha256new="G3WDMB4WRKAM5GTNZNE4CW2K222MI6WXDAWUB2VNG4FJMYOESEDA"/>
       <archive extract="gradle-5.3" href="https://services.gradle.org/distributions/gradle-5.3-bin.zip" size="87235389" type="application/zip"/>
     </implementation>
+  </group>
+
+  <group license="Apache License 2.0">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="8..!13">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+    <environment insert="lib/*" name="CLASSPATH"/>
+    <command name="run">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
+        <for-each item-from="GRADLE_OPTS" separator=" ">
+          <arg>$item</arg>
+        </for-each>
+        <arg>org.gradle.launcher.GradleMain</arg>
+      </runner>
+    </command>
     <implementation id="sha1new=42319c9d36373c0569a3ac082d716bae83cef3c8" released="2019-04-10" stability="testing" version="5.4-rc-1">
       <manifest-digest sha256new="DPQJ5LO2GYNP6MPSS3HD5B5P4C4NNDYID5GTKLTTPBAJ3WPYFMPA"/>
       <archive extract="gradle-5.4-rc-1" href="https://services.gradle.org/distributions/gradle-5.4-rc-1-bin.zip" size="87108287" type="application/zip"/>
@@ -955,6 +1031,21 @@
       <manifest-digest sha256new="5ZYI6IKUBLNNGVXD4SCFUJCUVS6GLDC2NUSRB5DTCSR4VD3Z3WYA"/>
       <archive extract="gradle-5.6.3" href="https://services.gradle.org/distributions/gradle-5.6.3-bin.zip" size="93894006" type="application/zip"/>
     </implementation>
+  </group>
+
+  <group license="Apache License 2.0">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="8..!14">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+    <environment insert="lib/*" name="CLASSPATH"/>
+    <command name="run">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
+        <for-each item-from="GRADLE_OPTS" separator=" ">
+          <arg>$item</arg>
+        </for-each>
+        <arg>org.gradle.launcher.GradleMain</arg>
+      </runner>
+    </command>
     <implementation id="sha1new=40b8e158aa3d0d99d406127afb164119ec78b0b0" released="2019-10-18" stability="testing" version="6.0-rc-1">
       <manifest-digest sha256new="DI4JME3ZKUA2QMXZGORNV4XBGMZMRMS77YGE6ZCNTW7OCVWXY2TQ"/>
       <archive extract="gradle-6.0-rc-1" href="https://services.gradle.org/distributions/gradle-6.0-rc-1-bin.zip" size="95119620" type="application/zip"/>
@@ -1035,6 +1126,21 @@
       <manifest-digest sha256new="DJQKKNENFTV2N74YCB6U33KGFF7NW6DBJ3BBVRFB4CPOCWRWGT7Q"/>
       <archive extract="gradle-6.2.2" href="https://services.gradle.org/distributions/gradle-6.2.2-bin.zip" size="97719334" type="application/zip"/>
     </implementation>
+  </group>
+
+  <group license="Apache License 2.0">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="8..!15">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+    <environment insert="lib/*" name="CLASSPATH"/>
+    <command name="run">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
+        <for-each item-from="GRADLE_OPTS" separator=" ">
+          <arg>$item</arg>
+        </for-each>
+        <arg>org.gradle.launcher.GradleMain</arg>
+      </runner>
+    </command>
     <implementation id="sha1new=78ea0593937c13a29eb115e6e5e981a2f79a90a1" released="2020-03-11" stability="testing" version="6.3-rc-1">
       <manifest-digest sha256new="4EZ5S64GNOXRK5LOVBWVXEX37X7YVWPHQK5IAL7IJ3EP43O3S57A"/>
       <archive extract="gradle-6.3-rc-1" href="https://services.gradle.org/distributions/gradle-6.3-rc-1-bin.zip" size="101757354" type="application/zip"/>
@@ -1143,6 +1249,21 @@
       <manifest-digest sha256new="S3N52SU3J7CE3DF6VMZWZL67HGW62XUMUXMUAFZRECPVVRW7S5SA"/>
       <archive extract="gradle-6.6.1" href="https://services.gradle.org/distributions/gradle-6.6.1-bin.zip" size="102673746" type="application/zip"/>
     </implementation>
+  </group>
+
+  <group license="Apache License 2.0">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="8..!16">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+    <environment insert="lib/*" name="CLASSPATH"/>
+    <command name="run">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
+        <for-each item-from="GRADLE_OPTS" separator=" ">
+          <arg>$item</arg>
+        </for-each>
+        <arg>org.gradle.launcher.GradleMain</arg>
+      </runner>
+    </command>
     <implementation id="sha1new=a39812bfdc9c69e079bd545856a09609d321b15e" released="2020-09-11" stability="testing" version="6.7-rc-1">
       <manifest-digest sha256new="S2ZBWD7S7LSKWZD4L6S4QELFYAGZCKAXN7Z4OVILKMBB3WIURZQA"/>
       <archive extract="gradle-6.7-rc-1" href="https://services.gradle.org/distributions/gradle-6.7-rc-1-bin.zip" size="102802008" type="application/zip"/>
@@ -1211,6 +1332,21 @@
       <manifest-digest sha256new="THELYQ2HZEFL2GASOQMW25R6JK6SV3CPDP42RUD57RFOSZFWQW4A"/>
       <archive extract="gradle-6.8.1" href="https://services.gradle.org/distributions/gradle-6.8.1-bin.zip" size="107843470" type="application/zip"/>
     </implementation>
+  </group>
+
+  <group license="Apache License 2.0">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="8..!17">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+    <environment insert="lib/*" name="CLASSPATH"/>
+    <command name="run">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
+        <for-each item-from="GRADLE_OPTS" separator=" ">
+          <arg>$item</arg>
+        </for-each>
+        <arg>org.gradle.launcher.GradleMain</arg>
+      </runner>
+    </command>
     <implementation id="sha1new=5782cf921acf338e7c75cca3dc5c50899e03417d" released="2021-02-03" stability="developer" version="7.0-pre-1">
       <manifest-digest sha256new="W44CM5LFBKFFGHVT3WH2H3JTIBFCEUDR3UIVGCVSAOX2J2OLEM5A"/>
       <archive extract="gradle-7.0-milestone-1" href="https://services.gradle.org/distributions/gradle-7.0-milestone-1-bin.zip" size="106387060" type="application/zip"/>
@@ -1299,6 +1435,21 @@
       <manifest-digest sha256new="WACC5B7RGFHIKJWV4XE4Y355XLR3RYVJYSZVOLE6UAWKUONM7BGA"/>
       <archive href="https://services.gradle.org/distributions/gradle-6.9.1-bin.zip" size="107669361" type="application/zip" extract="gradle-6.9.1"/>
     </implementation>
+  </group>
+
+  <group license="Apache License 2.0">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="8..!18">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+    <environment insert="lib/*" name="CLASSPATH"/>
+    <command name="run">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
+        <for-each item-from="GRADLE_OPTS" separator=" ">
+          <arg>$item</arg>
+        </for-each>
+        <arg>org.gradle.launcher.GradleMain</arg>
+      </runner>
+    </command>
     <implementation version="7.3-rc-1" released="2021-10-12" stability="testing" id="sha256new_SNIH7DOYH63UTGYW5C5U645R3OYVCCY5KLR3KDBP4WDH66D7C4LA">
       <manifest-digest sha256new="SNIH7DOYH63UTGYW5C5U645R3OYVCCY5KLR3KDBP4WDH66D7C4LA"/>
       <archive href="https://services.gradle.org/distributions/gradle-7.3-rc-1-bin.zip" size="115763587" type="application/zip" extract="gradle-7.3-rc-1"/>
@@ -1363,6 +1514,21 @@
       <manifest-digest sha256new="5QN5S42CZC7MY5JUG6JJPQKQWG272PU3ZEEJ73NWUMQIHPIMBHKA"/>
       <archive href="https://services.gradle.org/distributions/gradle-7.4.2-bin.zip" size="115852617" type="application/zip" extract="gradle-7.4.2"/>
     </implementation>
+  </group>
+
+  <group license="Apache License 2.0">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="8..!19">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+    <environment insert="lib/*" name="CLASSPATH"/>
+    <command name="run">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
+        <for-each item-from="GRADLE_OPTS" separator=" ">
+          <arg>$item</arg>
+        </for-each>
+        <arg>org.gradle.launcher.GradleMain</arg>
+      </runner>
+    </command>
     <implementation version="7.5-pre-1" released="2022-05-12" stability="developer" id="sha256new_JWPMGJOFUTE6WLOPJ4UOITNXBF7L4LHXP2IVEVIE2SRRIRXF6QIA">
       <manifest-digest sha256new="JWPMGJOFUTE6WLOPJ4UOITNXBF7L4LHXP2IVEVIE2SRRIRXF6QIA"/>
       <archive href="https://services.gradle.org/distributions/gradle-7.5-milestone-1-bin.zip" size="120552225" type="application/zip" extract="gradle-7.5-milestone-1"/>
@@ -1395,6 +1561,21 @@
       <manifest-digest sha256new="QNIHRWMFT56KI2Q6QW3GCVCGM2WXOVLQKXGD5LQ4E7TOARCDF3QA"/>
       <archive href="https://services.gradle.org/distributions/gradle-7.5.1-bin.zip" size="120635534" type="application/zip" extract="gradle-7.5.1"/>
     </implementation>
+  </group>
+
+  <group license="Apache License 2.0">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="8..!20">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+    <environment insert="lib/*" name="CLASSPATH"/>
+    <command name="run">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
+        <for-each item-from="GRADLE_OPTS" separator=" ">
+          <arg>$item</arg>
+        </for-each>
+        <arg>org.gradle.launcher.GradleMain</arg>
+      </runner>
+    </command>
     <implementation version="7.6-pre-1" released="2022-09-23" stability="developer" id="sha256new_J4BISXA5ZIK4OAMP3OBUG2RVQCHVINUFNXPYHC6WACYUT4BW33OQ">
       <manifest-digest sha256new="J4BISXA5ZIK4OAMP3OBUG2RVQCHVINUFNXPYHC6WACYUT4BW33OQ"/>
       <archive href="https://services.gradle.org/distributions/gradle-7.6-milestone-1-bin.zip" size="122080901" type="application/zip" extract="gradle-7.6-milestone-1"/>
@@ -1539,6 +1720,21 @@
       <manifest-digest sha256new="VEQ6CGIUIY4QEWH3BHM6BOL4SKTHH6QCBKTL5TEUK5UPCJR6LIHA"/>
       <archive href="https://services.gradle.org/distributions/gradle-8.2.1-bin.zip" size="128695158" type="application/zip" extract="gradle-8.2.1"/>
     </implementation>
+  </group>
+
+  <group license="Apache License 2.0">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="8..!21">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+    <environment insert="lib/*" name="CLASSPATH"/>
+    <command name="run">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
+        <for-each item-from="GRADLE_OPTS" separator=" ">
+          <arg>$item</arg>
+        </for-each>
+        <arg>org.gradle.launcher.GradleMain</arg>
+      </runner>
+    </command>
     <implementation version="8.3-rc-1" released="2023-07-19" stability="testing" id="sha256new_IOGD4ASLFA6VGUZI4NGAYZGIXYOXZSKNW4BJRT2UAEENJJLERYJA">
       <manifest-digest sha256new="IOGD4ASLFA6VGUZI4NGAYZGIXYOXZSKNW4BJRT2UAEENJJLERYJA"/>
       <archive href="https://services.gradle.org/distributions/gradle-8.3-rc-1-bin.zip" size="130637304" type="application/zip" extract="gradle-8.3-rc-1"/>
@@ -1579,6 +1775,21 @@
       <manifest-digest sha256new="LZKGSO6ERT2OMLIWLB5HOVI6LENL5OV5FTTHBYKQHOIK37R53J5Q"/>
       <archive href="https://services.gradle.org/distributions/gradle-8.4-bin.zip" size="130979468" type="application/zip" extract="gradle-8.4"/>
     </implementation>
+  </group>
+
+  <group license="Apache License 2.0">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="8..!22">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+    <environment insert="lib/*" name="CLASSPATH"/>
+    <command name="run">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
+        <for-each item-from="GRADLE_OPTS" separator=" ">
+          <arg>$item</arg>
+        </for-each>
+        <arg>org.gradle.launcher.GradleMain</arg>
+      </runner>
+    </command>
     <implementation version="8.5-rc-1" released="2023-11-07" stability="testing" id="sha256new_ERVZSVOTBNQ5BYCAVCIF44QAOF6IVCAC2GEKK6HO62SOPEPPJWZQ">
       <manifest-digest sha256new="ERVZSVOTBNQ5BYCAVCIF44QAOF6IVCAC2GEKK6HO62SOPEPPJWZQ"/>
       <archive href="https://services.gradle.org/distributions/gradle-8.5-rc-1-bin.zip" size="132509917" type="application/zip" extract="gradle-8.5-rc-1"/>
@@ -1659,11 +1870,11 @@
   <entry-point binary-name="gradle" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmZVefwACgkQWao5J8JOTh5iDwf+JB09
-pkQoCsROSze2j537l11XoU8YTrQajsO6saZhvB8hsey5gilWjWW1dMM4KvxArc7JeuvlmpdrMM1+
-3m8P7MmgstBu941BeQw02uS4a+qESKl43fwLk+uzf7lgWt3ERDonubnEF6guwA1mweHvp/Gh33gY
-ANi3QPzCNjCqIszBCh6fTyIhXHck2OSVdIK3meDu0E+ph93U0prPFjIEY1Ka6Jm9MBuR+Jk3QJcG
-SqBPKlIYgBqQtO5NNNZUXEPOErTtvIfhUNsP7BdpcCDxrjaBEpLzhBSRbkQReeGTZk/8AOhUjIam
-8U9UYLSrghtxu83vLgVTrhIfTOymEt7GEg==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmZXny4ACgkQWao5J8JOTh4YYwf/RKqs
+fnS1YH4hqsbcPMRfNEeIS+x2hmAaQJ6ITPOjtfqAHO3MUnXz2hokpXw67tXfXDXVk6Rj5Vd2lYMy
+INT+ASlnluglBc4HZqvfgXU+8EQyPC5gL6jNaa/FRpppdAmHYxZtF492c1Ui5UdSuhorFewuV6zt
+4L58kJDu9ecGht4qBSrQD/OiJ3ZddhLC9haKtM3kxS0zF2ian9EraXvmtOCztim5nPV1od5BS15G
+VtFvllDuEmoNxGkF5kPWLay4hUundpdLwCktJgJygBeWPevQmlKx4VhhEnFQAn30vh3sobIVbWRr
+PnZdt0NhYutFQOn40gOHplUPaPU+WAq8yw==
 
 -->

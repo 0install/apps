@@ -10,9 +10,6 @@
   <feed-for interface="https://apps.0install.net/java/gradle.xml"/>
 
   <group license="Apache License 2.0">
-    <requires interface="https://apps.0install.net/java/jdk.xml" version="8..!22">
-      <environment insert="" mode="replace" name="JAVA_HOME"/>
-    </requires>
     <environment insert="lib/*" name="CLASSPATH"/>
     <command name="run">
       <runner command="java" interface="https://apps.0install.net/java/jdk.xml">
@@ -22,9 +19,15 @@
         <arg>org.gradle.launcher.GradleMain</arg>
       </runner>
     </command>
-    <implementation version="{version}" released="{released}" stability="{stability}">
-      <manifest-digest/>
-      <archive href="https://services.gradle.org/distributions/gradle-{version-original}-bin.zip" type="application/zip" extract="gradle-{version-original}"/>
-    </implementation>
+
+    <group>
+      <requires interface="https://apps.0install.net/java/jdk.xml" version="8..!22">
+        <environment insert="" mode="replace" name="JAVA_HOME"/>
+      </requires>
+      <implementation version="{version}" released="{released}" stability="{stability}">
+        <manifest-digest/>
+        <archive href="https://services.gradle.org/distributions/gradle-{version-original}-bin.zip" type="application/zip" extract="gradle-{version-original}"/>
+      </implementation>
+    </group>
   </group>
 </interface>

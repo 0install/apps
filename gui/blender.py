@@ -7,11 +7,11 @@ def regex(url, pattern):
     return re.findall(pattern, data)
 
 def releases(suffix):
-    for minor_version in regex('https://mirror.clarkson.edu/blender/release/', r'>Blender([\d\.a-z]+)\/<\/a>'):
+    for minor_version in regex('https://mirrors.iu13.net/blender/release/', r'>Blender([\d\.a-z]+)\/<\/a>'):
         if minor_version.startswith('1.') or minor_version.startswith('2.'): continue
-        for match in regex('https://mirror.clarkson.edu/blender/release/Blender' + minor_version + '/', r'>blender-([\d\.\-a-z]+)-' + re.escape(suffix) + r'<\/a>\s+(..-...-....)'):
+        for match in regex('https://mirrors.iu13.net/blender/release/Blender' + minor_version + '/', r'>blender-([\d\.\-a-z]+)-' + re.escape(suffix) + r'<\/a><\/td><td align="right">(....-..-..)'):
             yield {
                 'version': match[0],
                 'minor-version': minor_version,
-                'released': datetime.strftime(datetime.strptime(match[1], '%d-%b-%Y'), '%Y-%m-%d')
+                'released': match[1]
             }

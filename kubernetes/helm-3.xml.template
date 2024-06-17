@@ -21,6 +21,10 @@
         <manifest-digest/>
         <archive href="https://get.helm.sh/helm-v{original-version}-darwin-amd64.tar.gz" type="application/x-compressed-tar" extract="darwin-amd64"/>
       </implementation>
+      <implementation arch="Darwin-aarch64" version="{version}" stability="{stability}" released="{released}">
+        <manifest-digest/>
+        <archive href="https://get.helm.sh/helm-v{original-version}-darwin-arm64.tar.gz" type="application/x-compressed-tar" extract="darwin-arm64"/>
+      </implementation>
     </group>
     <group>
       <command name="run" path="helm.exe"/>

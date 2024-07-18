@@ -1,9 +1,9 @@
 #os=Windows
 from urllib import request
-import re
+import gzip, re
 from datetime import datetime
 
-data = request.urlopen('https://www.python.org/downloads/windows/').read().decode('utf-8')
+data = gzip.decompress(request.urlopen('https://www.python.org/downloads/windows/').read()).decode('utf-8')
 
 releases = []
 for match in re.findall(r'Python (3)\.([0-9]+)\.([0-9]+)([0-9abrc]+?) - (.*)<\/a>', data):

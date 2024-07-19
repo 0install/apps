@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>mitmproxy</name>
+  <summary>free and open source interactive HTTPS proxy</summary>
+  <description>mitmproxy is your swiss-army knife for debugging, testing, privacy measurements, and penetration testing. It can be used to intercept, inspect, modify and replay web traffic such as HTTP/1, HTTP/2, WebSockets, or any other SSL/TLS-protected protocols.</description>
+  <homepage>https://mitmproxy.org/</homepage>
+  <category>Network</category>
+  <category>Utility</category>
+  <needs-terminal/>
+  <icon href="https://apps.0install.net/utils/mitmproxy.png" type="image/png"/>
+
+  <feed-for interface="https://apps.0install.net/utils/mitmproxy.xml"/>
+
+  <group license="MIT License" arch="Linux-x86_64">
+    <command name="run" path="mitmproxy"/>
+    <command name="web" path="mitmweb"/>
+    <command name="dump" path="mitmdump"/>
+
+    <implementation version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://downloads.mitmproxy.org/{version}/mitmproxy-{version}-linux-x86_64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="MIT License">
+    <command name="run" path="mitmproxy.app/Contents/MacOS/mitmproxy"/>
+    <command name="web" path="mitmproxy.app/Contents/MacOS/mitmweb"/>
+    <command name="dump" path="mitmproxy.app/Contents/MacOS/mitmdump"/>
+
+    <implementation arch="MacOSX-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://downloads.mitmproxy.org/{version}/mitmproxy-{version}-macos-x86_64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://downloads.mitmproxy.org/{version}/mitmproxy-{version}-macos-arm64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="MIT License" arch="Windows-x86_64">
+    <command name="run" path="mitmproxy.exe"/>
+    <command name="web" path="mitmweb.exe"/>
+    <command name="dump" path="mitmdump.exe"/>
+
+    <implementation version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://downloads.mitmproxy.org/{version}/mitmproxy-{version}-windows-x86_64.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

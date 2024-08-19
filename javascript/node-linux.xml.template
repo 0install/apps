@@ -14,12 +14,16 @@
   <group license="MIT License">
     <environment insert="lib/node_modules/npm/bin/npm-cli.js" mode="replace" name="NPM_CLI_JS"/>
     <environment insert="lib/node_modules/npm/bin/npx-cli.js" mode="replace" name="NPX_CLI_JS"/>
+    <environment insert="lib/node_modules/corepack/dist/corepack.js" mode="replace" name="COREPACK_CLI_JS"/>
     <command name="run" path="bin/node"/>
     <command name="npm" path="bin/node">
       <arg>$NPM_CLI_JS</arg>
     </command>
     <command name="npx" path="bin/node">
       <arg>$NPX_CLI_JS</arg>
+    </command>
+    <command name="corepack" path="bin/node">
+      <arg>$COREPACK_CLI_JS</arg>
     </command>
 
     <implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}">

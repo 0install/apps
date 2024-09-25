@@ -3,7 +3,13 @@ from urllib import request
 import gzip, re
 from datetime import datetime
 
-data = gzip.decompress(request.urlopen('https://www.python.org/downloads/windows/').read()).decode('utf-8')
+bytes = request.urlopen('https://www.python.org/downloads/windows/').read()
+
+# Response is sometimes, but not always, GZip-compressed
+try: bytes = gzip.decompress(bytes)
+except: pass
+
+data = bytes.decode('utf-8')
 
 releases = []
 for match in re.findall(r'Python (3)\.([0-9]+)\.([0-9]+)([0-9abrc]+?) - (.*)<\/a>', data):

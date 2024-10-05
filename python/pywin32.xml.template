@@ -60,6 +60,10 @@
         <manifest-digest/>
         <archive href="{cp310-win32}" type="application/zip"/>
       </implementation>
+      <implementation arch="Windows-aarch64" released="{released}" stability="stable" version="{version}">
+        <manifest-digest/>
+        <archive href="{cp310-win_arm64}" type="application/zip"/>
+      </implementation>
     </group>
 
     <group>
@@ -91,6 +95,22 @@
       <implementation arch="Windows-aarch64" released="{released}" stability="stable" version="{version}">
         <manifest-digest/>
         <archive href="{cp312-win_arm64}" type="application/zip"/>
+      </implementation>
+    </group>
+
+    <group>
+      <restricts interface="https://apps.0install.net/python/python.xml" version="3.13..!3.14"/>
+      <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
+        <manifest-digest/>
+        <archive href="{cp313-win_amd64}" type="application/zip"/>
+      </implementation>
+      <implementation arch="Windows-i486" released="{released}" stability="stable" version="{version}">
+        <manifest-digest/>
+        <archive href="{cp313-win32}" type="application/zip"/>
+      </implementation>
+      <implementation arch="Windows-aarch64" released="{released}" stability="stable" version="{version}">
+        <manifest-digest/>
+        <archive href="{cp313-win_arm64}" type="application/zip"/>
       </implementation>
     </group>
   </group>

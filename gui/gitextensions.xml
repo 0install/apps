@@ -338,6 +338,17 @@
         <archive href="https://github.com/gitextensions/gitextensions/releases/download/v4.2.1/GitExtensions-4.2.1.17611-b0c0b2848.msi" size="23248896" type="application/x-msi" extract="SourceDir/GitExtensions"/>
       </implementation>
     </group>
+
+    <group arch="Windows-x86_64">
+      <requires interface="https://apps.0install.net/dotnet/windowsdesktop-runtime.xml" version="8.0.8..!9.0"/>
+      <command name="run" path="GitExtensions.exe"/>
+      <command name="gitex" path="GitExtensions.exe"/>
+
+      <implementation version="5.0" released="2024-09-06" stability="stable" id="sha256new_T6AG4OG642H7UVR6NPVVOE753MEX5MGJPTCROFRGJACQ3SXUWZ3Q">
+        <manifest-digest sha256new="T6AG4OG642H7UVR6NPVVOE753MEX5MGJPTCROFRGJACQ3SXUWZ3Q"/>
+        <archive href="https://github.com/gitextensions/gitextensions/releases/download/v5.0/GitExtensions-x64-5.0.0.17897-2a3b78b86.msi" size="23101440" type="application/x-msi" extract="SourceDir/GitExtensions"/>
+      </implementation>
+    </group>
   </group>
 
   <entry-point app-id="GitExtensions" binary-name="GitExtensions" command="run">

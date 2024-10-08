@@ -10,4 +10,4 @@ def convert(release):
     download_url = next(asset['browser_download_url'] for asset in release['assets'] if str.endswith(asset['name'], '.msi'))
     return {'version': version, 'download-url': download_url, 'stability': stability, 'released': released}
 
-releases = [convert(release) for release in github.releases('gitextensions/gitextensions') if str.startswith(release['tag_name'], 'v4') and not 'alpha' in release['tag_name']]
+releases = [convert(release) for release in github.releases('gitextensions/gitextensions') if str.startswith(release['tag_name'], 'v5') and not 'alpha' in release['tag_name']]

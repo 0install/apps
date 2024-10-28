@@ -3,7 +3,7 @@ import re
 from datetime import datetime
 
 data = request.urlopen('https://services.gradle.org/distributions/').read().decode('utf-8')
-matches = re.findall(r'<span class="name">gradle-([0-9\.\-milestonerc]+)-bin.zip<\/span>\n<span class="date">(..-...-....)', data)
+matches = re.findall(r'<span class="name">gradle-([0-9\.\-milestonerc]+)-bin.zip<\/span>\n\s+<span class="date">(..-...-....)', data)
 releases = [{
     'version': match[0].replace('milestone', 'pre'),
     'version-original': match[0],

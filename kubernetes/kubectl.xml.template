@@ -20,9 +20,17 @@
         <manifest-digest/>
         <archive href="https://dl.k8s.io/v{original-version}/kubernetes-client-linux-386.tar.gz" type="application/x-compressed-tar" extract="kubernetes"/>
       </implementation>
+      <implementation arch="Linux-aarch64" version="{version}" stability="{stability}" released="{released}">
+        <manifest-digest/>
+        <archive href="https://dl.k8s.io/v{original-version}/kubernetes-client-linux-arm64.tar.gz" type="application/x-compressed-tar" extract="kubernetes"/>
+      </implementation>
       <implementation arch="Darwin-x86_64" version="{version}" stability="{stability}" released="{released}">
         <manifest-digest/>
         <archive href="https://dl.k8s.io/v{original-version}/kubernetes-client-darwin-amd64.tar.gz" type="application/x-compressed-tar" extract="kubernetes"/>
+      </implementation>
+      <implementation arch="Darwin-aarch64" version="{version}" stability="{stability}" released="{released}">
+        <manifest-digest/>
+        <archive href="https://dl.k8s.io/v{original-version}/kubernetes-client-darwin-arm64.tar.gz" type="application/x-compressed-tar" extract="kubernetes"/>
       </implementation>
     </group>
     <group>

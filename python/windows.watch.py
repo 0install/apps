@@ -12,7 +12,7 @@ except: pass
 data = bytes.decode('utf-8')
 
 releases = []
-for match in re.findall(r'Python (3)\.([0-9]+)\.([0-9]+)([0-9abrc]+?) - (.*)<\/a>', data):
+for match in re.findall(r'Python (3)\.([0-9]+)\.([0-9]+)([0-9abrc]*?) - (.*)<\/a>', data):
     version_major = match[0]
     version_minor = match[1]
     version_patch = match[2]

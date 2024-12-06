@@ -36,5 +36,11 @@ language for applications that need a programmable interface.</description>
         <remove path="python3{version-minor}._pth" />
       </recipe>
     </implementation>
+    <implementation arch="Windows-aarch64" released="{released}" stability="{stability}" version="{version}">
+      <recipe>
+        <archive href="https://www.python.org/ftp/python/{version-main}/python-{version-full}-embed-arm64.zip" type="application/zip"/>
+        <remove path="python3{version-minor}._pth" />
+      </recipe>
+    </implementation>
   </group>
 </interface>

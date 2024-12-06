@@ -20,7 +20,7 @@ for match in re.findall(r'Python (3)\.([0-9]+)\.([0-9]+)([0-9abrc]+?) - (.*)<\/a
 
     version_main = version_major + "." + version_minor + "." + version_patch
     version_full = version_main + version_suffix
-    if not (version_full + "-embed-win32.zip") in data:
+    if not (version_full + "-embed-arm64.zip") in data:
         continue
 
     if version_suffix.startswith('rc'):

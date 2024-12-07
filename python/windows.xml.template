@@ -26,20 +26,20 @@ language for applications that need a programmable interface.</description>
 
     <implementation arch="Windows-x86_64" released="{released}" stability="{stability}" version="{version}">
       <recipe>
-        <archive href="https://www.python.org/ftp/python/{version-main}/python-{version-full}-embed-amd64.zip" type="application/zip"/>
-        <remove path="python3{version-minor}._pth" />
+        <archive href="https://www.python.org/ftp/python/{version-patch}/python-{version-full}-embed-amd64.zip" type="application/zip"/>
+        <remove path="python3{version-minor-part}._pth" />
       </recipe>
     </implementation>
     <implementation arch="Windows-i486" released="{released}" stability="{stability}" version="{version}">
       <recipe>
-        <archive href="https://www.python.org/ftp/python/{version-main}/python-{version-full}-embed-win32.zip" type="application/zip"/>
-        <remove path="python3{version-minor}._pth" />
+        <archive href="https://www.python.org/ftp/python/{version-patch}/python-{version-full}-embed-win32.zip" type="application/zip"/>
+        <remove path="python3{version-minor-part}._pth" />
       </recipe>
     </implementation>
     <implementation arch="Windows-aarch64" released="{released}" stability="{stability}" version="{version}">
       <recipe>
-        <archive href="https://www.python.org/ftp/python/{version-main}/python-{version-full}-embed-arm64.zip" type="application/zip"/>
-        <remove path="python3{version-minor}._pth" />
+        <archive href="https://www.python.org/ftp/python/{version-patch}/python-{version-full}-embed-arm64.zip" type="application/zip"/>
+        <remove path="python3{version-minor-part}._pth" />
       </recipe>
     </implementation>
   </group>

@@ -13,30 +13,28 @@ data = bytes.decode('utf-8')
 
 releases = []
 for match in re.findall(r'Python (3)\.([0-9]+)\.([0-9]+)([0-9abrc]*?) - (.*)<\/a>', data):
-    version_major = match[0]
-    version_minor = match[1]
-    version_patch = match[2]
     version_suffix = match[3]
+    version_minor_part = match[1]
+    version_patch = match[0] + "." + version_minor_part + "." + match[2]
+    version_full = version_patch + version_suffix
 
-    version_main = version_major + "." + version_minor + "." + version_patch
-    version_full = version_main + version_suffix
     if not (version_full + "-embed-arm64.zip") in data:
         continue
 
     if version_suffix.startswith('rc'):
         stability = 'testing'
-        version = version_main + "-" + version_suffix
+        version = version_patch + "-" + version_suffix
     #elif version_suffix.startswith('b'):
     #    stability = 'developer'
-    #    version = version_main + "-" + version_suffix.replace("b", "pre")
+    #    version = version_patch + "-" + version_suffix.replace("b", "pre")
     #elif version_suffix.startswith('a'):
     #    stability = 'developer'
-    #    version = version_main + "-" + version_suffix.replace("a", "pre-pre")
+    #    version = version_patch + "-" + version_suffix.replace("a", "pre-pre")
     elif version_suffix != "":
         continue
     else:
         stability = 'stable'
-        version = version_main
+        version = version_patch
 
     try:
         released_parsed = datetime.strptime(match[4].replace('Sept.', 'Sep.'), '%b. %d, %Y')
@@ -47,8 +45,8 @@ for match in re.findall(r'Python (3)\.([0-9]+)\.([0-9]+)([0-9abrc]*?) - (.*)<\/a
     releases.append({
         'version': version,
         'version-full': version_full,
-        'version-main': version_main,
-        'version-minor': version_minor,
+        'version-patch': version_patch,
+        'version-minor-part': version_minor_part,
         'stability': stability,
         'released': released
     })

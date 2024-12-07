@@ -81,9 +81,7 @@ def guess_mime_type(name):
 #   archive.rel_url = result from get_archive_rel_url() above
 # If any target files already exist, overwrite them (we will retry if uploading fails part way through).
 def upload_archives(archives):
-	if os.getenv('NO_SIGN'):
-		print("Feeds not signed; not uploading archives")
-	else:
+	if os.getenv('GITHUB_TOKEN') and GPG_SIGNING_KEY:
 		from urllib import request
 		for archive in archives:
 			print("Uploading " + archive.rel_url)

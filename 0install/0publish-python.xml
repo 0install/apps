@@ -134,6 +134,17 @@
   </group>
 
   <group license="OSI Approved :: GNU Lesser General Public License (LGPL)">
+    <!-- Only treat GnuPG as hard requirement on Linux and Windows for now -->
+    <requires interface="https://apps.0install.net/utils/gnupg.xml" os="Linux">
+      <environment insert="." name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/utils/gnupg.xml" os="Windows">
+      <environment insert="." name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/utils/gnupg.xml" importance="recommended">
+      <environment insert="." name="PATH"/>
+    </requires>
+
     <command name="run" path="0publish">
       <runner interface="https://apps.0install.net/python/python.xml" version="3.."/>
     </command>
@@ -143,9 +154,6 @@
     <requires interface="https://apps.0install.net/0install/0install-python.xml">
       <environment insert="" mode="prepend" name="PYTHONPATH"/>
     </requires>
-    <requires interface="https://apps.0install.net/utils/gnupg.xml">
-      <environment insert="." name="PATH"/>
-    </requires>
     <implementation id="sha1new=526ae0429d5cf95eefcd7e891b11e150b7e806ac" released="2020-01-14" stability="stable" version="0.26">
       <manifest-digest sha256new="7LKYTUQ3Y24PQV2BX3B3CNYLTH4SSEKRP7F7YIJSQSA3A7EKDU3Q"/>
       <archive extract="0publish-0.26" href="https://downloads.sourceforge.net/project/zero-install/0publish/0.26/0publish-0.26.tar.bz2" size="25994"/>
@@ -153,11 +161,11 @@
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmYF+L8ACgkQWao5J8JOTh5qVQgAvBWn
-ooWbf17+VtLP6YdgbqEDJ7D4U+mrHkzn9EJmbl4FWybd9uhrYsJUFFk89eYlAvR8ENb9s3k771a8
-W+DyxpuYuyvFj2fBYqmD98arPwGRaV4RHeEIvOb8Z7LJVF5+xFGDI4PxFBMlRPQxwOVhAzRjLLYy
-JSQEF5ZL5QeX+U3Z1+cE+8qylyqX6jFX4CUvAASxJ3EbWgBXc84pPg4Xz5Fy2s2TBssnSQVgd1W6
-ZN8MWpfgyjl9Bdy+Zof4PpAEoP9OIl9lxpCT+un46V6TD6ONeQQOc3L8tnApZbmEmK1/RvgVmrFe
-lHXCX3ef8ikjK4BI9U672er4BRhZPUuZRg==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmdUUUEACgkQWao5J8JOTh5olgf8Dx8x
+L0gTDIzuSIxxDGeh5OPhLXt4L5NnwgLUBcXpY9OqE6tgXEQyL2bMBAjf9WPUXlLPlUpDps01xtPn
+ISv4oOHOmMJfYITIUD9d5G89BekzPF80ExSyuKJQlYfHHJiFi0Ropzl/T2cNbYP5IqiVsDj1jJMS
+gzx23/aWq5aUKgiXpCYoPoiA387OpYCcPV6k1dYU2vpqj4sBtoeVtJCOY3h3sQbYLFaawHijxpbz
+Tqf+6sbYA++rnfKboP0Pj5yn3NhWCXdt4QIrwoum+0bDD2WnSfrZmeU+a9c0R1X0qucJnBu5Jsgr
+4WEKYuDxVtttyyp7vtv+eUP21wNS9VVzJw==
 
 -->

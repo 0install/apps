@@ -372,9 +372,17 @@
     </implementation>
   </group>
   <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0launch">
-    <requires interface="https://apps.0install.net/utils/gnupg.xml">
+    <!-- Only treat GnuPG as hard requirement on Linux and Windows for now -->
+    <requires interface="https://apps.0install.net/utils/gnupg.xml" os="Linux">
       <executable-in-var name="ZEROINSTALL_GPG"/>
     </requires>
+    <requires interface="https://apps.0install.net/utils/gnupg.xml" os="Windows">
+      <executable-in-var name="ZEROINSTALL_GPG"/>
+    </requires>
+    <requires interface="https://apps.0install.net/utils/gnupg.xml" importance="recommended">
+      <executable-in-var name="ZEROINSTALL_GPG"/>
+    </requires>
+
     <requires interface="https://apps.0install.net/python/python.xml" version="3.4.."/>
     <requires interface="https://apps.0install.net/python/python.xml" os="Windows" version="3.4..!3.7"/>
     <requires interface="https://apps.0install.net/python/pywin32.xml" os="Windows"/>
@@ -427,11 +435,11 @@
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmPX0ksACgkQWao5J8JOTh7/bwf/U32Z
-jkyAFPKEo/+6eoK2vRtgLyGuUXg8CjxQt2oFNTqAabL1QXfgL4ioQMyGT9GyYH7mr2mPcXmFsv3x
-47BNN6EDc5PAjFMaN52fvM1ysRc4Z/CyJMKUtBDZDDj2zFqxMPxY/H8jzRE5AGWwMbShIYonXFrn
-4A2l7scdeMvRZ9xd7ViMPRHy9PVZbGCPFcVJ9ByNpa4q5hne9j8JJ5yKgGuryZtdz1fNBYFxnnXt
-rkZmPfnYVOVYOcPwxqhGzFmmCT1jWWphtUDEdplm4MdK4CJ2NqwuVsvqBm0UZ694E4PXDp1PWP5F
-zqKJ7Ss44OpqZrWVpfZQEYXgd8E8ZZr0jw==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmdUUUEACgkQWao5J8JOTh6eFggAnZiI
+4JfJUmhm5w2SWdYuwfehusVmfXFpobRq0TK3WNGVGwY2b1ELCLOBVxBOuea7HhHQf3/H99K6SklI
+fig4khu8Ej75bnodgLvFBiM+Qbq+jsLFn9p2O0C4JP3W6j6WbTtVuYta2wnUOE6ibu9uE9Du/Jsk
+rWyCl4SzZuz3hVFOYMJvbRMOt5Fg3S2KPbOZlHhf5/ANBlgzbGX2iNPYXfxb5oF/HbnTZ2/j2V0K
+F8EDt0keB+NvGdMKvpdFsnrv+LadcmqvbLl7P7xbLVY1+M3kUbO8jqT1JznliPB2DsTIVx4vl7N8
+zn9vHJh9J9f2x5tRyO8GpqPbO5MkTdIjHg==
 
 -->

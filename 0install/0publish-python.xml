@@ -133,6 +133,17 @@
   </group>
 
   <group license="OSI Approved :: GNU Lesser General Public License (LGPL)">
+    <!-- Only treat GnuPG as hard requirement on Linux and Windows for now -->
+    <requires interface="https://apps.0install.net/utils/gnupg.xml" os="Linux">
+      <environment insert="." name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/utils/gnupg.xml" os="Windows">
+      <environment insert="." name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/utils/gnupg.xml" importance="recommended">
+      <environment insert="." name="PATH"/>
+    </requires>
+
     <command name="run" path="0publish">
       <runner interface="https://apps.0install.net/python/python.xml" version="3.."/>
     </command>
@@ -141,9 +152,6 @@
     </command>
     <requires interface="https://apps.0install.net/0install/0install-python.xml">
       <environment insert="" mode="prepend" name="PYTHONPATH"/>
-    </requires>
-    <requires interface="https://apps.0install.net/utils/gnupg.xml">
-      <environment insert="." name="PATH"/>
     </requires>
     <implementation id="sha1new=526ae0429d5cf95eefcd7e891b11e150b7e806ac" released="2020-01-14" stability="stable" version="0.26">
       <manifest-digest sha256new="7LKYTUQ3Y24PQV2BX3B3CNYLTH4SSEKRP7F7YIJSQSA3A7EKDU3Q"/>

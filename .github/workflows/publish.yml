@@ -5,6 +5,8 @@ on:
   push:
     branches: [master]
     paths: ['0repo-config.py', '**/*.xml']
+concurrency:
+  group: publish
 
 jobs:
   publish:

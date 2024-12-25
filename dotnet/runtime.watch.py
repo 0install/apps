@@ -3,7 +3,7 @@ from urllib import request
 import json
 
 def get_releases(channel):
-    data = request.urlopen('https://raw.githubusercontent.com/dotnet/core/master/release-notes/' + channel + '/releases.json').read().decode('utf-8')
+    data = request.urlopen('https://builds.dotnet.microsoft.com/dotnet/release-metadata/' + channel + '/releases.json').read().decode('utf-8')
     return [{
         'version': release['runtime']['version'],
         'released': release['release-date']

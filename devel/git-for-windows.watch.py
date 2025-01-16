@@ -11,4 +11,4 @@ def convert(release):
     released = release['published_at'][0:10]
     return {'version': version, 'main-version': main_version, 'build': build, 'released': released}
 
-releases = [convert(release) for release in github.releases('git-for-windows/git') if not release['prerelease']]
+releases = [convert(release) for release in github.releases('git-for-windows/git') if not release['prerelease'] and any(asset['name'].endswith('-64-bit.tar.bz2') for asset in release['assets'])]

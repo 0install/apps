@@ -22,6 +22,7 @@
   <feed src="https://apps.0install.net/java/openjdk-21.xml"/>
   <feed src="https://apps.0install.net/java/openjdk-22.xml"/>
   <feed src="https://apps.0install.net/java/openjdk-23.xml"/>
+  <feed src="https://apps.0install.net/java/openjdk-24.xml"/>
 
   <package-implementation distributions="Darwin Windows" package="openjdk-7-jdk"/>
   <package-implementation distributions="Darwin Windows" package="openjdk-8-jdk"/>
@@ -40,6 +41,7 @@
   <package-implementation distributions="Darwin Windows" package="openjdk-21-jdk"/>
   <package-implementation distributions="Darwin Windows" package="openjdk-22-jdk"/>
   <package-implementation distributions="Darwin Windows" package="openjdk-23-jdk"/>
+  <package-implementation distributions="Darwin Windows" package="openjdk-24-jdk"/>
 
   <group>
     <!-- Some versions of JDK bundle their own copy of the JRE. For those that don't we refer back the regular JRE. -->
@@ -207,6 +209,10 @@
   <entry-point binary-name="jaccesswalker" command="jaccesswalker">
     <summary>navigate through the component trees in a particular Java Virtual Machine and presents the hierarchy in a tree view.</summary>
   </entry-point>
+  <entry-point binary-name="jnativescan" command="jnativescan">
+    <needs-terminal/>
+    <summary>static analysis tool that scans one or more jar files for uses of native functionalities, such as restricted method calls or native method declarations</summary>
+  </entry-point>
   <entry-point binary-name="jpackage" command="jpackage">
     <needs-terminal/>
     <summary>tool for packaging self-contained Java applications</summary>
@@ -217,11 +223,11 @@
   </entry-point>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmbt7GcACgkQWao5J8JOTh6UDQf/dc22
-vCL0liw6Z5/pj1UYf9lkBQgZ3KUdRU3QYI3wUvD8HAoDLHZcprQVSjM0bOM56AVdz8wgmVVTQsZ2
-HBV17efwE5IgWlcM/O/kSlGwz/v77qp2AM5aLnOcV2gkdAknbZVIFmf6J+49G0bdMc8lLfsXFQ88
-UFylh5r/mo//BMwVteiNvErIFu+vGiWSa+xxqvtRuxUaOo6EXJEf4Wu/Y9PBueM+Jnd9VhphPqzN
-4lew5F/CYe43JJxhWso/ZpG2uXY3tdIOQceWUxQ12HV0xTOATCiPmAC0A/EvC8fhjHbJamPiYaBG
-p2fn/OsDHa2ENugJdGXMFyCD+/Dn9i5QCQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmfayU8ACgkQWao5J8JOTh7KOgf/Z6aL
+Qob37XsbU7fZm8ojiNWl/5cgx4POcUyqrnkumPO7fPxvPV8R11ml8suu2xuqrdHiQwXIi8WyOy/7
+ChSvfgBUAzMQ146a0w4A/Ljtn/dIUYRDhW+ppvTqvgBzeQMov4Rd2vOKvj6hcrRuih1fZFr4ZYt6
+jg/nJZKP6wxsSGzSgt6u+ZLUqaBUrdItDRIjdLzHCCFPX0po+86c/hq2BZHUMjU5MIoNE6wCCtPv
+E3ma+mSRCQ/E2cG+3ObTYRNSWzRGKgbBMcEXAv21Zxaa6pAokoaTHSg7ttTTOFMue22EW/PCpAFj
+KL0Z7JolnQbeBZSuVLk27KN6ItZo29dnQg==
 
 -->

@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/java/openjdk-21.xml">
-  <name>OpenJDK 21.x</name>
-  <summary>OpenJDK Development Kit 21.x</summary>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/java/openjdk-24.xml">
+  <name>OpenJDK 24.x</name>
+  <summary>OpenJDK Development Kit 24.x</summary>
   <description>OpenJDK is a development environment for building applications, applets, and components using the Java programming language.</description>
-  <homepage>http://jdk.java.net/21/</homepage>
+  <homepage>http://jdk.java.net/24/</homepage>
   <category>Development</category>
 
   <feed-for interface="https://apps.0install.net/java/jdk.xml"/>
@@ -37,20 +37,21 @@
     <command name="jstat" path="bin/jstat"/>
     <command name="jstatd" path="bin/jstatd"/>
     <command name="serialver" path="bin/serialver"/>
+    <command name="jnativescan" path="bin/jnativescan"/>
     <command name="jpackage" path="bin/jpackage"/>
     <command name="jwebserver" path="bin/jwebserver"/>
 
-    <implementation version="21" released="2023-09-20" stability="stable" id="sha256new_IQEUVYF6L2A6XYKMFSUSJAIXCQR4JBRM7YCC3J6NWG3TZ75VVGOQ">
-      <manifest-digest sha256new="IQEUVYF6L2A6XYKMFSUSJAIXCQR4JBRM7YCC3J6NWG3TZ75VVGOQ"/>
-      <archive href="https://download.oracle.com/java/GA/jdk21/fd2272bbf8e04c3dbaee13770090416c/35/GPL/openjdk-21_linux-x64_bin.tar.gz" size="203348211" type="application/x-compressed-tar" extract="jdk-21"/>
+    <implementation version="24" released="2025-03-19" stability="stable" id="sha256new_2C7TDJL4A2G5C2N3H3UY3NS77SOOBIEXHUGWNULQT3MVUT5TD2QQ">
+      <manifest-digest sha256new="2C7TDJL4A2G5C2N3H3UY3NS77SOOBIEXHUGWNULQT3MVUT5TD2QQ"/>
+      <archive href="https://download.oracle.com/java/GA/jdk24/1f9ff9062db4449d8ca828c504ffae90/36/GPL/openjdk-24_linux-x64_bin.tar.gz" size="212235746" type="application/x-compressed-tar" extract="jdk-24"/>
     </implementation>
-    <implementation version="21.0.1" released="2023-10-20" stability="stable" id="sha256new_LM7JYETKEN7AWFNXLVL6O2HUVWJN2VK46WUWOZP656NOSZSSXEIQ">
-      <manifest-digest sha256new="LM7JYETKEN7AWFNXLVL6O2HUVWJN2VK46WUWOZP656NOSZSSXEIQ"/>
-      <archive href="https://download.oracle.com/java/GA/jdk21.0.1/415e3f918a1f4062a0074a2794853d0d/12/GPL/openjdk-21.0.1_linux-x64_bin.tar.gz" size="203394062" type="application/x-compressed-tar" extract="jdk-21.0.1"/>
+    <implementation arch="Linux-aarch64" version="24" released="2025-03-19" stability="stable" id="sha256new_KMRTPEQDSKGW7IY5FET72GJ7HSXCOFCOMCMN7GHA2RIUEBQB4VNA">
+      <manifest-digest sha256new="KMRTPEQDSKGW7IY5FET72GJ7HSXCOFCOMCMN7GHA2RIUEBQB4VNA"/>
+      <archive href="https://download.oracle.com/java/GA/jdk24/1f9ff9062db4449d8ca828c504ffae90/36/GPL/openjdk-24_linux-aarch64_bin.tar.gz" size="210076422" type="application/x-compressed-tar" extract="jdk-24"/>
     </implementation>
-    <implementation version="21.0.2" released="2024-01-17" stability="stable" id="sha256new_OD3JYAYEZEAPZUUELLU7N4CNCSPVGHGLMFVZLW3AMIXOE2GMK6LA">
-      <manifest-digest sha256new="OD3JYAYEZEAPZUUELLU7N4CNCSPVGHGLMFVZLW3AMIXOE2GMK6LA"/>
-      <archive href="https://download.oracle.com/java/GA/jdk21.0.2/f2283984656d49d69e91c558476027ac/13/GPL/openjdk-21.0.2_linux-x64_bin.tar.gz" size="203616881" type="application/x-compressed-tar" extract="jdk-21.0.2"/>
+    <implementation arch="MacOSX-*" version="24" released="2025-03-19" stability="stable" id="sha256new_4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ">
+      <manifest-digest sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <archive href="https://download.oracle.com/java/GA/jdk24/1f9ff9062db4449d8ca828c504ffae90/36/GPL/openjdk-24_macos-x64_bin.tar.gz" size="208221071" type="application/x-compressed-tar" extract="jdk-24"/>
     </implementation>
   </group>
 
@@ -89,29 +90,22 @@
     <command name="jabswitch" path="bin/jabswitch.exe"/>
     <command name="jaccessinspector" path="bin/jaccessinspector.exe"/>
     <command name="jaccesswalker" path="bin/jaccesswalker.exe"/>
+    <command name="jnativescan" path="bin/jnativescan.exe"/>
     <command name="jpackage" path="bin/jpackage.exe"/>
     <command name="jwebserver" path="bin/jwebserver.exe"/>
 
-    <implementation version="21" released="2023-09-20" stability="stable" id="sha256new_4DWXDNUBLWCMWYWYPLZD35VR7ASGVNHDLYYEWX77BWVQKOCCGOVQ">
-      <manifest-digest sha256new="4DWXDNUBLWCMWYWYPLZD35VR7ASGVNHDLYYEWX77BWVQKOCCGOVQ"/>
-      <archive href="https://download.oracle.com/java/GA/jdk21/fd2272bbf8e04c3dbaee13770090416c/35/GPL/openjdk-21_windows-x64_bin.zip" size="201151266" type="application/zip" extract="jdk-21"/>
-    </implementation>
-    <implementation version="21.0.1" released="2023-10-20" stability="stable" id="sha256new_JS3PBQTDK3P5U7BJA7RY74NT663DDPTIZSFOG25BA3FROJ3XGOFQ">
-      <manifest-digest sha256new="JS3PBQTDK3P5U7BJA7RY74NT663DDPTIZSFOG25BA3FROJ3XGOFQ"/>
-      <archive href="https://download.oracle.com/java/GA/jdk21.0.1/415e3f918a1f4062a0074a2794853d0d/12/GPL/openjdk-21.0.1_windows-x64_bin.zip" size="201193274" type="application/zip" extract="jdk-21.0.1"/>
-    </implementation>
-    <implementation version="21.0.2" released="2024-01-17" stability="stable" id="sha256new_B7L44KBKTPFPBW7PCTHB6EESWWLCX2MPGOUAGZHRQ2J2FXDSP7FQ">
-      <manifest-digest sha256new="B7L44KBKTPFPBW7PCTHB6EESWWLCX2MPGOUAGZHRQ2J2FXDSP7FQ"/>
-      <archive href="https://download.oracle.com/java/GA/jdk21.0.2/f2283984656d49d69e91c558476027ac/13/GPL/openjdk-21.0.2_windows-x64_bin.zip" size="201328186" type="application/zip" extract="jdk-21.0.2"/>
+    <implementation version="24" released="2025-03-19" stability="stable" id="sha256new_5JWTKNESWAXB34IN7ORG6Q4JWAHSXKEEU366LQJJBPRKKVTOCGXQ">
+      <manifest-digest sha256new="5JWTKNESWAXB34IN7ORG6Q4JWAHSXKEEU366LQJJBPRKKVTOCGXQ"/>
+      <archive href="https://download.oracle.com/java/GA/jdk24/1f9ff9062db4449d8ca828c504ffae90/36/GPL/openjdk-24_windows-x64_bin.zip" size="211589892" type="application/zip" extract="jdk-24"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmfayU8ACgkQWao5J8JOTh7G6wf+PeIu
-j1srFF5U7AuBszOW8bXCiuPNtRByraZLh+DB5V73GZNb4gqeCY6Ro+30ZXnAwfJ3ky/O4sWpplCr
-V41gclHNkUv1KwvtEgP9RLssB++NhiwGLpFxUkk4rHX7FAoMcd2/qeQbgU1ZDL5RAB82y8xxEgo/
-uCB0zy1jxHkanEhJO1iGUxA4Ng7bLgAaT/m0nnqSvcRzfcDfTq3aWcc1Q3tXdw6mNC6oLxHIZzyo
-Qn91SUBomL0Hu/MNlyie9bUTczsxMV/9OBLcAPyVnIJ+cU6CrQbzPxl5KapKd0RgUihfz1Glw2Jf
-AoazuLql0xGV5c0wSAP4P7pojovxqsEsDw==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmfayU8ACgkQWao5J8JOTh6Fwwf/cRs6
+sZL1G0HndEiGlbdejMZYwrLEX2QlpSNoHkjJ5YE+457prCvzMZHp1Gu31KrsKPrvRleMA6Kp8aep
++UXU3RZCZu2rV09AWlHD0GgGmoDDMLlrYBs4sAK5x7NFbALokd0al0v+nYA9QqzdAATVDZRjE8tZ
+fbeG1zZ1BhLPq128d+b4DKOKC38IhDg9NfiZBB4k8vhLpDVSFeLYcYQoaQzNXsHiQ0tRvg4lEorn
+unVhS8v1i1sNB2t7M4sDNmwN5iArayy0q1H30J8dilcK4QGElRfTb+3YWOcCskva58MTEo6yoNO8
+1bH8m4NZrdUTHTcqBm/PuEB7qkmM5gzXTQ==
 
 -->

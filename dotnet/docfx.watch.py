@@ -5,4 +5,4 @@ import github
 releases = [{
     'version': release['tag_name'].strip('v'),
     'released': release['published_at'][0:10]
-} for release in github.releases('dotnet/docfx') if not release['prerelease'] and not release['tag_name'] in ('v2.58.8')]
+} for release in github.releases('dotnet/docfx') if not release['prerelease'] and not release['tag_name'] in ('v2.58.8', 'v2.70.0')]

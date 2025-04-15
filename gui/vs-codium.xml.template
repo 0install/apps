@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>VSCodium</name>
+  <summary>freely-licensed binary distribution of Visual Studio Code</summary>
+  <description>VSCodium is a community-driven, freely-licensed binary distribution of Microsoft’s editor Visual Studio Code.</description>
+  <homepage>https://vscodium.com/</homepage>
+  <icon href="https://apps.0install.net/gui/vs-codium.png" type="image/png"/>
+  <icon href="https://apps.0install.net/gui/vs-codium.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://apps.0install.net/gui/vs-codium.icns" type="image/x-icns"/>
+  <category>Development</category>
+  <category>Utility</category>
+
+  <feed-for interface="https://apps.0install.net/gui/vs-codium.xml"/>
+
+  <group license="MIT License">
+    <requires importance="recommended" interface="https://apps.0install.net/devel/git.xml">
+      <executable-in-path name="git"/>
+    </requires>
+
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/{version}/VSCodium-win32-x64-{version}.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/{version}/VSCodium-win32-arm64-{version}.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/{version}/VSCodium-linux-x64-{version}.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/{version}/VSCodium-linux-arm64-{version}.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/{version}/VSCodium-linux-armhf-{version}.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" main="bin/codium" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/{version}/VSCodium-linux-ppc64le-{version}.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/{version}/VSCodium-darwin-x64-{version}.zip" type="application/zip" extract=""/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/{version}/VSCodium-darwin-arm64-{version}.zip" type="application/zip" extract=""/>
+    </implementation>
+  </group>
+</interface>

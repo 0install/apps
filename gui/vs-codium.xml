@@ -1,0 +1,931 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd" uri="https://apps.0install.net/gui/vs-codium.xml">
+  <name>VSCodium</name>
+  <summary>freely-licensed binary distribution of Visual Studio Code</summary>
+  <description>VSCodium is a community-driven, freely-licensed binary distribution of Microsoft’s editor Visual Studio Code.</description>
+  <homepage>https://vscodium.com/</homepage>
+  <icon href="https://apps.0install.net/gui/vs-codium.png" type="image/png"/>
+  <icon href="https://apps.0install.net/gui/vs-codium.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://apps.0install.net/gui/vs-codium.icns" type="image/x-icns"/>
+  <category>Development</category>
+  <category>Utility</category>
+
+  <group license="MIT License">
+    <requires importance="recommended" interface="https://apps.0install.net/devel/git.xml">
+      <executable-in-path name="git"/>
+    </requires>
+
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2024-09-12" stability="stable" version="1.93.1.24256" id="sha1new=4b3d73f9e42eb8141410a9198d55839c862deaf1">
+      <manifest-digest sha256new="TVUKLVYPQ72BJ6RSGAPMJOLE4HY7VZ7CYCO2EJWE62TRHC3CAXKQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.93.1.24256/VSCodium-win32-x64-1.93.1.24256.zip" type="application/zip" size="134791077"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2024-09-12" stability="stable" version="1.93.1.24256" id="sha1new=b7c6c7c019baeb42d07dd376a59fa2523b8ee87a">
+      <manifest-digest sha256new="VZ6WTONWDMXM7R4V54GZ735RMFE3UZP7VJUPRYNERT55BMOMDOGA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.93.1.24256/VSCodium-win32-arm64-1.93.1.24256.zip" type="application/zip" size="135730612"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2024-09-12" stability="stable" version="1.93.1.24256" id="sha1new=bd599d8985046ddafd45fd135022331e3ae6317b">
+      <manifest-digest sha256new="4X6HGA7P5EJYVKOATLBXCYZQ3Q4PWOARFKZP52F5M46HDTLEOILQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.93.1.24256/VSCodium-linux-x64-1.93.1.24256.tar.gz" type="application/x-compressed-tar" size="131547349"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2024-09-12" stability="stable" version="1.93.1.24256" id="sha1new=d502f46ef3a2155d282daca0f1a14f0da6dd996f">
+      <manifest-digest sha256new="KO2RALVPGGOLG34JB4CRDC7YPHCRKJT6KHH4OHBHP7DEKJRGYBPA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.93.1.24256/VSCodium-linux-arm64-1.93.1.24256.tar.gz" type="application/x-compressed-tar" size="131494186"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2024-09-12" stability="stable" version="1.93.1.24256" id="sha1new=14bafc0a4fcda68db7068a2abec573980b611792">
+      <manifest-digest sha256new="VMBSMQU3D3NFB4DQE7S677GIKIIUVJNSHMEIOSCHSB7S3RJUTNBQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.93.1.24256/VSCodium-linux-armhf-1.93.1.24256.tar.gz" type="application/x-compressed-tar" size="119891939"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-09-12" stability="stable" version="1.93.1.24256" id="sha1new=4dce99268a8d1762e7db0c58e0a4fb300b9c0a54">
+      <manifest-digest sha256new="HNUMY6XSB47KUVJEV26FELN745R7AX55A3NFFHBBDYWVVCSDGNYA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.93.1.24256/VSCodium-darwin-x64-1.93.1.24256.zip" type="application/zip" size="132736398"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-09-12" stability="stable" version="1.93.1.24256" id="sha1new=07be8bab70fc1ce08c2674e2ef0d1371e681bec7">
+      <manifest-digest sha256new="QEJY7HTJL35KSMHDUE6QWOOJGKZXQ7ANIJJPH5IOYCCOE6IZLTCQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.93.1.24256/VSCodium-darwin-arm64-1.93.1.24256.zip" type="application/zip" size="125247480"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2024-10-07" stability="stable" version="1.94.0.24281" id="sha1new=93d90539dbdbef8f9f1cf39bec5fa61c80e8def4">
+      <manifest-digest sha256new="ECXPQHDMWP5WHDPSMJ47YE26ERS5C23D2FH5Q4ZAAUKYUBC6FURA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.0.24281/VSCodium-win32-x64-1.94.0.24281.zip" type="application/zip" size="134277200"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2024-10-07" stability="stable" version="1.94.0.24281" id="sha1new=0b373f8198f8c012df5e8b0fb46ca1778f5f0ae3">
+      <manifest-digest sha256new="A25MXKBJPRJJQ5KDGJN3J2FYZNRVQTZWB4N5L47EEJ3AVUDMYRXA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.0.24281/VSCodium-win32-arm64-1.94.0.24281.zip" type="application/zip" size="135232072"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2024-10-07" stability="stable" version="1.94.0.24281" id="sha1new=ae663a3bd1da598cc0f17314a0d23d414686b2d8">
+      <manifest-digest sha256new="CQCJLUZJDMUK4FIPPZRPRHKBBTI2T5RDYMKVLYFA44ZPBGYSYCCQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.0.24281/VSCodium-linux-x64-1.94.0.24281.tar.gz" type="application/x-compressed-tar" size="130452164"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2024-10-07" stability="stable" version="1.94.0.24281" id="sha1new=ddfbdfd4986e4cdadff471ba0b25053b3a22d730">
+      <manifest-digest sha256new="I4GYJJR542B4F6RV22TREFZ3TOKJKKFZMCZ44NY62YQOT2QO7IQQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.0.24281/VSCodium-linux-arm64-1.94.0.24281.tar.gz" type="application/x-compressed-tar" size="130387346"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2024-10-07" stability="stable" version="1.94.0.24281" id="sha1new=7bf2c3949e643ec62ac3c6eee0f6fc370a51bc64">
+      <manifest-digest sha256new="VWP7AE23HXOST5PLVNJQLFPKWXI5UMUCA6VU7OOKK36NBKPON6ZA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.0.24281/VSCodium-linux-armhf-1.94.0.24281.tar.gz" type="application/x-compressed-tar" size="118802288"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-10-07" stability="stable" version="1.94.0.24281" id="sha1new=f107ade8d27a8da57204dfc07bcde15db49c2eb4">
+      <manifest-digest sha256new="QJZGYHCAEUSKOHKR7YKQO57LZLAO543EOQKD5G5V6I4ILBXG5FDA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.0.24281/VSCodium-darwin-x64-1.94.0.24281.zip" type="application/zip" size="132173790"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-10-07" stability="stable" version="1.94.0.24281" id="sha1new=677d0c6c329251ff189d2654b226e1d205e14d36">
+      <manifest-digest sha256new="LQCXR3WOME5CBGN4BJ4LC2WWBHBHEFZJG56KLAO47FXCNZ7DH4OA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.0.24281/VSCodium-darwin-arm64-1.94.0.24281.zip" type="application/zip" size="124685256"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2024-10-08" stability="stable" version="1.94.0.24282" id="sha1new=edf7353847b59e150068dd7b6399bf74ce82c760">
+      <manifest-digest sha256new="U623G5JBB4UUUYUFYOXY7Z3ILUP46SGQE6Y2PQT3HBNHSOBS7UKQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.0.24282/VSCodium-win32-x64-1.94.0.24282.zip" type="application/zip" size="134277562"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2024-10-08" stability="stable" version="1.94.0.24282" id="sha1new=6e371c8a69cf42455e80d1eb5b3a73658e5fc3b0">
+      <manifest-digest sha256new="CCLJSK672TCLLQMWCGHLGDB3FKOXIABKU5AVFG64FTKN7HF75JMQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.0.24282/VSCodium-win32-arm64-1.94.0.24282.zip" type="application/zip" size="135232458"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2024-10-08" stability="stable" version="1.94.0.24282" id="sha1new=4d6c6d2c3dcd322f4d117b14e7e48803cb5a6f7e">
+      <manifest-digest sha256new="4BORMGS7LWXNIDRXYU34GWNRDY6LBYUHHSFH6OUJX6O7ZQHIOQEA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.0.24282/VSCodium-linux-x64-1.94.0.24282.tar.gz" type="application/x-compressed-tar" size="130451886"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2024-10-08" stability="stable" version="1.94.0.24282" id="sha1new=c4d279c3ee3bc6eda5c3b0f7f7bf330b5cee4f7a">
+      <manifest-digest sha256new="4PTGKQBDGCGHNUWMKOOF2AHUTN26ND24MR5WPVGIAHAXOHRJ6IWQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.0.24282/VSCodium-linux-arm64-1.94.0.24282.tar.gz" type="application/x-compressed-tar" size="130386088"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2024-10-08" stability="stable" version="1.94.0.24282" id="sha1new=046b2535ada625a400abfea7170d0aafaefa2c1d">
+      <manifest-digest sha256new="AR47IAQQQLFPZ7J4B5WMMZ57LSETAVZYK6BX5SHM7RJ6PZPAJLFQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.0.24282/VSCodium-linux-armhf-1.94.0.24282.tar.gz" type="application/x-compressed-tar" size="118806606"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-10-08" stability="stable" version="1.94.0.24282" id="sha1new=5d42f98114b18574a23e00241c8e218d2ff67e02">
+      <manifest-digest sha256new="TOVOJYGSZHGCZLGHVQEMOAOJVWXI6NU6JOLEMG4BJ5WSRNELTH4A"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.0.24282/VSCodium-darwin-x64-1.94.0.24282.zip" type="application/zip" size="132174041"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-10-08" stability="stable" version="1.94.0.24282" id="sha1new=28e8d901957cb80c46e588990a6372584540be33">
+      <manifest-digest sha256new="I3ZABLQO7RA4FVCCSUXSBH3NGWHN7EWGSZOWUIKYPMGGATFGUQIA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.0.24282/VSCodium-darwin-arm64-1.94.0.24282.zip" type="application/zip" size="124685536"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2024-10-09" stability="stable" version="1.94.1.24283" id="sha1new=3e6634e75dd134d75e3c17017cdf9bd6417fc79a">
+      <manifest-digest sha256new="52ZTFWBFTPPCUY3SP6IVPA5YWDP7MNDRA4ERLOT7PUQQ3BFKGJIA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.1.24283/VSCodium-win32-x64-1.94.1.24283.zip" type="application/zip" size="134278327"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2024-10-09" stability="stable" version="1.94.1.24283" id="sha1new=ebb4fc91a52b79c0e6449e0ab1ce218350cb8ba0">
+      <manifest-digest sha256new="FLT2SP7PWLVG6N4MSSCMB5ORH4ZZJMXLF3XORKVLUZWHNCT4ET2A"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.1.24283/VSCodium-win32-arm64-1.94.1.24283.zip" type="application/zip" size="135233199"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2024-10-09" stability="stable" version="1.94.1.24283" id="sha1new=642212aca3812c0659fbd849eb3cba687f860d67">
+      <manifest-digest sha256new="XYH6Y7TXCCEZP34M63REOPNBQTNEL3DRJXMUCTBKOWXOUXEEDXXA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.1.24283/VSCodium-linux-x64-1.94.1.24283.tar.gz" type="application/x-compressed-tar" size="130462425"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2024-10-09" stability="stable" version="1.94.1.24283" id="sha1new=e9dbc877d4e754bf845652e4a8284b991fb006a8">
+      <manifest-digest sha256new="HOFZKNJSMFLXYFNR4XESLV7IGXYJ7FIRSCREKGN742NJWEXXNMQQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.1.24283/VSCodium-linux-arm64-1.94.1.24283.tar.gz" type="application/x-compressed-tar" size="130400583"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2024-10-09" stability="stable" version="1.94.1.24283" id="sha1new=569ac4f720f70fc3649cd2452a8a19f1b81c4fc3">
+      <manifest-digest sha256new="7YF2SCIDPPVBW2NQ2MRLHT7WR3KQD5XP2GUCOWQ277EFCYBU3P7A"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.1.24283/VSCodium-linux-armhf-1.94.1.24283.tar.gz" type="application/x-compressed-tar" size="118802719"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-10-09" stability="stable" version="1.94.1.24283" id="sha1new=d4978be0e854a70f36907edfadf8ab5b4b065c6d">
+      <manifest-digest sha256new="P5NLI7RJOOZBKYG7TBUDTEHDMS3YVGO2BB6GB2JYHC6SAESFHYYA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.1.24283/VSCodium-darwin-x64-1.94.1.24283.zip" type="application/zip" size="132174781"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-10-09" stability="stable" version="1.94.1.24283" id="sha1new=2a73450e07eae42ac00c46dc4d59319e577c49c3">
+      <manifest-digest sha256new="SLJELSLS45TXJT5OE4AP6VQ4AAVOU3DUQ2FHDB5VLDQQWFNCP5LQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.1.24283/VSCodium-darwin-arm64-1.94.1.24283.zip" type="application/zip" size="124686266"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2024-10-10" stability="stable" version="1.94.2.24284" id="sha1new=0ab9f59bb0d9c54f0bfe631470c8cf64a7b9a30f">
+      <manifest-digest sha256new="L4Z47O4B3DJ3YDZJDX6UFCF7EZBJCW2JG4WSYFCAXYCXWDTX6K5Q"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.2.24284/VSCodium-win32-x64-1.94.2.24284.zip" type="application/zip" size="134277960"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2024-10-10" stability="stable" version="1.94.2.24284" id="sha1new=a3a15f2e99599cc5a7568b7409ee23f9800b4fe4">
+      <manifest-digest sha256new="PADCWXUWCQZE2NRVX5S65Z2GASVU3AD6K4DPSYFI3YKE6K43IGCA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.2.24284/VSCodium-win32-arm64-1.94.2.24284.zip" type="application/zip" size="135232818"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2024-10-10" stability="stable" version="1.94.2.24284" id="sha1new=52e4e3457e47df500a627d9e9ddef9b2defdfc72">
+      <manifest-digest sha256new="IPYQNQIQZOEOVZBRAFRNQOWOROME3FNTLGRGBL7C5VHTJ5S3A2XQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.2.24284/VSCodium-linux-x64-1.94.2.24284.tar.gz" type="application/x-compressed-tar" size="130468776"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2024-10-10" stability="stable" version="1.94.2.24284" id="sha1new=7df4fd68933cde8a60d66c89789b057b57533a54">
+      <manifest-digest sha256new="EHZUJ5VQ4YNCUMSF62QEXOTWZZVPYBSBIZOUCDG7SOW7TST5S5EA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.2.24284/VSCodium-linux-arm64-1.94.2.24284.tar.gz" type="application/x-compressed-tar" size="130400768"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2024-10-10" stability="stable" version="1.94.2.24284" id="sha1new=55da79b9dd08a67285ccb20acf9ca280f1199b42">
+      <manifest-digest sha256new="QE54ZH7NJKWMPR7JAM6JGPH7BUVGEZTQY7NSX2IV2DEBYMT5REEA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.2.24284/VSCodium-linux-armhf-1.94.2.24284.tar.gz" type="application/x-compressed-tar" size="118803241"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-10-10" stability="stable" version="1.94.2.24284" id="sha1new=954bbc825e9628ebf795a422aff6f612a53f8644">
+      <manifest-digest sha256new="B7I3EEFTV3TKGTRCOXYTPIS6NJFPN2DS3KUOAEMGEGJUJBGWAOTQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.2.24284/VSCodium-darwin-x64-1.94.2.24284.zip" type="application/zip" size="132174515"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-10-10" stability="stable" version="1.94.2.24284" id="sha1new=bc37dc84aa898a9a70afb176850b713eb3bf6943">
+      <manifest-digest sha256new="DFXHMC236MTZDOWWNA7YPL3H6ZFZ2TI52ABM44DVXXCIID2VAJ3Q"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.2.24284/VSCodium-darwin-arm64-1.94.2.24284.zip" type="application/zip" size="124686033"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2024-10-12" stability="stable" version="1.94.2.24286" id="sha1new=dfe52786d0446ddb406b4436fb43011485429223">
+      <manifest-digest sha256new="WH6VSXRSEM45HD54DE5D4NOHZCMED4AJISCU3SKDMYM2WWT7D7FQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.2.24286/VSCodium-win32-x64-1.94.2.24286.zip" type="application/zip" size="134278308"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2024-10-12" stability="stable" version="1.94.2.24286" id="sha1new=46d967b3f9964eb5cb8d34e977abd7f9d1dde8a9">
+      <manifest-digest sha256new="4MEOLTDEH4GU22UWPAWNJHGH4GQKIPHSSBMHW25HQIRTIRQWHALA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.2.24286/VSCodium-win32-arm64-1.94.2.24286.zip" type="application/zip" size="135233180"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2024-10-12" stability="stable" version="1.94.2.24286" id="sha1new=9ebd1255091b6fa7e1f4d0cc418eb63b8d383058">
+      <manifest-digest sha256new="OMU4L2JHK4KJKX2SSKABHJQLXI25EMAZ63FTSRNSV7I6GHFTZQTQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.2.24286/VSCodium-linux-x64-1.94.2.24286.tar.gz" type="application/x-compressed-tar" size="130462753"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2024-10-12" stability="stable" version="1.94.2.24286" id="sha1new=47c915d99f0c6f98553bd5587a7d9e9cb4e622cc">
+      <manifest-digest sha256new="BEBVMPDZFGHWHNXOHNCWUYE5EW3NPDZGGHNV7D6O7NSCI7UQ5QEA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.2.24286/VSCodium-linux-arm64-1.94.2.24286.tar.gz" type="application/x-compressed-tar" size="130400501"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2024-10-12" stability="stable" version="1.94.2.24286" id="sha1new=5b6a2d4e6cb9510b1f5298064e821cda70f92902">
+      <manifest-digest sha256new="RYTSTCTWRGEIAGWIUCPHWOGFNZOAG4WF7VVYLDBBAAWRMWN6C4HA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.2.24286/VSCodium-linux-armhf-1.94.2.24286.tar.gz" type="application/x-compressed-tar" size="118804173"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-10-12" stability="stable" version="1.94.2.24286" id="sha1new=ffd2a669cf1aef034805a02beef67d1044c3087a">
+      <manifest-digest sha256new="Y3O3GYKRV72SAZAAP2YLERJX2CE6DGQ3NHE6XLHUANDXCFYF5BPQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.2.24286/VSCodium-darwin-x64-1.94.2.24286.zip" type="application/zip" size="132174856"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-10-12" stability="stable" version="1.94.2.24286" id="sha1new=213924628559ecc2871a41d6bde0370637c2361c">
+      <manifest-digest sha256new="TWIIKIGCQSF7H73WDRDIYELVYCSFYICO44D3UA5VDJODY4QEN3HQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.94.2.24286/VSCodium-darwin-arm64-1.94.2.24286.zip" type="application/zip" size="124686451"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2024-11-02" stability="stable" version="1.95.1.24307" id="sha1new=855bbb8b55272d66b14066f806c1772ce9a3bfe6">
+      <manifest-digest sha256new="UR2PME2FPCAZNGLKYVGEPEZWX4BKOM3UX7WWI3DHCBP4CQHK73BA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.1.24307/VSCodium-win32-x64-1.95.1.24307.zip" type="application/zip" size="138438132"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2024-11-02" stability="stable" version="1.95.1.24307" id="sha1new=02713af5723cb8cf0a21a1c36f8de8a03a768385">
+      <manifest-digest sha256new="F4SLJAC2HKC3GWR2UOKZ3ON6ZA4FIIPZYQGHZWQRC6ZZSVSSOQHA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.1.24307/VSCodium-win32-arm64-1.95.1.24307.zip" type="application/zip" size="139566845"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2024-11-02" stability="stable" version="1.95.1.24307" id="sha1new=d80e7c90e1d7f1757474894a803f542f334b7a54">
+      <manifest-digest sha256new="DHLHWCM7KJ4CI73Z3A4QDGXX4YJA3FTQZTN5NGEXX44QIYFJG7WA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.1.24307/VSCodium-linux-x64-1.95.1.24307.tar.gz" type="application/x-compressed-tar" size="133761601"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2024-11-02" stability="stable" version="1.95.1.24307" id="sha1new=f508eacb23c6b2e2ac961e08ebac9f6e66e14330">
+      <manifest-digest sha256new="HFS2LUW3WGDTUMA72E2JHG4DPTTSSUKEOLYDAKBT23UNKFI3KAHQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.1.24307/VSCodium-linux-arm64-1.95.1.24307.tar.gz" type="application/x-compressed-tar" size="133657550"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2024-11-02" stability="stable" version="1.95.1.24307" id="sha1new=37c5144a90d22ed5f7a4548bc0e0665a0ec67576">
+      <manifest-digest sha256new="ATF7GU5OGSEXX447B45C72YGCH5R6LB4T7WLFOAAH6V5UCOI5QFA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.1.24307/VSCodium-linux-armhf-1.95.1.24307.tar.gz" type="application/x-compressed-tar" size="121749295"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-11-02" stability="stable" version="1.95.1.24307" id="sha1new=e224e8f1083adbce77c9a4f86320cbc354f22883">
+      <manifest-digest sha256new="744UXNSO6WFP5RT3LC2QWEB3TV6JIQRMPKS7G4VWILPVWOX2PDWQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.1.24307/VSCodium-darwin-x64-1.95.1.24307.zip" type="application/zip" size="133839993"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-11-02" stability="stable" version="1.95.1.24307" id="sha1new=0b1f12dadd39582bb6ef08124e30d2fadcc7afa0">
+      <manifest-digest sha256new="NGEIVWQKTUJ2K4SJQBZSUOI7MJUWQNZLAEBNM3VDIDWFDLJ3ZLOQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.1.24307/VSCodium-darwin-arm64-1.95.1.24307.zip" type="application/zip" size="127382514"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2024-11-08" stability="stable" version="1.95.2.24313" id="sha1new=c5c4c1d7dd0d2e7639911842b2d6d13d98e61dff">
+      <manifest-digest sha256new="VZQWPI2DAJ6J5GZORUHU3A65O26QORZXLAVFATJBAHJ4N5ITRYQA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.2.24313/VSCodium-win32-x64-1.95.2.24313.zip" type="application/zip" size="138438109"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2024-11-08" stability="stable" version="1.95.2.24313" id="sha1new=d031594a4d0d1de3ce13614a21246e9791b0ef40">
+      <manifest-digest sha256new="GCUCSXQS7LAK7AG3XNDGEB5LDW3YSLZ6TGMT45NQGKXTHFCZNKIA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.2.24313/VSCodium-win32-arm64-1.95.2.24313.zip" type="application/zip" size="139566824"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2024-11-08" stability="stable" version="1.95.2.24313" id="sha1new=a9b223798220bfc1f1081a17cc3395aa2974338e">
+      <manifest-digest sha256new="JNWD2IULWCTAYGOMDPCK3G6UBMLUBEYF23UXP2RS6VNKD4GVIERA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.2.24313/VSCodium-linux-x64-1.95.2.24313.tar.gz" type="application/x-compressed-tar" size="135687532"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2024-11-08" stability="stable" version="1.95.2.24313" id="sha1new=41ce4c04b8005622e1a7f9d0f9514bf017af6693">
+      <manifest-digest sha256new="ZP4YEFRD5WQK7WVM7URFCQORXIR7HUXHF7AUN7EQLJJ5ZO25FGMA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.2.24313/VSCodium-linux-arm64-1.95.2.24313.tar.gz" type="application/x-compressed-tar" size="133658561"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2024-11-08" stability="stable" version="1.95.2.24313" id="sha1new=d03b83adeecaf0fb64ff12443d38754b89f374d4">
+      <manifest-digest sha256new="PKHH4B3U7754DA3HDKPJGLUQKRHTA6C4KYWMM4KGQ3OO4AFBLIXQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.2.24313/VSCodium-linux-armhf-1.95.2.24313.tar.gz" type="application/x-compressed-tar" size="121752120"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-11-08" stability="stable" version="1.95.2.24313" id="sha1new=9f71f465dc5510bba7c5b6344a34a1d1941b56d4">
+      <manifest-digest sha256new="5Z624V7TVZ6ANJKZHC3AVVQ56L4MASIQBXZJDFMWOVO2R2GYFCLQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.2.24313/VSCodium-darwin-x64-1.95.2.24313.zip" type="application/zip" size="133839704"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-11-08" stability="stable" version="1.95.2.24313" id="sha1new=34ead64add3e83d33f555e02afbce107cab076f8">
+      <manifest-digest sha256new="BPNIWUNNKNGZLTZQRVUS6YNXHLOGQ4TXRPNAO5O5HXX3FVT2TW3A"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.2.24313/VSCodium-darwin-arm64-1.95.2.24313.zip" type="application/zip" size="127382227"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2024-11-15" stability="stable" version="1.95.3.24320" id="sha1new=09552c69214489d695721cea270f13c4969fd78d">
+      <manifest-digest sha256new="7HM5SZAOAJKQNWCAKGJP5BDUOXYUAM3N6XARWZLF2Q6IFDPWJZAA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.3.24320/VSCodium-win32-x64-1.95.3.24320.zip" type="application/zip" size="138437564"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2024-11-15" stability="stable" version="1.95.3.24320" id="sha1new=7767add41a24e7f36ef9da41e38955d4ef67f382">
+      <manifest-digest sha256new="357X42H3R2YPFBXEG6JQCUJC7YAGV5KWG27BI5CFI7G4K6PIOKZA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.3.24320/VSCodium-win32-arm64-1.95.3.24320.zip" type="application/zip" size="139566272"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2024-11-15" stability="stable" version="1.95.3.24320" id="sha1new=a1b53ad75b288bba464678f17108ce4915ea5fb9">
+      <manifest-digest sha256new="5JKQA724ER3UWZGRPDF47NIFO5FAD4SWWUZJWLXFRS4TDM5CLTKA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.3.24320/VSCodium-linux-x64-1.95.3.24320.tar.gz" type="application/x-compressed-tar" size="135688825"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2024-11-15" stability="stable" version="1.95.3.24320" id="sha1new=85fc41e865db9d297b28ab1ab8c9ce104bf82441">
+      <manifest-digest sha256new="TTD6BHN44WA3SK6PGFZMJW42F6NRKWTYLZNZIQLALSAEKV6PGRQA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.3.24320/VSCodium-linux-arm64-1.95.3.24320.tar.gz" type="application/x-compressed-tar" size="133658902"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2024-11-15" stability="stable" version="1.95.3.24320" id="sha1new=c04d14b0ccf80b4877ca18faad47cc70c493d034">
+      <manifest-digest sha256new="WMZFRS4XXVBH2XLBGKFDG3LTXQ2LBJRKYVMN5VIHP735RW2LEJCA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.3.24320/VSCodium-linux-armhf-1.95.3.24320.tar.gz" type="application/x-compressed-tar" size="121752711"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-11-15" stability="stable" version="1.95.3.24320" id="sha1new=9fcdca89985a63c779191a2fc534edc3c26d6e4a">
+      <manifest-digest sha256new="JXMCPVIEBEOAXAYMYITCSV22SDSOWGAPKFFUXDGNSBFNR6AZFXIQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.3.24320/VSCodium-darwin-x64-1.95.3.24320.zip" type="application/zip" size="133839162"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-11-15" stability="stable" version="1.95.3.24320" id="sha1new=0842b8432590a3b8915a87c8738b0d16022e54d0">
+      <manifest-digest sha256new="6RFG77OJVH25WJ2G6IMPRDFJREW65AT3YDCK6ZVLGXW55RNBENDQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.3.24320/VSCodium-darwin-arm64-1.95.3.24320.zip" type="application/zip" size="127381683"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2024-11-16" stability="stable" version="1.95.3.24321" id="sha1new=57b9ad5be148f0757203639e3998f17432d9e98d">
+      <manifest-digest sha256new="SNYWC4WWQLSZX3GMLJ6RYMPYIKAVBZWZH5HZ4YNG5RUAZ4IH7KBA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.3.24321/VSCodium-win32-x64-1.95.3.24321.zip" type="application/zip" size="138458992"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2024-11-16" stability="stable" version="1.95.3.24321" id="sha1new=49cd9ab205b08c3b6e60f8c28f8452d0c0cda199">
+      <manifest-digest sha256new="MZVKXHDZ7FFI537MATTP6BYLEJI4W6OIISKQT3FX2QOGJDZYZFCQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.3.24321/VSCodium-win32-arm64-1.95.3.24321.zip" type="application/zip" size="139583605"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2024-11-16" stability="stable" version="1.95.3.24321" id="sha1new=f4ef68d281a5e94c2ed94550a236b61f7d1dd14f">
+      <manifest-digest sha256new="ZGUVHPELZUND5WECHVWKAZ2OFAZS2TMPCNA7UTE35DMKTTJ2LJAQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.3.24321/VSCodium-linux-x64-1.95.3.24321.tar.gz" type="application/x-compressed-tar" size="135715917"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2024-11-16" stability="stable" version="1.95.3.24321" id="sha1new=35d761467afbcf1ad16f6d0f4be9cf81d9573574">
+      <manifest-digest sha256new="SNRA46HNC7MZKGOHURONEM2IAPXSUMMJ5MAH3ENQ67MGC2SHFI7A"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.3.24321/VSCodium-linux-arm64-1.95.3.24321.tar.gz" type="application/x-compressed-tar" size="133684443"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2024-11-16" stability="stable" version="1.95.3.24321" id="sha1new=c01880b2ae47b55d6a92f7982a52b1f634c9872a">
+      <manifest-digest sha256new="WXJKESFFFQDNHXBXNA7TQJKBO2YHTDS5FWA4ISNYCPB3ZWJV4PUA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.3.24321/VSCodium-linux-armhf-1.95.3.24321.tar.gz" type="application/x-compressed-tar" size="121776506"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" main="bin/codium" released="2024-11-16" stability="stable" version="1.95.3.24321" id="sha1new=362868a54832eb454ef3d7255e4f93b266831033">
+      <manifest-digest sha256new="BR6NK63KXFDFCKOISRO4ANZLIGXMASOJP3A7KFGSLSLHVCCHCDRA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.3.24321/VSCodium-linux-ppc64le-1.95.3.24321.tar.gz" type="application/x-compressed-tar" size="145058429"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-11-16" stability="stable" version="1.95.3.24321" id="sha1new=3bcb371cd3cf45deaa2c2a2c2eb09980238e03ee">
+      <manifest-digest sha256new="CXTTABBEB2CZXXVCXXGLHX3F5HF56AU4XZFVEZKE67XCVWAW4SLA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.3.24321/VSCodium-darwin-x64-1.95.3.24321.zip" type="application/zip" size="133854927"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-11-16" stability="stable" version="1.95.3.24321" id="sha1new=71cab1256e42fbd2cf4a5974f61a432440e442e0">
+      <manifest-digest sha256new="MURBSENKT54MVSG3V6OVS5BUOXW6DIU7UNYCQE6AZZU3EI4UCVIQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.95.3.24321/VSCodium-darwin-arm64-1.95.3.24321.zip" type="application/zip" size="127386399"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2024-12-12" stability="stable" version="1.96.0.24347" id="sha1new=07aa62da37ef0811bc26c07003aeb8a349252a1d">
+      <manifest-digest sha256new="HPBGXZ6ZUCWSONFFJZXRLYDM44SGLVAMMQELFYLYXVC23IISSTVQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.0.24347/VSCodium-win32-x64-1.96.0.24347.zip" type="application/zip" size="140943109"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2024-12-12" stability="stable" version="1.96.0.24347" id="sha1new=022082a427962714921e64205e0bb64c9153bdcb">
+      <manifest-digest sha256new="DYSTGETSRFZDD3HCG4JYTYDP3BYTE743RUIC67RK5C3NITGZWPKQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.0.24347/VSCodium-win32-arm64-1.96.0.24347.zip" type="application/zip" size="142066791"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2024-12-12" stability="stable" version="1.96.0.24347" id="sha1new=fd31de9dd8faded4a45ca862c8fcd2b629a093ab">
+      <manifest-digest sha256new="ZVE6HKLWWRTV4PABE55QYBI5225AVPOEQTMUB5CNUEXMWP2CLUAA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.0.24347/VSCodium-linux-x64-1.96.0.24347.tar.gz" type="application/x-compressed-tar" size="136734771"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2024-12-12" stability="stable" version="1.96.0.24347" id="sha1new=aef22f6b28f1c2aa832b74fadd06e42c232d258b">
+      <manifest-digest sha256new="KMZH4T5D7WWSFX5XKCNRBEJY652OEE2FHAUDCSOV3CJDDSHPAWMA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.0.24347/VSCodium-linux-arm64-1.96.0.24347.tar.gz" type="application/x-compressed-tar" size="134689376"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2024-12-12" stability="stable" version="1.96.0.24347" id="sha1new=c531c5f5b4e93b1cc4136dcbc74bbad451185198">
+      <manifest-digest sha256new="E4LDBJNXCK53HS6B7TSJKGX3CUEQFBXJK3AWMHBIOCTGBDMFA4MA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.0.24347/VSCodium-linux-armhf-1.96.0.24347.tar.gz" type="application/x-compressed-tar" size="122778879"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" main="bin/codium" released="2024-12-12" stability="stable" version="1.96.0.24347" id="sha1new=dbba83cf81332988a8b9074341e0ea6ed905c57c">
+      <manifest-digest sha256new="LSGFL5AYNTHTVMH6VA6KZ4PNMOX37LJEGPS32DN7QVJFN7COOJCA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.0.24347/VSCodium-linux-ppc64le-1.96.0.24347.tar.gz" type="application/x-compressed-tar" size="146065904"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-12-12" stability="stable" version="1.96.0.24347" id="sha1new=237d2fd53f2333f91543c2eea9f0fed6a10b75a9">
+      <manifest-digest sha256new="X3L3UKAESSTDOEYEHQXSLWNVHF3EHREPM4RYCKOP47SMEL33XRPA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.0.24347/VSCodium-darwin-x64-1.96.0.24347.zip" type="application/zip" size="134873700"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-12-12" stability="stable" version="1.96.0.24347" id="sha1new=74b1acd0a860aeddbb5f29c566f3d5dfa6a59e02">
+      <manifest-digest sha256new="WE6DTAFUHM6YURQW7WQUIIVUT572SBIH5ZYMMFD2VIWDLMG6G7KA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.0.24347/VSCodium-darwin-arm64-1.96.0.24347.zip" type="application/zip" size="128535435"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2024-12-17" stability="stable" version="1.96.0.24352" id="sha1new=9ab2cb619de441d8f695926f76e90a252b7f1df0">
+      <manifest-digest sha256new="3HF7EEIRLO54CMOSUWW5BER7JR5OSW6OA2MWA6I7K7DJFS7OMDWQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.0.24352/VSCodium-win32-x64-1.96.0.24352.zip" type="application/zip" size="140942981"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2024-12-17" stability="stable" version="1.96.0.24352" id="sha1new=5115c61c5b3d5ce0aa2308d720aa8e3c7ee67568">
+      <manifest-digest sha256new="3742VBLBTOKP2S3DAJEIKL3KJ7JZ5B734WBPUQZIV5AUDSQTI4GQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.0.24352/VSCodium-win32-arm64-1.96.0.24352.zip" type="application/zip" size="142066673"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2024-12-17" stability="stable" version="1.96.0.24352" id="sha1new=ea5d42d5dd249d2c27941ce3885cbd2baaabe7bb">
+      <manifest-digest sha256new="WSQIOID6FP3QL5PXU23OKKYKMQSFLNW53MAUKIJF5OJOPW66NL2A"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.0.24352/VSCodium-linux-x64-1.96.0.24352.tar.gz" type="application/x-compressed-tar" size="136737002"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2024-12-17" stability="stable" version="1.96.0.24352" id="sha1new=d51660bc3903472be34e185349cdfec56339bdd0">
+      <manifest-digest sha256new="3DGMZQMGLBHZEGBXJURZ6KLWA3CELCY6CDOKPYOBMYEASN65WM5A"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.0.24352/VSCodium-linux-arm64-1.96.0.24352.tar.gz" type="application/x-compressed-tar" size="134689218"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2024-12-17" stability="stable" version="1.96.0.24352" id="sha1new=c67b1f973db19f72f288662ae6d5c5d61223da94">
+      <manifest-digest sha256new="ND2S7OU2CVKSHXEUYZIVCL75653E24SMIHZ2UYSN2FOONIBZERGQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.0.24352/VSCodium-linux-armhf-1.96.0.24352.tar.gz" type="application/x-compressed-tar" size="122777763"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" main="bin/codium" released="2024-12-17" stability="stable" version="1.96.0.24352" id="sha1new=7d24e350756492735aeb263e3b671698b55637ad">
+      <manifest-digest sha256new="HCGMDIGLQT2FJULMPJMPLG6HCV7ZEMQQWVHRFMYQ3IU7IFYM2NIQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.0.24352/VSCodium-linux-ppc64le-1.96.0.24352.tar.gz" type="application/x-compressed-tar" size="146067791"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-12-17" stability="stable" version="1.96.0.24352" id="sha1new=6a7eed4cb3d66dc071cb350bed951feb6a01268f">
+      <manifest-digest sha256new="KBFGV5LROBIZ2Z3TV77ZGMJM3CSVL3PBTLM4QW7NNV3NXSNWCNRA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.0.24352/VSCodium-darwin-x64-1.96.0.24352.zip" type="application/zip" size="134873659"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-12-17" stability="stable" version="1.96.0.24352" id="sha1new=241d06e69396df22739d693e72652783b0b6231b">
+      <manifest-digest sha256new="Z4XYEISZ3RD4L6CZQFISVD7COF2S3MXCYTE3N5LQ24VYWWDZZEHA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.0.24352/VSCodium-darwin-arm64-1.96.0.24352.zip" type="application/zip" size="128535410"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2024-12-18" stability="stable" version="1.96.1.24353" id="sha1new=1b2bd9edcc364addd2fbf5c86ceca41d30229f8d">
+      <manifest-digest sha256new="2URXA6KOO3X2NBWLUSWJPUM32SMWMDFFOMI2COA76ZF5HU2P4M7Q"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.1.24353/VSCodium-win32-x64-1.96.1.24353.zip" type="application/zip" size="140943038"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2024-12-18" stability="stable" version="1.96.1.24353" id="sha1new=b92d375719a2f0e777735adde55c92c2c087c509">
+      <manifest-digest sha256new="C47KCPDMJXSRTAYRZ6PVUNXP62OQ3X5Y4AOPPZV4B2MB2VXTGPZQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.1.24353/VSCodium-win32-arm64-1.96.1.24353.zip" type="application/zip" size="142066715"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2024-12-18" stability="stable" version="1.96.1.24353" id="sha1new=83d9a307f4463b541fce15960d52538351821dfc">
+      <manifest-digest sha256new="KL52AWIRPXCV5FLHS5ISOKF2HEHVZI4U76BXKLV2XO7GA5QVBE5Q"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.1.24353/VSCodium-linux-x64-1.96.1.24353.tar.gz" type="application/x-compressed-tar" size="136728552"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2024-12-18" stability="stable" version="1.96.1.24353" id="sha1new=3ee4f38dcb1ffec9ec169328551d7fcdb2c15b20">
+      <manifest-digest sha256new="BVY36ORI3JOUJ7X3PUL2OJIGEQGUZ34J7WAUXMZ7LDPVKJXTXJMA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.1.24353/VSCodium-linux-arm64-1.96.1.24353.tar.gz" type="application/x-compressed-tar" size="134683886"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2024-12-18" stability="stable" version="1.96.1.24353" id="sha1new=b9ecce4838f38557914da4eee6aa408dcef16197">
+      <manifest-digest sha256new="NYPBMSOA7HJFVAQ4QGUD5HHH62EGOTHEVG7MGMAAOXX7YV2S75AA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.1.24353/VSCodium-linux-armhf-1.96.1.24353.tar.gz" type="application/x-compressed-tar" size="122781171"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" main="bin/codium" released="2024-12-18" stability="stable" version="1.96.1.24353" id="sha1new=cbae7249ad1172f15c931ff4bdc85b09f99d9fba">
+      <manifest-digest sha256new="SRJNH2Y354LGV3LBZVUK5N7O6V5GSHHDBOJLFIAWELTJFGJWVU5Q"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.1.24353/VSCodium-linux-ppc64le-1.96.1.24353.tar.gz" type="application/x-compressed-tar" size="146072828"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-12-18" stability="stable" version="1.96.1.24353" id="sha1new=d99309c177b26bdcde28fb247d705bf02680ffb5">
+      <manifest-digest sha256new="BTRSJOZL5NJHJUNF6VGAQJ6YWEO2GNUOJSLN7AIWXYTLWWFKXZNA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.1.24353/VSCodium-darwin-x64-1.96.1.24353.zip" type="application/zip" size="134873976"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-12-18" stability="stable" version="1.96.1.24353" id="sha1new=13d0c8d5ac104ae6c7e74af20352b824348e7fd5">
+      <manifest-digest sha256new="L6MJIVUNLSD4PT2I7C5ZLRMD2SEG2ICMNR43OBUA5YAAJX3CVDSA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.1.24353/VSCodium-darwin-arm64-1.96.1.24353.zip" type="application/zip" size="128535698"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2024-12-20" stability="stable" version="1.96.2.24355" id="sha1new=463316103c91effd12d741d76788c344eb92219c">
+      <manifest-digest sha256new="EYDHCPGFOFTY4OJ5HOOGHE4RV2ZAWNRIQ33PM4PEK7PA7PGNCIEA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.2.24355/VSCodium-win32-x64-1.96.2.24355.zip" type="application/zip" size="140943088"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2024-12-20" stability="stable" version="1.96.2.24355" id="sha1new=400fc3c8643c2dcaa7857056cb4f3ec17d05719a">
+      <manifest-digest sha256new="K2GL2CIJMRRACIB3BJWTWWAWXEZFNKHP56CHXQKZ3MAKB2MTZ5LA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.2.24355/VSCodium-win32-arm64-1.96.2.24355.zip" type="application/zip" size="142066764"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2024-12-20" stability="stable" version="1.96.2.24355" id="sha1new=6345e227ee936ce8cf22f65b9a6352d6da064913">
+      <manifest-digest sha256new="GR7WMLH7IZGMEDCTQG7BACCWXBS23ER2UYQZOPDO7BPXFMTJL2OQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.2.24355/VSCodium-linux-x64-1.96.2.24355.tar.gz" type="application/x-compressed-tar" size="136733609"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2024-12-20" stability="stable" version="1.96.2.24355" id="sha1new=82486b9e9362d1ba2f65860b7f3054b70442a5e4">
+      <manifest-digest sha256new="NGYRGGJCRKP4GCA5DJ2T3FPLYLJF2UEGAET4FVVVYSJ4CSLHJGVA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.2.24355/VSCodium-linux-arm64-1.96.2.24355.tar.gz" type="application/x-compressed-tar" size="134688898"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2024-12-20" stability="stable" version="1.96.2.24355" id="sha1new=f4e0c693e7e2913fcf16fcd19b26a8ac06b7ce6d">
+      <manifest-digest sha256new="5ZX44T5W7CYLUUHA6Y4GW6C4BXLQ3IGDMRDQ2HB2KBTLSOHXIPKA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.2.24355/VSCodium-linux-armhf-1.96.2.24355.tar.gz" type="application/x-compressed-tar" size="122782157"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" main="bin/codium" released="2024-12-20" stability="stable" version="1.96.2.24355" id="sha1new=b153f7ab3fb19c980d6282c00b398d85da2d0763">
+      <manifest-digest sha256new="VZQDOKLBETBAZK2Q6DIKB33R2ANIDUECQ5TPESANEIZLUIJ5V46Q"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.2.24355/VSCodium-linux-ppc64le-1.96.2.24355.tar.gz" type="application/x-compressed-tar" size="146072524"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-12-20" stability="stable" version="1.96.2.24355" id="sha1new=cc91c8acc9cda8d0cc1ec161868ee02f0013961c">
+      <manifest-digest sha256new="HF2F272PNMZBR4ZVUWRL5VOOJIFGCS4DTIUNZ4BFIV7ZPZ3Q6CFQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.2.24355/VSCodium-darwin-x64-1.96.2.24355.zip" type="application/zip" size="134874094"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2024-12-20" stability="stable" version="1.96.2.24355" id="sha1new=3cb09b6e3c0dbad1b97ca7cb6a502bc39aeacc8f">
+      <manifest-digest sha256new="MBWEM4BZY3BDRQD2D667V2NRRIEN3ASC53TE3557AMWFJPBUI7WA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.2.24355/VSCodium-darwin-arm64-1.96.2.24355.zip" type="application/zip" size="128535831"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2025-01-13" stability="stable" version="1.96.3.25013" id="sha1new=95a7c704b8fca4582996998e51d1af18abb652ed">
+      <manifest-digest sha256new="CMQDXSKVCUUMPV277MKRAL2PTCT6IUTANG22PXONWSK36WM5Y23A"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.3.25013/VSCodium-win32-x64-1.96.3.25013.zip" type="application/zip" size="140943030"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2025-01-13" stability="stable" version="1.96.3.25013" id="sha1new=7f4f97fccef268609dba37fe0705f5486f48b956">
+      <manifest-digest sha256new="3ZFKKMCYOPG34NCW6CG5D5T3MZGF2XAB7TK4XE4ZL6HK53S5DMCQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.3.25013/VSCodium-win32-arm64-1.96.3.25013.zip" type="application/zip" size="142066697"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2025-01-13" stability="stable" version="1.96.3.25013" id="sha1new=3c023b0f8a087d98ebd146faaaa0bd59b3799b2d">
+      <manifest-digest sha256new="EFLLRC4HCJV7RCN7ZBLGVURWGWRTYAUXPMM7KX3XQMIG6RIC6OCA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.3.25013/VSCodium-linux-x64-1.96.3.25013.tar.gz" type="application/x-compressed-tar" size="136745649"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2025-01-13" stability="stable" version="1.96.3.25013" id="sha1new=10906a4910be9f5d976e75775e6b7bc896ea8f33">
+      <manifest-digest sha256new="OZMDMN5HYGSWECFKSJ3SLI572QQ7ODLGZKRT3FIZRU4ODKFJYTWQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.3.25013/VSCodium-linux-arm64-1.96.3.25013.tar.gz" type="application/x-compressed-tar" size="134709941"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2025-01-13" stability="stable" version="1.96.3.25013" id="sha1new=83fa7d820a6d5f5a694fc410e0901b31c6676dc0">
+      <manifest-digest sha256new="46OVS66NARN4PJAYQOOULPCHCDPIWXV6P5ADX3DBTLRAXLF6C2NQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.3.25013/VSCodium-linux-armhf-1.96.3.25013.tar.gz" type="application/x-compressed-tar" size="122802547"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" main="bin/codium" released="2025-01-13" stability="stable" version="1.96.3.25013" id="sha1new=2d47d131708723af96919ff0f2d60483af708dfc">
+      <manifest-digest sha256new="VOXROP3HXD64HCMZQM64P3V3EB6AYKDZBLEETJ7GY3HMVVRSTWXA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.3.25013/VSCodium-linux-ppc64le-1.96.3.25013.tar.gz" type="application/x-compressed-tar" size="146077583"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-01-13" stability="stable" version="1.96.3.25013" id="sha1new=3c1ff600e6658fc4ad511b59ff0c9a2a786400cb">
+      <manifest-digest sha256new="QJEUXBUWFKOFKRLNOYAFCWTROGDJNXIA3FK4M3VS3UEGZ5ZN5ARQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.3.25013/VSCodium-darwin-x64-1.96.3.25013.zip" type="application/zip" size="134873898"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-01-13" stability="stable" version="1.96.3.25013" id="sha1new=5c994ac3421b3dbd2fe1b84522709c54dc9cc43f">
+      <manifest-digest sha256new="DMPMMQG55S5VDIXKODQBCON5MYAAIIVLAI3LCTTS7CXD5VNKYSQA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.3.25013/VSCodium-darwin-arm64-1.96.3.25013.zip" type="application/zip" size="128535624"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2025-01-17" stability="stable" version="1.96.4.25017" id="sha1new=738af868cc91c8f86c2e0ca8b3078c8dd10e5bf1">
+      <manifest-digest sha256new="BF2U25C5N6KT6VEBJLILT6CAUTRF3DM77AWBQHJP2F7XIFOX57TQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.4.25017/VSCodium-win32-x64-1.96.4.25017.zip" type="application/zip" size="140942368"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2025-01-17" stability="stable" version="1.96.4.25017" id="sha1new=0f49498913d7f688d6eeccce3351f57e7cd0cc1c">
+      <manifest-digest sha256new="KZWBPL6ZY33N3M52VUWGWZK2C3W4GSOFL4WAHB3ZP7ICGLGOATPA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.4.25017/VSCodium-win32-arm64-1.96.4.25017.zip" type="application/zip" size="142066065"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2025-01-17" stability="stable" version="1.96.4.25017" id="sha1new=f8bb9190e7a7044f11c414969d7e13be3dc62543">
+      <manifest-digest sha256new="2WMF4YLPAK24FJJSZKL5WJYPNTHVHG4HTTZYSYDQQKKH27MAO35A"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.4.25017/VSCodium-linux-x64-1.96.4.25017.tar.gz" type="application/x-compressed-tar" size="136744379"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2025-01-17" stability="stable" version="1.96.4.25017" id="sha1new=7d6095c6accf38fec723dae5efa5ec4ed5d3ab82">
+      <manifest-digest sha256new="BRMYOGDN7MMJSWNYZRSTNH7JD6SZXXDILJ7E4WCJLKBE6OPORHOQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.4.25017/VSCodium-linux-arm64-1.96.4.25017.tar.gz" type="application/x-compressed-tar" size="134709728"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2025-01-17" stability="stable" version="1.96.4.25017" id="sha1new=fc8f282632018e85a7f05890e0522a550c0b58cf">
+      <manifest-digest sha256new="LNNBB3JUUT3RPT6QNEFXK556VNHP5UP2CMOJF7WCAEL33OZHSFNQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.4.25017/VSCodium-linux-armhf-1.96.4.25017.tar.gz" type="application/x-compressed-tar" size="122803904"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" main="bin/codium" released="2025-01-17" stability="stable" version="1.96.4.25017" id="sha1new=7d4922ce6cf09f4aea362a9a4164a9e01cf97f76">
+      <manifest-digest sha256new="UNOFI4IT3DVID4VXV7P22NJ6K5P6GACZXNNG3PPSUATUXMOGARXQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.4.25017/VSCodium-linux-ppc64le-1.96.4.25017.tar.gz" type="application/x-compressed-tar" size="146077110"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-01-17" stability="stable" version="1.96.4.25017" id="sha1new=5f9ed4628677008b76650224e6e07119e6db654e">
+      <manifest-digest sha256new="DU5TSTQSHANJVABLPQZBF5GTBSUSOWXENPCUCIEGEF6XYFX5ATZQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.4.25017/VSCodium-darwin-x64-1.96.4.25017.zip" type="application/zip" size="134873365"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-01-17" stability="stable" version="1.96.4.25017" id="sha1new=c41fd2ddff0fe7a4313e825ca66ab940de5f0b18">
+      <manifest-digest sha256new="P4B4HJCWSZPELRXPYCI4OYMNLKUBFBBREQADSON57TMTCOFKSY7Q"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.4.25017/VSCodium-darwin-arm64-1.96.4.25017.zip" type="application/zip" size="128535089"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2025-01-26" stability="stable" version="1.96.4.25026" id="sha1new=1a2539c95067de85904579c5e0687d75763b085a">
+      <manifest-digest sha256new="K242I7UL6NTHTBW3AM3BWJC7MZXBRKFP7BA5PEXWJ25DNP2LTG6Q"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.4.25026/VSCodium-win32-x64-1.96.4.25026.zip" type="application/zip" size="140943377"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2025-01-26" stability="stable" version="1.96.4.25026" id="sha1new=990612b49f4277b16cc07b6049a02f13d63d8117">
+      <manifest-digest sha256new="IT6OLQE6TTYAW4WG7XYWOISTO575SFRO7EAORNP7P2C2PJQAHUIA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.4.25026/VSCodium-win32-arm64-1.96.4.25026.zip" type="application/zip" size="142067014"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2025-01-26" stability="stable" version="1.96.4.25026" id="sha1new=d11838da1c51678d7e0bd76ce4e833d95663b864">
+      <manifest-digest sha256new="HTNQATJC3LR4F5GJZTKEPJW3PWZUEMH2HMQDFZZPTFZNAR5V3IWQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.4.25026/VSCodium-linux-x64-1.96.4.25026.tar.gz" type="application/x-compressed-tar" size="136727930"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2025-01-26" stability="stable" version="1.96.4.25026" id="sha1new=2fa53cbdbd4b76e5f94e4a9836da3081fe5e7908">
+      <manifest-digest sha256new="XUN3SJOE6ELHGZJVUXUON7BBEEYMGRW6ZIZNKJIWAUYBTEFSIX6Q"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.4.25026/VSCodium-linux-arm64-1.96.4.25026.tar.gz" type="application/x-compressed-tar" size="134680440"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2025-01-26" stability="stable" version="1.96.4.25026" id="sha1new=027a088569ec7178d04ec8c84b490781b307da21">
+      <manifest-digest sha256new="OC64N7EIDBKDA2HJWWKHNU7H4NNKG3KWKW6VDALFRAZBT2BTKVJQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.4.25026/VSCodium-linux-armhf-1.96.4.25026.tar.gz" type="application/x-compressed-tar" size="122767195"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" main="bin/codium" released="2025-01-26" stability="stable" version="1.96.4.25026" id="sha1new=7f28aab4f4646f513f82dc892db0ea0e307c0f0f">
+      <manifest-digest sha256new="AL3PA5V4LFTZMAHOWBQHFNGHPHRQJL7U7AZHESEMW6XWACESAPJA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.4.25026/VSCodium-linux-ppc64le-1.96.4.25026.tar.gz" type="application/x-compressed-tar" size="146052233"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-01-26" stability="stable" version="1.96.4.25026" id="sha1new=610f74720595ed228328ad52c85c011013a40326">
+      <manifest-digest sha256new="APJ3HMGUSL6LLWFXN45FGYKTOAHP65DD5M4MRHI2MZEBEZJ7PUTA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.4.25026/VSCodium-darwin-x64-1.96.4.25026.zip" type="application/zip" size="134874410"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-01-26" stability="stable" version="1.96.4.25026" id="sha1new=6238e9b0891c1762843ca38056458fe8456972cd">
+      <manifest-digest sha256new="QR7OTT6CNEEJMERYH5JQEN3Z32SY6FGQX32BJCRFNALGFVCPTEYQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.96.4.25026/VSCodium-darwin-arm64-1.96.4.25026.zip" type="application/zip" size="128536149"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2025-02-06" stability="stable" version="1.97.0.25037" id="sha1new=76f8c5ffa7bd77abbf549360fe6265de550785cb">
+      <manifest-digest sha256new="UXFATGOTNT3X2KHOF43UTAMZ7VAFORBVONTJBIREAXHWSQDP2FXQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.0.25037/VSCodium-win32-x64-1.97.0.25037.zip" type="application/zip" size="142189853"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2025-02-06" stability="stable" version="1.97.0.25037" id="sha1new=1fd872b20756490f7510582411700c05d4cc5ab9">
+      <manifest-digest sha256new="PTZRQMRGBLY2G6IGTJHPAW7SJSGQJHQ67CQR4U4SZVJRVCHWXOXQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.0.25037/VSCodium-win32-arm64-1.97.0.25037.zip" type="application/zip" size="143301205"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2025-02-06" stability="stable" version="1.97.0.25037" id="sha1new=8a09cbfa3e6ee3f94762b0fe73b85c471f45eb4e">
+      <manifest-digest sha256new="BHJVP3K3HOZSI6NDPJNUQE2N3VD3OQZBW6454B6NTWKOXJAY36GA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.0.25037/VSCodium-linux-x64-1.97.0.25037.tar.gz" type="application/x-compressed-tar" size="138068498"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2025-02-06" stability="stable" version="1.97.0.25037" id="sha1new=132a4f872d43db31a4572dfbc267c099fbf71174">
+      <manifest-digest sha256new="IIFDIURCHCEI3I5DUJVUBHZ2SZG3KTQYHWHDWI3IVPUFTWHT776Q"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.0.25037/VSCodium-linux-arm64-1.97.0.25037.tar.gz" type="application/x-compressed-tar" size="136046506"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2025-02-06" stability="stable" version="1.97.0.25037" id="sha1new=28fd86c8ef5864f13f6fd71f9fdc0afdc19103f0">
+      <manifest-digest sha256new="ZJEWDL7G6BCEZC7KTDZZLWHFB23T67NOTMX6ED3JNJQ6QAN3CMWQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.0.25037/VSCodium-linux-armhf-1.97.0.25037.tar.gz" type="application/x-compressed-tar" size="124135009"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" main="bin/codium" released="2025-02-06" stability="stable" version="1.97.0.25037" id="sha1new=d386ba94eeba6173c28c6e8b1c3b3c25d4b53ef0">
+      <manifest-digest sha256new="CJ2RO3GWM3MD2BVBO67GN5QAFRS2AXN2WUXRATOD4S4HPZAEAXTQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.0.25037/VSCodium-linux-ppc64le-1.97.0.25037.tar.gz" type="application/x-compressed-tar" size="147412311"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-02-06" stability="stable" version="1.97.0.25037" id="sha1new=b6b03f27a10982e91e26354bdbdcac6301521655">
+      <manifest-digest sha256new="PD2HSW2FEHAHNA4CPSPAOPQOVPXRC2RRGQLY2ZWR6UV3OPPL5NAA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.0.25037/VSCodium-darwin-x64-1.97.0.25037.zip" type="application/zip" size="136248021"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-02-06" stability="stable" version="1.97.0.25037" id="sha1new=adb1f16d114ec9ee347f0cf9984ea0bfa05de8b7">
+      <manifest-digest sha256new="IXQDBCDD2PIIIQH46T4XWGNZRZM5PB44G7USFD4YEHNSDNOI7LYA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.0.25037/VSCodium-darwin-arm64-1.97.0.25037.zip" type="application/zip" size="129900469"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2025-02-13" stability="stable" version="1.97.1.25044" id="sha1new=c8abe4d3deb52076cd6f9963aade9ef27e41be3c">
+      <manifest-digest sha256new="TUXXTXBXPOVNUKP4JAM6LMZRX6QZFMBROFWBOX4GSMPJRZ7Y43ZA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.1.25044/VSCodium-win32-x64-1.97.1.25044.zip" type="application/zip" size="142190421"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2025-02-13" stability="stable" version="1.97.1.25044" id="sha1new=8b071e6156d79f6e7329c91494d7ae0692922de1">
+      <manifest-digest sha256new="VE7VMMPFNFKXX6NG4Z3II3KQ63WCWO7P3UGXILVKXF565X27USHQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.1.25044/VSCodium-win32-arm64-1.97.1.25044.zip" type="application/zip" size="143301764"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2025-02-13" stability="stable" version="1.97.1.25044" id="sha1new=c88f4e8fe87bd798e89a1014a5076d469212d52e">
+      <manifest-digest sha256new="FUAX53WOFPUHAZL4VY3HPFFO66HOZ2Q23XWKF275RDLVLSWN5XHA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.1.25044/VSCodium-linux-x64-1.97.1.25044.tar.gz" type="application/x-compressed-tar" size="138064556"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2025-02-13" stability="stable" version="1.97.1.25044" id="sha1new=db6fb4b599cf3424d4c02bd3e6440d6941ff7674">
+      <manifest-digest sha256new="ONBK57JJ56YUI6CURAXGME2I7YVC6QUCVR24QLSNRODI3JY6CU5Q"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.1.25044/VSCodium-linux-arm64-1.97.1.25044.tar.gz" type="application/x-compressed-tar" size="136050855"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2025-02-13" stability="stable" version="1.97.1.25044" id="sha1new=12362a31e970c265de2b1039c5c16ddcd5a0a493">
+      <manifest-digest sha256new="XYMYZTXP2DHHCHOKZJMSLICRSZVEGE63SOVAPMDU7EQAH33B6AVA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.1.25044/VSCodium-linux-armhf-1.97.1.25044.tar.gz" type="application/x-compressed-tar" size="124149538"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" main="bin/codium" released="2025-02-13" stability="stable" version="1.97.1.25044" id="sha1new=e26933eb4242dc987658d0c2c64284f749f58a01">
+      <manifest-digest sha256new="YNKZNEDF73L64USOTDRKB37SVDRCBHXBIKZ3DPGQXPA4USJMVEAQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.1.25044/VSCodium-linux-ppc64le-1.97.1.25044.tar.gz" type="application/x-compressed-tar" size="147434478"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-02-13" stability="stable" version="1.97.1.25044" id="sha1new=9a7e28ae8e023f322cf8c67913bf82ca548161b8">
+      <manifest-digest sha256new="LUWVUFOBVUL3YCZEMYI5HZXQCDMYTUWQ7UCFMHHUZRJSP47HBC3Q"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.1.25044/VSCodium-darwin-x64-1.97.1.25044.zip" type="application/zip" size="136248637"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-02-13" stability="stable" version="1.97.1.25044" id="sha1new=2feba82c9db72ef16148ac4e08b5ee058bb226d7">
+      <manifest-digest sha256new="54KHBXPXACVW2GMBTUB222NLR5H5PITX3EHCPP7V56PNRA3THBLQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.1.25044/VSCodium-darwin-arm64-1.97.1.25044.zip" type="application/zip" size="129901016"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2025-02-14" stability="stable" version="1.97.2.25045" id="sha1new=70f11269d0a02123b0b335a5d253205e5d2f110a">
+      <manifest-digest sha256new="MC4KJUPJ4TWDQEBWQFIFLCKHTSZ4SCIAOFDIYLBUREMCZCSQBWYA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.2.25045/VSCodium-win32-x64-1.97.2.25045.zip" type="application/zip" size="142188381"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2025-02-14" stability="stable" version="1.97.2.25045" id="sha1new=d8fa7104520aa2cd1a155f8fcc79a1973569da42">
+      <manifest-digest sha256new="CO5XVJIN5RQW4HI6AET4AVYSVMRW3HXU2NND2RQE53AP5FTJPKCQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.2.25045/VSCodium-win32-arm64-1.97.2.25045.zip" type="application/zip" size="143300607"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2025-02-14" stability="stable" version="1.97.2.25045" id="sha1new=a18fac63b3e20576a32d1cff7c055f74319d0318">
+      <manifest-digest sha256new="X2353TOM7UBW2KPRG67IVIG6WZRFGRQ4JR6WEPV6G4XDP76H6S7A"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.2.25045/VSCodium-linux-x64-1.97.2.25045.tar.gz" type="application/x-compressed-tar" size="138066826"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2025-02-14" stability="stable" version="1.97.2.25045" id="sha1new=ee23dbca4d64bf328eb3285092be978781d9d6bf">
+      <manifest-digest sha256new="VIXYYPUTVLTXZCVXTKKGRNBAIJFW42REIROV7TP2NHF2BE6ZDSOA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.2.25045/VSCodium-linux-arm64-1.97.2.25045.tar.gz" type="application/x-compressed-tar" size="136052627"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2025-02-14" stability="stable" version="1.97.2.25045" id="sha1new=61d758b575510c1ec029229a024c8746d9178eb5">
+      <manifest-digest sha256new="2N4URGTL7T27XYHQGP6IEPDIVR3C6JP5FLM7PCIAT6ZDQESI5DTA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.2.25045/VSCodium-linux-armhf-1.97.2.25045.tar.gz" type="application/x-compressed-tar" size="124146372"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" main="bin/codium" released="2025-02-14" stability="stable" version="1.97.2.25045" id="sha1new=b36e930cae5cc0f5532c5214e5d820de036966a4">
+      <manifest-digest sha256new="SQGG2KRVUPOYKRMIFB377IRYRMASPJNCAMJMUMKPJZXUXJH3TOLA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.2.25045/VSCodium-linux-ppc64le-1.97.2.25045.tar.gz" type="application/x-compressed-tar" size="147437597"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-02-14" stability="stable" version="1.97.2.25045" id="sha1new=d78f98af3cb00669585c4f3eed1af001e74c9257">
+      <manifest-digest sha256new="GNWIJ2APFOVSWQMYV2NACXWWBGAV4YF2HYGZZSZVOERPZNEZQYJQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.2.25045/VSCodium-darwin-x64-1.97.2.25045.zip" type="application/zip" size="136248771"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-02-14" stability="stable" version="1.97.2.25045" id="sha1new=8b80fe9f070d0c334a971044c55dbed4d7ab7736">
+      <manifest-digest sha256new="XRZSFAVAPTRW47LFJNSMLANDIP5RVXEYQNQGXIAHIXQFO4RAUV6A"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.97.2.25045/VSCodium-darwin-arm64-1.97.2.25045.zip" type="application/zip" size="129901200"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2025-03-08" stability="stable" version="1.98.0.25067" id="sha1new=3708a84320d1bd3333e2e26f669414131c0fe5d6">
+      <manifest-digest sha256new="PNCZONHPSJLISK5AMRT74ZI6VVCQKEUZGSCOBLWLHIH27II2VMYQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.0.25067/VSCodium-win32-x64-1.98.0.25067.zip" type="application/zip" size="144057004"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2025-03-08" stability="stable" version="1.98.0.25067" id="sha1new=daf7259347256938b9db2191b2f0255bf57d97e6">
+      <manifest-digest sha256new="EMYCX7LFU4JSMVGMY63V7X5WNZGCZEK6HEM4W2PQPJ3OLJCU6SVQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.0.25067/VSCodium-win32-arm64-1.98.0.25067.zip" type="application/zip" size="148482202"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2025-03-08" stability="stable" version="1.98.0.25067" id="sha1new=a5ebb00316b0cd90a17b12eb709e227c064af475">
+      <manifest-digest sha256new="M3CARUBZ24OEEB26SPILFD3FSU424HYUHMZAFEKVEATWJWGS3S4Q"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.0.25067/VSCodium-linux-x64-1.98.0.25067.tar.gz" type="application/x-compressed-tar" size="135570754"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2025-03-08" stability="stable" version="1.98.0.25067" id="sha1new=cc8f6256b8dbd2ff59c5cd758d8e1ea33a376677">
+      <manifest-digest sha256new="UTAYEBQUFF7ABBMA7YK4JJUP6IF6ELYC3LSOUJW5VM2Y6JNVSGSQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.0.25067/VSCodium-linux-arm64-1.98.0.25067.tar.gz" type="application/x-compressed-tar" size="138327637"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2025-03-08" stability="stable" version="1.98.0.25067" id="sha1new=79edc02834e4a1fa8e9d1b53e186b832455b0f61">
+      <manifest-digest sha256new="YF2RK5VGBX2C64RCUDBYOGDZFHXA3GOSDP4SCOORLOOIRADRC5EQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.0.25067/VSCodium-linux-armhf-1.98.0.25067.tar.gz" type="application/x-compressed-tar" size="127957288"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" main="bin/codium" released="2025-03-08" stability="stable" version="1.98.0.25067" id="sha1new=fded9162414626c304f6a4a7a4feb9f13316fcc3">
+      <manifest-digest sha256new="OIGA6XMK5LMRON3AW2JEAA6R3ACPGIZEV2DMHYHFPMOF5EBZUW7A"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.0.25067/VSCodium-linux-ppc64le-1.98.0.25067.tar.gz" type="application/x-compressed-tar" size="148080081"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-03-08" stability="stable" version="1.98.0.25067" id="sha1new=b03df91b62b4cde763deb1d51d1c4213fb13f7e2">
+      <manifest-digest sha256new="IS5LZBDERNWCXALB67PXYDNUMZANJP4J5NSIBBPWUMRQLMTV7FIA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.0.25067/VSCodium-darwin-x64-1.98.0.25067.zip" type="application/zip" size="136583053"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-03-08" stability="stable" version="1.98.0.25067" id="sha1new=7fd92712c9b3a0d4fb20964c9fb16dde060a1bf2">
+      <manifest-digest sha256new="BJPIR7PI42T3VXFJJKUZHAHHQ5JBAK2GANJ6Y4KHBTQZWVX7XUTA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.0.25067/VSCodium-darwin-arm64-1.98.0.25067.zip" type="application/zip" size="129961147"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2025-03-11" stability="stable" version="1.98.1.25070" id="sha1new=1b70f1d4fdbd4978882e8d4827280620c66b987c">
+      <manifest-digest sha256new="JXRET5QQQE6TP7VUEKARZ7XZWVHPDK3EERRZFOCVE6XCKM5LQWRA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.1.25070/VSCodium-win32-x64-1.98.1.25070.zip" type="application/zip" size="144056532"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2025-03-11" stability="stable" version="1.98.1.25070" id="sha1new=995f7048824a11191d3d44f16be1668b4c13a248">
+      <manifest-digest sha256new="JTXFPRWIIOFEQQCLTKCCA7I3EYYFK2I3HL2HWBE7PFWRKWIBICBQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.1.25070/VSCodium-win32-arm64-1.98.1.25070.zip" type="application/zip" size="148481738"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2025-03-11" stability="stable" version="1.98.1.25070" id="sha1new=c457a44e727777d41e6fbdb3f7fccd4b72868752">
+      <manifest-digest sha256new="7UNY74I4I4ODVDAQLSLBZS5Y3UVNEUPZBJZLZ7UI6HZJXVYDJHOA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.1.25070/VSCodium-linux-x64-1.98.1.25070.tar.gz" type="application/x-compressed-tar" size="135569657"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2025-03-11" stability="stable" version="1.98.1.25070" id="sha1new=d1551db76dcb82efeecf1cf381c5c8301a32e9c2">
+      <manifest-digest sha256new="EBOLRIAYYPVKLHDUD3FYOKP3RVKI5UIG4CD3VKLK5DFUB7XILBIA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.1.25070/VSCodium-linux-arm64-1.98.1.25070.tar.gz" type="application/x-compressed-tar" size="138330336"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2025-03-11" stability="stable" version="1.98.1.25070" id="sha1new=db2a76f105e9f5f99e3e2a8dce47dfe38ed7a1e0">
+      <manifest-digest sha256new="2FMDFOXK37L75UCYQP62WFYRHM7GVCCU5YSZZKLBZFB34P4B643Q"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.1.25070/VSCodium-linux-armhf-1.98.1.25070.tar.gz" type="application/x-compressed-tar" size="127964734"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" main="bin/codium" released="2025-03-11" stability="stable" version="1.98.1.25070" id="sha1new=f36e870e2ff3a903448285ed67e462e7e8baabf6">
+      <manifest-digest sha256new="EUWS2OE5FAHAEPV6EFKRROKR6IMQRL4BXNHCZI5L6KRB32O2YMZQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.1.25070/VSCodium-linux-ppc64le-1.98.1.25070.tar.gz" type="application/x-compressed-tar" size="148078445"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-03-11" stability="stable" version="1.98.1.25070" id="sha1new=c8e862f0b564032a434d999bce26521fb5640e60">
+      <manifest-digest sha256new="YYZ6RDLEMEI46FRW7WIDV5FZUV24XOKI54IOTU6IHT7JVQUM3DLA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.1.25070/VSCodium-darwin-x64-1.98.1.25070.zip" type="application/zip" size="136582577"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-03-11" stability="stable" version="1.98.1.25070" id="sha1new=70211a9e818f14671e7378fd631a3446a39c3241">
+      <manifest-digest sha256new="7C3S4Q4O7F2HR4A4H3EDJTD3LUHLDHIGJ5AEYT7M4FI3RNCRA7UQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.1.25070/VSCodium-darwin-arm64-1.98.1.25070.zip" type="application/zip" size="129960685"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2025-03-13" stability="stable" version="1.98.2.25072" id="sha1new=642b7b894abd51a04461ab1c7a87eb4f528c5d22">
+      <manifest-digest sha256new="RXKZPHRHRGNDJBQOZORGJJ5NQ55UI2RNMM72VAJZDVOSPVOBL54Q"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.2.25072/VSCodium-win32-x64-1.98.2.25072.zip" type="application/zip" size="144056490"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2025-03-13" stability="stable" version="1.98.2.25072" id="sha1new=7e443a50efdd5c286896d9ce5275476ee590330a">
+      <manifest-digest sha256new="64FS4YPPAH4WWMRD4TNEGYEQAU3RNUWVV5757A5T62VYIIRD5PYQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.2.25072/VSCodium-win32-arm64-1.98.2.25072.zip" type="application/zip" size="148481591"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2025-03-13" stability="stable" version="1.98.2.25072" id="sha1new=a24779ea18ac6ae8f83d35e6937d20e1a2355d7f">
+      <manifest-digest sha256new="5K4W6D4AZPO4XOPDL7DEQMKSAGBPRNXSLEQWWCT5AZR6EDP7TY6Q"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.2.25072/VSCodium-linux-x64-1.98.2.25072.tar.gz" type="application/x-compressed-tar" size="135570258"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2025-03-13" stability="stable" version="1.98.2.25072" id="sha1new=67322c7f5314100a052416498bca89ec790925cc">
+      <manifest-digest sha256new="NFBJRBKXTV3SOSSMHP5BM3QZXZPG6CMTNBFADTXWVLGTOWUOEODA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.2.25072/VSCodium-linux-arm64-1.98.2.25072.tar.gz" type="application/x-compressed-tar" size="138323783"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2025-03-13" stability="stable" version="1.98.2.25072" id="sha1new=faa20540bd5c7c1695e126e063d12371add06798">
+      <manifest-digest sha256new="NXJPTS7DQDH4F4U64V6OTKTJPQTPWFJZMGQ7WL2Z22ADIDOMRWFQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.2.25072/VSCodium-linux-armhf-1.98.2.25072.tar.gz" type="application/x-compressed-tar" size="127956915"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" main="bin/codium" released="2025-03-13" stability="stable" version="1.98.2.25072" id="sha1new=c68ce0d7de089f061d7a2243604012a005d6820d">
+      <manifest-digest sha256new="DDOAHOWYCLRYE3K2Z3J2PMPQAXDHMXMLSAIE7ZNWL2PM5H7L3XIA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.2.25072/VSCodium-linux-ppc64le-1.98.2.25072.tar.gz" type="application/x-compressed-tar" size="148080602"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-03-13" stability="stable" version="1.98.2.25072" id="sha1new=e582a250077298e7cd21bc582c81994d4ee463bd">
+      <manifest-digest sha256new="STDSIHE4K65APUFSQUHXNS7HBJFS2TXS26BROP5QGLUBAA6QN5WQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.2.25072/VSCodium-darwin-x64-1.98.2.25072.zip" type="application/zip" size="136582419"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-03-13" stability="stable" version="1.98.2.25072" id="sha1new=7e77589b10e7a7f9dd9a7ff46a251cef34046fe8">
+      <manifest-digest sha256new="KN2PWCHR7374P7UUH3RISND47O6SPWATYY4HXZHITZEUBBAGF5IA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.2.25072/VSCodium-darwin-arm64-1.98.2.25072.zip" type="application/zip" size="129960554"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2025-03-18" stability="stable" version="1.98.2.25077" id="sha1new=b70df7726f2df16283e4e73cf770599b60dba7fa">
+      <manifest-digest sha256new="MUBDLTL7B46LISNRN6ITYWKSIOXE3GQEAJBETCSICSNCKCP2URJQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.2.25077/VSCodium-win32-x64-1.98.2.25077.zip" type="application/zip" size="144022359"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2025-03-18" stability="stable" version="1.98.2.25077" id="sha1new=ee331df2090781d57271636fb430fe2baa780df7">
+      <manifest-digest sha256new="4R2ZSH2EXVXTAIGQHF2BX75DMTCLMQ7YRF6KNSSSLJLB55V43XOQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.2.25077/VSCodium-win32-arm64-1.98.2.25077.zip" type="application/zip" size="148497140"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" main="bin/codium" released="2025-03-18" stability="stable" version="1.98.2.25077" id="sha1new=97ba3f74921b31ee39addfe8e20d88ec7166cb71">
+      <manifest-digest sha256new="CPRJN6ZIW62KKMFOG2IZU5UVPLLUHUVOVHLGNWO7NIRNUSPKVXTA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.2.25077/VSCodium-linux-ppc64le-1.98.2.25077.tar.gz" type="application/x-compressed-tar" size="148084395"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-03-18" stability="stable" version="1.98.2.25077" id="sha1new=0bd8a704ec72588b1efb452e6cda04a2dab31242">
+      <manifest-digest sha256new="IF3W5QTYUAJKPLDOWAWRI326C4LJCUIIQOD64OVLGTSQCQD4GUTA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.2.25077/VSCodium-darwin-x64-1.98.2.25077.zip" type="application/zip" size="136511215"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-03-18" stability="stable" version="1.98.2.25077" id="sha1new=8be319fe679781c334d31a9ce0950c9c04d04614">
+      <manifest-digest sha256new="67PIQ4AZSE4ZZ24HH6ID55R57B27BGXPOHLCU5XO2R3OMVUYAOKQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.2.25077/VSCodium-darwin-arm64-1.98.2.25077.zip" type="application/zip" size="129738397"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2025-03-19" stability="stable" version="1.98.2.25078" id="sha1new=458386d33ddfc6599f024d594f2cf6b2682dfbe1">
+      <manifest-digest sha256new="XP6SIASNP73WTFAT5U5RS2KUQH54I3VVCXTW5VDO4BCWE2MJHZJA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.2.25078/VSCodium-win32-x64-1.98.2.25078.zip" type="application/zip" size="144028372"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2025-03-19" stability="stable" version="1.98.2.25078" id="sha1new=c44d2b3ea3866a60ff3392bd6dd728135959d39b">
+      <manifest-digest sha256new="WNMJA5LGCAR4PNP4FWNBMXDUYQ5LBFA7AHL7XO2XKN6MY7GZW5PA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.2.25078/VSCodium-win32-arm64-1.98.2.25078.zip" type="application/zip" size="148503174"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2025-03-19" stability="stable" version="1.98.2.25078" id="sha1new=da41c39a564226fdccbcb02c6911c94e8a7671de">
+      <manifest-digest sha256new="2K7SNGNRE36JOLCL3F4PIDBLRVECSCPVCD5LOWXAUNX66OTFWNKQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.2.25078/VSCodium-linux-x64-1.98.2.25078.tar.gz" type="application/x-compressed-tar" size="135620710"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2025-03-19" stability="stable" version="1.98.2.25078" id="sha1new=dbde5dfba04aeb27bf9c0e2aa2cce7ea880eff1d">
+      <manifest-digest sha256new="M2OKFN5IPXR4M4O36KYNTO7KZ4AQDJK4XQDUI5LZCMC2QTOWGGGQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.2.25078/VSCodium-linux-arm64-1.98.2.25078.tar.gz" type="application/x-compressed-tar" size="138362973"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2025-03-19" stability="stable" version="1.98.2.25078" id="sha1new=217a0f95761743b0b544c7713fbb072773ed205c">
+      <manifest-digest sha256new="BRN563RXFW3C2HIX6YSEIEJUQQQ4W3RKEGTVDFS5523KR24CQBRA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.2.25078/VSCodium-linux-armhf-1.98.2.25078.tar.gz" type="application/x-compressed-tar" size="127992833"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" main="bin/codium" released="2025-03-19" stability="stable" version="1.98.2.25078" id="sha1new=931d13de6fafb94fe174b76705fdf5d0044e0ec5">
+      <manifest-digest sha256new="4U4ETX5YX6HDQLUN2GQYOAOB6MBR3EZFNXBGFVJ2EVBHSZGOHLEA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.2.25078/VSCodium-linux-ppc64le-1.98.2.25078.tar.gz" type="application/x-compressed-tar" size="148083329"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-03-19" stability="stable" version="1.98.2.25078" id="sha1new=f13d4e544e7b0f7ed01a55fcf164e8b1144a429d">
+      <manifest-digest sha256new="2DDUHIQCRD32AM5BHGNKP22JDFE6WALRMEEZVBGIVRJUDUKTXQ5A"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.2.25078/VSCodium-darwin-x64-1.98.2.25078.zip" type="application/zip" size="136516710"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-03-19" stability="stable" version="1.98.2.25078" id="sha1new=18eb22ade90ec96dcdebf089bfdaea39f2ddbb42">
+      <manifest-digest sha256new="GD3W2OHUD2XKD7QQQGWRMCYIMDSQFWEZV7H4CJJHIESG3LFBMBSQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.98.2.25078/VSCodium-darwin-arm64-1.98.2.25078.zip" type="application/zip" size="129748534"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2025-04-09" stability="stable" version="1.99.12392" id="sha1new=b66253d8a09934e3197395e43b3671b6ea46a755">
+      <manifest-digest sha256new="PQATQK245ML2ECPMSJYGBMDWSBSCLIZHRO4UIHSSWWKKSGTZIFKQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.12392/VSCodium-win32-x64-1.99.12392.zip" type="application/zip" size="151137250"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2025-04-09" stability="stable" version="1.99.12392" id="sha1new=83c3020f0b6d900dd554f9984580fa0b84507993">
+      <manifest-digest sha256new="BN6XEO6PZN4JJOFO4YN2WICWM7SYVXZ6N75K5AG2GPRZKPOHVDKQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.12392/VSCodium-win32-arm64-1.99.12392.zip" type="application/zip" size="154707892"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2025-04-09" stability="stable" version="1.99.12392" id="sha1new=c4d1fdd8f8098b8c8a37ebf07fe3857be0cb66e8">
+      <manifest-digest sha256new="EAVMJ74D6B6D2ZJYE2RS7ZCWHUYWDXQ5E6E2762LWQOJDMNAWSYA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.12392/VSCodium-linux-x64-1.99.12392.tar.gz" type="application/x-compressed-tar" size="144114153"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2025-04-09" stability="stable" version="1.99.12392" id="sha1new=885fb0bd89fd3c8a782c93993e215f81df869707">
+      <manifest-digest sha256new="TBWX4AVAEIFK4QHEP56A7AZA7ZMELLESUWHU2FPQOO5JH3K5QPWA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.12392/VSCodium-linux-arm64-1.99.12392.tar.gz" type="application/x-compressed-tar" size="146250957"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2025-04-09" stability="stable" version="1.99.12392" id="sha1new=3616c700fe01a763e59d293c269e76c4d979616e">
+      <manifest-digest sha256new="V3S6K5IUPMHTTS7QRYYL356SLWDXIX4522VDKHO63KL47GQRCNRQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.12392/VSCodium-linux-armhf-1.99.12392.tar.gz" type="application/x-compressed-tar" size="135827933"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" main="bin/codium" released="2025-04-09" stability="stable" version="1.99.12392" id="sha1new=2348ebbd4e91dee2ef219523f7b184833db06f27">
+      <manifest-digest sha256new="DLPT5DTXY7GODAEQ4QNRNN3MIXFA543YCHDPOIW5AG4WLMKLGVJA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.12392/VSCodium-linux-ppc64le-1.99.12392.tar.gz" type="application/x-compressed-tar" size="148075971"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-04-09" stability="stable" version="1.99.12392" id="sha1new=4f49c6892db2d1387f7c1551f9119e4f47720b56">
+      <manifest-digest sha256new="DJJ256XDPN3R3U53MBBQKEGHCVBLIJTSKAFYIGCKRAWJRTLAUYRA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.12392/VSCodium-darwin-x64-1.99.12392.zip" type="application/zip" size="142957151"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-04-09" stability="stable" version="1.99.12392" id="sha1new=0aa2de59d405697f23af60967a0a93f7d9d1ee00">
+      <manifest-digest sha256new="JP5ANOGK6GALJ2FXEGMG7F7PAWZD4SQ2BEJ5N72ZGUX2B4YYZALQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.12392/VSCodium-darwin-arm64-1.99.12392.zip" type="application/zip" size="135537280"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2025-04-10" stability="stable" version="1.99.22418" id="sha1new=0170b012976db1168b39380e900741519c9d79ab">
+      <manifest-digest sha256new="PWBX73HY7S3MX4236PWHGERJAEIZT2NUPZBUDOPUZOYMNYOWXJ3A"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.22418/VSCodium-win32-x64-1.99.22418.zip" type="application/zip" size="151139076"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2025-04-10" stability="stable" version="1.99.22418" id="sha1new=cdf4dd32183d6b406a5f4aac534d36c99c5be6be">
+      <manifest-digest sha256new="BFIBM4TW6API7XMXKRYW7UAASXWUQTVKG5FD2QHMRML6ENFCO4LA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.22418/VSCodium-win32-arm64-1.99.22418.zip" type="application/zip" size="154709696"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2025-04-10" stability="stable" version="1.99.22418" id="sha1new=8e6c31e881acd2f95d3cbce581345b0de1b99343">
+      <manifest-digest sha256new="667F2ITCEFNLLK6CFESFFWRIAEITHPQKSZRANSDYVUYMXTCSRJ7Q"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.22418/VSCodium-linux-x64-1.99.22418.tar.gz" type="application/x-compressed-tar" size="144115123"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2025-04-10" stability="stable" version="1.99.22418" id="sha1new=c1eec2a091fe0ee235c1b9c6fbd8c038f08f57b3">
+      <manifest-digest sha256new="TNSVBMG4FJQ3CGL6Y7K75M2UXAWVJ6BTN7UNZYDBYH5JGPXZXJ5Q"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.22418/VSCodium-linux-arm64-1.99.22418.tar.gz" type="application/x-compressed-tar" size="146251024"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2025-04-10" stability="stable" version="1.99.22418" id="sha1new=bf8be7694f21332adb935141a1dfbe2f586f650b">
+      <manifest-digest sha256new="6XV2VTF7XTDQ6IAU7ZIHURJFKV6TYR7BDH5ALVSZVR3V3XBWUDWQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.22418/VSCodium-linux-armhf-1.99.22418.tar.gz" type="application/x-compressed-tar" size="135836951"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" main="bin/codium" released="2025-04-10" stability="stable" version="1.99.22418" id="sha1new=f322b3c610610b559a981d798bf9faf56fba3353">
+      <manifest-digest sha256new="VPAETISWDFQTUYPRI6SIJVX4HSU5DT47HWF4TZUKOCRB57BSX3XA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.22418/VSCodium-linux-ppc64le-1.99.22418.tar.gz" type="application/x-compressed-tar" size="148072234"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-04-10" stability="stable" version="1.99.22418" id="sha1new=dae7f5dc28f9ba9e7a458b6c4bd87e44955d03f5">
+      <manifest-digest sha256new="QVNCGVGCKSVLDOIFZJ7CRSSCOX5GV5MCFIGGG2QSEFB4ASTQG6NQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.22418/VSCodium-darwin-x64-1.99.22418.zip" type="application/zip" size="142958185"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-04-10" stability="stable" version="1.99.22418" id="sha1new=3d73978febc06260152bc1701fb2677515650b6e">
+      <manifest-digest sha256new="IDTENBNPV3RGVQFFSVSNF3OMOPWMVKWCV24BQEB6WCXX3F5PB6TQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.22418/VSCodium-darwin-arm64-1.99.22418.zip" type="application/zip" size="135538339"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2025-04-04" stability="stable" version="1.99.02277" id="sha1new=7dbc730cf83ae0dc7513129c5dbd7364b86075f4">
+      <manifest-digest sha256new="LTPCDRJ57U2FDQTD4RARKLI3CTRVWIP5WQGPEDZBY5R3ONXMM6RQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02277/VSCodium-win32-x64-1.99.02277.zip" type="application/zip" size="144039845"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2025-04-04" stability="stable" version="1.99.02277" id="sha1new=8868703852afffaf5a97e62efdd40fab1ef385e8">
+      <manifest-digest sha256new="2Y46SAZPFOHO5XXXRYEUELZHVTUCZYA4M2KMPQ4ZHDVOF7TS33ZQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02277/VSCodium-win32-arm64-1.99.02277.zip" type="application/zip" size="148518228"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2025-04-04" stability="stable" version="1.99.02277" id="sha1new=99109d8ac5155d0787acd60256a5c7614e0dc106">
+      <manifest-digest sha256new="WELGJBBEE4TV6PDR2ERLBUDGOBPHCWUCRWIS6ZBR7ZR3WN6ILKXA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02277/VSCodium-linux-x64-1.99.02277.tar.gz" type="application/x-compressed-tar" size="135622459"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2025-04-04" stability="stable" version="1.99.02277" id="sha1new=f1f8a7ea82fafb0c61d7fddb531e48e1ae8d8bd7">
+      <manifest-digest sha256new="EIYBVEHRNZTT7XSTPWH2WRADLNGN6E22GXVV6CZ3PXRUQKIV5J4A"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02277/VSCodium-linux-arm64-1.99.02277.tar.gz" type="application/x-compressed-tar" size="138217322"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2025-04-04" stability="stable" version="1.99.02277" id="sha1new=e3471675f1a22d5622be9cc76295585ed62494dc">
+      <manifest-digest sha256new="VYL5773ASFCAUSJ4CFEZRORYLO4IY3EJSEJAVOHMKYLTUG4HYY2A"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02277/VSCodium-linux-armhf-1.99.02277.tar.gz" type="application/x-compressed-tar" size="127941806"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" main="bin/codium" released="2025-04-04" stability="stable" version="1.99.02277" id="sha1new=d3cf3173b023a721463d47eae199e6e2a608c6c7">
+      <manifest-digest sha256new="CYKOGCJLF6ATO3GWPOCGFVBRER24JGPMAS6YG7IW6KN2BOJMWIQQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02277/VSCodium-linux-ppc64le-1.99.02277.tar.gz" type="application/x-compressed-tar" size="148072292"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-04-04" stability="stable" version="1.99.02277" id="sha1new=3a8b6ae1f272b072948d52efd5507d1631e8fa49">
+      <manifest-digest sha256new="JMHRTOTH2U6AUNBZ6YLMRXZRKFG62K72CTZVYW5UWONPJ2WI5IGA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02277/VSCodium-darwin-x64-1.99.02277.zip" type="application/zip" size="136544706"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-04-04" stability="stable" version="1.99.02277" id="sha1new=ca513fd14949664db9e94a969a777c47ef367b3d">
+      <manifest-digest sha256new="WPZJFIYFLG3UG5TPU6ILWSDDZAML3PU5UIHFJ3ZFD4TXB47GZTAQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02277/VSCodium-darwin-arm64-1.99.02277.zip" type="application/zip" size="129768300"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2025-04-05" stability="stable" version="1.99.02283" id="sha1new=ab6d0ca3758d51c1e1c085ee9712d3d239154c40">
+      <manifest-digest sha256new="T4SEV4VJETBQONN3DYW6U3TG2NOWC37QKI5GBZYLLNEWTGRBAWNA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02283/VSCodium-win32-x64-1.99.02283.zip" type="application/zip" size="144039957"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2025-04-05" stability="stable" version="1.99.02283" id="sha1new=97a9eb3d3eeca42f8ab335e0602ca6d254be5f8a">
+      <manifest-digest sha256new="34RHN6DBWOKSSTTJADAXACCHJU53U3C7W5GQBJ2SXRCF5YSHY2DA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02283/VSCodium-win32-arm64-1.99.02283.zip" type="application/zip" size="148518352"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2025-04-05" stability="stable" version="1.99.02283" id="sha1new=196f4b458782ac90330cacc04e3fbc0f266471f3">
+      <manifest-digest sha256new="3QHM4VDWMMWUGQ3UDYM4WJ3RBPTJ63Y3XHBGJBJH26L2XEDXQ2ZQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02283/VSCodium-linux-x64-1.99.02283.tar.gz" type="application/x-compressed-tar" size="135625215"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2025-04-05" stability="stable" version="1.99.02283" id="sha1new=eb3aa2791836f6e4a1e5f51c5a327bc9bb079aa0">
+      <manifest-digest sha256new="JWOGTWLUGDGVFP6H23EG3BT7NMCJJYXGED5NGGTNVH7P43SENLTA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02283/VSCodium-linux-arm64-1.99.02283.tar.gz" type="application/x-compressed-tar" size="138217492"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2025-04-05" stability="stable" version="1.99.02283" id="sha1new=da7f4ac7e98e015b53ffdd068612671ff1aa83a4">
+      <manifest-digest sha256new="KJ3SIBDXDUGWU65ZF6ZSHZXPHNFUGGXW676Q55BQIIKJKRMU7QWA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02283/VSCodium-linux-armhf-1.99.02283.tar.gz" type="application/x-compressed-tar" size="127937573"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" main="bin/codium" released="2025-04-05" stability="stable" version="1.99.02283" id="sha1new=a22dd31b5d8dfa157e17989c3e25df937e1bebb6">
+      <manifest-digest sha256new="NUTISHCBIHDGRAIUC2VL4EXI3M6XS4TR4HLN6ZPCKHSF7H2WFTEA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02283/VSCodium-linux-ppc64le-1.99.02283.tar.gz" type="application/x-compressed-tar" size="148076119"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-04-05" stability="stable" version="1.99.02283" id="sha1new=b36e1ca3f1dbfadb287d7b34014813006534cc62">
+      <manifest-digest sha256new="YTT47EGMG4HEVQYFGQ6OT3TQXDEXB2U3HLJ3KDLKLXCKODMCHJ6A"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02283/VSCodium-darwin-x64-1.99.02283.zip" type="application/zip" size="136544815"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-04-05" stability="stable" version="1.99.02283" id="sha1new=b438499477c1bfff7de5038c28c152bd42efa2e4">
+      <manifest-digest sha256new="2AM2EZJZ2NMERPSUD55TW5PU7Z4TMD4RO423JA5JAN4IPEKNA4MA"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02283/VSCodium-darwin-arm64-1.99.02283.zip" type="application/zip" size="129768452"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="VSCodium.exe" released="2025-04-05" stability="stable" version="1.99.02289" id="sha1new=acd6a145f71dc366a8eecd8bde39bed56262ce13">
+      <manifest-digest sha256new="ZS6SJ2INM3JFUNT2H3R7YIP3T6BSIQ3MNIUUI2DHZOZNGCQGGCJQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02289/VSCodium-win32-x64-1.99.02289.zip" type="application/zip" size="144039797"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" main="VSCodium.exe" released="2025-04-05" stability="stable" version="1.99.02289" id="sha1new=96416bfec3d68dedfd4aef75e70b13d94ff52c20">
+      <manifest-digest sha256new="OBLRH2TIEUQD3LITNCOMQ7QXB36RZOS3GV57C5R5IHXGBHHMWWDQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02289/VSCodium-win32-arm64-1.99.02289.zip" type="application/zip" size="148518205"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" main="bin/codium" released="2025-04-05" stability="stable" version="1.99.02289" id="sha1new=46667eeff101931380a658cce89c4bcfc49d9451">
+      <manifest-digest sha256new="SWSWXPN3PLIIANNYP7KWNYK34O472QIPATF5W2Z7UHBDRZLWPLJQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02289/VSCodium-linux-x64-1.99.02289.tar.gz" type="application/x-compressed-tar" size="135627619"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="bin/codium" released="2025-04-05" stability="stable" version="1.99.02289" id="sha1new=41b04910a4a93aa8bf5899d8c7a10a67f21bece2">
+      <manifest-digest sha256new="VZTT2AUGROW7VHXR4KBBFHDPE5GDZBZLPB3IIEY2TZQFE3GVPJKQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02289/VSCodium-linux-arm64-1.99.02289.tar.gz" type="application/x-compressed-tar" size="138216085"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" main="bin/codium" released="2025-04-05" stability="stable" version="1.99.02289" id="sha1new=a13bf0b523c899a389533bf7e46d3140e72da5c5">
+      <manifest-digest sha256new="WMQMHMT3DVBIODQ32R3C6Y5IDFQCGSCMIYPWVH3Z7E7WDVGZFVZQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02289/VSCodium-linux-armhf-1.99.02289.tar.gz" type="application/x-compressed-tar" size="127945686"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" main="bin/codium" released="2025-04-05" stability="stable" version="1.99.02289" id="sha1new=f03dbc95619a2b65e63d82f35e883a4ac0c52e14">
+      <manifest-digest sha256new="3RROZFQG5356PQTR4CKM7XGJVVTQ25W3L27HWHXKOBLVJSCISIMQ"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02289/VSCodium-linux-ppc64le-1.99.02289.tar.gz" type="application/x-compressed-tar" size="148072874"/>
+    </implementation>
+    <implementation arch="MacOSX-x86_64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-04-05" stability="stable" version="1.99.02289" id="sha1new=1afc9abbf15a0b0dacb176daa08637929daafe20">
+      <manifest-digest sha256new="KSYZQF7XU6R5JNN4H4LU5GWAVD5IBEPQMOJ3SBL4C67EYZ5RMQ6Q"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02289/VSCodium-darwin-x64-1.99.02289.zip" type="application/zip" size="136544689"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" main="VSCodium.app/Contents/MacOS/Electron" released="2025-04-05" stability="stable" version="1.99.02289" id="sha1new=9ae76c3f2a69cfaf5a9d90fdba9fc2bdc1cfc087">
+      <manifest-digest sha256new="IGZNV27WGP7JE34DLG5ZFOZH7QP7SMOI5P3EULSUNEOKTYM6RU6Q"/>
+      <archive href="https://github.com/VSCodium/vscodium/releases/download/1.99.02289/VSCodium-darwin-arm64-1.99.02289.zip" type="application/zip" size="129768280"/>
+    </implementation>
+  </group>
+</interface>

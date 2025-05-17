@@ -5,7 +5,7 @@ from datetime import datetime
 downloads = request.urlopen(request.Request('https://www.mupdf.com/releases')).read().decode('utf-8')
 matches = re.findall(r'>mupdf-([0-9\.]+)-windows.zip<', downloads)
 
-release_history = request.urlopen(request.Request('https://www.mupdf.com/releases/history.html')).read().decode('utf-8')
+release_history = request.urlopen(request.Request('https://www.mupdf.com/releases/history')).read().decode('utf-8')
 today = datetime.today().date().isoformat()
 
 releases = []

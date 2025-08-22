@@ -5,4 +5,4 @@ import github
 releases = [{
     'version': release['tag_name'],
     'released': release['published_at'][0:10]
-} for release in github.releases('VSCodium/vscodium')]
+} for release in github.releases('VSCodium/vscodium') if any(asset["name"].startswith('VSCodium-win32-arm64') for asset in release["assets"])]

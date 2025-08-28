@@ -5,6 +5,8 @@ import github
 excluded_versions = ['v1.36.0', 'v1.55.1']
 
 releases = [{
-    'version': release['tag_name'].strip('v'),
+    'original-version': release['tag_name'].strip('v'),
+    'version': release['tag_name'].strip('v').replace('beta.', 'pre'),
+    'stability': 'testing' if release['prerelease'] else 'stable',
     'released': release['published_at'][0:10]
 } for release in github.releases('googleapis/api-linter') if not release['tag_name'] in excluded_versions]

@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/java/openjdk-22.xml">
-  <name>OpenJDK 22.x</name>
-  <summary>OpenJDK Development Kit 22.x</summary>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/java/openjdk-25.xml">
+  <name>OpenJDK 25.x</name>
+  <summary>OpenJDK Development Kit 25.x</summary>
   <description>OpenJDK is a development environment for building applications, applets, and components using the Java programming language.</description>
-  <homepage>http://jdk.java.net/22/</homepage>
+  <homepage>http://jdk.java.net/25/</homepage>
   <category>Development</category>
 
   <feed-for interface="https://apps.0install.net/java/jdk.xml"/>
@@ -37,16 +37,21 @@
     <command name="jstat" path="bin/jstat"/>
     <command name="jstatd" path="bin/jstatd"/>
     <command name="serialver" path="bin/serialver"/>
+    <command name="jnativescan" path="bin/jnativescan"/>
     <command name="jpackage" path="bin/jpackage"/>
     <command name="jwebserver" path="bin/jwebserver"/>
 
-    <implementation arch="Linux-x86_64" version="22.0.1" released="2024-05-18" stability="stable" id="sha256new_JFZNISTHE6D2VOYWESBGDX23MY5ZPCD6JYTX4V2NZ6Z6PG66A7MA">
-      <manifest-digest sha256new="JFZNISTHE6D2VOYWESBGDX23MY5ZPCD6JYTX4V2NZ6Z6PG66A7MA"/>
-      <archive href="https://download.oracle.com/java/GA/jdk22.0.1/c7ec1332f7bb44aeba2eb341ae18aca4/8/GPL/openjdk-22.0.1_linux-x64_bin.tar.gz" size="202217886" type="application/x-compressed-tar" extract="jdk-22.0.1"/>
+    <implementation arch="Linux-x86_64" version="25" released="2025-09-18" stability="stable" id="sha256new_K7XIDCVUR7GQHQIVRLL6TNXUQL2XJHZD7TRPWRUOJSHTHJJIK36Q">
+      <manifest-digest sha256new="K7XIDCVUR7GQHQIVRLL6TNXUQL2XJHZD7TRPWRUOJSHTHJJIK36Q"/>
+      <archive href="https://download.oracle.com/java/GA/jdk25/bd75d5f9689641da8e1daabeccb5528b/36/GPL/openjdk-25_linux-x64_bin.tar.gz" size="222449406" type="application/x-compressed-tar" extract="jdk-25"/>
     </implementation>
-    <implementation arch="Linux-x86_64" version="22.0.2" released="2024-07-17" stability="stable" id="sha256new_BUBSERGRNID7JUFHMLAT27H7CUI2MEYJBPT3CVHQIH5LSWGQKG2A">
-      <manifest-digest sha256new="BUBSERGRNID7JUFHMLAT27H7CUI2MEYJBPT3CVHQIH5LSWGQKG2A"/>
-      <archive href="https://download.oracle.com/java/GA/jdk22.0.2/c9ecb94cd31b495da20a27d4581645e8/9/GPL/openjdk-22.0.2_linux-x64_bin.tar.gz" size="201996264" type="application/x-compressed-tar" extract="jdk-22.0.2"/>
+    <implementation arch="Linux-aarch64" version="25" released="2025-09-18" stability="stable" id="sha256new_WX7ANDTG6MP6UDDAJ3U7VER4S6YGPSBTJZJ6ZJGPD4W4WAIBMUQQ">
+      <manifest-digest sha256new="WX7ANDTG6MP6UDDAJ3U7VER4S6YGPSBTJZJ6ZJGPD4W4WAIBMUQQ"/>
+      <archive href="https://download.oracle.com/java/GA/jdk25/bd75d5f9689641da8e1daabeccb5528b/36/GPL/openjdk-25_linux-aarch64_bin.tar.gz" size="220157297" type="application/x-compressed-tar" extract="jdk-25"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="25" released="2025-09-18" stability="stable" id="sha256new_UNDI6GH3QUPLKTMOO5PVLPBKCWFCNFQGUSGHHJH7GBMNHN7QBL6A">
+      <manifest-digest sha256new="UNDI6GH3QUPLKTMOO5PVLPBKCWFCNFQGUSGHHJH7GBMNHN7QBL6A"/>
+      <archive href="https://download.oracle.com/java/GA/jdk25/bd75d5f9689641da8e1daabeccb5528b/36/GPL/openjdk-25_macos-x64_bin.tar.gz" size="217677049" type="application/x-compressed-tar" extract="jdk-25.jdk"/>
     </implementation>
   </group>
 
@@ -85,25 +90,22 @@
     <command name="jabswitch" path="bin/jabswitch.exe"/>
     <command name="jaccessinspector" path="bin/jaccessinspector.exe"/>
     <command name="jaccesswalker" path="bin/jaccesswalker.exe"/>
+    <command name="jnativescan" path="bin/jnativescan.exe"/>
     <command name="jpackage" path="bin/jpackage.exe"/>
     <command name="jwebserver" path="bin/jwebserver.exe"/>
 
-    <implementation arch="Linux-x86_64" version="22.0.1" released="2024-05-18" stability="stable" id="sha256new_AZEPTBOTVTS2KGYAAQQV6VWWIJ57GROBFKPPV7ZHJ3BBOCIC5UHQ">
-      <manifest-digest sha256new="AZEPTBOTVTS2KGYAAQQV6VWWIJ57GROBFKPPV7ZHJ3BBOCIC5UHQ"/>
-      <archive href="https://download.oracle.com/java/GA/jdk22.0.1/c7ec1332f7bb44aeba2eb341ae18aca4/8/GPL/openjdk-22.0.1_windows-x64_bin.zip" size="200536892" type="application/zip" extract="jdk-22.0.1"/>
-    </implementation>
-    <implementation arch="Linux-x86_64" version="22.0.2" released="2024-07-17" stability="stable" id="sha256new_EL5JNDUKHYMCK3N577OUSJWMMMOIJFPRDRFHAO533FDPAGHVYCPQ">
-      <manifest-digest sha256new="EL5JNDUKHYMCK3N577OUSJWMMMOIJFPRDRFHAO533FDPAGHVYCPQ"/>
-      <archive href="https://download.oracle.com/java/GA/jdk22.0.2/c9ecb94cd31b495da20a27d4581645e8/9/GPL/openjdk-22.0.2_windows-x64_bin.zip" size="200567419" type="application/zip" extract="jdk-22.0.2"/>
+    <implementation arch="Linux-x86_64" version="25" released="2025-09-18" stability="stable" id="sha256new_5XLCVB4HYYYPLSKSOP5IUTNCBSJCZEDMUIO7OO7D55KS3FAX2U2A">
+      <manifest-digest sha256new="5XLCVB4HYYYPLSKSOP5IUTNCBSJCZEDMUIO7OO7D55KS3FAX2U2A"/>
+      <archive href="https://download.oracle.com/java/GA/jdk25/bd75d5f9689641da8e1daabeccb5528b/36/GPL/openjdk-25_windows-x64_bin.zip" size="221611465" type="application/zip" extract="jdk-25"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmjMQ7YACgkQWao5J8JOTh78UQgAqCRI
-BfoQ6pTi5mhop6Nhw+WUW95aOoviRfE/AE+8hWt/lqYe0xdTDJU8SgWHWO3BRKgsXvcGPI+SrJIb
-SJvV4m8icoXDiepUZd39zeDYdK5mysNjlYmz83PeKm37jsMKsQ2bsqNpyu9SR9YAAaDVRMgDQ4/1
-kJNZwsGcWV559BfKYDcvyN99Y8a76Px11FnJTtKIBqqTLTTxQJLEjt6bbPDmii4gyj2YBDFGzGPS
-0hauw0zK8FPqI/cnwHTF/QYp0CKqEN+S2O9lBhpqDsPvCMvdfgE1YSGPdXG7PnSaB5vGUqnCF/dg
-9Hfq0bUMPsfcYO7rKXIxeISjth7iqXgzvA==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmjMQ7YACgkQWao5J8JOTh6YUggAp9jN
+4G52R094aGitUSF6mcVbXXT1Vm9JKqEUjMLH5/IMSpMH8AtBc9qarLxrX0XegpmLvCCVlCseH6z9
+K7xFlbos9QhxWiBEitIMGy2wLTElA3FtwUnDboM55/zbzio6Rmb2sp97nmhycPSFT+l01QjpuI9q
+uuFLZckzQO8xpaSxMmJEUg2x5lelkiBVZHBZEFymBudEBPH+W6IDh3/TaB0ezyhoBvo2LkUQBA5u
+mi9A/gj4ETePO+RtMnSdECYGGTwY2LLTK5keZup7jrMjlWDb80e1FwmvEXMwJjWKmfZcqbg3jeVl
+DgNX/OUGH+SVPmCp5wi8cHILxBWaqqkofQ==
 
 -->

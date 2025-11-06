@@ -9,4 +9,4 @@ def convert(release):
     stability = 'testing' if release['prerelease'] else 'stable'
     return {'version': version, 'original-version': original_version, 'stability': stability, 'released': released}
 
-releases = [convert(release) for release in github.releases('audacity/audacity') if release['assets']]
+releases = [convert(release) for release in github.releases('audacity/audacity') if release['assets'] and not release['prerelease']]

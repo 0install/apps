@@ -22,15 +22,19 @@
       <environment insert="pageant.exe" mode="replace" name="GITEXT_PAGEANT"/>
     </requires>
 
-    <group arch="Windows-x86_64">
-      <requires interface="https://apps.0install.net/dotnet/windowsdesktop-runtime.xml" version="8.0.8..!9.0"/>
+    <group>
+      <requires interface="https://apps.0install.net/dotnet/windowsdesktop-runtime.xml" version="9.0..!10.0"/>
       <command name="run" path="GitExtensions.exe"/>
       <command name="gitex" path="GitExtensions.exe"/>
 
-      <implementation version="{version}" released="{released}" stability="{stability}">
+      <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="{stability}">
         <manifest-digest/>
-        <archive extract="SourceDir/GitExtensions" href="{download-url}" type="application/x-msi"/>
+        <archive extract="SourceDir/GitExtensions" href="{download-url-x64}" type="application/x-msi"/>
       </implementation>
+      <!--<implementation arch="Windows-aarch64" version="{version}" released="{released}" stability="{stability}">
+        <manifest-digest/>
+        <archive extract="SourceDir/GitExtensions" href="{download-url-arm64}" type="application/x-msi"/>
+      </implementation>-->
     </group>
   </group>
 </interface>

@@ -1,6 +1,15 @@
 from urllib import request
+import xml.etree.ElementTree as ET
 import re
+from datetime import datetime
 
-data = request.urlopen('https://sourceforge.net/projects/doxygen/files/').read().decode('utf-8')
-matches = re.findall(r'rel-([0-9\.]+)</span></a>\n\s*</th>\n\s*<td headers="files_date_h" class="opt"><abbr title="(....-..-..)', data)
-releases = [{'version': match[0], 'released': match[1]} for match in matches]
+data = request.urlopen('https://sourceforge.net/projects/doxygen/rss').read()
+
+releases = []
+for item in ET.fromstring(data).find('channel').findall('item'):
+    match = re.search(r'rel-([0-9\.]+)\/', item.find('title').text)
+    if match:
+        releases.append({
+            'version': match.group(1),
+            'released': datetime.strptime(item.find('pubDate').text, "%a, %d %b %Y %H:%M:%S UT").strftime("%Y-%m-%d")
+        })

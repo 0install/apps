@@ -371,7 +371,8 @@
       <archive extract="0install-2.3.8" href="https://downloads.sourceforge.net/project/zero-install/0install/2.3.8/0install-2.3.8.tar.bz2" size="454069"/>
     </implementation>
   </group>
-  <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0launch"><!-- Only treat GnuPG as hard requirement on Linux and Windows for now -->
+  <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0launch">
+    <!-- Only treat GnuPG as hard requirement on Linux and Windows for now -->
     <requires interface="https://apps.0install.net/utils/gnupg.xml" os="Linux"/>
     <requires interface="https://apps.0install.net/utils/gnupg.xml" os="Windows"/>
     <requires interface="https://apps.0install.net/utils/gnupg.xml" importance="recommended">
@@ -427,40 +428,18 @@
       <manifest-digest sha256new="DYQEHCTDQ2DL2HEH734VWR3MOVCLNRTGAVBU27VGQYUSUU7ZPTIA"/>
       <archive extract="0install-2.3.16" href="https://github.com/0install/0install/releases/download/v2.3.16/0install-2.3.16.tar.bz2" size="407884"/>
     </implementation>
-  </group>
-  <group main="0launch">
-    <requires interface="https://apps.0install.net/utils/gnupg.xml">
-      <executable-in-var name="ZEROINSTALL_GPG"/>
-    </requires>
-    <requires interface="https://apps.0install.net/python/python.xml" version="3.4.."/>
-    <requires interface="https://apps.0install.net/python/python.xml" os="Windows" version="3.4..!3.8"/>
-    <requires interface="https://apps.0install.net/python/pywin32.xml" os="Windows"/>
-    <requires interface="http://0install.net/2012/interfaces/0install-runenv-cli.xml" os="Windows" version="2.0.2..">
-      <environment insert="runenv.cli.template" mode="replace" name="ZEROINSTALL_CLI_TEMPLATE"/>
-    </requires>
-    <command name="run" path="0launch">
-      <runner interface="https://apps.0install.net/python/python.xml"/>
-    </command>
-    <command name="0install" path="0install">
-      <runner interface="https://apps.0install.net/python/python.xml"/>
-    </command>
-    <command name="test" path="tests/testall.py">
-      <runner interface="https://apps.0install.net/python/python.xml">
-        <arg>-tt</arg>
-      </runner>
-    </command>
-    <implementation version="2.3.17" released="2025-12-13" id="sha1new=e582d03bfd645694cc651017d3a194f4cc66b9c5" license="OSI Approved :: GNU Lesser General Public License (LGPL)">
+    <implementation id="sha1new=e582d03bfd645694cc651017d3a194f4cc66b9c5" released="2025-12-13" stability="stable" version="2.3.17">
       <manifest-digest sha256new="5M46VVSRL7KM2T453LIMCZEQZJNY5R6VHPRQJMV6XOGV4OGCI6FQ"/>
       <archive href="https://github.com/0install/0install/releases/download/v2.3.17/0install-python-2.3.17.tar.bz2" size="470549"/>
     </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmk9qPQACgkQWao5J8JOTh7+sgf/f+fj
-HtUgO+9RuRsrqWPwD6I4LmRkI0N4QRCpZGg71rhfSHIv8X3IaWNwks8hyTuhIg5BmM2dEkMhklcY
-O8RTwOxMSJRbfEK3UqX/KC13IUm3rDn5YWLGAowguK1L82Au8ithhotoQ8HgY8SK7C7fhah5//8h
-5rKndu2y/Ww+bXhQ/ZlrwTA/aR21ycKe+0BRrZATTokjORIGoadyzRzG6H4aZz5kyKNSBlJyEANF
-zLJEdm9N7C+pPlAsqcMfYSCfYGyXfXgRNBvlrwauoydgOX2I8ZwLq9ugJJuvyf+2A4Um0qzqNNuZ
-tR07rEqllhbDI57xZgnKjsnOUbGtMiBLgA==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmk9qboACgkQWao5J8JOTh7ucwf8Dkka
+Ui4IXrxsEOP0ih8wy10eHuHACwfXbDydnWt//B0HGBhMrY6rM9bl7H+93Q06RaB2Rblj/CDj6emg
+6R2x5BBYWlSt0C3/O7uddO0Oh5WLrtzYMZfk6zVxLcecNBWWnm8II+SQuoo/Lw5WsLKBylvruqnf
+BIzgClwQv/N4wDvwjF8NJsK71NbyS/0389APrdfobgh5NfSGWkV3MrtK3o8reFe0ohdaxkbUqHdY
+2ly8eDFnLBncG5Ui+36YaeG+Wxegotick52i8p7cqlDrTvaLqM4PHbPfhhUHfstj9Idy67fQqTt5
+Mg337Fncj65iaRsmK3UWLPcyE+rNxnI4jQ==
 
 -->

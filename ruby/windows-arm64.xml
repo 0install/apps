@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/ruby/windows-arm64.xml">
+  <name>Ruby for Windows - ARM64 builds</name>
+  <summary>dynamic, open source programming language</summary>
+  <description>A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.</description>
+  <homepage>http://www.ruby-lang.org/</homepage>
+  <needs-terminal/>
+
+  <icon href="https://apps.0install.net/ruby/ruby.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://apps.0install.net/ruby/ruby.png" type="image/png"/>
+
+  <feed-for interface="https://apps.0install.net/ruby/ruby.xml"/>
+
+  <group license="Ruby License" arch="Windows-aarch64">
+    <environment insert="bin" mode="replace" name="RUBY_BIN"/>
+    <command name="run" path="bin/ruby.exe"/>
+    <command name="run-gui" path="bin/rubyw.exe"/>
+    <command name="irb" path="bin/ruby.exe">
+      <arg>$RUBY_BIN/irb</arg>
+    </command>
+    <command name="erb" path="bin/ruby.exe">
+      <arg>$RUBY_BIN/erb</arg>
+    </command>
+    <command name="gem" path="bin/ruby.exe">
+      <arg>$RUBY_BIN/gem</arg>
+    </command>
+    <command name="rake" path="bin/ruby.exe">
+      <arg>$RUBY_BIN/rake</arg>
+    </command>
+    <command name="rdoc" path="bin/ruby.exe">
+      <arg>$RUBY_BIN/rdoc</arg>
+    </command>
+    <command name="ri" path="bin/ruby.exe">
+      <arg>$RUBY_BIN/ri</arg>
+    </command>
+
+    <implementation version="4.0.0-1" released="2025-12-27" stability="stable" id="sha256new_L22FUZCJUPOOJ37BAOHX3TGCFC5EVEJH3KR65XPS5Z2P2UVREHHA">
+      <manifest-digest sha256new="L22FUZCJUPOOJ37BAOHX3TGCFC5EVEJH3KR65XPS5Z2P2UVREHHA"/>
+      <archive href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-4.0.0-1/rubyinstaller-4.0.0-1-arm.7z" size="17234775" type="application/x-7z-compressed" extract="rubyinstaller-4.0.0-1-arm"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmls1kUACgkQWao5J8JOTh6cgQgAjKaP
+MJ0TvAf159O9cuXYdUkCaw68dKBR2gzDv5g9QY3O1ONyIFzF90xLqXl4sjaElSr9paZDhHO8oZ3m
+eqBTWGxU4xtzw+EDmBnQjiTCwuTrj0z61CYL16FHMWtWt83SwXyb0q22IvgbC+13GvNpla6z5m/v
+EP5DhiBVNVuZ1FOWCc60No2jCta9Thn31dX9Dt6k6tvGEVxlduaTYB5qP/ax8X04p4S/Wc6h+iVo
+S0/xrdtq9CkBSraIiHhEbWj0MLQ6Gr6/Ma0DrNHa5nhmKxz4Iib28dfuUIxKTaKAA31vtWpbNnQ0
+Dn2+vH6B8DsMLFoO1pIjV5GxncBDzNCxLw==
+
+-->

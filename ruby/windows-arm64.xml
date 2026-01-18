@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
-  <name>Ruby</name>
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/ruby/windows-arm64.xml">
+  <name>Ruby for Windows - ARM64 builds</name>
   <summary>dynamic, open source programming language</summary>
   <description>A dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.</description>
   <homepage>http://www.ruby-lang.org/</homepage>
@@ -11,7 +11,7 @@
 
   <feed-for interface="https://apps.0install.net/ruby/ruby.xml"/>
 
-  <group license="Ruby License">
+  <group license="Ruby License" arch="Windows-aarch64">
     <environment insert="bin" mode="replace" name="RUBY_BIN"/>
     <command name="run" path="bin/ruby.exe"/>
     <command name="run-gui" path="bin/rubyw.exe"/>
@@ -34,9 +34,9 @@
       <arg>$RUBY_BIN/ri</arg>
     </command>
 
-    <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
-      <manifest-digest/>
-      <archive extract="rubyinstaller-{version}-x64" href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-{version}/rubyinstaller-{version}-x64.7z" type="application/x-7z-compressed"/>
+    <implementation version="4.0.0-1" released="2025-12-27" stability="stable" id="sha256new_L22FUZCJUPOOJ37BAOHX3TGCFC5EVEJH3KR65XPS5Z2P2UVREHHA">
+      <manifest-digest sha256new="L22FUZCJUPOOJ37BAOHX3TGCFC5EVEJH3KR65XPS5Z2P2UVREHHA"/>
+      <archive href="https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-4.0.0-1/rubyinstaller-4.0.0-1-arm.7z" size="17234775" type="application/x-7z-compressed" extract="rubyinstaller-4.0.0-1-arm"/>
     </implementation>
   </group>
 </interface>

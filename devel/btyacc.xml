@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/devel/btyacc.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>BtYacc</name>
+  <summary xml:lang="en">BtYacc: an LALR(1) parser generator</summary>
+  <description xml:lang="en">BtYacc is a hacked version of the original Berkeley &quot;byacc&quot;. The main change to byacc is the addition of backtracking code, allowing you to try both alternatives in case of shift-reduce or reduce-reduce conflicts. As long as no backtracking takes place, speed is comparable to bison. 
+Additional features: 
+•enhanced support for storing of text position information for tokens 
+•closes the potential *yacc/bison memory leak during error recovery 
+•preprocessor directives like %ifdef, %include 
+•C++ friendly
+</description>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/devel/btyacc.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps/master/devel/btyacc.png" type="image/png"/>
+  <category>Development</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/btyacc.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=5c2926826791bc1a05a4583a67049f2759de973f" license="Public Domain" released="2003-10-30" version="3.0">
+    <command name="run" path="bin/btyacc.exe"/>
+    <manifest-digest sha256new="GUDP5LITERFZ3TOEQN3SXLLDX27WGN5S2HP64E2G4XJ3SEZSQJGQ"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/btyacc/3.0/btyacc-3.0-bin.zip" size="86765" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="dev-util/btyacc"/>
+  <package-implementation package="btyacc"/>
+  <entry-point binary-name="btyacc" command="run">
+    <needs-terminal/>
+  </entry-point>
+</interface>

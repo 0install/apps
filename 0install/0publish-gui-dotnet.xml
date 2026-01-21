@@ -260,4 +260,14 @@ these feeds.</description>
       <archive href="0publish-gui-dotnet-2.27.5.tar.zst" size="4766721" type="application/x-zstd-compressed-tar"/>
     </implementation>
   </group>
+
+  <group>
+    <requires interface="https://apps.0install.net/utils/gnupg.xml">
+      <environment name="PATH" insert="."/>
+    </requires>
+    <command name="run" path="0publish-gui.exe">
+      <runner interface="https://apps.0install.net/dotnet/clr.xml" version="4.8.." command="run-gui"/>
+    </command>
+
+  </group>
 </interface>

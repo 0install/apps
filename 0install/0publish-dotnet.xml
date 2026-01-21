@@ -41,4 +41,14 @@
       <archive href="0publish-dotnet-0.1.5.tar.zst" size="4628983" type="application/x-zstd-compressed-tar"/>
     </implementation>
   </group>
+
+  <group license="LGPL v3 (GNU Lesser General Public License)">
+    <requires interface="https://apps.0install.net/utils/gnupg.xml">
+      <environment insert="." name="PATH"/>
+    </requires>
+    <command name="run" path="0publish.exe">
+      <runner command="run" interface="https://apps.0install.net/dotnet/clr.xml" version="4.8.."/>
+    </command>
+
+  </group>
 </interface>

@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/lib/tre.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Tre</name>
+  <summary xml:lang="en">Tre: Posix compliant regular expression library </summary>
+  <description xml:lang="en">Tre is an attempt to create a lightweight, robust, and efficient fully Posix compliant regexp matching library. Tre is a lightweight, robust, efficient, portable, and Posix compliant regexp matching library. Key features include the agrep command line tool for approximate regexp matching in the style of grep, an approximate matching library API, portability, wide character and multibyte character support, binary pattern and data support, complete thread safety, consistently efficient matching, low memory consumption and small footprint, and strict standards conformance</description>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/lib/tre.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://raw.githubusercontent.com/0install/apps.0install.net/master/lib/tre.png" type="image/png"/>
+  <category>Development</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/tre.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-i486" id="sha1new=8bb77f2b611f00a78ab8025583a6a489e58167d4" license="LGPL (GNU Lesser General Public License)" released="2008-12-20" version="0.7.5-3">
+    <requires interface="https://apps.0install.net/lib/libiconv.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/devel/gettext.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/agrep.exe"/>
+    <manifest-digest sha256new="73AJHH264DLRQZJ5H547SNSKF7K7RR72KGFCGQKQIA5S6Y2AAIFA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/tre/0.7.5/tre-0.7.5-bin.zip" size="143185" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/tre-0.7.5-bin.zip?raw=true" size="143185" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="dev-libs/tre"/>
+  <package-implementation package="tre"/>
+  <entry-point binary-name="agrep" command="run">
+    <needs-terminal/>
+    <name xml:lang="en">Agrep</name>
+    <summary xml:lang="en">Agrep: print lines approximately matching a pattern</summary>
+    <description xml:lang="en">Searches for approximate matches of PATTERN in each FILE
+       or  standard  input.    Example:  `agrep   -2   optimize
+       foo.txt'  outputs all lines in file `foo.txt' that match
+       &quot;optimize&quot; within two errors.  E.g. lines which  contain
+       &quot;optimise&quot;, &quot;optmise&quot;, and &quot;opitmize&quot; all match.</description>
+  </entry-point>
+</interface>

@@ -261,13 +261,23 @@ these feeds.</description>
       <archive href="https://github.com/0install/0publish-gui-dotnet/releases/download/2.27.5/0publish-gui-dotnet-2.27.5.tar.zst" size="4766721" type="application/x-zstd-compressed-tar"/>
     </implementation>
   </group>
+
+  <group>
+    <requires interface="https://apps.0install.net/utils/gnupg.xml">
+      <environment name="PATH" insert="."/>
+    </requires>
+    <command name="run" path="0publish-gui.exe">
+      <runner interface="https://apps.0install.net/dotnet/clr.xml" version="4.8.." command="run-gui"/>
+    </command>
+
+  </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmiTKrAACgkQWao5J8JOTh4vCgf/d70e
-ZFWAiNrJFwOubCrWAs6pqzICVZADKkE1YXqu4EooFjIf4mBDTTlrwHcGEwTYtIgyWGla7FVC63/w
-gy3C18IRWU/jMkxDgecnVPj1DmYhMu14F/FbxXv7zNlkhoHbXHkgrzuxXQW1NTehhOP866hDZHEW
-7YQmqZbaaVc7WUBS7r0/NP3O20prixZoDzmjBiPEsphDKYA0+ZFmccBB5SDdKfHwXBKLAlgKpz0L
-fBQGpcNdcI0xigkRfcopCKGZS/d8YmqKlTIGWD7eBVw4bddY/h2ROU876v32Vto+90nZ9knnmedw
-eLFyxy9fLsDYBy4z9NG5/P8eJVFp10SMpQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAml0xH0ACgkQWao5J8JOTh5xHgf+ORy+
+OrT2G+1cxRFYAA4bvCIxDZEgdVdmE2aylAczD6vxChxEma2LpdxjcotBG6wTQkl/jJo8fVLpw6DP
+C30jXbcccQTQlwGpsLo0C6oQ+AFUzk6ivRKDB/Yvm3h1OO+kWVJulwWUassTcceaoHjLkqofxf7A
+5aTQGykzaTg18Ntp1FUvTTOKCE99XbqI7k+vPIFpfSLZSutukg/X3yZ/TcSGVYt+6RFb5pAPvjy/
+VrEvU6VYjbFe6U5EQa8pFgGT6dcs919tSUR9obAstr5XyB1qG3hBZ/ZLULGvZ04QwvJDDeqvGc/Y
+t7IRrUrS343lLS+fh0DT5SGNbASsoZLgvw==
 
 -->

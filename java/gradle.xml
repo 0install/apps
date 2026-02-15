@@ -488,12 +488,6 @@
         <manifest-digest sha1new="ad6fe525c68eef7b90137257aa4834b5151774b2" sha256="558be5d4ba11d8dc53470bf02272f55030e87f7c0d76a4b014ee1c51cd9a4a30" sha256new="KWF6LVF2CHMNYU2HBPYCE4XVKAYOQ734BV3KJMAU5YOFDTM2JIYA"/>
         <archive extract="gradle-2.14.1" href="https://services.gradle.org/distributions/gradle-2.14.1-bin.zip" size="45038784" type="application/zip"/>
       </implementation>
-    </group>
-
-    <group>
-      <requires interface="https://apps.0install.net/java/jdk.xml" version="7..">
-        <environment insert="" mode="replace" name="JAVA_HOME"/>
-      </requires>
       <implementation id="sha1new=d3c694a7227761d9cfd077cec31f876ec7dad375" released="2016-06-08" stability="developer" version="3.0-pre-1">
         <manifest-digest sha1new="d3c694a7227761d9cfd077cec31f876ec7dad375" sha256="4b1986236f08380acb35c380e0e6fd2bdcca8c3b66fece30b7403620fb1bb539" sha256new="JMMYMI3PBA4AVSZVYOAOBZX5FPOMVDB3M37M4MFXIA3CB6Y3WU4Q"/>
         <archive extract="gradle-3.0-milestone-1" href="https://services.gradle.org/distributions/gradle-3.0-milestone-1-bin.zip" size="63139051" type="application/zip"/>
@@ -1704,6 +1698,14 @@
         <manifest-digest sha256new="P2BI5XVGNMPZ2SGCAHWYQOLG4ZAKL5KVNZDTBNWGYG7IE544Z4AA"/>
         <archive href="https://services.gradle.org/distributions/gradle-7.6.4-bin.zip" size="122701480" type="application/zip" extract="gradle-7.6.4"/>
       </implementation>
+      <implementation version="7.6.5" released="2025-06-04" stability="stable" id="sha256new_OK723XD5GC5GZTX2RDUK362GW7TUWGDGFOIIATGMR532AAIALJ2A">
+        <manifest-digest sha256new="OK723XD5GC5GZTX2RDUK362GW7TUWGDGFOIIATGMR532AAIALJ2A"/>
+        <archive href="https://services.gradle.org/distributions/gradle-7.6.5-bin.zip" size="128439992" type="application/zip" extract="gradle-7.6.5"/>
+      </implementation>
+      <implementation version="7.6.6" released="2025-07-04" stability="stable" id="sha256new_KNI5HNNZDOLDRR7QSTCQZQWLWLTKVDDIT4XI6J7JSMBHTX7ZK4CQ">
+        <manifest-digest sha256new="KNI5HNNZDOLDRR7QSTCQZQWLWLTKVDDIT4XI6J7JSMBHTX7ZK4CQ"/>
+        <archive href="https://services.gradle.org/distributions/gradle-7.6.6-bin.zip" size="128439774" type="application/zip" extract="gradle-7.6.6"/>
+      </implementation>
       <implementation version="8.7-rc-1" released="2024-02-22" stability="testing" id="sha256new_PWCDXNYSMRA2F2XIAD73GX5ABOJQFKGSLN2ZBQ4EA7KWV5IY6P5A">
         <manifest-digest sha256new="PWCDXNYSMRA2F2XIAD73GX5ABOJQFKGSLN2ZBQ4EA7KWV5IY6P5A"/>
         <archive href="https://services.gradle.org/distributions/gradle-8.7-rc-1-bin.zip" size="134184865" type="application/zip" extract="gradle-8.7-rc-1"/>
@@ -1724,6 +1726,12 @@
         <manifest-digest sha256new="XD4LMXO6OP4SWLZ2FOKDY75TGGMCF4IO6DBXLWBN3R3VKY5PGPLA"/>
         <archive href="https://services.gradle.org/distributions/gradle-8.7-bin.zip" size="134184980" type="application/zip" extract="gradle-8.7"/>
       </implementation>
+    </group>
+
+    <group>
+      <requires interface="https://apps.0install.net/java/jdk.xml" version="8..!23">
+        <environment insert="" mode="replace" name="JAVA_HOME"/>
+      </requires>
       <implementation version="8.8-rc-1" released="2024-04-26" stability="testing" id="sha256new_RWBOS7AQPRUVFJ2CIUPOXRK3ZQX62WE4UO6WZXIFASC7QCEPOK7A">
         <manifest-digest sha256new="RWBOS7AQPRUVFJ2CIUPOXRK3ZQX62WE4UO6WZXIFASC7QCEPOK7A"/>
         <archive href="https://services.gradle.org/distributions/gradle-8.8-rc-1-bin.zip" size="138010862" type="application/zip" extract="gradle-8.8-rc-1"/>
@@ -1872,21 +1880,9 @@
         <manifest-digest sha256new="M43QHUKQH3NSWDPFOGODGMUU3PURMBPG7RPIMOEPIUON25V4BB3Q"/>
         <archive href="https://services.gradle.org/distributions/gradle-8.14-rc-1-bin.zip" size="137393754" type="application/zip" extract="gradle-8.14-rc-1"/>
       </implementation>
-      <implementation version="9.0-pre-1" released="2025-04-10" stability="developer" id="sha256new_WVBB5GNHK73XIWHT5VEVOXISSJJGFPSC3RKLXEVYJ7U5X53NKIVQ">
-        <manifest-digest sha256new="WVBB5GNHK73XIWHT5VEVOXISSJJGFPSC3RKLXEVYJ7U5X53NKIVQ"/>
-        <archive href="https://services.gradle.org/distributions/gradle-9.0-milestone-1-bin.zip" size="137444698" type="application/zip" extract="gradle-9.0-milestone-1"/>
-      </implementation>
-      <implementation version="9.0-pre-2" released="2025-04-14" stability="developer" id="sha256new_S4FENYKI7TJNNEZ3WZXDSHOJH6DL3NKWNLMM3BH4RKWIJ5HBH6BA">
-        <manifest-digest sha256new="S4FENYKI7TJNNEZ3WZXDSHOJH6DL3NKWNLMM3BH4RKWIJ5HBH6BA"/>
-        <archive href="https://services.gradle.org/distributions/gradle-9.0-milestone-2-bin.zip" size="134241053" type="application/zip" extract="gradle-9.0-milestone-2"/>
-      </implementation>
       <implementation version="8.14-rc-2" released="2025-04-17" stability="testing" id="sha256new_3WPIGMSQDVYSHIFEEPBDF7ZZ4T33RYK4IE236LIOSMSYUPWV5LXQ">
         <manifest-digest sha256new="3WPIGMSQDVYSHIFEEPBDF7ZZ4T33RYK4IE236LIOSMSYUPWV5LXQ"/>
         <archive href="https://services.gradle.org/distributions/gradle-8.14-rc-2-bin.zip" size="137394198" type="application/zip" extract="gradle-8.14-rc-2"/>
-      </implementation>
-      <implementation version="9.0-pre-3" released="2025-04-22" stability="developer" id="sha256new_ZXRWWERVSIESW6WLDH67KZHA6KG7WF5BO6FH26HZGR2ULNZQYDDA">
-        <manifest-digest sha256new="ZXRWWERVSIESW6WLDH67KZHA6KG7WF5BO6FH26HZGR2ULNZQYDDA"/>
-        <archive href="https://services.gradle.org/distributions/gradle-9.0-milestone-3-bin.zip" size="134219252" type="application/zip" extract="gradle-9.0-milestone-3"/>
       </implementation>
       <implementation version="8.14-rc-3" released="2025-04-23" stability="testing" id="sha256new_3SYMXC2RBTEWZSWJXYDDQ3I4Y3HGYRR2W7M2VVROBP5YD7SCQLFQ">
         <manifest-digest sha256new="3SYMXC2RBTEWZSWJXYDDQ3I4Y3HGYRR2W7M2VVROBP5YD7SCQLFQ"/>
@@ -1895,6 +1891,40 @@
       <implementation version="8.14" released="2025-04-25" stability="stable" id="sha256new_QJHASQLEXG4X3VBNQO3K3IJHJTNFKDTU4BASW5F4KNBJ42BHRNHA">
         <manifest-digest sha256new="QJHASQLEXG4X3VBNQO3K3IJHJTNFKDTU4BASW5F4KNBJ42BHRNHA"/>
         <archive href="https://services.gradle.org/distributions/gradle-8.14-bin.zip" size="137391539" type="application/zip" extract="gradle-8.14"/>
+      </implementation>
+      <implementation version="8.14.1" released="2025-05-22" stability="stable" id="sha256new_AIE3TJZL6LYUVJ4QH7X4H2BXZCGTWT53YZZYRSCCIQMRKFVBZOEQ">
+        <manifest-digest sha256new="AIE3TJZL6LYUVJ4QH7X4H2BXZCGTWT53YZZYRSCCIQMRKFVBZOEQ"/>
+        <archive href="https://services.gradle.org/distributions/gradle-8.14.1-bin.zip" size="137394055" type="application/zip" extract="gradle-8.14.1"/>
+      </implementation>
+      <implementation version="8.14.2" released="2025-06-05" stability="stable" id="sha256new_63XZMVNK336HLMCYVZUGIBEGLHTC3DXC2KTUX6POZEHBILFKN7SQ">
+        <manifest-digest sha256new="63XZMVNK336HLMCYVZUGIBEGLHTC3DXC2KTUX6POZEHBILFKN7SQ"/>
+        <archive href="https://services.gradle.org/distributions/gradle-8.14.2-bin.zip" size="137394077" type="application/zip" extract="gradle-8.14.2"/>
+      </implementation>
+      <implementation version="8.14.3" released="2025-07-04" stability="stable" id="sha256new_P3B3MADUKI4TOCPLCSCJRVYUFMFIQBMJELZG4FCUGJRGB5NCXS5A">
+        <manifest-digest sha256new="P3B3MADUKI4TOCPLCSCJRVYUFMFIQBMJELZG4FCUGJRGB5NCXS5A"/>
+        <archive href="https://services.gradle.org/distributions/gradle-8.14.3-bin.zip" size="137393837" type="application/zip" extract="gradle-8.14.3"/>
+      </implementation>
+      <implementation version="8.14.4" released="2026-01-23" stability="stable" id="sha256new_VCJXV5AIYRTJKDDBUAG4NVNG26KSK7RNV7XCBHE7K7RW2GDR443Q">
+        <manifest-digest sha256new="VCJXV5AIYRTJKDDBUAG4NVNG26KSK7RNV7XCBHE7K7RW2GDR443Q"/>
+        <archive href="https://services.gradle.org/distributions/gradle-8.14.4-bin.zip" size="137388246" type="application/zip" extract="gradle-8.14.4"/>
+      </implementation>
+    </group>
+
+    <group>
+      <requires interface="https://apps.0install.net/java/jdk.xml" version="17..!23">
+        <environment insert="" mode="replace" name="JAVA_HOME"/>
+      </requires>
+      <implementation version="9.0-pre-1" released="2025-04-10" stability="developer" id="sha256new_WVBB5GNHK73XIWHT5VEVOXISSJJGFPSC3RKLXEVYJ7U5X53NKIVQ">
+        <manifest-digest sha256new="WVBB5GNHK73XIWHT5VEVOXISSJJGFPSC3RKLXEVYJ7U5X53NKIVQ"/>
+        <archive href="https://services.gradle.org/distributions/gradle-9.0-milestone-1-bin.zip" size="137444698" type="application/zip" extract="gradle-9.0-milestone-1"/>
+      </implementation>
+      <implementation version="9.0-pre-2" released="2025-04-14" stability="developer" id="sha256new_S4FENYKI7TJNNEZ3WZXDSHOJH6DL3NKWNLMM3BH4RKWIJ5HBH6BA">
+        <manifest-digest sha256new="S4FENYKI7TJNNEZ3WZXDSHOJH6DL3NKWNLMM3BH4RKWIJ5HBH6BA"/>
+        <archive href="https://services.gradle.org/distributions/gradle-9.0-milestone-2-bin.zip" size="134241053" type="application/zip" extract="gradle-9.0-milestone-2"/>
+      </implementation>
+      <implementation version="9.0-pre-3" released="2025-04-22" stability="developer" id="sha256new_ZXRWWERVSIESW6WLDH67KZHA6KG7WF5BO6FH26HZGR2ULNZQYDDA">
+        <manifest-digest sha256new="ZXRWWERVSIESW6WLDH67KZHA6KG7WF5BO6FH26HZGR2ULNZQYDDA"/>
+        <archive href="https://services.gradle.org/distributions/gradle-9.0-milestone-3-bin.zip" size="134219252" type="application/zip" extract="gradle-9.0-milestone-3"/>
       </implementation>
       <implementation version="9.0-pre-4" released="2025-04-28" stability="developer" id="sha256new_MPFPUQZS5AQJEMSG5TRAB2OXO3HT543SIDQ2SB5S53TLDTNILYTA">
         <manifest-digest sha256new="MPFPUQZS5AQJEMSG5TRAB2OXO3HT543SIDQ2SB5S53TLDTNILYTA"/>
@@ -1916,33 +1946,13 @@
         <manifest-digest sha256new="CBOAZSMJJ7TFDI644YQ3CYWL6GNX4HMXDIRIPOWSOMGR6UIQKDLA"/>
         <archive href="https://services.gradle.org/distributions/gradle-9.0.0-milestone-8-bin.zip" size="131921469" type="application/zip" extract="gradle-9.0.0-milestone-8"/>
       </implementation>
-      <implementation version="8.14.1" released="2025-05-22" stability="stable" id="sha256new_AIE3TJZL6LYUVJ4QH7X4H2BXZCGTWT53YZZYRSCCIQMRKFVBZOEQ">
-        <manifest-digest sha256new="AIE3TJZL6LYUVJ4QH7X4H2BXZCGTWT53YZZYRSCCIQMRKFVBZOEQ"/>
-        <archive href="https://services.gradle.org/distributions/gradle-8.14.1-bin.zip" size="137394055" type="application/zip" extract="gradle-8.14.1"/>
-      </implementation>
       <implementation version="9.0.0-pre-9" released="2025-05-26" stability="developer" id="sha256new_XSJ5BZZGGKXY6RN3FG6JUDHBDFRKQLAJ6LSNY5LNJAPGBZJNV3CQ">
         <manifest-digest sha256new="XSJ5BZZGGKXY6RN3FG6JUDHBDFRKQLAJ6LSNY5LNJAPGBZJNV3CQ"/>
         <archive href="https://services.gradle.org/distributions/gradle-9.0.0-milestone-9-bin.zip" size="131676013" type="application/zip" extract="gradle-9.0.0-milestone-9"/>
       </implementation>
-      <implementation version="7.6.5" released="2025-06-04" stability="stable" id="sha256new_OK723XD5GC5GZTX2RDUK362GW7TUWGDGFOIIATGMR532AAIALJ2A">
-        <manifest-digest sha256new="OK723XD5GC5GZTX2RDUK362GW7TUWGDGFOIIATGMR532AAIALJ2A"/>
-        <archive href="https://services.gradle.org/distributions/gradle-7.6.5-bin.zip" size="128439992" type="application/zip" extract="gradle-7.6.5"/>
-      </implementation>
-      <implementation version="8.14.2" released="2025-06-05" stability="stable" id="sha256new_63XZMVNK336HLMCYVZUGIBEGLHTC3DXC2KTUX6POZEHBILFKN7SQ">
-        <manifest-digest sha256new="63XZMVNK336HLMCYVZUGIBEGLHTC3DXC2KTUX6POZEHBILFKN7SQ"/>
-        <archive href="https://services.gradle.org/distributions/gradle-8.14.2-bin.zip" size="137394077" type="application/zip" extract="gradle-8.14.2"/>
-      </implementation>
       <implementation version="9.0.0-rc-1" released="2025-06-18" stability="testing" id="sha256new_7HEEODCSLNLXXH7Q77XBWGBO2NUJ62DSGIFXKM37ESJBLYXCMWDA">
         <manifest-digest sha256new="7HEEODCSLNLXXH7Q77XBWGBO2NUJ62DSGIFXKM37ESJBLYXCMWDA"/>
         <archive href="https://services.gradle.org/distributions/gradle-9.0.0-rc-1-bin.zip" size="136481037" type="application/zip" extract="gradle-9.0.0-rc-1"/>
-      </implementation>
-      <implementation version="7.6.6" released="2025-07-04" stability="stable" id="sha256new_KNI5HNNZDOLDRR7QSTCQZQWLWLTKVDDIT4XI6J7JSMBHTX7ZK4CQ">
-        <manifest-digest sha256new="KNI5HNNZDOLDRR7QSTCQZQWLWLTKVDDIT4XI6J7JSMBHTX7ZK4CQ"/>
-        <archive href="https://services.gradle.org/distributions/gradle-7.6.6-bin.zip" size="128439774" type="application/zip" extract="gradle-7.6.6"/>
-      </implementation>
-      <implementation version="8.14.3" released="2025-07-04" stability="stable" id="sha256new_P3B3MADUKI4TOCPLCSCJRVYUFMFIQBMJELZG4FCUGJRGB5NCXS5A">
-        <manifest-digest sha256new="P3B3MADUKI4TOCPLCSCJRVYUFMFIQBMJELZG4FCUGJRGB5NCXS5A"/>
-        <archive href="https://services.gradle.org/distributions/gradle-8.14.3-bin.zip" size="137393837" type="application/zip" extract="gradle-8.14.3"/>
       </implementation>
       <implementation version="9.0.0-pre-10" released="2025-07-08" stability="developer" id="sha256new_ATFRNT2RGOMXPOCMVRTM3DQUHXRSQUXJ4G76BP7WEB35BPXBTE6Q">
         <manifest-digest sha256new="ATFRNT2RGOMXPOCMVRTM3DQUHXRSQUXJ4G76BP7WEB35BPXBTE6Q"/>
@@ -2051,10 +2061,6 @@
       <implementation version="9.3.0" released="2026-01-16" stability="stable" id="sha256new_PYFYLNXLJXV33HNLTJFKSLLO7KIHNWPYSN5DUMQAHWHQIX3QWHJA">
         <manifest-digest sha256new="PYFYLNXLJXV33HNLTJFKSLLO7KIHNWPYSN5DUMQAHWHQIX3QWHJA"/>
         <archive href="https://services.gradle.org/distributions/gradle-9.3.0-bin.zip" size="137006348" type="application/zip" extract="gradle-9.3.0"/>
-      </implementation>
-      <implementation version="8.14.4" released="2026-01-23" stability="stable" id="sha256new_VCJXV5AIYRTJKDDBUAG4NVNG26KSK7RNV7XCBHE7K7RW2GDR443Q">
-        <manifest-digest sha256new="VCJXV5AIYRTJKDDBUAG4NVNG26KSK7RNV7XCBHE7K7RW2GDR443Q"/>
-        <archive href="https://services.gradle.org/distributions/gradle-8.14.4-bin.zip" size="137388246" type="application/zip" extract="gradle-8.14.4"/>
       </implementation>
       <implementation version="9.4.0-pre-5" released="2026-01-23" stability="developer" id="sha256new_2NDZVZE6UQPUI4FUVW7MLNYQFF4DJDXEIOA3VANLTOCMOIJZFZMA">
         <manifest-digest sha256new="2NDZVZE6UQPUI4FUVW7MLNYQFF4DJDXEIOA3VANLTOCMOIJZFZMA"/>

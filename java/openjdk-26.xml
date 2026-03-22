@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/java/openjdk-26.xml">
+  <name>OpenJDK 26.x</name>
+  <summary>OpenJDK Development Kit 26.x</summary>
+  <description>OpenJDK is a development environment for building applications, applets, and components using the Java programming language.</description>
+  <homepage>http://jdk.java.net/26/</homepage>
+  <category>Development</category>
+
+  <feed-for interface="https://apps.0install.net/java/jdk.xml"/>
+
+  <group license="GNU General Public License, version 2, with the Classpath Exception">
+    <command name="run" path="bin/javac"/>
+    <command name="java" path="bin/java"/>
+    <command name="javap" path="bin/javap"/>
+    <command name="jar" path="bin/jar"/>
+    <command name="jarsigner" path="bin/jarsigner"/>
+    <command name="javadoc" path="bin/javadoc"/>
+    <command name="keytool" path="bin/keytool"/>
+    <command name="rmiregistry" path="bin/rmiregistry"/>
+    <command name="jrunscript" path="bin/jrunscript"/>
+    <command name="jcmd" path="bin/jcmd"/>
+    <command name="jconsole" path="bin/jconsole"/>
+    <command name="jdb" path="bin/jdb"/>
+    <command name="jdeprscan" path="bin/jdeprscan"/>
+    <command name="jdeps" path="bin/jdeps"/>
+    <command name="jfr" path="bin/jfr"/>
+    <command name="jhsdb" path="bin/jhsdb"/>
+    <command name="jimage" path="bin/jimage"/>
+    <command name="jinfo" path="bin/jinfo"/>
+    <command name="jlink" path="bin/jlink"/>
+    <command name="jmap" path="bin/jmap"/>
+    <command name="jmod" path="bin/jmod"/>
+    <command name="jps" path="bin/jps"/>
+    <command name="jshell" path="bin/jshell"/>
+    <command name="jstack" path="bin/jstack"/>
+    <command name="jstat" path="bin/jstat"/>
+    <command name="jstatd" path="bin/jstatd"/>
+    <command name="serialver" path="bin/serialver"/>
+    <command name="jnativescan" path="bin/jnativescan"/>
+    <command name="jpackage" path="bin/jpackage"/>
+    <command name="jwebserver" path="bin/jwebserver"/>
+
+    <implementation arch="Linux-x86_64" version="26" released="2026-03-22" stability="stable" id="sha256new_JCCBF6KQZXWVPDXTN4XB222ET737ESNKJE23OCXLI54CUJMCBRVQ">
+      <manifest-digest sha256new="JCCBF6KQZXWVPDXTN4XB222ET737ESNKJE23OCXLI54CUJMCBRVQ"/>
+      <archive href="https://download.oracle.com/java/GA/jdk26/c3cc523845074aa0af4f5e1e1ed4151d/35/GPL/openjdk-26_linux-x64_bin.tar.gz" size="227365902" type="application/x-compressed-tar" extract="jdk-26"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="26" released="2026-03-22" stability="stable" id="sha256new_UF44TPDAOWOTJOW2YL4TDPMOMULJ7KQECIZYLUDLRWWJFEV5IETQ">
+      <manifest-digest sha256new="UF44TPDAOWOTJOW2YL4TDPMOMULJ7KQECIZYLUDLRWWJFEV5IETQ"/>
+      <archive href="https://download.oracle.com/java/GA/jdk26/c3cc523845074aa0af4f5e1e1ed4151d/35/GPL/openjdk-26_linux-aarch64_bin.tar.gz" size="225171304" type="application/x-compressed-tar" extract="jdk-26"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="26" released="2026-03-22" stability="stable" id="sha256new_KKS2SKAEXCHT54CVEBLBBGHDQ2OYWKMC2FZGBDLF64SB264FUJCA">
+      <manifest-digest sha256new="KKS2SKAEXCHT54CVEBLBBGHDQ2OYWKMC2FZGBDLF64SB264FUJCA"/>
+      <archive href="https://download.oracle.com/java/GA/jdk26/c3cc523845074aa0af4f5e1e1ed4151d/35/GPL/openjdk-26_macos-x64_bin.tar.gz" size="222562240" type="application/x-compressed-tar" extract="jdk-26.jdk"/>
+    </implementation>
+  </group>
+
+  <group arch="Windows-x86_64" license="GNU General Public License, version 2, with the Classpath Exception">
+    <command name="run" path="bin/javac.exe"/>
+    <command name="java" path="bin/java.exe"/>
+    <command name="java-gui" path="bin/javaw.exe"/>
+    <command name="javadoc" path="bin/javadoc.exe"/>
+    <command name="javap" path="bin/javap.exe"/>
+    <command name="jar" path="bin/jar.exe"/>
+    <command name="jarsigner" path="bin/jarsigner.exe"/>
+    <command name="keytool" path="bin/keytool.exe"/>
+    <command name="rmiregistry" path="bin/rmiregistry.exe"/>
+    <command name="jrunscript" path="bin/jrunscript.exe"/>
+    <command name="jcmd" path="bin/jcmd.exe"/>
+    <command name="jconsole" path="bin/jconsole.exe"/>
+    <command name="jdb" path="bin/jdb.exe"/>
+    <command name="jdeprscan" path="bin/jdeprscan.exe"/>
+    <command name="jdeps" path="bin/jdeps.exe"/>
+    <command name="jfr" path="bin/jfr.exe"/>
+    <command name="jhsdb" path="bin/jhsdb.exe"/>
+    <command name="jimage" path="bin/jimage.exe"/>
+    <command name="jinfo" path="bin/jinfo.exe"/>
+    <command name="jlink" path="bin/jlink.exe"/>
+    <command name="jmap" path="bin/jmap.exe"/>
+    <command name="jmod" path="bin/jmod.exe"/>
+    <command name="jps" path="bin/jps.exe"/>
+    <command name="jshell" path="bin/jshell.exe"/>
+    <command name="jstack" path="bin/jstack.exe"/>
+    <command name="jstat" path="bin/jstat.exe"/>
+    <command name="jstatd" path="bin/jstatd.exe"/>
+    <command name="serialver" path="bin/serialver.exe"/>
+    <command name="kinit" path="bin/kinit.exe"/>
+    <command name="klist" path="bin/klist.exe"/>
+    <command name="ktab" path="bin/ktab.exe"/>
+    <command name="jabswitch" path="bin/jabswitch.exe"/>
+    <command name="jaccessinspector" path="bin/jaccessinspector.exe"/>
+    <command name="jaccesswalker" path="bin/jaccesswalker.exe"/>
+    <command name="jnativescan" path="bin/jnativescan.exe"/>
+    <command name="jpackage" path="bin/jpackage.exe"/>
+    <command name="jwebserver" path="bin/jwebserver.exe"/>
+
+    <implementation version="26" released="2026-03-22" stability="stable" id="sha256new_ZS22CUHHBTRLDAX7IU2GHGH3C2OLWDUGBV4RT57V6A4VMHIVINQA">
+      <manifest-digest sha256new="ZS22CUHHBTRLDAX7IU2GHGH3C2OLWDUGBV4RT57V6A4VMHIVINQA"/>
+      <archive href="https://download.oracle.com/java/GA/jdk26/c3cc523845074aa0af4f5e1e1ed4151d/35/GPL/openjdk-26_windows-x64_bin.zip" size="226956568" type="application/zip" extract="jdk-26"/>
+    </implementation>
+  </group>
+</interface>

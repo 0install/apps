@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/cpuid.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>CpuId</name>
+  <summary xml:lang="en">CpuId: CPU identification utility</summary>
+  <description xml:lang="en">This is a fairly complete CPU identification utility that executes the CPUID instruction on x86-family CPUs and decodes the results into English descriptions. It has been tested on several Intel, AMD (including Athlon/Duron) and Cyrix CPUs. If the Pentium III serial number misfeature is present and enabled, this program will display it. </description>
+  <category>Utility</category>
+  <homepage>http://gnuwin32.sourceforge.net/packages/cpuid.htm</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=daf7ae25bf8f564e7612cf9fa56c989c9f0a9251" released="2005-07-10" version="3.3-1">
+    <command name="run" path="bin/cpuid.exe"/>
+    <manifest-digest sha256new="ENV7PTQBRFHU4O6SD42OZ4WAGTLMEKPY34JLRNFAK5JI32N7EEQA"/>
+    <archive href="https://sourceforge.net/projects/gnuwin32/files/cpuid/3.3-1/cpuid-3.3-1-bin.zip" size="10295" type="application/zip"/>
+    <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/cpuid-bin.zip?raw=true" size="10295" type="application/zip"/>
+  </implementation>
+  <package-implementation package="misc/cpuid" distributions="Ports" />
+  <package-implementation package="cpuid" />
+  <entry-point command="run" binary-name="cpuid" />
+</interface>
+

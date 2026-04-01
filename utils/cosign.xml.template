@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>cosign</name>
+  <summary>container signing tool for supply chain security</summary>
+  <description>cosign is a tool for signing and verifying container images and other OCI artifacts, part of the Sigstore project.</description>
+  <homepage>https://github.com/sigstore/cosign</homepage>
+  <category>Security</category>
+  <category>Utility</category>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/utils/cosign.xml"/>
+
+  <group license="Apache-2.0">
+    <implementation arch="Linux-x86_64" main="cosign" released="{released}" stability="{stability}" version="{version}">
+      <manifest-digest/>
+      <file dest="cosign" executable="true" href="https://github.com/sigstore/cosign/releases/download/v{version}/cosign-linux-amd64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" main="cosign" released="{released}" stability="{stability}" version="{version}">
+      <manifest-digest/>
+      <file dest="cosign" executable="true" href="https://github.com/sigstore/cosign/releases/download/v{version}/cosign-linux-arm64"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" main="cosign" released="{released}" stability="{stability}" version="{version}">
+      <manifest-digest/>
+      <file dest="cosign" executable="true" href="https://github.com/sigstore/cosign/releases/download/v{version}/cosign-darwin-amd64"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" main="cosign" released="{released}" stability="{stability}" version="{version}">
+      <manifest-digest/>
+      <file dest="cosign" executable="true" href="https://github.com/sigstore/cosign/releases/download/v{version}/cosign-darwin-arm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" main="cosign.exe" released="{released}" stability="{stability}" version="{version}">
+      <manifest-digest/>
+      <file dest="cosign.exe" href="https://github.com/sigstore/cosign/releases/download/v{version}/cosign-windows-amd64.exe"/>
+    </implementation>
+  </group>
+</interface>

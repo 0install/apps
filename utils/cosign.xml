@@ -1,0 +1,613 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/utils/cosign.xml">
+  <name>cosign</name>
+  <summary>container signing tool for supply chain security</summary>
+  <description>cosign is a tool for signing and verifying container images and other OCI artifacts, part of the Sigstore project.</description>
+  <homepage>https://github.com/sigstore/cosign</homepage>
+  <category>Security</category>
+  <category>Utility</category>
+  <needs-terminal/>
+
+  <group license="Apache-2.0">
+    <implementation arch="Linux-x86_64" version="1.13.2" released="2023-12-02" stability="stable" main="cosign" id="sha256new_R5LYWPNGOUUXCV3VNCGIOCWT2V6O7EFFHRJW6GGLEALJUQBZX6JQ">
+      <manifest-digest sha256new="R5LYWPNGOUUXCV3VNCGIOCWT2V6O7EFFHRJW6GGLEALJUQBZX6JQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v1.13.2/cosign-linux-amd64" size="90383339" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.13.2" released="2023-12-02" stability="stable" main="cosign" id="sha256new_STGUUXT3JUZ76OQ6S3T5X75LQDXPHS4TQWNQCW5YGRDSDGHSWX7Q">
+      <manifest-digest sha256new="STGUUXT3JUZ76OQ6S3T5X75LQDXPHS4TQWNQCW5YGRDSDGHSWX7Q"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v1.13.2/cosign-linux-arm64" size="87131252" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.13.2" released="2023-12-02" stability="stable" main="cosign" id="sha256new_6LMN2FLJH7YYPN4Y4B4ZZNONEZNHCEXJ2JC6NEJYGH37EDNGMACA">
+      <manifest-digest sha256new="6LMN2FLJH7YYPN4Y4B4ZZNONEZNHCEXJ2JC6NEJYGH37EDNGMACA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v1.13.2/cosign-darwin-amd64" size="93855120" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.13.2" released="2023-12-02" stability="stable" main="cosign" id="sha256new_DE4AMKKCVVSNWKE7FDUORVXVDCD3CALC4PIIAJWXI4IXWV32BFHA">
+      <manifest-digest sha256new="DE4AMKKCVVSNWKE7FDUORVXVDCD3CALC4PIIAJWXI4IXWV32BFHA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v1.13.2/cosign-darwin-arm64" size="90036306" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.13.2" released="2023-12-02" stability="stable" main="cosign.exe" id="sha256new_36AYZ2E7IK3RWJFKVRBXOCOISX4HFM5HOE7JY56ITYUKMHLWVZ7A">
+      <manifest-digest sha256new="36AYZ2E7IK3RWJFKVRBXOCOISX4HFM5HOE7JY56ITYUKMHLWVZ7A"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v1.13.2/cosign-windows-amd64.exe" size="152793515" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.13.6" released="2024-03-21" stability="stable" main="cosign" id="sha256new_2BIP7IVGYZFBFZ2NYDMQEFFPYK3AE563Y4GTOZV3WXJA3M2XPY5A">
+      <manifest-digest sha256new="2BIP7IVGYZFBFZ2NYDMQEFFPYK3AE563Y4GTOZV3WXJA3M2XPY5A"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v1.13.6/cosign-linux-amd64" size="93337901" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.13.6" released="2024-03-21" stability="stable" main="cosign" id="sha256new_N2NDA7YMXF5AWSGYXUBVD6T3B2IBUEDDHRGYMMINRF25NWOE5ANQ">
+      <manifest-digest sha256new="N2NDA7YMXF5AWSGYXUBVD6T3B2IBUEDDHRGYMMINRF25NWOE5ANQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v1.13.6/cosign-linux-arm64" size="90084416" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.13.6" released="2024-03-21" stability="stable" main="cosign" id="sha256new_NIWXU7M6LAW2CADDWEQQOX2YP6GVYLB2MTB7ZC3CF6S7IDJFT4GQ">
+      <manifest-digest sha256new="NIWXU7M6LAW2CADDWEQQOX2YP6GVYLB2MTB7ZC3CF6S7IDJFT4GQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v1.13.6/cosign-darwin-amd64" size="95972400" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.13.6" released="2024-03-21" stability="stable" main="cosign" id="sha256new_UBBNL5WBWJX5SWKEZJHJ7DGAR6ECKDDJ6RHNZCJ45IE25FGWHTPA">
+      <manifest-digest sha256new="UBBNL5WBWJX5SWKEZJHJ7DGAR6ECKDDJ6RHNZCJ45IE25FGWHTPA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v1.13.6/cosign-darwin-arm64" size="92342978" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.13.6" released="2024-03-21" stability="stable" main="cosign.exe" id="sha256new_3ECJZ2XO6P2HLY6RTOAINTX7K72XT6FSFVGVBYVMI27HLEDH4BVQ">
+      <manifest-digest sha256new="3ECJZ2XO6P2HLY6RTOAINTX7K72XT6FSFVGVBYVMI27HLEDH4BVQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v1.13.6/cosign-windows-amd64.exe" size="159863375" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.0.0-rc3" released="2023-02-16" stability="testing" main="cosign" id="sha256new_IK26ZWYSYN7EUNLLKIBYMWIOE44MELXDEUFZDAZ6VAZDTA7QM3VA">
+      <manifest-digest sha256new="IK26ZWYSYN7EUNLLKIBYMWIOE44MELXDEUFZDAZ6VAZDTA7QM3VA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.0.0-rc.3/cosign-linux-amd64" size="92436604" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.0.0-rc3" released="2023-02-16" stability="testing" main="cosign" id="sha256new_2UYIDX6Y7IFCGBUA4LUU7BZUDNKO7VSINRRSKXLAR4GDZ7GR7DZA">
+      <manifest-digest sha256new="2UYIDX6Y7IFCGBUA4LUU7BZUDNKO7VSINRRSKXLAR4GDZ7GR7DZA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.0.0-rc.3/cosign-linux-arm64" size="88356587" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.0.0-rc3" released="2023-02-16" stability="testing" main="cosign" id="sha256new_7NOORIW7F5OZRNRRHETJ5UTUE7QVK2JF4DBMUBYLJ7HBAQCFUQDQ">
+      <manifest-digest sha256new="7NOORIW7F5OZRNRRHETJ5UTUE7QVK2JF4DBMUBYLJ7HBAQCFUQDQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.0.0-rc.3/cosign-darwin-amd64" size="96108120" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.0.0-rc3" released="2023-02-16" stability="testing" main="cosign" id="sha256new_ZDNISH6DLKUNPIQIT33SNTD7LJUDIYOYDHMH2AO7NQJCUVJJUATA">
+      <manifest-digest sha256new="ZDNISH6DLKUNPIQIT33SNTD7LJUDIYOYDHMH2AO7NQJCUVJJUATA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.0.0-rc.3/cosign-darwin-arm64" size="91647762" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.0.0-rc3" released="2023-02-16" stability="testing" main="cosign.exe" id="sha256new_ZUPQXHI7JOGTK7EINOKTE524T5VUOZRPYBYAXMC723I2KNM6M4JQ">
+      <manifest-digest sha256new="ZUPQXHI7JOGTK7EINOKTE524T5VUOZRPYBYAXMC723I2KNM6M4JQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.0.0-rc.3/cosign-windows-amd64.exe" size="156133084" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.0.0" released="2023-02-24" stability="stable" main="cosign" id="sha256new_72F3XT6BTLXJRPUZCFNOV37TN37DDRXGPFBXIQNKLVFHHTZ3TXCA">
+      <manifest-digest sha256new="72F3XT6BTLXJRPUZCFNOV37TN37DDRXGPFBXIQNKLVFHHTZ3TXCA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.0.0/cosign-linux-amd64" size="95006791" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.0.0" released="2023-02-24" stability="stable" main="cosign" id="sha256new_2L3L5L3DRISH3GGP6I55YOUBL4SH5OTKJFV22E2ROKJMEQE3URNQ">
+      <manifest-digest sha256new="2L3L5L3DRISH3GGP6I55YOUBL4SH5OTKJFV22E2ROKJMEQE3URNQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.0.0/cosign-linux-arm64" size="90783182" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.0.0" released="2023-02-24" stability="stable" main="cosign" id="sha256new_ZMZZA6HTV3AMOY6SU22AAGNB7WFH326N4Z4OKL64N2L6N5DL2LMA">
+      <manifest-digest sha256new="ZMZZA6HTV3AMOY6SU22AAGNB7WFH326N4Z4OKL64N2L6N5DL2LMA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.0.0/cosign-darwin-amd64" size="98706504" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.0.0" released="2023-02-24" stability="stable" main="cosign" id="sha256new_5QRJ3YVYYTSCF65RS3A6BQMUZ5ZG5H6NDDZNCMLAKHEBD2EIQEDQ">
+      <manifest-digest sha256new="5QRJ3YVYYTSCF65RS3A6BQMUZ5ZG5H6NDDZNCMLAKHEBD2EIQEDQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.0.0/cosign-darwin-arm64" size="94144946" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.0.0" released="2023-02-24" stability="stable" main="cosign.exe" id="sha256new_ZO6I6PWYGGZUXV42DQTG4AS6Z74R23RN5EKBTITF3G4GVJAZ25ZQ">
+      <manifest-digest sha256new="ZO6I6PWYGGZUXV42DQTG4AS6Z74R23RN5EKBTITF3G4GVJAZ25ZQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.0.0/cosign-windows-amd64.exe" size="160503247" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.0.1" released="2023-04-06" stability="stable" main="cosign" id="sha256new_PVX75NGCEHJAMNMSAIG6FLPUM2OSBKLRINKK5DO7HWI7W2BO3ZVA">
+      <manifest-digest sha256new="PVX75NGCEHJAMNMSAIG6FLPUM2OSBKLRINKK5DO7HWI7W2BO3ZVA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.0.1/cosign-linux-amd64" size="95655042" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.0.1" released="2023-04-06" stability="stable" main="cosign" id="sha256new_AWWAQMCSI4R7JOOJ5QLGVLDSPK6ABSFFQEKCYOIG4XTQOF65E5WA">
+      <manifest-digest sha256new="AWWAQMCSI4R7JOOJ5QLGVLDSPK6ABSFFQEKCYOIG4XTQOF65E5WA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.0.1/cosign-linux-arm64" size="91336311" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.0.1" released="2023-04-06" stability="stable" main="cosign" id="sha256new_5BX7QNRN5NEVVA3SITJGCJD7YLKEKCM553QDZ2BO4PMYQK45Z6DQ">
+      <manifest-digest sha256new="5BX7QNRN5NEVVA3SITJGCJD7YLKEKCM553QDZ2BO4PMYQK45Z6DQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.0.1/cosign-darwin-amd64" size="99353728" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.0.1" released="2023-04-06" stability="stable" main="cosign" id="sha256new_YGXDZW76XDRTG3W2HIDYF7OJLUXRNOHAZLL7FAVDC5KGBK3YVQMQ">
+      <manifest-digest sha256new="YGXDZW76XDRTG3W2HIDYF7OJLUXRNOHAZLL7FAVDC5KGBK3YVQMQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.0.1/cosign-darwin-arm64" size="95368050" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.0.1" released="2023-04-06" stability="stable" main="cosign.exe" id="sha256new_3I3MLRSD3XKBHQU56NEAS6RI2RQNHDZ6XVZJNVTCMWIZ56A3VFDA">
+      <manifest-digest sha256new="3I3MLRSD3XKBHQU56NEAS6RI2RQNHDZ6XVZJNVTCMWIZ56A3VFDA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.0.1/cosign-windows-amd64.exe" size="161597734" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.0.2" released="2023-04-24" stability="stable" main="cosign" id="sha256new_WXFHJZ3K4V3YIHY5AA5VRHNFO2B2NF5IN6YVHV3GA67BQ5RLOWRA">
+      <manifest-digest sha256new="WXFHJZ3K4V3YIHY5AA5VRHNFO2B2NF5IN6YVHV3GA67BQ5RLOWRA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.0.2/cosign-linux-amd64" size="97804194" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.0.2" released="2023-04-24" stability="stable" main="cosign" id="sha256new_Z6JFCQUQ6WM42D26H7SOK5W4W7I5F2BTKWKYUA2ICU3LUCVPTFRQ">
+      <manifest-digest sha256new="Z6JFCQUQ6WM42D26H7SOK5W4W7I5F2BTKWKYUA2ICU3LUCVPTFRQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.0.2/cosign-linux-arm64" size="93445676" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.0.2" released="2023-04-24" stability="stable" main="cosign" id="sha256new_XUCP6OFDVMKNPWYDCLTGTABDP4KC5MUBYASENCGU6UBGGW2BZC2A">
+      <manifest-digest sha256new="XUCP6OFDVMKNPWYDCLTGTABDP4KC5MUBYASENCGU6UBGGW2BZC2A"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.0.2/cosign-darwin-amd64" size="101561248" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.0.2" released="2023-04-24" stability="stable" main="cosign" id="sha256new_KGMOM7J2ELHNTUR3CBNKODU5HTSPOEXPYHLWVCDODNZZ32LHONMA">
+      <manifest-digest sha256new="KGMOM7J2ELHNTUR3CBNKODU5HTSPOEXPYHLWVCDODNZZ32LHONMA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.0.2/cosign-darwin-arm64" size="97471970" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.0.2" released="2023-04-24" stability="stable" main="cosign.exe" id="sha256new_QNQ25FAD6NWJII3OGEKZATJEDTHHWA6LF6MWUSBJZUCSTIAAQNBA">
+      <manifest-digest sha256new="QNQ25FAD6NWJII3OGEKZATJEDTHHWA6LF6MWUSBJZUCSTIAAQNBA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.0.2/cosign-windows-amd64.exe" size="164919210" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.1.0" released="2023-06-24" stability="stable" main="cosign" id="sha256new_R4BMCK5SVTWDN3HD2E7ODW6B62PJZ7ZKGFXAWXK3J7QHX2WS6VJA">
+      <manifest-digest sha256new="R4BMCK5SVTWDN3HD2E7ODW6B62PJZ7ZKGFXAWXK3J7QHX2WS6VJA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.1.0/cosign-linux-amd64" size="100584069" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.1.0" released="2023-06-24" stability="stable" main="cosign" id="sha256new_PJBLYZUST5EFGHTP4NJAPISX7TEAFIEKIFPRLRXLJXJELER36RVQ">
+      <manifest-digest sha256new="PJBLYZUST5EFGHTP4NJAPISX7TEAFIEKIFPRLRXLJXJELER36RVQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.1.0/cosign-linux-arm64" size="96133497" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.1.0" released="2023-06-24" stability="stable" main="cosign" id="sha256new_TVYNVRTYHWE63TVPTFAJXYFXV5YD5W3GR6AE7F3R54P4TWZD7BXQ">
+      <manifest-digest sha256new="TVYNVRTYHWE63TVPTFAJXYFXV5YD5W3GR6AE7F3R54P4TWZD7BXQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.1.0/cosign-darwin-amd64" size="104414360" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.1.0" released="2023-06-24" stability="stable" main="cosign" id="sha256new_KJYWGJJVH2C3EMMZUTIDBLRPGL4SLMHMH5F3FHPZ7K3IOOCCNXZA">
+      <manifest-digest sha256new="KJYWGJJVH2C3EMMZUTIDBLRPGL4SLMHMH5F3FHPZ7K3IOOCCNXZA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.1.0/cosign-darwin-arm64" size="100279458" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.1.0" released="2023-06-24" stability="stable" main="cosign.exe" id="sha256new_J6YQJWO2XQ32WLYMMWMMA4KK4NTN7EJQHDHEELR54LOQN7VNPI6Q">
+      <manifest-digest sha256new="J6YQJWO2XQ32WLYMMWMMA4KK4NTN7EJQHDHEELR54LOQN7VNPI6Q"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.1.0/cosign-windows-amd64.exe" size="169607867" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.1.1" released="2023-06-27" stability="stable" main="cosign" id="sha256new_WIYE7UT2QIO5N4QRW2D5PZVV6MUXSPPOLIDFXXUNEU5HJQBPR7YQ">
+      <manifest-digest sha256new="WIYE7UT2QIO5N4QRW2D5PZVV6MUXSPPOLIDFXXUNEU5HJQBPR7YQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.1.1/cosign-linux-amd64" size="100575055" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.1.1" released="2023-06-27" stability="stable" main="cosign" id="sha256new_Q5MCMHETMLAD7FZUOYEBECWMAYOBS2YV22WRUFLMUHXODYYQRSIQ">
+      <manifest-digest sha256new="Q5MCMHETMLAD7FZUOYEBECWMAYOBS2YV22WRUFLMUHXODYYQRSIQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.1.1/cosign-linux-arm64" size="96138315" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.1.1" released="2023-06-27" stability="stable" main="cosign" id="sha256new_GERNE2JQ6GZNI6RROD7ZI26PD74LEJQ4U7FBBENDWWT4YO5FB3IA">
+      <manifest-digest sha256new="GERNE2JQ6GZNI6RROD7ZI26PD74LEJQ4U7FBBENDWWT4YO5FB3IA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.1.1/cosign-darwin-amd64" size="104418864" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.1.1" released="2023-06-27" stability="stable" main="cosign" id="sha256new_FZ5Q7MAVMLTWVSHKNVPSS7UFEYY7AYTKLKYZ2O6ZC7UJZ6LX22LA">
+      <manifest-digest sha256new="FZ5Q7MAVMLTWVSHKNVPSS7UFEYY7AYTKLKYZ2O6ZC7UJZ6LX22LA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.1.1/cosign-darwin-arm64" size="100300562" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.1.1" released="2023-06-27" stability="stable" main="cosign.exe" id="sha256new_KZYNRG43CB6M2VC755QQCK5SMW7ROCSIRCLSXITZ4HQMERAEADSQ">
+      <manifest-digest sha256new="KZYNRG43CB6M2VC755QQCK5SMW7ROCSIRCLSXITZ4HQMERAEADSQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.1.1/cosign-windows-amd64.exe" size="169611341" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.2.0" released="2023-08-31" stability="stable" main="cosign" id="sha256new_JUINC765YBDVI5MDBHOVOYAIIACLXIYW6RCRUELES7Q25QZXFVVA">
+      <manifest-digest sha256new="JUINC765YBDVI5MDBHOVOYAIIACLXIYW6RCRUELES7Q25QZXFVVA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.0/cosign-linux-amd64" size="102593633" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.2.0" released="2023-08-31" stability="stable" main="cosign" id="sha256new_JLPCMIZIJ7MNDZZDMXM3VRLWBE5OG2COO6XTH3P5KO5GR7U6KU7Q">
+      <manifest-digest sha256new="JLPCMIZIJ7MNDZZDMXM3VRLWBE5OG2COO6XTH3P5KO5GR7U6KU7Q"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.0/cosign-linux-arm64" size="98930009" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.2.0" released="2023-08-31" stability="stable" main="cosign" id="sha256new_FL7YHH3IHWFGXPF6RJ6IVTKPYQZDY27B4YFTQ5OPQBXB3HZG5Y6Q">
+      <manifest-digest sha256new="FL7YHH3IHWFGXPF6RJ6IVTKPYQZDY27B4YFTQ5OPQBXB3HZG5Y6Q"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.0/cosign-darwin-amd64" size="106652888" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.2.0" released="2023-08-31" stability="stable" main="cosign" id="sha256new_O2IYCF3ZAR5H4KXNAFVZ6GBLF4236GEFQSC4B7723BRZMCCWP2SQ">
+      <manifest-digest sha256new="O2IYCF3ZAR5H4KXNAFVZ6GBLF4236GEFQSC4B7723BRZMCCWP2SQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.0/cosign-darwin-arm64" size="102681602" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.2.0" released="2023-08-31" stability="stable" main="cosign.exe" id="sha256new_UGXXLF36VHC7D3PXSLLHMKPDK4KPAZOVO42NG4K6JWZVDR4SD6NQ">
+      <manifest-digest sha256new="UGXXLF36VHC7D3PXSLLHMKPDK4KPAZOVO42NG4K6JWZVDR4SD6NQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.0/cosign-windows-amd64.exe" size="175708747" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.2.1" released="2023-11-07" stability="stable" main="cosign" id="sha256new_Y5P2WEP62RWALLUWN64RUNQDRH5DNCHXC625DVINZ37VITXX76BA">
+      <manifest-digest sha256new="Y5P2WEP62RWALLUWN64RUNQDRH5DNCHXC625DVINZ37VITXX76BA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.1/cosign-linux-amd64" size="104980462" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.2.1" released="2023-11-07" stability="stable" main="cosign" id="sha256new_FREUTTB6RW5E4TTP3JBSUYV3GOIIDQS4AAPYLVCCFW4VS6HUMFAQ">
+      <manifest-digest sha256new="FREUTTB6RW5E4TTP3JBSUYV3GOIIDQS4AAPYLVCCFW4VS6HUMFAQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.1/cosign-linux-arm64" size="101222028" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.2.1" released="2023-11-07" stability="stable" main="cosign" id="sha256new_5JM7SCZOVG25F3KTX5KUUUCCMXUMJVKMYMNRYEKC3IQHRSKBMIIA">
+      <manifest-digest sha256new="5JM7SCZOVG25F3KTX5KUUUCCMXUMJVKMYMNRYEKC3IQHRSKBMIIA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.1/cosign-darwin-amd64" size="107829240" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.2.1" released="2023-11-07" stability="stable" main="cosign" id="sha256new_QNH7V5AATCVJPFPRS353SREDBJETCPLYLL57AK5SHZX2KQVS65MA">
+      <manifest-digest sha256new="QNH7V5AATCVJPFPRS353SREDBJETCPLYLL57AK5SHZX2KQVS65MA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.1/cosign-darwin-arm64" size="103772418" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.2.1" released="2023-11-07" stability="stable" main="cosign.exe" id="sha256new_BMYYXIUMWLOC26TBTP45HDJUSGPT7MT6PI5IIK5NIYQ3SXOVIR2Q">
+      <manifest-digest sha256new="BMYYXIUMWLOC26TBTP45HDJUSGPT7MT6PI5IIK5NIYQ3SXOVIR2Q"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.1/cosign-windows-amd64.exe" size="179983784" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.2.2" released="2023-12-05" stability="stable" main="cosign" id="sha256new_JW72QJTP6KCPYJXASVZZMDTLYICEJLOLIJYKLNWGHICIQ7PLJIDQ">
+      <manifest-digest sha256new="JW72QJTP6KCPYJXASVZZMDTLYICEJLOLIJYKLNWGHICIQ7PLJIDQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.2/cosign-linux-amd64" size="102998936" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.2.2" released="2023-12-05" stability="stable" main="cosign" id="sha256new_4FCNWBSJLBMJHMB3S4B2RCFSE3HZYCVTOZIK3UG6IGJHRUF2F7NA">
+      <manifest-digest sha256new="4FCNWBSJLBMJHMB3S4B2RCFSE3HZYCVTOZIK3UG6IGJHRUF2F7NA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.2/cosign-linux-arm64" size="99304892" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.2.2" released="2023-12-05" stability="stable" main="cosign" id="sha256new_A6BB3USKVZGD6WKB27BCFMCOKLD7FVE4ZU7LJ5TWIJ74UMHCPF7Q">
+      <manifest-digest sha256new="A6BB3USKVZGD6WKB27BCFMCOKLD7FVE4ZU7LJ5TWIJ74UMHCPF7Q"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.2/cosign-darwin-amd64" size="105808744" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.2.2" released="2023-12-05" stability="stable" main="cosign" id="sha256new_WW5P6D3RXAVI2TW2IOMPA2VC236GZW4SHXLVGU324COFBKYLKI6Q">
+      <manifest-digest sha256new="WW5P6D3RXAVI2TW2IOMPA2VC236GZW4SHXLVGU324COFBKYLKI6Q"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.2/cosign-darwin-arm64" size="101797650" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.2.2" released="2023-12-05" stability="stable" main="cosign.exe" id="sha256new_CHHSOYPEXRFELRAO4IHUPGC6N4RWZ5KPHVXTUAI3PYRW2PWZY5OA">
+      <manifest-digest sha256new="CHHSOYPEXRFELRAO4IHUPGC6N4RWZ5KPHVXTUAI3PYRW2PWZY5OA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.2/cosign-windows-amd64.exe" size="176160355" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.2.3" released="2024-01-31" stability="stable" main="cosign" id="sha256new_5RSSMCPBEHIABRQMFK2UFLMRD6L7VJHQGSEOE53XDHYYY5EQC77A">
+      <manifest-digest sha256new="5RSSMCPBEHIABRQMFK2UFLMRD6L7VJHQGSEOE53XDHYYY5EQC77A"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.3/cosign-linux-amd64" size="103164867" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.2.3" released="2024-01-31" stability="stable" main="cosign" id="sha256new_VI4PJEADVF2WY3S4463ERHR2YKACGLYVYXWGBH3ISPDLGXVIACQQ">
+      <manifest-digest sha256new="VI4PJEADVF2WY3S4463ERHR2YKACGLYVYXWGBH3ISPDLGXVIACQQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.3/cosign-linux-arm64" size="99463103" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.2.3" released="2024-01-31" stability="stable" main="cosign" id="sha256new_E363NP6X7OA5OYEYY2WPYWI2PATN47RY3SCSG45FGHLYTQXL3XLQ">
+      <manifest-digest sha256new="E363NP6X7OA5OYEYY2WPYWI2PATN47RY3SCSG45FGHLYTQXL3XLQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.3/cosign-darwin-amd64" size="105958520" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.2.3" released="2024-01-31" stability="stable" main="cosign" id="sha256new_U6GLGEFREARKFQYVRIQM7UU2PH75JYLCOIMLDMDXVMEB7QFCIACA">
+      <manifest-digest sha256new="U6GLGEFREARKFQYVRIQM7UU2PH75JYLCOIMLDMDXVMEB7QFCIACA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.3/cosign-darwin-arm64" size="101933058" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.2.3" released="2024-01-31" stability="stable" main="cosign.exe" id="sha256new_QMGHSK3BXLHZU46CYEDRX46CVZYW6PNIPMYR5NKVFM4UOWBO7XDQ">
+      <manifest-digest sha256new="QMGHSK3BXLHZU46CYEDRX46CVZYW6PNIPMYR5NKVFM4UOWBO7XDQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.3/cosign-windows-amd64.exe" size="176370211" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.2.4" released="2024-04-10" stability="stable" main="cosign" id="sha256new_Y5RDZZNELICD6AAJSIFFZP4JFXLFWW3AG7T4HF47UQNRYL6WXMUQ">
+      <manifest-digest sha256new="Y5RDZZNELICD6AAJSIFFZP4JFXLFWW3AG7T4HF47UQNRYL6WXMUQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.4/cosign-linux-amd64" size="104977672" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.2.4" released="2024-04-10" stability="stable" main="cosign" id="sha256new_6P74KIGFZFXDYF3NIA2BD66FVILKKFAE4TWZV2YZ6JXMOOH3CCLA">
+      <manifest-digest sha256new="6P74KIGFZFXDYF3NIA2BD66FVILKKFAE4TWZV2YZ6JXMOOH3CCLA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.4/cosign-linux-arm64" size="101189126" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.2.4" released="2024-04-10" stability="stable" main="cosign" id="sha256new_SB47XWPC644EQT2ASIW2ULD267PTYOBDYNYNWIJEXSZZU3VYM5GQ">
+      <manifest-digest sha256new="SB47XWPC644EQT2ASIW2ULD267PTYOBDYNYNWIJEXSZZU3VYM5GQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.4/cosign-darwin-amd64" size="107794408" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.2.4" released="2024-04-10" stability="stable" main="cosign" id="sha256new_SGD6OKLO2EGJI76AGRZX236DPTSOHMXSIX5KWY6PZCQJIKD6S4OA">
+      <manifest-digest sha256new="SGD6OKLO2EGJI76AGRZX236DPTSOHMXSIX5KWY6PZCQJIKD6S4OA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.4/cosign-darwin-arm64" size="103680434" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.2.4" released="2024-04-10" stability="stable" main="cosign.exe" id="sha256new_QH42KHK44BYYIIOJASCJ4PDPAFPXVVMLZ5VV5Y5KCV2LZUABZNPA">
+      <manifest-digest sha256new="QH42KHK44BYYIIOJASCJ4PDPAFPXVVMLZ5VV5Y5KCV2LZUABZNPA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.2.4/cosign-windows-amd64.exe" size="179306625" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.3.0" released="2024-07-22" stability="stable" main="cosign" id="sha256new_SMVDPHR27V5Y2SCJ6PRKU5RK7OOLT7L32CRGOJ73WWZJJH7QON6A">
+      <manifest-digest sha256new="SMVDPHR27V5Y2SCJ6PRKU5RK7OOLT7L32CRGOJ73WWZJJH7QON6A"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.3.0/cosign-linux-amd64" size="108331175" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.3.0" released="2024-07-22" stability="stable" main="cosign" id="sha256new_DZCA2N6BESDWNMRMXVJYKAVDTY4SUBBTWZB4ZILDJCCSDMJZ6KOQ">
+      <manifest-digest sha256new="DZCA2N6BESDWNMRMXVJYKAVDTY4SUBBTWZB4ZILDJCCSDMJZ6KOQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.3.0/cosign-linux-arm64" size="104607776" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.3.0" released="2024-07-22" stability="stable" main="cosign" id="sha256new_TIYMFQAP24WR2IJRNR3B42SL55XO4P2K54ECOLI2XBKLXMH2ILXQ">
+      <manifest-digest sha256new="TIYMFQAP24WR2IJRNR3B42SL55XO4P2K54ECOLI2XBKLXMH2ILXQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.3.0/cosign-darwin-amd64" size="111630904" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.3.0" released="2024-07-22" stability="stable" main="cosign" id="sha256new_AIDOQXS4N7YGY6LKIZPMWMN5HMB2NGMTAO3FOJ5NKJEDYIS4RLKA">
+      <manifest-digest sha256new="AIDOQXS4N7YGY6LKIZPMWMN5HMB2NGMTAO3FOJ5NKJEDYIS4RLKA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.3.0/cosign-darwin-arm64" size="107390242" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.3.0" released="2024-07-22" stability="stable" main="cosign.exe" id="sha256new_O4DQDQN7CIWK2OLAFIH3BEKXX4NK6WDKA5BAG4F5NT57WR65BAWQ">
+      <manifest-digest sha256new="O4DQDQN7CIWK2OLAFIH3BEKXX4NK6WDKA5BAG4F5NT57WR65BAWQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.3.0/cosign-windows-amd64.exe" size="184663839" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.4.0" released="2024-08-06" stability="stable" main="cosign" id="sha256new_RLGO2K73HHCL44NACDCHOD3EPX5ZQCVDRXGO3DVGCOPSJIHIH2RA">
+      <manifest-digest sha256new="RLGO2K73HHCL44NACDCHOD3EPX5ZQCVDRXGO3DVGCOPSJIHIH2RA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.4.0/cosign-linux-amd64" size="109227755" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.4.0" released="2024-08-06" stability="stable" main="cosign" id="sha256new_I5NY4GBL3XJGUHWZYWK2HHNSYWZGEUZ2FFD4CFTSDF4BS6NH663Q">
+      <manifest-digest sha256new="I5NY4GBL3XJGUHWZYWK2HHNSYWZGEUZ2FFD4CFTSDF4BS6NH663Q"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.4.0/cosign-linux-arm64" size="105555380" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.4.0" released="2024-08-06" stability="stable" main="cosign" id="sha256new_BDJVFOINK5JIXQD7AIG7HR2WYBJPD37EYHYHJP7UVXSL6UABKTFQ">
+      <manifest-digest sha256new="BDJVFOINK5JIXQD7AIG7HR2WYBJPD37EYHYHJP7UVXSL6UABKTFQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.4.0/cosign-darwin-amd64" size="112546832" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.4.0" released="2024-08-06" stability="stable" main="cosign" id="sha256new_UI4YGSXXFU353DP3FLSCP77IPLGNGN4DURX7FIH7FA6QK7CVTTKQ">
+      <manifest-digest sha256new="UI4YGSXXFU353DP3FLSCP77IPLGNGN4DURX7FIH7FA6QK7CVTTKQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.4.0/cosign-darwin-arm64" size="108288546" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.4.0" released="2024-08-06" stability="stable" main="cosign.exe" id="sha256new_LZR27X6UCGELSZX5THLLLEFGBBOLOQUH2IRI3BHPNJA5OKV7MOFQ">
+      <manifest-digest sha256new="LZR27X6UCGELSZX5THLLLEFGBBOLOQUH2IRI3BHPNJA5OKV7MOFQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.4.0/cosign-windows-amd64.exe" size="186124154" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.4.1" released="2024-10-03" stability="stable" main="cosign" id="sha256new_FXJELFP77NAZFLFO3JTOK76HAQF7IZPLRNASXIZEZ2IR5NSPBDOA">
+      <manifest-digest sha256new="FXJELFP77NAZFLFO3JTOK76HAQF7IZPLRNASXIZEZ2IR5NSPBDOA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.4.1/cosign-linux-amd64" size="109799549" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.4.1" released="2024-10-03" stability="stable" main="cosign" id="sha256new_TG7GCNJFFIJBFNMLXWJ3RJPXONRX5AOEMARR3YKMC3HNO35B2EAQ">
+      <manifest-digest sha256new="TG7GCNJFFIJBFNMLXWJ3RJPXONRX5AOEMARR3YKMC3HNO35B2EAQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.4.1/cosign-linux-arm64" size="106050350" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.4.1" released="2024-10-03" stability="stable" main="cosign" id="sha256new_7YYRJUPFDM6RWVV57IT4I2DP2DZQQNCIF6NNCKVUT6P2M4ZP4QHA">
+      <manifest-digest sha256new="7YYRJUPFDM6RWVV57IT4I2DP2DZQQNCIF6NNCKVUT6P2M4ZP4QHA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.4.1/cosign-darwin-amd64" size="113137640" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.4.1" released="2024-10-03" stability="stable" main="cosign" id="sha256new_LIDBB2YBQYXVZKRWMJVOCQCHZMEPMOTQBSQZT4ILTWCWXJ2LXUVA">
+      <manifest-digest sha256new="LIDBB2YBQYXVZKRWMJVOCQCHZMEPMOTQBSQZT4ILTWCWXJ2LXUVA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.4.1/cosign-darwin-arm64" size="108805570" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.4.1" released="2024-10-03" stability="stable" main="cosign.exe" id="sha256new_UNJ47GBT5XWOKWM4MAIZZTBYUMOVLEBUUKVO4QPNQ3N5I3PRNC3A">
+      <manifest-digest sha256new="UNJ47GBT5XWOKWM4MAIZZTBYUMOVLEBUUKVO4QPNQ3N5I3PRNC3A"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.4.1/cosign-windows-amd64.exe" size="186998456" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.4.2" released="2025-02-04" stability="stable" main="cosign" id="sha256new_YO6AT4T3CZDIISZP625OOFXVGCAQ5PSJLIASRTI3AIVC3CFEE57A">
+      <manifest-digest sha256new="YO6AT4T3CZDIISZP625OOFXVGCAQ5PSJLIASRTI3AIVC3CFEE57A"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.4.2/cosign-linux-amd64" size="115446438" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.4.2" released="2025-02-04" stability="stable" main="cosign" id="sha256new_JHGLLOOH2AKCAS2HHRS375EQACTI7MMUXV3VN2K4MKLPQOGV3LFQ">
+      <manifest-digest sha256new="JHGLLOOH2AKCAS2HHRS375EQACTI7MMUXV3VN2K4MKLPQOGV3LFQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.4.2/cosign-linux-arm64" size="111548007" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.4.2" released="2025-02-04" stability="stable" main="cosign" id="sha256new_VGDY3OT3CKR5IR4VH3E3GG5DQ3EHA2QGRMLSYPE3VKEW2GBTCFKQ">
+      <manifest-digest sha256new="VGDY3OT3CKR5IR4VH3E3GG5DQ3EHA2QGRMLSYPE3VKEW2GBTCFKQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.4.2/cosign-darwin-amd64" size="118891280" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.4.2" released="2025-02-04" stability="stable" main="cosign" id="sha256new_JDX74KX6SJYONKSBMWNGCBQQWERP6XWUKLRN2RRM6WNR72M5UOZQ">
+      <manifest-digest sha256new="JDX74KX6SJYONKSBMWNGCBQQWERP6XWUKLRN2RRM6WNR72M5UOZQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.4.2/cosign-darwin-arm64" size="114434402" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.4.2" released="2025-02-04" stability="stable" main="cosign.exe" id="sha256new_V33T7DXCQ2AJZJZIXVMHL6EFU7O5R4LQS5KW4YVNDIKF27EFZ7IA">
+      <manifest-digest sha256new="V33T7DXCQ2AJZJZIXVMHL6EFU7O5R4LQS5KW4YVNDIKF27EFZ7IA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.4.2/cosign-windows-amd64.exe" size="195055719" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.4.3" released="2025-02-19" stability="stable" main="cosign" id="sha256new_X4EF3JQO7F73M2U57XALSIJHVANA2CLRTYFWB6RF3G7GH7ZJMFGA">
+      <manifest-digest sha256new="X4EF3JQO7F73M2U57XALSIJHVANA2CLRTYFWB6RF3G7GH7ZJMFGA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.4.3/cosign-linux-amd64" size="115937950" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.4.3" released="2025-02-19" stability="stable" main="cosign" id="sha256new_YUE46HCM5IMIFNHWJT7RSWHINBLX4CVCQ5VGE4D7KW4EIRRQSDKA">
+      <manifest-digest sha256new="YUE46HCM5IMIFNHWJT7RSWHINBLX4CVCQ5VGE4D7KW4EIRRQSDKA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.4.3/cosign-linux-arm64" size="112031199" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.4.3" released="2025-02-19" stability="stable" main="cosign" id="sha256new_H3L6GVPE4EONBU4PRHXB2ALANUZHXPK3ZNWYUAGO73WQXOYZALKA">
+      <manifest-digest sha256new="H3L6GVPE4EONBU4PRHXB2ALANUZHXPK3ZNWYUAGO73WQXOYZALKA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.4.3/cosign-darwin-amd64" size="119356856" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.4.3" released="2025-02-19" stability="stable" main="cosign" id="sha256new_G6WSZ4DWXJKV3HHJL2BZ6DMOXDG7VJWFFIAKONIEVLHUMWBIAHAQ">
+      <manifest-digest sha256new="G6WSZ4DWXJKV3HHJL2BZ6DMOXDG7VJWFFIAKONIEVLHUMWBIAHAQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.4.3/cosign-darwin-arm64" size="114874690" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.4.3" released="2025-02-19" stability="stable" main="cosign.exe" id="sha256new_VTTB2JAKXYMFE657JRZA7HTDE4STQPKDHUEKMASRZFLYDQM7M2FA">
+      <manifest-digest sha256new="VTTB2JAKXYMFE657JRZA7HTDE4STQPKDHUEKMASRZFLYDQM7M2FA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.4.3/cosign-windows-amd64.exe" size="195630881" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.5.0" released="2025-04-07" stability="stable" main="cosign" id="sha256new_URVCNTUI6P73XQVZBJTQ7POCADZH3IXIRMMJBMFQAL5BD3MD64OA">
+      <manifest-digest sha256new="URVCNTUI6P73XQVZBJTQ7POCADZH3IXIRMMJBMFQAL5BD3MD64OA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.5.0/cosign-linux-amd64" size="119620110" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.5.0" released="2025-04-07" stability="stable" main="cosign" id="sha256new_NA2WV3TEKBL7UKMLJGBZANN52ASW5PRQFVOWTEEAC5LZPQNORVZQ">
+      <manifest-digest sha256new="NA2WV3TEKBL7UKMLJGBZANN52ASW5PRQFVOWTEEAC5LZPQNORVZQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.5.0/cosign-linux-arm64" size="114655741" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.5.0" released="2025-04-07" stability="stable" main="cosign" id="sha256new_E677MIXNCW7CJ5UT6HCPFKSHU7YEKIAJVF7M4IB25QIMGXKG35RQ">
+      <manifest-digest sha256new="E677MIXNCW7CJ5UT6HCPFKSHU7YEKIAJVF7M4IB25QIMGXKG35RQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.5.0/cosign-darwin-amd64" size="123149032" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.5.0" released="2025-04-07" stability="stable" main="cosign" id="sha256new_M3TQKBDJ4RMO246EJICJ7CFVZW76QQMFWMVL722NUWBIKM3XVJMQ">
+      <manifest-digest sha256new="M3TQKBDJ4RMO246EJICJ7CFVZW76QQMFWMVL722NUWBIKM3XVJMQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.5.0/cosign-darwin-arm64" size="117629874" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.5.0" released="2025-04-07" stability="stable" main="cosign.exe" id="sha256new_HXKAJYURF5KRLHFIV3GZJFNMDGD5JGR3O5AXIVH4LBFKDMZHBJGQ">
+      <manifest-digest sha256new="HXKAJYURF5KRLHFIV3GZJFNMDGD5JGR3O5AXIVH4LBFKDMZHBJGQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.5.0/cosign-windows-amd64.exe" size="202375680" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.5.1" released="2025-06-16" stability="stable" main="cosign" id="sha256new_N2VPWZOQ325MAWVAYW7KH4H7IDZWVNSJ5ZWU6AYWEGTYJXGAZKWA">
+      <manifest-digest sha256new="N2VPWZOQ325MAWVAYW7KH4H7IDZWVNSJ5ZWU6AYWEGTYJXGAZKWA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.5.1/cosign-linux-amd64" size="132492135" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.5.1" released="2025-06-16" stability="stable" main="cosign" id="sha256new_62Y5U4NYTS57HJJGT7ES7U7I7VIMNHZYX4EHVXK6GRKRCPQOW77A">
+      <manifest-digest sha256new="62Y5U4NYTS57HJJGT7ES7U7I7VIMNHZYX4EHVXK6GRKRCPQOW77A"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.5.1/cosign-linux-arm64" size="127529992" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.5.1" released="2025-06-16" stability="stable" main="cosign" id="sha256new_C5V22KE7EASLKNRB3XPBEIXD7KXLN2K22MND3OV43AP5YRHB76BQ">
+      <manifest-digest sha256new="C5V22KE7EASLKNRB3XPBEIXD7KXLN2K22MND3OV43AP5YRHB76BQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.5.1/cosign-darwin-amd64" size="136324296" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.5.1" released="2025-06-16" stability="stable" main="cosign" id="sha256new_7GXGRJLSCDOBCQJX3DRFFIY6XTFOTUU5P6VWKO5EQBIUFC4LKTEQ">
+      <manifest-digest sha256new="7GXGRJLSCDOBCQJX3DRFFIY6XTFOTUU5P6VWKO5EQBIUFC4LKTEQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.5.1/cosign-darwin-arm64" size="130793490" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.5.1" released="2025-06-16" stability="stable" main="cosign.exe" id="sha256new_M2VQI3VR7TLGUSK3GIIXOCFIAJ2NCZCWBZUER3NT7UED44QI2TZA">
+      <manifest-digest sha256new="M2VQI3VR7TLGUSK3GIIXOCFIAJ2NCZCWBZUER3NT7UED44QI2TZA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.5.1/cosign-windows-amd64.exe" size="223411489" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.5.2" released="2025-06-18" stability="stable" main="cosign" id="sha256new_W5ZZUK5IV6WTWYJACKAUTQLTOU7EKTPH7SEZIFZBH3RHRRKNODTQ">
+      <manifest-digest sha256new="W5ZZUK5IV6WTWYJACKAUTQLTOU7EKTPH7SEZIFZBH3RHRRKNODTQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.5.2/cosign-linux-amd64" size="132561156" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.5.2" released="2025-06-18" stability="stable" main="cosign" id="sha256new_ZDOM3IBOUOIOVO33WQLK54XTY2GRNBCKDX57V53N3PNQYVYMSYIA">
+      <manifest-digest sha256new="ZDOM3IBOUOIOVO33WQLK54XTY2GRNBCKDX57V53N3PNQYVYMSYIA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.5.2/cosign-linux-arm64" size="127529229" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.5.2" released="2025-06-18" stability="stable" main="cosign" id="sha256new_MS6NZUPMFU2SVO42EAMAAIPVSHHR5SGZWGM5IM3X3HRQZ4JKZKIQ">
+      <manifest-digest sha256new="MS6NZUPMFU2SVO42EAMAAIPVSHHR5SGZWGM5IM3X3HRQZ4JKZKIQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.5.2/cosign-darwin-amd64" size="136397600" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.5.2" released="2025-06-18" stability="stable" main="cosign" id="sha256new_JEIKNDLKRPD57TDJHYXESR4CXKP4B5QNYJQ5ASODVQW7CCUZFASQ">
+      <manifest-digest sha256new="JEIKNDLKRPD57TDJHYXESR4CXKP4B5QNYJQ5ASODVQW7CCUZFASQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.5.2/cosign-darwin-arm64" size="130867538" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.5.2" released="2025-06-18" stability="stable" main="cosign.exe" id="sha256new_ITZ3P4Q226V3AFSGTE3MVZE2NTFY3DWS4GISE3AABLT6CC2TEJZQ">
+      <manifest-digest sha256new="ITZ3P4Q226V3AFSGTE3MVZE2NTFY3DWS4GISE3AABLT6CC2TEJZQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.5.2/cosign-windows-amd64.exe" size="223542878" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.5.3" released="2025-07-17" stability="stable" main="cosign" id="sha256new_Q6F67MQ5WOKDTSUH4V3PWIHO55BW4SLOGBRVYKEJUWOX3IAGVAJQ">
+      <manifest-digest sha256new="Q6F67MQ5WOKDTSUH4V3PWIHO55BW4SLOGBRVYKEJUWOX3IAGVAJQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.5.3/cosign-linux-amd64" size="154068646" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.5.3" released="2025-07-17" stability="stable" main="cosign" id="sha256new_DMRDS6OO6ELIWZMGDQ6AGAO4MJJOPWEZXNULWLNFZPIGMQGOOBMQ">
+      <manifest-digest sha256new="DMRDS6OO6ELIWZMGDQ6AGAO4MJJOPWEZXNULWLNFZPIGMQGOOBMQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.5.3/cosign-linux-arm64" size="148539773" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.5.3" released="2025-07-17" stability="stable" main="cosign" id="sha256new_EXU4L54YITJF33HWEC6Y65FBIXXHSZHOB7IUTMF3MKGNKVIVCFTA">
+      <manifest-digest sha256new="EXU4L54YITJF33HWEC6Y65FBIXXHSZHOB7IUTMF3MKGNKVIVCFTA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.5.3/cosign-darwin-amd64" size="158531064" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.5.3" released="2025-07-17" stability="stable" main="cosign" id="sha256new_ET7BIEM65IKZOIURDG6ZFQF6TQYCEGYUN3YX36KCI6EHGUSQYALQ">
+      <manifest-digest sha256new="ET7BIEM65IKZOIURDG6ZFQF6TQYCEGYUN3YX36KCI6EHGUSQYALQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.5.3/cosign-darwin-arm64" size="152385074" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.5.3" released="2025-07-17" stability="stable" main="cosign.exe" id="sha256new_VTQJANNKNY5NNWPHXP6UIX64VMZ6LAJXTBB32B7ZVG4UMCW6F2KQ">
+      <manifest-digest sha256new="VTQJANNKNY5NNWPHXP6UIX64VMZ6LAJXTBB32B7ZVG4UMCW6F2KQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.5.3/cosign-windows-amd64.exe" size="257850367" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.6.0" released="2025-09-12" stability="stable" main="cosign" id="sha256new_37D7STUX7MIXW7QEW3BH2IAHRIMHM5FFC5FSXJ25EUYMXW2FHAFQ">
+      <manifest-digest sha256new="37D7STUX7MIXW7QEW3BH2IAHRIMHM5FFC5FSXJ25EUYMXW2FHAFQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.6.0/cosign-linux-amd64" size="155329864" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.6.0" released="2025-09-12" stability="stable" main="cosign" id="sha256new_DOA4H3ANY6TUIMGPWYODPDWCLALACXEUCGDJL77WZEPJC6O45VTQ">
+      <manifest-digest sha256new="DOA4H3ANY6TUIMGPWYODPDWCLALACXEUCGDJL77WZEPJC6O45VTQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.6.0/cosign-linux-arm64" size="147407457" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.6.0" released="2025-09-12" stability="stable" main="cosign" id="sha256new_ARX2QML3P2AZMSM4UAAW5SEOUWCCH7QPVR6NPJN3P4YTZ7MAV52Q">
+      <manifest-digest sha256new="ARX2QML3P2AZMSM4UAAW5SEOUWCCH7QPVR6NPJN3P4YTZ7MAV52Q"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.6.0/cosign-darwin-amd64" size="163170064" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.6.0" released="2025-09-12" stability="stable" main="cosign" id="sha256new_E2BUJ3GYCGHHKGXOFUASHYK74LRLSGERMBWBAXJI7EXOFJZSEUOA">
+      <manifest-digest sha256new="E2BUJ3GYCGHHKGXOFUASHYK74LRLSGERMBWBAXJI7EXOFJZSEUOA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.6.0/cosign-darwin-arm64" size="154611890" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.6.0" released="2025-09-12" stability="stable" main="cosign.exe" id="sha256new_24HZWXPTKDKLFVJBGX7NRS3QTAEK4SR4ROPGKIBQKVZ7R3NQ66VQ">
+      <manifest-digest sha256new="24HZWXPTKDKLFVJBGX7NRS3QTAEK4SR4ROPGKIBQKVZ7R3NQ66VQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.6.0/cosign-windows-amd64.exe" size="217383834" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.6.1" released="2025-10-02" stability="stable" main="cosign" id="sha256new_ZRSD3TJQ6NB43OSXH36VVQ3VWZ2KVRFPPKANORKAT3PI4ZQBAWSQ">
+      <manifest-digest sha256new="ZRSD3TJQ6NB43OSXH36VVQ3VWZ2KVRFPPKANORKAT3PI4ZQBAWSQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.6.1/cosign-linux-amd64" size="155339383" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.6.1" released="2025-10-02" stability="stable" main="cosign" id="sha256new_LWGXZ2G3WOJQOPYGNKWFUMOK6DFPYZMRTAA3EW6T23THDTRP3THQ">
+      <manifest-digest sha256new="LWGXZ2G3WOJQOPYGNKWFUMOK6DFPYZMRTAA3EW6T23THDTRP3THQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.6.1/cosign-linux-arm64" size="147408784" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.6.1" released="2025-10-02" stability="stable" main="cosign" id="sha256new_Y25PSEHUX5P5VQTR4ZNI24GVF7YQXJTNHB3IJJXVMYYEU5ADX67Q">
+      <manifest-digest sha256new="Y25PSEHUX5P5VQTR4ZNI24GVF7YQXJTNHB3IJJXVMYYEU5ADX67Q"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.6.1/cosign-darwin-amd64" size="163170048" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.6.1" released="2025-10-02" stability="stable" main="cosign" id="sha256new_2NRIZMLWPBMEDVWZBFUJVBUNONGLLKKJWNZX3IQFMJ6PPYMHZKMA">
+      <manifest-digest sha256new="2NRIZMLWPBMEDVWZBFUJVBUNONGLLKKJWNZX3IQFMJ6PPYMHZKMA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.6.1/cosign-darwin-arm64" size="154611874" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.6.1" released="2025-10-02" stability="stable" main="cosign.exe" id="sha256new_OSDXYCBPX2QZ77FR56ZPJ5RWFEHSP7IWVYI4YSHB252NFZCI7H7A">
+      <manifest-digest sha256new="OSDXYCBPX2QZ77FR56ZPJ5RWFEHSP7IWVYI4YSHB252NFZCI7H7A"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.6.1/cosign-windows-amd64.exe" size="217388926" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.6.2" released="2026-01-09" stability="stable" main="cosign" id="sha256new_KCF5WDCA3IZEUDHRXHVQOA44U3KJ6WLJC4Y2HGNSJ6EPQLN3NGEQ">
+      <manifest-digest sha256new="KCF5WDCA3IZEUDHRXHVQOA44U3KJ6WLJC4Y2HGNSJ6EPQLN3NGEQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.6.2/cosign-linux-amd64" size="134696643" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.6.2" released="2026-01-09" stability="stable" main="cosign" id="sha256new_NUIHYMWDD7CN7DCEGJF24GIJLDGIKPDVN6PFI5DJV5CVLLUGVWLA">
+      <manifest-digest sha256new="NUIHYMWDD7CN7DCEGJF24GIJLDGIKPDVN6PFI5DJV5CVLLUGVWLA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.6.2/cosign-linux-arm64" size="127292457" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.6.2" released="2026-01-09" stability="stable" main="cosign" id="sha256new_M5CFF7C4SQ7V32AW5PB5X5JLKRJVEB4AXOWSD2LLKJIPKL376NDA">
+      <manifest-digest sha256new="M5CFF7C4SQ7V32AW5PB5X5JLKRJVEB4AXOWSD2LLKJIPKL376NDA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.6.2/cosign-darwin-amd64" size="141555616" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.6.2" released="2026-01-09" stability="stable" main="cosign" id="sha256new_U6T3QZOKWVXJMU2ZJM5H2ZPZYKF7ZNXMS65ZEUG4KXZQZ5MFKUPQ">
+      <manifest-digest sha256new="U6T3QZOKWVXJMU2ZJM5H2ZPZYKF7ZNXMS65ZEUG4KXZQZ5MFKUPQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.6.2/cosign-darwin-arm64" size="133650306" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.6.2" released="2026-01-09" stability="stable" main="cosign.exe" id="sha256new_2LYTZIV6LBR6QWTGFARR4DL5QW3FEWMOBLSDGUSZNHK7ZSNYHX6A">
+      <manifest-digest sha256new="2LYTZIV6LBR6QWTGFARR4DL5QW3FEWMOBLSDGUSZNHK7ZSNYHX6A"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v2.6.2/cosign-windows-amd64.exe" size="188345985" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="3.0.1" released="2025-10-08" stability="stable" main="cosign" id="sha256new_BVIEI6MFNIWRE4IFC2VY3GOTXB7XZU4HYXSYBGFH3PJ7ZLSNAANQ">
+      <manifest-digest sha256new="BVIEI6MFNIWRE4IFC2VY3GOTXB7XZU4HYXSYBGFH3PJ7ZLSNAANQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.1/cosign-linux-amd64" size="155395688" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="3.0.1" released="2025-10-08" stability="stable" main="cosign" id="sha256new_4WV4HOFATCVMOEFTMEENHNVYNKYQ6RSZUTD2FYZRZSUF7LVZXRPQ">
+      <manifest-digest sha256new="4WV4HOFATCVMOEFTMEENHNVYNKYQ6RSZUTD2FYZRZSUF7LVZXRPQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.1/cosign-linux-arm64" size="147490601" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="3.0.1" released="2025-10-08" stability="stable" main="cosign" id="sha256new_44YZ4ETC6QNRGPGD2PCP2COYDMSMYHYB3TA253GL35YHPBS3YQ2A">
+      <manifest-digest sha256new="44YZ4ETC6QNRGPGD2PCP2COYDMSMYHYB3TA253GL35YHPBS3YQ2A"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.1/cosign-darwin-amd64" size="163247568" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="3.0.1" released="2025-10-08" stability="stable" main="cosign" id="sha256new_POQ2B3Z45J27I3AVKREZ66QUJFQDJXEPN6R6KE6FCO6KSDPWQK6A">
+      <manifest-digest sha256new="POQ2B3Z45J27I3AVKREZ66QUJFQDJXEPN6R6KE6FCO6KSDPWQK6A"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.1/cosign-darwin-arm64" size="154681746" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="3.0.1" released="2025-10-08" stability="stable" main="cosign.exe" id="sha256new_LWQUUE7J6FWGVPIMR7IYE74HXGLGK7M6LMZUB2EVH4SH5R34OU4A">
+      <manifest-digest sha256new="LWQUUE7J6FWGVPIMR7IYE74HXGLGK7M6LMZUB2EVH4SH5R34OU4A"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.1/cosign-windows-amd64.exe" size="217486756" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="3.0.2" released="2025-10-10" stability="stable" main="cosign" id="sha256new_YUAQN33MA5EX6O277GZEXXDYQJCCHYWL2PHUQJ6USY2LMHGPSGTA">
+      <manifest-digest sha256new="YUAQN33MA5EX6O277GZEXXDYQJCCHYWL2PHUQJ6USY2LMHGPSGTA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.2/cosign-linux-amd64" size="156288179" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="3.0.2" released="2025-10-10" stability="stable" main="cosign" id="sha256new_ANXQ4F4QFE4TXIQNJHTXG7IKO6MTNK2FJU5QQBWVLOVJFC33QLWA">
+      <manifest-digest sha256new="ANXQ4F4QFE4TXIQNJHTXG7IKO6MTNK2FJU5QQBWVLOVJFC33QLWA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.2/cosign-linux-arm64" size="148272099" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="3.0.2" released="2025-10-10" stability="stable" main="cosign" id="sha256new_55METKRJVXZZCSL3ZXAN5ICFNZUE6RCUWA74VJXG3ZJBCVPHKQOA">
+      <manifest-digest sha256new="55METKRJVXZZCSL3ZXAN5ICFNZUE6RCUWA74VJXG3ZJBCVPHKQOA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.2/cosign-darwin-amd64" size="164198856" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="3.0.2" released="2025-10-10" stability="stable" main="cosign" id="sha256new_6N3AOWM72AKBCMAPFHRRI5R4YCQ3MMPTB7REDJMSVJALM3DOZPQQ">
+      <manifest-digest sha256new="6N3AOWM72AKBCMAPFHRRI5R4YCQ3MMPTB7REDJMSVJALM3DOZPQQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.2/cosign-darwin-arm64" size="155624370" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="3.0.2" released="2025-10-10" stability="stable" main="cosign.exe" id="sha256new_KASMWNPYUW4ICCG3RVHKQF3FOH4FMA2AHJ2HVYKTWRN3KTREPMOQ">
+      <manifest-digest sha256new="KASMWNPYUW4ICCG3RVHKQF3FOH4FMA2AHJ2HVYKTWRN3KTREPMOQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.2/cosign-windows-amd64.exe" size="218946749" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="3.0.3" released="2025-12-10" stability="stable" main="cosign" id="sha256new_DZRBLZWJKA4KNWFVE2U35XHFJMVOBR4NO2LUELVN7WFB76MP4FMQ">
+      <manifest-digest sha256new="DZRBLZWJKA4KNWFVE2U35XHFJMVOBR4NO2LUELVN7WFB76MP4FMQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.3/cosign-linux-amd64" size="135382598" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="3.0.3" released="2025-12-10" stability="stable" main="cosign" id="sha256new_AN35F7FAS6Y6OQQYGLGEF4MFFM53JZEVVXFRWOJVICBOTEWPOCZA">
+      <manifest-digest sha256new="AN35F7FAS6Y6OQQYGLGEF4MFFM53JZEVVXFRWOJVICBOTEWPOCZA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.3/cosign-linux-arm64" size="127906164" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="3.0.3" released="2025-12-10" stability="stable" main="cosign" id="sha256new_DGFIJHLLPUYBQVPLFNAJ77KRHOXMITKJXPGCQOTERBA7VG3ALZQQ">
+      <manifest-digest sha256new="DGFIJHLLPUYBQVPLFNAJ77KRHOXMITKJXPGCQOTERBA7VG3ALZQQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.3/cosign-darwin-amd64" size="142275928" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="3.0.3" released="2025-12-10" stability="stable" main="cosign" id="sha256new_53KYNH35A6WWYTSTTNE7ZT4KZZRIKRAYHSRJBMYIYR7IZUUYFM3A">
+      <manifest-digest sha256new="53KYNH35A6WWYTSTTNE7ZT4KZZRIKRAYHSRJBMYIYR7IZUUYFM3A"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.3/cosign-darwin-arm64" size="134322594" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="3.0.3" released="2025-12-10" stability="stable" main="cosign.exe" id="sha256new_AYDMW66NZQ7KIZGQC3QYPPOYAZGRA5RBLSK3YJQPTJV4TBPNKKYA">
+      <manifest-digest sha256new="AYDMW66NZQ7KIZGQC3QYPPOYAZGRA5RBLSK3YJQPTJV4TBPNKKYA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.3/cosign-windows-amd64.exe" size="189318614" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="3.0.4" released="2026-01-09" stability="stable" main="cosign" id="sha256new_3SNK4DIRMZ4OJLSXR4H3GDPEXLKOO56FRAKCOQSSCEU62A4AQXUA">
+      <manifest-digest sha256new="3SNK4DIRMZ4OJLSXR4H3GDPEXLKOO56FRAKCOQSSCEU62A4AQXUA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.4/cosign-linux-amd64" size="132996776" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="3.0.4" released="2026-01-09" stability="stable" main="cosign" id="sha256new_ASFML3E5AU4UGKW3JPKMPGH7QMUA2XO76L4IUPGMVKKSBHGXS5UQ">
+      <manifest-digest sha256new="ASFML3E5AU4UGKW3JPKMPGH7QMUA2XO76L4IUPGMVKKSBHGXS5UQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.4/cosign-linux-arm64" size="125610302" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="3.0.4" released="2026-01-09" stability="stable" main="cosign" id="sha256new_KQLYUGHZMZ7M7VKMUZL4624ENUXV7INYKNLPSKC3U36EZXXY3N4A">
+      <manifest-digest sha256new="KQLYUGHZMZ7M7VKMUZL4624ENUXV7INYKNLPSKC3U36EZXXY3N4A"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.4/cosign-darwin-amd64" size="139820224" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="3.0.4" released="2026-01-09" stability="stable" main="cosign" id="sha256new_FEUP7FFP4SQA5DRR3HA4Y62XUYGY4FPKJSIDZ2QIVREIIFYBH3KA">
+      <manifest-digest sha256new="FEUP7FFP4SQA5DRR3HA4Y62XUYGY4FPKJSIDZ2QIVREIIFYBH3KA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.4/cosign-darwin-arm64" size="132026450" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="3.0.4" released="2026-01-09" stability="stable" main="cosign.exe" id="sha256new_OFNWSJDAHAHFOGLDEXEDYRBRV3FMNOK76STTMG3ZKW7Z3UR2KEVQ">
+      <manifest-digest sha256new="OFNWSJDAHAHFOGLDEXEDYRBRV3FMNOK76STTMG3ZKW7Z3UR2KEVQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.4/cosign-windows-amd64.exe" size="186072186" dest="cosign.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="3.0.5" released="2026-02-19" stability="stable" main="cosign" id="sha256new_UD4WEO6NR727SDWR7MOGYWZNGMGZUMT4GGSJ7IC4ZZXZEEG5ZZ5Q">
+      <manifest-digest sha256new="UD4WEO6NR727SDWR7MOGYWZNGMGZUMT4GGSJ7IC4ZZXZEEG5ZZ5Q"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.5/cosign-linux-amd64" size="135112256" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="3.0.5" released="2026-02-19" stability="stable" main="cosign" id="sha256new_TX7AIJFUMJ447CM47QCAYDMK55S3WYLC7XATS5CI5JOD36P4IKVA">
+      <manifest-digest sha256new="TX7AIJFUMJ447CM47QCAYDMK55S3WYLC7XATS5CI5JOD36P4IKVA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.5/cosign-linux-arm64" size="127719526" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="3.0.5" released="2026-02-19" stability="stable" main="cosign" id="sha256new_TDKUOIQX5XZUOWD7B3YX6KUMPZHJ2GJTTHJ5OKLPOYFFCVU2WE7Q">
+      <manifest-digest sha256new="TDKUOIQX5XZUOWD7B3YX6KUMPZHJ2GJTTHJ5OKLPOYFFCVU2WE7Q"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.5/cosign-darwin-amd64" size="142175512" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="3.0.5" released="2026-02-19" stability="stable" main="cosign" id="sha256new_SZ5OXLGEJQAD54NJRUTJ324NRU77SPEQEDJF5JD5OFF36WZ23BVQ">
+      <manifest-digest sha256new="SZ5OXLGEJQAD54NJRUTJ324NRU77SPEQEDJF5JD5OFF36WZ23BVQ"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.5/cosign-darwin-arm64" size="134201970" dest="cosign" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="3.0.5" released="2026-02-19" stability="stable" main="cosign.exe" id="sha256new_NHCQ42L775F6SSV4RZQ5ECE52PSHMJXUV4CHTU2JDQT5EJVK2DCA">
+      <manifest-digest sha256new="NHCQ42L775F6SSV4RZQ5ECE52PSHMJXUV4CHTU2JDQT5EJVK2DCA"/>
+      <file href="https://github.com/sigstore/cosign/releases/download/v3.0.5/cosign-windows-amd64.exe" size="189479249" dest="cosign.exe"/>
+    </implementation>
+  </group>
+</interface>

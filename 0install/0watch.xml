@@ -15,7 +15,6 @@
     <command name="run" path="0watch.py">
       <runner interface="https://apps.0install.net/python/python.xml"/>
     </command>
-
     <requires interface="https://apps.0install.net/0install/0template.xml">
       <executable-in-path name="0template"/>
     </requires>
@@ -48,21 +47,34 @@
         <manifest-digest sha256new="UYJ6UBSK7AGAH6MYBSWZ35MQBKDPHTGPN3TATJF5XZ4R62QM4SZQ"/>
         <archive href="https://github.com/0install/0watch/releases/download/0.4.1/0watch-0.4.1.tar.bz2" size="12395"/>
       </implementation>
-      <implementation version="0.5.0" released="2026-04-05" id="sha1new=ae4543d3ce02b3af3043b713bc452bae2891e4b4">
-        <manifest-digest sha256new="KQW3ZZXACHP4SCJZKZIICE4S3SRK3XZ4QJVTJOG4QEZZQQHYQDOQ"/>
-        <archive href="https://github.com/0install/0watch/releases/download/0.5.0/0watch-0.5.0.tar.bz2" size="12558"/>
-      </implementation>
     </group>
+  </group>
+
+  <group license="OSI Approved :: GNU Lesser General Public License (LGPL)">
+    <command name="run" path="0watch.py">
+      <runner interface="https://apps.0install.net/python/python.xml"/>
+    </command>
+    <requires interface="https://apps.0install.net/0install/0install-python.xml">
+      <environment insert="" mode="prepend" name="PYTHONPATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/0install/0template.xml" version="0.10..">
+      <executable-in-path name="0template"/>
+    </requires>
+
+    <implementation version="0.5.0" released="2026-04-05" id="sha1new=ae4543d3ce02b3af3043b713bc452bae2891e4b4">
+      <manifest-digest sha256new="KQW3ZZXACHP4SCJZKZIICE4S3SRK3XZ4QJVTJOG4QEZZQQHYQDOQ"/>
+      <archive href="https://github.com/0install/0watch/releases/download/0.5.0/0watch-0.5.0.tar.bz2" size="12558"/>
+    </implementation>
   </group>
 
   <entry-point binary-name="0watch" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmnS7P0ACgkQWao5J8JOTh6KCgf/dGid
-YBd+ribFb/e4AA2hS7qcCyjpIRFruXst/IrkUxYT1E32IZ6PHo8s0MmPq0Yj0UKvrnk8bP8A/bvy
-2fq/SRlUjV46+vKIIwUdf992ZdViqtXF3KWKcVS9C/zYW5wYSkTf4+6pBXo0ltWAyKEFJ9Def5pI
-H6XgzX3Mo0bktNCXJDl3buaz6YhQHTC6/8ozKMWHP/gIOsVI3kdeGW3VblfBKNfWzYGVpGcFy5pR
-TW6gRXuZuD0V2GPhxkopIuvuIMrOVd+DMoLbUGzoNU/SOC6IijPlMWrEpxj+/dhvVX+DSJyzifkf
-inFdGHzTJ0CjOz1B45T6NH/jooPllZO0hA==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmnS7jAACgkQWao5J8JOTh6bRwf/RmBI
+tFIFWdKVFUReqKPqMhOTd6ovYDdJeKlY6qchRHbq26TweRfkq10JVXE4hqEnHSam+9t//hv3g4ek
+dbNj/NYiWAIDKeHUTwB4xFxYhyGnwBtTP13SgJY1OI2bxwetX6ode/C+x/rM+FubYKFZnKlk6Vis
+cn031z0Jj/nsaERlNAssj1Lsqb7ofudpXcKAjn9LMaF56TLOyls7sgxO0hB/9ZoKCenSb7UrESPj
+/dhEe6NvQUftKPCiogoNlT5D6NayinYSv5cKRpXlfAeyyCa+GoMJSuzwtKol7wQ84rNwVfRboxhJ
+P9Xmf+2taxlsl4c41DCdW6fWnpFao0Do2A==
 
 -->

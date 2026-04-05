@@ -14,7 +14,6 @@
     <command name="run" path="0watch.py">
       <runner interface="https://apps.0install.net/python/python.xml"/>
     </command>
-
     <requires interface="https://apps.0install.net/0install/0template.xml">
       <executable-in-path name="0template"/>
     </requires>
@@ -48,6 +47,23 @@
         <archive href="0watch-0.4.1.tar.bz2" size="12395"/>
       </implementation>
     </group>
+  </group>
+
+  <group license="OSI Approved :: GNU Lesser General Public License (LGPL)">
+    <command name="run" path="0watch.py">
+      <runner interface="https://apps.0install.net/python/python.xml"/>
+    </command>
+    <requires interface="https://apps.0install.net/0install/0install-python.xml">
+      <environment insert="" mode="prepend" name="PYTHONPATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/0install/0template.xml" version="0.10..">
+      <executable-in-path name="0template"/>
+    </requires>
+
+    <implementation version="0.5.0" released="2026-04-05" id="sha1new=ae4543d3ce02b3af3043b713bc452bae2891e4b4">
+      <manifest-digest sha256new="KQW3ZZXACHP4SCJZKZIICE4S3SRK3XZ4QJVTJOG4QEZZQQHYQDOQ"/>
+      <archive href="0watch-0.5.0.tar.bz2" size="12558"/>
+    </implementation>
   </group>
 
   <entry-point binary-name="0watch" command="run"/>

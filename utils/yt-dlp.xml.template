@@ -13,13 +13,63 @@
 
   <group license="Public Domain">
     <requires interface="https://apps.0install.net/utils/ffmpeg.xml" importance="recommended"/>
-    <command name="run" path="yt-dlp">
-      <runner interface="https://apps.0install.net/python/python.xml" version="3.8.."/>
-    </command>
 
-    <implementation version="{version}" released="{released}" stability="stable">
-      <manifest-digest/>
-      <file href="https://github.com/yt-dlp/yt-dlp/releases/download/{version}/yt-dlp" dest="yt-dlp"/>
-    </implementation>
+    <group>
+      <command name="run" path="yt-dlp">
+        <runner interface="https://apps.0install.net/python/python.xml" version="3.8.."/>
+      </command>
+      <implementation version="{version}" released="{released}" stability="stable">
+        <manifest-digest/>
+        <file href="https://github.com/yt-dlp/yt-dlp/releases/download/{version}/yt-dlp" dest="yt-dlp"/>
+      </implementation>
+    </group>
+
+    <group arch="Linux-x86_64">
+      <command name="run" path="yt-dlp_linux"/>
+      <implementation version="{version}" released="{released}" stability="stable">
+        <manifest-digest/>
+        <archive href="https://github.com/yt-dlp/yt-dlp/releases/download/{version}/yt-dlp_linux.zip" type="application/zip"/>
+      </implementation>
+    </group>
+
+    <group arch="Linux-aarch64">
+      <command name="run" path="/yt-dlp_linux_aarch64"/>
+      <implementation version="{version}" released="{released}" stability="stable">
+        <manifest-digest/>
+        <archive href="https://github.com/yt-dlp/yt-dlp/releases/download/{version}/yt-dlp_linux_aarch64.zip" type="application/zip"/>
+      </implementation>
+    </group>
+
+    <group arch="MacOSX-*">
+      <command name="run" path="yt-/yt-dlp_macos"/>
+      <implementation version="{version}" released="{released}" stability="stable">
+        <manifest-digest/>
+        <archive href="https://github.com/yt-dlp/yt-dlp/releases/download/{version}/yt-dlp_macos.zip" type="application/zip"/>
+      </implementation>
+    </group>
+
+    <group arch="Windows-x86_64">
+      <command name="run" path="yt-dlp.exe"/>
+      <implementation version="{version}" released="{released}" stability="stable">
+        <manifest-digest/>
+        <archive href="https://github.com/yt-dlp/yt-dlp/releases/download/{version}/yt-dlp_win.zip" type="application/zip"/>
+      </implementation>
+    </group>
+
+    <group arch="Windows-aarch64">
+      <command name="run" path="yt-dlp_arm64.exe"/>
+      <implementation version="{version}" released="{released}" stability="stable">
+        <manifest-digest/>
+        <archive href="https://github.com/yt-dlp/yt-dlp/releases/download/{version}/yt-dlp_win_arm64.zip" type="application/zip"/>
+      </implementation>
+    </group>
+
+    <group arch="Windows-i486">
+      <command name="run" path="yt-dlp_x86.exe"/>
+      <implementation version="{version}" released="{released}" stability="stable">
+        <manifest-digest/>
+        <archive href="https://github.com/yt-dlp/yt-dlp/releases/download/{version}/yt-dlp_win_x86.zip" type="application/zip"/>
+      </implementation>
+    </group>
   </group>
 </interface>

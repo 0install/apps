@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/utils/bsdtar.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uri="https://apps.0install.net/utils/bsdtar.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>BSD Tar</name>
   <summary>tar and cpio implementations based on libarchive</summary>
   <description>The bsdtar archiving program is built on libarchive, so offers a variety of modern features. One unusual feature it offers is the ability to function as a format-conversion filter, reading entries from one archive and emitting an archive in a different format with the same contents. This feature was simple to implement because libarchive's robust automatic format detection makes it unnecessary to specify the format of the input archive. The bsdtar program has a number of advantages over previous tar implementations: 
@@ -12,7 +12,7 @@
   <category>Utility</category>
   <homepage>https://www.libarchive.org/</homepage>
   <needs-terminal/>
-  <implementation arch="Windows-i486" id="sha1new=efaade1e475a4b90934407118837bd7759007f79" license="BSD License (revised)" released="2008-06-27" version="2.4.12-1-3">
+  <implementation arch="Windows-i486" id="sha1new=efaade1e475a4b90934407118837bd7759007f79" license="BSD-3-Clause" released="2008-06-27" version="2.4.12-1-3">
     <requires interface="https://apps.0install.net/utils/bzip2.xml" version="1.0.5">
       <environment insert="bin" name="PATH"/>
     </requires>
@@ -25,12 +25,12 @@
     <archive href="https://sourceforge.net/projects/gnuwin32/files/libarchive/2.4.12-1/libarchive-2.4.12-1-bin.zip" size="263534" type="application/zip"/>
     <archive href="https://github.com/kkeybbs/gnuwin32/blob/master/gnuwin32/libarchive-2.4.12-1-bin.zip" size="263534" type="application/zip"/>
   </implementation>
-  <implementation arch="Windows-x86_64" id="sha1new=f63b9d7bdbee5511bbaec6b65729c0f867a5b1c2" license="BSD License (revised)" released="2020-05-20" stability="stable" version="3.4.3">
+  <implementation arch="Windows-x86_64" version="3.4.3" released="2020-05-20" stability="stable" license="BSD-3-Clause" id="sha1new=f63b9d7bdbee5511bbaec6b65729c0f867a5b1c2">
     <command name="run" path="bin/bsdtar.exe"/>
     <command name="cpio" path="bin/bsdcpio.exe"/>
     <command name="cat" path="bin/bsdcat.exe"/>
     <manifest-digest sha256new="P4TWNY4NS4JFF5I4M4HPMKVA3MQOTKSMNAOAGAX4N5AO4VZJF7EQ"/>
-    <archive extract="libarchive" href="https://www.libarchive.org/downloads/libarchive-v3.4.3-win64.zip" size="2366188" type="application/zip"/>
+    <archive href="https://www.libarchive.org/downloads/libarchive-v3.4.3-win64.zip" size="2366188" type="application/zip" extract="libarchive"/>
   </implementation>
   <package-implementation package="libarchive">
     <command name="run" path="/usr/bin/bsdtar"/>
@@ -51,11 +51,11 @@
   </entry-point>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7Kc1wACgkQWao5J8JOTh5zlQf+NnKF
-5qSXKVnvGvgTtjZl+BR1ffzC9cRKbUL3gYi0jT0qVEKP7ahdMILcOyysbIVBnxW1NDM15BLKEY4D
-pd5+AF+z7H8fcNHDlzQ9mrwbmpraCU365qpczddKSAVrbMkvIG2r38p5KRJa37CLrMyJTwmUdila
-nAdedD8YtDRhrujU+AJxgidaj+kejI9umc1FYEmvgH2Do6jSHAjSSTGzZ9YVMIw31JkxvUIbOv29
-ndo2WmV/RU46AArRybyx2Qg5MypNWOZUkgIbEqUcVWCKMZa4W9BBw1cfs0drRzQno4fBkOLeLfWM
-9sIXmrjenxbUSCGnHRDIUrUovhZRlkx2fw==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmoh/8EACgkQWao5J8JOTh7XPwgAnJz3
+7KEnSxa8lFjAu0MnO2fyGSEV4D23Hr1ywusEn7NQQswHc7jmdJE9yqafug+9oBKpq3cR/IQ/l0YZ
+SRJHRexkH5iIUatLz0oFbHOPsMXgpWmkYQRHLCUy0mEHAWf+xvWGIwK4v1zMPdpf/vSwo8b0BqZT
+vCb8tiN/KQGUbZHNJ6PywArvipM1v1azyFiupGfVhfmno4pGw+qPvV8Y1XDhLJ7Lf25jHDMLJUkp
+Y2W2MBjP3JHX8bj18AOviUoAInJmP0MFudrA1uucY6LAJy0QFTHtyGD2dkX4j57GRsPhA87FyiH1
+Qwvzjhs/rtuGaWAnQni0lM/YBn1FldVkpw==
 
 -->

@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/lib/expat1.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/lib/expat1.xml">
   <name>libexpat1</name>
   <summary>XML parsing C library - runtime library</summary>
   <description>
@@ -23,25 +23,25 @@ parsing XML.</description>
       <archive href="https://github.com/0install/apps/releases/download/archives/libexpat1-amd64-2.0.1-7.tar.bz2" size="106257"/>
     </implementation>
   </group>
-  <implementation arch="Windows-i486" id="1.95.1withdllrenamed" license="MIT/X Consortium License" released="2000-10-22" version="1.95.0">
+  <implementation arch="Windows-i486" version="1.95.0" released="2000-10-22" license="MIT" id="1.95.1withdllrenamed">
     <manifest-digest sha256new="NIFBMKJZ277BARKR4SOXWRHPTW45IL3NBJM76PZZD4GVCYV6RHQQ"/>
     <recipe>
-      <archive extract="expat_win32bin_1_95_1" href="https://sourceforge.net/projects/expat/files/expat_win32/1.95.1/expat_win32bin_1_95_1.zip" size="119596" type="application/zip"/>
-      <rename dest="libexpat.dll" source="expat_1_95_1.dll"/>
+      <archive href="https://sourceforge.net/projects/expat/files/expat_win32/1.95.1/expat_win32bin_1_95_1.zip" size="119596" type="application/zip" extract="expat_win32bin_1_95_1"/>
+      <rename source="expat_1_95_1.dll" dest="libexpat.dll"/>
     </recipe>
     <recipe>
-      <archive extract="expat_win32bin_1_95_1" href="https://raw.githubusercontent.com/libexpat/libexpat/releases/download/R_1_95_1/expat_win32bin_1_95_1.zip" size="119596" type="application/zip"/>
-      <rename dest="libexpat.dll" source="expat_1_95_1.dll"/>
+      <archive href="https://raw.githubusercontent.com/libexpat/libexpat/releases/download/R_1_95_1/expat_win32bin_1_95_1.zip" size="119596" type="application/zip" extract="expat_win32bin_1_95_1"/>
+      <rename source="expat_1_95_1.dll" dest="libexpat.dll"/>
     </recipe>
   </implementation>
 
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmAveekACgkQWao5J8JOTh50XQgArdOn
-lkkuLFqnny18VR2MKjm7+lrToWuEPLiSQYPYXr9XAVp5e6ocjFdt+BXalVOthg/uAmxh2Ed7W0t3
-7hgX2AKk5za8Xl26GOSXCLWancLHlg+OUKYwTTYWZS/A4xyIBUYMkVRlfxtcwXxN/cY+f/4rvHT5
-JhwdqNlWv0eHXtL4dz5fbiTbjlv/89PjtlW2HHtGmTsflPw6Fxcke7FGUaEcWGLD5iJP2VXc17Ck
-U73Iu0Er4hj911o2kqps288F0t95NnkeiF6Fb7SG/gqpEDBeEi7q9+JJqrbYWSNaTrttaw8xVk0t
-hYFTVONTLXGtQdKuykGJX1K0GyUkysq8uw==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmoh/8EACgkQWao5J8JOTh5omAf+LsCe
+ASdcBw0ZKxbBUTNVXUPORp9aZeDrl5w+2cX3N1G13xyEqECQX634FOQFEFcDRvjJV1TmN6TgFzWk
+Eo1KlwJBfdD4D/YtKg593ZA3of3pC7zdubu/n5tTvW4ZVqvavaJ1y4KctlN7E/P/eUNp6riPgx5D
+xmeqIjiJmwTKZ55W7cxarpTSP+YeAynN9DAUesXmwmJLa0R5S7Dc/QtaGtBM9+Df/I8HAE0OSEc1
+yG+kl+kgPdhhT8hm6+d1SO/rZo1NlemjNmKWTtjeuAP44qu6+9+WJ8muEpHUslocSL+l0Gq1DxAK
+DeoTLf/2zPdnQ036Z8PGe+wHkzcKC4WDSQ==
 
 -->

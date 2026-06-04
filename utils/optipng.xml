@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/utils/optipng.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/elements/1.1/" uri="https://apps.0install.net/utils/optipng.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>OptiPNG</name>
   <summary>Compresses PNG files to a smaller size, without losing any information</summary>
   <description>The OptiPNG
@@ -14,8 +14,8 @@ and pixmap-to-PNG conversion.
   <needs-terminal/>
   <package-implementation distributions="Gentoo" package="media-gfx/optipng"/>
   <package-implementation package="optipng"/>
-  <package-implementation distributions="Slack" package="graphics/optipng"/>
-  <implementation arch="Windows-*" id="sha1new=54a5a176f8c7ca6312ea96fb9eb4424af811f388" license="zlib/libpng License" released="2017-12-27" version="0.7.7">
+  <package-implementation package="graphics/optipng" distributions="Slack"/>
+  <implementation arch="Windows-*" id="sha1new=54a5a176f8c7ca6312ea96fb9eb4424af811f388" license="Zlib" released="2017-12-27" version="0.7.7">
     <command name="run" path="optipng.exe"/>
     <manifest-digest sha256new="HGJUTGTH3T5WQMO6XOCRTRMPBKSBL5RPDSULJQK3UNHUL2YJDV5A"/>
     <archive extract="optipng-0.7.7-win32" href="http://prdownloads.sourceforge.net/optipng/optipng-0.7.7-win32.zip" size="138730" type="application/zip"/>
@@ -25,11 +25,11 @@ and pixmap-to-PNG conversion.
   </entry-point>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7KbgkACgkQWao5J8JOTh7EpggArDeR
-Z76PcDWERcf1P4huB9Mpa5XZmUs7kkeZMXNSoj5QM3Z2eR8+TgHdHk8OsS8H2Oxldf+RoHXbIi5p
-mqBJTjyufdAjoWOyWqbO9RF5P98ARGnB5igeF31PknbvtBm22nsM+ff1mqn6gxA4QD8P6sd+6Gdt
-8dGP+zIcRGdPPGj4S6MDs+TjZlSP+tTudnycvH9Jo2T4+t0n0IhiM/btR2ujZNVKyNq1JUxNZH7/
-+IvyJBYSSfmFSgX5LPXZAmLO1IrboA7VU/cZg+LS/9qa7grVM0+fZyAif+QZewGsc79preqY4S/i
-lXVy5kO2VJMlwDmMVwt3+qbDQBMk9NmG3g==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmoh/8AACgkQWao5J8JOTh5jpggAjbHP
+vrbw5J2RpJGCbNbMA2JusDbf5IviNA1Slq9N+NXKErOLrvL5Q7XIlZ1DJdD6X3i7O5Z1ootut4N7
+XgXzXpZ0vt6TiBvLvPfULbmTUjGotmfmK6fQBJcfBxJZ/RZubvrdi0+FdrG3FO1HM/kjjMqCZaYq
+TZyrHPRIXJkR2n8Whw3/t02tIvqR/mhxgLBEm/oLq25rbK6K7OwI/3uwq5F6npGkY40OfAMLwKUH
+OS2IBAJ1Fz/9ea4z72/ws3n0X5miG9ZATfYWako/YKfbYwL48+Hjdn2SvJPtubzweHdWLUpnXaxx
+rd2YZ+oYlP5q1XimJXSyv9R5GAXVq6RTlw==
 
 -->

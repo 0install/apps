@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/kubernetes/helm-autoversion.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/kubernetes/helm-autoversion.xml">
   <name>Helm Autoversion</name>
   <summary>wrapper for Helm that auto-downloads client matching server version</summary>
   <description>A wrapper for Kubernetes Helm that automatically downloads a Helm (client) version that matches the Tiller (server) version.</description>
@@ -15,7 +15,7 @@
   <feed-for interface="https://apps.0install.net/kubernetes/helm.xml"/>
 
   <!-- Marked as version 3-pre to be considered "better" than all Helm 2.x releases but not as a candidate for Helm >= 3.0. -->
-  <implementation id="sha1new=a551fc5839686a79ee5fe9b7412f0bcb82b43605" license="MIT License" released="2019-07-16" stability="stable" version="3-pre">
+  <implementation license="MIT" released="2019-07-16" stability="stable" id="sha1new=a551fc5839686a79ee5fe9b7412f0bcb82b43605" version="3-pre">
     <manifest-digest sha256new="YK4PPBMOGQYPFR227KIBN3NCXBE3FM2FGY2NMOAAOX3R7N66RPUA"/>
     <command name="run" path="helm-autoversion.py">
       <runner interface="https://apps.0install.net/python/python.xml"/>
@@ -25,11 +25,11 @@
 
 </interface>
 <!-- Base64 Signature
-iQEcBAABAgAGBQJeQLhpAAoJEFmqOSfCTk4ebAkH/3ETokqtq/t4WO+taCVwsOu+lnN83gu3uD/t
-yd+hCBuA+j7/NRqSQHXjgo4ozerzEzkjDySYym7jsmcERfXM3ic0vvKV67H07X9aenOwtIxLE3OQ
-knr370Zdqbr6SY0XnKp2n3MgdG6o/huqiytycA3AK/mN62/9Ql75gYpUHrf4Ept60uWEdIXzQH3P
-VXqrdgzymqiA2rrv25YHh6UNpKMl7hYhlV4cPb18zsu1mfSYLXNpq7IpjqEvvK+DqQCchb2URu6c
-KC/MHO4Ud1c0zSam54ew1d6wZtGwWDamFGOxe+dcy9vmP0qXgd0j0Zx/4940jUlXYtlnSGExa9Ki
-Xzw=
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmoh/8IACgkQWao5J8JOTh7UWwf/RvLO
+QABtKbtPJo9iKlZg1PvhrGSbiTDOBGFJPKBjGxKYlVBQzuZm8veejUP/+42NZnRZz4TFjDWIJOK4
+rZC38qLjQjZsckIGGRV5uRFITXzzxTUkmz9fqLm+NXBRVkUyCjoLvj5AEf93k/iK5ZwfMKdvb29t
+sSTG9SQU6KVlpLQKOHcNWSb/O5hkPHE/6n7rmZwTA4RO0Y0YG82jKzYcm7MFQ7BEXmCKhI/rVbxd
+gjUOQ5Aw2puheu+JtsMxnwTrQdckvtS5kMoHmnQuSGZFv5rPBBpLfmoupKlBg8JDvOxASWqQlI5w
+GtJKhPKqDNyVJoMTpdMSiGMEnE0JtzPx6w==
 
 -->

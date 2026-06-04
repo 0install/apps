@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/utils/gdisk.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/utils/gdisk.xml">
   <name>GPT fdisk</name>
   <summary>disk partitioning tool for modifying GPT disks</summary>
   <description>GPT fdisk is a disk partitioning tool loosely modeled on Linux fdisk, but used for modifying GUID Partition Table (GPT) disks.</description>
@@ -12,7 +12,7 @@
   <package-implementation distributions="Debian" main="/sbin/gdisk" package="gdisk"/>
   <package-implementation distributions="RPM" main="/usr/sbin/gdisk" package="gdisk"/>
 
-  <group arch="Windows-x86_64" license="GPL v2 (GNU General Public License)">
+  <group arch="Windows-x86_64" license="GPL-2.0-only">
     <command name="run" path="gdisk64.exe"/>
     <implementation id="Windows-x86_64-1.0.0" released="2015-03-17" stability="stable" version="1.0.0">
       <manifest-digest sha256new="4MKXLYK2YKSNMFEKCL6TJGB7KCA2W2YOGJG24IDGECOA76TLHNWQ"/>
@@ -36,7 +36,7 @@
     </implementation>
   </group>
 
-  <group arch="Windows-i486" license="GPL v2 (GNU General Public License)">
+  <group arch="Windows-i486" license="GPL-2.0-only">
     <command name="run" path="gdisk32.exe"/>
 
     <implementation id="Windows-i486-1.0.0" released="2015-03-17" stability="stable" version="1.0.0">
@@ -61,7 +61,7 @@
     </implementation>
   </group>
 
-  <group doc-dir="usr/share/doc/gdisk" license="GPL v2 (GNU General Public License)">
+  <group doc-dir="usr/share/doc/gdisk" license="GPL-2.0-only">
     <command name="run" path="usr/sbin/gdisk"/>
     <command name="sgdisk" path="usr/sbin/sgdisk"/>
     <command name="cgdisk" path="usr/sbin/cgdisk"/>
@@ -110,11 +110,11 @@
   <entry-point binary-name="gdisk" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl5SSPsACgkQWao5J8JOTh6Dcgf/TFrb
-KgoAABoiAr31COby4xho8g72x7ggvqPOgBnxYV3OjvoWYESNTcVNv3JKPf/i1Jr+h0qYlk1M2i4q
-8pOVmhyeOkScXnmSCCv22kklECHrjBR5CIdLCQYYJcWx/muR1JUTAFvEkOgRE6XW/wSCaz0t2kCo
-bhPz1YC1+cn1qEsdGGLII6MMAu8vSH10Ou/7PKj7wh16ao+VchLGHTEZ+M6qL8rtb/suW2SOFeE/
-MlN0TJk6JqbvJQ+7jOOLpK+Nk4chtuH44g97sp5JeXnO64LDWA+32I2sPGH/V8bwFBr6zmYLglUw
-vMOsFOzsvg+etQDJlCwSri1UiGRSlEskag==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmoh/8EACgkQWao5J8JOTh48Mgf/Xd8M
+Zd5joo0FD+JKHY3ibVMPcKaszv8s3SW4MPZ0ZDrpPgCgJbko6NijMlEwVX2OAj1BJM1+yRZzDoBa
+y6vM5UQt9iuUW8OL4yNGFvna5hXDZ6keCN1+wuUqPQ1cwyQOQjyvDm+wGMGHWjckIHM6Rk1Zp3Ol
+CX9mYJu5LWUKT30ZnQ7So/tbfmo90n7MmVIAexG3S0ivUNazGMo44LfNtZhiQo2FFDJt6GNtWz2g
+FHi6kdTQnN17FpvooDdL22Iu2VHp3WS+8kmYhwe6WnO8JnRUNCbFDqHdwLa8uIB0Wxdp2xrUCg23
+r9wdnHW6lqJvHSUmKC9+iyCZv23hHJ4k5Q==
 
 -->

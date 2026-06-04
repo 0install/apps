@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/utils/pngcrush.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/elements/1.1/" uri="https://apps.0install.net/utils/pngcrush.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>pngcrush</name>
   <summary>A tool for optimizing the compression of PNG files</summary>
   <summary xml:lang="fr">Pngcrush est un optimiseur de fichiers PNG (Portable Network Graphics).</summary>
@@ -25,9 +25,9 @@
   <needs-terminal/>
   <package-implementation distributions="Gentoo" package="media-gfx/pngcrush"/>
   <package-implementation package="pngcrush"/>
-  <package-implementation distributions="Ports" package="graphics/pngcrush"/>
-  <package-implementation distributions="Slack" package="graphics/pngcrush"/>
-  <group arch="Windows-*" license="zlib/libpng License" released="2017-01-16" version="1.8.11">
+  <package-implementation package="graphics/pngcrush" distributions="Ports"/>
+  <package-implementation package="graphics/pngcrush" distributions="Slack"/>
+  <group arch="Windows-*" license="Zlib" released="2017-01-16" version="1.8.11">
       <command name="run" path="pngcrush.exe"/>
 
     <implementation arch="Windows-x86_64" id="sha1new=8f69a1d3976bb707232d4aa0a69df7a30cfeafda"> 
@@ -44,11 +44,11 @@
   </entry-point>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7KbbMACgkQWao5J8JOTh4cggf/SqW8
-maJ+5G88Bg4BLwbvbY56bza+UOLRPC0A2hh7NqgMzVA3AF6Xqr2Ks42FjssmuTK1zwoNi+L/6G8u
-PvSCtXH7hMLHYI83Wk/BsL/3yeFdKSuPN193cJSxzvYL+1ROT8bJ7hZbMf27yo9FA3QJnL7/elCK
-JxrSSv6l7b6J6L+9o6SPYetJ8Q1+DPS1bHc63IRTY54BtYK/gIi8jcZrzR3GpzSpzXJF+beroOL8
-g5vancGV0Pxm0aMhMgy+Z/yFjd09+EtVMNCGO67WJn/v5A2rWJhrKlYGtmRiCRRurduKbzQQius9
-utv6vKM7X4ZrwRump3DP5v8T0jQj+eYkWQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmoh/8AACgkQWao5J8JOTh6OvQgAuoEu
+ZAW3Qsbuz0+vBOLFBI5m15YmuLB70aU/gHImFf4zcxV5ffnwPhRxXksYDFmPd3M8p28FKcygRrVr
+s65Eq45nEQhMOf0ZsuoVKDnmPtld05c+bwQY00wMFnSu1vNy6J1gJ/Zr7HtUJDawetPAx/7xoloB
+5s1sNBOZGPHXoHb1qYda5wMHj8MVpxqTgipe4vQSoHcmxVHO42pE0+kyNqal+QXHx4ZhglfLAAYT
+4NLnB1M2wjYbu//M7kNzq/mH4rf0sKZ2O3tOTtbpX21jCnHBk8DhcVcT2gRG/d1CgGNMk5vBsT//
+QlgSXs4Gi6ri2+m1U8TJMhN/XeKovGGOWg==
 
 -->

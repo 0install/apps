@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/utils/fixparts.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/utils/fixparts.xml">
   <name>FixParts</name>
   <summary>fixes some common problems on MBR disks</summary>
   <description>The FixParts utility fixes some common problems on Master Boot Record (MBR) disks.</description>
@@ -12,7 +12,7 @@
   <package-implementation distributions="Debian" main="/sbin/fixparts" package="gdisk"/>
   <package-implementation distributions="RPM" main="/usr/sbin/fixparts" package="fixparts"/>
 
-  <group arch="Windows-x86_64" license="GPL v2 (GNU General Public License)">
+  <group arch="Windows-x86_64" license="GPL-2.0-only">
     <command name="run" path="fixparts64.exe"/>
     <implementation id="Windows-x86_64-1.0.0" released="2015-03-17" stability="stable" version="1.0.0">
       <manifest-digest sha256new="CVOHNP57SGAGH7UDYBC77KIENR56N5RQPYWJ46LLSCLMC3WW6XOQ"/>
@@ -36,7 +36,7 @@
     </implementation>
   </group>
 
-  <group arch="Windows-i486" license="GPL v2 (GNU General Public License)">
+  <group arch="Windows-i486" license="GPL-2.0-only">
     <command name="run" path="fixparts32.exe"/>
     <implementation id="Windows-i486-1.0.0" released="2015-03-17" stability="stable" version="1.0.0">
       <manifest-digest sha256new="CVOHNP57SGAGH7UDYBC77KIENR56N5RQPYWJ46LLSCLMC3WW6XOQ"/>
@@ -60,7 +60,7 @@
     </implementation>
   </group>
 
-  <group doc-dir="usr/share/doc/fixparts" license="GPL v2 (GNU General Public License)">
+  <group doc-dir="usr/share/doc/fixparts" license="GPL-2.0-only">
     <command name="run" path="usr/sbin/fixparts"/>
     <implementation arch="Linux-x86_64" id="sha1new=be87255a556d139080c9c2d343098801e5dbd571" released="2015-03-17" stability="stable" version="1.0.0-1">
       <manifest-digest sha256new="SFXAFQMM2RVFLNZ3FDHNPSQEAZFUB5YS675X44LTE6YCWVUXVY7A"/>
@@ -107,11 +107,11 @@
   <entry-point binary-name="fixparts" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl5SSPsACgkQWao5J8JOTh67PQgAnYhy
-alahodCZDI83nHG4TQI0kdv1r0Y84kWETmE6eqyMyUqCSLnVPQoQyuPxapH5fl/wp8DYq4nkHG52
-1Jf5Xr0cKOypkRl2+kqKO/xt32JfAPBqFkEBJOXAUwjq7uDbVnXWX/1yr+lW03yqLVcIsYhAzZ/L
-b8aKWFfDN7ZZup4vPajFfSmYHAaKc9FIiuNWJLylCBsDrXmNAavJePrSKS5BsXRmmXzCMo5IzZcb
-hTgegdHWMdMurPPGxrFmXSmkAU/DD2CTHNDX0hN7ccMhJNdKMDNld7VyOMYqVMHxqS3ZD9NWkDxs
-kGJh2aAZnexBFcQC276VA5WNwiuDk/IzOQ==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmoh/8EACgkQWao5J8JOTh6aqQgAgldD
+9emvg8tEtWeaWdbLDAhk1St64duUp4QTjvcEMEekQnAd+O0u7AduTbvDbQNTDyQRuBfaY1Igmt34
+1YPwNucdvrEAx9Cs8AkljD2TQr4LPQvWAZG5ceOQYYrGq/z+FtvFkSwlmB/kX4lQnfM1U+bd+1qs
+m9BCynUSODCvvK8ISyQFQLV3wK25kxR9fhwZqQ7JaNskuB8XLIp93n/l8QmNeI+nyW/2Zu4GPyhA
+5cwjG3+xnkfkT+tvpo3zYP1ST5CDrbrZAaF6NYNN/00x7AmTBXazMU8CLSCzYGxMhG9H0u8ZY+Dj
+ahUcGuPouLigHJH+/iz3CWJAbFe31sc7iA==
 
 -->

@@ -1,24 +1,24 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface uri="https://apps.0install.net/utils/cpio.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uri="https://apps.0install.net/utils/cpio.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>cpio</name>
   <summary>copies files between archives and directories</summary>
   <category>Utility</category>
   <needs-terminal/>
-  <implementation arch="Windows-*" id="sha1new=da39a3ee5e6b4b0d3255bfef95601890afd80709" license="BSD License (revised)" version="1">
+  <implementation arch="Windows-*" version="1" license="BSD-3-Clause" id="sha1new=da39a3ee5e6b4b0d3255bfef95601890afd80709">
     <command name="run" path="bin/cpio.exe">
-      <runner command="cpio" interface="https://apps.0install.net/utils/bsdtar.xml"/>
+      <runner interface="https://apps.0install.net/utils/bsdtar.xml" command="cpio"/>
     </command>
     <manifest-digest sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
     <recipe/>
   </implementation>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAl7Kc1wACgkQWao5J8JOTh5CiwgAkqTR
-7m9Mah+4tD4M+4gUrLNt2pDiZ2peae2jTpKUoHubmM9hXAL6vw6frgD7dx0TjsARVNCArTGCfUSI
-wchqrJq3zXyLCcPqmRlPzE9/xjjUozx1EqCX6b6Jk/jXZ2/NQHOWZD8FrjKolo9CAiISHWJjJ4Mo
-JK8cmLVucw4xZS2BCI3S92tZ5Bkpgqi8AWh1W/sQ+/8G2X8aENYivbtHt+V3nKmjgsBBRlwH5MHT
-G25/5SGGsePfjzEFzK1lXhe/whwezrEm7gF0o/dy23JKYDGBE8jynWK+W8vMW1lbbrc4h6CfOd4i
-1IW8Jh6uhP2ZO6izMvHR3URtZ1l7S51QXg==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmoh/8EACgkQWao5J8JOTh54QAf+K2YT
+hOU3EfDtmquccmJf0S3u7fm0sjpaCq8ubFcstDV2inqGLvUT39QzJUN71ghrBrT0xu3AxbdnpneX
+HVHrd9tKZ7ySWEKI5fBQE9ZlicbNZ2ds6LAj51EfYS0tsQcheaaaXQmk4ccqFTphyxwCX8k7IB+i
+cpX5D5vpx0wBcIcSA0VGusgmKCq3bAFwCD0lrw8vTAabYz/uUkeH4OtDkxY21JCRTvUTBieds+Va
+SWsIKukQf8+CQNnWz52jaAuQhsXViaLPE7jruCYc/kpym/zFQTNzOMyjo/8eo9KEQz9nVhd4Mdie
+Q9eNyvYk4ezrOfpA9URg4K0G4RnImQMkPA==
 
 -->

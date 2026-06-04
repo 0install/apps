@@ -16,7 +16,7 @@ workspaces that can be used in the compiler environment of your choice.</descrip
 
   <feed-for interface="https://apps.0install.net/devel/cmake.xml"/>
 
-  <group license="BSD License (revised)">
+  <group license="BSD-3-Clause">
     <command name="run" path="bin/cmake"/>
     <command name="run-gui" path="bin/cmake-gui"/>
     <command name="run-curses" path="bin/ccmake"/>
@@ -28,7 +28,7 @@ workspaces that can be used in the compiler environment of your choice.</descrip
     </implementation>
   </group>
 
-  <group license="BSD License (revised)">
+  <group license="BSD-3-Clause">
     <command name="run" path="CMake.app/Contents/MacOS/CMake"/>
     <command name="run-gui" path="CMake.app/Contents/bin/cmake-gui"/>
     <command name="run-curses" path="CMake.app/Contents/bin/ccmake"/>
@@ -40,7 +40,7 @@ workspaces that can be used in the compiler environment of your choice.</descrip
     </implementation>
   </group>
 
-  <group license="BSD License (revised)">
+  <group license="BSD-3-Clause">
     <command name="run" path="bin/cmake.exe"/>
     <command name="run-gui" path="bin/cmake-gui.exe"/>
     <command name="cpack" path="bin/cpack.exe"/>
@@ -55,7 +55,7 @@ workspaces that can be used in the compiler environment of your choice.</descrip
     </implementation>
   </group>
 
-  <group arch="*-src" license="BSD License (revised)">
+  <group arch="*-src" license="BSD-3-Clause">
     <implementation compile:binary-main="bin/cmake" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" compile:dup-src="true" version="{version}" released="{released}" stability="{stability}" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
       <manifest-digest/>
       <archive href="https://cmake.org/files/v{minor-version}/cmake-{version}.tar.gz" type="application/x-compressed-tar" extract="cmake-{version}"/>

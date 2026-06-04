@@ -16,7 +16,7 @@
     <release:action phase="generate-archive">rm .gitignore; make translations</release:action>
   </release:management>
 
-  <group arch="*-src" license="OSI Approved :: GNU Lesser General Public License (LGPL)">
+  <group arch="*-src" license="LGPL-2.0-or-later">
     <command name="compile">
       <runner interface="https://apps.0install.net/devel/make.xml">
         <arg>-f</arg>
@@ -216,7 +216,7 @@
     </group>
   </group>
 
-  <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="files/0install">
+  <group license="LGPL-2.0-or-later" main="files/0install">
     <command name="run" path="files/0install"/>
     <requires interface="https://apps.0install.net/utils/gnupg.xml">
       <executable-in-var name="ZEROINSTALL_GPG"/>
@@ -274,7 +274,7 @@
       <archive extract="0install-linux-i486-2.5.1" href="0install-linux-i486-2.5.1.tar.bz2" size="1050653"/>
     </implementation>
   </group>
-  <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="files/0install">
+  <group license="LGPL-2.0-or-later" main="files/0install">
     <requires interface="https://apps.0install.net/utils/gnupg.xml">
       <executable-in-var name="ZEROINSTALL_GPG"/>
     </requires>
@@ -568,7 +568,7 @@
     <requires interface="https://apps.0install.net/utils/gnupg.xml">
       <executable-in-var name="ZEROINSTALL_GPG"/>
     </requires>
-    <implementation arch="Windows-*" id="sha1new=1320732c46df741dee96fa7851539071550d2640" license="OSI Approved :: GNU Lesser General Public License (LGPL)" main="0install.exe" released="2016-02-07" stability="stable" version="2.11">
+    <implementation arch="Windows-*" id="sha1new=1320732c46df741dee96fa7851539071550d2640" license="LGPL-2.0-or-later" main="0install.exe" released="2016-02-07" stability="stable" version="2.11">
       <manifest-digest sha256new="KJUNUEY57KOBOZVMAU4N3MJFLOO3FK3EMU62DUK3CFQVBNCNLU5A"/>
       <archive extract="0install-Windows-2.11" href="https://downloads.sourceforge.net/project/zero-install/0install/2.11/0install-Windows-2.11.zip" size="3545396" type="application/zip"/>
     </implementation>

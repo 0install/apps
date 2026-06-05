@@ -135,7 +135,7 @@ When the program isn't a native binary, a `<runner>` inside `<command>` names th
 ```
 
 - **Python**: `https://apps.0install.net/python/python.xml`. Use `command="run-gui"` on the runner for GUI apps that shouldn't open a console on Windows, and omit `<needs-terminal/>`.
-- **Java**: `<runner command="java" interface="https://apps.0install.net/java/jdk.xml">`; JARs usually also set `<environment insert="lib/*" name="CLASSPATH"/>`. Model: `java/gradle.xml.template`.
+- **Java**: `<runner command="java" interface="https://apps.0install.net/java/jdk.xml">`; JARs usually also set `<environment insert="lib/*" name="CLASSPATH"/>` (or `insert="name.jar"` for a single JAR). Model: `java/gradle.xml.template`. **Pick `jdk.xml`, not `jre.xml`, for anything needing Java 9+.** `java/jre.xml` only offers a *downloadable* Oracle JRE **8** (plus system-package fallbacks), so a runner against it resolves to Java 8 and a modern JAR dies at launch with `UnsupportedClassVersionError` (class file 55 = Java 11, 52 = Java 8). `java/jdk.xml` pulls a current OpenJDK via `openjdk.xml`, so it satisfies high `not-before` constraints. Always set the floor the JAR actually requires, e.g. `<version not-before="11"/>` (equivalently `version="11.."`); to discover it, generate the feed and run the tool — a class-version error names the minimum.
 - **.NET Framework**: `<runner interface="https://apps.0install.net/dotnet/clr.xml"/>` (or `clr-monopath.xml` when `MONO_PATH` matters).
 - **Perl**: `<runner interface="https://apps.0install.net/perl/perl.xml"/>`.
 

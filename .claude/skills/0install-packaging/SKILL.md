@@ -46,7 +46,7 @@ Find these before writing anything (ask the user only for what you genuinely can
 
 ## Step 2 — Pick the category and check for duplicates
 
-The directory reflects the **ecosystem/runtime**, not what the tool does:
+The directory reflects the **ecosystem the tool belongs to**:
 
 | Dir | Contents | Dir | Contents |
 | --- | --- | --- | --- |
@@ -56,6 +56,8 @@ The directory reflects the **ecosystem/runtime**, not what the tool does:
 | `golang/` | Go toolchain + Go tools | `dotnet/` | .NET SDK/runtime + tools |
 | `javascript/` | Node/Electron/nwjs | `kubernetes/` | k8s-ecosystem CLIs (helm, k9s) |
 | `protobuf/` | protobuf/gRPC tools | `docker/`, `ruby/`, `perl/`, `powershell/`, `ocaml/` | per-ecosystem |
+
+**The implementation language is not the category.** A language dir like `java/`, `python/`, or `golang/` is only for things that *extend that ecosystem* — its runtime (JRE/JDK), build tools (Gradle, Maven), or language-specific libraries. A general-purpose application that merely *happens to be written in* Java/Python/Go belongs in `utils/`, `devel/`, or `gui/` by its **function**, with the language pulled in invisibly via a `<runner>`.
 
 When unsure, prefer `devel/` for developer tooling and `utils/` for general utilities. Then confirm it's new:
 
@@ -208,7 +210,7 @@ Step 5 only validated the template against one version. Now make the feed live: 
    - `name.ico` — **only** for cross-platform or Windows-only feeds (Windows uses it for shortcuts); skip it for a macOS/Linux-only feed.
    - `name.icns` — **only** for cross-platform or macOS-only feeds; skip it for a Windows/Linux-only feed.
 
-   **Prefer a `.ico`/`.icns` the project already ships** (from step 1) over generating one — they're usually better-tuned. Only convert when none exists: rasterize an `.svg` to PNG first if that's all you have, then `magick name.png name.ico` for the `.ico` and `png2icns`/`iconutil` for the `.icns`.
+   **Prefer a `.ico`/`.icns` the project already ships** (from step 1) over generating one — they're usually better-tuned. Only convert when none exists: rasterize an `.svg` to PNG first if that's all you have, then `magick name.png name.ico` for the `.ico` and `magick name.png name.icns` for the `.icns`. If `magick` (ImageMagick) isn't installed, run it through 0install — prefix the command with `0install run https://apps.0install.net/utils/imagemagick.xml` (e.g. `0install run https://apps.0install.net/utils/imagemagick.xml name.png name.ico`).
 3. **Place them in the gh-pages checkout.** The README's local layout clones it as `public/` next to `feeds/`, i.e. **`../public/`** relative to your feeds checkout (verify with `git -C ../public rev-parse --abbrev-ref HEAD` → `gh-pages`). Copy each file to `../public/CATEGORY/name.<ext>`.
 4. **Reference each format you produced** with its own `<icon>` line — in **both** the template and the seed master — using the matching MIME type:
 

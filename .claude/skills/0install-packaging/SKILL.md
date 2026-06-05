@@ -19,7 +19,7 @@ set up, automation does the repetitive per-release work:
 | --- | --- |
 | `CATEGORY/name.xml.template` | The feed with `{placeholder}` holes (version, date, …) for 0template to fill. |
 | `CATEGORY/name.watch.py`     | A Python script that discovers upstream releases and feeds their values to the template. |
-| `CATEGORY/name.xml`          | The master feed. You create it **once**, with the metadata but **no `<implementation>` elements**; 0repo then fills in and grows the implementations from the generated per-version feeds. Edit metadata here, leave implementations to 0repo. |
+| `CATEGORY/name.xml`          | The master feed. You create it **once**, with the metadata **and** the structural skeleton (`<group>`s, `<command>`s, etc.) **but no `<implementation>` elements**; 0repo then fills in and grows the implementations from the generated per-version feeds. |
 
 ## The pipeline (understand this before editing anything)
 
@@ -194,7 +194,7 @@ Step 5 only validated the template against one version. Now make the feed live: 
 
 **Two branches.** What you author — templates, watch scripts, and the **unsigned** master feeds — lives on `master`. The **signed** feeds and the icons live on `gh-pages`, which is what `https://apps.0install.net/` serves. The README's **Local setup** clones these as `feeds/` (master) and `public/` (gh-pages).
 
-**Author the sources** (on `master`): `name.xml.template`, `name.watch.py`, and a seed master `name.xml` — the interface metadata with **no `<implementation>` elements**, identical `<name>`/`<summary>`/`<description>`/`<homepage>`/`<icon>`/`<category>` to the template but with `uri="https://apps.0install.net/CATEGORY/name.xml"` on `<interface>` instead of the template's `<feed-for>`. You never hand-write `<implementation>`s — 0template + 0repo produce them.
+**Author the sources** (on `master`): `name.xml.template`, `name.watch.py`, and a seed master `name.xml` — the interface metadata identical to the template (`<name>`/`<summary>`/`<description>`/`<homepage>`/`<icon>`/`<category>`) but with `uri="https://apps.0install.net/CATEGORY/name.xml"` on `<interface>` instead of the template's `<feed-for>`. **Mirror the template's structural skeleton** too — the `<group>`(s), `<command>`(s), and any `<runner>`/`<requires>` they carry — **but with no `<implementation>` elements inside them**. Giving 0repo this skeleton up front lets it merge the per-version feeds into a single combined structure (one shared `<group>`/`<command>` tree) rather than emitting a separate group per version. You never hand-write `<implementation>`s — 0template + 0repo produce them.
 
 **Add `<entry-point>`s for every command — in the master feed only, never the template.** Entry-points carry the human-facing metadata (menu name, icon, terminal flag) that desktop integration shows for each command. Add one `<entry-point command="…">` per `<command>` the template defines:
 
@@ -240,5 +240,5 @@ Then commit and push **only `feeds/`** — the now-populated `name.xml` plus you
 
 - `name.xml.template` → feed with `{placeholders}`; consumed by 0template. **Write this.**
 - `name.watch.py` → sets `releases = [...]`; consumed by 0watch. **Write this.**
-- `name.xml` → master feed. **Create it once** with metadata only (`uri=` on `<interface>`, no implementations); 0repo fills in and grows the `<implementation>` list. Edit metadata here; leave implementations to 0repo.
+- `name.xml` → master feed. **Create it once** with metadata plus the structural skeleton — `<group>`s, `<command>`s, `<runner>`/`<requires>` (`uri=` on `<interface>`, but **no `<implementation>`s**); 0repo fills in and grows the `<implementation>` list inside that skeleton.
 - `name.watch_.py` → a watch script **disabled** by the trailing underscore (the `*.watch.py` glob skips it).

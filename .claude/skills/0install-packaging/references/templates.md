@@ -9,6 +9,7 @@ A template is an ordinary 0install feed with `{placeholder}` holes that [0templa
 - [Arch tokens](#arch-tokens)
 - [`<archive>` vs `<file>`](#archive-vs-file)
 - [Multi-arch layouts: siblings vs groups](#multi-arch-layouts)
+- [Multiple commands and entry-points](#multiple-commands-and-entry-points)
 - [Libraries (no run command)](#libraries)
 - [Runtime feeds: `<runner>`](#runtime-feeds-runner)
 - [Dependencies: `<requires>`, `<environment>`, `<executable-in-path>`](#dependencies)
@@ -71,6 +72,39 @@ The `<command name="run" path="…">` `path` is relative to the implementation r
 **Multiple `<group arch="…">` blocks** — when the command path or layout differs per OS (e.g. a macOS `.app` bundle vs a Linux `bin/`), or different dependencies per OS. Each group carries its own `<command>`/`<requires>` and one or more implementations.
 
 Shared attributes (`license`, `stability`) and child elements (`<command>`, `<requires>`, `<environment>`) set on an outer `<group>` are inherited by inner groups/implementations — factor common parts outward.
+
+## Multiple commands and entry-points
+
+An app that ships several runnable executables gets one `<command name="…" path="…"/>` per executable. Put them all in the shared `<group>` so every arch inherits them (use per-arch groups only when the `path`/`.exe` differs by OS).
+
+Naming:
+
+- The **main** entry point is always `name="run"`.
+- If the app has **both a GUI and a non-GUI main entry point**, name them `name="run-gui"` (GUI) and `name="run"` (CLI).
+- Secondary commands take any `name` — conventionally the binary's own name (`<command name="gitk" path="cmd/gitk.exe"/>`).
+
+`<command>`s go in the **template** (so they flow into every generated per-version feed). The matching `<entry-point>`s — the desktop-integration metadata — go in the **master feed** (`name.xml`) and **must not** appear in the template. Place them after the implementation groups, one per command:
+
+```xml
+<entry-point binary-name="git" command="run">       <!-- binary-name: command name ≠ executable -->
+  <needs-terminal/>                                 <!-- per-command; CLI only -->
+  <name>Git</name>
+  <summary>command-line interface for Git</summary>
+</entry-point>
+<entry-point binary-name="git-gui" command="run-gui">  <!-- GUI: no <needs-terminal/> -->
+  <name>Git GUI</name>
+  <summary>graphical interface for creating Git commits</summary>
+</entry-point>
+<entry-point command="gitk">                       <!-- name already matches binary → no binary-name -->
+  <name>Gitk GUI</name>
+  <summary>graphical interface for editing Git commits</summary>
+</entry-point>
+```
+
+- **`binary-name`** — required whenever a command's `name` differs from the executable filename (so the menu label and PATH entry use the real binary). `run`/`run-gui` essentially always need it; a `command="gitk"` that runs `gitk.exe` does not.
+- **`<name>`/`<summary>`** — add them per entry-point for multi-command apps so each command gets a distinct menu label and description. A single-command feed can use a bare `<entry-point binary-name="name" command="run"/>` and rely on the interface's own `<name>`/`<summary>`.
+
+Models: `devel/git-for-windows.xml(.template)` (full `run` + `run-gui` + many secondary commands) and `utils/curl.xml` (single bare entry-point).
 
 ## Libraries
 

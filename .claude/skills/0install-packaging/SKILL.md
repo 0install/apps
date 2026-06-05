@@ -104,8 +104,10 @@ Rules that matter:
 - **`<feed-for>`** must point at the canonical published URL `https://apps.0install.net/CATEGORY/name.xml`. This is how 0repo merges the per-version feed into the right master. The filename and category must match.
 - **Leave `<manifest-digest/>` empty** and add no `id`/`size`. 0template computes them from the downloaded archive.
 - **Placeholders** are `{version}` and `{released}` (ISO `YYYY-MM-DD`), plus `{stability}` if the watch script varies it, plus any custom keys your watch script emits (e.g. `{version-original}` when the download URL uses the raw upstream tag but the feed version is normalized — see jq). Every `{key}` must be supplied by the watch script (or on the 0template command line).
-- **`<archive extract="dir">`** for tarballs/zips: `extract` is the single top-level directory inside the archive (often `name-{version}-platform`). **`<file dest="name" href="…"/>`** for a single downloaded file (a bare binary or `.exe`); add `executable="true"` for a bare Unix binary.
+- **`<archive extract="dir">`** for tarballs/zips: `extract` is the single top-level directory inside the archive (often `name-{version}-platform`). But many archives have **no wrapping directory** — files sit at the root — in which case you **omit `extract` entirely** (the `path`/`main` is then just `name`). Don't guess: run `tar -tzf archive.tar.gz` (or `unzip -l`) and look — a single top-level dir → use `extract`; files at root → no `extract`.
+- **`<file dest="name" href="…"/>`** for a single downloaded file (a bare binary or `.exe`); add `executable="true"` for a bare Unix binary. Watch for assets whose **filename has no version in it** (e.g. `name-windows-amd64.exe`, identical across releases) — that's fine, because the release **tag** is still in the URL path (`/download/v{version}/`), so `href="…/download/v{version}/name-windows-amd64.exe"` is still version-specific.
 - **Per arch**: one `<implementation arch="OS-CPU">` each. OS-specific commands (different `path`/`.exe`) go in separate `<group arch="…">` blocks.
+- **Multiple executables → multiple `<command>`s.** An app that ships several runnable binaries gets one `<command>` per binary (preferrably in `<group>`s, so that `<implementation>`s inherit them instead of repeating them). The **main entry point** is always `name="run"`. When the app has **both a GUI and a non-GUI main entry point**, name them `name="run-gui"` (the GUI) and `name="run"` (the CLI) respectively. Secondary commands take a `name` of your choosing — conventionally the binary's own name. The `<command>`s live in the **template** (and thus the generated per-version feeds); the matching `<entry-point>`s live in the **master feed** — see step 6.
 
 For libraries (bindings instead of a run command), runtime feeds (`<runner>`), dependencies (`<requires>`/`<environment>`/`<executable-in-path>`), the full arch-token list, and multi-`<group>` layouts, **read `references/templates.md`**.
 
@@ -163,8 +165,10 @@ This execs the script the same way 0watch does and prints the `releases` list. C
 **b. Generate the feed for one version with 0template** — this is the real test of the template (URLs resolve, archives download, digests/extract compute). Pick the newest version from step (a):
 
 ```bash
-( cd CATEGORY && 0install run https://apps.0install.net/0install/0template.xml name.xml.template version=1.2.3 )
+( cd CATEGORY && 0install run https://apps.0install.net/0install/0template.xml name.xml.template version=1.2.3 released=2024-01-01 )
 ```
+
+You must supply **every** placeholder the template uses on the command line — at minimum `version=` **and** `released=` (any `YYYY-MM-DD`; it's only a throwaway test feed), plus any custom keys your watch script emits.
 
 It writes `CATEGORY/name-1.2.3.xml` and downloads the archive(s) there. If a download 404s or `extract` is wrong, fix the template and rerun.
 
@@ -175,6 +179,8 @@ It writes `CATEGORY/name-1.2.3.xml` and downloads the archive(s) there. If a dow
 0install select CATEGORY/name-1.2.3.xml      # resolves deps without launching
 0install run    CATEGORY/name-1.2.3.xml -- --version   # actually run a CLI tool (skip for libraries/GUIs)
 ```
+
+**feedlint caveat:** feedlint *crashes* (not warns) on implementations that use a `<file>` element, with `AttributeError: 'FileSource' object has no attribute 'start_offset'`. It validates any `<archive>` implementations first, so you still get useful output above the traceback — that traceback is a feedlint limitation, **not** a defect in your feed. For `<file>`-based implementations (bare binaries / `.exe`), rely on `0install select`/`0install run` to confirm they resolve and launch.
 
 Step b's `0template` run is only a **test**: the `name-1.2.3.xml` it writes is a throwaway for checking the template — you don't commit it. (The real master `name.xml` is the metadata-only file you create in step 6, which 0repo then populates.) Use a single-version `0template` call for this quick test rather than 0watch — running 0watch generates a feed for *every* version your script reports; that bulk population is step 6 (done locally or by CI).
 
@@ -188,7 +194,30 @@ Step 5 only validated the template against one version. Now make the feed live: 
 
 **Author the sources** (on `master`): `name.xml.template`, `name.watch.py`, and a seed master `name.xml` — the interface metadata with **no `<implementation>` elements**, identical `<name>`/`<summary>`/`<description>`/`<homepage>`/`<icon>`/`<category>` to the template but with `uri="https://apps.0install.net/CATEGORY/name.xml"` on `<interface>` instead of the template's `<feed-for>`. You never hand-write `<implementation>`s — 0template + 0repo produce them.
 
-**Add the icon** (on `gh-pages`): place `name.png` (plus `name.ico` for Windows and `name.icns` for macOS) under `CATEGORY/` in the `public/` clone, then commit and push it to `gh-pages`. The template's `<icon href="https://apps.0install.net/CATEGORY/name.png">` resolves there. CI generates the signed feeds but **not** the icons, so this is the one asset you publish to `gh-pages` by hand; icons never live on `master`.
+**Add `<entry-point>`s for every command — in the master feed only, never the template.** Entry-points carry the human-facing metadata (menu name, icon, terminal flag) that desktop integration shows for each command. Add one `<entry-point command="…">` per `<command>` the template defines:
+
+- **`binary-name`** — set it when the command's `name` differs from the executable's filename, so the `PATH` entry use the real binary name. The main `run`/`run-gui` commands almost always need it, since the executable isn't literally called `run`. A command already named after its binary needs no `binary-name`.
+- **`<needs-terminal/>`** — repeat it inside each entry-point for a CLI command; omit it for GUI commands so they don't open a console.
+- **`<name>` and `<summary>`** — for an app with multiple entry points, add these child elements to give each command a distinct menu label and one-line description. For a single-command feed they're optional — a bare `<entry-point binary-name="name" command="run"/>` is enough, since the interface's own `<name>`/`<summary>` already describe it.
+
+**Add the icon** (on `gh-pages`) — **do this actively, don't punt it to the user.** Icons are the one asset CI never generates; they live only on `gh-pages`, never on `master`. If the project has no icon anywhere you can find, that's fine — ship with **no `<icon>` element at all** and skip this step. Otherwise work through it:
+
+1. **Find source images.** Look in the **upstream project's own Git repo** first — logos usually sit at the repo root or under `assets/`, `images/`, or `docs/`. Grab whatever's there: a `.png` or `.svg` for the primary icon, **plus any ready-made `.ico` or `.icns` the project already ships**. Prefer a square, transparent-background PNG between 128px and 512px.
+2. **Produce the formats the feed actually needs**, named exactly after the feed:
+   - `name.png` — **required** whenever the feed has any icon; the primary icon.
+   - `name.ico` — **only** for cross-platform or Windows-only feeds (Windows uses it for shortcuts); skip it for a macOS/Linux-only feed.
+   - `name.icns` — **only** for cross-platform or macOS-only feeds; skip it for a Windows/Linux-only feed.
+
+   **Prefer a `.ico`/`.icns` the project already ships** (from step 1) over generating one — they're usually better-tuned. Only convert when none exists: rasterize an `.svg` to PNG first if that's all you have, then `magick name.png name.ico` for the `.ico` and `png2icns`/`iconutil` for the `.icns`.
+3. **Place them in the gh-pages checkout.** The README's local layout clones it as `public/` next to `feeds/`, i.e. **`../public/`** relative to your feeds checkout (verify with `git -C ../public rev-parse --abbrev-ref HEAD` → `gh-pages`). Copy each file to `../public/CATEGORY/name.<ext>`.
+4. **Reference each format you produced** with its own `<icon>` line — in **both** the template and the seed master — using the matching MIME type:
+
+   ```xml
+   <icon href="https://apps.0install.net/CATEGORY/name.png" type="image/png"/>
+   <icon href="https://apps.0install.net/CATEGORY/name.ico" type="image/vnd.microsoft.icon"/>
+   <icon href="https://apps.0install.net/CATEGORY/name.icns" type="image/x-icns"/>
+   ```
+5. **Commit and push `../public` to `gh-pages`** — a separate commit from your `master` push. Until that lands the `<icon>` URLs 404 (which is also why feedlint may warn the icon is unreachable before you've pushed); that warning clears once `gh-pages` has the files.
 
 **Now add the versions — two ways:**
 

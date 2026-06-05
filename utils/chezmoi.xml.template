@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>chezmoi</name>
+  <summary>manage your dotfiles across multiple machines, securely</summary>
+  <description>chezmoi helps you manage your personal configuration files (dotfiles) across multiple diverse machines. It handles secrets, templating, and per-machine differences while keeping your dotfiles in a single source of truth.</description>
+  <homepage>https://www.chezmoi.io/</homepage>
+  <category>Utility</category>
+  <needs-terminal/>
+  <icon href="https://apps.0install.net/utils/chezmoi.png" type="image/png"/>
+  <icon href="https://apps.0install.net/utils/chezmoi.ico" type="image/vnd.microsoft.icon"/>
+
+  <feed-for interface="https://apps.0install.net/utils/chezmoi.xml"/>
+
+  <group license="MIT">
+    <command name="run" path="chezmoi"/>
+    <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v{version}/chezmoi_{version}_linux_amd64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v{version}/chezmoi_{version}_linux_i386.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v{version}/chezmoi_{version}_linux_arm64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v{version}/chezmoi_{version}_darwin_amd64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v{version}/chezmoi_{version}_darwin_arm64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="MIT">
+    <command name="run" path="chezmoi.exe"/>
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <file dest="chezmoi.exe" href="https://github.com/twpayne/chezmoi/releases/download/v{version}/chezmoi-windows-amd64.exe"/>
+    </implementation>
+  </group>
+</interface>

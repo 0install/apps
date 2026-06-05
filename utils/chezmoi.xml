@@ -1,0 +1,741 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/utils/chezmoi.xml">
+  <name>chezmoi</name>
+  <summary>manage your dotfiles across multiple machines, securely</summary>
+  <description>chezmoi helps you manage your personal configuration files (dotfiles) across multiple diverse machines. It handles secrets, templating, and per-machine differences while keeping your dotfiles in a single source of truth.</description>
+  <homepage>https://www.chezmoi.io/</homepage>
+  <category>Utility</category>
+  <needs-terminal/>
+  <icon href="https://apps.0install.net/utils/chezmoi.png" type="image/png"/>
+  <icon href="https://apps.0install.net/utils/chezmoi.ico" type="image/vnd.microsoft.icon"/>
+
+  <entry-point binary-name="chezmoi" command="run"/>
+
+  <group license="MIT">
+    <command name="run" path="chezmoi"/>
+    <implementation arch="Linux-x86_64" version="2.62.1" released="2025-04-13" stability="stable" id="sha256new_MTEKSD7F6KFOW3YKOKJCH26C7H7WQ2PMFGVKYUOBZAHEKHZRPDKQ">
+      <manifest-digest sha256new="MTEKSD7F6KFOW3YKOKJCH26C7H7WQ2PMFGVKYUOBZAHEKHZRPDKQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.1/chezmoi_2.62.1_linux_amd64.tar.gz" size="12176744" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.62.1" released="2025-04-13" stability="stable" id="sha256new_NKZTFHCSKQYDBTX73ADFYFFGMHHXF26BVBWIZML5GKVTIWJTCVSQ">
+      <manifest-digest sha256new="NKZTFHCSKQYDBTX73ADFYFFGMHHXF26BVBWIZML5GKVTIWJTCVSQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.1/chezmoi_2.62.1_linux_i386.tar.gz" size="11474791" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.62.1" released="2025-04-13" stability="stable" id="sha256new_FRPD3QPFNG4KEXO6SZT4V57WRQPN5FKGRQUO643YW3SOJQX6DGNQ">
+      <manifest-digest sha256new="FRPD3QPFNG4KEXO6SZT4V57WRQPN5FKGRQUO643YW3SOJQX6DGNQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.1/chezmoi_2.62.1_linux_arm64.tar.gz" size="11152425" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.62.1" released="2025-04-13" stability="stable" id="sha256new_IF6COCUCVRN2XARE3JYRGCJ3HPHPX6K3G2O27XI75STAU4UD3MZQ">
+      <manifest-digest sha256new="IF6COCUCVRN2XARE3JYRGCJ3HPHPX6K3G2O27XI75STAU4UD3MZQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.1/chezmoi_2.62.1_darwin_amd64.tar.gz" size="12284331" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.62.1" released="2025-04-13" stability="stable" id="sha256new_DGZNGPR5BR2N7CQJRE2GVJYZSJH2PV5FF2K5CFI73WOPJ3I2FYPQ">
+      <manifest-digest sha256new="DGZNGPR5BR2N7CQJRE2GVJYZSJH2PV5FF2K5CFI73WOPJ3I2FYPQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.1/chezmoi_2.62.1_darwin_arm64.tar.gz" size="11554640" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.62.2" released="2025-04-18" stability="stable" id="sha256new_B6CTGQRYCQH42SDMHWPPNITF3XCUDC6QVZF6XKLNCGQ7HFJ4ALFA">
+      <manifest-digest sha256new="B6CTGQRYCQH42SDMHWPPNITF3XCUDC6QVZF6XKLNCGQ7HFJ4ALFA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.2/chezmoi_2.62.2_linux_amd64.tar.gz" size="12178869" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.62.2" released="2025-04-18" stability="stable" id="sha256new_4BRVG5U5FSEKDW6PYFRRSQ6STYGZPOPPSMDUJRJ5VKEJ7XRL7E3A">
+      <manifest-digest sha256new="4BRVG5U5FSEKDW6PYFRRSQ6STYGZPOPPSMDUJRJ5VKEJ7XRL7E3A"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.2/chezmoi_2.62.2_linux_i386.tar.gz" size="11475555" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.62.2" released="2025-04-18" stability="stable" id="sha256new_EE2F3YRAQZOX6YGGDRPHS7FONGGYSX7NK2PJKBQLJW6PX4DKQN5Q">
+      <manifest-digest sha256new="EE2F3YRAQZOX6YGGDRPHS7FONGGYSX7NK2PJKBQLJW6PX4DKQN5Q"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.2/chezmoi_2.62.2_linux_arm64.tar.gz" size="11158398" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.62.2" released="2025-04-18" stability="stable" id="sha256new_EBHA5O25VVTR7M4CH4AZASYAE3R7USVUG3ALZFEHT6ZPGZZCLBRQ">
+      <manifest-digest sha256new="EBHA5O25VVTR7M4CH4AZASYAE3R7USVUG3ALZFEHT6ZPGZZCLBRQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.2/chezmoi_2.62.2_darwin_amd64.tar.gz" size="12285963" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.62.2" released="2025-04-18" stability="stable" id="sha256new_MVU75FXV23NACUPEYZ5YK3I2J2MUWI5CDF7DM3BXFB5AF5AP53KQ">
+      <manifest-digest sha256new="MVU75FXV23NACUPEYZ5YK3I2J2MUWI5CDF7DM3BXFB5AF5AP53KQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.2/chezmoi_2.62.2_darwin_arm64.tar.gz" size="11554979" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.62.3" released="2025-05-06" stability="stable" id="sha256new_OXLNB2B5NAZ7PWHGCJRBOCW7Y7ITBNAKFGZYXHAEFCMOIPCJXFUQ">
+      <manifest-digest sha256new="OXLNB2B5NAZ7PWHGCJRBOCW7Y7ITBNAKFGZYXHAEFCMOIPCJXFUQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.3/chezmoi_2.62.3_linux_amd64.tar.gz" size="11812408" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.62.3" released="2025-05-06" stability="stable" id="sha256new_LJP3A6JFXK3UNAUDWGLE3KBDFWFOBPIALYGDEMTLYHW3DFUKRNNA">
+      <manifest-digest sha256new="LJP3A6JFXK3UNAUDWGLE3KBDFWFOBPIALYGDEMTLYHW3DFUKRNNA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.3/chezmoi_2.62.3_linux_i386.tar.gz" size="11109241" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.62.3" released="2025-05-06" stability="stable" id="sha256new_XHXKUFSOSQ37M22CJ46QHWZ4VMMXWQWKCLJJF6XXNTX2EZPFQVBA">
+      <manifest-digest sha256new="XHXKUFSOSQ37M22CJ46QHWZ4VMMXWQWKCLJJF6XXNTX2EZPFQVBA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.3/chezmoi_2.62.3_linux_arm64.tar.gz" size="10788399" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.62.3" released="2025-05-06" stability="stable" id="sha256new_BXM6GZA6NT3MPFG6UBRDLX2HBG6YQ6HRGP7Q4BIMFECT4HCJNLEQ">
+      <manifest-digest sha256new="BXM6GZA6NT3MPFG6UBRDLX2HBG6YQ6HRGP7Q4BIMFECT4HCJNLEQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.3/chezmoi_2.62.3_darwin_amd64.tar.gz" size="11921410" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.62.3" released="2025-05-06" stability="stable" id="sha256new_N4NFQT62CABWCVOJUMPQBXDTIKUCZWCUSJK4TJ4WQ3FVPTYUCSPA">
+      <manifest-digest sha256new="N4NFQT62CABWCVOJUMPQBXDTIKUCZWCUSJK4TJ4WQ3FVPTYUCSPA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.3/chezmoi_2.62.3_darwin_arm64.tar.gz" size="11187919" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.62.4" released="2025-05-11" stability="stable" id="sha256new_XSLEFHZRCZXTPTBS2VNWSG7XTTTU3UT35IDPCYPOT33ORJBS5B2Q">
+      <manifest-digest sha256new="XSLEFHZRCZXTPTBS2VNWSG7XTTTU3UT35IDPCYPOT33ORJBS5B2Q"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.4/chezmoi_2.62.4_linux_amd64.tar.gz" size="11812521" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.62.4" released="2025-05-11" stability="stable" id="sha256new_O3CHP4ETXSJEOKCF36TEXSRK6NZP3KXYSR5L6PX4PYTOYGAILLMQ">
+      <manifest-digest sha256new="O3CHP4ETXSJEOKCF36TEXSRK6NZP3KXYSR5L6PX4PYTOYGAILLMQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.4/chezmoi_2.62.4_linux_i386.tar.gz" size="11109458" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.62.4" released="2025-05-11" stability="stable" id="sha256new_NWOPVIYSOLQBP2Y4E5TDHMFAK4TYBXCYOJLKIFCISNLC55RQXRMQ">
+      <manifest-digest sha256new="NWOPVIYSOLQBP2Y4E5TDHMFAK4TYBXCYOJLKIFCISNLC55RQXRMQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.4/chezmoi_2.62.4_linux_arm64.tar.gz" size="10788386" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.62.4" released="2025-05-11" stability="stable" id="sha256new_HXAZBRVVCIDCC7BUIJB2VQX33GMEQEUG4WXPKX2LYQ6662LWTIIA">
+      <manifest-digest sha256new="HXAZBRVVCIDCC7BUIJB2VQX33GMEQEUG4WXPKX2LYQ6662LWTIIA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.4/chezmoi_2.62.4_darwin_amd64.tar.gz" size="11921335" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.62.4" released="2025-05-11" stability="stable" id="sha256new_D43AGA7FSCY5AVTH7632MQX24PIB2E25BITX3TAA7Z4R6NTCHH6A">
+      <manifest-digest sha256new="D43AGA7FSCY5AVTH7632MQX24PIB2E25BITX3TAA7Z4R6NTCHH6A"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.4/chezmoi_2.62.4_darwin_arm64.tar.gz" size="11187944" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.62.5" released="2025-05-23" stability="stable" id="sha256new_RXV3IPE7KHZESKKRPY5XKDINQNRDDVIECH4BORRENGNJOUER5NZA">
+      <manifest-digest sha256new="RXV3IPE7KHZESKKRPY5XKDINQNRDDVIECH4BORRENGNJOUER5NZA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.5/chezmoi_2.62.5_linux_amd64.tar.gz" size="11668724" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.62.5" released="2025-05-23" stability="stable" id="sha256new_A44ZHF3JRULN5B3XQTZLGB657QQA2U5KRPHVEQYLD6NIZ3B5KPCQ">
+      <manifest-digest sha256new="A44ZHF3JRULN5B3XQTZLGB657QQA2U5KRPHVEQYLD6NIZ3B5KPCQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.5/chezmoi_2.62.5_linux_i386.tar.gz" size="10970536" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.62.5" released="2025-05-23" stability="stable" id="sha256new_RWNPESR5MEMEJZPUKEGAUAW7Z2DQAA5ZHC4WAJJBPCO5AIRBVRFQ">
+      <manifest-digest sha256new="RWNPESR5MEMEJZPUKEGAUAW7Z2DQAA5ZHC4WAJJBPCO5AIRBVRFQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.5/chezmoi_2.62.5_linux_arm64.tar.gz" size="10648475" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.62.5" released="2025-05-23" stability="stable" id="sha256new_UF5O4JMUYFKKPM3LCGXQ7WLFP6KDKVZZISMPLIU6MQNHUSV3WIRQ">
+      <manifest-digest sha256new="UF5O4JMUYFKKPM3LCGXQ7WLFP6KDKVZZISMPLIU6MQNHUSV3WIRQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.5/chezmoi_2.62.5_darwin_amd64.tar.gz" size="11775263" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.62.5" released="2025-05-23" stability="stable" id="sha256new_ZE5RSYU6MDC5SCRHR2OKODDN4CBRR7RMGXRGZJZXP6BSLJJ43IHA">
+      <manifest-digest sha256new="ZE5RSYU6MDC5SCRHR2OKODDN4CBRR7RMGXRGZJZXP6BSLJJ43IHA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.5/chezmoi_2.62.5_darwin_arm64.tar.gz" size="11048139" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.62.6" released="2025-06-06" stability="stable" id="sha256new_H56TPV45L6QXYFZDVLVTGNCSD3NXDJBJQGC4UXPLYEQV5WNX6LXQ">
+      <manifest-digest sha256new="H56TPV45L6QXYFZDVLVTGNCSD3NXDJBJQGC4UXPLYEQV5WNX6LXQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.6/chezmoi_2.62.6_linux_amd64.tar.gz" size="12812318" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.62.6" released="2025-06-06" stability="stable" id="sha256new_CDZ7BHM5C3YFFS2QXGWGMLVCUQJDEKYMSUK3N6K53CZBMKASBROQ">
+      <manifest-digest sha256new="CDZ7BHM5C3YFFS2QXGWGMLVCUQJDEKYMSUK3N6K53CZBMKASBROQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.6/chezmoi_2.62.6_linux_i386.tar.gz" size="12146601" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.62.6" released="2025-06-06" stability="stable" id="sha256new_OZFMXWA7NBISOH6BFGJM7AWBQFNEPUQDESJQLIKOD5DBPWS4C5NQ">
+      <manifest-digest sha256new="OZFMXWA7NBISOH6BFGJM7AWBQFNEPUQDESJQLIKOD5DBPWS4C5NQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.6/chezmoi_2.62.6_linux_arm64.tar.gz" size="11713495" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.62.6" released="2025-06-06" stability="stable" id="sha256new_KPLWGHA2P67U6NGDPZDUBTBUODSXXYCHFIGTN2BMPHZNPS5WJPTQ">
+      <manifest-digest sha256new="KPLWGHA2P67U6NGDPZDUBTBUODSXXYCHFIGTN2BMPHZNPS5WJPTQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.6/chezmoi_2.62.6_darwin_amd64.tar.gz" size="12939242" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.62.6" released="2025-06-06" stability="stable" id="sha256new_6P3BZR5TCAY4EJUQGZESULP5I3MZIITVDSDQWP3JDABRSCPNTU4A">
+      <manifest-digest sha256new="6P3BZR5TCAY4EJUQGZESULP5I3MZIITVDSDQWP3JDABRSCPNTU4A"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.6/chezmoi_2.62.6_darwin_arm64.tar.gz" size="12145977" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.62.7" released="2025-06-22" stability="stable" id="sha256new_CJAFFBDCBVR7P7QEA6YMNLXWL56VWDW2ZUAQYPQGR7ELXDUBVYIQ">
+      <manifest-digest sha256new="CJAFFBDCBVR7P7QEA6YMNLXWL56VWDW2ZUAQYPQGR7ELXDUBVYIQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.7/chezmoi_2.62.7_linux_amd64.tar.gz" size="12818198" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.62.7" released="2025-06-22" stability="stable" id="sha256new_VVFZWADPGIZS3XQ37TGQBUKSXNKI3VFHC6PJEFW2EYBN5I4ZOVMQ">
+      <manifest-digest sha256new="VVFZWADPGIZS3XQ37TGQBUKSXNKI3VFHC6PJEFW2EYBN5I4ZOVMQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.7/chezmoi_2.62.7_linux_i386.tar.gz" size="12149313" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.62.7" released="2025-06-22" stability="stable" id="sha256new_KZC2PLKES3YDBYCOCNYN23ZQ2O36XLLJ22FCXMMIZYHAAGR6YVFA">
+      <manifest-digest sha256new="KZC2PLKES3YDBYCOCNYN23ZQ2O36XLLJ22FCXMMIZYHAAGR6YVFA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.7/chezmoi_2.62.7_linux_arm64.tar.gz" size="11720710" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.62.7" released="2025-06-22" stability="stable" id="sha256new_ZMRSLK3OFVXYTPP2YOZ3UNX2CUYBVKO2I55ZYHGPR47AX35V322Q">
+      <manifest-digest sha256new="ZMRSLK3OFVXYTPP2YOZ3UNX2CUYBVKO2I55ZYHGPR47AX35V322Q"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.7/chezmoi_2.62.7_darwin_amd64.tar.gz" size="12941698" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.62.7" released="2025-06-22" stability="stable" id="sha256new_35FMP6463EEQ76QL2MFWPVFLAVY32GZYQLHJW3DUJON6JRXEVPFA">
+      <manifest-digest sha256new="35FMP6463EEQ76QL2MFWPVFLAVY32GZYQLHJW3DUJON6JRXEVPFA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.62.7/chezmoi_2.62.7_darwin_arm64.tar.gz" size="12150153" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.63.0" released="2025-07-09" stability="stable" id="sha256new_MAMKR2SJR5W322IM7QLZWXQEZORPONTDQX3XXYINYHTZJYDHJV5A">
+      <manifest-digest sha256new="MAMKR2SJR5W322IM7QLZWXQEZORPONTDQX3XXYINYHTZJYDHJV5A"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.63.0/chezmoi_2.63.0_linux_amd64.tar.gz" size="12823401" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.63.0" released="2025-07-09" stability="stable" id="sha256new_3YGEUR4IOS2TNHKBQ6CG35TEELNNZTOGL4KVP6NMBWV4KOFRYDEQ">
+      <manifest-digest sha256new="3YGEUR4IOS2TNHKBQ6CG35TEELNNZTOGL4KVP6NMBWV4KOFRYDEQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.63.0/chezmoi_2.63.0_linux_i386.tar.gz" size="12153104" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.63.0" released="2025-07-09" stability="stable" id="sha256new_5OQB43346MBXV3TAUXQY6ZOIJF4AJMTFVBPDRXIBELM35FZEYQUQ">
+      <manifest-digest sha256new="5OQB43346MBXV3TAUXQY6ZOIJF4AJMTFVBPDRXIBELM35FZEYQUQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.63.0/chezmoi_2.63.0_linux_arm64.tar.gz" size="11725131" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.63.0" released="2025-07-09" stability="stable" id="sha256new_HZP5DNROL4UHMULALY7VYQD7U5J4OE5Q5VKFNXI6M6KA35HNZI3A">
+      <manifest-digest sha256new="HZP5DNROL4UHMULALY7VYQD7U5J4OE5Q5VKFNXI6M6KA35HNZI3A"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.63.0/chezmoi_2.63.0_darwin_amd64.tar.gz" size="12948714" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.63.0" released="2025-07-09" stability="stable" id="sha256new_76RSDYNNPH7MI2CHKHWVABUPJBS4HLCO2MZY2L63OJLOXADYDWMA">
+      <manifest-digest sha256new="76RSDYNNPH7MI2CHKHWVABUPJBS4HLCO2MZY2L63OJLOXADYDWMA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.63.0/chezmoi_2.63.0_darwin_arm64.tar.gz" size="12156104" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.63.1" released="2025-07-22" stability="stable" id="sha256new_CFNUTWWIYXJ52MAPSE32FPMUKJIRGMRQZOCVDUOZAS422Z7O4URQ">
+      <manifest-digest sha256new="CFNUTWWIYXJ52MAPSE32FPMUKJIRGMRQZOCVDUOZAS422Z7O4URQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.63.1/chezmoi_2.63.1_linux_amd64.tar.gz" size="12850818" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.63.1" released="2025-07-22" stability="stable" id="sha256new_LCASJAHAIFW7BDNE4ORZI677OQLWPAWBLYANX7AA6BJ7LDR375LQ">
+      <manifest-digest sha256new="LCASJAHAIFW7BDNE4ORZI677OQLWPAWBLYANX7AA6BJ7LDR375LQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.63.1/chezmoi_2.63.1_linux_i386.tar.gz" size="12179993" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.63.1" released="2025-07-22" stability="stable" id="sha256new_URTPRQ4SIA5QLR3ZQY5DYSO7TOFQ4N76UGOKIYJSJCIOQ52VHVEA">
+      <manifest-digest sha256new="URTPRQ4SIA5QLR3ZQY5DYSO7TOFQ4N76UGOKIYJSJCIOQ52VHVEA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.63.1/chezmoi_2.63.1_linux_arm64.tar.gz" size="11745725" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.63.1" released="2025-07-22" stability="stable" id="sha256new_UMWZPOAFC6X5H3OAVNITL44GT7GPFKTBLGJG3WD37ANTHUMCPAWA">
+      <manifest-digest sha256new="UMWZPOAFC6X5H3OAVNITL44GT7GPFKTBLGJG3WD37ANTHUMCPAWA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.63.1/chezmoi_2.63.1_darwin_amd64.tar.gz" size="12978631" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.63.1" released="2025-07-22" stability="stable" id="sha256new_MM7Q3VCS7VRDAT67INBPRBXNA47UICBUDF36PDBKMJX6DQQWRNYQ">
+      <manifest-digest sha256new="MM7Q3VCS7VRDAT67INBPRBXNA47UICBUDF36PDBKMJX6DQQWRNYQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.63.1/chezmoi_2.63.1_darwin_arm64.tar.gz" size="12186136" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.64.0" released="2025-08-06" stability="stable" id="sha256new_KZ2J2HLIVBO2MWZ6K5AJ3NARSZ5L5NEJYSSBNDYVA6JPLWYFGDKQ">
+      <manifest-digest sha256new="KZ2J2HLIVBO2MWZ6K5AJ3NARSZ5L5NEJYSSBNDYVA6JPLWYFGDKQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.64.0/chezmoi_2.64.0_linux_amd64.tar.gz" size="12863069" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.64.0" released="2025-08-06" stability="stable" id="sha256new_GR7KMRNFYOS6MAROLYOXBCXQFU5FKNRHBVHXBBVAJV6XR24S375Q">
+      <manifest-digest sha256new="GR7KMRNFYOS6MAROLYOXBCXQFU5FKNRHBVHXBBVAJV6XR24S375Q"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.64.0/chezmoi_2.64.0_linux_i386.tar.gz" size="12177022" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.64.0" released="2025-08-06" stability="stable" id="sha256new_3BL5Q67273KBB5JCX5LEVP2PPCKCNL5M3HTQ6QT2ZUQYCE73W2SQ">
+      <manifest-digest sha256new="3BL5Q67273KBB5JCX5LEVP2PPCKCNL5M3HTQ6QT2ZUQYCE73W2SQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.64.0/chezmoi_2.64.0_linux_arm64.tar.gz" size="11753958" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.64.0" released="2025-08-06" stability="stable" id="sha256new_5LFOHLUGFFBBTWAS2NRWODRFGCHRQ57Y2DDEXA5VTNTV4SJEPDZQ">
+      <manifest-digest sha256new="5LFOHLUGFFBBTWAS2NRWODRFGCHRQ57Y2DDEXA5VTNTV4SJEPDZQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.64.0/chezmoi_2.64.0_darwin_amd64.tar.gz" size="12990553" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.64.0" released="2025-08-06" stability="stable" id="sha256new_EDXFL5CS5KRKYX4CN3MMWP7F7SR5JM75XT4NTSMIV463ERPM2BPQ">
+      <manifest-digest sha256new="EDXFL5CS5KRKYX4CN3MMWP7F7SR5JM75XT4NTSMIV463ERPM2BPQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.64.0/chezmoi_2.64.0_darwin_arm64.tar.gz" size="12194114" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.65.0" released="2025-08-26" stability="stable" id="sha256new_RPUD3US527DLYKKIWWUJW6U5WRJHQN3D6ROHJRJBJ3B7JELWNYVA">
+      <manifest-digest sha256new="RPUD3US527DLYKKIWWUJW6U5WRJHQN3D6ROHJRJBJ3B7JELWNYVA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.65.0/chezmoi_2.65.0_linux_amd64.tar.gz" size="12941770" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.65.0" released="2025-08-26" stability="stable" id="sha256new_S5227CSX345HHY4C4HUEBTTXJCKNVJECYMPNQXPIZURYDANZNFQA">
+      <manifest-digest sha256new="S5227CSX345HHY4C4HUEBTTXJCKNVJECYMPNQXPIZURYDANZNFQA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.65.0/chezmoi_2.65.0_linux_i386.tar.gz" size="12279347" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.65.0" released="2025-08-26" stability="stable" id="sha256new_PYZHN7D3KJNWIBRIF2MGNDIXFBG6VQQQOYTNK3LSNFIBOEUYCTEA">
+      <manifest-digest sha256new="PYZHN7D3KJNWIBRIF2MGNDIXFBG6VQQQOYTNK3LSNFIBOEUYCTEA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.65.0/chezmoi_2.65.0_linux_arm64.tar.gz" size="11689984" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.65.0" released="2025-08-26" stability="stable" id="sha256new_D5C24AJ7JBSR53JBJW6GLCQ6OLUNJRYKP5IGESVHZL4PXOENNMNQ">
+      <manifest-digest sha256new="D5C24AJ7JBSR53JBJW6GLCQ6OLUNJRYKP5IGESVHZL4PXOENNMNQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.65.0/chezmoi_2.65.0_darwin_amd64.tar.gz" size="13068255" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.65.0" released="2025-08-26" stability="stable" id="sha256new_HNOKX4UZAGMPBFS2AZIW7NEBD32AKEM5H277NO33CMMJ236DAYCA">
+      <manifest-digest sha256new="HNOKX4UZAGMPBFS2AZIW7NEBD32AKEM5H277NO33CMMJ236DAYCA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.65.0/chezmoi_2.65.0_darwin_arm64.tar.gz" size="12119478" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.65.1" released="2025-09-09" stability="stable" id="sha256new_BRAVXRC3MKKEVOZP5FFXBO35AAWRCYGY3SCDLANHGTMKFAG6VKHQ">
+      <manifest-digest sha256new="BRAVXRC3MKKEVOZP5FFXBO35AAWRCYGY3SCDLANHGTMKFAG6VKHQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.65.1/chezmoi_2.65.1_linux_amd64.tar.gz" size="13119243" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.65.1" released="2025-09-09" stability="stable" id="sha256new_LBBROU4WNQE5UZBVRHPZN455NV37EMKUDBCFSV4TCIII3RS4TWKQ">
+      <manifest-digest sha256new="LBBROU4WNQE5UZBVRHPZN455NV37EMKUDBCFSV4TCIII3RS4TWKQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.65.1/chezmoi_2.65.1_linux_i386.tar.gz" size="12417345" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.65.1" released="2025-09-09" stability="stable" id="sha256new_TLH7AJG3WA25626P6VESCJWKXU7YK2HFZW6MEOC7PPHHULF3F23A">
+      <manifest-digest sha256new="TLH7AJG3WA25626P6VESCJWKXU7YK2HFZW6MEOC7PPHHULF3F23A"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.65.1/chezmoi_2.65.1_linux_arm64.tar.gz" size="11832937" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.65.1" released="2025-09-09" stability="stable" id="sha256new_RICK2RBD7HKT4WZKATAHVA2QDVIKQ6OTCXFXE4H52CE4W53CBLWA">
+      <manifest-digest sha256new="RICK2RBD7HKT4WZKATAHVA2QDVIKQ6OTCXFXE4H52CE4W53CBLWA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.65.1/chezmoi_2.65.1_darwin_amd64.tar.gz" size="13249507" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.65.1" released="2025-09-09" stability="stable" id="sha256new_4UL6HOY6UV3FG3EWYE6XCTMCC5VUUXLF5SLLJEFLXSVBQJSZDU6Q">
+      <manifest-digest sha256new="4UL6HOY6UV3FG3EWYE6XCTMCC5VUUXLF5SLLJEFLXSVBQJSZDU6Q"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.65.1/chezmoi_2.65.1_darwin_arm64.tar.gz" size="12273093" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.65.2" released="2025-09-23" stability="stable" id="sha256new_5NI27EBOMU55WUIDRPSHRCR4UDLTH5KLCWTQYRNLALE6QOX2GC6A">
+      <manifest-digest sha256new="5NI27EBOMU55WUIDRPSHRCR4UDLTH5KLCWTQYRNLALE6QOX2GC6A"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.65.2/chezmoi_2.65.2_linux_amd64.tar.gz" size="13173616" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.65.2" released="2025-09-23" stability="stable" id="sha256new_HVON4KIMCADQVCQCEADVVNZPL2Z35NV4GTOR3PEUADYA6V7OOQNA">
+      <manifest-digest sha256new="HVON4KIMCADQVCQCEADVVNZPL2Z35NV4GTOR3PEUADYA6V7OOQNA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.65.2/chezmoi_2.65.2_linux_i386.tar.gz" size="12470396" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.65.2" released="2025-09-23" stability="stable" id="sha256new_HNX4YCTHJUXHCKDWUXP65YEP6TDNI4C6O333RUZZEGGSQPD27IJQ">
+      <manifest-digest sha256new="HNX4YCTHJUXHCKDWUXP65YEP6TDNI4C6O333RUZZEGGSQPD27IJQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.65.2/chezmoi_2.65.2_linux_arm64.tar.gz" size="11880655" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.65.2" released="2025-09-23" stability="stable" id="sha256new_6QIMAIB5BA2B3PWHJ6BVL4SW2LF2KHJHCBG5GZFYUX7K54LNUGZA">
+      <manifest-digest sha256new="6QIMAIB5BA2B3PWHJ6BVL4SW2LF2KHJHCBG5GZFYUX7K54LNUGZA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.65.2/chezmoi_2.65.2_darwin_amd64.tar.gz" size="13301257" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.65.2" released="2025-09-23" stability="stable" id="sha256new_AOFKTKTFNGOO4CC4DU26TTLCKHVPCGQS724YJGHNDFZQHBXBLBVA">
+      <manifest-digest sha256new="AOFKTKTFNGOO4CC4DU26TTLCKHVPCGQS724YJGHNDFZQHBXBLBVA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.65.2/chezmoi_2.65.2_darwin_arm64.tar.gz" size="12315454" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.66.0" released="2025-10-07" stability="stable" id="sha256new_EGD6ILOL2VZXIZEBAI6UE2ENN477HBWHWHIOL4ONTXEJOKO4MRRA">
+      <manifest-digest sha256new="EGD6ILOL2VZXIZEBAI6UE2ENN477HBWHWHIOL4ONTXEJOKO4MRRA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.66.0/chezmoi_2.66.0_linux_amd64.tar.gz" size="13148369" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.66.0" released="2025-10-07" stability="stable" id="sha256new_RKFVDWIYD5SUMCAUQ7QA6UC6PCT22UT2JOEKQQW6LYL2U7I7TOZA">
+      <manifest-digest sha256new="RKFVDWIYD5SUMCAUQ7QA6UC6PCT22UT2JOEKQQW6LYL2U7I7TOZA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.66.0/chezmoi_2.66.0_linux_i386.tar.gz" size="12447765" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.66.0" released="2025-10-07" stability="stable" id="sha256new_57VBHNL5YTW3TO3N5QZS3CB6RF3OSPM3QRFC7SX7JXUQCMR3YI2Q">
+      <manifest-digest sha256new="57VBHNL5YTW3TO3N5QZS3CB6RF3OSPM3QRFC7SX7JXUQCMR3YI2Q"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.66.0/chezmoi_2.66.0_linux_arm64.tar.gz" size="11857006" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.66.0" released="2025-10-07" stability="stable" id="sha256new_5J652RV3ZGOESJNAOQ7TE6WGNXD66QTUDYXZULUMPITNVOAQPI2Q">
+      <manifest-digest sha256new="5J652RV3ZGOESJNAOQ7TE6WGNXD66QTUDYXZULUMPITNVOAQPI2Q"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.66.0/chezmoi_2.66.0_darwin_amd64.tar.gz" size="13260362" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.66.0" released="2025-10-07" stability="stable" id="sha256new_2Z5AT4NHGUFADJQJIPEWTTBXT7P7FO6KPDLI2WND7PC4M4NTRNEQ">
+      <manifest-digest sha256new="2Z5AT4NHGUFADJQJIPEWTTBXT7P7FO6KPDLI2WND7PC4M4NTRNEQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.66.0/chezmoi_2.66.0_darwin_arm64.tar.gz" size="12283924" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.66.1" released="2025-10-19" stability="stable" id="sha256new_PS5PETX3AQ6PPH2AHRFEHHSG43TAYBFHPJ2EEJXIJZJC3P2QT3IA">
+      <manifest-digest sha256new="PS5PETX3AQ6PPH2AHRFEHHSG43TAYBFHPJ2EEJXIJZJC3P2QT3IA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.66.1/chezmoi_2.66.1_linux_amd64.tar.gz" size="13171273" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.66.1" released="2025-10-19" stability="stable" id="sha256new_Y2T54NW6EXHHV67EUTO66S7XOL5FPSF3LAUCNJCAAPLLYLTXVH5Q">
+      <manifest-digest sha256new="Y2T54NW6EXHHV67EUTO66S7XOL5FPSF3LAUCNJCAAPLLYLTXVH5Q"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.66.1/chezmoi_2.66.1_linux_i386.tar.gz" size="12472621" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.66.1" released="2025-10-19" stability="stable" id="sha256new_VM3UFZUEIMONV4ZP4P7I2OJA7A47GFSSLKB2MBFVLWMP4YZJ5OPA">
+      <manifest-digest sha256new="VM3UFZUEIMONV4ZP4P7I2OJA7A47GFSSLKB2MBFVLWMP4YZJ5OPA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.66.1/chezmoi_2.66.1_linux_arm64.tar.gz" size="11878337" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.66.1" released="2025-10-19" stability="stable" id="sha256new_O6P5PQEGXYSHMLBRHRBTPG3JQT6AXY2LKLOHR4WF6DYJJDQC247Q">
+      <manifest-digest sha256new="O6P5PQEGXYSHMLBRHRBTPG3JQT6AXY2LKLOHR4WF6DYJJDQC247Q"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.66.1/chezmoi_2.66.1_darwin_amd64.tar.gz" size="13288120" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.66.1" released="2025-10-19" stability="stable" id="sha256new_DYZE4HAP6GLWWJ52I5PR4K5TCWCK6CDUVYD4ACYD4364BLJQTJBQ">
+      <manifest-digest sha256new="DYZE4HAP6GLWWJ52I5PR4K5TCWCK6CDUVYD4ACYD4364BLJQTJBQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.66.1/chezmoi_2.66.1_darwin_arm64.tar.gz" size="12301375" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.67.0" released="2025-11-02" stability="stable" id="sha256new_B7VOIQC63J6GIWIZQOSWHMN23BDANDPIG6RBJPK76ECTA5EOSFGA">
+      <manifest-digest sha256new="B7VOIQC63J6GIWIZQOSWHMN23BDANDPIG6RBJPK76ECTA5EOSFGA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.67.0/chezmoi_2.67.0_linux_amd64.tar.gz" size="13178611" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.67.0" released="2025-11-02" stability="stable" id="sha256new_HS3QICWWMJ7OSSZBI6NRKHGHQZZIBSIANKWXXMP43FPEH6XRJDOA">
+      <manifest-digest sha256new="HS3QICWWMJ7OSSZBI6NRKHGHQZZIBSIANKWXXMP43FPEH6XRJDOA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.67.0/chezmoi_2.67.0_linux_i386.tar.gz" size="12480956" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.67.0" released="2025-11-02" stability="stable" id="sha256new_PXVNGZJVTUIMNZEOTRTXKLH7R7ZDZSLIRRIW4NTI3B4KZUDL7FOA">
+      <manifest-digest sha256new="PXVNGZJVTUIMNZEOTRTXKLH7R7ZDZSLIRRIW4NTI3B4KZUDL7FOA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.67.0/chezmoi_2.67.0_linux_arm64.tar.gz" size="11881696" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.67.0" released="2025-11-02" stability="stable" id="sha256new_ACUKUIDQSIDHF2T5TGEQ3WJIG2ALZDLEOLNNQUTASHHDLNY65ENA">
+      <manifest-digest sha256new="ACUKUIDQSIDHF2T5TGEQ3WJIG2ALZDLEOLNNQUTASHHDLNY65ENA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.67.0/chezmoi_2.67.0_darwin_amd64.tar.gz" size="13287861" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.67.0" released="2025-11-02" stability="stable" id="sha256new_2DU3RR3OUKP3ZY5TIBV3JBWERSKYFSUQ4JFXXB3KHOTM2NDKKNKQ">
+      <manifest-digest sha256new="2DU3RR3OUKP3ZY5TIBV3JBWERSKYFSUQ4JFXXB3KHOTM2NDKKNKQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.67.0/chezmoi_2.67.0_darwin_arm64.tar.gz" size="12306754" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.67.1" released="2025-11-26" stability="stable" id="sha256new_CB7K66UXJLTFFN7RPBNSNMSDXBWWYHXGTZ73SQLFITM2WSEEPPRQ">
+      <manifest-digest sha256new="CB7K66UXJLTFFN7RPBNSNMSDXBWWYHXGTZ73SQLFITM2WSEEPPRQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.67.1/chezmoi_2.67.1_linux_amd64.tar.gz" size="13271215" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.67.1" released="2025-11-26" stability="stable" id="sha256new_5K54K42PD4FNTOW4MIFBTHMSDUGJSN6IYX6HZDQD3763QSVKQYGQ">
+      <manifest-digest sha256new="5K54K42PD4FNTOW4MIFBTHMSDUGJSN6IYX6HZDQD3763QSVKQYGQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.67.1/chezmoi_2.67.1_linux_i386.tar.gz" size="12556944" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.67.1" released="2025-11-26" stability="stable" id="sha256new_WE4NZK3K54AJCXXIOEVCLNTKMOSQQTAVTVWDOIR7NR6KRGX2U47Q">
+      <manifest-digest sha256new="WE4NZK3K54AJCXXIOEVCLNTKMOSQQTAVTVWDOIR7NR6KRGX2U47Q"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.67.1/chezmoi_2.67.1_linux_arm64.tar.gz" size="11968480" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.67.1" released="2025-11-26" stability="stable" id="sha256new_IRNAQP5NC2AMU7PDC24GJCQQUGVHXGTDMBFWCNHBS45N3XLWCGEA">
+      <manifest-digest sha256new="IRNAQP5NC2AMU7PDC24GJCQQUGVHXGTDMBFWCNHBS45N3XLWCGEA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.67.1/chezmoi_2.67.1_darwin_amd64.tar.gz" size="13410058" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.67.1" released="2025-11-26" stability="stable" id="sha256new_BRSHADZSGMF4I5DBIP36NQR3NBOTHDTF57SE34XRDDPYYSCG7OPA">
+      <manifest-digest sha256new="BRSHADZSGMF4I5DBIP36NQR3NBOTHDTF57SE34XRDDPYYSCG7OPA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.67.1/chezmoi_2.67.1_darwin_arm64.tar.gz" size="12421257" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.68.0" released="2025-12-03" stability="stable" id="sha256new_VUGF5HVJDVCKXLTLIHZ463CE4D2IRCZIQBH4Y5IBLKZ7T74OT2QQ">
+      <manifest-digest sha256new="VUGF5HVJDVCKXLTLIHZ463CE4D2IRCZIQBH4Y5IBLKZ7T74OT2QQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.68.0/chezmoi_2.68.0_linux_amd64.tar.gz" size="13268840" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.68.0" released="2025-12-03" stability="stable" id="sha256new_SOE3JDQ7BZY2PWUHZHNP7ZFS2JHE34GYMDBU2JVKLYQPFPES4ITQ">
+      <manifest-digest sha256new="SOE3JDQ7BZY2PWUHZHNP7ZFS2JHE34GYMDBU2JVKLYQPFPES4ITQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.68.0/chezmoi_2.68.0_linux_i386.tar.gz" size="12570621" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.68.0" released="2025-12-03" stability="stable" id="sha256new_LYGBMFRSXMNMHEAURN25GD7NYYHYBVKRV45WGYZKKVBVO2RDPXRA">
+      <manifest-digest sha256new="LYGBMFRSXMNMHEAURN25GD7NYYHYBVKRV45WGYZKKVBVO2RDPXRA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.68.0/chezmoi_2.68.0_linux_arm64.tar.gz" size="11956796" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.68.0" released="2025-12-03" stability="stable" id="sha256new_JO45ZU46OCVRP3BSCWH7JSTTN3M6WQYA3EN5QIAOAS2AQZ4USM7Q">
+      <manifest-digest sha256new="JO45ZU46OCVRP3BSCWH7JSTTN3M6WQYA3EN5QIAOAS2AQZ4USM7Q"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.68.0/chezmoi_2.68.0_darwin_amd64.tar.gz" size="13407580" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.68.0" released="2025-12-03" stability="stable" id="sha256new_FKKNFACZNA25FFNEOXTPKZHCEW5OWIMTYCZPQ42EZUMBKU4XCWMA">
+      <manifest-digest sha256new="FKKNFACZNA25FFNEOXTPKZHCEW5OWIMTYCZPQ42EZUMBKU4XCWMA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.68.0/chezmoi_2.68.0_darwin_arm64.tar.gz" size="12408838" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.68.1" released="2025-12-10" stability="stable" id="sha256new_XD4DXKE3PQNROXX72KHVTGD6XQ6VYIKY3JANTCZN5MIBK4UU7E4A">
+      <manifest-digest sha256new="XD4DXKE3PQNROXX72KHVTGD6XQ6VYIKY3JANTCZN5MIBK4UU7E4A"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.68.1/chezmoi_2.68.1_linux_amd64.tar.gz" size="13275898" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.68.1" released="2025-12-10" stability="stable" id="sha256new_MTBWOY4HX2A4M6RTFVJP4Z33U6QQZVXIZWRNABCTOVQOFP3CHAPQ">
+      <manifest-digest sha256new="MTBWOY4HX2A4M6RTFVJP4Z33U6QQZVXIZWRNABCTOVQOFP3CHAPQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.68.1/chezmoi_2.68.1_linux_i386.tar.gz" size="12573394" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.68.1" released="2025-12-10" stability="stable" id="sha256new_HSD2BPAXHVDG6AGBINRBDQYIVTMMTEUPRLA5YBCRST3PN2YLB7QA">
+      <manifest-digest sha256new="HSD2BPAXHVDG6AGBINRBDQYIVTMMTEUPRLA5YBCRST3PN2YLB7QA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.68.1/chezmoi_2.68.1_linux_arm64.tar.gz" size="11966087" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.68.1" released="2025-12-10" stability="stable" id="sha256new_RIDNGNFSXCIRF6SAE4OZM6WYI3656A4WOMNTNMGLW2NR5TXO2HZA">
+      <manifest-digest sha256new="RIDNGNFSXCIRF6SAE4OZM6WYI3656A4WOMNTNMGLW2NR5TXO2HZA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.68.1/chezmoi_2.68.1_darwin_amd64.tar.gz" size="13408065" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.68.1" released="2025-12-10" stability="stable" id="sha256new_IPPJOLURWEWW4CHAQPETE6HF2H2CKRYYRTQLD76OXEQIPRHI56JA">
+      <manifest-digest sha256new="IPPJOLURWEWW4CHAQPETE6HF2H2CKRYYRTQLD76OXEQIPRHI56JA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.68.1/chezmoi_2.68.1_darwin_arm64.tar.gz" size="12415093" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.69.0" released="2026-01-04" stability="stable" id="sha256new_N6YLA53TJIG3WVPCNFYCEWTBLZMZJBR6LJNCFSQ3LI4U23MOSK5A">
+      <manifest-digest sha256new="N6YLA53TJIG3WVPCNFYCEWTBLZMZJBR6LJNCFSQ3LI4U23MOSK5A"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.0/chezmoi_2.69.0_linux_amd64.tar.gz" size="13658867" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.69.0" released="2026-01-04" stability="stable" id="sha256new_RGF2GP6BXMTIKK6FSU6IES4PJRA5OSMCM7P4M3VFJ45JOB6UAAJQ">
+      <manifest-digest sha256new="RGF2GP6BXMTIKK6FSU6IES4PJRA5OSMCM7P4M3VFJ45JOB6UAAJQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.0/chezmoi_2.69.0_linux_i386.tar.gz" size="12932307" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.69.0" released="2026-01-04" stability="stable" id="sha256new_V7RNVXHG7T75N7O5IJW4WBIGFU7XA472UQKA5WRJLQFHLZ7EO2NQ">
+      <manifest-digest sha256new="V7RNVXHG7T75N7O5IJW4WBIGFU7XA472UQKA5WRJLQFHLZ7EO2NQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.0/chezmoi_2.69.0_linux_arm64.tar.gz" size="12310210" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.69.0" released="2026-01-04" stability="stable" id="sha256new_QU2WPBVWTFJRBDOFZQCTVTUI4KGFDBS3NCM4D2VIVVTM7COLSMBA">
+      <manifest-digest sha256new="QU2WPBVWTFJRBDOFZQCTVTUI4KGFDBS3NCM4D2VIVVTM7COLSMBA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.0/chezmoi_2.69.0_darwin_amd64.tar.gz" size="13799092" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.69.0" released="2026-01-04" stability="stable" id="sha256new_66Z4RP6IADPSILLSFISDMW3N35QMI4WJE6SU5PDI2YU3EFFLD63Q">
+      <manifest-digest sha256new="66Z4RP6IADPSILLSFISDMW3N35QMI4WJE6SU5PDI2YU3EFFLD63Q"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.0/chezmoi_2.69.0_darwin_arm64.tar.gz" size="12775577" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.69.1" released="2026-01-10" stability="stable" id="sha256new_JPA2LWYM4NIJ4XC77NY3DAGN4XAFBSW5357U5DO5VGJPGJZNXPLQ">
+      <manifest-digest sha256new="JPA2LWYM4NIJ4XC77NY3DAGN4XAFBSW5357U5DO5VGJPGJZNXPLQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.1/chezmoi_2.69.1_linux_amd64.tar.gz" size="13405885" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.69.1" released="2026-01-10" stability="stable" id="sha256new_ETCFCZJZ6WB256FHHA6IMFLSGY2ZN7SJF3PK7O6ESOHP5QTPZBIQ">
+      <manifest-digest sha256new="ETCFCZJZ6WB256FHHA6IMFLSGY2ZN7SJF3PK7O6ESOHP5QTPZBIQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.1/chezmoi_2.69.1_linux_i386.tar.gz" size="12693159" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.69.1" released="2026-01-10" stability="stable" id="sha256new_GZXUMZEW4HBWE6GNOP76IAGJADKKYCRYGEGF3PT4OCPYAVS3A6EA">
+      <manifest-digest sha256new="GZXUMZEW4HBWE6GNOP76IAGJADKKYCRYGEGF3PT4OCPYAVS3A6EA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.1/chezmoi_2.69.1_linux_arm64.tar.gz" size="12086019" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.69.1" released="2026-01-10" stability="stable" id="sha256new_2PDRRIXQJFSQF6JLFYU5DE3CGJ3B6RQO4YWR5STVQTBYWGATC3CA">
+      <manifest-digest sha256new="2PDRRIXQJFSQF6JLFYU5DE3CGJ3B6RQO4YWR5STVQTBYWGATC3CA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.1/chezmoi_2.69.1_darwin_amd64.tar.gz" size="13542650" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.69.1" released="2026-01-10" stability="stable" id="sha256new_N2GHDPS2SVIKZWDPU76OMMGHY24XMZ3SQXV36DO7EUE4DRKOXFSA">
+      <manifest-digest sha256new="N2GHDPS2SVIKZWDPU76OMMGHY24XMZ3SQXV36DO7EUE4DRKOXFSA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.1/chezmoi_2.69.1_darwin_arm64.tar.gz" size="12537250" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.69.2" released="2026-01-16" stability="stable" id="sha256new_WVH6QMFXXND4EYMGV6ZMIG5UJPLRDJC476YOAPOCPHAVOBCIEO5A">
+      <manifest-digest sha256new="WVH6QMFXXND4EYMGV6ZMIG5UJPLRDJC476YOAPOCPHAVOBCIEO5A"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.2/chezmoi_2.69.2_linux_amd64.tar.gz" size="13433501" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.69.2" released="2026-01-16" stability="stable" id="sha256new_7KZSYACXZBSQLJEVL5NKEN3LFOEASW7JCUUY7ONNBTNVX4ZMW3DA">
+      <manifest-digest sha256new="7KZSYACXZBSQLJEVL5NKEN3LFOEASW7JCUUY7ONNBTNVX4ZMW3DA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.2/chezmoi_2.69.2_linux_i386.tar.gz" size="12721183" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.69.2" released="2026-01-16" stability="stable" id="sha256new_7QQ74TRGZPKQNSZVPWXC765YKEWEBDVRL2G4H3QOM6I5P6BOI6ZA">
+      <manifest-digest sha256new="7QQ74TRGZPKQNSZVPWXC765YKEWEBDVRL2G4H3QOM6I5P6BOI6ZA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.2/chezmoi_2.69.2_linux_arm64.tar.gz" size="12109660" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.69.2" released="2026-01-16" stability="stable" id="sha256new_SIMNBSIKRBNLUND3RYM5WJWQDNCA6O325U4WSP36YLWO364FTMRQ">
+      <manifest-digest sha256new="SIMNBSIKRBNLUND3RYM5WJWQDNCA6O325U4WSP36YLWO364FTMRQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.2/chezmoi_2.69.2_darwin_amd64.tar.gz" size="13568351" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.69.2" released="2026-01-16" stability="stable" id="sha256new_IX37E3B5IICVUR5WKJYWHMTHDXY6OFEKLTDY35S2VGEFLF4DFNEQ">
+      <manifest-digest sha256new="IX37E3B5IICVUR5WKJYWHMTHDXY6OFEKLTDY35S2VGEFLF4DFNEQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.2/chezmoi_2.69.2_darwin_arm64.tar.gz" size="12561914" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.69.3" released="2026-01-16" stability="stable" id="sha256new_DDXOLUB6NULN6DTEW5Z2PNGSP4OTDHM5OGDVKIDV5ROV4KLO2NUQ">
+      <manifest-digest sha256new="DDXOLUB6NULN6DTEW5Z2PNGSP4OTDHM5OGDVKIDV5ROV4KLO2NUQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.3/chezmoi_2.69.3_linux_amd64.tar.gz" size="13433494" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.69.3" released="2026-01-16" stability="stable" id="sha256new_6HB67OALJQIKEPOFAW3TS4WJ6URK22V5AY3LZUONRQ6FR22SL7PA">
+      <manifest-digest sha256new="6HB67OALJQIKEPOFAW3TS4WJ6URK22V5AY3LZUONRQ6FR22SL7PA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.3/chezmoi_2.69.3_linux_i386.tar.gz" size="12721209" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.69.3" released="2026-01-16" stability="stable" id="sha256new_G7XIFBMIRBHGVJ3TLDKLMOQJOU6QOLFCUF2NXFLUTPD4S7ZLOSWQ">
+      <manifest-digest sha256new="G7XIFBMIRBHGVJ3TLDKLMOQJOU6QOLFCUF2NXFLUTPD4S7ZLOSWQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.3/chezmoi_2.69.3_linux_arm64.tar.gz" size="12109667" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.69.3" released="2026-01-16" stability="stable" id="sha256new_N5TQHHFP47JDF3T3IHW6G4GQB3PXNAMAWQXKCXAV6WVZAQOIVNPQ">
+      <manifest-digest sha256new="N5TQHHFP47JDF3T3IHW6G4GQB3PXNAMAWQXKCXAV6WVZAQOIVNPQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.3/chezmoi_2.69.3_darwin_amd64.tar.gz" size="13568352" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.69.3" released="2026-01-16" stability="stable" id="sha256new_GUDYTJOG6C54I76CK7KVQQQS7IWMUZB6ZP5HH244QWPSLTXEHV6Q">
+      <manifest-digest sha256new="GUDYTJOG6C54I76CK7KVQQQS7IWMUZB6ZP5HH244QWPSLTXEHV6Q"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.3/chezmoi_2.69.3_darwin_arm64.tar.gz" size="12561913" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.69.4" released="2026-02-11" stability="stable" id="sha256new_3C4CQIIVYVBIMQUF2LEXHLQPNXWBNVROHPXXBL7QQPZZDPPKAQEA">
+      <manifest-digest sha256new="3C4CQIIVYVBIMQUF2LEXHLQPNXWBNVROHPXXBL7QQPZZDPPKAQEA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.4/chezmoi_2.69.4_linux_amd64.tar.gz" size="13446382" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.69.4" released="2026-02-11" stability="stable" id="sha256new_NKL2XAXWBWYY74EI3DI3UNDDIASU3SKXAYQSVBYJVYU3DYDEXQNA">
+      <manifest-digest sha256new="NKL2XAXWBWYY74EI3DI3UNDDIASU3SKXAYQSVBYJVYU3DYDEXQNA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.4/chezmoi_2.69.4_linux_i386.tar.gz" size="12733927" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.69.4" released="2026-02-11" stability="stable" id="sha256new_SYNHODD7CBFLK32J7E3FG75EHA36MYYKH4ZUTPJZOT4IFFLL5HLQ">
+      <manifest-digest sha256new="SYNHODD7CBFLK32J7E3FG75EHA36MYYKH4ZUTPJZOT4IFFLL5HLQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.4/chezmoi_2.69.4_linux_arm64.tar.gz" size="12116821" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.69.4" released="2026-02-11" stability="stable" id="sha256new_TUX6Q4NEGSQQ2CZBTWQMZEMNPCXM44LIHWN64NZZGTUGBALROOSA">
+      <manifest-digest sha256new="TUX6Q4NEGSQQ2CZBTWQMZEMNPCXM44LIHWN64NZZGTUGBALROOSA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.4/chezmoi_2.69.4_darwin_amd64.tar.gz" size="13584234" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.69.4" released="2026-02-11" stability="stable" id="sha256new_SACUCP5SSKLSX72ECPQB3W3AJFXWRVVNRJELNAGYNXF3JGOXHI2A">
+      <manifest-digest sha256new="SACUCP5SSKLSX72ECPQB3W3AJFXWRVVNRJELNAGYNXF3JGOXHI2A"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.69.4/chezmoi_2.69.4_darwin_arm64.tar.gz" size="12573858" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.70.0" released="2026-03-09" stability="stable" id="sha256new_3UJJESO3RWZ6ZOFZOS6IOKP4VJU56XOVV3VRIDB3HAZYZBZWGJVQ">
+      <manifest-digest sha256new="3UJJESO3RWZ6ZOFZOS6IOKP4VJU56XOVV3VRIDB3HAZYZBZWGJVQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.0/chezmoi_2.70.0_linux_amd64.tar.gz" size="13627819" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.70.0" released="2026-03-09" stability="stable" id="sha256new_BHZFSRYHGVKX2GNFCGNTW2JHYSE3E5SH52VNF35CTKVO6FCRED4Q">
+      <manifest-digest sha256new="BHZFSRYHGVKX2GNFCGNTW2JHYSE3E5SH52VNF35CTKVO6FCRED4Q"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.0/chezmoi_2.70.0_linux_i386.tar.gz" size="12901108" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.70.0" released="2026-03-09" stability="stable" id="sha256new_GSG7Z6GS5VILAF2OFVLQACWLPKGUJIRYMJ6EBOHHLDC72IRIAIWA">
+      <manifest-digest sha256new="GSG7Z6GS5VILAF2OFVLQACWLPKGUJIRYMJ6EBOHHLDC72IRIAIWA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.0/chezmoi_2.70.0_linux_arm64.tar.gz" size="12236619" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.70.0" released="2026-03-09" stability="stable" id="sha256new_FFWIZQJKDJB3OVGEDCVIUXQHXKJWQEPSZPWH3HXMLJGDAR7JC7DA">
+      <manifest-digest sha256new="FFWIZQJKDJB3OVGEDCVIUXQHXKJWQEPSZPWH3HXMLJGDAR7JC7DA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.0/chezmoi_2.70.0_darwin_amd64.tar.gz" size="13776436" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.70.0" released="2026-03-09" stability="stable" id="sha256new_IOOJS4OMNDQROTRTFLTWNL3B36DLVZSPNOAAK4OAIQUPO6IPBMMA">
+      <manifest-digest sha256new="IOOJS4OMNDQROTRTFLTWNL3B36DLVZSPNOAAK4OAIQUPO6IPBMMA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.0/chezmoi_2.70.0_darwin_arm64.tar.gz" size="12706453" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.70.1" released="2026-04-08" stability="stable" id="sha256new_EURWX3F4JQNHT6ZIYRN7EW6JCWVVXL2FAREVXGXVT3ENCAHA5ARQ">
+      <manifest-digest sha256new="EURWX3F4JQNHT6ZIYRN7EW6JCWVVXL2FAREVXGXVT3ENCAHA5ARQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.1/chezmoi_2.70.1_linux_amd64.tar.gz" size="13591976" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.70.1" released="2026-04-08" stability="stable" id="sha256new_L6XASEQ5TQ42JAV2NIJV33U7DH6XAZLDZWGZFZJKZY76VB5YXG5Q">
+      <manifest-digest sha256new="L6XASEQ5TQ42JAV2NIJV33U7DH6XAZLDZWGZFZJKZY76VB5YXG5Q"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.1/chezmoi_2.70.1_linux_i386.tar.gz" size="12864071" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.70.1" released="2026-04-08" stability="stable" id="sha256new_GBPJLXQYD7ZV2MZGNGGGEMTZF4XS3GWMZY752DPRJXRSTPFJCO4A">
+      <manifest-digest sha256new="GBPJLXQYD7ZV2MZGNGGGEMTZF4XS3GWMZY752DPRJXRSTPFJCO4A"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.1/chezmoi_2.70.1_linux_arm64.tar.gz" size="12203384" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.70.1" released="2026-04-08" stability="stable" id="sha256new_PENLVPIVC2X7HP7ZFLPFUZONM6HVEDBC55WORBRKWIS4KYK2I6SQ">
+      <manifest-digest sha256new="PENLVPIVC2X7HP7ZFLPFUZONM6HVEDBC55WORBRKWIS4KYK2I6SQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.1/chezmoi_2.70.1_darwin_amd64.tar.gz" size="13740563" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.70.1" released="2026-04-08" stability="stable" id="sha256new_37DKV66PLRX3TJDJT5ZCL3NNNG2EYME5QNXSGLAHCP6PAKDQI7MA">
+      <manifest-digest sha256new="37DKV66PLRX3TJDJT5ZCL3NNNG2EYME5QNXSGLAHCP6PAKDQI7MA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.1/chezmoi_2.70.1_darwin_arm64.tar.gz" size="12672261" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.70.2" released="2026-04-17" stability="stable" id="sha256new_BSALL2N6EYKAX7R6TSPKQUDX4JYQ4YQQ7BC322ZW437UQZBLD5FQ">
+      <manifest-digest sha256new="BSALL2N6EYKAX7R6TSPKQUDX4JYQ4YQQ7BC322ZW437UQZBLD5FQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.2/chezmoi_2.70.2_linux_amd64.tar.gz" size="16990551" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.70.2" released="2026-04-17" stability="stable" id="sha256new_YFRXEMTDSRVMAOCMJYVHAGZXTBJKTMV56USN4ZRZ2KJQVA4ZX45Q">
+      <manifest-digest sha256new="YFRXEMTDSRVMAOCMJYVHAGZXTBJKTMV56USN4ZRZ2KJQVA4ZX45Q"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.2/chezmoi_2.70.2_linux_i386.tar.gz" size="16109734" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.70.2" released="2026-04-17" stability="stable" id="sha256new_3FRDONOZLJSIRGJH4WHVL6WJOH2ZKJY7RKV2S5BJLJWSNHUKSA2Q">
+      <manifest-digest sha256new="3FRDONOZLJSIRGJH4WHVL6WJOH2ZKJY7RKV2S5BJLJWSNHUKSA2Q"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.2/chezmoi_2.70.2_linux_arm64.tar.gz" size="15351944" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.70.2" released="2026-04-17" stability="stable" id="sha256new_E7GY3P5MFKV2C6DBY6K2UNGSWTSUUC4AG7QVYOUV3HQS52YHT47Q">
+      <manifest-digest sha256new="E7GY3P5MFKV2C6DBY6K2UNGSWTSUUC4AG7QVYOUV3HQS52YHT47Q"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.2/chezmoi_2.70.2_darwin_amd64.tar.gz" size="17198200" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.70.2" released="2026-04-17" stability="stable" id="sha256new_NT7WMYWQ7KDVOB62NORRRXD56LXWUH46WRJHAL7E2DO6GB7CEV7Q">
+      <manifest-digest sha256new="NT7WMYWQ7KDVOB62NORRRXD56LXWUH46WRJHAL7E2DO6GB7CEV7Q"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.2/chezmoi_2.70.2_darwin_arm64.tar.gz" size="15953866" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.70.3" released="2026-05-07" stability="stable" id="sha256new_GDB35A5SQON3ACNEOSEQVOH5MLD6NCXDQQKK52MHSSTXWVQC7DYA">
+      <manifest-digest sha256new="GDB35A5SQON3ACNEOSEQVOH5MLD6NCXDQQKK52MHSSTXWVQC7DYA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.3/chezmoi_2.70.3_linux_amd64.tar.gz" size="17058176" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.70.3" released="2026-05-07" stability="stable" id="sha256new_RWX775X7QEJCTYVSLMWCRTKVAYTE2FQMOVLIDMYNGVSDUQGWGDHQ">
+      <manifest-digest sha256new="RWX775X7QEJCTYVSLMWCRTKVAYTE2FQMOVLIDMYNGVSDUQGWGDHQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.3/chezmoi_2.70.3_linux_i386.tar.gz" size="16163584" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.70.3" released="2026-05-07" stability="stable" id="sha256new_QXGSXFAI573PIBT2XJZXHV6MFV64N6YRD52MFEPAWN7IWDEHOVUQ">
+      <manifest-digest sha256new="QXGSXFAI573PIBT2XJZXHV6MFV64N6YRD52MFEPAWN7IWDEHOVUQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.3/chezmoi_2.70.3_linux_arm64.tar.gz" size="15410254" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.70.3" released="2026-05-07" stability="stable" id="sha256new_MIVRQ7GIYKB6D34HUVQA2VMVWKI7KAHVIQWQHFKI5JU5P5VCKXRQ">
+      <manifest-digest sha256new="MIVRQ7GIYKB6D34HUVQA2VMVWKI7KAHVIQWQHFKI5JU5P5VCKXRQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.3/chezmoi_2.70.3_darwin_amd64.tar.gz" size="17261637" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.70.3" released="2026-05-07" stability="stable" id="sha256new_3RVLZ5TM2Q62M5VE52IS5VU4B7MDKMX7S3YYYGOBKF7HPQNC3S6A">
+      <manifest-digest sha256new="3RVLZ5TM2Q62M5VE52IS5VU4B7MDKMX7S3YYYGOBKF7HPQNC3S6A"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.3/chezmoi_2.70.3_darwin_arm64.tar.gz" size="16013655" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.70.4" released="2026-05-19" stability="stable" id="sha256new_EZO4GJZQSBCZQJEMWBMW3POWXJQLSXJZ6FRZMSGMRBRJZZ55DVSA">
+      <manifest-digest sha256new="EZO4GJZQSBCZQJEMWBMW3POWXJQLSXJZ6FRZMSGMRBRJZZ55DVSA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.4/chezmoi_2.70.4_linux_amd64.tar.gz" size="17320210" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.70.4" released="2026-05-19" stability="stable" id="sha256new_RS6BPBFNNXOMXVGQLSXAKE3QDOT3ERFIFUYEJBSLX3YGL5W4NLTQ">
+      <manifest-digest sha256new="RS6BPBFNNXOMXVGQLSXAKE3QDOT3ERFIFUYEJBSLX3YGL5W4NLTQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.4/chezmoi_2.70.4_linux_i386.tar.gz" size="16427513" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.70.4" released="2026-05-19" stability="stable" id="sha256new_QXPHX3AUECAHP6VDWCW5AC7D5SP2O4VPKGZHERIYON6WO4SHDAUA">
+      <manifest-digest sha256new="QXPHX3AUECAHP6VDWCW5AC7D5SP2O4VPKGZHERIYON6WO4SHDAUA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.4/chezmoi_2.70.4_linux_arm64.tar.gz" size="15650004" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.70.4" released="2026-05-19" stability="stable" id="sha256new_QLEXEKCNIH5MR7VUIHBUVQVIGVAOYGW37DI7TSDK527KDEEDYTPA">
+      <manifest-digest sha256new="QLEXEKCNIH5MR7VUIHBUVQVIGVAOYGW37DI7TSDK527KDEEDYTPA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.4/chezmoi_2.70.4_darwin_amd64.tar.gz" size="17536837" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.70.4" released="2026-05-19" stability="stable" id="sha256new_7QOHQKA5YS43YXIXO24QP3A2SBU5GWRQA2BP46TYCER5A2HTPOSA">
+      <manifest-digest sha256new="7QOHQKA5YS43YXIXO24QP3A2SBU5GWRQA2BP46TYCER5A2HTPOSA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.4/chezmoi_2.70.4_darwin_arm64.tar.gz" size="16271060" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="2.70.5" released="2026-06-03" stability="stable" id="sha256new_LWEHRLGVCH2BBVI3NGM5Z5FQSY4M33QQPXVWHJ5WGY6DCHW7ZKFQ">
+      <manifest-digest sha256new="LWEHRLGVCH2BBVI3NGM5Z5FQSY4M33QQPXVWHJ5WGY6DCHW7ZKFQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.5/chezmoi_2.70.5_linux_amd64.tar.gz" size="17394516" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="2.70.5" released="2026-06-03" stability="stable" id="sha256new_IOMNEPU7YR5KEXU6IBISQLU6UTZQSTQK75LVIPHID7WKTXNSHAXQ">
+      <manifest-digest sha256new="IOMNEPU7YR5KEXU6IBISQLU6UTZQSTQK75LVIPHID7WKTXNSHAXQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.5/chezmoi_2.70.5_linux_i386.tar.gz" size="16491530" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2.70.5" released="2026-06-03" stability="stable" id="sha256new_B3Q3WN7RDS36UGBWI4QGONB6MWFRYJU63Q2D2ZGUCFRE5KZW4VPQ">
+      <manifest-digest sha256new="B3Q3WN7RDS36UGBWI4QGONB6MWFRYJU63Q2D2ZGUCFRE5KZW4VPQ"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.5/chezmoi_2.70.5_linux_arm64.tar.gz" size="15721117" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="2.70.5" released="2026-06-03" stability="stable" id="sha256new_ZGBUV4NXEYBLKCS5JANB267ZPCET3REBKINKKAMAOYWEXG52SVPA">
+      <manifest-digest sha256new="ZGBUV4NXEYBLKCS5JANB267ZPCET3REBKINKKAMAOYWEXG52SVPA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.5/chezmoi_2.70.5_darwin_amd64.tar.gz" size="17610850" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2.70.5" released="2026-06-03" stability="stable" id="sha256new_IULUMCZ7JJPO6VXWKAUQXLFE64DBUBHLFTKFPIX2FJCDCEP2QGLA">
+      <manifest-digest sha256new="IULUMCZ7JJPO6VXWKAUQXLFE64DBUBHLFTKFPIX2FJCDCEP2QGLA"/>
+      <archive href="https://github.com/twpayne/chezmoi/releases/download/v2.70.5/chezmoi_2.70.5_darwin_arm64.tar.gz" size="16346244" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="MIT">
+    <command name="run" path="chezmoi.exe"/>
+    <implementation arch="Windows-x86_64" version="2.62.1" released="2025-04-13" stability="stable" id="sha256new_4QJIZPRT5BOAMHDUYFG25L55SWGFZASR6G2YXAQSJRHRYRLRPZVQ">
+      <manifest-digest sha256new="4QJIZPRT5BOAMHDUYFG25L55SWGFZASR6G2YXAQSJRHRYRLRPZVQ"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.62.1/chezmoi-windows-amd64.exe" size="33237504" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.62.2" released="2025-04-18" stability="stable" id="sha256new_SKXOLED2RU4S6Y42EXWFCUCN3MKV6RNSTBYJTZKRIEQB5GFBXYTA">
+      <manifest-digest sha256new="SKXOLED2RU4S6Y42EXWFCUCN3MKV6RNSTBYJTZKRIEQB5GFBXYTA"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.62.2/chezmoi-windows-amd64.exe" size="33244672" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.62.3" released="2025-05-06" stability="stable" id="sha256new_AMG252U3KDQKLFRD235XYLCQGU75W7UARZRGJG62IP2M3DQ4WLDQ">
+      <manifest-digest sha256new="AMG252U3KDQKLFRD235XYLCQGU75W7UARZRGJG62IP2M3DQ4WLDQ"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.62.3/chezmoi-windows-amd64.exe" size="32841728" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.62.4" released="2025-05-11" stability="stable" id="sha256new_54LW36JDYO7RWO3GVE66TB3GRHFM4T6IRVPIEKCIIVZRUSBXPE7A">
+      <manifest-digest sha256new="54LW36JDYO7RWO3GVE66TB3GRHFM4T6IRVPIEKCIIVZRUSBXPE7A"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.62.4/chezmoi-windows-amd64.exe" size="32842240" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.62.5" released="2025-05-23" stability="stable" id="sha256new_QCFGFRF7MDSZTVDUDTFQ4VADCUE7D6NWXORNHU3MV4EEX6Z25CZA">
+      <manifest-digest sha256new="QCFGFRF7MDSZTVDUDTFQ4VADCUE7D6NWXORNHU3MV4EEX6Z25CZA"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.62.5/chezmoi-windows-amd64.exe" size="32588288" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.62.6" released="2025-06-06" stability="stable" id="sha256new_RLCV22JBTKAI3MA6YFLUBY2UPSREQ7WBIOD4FBMNJU75QSHN3WSA">
+      <manifest-digest sha256new="RLCV22JBTKAI3MA6YFLUBY2UPSREQ7WBIOD4FBMNJU75QSHN3WSA"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.62.6/chezmoi-windows-amd64.exe" size="35481088" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.62.7" released="2025-06-22" stability="stable" id="sha256new_SPFNVG5BVWD2MQZTUJYV5KYXT6OVAWKU5JFM7RJ3CKRCO4CNA6KQ">
+      <manifest-digest sha256new="SPFNVG5BVWD2MQZTUJYV5KYXT6OVAWKU5JFM7RJ3CKRCO4CNA6KQ"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.62.7/chezmoi-windows-amd64.exe" size="35494400" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.63.0" released="2025-07-09" stability="stable" id="sha256new_KHAUPZYVZQNQOAXITFWJ66ZKL5SHCVLDQUGBMMLUAYNS2EX3FLQQ">
+      <manifest-digest sha256new="KHAUPZYVZQNQOAXITFWJ66ZKL5SHCVLDQUGBMMLUAYNS2EX3FLQQ"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.63.0/chezmoi-windows-amd64.exe" size="35514368" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.63.1" released="2025-07-22" stability="stable" id="sha256new_I3BN5VSCOG6A5QPXGNOWZ7QGPBVEC6XYXJG5YXDVO3GXVGODOFKA">
+      <manifest-digest sha256new="I3BN5VSCOG6A5QPXGNOWZ7QGPBVEC6XYXJG5YXDVO3GXVGODOFKA"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.63.1/chezmoi-windows-amd64.exe" size="35596288" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.64.0" released="2025-08-06" stability="stable" id="sha256new_BDHADQYABESR7LCIJQKURLADD5E66QC2IRCTAY4SY5V2RFPB4QKQ">
+      <manifest-digest sha256new="BDHADQYABESR7LCIJQKURLADD5E66QC2IRCTAY4SY5V2RFPB4QKQ"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.64.0/chezmoi-windows-amd64.exe" size="35692032" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.65.0" released="2025-08-26" stability="stable" id="sha256new_ZBB45MHXSVURZMQZGAIF2YM3ODAIUAK2TC4FD64I62MGYFPR54JQ">
+      <manifest-digest sha256new="ZBB45MHXSVURZMQZGAIF2YM3ODAIUAK2TC4FD64I62MGYFPR54JQ"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.65.0/chezmoi-windows-amd64.exe" size="35844096" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.65.1" released="2025-09-09" stability="stable" id="sha256new_4GBSJJPMKWVVIIQP3I4P3KKRXGQUGAAKN7H3MRHKMGSQQ6J5JAYQ">
+      <manifest-digest sha256new="4GBSJJPMKWVVIIQP3I4P3KKRXGQUGAAKN7H3MRHKMGSQQ6J5JAYQ"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.65.1/chezmoi-windows-amd64.exe" size="36273664" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.65.2" released="2025-09-23" stability="stable" id="sha256new_NWH326GEMEVOJMWSFA5NW4MRPQDKGUZPUXLM5D746YXUTO4LZQGA">
+      <manifest-digest sha256new="NWH326GEMEVOJMWSFA5NW4MRPQDKGUZPUXLM5D746YXUTO4LZQGA"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.65.2/chezmoi-windows-amd64.exe" size="36399616" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.66.0" released="2025-10-07" stability="stable" id="sha256new_EWSJS72YABFQ7X6S5KGM67ILIFEUF3XBWZUR3FPLDYJIBYCRORDA">
+      <manifest-digest sha256new="EWSJS72YABFQ7X6S5KGM67ILIFEUF3XBWZUR3FPLDYJIBYCRORDA"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.66.0/chezmoi-windows-amd64.exe" size="36206592" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.66.1" released="2025-10-19" stability="stable" id="sha256new_M476GXQW2PV2D7WBA5N4ZJIQ4ABUTTHV2DZXK4C4JGTEENYQIVHQ">
+      <manifest-digest sha256new="M476GXQW2PV2D7WBA5N4ZJIQ4ABUTTHV2DZXK4C4JGTEENYQIVHQ"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.66.1/chezmoi-windows-amd64.exe" size="36274176" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.67.0" released="2025-11-02" stability="stable" id="sha256new_I6AF67LT3BMEZ6WCCCTBCJ6N7FSPLBTS3XQA7VKJ4WWBTHXXRXYQ">
+      <manifest-digest sha256new="I6AF67LT3BMEZ6WCCCTBCJ6N7FSPLBTS3XQA7VKJ4WWBTHXXRXYQ"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.67.0/chezmoi-windows-amd64.exe" size="36291072" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.67.1" released="2025-11-26" stability="stable" id="sha256new_MCXNWQSRYXE64VDEX7NDUAOTVN34RMYJATFJIA37XZRBNU6O26VA">
+      <manifest-digest sha256new="MCXNWQSRYXE64VDEX7NDUAOTVN34RMYJATFJIA37XZRBNU6O26VA"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.67.1/chezmoi-windows-amd64.exe" size="36598784" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.68.0" released="2025-12-03" stability="stable" id="sha256new_NNWSQP5XTWZ265TD4VMXRSNPNDYARU4TR55CBTXIHURMH4RBRQQA">
+      <manifest-digest sha256new="NNWSQP5XTWZ265TD4VMXRSNPNDYARU4TR55CBTXIHURMH4RBRQQA"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.68.0/chezmoi-windows-amd64.exe" size="36563456" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.68.1" released="2025-12-10" stability="stable" id="sha256new_4OR4MPNME25ICUBGBZMKIWIL7H337GLZGS4VV7CK4V3C7DDYCDVA">
+      <manifest-digest sha256new="4OR4MPNME25ICUBGBZMKIWIL7H337GLZGS4VV7CK4V3C7DDYCDVA"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.68.1/chezmoi-windows-amd64.exe" size="36579328" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.69.0" released="2026-01-04" stability="stable" id="sha256new_FZH3Z2TKLBCLD6LCTE3X7BC2I6IHY6SMHLACLSVA5IL3YNGJQQHQ">
+      <manifest-digest sha256new="FZH3Z2TKLBCLD6LCTE3X7BC2I6IHY6SMHLACLSVA5IL3YNGJQQHQ"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.69.0/chezmoi-windows-amd64.exe" size="37626880" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.69.1" released="2026-01-10" stability="stable" id="sha256new_F3FCKUNOCQHUX7FKF44JN4P4IUSCJ5W2DOITIHYRH75PCFI3AGGA">
+      <manifest-digest sha256new="F3FCKUNOCQHUX7FKF44JN4P4IUSCJ5W2DOITIHYRH75PCFI3AGGA"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.69.1/chezmoi-windows-amd64.exe" size="36914176" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.69.2" released="2026-01-16" stability="stable" id="sha256new_SIIR275PMYIYGSV5C3NFC2KSNFU44ULE7GRQLGS6LJKMIVZM4IXA">
+      <manifest-digest sha256new="SIIR275PMYIYGSV5C3NFC2KSNFU44ULE7GRQLGS6LJKMIVZM4IXA"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.69.2/chezmoi-windows-amd64.exe" size="36921344" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.69.3" released="2026-01-16" stability="stable" id="sha256new_JTMQRUSP34YJBGH42H6QU2CXNY6TJOJ2RIR3DIDBCSIYILHHOS4A">
+      <manifest-digest sha256new="JTMQRUSP34YJBGH42H6QU2CXNY6TJOJ2RIR3DIDBCSIYILHHOS4A"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.69.3/chezmoi-windows-amd64.exe" size="36921344" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.69.4" released="2026-02-11" stability="stable" id="sha256new_TNOMLVNLL3PTWYAJTIUSM2EGM3K5R3FDTXWAB6IIQXTLGWYM25IA">
+      <manifest-digest sha256new="TNOMLVNLL3PTWYAJTIUSM2EGM3K5R3FDTXWAB6IIQXTLGWYM25IA"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.69.4/chezmoi-windows-amd64.exe" size="36987904" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.70.0" released="2026-03-09" stability="stable" id="sha256new_HEFAP6HJ5EOZU6GUG35ZS2MRLS7DYDLVOCSKFP3RIHKIQWQ2JUQA">
+      <manifest-digest sha256new="HEFAP6HJ5EOZU6GUG35ZS2MRLS7DYDLVOCSKFP3RIHKIQWQ2JUQA"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.70.0/chezmoi-windows-amd64.exe" size="37606912" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.70.1" released="2026-04-08" stability="stable" id="sha256new_QSFWN4L2SQ7YACNWBS7D4TFJFEHGX7RVTY6DH7PD5NZVNX2MMMOA">
+      <manifest-digest sha256new="QSFWN4L2SQ7YACNWBS7D4TFJFEHGX7RVTY6DH7PD5NZVNX2MMMOA"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.70.1/chezmoi-windows-amd64.exe" size="37522432" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.70.2" released="2026-04-17" stability="stable" id="sha256new_FAMQQKVDMTOVAXCEIPD32BLVYWJBUCHHGP3N7I5Z5DAWGFORI3UQ">
+      <manifest-digest sha256new="FAMQQKVDMTOVAXCEIPD32BLVYWJBUCHHGP3N7I5Z5DAWGFORI3UQ"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.70.2/chezmoi-windows-amd64.exe" size="46737408" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.70.3" released="2026-05-07" stability="stable" id="sha256new_T324FCZQLNEYMZASLFJFBKVBKGBLFXODFFR3DSGE3TIKGKOVK4OA">
+      <manifest-digest sha256new="T324FCZQLNEYMZASLFJFBKVBKGBLFXODFFR3DSGE3TIKGKOVK4OA"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.70.3/chezmoi-windows-amd64.exe" size="46905344" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.70.4" released="2026-05-19" stability="stable" id="sha256new_VRVZQJB5BTPOYYETSTHWEA3OJB4CCNFH4VZAT7NFOXRSDM3UPKWQ">
+      <manifest-digest sha256new="VRVZQJB5BTPOYYETSTHWEA3OJB4CCNFH4VZAT7NFOXRSDM3UPKWQ"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.70.4/chezmoi-windows-amd64.exe" size="48003584" dest="chezmoi.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.70.5" released="2026-06-03" stability="stable" id="sha256new_JL2NM53HPJGYZRLCDX2DYNBWOZX3PRKLCFQWZVEKGJQK62MXD5BQ">
+      <manifest-digest sha256new="JL2NM53HPJGYZRLCDX2DYNBWOZX3PRKLCFQWZVEKGJQK62MXD5BQ"/>
+      <file href="https://github.com/twpayne/chezmoi/releases/download/v2.70.5/chezmoi-windows-amd64.exe" size="48188416" dest="chezmoi.exe"/>
+    </implementation>
+  </group>
+</interface>

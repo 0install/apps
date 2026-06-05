@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>PlantUML</name>
+  <summary>draw UML diagrams from a plain text language</summary>
+  <description>PlantUML is a tool that lets you create diagrams from a simple and intuitive
+plain text language. It supports many diagram types including sequence, use
+case, class, activity, component, state, object, deployment and timing
+diagrams, as well as non-UML diagrams such as JSON, YAML, mind maps, Gantt
+charts and wireframes.</description>
+  <homepage>https://plantuml.com/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+  <icon href="https://apps.0install.net/utils/plantuml.png" type="image/png"/>
+  <icon href="https://apps.0install.net/utils/plantuml.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://apps.0install.net/utils/plantuml.icns" type="image/x-icns"/>
+
+  <feed-for interface="https://apps.0install.net/utils/plantuml.xml"/>
+
+  <group license="GPL-3.0-or-later">
+    <environment insert="plantuml.jar" name="CLASSPATH"/>
+    <command name="run">
+      <runner command="java" interface="https://apps.0install.net/java/jdk.xml" version="11..">
+        <arg>net.sourceforge.plantuml.Run</arg>
+      </runner>
+    </command>
+    <implementation version="{version}" released="{released}" stability="{stability}">
+      <manifest-digest/>
+      <file href="https://github.com/plantuml/plantuml/releases/download/v{version}/plantuml-{version}.jar" dest="plantuml.jar"/>
+    </implementation>
+  </group>
+</interface>

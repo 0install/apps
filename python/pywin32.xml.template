@@ -15,18 +15,6 @@
     <environment insert="pythonwin" name="PYTHONPATH"/>
 
     <group>
-      <restricts interface="https://apps.0install.net/python/python.xml" version="3.8..!3.9"/>
-      <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
-        <manifest-digest/>
-        <archive href="{cp38-win_amd64}" type="application/zip"/>
-      </implementation>
-      <implementation arch="Windows-i486" released="{released}" stability="stable" version="{version}">
-        <manifest-digest/>
-        <archive href="{cp38-win32}" type="application/zip"/>
-      </implementation>
-    </group>
-
-    <group>
       <restricts interface="https://apps.0install.net/python/python.xml" version="3.9..!3.10"/>
       <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
         <manifest-digest/>
@@ -119,6 +107,22 @@
       <implementation arch="Windows-aarch64" released="{released}" stability="stable" version="{version}">
         <manifest-digest/>
         <archive href="{cp314-win_arm64}" type="application/zip"/>
+      </implementation>
+    </group>
+
+    <group>
+      <restricts interface="https://apps.0install.net/python/python.xml" version="3.15..!3.16"/>
+      <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
+        <manifest-digest/>
+        <archive href="{cp315-win_amd64}" type="application/zip"/>
+      </implementation>
+      <implementation arch="Windows-i486" released="{released}" stability="stable" version="{version}">
+        <manifest-digest/>
+        <archive href="{cp315-win32}" type="application/zip"/>
+      </implementation>
+      <implementation arch="Windows-aarch64" released="{released}" stability="stable" version="{version}">
+        <manifest-digest/>
+        <archive href="{cp315-win_arm64}" type="application/zip"/>
       </implementation>
     </group>
   </group>

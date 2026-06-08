@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>7-Zip</name>
+  <summary>file archiver with a high compression ratio</summary>
+  <description>7-Zip is a file archiver with a high compression ratio. It uses its own 7z format with LZMA/LZMA2 compression, and also packs and unpacks ZIP, GZIP, BZIP2, XZ, TAR and WIM archives, while extracting many more formats including RAR, CAB, ISO, DMG and MSI.</description>
+  <homepage>https://www.7-zip.org/</homepage>
+  <category>Utility</category>
+  <needs-terminal/>
+  <icon href="https://apps.0install.net/utils/7zip.png" type="image/png"/>
+  <icon href="https://apps.0install.net/utils/7zip.ico" type="image/vnd.microsoft.icon"/>
+
+  <feed-for interface="https://apps.0install.net/utils/7zip.xml"/>
+
+  <group license="LGPL-2.1-or-later">
+    <group>
+      <command name="run" path="7zz"/>
+      <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="stable">
+        <manifest-digest/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/{version}/7z{version-packed}-linux-x64.tar.xz" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-i486" version="{version}" released="{released}" stability="stable">
+        <manifest-digest/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/{version}/7z{version-packed}-linux-x86.tar.xz" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="{version}" released="{released}" stability="stable">
+        <manifest-digest/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/{version}/7z{version-packed}-linux-arm64.tar.xz" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-armv7l" version="{version}" released="{released}" stability="stable">
+        <manifest-digest/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/{version}/7z{version-packed}-linux-arm.tar.xz" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-*" version="{version}" released="{released}" stability="stable">
+        <manifest-digest/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/{version}/7z{version-packed}-mac.tar.xz" type="application/x-xz-compressed-tar"/>
+      </implementation>
+    </group>
+
+    <group>
+      <command name="run" path="7z.exe"/>
+      <command name="run-gui" path="7zG.exe"/>
+      <command name="file-manager" path="7zFM.exe"/>
+      <implementation arch="Windows-i486" version="{version}" released="{released}" stability="stable">
+        <manifest-digest/>
+        <archive extract="SourceDir/Files/7-Zip" href="https://github.com/ip7z/7zip/releases/download/{version}/7z{version-packed}.msi" type="application/x-msi"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
+        <manifest-digest/>
+        <archive extract="SourceDir/Files/7-Zip" href="https://github.com/ip7z/7zip/releases/download/{version}/7z{version-packed}-x64.msi" type="application/x-msi"/>
+      </implementation>
+    </group>
+  </group>
+</interface>

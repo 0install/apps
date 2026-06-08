@@ -1,0 +1,388 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/utils/7zip.xml">
+  <name>7-Zip</name>
+  <summary>file archiver with a high compression ratio</summary>
+  <description>7-Zip is a file archiver with a high compression ratio. It uses its own 7z format with LZMA/LZMA2 compression, and also packs and unpacks ZIP, GZIP, BZIP2, XZ, TAR and WIM archives, while extracting many more formats including RAR, CAB, ISO, DMG and MSI.</description>
+  <homepage>https://www.7-zip.org/</homepage>
+  <category>Utility</category>
+  <needs-terminal/>
+  <icon href="https://apps.0install.net/utils/7zip.png" type="image/png"/>
+  <icon href="https://apps.0install.net/utils/7zip.ico" type="image/vnd.microsoft.icon"/>
+
+  <entry-point binary-name="7z" command="run">
+    <name>7-Zip command-line</name>
+    <summary>Runs 7-Zip command-line instructions</summary>
+  </entry-point>
+  <entry-point binary-name="7zG" command="run-gui">
+    <name>7-Zip GUI command-line</name>
+    <summary>Runs 7-Zip command-line instructions and shows the progress and result in a GUI</summary>
+  </entry-point>
+  <entry-point binary-name="7zFM" command="file-manager">
+    <name>7-Zip File Manager</name>
+    <summary>Graphical file manager for creating, exploring and extracting archives</summary>
+  </entry-point>
+
+  <group license="LGPL-2.1-or-later">
+    <group>
+      <command name="run" path="7zz"/>
+      <implementation arch="Linux-x86_64" version="21.7" released="2022-03-18" stability="stable" id="sha256new_PTZVJXCIRVNIJEKWNQ5PPYXG2DULOUDPHAJLJWIQUNMNGXCYXFPQ">
+        <manifest-digest sha256new="PTZVJXCIRVNIJEKWNQ5PPYXG2DULOUDPHAJLJWIQUNMNGXCYXFPQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/21.07/7z2107-linux-x64.tar.xz" size="1456516" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-i486" version="21.7" released="2022-03-18" stability="stable" id="sha256new_4NEGD45PTSSHEVELPJYJTZOX6J67EX2INTJCRUAWK6O6DQQJQ2BQ">
+        <manifest-digest sha256new="4NEGD45PTSSHEVELPJYJTZOX6J67EX2INTJCRUAWK6O6DQQJQ2BQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/21.07/7z2107-linux-x86.tar.xz" size="1586240" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="21.7" released="2022-03-18" stability="stable" id="sha256new_NHUEWL2YBBE6P3RXO3ZWXGFAPEBMXSNOTI22HZUKRIWJFJNIF2DA">
+        <manifest-digest sha256new="NHUEWL2YBBE6P3RXO3ZWXGFAPEBMXSNOTI22HZUKRIWJFJNIF2DA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/21.07/7z2107-linux-arm64.tar.xz" size="1222356" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-armv7l" version="21.7" released="2022-03-18" stability="stable" id="sha256new_3XAXYCP5PVF6ILVNXTRXCFC7RWS6ZMBQ7KHS7JJPURP3DDPDMIFA">
+        <manifest-digest sha256new="3XAXYCP5PVF6ILVNXTRXCFC7RWS6ZMBQ7KHS7JJPURP3DDPDMIFA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/21.07/7z2107-linux-arm.tar.xz" size="1123168" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" version="22.0" released="2023-12-17" stability="stable" id="sha256new_ZVHLOXRJF7J2BQDAJOMZXXSGHS2FZXNOYWNXUOC7AHIPEEEAF2LA">
+        <manifest-digest sha256new="ZVHLOXRJF7J2BQDAJOMZXXSGHS2FZXNOYWNXUOC7AHIPEEEAF2LA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/22.00/7z2200-linux-x64.tar.xz" size="1504948" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-i486" version="22.0" released="2023-12-17" stability="stable" id="sha256new_XGYZS3WP7TNMEUZLDBPD3HLQYJNISIEK5VYBBX7V4VJSVPMRQEXQ">
+        <manifest-digest sha256new="XGYZS3WP7TNMEUZLDBPD3HLQYJNISIEK5VYBBX7V4VJSVPMRQEXQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/22.00/7z2200-linux-x86.tar.xz" size="1643764" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="22.0" released="2023-12-17" stability="stable" id="sha256new_7PH5HGL3HVHMVQORH7PPKKAIFRRWMUSH7R7TCG3UMKXVFCVT4OQQ">
+        <manifest-digest sha256new="7PH5HGL3HVHMVQORH7PPKKAIFRRWMUSH7R7TCG3UMKXVFCVT4OQQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/22.00/7z2200-linux-arm64.tar.xz" size="1282640" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-armv7l" version="22.0" released="2023-12-17" stability="stable" id="sha256new_WVP5URDVHOJY4GWAVCKY4FQY7NRTSBY5SOKLA56OXMNRRSTR3NXA">
+        <manifest-digest sha256new="WVP5URDVHOJY4GWAVCKY4FQY7NRTSBY5SOKLA56OXMNRRSTR3NXA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/22.00/7z2200-linux-arm.tar.xz" size="1175652" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" version="22.1" released="2023-12-17" stability="stable" id="sha256new_XEBRPRDKHX7FOQA2BB4RH5ILPADB7VWLJUYP5AC4BGAVMCHCGTLA">
+        <manifest-digest sha256new="XEBRPRDKHX7FOQA2BB4RH5ILPADB7VWLJUYP5AC4BGAVMCHCGTLA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/22.01/7z2201-linux-x64.tar.xz" size="1527036" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-i486" version="22.1" released="2023-12-17" stability="stable" id="sha256new_UPMYD65HT54E5JR42F24BJHHJN5DO66HS67H3XH2R4N6E5EI2AFQ">
+        <manifest-digest sha256new="UPMYD65HT54E5JR42F24BJHHJN5DO66HS67H3XH2R4N6E5EI2AFQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/22.01/7z2201-linux-x86.tar.xz" size="1660052" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="22.1" released="2023-12-17" stability="stable" id="sha256new_UGSQC3MAU5GK5QG7Z7VKT2CGWGGWRI2HZPJJ2R2PBV2WRVQNQM5A">
+        <manifest-digest sha256new="UGSQC3MAU5GK5QG7Z7VKT2CGWGGWRI2HZPJJ2R2PBV2WRVQNQM5A"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/22.01/7z2201-linux-arm64.tar.xz" size="1282508" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-armv7l" version="22.1" released="2023-12-17" stability="stable" id="sha256new_TYA7ZAVDSG7IJPGNLLKIMYZJ6SDCFFH3RJBOZLOCS4CDUSGN5KRQ">
+        <manifest-digest sha256new="TYA7ZAVDSG7IJPGNLLKIMYZJ6SDCFFH3RJBOZLOCS4CDUSGN5KRQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/22.01/7z2201-linux-arm.tar.xz" size="1181856" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" version="23.1" released="2023-12-17" stability="stable" id="sha256new_S5FJD5LJPO3ODO34LN73B3HJTV4YURVCESQ4XHLVLLCV6AEV6U5A">
+        <manifest-digest sha256new="S5FJD5LJPO3ODO34LN73B3HJTV4YURVCESQ4XHLVLLCV6AEV6U5A"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/23.01/7z2301-linux-x64.tar.xz" size="1527700" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-i486" version="23.1" released="2023-12-17" stability="stable" id="sha256new_XVEJ2R4SWZMUYCQ3JXGQWJ5FRP2N6TVCNUJVW6VOPHLWJK3UXRDA">
+        <manifest-digest sha256new="XVEJ2R4SWZMUYCQ3JXGQWJ5FRP2N6TVCNUJVW6VOPHLWJK3UXRDA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/23.01/7z2301-linux-x86.tar.xz" size="1670148" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="23.1" released="2023-12-17" stability="stable" id="sha256new_UMDEADDOHNROD3V2LTRA7E2NSMFIMYECTIMPUF4AHDYNRQGTCESQ">
+        <manifest-digest sha256new="UMDEADDOHNROD3V2LTRA7E2NSMFIMYECTIMPUF4AHDYNRQGTCESQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/23.01/7z2301-linux-arm64.tar.xz" size="1282756" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-armv7l" version="23.1" released="2023-12-17" stability="stable" id="sha256new_TAUMSUCIMTPGJOUV5RBIQUZR66AQS5AFKK2HOBKI4QXKISAZXEVA">
+        <manifest-digest sha256new="TAUMSUCIMTPGJOUV5RBIQUZR66AQS5AFKK2HOBKI4QXKISAZXEVA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/23.01/7z2301-linux-arm.tar.xz" size="1165144" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-*" version="23.1" released="2023-12-17" stability="stable" id="sha256new_GJVQ6C3P6R3APWSPOEHSXJZ3BT6CIQ6OSIRHWKHUI27LCSS6KECQ">
+        <manifest-digest sha256new="GJVQ6C3P6R3APWSPOEHSXJZ3BT6CIQ6OSIRHWKHUI27LCSS6KECQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/23.01/7z2301-mac.tar.xz" size="1805532" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" version="24.5" released="2024-05-15" stability="stable" id="sha256new_YR63PIYAK4MZZ2XNHMKLIU6M22KGFAEVFVKVXYP56CQIQIFCGQPQ">
+        <manifest-digest sha256new="YR63PIYAK4MZZ2XNHMKLIU6M22KGFAEVFVKVXYP56CQIQIFCGQPQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.05/7z2405-linux-x64.tar.xz" size="1553872" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-i486" version="24.5" released="2024-05-15" stability="stable" id="sha256new_KFYOCAH3LC6BSBCZD3KRGWOBIRSWUV2WPYBHNJC3R5NUOA7VTXMA">
+        <manifest-digest sha256new="KFYOCAH3LC6BSBCZD3KRGWOBIRSWUV2WPYBHNJC3R5NUOA7VTXMA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.05/7z2405-linux-x86.tar.xz" size="1704292" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="24.5" released="2024-05-15" stability="stable" id="sha256new_AOEHVUT3ANW2MU5W6CDDM2MKITU7CGEGK44H2TH26XQUBNPDGG7Q">
+        <manifest-digest sha256new="AOEHVUT3ANW2MU5W6CDDM2MKITU7CGEGK44H2TH26XQUBNPDGG7Q"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.05/7z2405-linux-arm64.tar.xz" size="1305288" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-armv7l" version="24.5" released="2024-05-15" stability="stable" id="sha256new_FGDH6XAQJHDZJZKR7MKOHQ6VOVITGQV2BSSTTBT7DBA6N3OYDZEQ">
+        <manifest-digest sha256new="FGDH6XAQJHDZJZKR7MKOHQ6VOVITGQV2BSSTTBT7DBA6N3OYDZEQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.05/7z2405-linux-arm.tar.xz" size="1193444" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-*" version="24.5" released="2024-05-15" stability="stable" id="sha256new_6IJLVDABUP74VXXPAKZ2CFTDL7CWXVLT5TBGWL7XVS6URZYV22KA">
+        <manifest-digest sha256new="6IJLVDABUP74VXXPAKZ2CFTDL7CWXVLT5TBGWL7XVS6URZYV22KA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.05/7z2405-mac.tar.xz" size="1849676" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" version="24.6" released="2024-05-27" stability="stable" id="sha256new_XPOORN5YUAP2U4RC6QBNBRNCODK2D5TPNRINVLNDFRNQAJ3GUEEQ">
+        <manifest-digest sha256new="XPOORN5YUAP2U4RC6QBNBRNCODK2D5TPNRINVLNDFRNQAJ3GUEEQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.06/7z2406-linux-x64.tar.xz" size="1551724" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-i486" version="24.6" released="2024-05-27" stability="stable" id="sha256new_3YMXC34MDLNRI7GYEFUADXCR666HOWW5YORCOKURKOJYMW2KVJRA">
+        <manifest-digest sha256new="3YMXC34MDLNRI7GYEFUADXCR666HOWW5YORCOKURKOJYMW2KVJRA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.06/7z2406-linux-x86.tar.xz" size="1704320" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="24.6" released="2024-05-27" stability="stable" id="sha256new_TSOQAJFWUYKB3UB4T7PFNHI3XH2TR7FQSI5LYOMCV6TUXWAPVIXA">
+        <manifest-digest sha256new="TSOQAJFWUYKB3UB4T7PFNHI3XH2TR7FQSI5LYOMCV6TUXWAPVIXA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.06/7z2406-linux-arm64.tar.xz" size="1293944" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-armv7l" version="24.6" released="2024-05-27" stability="stable" id="sha256new_Y4AAQYYNDAHQMGDWUFBODUZ5IAHEX6VSTGJAL557R2XA7VQHLJ3A">
+        <manifest-digest sha256new="Y4AAQYYNDAHQMGDWUFBODUZ5IAHEX6VSTGJAL557R2XA7VQHLJ3A"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.06/7z2406-linux-arm.tar.xz" size="1193748" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-*" version="24.6" released="2024-05-27" stability="stable" id="sha256new_H2NIF4BKMPW4GWMZYEVRZGWA2WA35EEXGS5YREEGHG34DP4JTJSA">
+        <manifest-digest sha256new="H2NIF4BKMPW4GWMZYEVRZGWA2WA35EEXGS5YREEGHG34DP4JTJSA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.06/7z2406-mac.tar.xz" size="1849800" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" version="24.7" released="2024-06-19" stability="stable" id="sha256new_5RHO6HC52ONEUDGDSJIPGLFSQ7SMRLU26WV7RWPWRD2K6F56CBCQ">
+        <manifest-digest sha256new="5RHO6HC52ONEUDGDSJIPGLFSQ7SMRLU26WV7RWPWRD2K6F56CBCQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.07/7z2407-linux-x64.tar.xz" size="1554932" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-i486" version="24.7" released="2024-06-19" stability="stable" id="sha256new_P674WD627KBFQ2G3GWCJ5KZ436WT4KFMDCVO4ORTWKT2XU6YDRXA">
+        <manifest-digest sha256new="P674WD627KBFQ2G3GWCJ5KZ436WT4KFMDCVO4ORTWKT2XU6YDRXA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.07/7z2407-linux-x86.tar.xz" size="1704492" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="24.7" released="2024-06-19" stability="stable" id="sha256new_SCJA76VY6UKN565K5GJALEXPTFUWEHVPETLUES6MCS6D6E2RFJFA">
+        <manifest-digest sha256new="SCJA76VY6UKN565K5GJALEXPTFUWEHVPETLUES6MCS6D6E2RFJFA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.07/7z2407-linux-arm64.tar.xz" size="1301516" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-armv7l" version="24.7" released="2024-06-19" stability="stable" id="sha256new_3JJDHEBFEQBN7COKGISJLZFWQKEJIA7FAHHT4RA3QDSQ6LJO4Z5Q">
+        <manifest-digest sha256new="3JJDHEBFEQBN7COKGISJLZFWQKEJIA7FAHHT4RA3QDSQ6LJO4Z5Q"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.07/7z2407-linux-arm.tar.xz" size="1194364" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-*" version="24.7" released="2024-06-19" stability="stable" id="sha256new_MPFSBP6LWGNS6DFOENYHGF6UZ2E77SZV7G7523A62WKYMZXHCTCQ">
+        <manifest-digest sha256new="MPFSBP6LWGNS6DFOENYHGF6UZ2E77SZV7G7523A62WKYMZXHCTCQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.07/7z2407-mac.tar.xz" size="1850680" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" version="24.8" released="2024-08-12" stability="stable" id="sha256new_P5NLC3MNXLBCOB4BIKBGJ32HJMNVUKTHAF6SC2DLLYM3IILMMORA">
+        <manifest-digest sha256new="P5NLC3MNXLBCOB4BIKBGJ32HJMNVUKTHAF6SC2DLLYM3IILMMORA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.08/7z2408-linux-x64.tar.xz" size="1556956" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-i486" version="24.8" released="2024-08-12" stability="stable" id="sha256new_BOVFQBRFC36J2HMVAT7YBJ7GE423ZHTB2WTELR5OPQQS7LXSUPEA">
+        <manifest-digest sha256new="BOVFQBRFC36J2HMVAT7YBJ7GE423ZHTB2WTELR5OPQQS7LXSUPEA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.08/7z2408-linux-x86.tar.xz" size="1703480" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="24.8" released="2024-08-12" stability="stable" id="sha256new_DYK5DHXCI6HWJHL4W7PDKBLS2OYIEEL5PXNNCN553ZURMDGUA3HA">
+        <manifest-digest sha256new="DYK5DHXCI6HWJHL4W7PDKBLS2OYIEEL5PXNNCN553ZURMDGUA3HA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.08/7z2408-linux-arm64.tar.xz" size="1311308" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-armv7l" version="24.8" released="2024-08-12" stability="stable" id="sha256new_5WNBZA3RMIWVFQREZPFJHKR2B5WADJWIPX4EWMYIN5ZKSO6OF32Q">
+        <manifest-digest sha256new="5WNBZA3RMIWVFQREZPFJHKR2B5WADJWIPX4EWMYIN5ZKSO6OF32Q"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.08/7z2408-linux-arm.tar.xz" size="1195168" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-*" version="24.8" released="2024-08-12" stability="stable" id="sha256new_OVYXPE5BPDLV5U2PNFA7QAQGGDDSMDIIW7WSSZINY2S5YA3JDO3Q">
+        <manifest-digest sha256new="OVYXPE5BPDLV5U2PNFA7QAQGGDDSMDIIW7WSSZINY2S5YA3JDO3Q"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.08/7z2408-mac.tar.xz" size="1851588" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" version="24.9" released="2024-11-30" stability="stable" id="sha256new_NRCNFQZTIRGUJIVXZDRDH7UTGSFMCWODRU2B6FNDZXJWIP7LKOFQ">
+        <manifest-digest sha256new="NRCNFQZTIRGUJIVXZDRDH7UTGSFMCWODRU2B6FNDZXJWIP7LKOFQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.09/7z2409-linux-x64.tar.xz" size="1565344" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-i486" version="24.9" released="2024-11-30" stability="stable" id="sha256new_WQUM362ZRKUKLEAC6G6SZMPWA3QCTCSIKDZGBLJYULI4RPOXEERQ">
+        <manifest-digest sha256new="WQUM362ZRKUKLEAC6G6SZMPWA3QCTCSIKDZGBLJYULI4RPOXEERQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.09/7z2409-linux-x86.tar.xz" size="1718812" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="24.9" released="2024-11-30" stability="stable" id="sha256new_MVJN2FGF4C4EFQ4SWGQNMSKSC2ZIPITD2YZIUYGX4EFYSWZ6HX3Q">
+        <manifest-digest sha256new="MVJN2FGF4C4EFQ4SWGQNMSKSC2ZIPITD2YZIUYGX4EFYSWZ6HX3Q"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.09/7z2409-linux-arm64.tar.xz" size="1324144" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-armv7l" version="24.9" released="2024-11-30" stability="stable" id="sha256new_47S4MXT2BQV5G6IGZXRWZCWKGJ7KGHJ6SUINXG5UEU36PQ3LY6JQ">
+        <manifest-digest sha256new="47S4MXT2BQV5G6IGZXRWZCWKGJ7KGHJ6SUINXG5UEU36PQ3LY6JQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.09/7z2409-linux-arm.tar.xz" size="1209256" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-*" version="24.9" released="2024-11-30" stability="stable" id="sha256new_WXZSYFPJ5GQ5Z6KBFJYGALEB7BFNPUHUL6MZXZTENCKFIP7IIM3Q">
+        <manifest-digest sha256new="WXZSYFPJ5GQ5Z6KBFJYGALEB7BFNPUHUL6MZXZTENCKFIP7IIM3Q"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.09/7z2409-mac.tar.xz" size="1867264" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" version="25.0" released="2025-07-05" stability="stable" id="sha256new_NTLFG52AWBF4Z5ICE2UIZMVLVQIOJDD7X6YFTKD5CV7IVSJZSGDA">
+        <manifest-digest sha256new="NTLFG52AWBF4Z5ICE2UIZMVLVQIOJDD7X6YFTKD5CV7IVSJZSGDA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/25.00/7z2500-linux-x64.tar.xz" size="1568496" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-i486" version="25.0" released="2025-07-05" stability="stable" id="sha256new_5SCIDR2EFADBPZLVT25WVZOGJRB6APPCBQMUOF6NPMH7LUTMHDGQ">
+        <manifest-digest sha256new="5SCIDR2EFADBPZLVT25WVZOGJRB6APPCBQMUOF6NPMH7LUTMHDGQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/25.00/7z2500-linux-x86.tar.xz" size="1721920" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="25.0" released="2025-07-05" stability="stable" id="sha256new_BHDH3GPXCVK5MHELJUXFMVCQZRWSWRVAEDUTWI4WDVORV7UD7MNQ">
+        <manifest-digest sha256new="BHDH3GPXCVK5MHELJUXFMVCQZRWSWRVAEDUTWI4WDVORV7UD7MNQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/25.00/7z2500-linux-arm64.tar.xz" size="1316200" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-armv7l" version="25.0" released="2025-07-05" stability="stable" id="sha256new_VIF6XNIJIAEIF5JWTPARSXN2WLZ5IPCSGMFRP5NFE22YKED733QA">
+        <manifest-digest sha256new="VIF6XNIJIAEIF5JWTPARSXN2WLZ5IPCSGMFRP5NFE22YKED733QA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/25.00/7z2500-linux-arm.tar.xz" size="1209480" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-*" version="25.0" released="2025-07-05" stability="stable" id="sha256new_ILSB4L5SRHLD5AK5VMZIPVCIWGRCCPLCH42LGLDI5MXZP2ND4VIA">
+        <manifest-digest sha256new="ILSB4L5SRHLD5AK5VMZIPVCIWGRCCPLCH42LGLDI5MXZP2ND4VIA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/25.00/7z2500-mac.tar.xz" size="1872476" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" version="25.1" released="2025-08-03" stability="stable" id="sha256new_HFABUXKSF72H2IY4YGZNCIGNVLFUIXMN3B76QT6G5KSKW3SUIVRQ">
+        <manifest-digest sha256new="HFABUXKSF72H2IY4YGZNCIGNVLFUIXMN3B76QT6G5KSKW3SUIVRQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/25.01/7z2501-linux-x64.tar.xz" size="1571044" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-i486" version="25.1" released="2025-08-03" stability="stable" id="sha256new_QZLICWDOL5BE4QZH7WPCKTXQZTJQKZTGYHSUQ3PCA4MY224ENNBA">
+        <manifest-digest sha256new="QZLICWDOL5BE4QZH7WPCKTXQZTJQKZTGYHSUQ3PCA4MY224ENNBA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/25.01/7z2501-linux-x86.tar.xz" size="1721924" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="25.1" released="2025-08-03" stability="stable" id="sha256new_43S6AQVAVXLG3XP7ZL5F7PBT7IKSWQNPK5TPJYKLQEQ5GCPCYIYA">
+        <manifest-digest sha256new="43S6AQVAVXLG3XP7ZL5F7PBT7IKSWQNPK5TPJYKLQEQ5GCPCYIYA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/25.01/7z2501-linux-arm64.tar.xz" size="1326736" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-armv7l" version="25.1" released="2025-08-03" stability="stable" id="sha256new_SBZILQNBXWJUFXLCWDE5EDKTJM4JDGAPVDCG6GLCTRYR6CZCJ7TQ">
+        <manifest-digest sha256new="SBZILQNBXWJUFXLCWDE5EDKTJM4JDGAPVDCG6GLCTRYR6CZCJ7TQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/25.01/7z2501-linux-arm.tar.xz" size="1212764" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-*" version="25.1" released="2025-08-03" stability="stable" id="sha256new_AXVDRBJTZG7UWDSNISOKGE4WD6VFNEYHCSHQQWJZTZ5EFUGCCZGA">
+        <manifest-digest sha256new="AXVDRBJTZG7UWDSNISOKGE4WD6VFNEYHCSHQQWJZTZ5EFUGCCZGA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/25.01/7z2501-mac.tar.xz" size="1876264" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" version="26.0" released="2026-02-12" stability="stable" id="sha256new_HGWVILQPFLVKTF7UTFLPSLTVJIS4RHAQF3QQCSBOGGFBLCGZWNGA">
+        <manifest-digest sha256new="HGWVILQPFLVKTF7UTFLPSLTVJIS4RHAQF3QQCSBOGGFBLCGZWNGA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/26.00/7z2600-linux-x64.tar.xz" size="1572504" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-i486" version="26.0" released="2026-02-12" stability="stable" id="sha256new_5YKCEBK5KHFDMYM2EXCBLYQK4F72ZDKB4KPTXEUJLWMZ32SIN66A">
+        <manifest-digest sha256new="5YKCEBK5KHFDMYM2EXCBLYQK4F72ZDKB4KPTXEUJLWMZ32SIN66A"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/26.00/7z2600-linux-x86.tar.xz" size="1725492" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="26.0" released="2026-02-12" stability="stable" id="sha256new_C6VHEPLT3SWVU5A464HPJCYQB6ROBMWROZNJNECG7VDGPVUSCKTQ">
+        <manifest-digest sha256new="C6VHEPLT3SWVU5A464HPJCYQB6ROBMWROZNJNECG7VDGPVUSCKTQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/26.00/7z2600-linux-arm64.tar.xz" size="1327300" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-armv7l" version="26.0" released="2026-02-12" stability="stable" id="sha256new_GLA7A4WVXSCVVLNGQC2SIMICOZGPZ354SJWKECDIKIIL4JRHLUIQ">
+        <manifest-digest sha256new="GLA7A4WVXSCVVLNGQC2SIMICOZGPZ354SJWKECDIKIIL4JRHLUIQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/26.00/7z2600-linux-arm.tar.xz" size="1213272" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-*" version="26.0" released="2026-02-12" stability="stable" id="sha256new_C742RGXCILMVDQZ7LCIR35NAGKLKTOYQSD7QRQGZJKZ2FKZXGQOQ">
+        <manifest-digest sha256new="C742RGXCILMVDQZ7LCIR35NAGKLKTOYQSD7QRQGZJKZ2FKZXGQOQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/26.00/7z2600-mac.tar.xz" size="1850044" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" version="26.1" released="2026-04-27" stability="stable" id="sha256new_DAMCPQAIRCEZEPFT6HCVFXMAYFX4NK4TJ3Q3SKQAMXV7FAI6BH2A">
+        <manifest-digest sha256new="DAMCPQAIRCEZEPFT6HCVFXMAYFX4NK4TJ3Q3SKQAMXV7FAI6BH2A"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/26.01/7z2601-linux-x64.tar.xz" size="1572208" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-i486" version="26.1" released="2026-04-27" stability="stable" id="sha256new_R627AVJPJSFDBWPRNCQVPAD6FOT5U6BTIOUEDVBJLHYRBINHSOVQ">
+        <manifest-digest sha256new="R627AVJPJSFDBWPRNCQVPAD6FOT5U6BTIOUEDVBJLHYRBINHSOVQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/26.01/7z2601-linux-x86.tar.xz" size="1727676" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="26.1" released="2026-04-27" stability="stable" id="sha256new_FACKZNMPYFFXH2WUGERZTEGW6Y7Z7WOB72XEETKD3W3UJ5KL6QZA">
+        <manifest-digest sha256new="FACKZNMPYFFXH2WUGERZTEGW6Y7Z7WOB72XEETKD3W3UJ5KL6QZA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/26.01/7z2601-linux-arm64.tar.xz" size="1326544" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Linux-armv7l" version="26.1" released="2026-04-27" stability="stable" id="sha256new_HXTZREJ6IFON2TDZ5V4X4GPBZ3K4WSBGSMA5XBAAJR7CHHTNVLPA">
+        <manifest-digest sha256new="HXTZREJ6IFON2TDZ5V4X4GPBZ3K4WSBGSMA5XBAAJR7CHHTNVLPA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/26.01/7z2601-linux-arm.tar.xz" size="1215608" type="application/x-xz-compressed-tar"/>
+      </implementation>
+      <implementation arch="Darwin-*" version="26.1" released="2026-04-27" stability="stable" id="sha256new_S5DP7BYICYHVVU5EAGTSQ5YQVJIXGUMYPSRCDHLAELKTQISD5CQA">
+        <manifest-digest sha256new="S5DP7BYICYHVVU5EAGTSQ5YQVJIXGUMYPSRCDHLAELKTQISD5CQA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/26.01/7z2601-mac.tar.xz" size="1860356" type="application/x-xz-compressed-tar"/>
+      </implementation>
+    </group>
+
+    <group>
+      <command name="run" path="7z.exe"/>
+      <command name="run-gui" path="7zG.exe"/>
+      <command name="file-manager" path="7zFM.exe"/>
+      <implementation arch="Windows-i486" version="21.7" released="2022-03-18" stability="stable" id="sha256new_WZZHZIIKEWGYRH2PPXZY4W5LL2ODGNTIQYYROBKVQ7RW4HCYYXRQ">
+        <manifest-digest sha256new="WZZHZIIKEWGYRH2PPXZY4W5LL2ODGNTIQYYROBKVQ7RW4HCYYXRQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/21.07/7z2107.msi" size="1449984" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="21.7" released="2022-03-18" stability="stable" id="sha256new_YTLAA7MYXGKZYTP3HJ4B3P66IPNTDBVGABMKCLRX35SOSPKM5VOA">
+        <manifest-digest sha256new="YTLAA7MYXGKZYTP3HJ4B3P66IPNTDBVGABMKCLRX35SOSPKM5VOA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/21.07/7z2107-x64.msi" size="1863168" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="22.0" released="2023-12-17" stability="stable" id="sha256new_6DG3TKGYZ4NDGUTS5E53KNPZ6EVIAYNIHJSWOBNQ77YFHUWURTGQ">
+        <manifest-digest sha256new="6DG3TKGYZ4NDGUTS5E53KNPZ6EVIAYNIHJSWOBNQ77YFHUWURTGQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/22.00/7z2200.msi" size="1485824" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="22.0" released="2023-12-17" stability="stable" id="sha256new_LFG4GMAOIJHUJLNGSZSXQY62LVHJMENX4OBXX73EZMHDUI6VDLMA">
+        <manifest-digest sha256new="LFG4GMAOIJHUJLNGSZSXQY62LVHJMENX4OBXX73EZMHDUI6VDLMA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/22.00/7z2200-x64.msi" size="1904640" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="22.1" released="2023-12-17" stability="stable" id="sha256new_NDCU4B5KBWGBT3GZA7BWBN5O4DNLOTFUQIEUM2DPPXF3HSKDB2AA">
+        <manifest-digest sha256new="NDCU4B5KBWGBT3GZA7BWBN5O4DNLOTFUQIEUM2DPPXF3HSKDB2AA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/22.01/7z2201.msi" size="1490432" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="22.1" released="2023-12-17" stability="stable" id="sha256new_ELG7ASZHIPVE46B7YF6OCTIPFW4IZG5CSICERC4GQNEM5C6EKPAQ">
+        <manifest-digest sha256new="ELG7ASZHIPVE46B7YF6OCTIPFW4IZG5CSICERC4GQNEM5C6EKPAQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/22.01/7z2201-x64.msi" size="1912320" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="23.1" released="2023-12-17" stability="stable" id="sha256new_G4F3HRH64E7V7N3PTVA2XYD5IC2KVHV3XISMWXIHAVI3QDYUYGOQ">
+        <manifest-digest sha256new="G4F3HRH64E7V7N3PTVA2XYD5IC2KVHV3XISMWXIHAVI3QDYUYGOQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/23.01/7z2301.msi" size="1501184" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="23.1" released="2023-12-17" stability="stable" id="sha256new_OOYDQ6AYVVEUEAUMBLTPPV64KREL45PNZESBKNN2PEFCYDB564MQ">
+        <manifest-digest sha256new="OOYDQ6AYVVEUEAUMBLTPPV64KREL45PNZESBKNN2PEFCYDB564MQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/23.01/7z2301-x64.msi" size="1933312" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="24.5" released="2024-05-15" stability="stable" id="sha256new_GMFLP27ST754HQKZCBBCV5TAOPKTXFPEJJ4RKYALN4UAGHEZSELA">
+        <manifest-digest sha256new="GMFLP27ST754HQKZCBBCV5TAOPKTXFPEJJ4RKYALN4UAGHEZSELA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.05/7z2405.msi" size="1537024" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="24.5" released="2024-05-15" stability="stable" id="sha256new_K3PODFC3ESU2MFHYPL6PIOEZL57W3IQJL3DHDQ6WTWGOW7PFC47A">
+        <manifest-digest sha256new="K3PODFC3ESU2MFHYPL6PIOEZL57W3IQJL3DHDQ6WTWGOW7PFC47A"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.05/7z2405-x64.msi" size="1969152" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="24.6" released="2024-05-27" stability="stable" id="sha256new_WSHI3MPTCUPODAFL3IPMJUH6U5BZGA5YSEB4J5IEKV7PDP44MPLA">
+        <manifest-digest sha256new="WSHI3MPTCUPODAFL3IPMJUH6U5BZGA5YSEB4J5IEKV7PDP44MPLA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.06/7z2406.msi" size="1538560" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="24.6" released="2024-05-27" stability="stable" id="sha256new_R4LKAITIL5BEV4ZWZTJI62APP7I6636YDNTCW4KXWYA7BTUMY7SQ">
+        <manifest-digest sha256new="R4LKAITIL5BEV4ZWZTJI62APP7I6636YDNTCW4KXWYA7BTUMY7SQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.06/7z2406-x64.msi" size="1964032" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="24.7" released="2024-06-19" stability="stable" id="sha256new_XNLH7KVSWXVEFOZNX4V57GG65KSJEL6ICJKZC2NXBYS6LPC45FMQ">
+        <manifest-digest sha256new="XNLH7KVSWXVEFOZNX4V57GG65KSJEL6ICJKZC2NXBYS6LPC45FMQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.07/7z2407.msi" size="1538560" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="24.7" released="2024-06-19" stability="stable" id="sha256new_B44ONXB3GJ3TDM3AD4CHATPJ7OSEOJEFIAAK4FZJTS5BPJKX5GQA">
+        <manifest-digest sha256new="B44ONXB3GJ3TDM3AD4CHATPJ7OSEOJEFIAAK4FZJTS5BPJKX5GQA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.07/7z2407-x64.msi" size="1966592" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="24.8" released="2024-08-12" stability="stable" id="sha256new_K7KO6SXAZEY6DZNBKCM2ZNREAKOWKHTZ3IZIJWDBJPB5JDVXMBDQ">
+        <manifest-digest sha256new="K7KO6SXAZEY6DZNBKCM2ZNREAKOWKHTZ3IZIJWDBJPB5JDVXMBDQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.08/7z2408.msi" size="1539072" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="24.8" released="2024-08-12" stability="stable" id="sha256new_JRGYPJ3QS2RHH3T6SO5LQRQBLO4BR5SRX3AOTTPQ6WNOJ5WXSQHA">
+        <manifest-digest sha256new="JRGYPJ3QS2RHH3T6SO5LQRQBLO4BR5SRX3AOTTPQ6WNOJ5WXSQHA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.08/7z2408-x64.msi" size="1971200" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="24.9" released="2024-11-30" stability="stable" id="sha256new_EBZNKX5ZEQLMGYPSZXQBUI2D26L52K6ISOM22HCNSTQOCIZT5G6Q">
+        <manifest-digest sha256new="EBZNKX5ZEQLMGYPSZXQBUI2D26L52K6ISOM22HCNSTQOCIZT5G6Q"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.09/7z2409.msi" size="1556480" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="24.9" released="2024-11-30" stability="stable" id="sha256new_SKY5X3LHU725OXWIJMNEVBA5DITDHJDDMZJPVAVJ3R4BE5ZTRIOA">
+        <manifest-digest sha256new="SKY5X3LHU725OXWIJMNEVBA5DITDHJDDMZJPVAVJ3R4BE5ZTRIOA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/24.09/7z2409-x64.msi" size="1987584" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="25.0" released="2025-07-05" stability="stable" id="sha256new_NERCDZSGGP5PSNMGZDARKZ2VDRMRP3GSKRRYTQZIOSPGGT3RGRAA">
+        <manifest-digest sha256new="NERCDZSGGP5PSNMGZDARKZ2VDRMRP3GSKRRYTQZIOSPGGT3RGRAA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/25.00/7z2500.msi" size="1562112" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="25.0" released="2025-07-05" stability="stable" id="sha256new_RRFEPSL4W2MKAZU5QVRTOFPYD3VCH7C5OBDCLNYD6WDRUSVB2IHA">
+        <manifest-digest sha256new="RRFEPSL4W2MKAZU5QVRTOFPYD3VCH7C5OBDCLNYD6WDRUSVB2IHA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/25.00/7z2500-x64.msi" size="1991680" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="25.1" released="2025-08-03" stability="stable" id="sha256new_BJL3P32UNTK2ZYVW4Q6AJMFPYI2M35GL7N3YIYFIQGHTIXJQVRUA">
+        <manifest-digest sha256new="BJL3P32UNTK2ZYVW4Q6AJMFPYI2M35GL7N3YIYFIQGHTIXJQVRUA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/25.01/7z2501.msi" size="1563648" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="25.1" released="2025-08-03" stability="stable" id="sha256new_MAYXX6KM7R47Q7YXQSMNYC6OOHZM5QCBMS25H6J7Z4JGWGUTNJWQ">
+        <manifest-digest sha256new="MAYXX6KM7R47Q7YXQSMNYC6OOHZM5QCBMS25H6J7Z4JGWGUTNJWQ"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/25.01/7z2501-x64.msi" size="1996800" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="26.0" released="2026-02-12" stability="stable" id="sha256new_7QHVGM4QICNKDXZTF4YSO2INMW3BTWVEYWVCXD4MY2R6YEBIYHVA">
+        <manifest-digest sha256new="7QHVGM4QICNKDXZTF4YSO2INMW3BTWVEYWVCXD4MY2R6YEBIYHVA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/26.00/7z2600.msi" size="1566720" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="26.0" released="2026-02-12" stability="stable" id="sha256new_QS3K7MCM6ZJGQ33OD3NHOI3ZSX6FR6TARCC3ZGFP6BF7DFV6VMMA">
+        <manifest-digest sha256new="QS3K7MCM6ZJGQ33OD3NHOI3ZSX6FR6TARCC3ZGFP6BF7DFV6VMMA"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/26.00/7z2600-x64.msi" size="1999872" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="26.1" released="2026-04-27" stability="stable" id="sha256new_XU5Y72DSCGDHEHRVHCEGAQXPX2FSLR2VVALMH4HJWQV46YW2HP7Q">
+        <manifest-digest sha256new="XU5Y72DSCGDHEHRVHCEGAQXPX2FSLR2VVALMH4HJWQV46YW2HP7Q"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/26.01/7z2601.msi" size="1568768" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="26.1" released="2026-04-27" stability="stable" id="sha256new_ZCOKTPCFTOTGD4W4XS4DI6ZMEU6SDHPVIO75PI6UAK7EV73YKO7Q">
+        <manifest-digest sha256new="ZCOKTPCFTOTGD4W4XS4DI6ZMEU6SDHPVIO75PI6UAK7EV73YKO7Q"/>
+        <archive href="https://github.com/ip7z/7zip/releases/download/26.01/7z2601-x64.msi" size="2002432" type="application/x-msi" extract="SourceDir/Files/7-Zip"/>
+      </implementation>
+    </group>
+  </group>
+</interface>

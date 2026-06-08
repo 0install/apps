@@ -244,6 +244,8 @@ A practical strategy for getting those older versions in:
 4. Repeat 1–3 if you hit a still-older convention break.
 5. **Restore `name.xml.template` to the current-version form** before committing — the template you commit must describe the *latest* release, since that's what CI uses going forward.
 
+**Before running 0repo, check the generated feeds in `incoming/` for the manifest digest `4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ`.** This is the digest of an **empty directory**, and almost always means an archive's `extract` value was wrong — 0template extracted a directory that doesn't exist, getting nothing. This commonly happens when the directory structure inside an archive changed between versions. Fix it the same way as a failing 0watch run: delete those particular per-version feeds from `incoming/`, temporarily edit `name.xml.template` to match the correct layout for those versions, run 0watch again to regenerate them, then restore the template to the current-version form.
+
 Then run `NO_SIGN=1 0repo` once to merge everything that accumulated in `incoming/`.
 
 ## File-type quick reference

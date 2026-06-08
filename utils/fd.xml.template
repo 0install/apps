@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>fd</name>
+  <summary>simple, fast and user-friendly alternative to find</summary>
+  <description>fd is a program to find entries in your filesystem. It is a simple, fast and user-friendly alternative to find. While it does not aim to support all of find's powerful functionality, it provides sensible (opinionated) defaults for the majority of use cases.</description>
+  <homepage>https://github.com/sharkdp/fd</homepage>
+  <category>Utility</category>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/utils/fd.xml"/>
+
+  <group license="MIT / Apache-2.0">
+    <command name="run" path="fd"/>
+    <implementation arch="Linux-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive extract="fd-v{version}-x86_64-unknown-linux-musl" href="https://github.com/sharkdp/fd/releases/download/v{version}/fd-v{version}-x86_64-unknown-linux-musl.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive extract="fd-v{version}-i686-unknown-linux-musl" href="https://github.com/sharkdp/fd/releases/download/v{version}/fd-v{version}-i686-unknown-linux-musl.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive extract="fd-v{version}-aarch64-unknown-linux-musl" href="https://github.com/sharkdp/fd/releases/download/v{version}/fd-v{version}-aarch64-unknown-linux-musl.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive extract="fd-v{version}-aarch64-apple-darwin" href="https://github.com/sharkdp/fd/releases/download/v{version}/fd-v{version}-aarch64-apple-darwin.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="MIT / Apache-2.0">
+    <command name="run" path="fd.exe"/>
+    <implementation arch="Windows-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive extract="fd-v{version}-x86_64-pc-windows-msvc" href="https://github.com/sharkdp/fd/releases/download/v{version}/fd-v{version}-x86_64-pc-windows-msvc.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive extract="fd-v{version}-i686-pc-windows-msvc" href="https://github.com/sharkdp/fd/releases/download/v{version}/fd-v{version}-i686-pc-windows-msvc.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive extract="fd-v{version}-aarch64-pc-windows-msvc" href="https://github.com/sharkdp/fd/releases/download/v{version}/fd-v{version}-aarch64-pc-windows-msvc.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

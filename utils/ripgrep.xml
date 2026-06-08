@@ -1,0 +1,605 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/utils/ripgrep.xml">
+  <name>ripgrep</name>
+  <summary>recursively search directories for a regex pattern</summary>
+  <description>ripgrep (rg) is a line-oriented search tool that recursively searches the current directory for a regex pattern. It respects gitignore rules and automatically skips hidden files/directories and binary files. ripgrep is fast, written in Rust, and supports Unicode and many text encodings.</description>
+  <homepage>https://github.com/BurntSushi/ripgrep</homepage>
+  <category>Utility</category>
+  <needs-terminal/>
+
+  <entry-point binary-name="rg" command="run">
+    <needs-terminal/>
+  </entry-point>
+
+  <group license="Unlicense OR MIT">
+    <command name="run" path="rg"/>
+    <implementation arch="Linux-x86_64" version="0.10.0" released="2018-09-07" stability="stable" id="sha256new_WERBT4JESZVMMVVGQJPVXFBTUGW2UTT3YKQGL5TZC3VNVM4BPKKA">
+      <manifest-digest sha256new="WERBT4JESZVMMVVGQJPVXFBTUGW2UTT3YKQGL5TZC3VNVM4BPKKA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.10.0/ripgrep-0.10.0-x86_64-unknown-linux-musl.tar.gz" size="2057895" type="application/x-compressed-tar" extract="ripgrep-0.10.0-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.10.0" released="2018-09-07" stability="stable" id="sha256new_TO7S3DEQ2XN3NXMEWNJWWG44ZJR2WJKB4S33EENTW7T3GCOJZ2QQ">
+      <manifest-digest sha256new="TO7S3DEQ2XN3NXMEWNJWWG44ZJR2WJKB4S33EENTW7T3GCOJZ2QQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.10.0/ripgrep-0.10.0-x86_64-apple-darwin.tar.gz" size="1961225" type="application/x-compressed-tar" extract="ripgrep-0.10.0-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.3.0" released="2016-11-20" stability="stable" id="sha256new_MFXGJP2NLEO7ZM7Y5QIHNPD7PQY6ERHEVW4O63S3OPZQUDMJDPOQ">
+      <manifest-digest sha256new="MFXGJP2NLEO7ZM7Y5QIHNPD7PQY6ERHEVW4O63S3OPZQUDMJDPOQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.3.0/ripgrep-0.3.0-x86_64-unknown-linux-musl.tar.gz" size="4286752" type="application/x-compressed-tar" extract="ripgrep-0.3.0-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.3.0" released="2016-11-20" stability="stable" id="sha256new_YEKAEFGL53AKTD467M2JGC5SCDH3CUREXFZPZ2C5MXW6JFVT6CPQ">
+      <manifest-digest sha256new="YEKAEFGL53AKTD467M2JGC5SCDH3CUREXFZPZ2C5MXW6JFVT6CPQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.3.0/ripgrep-0.3.0-x86_64-apple-darwin.tar.gz" size="1080835" type="application/x-compressed-tar" extract="ripgrep-0.3.0-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.3.1" released="2016-11-22" stability="stable" id="sha256new_UC7MDRPH57DFSUQ2JFFYUWU3B2HPLJ2QJWEZF2SS5XUERQWM5YVA">
+      <manifest-digest sha256new="UC7MDRPH57DFSUQ2JFFYUWU3B2HPLJ2QJWEZF2SS5XUERQWM5YVA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.3.1/ripgrep-0.3.1-x86_64-unknown-linux-musl.tar.gz" size="4286881" type="application/x-compressed-tar" extract="ripgrep-0.3.1-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.3.1" released="2016-11-22" stability="stable" id="sha256new_7MGEZT6M7RZLQKJ377FJTH6POG4SW7L6ZITHIHLE2G7WLE5IKTYA">
+      <manifest-digest sha256new="7MGEZT6M7RZLQKJ377FJTH6POG4SW7L6ZITHIHLE2G7WLE5IKTYA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.3.1/ripgrep-0.3.1-x86_64-apple-darwin.tar.gz" size="1081010" type="application/x-compressed-tar" extract="ripgrep-0.3.1-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.3.2" released="2016-12-07" stability="stable" id="sha256new_HYZ33JPKEVQRCMG6CGXMV4QMOWM4BHATWEBYRWNJQEHVEYXZ6NHQ">
+      <manifest-digest sha256new="HYZ33JPKEVQRCMG6CGXMV4QMOWM4BHATWEBYRWNJQEHVEYXZ6NHQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.3.2/ripgrep-0.3.2-x86_64-unknown-linux-musl.tar.gz" size="4356083" type="application/x-compressed-tar" extract="ripgrep-0.3.2-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.3.2" released="2016-12-07" stability="stable" id="sha256new_33WR74SXZSDNZHDJ3A7TMWSF2JLNFGNN3GZKIYXUHEJRG7DCEY3Q">
+      <manifest-digest sha256new="33WR74SXZSDNZHDJ3A7TMWSF2JLNFGNN3GZKIYXUHEJRG7DCEY3Q"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.3.2/ripgrep-0.3.2-x86_64-apple-darwin.tar.gz" size="1079430" type="application/x-compressed-tar" extract="ripgrep-0.3.2-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.4.0" released="2017-01-14" stability="stable" id="sha256new_QJYWBYKDA4I4A2ZDO42Y6TCNNX2TUGZZI2SSBCG7OP3QNFHW3F3A">
+      <manifest-digest sha256new="QJYWBYKDA4I4A2ZDO42Y6TCNNX2TUGZZI2SSBCG7OP3QNFHW3F3A"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.4.0/ripgrep-0.4.0-x86_64-unknown-linux-musl.tar.gz" size="4737180" type="application/x-compressed-tar" extract="ripgrep-0.4.0-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.4.0" released="2017-01-14" stability="stable" id="sha256new_PXNG4DVW5OU6KCWOYLW7HN5L5MBAAJPU5ILWQKFLBRTXM5AULYHQ">
+      <manifest-digest sha256new="PXNG4DVW5OU6KCWOYLW7HN5L5MBAAJPU5ILWQKFLBRTXM5AULYHQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.4.0/ripgrep-0.4.0-x86_64-apple-darwin.tar.gz" size="1065511" type="application/x-compressed-tar" extract="ripgrep-0.4.0-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.5.0" released="2017-03-13" stability="stable" id="sha256new_XRELWPGAA5KZNULNOB3VB3LETTBAVGBSJXNT6R6JW4CF62MT75AQ">
+      <manifest-digest sha256new="XRELWPGAA5KZNULNOB3VB3LETTBAVGBSJXNT6R6JW4CF62MT75AQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.5.0/ripgrep-0.5.0-x86_64-unknown-linux-musl.tar.gz" size="5574357" type="application/x-compressed-tar" extract="ripgrep-0.5.0-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.5.0" released="2017-03-13" stability="stable" id="sha256new_CUQZ4SB3MNNI4C6BQ4XJA2IU3MEJMO5DITA74FKYAVAOFMHNIMCA">
+      <manifest-digest sha256new="CUQZ4SB3MNNI4C6BQ4XJA2IU3MEJMO5DITA74FKYAVAOFMHNIMCA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.5.0/ripgrep-0.5.0-x86_64-apple-darwin.tar.gz" size="1262524" type="application/x-compressed-tar" extract="ripgrep-0.5.0-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.5.1" released="2017-04-09" stability="stable" id="sha256new_J4CLE7MIYE6MT22MVC53XQUPPYKKLPU4XWDFCXGJ5LOWMDFOB4YQ">
+      <manifest-digest sha256new="J4CLE7MIYE6MT22MVC53XQUPPYKKLPU4XWDFCXGJ5LOWMDFOB4YQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.5.1/ripgrep-0.5.1-x86_64-unknown-linux-musl.tar.gz" size="5598341" type="application/x-compressed-tar" extract="ripgrep-0.5.1-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.5.1" released="2017-04-09" stability="stable" id="sha256new_CXEAQ63DQXPP4WEK6JBS3FMZ55Q3NRIMWIVJEXAHHDYYRUB5LFLQ">
+      <manifest-digest sha256new="CXEAQ63DQXPP4WEK6JBS3FMZ55Q3NRIMWIVJEXAHHDYYRUB5LFLQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.5.1/ripgrep-0.5.1-x86_64-apple-darwin.tar.gz" size="1264447" type="application/x-compressed-tar" extract="ripgrep-0.5.1-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.5.2" released="2017-05-11" stability="stable" id="sha256new_WQBIS2TIQ52M7JESFSPFXCLEPVFGRWFZXDLI43BJUHLWYB3PJTWA">
+      <manifest-digest sha256new="WQBIS2TIQ52M7JESFSPFXCLEPVFGRWFZXDLI43BJUHLWYB3PJTWA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.5.2/ripgrep-0.5.2-x86_64-unknown-linux-musl.tar.gz" size="5611709" type="application/x-compressed-tar" extract="ripgrep-0.5.2-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.5.2" released="2017-05-11" stability="stable" id="sha256new_7B4Y7PVWSB7KMW6R42SJVDAF72ZEO2EPE7DRSHM4USZDJHXHHSYA">
+      <manifest-digest sha256new="7B4Y7PVWSB7KMW6R42SJVDAF72ZEO2EPE7DRSHM4USZDJHXHHSYA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.5.2/ripgrep-0.5.2-x86_64-apple-darwin.tar.gz" size="1272364" type="application/x-compressed-tar" extract="ripgrep-0.5.2-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.6.0" released="2017-08-24" stability="stable" id="sha256new_KVYP7ZCRKDNWEN6PZVCFQCPIRN4MTGCOTRX6QLSHSWHTVLCNCEHA">
+      <manifest-digest sha256new="KVYP7ZCRKDNWEN6PZVCFQCPIRN4MTGCOTRX6QLSHSWHTVLCNCEHA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.6.0/ripgrep-0.6.0-x86_64-unknown-linux-musl.tar.gz" size="1209747" type="application/x-compressed-tar" extract="ripgrep-0.6.0-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.6.0" released="2017-08-24" stability="stable" id="sha256new_7PMOKCPXTSINTVPUGNRGNHDKC2C3GBGZ6GSBY4B5R26NNBW5X37A">
+      <manifest-digest sha256new="7PMOKCPXTSINTVPUGNRGNHDKC2C3GBGZ6GSBY4B5R26NNBW5X37A"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.6.0/ripgrep-0.6.0-x86_64-apple-darwin.tar.gz" size="1119028" type="application/x-compressed-tar" extract="ripgrep-0.6.0-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.7.0" released="2017-10-22" stability="stable" id="sha256new_JWJLX5K7AIWQS3DARAYWMFQKBVFPDTGEF5ON66TVCH5IM3ZBFLWQ">
+      <manifest-digest sha256new="JWJLX5K7AIWQS3DARAYWMFQKBVFPDTGEF5ON66TVCH5IM3ZBFLWQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.7.0/ripgrep-0.7.0-x86_64-unknown-linux-musl.tar.gz" size="1180084" type="application/x-compressed-tar" extract="ripgrep-0.7.0-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.7.0" released="2017-10-22" stability="stable" id="sha256new_M3HMIIN4R2MADZUJ52FD7D4HE5J3NSMMR676UTMHYWLWAQD6J2SA">
+      <manifest-digest sha256new="M3HMIIN4R2MADZUJ52FD7D4HE5J3NSMMR676UTMHYWLWAQD6J2SA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.7.0/ripgrep-0.7.0-x86_64-apple-darwin.tar.gz" size="1101686" type="application/x-compressed-tar" extract="ripgrep-0.7.0-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.7.1" released="2017-10-22" stability="stable" id="sha256new_P7C34YLPAKGWT3KV2NV3DESV4BP4K5SHSM7OQ76G7DNKFUG5UKDQ">
+      <manifest-digest sha256new="P7C34YLPAKGWT3KV2NV3DESV4BP4K5SHSM7OQ76G7DNKFUG5UKDQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.7.1/ripgrep-0.7.1-x86_64-unknown-linux-musl.tar.gz" size="1179176" type="application/x-compressed-tar" extract="ripgrep-0.7.1-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.7.1" released="2017-10-22" stability="stable" id="sha256new_U5RKIIQKIC2C47I66TJVKZZ6FUKB2ZH3PQITWAS26LBSJE5E5BGA">
+      <manifest-digest sha256new="U5RKIIQKIC2C47I66TJVKZZ6FUKB2ZH3PQITWAS26LBSJE5E5BGA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.7.1/ripgrep-0.7.1-x86_64-apple-darwin.tar.gz" size="1101357" type="application/x-compressed-tar" extract="ripgrep-0.7.1-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.8.0" released="2018-02-12" stability="stable" id="sha256new_PIIES3BCDVZUIFENY3YZ5LGWKI4NYUXXHYWAOB6YRU2MMTCYWYUA">
+      <manifest-digest sha256new="PIIES3BCDVZUIFENY3YZ5LGWKI4NYUXXHYWAOB6YRU2MMTCYWYUA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.8.0/ripgrep-0.8.0-x86_64-unknown-linux-musl.tar.gz" size="1371280" type="application/x-compressed-tar" extract="ripgrep-0.8.0-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.8.0" released="2018-02-12" stability="stable" id="sha256new_VJKXWAJ2YRHMTEMWXIG33M33T4ML67ISLR5UR4MZZT4LSYZECFLA">
+      <manifest-digest sha256new="VJKXWAJ2YRHMTEMWXIG33M33T4ML67ISLR5UR4MZZT4LSYZECFLA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.8.0/ripgrep-0.8.0-x86_64-apple-darwin.tar.gz" size="1289400" type="application/x-compressed-tar" extract="ripgrep-0.8.0-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.8.1" released="2018-02-21" stability="stable" id="sha256new_CCRAUKTAKPQBODKX6CLWD6RWRLMTPADDL67JQGRCUITMMK7KC3GQ">
+      <manifest-digest sha256new="CCRAUKTAKPQBODKX6CLWD6RWRLMTPADDL67JQGRCUITMMK7KC3GQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.8.1/ripgrep-0.8.1-x86_64-unknown-linux-musl.tar.gz" size="1372659" type="application/x-compressed-tar" extract="ripgrep-0.8.1-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.8.1" released="2018-02-21" stability="stable" id="sha256new_AI4KUOTZGVRBYZWCH3CBC3MNAXBUGNNMFKZO6HGJPRPSPLAHF2XQ">
+      <manifest-digest sha256new="AI4KUOTZGVRBYZWCH3CBC3MNAXBUGNNMFKZO6HGJPRPSPLAHF2XQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.8.1/ripgrep-0.8.1-x86_64-apple-darwin.tar.gz" size="1290614" type="application/x-compressed-tar" extract="ripgrep-0.8.1-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.9.0" released="2018-08-03" stability="stable" id="sha256new_DLHCZNBFSELWUK7NKAQ4EQS4SRS7YU6FEYRR7WBLGIB4P4LLMGPQ">
+      <manifest-digest sha256new="DLHCZNBFSELWUK7NKAQ4EQS4SRS7YU6FEYRR7WBLGIB4P4LLMGPQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.9.0/ripgrep-0.9.0-x86_64-unknown-linux-musl.tar.gz" size="1529031" type="application/x-compressed-tar" extract="ripgrep-0.9.0-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.9.0" released="2018-08-03" stability="stable" id="sha256new_P3WAOIJSZH323L4KU42KTHO2JANYJEQEGBD3KQQMTOXNGGIQCW2Q">
+      <manifest-digest sha256new="P3WAOIJSZH323L4KU42KTHO2JANYJEQEGBD3KQQMTOXNGGIQCW2Q"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.9.0/ripgrep-0.9.0-x86_64-apple-darwin.tar.gz" size="1421862" type="application/x-compressed-tar" extract="ripgrep-0.9.0-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="11.0.0" released="2019-04-15" stability="stable" id="sha256new_WS6CXWKU7UDYQXBHJDFQUWG2JNX5AQKP53B4PUO4U4RU3ZK2HZ2Q">
+      <manifest-digest sha256new="WS6CXWKU7UDYQXBHJDFQUWG2JNX5AQKP53B4PUO4U4RU3ZK2HZ2Q"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/11.0.0/ripgrep-11.0.0-x86_64-unknown-linux-musl.tar.gz" size="2020487" type="application/x-compressed-tar" extract="ripgrep-11.0.0-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="11.0.0" released="2019-04-15" stability="stable" id="sha256new_NB3M7JKLQLWABBWMMPQW56SWALKYWREN434DL4WDTP6NZHDVNNGQ">
+      <manifest-digest sha256new="NB3M7JKLQLWABBWMMPQW56SWALKYWREN434DL4WDTP6NZHDVNNGQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/11.0.0/ripgrep-11.0.0-x86_64-apple-darwin.tar.gz" size="1950054" type="application/x-compressed-tar" extract="ripgrep-11.0.0-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="11.0.1" released="2019-04-16" stability="stable" id="sha256new_DWLALCSFFBQ4DJCFK4H5OQY5LUFFWXDXWH2ZPV4S6CDM6LJCXZFQ">
+      <manifest-digest sha256new="DWLALCSFFBQ4DJCFK4H5OQY5LUFFWXDXWH2ZPV4S6CDM6LJCXZFQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/11.0.1/ripgrep-11.0.1-x86_64-unknown-linux-musl.tar.gz" size="2019266" type="application/x-compressed-tar" extract="ripgrep-11.0.1-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="11.0.1" released="2019-04-16" stability="stable" id="sha256new_UR2ECWJX3HVPPTCNRLJY236Q6UKMS72I4QTQFAR5IF7DG3XEDTLQ">
+      <manifest-digest sha256new="UR2ECWJX3HVPPTCNRLJY236Q6UKMS72I4QTQFAR5IF7DG3XEDTLQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/11.0.1/ripgrep-11.0.1-x86_64-apple-darwin.tar.gz" size="1950415" type="application/x-compressed-tar" extract="ripgrep-11.0.1-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="11.0.2" released="2019-08-01" stability="stable" id="sha256new_6XJ2CWLGGWHVFIVVSOIG7ITKJYR26YZC6CAQ56DOKPTDYN4NBWXQ">
+      <manifest-digest sha256new="6XJ2CWLGGWHVFIVVSOIG7ITKJYR26YZC6CAQ56DOKPTDYN4NBWXQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep-11.0.2-x86_64-unknown-linux-musl.tar.gz" size="2224246" type="application/x-compressed-tar" extract="ripgrep-11.0.2-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="11.0.2" released="2019-08-01" stability="stable" id="sha256new_RLERQK5IWA7TNJZHJ3FOCYY6MC4Q3TWREBC43C2ZB7ZLY7GQNX5A">
+      <manifest-digest sha256new="RLERQK5IWA7TNJZHJ3FOCYY6MC4Q3TWREBC43C2ZB7ZLY7GQNX5A"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep-11.0.2-x86_64-apple-darwin.tar.gz" size="1902228" type="application/x-compressed-tar" extract="ripgrep-11.0.2-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="12.0.0" released="2020-03-16" stability="stable" id="sha256new_UMFHOTBPG3XXBFRZHMVWOXGSBF2YTNFIJM27TPMUUTTGYMQNWHRA">
+      <manifest-digest sha256new="UMFHOTBPG3XXBFRZHMVWOXGSBF2YTNFIJM27TPMUUTTGYMQNWHRA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/12.0.0/ripgrep-12.0.0-x86_64-unknown-linux-musl.tar.gz" size="2232167" type="application/x-compressed-tar" extract="ripgrep-12.0.0-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="12.0.0" released="2020-03-16" stability="stable" id="sha256new_4DL5SFUUXST7PXKBF562MOSD4G7KSUCYMCQGW2RJ6VSD5E7YCY7A">
+      <manifest-digest sha256new="4DL5SFUUXST7PXKBF562MOSD4G7KSUCYMCQGW2RJ6VSD5E7YCY7A"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/12.0.0/ripgrep-12.0.0-x86_64-apple-darwin.tar.gz" size="1945715" type="application/x-compressed-tar" extract="ripgrep-12.0.0-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="12.0.1" released="2020-03-29" stability="stable" id="sha256new_RHSJ7PIWVRAXJNJF5PY3CLDZ44NAGVEIQKVHKYX72YZWTCCMDZTQ">
+      <manifest-digest sha256new="RHSJ7PIWVRAXJNJF5PY3CLDZ44NAGVEIQKVHKYX72YZWTCCMDZTQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/12.0.1/ripgrep-12.0.1-x86_64-unknown-linux-musl.tar.gz" size="2234221" type="application/x-compressed-tar" extract="ripgrep-12.0.1-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="12.0.1" released="2020-03-29" stability="stable" id="sha256new_XFXD2IQ237BFKKWCJZXMDJG57HUZ3C7TP6SSRP4OFNG3373CZNMA">
+      <manifest-digest sha256new="XFXD2IQ237BFKKWCJZXMDJG57HUZ3C7TP6SSRP4OFNG3373CZNMA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/12.0.1/ripgrep-12.0.1-x86_64-apple-darwin.tar.gz" size="1955404" type="application/x-compressed-tar" extract="ripgrep-12.0.1-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="12.1.0" released="2020-05-09" stability="stable" id="sha256new_BWIUZYYFCO2N4XI6XXUUIZ6BDAUGPO3SY4TX73OK7OPX6RSWSPDA">
+      <manifest-digest sha256new="BWIUZYYFCO2N4XI6XXUUIZ6BDAUGPO3SY4TX73OK7OPX6RSWSPDA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/12.1.0/ripgrep-12.1.0-x86_64-unknown-linux-musl.tar.gz" size="2220989" type="application/x-compressed-tar" extract="ripgrep-12.1.0-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="12.1.0" released="2020-05-09" stability="stable" id="sha256new_ZDOFNNFAOQE5U4Q45RCHVEU7ACZYD7YWL7MTYLQYBYENQHELWT5Q">
+      <manifest-digest sha256new="ZDOFNNFAOQE5U4Q45RCHVEU7ACZYD7YWL7MTYLQYBYENQHELWT5Q"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/12.1.0/ripgrep-12.1.0-x86_64-apple-darwin.tar.gz" size="1891967" type="application/x-compressed-tar" extract="ripgrep-12.1.0-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="12.1.1" released="2020-05-29" stability="stable" id="sha256new_7365OL36FPLVUIUBULSIQ5MEDAFEQCTZD4DDLJYQ3HQWRMHTS3TQ">
+      <manifest-digest sha256new="7365OL36FPLVUIUBULSIQ5MEDAFEQCTZD4DDLJYQ3HQWRMHTS3TQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/12.1.1/ripgrep-12.1.1-x86_64-unknown-linux-musl.tar.gz" size="2211756" type="application/x-compressed-tar" extract="ripgrep-12.1.1-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="12.1.1" released="2020-05-29" stability="stable" id="sha256new_LHRAFRJVY65CMQHZBXAZRMDIULD4NZCI2NWIALIXZEFPCCVTQLGA">
+      <manifest-digest sha256new="LHRAFRJVY65CMQHZBXAZRMDIULD4NZCI2NWIALIXZEFPCCVTQLGA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/12.1.1/ripgrep-12.1.1-x86_64-apple-darwin.tar.gz" size="1886214" type="application/x-compressed-tar" extract="ripgrep-12.1.1-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="13.0.0" released="2021-06-12" stability="stable" id="sha256new_IM2YQULDBYEXMEHG7OI5ZOOF4LLTTZ5BCRX5R7BCQPIARWKRRBKQ">
+      <manifest-digest sha256new="IM2YQULDBYEXMEHG7OI5ZOOF4LLTTZ5BCRX5R7BCQPIARWKRRBKQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz" size="2109801" type="application/x-compressed-tar" extract="ripgrep-13.0.0-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="13.0.0" released="2021-06-12" stability="stable" id="sha256new_Z5NCRSWANUXTEP3DQW4CWIGN3HSJQGOZE7U2URC3VSNGVYSF2W3A">
+      <manifest-digest sha256new="Z5NCRSWANUXTEP3DQW4CWIGN3HSJQGOZE7U2URC3VSNGVYSF2W3A"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-apple-darwin.tar.gz" size="1815615" type="application/x-compressed-tar" extract="ripgrep-13.0.0-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="14.0.0" released="2023-11-26" stability="stable" id="sha256new_NXB6322JIFC6IIDAHEPDEFY6EDGABESNIU5HB44G37ZUXDCDOOBQ">
+      <manifest-digest sha256new="NXB6322JIFC6IIDAHEPDEFY6EDGABESNIU5HB44G37ZUXDCDOOBQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.0/ripgrep-14.0.0-x86_64-unknown-linux-musl.tar.gz" size="2442588" type="application/x-compressed-tar" extract="ripgrep-14.0.0-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="14.0.0" released="2023-11-26" stability="stable" id="sha256new_KLHAVYB6OALBOFIMTCZATWEC6CHGAN2FCTAF22TVTNVII4YBC7AA">
+      <manifest-digest sha256new="KLHAVYB6OALBOFIMTCZATWEC6CHGAN2FCTAF22TVTNVII4YBC7AA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.0/ripgrep-14.0.0-i686-unknown-linux-gnu.tar.gz" size="2314439" type="application/x-compressed-tar" extract="ripgrep-14.0.0-i686-unknown-linux-gnu"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="14.0.0" released="2023-11-26" stability="stable" id="sha256new_TWYB4A7Q35MY2AFWFHLEXRH5W5PPOC3P7I3W5XY5YDIKIZLX2AIQ">
+      <manifest-digest sha256new="TWYB4A7Q35MY2AFWFHLEXRH5W5PPOC3P7I3W5XY5YDIKIZLX2AIQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.0/ripgrep-14.0.0-aarch64-unknown-linux-gnu.tar.gz" size="2054083" type="application/x-compressed-tar" extract="ripgrep-14.0.0-aarch64-unknown-linux-gnu"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="14.0.0" released="2023-11-26" stability="stable" id="sha256new_MHCNCM67MTG5RVISOD5CVP5OMKK5HSOORXDY62J63GKK5G4MQD2A">
+      <manifest-digest sha256new="MHCNCM67MTG5RVISOD5CVP5OMKK5HSOORXDY62J63GKK5G4MQD2A"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.0/ripgrep-14.0.0-x86_64-apple-darwin.tar.gz" size="2079151" type="application/x-compressed-tar" extract="ripgrep-14.0.0-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="14.0.0" released="2023-11-26" stability="stable" id="sha256new_VZXCONY2POTT3QBEN3BOSHYDUAJEQ7NCVWZJFIGR232H4GJFRBCQ">
+      <manifest-digest sha256new="VZXCONY2POTT3QBEN3BOSHYDUAJEQ7NCVWZJFIGR232H4GJFRBCQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.0/ripgrep-14.0.0-aarch64-apple-darwin.tar.gz" size="1774360" type="application/x-compressed-tar" extract="ripgrep-14.0.0-aarch64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="14.0.1" released="2023-11-26" stability="stable" id="sha256new_MFXIK6YTO4BEBVLINJSYVVEMB7JHTLUHAUVB4WHDGUHWSUOEXEAQ">
+      <manifest-digest sha256new="MFXIK6YTO4BEBVLINJSYVVEMB7JHTLUHAUVB4WHDGUHWSUOEXEAQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.1/ripgrep-14.0.1-x86_64-unknown-linux-musl.tar.gz" size="2449798" type="application/x-compressed-tar" extract="ripgrep-14.0.1-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="14.0.1" released="2023-11-26" stability="stable" id="sha256new_VALQQKAC5CLIASX2CTJKISQZ5YVXRXBQEPNAERK3BR365JK337ZQ">
+      <manifest-digest sha256new="VALQQKAC5CLIASX2CTJKISQZ5YVXRXBQEPNAERK3BR365JK337ZQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.1/ripgrep-14.0.1-i686-unknown-linux-gnu.tar.gz" size="2313733" type="application/x-compressed-tar" extract="ripgrep-14.0.1-i686-unknown-linux-gnu"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="14.0.1" released="2023-11-26" stability="stable" id="sha256new_QY3WUDITFSVASSLFCAHJ24QCQ37KV4MTRKDBSDW4T7UK4QC7ECYA">
+      <manifest-digest sha256new="QY3WUDITFSVASSLFCAHJ24QCQ37KV4MTRKDBSDW4T7UK4QC7ECYA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.1/ripgrep-14.0.1-aarch64-unknown-linux-gnu.tar.gz" size="2053486" type="application/x-compressed-tar" extract="ripgrep-14.0.1-aarch64-unknown-linux-gnu"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="14.0.1" released="2023-11-26" stability="stable" id="sha256new_2RVLUKDEN4U5SSTZZLZOMFGKWW2RLQEEOYS3NVT3Z2SQR6T4URAA">
+      <manifest-digest sha256new="2RVLUKDEN4U5SSTZZLZOMFGKWW2RLQEEOYS3NVT3Z2SQR6T4URAA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.1/ripgrep-14.0.1-x86_64-apple-darwin.tar.gz" size="2079298" type="application/x-compressed-tar" extract="ripgrep-14.0.1-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="14.0.1" released="2023-11-26" stability="stable" id="sha256new_JRHBVJJQOPCRXG2TCSKCFXWPKPIOUP57YSI57ZCJH4YUCXCCYREQ">
+      <manifest-digest sha256new="JRHBVJJQOPCRXG2TCSKCFXWPKPIOUP57YSI57ZCJH4YUCXCCYREQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.1/ripgrep-14.0.1-aarch64-apple-darwin.tar.gz" size="1775882" type="application/x-compressed-tar" extract="ripgrep-14.0.1-aarch64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="14.0.2" released="2023-11-28" stability="stable" id="sha256new_U6BNKAA4CHADHBXMHZ3KVX7RFLYLIOLXG3ATCU73KEV72YIFPQSQ">
+      <manifest-digest sha256new="U6BNKAA4CHADHBXMHZ3KVX7RFLYLIOLXG3ATCU73KEV72YIFPQSQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.2/ripgrep-14.0.2-x86_64-unknown-linux-musl.tar.gz" size="2448191" type="application/x-compressed-tar" extract="ripgrep-14.0.2-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="14.0.2" released="2023-11-28" stability="stable" id="sha256new_BBSVUYWIRUNLDSFLHFBDRGJPDHDP27X6U6X3GKA4VNTGZ4N3MNZQ">
+      <manifest-digest sha256new="BBSVUYWIRUNLDSFLHFBDRGJPDHDP27X6U6X3GKA4VNTGZ4N3MNZQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.2/ripgrep-14.0.2-i686-unknown-linux-gnu.tar.gz" size="2317330" type="application/x-compressed-tar" extract="ripgrep-14.0.2-i686-unknown-linux-gnu"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="14.0.2" released="2023-11-28" stability="stable" id="sha256new_BCQ7NLH7KHVRQ6RXRTXPZLO7LAEKPEYEEUR7RX7QYYQSW4NOXZGA">
+      <manifest-digest sha256new="BCQ7NLH7KHVRQ6RXRTXPZLO7LAEKPEYEEUR7RX7QYYQSW4NOXZGA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.2/ripgrep-14.0.2-aarch64-unknown-linux-gnu.tar.gz" size="2047466" type="application/x-compressed-tar" extract="ripgrep-14.0.2-aarch64-unknown-linux-gnu"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="14.0.2" released="2023-11-28" stability="stable" id="sha256new_4QNGUXZDIXOMVR4L6HK3QQAXE7PHR76TCXI2W5KHD5GJ6DXQS66A">
+      <manifest-digest sha256new="4QNGUXZDIXOMVR4L6HK3QQAXE7PHR76TCXI2W5KHD5GJ6DXQS66A"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.2/ripgrep-14.0.2-x86_64-apple-darwin.tar.gz" size="2079832" type="application/x-compressed-tar" extract="ripgrep-14.0.2-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="14.0.2" released="2023-11-28" stability="stable" id="sha256new_EUE6P2DKLBGDI7XUYQP6JNU3DMZ7IQS2LEF3T5J7RCQJY4VUJTDQ">
+      <manifest-digest sha256new="EUE6P2DKLBGDI7XUYQP6JNU3DMZ7IQS2LEF3T5J7RCQJY4VUJTDQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.2/ripgrep-14.0.2-aarch64-apple-darwin.tar.gz" size="1779198" type="application/x-compressed-tar" extract="ripgrep-14.0.2-aarch64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="14.0.3" released="2023-11-28" stability="stable" id="sha256new_MRALEHBRVXFXQ4ZZGZE7EFSK5MDWUMTRHUKLMRV4LDTWJBRGT3RQ">
+      <manifest-digest sha256new="MRALEHBRVXFXQ4ZZGZE7EFSK5MDWUMTRHUKLMRV4LDTWJBRGT3RQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.3/ripgrep-14.0.3-x86_64-unknown-linux-musl.tar.gz" size="2413752" type="application/x-compressed-tar" extract="ripgrep-14.0.3-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="14.0.3" released="2023-11-28" stability="stable" id="sha256new_HU6EFERUPSCW7ZDD4L7MRB4AMX45JEGAAGGWAJGOP4WMGQP63RVQ">
+      <manifest-digest sha256new="HU6EFERUPSCW7ZDD4L7MRB4AMX45JEGAAGGWAJGOP4WMGQP63RVQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.3/ripgrep-14.0.3-i686-unknown-linux-gnu.tar.gz" size="2322554" type="application/x-compressed-tar" extract="ripgrep-14.0.3-i686-unknown-linux-gnu"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="14.0.3" released="2023-11-28" stability="stable" id="sha256new_F6JGWAR6DM6Y6HVTTX7OCF5BP5VEQ7RQ4HX6LBVTTXV3VB3AWFFA">
+      <manifest-digest sha256new="F6JGWAR6DM6Y6HVTTX7OCF5BP5VEQ7RQ4HX6LBVTTXV3VB3AWFFA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.3/ripgrep-14.0.3-aarch64-unknown-linux-gnu.tar.gz" size="2064052" type="application/x-compressed-tar" extract="ripgrep-14.0.3-aarch64-unknown-linux-gnu"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="14.0.3" released="2023-11-28" stability="stable" id="sha256new_CQPKM4T3EQMGDRAUTFMHNR3GF4BZ2WIHIAJNKISPWBNWGCPH2Y2Q">
+      <manifest-digest sha256new="CQPKM4T3EQMGDRAUTFMHNR3GF4BZ2WIHIAJNKISPWBNWGCPH2Y2Q"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.3/ripgrep-14.0.3-x86_64-apple-darwin.tar.gz" size="2058869" type="application/x-compressed-tar" extract="ripgrep-14.0.3-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="14.0.3" released="2023-11-28" stability="stable" id="sha256new_SAPHSOBYXF4V6LTEHKW7YAEBCWCRUWSXMU4ELESSWL52X6GMP2AQ">
+      <manifest-digest sha256new="SAPHSOBYXF4V6LTEHKW7YAEBCWCRUWSXMU4ELESSWL52X6GMP2AQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.3/ripgrep-14.0.3-aarch64-apple-darwin.tar.gz" size="1786732" type="application/x-compressed-tar" extract="ripgrep-14.0.3-aarch64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="14.1.0" released="2024-01-06" stability="stable" id="sha256new_ZQKJESTGRKMI4V3SIARLC3GSKGKIKDOAYEHTJ5RRBDBKNC3KXNHQ">
+      <manifest-digest sha256new="ZQKJESTGRKMI4V3SIARLC3GSKGKIKDOAYEHTJ5RRBDBKNC3KXNHQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep-14.1.0-x86_64-unknown-linux-musl.tar.gz" size="2527296" type="application/x-compressed-tar" extract="ripgrep-14.1.0-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="14.1.0" released="2024-01-06" stability="stable" id="sha256new_WRIL5OY3H54EXKB6J2JKBPP3NR3B3RTP6NF6WBWXMIK6LWCQMJZQ">
+      <manifest-digest sha256new="WRIL5OY3H54EXKB6J2JKBPP3NR3B3RTP6NF6WBWXMIK6LWCQMJZQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep-14.1.0-i686-unknown-linux-gnu.tar.gz" size="2346060" type="application/x-compressed-tar" extract="ripgrep-14.1.0-i686-unknown-linux-gnu"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="14.1.0" released="2024-01-06" stability="stable" id="sha256new_S73LFLV4SMGS5R2YY6IQ6Y3QOBHURC7URS46WJK6BCMVC3YN2Z6Q">
+      <manifest-digest sha256new="S73LFLV4SMGS5R2YY6IQ6Y3QOBHURC7URS46WJK6BCMVC3YN2Z6Q"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep-14.1.0-aarch64-unknown-linux-gnu.tar.gz" size="2067022" type="application/x-compressed-tar" extract="ripgrep-14.1.0-aarch64-unknown-linux-gnu"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="14.1.0" released="2024-01-06" stability="stable" id="sha256new_2XQGWNKEGIYWET3CJHQS43JAVBAK2JEOON2TZUR2JM274UOZY4RQ">
+      <manifest-digest sha256new="2XQGWNKEGIYWET3CJHQS43JAVBAK2JEOON2TZUR2JM274UOZY4RQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep-14.1.0-x86_64-apple-darwin.tar.gz" size="2072541" type="application/x-compressed-tar" extract="ripgrep-14.1.0-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="14.1.0" released="2024-01-06" stability="stable" id="sha256new_AVGGMDXQYZ7AFPEOEU7633YWCOAMHX3E2ABRQUVOSLF6KRUJTQXA">
+      <manifest-digest sha256new="AVGGMDXQYZ7AFPEOEU7633YWCOAMHX3E2ABRQUVOSLF6KRUJTQXA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep-14.1.0-aarch64-apple-darwin.tar.gz" size="1782988" type="application/x-compressed-tar" extract="ripgrep-14.1.0-aarch64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="14.1.1" released="2024-09-09" stability="stable" id="sha256new_CLXGNQ2R43L7GWFW2TV56UYCPIEWCSZIEUBPNSHG4RLFR6CKPKPQ">
+      <manifest-digest sha256new="CLXGNQ2R43L7GWFW2TV56UYCPIEWCSZIEUBPNSHG4RLFR6CKPKPQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep-14.1.1-x86_64-unknown-linux-musl.tar.gz" size="2566310" type="application/x-compressed-tar" extract="ripgrep-14.1.1-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="14.1.1" released="2024-09-09" stability="stable" id="sha256new_HPDZYKADKJP3C7N34AOXPUL6DTOYCYMBPLBLUEBQD6ZHORTQQFFA">
+      <manifest-digest sha256new="HPDZYKADKJP3C7N34AOXPUL6DTOYCYMBPLBLUEBQD6ZHORTQQFFA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep-14.1.1-i686-unknown-linux-gnu.tar.gz" size="2357090" type="application/x-compressed-tar" extract="ripgrep-14.1.1-i686-unknown-linux-gnu"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="14.1.1" released="2024-09-09" stability="stable" id="sha256new_ZA5R3IOOZBHCE6VUSXYTEEMIHTRDVIM5S4ZHPITJ7BEQWJJNHGQQ">
+      <manifest-digest sha256new="ZA5R3IOOZBHCE6VUSXYTEEMIHTRDVIM5S4ZHPITJ7BEQWJJNHGQQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep-14.1.1-aarch64-unknown-linux-gnu.tar.gz" size="2047405" type="application/x-compressed-tar" extract="ripgrep-14.1.1-aarch64-unknown-linux-gnu"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="14.1.1" released="2024-09-09" stability="stable" id="sha256new_NWSQFO6F5ZWPJUKTWRUSZDXQF4VY64BDBIFJYEDI2WTFCESTOQ7A">
+      <manifest-digest sha256new="NWSQFO6F5ZWPJUKTWRUSZDXQF4VY64BDBIFJYEDI2WTFCESTOQ7A"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep-14.1.1-x86_64-apple-darwin.tar.gz" size="2082672" type="application/x-compressed-tar" extract="ripgrep-14.1.1-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="14.1.1" released="2024-09-09" stability="stable" id="sha256new_RESTEHM6RC7ROTXWDTHF7SSGPDTKK434X6VAZRWCH7C5BDGZGBFQ">
+      <manifest-digest sha256new="RESTEHM6RC7ROTXWDTHF7SSGPDTKK434X6VAZRWCH7C5BDGZGBFQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep-14.1.1-aarch64-apple-darwin.tar.gz" size="1787248" type="application/x-compressed-tar" extract="ripgrep-14.1.1-aarch64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="15.0.0" released="2025-10-16" stability="stable" id="sha256new_2TENLJGVXGS6VKUVRNKCTW3YPY633DRG3CDBGDGYBEIJCTNPZIVQ">
+      <manifest-digest sha256new="2TENLJGVXGS6VKUVRNKCTW3YPY633DRG3CDBGDGYBEIJCTNPZIVQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/15.0.0/ripgrep-15.0.0-x86_64-unknown-linux-musl.tar.gz" size="2262100" type="application/x-compressed-tar" extract="ripgrep-15.0.0-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="15.0.0" released="2025-10-16" stability="stable" id="sha256new_4LS7QPDEHTTQKWARDNFOJCW4CPD5ENULBOM4P34LNKMPPJU3I2VQ">
+      <manifest-digest sha256new="4LS7QPDEHTTQKWARDNFOJCW4CPD5ENULBOM4P34LNKMPPJU3I2VQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/15.0.0/ripgrep-15.0.0-i686-unknown-linux-gnu.tar.gz" size="1952857" type="application/x-compressed-tar" extract="ripgrep-15.0.0-i686-unknown-linux-gnu"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="15.0.0" released="2025-10-16" stability="stable" id="sha256new_XUNZVWV7ZD3DV6SZ3QPWVRCGJ55IAVAOIYBL7PAKOWG3UTIIOSQQ">
+      <manifest-digest sha256new="XUNZVWV7ZD3DV6SZ3QPWVRCGJ55IAVAOIYBL7PAKOWG3UTIIOSQQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/15.0.0/ripgrep-15.0.0-aarch64-unknown-linux-gnu.tar.gz" size="1864542" type="application/x-compressed-tar" extract="ripgrep-15.0.0-aarch64-unknown-linux-gnu"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="15.0.0" released="2025-10-16" stability="stable" id="sha256new_35ELCW5CAIRBDC5ELKYMDYZOF6DMWW55XJAXRERNQ2CQBJIUY4JQ">
+      <manifest-digest sha256new="35ELCW5CAIRBDC5ELKYMDYZOF6DMWW55XJAXRERNQ2CQBJIUY4JQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/15.0.0/ripgrep-15.0.0-x86_64-apple-darwin.tar.gz" size="1887368" type="application/x-compressed-tar" extract="ripgrep-15.0.0-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="15.0.0" released="2025-10-16" stability="stable" id="sha256new_56CJPQGUSGGDTUUROKSZFSEGIOKDDT6BWLYAHC7FMITEP4COKI5A">
+      <manifest-digest sha256new="56CJPQGUSGGDTUUROKSZFSEGIOKDDT6BWLYAHC7FMITEP4COKI5A"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/15.0.0/ripgrep-15.0.0-aarch64-apple-darwin.tar.gz" size="1775660" type="application/x-compressed-tar" extract="ripgrep-15.0.0-aarch64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="15.1.0" released="2025-10-22" stability="stable" id="sha256new_U3K4UH6YC35A7K4KVDZMENKNDC6YFJOD4WJHMD2MVLMGP6RE6EMQ">
+      <manifest-digest sha256new="U3K4UH6YC35A7K4KVDZMENKNDC6YFJOD4WJHMD2MVLMGP6RE6EMQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/15.1.0/ripgrep-15.1.0-x86_64-unknown-linux-musl.tar.gz" size="2263077" type="application/x-compressed-tar" extract="ripgrep-15.1.0-x86_64-unknown-linux-musl"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="15.1.0" released="2025-10-22" stability="stable" id="sha256new_2YAIWDSC3VHISW4BNOP2ULMIBMIRLZ53F7A2LKSJEBX6W7CDHSJA">
+      <manifest-digest sha256new="2YAIWDSC3VHISW4BNOP2ULMIBMIRLZ53F7A2LKSJEBX6W7CDHSJA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/15.1.0/ripgrep-15.1.0-i686-unknown-linux-gnu.tar.gz" size="1950407" type="application/x-compressed-tar" extract="ripgrep-15.1.0-i686-unknown-linux-gnu"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="15.1.0" released="2025-10-22" stability="stable" id="sha256new_S4FEDCICOAGQNHSV76HATQQBFBEGPN77EA34PKAEDI7WZS27ZHQA">
+      <manifest-digest sha256new="S4FEDCICOAGQNHSV76HATQQBFBEGPN77EA34PKAEDI7WZS27ZHQA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/15.1.0/ripgrep-15.1.0-aarch64-unknown-linux-gnu.tar.gz" size="1869959" type="application/x-compressed-tar" extract="ripgrep-15.1.0-aarch64-unknown-linux-gnu"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="15.1.0" released="2025-10-22" stability="stable" id="sha256new_SLK2MOSIL36WWWIZYFS6KOEO26OJQ5ROFI4ZA2HQUCW74NQCKQRA">
+      <manifest-digest sha256new="SLK2MOSIL36WWWIZYFS6KOEO26OJQ5ROFI4ZA2HQUCW74NQCKQRA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/15.1.0/ripgrep-15.1.0-x86_64-apple-darwin.tar.gz" size="1894127" type="application/x-compressed-tar" extract="ripgrep-15.1.0-x86_64-apple-darwin"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="15.1.0" released="2025-10-22" stability="stable" id="sha256new_4ZPITPO24V4TOKO2A4QZ5XESHZJPBZ7RP6JYYQAE3F6GFJQMVTAQ">
+      <manifest-digest sha256new="4ZPITPO24V4TOKO2A4QZ5XESHZJPBZ7RP6JYYQAE3F6GFJQMVTAQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/15.1.0/ripgrep-15.1.0-aarch64-apple-darwin.tar.gz" size="1777930" type="application/x-compressed-tar" extract="ripgrep-15.1.0-aarch64-apple-darwin"/>
+    </implementation>
+  </group>
+
+  <group license="Unlicense OR MIT">
+    <command name="run" path="rg.exe"/>
+    <implementation arch="Windows-x86_64" version="0.10.0" released="2018-09-07" stability="stable" id="sha256new_QT65HDJRDYZLTJC3NONSXPGUHTATBCEHOVS6ZOMEVGN62WTMY47A">
+      <manifest-digest sha256new="QT65HDJRDYZLTJC3NONSXPGUHTATBCEHOVS6ZOMEVGN62WTMY47A"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.10.0/ripgrep-0.10.0-x86_64-pc-windows-msvc.zip" size="1650751" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="0.10.0" released="2018-09-07" stability="stable" id="sha256new_NCW2HPKWEAJPHPOH3YOMNV4MH5OKPYSOCZ62GYEP5TH2SOEDAEAQ">
+      <manifest-digest sha256new="NCW2HPKWEAJPHPOH3YOMNV4MH5OKPYSOCZ62GYEP5TH2SOEDAEAQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.10.0/ripgrep-0.10.0-i686-pc-windows-msvc.zip" size="1492440" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.3.0" released="2016-11-20" stability="stable" id="sha256new_YLVTVGGSARXNCUKAYOUFA6TMGNU2FAS6AJ2K5SDNYY7ICCQ6XOMQ">
+      <manifest-digest sha256new="YLVTVGGSARXNCUKAYOUFA6TMGNU2FAS6AJ2K5SDNYY7ICCQ6XOMQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.3.0/ripgrep-0.3.0-x86_64-pc-windows-msvc.zip" size="767574" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="0.3.0" released="2016-11-20" stability="stable" id="sha256new_SH7X765ET4THPOC3PYXRT4T4CIRZ5XL2Z43SFXZPXJZK4CWEB37Q">
+      <manifest-digest sha256new="SH7X765ET4THPOC3PYXRT4T4CIRZ5XL2Z43SFXZPXJZK4CWEB37Q"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.3.0/ripgrep-0.3.0-i686-pc-windows-msvc.zip" size="726160" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.3.1" released="2016-11-22" stability="stable" id="sha256new_55RG3VNF3JHSOVGOZEEHVAUM74WDEXWG5SQC4YC4RTRQRWTEMEHQ">
+      <manifest-digest sha256new="55RG3VNF3JHSOVGOZEEHVAUM74WDEXWG5SQC4YC4RTRQRWTEMEHQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.3.1/ripgrep-0.3.1-x86_64-pc-windows-msvc.zip" size="767387" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="0.3.1" released="2016-11-22" stability="stable" id="sha256new_3FU43KMMYFDA2KTU53CHEZDTSEFRRPRHYI3BIV3LNYVF4QMKKEMA">
+      <manifest-digest sha256new="3FU43KMMYFDA2KTU53CHEZDTSEFRRPRHYI3BIV3LNYVF4QMKKEMA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.3.1/ripgrep-0.3.1-i686-pc-windows-msvc.zip" size="727371" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.3.2" released="2016-12-07" stability="stable" id="sha256new_KKMIJV3JOEVGR3NLSX6IPTLT5Z6JSTOMJNUZVUORCOTAPPPL4CNQ">
+      <manifest-digest sha256new="KKMIJV3JOEVGR3NLSX6IPTLT5Z6JSTOMJNUZVUORCOTAPPPL4CNQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.3.2/ripgrep-0.3.2-x86_64-pc-windows-msvc.zip" size="767488" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="0.3.2" released="2016-12-07" stability="stable" id="sha256new_BFYUTMEEESIHJI5G3AQWW5HZV5V3GE4W7YU2JWGAMUGK2QYWWKLQ">
+      <manifest-digest sha256new="BFYUTMEEESIHJI5G3AQWW5HZV5V3GE4W7YU2JWGAMUGK2QYWWKLQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.3.2/ripgrep-0.3.2-i686-pc-windows-msvc.zip" size="730879" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.4.0" released="2017-01-14" stability="stable" id="sha256new_LLFDXJCIUOTV5X7RJST3HR4ZLHW57BGB4M33KXDPSDEPEGANUFYA">
+      <manifest-digest sha256new="LLFDXJCIUOTV5X7RJST3HR4ZLHW57BGB4M33KXDPSDEPEGANUFYA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.4.0/ripgrep-0.4.0-x86_64-pc-windows-msvc.zip" size="800748" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="0.4.0" released="2017-01-14" stability="stable" id="sha256new_YZFATR6ALBLPO6FFUWTTH2LKIBW6C3PDA4K6RTKKS5DDLAGBZTDA">
+      <manifest-digest sha256new="YZFATR6ALBLPO6FFUWTTH2LKIBW6C3PDA4K6RTKKS5DDLAGBZTDA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.4.0/ripgrep-0.4.0-i686-pc-windows-msvc.zip" size="748308" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.5.0" released="2017-03-13" stability="stable" id="sha256new_BXUTN7UB5CO5YYMR4GOPS7674TULACHIQH7P5LX3JBVBQUZBER5Q">
+      <manifest-digest sha256new="BXUTN7UB5CO5YYMR4GOPS7674TULACHIQH7P5LX3JBVBQUZBER5Q"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.5.0/ripgrep-0.5.0-x86_64-pc-windows-msvc.zip" size="924063" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="0.5.0" released="2017-03-13" stability="stable" id="sha256new_NIFETCLH6LJ2WOZ3XYVIYUKYU35AMYKPWULGJ2H5ITFG5UPTOXRQ">
+      <manifest-digest sha256new="NIFETCLH6LJ2WOZ3XYVIYUKYU35AMYKPWULGJ2H5ITFG5UPTOXRQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.5.0/ripgrep-0.5.0-i686-pc-windows-msvc.zip" size="877789" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.5.1" released="2017-04-09" stability="stable" id="sha256new_JLMWRH2LAEMQHYF2AYH3FWC2O2OTVWFQHD4HZRZUQFK4CJ74L6NQ">
+      <manifest-digest sha256new="JLMWRH2LAEMQHYF2AYH3FWC2O2OTVWFQHD4HZRZUQFK4CJ74L6NQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.5.1/ripgrep-0.5.1-x86_64-pc-windows-msvc.zip" size="952288" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="0.5.1" released="2017-04-09" stability="stable" id="sha256new_MD74KVMWWIOQIXIVZ5UK5E2V3TJEZITWWFUJCH7QL5W7XSU5DDFQ">
+      <manifest-digest sha256new="MD74KVMWWIOQIXIVZ5UK5E2V3TJEZITWWFUJCH7QL5W7XSU5DDFQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.5.1/ripgrep-0.5.1-i686-pc-windows-msvc.zip" size="907034" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.5.2" released="2017-05-11" stability="stable" id="sha256new_J3VVN3NZXPEGXFTSH5E7YRQGPHPLOGESP2N5JW2N5YCPLU5PEU2A">
+      <manifest-digest sha256new="J3VVN3NZXPEGXFTSH5E7YRQGPHPLOGESP2N5JW2N5YCPLU5PEU2A"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.5.2/ripgrep-0.5.2-x86_64-pc-windows-msvc.zip" size="930052" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="0.5.2" released="2017-05-11" stability="stable" id="sha256new_M4APVOKXCT6QSVFQHCLWZCF2UKV7GSV7AFMR7FVE52TCKJTUFAPA">
+      <manifest-digest sha256new="M4APVOKXCT6QSVFQHCLWZCF2UKV7GSV7AFMR7FVE52TCKJTUFAPA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.5.2/ripgrep-0.5.2-i686-pc-windows-msvc.zip" size="884281" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.6.0" released="2017-08-24" stability="stable" id="sha256new_R2HK3R2T3EICX4OBJ432CKHDPYU6WAF3S6ZOAN6CBYKE6P5SFBLQ">
+      <manifest-digest sha256new="R2HK3R2T3EICX4OBJ432CKHDPYU6WAF3S6ZOAN6CBYKE6P5SFBLQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.6.0/ripgrep-0.6.0-x86_64-pc-windows-msvc.zip" size="980531" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="0.6.0" released="2017-08-24" stability="stable" id="sha256new_PHEHH54FXYCE4E7YGHNFB23JKJKLOACWJQNRG6ZPQ37H2GDNOLDQ">
+      <manifest-digest sha256new="PHEHH54FXYCE4E7YGHNFB23JKJKLOACWJQNRG6ZPQ37H2GDNOLDQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.6.0/ripgrep-0.6.0-i686-pc-windows-msvc.zip" size="934499" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.7.0" released="2017-10-22" stability="stable" id="sha256new_4KL6HT3Z3JUHFZI4PWS4RXPHXULLGJF6ZF5CRWSBRFMWX6DFPDHQ">
+      <manifest-digest sha256new="4KL6HT3Z3JUHFZI4PWS4RXPHXULLGJF6ZF5CRWSBRFMWX6DFPDHQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.7.0/ripgrep-0.7.0-x86_64-pc-windows-msvc.zip" size="952524" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="0.7.0" released="2017-10-22" stability="stable" id="sha256new_SEYTGGNFGIHDUBM6NTAFRHPJE6EII7VI4LMBCDTYJAIMDBHQ6L4Q">
+      <manifest-digest sha256new="SEYTGGNFGIHDUBM6NTAFRHPJE6EII7VI4LMBCDTYJAIMDBHQ6L4Q"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.7.0/ripgrep-0.7.0-i686-pc-windows-msvc.zip" size="908353" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.7.1" released="2017-10-22" stability="stable" id="sha256new_6AEROTDHREW4IAFJQFGIVZE6BOAULMA37AR65RCCVZQOKXCKKZOQ">
+      <manifest-digest sha256new="6AEROTDHREW4IAFJQFGIVZE6BOAULMA37AR65RCCVZQOKXCKKZOQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.7.1/ripgrep-0.7.1-x86_64-pc-windows-msvc.zip" size="952148" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="0.7.1" released="2017-10-22" stability="stable" id="sha256new_M667DAYKLHSL6S5SBKLYNI72RF6U2OAX5KDY63UEK7UD4DVBM7HA">
+      <manifest-digest sha256new="M667DAYKLHSL6S5SBKLYNI72RF6U2OAX5KDY63UEK7UD4DVBM7HA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.7.1/ripgrep-0.7.1-i686-pc-windows-msvc.zip" size="908304" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.8.0" released="2018-02-12" stability="stable" id="sha256new_HRCIZOMJ3AGAAWVQVTTVARFZ23ZJUJ2IU6HK7KLQHCHS7BCJXLGA">
+      <manifest-digest sha256new="HRCIZOMJ3AGAAWVQVTTVARFZ23ZJUJ2IU6HK7KLQHCHS7BCJXLGA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.8.0/ripgrep-0.8.0-x86_64-pc-windows-msvc.zip" size="997931" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="0.8.0" released="2018-02-12" stability="stable" id="sha256new_BNT77AN7C6SHYY2HID2RJTXCLW56LP6KYGBJEXIR4QI6N562BPWA">
+      <manifest-digest sha256new="BNT77AN7C6SHYY2HID2RJTXCLW56LP6KYGBJEXIR4QI6N562BPWA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.8.0/ripgrep-0.8.0-i686-pc-windows-msvc.zip" size="951635" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.8.1" released="2018-02-21" stability="stable" id="sha256new_6Y7JB64NOEAO24PGPNHS4ZF7UOHOE5Y6RBNUED7N2PR23KNUP4XQ">
+      <manifest-digest sha256new="6Y7JB64NOEAO24PGPNHS4ZF7UOHOE5Y6RBNUED7N2PR23KNUP4XQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.8.1/ripgrep-0.8.1-x86_64-pc-windows-msvc.zip" size="1078085" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="0.8.1" released="2018-02-21" stability="stable" id="sha256new_IMLH5LX6P6MDFE7PQO4DNY3SN65E4TILALEJ6HQNLDKEUYMWV3WA">
+      <manifest-digest sha256new="IMLH5LX6P6MDFE7PQO4DNY3SN65E4TILALEJ6HQNLDKEUYMWV3WA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.8.1/ripgrep-0.8.1-i686-pc-windows-msvc.zip" size="1010839" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.9.0" released="2018-08-03" stability="stable" id="sha256new_XLCEJLIF7ETARR6KZ4ZURAPRFQP2XEEJJSEG3YEICZ4VUM5GFZ4Q">
+      <manifest-digest sha256new="XLCEJLIF7ETARR6KZ4ZURAPRFQP2XEEJJSEG3YEICZ4VUM5GFZ4Q"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.9.0/ripgrep-0.9.0-x86_64-pc-windows-msvc.zip" size="1220166" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="0.9.0" released="2018-08-03" stability="stable" id="sha256new_3HFS265KI5PJYTSYSQUV4UE5U7S5GQKWKD4P767YGZZS7TOGXE5Q">
+      <manifest-digest sha256new="3HFS265KI5PJYTSYSQUV4UE5U7S5GQKWKD4P767YGZZS7TOGXE5Q"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/0.9.0/ripgrep-0.9.0-i686-pc-windows-msvc.zip" size="1124325" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="11.0.0" released="2019-04-15" stability="stable" id="sha256new_EPI4LUYBDHBVLPNUGITR2LU4ELMTCASMISSXF5XPGPQSZX5SHAEA">
+      <manifest-digest sha256new="EPI4LUYBDHBVLPNUGITR2LU4ELMTCASMISSXF5XPGPQSZX5SHAEA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/11.0.0/ripgrep-11.0.0-x86_64-pc-windows-msvc.zip" size="1769077" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="11.0.0" released="2019-04-15" stability="stable" id="sha256new_VRE63W4WNIEYN7UW5HBCEG3HBH7EC57RU7XFIYCCST4VPSPIMQAA">
+      <manifest-digest sha256new="VRE63W4WNIEYN7UW5HBCEG3HBH7EC57RU7XFIYCCST4VPSPIMQAA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/11.0.0/ripgrep-11.0.0-i686-pc-windows-msvc.zip" size="1595379" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="11.0.1" released="2019-04-16" stability="stable" id="sha256new_2UGUXZ5SQW7YKW2EUYOCV5YWRBB7LHGGF6FE2PR4SU6LGPNFZZAA">
+      <manifest-digest sha256new="2UGUXZ5SQW7YKW2EUYOCV5YWRBB7LHGGF6FE2PR4SU6LGPNFZZAA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/11.0.1/ripgrep-11.0.1-x86_64-pc-windows-msvc.zip" size="1767433" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="11.0.1" released="2019-04-16" stability="stable" id="sha256new_T75BYQRKTSKHGUMFPLGPEXUWBIDXSJ6VZH34BN2OHMUTZPRNQJZA">
+      <manifest-digest sha256new="T75BYQRKTSKHGUMFPLGPEXUWBIDXSJ6VZH34BN2OHMUTZPRNQJZA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/11.0.1/ripgrep-11.0.1-i686-pc-windows-msvc.zip" size="1595373" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="11.0.2" released="2019-08-01" stability="stable" id="sha256new_LR7BHRKL5JF6MZ3MCI5TDKOH6ZHXHG7RNLTUAMVV2UEI7SHQADVQ">
+      <manifest-digest sha256new="LR7BHRKL5JF6MZ3MCI5TDKOH6ZHXHG7RNLTUAMVV2UEI7SHQADVQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep-11.0.2-x86_64-pc-windows-msvc.zip" size="1764661" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="11.0.2" released="2019-08-01" stability="stable" id="sha256new_4TJWBDHPDZKM2P653CBXH4PNRCJNM5CMUWCAMVCMMX6LG7Q5NGIQ">
+      <manifest-digest sha256new="4TJWBDHPDZKM2P653CBXH4PNRCJNM5CMUWCAMVCMMX6LG7Q5NGIQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep-11.0.2-i686-pc-windows-msvc.zip" size="1602484" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="12.0.0" released="2020-03-16" stability="stable" id="sha256new_5A6ZVFHQAA2KZ2GLZJL7QF3BCA2B3GDBDAHFCRHV2OCXCNNJB42Q">
+      <manifest-digest sha256new="5A6ZVFHQAA2KZ2GLZJL7QF3BCA2B3GDBDAHFCRHV2OCXCNNJB42Q"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/12.0.0/ripgrep-12.0.0-x86_64-pc-windows-msvc.zip" size="1843612" type="application/zip" extract="ripgrep-12.0.0-x86_64-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="12.0.0" released="2020-03-16" stability="stable" id="sha256new_KTZHIL3QWO3SVYGTQ2H4IOE6ZK24N67ATQ3K2XS5CMJSIWA2VECQ">
+      <manifest-digest sha256new="KTZHIL3QWO3SVYGTQ2H4IOE6ZK24N67ATQ3K2XS5CMJSIWA2VECQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/12.0.0/ripgrep-12.0.0-i686-pc-windows-msvc.zip" size="1674249" type="application/zip" extract="ripgrep-12.0.0-i686-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="12.0.1" released="2020-03-29" stability="stable" id="sha256new_SFU4VSMRSZZCLOUCUIWCOEFYTMP3CVNH7QJSZCVZH2WHXGYZQC3Q">
+      <manifest-digest sha256new="SFU4VSMRSZZCLOUCUIWCOEFYTMP3CVNH7QJSZCVZH2WHXGYZQC3Q"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/12.0.1/ripgrep-12.0.1-x86_64-pc-windows-msvc.zip" size="1855142" type="application/zip" extract="ripgrep-12.0.1-x86_64-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="12.0.1" released="2020-03-29" stability="stable" id="sha256new_WGYL2PWF6QMFSOBCUBXYN6IVXFYO2DIXPGIJACWCDUWXRDTRXJPQ">
+      <manifest-digest sha256new="WGYL2PWF6QMFSOBCUBXYN6IVXFYO2DIXPGIJACWCDUWXRDTRXJPQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/12.0.1/ripgrep-12.0.1-i686-pc-windows-msvc.zip" size="1685204" type="application/zip" extract="ripgrep-12.0.1-i686-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="12.1.0" released="2020-05-09" stability="stable" id="sha256new_TVMRCNK5764WN36ZNLKL3AOWLKDIOOZ6RW46PWX76VMSZLTR25LA">
+      <manifest-digest sha256new="TVMRCNK5764WN36ZNLKL3AOWLKDIOOZ6RW46PWX76VMSZLTR25LA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/12.1.0/ripgrep-12.1.0-x86_64-pc-windows-msvc.zip" size="1838171" type="application/zip" extract="ripgrep-12.1.0-x86_64-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="12.1.0" released="2020-05-09" stability="stable" id="sha256new_IYHSCBLJGMYDL4NF7QVJC4KLYNHXE536VKVDQHH4E3QZCCQZ4EJQ">
+      <manifest-digest sha256new="IYHSCBLJGMYDL4NF7QVJC4KLYNHXE536VKVDQHH4E3QZCCQZ4EJQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/12.1.0/ripgrep-12.1.0-i686-pc-windows-msvc.zip" size="1682559" type="application/zip" extract="ripgrep-12.1.0-i686-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="12.1.1" released="2020-05-29" stability="stable" id="sha256new_6YV3BDVAEH6ILYGYNLMBOO7BOHY5OE6VRQ3MEL644N7VBXENSR4Q">
+      <manifest-digest sha256new="6YV3BDVAEH6ILYGYNLMBOO7BOHY5OE6VRQ3MEL644N7VBXENSR4Q"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/12.1.1/ripgrep-12.1.1-x86_64-pc-windows-msvc.zip" size="1835604" type="application/zip" extract="ripgrep-12.1.1-x86_64-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="12.1.1" released="2020-05-29" stability="stable" id="sha256new_KPG622VVT2SSL7HEEEBEZZOOCEJ6MXFSCODZCEVNHHYIVKCVYGIA">
+      <manifest-digest sha256new="KPG622VVT2SSL7HEEEBEZZOOCEJ6MXFSCODZCEVNHHYIVKCVYGIA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/12.1.1/ripgrep-12.1.1-i686-pc-windows-msvc.zip" size="1659655" type="application/zip" extract="ripgrep-12.1.1-i686-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="13.0.0" released="2021-06-12" stability="stable" id="sha256new_XTVNZVZFELK25KMCL2QH2GDQXKPRGDIWAPRFYVQIBP425BLIYJ6Q">
+      <manifest-digest sha256new="XTVNZVZFELK25KMCL2QH2GDQXKPRGDIWAPRFYVQIBP425BLIYJ6Q"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-pc-windows-msvc.zip" size="1734357" type="application/zip" extract="ripgrep-13.0.0-x86_64-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="13.0.0" released="2021-06-12" stability="stable" id="sha256new_KQC7VA6DJCR6AN3JC25JBWF3XLPIT3ODRBWE76RWGWUO72HTAA3A">
+      <manifest-digest sha256new="KQC7VA6DJCR6AN3JC25JBWF3XLPIT3ODRBWE76RWGWUO72HTAA3A"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-i686-pc-windows-msvc.zip" size="1591463" type="application/zip" extract="ripgrep-13.0.0-i686-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="14.0.0" released="2023-11-26" stability="stable" id="sha256new_WAVMD33CTCPIEJYCWMPSPTDTWKF2ULVTQW4SBQXPFABBCTMZCLAQ">
+      <manifest-digest sha256new="WAVMD33CTCPIEJYCWMPSPTDTWKF2ULVTQW4SBQXPFABBCTMZCLAQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.0/ripgrep-14.0.0-x86_64-pc-windows-msvc.zip" size="2042018" type="application/zip" extract="ripgrep-14.0.0-x86_64-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="14.0.0" released="2023-11-26" stability="stable" id="sha256new_4MVBI2XNHO3CMPGAOA4QBX45AB6IH5I3AYMWJMIMN6ZIA63PEYDQ">
+      <manifest-digest sha256new="4MVBI2XNHO3CMPGAOA4QBX45AB6IH5I3AYMWJMIMN6ZIA63PEYDQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.0/ripgrep-14.0.0-i686-pc-windows-msvc.zip" size="1887901" type="application/zip" extract="ripgrep-14.0.0-i686-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="14.0.1" released="2023-11-26" stability="stable" id="sha256new_DYBWT7COBPL5U2SD4XYV5PQDWP3C6WQWI23SDPV6IYATSBQ2X2RQ">
+      <manifest-digest sha256new="DYBWT7COBPL5U2SD4XYV5PQDWP3C6WQWI23SDPV6IYATSBQ2X2RQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.1/ripgrep-14.0.1-x86_64-pc-windows-msvc.zip" size="2041115" type="application/zip" extract="ripgrep-14.0.1-x86_64-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="14.0.1" released="2023-11-26" stability="stable" id="sha256new_B2ZLWEBSL6JD5KY2OPOZS7BYN3LQZLPF6LG4XB3IYEAFMLDFI7UA">
+      <manifest-digest sha256new="B2ZLWEBSL6JD5KY2OPOZS7BYN3LQZLPF6LG4XB3IYEAFMLDFI7UA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.1/ripgrep-14.0.1-i686-pc-windows-msvc.zip" size="1886631" type="application/zip" extract="ripgrep-14.0.1-i686-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="14.0.2" released="2023-11-28" stability="stable" id="sha256new_HV5Q2NIOMRSXACOQABKOW7CBNEBSBIWPNNOVUFKQVQ2W6FTBFYIA">
+      <manifest-digest sha256new="HV5Q2NIOMRSXACOQABKOW7CBNEBSBIWPNNOVUFKQVQ2W6FTBFYIA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.2/ripgrep-14.0.2-x86_64-pc-windows-msvc.zip" size="2040864" type="application/zip" extract="ripgrep-14.0.2-x86_64-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="14.0.2" released="2023-11-28" stability="stable" id="sha256new_HBIDV73MPLE5R7WXY6DSSBWWHTK3HKPMVSPXCESGMYXRP3FDUX2A">
+      <manifest-digest sha256new="HBIDV73MPLE5R7WXY6DSSBWWHTK3HKPMVSPXCESGMYXRP3FDUX2A"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.2/ripgrep-14.0.2-i686-pc-windows-msvc.zip" size="1893563" type="application/zip" extract="ripgrep-14.0.2-i686-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="14.0.3" released="2023-11-28" stability="stable" id="sha256new_QND533SEPYFUTMSP664NMFXB5BGVFSPXLIJSUJUNUESCHYSNXXDA">
+      <manifest-digest sha256new="QND533SEPYFUTMSP664NMFXB5BGVFSPXLIJSUJUNUESCHYSNXXDA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.3/ripgrep-14.0.3-x86_64-pc-windows-msvc.zip" size="2015177" type="application/zip" extract="ripgrep-14.0.3-x86_64-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="14.0.3" released="2023-11-28" stability="stable" id="sha256new_FENFKTNMBZT7L5RAPUT3M64JHXKGG63YJYKWHHYZJGZ3ESDV4CVA">
+      <manifest-digest sha256new="FENFKTNMBZT7L5RAPUT3M64JHXKGG63YJYKWHHYZJGZ3ESDV4CVA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.0.3/ripgrep-14.0.3-i686-pc-windows-msvc.zip" size="1896505" type="application/zip" extract="ripgrep-14.0.3-i686-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="14.1.0" released="2024-01-06" stability="stable" id="sha256new_7T4LYZV3DMWSFP2TQM2OHQ7RJAID6R34RHZCAT7FC5Q4UNVTPKDA">
+      <manifest-digest sha256new="7T4LYZV3DMWSFP2TQM2OHQ7RJAID6R34RHZCAT7FC5Q4UNVTPKDA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep-14.1.0-x86_64-pc-windows-msvc.zip" size="2020417" type="application/zip" extract="ripgrep-14.1.0-x86_64-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="14.1.0" released="2024-01-06" stability="stable" id="sha256new_JBEZK6E2BAEI5SULKNRXY6A37EUFWBAYXJWA3EV2A75HO5AOKTQA">
+      <manifest-digest sha256new="JBEZK6E2BAEI5SULKNRXY6A37EUFWBAYXJWA3EV2A75HO5AOKTQA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.1.0/ripgrep-14.1.0-i686-pc-windows-msvc.zip" size="1918821" type="application/zip" extract="ripgrep-14.1.0-i686-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="14.1.1" released="2024-09-09" stability="stable" id="sha256new_MFT266YJG23I7N3LMN5Q4UPJRN2TCLCTS5Q4M7O3HY4BVM7UGIKA">
+      <manifest-digest sha256new="MFT266YJG23I7N3LMN5Q4UPJRN2TCLCTS5Q4M7O3HY4BVM7UGIKA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep-14.1.1-x86_64-pc-windows-msvc.zip" size="2058893" type="application/zip" extract="ripgrep-14.1.1-x86_64-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="14.1.1" released="2024-09-09" stability="stable" id="sha256new_I44WIUTGA3NG6YJQ53LUC5X4INMWF4VC6HCQLFVJVCSJ4G32OYCA">
+      <manifest-digest sha256new="I44WIUTGA3NG6YJQ53LUC5X4INMWF4VC6HCQLFVJVCSJ4G32OYCA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/14.1.1/ripgrep-14.1.1-i686-pc-windows-msvc.zip" size="1918749" type="application/zip" extract="ripgrep-14.1.1-i686-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="15.0.0" released="2025-10-16" stability="stable" id="sha256new_S75TL67RIGNBDDJGGEOCYJ76W4HUEAMTNDUMOMCI7BKD77KQX3AA">
+      <manifest-digest sha256new="S75TL67RIGNBDDJGGEOCYJ76W4HUEAMTNDUMOMCI7BKD77KQX3AA"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/15.0.0/ripgrep-15.0.0-x86_64-pc-windows-msvc.zip" size="1805250" type="application/zip" extract="ripgrep-15.0.0-x86_64-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="15.0.0" released="2025-10-16" stability="stable" id="sha256new_BR44CZ2WMWVL3D5KFIWISHIZPGJ664ZSN2AKAMXIV6J72CPAWXIQ">
+      <manifest-digest sha256new="BR44CZ2WMWVL3D5KFIWISHIZPGJ664ZSN2AKAMXIV6J72CPAWXIQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/15.0.0/ripgrep-15.0.0-i686-pc-windows-msvc.zip" size="1670048" type="application/zip" extract="ripgrep-15.0.0-i686-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="15.0.0" released="2025-10-16" stability="stable" id="sha256new_VSGEN6GPPNCRNNOKOMRR7EUAWZOCRKBZYI345LBYX4Y6ZSUEM3LQ">
+      <manifest-digest sha256new="VSGEN6GPPNCRNNOKOMRR7EUAWZOCRKBZYI345LBYX4Y6ZSUEM3LQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/15.0.0/ripgrep-15.0.0-aarch64-pc-windows-msvc.zip" size="1673744" type="application/zip" extract="ripgrep-15.0.0-aarch64-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="15.1.0" released="2025-10-22" stability="stable" id="sha256new_KQPLO56OQQMLJN4OGHLOFELT53DYAVRAA7B3RKWPNKJVMCX3OW7Q">
+      <manifest-digest sha256new="KQPLO56OQQMLJN4OGHLOFELT53DYAVRAA7B3RKWPNKJVMCX3OW7Q"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/15.1.0/ripgrep-15.1.0-x86_64-pc-windows-msvc.zip" size="1810687" type="application/zip" extract="ripgrep-15.1.0-x86_64-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="15.1.0" released="2025-10-22" stability="stable" id="sha256new_CSRYT7XTNT73ZED2BYXZT3YRQ3IWP6PW73TKKOMR3T53ITRGMJYQ">
+      <manifest-digest sha256new="CSRYT7XTNT73ZED2BYXZT3YRQ3IWP6PW73TKKOMR3T53ITRGMJYQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/15.1.0/ripgrep-15.1.0-i686-pc-windows-msvc.zip" size="1665725" type="application/zip" extract="ripgrep-15.1.0-i686-pc-windows-msvc"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="15.1.0" released="2025-10-22" stability="stable" id="sha256new_R7I7DYOEMYB4JH7BR37KKY762BKMDR3QYT467VJNMUWA7ROQU4AQ">
+      <manifest-digest sha256new="R7I7DYOEMYB4JH7BR37KKY762BKMDR3QYT467VJNMUWA7ROQU4AQ"/>
+      <archive href="https://github.com/BurntSushi/ripgrep/releases/download/15.1.0/ripgrep-15.1.0-aarch64-pc-windows-msvc.zip" size="1675460" type="application/zip" extract="ripgrep-15.1.0-aarch64-pc-windows-msvc"/>
+    </implementation>
+  </group>
+</interface>

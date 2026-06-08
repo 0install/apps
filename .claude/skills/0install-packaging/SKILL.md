@@ -84,7 +84,7 @@ Minimal cross-platform skeleton:
   <homepage>https://example.com/</homepage>
   <category>Development</category>
   <needs-terminal/>
-  <icon href="https://apps.0install.net/CATEGORY/name.png" type="image/png"/>
+  <icon href="https://apps.0install.net/CATEGORY/name.png" type="image/png"/> <!-- omit this line now if upstream ships no logo -->
 
   <feed-for interface="https://apps.0install.net/CATEGORY/name.xml"/>
 
@@ -184,13 +184,15 @@ It writes `CATEGORY/name-1.2.3.xml` and downloads the archive(s) there. If a dow
 
 **feedlint caveat:** feedlint *crashes* (not warns) on implementations that use a `<file>` element, with `AttributeError: 'FileSource' object has no attribute 'start_offset'`. It validates any `<archive>` implementations first, so you still get useful output above the traceback — that traceback is a feedlint limitation, **not** a defect in your feed. For `<file>`-based implementations (bare binaries / `.exe`), rely on `0install select`/`0install run` to confirm they resolve and launch.
 
-Step b's `0template` run is only a **test**: the `name-1.2.3.xml` it writes is a throwaway for checking the template — you don't commit it. (The real master `name.xml` is the metadata-only file you create in step 6, which 0repo then populates.) Use a single-version `0template` call for this quick test rather than 0watch — running 0watch generates a feed for *every* version your script reports; that bulk population is step 6 (done locally or by CI).
+A second expected feedlint result here: if your template carries an `<icon>` whose `gh-pages` file isn't pushed yet, feedlint reports `ERROR ... HTTP error: got status code 404` / `ERRORS FOUND: 1`. That's a hard error, not a warning, but it's harmless — it clears once the icon lands on `gh-pages` (step 6). The archives above it still validate, so treat a lone icon-404 as expected, not a feed defect.
+
+Step b's `0template` run is only a **test**: the `name-1.2.3.xml` it writes is a throwaway for checking the template — you don't commit it. (The real master `name.xml` is the metadata-only file you create in step 6, which 0repo then populates.) Use a single-version `0template` call for this quick test rather than 0watch — running 0watch generates a feed for *every* version your script reports; that bulk population is step 6.
 
 **Clean up**: the downloaded archive (`*.tar.gz`/`*.zip`) is a throwaway — delete it. The per-version `name-1.2.3.xml` is also intermediate; it gets merged by 0repo, so don't commit it.
 
-## Step 6 — Add implementations to the feed (locally or via CI)
+## Step 6 — Add implementations to the feed
 
-Step 5 only validated the template against one version. Now make the feed live: do the part both paths share, then pick how the versions get added.
+Step 5 only validated the template against one version. Now make the feed live by populating it with every release.
 
 **Two branches.** What you author — templates, watch scripts, and the **unsigned** master feeds — lives on `master`. The **signed** feeds and the icons live on `gh-pages`, which is what `https://apps.0install.net/` serves. The README's **Local setup** clones these as `feeds/` (master) and `public/` (gh-pages).
 
@@ -219,22 +221,30 @@ Step 5 only validated the template against one version. Now make the feed live: 
    <icon href="https://apps.0install.net/CATEGORY/name.ico" type="image/vnd.microsoft.icon"/>
    <icon href="https://apps.0install.net/CATEGORY/name.icns" type="image/x-icns"/>
    ```
-5. **Commit and push `../public` to `gh-pages`** — a separate commit from your `master` push. Until that lands the `<icon>` URLs 404 (which is also why feedlint may warn the icon is unreachable before you've pushed); that warning clears once `gh-pages` has the files.
+5. **Commit and push `../public` to `gh-pages`** — a separate commit from your `master` push. Until that lands the `<icon>` URLs 404 (which is also why feedlint reports the icon as unreachable before you've pushed).
 
-**Now add the versions — two ways:**
-
-**Path A — populate locally with 0watch + 0repo.** Only works if your checkout matches the README's local layout (the `feeds/` + `public/` clones, the `0repo-config.py`/`archives.db` symlinks, an `incoming/` directory). 0watch generates a per-version feed for every release your script reports into `incoming/`; then 0repo merges them into your seed master `name.xml`:
+**Now populate the versions locally with 0watch + 0repo.** This only works if your checkout matches the README's local layout (the `feeds/` + `public/` clones, the `0repo-config.py`/`archives.db` symlinks, an `incoming/` directory). 0watch generates a per-version feed for every release your script reports into `incoming/`; then 0repo merges them into your seed master `name.xml`:
 
 ```bash
 ( cd feeds/CATEGORY && 0install run https://apps.0install.net/0install/0watch.xml --output ../../incoming name.watch.py )
 NO_SIGN=1 0repo
 ```
 
+> **Ask the user for confirmation before running `0watch` or `0repo`.** These download every archive, digest them, and mutate the local 0repo state — don't run them autonomously. (Running `0template` and `run_watch.py` autonomously is fine.)
+
 Then commit and push **only `feeds/`** — the now-populated `name.xml` plus your sources. You don't need to push `public/`: CI regenerates the signed feeds on `gh-pages` from `master`. That's why `NO_SIGN=1` is fine — it just skips signing 0repo's local `public/` output, which you won't push, while the merge into the `master` feed works exactly the same. This can take a while when the script reports many versions, since every archive is downloaded and digested.
 
-**Path B — let CI populate it.** Commit the seed (empty) master, the template and the watch script to `master`. Once pushed, the nightly **Update** job runs your watch script, generates *all* the reported versions, and opens an "Automatic updates" PR — merging that publishes the populated, signed feed. No local 0repo setup needed, but the feed stays empty until that nightly run lands.
+**0watch often succeeds for the newest versions, then fails partway down the list.** It walks releases newest-to-oldest, and an older release frequently doesn't match the template you wrote for the *current* one — it may not have published archives for the same architectures, used a different filename/naming convention, lived at a different URL, or shipped a different archive layout. When 0watch hits such a version it errors out (a 404, a missing `extract` dir, etc.).
 
-**Either way, CI keeps it current afterwards.** The nightly **Update** job (`.github/workflows/`) runs every watch script on Linux/macOS/Windows, merges new versions with 0repo, and opens "Automatic updates" PRs to `master`; **Publish** deploys the signed feeds to `gh-pages`. For each future release you do nothing — it's the same 0watch→0template→0repo chain, run for you.
+A practical strategy for getting those older versions in:
+
+1. Note which version 0watch got stuck on. The versions above it are already in `incoming/` — keep them.
+2. **Temporarily edit `name.xml.template`** to match that older release's reality (its arch set, URL pattern, `extract` dir, …).
+3. Run `0watch` again — it now skips the versions already produced and generates feeds for the older ones the adjusted template fits.
+4. Repeat 1–3 if you hit a still-older convention break.
+5. **Restore `name.xml.template` to the current-version form** before committing — the template you commit must describe the *latest* release, since that's what CI uses going forward.
+
+Then run `NO_SIGN=1 0repo` once to merge everything that accumulated in `incoming/`.
 
 ## File-type quick reference
 

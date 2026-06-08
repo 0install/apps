@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>bat</name>
+  <summary>cat clone with syntax highlighting and Git integration</summary>
+  <description>A cat clone with syntax highlighting for a large number of programming and markup languages, Git integration to show file modifications, automatic paging, and more.</description>
+  <homepage>https://github.com/sharkdp/bat</homepage>
+  <category>Utility</category>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/utils/bat.xml"/>
+
+  <group license="MIT License or Apache License 2.0">
+    <command name="run" path="bat"/>
+    <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="bat-v{version}-x86_64-unknown-linux-musl" href="https://github.com/sharkdp/bat/releases/download/v{version}/bat-v{version}-x86_64-unknown-linux-musl.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="bat-v{version}-i686-unknown-linux-musl" href="https://github.com/sharkdp/bat/releases/download/v{version}/bat-v{version}-i686-unknown-linux-musl.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="bat-v{version}-aarch64-unknown-linux-musl" href="https://github.com/sharkdp/bat/releases/download/v{version}/bat-v{version}-aarch64-unknown-linux-musl.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="bat-v{version}-x86_64-apple-darwin" href="https://github.com/sharkdp/bat/releases/download/v{version}/bat-v{version}-x86_64-apple-darwin.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="bat-v{version}-aarch64-apple-darwin" href="https://github.com/sharkdp/bat/releases/download/v{version}/bat-v{version}-aarch64-apple-darwin.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="MIT License or Apache License 2.0">
+    <command name="run" path="bat.exe"/>
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="bat-v{version}-x86_64-pc-windows-msvc" href="https://github.com/sharkdp/bat/releases/download/v{version}/bat-v{version}-x86_64-pc-windows-msvc.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i686" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="bat-v{version}-i686-pc-windows-msvc" href="https://github.com/sharkdp/bat/releases/download/v{version}/bat-v{version}-i686-pc-windows-msvc.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="bat-v{version}-aarch64-pc-windows-msvc" href="https://github.com/sharkdp/bat/releases/download/v{version}/bat-v{version}-aarch64-pc-windows-msvc.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

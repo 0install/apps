@@ -19,7 +19,7 @@ set up, automation does the repetitive per-release work:
 | --- | --- |
 | `CATEGORY/name.xml.template` | The feed with `{placeholder}` holes (version, date, …) for 0template to fill. |
 | `CATEGORY/name.watch.py`     | A Python script that discovers upstream releases and feeds their values to the template. |
-| `CATEGORY/name.xml`          | The master feed. You create it **once**, with the metadata **and** the structural skeleton (`<group>`s, `<command>`s, etc.) **but no `<implementation>` elements**; 0repo then fills in and grows the implementations from the generated per-version feeds. |
+| `CATEGORY/name.xml`          | The master feed. You create it **once** with metadata and a structural skeleton (`<group>`s, `<command>`s) but **no `<implementation>` elements** (step 6); 0repo fills in and grows the implementations. |
 
 ## The pipeline (understand this before editing anything)
 
@@ -186,7 +186,7 @@ It writes `CATEGORY/name-1.2.3.xml` and downloads the archive(s) there. If a dow
 
 A second expected feedlint result here: if your template carries an `<icon>` whose `gh-pages` file isn't pushed yet, feedlint reports `ERROR ... HTTP error: got status code 404` / `ERRORS FOUND: 1`. That's a hard error, not a warning, but it's harmless — it clears once the icon lands on `gh-pages` (step 6). The archives above it still validate, so treat a lone icon-404 as expected, not a feed defect.
 
-Step b's `0template` run is only a **test**: the `name-1.2.3.xml` it writes is a throwaway for checking the template — you don't commit it. (The real master `name.xml` is the metadata-only file you create in step 6, which 0repo then populates.) Use a single-version `0template` call for this quick test rather than 0watch — running 0watch generates a feed for *every* version your script reports; that bulk population is step 6.
+Step b's `0template` run is only a **test**: the `name-1.2.3.xml` it writes is a throwaway for checking the template — you don't commit it. (The real master `name.xml` is the metadata-only file you create in step 6.) Use a single-version `0template` call for this quick test rather than 0watch — running 0watch generates a feed for *every* version your script reports; that bulk population is step 6.
 
 **Clean up**: the downloaded archive (`*.tar.gz`/`*.zip`) is a throwaway — delete it. The per-version `name-1.2.3.xml` is also intermediate; it gets merged by 0repo, so don't commit it.
 

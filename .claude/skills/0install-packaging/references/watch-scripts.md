@@ -30,19 +30,7 @@ Return only releases you can actually package (those with downloadable assets). 
 
 ## GitHub via `github.py`
 
-The repo-root `github.py` helper wraps the GitHub REST API and honors `GITHUB_TOKEN` (set it locally to avoid the low unauthenticated rate limit; CI sets it automatically).
-
-```python
-import sys, os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-import github
-
-releases = [{
-    'version': release['tag_name'].lstrip('v'),
-    'released': release['published_at'][0:10],
-    'stability': 'testing' if release['prerelease'] else 'stable',
-} for release in github.releases('OWNER/REPO') if release['assets']]
-```
+The repo-root `github.py` helper wraps the GitHub REST API and honors `GITHUB_TOKEN` (set it locally to avoid the low unauthenticated rate limit; CI sets it automatically). SKILL.md step 4 shows the base pattern; this helper provides:
 
 - `github.releases(repo)` → the `/releases` list (each has `tag_name`, `published_at`, `prerelease`, `assets`).
 - `github.tags(repo)` → the `/tags` list (only `name` + commit; no dates/assets) — use when a project tags but doesn't cut "releases".
@@ -55,24 +43,13 @@ There is **no `gitlab.py` helper** in this repo. For GitLab or other forges, scr
 
 ## Web scraping and JSON APIs
 
-Use the stdlib — `urllib.request`, `re`, `json`, `datetime`. No third-party deps.
+Use the stdlib — `urllib.request`, `re`, `json`, `datetime`. No third-party deps. SKILL.md step 4 shows the basic HTML-scraping shape; the points specific to scraping here:
 
-```python
-from urllib import request
-import re
-from datetime import datetime
+- **Bound the scrape to recent releases** so you don't regenerate the entire history — e.g. append `if int(m[1][-4:]) >= 2023` to the comprehension.
+- For JSON APIs (PyPI `https://pypi.org/pypi/<pkg>/json`, Google Cloud Storage listings, etc.) `json.loads(request.urlopen(url).read())` and pick out version + upload date.
+- When a request needs headers (e.g. a `User-Agent` or auth token), wrap it: `request.urlopen(request.Request(url, headers={...}))`.
 
-data = request.urlopen('https://curl.se/changes.html').read().decode('utf-8')
-matches = re.findall(r'Fixed in (\d+\.\d+\.\d+) - (\w+ \d+ \d+)', data)
-releases = [{
-    'version': m[0],
-    'released': datetime.strptime(m[1], '%B %d %Y').strftime('%Y-%m-%d'),
-} for m in matches if int(m[1][-4:]) >= 2023]   # bound the scrape to recent releases
-```
-
-For JSON APIs (PyPI `https://pypi.org/pypi/<pkg>/json`, Google Cloud Storage listings, etc.) `json.loads(request.urlopen(url).read())` and pick out version + upload date. Bound scrapers to recent versions so you don't regenerate the entire history. Models: `utils/curl.watch.py`, `devel/cmake.watch.py`, `python/pywin32.watch.py`.
-
-When a request needs headers (e.g. a `User-Agent` or auth token), wrap it: `request.urlopen(request.Request(url, headers={...}))`.
+Models: `utils/curl.watch.py`, `devel/cmake.watch.py`, `python/pywin32.watch.py`.
 
 ## Version normalization
 

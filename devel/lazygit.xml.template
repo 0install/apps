@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>lazygit</name>
+  <summary>simple terminal UI for git commands</summary>
+  <description>A simple terminal UI for git commands, written in Go with the gocui library. It makes staging, committing, branching, rebasing, stashing and other common git operations fast and intuitive.</description>
+  <homepage>https://github.com/jesseduffield/lazygit</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/devel/lazygit.xml"/>
+
+  <group license="MIT">
+    <command name="run" path="lazygit"/>
+    <implementation arch="Linux-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/jesseduffield/lazygit/releases/download/v{version}/lazygit_{version}_linux_x86_64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/jesseduffield/lazygit/releases/download/v{version}/lazygit_{version}_linux_32-bit.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-armv6l" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/jesseduffield/lazygit/releases/download/v{version}/lazygit_{version}_linux_armv6.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/jesseduffield/lazygit/releases/download/v{version}/lazygit_{version}_linux_arm64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/jesseduffield/lazygit/releases/download/v{version}/lazygit_{version}_darwin_x86_64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/jesseduffield/lazygit/releases/download/v{version}/lazygit_{version}_darwin_arm64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="MIT">
+    <command name="run" path="lazygit.exe"/>
+    <implementation arch="Windows-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/jesseduffield/lazygit/releases/download/v{version}/lazygit_{version}_windows_x86_64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/jesseduffield/lazygit/releases/download/v{version}/lazygit_{version}_windows_32-bit.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/jesseduffield/lazygit/releases/download/v{version}/lazygit_{version}_windows_arm64.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

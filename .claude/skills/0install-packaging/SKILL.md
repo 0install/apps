@@ -19,7 +19,7 @@ set up, automation does the repetitive per-release work:
 | --- | --- |
 | `CATEGORY/name.xml.template` | The feed with `{placeholder}` holes (version, date, …) for 0template to fill. |
 | `CATEGORY/name.watch.py`     | A Python script that discovers upstream releases and feeds their values to the template. |
-| `CATEGORY/name.xml`          | The master feed. You create it **once**, with the metadata **and** the structural skeleton (`<group>`s, `<command>`s, etc.) **but no `<implementation>` elements**; 0repo then fills in and grows the implementations from the generated per-version feeds. |
+| `CATEGORY/name.xml`          | The master feed. You create it **once** with metadata and a structural skeleton (`<group>`s, `<command>`s) but **no `<implementation>` elements** (step 6); 0repo fills in and grows the implementations. |
 
 ## The pipeline (understand this before editing anything)
 
@@ -96,7 +96,7 @@ Minimal cross-platform skeleton:
                href="https://github.com/OWNER/REPO/releases/download/v{version}/name-{version}-linux-amd64.tar.gz"
                type="application/x-compressed-tar"/>
     </implementation>
-    <!-- repeat <implementation> per arch: Linux-{i486,aarch64}, Darwin-{x86_64,aarch64}, Windows-{x86_64,i486,aarch64} -->
+    <!-- repeat <implementation> per arch: Linux-{i486,aarch64}, Darwin-{x86_64,aarch64} (use MacOSX-… instead of Darwin-… for GUI tools), Windows-{x86_64,i486,aarch64} -->
   </group>
 </interface>
 ```
@@ -186,7 +186,7 @@ It writes `CATEGORY/name-1.2.3.xml` and downloads the archive(s) there. If a dow
 
 A second expected feedlint result here: if your template carries an `<icon>` whose `gh-pages` file isn't pushed yet, feedlint reports `ERROR ... HTTP error: got status code 404` / `ERRORS FOUND: 1`. That's a hard error, not a warning, but it's harmless — it clears once the icon lands on `gh-pages` (step 6). The archives above it still validate, so treat a lone icon-404 as expected, not a feed defect.
 
-Step b's `0template` run is only a **test**: the `name-1.2.3.xml` it writes is a throwaway for checking the template — you don't commit it. (The real master `name.xml` is the metadata-only file you create in step 6, which 0repo then populates.) Use a single-version `0template` call for this quick test rather than 0watch — running 0watch generates a feed for *every* version your script reports; that bulk population is step 6.
+Step b's `0template` run is only a **test**: the `name-1.2.3.xml` it writes is a throwaway for checking the template — you don't commit it. (The real master `name.xml` is the metadata-only file you create in step 6.) Use a single-version `0template` call for this quick test rather than 0watch — running 0watch generates a feed for *every* version your script reports; that bulk population is step 6.
 
 **Clean up**: the downloaded archive (`*.tar.gz`/`*.zip`) is a throwaway — delete it. The per-version `name-1.2.3.xml` is also intermediate; it gets merged by 0repo, so don't commit it.
 
@@ -198,11 +198,7 @@ Step 5 only validated the template against one version. Now make the feed live b
 
 **Author the sources** (on `master`): `name.xml.template`, `name.watch.py`, and a seed master `name.xml` — the interface metadata identical to the template (`<name>`/`<summary>`/`<description>`/`<homepage>`/`<icon>`/`<category>`) but with `uri="https://apps.0install.net/CATEGORY/name.xml"` on `<interface>` instead of the template's `<feed-for>`. **Mirror the template's structural skeleton** too — the `<group>`(s), `<command>`(s), and any `<runner>`/`<requires>` they carry — **but with no `<implementation>` elements inside them**. Giving 0repo this skeleton up front lets it merge the per-version feeds into a single combined structure (one shared `<group>`/`<command>` tree) rather than emitting a separate group per version. You never hand-write `<implementation>`s — 0template + 0repo produce them.
 
-**Add `<entry-point>`s for every command — in the master feed only, never the template.** Entry-points carry the human-facing metadata (menu name, icon, terminal flag) that desktop integration shows for each command. Add one `<entry-point command="…">` per `<command>` the template defines:
-
-- **`binary-name`** — set it when the command's `name` differs from the executable's filename, so the `PATH` entry use the real binary name. The main `run`/`run-gui` commands almost always need it, since the executable isn't literally called `run`. A command already named after its binary needs no `binary-name`.
-- **`<needs-terminal/>`** — repeat it inside each entry-point for a CLI command; omit it for GUI commands so they don't open a console.
-- **`<name>` and `<summary>`** — for an app with multiple entry points, add these child elements to give each command a distinct menu label and one-line description. For a single-command feed they're optional — a bare `<entry-point binary-name="name" command="run"/>` is enough, since the interface's own `<name>`/`<summary>` already describe it.
+**Add `<entry-point>`s for every command — in the master feed only, never the template.** Entry-points carry the human-facing metadata (menu name, icon, terminal flag) that desktop integration shows for each command: add one `<entry-point command="…">` per `<command>` the template defines, with `binary-name` when the command's `name` differs from the executable's filename, a repeated `<needs-terminal/>` for each CLI command (omit it for GUI ones), and `<name>`/`<summary>` to give each command a distinct menu label. All three are optional for a single-command feed — a bare `<entry-point binary-name="name" command="run"/>` suffices, since the interface's own `<name>`/`<summary>` already describe it. **See `references/templates.md` for the full rules and a worked multi-command example.**
 
 **Add the icon** (on `gh-pages`) — **do this actively, don't punt it to the user.** Icons are the one asset CI never generates; they live only on `gh-pages`, never on `master`. If the project has no icon anywhere you can find, that's fine — ship with **no `<icon>` element at all** and skip this step. Otherwise work through it:
 

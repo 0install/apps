@@ -45,7 +45,7 @@ Order, top to bottom inside `<interface xmlns="http://zero-install.sourceforge.n
 
 `arch="OS-CPU"`. Common values:
 
-- OS: `Linux`, `Darwin` (macOS — preferred in newer feeds; older ones use `MacOSX`), `Windows`, `POSIX` (any Unix-like, e.g. portable scripts), `*` (any OS).
+- OS: `Linux`, `Darwin`/`MacOSX` (macOS — use `Darwin` for a command-line tool and `MacOSX` for a GUI tool), `Windows`, `POSIX` (any Unix-like, e.g. portable scripts), `*` (any OS).
 - CPU: `x86_64`, `i486` (the usual token for 32-bit x86; `i386`/`i586`/`i686` also seen), `aarch64` (64-bit ARM), `armv7l`, `ppc64`, `*` (any CPU).
 - `arch="*-*"` — runs anywhere (platform-independent: pure scripts, JARs, .NET DLLs).
 - `arch="*-src"` — a source archive to be compiled (rare here; this repo mostly ships binaries).

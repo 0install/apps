@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>HandBrake</name>
+  <summary>open source video transcoder</summary>
+  <description>HandBrake is a tool for converting video from nearly any format to a selection of modern, widely supported codecs.</description>
+  <homepage>https://handbrake.fr/</homepage>
+  <icon href="https://apps.0install.net/gui/handbrake.png" type="image/png"/>
+  <icon href="https://apps.0install.net/gui/handbrake.ico" type="image/vnd.microsoft.icon"/>
+  <category>Video</category>
+
+  <feed-for interface="https://apps.0install.net/gui/handbrake.xml"/>
+
+  <group license="GPL-2.0-only">
+    <command name="run" path="HandBrake.exe"/>
+
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="HandBrake" href="https://github.com/HandBrake/HandBrake/releases/download/{version}/HandBrake-{version}-x86_64-Win_GUI.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="HandBrake" href="https://github.com/HandBrake/HandBrake/releases/download/{version}/HandBrake-{version}-arm64-Win_GUI.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>ImageMagick</name>
+  <summary>create, edit, compose, or convert bitmap images</summary>
+  <description>ImageMagick can read and write images in a variety of formats (over 200) including PNG, JPEG, GIF, HEIC, TIFF, DPX, EXR, WebP, Postscript, PDF, and SVG. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.</description>
+  <icon href="https://apps.0install.net/utils/imagemagick.png" type="image/png"/>
+  <icon href="https://apps.0install.net/utils/imagemagick.ico" type="image/vnd.microsoft.icon"/>
+  <category>Graphics</category>
+  <homepage>https://imagemagick.org/</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/utils/imagemagick.xml"/>
+
+  <group license="ImageMagick" arch="Linux-x86_64">
+    <command name="run" path="magick"/>
+    <implementation version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <file href="https://github.com/ImageMagick/ImageMagick/releases/download/{version}/ImageMagick-{version}-gcc-x86_64.AppImage" dest="magick" executable="true"/>
+    </implementation>
+  </group>
+
+  <group license="ImageMagick">
+    <command name="run" path="magick.exe"/>
+    <command name="compare" path="compare.exe"/>
+    <command name="composite" path="composite.exe"/>
+    <command name="conjure" path="conjure.exe"/>
+    <command name="identify" path="identify.exe"/>
+    <command name="mogrify" path="mogrify.exe"/>
+    <command name="montage" path="montage.exe"/>
+    <command name="stream" path="stream.exe"/>
+    <environment insert="." mode="prepend" name="MAGICK_HOME"/>
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/{version}/ImageMagick-{version}-portable-Q16-x64.7z" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/{version}/ImageMagick-{version}-portable-Q16-x86.7z" type="application/x-7z-compressed"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/{version}/ImageMagick-{version}-portable-Q16-arm64.7z" type="application/x-7z-compressed"/>
+    </implementation>
+  </group>
+</interface>

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="https://apps.0install.net/utils/imagemagick.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/utils/imagemagick.xml">
   <name>ImageMagick</name>
   <summary>create, edit, compose, or convert bitmap images</summary>
   <description>ImageMagick can read and write images in a variety of formats (over 200) including PNG, JPEG, GIF, HEIC, TIFF, DPX, EXR, WebP, Postscript, PDF, and SVG. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves.</description>
@@ -13,14 +13,6 @@
     <needs-terminal/>
     <name>magick</name>
     <summary>convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.</summary>
-  </entry-point>
-  <entry-point binary-name="IMDisplay" command="run-gui">
-    <name>IMDisplay Application</name>
-  </entry-point>
-  <entry-point binary-name="magick-script" command="script">
-    <needs-terminal/>
-    <name>magick-script</name>
-    <summary>use this scripting language interpreter to convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.</summary>
   </entry-point>
   <entry-point binary-name="compare" command="compare">
     <needs-terminal/>
@@ -36,11 +28,6 @@
     <needs-terminal/>
     <name>conjure</name>
     <summary>interpret and execute scripts written in the Magick Scripting Language (MSL).</summary>
-  </entry-point>
-  <entry-point binary-name="convert" command="convert">
-    <needs-terminal/>
-    <name>convert</name>
-    <summary>convert between image formats as well as resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more.</summary>
   </entry-point>
   <entry-point binary-name="identify" command="identify">
     <needs-terminal/>
@@ -60,46 +47,297 @@
   <entry-point binary-name="stream" command="stream">
     <needs-terminal/>
     <name>stream</name>
-    <summary>a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats. It writes the pixel components as they are read from the input image a row at a time making stream desirable when working with large images or when you require raw pixel components.</summary>
+    <summary>a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats.</summary>
   </entry-point>
 
   <package-implementation distributions="Gentoo" package="media-gfx/imagemagick-tools"/>
   <package-implementation package="imagemagick">
     <command name="run" path="/usr/bin/magick"/>
-    <command name="script" path="/usr/bin/magick-script"/>
     <command name="compare" path="/usr/bin/compare"/>
     <command name="composite" path="/usr/bin/composite"/>
     <command name="conjure" path="/usr/bin/conjure"/>
-    <command name="convert" path="/usr/bin/convert"/>
     <command name="identify" path="/usr/bin/identify"/>
     <command name="mogrify" path="/usr/bin/mogrify"/>
     <command name="montage" path="/usr/bin/montage"/>
     <command name="stream" path="/usr/bin/stream"/>
   </package-implementation>
 
-  <group license="Apache-2.0">
+  <group license="ImageMagick" arch="Linux-x86_64">
+    <command name="run" path="magick"/>
+    <group>
+      <environment name="MAGICK_HOME" insert="."/>
+      <command name="run" path="magick.exe"/>
+      <command name="compare" path="compare.exe"/>
+      <command name="composite" path="composite.exe"/>
+      <command name="conjure" path="conjure.exe"/>
+      <command name="identify" path="identify.exe"/>
+      <command name="mogrify" path="mogrify.exe"/>
+      <command name="montage" path="montage.exe"/>
+      <command name="stream" path="stream.exe"/>
+      <implementation arch="Windows-x86_64" version="7.1.2-5" released="2025-10-06" stability="stable" id="sha256new_54YJDHZZLPSAKOTCXNYJCLDTQVF2VXBB2FPIBHZSJLJAGLG2RAPA">
+        <manifest-digest sha256new="54YJDHZZLPSAKOTCXNYJCLDTQVF2VXBB2FPIBHZSJLJAGLG2RAPA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-5/ImageMagick-7.1.2-5-portable-Q16-x64.7z" size="21342571" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="7.1.2-5" released="2025-10-06" stability="stable" id="sha256new_RQP6DAO5YSPZRCLPPG2VOG5MQM4OFSGQPSRWFXURJH4P3QX7BHTQ">
+        <manifest-digest sha256new="RQP6DAO5YSPZRCLPPG2VOG5MQM4OFSGQPSRWFXURJH4P3QX7BHTQ"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-5/ImageMagick-7.1.2-5-portable-Q16-x86.7z" size="18702486" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-aarch64" version="7.1.2-5" released="2025-10-06" stability="stable" id="sha256new_SDPWZEMOCDUSI2UPVR54L6SHKTCUTUEO54B64IVQEWNPBDJRRH7A">
+        <manifest-digest sha256new="SDPWZEMOCDUSI2UPVR54L6SHKTCUTUEO54B64IVQEWNPBDJRRH7A"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-5/ImageMagick-7.1.2-5-portable-Q16-arm64.7z" size="17693461" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="7.1.2-7" released="2025-10-14" stability="stable" id="sha256new_LA7KCVZ4OKSK6MDZP3YOYLDEXYHHOQSRTQ33ZSNWSXMXL3BWTZFA">
+        <manifest-digest sha256new="LA7KCVZ4OKSK6MDZP3YOYLDEXYHHOQSRTQ33ZSNWSXMXL3BWTZFA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-7/ImageMagick-7.1.2-7-portable-Q16-x64.7z" size="21336368" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="7.1.2-7" released="2025-10-14" stability="stable" id="sha256new_2N332DJDBPPNEQJFO4DV7ZZFDSP3QRY73AZAMEJ54DODYJ6OKIEA">
+        <manifest-digest sha256new="2N332DJDBPPNEQJFO4DV7ZZFDSP3QRY73AZAMEJ54DODYJ6OKIEA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-7/ImageMagick-7.1.2-7-portable-Q16-x86.7z" size="18671743" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-aarch64" version="7.1.2-7" released="2025-10-14" stability="stable" id="sha256new_VRIIEJD2Z7MS5TMTRR7F3IABETFVXAW43GI3XNT6RRE7LJ7TPSIA">
+        <manifest-digest sha256new="VRIIEJD2Z7MS5TMTRR7F3IABETFVXAW43GI3XNT6RRE7LJ7TPSIA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-7/ImageMagick-7.1.2-7-portable-Q16-arm64.7z" size="17724312" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="7.1.2-8" released="2025-10-26" stability="stable" id="sha256new_3IRDWBJXKV2EEALHUM5TTYEKJNCB2YNTI2NEXMXYL3PX2VTAMNLA">
+        <manifest-digest sha256new="3IRDWBJXKV2EEALHUM5TTYEKJNCB2YNTI2NEXMXYL3PX2VTAMNLA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-8/ImageMagick-7.1.2-8-portable-Q16-x64.7z" size="21342577" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="7.1.2-8" released="2025-10-26" stability="stable" id="sha256new_7BKMPRZAK24M56I2TQF645PRJAA2MIJOHHIBMCTRI4ZXSSMHH7EQ">
+        <manifest-digest sha256new="7BKMPRZAK24M56I2TQF645PRJAA2MIJOHHIBMCTRI4ZXSSMHH7EQ"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-8/ImageMagick-7.1.2-8-portable-Q16-x86.7z" size="18719340" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-aarch64" version="7.1.2-8" released="2025-10-26" stability="stable" id="sha256new_ZKICN76D5LXRWKRUMJYOMJVDX7CZEU7DSKWW3SWJOAUNOTDBBJGA">
+        <manifest-digest sha256new="ZKICN76D5LXRWKRUMJYOMJVDX7CZEU7DSKWW3SWJOAUNOTDBBJGA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-8/ImageMagick-7.1.2-8-portable-Q16-arm64.7z" size="17757318" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="7.1.2-9" released="2025-11-30" stability="stable" id="sha256new_XIKWDZFFX2A4OHLCZTOH4BA76T4Z7OMCYTYLCJU4O3SQ2WCFN2IA">
+        <manifest-digest sha256new="XIKWDZFFX2A4OHLCZTOH4BA76T4Z7OMCYTYLCJU4O3SQ2WCFN2IA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-9/ImageMagick-7.1.2-9-portable-Q16-x64.7z" size="21482172" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="7.1.2-9" released="2025-11-30" stability="stable" id="sha256new_XUXOEKY37TPZZQOCF6A2ZB7JE7QC2XBY6AIIBIIBRMHF4YIH3ZQA">
+        <manifest-digest sha256new="XUXOEKY37TPZZQOCF6A2ZB7JE7QC2XBY6AIIBIIBRMHF4YIH3ZQA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-9/ImageMagick-7.1.2-9-portable-Q16-x86.7z" size="18761168" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-aarch64" version="7.1.2-9" released="2025-11-30" stability="stable" id="sha256new_5YSQORECZ76UIW3ELFRVSRNKZIGA5ONNJW32VQTOVL7LQOI3R2BQ">
+        <manifest-digest sha256new="5YSQORECZ76UIW3ELFRVSRNKZIGA5ONNJW32VQTOVL7LQOI3R2BQ"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-9/ImageMagick-7.1.2-9-portable-Q16-arm64.7z" size="17719028" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="7.1.2-10" released="2025-12-07" stability="stable" id="sha256new_E4MPL2OC3G3KO6HRDWCDD5PHP6YADZR4Y4YUXJUW6JAYJ3FQ4G2A">
+        <manifest-digest sha256new="E4MPL2OC3G3KO6HRDWCDD5PHP6YADZR4Y4YUXJUW6JAYJ3FQ4G2A"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-10/ImageMagick-7.1.2-10-portable-Q16-x64.7z" size="21503465" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="7.1.2-10" released="2025-12-07" stability="stable" id="sha256new_OQ4Z7EITLPNONIQHUNW6UCOACMIDZ3RPMJTIINP5KYTSIHXY4ROA">
+        <manifest-digest sha256new="OQ4Z7EITLPNONIQHUNW6UCOACMIDZ3RPMJTIINP5KYTSIHXY4ROA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-10/ImageMagick-7.1.2-10-portable-Q16-x86.7z" size="18766837" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-aarch64" version="7.1.2-10" released="2025-12-07" stability="stable" id="sha256new_XCGMBTB2CWNNNDXZJYU3PISPRWBM5DW75HEK32F6EDOKRSDBGK7Q">
+        <manifest-digest sha256new="XCGMBTB2CWNNNDXZJYU3PISPRWBM5DW75HEK32F6EDOKRSDBGK7Q"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-10/ImageMagick-7.1.2-10-portable-Q16-arm64.7z" size="17747552" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="7.1.2-11" released="2025-12-14" stability="stable" id="sha256new_AYTSX5NS6F7BNWX7FIZIHVQBL2GM22OYJPJ2SHKPCCFQ2225PA3A">
+        <manifest-digest sha256new="AYTSX5NS6F7BNWX7FIZIHVQBL2GM22OYJPJ2SHKPCCFQ2225PA3A"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-11/ImageMagick-7.1.2-11-portable-Q16-x64.7z" size="21477127" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="7.1.2-11" released="2025-12-14" stability="stable" id="sha256new_LHCNF7P6V4GWQBORVUXTTD3CTCSAQKMN2D7K76INITS4LQICWX3A">
+        <manifest-digest sha256new="LHCNF7P6V4GWQBORVUXTTD3CTCSAQKMN2D7K76INITS4LQICWX3A"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-11/ImageMagick-7.1.2-11-portable-Q16-x86.7z" size="18806467" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-aarch64" version="7.1.2-11" released="2025-12-14" stability="stable" id="sha256new_UL6AAOFTAUUHVVUH7KJU2EU6AJ3XUIZ2DZ7FR2CN2GIIGEMTSYHQ">
+        <manifest-digest sha256new="UL6AAOFTAUUHVVUH7KJU2EU6AJ3XUIZ2DZ7FR2CN2GIIGEMTSYHQ"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-11/ImageMagick-7.1.2-11-portable-Q16-arm64.7z" size="17752173" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="7.1.2-12" released="2025-12-28" stability="stable" id="sha256new_IZTS7GYB4KAUIRJ2UTBNO653SLCE4HQVMCUFU55VIWUYRKAPI6NQ">
+        <manifest-digest sha256new="IZTS7GYB4KAUIRJ2UTBNO653SLCE4HQVMCUFU55VIWUYRKAPI6NQ"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-12/ImageMagick-7.1.2-12-portable-Q16-x64.7z" size="21479900" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="7.1.2-12" released="2025-12-28" stability="stable" id="sha256new_JXOQCTFWUTTFHA5YSFNB4CM4AMBTFXYAQXTR2XNZKQCM3AMT37JA">
+        <manifest-digest sha256new="JXOQCTFWUTTFHA5YSFNB4CM4AMBTFXYAQXTR2XNZKQCM3AMT37JA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-12/ImageMagick-7.1.2-12-portable-Q16-x86.7z" size="18807044" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-aarch64" version="7.1.2-12" released="2025-12-28" stability="stable" id="sha256new_BSTCBPVAJNIIHYYKHF54P2GSZXT4V5R67VE54RCSKCNS6PACGI4A">
+        <manifest-digest sha256new="BSTCBPVAJNIIHYYKHF54P2GSZXT4V5R67VE54RCSKCNS6PACGI4A"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-12/ImageMagick-7.1.2-12-portable-Q16-arm64.7z" size="17750641" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="7.1.2-13" released="2026-01-19" stability="stable" id="sha256new_CNSNDVVX2B7L325KO7ZF7ZSKVG6LQPKNBNMQ2KEMI45NIHVEUWPA">
+        <manifest-digest sha256new="CNSNDVVX2B7L325KO7ZF7ZSKVG6LQPKNBNMQ2KEMI45NIHVEUWPA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-13/ImageMagick-7.1.2-13-portable-Q16-x64.7z" size="21584581" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="7.1.2-13" released="2026-01-19" stability="stable" id="sha256new_7AB2TNSAZJC7WEXMZTI7DTS42NRCNRACPGJE3PBX2U3WK5QAF2YQ">
+        <manifest-digest sha256new="7AB2TNSAZJC7WEXMZTI7DTS42NRCNRACPGJE3PBX2U3WK5QAF2YQ"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-13/ImageMagick-7.1.2-13-portable-Q16-x86.7z" size="18846372" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-aarch64" version="7.1.2-13" released="2026-01-19" stability="stable" id="sha256new_SRJ54Q5QPG7FHYRFLBHJERRXHDO2ELJ5VKMRPQATXZZEHXXNNKUQ">
+        <manifest-digest sha256new="SRJ54Q5QPG7FHYRFLBHJERRXHDO2ELJ5VKMRPQATXZZEHXXNNKUQ"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-13/ImageMagick-7.1.2-13-portable-Q16-arm64.7z" size="17807795" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="7.1.2-15" released="2026-02-22" stability="stable" id="sha256new_RIDE3VW5MUOY3UCINKVPT3RAP3AZQ74U4DTRXFBK3JQHJF6VQXQA">
+        <manifest-digest sha256new="RIDE3VW5MUOY3UCINKVPT3RAP3AZQ74U4DTRXFBK3JQHJF6VQXQA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-15/ImageMagick-7.1.2-15-portable-Q16-x64.7z" size="21581491" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="7.1.2-15" released="2026-02-22" stability="stable" id="sha256new_JG3ASQAIOF3USHEALEIGS76GJYWT43XLRW3BYX633AWZWQXAC2KA">
+        <manifest-digest sha256new="JG3ASQAIOF3USHEALEIGS76GJYWT43XLRW3BYX633AWZWQXAC2KA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-15/ImageMagick-7.1.2-15-portable-Q16-x86.7z" size="18902672" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-aarch64" version="7.1.2-15" released="2026-02-22" stability="stable" id="sha256new_JKITYIW7CD33W3XDRVI7IPN47FS7XVXLQDARP4FPY6TI5Y25DL7A">
+        <manifest-digest sha256new="JKITYIW7CD33W3XDRVI7IPN47FS7XVXLQDARP4FPY6TI5Y25DL7A"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-15/ImageMagick-7.1.2-15-portable-Q16-arm64.7z" size="17860941" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="7.1.2-16" released="2026-03-08" stability="stable" id="sha256new_UNCJMQMH2ZK3VBPHXCOSVE4IFPSWN37TG2E73GCKOLPQBURQGCEA">
+        <manifest-digest sha256new="UNCJMQMH2ZK3VBPHXCOSVE4IFPSWN37TG2E73GCKOLPQBURQGCEA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-16/ImageMagick-7.1.2-16-portable-Q16-x64.7z" size="21579877" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="7.1.2-16" released="2026-03-08" stability="stable" id="sha256new_XKB4DPHITRPJTHWUNRGKKV5DP4MQFRGAYWGZFQJGJAM2JSMCVMNA">
+        <manifest-digest sha256new="XKB4DPHITRPJTHWUNRGKKV5DP4MQFRGAYWGZFQJGJAM2JSMCVMNA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-16/ImageMagick-7.1.2-16-portable-Q16-x86.7z" size="18905707" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-aarch64" version="7.1.2-16" released="2026-03-08" stability="stable" id="sha256new_VBUZ5AGPHR4JNCUD3WEJ4BZ6NFVKF337XVOLXTYTLHOZNQSBEIRQ">
+        <manifest-digest sha256new="VBUZ5AGPHR4JNCUD3WEJ4BZ6NFVKF337XVOLXTYTLHOZNQSBEIRQ"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-16/ImageMagick-7.1.2-16-portable-Q16-arm64.7z" size="17828981" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="7.1.2-17" released="2026-03-15" stability="stable" id="sha256new_2MWIUKGWF2O5BX3LJFOTJMJV6G3LZL4TEMXA7WXEGCYELHCH6GTQ">
+        <manifest-digest sha256new="2MWIUKGWF2O5BX3LJFOTJMJV6G3LZL4TEMXA7WXEGCYELHCH6GTQ"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-17/ImageMagick-7.1.2-17-portable-Q16-x64.7z" size="21783598" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="7.1.2-17" released="2026-03-15" stability="stable" id="sha256new_VKZLK22AIXDXFH4DMK3BPUD5JPDKCIYLZ7DGRYRNLP7XSSZGCTZQ">
+        <manifest-digest sha256new="VKZLK22AIXDXFH4DMK3BPUD5JPDKCIYLZ7DGRYRNLP7XSSZGCTZQ"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-17/ImageMagick-7.1.2-17-portable-Q16-x86.7z" size="18921784" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-aarch64" version="7.1.2-17" released="2026-03-15" stability="stable" id="sha256new_5KFPB6AJLS34LNR4IYUO44UZH43PGT2NXUWQTLELWBZ7BXKF5VMA">
+        <manifest-digest sha256new="5KFPB6AJLS34LNR4IYUO44UZH43PGT2NXUWQTLELWBZ7BXKF5VMA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-17/ImageMagick-7.1.2-17-portable-Q16-arm64.7z" size="17847819" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="7.1.2-18" released="2026-03-22" stability="stable" id="sha256new_EQ5X4ETSDHPMUQYARFTJ5LWZYKB2IHNJJ7HFB3D7ZQ4EMUX5JLFQ">
+        <manifest-digest sha256new="EQ5X4ETSDHPMUQYARFTJ5LWZYKB2IHNJJ7HFB3D7ZQ4EMUX5JLFQ"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-18/ImageMagick-7.1.2-18-portable-Q16-x64.7z" size="21590860" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="7.1.2-18" released="2026-03-22" stability="stable" id="sha256new_BQ4CJA3VTJQFGUSAAO6JXGGXPT2AAHY5P7ID7UM35BQRARUQRVRQ">
+        <manifest-digest sha256new="BQ4CJA3VTJQFGUSAAO6JXGGXPT2AAHY5P7ID7UM35BQRARUQRVRQ"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-18/ImageMagick-7.1.2-18-portable-Q16-x86.7z" size="18914787" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-aarch64" version="7.1.2-18" released="2026-03-22" stability="stable" id="sha256new_PXOGK3RIUA3VPQA5CTX64Y7DGQY7SCUEMWNUSVJLC6ZLKTODZ2GA">
+        <manifest-digest sha256new="PXOGK3RIUA3VPQA5CTX64Y7DGQY7SCUEMWNUSVJLC6ZLKTODZ2GA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-18/ImageMagick-7.1.2-18-portable-Q16-arm64.7z" size="17884459" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="7.1.2-19" released="2026-04-12" stability="stable" id="sha256new_B4W3M4O2GDSN3R2EEHCBF3K3BCDJE6WES6CMWXNIEVVZDTYKK25A">
+        <manifest-digest sha256new="B4W3M4O2GDSN3R2EEHCBF3K3BCDJE6WES6CMWXNIEVVZDTYKK25A"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-19/ImageMagick-7.1.2-19-portable-Q16-x64.7z" size="21866230" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="7.1.2-19" released="2026-04-12" stability="stable" id="sha256new_QAI3I4HIRUC6ED7K5QN64YACRJLPRAH5YGIGXX2B6Z3IBUOHNQMA">
+        <manifest-digest sha256new="QAI3I4HIRUC6ED7K5QN64YACRJLPRAH5YGIGXX2B6Z3IBUOHNQMA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-19/ImageMagick-7.1.2-19-portable-Q16-x86.7z" size="18976634" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-aarch64" version="7.1.2-19" released="2026-04-12" stability="stable" id="sha256new_D37SHUZJHTCQGICK5TYVUVJ44HITLOWKPMWQTJRPRPF3KO5PPSDQ">
+        <manifest-digest sha256new="D37SHUZJHTCQGICK5TYVUVJ44HITLOWKPMWQTJRPRPF3KO5PPSDQ"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-19/ImageMagick-7.1.2-19-portable-Q16-arm64.7z" size="17817287" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="7.1.2-20" released="2026-04-21" stability="stable" id="sha256new_G4ESK76RYYVHDQLMXXKLM3GKIECWHX25TDT773COQ4SCXY3IQC7Q">
+        <manifest-digest sha256new="G4ESK76RYYVHDQLMXXKLM3GKIECWHX25TDT773COQ4SCXY3IQC7Q"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-20/ImageMagick-7.1.2-20-portable-Q16-x64.7z" size="21707365" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="7.1.2-20" released="2026-04-21" stability="stable" id="sha256new_LJ5SABY2KDDQONRK33HRK3OODNUAV2UCMCP73N34QSCAOEOXWRJA">
+        <manifest-digest sha256new="LJ5SABY2KDDQONRK33HRK3OODNUAV2UCMCP73N34QSCAOEOXWRJA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-20/ImageMagick-7.1.2-20-portable-Q16-x86.7z" size="19000803" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-aarch64" version="7.1.2-20" released="2026-04-21" stability="stable" id="sha256new_FFCWEQTRONMO6JSS5VSB434MG2VPJSEDFEP7UISQL2BBGMF3WIMA">
+        <manifest-digest sha256new="FFCWEQTRONMO6JSS5VSB434MG2VPJSEDFEP7UISQL2BBGMF3WIMA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-20/ImageMagick-7.1.2-20-portable-Q16-arm64.7z" size="17869540" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="7.1.2-21" released="2026-04-21" stability="stable" id="sha256new_I2NXKMZFZGKSJHIZDC4NEX3XEJSQ3MQ3GF6FOC7C3FLNFV2RCTUQ">
+        <manifest-digest sha256new="I2NXKMZFZGKSJHIZDC4NEX3XEJSQ3MQ3GF6FOC7C3FLNFV2RCTUQ"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-21/ImageMagick-7.1.2-21-portable-Q16-x64.7z" size="21705769" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="7.1.2-21" released="2026-04-21" stability="stable" id="sha256new_NADICVITFEE2GK342GLDB456GDR7FVLUEJFRMQ2GHHPSP3KN4PPA">
+        <manifest-digest sha256new="NADICVITFEE2GK342GLDB456GDR7FVLUEJFRMQ2GHHPSP3KN4PPA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-21/ImageMagick-7.1.2-21-portable-Q16-x86.7z" size="18999412" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-aarch64" version="7.1.2-21" released="2026-04-21" stability="stable" id="sha256new_UI2LHCVIB4HJILSTT2GUYUGUZZ7KEMWWE4YHPOCJAFOER2V2INNQ">
+        <manifest-digest sha256new="UI2LHCVIB4HJILSTT2GUYUGUZZ7KEMWWE4YHPOCJAFOER2V2INNQ"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-21/ImageMagick-7.1.2-21-portable-Q16-arm64.7z" size="17865082" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="7.1.2-22" released="2026-05-12" stability="stable" id="sha256new_XUQDXCC53L4RQAXYUK2IRU56OZVDHHO7LKSQKE42ZJXBGB7FZHDA">
+        <manifest-digest sha256new="XUQDXCC53L4RQAXYUK2IRU56OZVDHHO7LKSQKE42ZJXBGB7FZHDA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-22/ImageMagick-7.1.2-22-portable-Q16-x64.7z" size="21897176" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="7.1.2-22" released="2026-05-12" stability="stable" id="sha256new_AETTD7BQFJ35SHEKUI4T7OMHCZR6O6I5L73N5XTVE7YTRKIOSRUA">
+        <manifest-digest sha256new="AETTD7BQFJ35SHEKUI4T7OMHCZR6O6I5L73N5XTVE7YTRKIOSRUA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-22/ImageMagick-7.1.2-22-portable-Q16-x86.7z" size="18967520" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-aarch64" version="7.1.2-22" released="2026-05-12" stability="stable" id="sha256new_N7YWNPCYDFQKQ5YIFIBA4E7Z2S62CW3M7SX5BMNYCFHIHOMSEGCQ">
+        <manifest-digest sha256new="N7YWNPCYDFQKQ5YIFIBA4E7Z2S62CW3M7SX5BMNYCFHIHOMSEGCQ"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-22/ImageMagick-7.1.2-22-portable-Q16-arm64.7z" size="17941248" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="7.1.2-23" released="2026-05-17" stability="stable" id="sha256new_ZWYRSYVLEOTXRJ7MK73FE5MVVPJ3GWCVQTQP2JYXI5TNJFBL6CDA">
+        <manifest-digest sha256new="ZWYRSYVLEOTXRJ7MK73FE5MVVPJ3GWCVQTQP2JYXI5TNJFBL6CDA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-23/ImageMagick-7.1.2-23-portable-Q16-x64.7z" size="21750034" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="7.1.2-23" released="2026-05-17" stability="stable" id="sha256new_ZJHXAD3GW3T2YIAV34I6NOG44FX4ED34FBHJELOPMVBUN6TAXR2A">
+        <manifest-digest sha256new="ZJHXAD3GW3T2YIAV34I6NOG44FX4ED34FBHJELOPMVBUN6TAXR2A"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-23/ImageMagick-7.1.2-23-portable-Q16-x86.7z" size="19010803" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-aarch64" version="7.1.2-23" released="2026-05-17" stability="stable" id="sha256new_SQEXAZYFUUB4RITSTU6VYZ2GG5EMNDKZMQA6OYXFXADAXEJE2PAA">
+        <manifest-digest sha256new="SQEXAZYFUUB4RITSTU6VYZ2GG5EMNDKZMQA6OYXFXADAXEJE2PAA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-23/ImageMagick-7.1.2-23-portable-Q16-arm64.7z" size="17842531" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="7.1.2-24" released="2026-05-26" stability="stable" id="sha256new_SRRBSU6WKN3LA3FOLPJLHSDWT2HTBXVDOXWR4RULYXYYZSALVDLA">
+        <manifest-digest sha256new="SRRBSU6WKN3LA3FOLPJLHSDWT2HTBXVDOXWR4RULYXYYZSALVDLA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-24/ImageMagick-7.1.2-24-portable-Q16-x64.7z" size="21815949" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="7.1.2-24" released="2026-05-26" stability="stable" id="sha256new_JNQIZWIT25UEO7PZ4ABE7YPOYPWUJFMH4P6T55BLLFV7ACWARYDA">
+        <manifest-digest sha256new="JNQIZWIT25UEO7PZ4ABE7YPOYPWUJFMH4P6T55BLLFV7ACWARYDA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-24/ImageMagick-7.1.2-24-portable-Q16-x86.7z" size="18994335" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-aarch64" version="7.1.2-24" released="2026-05-26" stability="stable" id="sha256new_QK47WQAKFVKJ3IHOHLZW55AJLKC6C247B4QCXX6SCLHZU6UG4HDQ">
+        <manifest-digest sha256new="QK47WQAKFVKJ3IHOHLZW55AJLKC6C247B4QCXX6SCLHZU6UG4HDQ"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-24/ImageMagick-7.1.2-24-portable-Q16-arm64.7z" size="18428583" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="7.1.2-25" released="2026-06-04" stability="stable" id="sha256new_LYOFGC3MOKEO6RACNJ2N5S23L6HLG5I5QZNQPK4MM44PGG6IKEVQ">
+        <manifest-digest sha256new="LYOFGC3MOKEO6RACNJ2N5S23L6HLG5I5QZNQPK4MM44PGG6IKEVQ"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-25/ImageMagick-7.1.2-25-portable-Q16-x64.7z" size="22252145" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="7.1.2-25" released="2026-06-04" stability="stable" id="sha256new_I6OWUNYQE456KBBIHVZYXMCSCX5BHSRKFSBCVGVSLFG6WJB4ZATA">
+        <manifest-digest sha256new="I6OWUNYQE456KBBIHVZYXMCSCX5BHSRKFSBCVGVSLFG6WJB4ZATA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-25/ImageMagick-7.1.2-25-portable-Q16-x86.7z" size="19210023" type="application/x-7z-compressed"/>
+      </implementation>
+      <implementation arch="Windows-aarch64" version="7.1.2-25" released="2026-06-04" stability="stable" id="sha256new_Q4HLV7A7OA2P3AUGZGQYOUM2WYCGGDYZBZFEBBXNBQG26O4XR3XA">
+        <manifest-digest sha256new="Q4HLV7A7OA2P3AUGZGQYOUM2WYCGGDYZBZFEBBXNBQG26O4XR3XA"/>
+        <archive href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-25/ImageMagick-7.1.2-25-portable-Q16-arm64.7z" size="18649722" type="application/x-7z-compressed"/>
+      </implementation>
+    </group>
+    <implementation version="7.1.2-20" released="2026-04-21" stability="stable" id="sha256new_K6VF7HYCFJKNPQBC36YPSIL6YSUFOZNFV4JH42YP6F5WPLSM3RLQ">
+      <manifest-digest sha256new="K6VF7HYCFJKNPQBC36YPSIL6YSUFOZNFV4JH42YP6F5WPLSM3RLQ"/>
+      <file href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-20/ImageMagick-7.1.2-20-gcc-x86_64.AppImage" size="33438200" dest="magick" executable="true"/>
+    </implementation>
+    <implementation version="7.1.2-21" released="2026-04-21" stability="stable" id="sha256new_LSMQMW4XVSOMFBVML72RIN5C2QX7ZJOWIYYH7XQ4DX7SWD2TCYZA">
+      <manifest-digest sha256new="LSMQMW4XVSOMFBVML72RIN5C2QX7ZJOWIYYH7XQ4DX7SWD2TCYZA"/>
+      <file href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-21/ImageMagick-7.1.2-21-gcc-x86_64.AppImage" size="33438200" dest="magick" executable="true"/>
+    </implementation>
+    <implementation version="7.1.2-22" released="2026-05-12" stability="stable" id="sha256new_MS6JSE7ZWYOIEXYZUY43IJFCCJW7MQCGRI3KDUS3ZSZGDRWQNGTA">
+      <manifest-digest sha256new="MS6JSE7ZWYOIEXYZUY43IJFCCJW7MQCGRI3KDUS3ZSZGDRWQNGTA"/>
+      <file href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-22/ImageMagick-7.1.2-22-gcc-x86_64.AppImage" size="33438200" dest="magick" executable="true"/>
+    </implementation>
+    <implementation version="7.1.2-23" released="2026-05-17" stability="stable" id="sha256new_HZHLY5HBNIZZPZZCQIMZNQFZVTMEHFEFDCII7T7LPRFSN7WNIGXA">
+      <manifest-digest sha256new="HZHLY5HBNIZZPZZCQIMZNQFZVTMEHFEFDCII7T7LPRFSN7WNIGXA"/>
+      <file href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-23/ImageMagick-7.1.2-23-gcc-x86_64.AppImage" size="33442296" dest="magick" executable="true"/>
+    </implementation>
+    <implementation version="7.1.2-24" released="2026-05-26" stability="stable" id="sha256new_235PULVITCCDZLR3JEAO2MSUAGWS4RE7QRAZPV5QHIKIC4KBPJFQ">
+      <manifest-digest sha256new="235PULVITCCDZLR3JEAO2MSUAGWS4RE7QRAZPV5QHIKIC4KBPJFQ"/>
+      <file href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-24/ImageMagick-7.1.2-24-gcc-x86_64.AppImage" size="33491448" dest="magick" executable="true"/>
+    </implementation>
+    <implementation version="7.1.2-25" released="2026-06-04" stability="stable" id="sha256new_3S3LO4CY3KABJUKVZEHFVRYTJBXPOKESGX2ELKUOT64QQE3SXDWQ">
+      <manifest-digest sha256new="3S3LO4CY3KABJUKVZEHFVRYTJBXPOKESGX2ELKUOT64QQE3SXDWQ"/>
+      <file href="https://github.com/ImageMagick/ImageMagick/releases/download/7.1.2-25/ImageMagick-7.1.2-25-gcc-x86_64.AppImage" size="33491448" dest="magick" executable="true"/>
+    </implementation>
+  </group>
+
+  <group license="ImageMagick">
     <command name="run" path="magick.exe"/>
-    <command name="run-gui" path="IMDisplay.exe"/>
-    <command name="script" path="magick-script.exe"/>
     <command name="compare" path="compare.exe"/>
     <command name="composite" path="composite.exe"/>
     <command name="conjure" path="conjure.exe"/>
-    <command name="convert" path="convert.exe"/>
-    <command name="dcraw" path="dcraw.exe"/>
-    <command name="hp2xx" path="hp2xx.exe"/>
     <command name="identify" path="identify.exe"/>
     <command name="mogrify" path="mogrify.exe"/>
     <command name="montage" path="montage.exe"/>
     <command name="stream" path="stream.exe"/>
     <environment insert="." mode="prepend" name="MAGICK_HOME"/>
-
-    <implementation arch="Windows-x86_64" version="7.0.11-0" released="2021-02-13" stability="stable" id="sha1new=e0d136ae6aba841e1156ac756bd70320e59e462b">
-      <manifest-digest sha256new="XCFFM6NG44UKQP2SJKBEPJBB5LYGNBYS3X645C2O6FIYT6H4QXMA"/>
-      <archive href="https://imagemagick.org/download/binaries/ImageMagick-7.0.11-0-portable-Q16-x64.zip" size="98396889" type="application/zip" />
-    </implementation>
-    <implementation arch="Windows-i486" version="7.0.11-0" released="2021-02-13" stability="stable" id="sha1new=baaab7cecd945f5ca89ca033bfe744db8dff4fe5">
-      <manifest-digest sha256new="7H4KZIUM6OH7BSDOEWZE2S7DZFYTW6ACDV225GRNFDMS77TLU42A"/>
-      <archive href="https://imagemagick.org/download/binaries/ImageMagick-7.0.11-0-portable-Q16-x86.zip" size="86183740" type="application/zip" />
-    </implementation>
   </group>
 </interface>

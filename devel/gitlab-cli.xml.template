@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>GitLab CLI</name>
+  <summary>GitLab's official command line tool</summary>
+  <description>glab is an open source GitLab CLI tool. It brings GitLab to your terminal next to where you are already working with git and your code, without switching between windows and browser tabs.</description>
+  <homepage>https://gitlab.com/gitlab-org/cli</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/devel/gitlab-cli.xml"/>
+
+  <group license="MIT">
+    <command name="run" path="bin/glab"/>
+    <implementation arch="Linux-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://gitlab.com/api/v4/projects/gitlab-org%2Fcli/packages/generic/glab/{version}/glab_{version}_linux_amd64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://gitlab.com/api/v4/projects/gitlab-org%2Fcli/packages/generic/glab/{version}/glab_{version}_linux_386.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://gitlab.com/api/v4/projects/gitlab-org%2Fcli/packages/generic/glab/{version}/glab_{version}_linux_arm64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://gitlab.com/api/v4/projects/gitlab-org%2Fcli/packages/generic/glab/{version}/glab_{version}_darwin_amd64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://gitlab.com/api/v4/projects/gitlab-org%2Fcli/packages/generic/glab/{version}/glab_{version}_darwin_arm64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="MIT">
+    <command name="run" path="bin/glab.exe"/>
+    <implementation arch="Windows-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://gitlab.com/api/v4/projects/gitlab-org%2Fcli/packages/generic/glab/{version}/glab_{version}_windows_amd64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://gitlab.com/api/v4/projects/gitlab-org%2Fcli/packages/generic/glab/{version}/glab_{version}_windows_386.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

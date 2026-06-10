@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Neovim</name>
+  <summary>hyperextensible Vim-based text editor</summary>
+  <description>Neovim is a refactor, and sometimes redactor, of the Vim text editor. It is built for users who want the good parts of Vim, and more. It focuses on extensibility and usability, with a built-in Lua scripting runtime, asynchronous job control, and a powerful plugin ecosystem.</description>
+  <homepage>https://neovim.io/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+  <icon href="https://apps.0install.net/utils/neovim.png" type="image/png"/>
+  <icon href="https://apps.0install.net/utils/neovim.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://apps.0install.net/utils/neovim.icns" type="image/x-icns"/>
+
+  <feed-for interface="https://apps.0install.net/utils/neovim.xml"/>
+
+  <group license="Apache License 2.0">
+    <command name="run" path="bin/nvim"/>
+    <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="nvim-linux-x86_64" href="https://github.com/neovim/neovim/releases/download/v{version}/nvim-linux-x86_64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="nvim-linux-arm64" href="https://github.com/neovim/neovim/releases/download/v{version}/nvim-linux-arm64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="nvim-macos-x86_64" href="https://github.com/neovim/neovim/releases/download/v{version}/nvim-macos-x86_64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="nvim-macos-arm64" href="https://github.com/neovim/neovim/releases/download/v{version}/nvim-macos-arm64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="Apache License 2.0">
+    <command name="run" path="bin/nvim.exe"/>
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="nvim-win64" href="https://github.com/neovim/neovim/releases/download/v{version}/nvim-win64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="nvim-win-arm64" href="https://github.com/neovim/neovim/releases/download/v{version}/nvim-win-arm64.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

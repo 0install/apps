@@ -73,6 +73,8 @@ The `<command name="run" path="…">` `path` is relative to the implementation r
 
 Shared attributes (`license`, `stability`) and child elements (`<command>`, `<requires>`, `<environment>`) set on an outer `<group>` are inherited by inner groups/implementations — factor common parts outward.
 
+**Never give two `<implementation>`s the exact same `<archive>`(s).** One download is one implementation. If several platforms share a single build — a portable script, a `*-*` JAR/DLL, a universal binary, or just one asset that upstream declares as covering multiple arches — write **one** `<implementation>` whose `arch` is broad enough to cover them all (e.g. `arch="Darwin-*"`), rather than copies of the same `<archive href="…">` under different `arch` values.
+
 ## Multiple commands and entry-points
 
 An app that ships several runnable executables gets one `<command name="…" path="…"/>` per executable. Put them all in the shared `<group>` so every arch inherits them (use per-arch groups only when the `path`/`.exe` differs by OS).
@@ -102,6 +104,7 @@ Naming:
 ```
 
 - **`binary-name`** — required whenever a command's `name` differs from the executable filename (so the menu label and PATH entry use the real binary). `run`/`run-gui` essentially always need it; a `command="gitk"` that runs `gitk.exe` does not.
+- **`<needs-terminal/>`** — add it to each entry-point whose command is a CLI tool; omit it for GUI commands. **One shortcut:** if the feed already carries a top-level `<needs-terminal/>` **and** has just a *single* entry-point that targets `command="run"`, you can leave it off that entry-point — the top-level flag already covers it (see `utils/curl.xml`). In every other case — more than one entry-point, or a `command` other than `run` — repeat `<needs-terminal/>` on each CLI entry-point (see `devel/git-for-windows.xml`).
 - **`<name>`/`<summary>`** — add them per entry-point for multi-command apps so each command gets a distinct menu label and description. A single-command feed can use a bare `<entry-point binary-name="name" command="run"/>` and rely on the interface's own `<name>`/`<summary>`.
 
 Models: `devel/git-for-windows.xml(.template)` (full `run` + `run-gui` + many secondary commands) and `utils/curl.xml` (single bare entry-point).

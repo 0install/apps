@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Ollama</name>
+  <summary>run large language models locally</summary>
+  <description>Ollama lets you get up and running with large language models such as Llama, Mistral, Gemma and others on your own machine. It bundles model weights, configuration and a runtime into a single tool and exposes both a command-line interface and a local HTTP API.</description>
+  <homepage>https://ollama.com/</homepage>
+  <category>Utility</category>
+  <needs-terminal/>
+  <icon href="https://apps.0install.net/utils/ollama.png" type="image/png"/>
+  <icon href="https://apps.0install.net/utils/ollama.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://apps.0install.net/utils/ollama.icns" type="image/x-icns"/>
+
+  <feed-for interface="https://apps.0install.net/utils/ollama.xml"/>
+
+  <group license="MIT License">
+    <command name="run" path="bin/ollama"/>
+    <implementation arch="Linux-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/ollama/ollama/releases/download/v{version}/ollama-linux-amd64.tar.zst" type="application/x-zstd-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/ollama/ollama/releases/download/v{version}/ollama-linux-arm64.tar.zst" type="application/x-zstd-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="MIT License">
+    <command name="run" path="ollama"/>
+    <implementation arch="Darwin-*" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/ollama/ollama/releases/download/v{version}/ollama-darwin.tgz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="MIT License">
+    <command name="run" path="ollama.exe"/>
+    <implementation arch="Windows-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/ollama/ollama/releases/download/v{version}/ollama-windows-amd64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/ollama/ollama/releases/download/v{version}/ollama-windows-arm64.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

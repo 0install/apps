@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://apps.0install.net/utils/pngrewrite.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>pngrewrite</name>
+  <summary xml:lang="en"> is command-line utility that reduces the unnecessarily large palettes that some programs write into PNG files.</summary>
+  <description xml:lang="en">Pngrewrite is command-line utility that reduces the unnecessarily large palettes that some programs write into PNG files. It also optimizes transparency data, and reduces the bits-per-pixel if possible. Handy for post-processing PNG files before putting them on a web site.</description>
+  <category>Graphics</category>
+  <homepage>http://entropymine.com/jason/pngrewrite/</homepage>
+  <needs-terminal/>
+  <implementation arch="Windows-*" id="sha1new=4154a19170a0813777b9c9fbe767170e07c75668" license="zlib/libpng License" released="2010-06-08" version="1.4.0">
+    <command name="run" path="pngrewrite.exe"/>
+    <manifest-digest sha256new="IAB3BK5JQZMF6ICAFYUVCNFYWZGLLZUVZMV7K6UCIDA6O4HWFAKA"/>
+    <archive href="http://entropymine.com/jason/pngrewrite/pngrewrite-1.4.0.zip" size="149760" type="application/zip"/>
+  </implementation>
+  <package-implementation distributions="Gentoo" package="media-gfx/pngrewrite"/>
+  <package-implementation package="pngrewrite"/>
+  <entry-point binary-name="pngrewrite" command="run">
+    <needs-terminal/>
+  </entry-point>
+</interface>

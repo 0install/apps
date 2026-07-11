@@ -32,16 +32,19 @@
       <manifest-digest/>
       <archive href="https://github.com/godotengine/godot/releases/download/{version-original}/Godot_v{version-original}_macos.universal.zip" type="application/zip"/>
     </implementation>
-    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable" main="Godot_v{version-original}_win64.exe">
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable" main="Godot_v{version-original}_win64_console.exe">
       <manifest-digest/>
+      <command name="run-gui" path="Godot_v{version-original}_win64.exe"/>
       <archive href="https://github.com/godotengine/godot/releases/download/{version-original}/Godot_v{version-original}_win64.exe.zip" type="application/zip"/>
     </implementation>
-    <implementation arch="Windows-i486" version="{version}" released="{released}" stability="stable" main="Godot_v{version-original}_win32.exe">
+    <implementation arch="Windows-i486" version="{version}" released="{released}" stability="stable" main="Godot_v{version-original}_win32_console.exe">
       <manifest-digest/>
+      <command name="run-gui" path="Godot_v{version-original}_win32.exe"/>
       <archive href="https://github.com/godotengine/godot/releases/download/{version-original}/Godot_v{version-original}_win32.exe.zip" type="application/zip"/>
     </implementation>
-    <implementation arch="Windows-aarch64" version="{version}" released="{released}" stability="stable" main="Godot_v{version-original}_windows_arm64.exe">
+    <implementation arch="Windows-aarch64" version="{version}" released="{released}" stability="stable" main="Godot_v{version-original}_windows_arm64_console.exe">
       <manifest-digest/>
+      <command name="run-gui" path="Godot_v{version-original}_windows_arm64.exe"/>
       <archive href="https://github.com/godotengine/godot/releases/download/{version-original}/Godot_v{version-original}_windows_arm64.exe.zip" type="application/zip"/>
     </implementation>
   </group>

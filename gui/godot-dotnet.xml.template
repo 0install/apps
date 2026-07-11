@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Godot - .NET version</name>
+  <summary>cross-platform 2D and 3D game engine with C# support</summary>
+  <description>Godot is a feature-packed, cross-platform game engine to create 2D and 3D games from a unified interface. It provides a comprehensive set of common tools, so that users can focus on making games without having to reinvent the wheel. Games can be exported with one click to a number of platforms, including the major desktop platforms (Linux, macOS, Windows), mobile platforms (Android, iOS), as well as Web-based platforms and consoles. The .NET version uses C# instead of GDScript.</description>
+  <homepage>https://godotengine.org/</homepage>
+  <icon href="https://apps.0install.net/gui/godot.png" type="image/png"/>
+  <icon href="https://apps.0install.net/gui/godot.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://apps.0install.net/gui/godot.icns" type="image/x-icns"/>
+  <category>Development</category>
+
+  <feed-for interface="https://apps.0install.net/gui/godot-dotnet.xml"/>
+
+  <group license="MIT">
+    <requires interface="https://apps.0install.net/dotnet/sdk.xml" version="8.0..">
+      <executable-in-path name="dotnet"/>
+    </requires>
+
+    <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="stable" main="Godot_v{version-original}_mono_linux.x86_64">
+      <manifest-digest/>
+      <archive extract="Godot_v{version-original}_mono_linux_x86_64" href="https://github.com/godotengine/godot/releases/download/{version-original}/Godot_v{version-original}_mono_linux_x86_64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="{version}" released="{released}" stability="stable" main="Godot_v{version-original}_mono_linux.x86_32">
+      <manifest-digest/>
+      <archive extract="Godot_v{version-original}_mono_linux_x86_32" href="https://github.com/godotengine/godot/releases/download/{version-original}/Godot_v{version-original}_mono_linux_x86_32.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" released="{released}" stability="stable" main="Godot_v{version-original}_mono_linux.arm64">
+      <manifest-digest/>
+      <archive extract="Godot_v{version-original}_mono_linux_arm64" href="https://github.com/godotengine/godot/releases/download/{version-original}/Godot_v{version-original}_mono_linux_arm64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" version="{version}" released="{released}" stability="stable" main="Godot_v{version-original}_mono_linux.arm32">
+      <manifest-digest/>
+      <archive extract="Godot_v{version-original}_mono_linux_arm32" href="https://github.com/godotengine/godot/releases/download/{version-original}/Godot_v{version-original}_mono_linux_arm32.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="{version}" released="{released}" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot">
+      <manifest-digest/>
+      <archive href="https://github.com/godotengine/godot/releases/download/{version-original}/Godot_v{version-original}_mono_macos.universal.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable" main="Godot_v{version-original}_mono_win64_console.exe">
+      <manifest-digest/>
+      <command name="run-gui" path="Godot_v{version-original}_mono_win64.exe"/>
+      <archive extract="Godot_v{version-original}_mono_win64" href="https://github.com/godotengine/godot/releases/download/{version-original}/Godot_v{version-original}_mono_win64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" released="{released}" stability="stable" main="Godot_v{version-original}_mono_win32_console.exe">
+      <manifest-digest/>
+      <command name="run-gui" path="Godot_v{version-original}_mono_win32.exe"/>
+      <archive extract="Godot_v{version-original}_mono_win32" href="https://github.com/godotengine/godot/releases/download/{version-original}/Godot_v{version-original}_mono_win32.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="{version}" released="{released}" stability="stable" main="Godot_v{version-original}_mono_windows_arm64_console.exe">
+      <manifest-digest/>
+      <command name="run-gui" path="Godot_v{version-original}_mono_windows_arm64.exe"/>
+      <archive extract="Godot_v{version-original}_mono_windows_arm64" href="https://github.com/godotengine/godot/releases/download/{version-original}/Godot_v{version-original}_mono_windows_arm64.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

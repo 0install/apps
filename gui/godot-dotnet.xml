@@ -1,0 +1,851 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/gui/godot-dotnet.xml">
+  <name>Godot - .NET version</name>
+  <summary>cross-platform 2D and 3D game engine with C# support</summary>
+  <description>Godot is a feature-packed, cross-platform game engine to create 2D and 3D games from a unified interface. It provides a comprehensive set of common tools, so that users can focus on making games without having to reinvent the wheel. Games can be exported with one click to a number of platforms, including the major desktop platforms (Linux, macOS, Windows), mobile platforms (Android, iOS), as well as Web-based platforms and consoles. The .NET version uses C# instead of GDScript.</description>
+  <homepage>https://godotengine.org/</homepage>
+  <icon href="https://apps.0install.net/gui/godot.png" type="image/png"/>
+  <icon href="https://apps.0install.net/gui/godot.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://apps.0install.net/gui/godot.icns" type="image/x-icns"/>
+  <category>Development</category>
+
+  <entry-point binary-name="godot" command="run">
+    <needs-terminal/>
+  </entry-point>
+  <entry-point command="run-gui"/>
+
+  <group license="MIT">
+    <requires interface="https://apps.0install.net/dotnet/sdk.xml" version="6.0..">
+      <executable-in-path name="dotnet"/>
+    </requires>
+    <implementation arch="Linux-x86_64" version="4.0.1" released="2023-03-20" stability="stable" main="Godot_v4.0.1-stable_mono_linux.x86_64" id="sha256new_WA2G4OQM5D4FR6KK25AK4CPMAXIVG4YZMVWRZVM7SFXZ47MRI4GA">
+      <manifest-digest sha256new="WA2G4OQM5D4FR6KK25AK4CPMAXIVG4YZMVWRZVM7SFXZ47MRI4GA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.0.1-stable/Godot_v4.0.1-stable_mono_linux_x86_64.zip" size="59966629" type="application/zip" extract="Godot_v4.0.1-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.0.1" released="2023-03-20" stability="stable" main="Godot_v4.0.1-stable_mono_linux.x86_32" id="sha256new_O36X2GQOONGHCTWWODW4HLUCWXNGW4JKR3PA47QO4LDRQKXGMLYA">
+      <manifest-digest sha256new="O36X2GQOONGHCTWWODW4HLUCWXNGW4JKR3PA47QO4LDRQKXGMLYA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.0.1-stable/Godot_v4.0.1-stable_mono_linux_x86_32.zip" size="52924415" type="application/zip" extract="Godot_v4.0.1-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.0.1" released="2023-03-20" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_GPGXZ5LLJKWJIPEFOV52Q67LS7EF6S3D2PP2RJ5G4YN7NDCEF3MQ">
+      <manifest-digest sha256new="GPGXZ5LLJKWJIPEFOV52Q67LS7EF6S3D2PP2RJ5G4YN7NDCEF3MQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.0.1-stable/Godot_v4.0.1-stable_mono_macos.universal.zip" size="108427624" type="application/zip"/>
+    </implementation>
+    <group>
+      <command name="run-gui" path="Godot_v4.0.1-stable_mono_win64.exe"/>
+      <implementation arch="Windows-x86_64" version="4.0.1" released="2023-03-20" stability="stable" main="Godot_v4.0.1-stable_mono_win64_console.exe" id="sha256new_YQOOT7HSXKYC63YXRK2DAPJDF7MFJBTVYM7D76JUBDAJQZN47JLQ">
+        <manifest-digest sha256new="YQOOT7HSXKYC63YXRK2DAPJDF7MFJBTVYM7D76JUBDAJQZN47JLQ"/>
+        <archive href="https://github.com/godotengine/godot/releases/download/4.0.1-stable/Godot_v4.0.1-stable_mono_win64.zip" size="59795538" type="application/zip" extract="Godot_v4.0.1-stable_mono_win64"/>
+      </implementation>
+      <group>
+        <command name="run-gui" path="Godot_v4.0.1-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.0.1" released="2023-03-20" stability="stable" main="Godot_v4.0.1-stable_mono_win32_console.exe" id="sha256new_EBF5274CIS6GCO4NOLQEXMYW4FLUUEI52Y7ZJEFRR25OGMXZQL5Q">
+          <manifest-digest sha256new="EBF5274CIS6GCO4NOLQEXMYW4FLUUEI52Y7ZJEFRR25OGMXZQL5Q"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.0.1-stable/Godot_v4.0.1-stable_mono_win32.zip" size="55110533" type="application/zip" extract="Godot_v4.0.1-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.0.2-stable_mono_win64.exe"/>
+        <implementation arch="Windows-x86_64" version="4.0.2" released="2023-04-04" stability="stable" main="Godot_v4.0.2-stable_mono_win64_console.exe" id="sha256new_34637ZMCTUXECF6EBR5YWD33D25HHVQ2KYIOI6XOWO7NBXKETQ6A">
+          <manifest-digest sha256new="34637ZMCTUXECF6EBR5YWD33D25HHVQ2KYIOI6XOWO7NBXKETQ6A"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.0.2-stable/Godot_v4.0.2-stable_mono_win64.zip" size="60326190" type="application/zip" extract="Godot_v4.0.2-stable_mono_win64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.0.2-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.0.2" released="2023-04-04" stability="stable" main="Godot_v4.0.2-stable_mono_win32_console.exe" id="sha256new_GL4HDNJV7HYOJXU2TVYXVK4OQW6U46KLPYYFRXE6YPLKROJGQ55A">
+          <manifest-digest sha256new="GL4HDNJV7HYOJXU2TVYXVK4OQW6U46KLPYYFRXE6YPLKROJGQ55A"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.0.2-stable/Godot_v4.0.2-stable_mono_win32.zip" size="55635416" type="application/zip" extract="Godot_v4.0.2-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.0.3-stable_mono_win64.exe"/>
+        <implementation arch="Windows-x86_64" version="4.0.3" released="2023-05-19" stability="stable" main="Godot_v4.0.3-stable_mono_win64_console.exe" id="sha256new_R5YY22LIUGISKJGVHDS7Y7DASDQYZENZGRN7GHZJPQ7LQWCFDTTA">
+          <manifest-digest sha256new="R5YY22LIUGISKJGVHDS7Y7DASDQYZENZGRN7GHZJPQ7LQWCFDTTA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.0.3-stable/Godot_v4.0.3-stable_mono_win64.zip" size="60899010" type="application/zip" extract="Godot_v4.0.3-stable_mono_win64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.0.3-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.0.3" released="2023-05-19" stability="stable" main="Godot_v4.0.3-stable_mono_win32_console.exe" id="sha256new_ETGHQ42Q6PMNEEQ2Z3PJT4CQ3QNH35LEJWJ23SDBLR6WYZDRI6IA">
+          <manifest-digest sha256new="ETGHQ42Q6PMNEEQ2Z3PJT4CQ3QNH35LEJWJ23SDBLR6WYZDRI6IA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.0.3-stable/Godot_v4.0.3-stable_mono_win32.zip" size="56250940" type="application/zip" extract="Godot_v4.0.3-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.0.4-stable_mono_win64.exe"/>
+        <implementation arch="Windows-x86_64" version="4.0.4" released="2023-08-03" stability="stable" main="Godot_v4.0.4-stable_mono_win64_console.exe" id="sha256new_TCL7NHQ5X22VDCDGRSYV7UGYBK7GHJIS2QL6EVQAZIU3TWSSRJYA">
+          <manifest-digest sha256new="TCL7NHQ5X22VDCDGRSYV7UGYBK7GHJIS2QL6EVQAZIU3TWSSRJYA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.0.4-stable/Godot_v4.0.4-stable_mono_win64.zip" size="61015744" type="application/zip" extract="Godot_v4.0.4-stable_mono_win64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.0.4-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.0.4" released="2023-08-03" stability="stable" main="Godot_v4.0.4-stable_mono_win32_console.exe" id="sha256new_GSTKWPZUGD6GGB7ILSODAPSZ6V7RHQWNYCHZG4GG73EHTBZR35XA">
+          <manifest-digest sha256new="GSTKWPZUGD6GGB7ILSODAPSZ6V7RHQWNYCHZG4GG73EHTBZR35XA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.0.4-stable/Godot_v4.0.4-stable_mono_win32.zip" size="56328759" type="application/zip" extract="Godot_v4.0.4-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.0-stable_mono_win64.exe"/>
+        <implementation arch="Windows-x86_64" version="4.0" released="2023-03-01" stability="stable" main="Godot_v4.0-stable_mono_win64_console.exe" id="sha256new_GKSYZFKK4GFWQATTVLQ7Z5UEIACTA4ZWNG3GCEJSX6GES55ZEJAA">
+          <manifest-digest sha256new="GKSYZFKK4GFWQATTVLQ7Z5UEIACTA4ZWNG3GCEJSX6GES55ZEJAA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.0-stable/Godot_v4.0-stable_mono_win64.zip" size="59356068" type="application/zip" extract="Godot_v4.0-stable_mono_win64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.0-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.0" released="2023-03-01" stability="stable" main="Godot_v4.0-stable_mono_win32_console.exe" id="sha256new_JQGTBDUZAQNY5QK6TUDFXGJ6NVYZOXTCWRJSEH3KVLWE36XUKIKA">
+          <manifest-digest sha256new="JQGTBDUZAQNY5QK6TUDFXGJ6NVYZOXTCWRJSEH3KVLWE36XUKIKA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.0-stable/Godot_v4.0-stable_mono_win32.zip" size="54670098" type="application/zip" extract="Godot_v4.0-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.1.1-stable_mono_win64.exe"/>
+        <implementation arch="Windows-x86_64" version="4.1.1" released="2023-07-17" stability="stable" main="Godot_v4.1.1-stable_mono_win64_console.exe" id="sha256new_VGPOEWA4ZYG6ICQSZC3LU55NQCWDZR7UNNIJFSOOCTDFOBHZ6QRQ">
+          <manifest-digest sha256new="VGPOEWA4ZYG6ICQSZC3LU55NQCWDZR7UNNIJFSOOCTDFOBHZ6QRQ"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.1.1-stable/Godot_v4.1.1-stable_mono_win64.zip" size="62258568" type="application/zip" extract="Godot_v4.1.1-stable_mono_win64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.1.1-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.1.1" released="2023-07-17" stability="stable" main="Godot_v4.1.1-stable_mono_win32_console.exe" id="sha256new_BFKYUTMQ2JRXAHO5A3Z5UZLXJPYUCNCVVRNKG6QCCOTMI5M4AEKA">
+          <manifest-digest sha256new="BFKYUTMQ2JRXAHO5A3Z5UZLXJPYUCNCVVRNKG6QCCOTMI5M4AEKA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.1.1-stable/Godot_v4.1.1-stable_mono_win32.zip" size="57524635" type="application/zip" extract="Godot_v4.1.1-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.1.2-stable_mono_win64.exe"/>
+        <implementation arch="Windows-x86_64" version="4.1.2" released="2023-10-04" stability="stable" main="Godot_v4.1.2-stable_mono_win64_console.exe" id="sha256new_UYUCHXEK26THFPI5DRU44PLOFUT4XLQR2RZQIULDQACFRT4PFBZA">
+          <manifest-digest sha256new="UYUCHXEK26THFPI5DRU44PLOFUT4XLQR2RZQIULDQACFRT4PFBZA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.1.2-stable/Godot_v4.1.2-stable_mono_win64.zip" size="63119833" type="application/zip" extract="Godot_v4.1.2-stable_mono_win64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.1.2-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.1.2" released="2023-10-04" stability="stable" main="Godot_v4.1.2-stable_mono_win32_console.exe" id="sha256new_ITLROHBUOY4WAUIAURIWRYXFA3S2YFWBUKIIZ6EXWTJM5JCCLHBA">
+          <manifest-digest sha256new="ITLROHBUOY4WAUIAURIWRYXFA3S2YFWBUKIIZ6EXWTJM5JCCLHBA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.1.2-stable/Godot_v4.1.2-stable_mono_win32.zip" size="58388225" type="application/zip" extract="Godot_v4.1.2-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.1.3-stable_mono_win64.exe"/>
+        <implementation arch="Windows-x86_64" version="4.1.3" released="2023-11-01" stability="stable" main="Godot_v4.1.3-stable_mono_win64_console.exe" id="sha256new_KH5YQGJDVGDYLBTC4KFVAVLDEDMFJKXAJD3ZJA4UPUPH4VUZ65EA">
+          <manifest-digest sha256new="KH5YQGJDVGDYLBTC4KFVAVLDEDMFJKXAJD3ZJA4UPUPH4VUZ65EA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.1.3-stable/Godot_v4.1.3-stable_mono_win64.zip" size="63132970" type="application/zip" extract="Godot_v4.1.3-stable_mono_win64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.1.3-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.1.3" released="2023-11-01" stability="stable" main="Godot_v4.1.3-stable_mono_win32_console.exe" id="sha256new_3TI3RA22YC4BXMSOWN5BOPJ6IZPJEBDOU4ZSWPVXJE6TRJXVEE6A">
+          <manifest-digest sha256new="3TI3RA22YC4BXMSOWN5BOPJ6IZPJEBDOU4ZSWPVXJE6TRJXVEE6A"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.1.3-stable/Godot_v4.1.3-stable_mono_win32.zip" size="58406458" type="application/zip" extract="Godot_v4.1.3-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.1.4-stable_mono_win64.exe"/>
+        <implementation arch="Windows-x86_64" version="4.1.4" released="2024-04-17" stability="stable" main="Godot_v4.1.4-stable_mono_win64_console.exe" id="sha256new_YUYWXUIPVZFQC2RN7LKSHNQAP5BPD254CHWOTRCPCDOOVSTDEUBA">
+          <manifest-digest sha256new="YUYWXUIPVZFQC2RN7LKSHNQAP5BPD254CHWOTRCPCDOOVSTDEUBA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.1.4-stable/Godot_v4.1.4-stable_mono_win64.zip" size="63192181" type="application/zip" extract="Godot_v4.1.4-stable_mono_win64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.1.4-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.1.4" released="2024-04-17" stability="stable" main="Godot_v4.1.4-stable_mono_win32_console.exe" id="sha256new_MFHKMRG6BWZKDO74J5PC7VZKP3UAVXK7F67OK342NJ2BC6TTLLRA">
+          <manifest-digest sha256new="MFHKMRG6BWZKDO74J5PC7VZKP3UAVXK7F67OK342NJ2BC6TTLLRA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.1.4-stable/Godot_v4.1.4-stable_mono_win32.zip" size="58449021" type="application/zip" extract="Godot_v4.1.4-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.1-stable_mono_win64.exe"/>
+        <implementation arch="Windows-x86_64" version="4.1" released="2023-07-06" stability="stable" main="Godot_v4.1-stable_mono_win64_console.exe" id="sha256new_ODMT2CBS5R2CQBY5JDZJCLHUDL7EUORT2DCWVMXIQFIALOABVY5A">
+          <manifest-digest sha256new="ODMT2CBS5R2CQBY5JDZJCLHUDL7EUORT2DCWVMXIQFIALOABVY5A"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.1-stable/Godot_v4.1-stable_mono_win64.zip" size="62235786" type="application/zip" extract="Godot_v4.1-stable_mono_win64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.1-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.1" released="2023-07-06" stability="stable" main="Godot_v4.1-stable_mono_win32_console.exe" id="sha256new_5WKQBQP6NWVROCZIMOUMQ4SNJIQHWG2ONYM6LZSNK7CFKVJIAGLA">
+          <manifest-digest sha256new="5WKQBQP6NWVROCZIMOUMQ4SNJIQHWG2ONYM6LZSNK7CFKVJIAGLA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.1-stable/Godot_v4.1-stable_mono_win32.zip" size="57513241" type="application/zip" extract="Godot_v4.1-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.2.1-stable_mono_win64.exe"/>
+        <implementation arch="Windows-x86_64" version="4.2.1" released="2023-12-12" stability="stable" main="Godot_v4.2.1-stable_mono_win64_console.exe" id="sha256new_PFQNNTX4QPTOUSTOD3N3P4QRTHQ3YJYZFRFL37XXUIHFEWDNI7YA">
+          <manifest-digest sha256new="PFQNNTX4QPTOUSTOD3N3P4QRTHQ3YJYZFRFL37XXUIHFEWDNI7YA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.2.1-stable/Godot_v4.2.1-stable_mono_win64.zip" size="58596201" type="application/zip" extract="Godot_v4.2.1-stable_mono_win64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.2.1-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.2.1" released="2023-12-12" stability="stable" main="Godot_v4.2.1-stable_mono_win32_console.exe" id="sha256new_MVQO3DRALD3RGTMIVKDRIZKMFOMGERLHYKWUQ7WGEN5NHQCK563A">
+          <manifest-digest sha256new="MVQO3DRALD3RGTMIVKDRIZKMFOMGERLHYKWUQ7WGEN5NHQCK563A"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.2.1-stable/Godot_v4.2.1-stable_mono_win32.zip" size="59318964" type="application/zip" extract="Godot_v4.2.1-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.2.2-stable_mono_win64.exe"/>
+        <implementation arch="Windows-x86_64" version="4.2.2" released="2024-04-17" stability="stable" main="Godot_v4.2.2-stable_mono_win64_console.exe" id="sha256new_4GK5MCBNML3T7M3IHBNIZSHN7L6NWDNZDJSYVHQLT3G5KRBVL45Q">
+          <manifest-digest sha256new="4GK5MCBNML3T7M3IHBNIZSHN7L6NWDNZDJSYVHQLT3G5KRBVL45Q"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.2.2-stable/Godot_v4.2.2-stable_mono_win64.zip" size="58772232" type="application/zip" extract="Godot_v4.2.2-stable_mono_win64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.2.2-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.2.2" released="2024-04-17" stability="stable" main="Godot_v4.2.2-stable_mono_win32_console.exe" id="sha256new_RCH5WHU4FL54FWHQNU4KHJWGEWPUVSLD3GRX5JCK5XCZDCKYVKWQ">
+          <manifest-digest sha256new="RCH5WHU4FL54FWHQNU4KHJWGEWPUVSLD3GRX5JCK5XCZDCKYVKWQ"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.2.2-stable/Godot_v4.2.2-stable_mono_win32.zip" size="59508918" type="application/zip" extract="Godot_v4.2.2-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.2-stable_mono_win64.exe"/>
+        <implementation arch="Windows-x86_64" version="4.2" released="2023-11-30" stability="stable" main="Godot_v4.2-stable_mono_win64_console.exe" id="sha256new_JASB53O2XLMDXHOE3ZVROGBA2GDNUMU6OL4J75ZSRBTLJF26SGQA">
+          <manifest-digest sha256new="JASB53O2XLMDXHOE3ZVROGBA2GDNUMU6OL4J75ZSRBTLJF26SGQA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.2-stable/Godot_v4.2-stable_mono_win64.zip" size="58558709" type="application/zip" extract="Godot_v4.2-stable_mono_win64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.2-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.2" released="2023-11-30" stability="stable" main="Godot_v4.2-stable_mono_win32_console.exe" id="sha256new_4QGB5QIKZUQHND6DBJXPSQ6V656AF6THQEAGQ7IFSNM72Q3LCTZA">
+          <manifest-digest sha256new="4QGB5QIKZUQHND6DBJXPSQ6V656AF6THQEAGQ7IFSNM72Q3LCTZA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.2-stable/Godot_v4.2-stable_mono_win32.zip" size="59289752" type="application/zip" extract="Godot_v4.2-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.3-stable_mono_win64.exe"/>
+        <implementation arch="Windows-x86_64" version="4.3" released="2024-08-15" stability="stable" main="Godot_v4.3-stable_mono_win64_console.exe" id="sha256new_UKYLEJIZTK4YIMIJP6S3W7P7XVYX647NJ776WFDKZDNBL5WSDPAA">
+          <manifest-digest sha256new="UKYLEJIZTK4YIMIJP6S3W7P7XVYX647NJ776WFDKZDNBL5WSDPAA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_mono_win64.zip" size="78546284" type="application/zip" extract="Godot_v4.3-stable_mono_win64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.3-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.3" released="2024-08-15" stability="stable" main="Godot_v4.3-stable_mono_win32_console.exe" id="sha256new_YOPLYE7PQV3FIB6MXIAYY46KDUWA7WECYAVSWEBAHRMLSVYN74RQ">
+          <manifest-digest sha256new="YOPLYE7PQV3FIB6MXIAYY46KDUWA7WECYAVSWEBAHRMLSVYN74RQ"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_mono_win32.zip" size="79954921" type="application/zip" extract="Godot_v4.3-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.3-stable_mono_windows_arm64.exe"/>
+        <implementation arch="Windows-aarch64" version="4.3" released="2024-08-15" stability="stable" main="Godot_v4.3-stable_mono_windows_arm64_console.exe" id="sha256new_7VYPJ2MVJ3S6SJWGFCRSESXXQJBSDP3BOQ2YOIYAYCG742ZSHS7Q">
+          <manifest-digest sha256new="7VYPJ2MVJ3S6SJWGFCRSESXXQJBSDP3BOQ2YOIYAYCG742ZSHS7Q"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_mono_windows_arm64.zip" size="74650744" type="application/zip" extract="Godot_v4.3-stable_mono_windows_arm64"/>
+        </implementation>
+      </group>
+    </group>
+    <implementation arch="Linux-x86_64" version="4.0.2" released="2023-04-04" stability="stable" main="Godot_v4.0.2-stable_mono_linux.x86_64" id="sha256new_SRVBKQKPV3GASFYMXAYW3MGF7ERDM4KKATNLZLYLHDNOGJ7C5OQQ">
+      <manifest-digest sha256new="SRVBKQKPV3GASFYMXAYW3MGF7ERDM4KKATNLZLYLHDNOGJ7C5OQQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.0.2-stable/Godot_v4.0.2-stable_mono_linux_x86_64.zip" size="60502470" type="application/zip" extract="Godot_v4.0.2-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.0.2" released="2023-04-04" stability="stable" main="Godot_v4.0.2-stable_mono_linux.x86_32" id="sha256new_2H3EQF3M7HYVAVO5OR2357CTDZN6OHRO3US77UROMOCQHJ5XXOJA">
+      <manifest-digest sha256new="2H3EQF3M7HYVAVO5OR2357CTDZN6OHRO3US77UROMOCQHJ5XXOJA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.0.2-stable/Godot_v4.0.2-stable_mono_linux_x86_32.zip" size="53444740" type="application/zip" extract="Godot_v4.0.2-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.0.2" released="2023-04-04" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_QRHC6R6OITEOY2B5KHA6BLNY3FQP74BW2TAXWYATH3UBLDZDVUXQ">
+      <manifest-digest sha256new="QRHC6R6OITEOY2B5KHA6BLNY3FQP74BW2TAXWYATH3UBLDZDVUXQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.0.2-stable/Godot_v4.0.2-stable_mono_macos.universal.zip" size="109554163" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="4.0.3" released="2023-05-19" stability="stable" main="Godot_v4.0.3-stable_mono_linux.x86_64" id="sha256new_JPHLZKDYLQ3AI74FOLYQZ7AQ535N4XAD6UJBC7HL553KZLPYAHOA">
+      <manifest-digest sha256new="JPHLZKDYLQ3AI74FOLYQZ7AQ535N4XAD6UJBC7HL553KZLPYAHOA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.0.3-stable/Godot_v4.0.3-stable_mono_linux_x86_64.zip" size="61093432" type="application/zip" extract="Godot_v4.0.3-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.0.3" released="2023-05-19" stability="stable" main="Godot_v4.0.3-stable_mono_linux.x86_32" id="sha256new_WTYVWLNBCQFCHEHVPHBKGD3GZ2OTB6TXGXWPYA2RXY32WHFLCA4A">
+      <manifest-digest sha256new="WTYVWLNBCQFCHEHVPHBKGD3GZ2OTB6TXGXWPYA2RXY32WHFLCA4A"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.0.3-stable/Godot_v4.0.3-stable_mono_linux_x86_32.zip" size="53981534" type="application/zip" extract="Godot_v4.0.3-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.0.3" released="2023-05-19" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_46VFCWHWE3FRVOFGND4FAMTTYC7GJ6RLPM2WO5P2KHDBPPYCQM3A">
+      <manifest-digest sha256new="46VFCWHWE3FRVOFGND4FAMTTYC7GJ6RLPM2WO5P2KHDBPPYCQM3A"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.0.3-stable/Godot_v4.0.3-stable_mono_macos.universal.zip" size="110551821" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="4.0.4" released="2023-08-03" stability="stable" main="Godot_v4.0.4-stable_mono_linux.x86_64" id="sha256new_PN7VLZOGJZCYVCNP2K6W55F5TOA3O47KQB63GFWDQAVY3ERLGN6Q">
+      <manifest-digest sha256new="PN7VLZOGJZCYVCNP2K6W55F5TOA3O47KQB63GFWDQAVY3ERLGN6Q"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.0.4-stable/Godot_v4.0.4-stable_mono_linux_x86_64.zip" size="61184216" type="application/zip" extract="Godot_v4.0.4-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.0.4" released="2023-08-03" stability="stable" main="Godot_v4.0.4-stable_mono_linux.x86_32" id="sha256new_NO6VLKDJDPBECBTWBGP6PBGMO73MDG7RUIKBSKZOYYLOI55VQPPQ">
+      <manifest-digest sha256new="NO6VLKDJDPBECBTWBGP6PBGMO73MDG7RUIKBSKZOYYLOI55VQPPQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.0.4-stable/Godot_v4.0.4-stable_mono_linux_x86_32.zip" size="54085466" type="application/zip" extract="Godot_v4.0.4-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.0.4" released="2023-08-03" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_DQKXUPD2IXJ3OJT6V55L5H4BLWIWBQVUQBVPSPDRCFQMRGLWVEJQ">
+      <manifest-digest sha256new="DQKXUPD2IXJ3OJT6V55L5H4BLWIWBQVUQBVPSPDRCFQMRGLWVEJQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.0.4-stable/Godot_v4.0.4-stable_mono_macos.universal.zip" size="110723283" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="4.0" released="2023-03-01" stability="stable" main="Godot_v4.0-stable_mono_linux.x86_64" id="sha256new_W2XK5OIXPWSZTS5TA3K4YGNMDCX36BBOJSUZORCR3FSVP3SPIM7Q">
+      <manifest-digest sha256new="W2XK5OIXPWSZTS5TA3K4YGNMDCX36BBOJSUZORCR3FSVP3SPIM7Q"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.0-stable/Godot_v4.0-stable_mono_linux_x86_64.zip" size="59516523" type="application/zip" extract="Godot_v4.0-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.0" released="2023-03-01" stability="stable" main="Godot_v4.0-stable_mono_linux.x86_32" id="sha256new_TIQ5TQU5YTALZVSRTYGED2WRFD2WY6HG2OS2Q4FLD2IMHJ2ZMJFA">
+      <manifest-digest sha256new="TIQ5TQU5YTALZVSRTYGED2WRFD2WY6HG2OS2Q4FLD2IMHJ2ZMJFA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.0-stable/Godot_v4.0-stable_mono_linux_x86_32.zip" size="52470333" type="application/zip" extract="Godot_v4.0-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.0" released="2023-03-01" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_NNAASEKZBUUXN2NA6CZRWLLJEVPCEVATBVCCKQ6XG7QPFHELOGEQ">
+      <manifest-digest sha256new="NNAASEKZBUUXN2NA6CZRWLLJEVPCEVATBVCCKQ6XG7QPFHELOGEQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.0-stable/Godot_v4.0-stable_mono_macos.universal.zip" size="107537262" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="4.1.1" released="2023-07-17" stability="stable" main="Godot_v4.1.1-stable_mono_linux.x86_64" id="sha256new_HLH7C6UAXCLPAGM2NNLGSPWUHWR63PAHV7QWJPYWFHVWWTYTN5FA">
+      <manifest-digest sha256new="HLH7C6UAXCLPAGM2NNLGSPWUHWR63PAHV7QWJPYWFHVWWTYTN5FA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.1.1-stable/Godot_v4.1.1-stable_mono_linux_x86_64.zip" size="62394711" type="application/zip" extract="Godot_v4.1.1-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.1.1" released="2023-07-17" stability="stable" main="Godot_v4.1.1-stable_mono_linux.x86_32" id="sha256new_AEERYSZY27SCVTAKQANSOGQAHD47SOS5WDIDZBBEFFJXZLTN6GNA">
+      <manifest-digest sha256new="AEERYSZY27SCVTAKQANSOGQAHD47SOS5WDIDZBBEFFJXZLTN6GNA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.1.1-stable/Godot_v4.1.1-stable_mono_linux_x86_32.zip" size="55217376" type="application/zip" extract="Godot_v4.1.1-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.1.1" released="2023-07-17" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_AELNORELLVCESRUNP2Z3IFLA3TE423RKKOFM4DA7ZZ3DMMUGNL6Q">
+      <manifest-digest sha256new="AELNORELLVCESRUNP2Z3IFLA3TE423RKKOFM4DA7ZZ3DMMUGNL6Q"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.1.1-stable/Godot_v4.1.1-stable_mono_macos.universal.zip" size="112689109" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="4.1.2" released="2023-10-04" stability="stable" main="Godot_v4.1.2-stable_mono_linux.x86_64" id="sha256new_H3LT3OE2KXNWPUHBWOBFGYDGKFSKAJK4SZJOBTP7F5WCMTIQPZNA">
+      <manifest-digest sha256new="H3LT3OE2KXNWPUHBWOBFGYDGKFSKAJK4SZJOBTP7F5WCMTIQPZNA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.1.2-stable/Godot_v4.1.2-stable_mono_linux_x86_64.zip" size="63265450" type="application/zip" extract="Godot_v4.1.2-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.1.2" released="2023-10-04" stability="stable" main="Godot_v4.1.2-stable_mono_linux.x86_32" id="sha256new_5GCXC24KOIJIXPQIWRBKEZGBXQACJ76UGFEBFFVIO64GG7UE2ECA">
+      <manifest-digest sha256new="5GCXC24KOIJIXPQIWRBKEZGBXQACJ76UGFEBFFVIO64GG7UE2ECA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.1.2-stable/Godot_v4.1.2-stable_mono_linux_x86_32.zip" size="56071851" type="application/zip" extract="Godot_v4.1.2-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.1.2" released="2023-10-04" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_F7R4OSYWALEUQGMBOHRRSKBBBGP3WOOHGMKIEV5PWYDNMS77RZHQ">
+      <manifest-digest sha256new="F7R4OSYWALEUQGMBOHRRSKBBBGP3WOOHGMKIEV5PWYDNMS77RZHQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.1.2-stable/Godot_v4.1.2-stable_mono_macos.universal.zip" size="114386330" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="4.1.3" released="2023-11-01" stability="stable" main="Godot_v4.1.3-stable_mono_linux.x86_64" id="sha256new_N43R65YKSOMIZT6HVON7BV7AWRYKJAVBWCR45FCU6JJLZZY6PKPQ">
+      <manifest-digest sha256new="N43R65YKSOMIZT6HVON7BV7AWRYKJAVBWCR45FCU6JJLZZY6PKPQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.1.3-stable/Godot_v4.1.3-stable_mono_linux_x86_64.zip" size="63294080" type="application/zip" extract="Godot_v4.1.3-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.1.3" released="2023-11-01" stability="stable" main="Godot_v4.1.3-stable_mono_linux.x86_32" id="sha256new_SEHU3FZBBXDJCHFP4F4MBOPGKQA5SZEXKLWYW2YENNH6NRHGGAWA">
+      <manifest-digest sha256new="SEHU3FZBBXDJCHFP4F4MBOPGKQA5SZEXKLWYW2YENNH6NRHGGAWA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.1.3-stable/Godot_v4.1.3-stable_mono_linux_x86_32.zip" size="56092238" type="application/zip" extract="Godot_v4.1.3-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.1.3" released="2023-11-01" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_465AOWDQAUMSXR4VKQJDEJAJRHAAJIJGEIJ66JQEWY5IP2OZQ2CA">
+      <manifest-digest sha256new="465AOWDQAUMSXR4VKQJDEJAJRHAAJIJGEIJ66JQEWY5IP2OZQ2CA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.1.3-stable/Godot_v4.1.3-stable_mono_macos.universal.zip" size="114419727" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="4.1.4" released="2024-04-17" stability="stable" main="Godot_v4.1.4-stable_mono_linux.x86_64" id="sha256new_WWYNYHSQGWW7FTT7GQ2SFXRQP5Q42LWYJPRKWMM5C2BUH2GDYYBQ">
+      <manifest-digest sha256new="WWYNYHSQGWW7FTT7GQ2SFXRQP5Q42LWYJPRKWMM5C2BUH2GDYYBQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.1.4-stable/Godot_v4.1.4-stable_mono_linux_x86_64.zip" size="63327755" type="application/zip" extract="Godot_v4.1.4-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.1.4" released="2024-04-17" stability="stable" main="Godot_v4.1.4-stable_mono_linux.x86_32" id="sha256new_LY5OB4PWZ5R5EUSFJP5FI6X642UIKHUFCDMJKGR2B3JGJ3SUN7GQ">
+      <manifest-digest sha256new="LY5OB4PWZ5R5EUSFJP5FI6X642UIKHUFCDMJKGR2B3JGJ3SUN7GQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.1.4-stable/Godot_v4.1.4-stable_mono_linux_x86_32.zip" size="56142694" type="application/zip" extract="Godot_v4.1.4-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.1.4" released="2024-04-17" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_CHUQKO6R2QLQLJZSWKJO55ZZYXL523SY5YUR6F33Z3KDHID6OQ3A">
+      <manifest-digest sha256new="CHUQKO6R2QLQLJZSWKJO55ZZYXL523SY5YUR6F33Z3KDHID6OQ3A"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.1.4-stable/Godot_v4.1.4-stable_mono_macos.universal.zip" size="115374457" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="4.1" released="2023-07-06" stability="stable" main="Godot_v4.1-stable_mono_linux.x86_64" id="sha256new_S5MWMBWKQZA4YZHZ2WU7WOTSLCEBXLCWIHEECZEUH2NN3RFBKAVQ">
+      <manifest-digest sha256new="S5MWMBWKQZA4YZHZ2WU7WOTSLCEBXLCWIHEECZEUH2NN3RFBKAVQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.1-stable/Godot_v4.1-stable_mono_linux_x86_64.zip" size="62378576" type="application/zip" extract="Godot_v4.1-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.1" released="2023-07-06" stability="stable" main="Godot_v4.1-stable_mono_linux.x86_32" id="sha256new_F2X5Z3NBIBWL3CEPQYADGI25D4VQOGPGTBEPEZ5SHR22MSOST5DQ">
+      <manifest-digest sha256new="F2X5Z3NBIBWL3CEPQYADGI25D4VQOGPGTBEPEZ5SHR22MSOST5DQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.1-stable/Godot_v4.1-stable_mono_linux_x86_32.zip" size="55191162" type="application/zip" extract="Godot_v4.1-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.1" released="2023-07-06" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_DYNLEFKINMJHOMFHKT7KIZFIVKVIFIIN6PBRJUQIOBVCBQXCHW2Q">
+      <manifest-digest sha256new="DYNLEFKINMJHOMFHKT7KIZFIVKVIFIIN6PBRJUQIOBVCBQXCHW2Q"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.1-stable/Godot_v4.1-stable_mono_macos.universal.zip" size="112651920" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="4.2.1" released="2023-12-12" stability="stable" main="Godot_v4.2.1-stable_mono_linux.x86_64" id="sha256new_2ZKVWAYY7H7IJOH7FW4TENR5KGIOMJMJCAQSNGJOVXMMYPQ645VA">
+      <manifest-digest sha256new="2ZKVWAYY7H7IJOH7FW4TENR5KGIOMJMJCAQSNGJOVXMMYPQ645VA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.2.1-stable/Godot_v4.2.1-stable_mono_linux_x86_64.zip" size="55091892" type="application/zip" extract="Godot_v4.2.1-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.2.1" released="2023-12-12" stability="stable" main="Godot_v4.2.1-stable_mono_linux.x86_32" id="sha256new_PA4X4SSK7FLXYMTURLHINSRAXODJKK7EWWLYC4MTVUNRSVHDOP7Q">
+      <manifest-digest sha256new="PA4X4SSK7FLXYMTURLHINSRAXODJKK7EWWLYC4MTVUNRSVHDOP7Q"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.2.1-stable/Godot_v4.2.1-stable_mono_linux_x86_32.zip" size="54384687" type="application/zip" extract="Godot_v4.2.1-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="4.2.1" released="2023-12-12" stability="stable" main="Godot_v4.2.1-stable_mono_linux.arm64" id="sha256new_E3XI7RQULHEJL6YKNDKRQKSVDVPYJ7MBQR5NB25BYCS6MH3QUDGA">
+      <manifest-digest sha256new="E3XI7RQULHEJL6YKNDKRQKSVDVPYJ7MBQR5NB25BYCS6MH3QUDGA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.2.1-stable/Godot_v4.2.1-stable_mono_linux_arm64.zip" size="54265449" type="application/zip" extract="Godot_v4.2.1-stable_mono_linux_arm64"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" version="4.2.1" released="2023-12-12" stability="stable" main="Godot_v4.2.1-stable_mono_linux.arm32" id="sha256new_TZXMKL4U7Q6ED4VOBZ2VV7BG7Y54FZ33U5J6SG74I4ON3E4W6LXQ">
+      <manifest-digest sha256new="TZXMKL4U7Q6ED4VOBZ2VV7BG7Y54FZ33U5J6SG74I4ON3E4W6LXQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.2.1-stable/Godot_v4.2.1-stable_mono_linux_arm32.zip" size="51363789" type="application/zip" extract="Godot_v4.2.1-stable_mono_linux_arm32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.2.1" released="2023-12-12" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_VBCFVZJ7ZE6MDEWA5IQWDA4ZVSLOVLLQLCMWGLAKJLQNZBMSAY6A">
+      <manifest-digest sha256new="VBCFVZJ7ZE6MDEWA5IQWDA4ZVSLOVLLQLCMWGLAKJLQNZBMSAY6A"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.2.1-stable/Godot_v4.2.1-stable_mono_macos.universal.zip" size="104509730" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="4.2.2" released="2024-04-17" stability="stable" main="Godot_v4.2.2-stable_mono_linux.x86_64" id="sha256new_YYAVJSA4K4OLZUDHOFXEJNPUL7Y6ZRGWJBLZRGOS4CDQYAL72VUQ">
+      <manifest-digest sha256new="YYAVJSA4K4OLZUDHOFXEJNPUL7Y6ZRGWJBLZRGOS4CDQYAL72VUQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.2.2-stable/Godot_v4.2.2-stable_mono_linux_x86_64.zip" size="55254251" type="application/zip" extract="Godot_v4.2.2-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.2.2" released="2024-04-17" stability="stable" main="Godot_v4.2.2-stable_mono_linux.x86_32" id="sha256new_4QUVPIAHZ5EFRERLODTV7V5I77T6ECVRWEOZMWAWSOXSBAKVLZKQ">
+      <manifest-digest sha256new="4QUVPIAHZ5EFRERLODTV7V5I77T6ECVRWEOZMWAWSOXSBAKVLZKQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.2.2-stable/Godot_v4.2.2-stable_mono_linux_x86_32.zip" size="54558168" type="application/zip" extract="Godot_v4.2.2-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="4.2.2" released="2024-04-17" stability="stable" main="Godot_v4.2.2-stable_mono_linux.arm64" id="sha256new_RRMGQNICUQJLYUJCE3GMI747YAKWT6PE2VJFWHCZZLMHPXFUOKHA">
+      <manifest-digest sha256new="RRMGQNICUQJLYUJCE3GMI747YAKWT6PE2VJFWHCZZLMHPXFUOKHA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.2.2-stable/Godot_v4.2.2-stable_mono_linux_arm64.zip" size="54436651" type="application/zip" extract="Godot_v4.2.2-stable_mono_linux_arm64"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" version="4.2.2" released="2024-04-17" stability="stable" main="Godot_v4.2.2-stable_mono_linux.arm32" id="sha256new_XA6GUQDRFXFNGNIZDV2OEUREWJ2BHV3NKIDI2XYV6JQAZCAMGDDQ">
+      <manifest-digest sha256new="XA6GUQDRFXFNGNIZDV2OEUREWJ2BHV3NKIDI2XYV6JQAZCAMGDDQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.2.2-stable/Godot_v4.2.2-stable_mono_linux_arm32.zip" size="51656847" type="application/zip" extract="Godot_v4.2.2-stable_mono_linux_arm32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.2.2" released="2024-04-17" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_I3ZG5ZAIZ4NLLU6GQDT3RVMRNWX4HSJ5CEUMJKER2GL2RCJAI7JQ">
+      <manifest-digest sha256new="I3ZG5ZAIZ4NLLU6GQDT3RVMRNWX4HSJ5CEUMJKER2GL2RCJAI7JQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.2.2-stable/Godot_v4.2.2-stable_mono_macos.universal.zip" size="104841299" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="4.2" released="2023-11-30" stability="stable" main="Godot_v4.2-stable_mono_linux.x86_64" id="sha256new_YGUEETDLYKZS7IAAJXXQ6OEXMK7MQ2I2GUEDRZ542Q3QPLJTE2WQ">
+      <manifest-digest sha256new="YGUEETDLYKZS7IAAJXXQ6OEXMK7MQ2I2GUEDRZ542Q3QPLJTE2WQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.2-stable/Godot_v4.2-stable_mono_linux_x86_64.zip" size="55059762" type="application/zip" extract="Godot_v4.2-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.2" released="2023-11-30" stability="stable" main="Godot_v4.2-stable_mono_linux.x86_32" id="sha256new_6HBSKZTPXGVGELWSDLX4STBVG5S5DG4EPZBS7TEWH2C5PE7TZWBQ">
+      <manifest-digest sha256new="6HBSKZTPXGVGELWSDLX4STBVG5S5DG4EPZBS7TEWH2C5PE7TZWBQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.2-stable/Godot_v4.2-stable_mono_linux_x86_32.zip" size="54352156" type="application/zip" extract="Godot_v4.2-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="4.2" released="2023-11-30" stability="stable" main="Godot_v4.2-stable_mono_linux.arm64" id="sha256new_TJUOYS36S4KR5VC5HGDSMGFQHPRQNEXH3SNBVURC5YPU2PYSKV7A">
+      <manifest-digest sha256new="TJUOYS36S4KR5VC5HGDSMGFQHPRQNEXH3SNBVURC5YPU2PYSKV7A"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.2-stable/Godot_v4.2-stable_mono_linux_arm64.zip" size="55671740" type="application/zip" extract="Godot_v4.2-stable_mono_linux_arm64"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" version="4.2" released="2023-11-30" stability="stable" main="Godot_v4.2-stable_mono_linux.arm32" id="sha256new_OPFDT536VLKYYNWQAARG7DZAOJZ2KAQTWHLFRMGAQ7QDCVDREA4Q">
+      <manifest-digest sha256new="OPFDT536VLKYYNWQAARG7DZAOJZ2KAQTWHLFRMGAQ7QDCVDREA4Q"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.2-stable/Godot_v4.2-stable_mono_linux_arm32.zip" size="51774799" type="application/zip" extract="Godot_v4.2-stable_mono_linux_arm32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.2" released="2023-11-30" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_76XMC6CVUNQW77OXOHAHE5I6U45A46U4LLTTPXD2W4W7BCKGWHAQ">
+      <manifest-digest sha256new="76XMC6CVUNQW77OXOHAHE5I6U45A46U4LLTTPXD2W4W7BCKGWHAQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.2-stable/Godot_v4.2-stable_mono_macos.universal.zip" size="104442803" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="4.3" released="2024-08-15" stability="stable" main="Godot_v4.3-stable_mono_linux.x86_64" id="sha256new_32XZHRDFXT2SPYKELNFCVZRJCOA2JM5FDOS7GQICXQGOHIVYM6LA">
+      <manifest-digest sha256new="32XZHRDFXT2SPYKELNFCVZRJCOA2JM5FDOS7GQICXQGOHIVYM6LA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_mono_linux_x86_64.zip" size="70627262" type="application/zip" extract="Godot_v4.3-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.3" released="2024-08-15" stability="stable" main="Godot_v4.3-stable_mono_linux.x86_32" id="sha256new_XNAAHINNYVJ6QNGD45A732FU4ECW7AGCZGQPGOEONGBWEEXRCAAA">
+      <manifest-digest sha256new="XNAAHINNYVJ6QNGD45A732FU4ECW7AGCZGQPGOEONGBWEEXRCAAA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_mono_linux_x86_32.zip" size="70591873" type="application/zip" extract="Godot_v4.3-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="4.3" released="2024-08-15" stability="stable" main="Godot_v4.3-stable_mono_linux.arm64" id="sha256new_E6TGKEXY34DVJUZISVNKPBOMEVFOWXZUQCLTUHPI2CH5PNWRN2OA">
+      <manifest-digest sha256new="E6TGKEXY34DVJUZISVNKPBOMEVFOWXZUQCLTUHPI2CH5PNWRN2OA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_mono_linux_arm64.zip" size="69747021" type="application/zip" extract="Godot_v4.3-stable_mono_linux_arm64"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" version="4.3" released="2024-08-15" stability="stable" main="Godot_v4.3-stable_mono_linux.arm32" id="sha256new_QGTF7CBCDHHBW3VL4JYXYARWBIQHIHUCCM2Y4KUUBNA5W64SZYHA">
+      <manifest-digest sha256new="QGTF7CBCDHHBW3VL4JYXYARWBIQHIHUCCM2Y4KUUBNA5W64SZYHA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_mono_linux_arm32.zip" size="67285508" type="application/zip" extract="Godot_v4.3-stable_mono_linux_arm32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.3" released="2024-08-15" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_VDLAVIXZI2NCNNI4XUJVHKVLV5QQTWLOLEVSFIFRVA2UPLBGEBVA">
+      <manifest-digest sha256new="VDLAVIXZI2NCNNI4XUJVHKVLV5QQTWLOLEVSFIFRVA2UPLBGEBVA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_mono_macos.universal.zip" size="125444953" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group license="MIT">
+    <requires interface="https://apps.0install.net/dotnet/sdk.xml" version="8.0..">
+      <executable-in-path name="dotnet"/>
+    </requires>
+    <implementation arch="Linux-x86_64" version="4.4.1" released="2025-03-26" stability="stable" main="Godot_v4.4.1-stable_mono_linux.x86_64" id="sha256new_RKJ47MB2RTP4XHBRA5HYBKRJMQYZER7AYQXLB3SC4T6452QZPXNQ">
+      <manifest-digest sha256new="RKJ47MB2RTP4XHBRA5HYBKRJMQYZER7AYQXLB3SC4T6452QZPXNQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_mono_linux_x86_64.zip" size="84213438" type="application/zip" extract="Godot_v4.4.1-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.4.1" released="2025-03-26" stability="stable" main="Godot_v4.4.1-stable_mono_linux.x86_32" id="sha256new_3XBNXA3QHUHFPTUYKCHAZOEXFV26OCSL4QPFP4UJFBQOE7QQNDZQ">
+      <manifest-digest sha256new="3XBNXA3QHUHFPTUYKCHAZOEXFV26OCSL4QPFP4UJFBQOE7QQNDZQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_mono_linux_x86_32.zip" size="84925981" type="application/zip" extract="Godot_v4.4.1-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="4.4.1" released="2025-03-26" stability="stable" main="Godot_v4.4.1-stable_mono_linux.arm64" id="sha256new_WGRAHXXGY6NAPN3YPHGK2ZPKXDSAAN5MRST225HUXHKORE7ZZN6A">
+      <manifest-digest sha256new="WGRAHXXGY6NAPN3YPHGK2ZPKXDSAAN5MRST225HUXHKORE7ZZN6A"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_mono_linux_arm64.zip" size="83377072" type="application/zip" extract="Godot_v4.4.1-stable_mono_linux_arm64"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" version="4.4.1" released="2025-03-26" stability="stable" main="Godot_v4.4.1-stable_mono_linux.arm32" id="sha256new_DNL64FPZBUQSDBB56TW7ES2Z6737MRIWTYMXVU3OFNOMM4C3PQTA">
+      <manifest-digest sha256new="DNL64FPZBUQSDBB56TW7ES2Z6737MRIWTYMXVU3OFNOMM4C3PQTA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_mono_linux_arm32.zip" size="81526986" type="application/zip" extract="Godot_v4.4.1-stable_mono_linux_arm32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.4.1" released="2025-03-26" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_KB6KNNBVYZUONZLQMJMN2KIREUXMTRN4CHBTSQ6VOX6J3CMNZEYA">
+      <manifest-digest sha256new="KB6KNNBVYZUONZLQMJMN2KIREUXMTRN4CHBTSQ6VOX6J3CMNZEYA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_mono_macos.universal.zip" size="155146658" type="application/zip"/>
+    </implementation>
+    <group>
+      <command name="run-gui" path="Godot_v4.4.1-stable_mono_win64.exe"/>
+      <implementation arch="Windows-x86_64" version="4.4.1" released="2025-03-26" stability="stable" main="Godot_v4.4.1-stable_mono_win64_console.exe" id="sha256new_D6ZITJSSA2J43XA5TLFS5YHALQ7K663MSGHMDPTDTI7PNET2I2HA">
+        <manifest-digest sha256new="D6ZITJSSA2J43XA5TLFS5YHALQ7K663MSGHMDPTDTI7PNET2I2HA"/>
+        <archive href="https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_mono_win64.zip" size="91829474" type="application/zip" extract="Godot_v4.4.1-stable_mono_win64"/>
+      </implementation>
+      <group>
+        <command name="run-gui" path="Godot_v4.4.1-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.4.1" released="2025-03-26" stability="stable" main="Godot_v4.4.1-stable_mono_win32_console.exe" id="sha256new_IZSTMLZZSDLLAX77QXWCBNKU4XRQ5PTFYIGJD5IESKUILIFO75MQ">
+          <manifest-digest sha256new="IZSTMLZZSDLLAX77QXWCBNKU4XRQ5PTFYIGJD5IESKUILIFO75MQ"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_mono_win32.zip" size="93779754" type="application/zip" extract="Godot_v4.4.1-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.4.1-stable_mono_windows_arm64.exe"/>
+        <implementation arch="Windows-aarch64" version="4.4.1" released="2025-03-26" stability="stable" main="Godot_v4.4.1-stable_mono_windows_arm64_console.exe" id="sha256new_3RDENIXHJ6ZUR3KAFKF27Q5ATS53LPRRDFYAGYDJTITF5OBYOATA">
+          <manifest-digest sha256new="3RDENIXHJ6ZUR3KAFKF27Q5ATS53LPRRDFYAGYDJTITF5OBYOATA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_mono_windows_arm64.zip" size="94801173" type="application/zip" extract="Godot_v4.4.1-stable_mono_windows_arm64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.4-stable_mono_win64.exe"/>
+        <implementation arch="Windows-x86_64" version="4.4" released="2025-03-03" stability="stable" main="Godot_v4.4-stable_mono_win64_console.exe" id="sha256new_UTI36VS4GLRZB2N25XDHX4SY3MPHLWDYUUWMKFI7LSDHI7XEK4CQ">
+          <manifest-digest sha256new="UTI36VS4GLRZB2N25XDHX4SY3MPHLWDYUUWMKFI7LSDHI7XEK4CQ"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.4-stable/Godot_v4.4-stable_mono_win64.zip" size="90196691" type="application/zip" extract="Godot_v4.4-stable_mono_win64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.4-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.4" released="2025-03-03" stability="stable" main="Godot_v4.4-stable_mono_win32_console.exe" id="sha256new_XMG5364QTJWJ4BMHHQ3D3FIK57YBH2ZQETSTMYI3UUPEEBCUEYSQ">
+          <manifest-digest sha256new="XMG5364QTJWJ4BMHHQ3D3FIK57YBH2ZQETSTMYI3UUPEEBCUEYSQ"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.4-stable/Godot_v4.4-stable_mono_win32.zip" size="92136496" type="application/zip" extract="Godot_v4.4-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.4-stable_mono_windows_arm64.exe"/>
+        <implementation arch="Windows-aarch64" version="4.4" released="2025-03-03" stability="stable" main="Godot_v4.4-stable_mono_windows_arm64_console.exe" id="sha256new_YJY6QGQFHGKUEIL4NA5LJJIJAYIKWTY45NXDY6CMIA3UDHHGNPAA">
+          <manifest-digest sha256new="YJY6QGQFHGKUEIL4NA5LJJIJAYIKWTY45NXDY6CMIA3UDHHGNPAA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.4-stable/Godot_v4.4-stable_mono_windows_arm64.zip" size="93179667" type="application/zip" extract="Godot_v4.4-stable_mono_windows_arm64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.5.1-stable_mono_win64.exe"/>
+        <implementation arch="Windows-x86_64" version="4.5.1" released="2025-10-15" stability="stable" main="Godot_v4.5.1-stable_mono_win64_console.exe" id="sha256new_U7N5ONDCIKGUPNBK3ZRALLAJLG5SU4SD6YQ62OG2BJE5I6MKH5VQ">
+          <manifest-digest sha256new="U7N5ONDCIKGUPNBK3ZRALLAJLG5SU4SD6YQ62OG2BJE5I6MKH5VQ"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.5.1-stable/Godot_v4.5.1-stable_mono_win64.zip" size="100448482" type="application/zip" extract="Godot_v4.5.1-stable_mono_win64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.5.1-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.5.1" released="2025-10-15" stability="stable" main="Godot_v4.5.1-stable_mono_win32_console.exe" id="sha256new_DW2S7CYGZDHS3CPJGKJ32UABB4B5BCEBV2BMHEASF4ONPGM6P5NA">
+          <manifest-digest sha256new="DW2S7CYGZDHS3CPJGKJ32UABB4B5BCEBV2BMHEASF4ONPGM6P5NA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.5.1-stable/Godot_v4.5.1-stable_mono_win32.zip" size="102298647" type="application/zip" extract="Godot_v4.5.1-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.5.1-stable_mono_windows_arm64.exe"/>
+        <implementation arch="Windows-aarch64" version="4.5.1" released="2025-10-15" stability="stable" main="Godot_v4.5.1-stable_mono_windows_arm64_console.exe" id="sha256new_2XVCCDPPWDC54HBZYHCVXUAP6QKRG7VESYBDSRQRV7ZVCCSKTDAA">
+          <manifest-digest sha256new="2XVCCDPPWDC54HBZYHCVXUAP6QKRG7VESYBDSRQRV7ZVCCSKTDAA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.5.1-stable/Godot_v4.5.1-stable_mono_windows_arm64.zip" size="99974183" type="application/zip" extract="Godot_v4.5.1-stable_mono_windows_arm64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.5.2-stable_mono_win64.exe"/>
+        <implementation arch="Windows-x86_64" version="4.5.2" released="2026-03-19" stability="stable" main="Godot_v4.5.2-stable_mono_win64_console.exe" id="sha256new_NOYRCVG7QO4C52PGNC6F2ESES5XMKPHUW5X67C62MWMN5MCF27NQ">
+          <manifest-digest sha256new="NOYRCVG7QO4C52PGNC6F2ESES5XMKPHUW5X67C62MWMN5MCF27NQ"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.5.2-stable/Godot_v4.5.2-stable_mono_win64.zip" size="101231941" type="application/zip" extract="Godot_v4.5.2-stable_mono_win64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.5.2-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.5.2" released="2026-03-19" stability="stable" main="Godot_v4.5.2-stable_mono_win32_console.exe" id="sha256new_EQLE6XPXGEF2ALLCW6XTYMAM2KSLEWQUQSCWGRLEMJSV6JEZHZQQ">
+          <manifest-digest sha256new="EQLE6XPXGEF2ALLCW6XTYMAM2KSLEWQUQSCWGRLEMJSV6JEZHZQQ"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.5.2-stable/Godot_v4.5.2-stable_mono_win32.zip" size="103070330" type="application/zip" extract="Godot_v4.5.2-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.5.2-stable_mono_windows_arm64.exe"/>
+        <implementation arch="Windows-aarch64" version="4.5.2" released="2026-03-19" stability="stable" main="Godot_v4.5.2-stable_mono_windows_arm64_console.exe" id="sha256new_R7URF7ST24BOPZH2SERGMO6TWG2LTCHOOQYRXDKYOYJGMIPQJTOQ">
+          <manifest-digest sha256new="R7URF7ST24BOPZH2SERGMO6TWG2LTCHOOQYRXDKYOYJGMIPQJTOQ"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.5.2-stable/Godot_v4.5.2-stable_mono_windows_arm64.zip" size="100753472" type="application/zip" extract="Godot_v4.5.2-stable_mono_windows_arm64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.5-stable_mono_win64.exe"/>
+        <implementation arch="Windows-x86_64" version="4.5" released="2025-09-15" stability="stable" main="Godot_v4.5-stable_mono_win64_console.exe" id="sha256new_PQKZNJOGRXRX4IAJF2OMN3PIVOD6OEVVS3P36YR52LER64RV6QLQ">
+          <manifest-digest sha256new="PQKZNJOGRXRX4IAJF2OMN3PIVOD6OEVVS3P36YR52LER64RV6QLQ"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.5-stable/Godot_v4.5-stable_mono_win64.zip" size="129127719" type="application/zip" extract="Godot_v4.5-stable_mono_win64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.5-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.5" released="2025-09-15" stability="stable" main="Godot_v4.5-stable_mono_win32_console.exe" id="sha256new_TVFOO7VUXMQ6ASBJD4D5IVVBYVK7PUQJS3PFXVW6EGXZCSY5DMFQ">
+          <manifest-digest sha256new="TVFOO7VUXMQ6ASBJD4D5IVVBYVK7PUQJS3PFXVW6EGXZCSY5DMFQ"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.5-stable/Godot_v4.5-stable_mono_win32.zip" size="130970838" type="application/zip" extract="Godot_v4.5-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.5-stable_mono_windows_arm64.exe"/>
+        <implementation arch="Windows-aarch64" version="4.5" released="2025-09-15" stability="stable" main="Godot_v4.5-stable_mono_windows_arm64_console.exe" id="sha256new_HSQMB26CYHMY6SQ3MRC5A6IGP7YGMHUIKY2ISPWMEOVWHYL2LFAQ">
+          <manifest-digest sha256new="HSQMB26CYHMY6SQ3MRC5A6IGP7YGMHUIKY2ISPWMEOVWHYL2LFAQ"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.5-stable/Godot_v4.5-stable_mono_windows_arm64.zip" size="128665922" type="application/zip" extract="Godot_v4.5-stable_mono_windows_arm64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.6.1-stable_mono_win64.exe"/>
+        <implementation arch="Windows-x86_64" version="4.6.1" released="2026-02-16" stability="stable" main="Godot_v4.6.1-stable_mono_win64_console.exe" id="sha256new_ZJVW4PW2H6ACEGOTRX37VLA422IJCMCIAX3IOQLNR2JZ6YC6WQ5A">
+          <manifest-digest sha256new="ZJVW4PW2H6ACEGOTRX37VLA422IJCMCIAX3IOQLNR2JZ6YC6WQ5A"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_mono_win64.zip" size="109611716" type="application/zip" extract="Godot_v4.6.1-stable_mono_win64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.6.1-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.6.1" released="2026-02-16" stability="stable" main="Godot_v4.6.1-stable_mono_win32_console.exe" id="sha256new_S5M6UJRS7GMNCXOXSNPHWZRD6D3HIGVABZRTCIMCOWVDXXBKMOYA">
+          <manifest-digest sha256new="S5M6UJRS7GMNCXOXSNPHWZRD6D3HIGVABZRTCIMCOWVDXXBKMOYA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_mono_win32.zip" size="111346469" type="application/zip" extract="Godot_v4.6.1-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.6.1-stable_mono_windows_arm64.exe"/>
+        <implementation arch="Windows-aarch64" version="4.6.1" released="2026-02-16" stability="stable" main="Godot_v4.6.1-stable_mono_windows_arm64_console.exe" id="sha256new_GSJYUQVQGKM2WVF7T6A7YMDPOBXJYDSXEOBKRVHS642KFXI3JHVA">
+          <manifest-digest sha256new="GSJYUQVQGKM2WVF7T6A7YMDPOBXJYDSXEOBKRVHS642KFXI3JHVA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_mono_windows_arm64.zip" size="107668958" type="application/zip" extract="Godot_v4.6.1-stable_mono_windows_arm64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.6.2-stable_mono_win64.exe"/>
+        <implementation arch="Windows-x86_64" version="4.6.2" released="2026-04-01" stability="stable" main="Godot_v4.6.2-stable_mono_win64_console.exe" id="sha256new_3NO7UILHM6T4IHDM3E3IFIESSDSOYQAVLZ3XIP6AM3B6NI53TQDQ">
+          <manifest-digest sha256new="3NO7UILHM6T4IHDM3E3IFIESSDSOYQAVLZ3XIP6AM3B6NI53TQDQ"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.6.2-stable/Godot_v4.6.2-stable_mono_win64.zip" size="109645645" type="application/zip" extract="Godot_v4.6.2-stable_mono_win64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.6.2-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.6.2" released="2026-04-01" stability="stable" main="Godot_v4.6.2-stable_mono_win32_console.exe" id="sha256new_CDQXHZHPX756MXUE6RY5VSFULQGCRPOO5GX6J4ICOFFAJABFC3NQ">
+          <manifest-digest sha256new="CDQXHZHPX756MXUE6RY5VSFULQGCRPOO5GX6J4ICOFFAJABFC3NQ"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.6.2-stable/Godot_v4.6.2-stable_mono_win32.zip" size="111387461" type="application/zip" extract="Godot_v4.6.2-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.6.2-stable_mono_windows_arm64.exe"/>
+        <implementation arch="Windows-aarch64" version="4.6.2" released="2026-04-01" stability="stable" main="Godot_v4.6.2-stable_mono_windows_arm64_console.exe" id="sha256new_WWUG53KET6NHUHFF3MH5QFMEWVUKZCTTLCX2IXQGFJCVJIO2XSVQ">
+          <manifest-digest sha256new="WWUG53KET6NHUHFF3MH5QFMEWVUKZCTTLCX2IXQGFJCVJIO2XSVQ"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.6.2-stable/Godot_v4.6.2-stable_mono_windows_arm64.zip" size="107707289" type="application/zip" extract="Godot_v4.6.2-stable_mono_windows_arm64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.6.3-stable_mono_win64.exe"/>
+        <implementation arch="Windows-x86_64" version="4.6.3" released="2026-05-20" stability="stable" main="Godot_v4.6.3-stable_mono_win64_console.exe" id="sha256new_MJDDNIFB7HUJ6M7MEAYHCBHC3SVDNTTZPGIC36A2SJ5XP6ZLDCIQ">
+          <manifest-digest sha256new="MJDDNIFB7HUJ6M7MEAYHCBHC3SVDNTTZPGIC36A2SJ5XP6ZLDCIQ"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.6.3-stable/Godot_v4.6.3-stable_mono_win64.zip" size="109661890" type="application/zip" extract="Godot_v4.6.3-stable_mono_win64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.6.3-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.6.3" released="2026-05-20" stability="stable" main="Godot_v4.6.3-stable_mono_win32_console.exe" id="sha256new_YO7XOI4BBEWGBX66A77KRUG7IGCYX3CUIDRNOW565CCEWZIYUAKA">
+          <manifest-digest sha256new="YO7XOI4BBEWGBX66A77KRUG7IGCYX3CUIDRNOW565CCEWZIYUAKA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.6.3-stable/Godot_v4.6.3-stable_mono_win32.zip" size="111399249" type="application/zip" extract="Godot_v4.6.3-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.6.3-stable_mono_windows_arm64.exe"/>
+        <implementation arch="Windows-aarch64" version="4.6.3" released="2026-05-20" stability="stable" main="Godot_v4.6.3-stable_mono_windows_arm64_console.exe" id="sha256new_VKJCYL22ZDX5ZQECIHAW2HY7ZNP5OEWJE7C4ZRWZNKPQJXDHPHEA">
+          <manifest-digest sha256new="VKJCYL22ZDX5ZQECIHAW2HY7ZNP5OEWJE7C4ZRWZNKPQJXDHPHEA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.6.3-stable/Godot_v4.6.3-stable_mono_windows_arm64.zip" size="107729001" type="application/zip" extract="Godot_v4.6.3-stable_mono_windows_arm64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.6-stable_mono_win64.exe"/>
+        <implementation arch="Windows-x86_64" version="4.6" released="2026-01-26" stability="stable" main="Godot_v4.6-stable_mono_win64_console.exe" id="sha256new_5HYFFEXMY24ZCOAEQCNPVSIT3GPB5IXZT4KQQZWZLQVY3U5NAENA">
+          <manifest-digest sha256new="5HYFFEXMY24ZCOAEQCNPVSIT3GPB5IXZT4KQQZWZLQVY3U5NAENA"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.6-stable/Godot_v4.6-stable_mono_win64.zip" size="109206511" type="application/zip" extract="Godot_v4.6-stable_mono_win64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.6-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.6" released="2026-01-26" stability="stable" main="Godot_v4.6-stable_mono_win32_console.exe" id="sha256new_R4LAY7L75DGLZIFSQZNBMDYCNAZOA7HWQVCVLAXLVT4KOLSPXQVQ">
+          <manifest-digest sha256new="R4LAY7L75DGLZIFSQZNBMDYCNAZOA7HWQVCVLAXLVT4KOLSPXQVQ"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.6-stable/Godot_v4.6-stable_mono_win32.zip" size="110943313" type="application/zip" extract="Godot_v4.6-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.6-stable_mono_windows_arm64.exe"/>
+        <implementation arch="Windows-aarch64" version="4.6" released="2026-01-26" stability="stable" main="Godot_v4.6-stable_mono_windows_arm64_console.exe" id="sha256new_BUGUZ4CEWVBXE4NETZ6PEF6QDI44SMPB5ZYKPGVBVQOE7SRIAN4Q">
+          <manifest-digest sha256new="BUGUZ4CEWVBXE4NETZ6PEF6QDI44SMPB5ZYKPGVBVQOE7SRIAN4Q"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.6-stable/Godot_v4.6-stable_mono_windows_arm64.zip" size="107260579" type="application/zip" extract="Godot_v4.6-stable_mono_windows_arm64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.7-stable_mono_win64.exe"/>
+        <implementation arch="Windows-x86_64" version="4.7" released="2026-06-18" stability="stable" main="Godot_v4.7-stable_mono_win64_console.exe" id="sha256new_XM35NKRLHVF6STPEG6ISOTF6CZDFEBYN3NQP73NNQG7MTMRFOGDQ">
+          <manifest-digest sha256new="XM35NKRLHVF6STPEG6ISOTF6CZDFEBYN3NQP73NNQG7MTMRFOGDQ"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.7-stable/Godot_v4.7-stable_mono_win64.zip" size="114324762" type="application/zip" extract="Godot_v4.7-stable_mono_win64"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.7-stable_mono_win32.exe"/>
+        <implementation arch="Windows-i486" version="4.7" released="2026-06-18" stability="stable" main="Godot_v4.7-stable_mono_win32_console.exe" id="sha256new_YBMWPKJGQ5DMYDCST26YJUCDKWHOKV2JU2LIXETN2AKU6LVUBAAQ">
+          <manifest-digest sha256new="YBMWPKJGQ5DMYDCST26YJUCDKWHOKV2JU2LIXETN2AKU6LVUBAAQ"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.7-stable/Godot_v4.7-stable_mono_win32.zip" size="116208992" type="application/zip" extract="Godot_v4.7-stable_mono_win32"/>
+        </implementation>
+      </group>
+      <group>
+        <command name="run-gui" path="Godot_v4.7-stable_mono_windows_arm64.exe"/>
+        <implementation arch="Windows-aarch64" version="4.7" released="2026-06-18" stability="stable" main="Godot_v4.7-stable_mono_windows_arm64_console.exe" id="sha256new_OU7XN7VYEZ2EMYCGNANH62XDFVUFINCSZIDMBXJ37N4SBD52RI5Q">
+          <manifest-digest sha256new="OU7XN7VYEZ2EMYCGNANH62XDFVUFINCSZIDMBXJ37N4SBD52RI5Q"/>
+          <archive href="https://github.com/godotengine/godot/releases/download/4.7-stable/Godot_v4.7-stable_mono_windows_arm64.zip" size="112632999" type="application/zip" extract="Godot_v4.7-stable_mono_windows_arm64"/>
+        </implementation>
+      </group>
+    </group>
+    <implementation arch="Linux-x86_64" version="4.4" released="2025-03-03" stability="stable" main="Godot_v4.4-stable_mono_linux.x86_64" id="sha256new_ZDLZVAE7RFSE3RBKIMW2XGXGLHOQJLUEO2ONSPXQYNLD4UPBPD6A">
+      <manifest-digest sha256new="ZDLZVAE7RFSE3RBKIMW2XGXGLHOQJLUEO2ONSPXQYNLD4UPBPD6A"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.4-stable/Godot_v4.4-stable_mono_linux_x86_64.zip" size="82561325" type="application/zip" extract="Godot_v4.4-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.4" released="2025-03-03" stability="stable" main="Godot_v4.4-stable_mono_linux.x86_32" id="sha256new_2TKTMXSO2AKOY7ZDRGZOTW5SBZ3KZN7BGEQNFABIGZWZZHAAVBLQ">
+      <manifest-digest sha256new="2TKTMXSO2AKOY7ZDRGZOTW5SBZ3KZN7BGEQNFABIGZWZZHAAVBLQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.4-stable/Godot_v4.4-stable_mono_linux_x86_32.zip" size="83268597" type="application/zip" extract="Godot_v4.4-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="4.4" released="2025-03-03" stability="stable" main="Godot_v4.4-stable_mono_linux.arm64" id="sha256new_AUASWAYFPFPX6WJPVEO2F36VLKDVWR4EHMOHSZ4MN2GUAAFB6VJQ">
+      <manifest-digest sha256new="AUASWAYFPFPX6WJPVEO2F36VLKDVWR4EHMOHSZ4MN2GUAAFB6VJQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.4-stable/Godot_v4.4-stable_mono_linux_arm64.zip" size="81733981" type="application/zip" extract="Godot_v4.4-stable_mono_linux_arm64"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" version="4.4" released="2025-03-03" stability="stable" main="Godot_v4.4-stable_mono_linux.arm32" id="sha256new_FFBCUATDOOGWPZQZDA5GFLU3EA5EFP6ER64VMWU2CS5BWTJEFREA">
+      <manifest-digest sha256new="FFBCUATDOOGWPZQZDA5GFLU3EA5EFP6ER64VMWU2CS5BWTJEFREA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.4-stable/Godot_v4.4-stable_mono_linux_arm32.zip" size="79888350" type="application/zip" extract="Godot_v4.4-stable_mono_linux_arm32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.4" released="2025-03-03" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_KOZUNQUEJJTKBEXWFTQ5BZ3A5V7Y3OXEL2WPCIR43QQTYLJFOL3A">
+      <manifest-digest sha256new="KOZUNQUEJJTKBEXWFTQ5BZ3A5V7Y3OXEL2WPCIR43QQTYLJFOL3A"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.4-stable/Godot_v4.4-stable_mono_macos.universal.zip" size="151837645" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="4.5.1" released="2025-10-15" stability="stable" main="Godot_v4.5.1-stable_mono_linux.x86_64" id="sha256new_APCIX3POAWQWWLXEUEWM76UZEUALIU5IHQI2SMBGP3PWEO5WV2ZA">
+      <manifest-digest sha256new="APCIX3POAWQWWLXEUEWM76UZEUALIU5IHQI2SMBGP3PWEO5WV2ZA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.5.1-stable/Godot_v4.5.1-stable_mono_linux_x86_64.zip" size="92589426" type="application/zip" extract="Godot_v4.5.1-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.5.1" released="2025-10-15" stability="stable" main="Godot_v4.5.1-stable_mono_linux.x86_32" id="sha256new_WISPY5JRDRFR3PHW4T6TIBBPWVCLQODSSBRTI3GCQNJNIQNPPISQ">
+      <manifest-digest sha256new="WISPY5JRDRFR3PHW4T6TIBBPWVCLQODSSBRTI3GCQNJNIQNPPISQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.5.1-stable/Godot_v4.5.1-stable_mono_linux_x86_32.zip" size="92748860" type="application/zip" extract="Godot_v4.5.1-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="4.5.1" released="2025-10-15" stability="stable" main="Godot_v4.5.1-stable_mono_linux.arm64" id="sha256new_ZSALYHIVHQGVSHGMJU67XLHKYELCZT4LUVNQ3LPCY4HXN55H4CDQ">
+      <manifest-digest sha256new="ZSALYHIVHQGVSHGMJU67XLHKYELCZT4LUVNQ3LPCY4HXN55H4CDQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.5.1-stable/Godot_v4.5.1-stable_mono_linux_arm64.zip" size="91475443" type="application/zip" extract="Godot_v4.5.1-stable_mono_linux_arm64"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" version="4.5.1" released="2025-10-15" stability="stable" main="Godot_v4.5.1-stable_mono_linux.arm32" id="sha256new_GECWJW2QBJGHOHDAURXDJWKE4SYWRNUJZD2V4AFOZYF37RA2QIRQ">
+      <manifest-digest sha256new="GECWJW2QBJGHOHDAURXDJWKE4SYWRNUJZD2V4AFOZYF37RA2QIRQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.5.1-stable/Godot_v4.5.1-stable_mono_linux_arm32.zip" size="89357350" type="application/zip" extract="Godot_v4.5.1-stable_mono_linux_arm32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.5.1" released="2025-10-15" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_WHG7HE7OGOEPGR7N5AGWQVWVUO2XSBQP7BN7RWRNXADCQOERGPJA">
+      <manifest-digest sha256new="WHG7HE7OGOEPGR7N5AGWQVWVUO2XSBQP7BN7RWRNXADCQOERGPJA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.5.1-stable/Godot_v4.5.1-stable_mono_macos.universal.zip" size="184079584" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="4.5.2" released="2026-03-19" stability="stable" main="Godot_v4.5.2-stable_mono_linux.x86_64" id="sha256new_GCYAIBZFU7POTIRUCTYI63WYO7FI4OAQNO4AQLCZJXN4HGZQYVIQ">
+      <manifest-digest sha256new="GCYAIBZFU7POTIRUCTYI63WYO7FI4OAQNO4AQLCZJXN4HGZQYVIQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.5.2-stable/Godot_v4.5.2-stable_mono_linux_x86_64.zip" size="93539960" type="application/zip" extract="Godot_v4.5.2-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.5.2" released="2026-03-19" stability="stable" main="Godot_v4.5.2-stable_mono_linux.x86_32" id="sha256new_5RJJZ7F77VFTUXWWKO346GWI22LC44PMPXFXEY7JHDRTNNQRLI3A">
+      <manifest-digest sha256new="5RJJZ7F77VFTUXWWKO346GWI22LC44PMPXFXEY7JHDRTNNQRLI3A"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.5.2-stable/Godot_v4.5.2-stable_mono_linux_x86_32.zip" size="93698199" type="application/zip" extract="Godot_v4.5.2-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="4.5.2" released="2026-03-19" stability="stable" main="Godot_v4.5.2-stable_mono_linux.arm64" id="sha256new_FD2PN6B55IG7IVFHD757WI7C2W2QCVRIYIACAEY4NR2UEXN6SYNQ">
+      <manifest-digest sha256new="FD2PN6B55IG7IVFHD757WI7C2W2QCVRIYIACAEY4NR2UEXN6SYNQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.5.2-stable/Godot_v4.5.2-stable_mono_linux_arm64.zip" size="92420420" type="application/zip" extract="Godot_v4.5.2-stable_mono_linux_arm64"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" version="4.5.2" released="2026-03-19" stability="stable" main="Godot_v4.5.2-stable_mono_linux.arm32" id="sha256new_PAVJE3G4IJPAQ2EHXERSSZG3N36PZXDZPZPNDX44O4OI2YMGZMCA">
+      <manifest-digest sha256new="PAVJE3G4IJPAQ2EHXERSSZG3N36PZXDZPZPNDX44O4OI2YMGZMCA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.5.2-stable/Godot_v4.5.2-stable_mono_linux_arm32.zip" size="90301721" type="application/zip" extract="Godot_v4.5.2-stable_mono_linux_arm32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.5.2" released="2026-03-19" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_WKAWPYVSY3XJGAYPE34TPTDBNHWNCYJPAX4KME7CDAE4OTVMSLLQ">
+      <manifest-digest sha256new="WKAWPYVSY3XJGAYPE34TPTDBNHWNCYJPAX4KME7CDAE4OTVMSLLQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.5.2-stable/Godot_v4.5.2-stable_mono_macos.universal.zip" size="185618302" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="4.5" released="2025-09-15" stability="stable" main="Godot_v4.5-stable_mono_linux.x86_64" id="sha256new_W73YLOOYLDFZJ7A7BWQUDHL5QGCM6UL6EWNWIK6CDO545GPAL5VA">
+      <manifest-digest sha256new="W73YLOOYLDFZJ7A7BWQUDHL5QGCM6UL6EWNWIK6CDO545GPAL5VA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.5-stable/Godot_v4.5-stable_mono_linux_x86_64.zip" size="113973295" type="application/zip" extract="Godot_v4.5-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.5" released="2025-09-15" stability="stable" main="Godot_v4.5-stable_mono_linux.x86_32" id="sha256new_4C4VRBY7LUJN47VKKVTS4QWW4T6NULNVOGMERQ2IXDROXH2HZQVA">
+      <manifest-digest sha256new="4C4VRBY7LUJN47VKKVTS4QWW4T6NULNVOGMERQ2IXDROXH2HZQVA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.5-stable/Godot_v4.5-stable_mono_linux_x86_32.zip" size="114114538" type="application/zip" extract="Godot_v4.5-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="4.5" released="2025-09-15" stability="stable" main="Godot_v4.5-stable_mono_linux.arm64" id="sha256new_BVXBMHZJ7H2WGCBQ4MDPAKBO4G3LSRGHUK64NPC6RJEB3TYA2KQA">
+      <manifest-digest sha256new="BVXBMHZJ7H2WGCBQ4MDPAKBO4G3LSRGHUK64NPC6RJEB3TYA2KQA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.5-stable/Godot_v4.5-stable_mono_linux_arm64.zip" size="112849487" type="application/zip" extract="Godot_v4.5-stable_mono_linux_arm64"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" version="4.5" released="2025-09-15" stability="stable" main="Godot_v4.5-stable_mono_linux.arm32" id="sha256new_QBUGTXEFEUEKXB3YQ44LDGWUJ3WFL3OR7CPXRIKJ2XIVQVJEOF3A">
+      <manifest-digest sha256new="QBUGTXEFEUEKXB3YQ44LDGWUJ3WFL3OR7CPXRIKJ2XIVQVJEOF3A"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.5-stable/Godot_v4.5-stable_mono_linux_arm32.zip" size="110740794" type="application/zip" extract="Godot_v4.5-stable_mono_linux_arm32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.5" released="2025-09-15" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_TQ7I24OZEIG6LJJVNY642JKL6WS7ZTC5NUU44UVIQYXDGJWDZ6QQ">
+      <manifest-digest sha256new="TQ7I24OZEIG6LJJVNY642JKL6WS7ZTC5NUU44UVIQYXDGJWDZ6QQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.5-stable/Godot_v4.5-stable_mono_macos.universal.zip" size="204948098" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="4.6.1" released="2026-02-16" stability="stable" main="Godot_v4.6.1-stable_mono_linux.x86_64" id="sha256new_RHM27L4EA376DM3M2QFSCM4CE6L2TIOS7VTIJL33Y5MTS2QKQAZA">
+      <manifest-digest sha256new="RHM27L4EA376DM3M2QFSCM4CE6L2TIOS7VTIJL33Y5MTS2QKQAZA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_mono_linux_x86_64.zip" size="100871225" type="application/zip" extract="Godot_v4.6.1-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.6.1" released="2026-02-16" stability="stable" main="Godot_v4.6.1-stable_mono_linux.x86_32" id="sha256new_Y3ZC2WD63UJOW5B2IAS3EQQVIAGNW3EB6ULDXNUFH2U6HBW6N77A">
+      <manifest-digest sha256new="Y3ZC2WD63UJOW5B2IAS3EQQVIAGNW3EB6ULDXNUFH2U6HBW6N77A"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_mono_linux_x86_32.zip" size="100575480" type="application/zip" extract="Godot_v4.6.1-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="4.6.1" released="2026-02-16" stability="stable" main="Godot_v4.6.1-stable_mono_linux.arm64" id="sha256new_IW4VFVDWV4ETQRBMQNGH2MUCUGED4Q6ZCZQPZ3V33YCTTZIO5GRQ">
+      <manifest-digest sha256new="IW4VFVDWV4ETQRBMQNGH2MUCUGED4Q6ZCZQPZ3V33YCTTZIO5GRQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_mono_linux_arm64.zip" size="99920546" type="application/zip" extract="Godot_v4.6.1-stable_mono_linux_arm64"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" version="4.6.1" released="2026-02-16" stability="stable" main="Godot_v4.6.1-stable_mono_linux.arm32" id="sha256new_XJWI66XBOQR4FQNU252JUHD7DRXLDKJPGRJJZYCABVLZFL3HDJ2A">
+      <manifest-digest sha256new="XJWI66XBOQR4FQNU252JUHD7DRXLDKJPGRJJZYCABVLZFL3HDJ2A"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_mono_linux_arm32.zip" size="97589790" type="application/zip" extract="Godot_v4.6.1-stable_mono_linux_arm32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.6.1" released="2026-02-16" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_JUFNZ57XJRRJG25ZITMPDYQFKQVWBEAQXQF5DSP6QEBNFE7753QQ">
+      <manifest-digest sha256new="JUFNZ57XJRRJG25ZITMPDYQFKQVWBEAQXQF5DSP6QEBNFE7753QQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.6.1-stable/Godot_v4.6.1-stable_mono_macos.universal.zip" size="190505620" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="4.6.2" released="2026-04-01" stability="stable" main="Godot_v4.6.2-stable_mono_linux.x86_64" id="sha256new_XLZO2M3Q5EMJDAPAFVYL6NG3X2HU2MYQYVMFGSYKD7F5MHSQPXMA">
+      <manifest-digest sha256new="XLZO2M3Q5EMJDAPAFVYL6NG3X2HU2MYQYVMFGSYKD7F5MHSQPXMA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.6.2-stable/Godot_v4.6.2-stable_mono_linux_x86_64.zip" size="100887556" type="application/zip" extract="Godot_v4.6.2-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.6.2" released="2026-04-01" stability="stable" main="Godot_v4.6.2-stable_mono_linux.x86_32" id="sha256new_I4M6JO74FUMN2BVMXBP3XBMP63HI2IJTENXZ66YPRQLLYRX7MVFQ">
+      <manifest-digest sha256new="I4M6JO74FUMN2BVMXBP3XBMP63HI2IJTENXZ66YPRQLLYRX7MVFQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.6.2-stable/Godot_v4.6.2-stable_mono_linux_x86_32.zip" size="100593407" type="application/zip" extract="Godot_v4.6.2-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="4.6.2" released="2026-04-01" stability="stable" main="Godot_v4.6.2-stable_mono_linux.arm64" id="sha256new_66RK6IJ47TZ6J4DJMGVZJDDNIREPGIM4CLLEEIO4EJF7ZRU7MJIQ">
+      <manifest-digest sha256new="66RK6IJ47TZ6J4DJMGVZJDDNIREPGIM4CLLEEIO4EJF7ZRU7MJIQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.6.2-stable/Godot_v4.6.2-stable_mono_linux_arm64.zip" size="99946683" type="application/zip" extract="Godot_v4.6.2-stable_mono_linux_arm64"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" version="4.6.2" released="2026-04-01" stability="stable" main="Godot_v4.6.2-stable_mono_linux.arm32" id="sha256new_MDBUUSY2URYPKLX5KLBP4PDWVS6HH2FOCTRRNENCLZKKVTEWNWJA">
+      <manifest-digest sha256new="MDBUUSY2URYPKLX5KLBP4PDWVS6HH2FOCTRRNENCLZKKVTEWNWJA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.6.2-stable/Godot_v4.6.2-stable_mono_linux_arm32.zip" size="97601838" type="application/zip" extract="Godot_v4.6.2-stable_mono_linux_arm32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.6.2" released="2026-04-01" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_IYQEFVACI74DSCYC2Q7TREBPC4X24SDNMNUUJMCIFYYHVM4TREFA">
+      <manifest-digest sha256new="IYQEFVACI74DSCYC2Q7TREBPC4X24SDNMNUUJMCIFYYHVM4TREFA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.6.2-stable/Godot_v4.6.2-stable_mono_macos.universal.zip" size="190561450" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="4.6.3" released="2026-05-20" stability="stable" main="Godot_v4.6.3-stable_mono_linux.x86_64" id="sha256new_QCBOA3XRMMH4ETGQYTR7SKBMHAD4CKYEPME5FWXYMBUBADGDENPQ">
+      <manifest-digest sha256new="QCBOA3XRMMH4ETGQYTR7SKBMHAD4CKYEPME5FWXYMBUBADGDENPQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.6.3-stable/Godot_v4.6.3-stable_mono_linux_x86_64.zip" size="100887313" type="application/zip" extract="Godot_v4.6.3-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.6.3" released="2026-05-20" stability="stable" main="Godot_v4.6.3-stable_mono_linux.x86_32" id="sha256new_25IXKKVSVWMKRXRFJKXTD5JVRNMIUEZLKTPFDNGOBVILNWEGPICQ">
+      <manifest-digest sha256new="25IXKKVSVWMKRXRFJKXTD5JVRNMIUEZLKTPFDNGOBVILNWEGPICQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.6.3-stable/Godot_v4.6.3-stable_mono_linux_x86_32.zip" size="100600038" type="application/zip" extract="Godot_v4.6.3-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="4.6.3" released="2026-05-20" stability="stable" main="Godot_v4.6.3-stable_mono_linux.arm64" id="sha256new_6BR5OJIWNS5LRVTGE6BN4FOVLLQJD2NOMMHC5VT2FZWWQEJTHMDQ">
+      <manifest-digest sha256new="6BR5OJIWNS5LRVTGE6BN4FOVLLQJD2NOMMHC5VT2FZWWQEJTHMDQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.6.3-stable/Godot_v4.6.3-stable_mono_linux_arm64.zip" size="99948029" type="application/zip" extract="Godot_v4.6.3-stable_mono_linux_arm64"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" version="4.6.3" released="2026-05-20" stability="stable" main="Godot_v4.6.3-stable_mono_linux.arm32" id="sha256new_MIZFU4UFT7QO4YTRJ23RNV6S6VFKND2WGAG7TKXN6XL2Y245H3PA">
+      <manifest-digest sha256new="MIZFU4UFT7QO4YTRJ23RNV6S6VFKND2WGAG7TKXN6XL2Y245H3PA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.6.3-stable/Godot_v4.6.3-stable_mono_linux_arm32.zip" size="97622293" type="application/zip" extract="Godot_v4.6.3-stable_mono_linux_arm32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.6.3" released="2026-05-20" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_DL3CRQJLVPQIMPF56SOILP5QMIEBHNQPWG4VWSNNXSBXBEOIYOJQ">
+      <manifest-digest sha256new="DL3CRQJLVPQIMPF56SOILP5QMIEBHNQPWG4VWSNNXSBXBEOIYOJQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.6.3-stable/Godot_v4.6.3-stable_mono_macos.universal.zip" size="190574861" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="4.6" released="2026-01-26" stability="stable" main="Godot_v4.6-stable_mono_linux.x86_64" id="sha256new_6T75KYGXG4BG6672NPGR3ZN5DVJUP5S4FMVSJPSPGX5LGMXMZ2ZQ">
+      <manifest-digest sha256new="6T75KYGXG4BG6672NPGR3ZN5DVJUP5S4FMVSJPSPGX5LGMXMZ2ZQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.6-stable/Godot_v4.6-stable_mono_linux_x86_64.zip" size="100460305" type="application/zip" extract="Godot_v4.6-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.6" released="2026-01-26" stability="stable" main="Godot_v4.6-stable_mono_linux.x86_32" id="sha256new_MYV64GQZWKYZDCV4PC2QM3O4TO3W3MFA33M6FOUBSII2ZKAW7HIA">
+      <manifest-digest sha256new="MYV64GQZWKYZDCV4PC2QM3O4TO3W3MFA33M6FOUBSII2ZKAW7HIA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.6-stable/Godot_v4.6-stable_mono_linux_x86_32.zip" size="100160498" type="application/zip" extract="Godot_v4.6-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="4.6" released="2026-01-26" stability="stable" main="Godot_v4.6-stable_mono_linux.arm64" id="sha256new_N3DUSF4ZIUJON3BAOG4TSCT5ITJCTA2WGBWE2FYNVCLCCBTFODJQ">
+      <manifest-digest sha256new="N3DUSF4ZIUJON3BAOG4TSCT5ITJCTA2WGBWE2FYNVCLCCBTFODJQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.6-stable/Godot_v4.6-stable_mono_linux_arm64.zip" size="99521291" type="application/zip" extract="Godot_v4.6-stable_mono_linux_arm64"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" version="4.6" released="2026-01-26" stability="stable" main="Godot_v4.6-stable_mono_linux.arm32" id="sha256new_BXEQDDOE6ME4US5CDUHB6ISYBIJTXGCAZ2Y3SC3UIEPSSO3GGIKQ">
+      <manifest-digest sha256new="BXEQDDOE6ME4US5CDUHB6ISYBIJTXGCAZ2Y3SC3UIEPSSO3GGIKQ"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.6-stable/Godot_v4.6-stable_mono_linux_arm32.zip" size="97198745" type="application/zip" extract="Godot_v4.6-stable_mono_linux_arm32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.6" released="2026-01-26" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_P7I3YVFFCTMNISKKLWDL4EXTQZCE73JE4ANC656433BPGYYV7X4Q">
+      <manifest-digest sha256new="P7I3YVFFCTMNISKKLWDL4EXTQZCE73JE4ANC656433BPGYYV7X4Q"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.6-stable/Godot_v4.6-stable_mono_macos.universal.zip" size="190087407" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="4.7" released="2026-06-18" stability="stable" main="Godot_v4.7-stable_mono_linux.x86_64" id="sha256new_4QFD2PQFYQ2CZNLJ2OXRJVGAFWOGJ2ZWXZC33GZ733X6CZHKGAXA">
+      <manifest-digest sha256new="4QFD2PQFYQ2CZNLJ2OXRJVGAFWOGJ2ZWXZC33GZ733X6CZHKGAXA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.7-stable/Godot_v4.7-stable_mono_linux_x86_64.zip" size="105506785" type="application/zip" extract="Godot_v4.7-stable_mono_linux_x86_64"/>
+    </implementation>
+    <implementation arch="Linux-i386" version="4.7" released="2026-06-18" stability="stable" main="Godot_v4.7-stable_mono_linux.x86_32" id="sha256new_VZGJ3PUG4HONRTQH3KWT7GNSPGVQXG44TAJM5FJ5HU2U4YIINQ3A">
+      <manifest-digest sha256new="VZGJ3PUG4HONRTQH3KWT7GNSPGVQXG44TAJM5FJ5HU2U4YIINQ3A"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.7-stable/Godot_v4.7-stable_mono_linux_x86_32.zip" size="105675292" type="application/zip" extract="Godot_v4.7-stable_mono_linux_x86_32"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="4.7" released="2026-06-18" stability="stable" main="Godot_v4.7-stable_mono_linux.arm64" id="sha256new_QTYXJCZAW4A6Q5EEBLV4ZQ6CVJUNGRDQXUXENKCVCCV4SJFZ4VXA">
+      <manifest-digest sha256new="QTYXJCZAW4A6Q5EEBLV4ZQ6CVJUNGRDQXUXENKCVCCV4SJFZ4VXA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.7-stable/Godot_v4.7-stable_mono_linux_arm64.zip" size="104668870" type="application/zip" extract="Godot_v4.7-stable_mono_linux_arm64"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" version="4.7" released="2026-06-18" stability="stable" main="Godot_v4.7-stable_mono_linux.arm32" id="sha256new_ETJIV22M3XCLT3PJYTBUS2Q2TZDLQJNWXQWHENIGXUO4IXLBSZIA">
+      <manifest-digest sha256new="ETJIV22M3XCLT3PJYTBUS2Q2TZDLQJNWXQWHENIGXUO4IXLBSZIA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.7-stable/Godot_v4.7-stable_mono_linux_arm32.zip" size="102396491" type="application/zip" extract="Godot_v4.7-stable_mono_linux_arm32"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="4.7" released="2026-06-18" stability="stable" main="Godot_mono.app/Contents/MacOS/Godot" id="sha256new_C6QOILWX4EION5YCS3ALG7OMBXC6Q4DEYNND6PYZNEQ2WIINYIHA">
+      <manifest-digest sha256new="C6QOILWX4EION5YCS3ALG7OMBXC6Q4DEYNND6PYZNEQ2WIINYIHA"/>
+      <archive href="https://github.com/godotengine/godot/releases/download/4.7-stable/Godot_v4.7-stable_mono_macos.universal.zip" size="196178901" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmpTqksACgkQWao5J8JOTh7EzggAg4RY
+nh7IkT86fpRDVYXsLcExxPCZUZLRdatP/NAhl6/YY8MLOLfDra3WCxCc/KGu6Sf2HvpknZmFyQoq
+NgE0EdakcXUGk8Bk/BbzNO+zS329HFBmkUzpcC+hd0y8dkwF04RI63Mz3qORTGeeSCAuaprnnnGJ
+/SdYroPMnrRbZwJlz/8feo9rl58uE4WWIhrIyYrqzFH54Xh+45S52YlfpujvueYPyqrjL+BDivq2
+meiilOrkYNc8Aa8hcfH3SuV/BvdhBDmiLI8CRXcOGl/ppZjOc0VpylvL3HF0fNRQ6T/16SjdmvFi
+Kd06KLRhWPILaA/0zE2UrboqgqqpclL8/A==
+
+-->

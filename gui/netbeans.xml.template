@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Apache NetBeans</name>
+  <summary>integrated development environment for Java, PHP, HTML5 and more</summary>
+  <description>Apache NetBeans is an open source development environment, tooling platform and application framework. It provides support for developing Java, PHP, HTML5, JavaScript, C/C++ and other languages, with editors, code analyzers and converters.</description>
+  <homepage>https://netbeans.apache.org/</homepage>
+  <category>Development</category>
+  <icon href="https://apps.0install.net/gui/netbeans.png" type="image/png"/>
+  <icon href="https://apps.0install.net/gui/netbeans.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://apps.0install.net/gui/netbeans.icns" type="image/x-icns"/>
+
+  <feed-for interface="https://apps.0install.net/gui/netbeans.xml"/>
+
+  <group license="Apache-2.0">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="21..">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+
+    <group>
+      <command name="run" path="bin/netbeans"/>
+      <implementation id="netbeans-{version}-posix" arch="POSIX-*" version="{version}" released="{released}" stability="{stability}">
+        <manifest-digest/>
+        <archive extract="netbeans" href="https://archive.apache.org/dist/netbeans/netbeans/{version}/netbeans-{version}-bin.zip" type="application/zip"/>
+      </implementation>
+    </group>
+
+    <group arch="Windows-*">
+      <command name="run" path="bin/netbeans64.exe"/>
+      <implementation id="netbeans-{version}-windows" version="{version}" released="{released}" stability="{stability}">
+        <manifest-digest/>
+        <archive extract="netbeans" href="https://archive.apache.org/dist/netbeans/netbeans/{version}/netbeans-{version}-bin.zip" type="application/zip"/>
+      </implementation>
+    </group>
+  </group>
+</interface>

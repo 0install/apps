@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Microsoft Build of OpenJDK</name>
+  <summary>Microsoft Build of OpenJDK Development Kit</summary>
+  <description>The Microsoft Build of OpenJDK is a no-cost distribution of OpenJDK that is open source and available for free for anyone to deploy anywhere.</description>
+  <homepage>https://learn.microsoft.com/en-us/java/openjdk/</homepage>
+  <category>Development</category>
+
+  <feed-for interface="https://apps.0install.net/java/microsoft-jdk.xml"/>
+
+  <group license="GPL-2.0-only WITH Classpath-exception-2.0">
+    <command name="run" path="bin/javac.exe"/>
+    <command name="java" path="bin/java.exe"/>
+    <command name="java-gui" path="bin/javaw.exe"/>
+    <command name="javadoc" path="bin/javadoc.exe"/>
+    <command name="javap" path="bin/javap.exe"/>
+    <command name="jar" path="bin/jar.exe"/>
+    <command name="jarsigner" path="bin/jarsigner.exe"/>
+    <command name="keytool" path="bin/keytool.exe"/>
+    <command name="rmiregistry" path="bin/rmiregistry.exe"/>
+    <command name="jrunscript" path="bin/jrunscript.exe"/>
+    <command name="jcmd" path="bin/jcmd.exe"/>
+    <command name="jconsole" path="bin/jconsole.exe"/>
+    <command name="jdb" path="bin/jdb.exe"/>
+    <command name="jdeprscan" path="bin/jdeprscan.exe"/>
+    <command name="jdeps" path="bin/jdeps.exe"/>
+    <command name="jfr" path="bin/jfr.exe"/>
+    <command name="jhsdb" path="bin/jhsdb.exe"/>
+    <command name="jimage" path="bin/jimage.exe"/>
+    <command name="jinfo" path="bin/jinfo.exe"/>
+    <command name="jlink" path="bin/jlink.exe"/>
+    <command name="jmap" path="bin/jmap.exe"/>
+    <command name="jmod" path="bin/jmod.exe"/>
+    <command name="jps" path="bin/jps.exe"/>
+    <command name="jshell" path="bin/jshell.exe"/>
+    <command name="jstack" path="bin/jstack.exe"/>
+    <command name="jstat" path="bin/jstat.exe"/>
+    <command name="jstatd" path="bin/jstatd.exe"/>
+    <command name="serialver" path="bin/serialver.exe"/>
+    <command name="kinit" path="bin/kinit.exe"/>
+    <command name="klist" path="bin/klist.exe"/>
+    <command name="ktab" path="bin/ktab.exe"/>
+    <command name="jabswitch" path="bin/jabswitch.exe"/>
+    <command name="jaccessinspector" path="bin/jaccessinspector.exe"/>
+    <command name="jaccesswalker" path="bin/jaccesswalker.exe"/>
+    <command name="jpackage" path="bin/jpackage.exe"/>
+    <command name="jwebserver" path="bin/jwebserver.exe"/>
+
+    <implementation arch="Windows-x86_64" version="{version}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://aka.ms/download-jdk/microsoft-jdk-{version}-windows-x64.zip" type="application/zip" extract="jdk-{version}+{buildnumber}"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="{version}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://aka.ms/download-jdk/microsoft-jdk-{version}-windows-aarch64.zip" type="application/zip" extract="jdk-{version}+{buildnumber}"/>
+    </implementation>
+  </group>
+
+  <!-- Non-Windows builds currently generate inconsistent manifest digests -->
+  <!--<group license="GPL-2.0-only WITH Classpath-exception-2.0">
+    <command name="run" path="bin/javac"/>
+    <command name="java" path="bin/java"/>
+    <command name="javap" path="bin/javap"/>
+    <command name="jar" path="bin/jar"/>
+    <command name="jarsigner" path="bin/jarsigner"/>
+    <command name="javadoc" path="bin/javadoc"/>
+    <command name="keytool" path="bin/keytool"/>
+    <command name="rmiregistry" path="bin/rmiregistry"/>
+    <command name="jrunscript" path="bin/jrunscript"/>
+    <command name="jcmd" path="bin/jcmd"/>
+    <command name="jconsole" path="bin/jconsole"/>
+    <command name="jdb" path="bin/jdb"/>
+    <command name="jdeprscan" path="bin/jdeprscan"/>
+    <command name="jdeps" path="bin/jdeps"/>
+    <command name="jfr" path="bin/jfr"/>
+    <command name="jhsdb" path="bin/jhsdb"/>
+    <command name="jimage" path="bin/jimage"/>
+    <command name="jinfo" path="bin/jinfo"/>
+    <command name="jlink" path="bin/jlink"/>
+    <command name="jmap" path="bin/jmap"/>
+    <command name="jmod" path="bin/jmod"/>
+    <command name="jps" path="bin/jps"/>
+    <command name="jshell" path="bin/jshell"/>
+    <command name="jstack" path="bin/jstack"/>
+    <command name="jstat" path="bin/jstat"/>
+    <command name="jstatd" path="bin/jstatd"/>
+    <command name="serialver" path="bin/serialver"/>
+    <command name="jpackage" path="bin/jpackage"/>
+    <command name="jwebserver" path="bin/jwebserver"/>
+
+    <implementation arch="Linux-x86_64" version="{version}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://aka.ms/download-jdk/microsoft-jdk-{version}-linux-x64.tar.gz" type="application/x-compressed-tar" extract="jdk-{version}+{buildnumber}"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://aka.ms/download-jdk/microsoft-jdk-{version}-linux-aarch64.tar.gz" type="application/x-compressed-tar" extract="jdk-{version}+{buildnumber}"/>
+    </implementation>
+  </group>
+
+  <group license="GPL-2.0-only WITH Classpath-exception-2.0">
+    <command name="run" path="Contents/Home/bin/javac"/>
+    <command name="java" path="Contents/Home/bin/java"/>
+    <command name="javap" path="Contents/Home/bin/javap"/>
+    <command name="jar" path="Contents/Home/bin/jar"/>
+    <command name="jarsigner" path="Contents/Home/bin/jarsigner"/>
+    <command name="javadoc" path="Contents/Home/bin/javadoc"/>
+    <command name="keytool" path="Contents/Home/bin/keytool"/>
+    <command name="rmiregistry" path="Contents/Home/bin/rmiregistry"/>
+    <command name="jrunscript" path="Contents/Home/bin/jrunscript"/>
+    <command name="jcmd" path="Contents/Home/bin/jcmd"/>
+    <command name="jconsole" path="Contents/Home/bin/jconsole"/>
+    <command name="jdb" path="Contents/Home/bin/jdb"/>
+    <command name="jdeprscan" path="Contents/Home/bin/jdeprscan"/>
+    <command name="jdeps" path="Contents/Home/bin/jdeps"/>
+    <command name="jfr" path="Contents/Home/bin/jfr"/>
+    <command name="jhsdb" path="Contents/Home/bin/jhsdb"/>
+    <command name="jimage" path="Contents/Home/bin/jimage"/>
+    <command name="jinfo" path="Contents/Home/bin/jinfo"/>
+    <command name="jlink" path="Contents/Home/bin/jlink"/>
+    <command name="jmap" path="Contents/Home/bin/jmap"/>
+    <command name="jmod" path="Contents/Home/bin/jmod"/>
+    <command name="jps" path="Contents/Home/bin/jps"/>
+    <command name="jshell" path="Contents/Home/bin/jshell"/>
+    <command name="jstack" path="Contents/Home/bin/jstack"/>
+    <command name="jstat" path="Contents/Home/bin/jstat"/>
+    <command name="jstatd" path="Contents/Home/bin/jstatd"/>
+    <command name="serialver" path="Contents/Home/bin/serialver"/>
+    <command name="jpackage" path="Contents/Home/bin/jpackage"/>
+    <command name="jwebserver" path="Contents/Home/bin/jwebserver"/>
+
+    <implementation arch="MacOSX-x86_64" version="{version}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://aka.ms/download-jdk/microsoft-jdk-{version}-macos-x64.tar.gz" type="application/x-compressed-tar" extract="jdk-{version}+{buildnumber}"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="{version}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://aka.ms/download-jdk/microsoft-jdk-{version}-macos-aarch64.tar.gz" type="application/x-compressed-tar" extract="jdk-{version}+{buildnumber}"/>
+    </implementation>
+  </group>-->
+</interface>

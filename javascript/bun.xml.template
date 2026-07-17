@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Bun</name>
+  <summary>fast all-in-one JavaScript runtime, bundler, test runner and package manager</summary>
+  <description>Bun is an all-in-one toolkit for JavaScript and TypeScript apps. It ships as a single executable called bun and includes a fast JavaScript runtime (a drop-in replacement for Node.js), a bundler, a test runner, and a Node.js-compatible package manager.</description>
+  <homepage>https://bun.sh/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+
+  <icon href="https://apps.0install.net/javascript/bun.png" type="image/png"/>
+  <icon href="https://apps.0install.net/javascript/bun.ico" type="image/vnd.microsoft.icon"/>
+
+  <feed-for interface="https://apps.0install.net/javascript/bun.xml"/>
+
+  <group license="MIT">
+    <command name="run" path="bun"/>
+    <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="bun-linux-x64" href="https://github.com/oven-sh/bun/releases/download/bun-v{version}/bun-linux-x64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="bun-linux-aarch64" href="https://github.com/oven-sh/bun/releases/download/bun-v{version}/bun-linux-aarch64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="bun-darwin-x64" href="https://github.com/oven-sh/bun/releases/download/bun-v{version}/bun-darwin-x64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="bun-darwin-aarch64" href="https://github.com/oven-sh/bun/releases/download/bun-v{version}/bun-darwin-aarch64.zip" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group license="MIT">
+    <command name="run" path="bun.exe"/>
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="bun-windows-x64" href="https://github.com/oven-sh/bun/releases/download/bun-v{version}/bun-windows-x64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="bun-windows-aarch64" href="https://github.com/oven-sh/bun/releases/download/bun-v{version}/bun-windows-aarch64.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

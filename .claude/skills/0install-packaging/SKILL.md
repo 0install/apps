@@ -208,7 +208,7 @@ Step 5 only validated the template against one version. Now make the feed live b
 2. **Produce the formats the feed actually needs**, named exactly after the feed:
    - `name.png` — **required** whenever the feed has any icon; the primary icon.
    - `name.ico` — **only** for cross-platform or Windows-only feeds (Windows uses it for shortcuts); skip it for a macOS/Linux-only feed.
-   - `name.icns` — **only** for cross-platform or macOS-only feeds; skip it for a Windows/Linux-only feed.
+   - `name.icns` — **only** for cross-platform or macOS-only GUI feeds; skip it for a Windows/Linux-only feed, skip it for CLI-only feed.
 
    **Prefer a `.ico`/`.icns` the project already ships** (from step 1) over generating one — they're usually better-tuned. Only convert when none exists: rasterize an `.svg` to PNG first if that's all you have, then `magick name.png name.ico` for the `.ico` and `magick name.png name.icns` for the `.icns`. If `magick` (ImageMagick) isn't installed, run it through 0install — prefix the command with `0install run https://apps.0install.net/utils/imagemagick.xml` (e.g. `0install run https://apps.0install.net/utils/imagemagick.xml name.png name.ico`).
 3. **Place them in the gh-pages checkout.** The README's local layout clones it as `public/` next to `feeds/`, i.e. **`../public/`** relative to your feeds checkout (verify with `git -C ../public rev-parse --abbrev-ref HEAD` → `gh-pages`). Copy each file to `../public/CATEGORY/name.<ext>`.

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>KeePassXC - Linux builds</name>
+  <summary>cross-platform password manager</summary>
+  <description>KeePassXC is a free, open source, cross-platform password manager that helps you store your passwords securely and auto-type them into your everyday websites and applications. Databases are encrypted with AES, Twofish, or ChaCha20 using Argon2 key derivation, and can be locked with a master password, key file, and/or hardware key.</description>
+  <homepage>https://keepassxc.org/</homepage>
+  <icon href="https://apps.0install.net/gui/keepassxc.png" type="image/png"/>
+  <category>Utility</category>
+
+  <feed-for interface="https://apps.0install.net/gui/keepassxc-linux.xml"/>
+
+  <group license="GPL-3.0-only">
+    <command name="run" path="KeePassXC"/>
+
+    <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <file href="https://github.com/keepassxreboot/keepassxc/releases/download/{version}/KeePassXC-{version}-x86_64.AppImage" dest="KeePassXC" executable="true"/>
+    </implementation>
+  </group>
+</interface>

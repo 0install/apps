@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/gui/keepassxc.xml">
+  <name>KeePassXC</name>
+  <summary>cross-platform password manager</summary>
+  <description>KeePassXC is a free, open source, cross-platform password manager that helps you store your passwords securely and auto-type them into your everyday websites and applications. Databases are encrypted with AES, Twofish, or ChaCha20 using Argon2 key derivation, and can be locked with a master password, key file, and/or hardware key.</description>
+  <icon href="https://apps.0install.net/gui/keepassxc.png" type="image/png"/>
+  <icon href="https://apps.0install.net/gui/keepassxc.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://apps.0install.net/gui/keepassxc.icns" type="image/x-icns"/>
+  <category>Utility</category>
+  <homepage>https://keepassxc.org/</homepage>
+
+  <feed arch="Linux-*" src="https://apps.0install.net/gui/keepassxc-linux.xml"/>
+  <feed arch="MacOSX-*" src="https://apps.0install.net/gui/keepassxc-macos.xml"/>
+  <feed arch="Windows-*" src="https://apps.0install.net/gui/keepassxc-windows.xml"/>
+
+  <entry-point binary-name="KeePassXC" command="run"/>
+  <entry-point binary-name="keepassxc-cli" command="keepassxc-cli">
+    <needs-terminal/>
+    <name>KeePassXC CLI</name>
+    <summary>command-line interface for KeePassXC</summary>
+  </entry-point>
+</interface>

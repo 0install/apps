@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>KeePassXC - macOS builds</name>
+  <summary>cross-platform password manager</summary>
+  <description>KeePassXC is a free, open source, cross-platform password manager that helps you store your passwords securely and auto-type them into your everyday websites and applications. Databases are encrypted with AES, Twofish, or ChaCha20 using Argon2 key derivation, and can be locked with a master password, key file, and/or hardware key.</description>
+  <homepage>https://keepassxc.org/</homepage>
+  <icon href="https://apps.0install.net/gui/keepassxc.png" type="image/png"/>
+  <icon href="https://apps.0install.net/gui/keepassxc.icns" type="image/x-icns"/>
+  <category>Utility</category>
+
+  <feed-for interface="https://apps.0install.net/gui/keepassxc-macos.xml"/>
+
+  <group license="GPL-3.0-only">
+    <command name="run" path="KeePassXC.app/Contents/MacOS/KeePassXC"/>
+    <command name="keepassxc-cli" path="KeePassXC.app/Contents/MacOS/keepassxc-cli"/>
+
+    <implementation arch="MacOSX-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/keepassxreboot/keepassxc/releases/download/{version}/KeePassXC-{version}-x86_64.dmg" type="application/x-apple-diskimage"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/keepassxreboot/keepassxc/releases/download/{version}/KeePassXC-{version}-arm64.dmg" type="application/x-apple-diskimage"/>
+    </implementation>
+  </group>
+</interface>

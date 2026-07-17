@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>kind</name>
+  <summary>run local Kubernetes clusters using Docker container "nodes"</summary>
+  <description>kind is a tool for running local Kubernetes clusters using Docker container "nodes". It was primarily designed for testing Kubernetes itself, but may be used for local development or CI.</description>
+  <homepage>https://kind.sigs.k8s.io/</homepage>
+  <needs-terminal/>
+  <icon href="https://apps.0install.net/kubernetes/kind.png" type="image/png"/>
+  <icon href="https://apps.0install.net/kubernetes/kind.ico" type="image/vnd.microsoft.icon"/>
+
+  <feed-for interface="https://apps.0install.net/kubernetes/kind.xml"/>
+
+  <group license="Apache-2.0">
+    <implementation arch="Windows-x86_64" version="{version}" stability="{stability}" released="{released}" main="kind.exe">
+      <manifest-digest/>
+      <file dest="kind.exe" href="https://github.com/kubernetes-sigs/kind/releases/download/v{version}/kind-windows-amd64"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="{version}" stability="{stability}" released="{released}" main="kind">
+      <manifest-digest/>
+      <file dest="kind" executable="true" href="https://github.com/kubernetes-sigs/kind/releases/download/v{version}/kind-linux-amd64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" stability="{stability}" released="{released}" main="kind">
+      <manifest-digest/>
+      <file dest="kind" executable="true" href="https://github.com/kubernetes-sigs/kind/releases/download/v{version}/kind-linux-arm64"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" stability="{stability}" released="{released}" main="kind">
+      <manifest-digest/>
+      <file dest="kind" executable="true" href="https://github.com/kubernetes-sigs/kind/releases/download/v{version}/kind-darwin-amd64"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="{version}" stability="{stability}" released="{released}" main="kind">
+      <manifest-digest/>
+      <file dest="kind" executable="true" href="https://github.com/kubernetes-sigs/kind/releases/download/v{version}/kind-darwin-arm64"/>
+    </implementation>
+  </group>
+</interface>

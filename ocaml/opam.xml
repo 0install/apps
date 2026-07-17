@@ -1,0 +1,395 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/ocaml/opam.xml">
+  <name>opam</name>
+  <summary>source-based package manager for OCaml</summary>
+  <description>opam is the package manager for OCaml. It supports multiple simultaneous compiler installations, flexible package constraints, and a Git-friendly development workflow, and is the primary way to install OCaml compilers, tools and libraries.</description>
+  <homepage>https://opam.ocaml.org/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+  <icon href="https://apps.0install.net/ocaml/opam.png" type="image/png"/>
+  <icon href="https://apps.0install.net/ocaml/opam.ico" type="image/vnd.microsoft.icon"/>
+
+  <entry-point binary-name="opam" command="run"/>
+
+  <group license="LGPL-2.1-only">
+    <requires importance="recommended" interface="https://apps.0install.net/devel/git.xml">
+      <executable-in-path name="git"/>
+    </requires>
+
+    <group>
+      <command name="run" path="opam"/>
+      <implementation arch="Linux-x86_64" version="2.1.3" released="2022-08-12" stability="stable" id="sha256new_GV5YBJ7MLMMOWDMWBZTPWN6OAA6SQPTXXKMAIZLDAA7USZRYDAQQ">
+        <manifest-digest sha256new="GV5YBJ7MLMMOWDMWBZTPWN6OAA6SQPTXXKMAIZLDAA7USZRYDAQQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.3/opam-2.1.3-x86_64-linux" size="7331232" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-i686" version="2.1.3" released="2022-08-12" stability="stable" id="sha256new_MLULGDWGTONTFSOO3U6JHRQS6VV6CJAOSG26MWTDZXKHRF5BR37Q">
+        <manifest-digest sha256new="MLULGDWGTONTFSOO3U6JHRQS6VV6CJAOSG26MWTDZXKHRF5BR37Q"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.3/opam-2.1.3-i686-linux" size="6711324" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="2.1.3" released="2022-08-12" stability="stable" id="sha256new_J325TL5MZ5ERHTM22WY5FT5WAOOGUMR36I22KEUC6DFJ7GSKGEZA">
+        <manifest-digest sha256new="J325TL5MZ5ERHTM22WY5FT5WAOOGUMR36I22KEUC6DFJ7GSKGEZA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.3/opam-2.1.3-arm64-linux" size="7470632" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-armv6l" version="2.1.3" released="2022-08-12" stability="stable" id="sha256new_VB5JZCEYQEYTK2Q3RGAYYFPQZMBRHAAYTYIDHWSIVV56GIXGRNEA">
+        <manifest-digest sha256new="VB5JZCEYQEYTK2Q3RGAYYFPQZMBRHAAYTYIDHWSIVV56GIXGRNEA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.3/opam-2.1.3-armhf-linux" size="5383484" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" version="2.1.3" released="2022-08-12" stability="stable" id="sha256new_FRRSE4QE7V5VD7SJLQLIMVY5EQ4KIY4AQX7J3NWNNOMPXFEKF6UA">
+        <manifest-digest sha256new="FRRSE4QE7V5VD7SJLQLIMVY5EQ4KIY4AQX7J3NWNNOMPXFEKF6UA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.3/opam-2.1.3-x86_64-macos" size="7353672" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-aarch64" version="2.1.3" released="2022-08-12" stability="stable" id="sha256new_KQ3LG3RN4RKVCOD3JN2SRHLMJBF5JBS3JAYMY7UQTP6TTBJVR36Q">
+        <manifest-digest sha256new="KQ3LG3RN4RKVCOD3JN2SRHLMJBF5JBS3JAYMY7UQTP6TTBJVR36Q"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.3/opam-2.1.3-arm64-macos" size="7456344" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="FreeBSD-x86_64" version="2.1.3" released="2022-08-12" stability="stable" id="sha256new_V42WLKAMQ5U3Y52YNXRP4NWGRANDKVHBMDKEEAPKDQAIVANPPYZA">
+        <manifest-digest sha256new="V42WLKAMQ5U3Y52YNXRP4NWGRANDKVHBMDKEEAPKDQAIVANPPYZA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.3/opam-2.1.3-x86_64-freebsd" size="8242000" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" version="2.1.4" released="2022-12-14" stability="stable" id="sha256new_VHOI2ARNC2L3SSLTSMJ2DRYZ2AAQDE3F6BOF4NJSGC7DTE6ATGHA">
+        <manifest-digest sha256new="VHOI2ARNC2L3SSLTSMJ2DRYZ2AAQDE3F6BOF4NJSGC7DTE6ATGHA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.4/opam-2.1.4-x86_64-linux" size="7353952" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-i686" version="2.1.4" released="2022-12-14" stability="stable" id="sha256new_3BNKYJMQGAV6CRED7LJ4RKXFQBQMJT2AU4UKDXCC46DKQC4MSJCA">
+        <manifest-digest sha256new="3BNKYJMQGAV6CRED7LJ4RKXFQBQMJT2AU4UKDXCC46DKQC4MSJCA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.4/opam-2.1.4-i686-linux" size="6750908" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="2.1.4" released="2022-12-14" stability="stable" id="sha256new_G5BXN6UT2JIGSQOIXWFOG6ENEXRAIQ6TVJNHIEVTE5CF5N7KYITQ">
+        <manifest-digest sha256new="G5BXN6UT2JIGSQOIXWFOG6ENEXRAIQ6TVJNHIEVTE5CF5N7KYITQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.4/opam-2.1.4-arm64-linux" size="7484680" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-armv6l" version="2.1.4" released="2022-12-14" stability="stable" id="sha256new_2MKCMOLGJ5AE5MXHO6FQ6NLCB45J6BHEWKJPM3JX5MBBI4LAMZUQ">
+        <manifest-digest sha256new="2MKCMOLGJ5AE5MXHO6FQ6NLCB45J6BHEWKJPM3JX5MBBI4LAMZUQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.4/opam-2.1.4-armhf-linux" size="5429140" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" version="2.1.4" released="2022-12-14" stability="stable" id="sha256new_FMWKVVZAX7BYBQ34P4HECUFGE3FFIJ5PCDYWYGM2PEJ73QCNNI3A">
+        <manifest-digest sha256new="FMWKVVZAX7BYBQ34P4HECUFGE3FFIJ5PCDYWYGM2PEJ73QCNNI3A"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.4/opam-2.1.4-x86_64-macos" size="7152704" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-aarch64" version="2.1.4" released="2022-12-14" stability="stable" id="sha256new_CVVDGCC4CNBKKB4HL5SAASU6ISITUIOQMRR7QWYIYZDHWRXTAIPQ">
+        <manifest-digest sha256new="CVVDGCC4CNBKKB4HL5SAASU6ISITUIOQMRR7QWYIYZDHWRXTAIPQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.4/opam-2.1.4-arm64-macos" size="7280728" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="FreeBSD-x86_64" version="2.1.4" released="2022-12-14" stability="stable" id="sha256new_VALPBMUR4YO5BJKFLGTMA42IBDRRY3HKLYJ7M4KFOHL56NFQUVIQ">
+        <manifest-digest sha256new="VALPBMUR4YO5BJKFLGTMA42IBDRRY3HKLYJ7M4KFOHL56NFQUVIQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.4/opam-2.1.4-x86_64-freebsd" size="8282336" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" version="2.1.5" released="2023-05-24" stability="stable" id="sha256new_XTND5OA4ZO3UBE4DHSMLPIMMMTFFEWG4IIU2TYZ47CLSXM26YCBA">
+        <manifest-digest sha256new="XTND5OA4ZO3UBE4DHSMLPIMMMTFFEWG4IIU2TYZ47CLSXM26YCBA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.5/opam-2.1.5-x86_64-linux" size="7353824" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-i686" version="2.1.5" released="2023-05-24" stability="stable" id="sha256new_EX3NZXKMXCJGC2XWA3WQGBAACVX6Q42PT25DWALK5AWDM3JEJLBA">
+        <manifest-digest sha256new="EX3NZXKMXCJGC2XWA3WQGBAACVX6Q42PT25DWALK5AWDM3JEJLBA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.5/opam-2.1.5-i686-linux" size="6750812" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="2.1.5" released="2023-05-24" stability="stable" id="sha256new_5GG65X2RHWR7MLW635T3SNBXP5T3W7BVBY7JGD3MIIXGKJFHUC6Q">
+        <manifest-digest sha256new="5GG65X2RHWR7MLW635T3SNBXP5T3W7BVBY7JGD3MIIXGKJFHUC6Q"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.5/opam-2.1.5-arm64-linux" size="7484536" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-armv6l" version="2.1.5" released="2023-05-24" stability="stable" id="sha256new_2QSLHYOXAXBJGO7FBG2O73FDN2HFWD4YPOTYPBVM3IASVGLWXQGA">
+        <manifest-digest sha256new="2QSLHYOXAXBJGO7FBG2O73FDN2HFWD4YPOTYPBVM3IASVGLWXQGA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.5/opam-2.1.5-armhf-linux" size="5429028" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" version="2.1.5" released="2023-05-24" stability="stable" id="sha256new_AADWSP2XPEXKHBMVFUG5ZHLRRKL35PAN5D2RMZSW33NFGSRF7PDQ">
+        <manifest-digest sha256new="AADWSP2XPEXKHBMVFUG5ZHLRRKL35PAN5D2RMZSW33NFGSRF7PDQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.5/opam-2.1.5-x86_64-macos" size="7230776" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-aarch64" version="2.1.5" released="2023-05-24" stability="stable" id="sha256new_3PPOOLOKLMF7EJFDOD2UORGI3IZ62YA346VJPOKCMY77KJKTFPNQ">
+        <manifest-digest sha256new="3PPOOLOKLMF7EJFDOD2UORGI3IZ62YA346VJPOKCMY77KJKTFPNQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.5/opam-2.1.5-arm64-macos" size="7390728" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="FreeBSD-x86_64" version="2.1.5" released="2023-05-24" stability="stable" id="sha256new_56GWUTPERRDR7JTVUJYQLOEWXL3YEGQPM6AHJRPK6HJ3SBPMXWMQ">
+        <manifest-digest sha256new="56GWUTPERRDR7JTVUJYQLOEWXL3YEGQPM6AHJRPK6HJ3SBPMXWMQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.5/opam-2.1.5-x86_64-freebsd" size="8282272" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" version="2.1.6" released="2024-05-16" stability="stable" id="sha256new_VCJMBI2DOP6EOZQVJURHH7URRK62RRXF33NLA55W4NSJNT4IDVPQ">
+        <manifest-digest sha256new="VCJMBI2DOP6EOZQVJURHH7URRK62RRXF33NLA55W4NSJNT4IDVPQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.6/opam-2.1.6-x86_64-linux" size="7354880" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-i686" version="2.1.6" released="2024-05-16" stability="stable" id="sha256new_BNU6HTBLZMJXGQBA3JYE3QRH3TOD7XM7374FWS2AL3PZE2P7KYSA">
+        <manifest-digest sha256new="BNU6HTBLZMJXGQBA3JYE3QRH3TOD7XM7374FWS2AL3PZE2P7KYSA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.6/opam-2.1.6-i686-linux" size="6755708" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="2.1.6" released="2024-05-16" stability="stable" id="sha256new_DK4UPHZVEGDP7M5SEVBHEYR3ZUXT4SU6CQNRS2DUU5Z4LGDBEX5A">
+        <manifest-digest sha256new="DK4UPHZVEGDP7M5SEVBHEYR3ZUXT4SU6CQNRS2DUU5Z4LGDBEX5A"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.6/opam-2.1.6-arm64-linux" size="7485608" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-armv6l" version="2.1.6" released="2024-05-16" stability="stable" id="sha256new_E33QFLUCP66ALJBQZSNYHUUYOLFARFZJBGQS4IDM4PBYQN3NQCYQ">
+        <manifest-digest sha256new="E33QFLUCP66ALJBQZSNYHUUYOLFARFZJBGQS4IDM4PBYQN3NQCYQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.6/opam-2.1.6-armhf-linux" size="5433948" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" version="2.1.6" released="2024-05-16" stability="stable" id="sha256new_KAQCW4LWXVNCEA2UAKLXFBQL64YD2XWWXBTTTWA6XRUBY4D2G57Q">
+        <manifest-digest sha256new="KAQCW4LWXVNCEA2UAKLXFBQL64YD2XWWXBTTTWA6XRUBY4D2G57Q"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.6/opam-2.1.6-x86_64-macos" size="7230104" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-aarch64" version="2.1.6" released="2024-05-16" stability="stable" id="sha256new_F6FBYQS63NQCVPGDCNUYHLYLPHADRFSGRKHTL5LKYLFAFXSZXXEQ">
+        <manifest-digest sha256new="F6FBYQS63NQCVPGDCNUYHLYLPHADRFSGRKHTL5LKYLFAFXSZXXEQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.6/opam-2.1.6-arm64-macos" size="7297512" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="FreeBSD-x86_64" version="2.1.6" released="2024-05-16" stability="stable" id="sha256new_QX6X4LAS4EWF7TCN2MUSBTZ5IML3JKOTJOELCPG4FKGCWULNSJMQ">
+        <manifest-digest sha256new="QX6X4LAS4EWF7TCN2MUSBTZ5IML3JKOTJOELCPG4FKGCWULNSJMQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.1.6/opam-2.1.6-x86_64-freebsd" size="8150248" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" version="2.2.0" released="2024-07-01" stability="stable" id="sha256new_HKJDQJWTPM5BDBZDQGEEOGQOV7BJONQHG7HO7JBTRSC4HMBWKODQ">
+        <manifest-digest sha256new="HKJDQJWTPM5BDBZDQGEEOGQOV7BJONQHG7HO7JBTRSC4HMBWKODQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.2.0/opam-2.2.0-x86_64-linux" size="8266784" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-i686" version="2.2.0" released="2024-07-01" stability="stable" id="sha256new_JXUR6F3FU6SMW6Z7ABDODHV4Z25COD53BIUCWGFY2Z44S7OGHG3Q">
+        <manifest-digest sha256new="JXUR6F3FU6SMW6Z7ABDODHV4Z25COD53BIUCWGFY2Z44S7OGHG3Q"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.2.0/opam-2.2.0-i686-linux" size="7567676" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="2.2.0" released="2024-07-01" stability="stable" id="sha256new_VVSJ7TMVUFLZJJLMVHNSMX2KQZKCNGX3WYPCKGMOWSKN37W25Z5Q">
+        <manifest-digest sha256new="VVSJ7TMVUFLZJJLMVHNSMX2KQZKCNGX3WYPCKGMOWSKN37W25Z5Q"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.2.0/opam-2.2.0-arm64-linux" size="8409840" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-armv6l" version="2.2.0" released="2024-07-01" stability="stable" id="sha256new_ZHFUX4AI7MARYHUGDUAHLCIFDQNDNFOFQZUMHALSV5FZKL2LRQMQ">
+        <manifest-digest sha256new="ZHFUX4AI7MARYHUGDUAHLCIFDQNDNFOFQZUMHALSV5FZKL2LRQMQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.2.0/opam-2.2.0-armhf-linux" size="6138564" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" version="2.2.0" released="2024-07-01" stability="stable" id="sha256new_7AHOTJOUOIZNHNCF52KLXSDP6BDLPP557JJ4CULFXIX4TZQMQX4Q">
+        <manifest-digest sha256new="7AHOTJOUOIZNHNCF52KLXSDP6BDLPP557JJ4CULFXIX4TZQMQX4Q"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.2.0/opam-2.2.0-x86_64-macos" size="8228592" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-aarch64" version="2.2.0" released="2024-07-01" stability="stable" id="sha256new_CX53B5HQXJ2BPPOGIZNCFZO3UYTWI3A6RDWNCJFCTHWX6IX47IVQ">
+        <manifest-digest sha256new="CX53B5HQXJ2BPPOGIZNCFZO3UYTWI3A6RDWNCJFCTHWX6IX47IVQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.2.0/opam-2.2.0-arm64-macos" size="8307944" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="FreeBSD-x86_64" version="2.2.0" released="2024-07-01" stability="stable" id="sha256new_TFQFTCH3EEG6JDEHT5TTYXAL5NIV4ZQ2ZWFSSJD657LNUMI6RFMQ">
+        <manifest-digest sha256new="TFQFTCH3EEG6JDEHT5TTYXAL5NIV4ZQ2ZWFSSJD657LNUMI6RFMQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.2.0/opam-2.2.0-x86_64-freebsd" size="9358456" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" version="2.2.1" released="2024-08-22" stability="stable" id="sha256new_V37IRPHBXFGOZP63EVGCR6DQBBH53QIO7FMNAFBVJG74QAKZIP3Q">
+        <manifest-digest sha256new="V37IRPHBXFGOZP63EVGCR6DQBBH53QIO7FMNAFBVJG74QAKZIP3Q"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.2.1/opam-2.2.1-x86_64-linux" size="8272128" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-i686" version="2.2.1" released="2024-08-22" stability="stable" id="sha256new_RLKGKJIHCOCYCMUSKUZ4I3T4VTIK4CTZPTPG4YYOVQHDJSWFXAKA">
+        <manifest-digest sha256new="RLKGKJIHCOCYCMUSKUZ4I3T4VTIK4CTZPTPG4YYOVQHDJSWFXAKA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.2.1/opam-2.2.1-i686-linux" size="7568700" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="2.2.1" released="2024-08-22" stability="stable" id="sha256new_KIG25JHIZCZU4DQOI4NIQWPR2YFB3EMYTMXSEYDVSXTRBRROJNKQ">
+        <manifest-digest sha256new="KIG25JHIZCZU4DQOI4NIQWPR2YFB3EMYTMXSEYDVSXTRBRROJNKQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.2.1/opam-2.2.1-arm64-linux" size="8415168" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-armv6l" version="2.2.1" released="2024-08-22" stability="stable" id="sha256new_4BY4JOMKR6NYEQNWFCGPLRF35SOC2IP2JOSRGCQQTNCTJHUSKFXA">
+        <manifest-digest sha256new="4BY4JOMKR6NYEQNWFCGPLRF35SOC2IP2JOSRGCQQTNCTJHUSKFXA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.2.1/opam-2.2.1-armhf-linux" size="6143700" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" version="2.2.1" released="2024-08-22" stability="stable" id="sha256new_NISUPEXBGQOUWPGWH33CGXYKXTZPFCUOYFGMTJ4YXBOJAZE3OPCA">
+        <manifest-digest sha256new="NISUPEXBGQOUWPGWH33CGXYKXTZPFCUOYFGMTJ4YXBOJAZE3OPCA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.2.1/opam-2.2.1-x86_64-macos" size="8228392" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-aarch64" version="2.2.1" released="2024-08-22" stability="stable" id="sha256new_LFTYON22TVF23O2U3NNMEOEGDB3RCQIDI7SXBDKPNRJYDQ7YSGUA">
+        <manifest-digest sha256new="LFTYON22TVF23O2U3NNMEOEGDB3RCQIDI7SXBDKPNRJYDQ7YSGUA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.2.1/opam-2.2.1-arm64-macos" size="8308200" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="FreeBSD-x86_64" version="2.2.1" released="2024-08-22" stability="stable" id="sha256new_RQ3GFPFSS6KSOSUBXCL5UI6WF2WW4ZJ4H664HLCLMVGJV7QNRTOA">
+        <manifest-digest sha256new="RQ3GFPFSS6KSOSUBXCL5UI6WF2WW4ZJ4H664HLCLMVGJV7QNRTOA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.2.1/opam-2.2.1-x86_64-freebsd" size="9359784" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" version="2.3.0" released="2024-11-13" stability="stable" id="sha256new_DPKN3JSSVXVCQKTDPGOZFA7QHUCLGWIDNPLQIU66V6KZP2LUTAQA">
+        <manifest-digest sha256new="DPKN3JSSVXVCQKTDPGOZFA7QHUCLGWIDNPLQIU66V6KZP2LUTAQA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.3.0/opam-2.3.0-x86_64-linux" size="8677160" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-i686" version="2.3.0" released="2024-11-13" stability="stable" id="sha256new_ZGN7M6OXDU2ZAJVLJCNM5KDOKTYQI2JB2HFDTVXX4WFOMK5LN66Q">
+        <manifest-digest sha256new="ZGN7M6OXDU2ZAJVLJCNM5KDOKTYQI2JB2HFDTVXX4WFOMK5LN66Q"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.3.0/opam-2.3.0-i686-linux" size="7982508" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="2.3.0" released="2024-11-13" stability="stable" id="sha256new_NGFMHW7L3KLV6D6CTPYD46NAJZGJIVRN5V2JDFSQFXVEBET2MQ7Q">
+        <manifest-digest sha256new="NGFMHW7L3KLV6D6CTPYD46NAJZGJIVRN5V2JDFSQFXVEBET2MQ7Q"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.3.0/opam-2.3.0-arm64-linux" size="8824344" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-armv6l" version="2.3.0" released="2024-11-13" stability="stable" id="sha256new_U7SX57MFHJ4MPRWQKZ75OYY4CIOGNQBEW33QJVHJNB5VKDPSAI4A">
+        <manifest-digest sha256new="U7SX57MFHJ4MPRWQKZ75OYY4CIOGNQBEW33QJVHJNB5VKDPSAI4A"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.3.0/opam-2.3.0-armhf-linux" size="6418188" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" version="2.3.0" released="2024-11-13" stability="stable" id="sha256new_TG2JQB4AYYCCZFHWMM6UIBUJEXWK27NFOQ72MECBTLGBKIWHPF4A">
+        <manifest-digest sha256new="TG2JQB4AYYCCZFHWMM6UIBUJEXWK27NFOQ72MECBTLGBKIWHPF4A"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.3.0/opam-2.3.0-x86_64-macos" size="8266944" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-aarch64" version="2.3.0" released="2024-11-13" stability="stable" id="sha256new_ONHDYLHN5MU2XDVB25IEHDIV4LFT24PRNGIRYUDLX43IC5LHNX4Q">
+        <manifest-digest sha256new="ONHDYLHN5MU2XDVB25IEHDIV4LFT24PRNGIRYUDLX43IC5LHNX4Q"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.3.0/opam-2.3.0-arm64-macos" size="8361928" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="FreeBSD-x86_64" version="2.3.0" released="2024-11-13" stability="stable" id="sha256new_BLWALFL7H7ZFNR7OFHYZHE3EZUX6NNUISGFIUM2JZKREUUBR55SA">
+        <manifest-digest sha256new="BLWALFL7H7ZFNR7OFHYZHE3EZUX6NNUISGFIUM2JZKREUUBR55SA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.3.0/opam-2.3.0-x86_64-freebsd" size="9355776" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" version="2.4.0" released="2025-07-18" stability="stable" id="sha256new_EQ6ODX2QQJMMXZQ43YSSNBWV2GHUPECXTATAAJ6POUJXTZTAT6NA">
+        <manifest-digest sha256new="EQ6ODX2QQJMMXZQ43YSSNBWV2GHUPECXTATAAJ6POUJXTZTAT6NA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.4.0/opam-2.4.0-x86_64-linux" size="8895120" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-i686" version="2.4.0" released="2025-07-18" stability="stable" id="sha256new_6GX6SFKK3QKIEEFCQFT6SA45SJYVX3XQW5WODZM3GUOFSATF4TCQ">
+        <manifest-digest sha256new="6GX6SFKK3QKIEEFCQFT6SA45SJYVX3XQW5WODZM3GUOFSATF4TCQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.4.0/opam-2.4.0-i686-linux" size="8159320" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="2.4.0" released="2025-07-18" stability="stable" id="sha256new_6HHD3CMSJ77R74PBUNW63JSQXB3OQTP43MLUUS6VE6PBD4CRJEEQ">
+        <manifest-digest sha256new="6HHD3CMSJ77R74PBUNW63JSQXB3OQTP43MLUUS6VE6PBD4CRJEEQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.4.0/opam-2.4.0-arm64-linux" size="9034064" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-armv6l" version="2.4.0" released="2025-07-18" stability="stable" id="sha256new_75EIOJ2GEOG2GFLZLQZP5ER774NBU47RWOLW4W46PRFQAHMSIY4Q">
+        <manifest-digest sha256new="75EIOJ2GEOG2GFLZLQZP5ER774NBU47RWOLW4W46PRFQAHMSIY4Q"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.4.0/opam-2.4.0-armhf-linux" size="6540544" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" version="2.4.0" released="2025-07-18" stability="stable" id="sha256new_MOUCWNFG6J5ZA3IZDMZYU44PUHUVRU35XKUK5SI6YUVEX2522PYQ">
+        <manifest-digest sha256new="MOUCWNFG6J5ZA3IZDMZYU44PUHUVRU35XKUK5SI6YUVEX2522PYQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.4.0/opam-2.4.0-x86_64-macos" size="8418456" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-aarch64" version="2.4.0" released="2025-07-18" stability="stable" id="sha256new_M3ZAST4YZE6IXQPFN5HTDGK6ZFHBXCWFCP2ZP5U6XTCFHNGEQSDA">
+        <manifest-digest sha256new="M3ZAST4YZE6IXQPFN5HTDGK6ZFHBXCWFCP2ZP5U6XTCFHNGEQSDA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.4.0/opam-2.4.0-arm64-macos" size="8512208" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="FreeBSD-x86_64" version="2.4.0" released="2025-07-18" stability="stable" id="sha256new_MZIB22VE6ZCEIRYZQLC6JJGE4ALX4P5LGV4QAH256KKJ5I4K35OQ">
+        <manifest-digest sha256new="MZIB22VE6ZCEIRYZQLC6JJGE4ALX4P5LGV4QAH256KKJ5I4K35OQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.4.0/opam-2.4.0-x86_64-freebsd" size="9551200" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" version="2.4.1" released="2025-07-23" stability="stable" id="sha256new_WJURIXTCB45TN36J4NSS3DTSSLIOCCLW4FPTXBHSYEV6IRD35MMQ">
+        <manifest-digest sha256new="WJURIXTCB45TN36J4NSS3DTSSLIOCCLW4FPTXBHSYEV6IRD35MMQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.4.1/opam-2.4.1-x86_64-linux" size="8895248" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-i686" version="2.4.1" released="2025-07-23" stability="stable" id="sha256new_7M6YOV2SZPZITVGZEKU3BPAUDHYKLLHW4TRLEYXIKUSXUYPDIPTQ">
+        <manifest-digest sha256new="7M6YOV2SZPZITVGZEKU3BPAUDHYKLLHW4TRLEYXIKUSXUYPDIPTQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.4.1/opam-2.4.1-i686-linux" size="8159416" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="2.4.1" released="2025-07-23" stability="stable" id="sha256new_5S4Z6QCBB6W44D2E26GYZXB4XIDNYI7SWL2MXXJHIXBVNTBCRM4Q">
+        <manifest-digest sha256new="5S4Z6QCBB6W44D2E26GYZXB4XIDNYI7SWL2MXXJHIXBVNTBCRM4Q"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.4.1/opam-2.4.1-arm64-linux" size="9034224" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-armv6l" version="2.4.1" released="2025-07-23" stability="stable" id="sha256new_U32Y4PHFKPWCUC7MLH54RC4G2Y7BS4RZFETNYXHEUSHBKNHX5TWA">
+        <manifest-digest sha256new="U32Y4PHFKPWCUC7MLH54RC4G2Y7BS4RZFETNYXHEUSHBKNHX5TWA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.4.1/opam-2.4.1-armhf-linux" size="6540664" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" version="2.4.1" released="2025-07-23" stability="stable" id="sha256new_POXHPT6XJKNIQT52FXNLRVZX4DQ22CTAAE5JOXP6SLYKMU2FKNLQ">
+        <manifest-digest sha256new="POXHPT6XJKNIQT52FXNLRVZX4DQ22CTAAE5JOXP6SLYKMU2FKNLQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.4.1/opam-2.4.1-x86_64-macos" size="8418456" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-aarch64" version="2.4.1" released="2025-07-23" stability="stable" id="sha256new_57PFC526MKTVMIHJPTXDTBQYDLERU2XQYO2MG7SHTSWQ2UPWFAIQ">
+        <manifest-digest sha256new="57PFC526MKTVMIHJPTXDTBQYDLERU2XQYO2MG7SHTSWQ2UPWFAIQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.4.1/opam-2.4.1-arm64-macos" size="8512224" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="FreeBSD-x86_64" version="2.4.1" released="2025-07-23" stability="stable" id="sha256new_KLKCVRWMDTNRPHPT3ILCUDCWSJPPR5MP4CPMZKH73FPFVNSB4AXA">
+        <manifest-digest sha256new="KLKCVRWMDTNRPHPT3ILCUDCWSJPPR5MP4CPMZKH73FPFVNSB4AXA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.4.1/opam-2.4.1-x86_64-freebsd" size="9551600" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" version="2.5.0" released="2025-11-27" stability="stable" id="sha256new_HW77PUPSLY3VOU56NSZDD7PLPUXG5H42SLNYBKZLO47UA7BOVPNA">
+        <manifest-digest sha256new="HW77PUPSLY3VOU56NSZDD7PLPUXG5H42SLNYBKZLO47UA7BOVPNA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.0/opam-2.5.0-x86_64-linux" size="8943344" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-i686" version="2.5.0" released="2025-11-27" stability="stable" id="sha256new_QMEF7MI3Z5JBR5QGS6NASRWFCF3BXKX52XRHQZ34ZCSI3ABNFUEQ">
+        <manifest-digest sha256new="QMEF7MI3Z5JBR5QGS6NASRWFCF3BXKX52XRHQZ34ZCSI3ABNFUEQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.0/opam-2.5.0-i686-linux" size="8194136" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="2.5.0" released="2025-11-27" stability="stable" id="sha256new_YZ7YKYJPVSRVB7MSQUFQSNJRTN6THB5RZ6IR6ILNLYVJ22WRX25Q">
+        <manifest-digest sha256new="YZ7YKYJPVSRVB7MSQUFQSNJRTN6THB5RZ6IR6ILNLYVJ22WRX25Q"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.0/opam-2.5.0-arm64-linux" size="9074096" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-armv6l" version="2.5.0" released="2025-11-27" stability="stable" id="sha256new_VZEHYECWX3O5ZFOIPLJZOPZWEP2VCOSIGCOFAN7LLDYU6UXQIV7Q">
+        <manifest-digest sha256new="VZEHYECWX3O5ZFOIPLJZOPZWEP2VCOSIGCOFAN7LLDYU6UXQIV7Q"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.0/opam-2.5.0-armhf-linux" size="6575304" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" version="2.5.0" released="2025-11-27" stability="stable" id="sha256new_64OLKTWZOWGWYPUGYU7GVZ4QF5MOUJXWYJNRYDHC6BT6RAZWJ7GA">
+        <manifest-digest sha256new="64OLKTWZOWGWYPUGYU7GVZ4QF5MOUJXWYJNRYDHC6BT6RAZWJ7GA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.0/opam-2.5.0-x86_64-macos" size="8466368" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-aarch64" version="2.5.0" released="2025-11-27" stability="stable" id="sha256new_NIFZE2DQYNKMAEEA5EHJ5UHW2JRVWXLQXWW4XYZR4P2SPNC4HD7A">
+        <manifest-digest sha256new="NIFZE2DQYNKMAEEA5EHJ5UHW2JRVWXLQXWW4XYZR4P2SPNC4HD7A"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.0/opam-2.5.0-arm64-macos" size="8585216" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="FreeBSD-x86_64" version="2.5.0" released="2025-11-27" stability="stable" id="sha256new_KZND2P6Q5IYBX6VA3CTC5XXRUSEXSSE3QSKB7KXWIWHLQLLTKIOA">
+        <manifest-digest sha256new="KZND2P6Q5IYBX6VA3CTC5XXRUSEXSSE3QSKB7KXWIWHLQLLTKIOA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.0/opam-2.5.0-x86_64-freebsd" size="9609488" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" version="2.5.1" released="2026-04-15" stability="stable" id="sha256new_QITHNHHSTAEXXIXWRIQZCREYIF5PRCLNRAVJ7UQ6HDNWJ4IM5LIA">
+        <manifest-digest sha256new="QITHNHHSTAEXXIXWRIQZCREYIF5PRCLNRAVJ7UQ6HDNWJ4IM5LIA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.1/opam-2.5.1-x86_64-linux" size="8944496" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-i686" version="2.5.1" released="2026-04-15" stability="stable" id="sha256new_HJ7Z6OSPJWXKB5KBHUHBZY4ZPJZJODO4DGPM3GIBPSV6X5PIPMNA">
+        <manifest-digest sha256new="HJ7Z6OSPJWXKB5KBHUHBZY4ZPJZJODO4DGPM3GIBPSV6X5PIPMNA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.1/opam-2.5.1-i686-linux" size="8194968" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="2.5.1" released="2026-04-15" stability="stable" id="sha256new_VECNAVWQCHTIPHXTH7CONI43FVDI5WPFJH5LZITF7RPWKRJZBTBA">
+        <manifest-digest sha256new="VECNAVWQCHTIPHXTH7CONI43FVDI5WPFJH5LZITF7RPWKRJZBTBA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.1/opam-2.5.1-arm64-linux" size="9075232" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-armv6l" version="2.5.1" released="2026-04-15" stability="stable" id="sha256new_CLSPB7J42ZC6KFBXZUK7YMU5HAHGBKL37FL2PZQ6ZGEBB5RT443A">
+        <manifest-digest sha256new="CLSPB7J42ZC6KFBXZUK7YMU5HAHGBKL37FL2PZQ6ZGEBB5RT443A"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.1/opam-2.5.1-armhf-linux" size="6576136" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" version="2.5.1" released="2026-04-15" stability="stable" id="sha256new_TCP5ER4Z5PDL36IOXRIZWER5C5DMD35CTJKELZPRAQXHZL5N2N7A">
+        <manifest-digest sha256new="TCP5ER4Z5PDL36IOXRIZWER5C5DMD35CTJKELZPRAQXHZL5N2N7A"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.1/opam-2.5.1-x86_64-macos" size="8471032" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-aarch64" version="2.5.1" released="2026-04-15" stability="stable" id="sha256new_ES7IBSTGPCMH7RE7KHVYTHIS5VF4RWXPGH2I4RRDWZHMVKQTJCNA">
+        <manifest-digest sha256new="ES7IBSTGPCMH7RE7KHVYTHIS5VF4RWXPGH2I4RRDWZHMVKQTJCNA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.1/opam-2.5.1-arm64-macos" size="8585536" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="FreeBSD-x86_64" version="2.5.1" released="2026-04-15" stability="stable" id="sha256new_2UUSRHW2LCKMIBZB4ION5DPHIDVJVRYEZFDV2WUKA3HLD3BYGOQA">
+        <manifest-digest sha256new="2UUSRHW2LCKMIBZB4ION5DPHIDVJVRYEZFDV2WUKA3HLD3BYGOQA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.1/opam-2.5.1-x86_64-freebsd" size="9611408" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-x86_64" version="2.5.2" released="2026-07-09" stability="stable" id="sha256new_LWCAJKC6PDFYDVM2VPQUAHSANZCIOCZ3CTN3AFGV5MUA6EVY2ZBQ">
+        <manifest-digest sha256new="LWCAJKC6PDFYDVM2VPQUAHSANZCIOCZ3CTN3AFGV5MUA6EVY2ZBQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.2/opam-2.5.2-x86_64-linux" size="8945008" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-i686" version="2.5.2" released="2026-07-09" stability="stable" id="sha256new_556J7KTBKUNH3SOPZ6UPNZKUA33M3PMEOTY2VXGWY4HUGXXFJOHA">
+        <manifest-digest sha256new="556J7KTBKUNH3SOPZ6UPNZKUA33M3PMEOTY2VXGWY4HUGXXFJOHA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.2/opam-2.5.2-i686-linux" size="8195384" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="2.5.2" released="2026-07-09" stability="stable" id="sha256new_2DFKYZWT25MZZBS6U4RTWXDZKX3SUKQ2KZUTKY2FJNBEXACKADTA">
+        <manifest-digest sha256new="2DFKYZWT25MZZBS6U4RTWXDZKX3SUKQ2KZUTKY2FJNBEXACKADTA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.2/opam-2.5.2-arm64-linux" size="9075760" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Linux-armv6l" version="2.5.2" released="2026-07-09" stability="stable" id="sha256new_45SXOF7SCJNBLIGKNNUN7H5T45J54KHOI7SHQTAVQJ6FLRYFJO7Q">
+        <manifest-digest sha256new="45SXOF7SCJNBLIGKNNUN7H5T45J54KHOI7SHQTAVQJ6FLRYFJO7Q"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.2/opam-2.5.2-armhf-linux" size="6576552" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" version="2.5.2" released="2026-07-09" stability="stable" id="sha256new_4B5W5SYIFEELHWCLDNWEWGXSLLYWOLTF5GJJRHQSD25CUOAXGR2A">
+        <manifest-digest sha256new="4B5W5SYIFEELHWCLDNWEWGXSLLYWOLTF5GJJRHQSD25CUOAXGR2A"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.2/opam-2.5.2-x86_64-macos" size="8475136" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="Darwin-aarch64" version="2.5.2" released="2026-07-09" stability="stable" id="sha256new_MQKRTTMRBZTR24W7AYUQOLBX5RY3L2UE5HYIIRP5Z4DZ2B7K4OHQ">
+        <manifest-digest sha256new="MQKRTTMRBZTR24W7AYUQOLBX5RY3L2UE5HYIIRP5Z4DZ2B7K4OHQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.2/opam-2.5.2-arm64-macos" size="8585728" dest="opam" executable="true"/>
+      </implementation>
+      <implementation arch="FreeBSD-x86_64" version="2.5.2" released="2026-07-09" stability="stable" id="sha256new_N5JURQHDO4FYABWOO3JAFI5L23PHZ5EJUPFC2XFLTVC4EPRDFHWQ">
+        <manifest-digest sha256new="N5JURQHDO4FYABWOO3JAFI5L23PHZ5EJUPFC2XFLTVC4EPRDFHWQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.2/opam-2.5.2-x86_64-freebsd" size="9612208" dest="opam" executable="true"/>
+      </implementation>
+    </group>
+
+    <group>
+      <command name="run" path="opam.exe"/>
+      <implementation arch="Windows-x86_64" version="2.2.0" released="2024-07-01" stability="stable" id="sha256new_BH7J2K3ZXBJV3EOR4WGXRYK7WVLX5H4IOTZJRXGOSOGTAGR474RA">
+        <manifest-digest sha256new="BH7J2K3ZXBJV3EOR4WGXRYK7WVLX5H4IOTZJRXGOSOGTAGR474RA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.2.0/opam-2.2.0-x86_64-windows.exe" size="10350080" dest="opam.exe"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="2.2.1" released="2024-08-22" stability="stable" id="sha256new_773VOWVFU6HQEGVUBLWYODZC52GRRRG7THFUW3VC5MVLTPL2XRRA">
+        <manifest-digest sha256new="773VOWVFU6HQEGVUBLWYODZC52GRRRG7THFUW3VC5MVLTPL2XRRA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.2.1/opam-2.2.1-x86_64-windows.exe" size="10377216" dest="opam.exe"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="2.3.0" released="2024-11-13" stability="stable" id="sha256new_TADAVPPQSPA5PRUSRHT3PX5RLHCNP4HJHL63NGRVQQX6UQQA2LMA">
+        <manifest-digest sha256new="TADAVPPQSPA5PRUSRHT3PX5RLHCNP4HJHL63NGRVQQX6UQQA2LMA"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.3.0/opam-2.3.0-x86_64-windows.exe" size="10423808" dest="opam.exe"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="2.4.0" released="2025-07-18" stability="stable" id="sha256new_EOQ2RJ337JM5IT2J5FQCNQONQG73GQ5HFJPNWDJYVURJEMDHPA5Q">
+        <manifest-digest sha256new="EOQ2RJ337JM5IT2J5FQCNQONQG73GQ5HFJPNWDJYVURJEMDHPA5Q"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.4.0/opam-2.4.0-x86_64-windows.exe" size="12225536" dest="opam.exe"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="2.4.1" released="2025-07-23" stability="stable" id="sha256new_FIDIZXRZQJTMZBGTGFAF3ZBHULQ2ZLJIJNC7TMSZW7U5Q7XWNZXQ">
+        <manifest-digest sha256new="FIDIZXRZQJTMZBGTGFAF3ZBHULQ2ZLJIJNC7TMSZW7U5Q7XWNZXQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.4.1/opam-2.4.1-x86_64-windows.exe" size="12225536" dest="opam.exe"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="2.5.0" released="2025-11-27" stability="stable" id="sha256new_W5Y5AZIUBQOQ2IWL3CC3PUMQVS65V3KIXE6UWGSNSM7K33QCMHMQ">
+        <manifest-digest sha256new="W5Y5AZIUBQOQ2IWL3CC3PUMQVS65V3KIXE6UWGSNSM7K33QCMHMQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.0/opam-2.5.0-x86_64-windows.exe" size="12305408" dest="opam.exe"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="2.5.1" released="2026-04-15" stability="stable" id="sha256new_L5HWRFLXO7GTBPNE3UXUKT4OUNKIFNB2IBM225J4DV4C7WCUVPWQ">
+        <manifest-digest sha256new="L5HWRFLXO7GTBPNE3UXUKT4OUNKIFNB2IBM225J4DV4C7WCUVPWQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.1/opam-2.5.1-x86_64-windows.exe" size="12310016" dest="opam.exe"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="2.5.2" released="2026-07-09" stability="stable" id="sha256new_RBBWDFMA3NTNQDTA4X2XNVO3SWQNJ5L3V3TCH6KOFPLUC4BORTMQ">
+        <manifest-digest sha256new="RBBWDFMA3NTNQDTA4X2XNVO3SWQNJ5L3V3TCH6KOFPLUC4BORTMQ"/>
+        <file href="https://github.com/ocaml/opam/releases/download/2.5.2/opam-2.5.2-x86_64-windows.exe" size="11956224" dest="opam.exe"/>
+      </implementation>
+    </group>
+  </group>
+</interface>

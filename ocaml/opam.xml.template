@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>opam</name>
+  <summary>source-based package manager for OCaml</summary>
+  <description>opam is the package manager for OCaml. It supports multiple simultaneous compiler installations, flexible package constraints, and a Git-friendly development workflow, and is the primary way to install OCaml compilers, tools and libraries.</description>
+  <homepage>https://opam.ocaml.org/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+  <icon href="https://apps.0install.net/ocaml/opam.png" type="image/png"/>
+  <icon href="https://apps.0install.net/ocaml/opam.ico" type="image/vnd.microsoft.icon"/>
+
+  <feed-for interface="https://apps.0install.net/ocaml/opam.xml"/>
+
+  <group license="LGPL-2.1-only">
+    <requires importance="recommended" interface="https://apps.0install.net/devel/git.xml">
+      <executable-in-path name="git"/>
+    </requires>
+
+    <group>
+      <command name="run" path="opam"/>
+      <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="stable">
+        <manifest-digest/>
+        <file dest="opam" executable="true" href="https://github.com/ocaml/opam/releases/download/{version}/opam-{version}-x86_64-linux"/>
+      </implementation>
+      <implementation arch="Linux-i686" version="{version}" released="{released}" stability="stable">
+        <manifest-digest/>
+        <file dest="opam" executable="true" href="https://github.com/ocaml/opam/releases/download/{version}/opam-{version}-i686-linux"/>
+      </implementation>
+      <implementation arch="Linux-aarch64" version="{version}" released="{released}" stability="stable">
+        <manifest-digest/>
+        <file dest="opam" executable="true" href="https://github.com/ocaml/opam/releases/download/{version}/opam-{version}-arm64-linux"/>
+      </implementation>
+      <implementation arch="Linux-armv6l" version="{version}" released="{released}" stability="stable">
+        <manifest-digest/>
+        <file dest="opam" executable="true" href="https://github.com/ocaml/opam/releases/download/{version}/opam-{version}-armhf-linux"/>
+      </implementation>
+      <implementation arch="Darwin-x86_64" version="{version}" released="{released}" stability="stable">
+        <manifest-digest/>
+        <file dest="opam" executable="true" href="https://github.com/ocaml/opam/releases/download/{version}/opam-{version}-x86_64-macos"/>
+      </implementation>
+      <implementation arch="Darwin-aarch64" version="{version}" released="{released}" stability="stable">
+        <manifest-digest/>
+        <file dest="opam" executable="true" href="https://github.com/ocaml/opam/releases/download/{version}/opam-{version}-arm64-macos"/>
+      </implementation>
+      <implementation arch="FreeBSD-x86_64" version="{version}" released="{released}" stability="stable">
+        <manifest-digest/>
+        <file dest="opam" executable="true" href="https://github.com/ocaml/opam/releases/download/{version}/opam-{version}-x86_64-freebsd"/>
+      </implementation>
+    </group>
+
+    <group>
+      <command name="run" path="opam.exe"/>
+      <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
+        <manifest-digest/>
+        <file dest="opam.exe" href="https://github.com/ocaml/opam/releases/download/{version}/opam-{version}-x86_64-windows.exe"/>
+      </implementation>
+    </group>
+  </group>
+</interface>

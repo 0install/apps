@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Pandoc</name>
+  <summary>a universal document converter</summary>
+  <description>Pandoc can convert documents between numerous markup and word processor formats, including Markdown, HTML, LaTeX, DOCX, EPUB, and PDF.</description>
+  <homepage>https://pandoc.org/</homepage>
+  <category>Utility</category>
+  <category>Office</category>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/utils/pandoc.xml"/>
+
+  <group license="GPL-2.0-or-later">
+    <command name="run" path="bin/pandoc"/>
+    <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="pandoc-{version}" href="https://github.com/jgm/pandoc/releases/download/{version}/pandoc-{version}-linux-amd64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="pandoc-{version}" href="https://github.com/jgm/pandoc/releases/download/{version}/pandoc-{version}-linux-arm64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="pandoc-{version}-x86_64" href="https://github.com/jgm/pandoc/releases/download/{version}/pandoc-{version}-x86_64-macOS.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="pandoc-{version}-arm64" href="https://github.com/jgm/pandoc/releases/download/{version}/pandoc-{version}-arm64-macOS.zip" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group license="GPL-2.0-or-later">
+    <command name="run" path="pandoc.exe"/>
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="pandoc-{version}" href="https://github.com/jgm/pandoc/releases/download/{version}/pandoc-{version}-windows-x86_64.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

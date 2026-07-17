@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uri="https://apps.0install.net/gui/krita-macos.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Krita - MacOS builds</name>
+  <summary>digital painting application</summary>
+  <description>Krita is a free and open source cross-platform application that offers an end-to-end solution for creating digital art files from scratch. Krita is optimized for frequent, prolonged and focused use. Explicitly supported fields of painting are illustrations, concept art, matte painting, textures, comics and animations. Krita is developed together with users of such backgrounds, ensuring that Krita is really tailored to their needs.</description>
+  <homepage>https://krita.org/</homepage>
+  <icon href="https://apps.0install.net/gui/krita.png" type="image/png"/>
+  <icon href="https://apps.0install.net/gui/krita.icns" type="image/x-icns"/>
+  <category>Graphics</category>
+
+  <feed-for interface="https://apps.0install.net/gui/krita.xml"/>
+
+  <group license="GPL-3.0-only">
+    <command name="run" path="krita.app/Contents/MacOS/krita"/>
+    <command name="kritarunner" path="krita.app/Contents/MacOS/kritarunner"/>
+    <implementation arch="MacOSX-*" version="5.3.2.1" released="2026-06-02" stability="stable" id="sha1new=b9aa20af9c0e1eabbfdd416cd8bd32c2a2064e8a">
+      <manifest-digest sha256new="JKKT7LRP7QG4IJCRL2GTGRX7A7QQEQ6Q3ESUSRPJPCCMYP66E6XA"/>
+      <archive href="https://download.kde.org/stable/krita/5.3.2.1/krita-5.3.2.1-signed.dmg" type="application/x-apple-diskimage" size="388300712"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="6.0.2.1" released="2026-06-02" stability="stable" id="sha1new=76293b81ad4cb1da540f54775efb56936e57b851">
+      <manifest-digest sha256new="NZ7PULFA7NGOSAI2NZMFIAX7UKU3YAXUJLEV4DVY2GZEOFZLMFUQ"/>
+      <archive href="https://download.kde.org/stable/krita/6.0.2.1/krita-6.0.2.1-signed.dmg" type="application/x-apple-diskimage" size="402360442"/>
+    </implementation>
+    <implementation arch="MacOSX-*" version="6.0.2" released="2026-05-26" stability="stable" id="sha1new=9f0fdac57bc738ddb41bec458e72cb4836d8609c">
+      <manifest-digest sha256new="UGFQ5HCYUGSJ2HWCXZVFVG7WXXD5G3WYRVJWJ3C3S4MFLERSU6VA"/>
+      <archive href="https://download.kde.org/stable/krita/6.0.2/krita-6.0.2-signed.dmg" type="application/x-apple-diskimage" size="402070793"/>
+    </implementation>
+  </group>
+</interface>

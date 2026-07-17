@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Krita - Linux builds</name>
+  <summary>digital painting application</summary>
+  <description>Krita is a free and open source cross-platform application that offers an end-to-end solution for creating digital art files from scratch. Krita is optimized for frequent, prolonged and focused use. Explicitly supported fields of painting are illustrations, concept art, matte painting, textures, comics and animations. Krita is developed together with users of such backgrounds, ensuring that Krita is really tailored to their needs.</description>
+  <homepage>https://krita.org/</homepage>
+  <icon href="https://apps.0install.net/gui/krita.png" type="image/png"/>
+  <category>Graphics</category>
+
+  <feed-for interface="https://apps.0install.net/gui/krita-linux.xml"/>
+
+  <group license="GPL-3.0-only">
+    <command name="run" path="krita"/>
+
+    <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <file href="https://download.kde.org/stable/krita/{version}/krita-{version}-x86_64.AppImage" dest="krita" executable="true"/>
+    </implementation>
+  </group>
+</interface>

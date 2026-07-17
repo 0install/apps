@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/gui/netbeans.xml">
+  <name>Apache NetBeans</name>
+  <summary>integrated development environment for Java, PHP, HTML5 and more</summary>
+  <description>Apache NetBeans is an open source development environment, tooling platform and application framework. It provides support for developing Java, PHP, HTML5, JavaScript, C/C++ and other languages, with editors, code analyzers and converters.</description>
+  <homepage>https://netbeans.apache.org/</homepage>
+  <category>Development</category>
+  <icon href="https://apps.0install.net/gui/netbeans.png" type="image/png"/>
+  <icon href="https://apps.0install.net/gui/netbeans.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://apps.0install.net/gui/netbeans.icns" type="image/x-icns"/>
+
+  <entry-point binary-name="netbeans" command="run"/>
+
+  <group license="Apache-2.0">
+    <requires interface="https://apps.0install.net/java/jdk.xml" version="21..">
+      <environment insert="" mode="replace" name="JAVA_HOME"/>
+    </requires>
+
+    <group>
+      <command name="run" path="bin/netbeans"/>
+      <implementation arch="POSIX-*" version="23" released="2024-09-13" stability="stable" id="netbeans-23-posix">
+        <manifest-digest sha256new="GXHJHHLWMIHR3FM7XOC5SAQSVM7UGNN7WNIR43BGUQVAGZBZYDKQ"/>
+        <archive href="https://archive.apache.org/dist/netbeans/netbeans/23/netbeans-23-bin.zip" size="510066865" type="application/zip" extract="netbeans"/>
+      </implementation>
+      <implementation arch="POSIX-*" version="24" released="2024-12-05" stability="stable" id="netbeans-24-posix">
+        <manifest-digest sha256new="BLRXXM73CKTIXBKWQZPD5646NC6GTJ4GCNP5GBWDIRVHRY76S4IQ"/>
+        <archive href="https://archive.apache.org/dist/netbeans/netbeans/24/netbeans-24-bin.zip" size="517058214" type="application/zip" extract="netbeans"/>
+      </implementation>
+      <implementation arch="POSIX-*" version="25" released="2025-02-14" stability="stable" id="netbeans-25-posix">
+        <manifest-digest sha256new="P5PZEFSXI77S7BTYKPYETSIRBLQ5PVNHFCBG2YSZYLI4AR4XFGWA"/>
+        <archive href="https://archive.apache.org/dist/netbeans/netbeans/25/netbeans-25-bin.zip" size="518108668" type="application/zip" extract="netbeans"/>
+      </implementation>
+      <implementation arch="POSIX-*" version="26" released="2025-05-14" stability="stable" id="netbeans-26-posix">
+        <manifest-digest sha256new="S3RACAEW7NIRKNKQL6BBGYE35G4AXZJBFE4HQ4H5N5NYC43DJRBA"/>
+        <archive href="https://archive.apache.org/dist/netbeans/netbeans/26/netbeans-26-bin.zip" size="514693537" type="application/zip" extract="netbeans"/>
+      </implementation>
+      <implementation arch="POSIX-*" version="27" released="2025-08-16" stability="stable" id="netbeans-27-posix">
+        <manifest-digest sha256new="64MPSPILSFN4L54M24UU6IRVSOCA4RUFL5AMVW6BGBNRUEC36DXQ"/>
+        <archive href="https://archive.apache.org/dist/netbeans/netbeans/27/netbeans-27-bin.zip" size="514762127" type="application/zip" extract="netbeans"/>
+      </implementation>
+      <implementation arch="POSIX-*" version="28" released="2025-11-05" stability="stable" id="netbeans-28-posix">
+        <manifest-digest sha256new="BOOTKSVS64XFHNLVDYTDJW7AVGCJJRT2USLNLHT4TCRCSXS76JLQ"/>
+        <archive href="https://archive.apache.org/dist/netbeans/netbeans/28/netbeans-28-bin.zip" size="515738035" type="application/zip" extract="netbeans"/>
+      </implementation>
+      <implementation arch="POSIX-*" version="29" released="2026-02-19" stability="stable" id="netbeans-29-posix">
+        <manifest-digest sha256new="DG4HKN75YL3SSDJCCXX67KPPLWWAF3ZN6ZV4LZKRYZLDY36CU7QQ"/>
+        <archive href="https://archive.apache.org/dist/netbeans/netbeans/29/netbeans-29-bin.zip" size="516017676" type="application/zip" extract="netbeans"/>
+      </implementation>
+      <implementation arch="POSIX-*" version="30" released="2026-05-11" stability="stable" id="netbeans-30-posix">
+        <manifest-digest sha256new="ANAWU5OQKUYVDTTR23GJDJGCHITKJQ2HE27H4AJILGS3DALKEZRQ"/>
+        <archive href="https://archive.apache.org/dist/netbeans/netbeans/30/netbeans-30-bin.zip" size="520635086" type="application/zip" extract="netbeans"/>
+      </implementation>
+    </group>
+
+    <group arch="Windows-*">
+      <command name="run" path="bin/netbeans64.exe"/>
+      <implementation version="23" released="2024-09-13" stability="stable" id="netbeans-23-windows">
+        <manifest-digest sha256new="GXHJHHLWMIHR3FM7XOC5SAQSVM7UGNN7WNIR43BGUQVAGZBZYDKQ"/>
+        <archive href="https://archive.apache.org/dist/netbeans/netbeans/23/netbeans-23-bin.zip" size="510066865" type="application/zip" extract="netbeans"/>
+      </implementation>
+      <implementation version="24" released="2024-12-05" stability="stable" id="netbeans-24-windows">
+        <manifest-digest sha256new="BLRXXM73CKTIXBKWQZPD5646NC6GTJ4GCNP5GBWDIRVHRY76S4IQ"/>
+        <archive href="https://archive.apache.org/dist/netbeans/netbeans/24/netbeans-24-bin.zip" size="517058214" type="application/zip" extract="netbeans"/>
+      </implementation>
+      <implementation version="25" released="2025-02-14" stability="stable" id="netbeans-25-windows">
+        <manifest-digest sha256new="P5PZEFSXI77S7BTYKPYETSIRBLQ5PVNHFCBG2YSZYLI4AR4XFGWA"/>
+        <archive href="https://archive.apache.org/dist/netbeans/netbeans/25/netbeans-25-bin.zip" size="518108668" type="application/zip" extract="netbeans"/>
+      </implementation>
+      <implementation version="26" released="2025-05-14" stability="stable" id="netbeans-26-windows">
+        <manifest-digest sha256new="S3RACAEW7NIRKNKQL6BBGYE35G4AXZJBFE4HQ4H5N5NYC43DJRBA"/>
+        <archive href="https://archive.apache.org/dist/netbeans/netbeans/26/netbeans-26-bin.zip" size="514693537" type="application/zip" extract="netbeans"/>
+      </implementation>
+      <implementation version="27" released="2025-08-16" stability="stable" id="netbeans-27-windows">
+        <manifest-digest sha256new="64MPSPILSFN4L54M24UU6IRVSOCA4RUFL5AMVW6BGBNRUEC36DXQ"/>
+        <archive href="https://archive.apache.org/dist/netbeans/netbeans/27/netbeans-27-bin.zip" size="514762127" type="application/zip" extract="netbeans"/>
+      </implementation>
+      <implementation version="28" released="2025-11-05" stability="stable" id="netbeans-28-windows">
+        <manifest-digest sha256new="BOOTKSVS64XFHNLVDYTDJW7AVGCJJRT2USLNLHT4TCRCSXS76JLQ"/>
+        <archive href="https://archive.apache.org/dist/netbeans/netbeans/28/netbeans-28-bin.zip" size="515738035" type="application/zip" extract="netbeans"/>
+      </implementation>
+      <implementation version="29" released="2026-02-19" stability="stable" id="netbeans-29-windows">
+        <manifest-digest sha256new="DG4HKN75YL3SSDJCCXX67KPPLWWAF3ZN6ZV4LZKRYZLDY36CU7QQ"/>
+        <archive href="https://archive.apache.org/dist/netbeans/netbeans/29/netbeans-29-bin.zip" size="516017676" type="application/zip" extract="netbeans"/>
+      </implementation>
+      <implementation version="30" released="2026-05-11" stability="stable" id="netbeans-30-windows">
+        <manifest-digest sha256new="ANAWU5OQKUYVDTTR23GJDJGCHITKJQ2HE27H4AJILGS3DALKEZRQ"/>
+        <archive href="https://archive.apache.org/dist/netbeans/netbeans/30/netbeans-30-bin.zip" size="520635086" type="application/zip" extract="netbeans"/>
+      </implementation>
+    </group>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmpaO8UACgkQWao5J8JOTh4/8AgAmNBk
+dRj45aKCbsOCuJdoHjrio6dG1pSJ0Og798Z9Q2RLShT7DkmP30l10A9YDxA9RffTjSdTipSOQkPD
+JRtNGed8+BVmQD07FKBLncKM9Ag5JNVU17zk/6HGX1zZH9J8XTxDltfdZbAq+eR0+rh6Ikj+HKeP
+D2eYr8vGFffKEsfuyCb2bF9YsYkAvKhorDZHw/FtOBRZfhTQ1YqhXGgd0Rz3I0lqwplin7FmDmP9
+CS+XONGB2Vxg3IL2f30pZbkDSR3tkHHBRNTHaC0q6Y1UIdfNjsvXFPgUQvWV8wKr8NrHxfAbLj6E
+KgtMSZ9kJd2Rare06D13M/TdOG8vYq0K0A==
+
+-->

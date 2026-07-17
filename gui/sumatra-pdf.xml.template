@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>SumatraPDF</name>
+  <summary>lightweight PDF, ebook and comic book viewer for Windows</summary>
+  <description>SumatraPDF is a free and open-source viewer for PDF, EPUB, MOBI, CBZ, CBR, DjVu, XPS and CHM documents, plus common image formats. It is small, starts up instantly and uses very little memory.</description>
+  <homepage>https://www.sumatrapdfreader.org/</homepage>
+  <icon href="https://apps.0install.net/gui/sumatra-pdf.png" type="image/png"/>
+  <icon href="https://apps.0install.net/gui/sumatra-pdf.ico" type="image/vnd.microsoft.icon"/>
+  <category>Office</category>
+
+  <feed-for interface="https://apps.0install.net/gui/sumatra-pdf.xml"/>
+
+  <group license="GPL-3.0-only">
+    <command name="run" path="SumatraPDF.exe"/>
+
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <recipe>
+        <archive href="https://www.sumatrapdfreader.org/dl/rel/{version}/SumatraPDF-{version}-64.zip" type="application/zip"/>
+        <rename source="SumatraPDF-{version}-64.exe" dest="SumatraPDF.exe"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <recipe>
+        <archive href="https://www.sumatrapdfreader.org/dl/rel/{version}/SumatraPDF-{version}.zip" type="application/zip"/>
+        <rename source="SumatraPDF-{version}-32.exe" dest="SumatraPDF.exe"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <recipe>
+        <archive href="https://www.sumatrapdfreader.org/dl/rel/{version}/SumatraPDF-{version}-arm64.zip" type="application/zip"/>
+        <rename source="SumatraPDF-{version}-arm64.exe" dest="SumatraPDF.exe"/>
+      </recipe>
+    </implementation>
+  </group>
+</interface>

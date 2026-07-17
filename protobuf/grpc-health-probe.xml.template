@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>grpc-health-probe</name>
+  <summary>command-line tool to check health of gRPC services</summary>
+  <description>grpc_health_probe allows you to query health of gRPC services that expose their status through the gRPC Health Checking Protocol.</description>
+  <homepage>https://github.com/grpc-ecosystem/grpc-health-probe</homepage>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/protobuf/grpc-health-probe.xml"/>
+
+  <group license="Apache-2.0">
+    <command name="run" path="grpc_health_probe"/>
+    <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <file dest="grpc_health_probe" executable="true" href="https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/v{version}/grpc_health_probe-linux-amd64"/>
+    </implementation>
+    <implementation arch="Linux-i486" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <file dest="grpc_health_probe" executable="true" href="https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/v{version}/grpc_health_probe-linux-386"/>
+    </implementation>
+    <implementation arch="Linux-armv7l" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <file dest="grpc_health_probe" executable="true" href="https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/v{version}/grpc_health_probe-linux-arm"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <file dest="grpc_health_probe" executable="true" href="https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/v{version}/grpc_health_probe-linux-arm64"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <file dest="grpc_health_probe" executable="true" href="https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/v{version}/grpc_health_probe-linux-ppc64le"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <file dest="grpc_health_probe" executable="true" href="https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/v{version}/grpc_health_probe-darwin-amd64"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <file dest="grpc_health_probe" executable="true" href="https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/v{version}/grpc_health_probe-darwin-arm64"/>
+    </implementation>
+  </group>
+
+  <group license="Apache-2.0">
+    <command name="run" path="grpc_health_probe.exe"/>
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <file dest="grpc_health_probe.exe" href="https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/v{version}/grpc_health_probe-windows-amd64.exe"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <file dest="grpc_health_probe.exe" href="https://github.com/grpc-ecosystem/grpc-health-probe/releases/download/v{version}/grpc_health_probe-windows-arm64.exe"/>
+    </implementation>
+  </group>
+</interface>

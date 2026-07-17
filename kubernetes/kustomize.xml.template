@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>kustomize</name>
+  <summary>customization of kubernetes YAML configurations</summary>
+  <description>kustomize lets you customize raw, template-free YAML files for multiple purposes, leaving the original YAML untouched and usable as is. It targets Kubernetes; it understands and can patch Kubernetes style API objects. It's like make, in that what it does is declared in a file, and it's like sed, in that it makes structured edits to data without fully parsing it.</description>
+  <homepage>https://kustomize.io/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+  <icon href="https://apps.0install.net/kubernetes/kustomize.png" type="image/png"/>
+  <icon href="https://apps.0install.net/kubernetes/kustomize.ico" type="image/vnd.microsoft.icon"/>
+
+  <feed-for interface="https://apps.0install.net/kubernetes/kustomize.xml"/>
+
+  <group license="Apache-2.0">
+    <command name="run" path="kustomize"/>
+    <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize/v{version}/kustomize_v{version}_linux_amd64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize/v{version}/kustomize_v{version}_linux_arm64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-ppc64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize/v{version}/kustomize_v{version}_linux_ppc64le.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize/v{version}/kustomize_v{version}_darwin_amd64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize/v{version}/kustomize_v{version}_darwin_arm64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="Apache-2.0">
+    <command name="run" path="kustomize.exe"/>
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize/v{version}/kustomize_v{version}_windows_amd64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize/v{version}/kustomize_v{version}_windows_arm64.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

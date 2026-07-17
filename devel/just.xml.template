@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>just</name>
+  <summary>handy way to save and run project-specific commands</summary>
+  <description>just is a command runner. It's a handy way to save and run project-specific commands, like make, but without make's crufty syntax and idiosyncrasies. Recipes are written in a justfile, which is checked into version control alongside the rest of a project's code.</description>
+  <homepage>https://just.systems/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/devel/just.xml"/>
+
+  <group license="Public Domain">
+    <command name="run" path="just"/>
+    <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/casey/just/releases/download/{version}/just-{version}-x86_64-unknown-linux-musl.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/casey/just/releases/download/{version}/just-{version}-aarch64-unknown-linux-musl.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/casey/just/releases/download/{version}/just-{version}-x86_64-apple-darwin.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/casey/just/releases/download/{version}/just-{version}-aarch64-apple-darwin.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="Public Domain">
+    <command name="run" path="just.exe"/>
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/casey/just/releases/download/{version}/just-{version}-x86_64-pc-windows-msvc.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/casey/just/releases/download/{version}/just-{version}-aarch64-pc-windows-msvc.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

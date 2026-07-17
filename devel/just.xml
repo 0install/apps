@@ -1,0 +1,737 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/devel/just.xml">
+  <name>just</name>
+  <summary>handy way to save and run project-specific commands</summary>
+  <description>just is a command runner. It's a handy way to save and run project-specific commands, like make, but without make's crufty syntax and idiosyncrasies. Recipes are written in a justfile, which is checked into version control alongside the rest of a project's code.</description>
+  <homepage>https://just.systems/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+
+  <group license="Public Domain">
+    <command name="run" path="just"/>
+    <implementation arch="Linux-x86_64" version="1.36.0" released="2024-09-30" stability="stable" id="sha256new_XE5RIVG4ZQ6IMNPSSDA4I34STFKIUIVXCNFEWH3R5M2ETOMJRHTA">
+      <manifest-digest sha256new="XE5RIVG4ZQ6IMNPSSDA4I34STFKIUIVXCNFEWH3R5M2ETOMJRHTA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.36.0/just-1.36.0-x86_64-unknown-linux-musl.tar.gz" size="1928456" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.36.0" released="2024-09-30" stability="stable" id="sha256new_Z4TYS22BGXYOV327QAJ6KYOFWHFC2MTJ4CUGTE7AABMZTH4CI32A">
+      <manifest-digest sha256new="Z4TYS22BGXYOV327QAJ6KYOFWHFC2MTJ4CUGTE7AABMZTH4CI32A"/>
+      <archive href="https://github.com/casey/just/releases/download/1.36.0/just-1.36.0-aarch64-unknown-linux-musl.tar.gz" size="1812994" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.36.0" released="2024-09-30" stability="stable" id="sha256new_YVPQJXIUL7YJDSACVBLWUZWRBOWEBSYZAQEVHAJ5JZNFIRVMPQ4A">
+      <manifest-digest sha256new="YVPQJXIUL7YJDSACVBLWUZWRBOWEBSYZAQEVHAJ5JZNFIRVMPQ4A"/>
+      <archive href="https://github.com/casey/just/releases/download/1.36.0/just-1.36.0-x86_64-apple-darwin.tar.gz" size="1740814" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.36.0" released="2024-09-30" stability="stable" id="sha256new_NM3EGNPG7VVYRQPTWJOIP5O66NC75QNBOPTVFRD5PPSMBGP2PVLA">
+      <manifest-digest sha256new="NM3EGNPG7VVYRQPTWJOIP5O66NC75QNBOPTVFRD5PPSMBGP2PVLA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.36.0/just-1.36.0-aarch64-apple-darwin.tar.gz" size="1614682" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.37.0" released="2024-11-20" stability="stable" id="sha256new_7EEWOKRLD4OAQT7FTZGHKY33RCGZUE362FUTP3BFFLL5TFVPTXSQ">
+      <manifest-digest sha256new="7EEWOKRLD4OAQT7FTZGHKY33RCGZUE362FUTP3BFFLL5TFVPTXSQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.37.0/just-1.37.0-x86_64-unknown-linux-musl.tar.gz" size="1941115" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.37.0" released="2024-11-20" stability="stable" id="sha256new_CXFJYYYLI2DEFVYOSSLD2G6K3YQQGDCTRTKXVZAPCJM7RGB2L7ZA">
+      <manifest-digest sha256new="CXFJYYYLI2DEFVYOSSLD2G6K3YQQGDCTRTKXVZAPCJM7RGB2L7ZA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.37.0/just-1.37.0-aarch64-unknown-linux-musl.tar.gz" size="1774434" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.37.0" released="2024-11-20" stability="stable" id="sha256new_QS35XU43ZPWSPSIEYI7SY53DWRQKT2TUCHJPKDD7OZCYW6Y4THVQ">
+      <manifest-digest sha256new="QS35XU43ZPWSPSIEYI7SY53DWRQKT2TUCHJPKDD7OZCYW6Y4THVQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.37.0/just-1.37.0-x86_64-apple-darwin.tar.gz" size="1751417" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.37.0" released="2024-11-20" stability="stable" id="sha256new_GJPKY7FSZUS6A5C7YQPJVW7NNM6GPNYB7UC6AUKFQ23RLQ37PRKQ">
+      <manifest-digest sha256new="GJPKY7FSZUS6A5C7YQPJVW7NNM6GPNYB7UC6AUKFQ23RLQ37PRKQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.37.0/just-1.37.0-aarch64-apple-darwin.tar.gz" size="1626846" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.38.0" released="2024-12-10" stability="stable" id="sha256new_M6HDYAU4B4XLWW2544BGANLOTCD5X5653VKE2JNYYC3EDSVQERVQ">
+      <manifest-digest sha256new="M6HDYAU4B4XLWW2544BGANLOTCD5X5653VKE2JNYYC3EDSVQERVQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.38.0/just-1.38.0-x86_64-unknown-linux-musl.tar.gz" size="1962418" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.38.0" released="2024-12-10" stability="stable" id="sha256new_PUZLT6U2JMNLKKZQL4RVUABOANDQHINNLUHDGXTVFK6O2NKJGWDQ">
+      <manifest-digest sha256new="PUZLT6U2JMNLKKZQL4RVUABOANDQHINNLUHDGXTVFK6O2NKJGWDQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.38.0/just-1.38.0-aarch64-unknown-linux-musl.tar.gz" size="1796883" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.38.0" released="2024-12-10" stability="stable" id="sha256new_LB4LVRVX7WWATHOKKAYDKRJXOREWLOFRI3BDPHBQ6EJWUGNKE36Q">
+      <manifest-digest sha256new="LB4LVRVX7WWATHOKKAYDKRJXOREWLOFRI3BDPHBQ6EJWUGNKE36Q"/>
+      <archive href="https://github.com/casey/just/releases/download/1.38.0/just-1.38.0-x86_64-apple-darwin.tar.gz" size="1774240" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.38.0" released="2024-12-10" stability="stable" id="sha256new_5ESULHUOSD5QTXGDYWUDR7JBVC7LDBBSI5XZ42EMRNO4AEF2PQLA">
+      <manifest-digest sha256new="5ESULHUOSD5QTXGDYWUDR7JBVC7LDBBSI5XZ42EMRNO4AEF2PQLA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.38.0/just-1.38.0-aarch64-apple-darwin.tar.gz" size="1647597" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.39.0" released="2025-01-22" stability="stable" id="sha256new_XJDUCBLEWSF4GWPL3RIP73WSE5RWLRPJ2O4432ICFY4KQOU2JLHQ">
+      <manifest-digest sha256new="XJDUCBLEWSF4GWPL3RIP73WSE5RWLRPJ2O4432ICFY4KQOU2JLHQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.39.0/just-1.39.0-x86_64-unknown-linux-musl.tar.gz" size="1962314" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.39.0" released="2025-01-22" stability="stable" id="sha256new_MQ2R7SUSA5UMMORAOMDU4LRLBL4EJMCFY5HME36I6CYAMCOMPBYA">
+      <manifest-digest sha256new="MQ2R7SUSA5UMMORAOMDU4LRLBL4EJMCFY5HME36I6CYAMCOMPBYA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.39.0/just-1.39.0-aarch64-unknown-linux-musl.tar.gz" size="1792731" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.39.0" released="2025-01-22" stability="stable" id="sha256new_II6D3MNGTAFISTROXEWC5DOGOFFFMAT7NGLBYHGY5JSRWM2DVQRA">
+      <manifest-digest sha256new="II6D3MNGTAFISTROXEWC5DOGOFFFMAT7NGLBYHGY5JSRWM2DVQRA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.39.0/just-1.39.0-x86_64-apple-darwin.tar.gz" size="1800352" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.39.0" released="2025-01-22" stability="stable" id="sha256new_4MDQH3PKG5HVRBOMJXQIM7GCH6GOE34YXJ3BP7ZIJXQNZWGM44VQ">
+      <manifest-digest sha256new="4MDQH3PKG5HVRBOMJXQIM7GCH6GOE34YXJ3BP7ZIJXQNZWGM44VQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.39.0/just-1.39.0-aarch64-apple-darwin.tar.gz" size="1672713" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.40.0" released="2025-03-09" stability="stable" id="sha256new_O4PVV7H5NPXPJIGQTFPYRWCMPUZYC5LZB2YAHJ4SM4TSVRBTVJIQ">
+      <manifest-digest sha256new="O4PVV7H5NPXPJIGQTFPYRWCMPUZYC5LZB2YAHJ4SM4TSVRBTVJIQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.40.0/just-1.40.0-x86_64-unknown-linux-musl.tar.gz" size="1972354" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.40.0" released="2025-03-09" stability="stable" id="sha256new_EDBB4H7HQZASD3JM7AARCHDESINH7NVSPH25FUT4OJXX2O37A2LQ">
+      <manifest-digest sha256new="EDBB4H7HQZASD3JM7AARCHDESINH7NVSPH25FUT4OJXX2O37A2LQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.40.0/just-1.40.0-aarch64-unknown-linux-musl.tar.gz" size="1797966" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.40.0" released="2025-03-09" stability="stable" id="sha256new_N6WEDTBFNTT25BBZQW4Q4ZSNPI4ZTVCJFK4DJVWHKRRVN43NYZSA">
+      <manifest-digest sha256new="N6WEDTBFNTT25BBZQW4Q4ZSNPI4ZTVCJFK4DJVWHKRRVN43NYZSA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.40.0/just-1.40.0-x86_64-apple-darwin.tar.gz" size="1794629" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.40.0" released="2025-03-09" stability="stable" id="sha256new_R3V6W2PYYRCFF4D6XBOU42RXHPENY32GYKJBG3JX2SGBWBOY5MOA">
+      <manifest-digest sha256new="R3V6W2PYYRCFF4D6XBOU42RXHPENY32GYKJBG3JX2SGBWBOY5MOA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.40.0/just-1.40.0-aarch64-apple-darwin.tar.gz" size="1660683" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.41.0" released="2025-07-01" stability="stable" id="sha256new_KL5J47V4TCL3EFGDHI46IBYGSC25DCI4EM7WPHL2FXAHJ4S3IOYA">
+      <manifest-digest sha256new="KL5J47V4TCL3EFGDHI46IBYGSC25DCI4EM7WPHL2FXAHJ4S3IOYA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.41.0/just-1.41.0-x86_64-unknown-linux-musl.tar.gz" size="1995783" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.41.0" released="2025-07-01" stability="stable" id="sha256new_2PSJITPPE4JVFGQDY3LUASV3IYDDJPVFRHWZXW3NRC64ST3V7KDQ">
+      <manifest-digest sha256new="2PSJITPPE4JVFGQDY3LUASV3IYDDJPVFRHWZXW3NRC64ST3V7KDQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.41.0/just-1.41.0-aarch64-unknown-linux-musl.tar.gz" size="1820257" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.41.0" released="2025-07-01" stability="stable" id="sha256new_OVLRRQQUOMYRH4GBHMW3V62MUJH4NQ2BVN3XHHR7TYLAW5IAWOKA">
+      <manifest-digest sha256new="OVLRRQQUOMYRH4GBHMW3V62MUJH4NQ2BVN3XHHR7TYLAW5IAWOKA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.41.0/just-1.41.0-x86_64-apple-darwin.tar.gz" size="1825625" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.41.0" released="2025-07-01" stability="stable" id="sha256new_R6FDEFTELKN6XJJP2DO5RWQLSQXII57QOWYACJ3CTGHJP2Z54VQQ">
+      <manifest-digest sha256new="R6FDEFTELKN6XJJP2DO5RWQLSQXII57QOWYACJ3CTGHJP2Z54VQQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.41.0/just-1.41.0-aarch64-apple-darwin.tar.gz" size="1690957" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.42.0" released="2025-07-14" stability="stable" id="sha256new_Z5C7JQYTAAYVQRO3JAZE657C4K2KEYXFIPFMFLOHVPHGGO7HLFNA">
+      <manifest-digest sha256new="Z5C7JQYTAAYVQRO3JAZE657C4K2KEYXFIPFMFLOHVPHGGO7HLFNA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.0/just-1.42.0-x86_64-unknown-linux-musl.tar.gz" size="2003678" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.42.0" released="2025-07-14" stability="stable" id="sha256new_X5KILMNEP5YFIJHEDHQRRQSNJDWKAUMCUZMXCPRG2VDVJ6POHZTA">
+      <manifest-digest sha256new="X5KILMNEP5YFIJHEDHQRRQSNJDWKAUMCUZMXCPRG2VDVJ6POHZTA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.0/just-1.42.0-aarch64-unknown-linux-musl.tar.gz" size="1828053" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.42.0" released="2025-07-14" stability="stable" id="sha256new_BSHHCE3YNFZEZGXAXOGCC3TTSOP2J7AACVFEE6JBHCV24BCR7RYQ">
+      <manifest-digest sha256new="BSHHCE3YNFZEZGXAXOGCC3TTSOP2J7AACVFEE6JBHCV24BCR7RYQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.0/just-1.42.0-x86_64-apple-darwin.tar.gz" size="1837202" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.42.0" released="2025-07-14" stability="stable" id="sha256new_L64T6TBU5HPVUBQ3AVHK7NFHS7X7HCREZVKRB2RWNYTNVOTPJYBQ">
+      <manifest-digest sha256new="L64T6TBU5HPVUBQ3AVHK7NFHS7X7HCREZVKRB2RWNYTNVOTPJYBQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.0/just-1.42.0-aarch64-apple-darwin.tar.gz" size="1699227" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.42.1" released="2025-07-14" stability="stable" id="sha256new_PKDL3UBV4FKO4SU5JTIDVXQWTWJMD55PBDHOP4CIJWMHUTEWCQ4A">
+      <manifest-digest sha256new="PKDL3UBV4FKO4SU5JTIDVXQWTWJMD55PBDHOP4CIJWMHUTEWCQ4A"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.1/just-1.42.1-x86_64-unknown-linux-musl.tar.gz" size="2003495" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.42.1" released="2025-07-14" stability="stable" id="sha256new_BQMFUZ46D7RS7LKTZHVP7TQFRLE22FF3PWZQDZOVTONEQKLCAKVA">
+      <manifest-digest sha256new="BQMFUZ46D7RS7LKTZHVP7TQFRLE22FF3PWZQDZOVTONEQKLCAKVA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.1/just-1.42.1-aarch64-unknown-linux-musl.tar.gz" size="1827526" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.42.1" released="2025-07-14" stability="stable" id="sha256new_RO3ZEP3GNFGBK4BLJ2NKT5PRBXW5X223OTQFNV2MCTOI5EDVJPTQ">
+      <manifest-digest sha256new="RO3ZEP3GNFGBK4BLJ2NKT5PRBXW5X223OTQFNV2MCTOI5EDVJPTQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.1/just-1.42.1-x86_64-apple-darwin.tar.gz" size="1836054" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.42.1" released="2025-07-14" stability="stable" id="sha256new_5R3YBVQGP6H5VX6BJKPIE3CD2MJHZNA5DRAQTCIDH7QWLKIKLZ4A">
+      <manifest-digest sha256new="5R3YBVQGP6H5VX6BJKPIE3CD2MJHZNA5DRAQTCIDH7QWLKIKLZ4A"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.1/just-1.42.1-aarch64-apple-darwin.tar.gz" size="1700396" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.42.2" released="2025-07-15" stability="stable" id="sha256new_IHA7LL6TZUGRNGS2DLP5MVF2VRCQPQF7VUWKV6ZCU7VAF5HAXB5Q">
+      <manifest-digest sha256new="IHA7LL6TZUGRNGS2DLP5MVF2VRCQPQF7VUWKV6ZCU7VAF5HAXB5Q"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.2/just-1.42.2-x86_64-unknown-linux-musl.tar.gz" size="2003553" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.42.2" released="2025-07-15" stability="stable" id="sha256new_7BDHMC4ONZYTML6Z7GS5OOTD4WB4NOL6ZUPLDNAGLXYIXMGBLJ7Q">
+      <manifest-digest sha256new="7BDHMC4ONZYTML6Z7GS5OOTD4WB4NOL6ZUPLDNAGLXYIXMGBLJ7Q"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.2/just-1.42.2-aarch64-unknown-linux-musl.tar.gz" size="1827821" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.42.2" released="2025-07-15" stability="stable" id="sha256new_GFESHWM3MOL45QUSRU3X24WIBMYLRZMCKLH2WKAO2AMWG2EKDTQA">
+      <manifest-digest sha256new="GFESHWM3MOL45QUSRU3X24WIBMYLRZMCKLH2WKAO2AMWG2EKDTQA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.2/just-1.42.2-x86_64-apple-darwin.tar.gz" size="1836905" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.42.2" released="2025-07-15" stability="stable" id="sha256new_Z23YXHFORSER3A7XFKPJQT7GR3TRDNKHXFD6TRKLGTXHJTSC34YA">
+      <manifest-digest sha256new="Z23YXHFORSER3A7XFKPJQT7GR3TRDNKHXFD6TRKLGTXHJTSC34YA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.2/just-1.42.2-aarch64-apple-darwin.tar.gz" size="1699956" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.42.3" released="2025-07-19" stability="stable" id="sha256new_KEY5YZPSCXLDO4SA5ZAHLIO44VGPA3SK4Q6UDQULI2IDW5OT5KMA">
+      <manifest-digest sha256new="KEY5YZPSCXLDO4SA5ZAHLIO44VGPA3SK4Q6UDQULI2IDW5OT5KMA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.3/just-1.42.3-x86_64-unknown-linux-musl.tar.gz" size="2003615" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.42.3" released="2025-07-19" stability="stable" id="sha256new_FUEBD2QRBBJRAPJSSMY53G2CDRBZTWGB37XMXBRXN3G5YTRIBSDQ">
+      <manifest-digest sha256new="FUEBD2QRBBJRAPJSSMY53G2CDRBZTWGB37XMXBRXN3G5YTRIBSDQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.3/just-1.42.3-aarch64-unknown-linux-musl.tar.gz" size="1827487" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.42.3" released="2025-07-19" stability="stable" id="sha256new_DM45UEYP73XAQAI354WOPQ5QLNDAT5NFHRTQAW5UG55NFLHGUQEA">
+      <manifest-digest sha256new="DM45UEYP73XAQAI354WOPQ5QLNDAT5NFHRTQAW5UG55NFLHGUQEA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.3/just-1.42.3-x86_64-apple-darwin.tar.gz" size="1837248" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.42.3" released="2025-07-19" stability="stable" id="sha256new_UYY5OVUUHGRU3FAYJ5FLUYPVDYQETMGXEUYBYQKP7X4VPDXIQRKA">
+      <manifest-digest sha256new="UYY5OVUUHGRU3FAYJ5FLUYPVDYQETMGXEUYBYQKP7X4VPDXIQRKA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.3/just-1.42.3-aarch64-apple-darwin.tar.gz" size="1700663" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.42.4" released="2025-07-24" stability="stable" id="sha256new_3ZBX726URTQTI72OTUNDJN4ITJB4LFHNPS5IDFBWM65HA4O4XNRA">
+      <manifest-digest sha256new="3ZBX726URTQTI72OTUNDJN4ITJB4LFHNPS5IDFBWM65HA4O4XNRA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.4/just-1.42.4-x86_64-unknown-linux-musl.tar.gz" size="2003117" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.42.4" released="2025-07-24" stability="stable" id="sha256new_O22Q324EM4JCKONSYU3ASFCZ7MLFSDMBEZKIJZHVGXDBP7AKYDAA">
+      <manifest-digest sha256new="O22Q324EM4JCKONSYU3ASFCZ7MLFSDMBEZKIJZHVGXDBP7AKYDAA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.4/just-1.42.4-aarch64-unknown-linux-musl.tar.gz" size="1829411" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.42.4" released="2025-07-24" stability="stable" id="sha256new_RX3SBQVECJFV33DO43WFJRLWMLNPOSEYW2MXEQ33663SROKDYHFQ">
+      <manifest-digest sha256new="RX3SBQVECJFV33DO43WFJRLWMLNPOSEYW2MXEQ33663SROKDYHFQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.4/just-1.42.4-x86_64-apple-darwin.tar.gz" size="1836612" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.42.4" released="2025-07-24" stability="stable" id="sha256new_JZA2LKRVSNES353YMJPXSDXOC4M5XB5RIAF3BYX2SGIMN3N45YRA">
+      <manifest-digest sha256new="JZA2LKRVSNES353YMJPXSDXOC4M5XB5RIAF3BYX2SGIMN3N45YRA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.4/just-1.42.4-aarch64-apple-darwin.tar.gz" size="1701037" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.43.0" released="2025-09-27" stability="stable" id="sha256new_YHTR6QWZ7S7OTRJS5OW2RBQXPOJ5NRUKD6DRE4OUAEF6FGCTQHDA">
+      <manifest-digest sha256new="YHTR6QWZ7S7OTRJS5OW2RBQXPOJ5NRUKD6DRE4OUAEF6FGCTQHDA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.43.0/just-1.43.0-x86_64-unknown-linux-musl.tar.gz" size="1939316" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.43.0" released="2025-09-27" stability="stable" id="sha256new_TJMDBOSARLX4C2L4KWEKOK55HT7J7VE2T6236H242SXN4FGWWL3A">
+      <manifest-digest sha256new="TJMDBOSARLX4C2L4KWEKOK55HT7J7VE2T6236H242SXN4FGWWL3A"/>
+      <archive href="https://github.com/casey/just/releases/download/1.43.0/just-1.43.0-aarch64-unknown-linux-musl.tar.gz" size="1769960" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.43.0" released="2025-09-27" stability="stable" id="sha256new_GMVXJ6UU374QAFXXPENLDHF5YU7UPSP3FKOH66WX4SI2DXSRRMTA">
+      <manifest-digest sha256new="GMVXJ6UU374QAFXXPENLDHF5YU7UPSP3FKOH66WX4SI2DXSRRMTA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.43.0/just-1.43.0-x86_64-apple-darwin.tar.gz" size="1773428" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.43.0" released="2025-09-27" stability="stable" id="sha256new_HJAMJDE2OHYZ5SDNAEUKVZVHSFHVRUGCOFZR4GK24QP5QI72FJRQ">
+      <manifest-digest sha256new="HJAMJDE2OHYZ5SDNAEUKVZVHSFHVRUGCOFZR4GK24QP5QI72FJRQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.43.0/just-1.43.0-aarch64-apple-darwin.tar.gz" size="1638603" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.43.1" released="2025-11-12" stability="stable" id="sha256new_4NUTNRUJA3YLVWC546C5OHFDDJEMD2UTLKDGGHFUDROWOCMIX2DA">
+      <manifest-digest sha256new="4NUTNRUJA3YLVWC546C5OHFDDJEMD2UTLKDGGHFUDROWOCMIX2DA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.43.1/just-1.43.1-x86_64-unknown-linux-musl.tar.gz" size="1941840" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.43.1" released="2025-11-12" stability="stable" id="sha256new_6BM3PEK2ZDKIY76WT7BJTFQGUWNQFVAZAT2Q5C4GYD3PCB3XPMUA">
+      <manifest-digest sha256new="6BM3PEK2ZDKIY76WT7BJTFQGUWNQFVAZAT2Q5C4GYD3PCB3XPMUA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.43.1/just-1.43.1-aarch64-unknown-linux-musl.tar.gz" size="1773656" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.43.1" released="2025-11-12" stability="stable" id="sha256new_UDCQJJPQG5XKJRC5Q25YWFKSYFPJ7CA526HTB6CHDRKKJNM22RXA">
+      <manifest-digest sha256new="UDCQJJPQG5XKJRC5Q25YWFKSYFPJ7CA526HTB6CHDRKKJNM22RXA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.43.1/just-1.43.1-x86_64-apple-darwin.tar.gz" size="1771694" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.43.1" released="2025-11-12" stability="stable" id="sha256new_EG2PA2LWPB36F7623CE35PVTT45DYBBD3KXO7ZENNEZDY4AOHF2Q">
+      <manifest-digest sha256new="EG2PA2LWPB36F7623CE35PVTT45DYBBD3KXO7ZENNEZDY4AOHF2Q"/>
+      <archive href="https://github.com/casey/just/releases/download/1.43.1/just-1.43.1-aarch64-apple-darwin.tar.gz" size="1633873" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.44.0" released="2025-12-07" stability="stable" id="sha256new_G64PNEALTOJFXT6NPQA6SZTGVD76R77JHZE4GCSCQSP6FZ7FE2FA">
+      <manifest-digest sha256new="G64PNEALTOJFXT6NPQA6SZTGVD76R77JHZE4GCSCQSP6FZ7FE2FA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.44.0/just-1.44.0-x86_64-unknown-linux-musl.tar.gz" size="1946378" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.44.0" released="2025-12-07" stability="stable" id="sha256new_IWMT4M6W6WUCNL33N4OG3ZCR4AIPBKQNZ2ZT43NMHM6INPKP2SEA">
+      <manifest-digest sha256new="IWMT4M6W6WUCNL33N4OG3ZCR4AIPBKQNZ2ZT43NMHM6INPKP2SEA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.44.0/just-1.44.0-aarch64-unknown-linux-musl.tar.gz" size="1780704" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.44.0" released="2025-12-07" stability="stable" id="sha256new_JGQ43GFJ63QUDQSKVQYTLDS4WQERQTW5RRAXIRG2LFTH3PUA73CA">
+      <manifest-digest sha256new="JGQ43GFJ63QUDQSKVQYTLDS4WQERQTW5RRAXIRG2LFTH3PUA73CA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.44.0/just-1.44.0-x86_64-apple-darwin.tar.gz" size="1778726" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.44.0" released="2025-12-07" stability="stable" id="sha256new_JAFNM5VJEGG6HBVKFEUBTA5CK76XABXQ24QNCADRZZRZC3IG77AQ">
+      <manifest-digest sha256new="JAFNM5VJEGG6HBVKFEUBTA5CK76XABXQ24QNCADRZZRZC3IG77AQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.44.0/just-1.44.0-aarch64-apple-darwin.tar.gz" size="1643777" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.44.1" released="2025-12-09" stability="stable" id="sha256new_7IFXXBPOIMVZMT4UK6R4AIEGPLXCP2RE5XEHGC35YQVCXQXF7ENQ">
+      <manifest-digest sha256new="7IFXXBPOIMVZMT4UK6R4AIEGPLXCP2RE5XEHGC35YQVCXQXF7ENQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.44.1/just-1.44.1-x86_64-unknown-linux-musl.tar.gz" size="1947620" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.44.1" released="2025-12-09" stability="stable" id="sha256new_U2C4E3RI2XGCLE23HYJZ4A6CMLXCTIC2CHRY7LLRMQ3ZWI4W73KA">
+      <manifest-digest sha256new="U2C4E3RI2XGCLE23HYJZ4A6CMLXCTIC2CHRY7LLRMQ3ZWI4W73KA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.44.1/just-1.44.1-aarch64-unknown-linux-musl.tar.gz" size="1780706" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.44.1" released="2025-12-09" stability="stable" id="sha256new_3MSVOJRM4WCS2GX57DIMY43GCJANXRUFJ6YZ4N5TGFHM3NVKDZ2Q">
+      <manifest-digest sha256new="3MSVOJRM4WCS2GX57DIMY43GCJANXRUFJ6YZ4N5TGFHM3NVKDZ2Q"/>
+      <archive href="https://github.com/casey/just/releases/download/1.44.1/just-1.44.1-x86_64-apple-darwin.tar.gz" size="1779560" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.44.1" released="2025-12-09" stability="stable" id="sha256new_4IFH53K3CV7Z5I2TTLPTVN5WVEYHK2MLKPCTSF7AZUOD2PXS3UPA">
+      <manifest-digest sha256new="4IFH53K3CV7Z5I2TTLPTVN5WVEYHK2MLKPCTSF7AZUOD2PXS3UPA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.44.1/just-1.44.1-aarch64-apple-darwin.tar.gz" size="1643482" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.45.0" released="2025-12-10" stability="stable" id="sha256new_4GHDUPY2ZIA3AGDJWTJQWHRVWPSX7EA6NZSPEVPE7A4WQL4M2WTQ">
+      <manifest-digest sha256new="4GHDUPY2ZIA3AGDJWTJQWHRVWPSX7EA6NZSPEVPE7A4WQL4M2WTQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.45.0/just-1.45.0-x86_64-unknown-linux-musl.tar.gz" size="1976463" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.45.0" released="2025-12-10" stability="stable" id="sha256new_HABB4X3FCVF22ZNKDDRZGX5DU6F4ELEAN5UGWU2IC33VRXPKRUNQ">
+      <manifest-digest sha256new="HABB4X3FCVF22ZNKDDRZGX5DU6F4ELEAN5UGWU2IC33VRXPKRUNQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.45.0/just-1.45.0-aarch64-unknown-linux-musl.tar.gz" size="1809302" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.45.0" released="2025-12-10" stability="stable" id="sha256new_VKCZ5UQX2IMKMNXWDSNLSZEEVEF4RZDFNAP26U2CBLGHBHOONZJA">
+      <manifest-digest sha256new="VKCZ5UQX2IMKMNXWDSNLSZEEVEF4RZDFNAP26U2CBLGHBHOONZJA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.45.0/just-1.45.0-x86_64-apple-darwin.tar.gz" size="1808937" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.45.0" released="2025-12-10" stability="stable" id="sha256new_5XPERVLM5AKWTQQ24CQAHCEXYC4XHBMLRQMLHDSX7T5L2OGA5BEQ">
+      <manifest-digest sha256new="5XPERVLM5AKWTQQ24CQAHCEXYC4XHBMLRQMLHDSX7T5L2OGA5BEQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.45.0/just-1.45.0-aarch64-apple-darwin.tar.gz" size="1670167" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.46.0" released="2026-01-02" stability="stable" id="sha256new_VU2MSF5OPJVLXG46DY6DIRYN5AKLFEJDBLYTF5N2PLQLFKR5GFYQ">
+      <manifest-digest sha256new="VU2MSF5OPJVLXG46DY6DIRYN5AKLFEJDBLYTF5N2PLQLFKR5GFYQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.46.0/just-1.46.0-x86_64-unknown-linux-musl.tar.gz" size="2007171" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.46.0" released="2026-01-02" stability="stable" id="sha256new_3YPLWUK2MEMTCHAYGIBX4TMS3FRE562NVS6M22M5N3FHVCGGBOQA">
+      <manifest-digest sha256new="3YPLWUK2MEMTCHAYGIBX4TMS3FRE562NVS6M22M5N3FHVCGGBOQA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.46.0/just-1.46.0-aarch64-unknown-linux-musl.tar.gz" size="1834096" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.46.0" released="2026-01-02" stability="stable" id="sha256new_WL3437ADTQZ32GHMHS37YKI3ZUUGNYQWC52ZGVKBWP7GUIHU6EJQ">
+      <manifest-digest sha256new="WL3437ADTQZ32GHMHS37YKI3ZUUGNYQWC52ZGVKBWP7GUIHU6EJQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.46.0/just-1.46.0-x86_64-apple-darwin.tar.gz" size="1834940" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.46.0" released="2026-01-02" stability="stable" id="sha256new_MSWWO5NQK7NXDPFRE5Q7LQL7ZIDFRWR2RQHO33I4V3PW46CQEGIA">
+      <manifest-digest sha256new="MSWWO5NQK7NXDPFRE5Q7LQL7ZIDFRWR2RQHO33I4V3PW46CQEGIA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.46.0/just-1.46.0-aarch64-apple-darwin.tar.gz" size="1693949" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.47.0" released="2026-03-15" stability="stable" id="sha256new_5ZXCFGV4RURNX2SRW6IVER4R4YUWTV7AHEJMCZI7QBJUL736QMHQ">
+      <manifest-digest sha256new="5ZXCFGV4RURNX2SRW6IVER4R4YUWTV7AHEJMCZI7QBJUL736QMHQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.47.0/just-1.47.0-x86_64-unknown-linux-musl.tar.gz" size="1989196" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.47.0" released="2026-03-15" stability="stable" id="sha256new_W52BF3BSDLKWDXNYOINZPENN7TIH367TEALRSECM72Q7JTUTZTNQ">
+      <manifest-digest sha256new="W52BF3BSDLKWDXNYOINZPENN7TIH367TEALRSECM72Q7JTUTZTNQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.47.0/just-1.47.0-aarch64-unknown-linux-musl.tar.gz" size="1815558" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.47.0" released="2026-03-15" stability="stable" id="sha256new_YXM2IGY32KFCKYDIHCLH6VFKH6BTF3ECQTXST6A24DNA26C5CKGQ">
+      <manifest-digest sha256new="YXM2IGY32KFCKYDIHCLH6VFKH6BTF3ECQTXST6A24DNA26C5CKGQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.47.0/just-1.47.0-x86_64-apple-darwin.tar.gz" size="1818945" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.47.0" released="2026-03-15" stability="stable" id="sha256new_TYWQYTLAQKSR6QQTRNAUPSXJUMMNGIUNQLWED4NJ53IUMRHUNGOA">
+      <manifest-digest sha256new="TYWQYTLAQKSR6QQTRNAUPSXJUMMNGIUNQLWED4NJ53IUMRHUNGOA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.47.0/just-1.47.0-aarch64-apple-darwin.tar.gz" size="1673932" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.47.1" released="2026-03-16" stability="stable" id="sha256new_Q3RESE6IQSEZQ4FQUZYD77J5FEPU4BPFZPCUOLI5HCG5N766WNVQ">
+      <manifest-digest sha256new="Q3RESE6IQSEZQ4FQUZYD77J5FEPU4BPFZPCUOLI5HCG5N766WNVQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.47.1/just-1.47.1-x86_64-unknown-linux-musl.tar.gz" size="1990561" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.47.1" released="2026-03-16" stability="stable" id="sha256new_YKQHMY5ZK4Y5CC7TD3FCSNQZQDDEVTRAN2BPDQY3QR6AGB37J3YQ">
+      <manifest-digest sha256new="YKQHMY5ZK4Y5CC7TD3FCSNQZQDDEVTRAN2BPDQY3QR6AGB37J3YQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.47.1/just-1.47.1-aarch64-unknown-linux-musl.tar.gz" size="1816355" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.47.1" released="2026-03-16" stability="stable" id="sha256new_W5MUYCJLZN3D4XUMHTTKHIQ2YJ73KCSJZ7IDCJBTMH5XDUIWX3TA">
+      <manifest-digest sha256new="W5MUYCJLZN3D4XUMHTTKHIQ2YJ73KCSJZ7IDCJBTMH5XDUIWX3TA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.47.1/just-1.47.1-x86_64-apple-darwin.tar.gz" size="1822197" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.47.1" released="2026-03-16" stability="stable" id="sha256new_3FNBH5YWEAPQK6AWNS3SQIIV52HW7XT6EIRTZNLXV2NNRFJDQX5A">
+      <manifest-digest sha256new="3FNBH5YWEAPQK6AWNS3SQIIV52HW7XT6EIRTZNLXV2NNRFJDQX5A"/>
+      <archive href="https://github.com/casey/just/releases/download/1.47.1/just-1.47.1-aarch64-apple-darwin.tar.gz" size="1674001" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.48.0" released="2026-03-24" stability="stable" id="sha256new_AYI6CQLJJQGUWQKMK6WJU4ILWZG7KCHL6HH5KXUARQM2IZMKEVEQ">
+      <manifest-digest sha256new="AYI6CQLJJQGUWQKMK6WJU4ILWZG7KCHL6HH5KXUARQM2IZMKEVEQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.48.0/just-1.48.0-x86_64-unknown-linux-musl.tar.gz" size="2102945" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.48.0" released="2026-03-24" stability="stable" id="sha256new_WZZCTHQ3KLXFJCYYHDJ72E6DB23JGO6YRR5LXALFBWEWYYLFF53Q">
+      <manifest-digest sha256new="WZZCTHQ3KLXFJCYYHDJ72E6DB23JGO6YRR5LXALFBWEWYYLFF53Q"/>
+      <archive href="https://github.com/casey/just/releases/download/1.48.0/just-1.48.0-aarch64-unknown-linux-musl.tar.gz" size="1917570" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.48.0" released="2026-03-24" stability="stable" id="sha256new_4GNAU5DTSNF5I5GKXX6JUMOPC273IHSZ5UFASXDBVGJ32VRSWXMA">
+      <manifest-digest sha256new="4GNAU5DTSNF5I5GKXX6JUMOPC273IHSZ5UFASXDBVGJ32VRSWXMA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.48.0/just-1.48.0-x86_64-apple-darwin.tar.gz" size="1927395" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.48.0" released="2026-03-24" stability="stable" id="sha256new_DUW7WKEBHFFQU7T6WUIUVH3XBTMXJOIV6J2P5VIVCRKL44J7B5IQ">
+      <manifest-digest sha256new="DUW7WKEBHFFQU7T6WUIUVH3XBTMXJOIV6J2P5VIVCRKL44J7B5IQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.48.0/just-1.48.0-aarch64-apple-darwin.tar.gz" size="1775265" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.48.1" released="2026-03-28" stability="stable" id="sha256new_5WLLXNWMDAAQFGPLUGEFL55I6PWR3RZUJF6ZFO3UAW6XARS35OPQ">
+      <manifest-digest sha256new="5WLLXNWMDAAQFGPLUGEFL55I6PWR3RZUJF6ZFO3UAW6XARS35OPQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.48.1/just-1.48.1-x86_64-unknown-linux-musl.tar.gz" size="2102695" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.48.1" released="2026-03-28" stability="stable" id="sha256new_LMIZCL2YS34XLWDU7YYMV4G5QQH52UQ6VSKZSZRQR52UWK33PORQ">
+      <manifest-digest sha256new="LMIZCL2YS34XLWDU7YYMV4G5QQH52UQ6VSKZSZRQR52UWK33PORQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.48.1/just-1.48.1-aarch64-unknown-linux-musl.tar.gz" size="1917773" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.48.1" released="2026-03-28" stability="stable" id="sha256new_FYZKP36PB22ZEYP65KBNLSHTI6MHSZSSVH5COKE5F2BV4FUKFZJA">
+      <manifest-digest sha256new="FYZKP36PB22ZEYP65KBNLSHTI6MHSZSSVH5COKE5F2BV4FUKFZJA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.48.1/just-1.48.1-x86_64-apple-darwin.tar.gz" size="1917972" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.48.1" released="2026-03-28" stability="stable" id="sha256new_CR3DBZ4SOTMIMUDZJXJE6PVQNRG62BFBKBH2MIUJJSSQF65JA2FA">
+      <manifest-digest sha256new="CR3DBZ4SOTMIMUDZJXJE6PVQNRG62BFBKBH2MIUJJSSQF65JA2FA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.48.1/just-1.48.1-aarch64-apple-darwin.tar.gz" size="1771432" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.49.0" released="2026-04-05" stability="stable" id="sha256new_ZG3PHZHQM3JB3OWLAI6FWP6FAKVJTNJYVCKMKROLSWBE2D4IQABQ">
+      <manifest-digest sha256new="ZG3PHZHQM3JB3OWLAI6FWP6FAKVJTNJYVCKMKROLSWBE2D4IQABQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.49.0/just-1.49.0-x86_64-unknown-linux-musl.tar.gz" size="2241668" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.49.0" released="2026-04-05" stability="stable" id="sha256new_Y2BONRLEBP7STD3VCFLGAPWKXFVOZZHSJTO5HH7DKIOTGXYNVFLQ">
+      <manifest-digest sha256new="Y2BONRLEBP7STD3VCFLGAPWKXFVOZZHSJTO5HH7DKIOTGXYNVFLQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.49.0/just-1.49.0-aarch64-unknown-linux-musl.tar.gz" size="2044910" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.49.0" released="2026-04-05" stability="stable" id="sha256new_PMSJYZOSLOP7VGCI4N3OQRG4QHRJHNY6HMACJCUOW4J4SM5ITP2A">
+      <manifest-digest sha256new="PMSJYZOSLOP7VGCI4N3OQRG4QHRJHNY6HMACJCUOW4J4SM5ITP2A"/>
+      <archive href="https://github.com/casey/just/releases/download/1.49.0/just-1.49.0-x86_64-apple-darwin.tar.gz" size="2053847" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.49.0" released="2026-04-05" stability="stable" id="sha256new_KQ67OYHD5TLP257FZIYBZPPRBNIVXV6ZLOACGPQPBZI6PGGUCHGA">
+      <manifest-digest sha256new="KQ67OYHD5TLP257FZIYBZPPRBNIVXV6ZLOACGPQPBZI6PGGUCHGA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.49.0/just-1.49.0-aarch64-apple-darwin.tar.gz" size="1897872" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.50.0" released="2026-04-19" stability="stable" id="sha256new_JYD36BAECDNYLE6LNXOZ34JWHMOZVMOH5KBRCC5KZPS7TFNQ355A">
+      <manifest-digest sha256new="JYD36BAECDNYLE6LNXOZ34JWHMOZVMOH5KBRCC5KZPS7TFNQ355A"/>
+      <archive href="https://github.com/casey/just/releases/download/1.50.0/just-1.50.0-x86_64-unknown-linux-musl.tar.gz" size="2247333" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.50.0" released="2026-04-19" stability="stable" id="sha256new_R64FMQBEIKZM5FF4H5EK5OFYFJ7J6LSFW7W6SV25YABVJ25FGJ2A">
+      <manifest-digest sha256new="R64FMQBEIKZM5FF4H5EK5OFYFJ7J6LSFW7W6SV25YABVJ25FGJ2A"/>
+      <archive href="https://github.com/casey/just/releases/download/1.50.0/just-1.50.0-aarch64-unknown-linux-musl.tar.gz" size="2039731" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.50.0" released="2026-04-19" stability="stable" id="sha256new_EIF5V6KAITRKZRPQTQLPD53ZD2WWKCXG5XIJEPEVHGROARWGIW7Q">
+      <manifest-digest sha256new="EIF5V6KAITRKZRPQTQLPD53ZD2WWKCXG5XIJEPEVHGROARWGIW7Q"/>
+      <archive href="https://github.com/casey/just/releases/download/1.50.0/just-1.50.0-x86_64-apple-darwin.tar.gz" size="2061099" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.50.0" released="2026-04-19" stability="stable" id="sha256new_W5QCNHIBHHNRT7Z4BURMOSDRGBDQC4VV4BGAWSLAG63MUS3BORCA">
+      <manifest-digest sha256new="W5QCNHIBHHNRT7Z4BURMOSDRGBDQC4VV4BGAWSLAG63MUS3BORCA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.50.0/just-1.50.0-aarch64-apple-darwin.tar.gz" size="1893409" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.51.0" released="2026-05-10" stability="stable" id="sha256new_HD2CLB7NTD6JJ3FCHJTVM4AWNDDRWS3Z6UOW7IDPNYS7VJDGTV2Q">
+      <manifest-digest sha256new="HD2CLB7NTD6JJ3FCHJTVM4AWNDDRWS3Z6UOW7IDPNYS7VJDGTV2Q"/>
+      <archive href="https://github.com/casey/just/releases/download/1.51.0/just-1.51.0-x86_64-unknown-linux-musl.tar.gz" size="2257502" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.51.0" released="2026-05-10" stability="stable" id="sha256new_GDUTLIKRC5AIRRWKG7KWHT364P3NO7B6DJMN7RTMKXA24Q42TYDA">
+      <manifest-digest sha256new="GDUTLIKRC5AIRRWKG7KWHT364P3NO7B6DJMN7RTMKXA24Q42TYDA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.51.0/just-1.51.0-aarch64-unknown-linux-musl.tar.gz" size="2054214" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.51.0" released="2026-05-10" stability="stable" id="sha256new_NK3Y3BUZQEW7QAA7OWF5P6STTYQCPLQJCNDFKBMIYUSETI5VYVSQ">
+      <manifest-digest sha256new="NK3Y3BUZQEW7QAA7OWF5P6STTYQCPLQJCNDFKBMIYUSETI5VYVSQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.51.0/just-1.51.0-x86_64-apple-darwin.tar.gz" size="2056221" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.51.0" released="2026-05-10" stability="stable" id="sha256new_GYH4O7NSWIB3LEBJBL2ZGJMJLX3SBBEXL3KUCLEWJA5L5OSRENIQ">
+      <manifest-digest sha256new="GYH4O7NSWIB3LEBJBL2ZGJMJLX3SBBEXL3KUCLEWJA5L5OSRENIQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.51.0/just-1.51.0-aarch64-apple-darwin.tar.gz" size="1903835" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.52.0" released="2026-06-08" stability="stable" id="sha256new_YAQ3UY6BGI42FIKW7BYWKSLUIICML2JNDERXQVPXOH2U57POOPXQ">
+      <manifest-digest sha256new="YAQ3UY6BGI42FIKW7BYWKSLUIICML2JNDERXQVPXOH2U57POOPXQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-x86_64-unknown-linux-musl.tar.gz" size="2270564" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.52.0" released="2026-06-08" stability="stable" id="sha256new_PEEZZY456REFTBJ4WFOSZX6WS3BSJ53W7OM3O3ZDMNPLEH2G2MXA">
+      <manifest-digest sha256new="PEEZZY456REFTBJ4WFOSZX6WS3BSJ53W7OM3O3ZDMNPLEH2G2MXA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-aarch64-unknown-linux-musl.tar.gz" size="2074494" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.52.0" released="2026-06-08" stability="stable" id="sha256new_76SEH4OAE6M2UBZ7636B6ZQUZ2VTUEGBQVGDYTY3MVFV4RWQP7HQ">
+      <manifest-digest sha256new="76SEH4OAE6M2UBZ7636B6ZQUZ2VTUEGBQVGDYTY3MVFV4RWQP7HQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-x86_64-apple-darwin.tar.gz" size="2087262" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.52.0" released="2026-06-08" stability="stable" id="sha256new_2AHSXHAWNGHFHVRWGTCUZDUPP6MCIMIO76Q6OOBJWGL3LKO47NDQ">
+      <manifest-digest sha256new="2AHSXHAWNGHFHVRWGTCUZDUPP6MCIMIO76Q6OOBJWGL3LKO47NDQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-aarch64-apple-darwin.tar.gz" size="1926119" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.53.0" released="2026-06-16" stability="stable" id="sha256new_PIOIBYHZHIV45D4LLDLEATNKTG3YHFZ5LFUJSJWKCA3XMK4Q6J2Q">
+      <manifest-digest sha256new="PIOIBYHZHIV45D4LLDLEATNKTG3YHFZ5LFUJSJWKCA3XMK4Q6J2Q"/>
+      <archive href="https://github.com/casey/just/releases/download/1.53.0/just-1.53.0-x86_64-unknown-linux-musl.tar.gz" size="2420438" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.53.0" released="2026-06-16" stability="stable" id="sha256new_LOGWNYFUHRCJ3YLFYWQSVIBUQTY6K2L4DUVCZUU4VHZ3DUIWCTTQ">
+      <manifest-digest sha256new="LOGWNYFUHRCJ3YLFYWQSVIBUQTY6K2L4DUVCZUU4VHZ3DUIWCTTQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.53.0/just-1.53.0-aarch64-unknown-linux-musl.tar.gz" size="2213668" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.53.0" released="2026-06-16" stability="stable" id="sha256new_5NK2WO425ILY6COLWMAFBKPJZAHFZXR3NSZD7IFY2V6GFDX37P2A">
+      <manifest-digest sha256new="5NK2WO425ILY6COLWMAFBKPJZAHFZXR3NSZD7IFY2V6GFDX37P2A"/>
+      <archive href="https://github.com/casey/just/releases/download/1.53.0/just-1.53.0-x86_64-apple-darwin.tar.gz" size="2218542" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.53.0" released="2026-06-16" stability="stable" id="sha256new_N2GBXFCR6NGVY6XXL75HLDKAJ6GWVDZGHHM5YAPYWX4XTO7PQ5XQ">
+      <manifest-digest sha256new="N2GBXFCR6NGVY6XXL75HLDKAJ6GWVDZGHHM5YAPYWX4XTO7PQ5XQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.53.0/just-1.53.0-aarch64-apple-darwin.tar.gz" size="2050537" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.54.0" released="2026-06-23" stability="stable" id="sha256new_RFMLXF2IOHOQQO5TZJFCHCKTBLUU3P4ZUTXX4RWJSKOKPHMF352Q">
+      <manifest-digest sha256new="RFMLXF2IOHOQQO5TZJFCHCKTBLUU3P4ZUTXX4RWJSKOKPHMF352Q"/>
+      <archive href="https://github.com/casey/just/releases/download/1.54.0/just-1.54.0-x86_64-unknown-linux-musl.tar.gz" size="2489309" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.54.0" released="2026-06-23" stability="stable" id="sha256new_MJU2WRPIWVPPPP3IOY7OIJ2URFABHEKGSOFJO6P37NEBC3GK47CQ">
+      <manifest-digest sha256new="MJU2WRPIWVPPPP3IOY7OIJ2URFABHEKGSOFJO6P37NEBC3GK47CQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.54.0/just-1.54.0-aarch64-unknown-linux-musl.tar.gz" size="2268802" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.54.0" released="2026-06-23" stability="stable" id="sha256new_VWRZNKGPHMK7Z24ADTTU5F3JNQCV5JTP47VE3DWXSTMC56KTELJQ">
+      <manifest-digest sha256new="VWRZNKGPHMK7Z24ADTTU5F3JNQCV5JTP47VE3DWXSTMC56KTELJQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.54.0/just-1.54.0-x86_64-apple-darwin.tar.gz" size="2289922" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.54.0" released="2026-06-23" stability="stable" id="sha256new_4QYDM7RR3FQJMLEG74NRDKCKTJJRXF6DVNEDR2GJKCBOVWZUOVXA">
+      <manifest-digest sha256new="4QYDM7RR3FQJMLEG74NRDKCKTJJRXF6DVNEDR2GJKCBOVWZUOVXA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.54.0/just-1.54.0-aarch64-apple-darwin.tar.gz" size="2111384" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.55.0" released="2026-06-29" stability="stable" id="sha256new_7U6DGNCNQFY4URTNZNELJPCG23DYTEABDPSSYFNHGT5QGUSW5V4Q">
+      <manifest-digest sha256new="7U6DGNCNQFY4URTNZNELJPCG23DYTEABDPSSYFNHGT5QGUSW5V4Q"/>
+      <archive href="https://github.com/casey/just/releases/download/1.55.0/just-1.55.0-x86_64-unknown-linux-musl.tar.gz" size="2512069" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.55.0" released="2026-06-29" stability="stable" id="sha256new_KTYOP772LZXHYFX6KVDJ7LXAIP7YJQ2AZZI56AH3W4NUZ3XXRBGQ">
+      <manifest-digest sha256new="KTYOP772LZXHYFX6KVDJ7LXAIP7YJQ2AZZI56AH3W4NUZ3XXRBGQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.55.0/just-1.55.0-aarch64-unknown-linux-musl.tar.gz" size="2295361" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.55.0" released="2026-06-29" stability="stable" id="sha256new_ILJVOWY43VED5KHHU6PEMIOYIO3YZHFVSAXGW5FQVWELCIWD7KTA">
+      <manifest-digest sha256new="ILJVOWY43VED5KHHU6PEMIOYIO3YZHFVSAXGW5FQVWELCIWD7KTA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.55.0/just-1.55.0-x86_64-apple-darwin.tar.gz" size="2320695" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.55.0" released="2026-06-29" stability="stable" id="sha256new_NDEMNLOWRTW5CWWMNOJGLM2R4IVMUQGJC7RYAM7WW3VZD5YNHPAA">
+      <manifest-digest sha256new="NDEMNLOWRTW5CWWMNOJGLM2R4IVMUQGJC7RYAM7WW3VZD5YNHPAA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.55.0/just-1.55.0-aarch64-apple-darwin.tar.gz" size="2138069" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.55.1" released="2026-06-30" stability="stable" id="sha256new_R7KP7Q7OQSGL2ZF7OISBXABZOC6J5U3NOFLX34UTFRMVH6TT23PQ">
+      <manifest-digest sha256new="R7KP7Q7OQSGL2ZF7OISBXABZOC6J5U3NOFLX34UTFRMVH6TT23PQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.55.1/just-1.55.1-x86_64-unknown-linux-musl.tar.gz" size="2518831" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.55.1" released="2026-06-30" stability="stable" id="sha256new_XCUU4FJNX3UBIOK3N3O24BYYH25EQSLI6FNQR7SQDFAY4SIIYYNQ">
+      <manifest-digest sha256new="XCUU4FJNX3UBIOK3N3O24BYYH25EQSLI6FNQR7SQDFAY4SIIYYNQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.55.1/just-1.55.1-aarch64-unknown-linux-musl.tar.gz" size="2297303" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.55.1" released="2026-06-30" stability="stable" id="sha256new_MFOHYBEIINQWIU6CZ227QAJYZHLGP27UAG66KP4XJLRPKFL7CHNA">
+      <manifest-digest sha256new="MFOHYBEIINQWIU6CZ227QAJYZHLGP27UAG66KP4XJLRPKFL7CHNA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.55.1/just-1.55.1-x86_64-apple-darwin.tar.gz" size="2319052" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.55.1" released="2026-06-30" stability="stable" id="sha256new_YDQ5ZQJB2RVAEAKRSBK3TEQ22AUGHZD74K75HYT6BHSEYOBZ6TMA">
+      <manifest-digest sha256new="YDQ5ZQJB2RVAEAKRSBK3TEQ22AUGHZD74K75HYT6BHSEYOBZ6TMA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.55.1/just-1.55.1-aarch64-apple-darwin.tar.gz" size="2135949" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.56.0" released="2026-07-10" stability="stable" id="sha256new_DN7RVJ67E4G7QMMOFO4NPDFXB2JHVWUNZMQ4ARNOD2J25U4F4KQQ">
+      <manifest-digest sha256new="DN7RVJ67E4G7QMMOFO4NPDFXB2JHVWUNZMQ4ARNOD2J25U4F4KQQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.56.0/just-1.56.0-x86_64-unknown-linux-musl.tar.gz" size="2545305" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.56.0" released="2026-07-10" stability="stable" id="sha256new_2YCE3CR4G7BRG3QGNAKBZQ6SHC774MDBGBQWS3CWP4J7DBBTEW3Q">
+      <manifest-digest sha256new="2YCE3CR4G7BRG3QGNAKBZQ6SHC774MDBGBQWS3CWP4J7DBBTEW3Q"/>
+      <archive href="https://github.com/casey/just/releases/download/1.56.0/just-1.56.0-aarch64-unknown-linux-musl.tar.gz" size="2325310" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.56.0" released="2026-07-10" stability="stable" id="sha256new_EC7W75UEUCWHU5T4R4REMBSO4OCJDUHBH7AJIRL5KZIVEEWIQ6XQ">
+      <manifest-digest sha256new="EC7W75UEUCWHU5T4R4REMBSO4OCJDUHBH7AJIRL5KZIVEEWIQ6XQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.56.0/just-1.56.0-x86_64-apple-darwin.tar.gz" size="2350236" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.56.0" released="2026-07-10" stability="stable" id="sha256new_EI4CK3RX5BRXWEMXPDFPC7NQR2BSUN3MWTHXEZ2FP5QOMMZFZGFA">
+      <manifest-digest sha256new="EI4CK3RX5BRXWEMXPDFPC7NQR2BSUN3MWTHXEZ2FP5QOMMZFZGFA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.56.0/just-1.56.0-aarch64-apple-darwin.tar.gz" size="2160129" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="Public Domain">
+    <command name="run" path="just.exe"/>
+    <implementation arch="Windows-x86_64" version="1.36.0" released="2024-09-30" stability="stable" id="sha256new_OTMLOVQ4ICYLYSRPZIA5TRPIBGPPS526COWLOMT3CJ53VE3BQURQ">
+      <manifest-digest sha256new="OTMLOVQ4ICYLYSRPZIA5TRPIBGPPS526COWLOMT3CJ53VE3BQURQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.36.0/just-1.36.0-x86_64-pc-windows-msvc.zip" size="1663390" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.36.0" released="2024-09-30" stability="stable" id="sha256new_OZ26L3HW7VEGPBAL5MC3HSKP2ZGIDKEW75XY2OMEFKNCOXUGQXUQ">
+      <manifest-digest sha256new="OZ26L3HW7VEGPBAL5MC3HSKP2ZGIDKEW75XY2OMEFKNCOXUGQXUQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.36.0/just-1.36.0-aarch64-pc-windows-msvc.zip" size="1520721" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.37.0" released="2024-11-20" stability="stable" id="sha256new_C4HVFPHN74X76YTAZC4CAZWDFEU2T37XDEFPVI5WAMDCLGDI5UJA">
+      <manifest-digest sha256new="C4HVFPHN74X76YTAZC4CAZWDFEU2T37XDEFPVI5WAMDCLGDI5UJA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.37.0/just-1.37.0-x86_64-pc-windows-msvc.zip" size="1679254" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.37.0" released="2024-11-20" stability="stable" id="sha256new_REHARV3BLISAMS7WBQGZDYDZDMQABMY6B6XQXNYZGT25EXLJZUNQ">
+      <manifest-digest sha256new="REHARV3BLISAMS7WBQGZDYDZDMQABMY6B6XQXNYZGT25EXLJZUNQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.37.0/just-1.37.0-aarch64-pc-windows-msvc.zip" size="1540568" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.38.0" released="2024-12-10" stability="stable" id="sha256new_KVVZFZMVLIGS7A4JKXLILJ54AT4LS65RYECAFGSYWE2DE4AMISRQ">
+      <manifest-digest sha256new="KVVZFZMVLIGS7A4JKXLILJ54AT4LS65RYECAFGSYWE2DE4AMISRQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.38.0/just-1.38.0-x86_64-pc-windows-msvc.zip" size="1695470" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.38.0" released="2024-12-10" stability="stable" id="sha256new_3UMOISXVCNLYNFUC24FMG3KVN2NIRYMZVKPE7HTF3WNMUJ6KH65Q">
+      <manifest-digest sha256new="3UMOISXVCNLYNFUC24FMG3KVN2NIRYMZVKPE7HTF3WNMUJ6KH65Q"/>
+      <archive href="https://github.com/casey/just/releases/download/1.38.0/just-1.38.0-aarch64-pc-windows-msvc.zip" size="1557680" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.39.0" released="2025-01-22" stability="stable" id="sha256new_2H26SYBT2XIYDEHP3ZW7TWXBOXLM4UBQIGG3FFAATP32QNTRSP6Q">
+      <manifest-digest sha256new="2H26SYBT2XIYDEHP3ZW7TWXBOXLM4UBQIGG3FFAATP32QNTRSP6Q"/>
+      <archive href="https://github.com/casey/just/releases/download/1.39.0/just-1.39.0-x86_64-pc-windows-msvc.zip" size="1720862" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.39.0" released="2025-01-22" stability="stable" id="sha256new_IQWUVATL4EZTH4OZJ63RACHWO4YEEG7F7SDHYCX23UVWPOJ2XCUA">
+      <manifest-digest sha256new="IQWUVATL4EZTH4OZJ63RACHWO4YEEG7F7SDHYCX23UVWPOJ2XCUA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.39.0/just-1.39.0-aarch64-pc-windows-msvc.zip" size="1574484" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.40.0" released="2025-03-09" stability="stable" id="sha256new_5KTIFXPFNWBCTGXIHA2XIYE5TDPYAXGAP5LFUFNER5MMZAIJDB2A">
+      <manifest-digest sha256new="5KTIFXPFNWBCTGXIHA2XIYE5TDPYAXGAP5LFUFNER5MMZAIJDB2A"/>
+      <archive href="https://github.com/casey/just/releases/download/1.40.0/just-1.40.0-x86_64-pc-windows-msvc.zip" size="1724669" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.40.0" released="2025-03-09" stability="stable" id="sha256new_73QSTTYE5V7GL6XAPA4EJ7T24QG3UUCWHL7PIAROAJZLPXVFTATA">
+      <manifest-digest sha256new="73QSTTYE5V7GL6XAPA4EJ7T24QG3UUCWHL7PIAROAJZLPXVFTATA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.40.0/just-1.40.0-aarch64-pc-windows-msvc.zip" size="1574768" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.41.0" released="2025-07-01" stability="stable" id="sha256new_B3DV24YVZ2ASXR4YMM6LSIDG2USCDJ57VUKWNVRH56U77TNGODQQ">
+      <manifest-digest sha256new="B3DV24YVZ2ASXR4YMM6LSIDG2USCDJ57VUKWNVRH56U77TNGODQQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.41.0/just-1.41.0-x86_64-pc-windows-msvc.zip" size="1743754" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.41.0" released="2025-07-01" stability="stable" id="sha256new_WCUW5L5TX6LIGMPCDDSP23ZHUTDL6RSEMHTFOXTZRQAKXHOBMNOQ">
+      <manifest-digest sha256new="WCUW5L5TX6LIGMPCDDSP23ZHUTDL6RSEMHTFOXTZRQAKXHOBMNOQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.41.0/just-1.41.0-aarch64-pc-windows-msvc.zip" size="1594569" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.42.0" released="2025-07-14" stability="stable" id="sha256new_BWPMO3GGYUGQQQEW5L3K43NBQ43GDDEHBCVRKOL3PWDOFLYPXBFA">
+      <manifest-digest sha256new="BWPMO3GGYUGQQQEW5L3K43NBQ43GDDEHBCVRKOL3PWDOFLYPXBFA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.0/just-1.42.0-x86_64-pc-windows-msvc.zip" size="1753691" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.42.0" released="2025-07-14" stability="stable" id="sha256new_6TSALF2E7BP4473XHGD3VMMSCXFLYQGDEEOQZBMUQ4NWGS245KVQ">
+      <manifest-digest sha256new="6TSALF2E7BP4473XHGD3VMMSCXFLYQGDEEOQZBMUQ4NWGS245KVQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.0/just-1.42.0-aarch64-pc-windows-msvc.zip" size="1602593" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.42.1" released="2025-07-14" stability="stable" id="sha256new_IOJ5EQN6T7Y2X7I6SSBSOJ4W2NC2OMAQVXHSYSSYUW4GTS37WQ5Q">
+      <manifest-digest sha256new="IOJ5EQN6T7Y2X7I6SSBSOJ4W2NC2OMAQVXHSYSSYUW4GTS37WQ5Q"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.1/just-1.42.1-x86_64-pc-windows-msvc.zip" size="1753850" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.42.1" released="2025-07-14" stability="stable" id="sha256new_KYOLBQCAIBNVX7G2HPRRIPD4W37LIFTFRU27HSFFT6VIU5VUOZ4A">
+      <manifest-digest sha256new="KYOLBQCAIBNVX7G2HPRRIPD4W37LIFTFRU27HSFFT6VIU5VUOZ4A"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.1/just-1.42.1-aarch64-pc-windows-msvc.zip" size="1603323" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.42.2" released="2025-07-15" stability="stable" id="sha256new_OAD25AOJZUFKINX3KTSAV3FW3YYDA6UOE4AB2OMF2CGW5SA7YZSA">
+      <manifest-digest sha256new="OAD25AOJZUFKINX3KTSAV3FW3YYDA6UOE4AB2OMF2CGW5SA7YZSA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.2/just-1.42.2-x86_64-pc-windows-msvc.zip" size="1753503" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.42.2" released="2025-07-15" stability="stable" id="sha256new_CIHVTIBQDWJGNVKC2VCOQBSXCWBPECOVECG4TSN4RIPLHRQTEDPA">
+      <manifest-digest sha256new="CIHVTIBQDWJGNVKC2VCOQBSXCWBPECOVECG4TSN4RIPLHRQTEDPA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.2/just-1.42.2-aarch64-pc-windows-msvc.zip" size="1603820" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.42.3" released="2025-07-19" stability="stable" id="sha256new_UOUYQ2MHFCYHDRJCF7RG7ODUTE23T7TLMV5YS7HLXJZPYWZFSSGQ">
+      <manifest-digest sha256new="UOUYQ2MHFCYHDRJCF7RG7ODUTE23T7TLMV5YS7HLXJZPYWZFSSGQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.3/just-1.42.3-x86_64-pc-windows-msvc.zip" size="1753952" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.42.3" released="2025-07-19" stability="stable" id="sha256new_LZFBGBMBUT77NYFRVQC2U5MQOJEI7X3Y37HDX566KLCGUHIZ35ZA">
+      <manifest-digest sha256new="LZFBGBMBUT77NYFRVQC2U5MQOJEI7X3Y37HDX566KLCGUHIZ35ZA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.3/just-1.42.3-aarch64-pc-windows-msvc.zip" size="1603864" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.42.4" released="2025-07-24" stability="stable" id="sha256new_2QOUZOQEOQEQ32OITOQZIZUXAANXL3Z7ECEYY3NA4DJTD6GTNU3A">
+      <manifest-digest sha256new="2QOUZOQEOQEQ32OITOQZIZUXAANXL3Z7ECEYY3NA4DJTD6GTNU3A"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.4/just-1.42.4-x86_64-pc-windows-msvc.zip" size="1753550" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.42.4" released="2025-07-24" stability="stable" id="sha256new_Y75FD4E4FBQAYKA6DKVYZN6TJS7RSVOVQ42VNJYB4OZIOMGIX5YQ">
+      <manifest-digest sha256new="Y75FD4E4FBQAYKA6DKVYZN6TJS7RSVOVQ42VNJYB4OZIOMGIX5YQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.42.4/just-1.42.4-aarch64-pc-windows-msvc.zip" size="1603595" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.43.0" released="2025-09-27" stability="stable" id="sha256new_4OMNTSXZ32ARREMEC3F7YRE7DH6CRMGURO6L3R4PH2JKM3GKOA7A">
+      <manifest-digest sha256new="4OMNTSXZ32ARREMEC3F7YRE7DH6CRMGURO6L3R4PH2JKM3GKOA7A"/>
+      <archive href="https://github.com/casey/just/releases/download/1.43.0/just-1.43.0-x86_64-pc-windows-msvc.zip" size="1682468" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.43.0" released="2025-09-27" stability="stable" id="sha256new_KH3R7MDGANB734F3QJB7SC7PM2AHJ4HDJXC72RZTK5SK4QUGQUSA">
+      <manifest-digest sha256new="KH3R7MDGANB734F3QJB7SC7PM2AHJ4HDJXC72RZTK5SK4QUGQUSA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.43.0/just-1.43.0-aarch64-pc-windows-msvc.zip" size="1539364" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.43.1" released="2025-11-12" stability="stable" id="sha256new_I3EHKZTKRW4PQKUK4HHLTRNJXBHIKIIBTOAW53GYCLCKNUPH2CQQ">
+      <manifest-digest sha256new="I3EHKZTKRW4PQKUK4HHLTRNJXBHIKIIBTOAW53GYCLCKNUPH2CQQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.43.1/just-1.43.1-x86_64-pc-windows-msvc.zip" size="1685883" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.43.1" released="2025-11-12" stability="stable" id="sha256new_2TJHJSPOAQJE5MFBDH26LAWXQ3QNU3S7JXMO3XIBEUCGLQW7Y2FQ">
+      <manifest-digest sha256new="2TJHJSPOAQJE5MFBDH26LAWXQ3QNU3S7JXMO3XIBEUCGLQW7Y2FQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.43.1/just-1.43.1-aarch64-pc-windows-msvc.zip" size="1537794" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.44.0" released="2025-12-07" stability="stable" id="sha256new_4Q3S5EY6XQFSUABPMPYOGWOPFWYJTBDTRNSXHLHHQY46DGZKL2WA">
+      <manifest-digest sha256new="4Q3S5EY6XQFSUABPMPYOGWOPFWYJTBDTRNSXHLHHQY46DGZKL2WA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.44.0/just-1.44.0-x86_64-pc-windows-msvc.zip" size="1692123" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.44.0" released="2025-12-07" stability="stable" id="sha256new_5EA5N5XZRPSD3E6L4DXEYGZJPPUM4Q5OALKJPFQKWFNDZ7VNRKVA">
+      <manifest-digest sha256new="5EA5N5XZRPSD3E6L4DXEYGZJPPUM4Q5OALKJPFQKWFNDZ7VNRKVA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.44.0/just-1.44.0-aarch64-pc-windows-msvc.zip" size="1545057" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.44.1" released="2025-12-09" stability="stable" id="sha256new_MKDR2M3LSSML7AVV2LHRON4HNRCGJYA2YNXF2ZQ6MORWC6TBB5UA">
+      <manifest-digest sha256new="MKDR2M3LSSML7AVV2LHRON4HNRCGJYA2YNXF2ZQ6MORWC6TBB5UA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.44.1/just-1.44.1-x86_64-pc-windows-msvc.zip" size="1692592" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.44.1" released="2025-12-09" stability="stable" id="sha256new_5WNKPGKXA6AY2HKFW2GE247YG4UMHPNW4F3FY2TBCGF3YIYNMAZA">
+      <manifest-digest sha256new="5WNKPGKXA6AY2HKFW2GE247YG4UMHPNW4F3FY2TBCGF3YIYNMAZA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.44.1/just-1.44.1-aarch64-pc-windows-msvc.zip" size="1545471" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.45.0" released="2025-12-10" stability="stable" id="sha256new_X5BGE3MKCUQN6RPDL2JOPJITP4QTHDBON4LJBTCUH6W3JI474CEA">
+      <manifest-digest sha256new="X5BGE3MKCUQN6RPDL2JOPJITP4QTHDBON4LJBTCUH6W3JI474CEA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.45.0/just-1.45.0-x86_64-pc-windows-msvc.zip" size="1720978" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.45.0" released="2025-12-10" stability="stable" id="sha256new_44FATJNE23NBMF7733JMM6M22VTVDESU2CFZGEMHI4GGD7GO5RRA">
+      <manifest-digest sha256new="44FATJNE23NBMF7733JMM6M22VTVDESU2CFZGEMHI4GGD7GO5RRA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.45.0/just-1.45.0-aarch64-pc-windows-msvc.zip" size="1572959" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.46.0" released="2026-01-02" stability="stable" id="sha256new_A5MIS5DHMYPQ3PIITSIBCYALEJIQ4IQVRBMWIG72QBSTAC3VDVCA">
+      <manifest-digest sha256new="A5MIS5DHMYPQ3PIITSIBCYALEJIQ4IQVRBMWIG72QBSTAC3VDVCA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.46.0/just-1.46.0-x86_64-pc-windows-msvc.zip" size="1751006" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.46.0" released="2026-01-02" stability="stable" id="sha256new_RW2CJ7FD7R5SE4DYUUXYTAUHV6JQLDSCKEAKZIMLCXNHIFKUVCHQ">
+      <manifest-digest sha256new="RW2CJ7FD7R5SE4DYUUXYTAUHV6JQLDSCKEAKZIMLCXNHIFKUVCHQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.46.0/just-1.46.0-aarch64-pc-windows-msvc.zip" size="1596594" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.47.0" released="2026-03-15" stability="stable" id="sha256new_4TX7GK7BWDZQICVR4B4GUV4KVLBCWZJO6EYFAGAW6QK24AX5VIAQ">
+      <manifest-digest sha256new="4TX7GK7BWDZQICVR4B4GUV4KVLBCWZJO6EYFAGAW6QK24AX5VIAQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.47.0/just-1.47.0-x86_64-pc-windows-msvc.zip" size="1739027" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.47.0" released="2026-03-15" stability="stable" id="sha256new_MY6AKRHWG6YJDBORCFPGPA7WUBRT6AL7ARDWTSWBBSG6XSDSAI4A">
+      <manifest-digest sha256new="MY6AKRHWG6YJDBORCFPGPA7WUBRT6AL7ARDWTSWBBSG6XSDSAI4A"/>
+      <archive href="https://github.com/casey/just/releases/download/1.47.0/just-1.47.0-aarch64-pc-windows-msvc.zip" size="1581868" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.47.1" released="2026-03-16" stability="stable" id="sha256new_DIMHANJUDCHAW2OSKPZEN7MFO7Y6QHX77M6VTRL323XCTN7HAO6A">
+      <manifest-digest sha256new="DIMHANJUDCHAW2OSKPZEN7MFO7Y6QHX77M6VTRL323XCTN7HAO6A"/>
+      <archive href="https://github.com/casey/just/releases/download/1.47.1/just-1.47.1-x86_64-pc-windows-msvc.zip" size="1742794" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.47.1" released="2026-03-16" stability="stable" id="sha256new_3STKIN3IUKABNHFSJDRB4SKJKCIIFISXLGHUD2YRTIRT3XOWTKHA">
+      <manifest-digest sha256new="3STKIN3IUKABNHFSJDRB4SKJKCIIFISXLGHUD2YRTIRT3XOWTKHA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.47.1/just-1.47.1-aarch64-pc-windows-msvc.zip" size="1581219" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.48.0" released="2026-03-24" stability="stable" id="sha256new_ZH54POCUKTC2ANL3CHT4IMUKA2DIFRGSAMACG7FJDZX7IKRBZKBA">
+      <manifest-digest sha256new="ZH54POCUKTC2ANL3CHT4IMUKA2DIFRGSAMACG7FJDZX7IKRBZKBA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.48.0/just-1.48.0-x86_64-pc-windows-msvc.zip" size="1843778" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.48.0" released="2026-03-24" stability="stable" id="sha256new_CWZ5GMPN4ETYIRXSDBWNFO6EISCLTLMN4PLWVGQUXD3BOG64XZ2A">
+      <manifest-digest sha256new="CWZ5GMPN4ETYIRXSDBWNFO6EISCLTLMN4PLWVGQUXD3BOG64XZ2A"/>
+      <archive href="https://github.com/casey/just/releases/download/1.48.0/just-1.48.0-aarch64-pc-windows-msvc.zip" size="1682811" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.48.1" released="2026-03-28" stability="stable" id="sha256new_I6J5HCGH5KTRCIZ67IODMFAFUEP4ZGCRW7W26MULZCTYO2CBELSQ">
+      <manifest-digest sha256new="I6J5HCGH5KTRCIZ67IODMFAFUEP4ZGCRW7W26MULZCTYO2CBELSQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.48.1/just-1.48.1-x86_64-pc-windows-msvc.zip" size="1844511" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.48.1" released="2026-03-28" stability="stable" id="sha256new_FW6REG2I2QSO22NQA6ODNCH5YCXFKEZR2SLKT2PZ3WASKRJVGX3Q">
+      <manifest-digest sha256new="FW6REG2I2QSO22NQA6ODNCH5YCXFKEZR2SLKT2PZ3WASKRJVGX3Q"/>
+      <archive href="https://github.com/casey/just/releases/download/1.48.1/just-1.48.1-aarch64-pc-windows-msvc.zip" size="1679116" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.49.0" released="2026-04-05" stability="stable" id="sha256new_WNA3DYIVTZECEXTIVLJSTZ4VTT4BEI7JRADLX4HJZ6ERM6FXKM5A">
+      <manifest-digest sha256new="WNA3DYIVTZECEXTIVLJSTZ4VTT4BEI7JRADLX4HJZ6ERM6FXKM5A"/>
+      <archive href="https://github.com/casey/just/releases/download/1.49.0/just-1.49.0-x86_64-pc-windows-msvc.zip" size="1973890" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.49.0" released="2026-04-05" stability="stable" id="sha256new_CKRTHPPJKVFHOYERT4VCYWNSAVQYVM3XDKUB7AOGGFRLNHOEQOHQ">
+      <manifest-digest sha256new="CKRTHPPJKVFHOYERT4VCYWNSAVQYVM3XDKUB7AOGGFRLNHOEQOHQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.49.0/just-1.49.0-aarch64-pc-windows-msvc.zip" size="1794892" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.50.0" released="2026-04-19" stability="stable" id="sha256new_XG4HAOA3SVTAMSEODX6T445H7QSZLE54666556UCWBUHWJV7O7OQ">
+      <manifest-digest sha256new="XG4HAOA3SVTAMSEODX6T445H7QSZLE54666556UCWBUHWJV7O7OQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.50.0/just-1.50.0-x86_64-pc-windows-msvc.zip" size="1971550" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.50.0" released="2026-04-19" stability="stable" id="sha256new_DFKMP6DGYRKI2CXMJAM4QESYTLOKNQLMYWP7TKMZ5QU5WUPBDXDQ">
+      <manifest-digest sha256new="DFKMP6DGYRKI2CXMJAM4QESYTLOKNQLMYWP7TKMZ5QU5WUPBDXDQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.50.0/just-1.50.0-aarch64-pc-windows-msvc.zip" size="1789224" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.51.0" released="2026-05-10" stability="stable" id="sha256new_OGXKE6IDSS6B2LB6TUX3BGHUFPDMAZ37ORLMSUHS52XMVQFC43IQ">
+      <manifest-digest sha256new="OGXKE6IDSS6B2LB6TUX3BGHUFPDMAZ37ORLMSUHS52XMVQFC43IQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.51.0/just-1.51.0-x86_64-pc-windows-msvc.zip" size="1974630" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.51.0" released="2026-05-10" stability="stable" id="sha256new_SPPBOFX2TEXAHL5RSBPUKR7ZJZDT2HT7GGOZROQ333HVSWO45AIA">
+      <manifest-digest sha256new="SPPBOFX2TEXAHL5RSBPUKR7ZJZDT2HT7GGOZROQ333HVSWO45AIA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.51.0/just-1.51.0-aarch64-pc-windows-msvc.zip" size="1794271" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.52.0" released="2026-06-08" stability="stable" id="sha256new_YGRLKE3PGY3AAB5ZJDBM2ZM4BTLC5REOZPS3H4LZXB2VEUJ7ZJ3Q">
+      <manifest-digest sha256new="YGRLKE3PGY3AAB5ZJDBM2ZM4BTLC5REOZPS3H4LZXB2VEUJ7ZJ3Q"/>
+      <archive href="https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-x86_64-pc-windows-msvc.zip" size="1996739" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.52.0" released="2026-06-08" stability="stable" id="sha256new_X225PW7CSHIQBM3XESPM256FCMTDW7VQO6RG2CTUJDRZC5OBGUVA">
+      <manifest-digest sha256new="X225PW7CSHIQBM3XESPM256FCMTDW7VQO6RG2CTUJDRZC5OBGUVA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.52.0/just-1.52.0-aarch64-pc-windows-msvc.zip" size="1812298" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.53.0" released="2026-06-16" stability="stable" id="sha256new_Y3XH4O47I72SEZZZC4JSSD4SPEQZ5FO7ZTXOHMPGUBOCUHA6KJKA">
+      <manifest-digest sha256new="Y3XH4O47I72SEZZZC4JSSD4SPEQZ5FO7ZTXOHMPGUBOCUHA6KJKA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.53.0/just-1.53.0-x86_64-pc-windows-msvc.zip" size="2128128" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.53.0" released="2026-06-16" stability="stable" id="sha256new_RBCM6ZLOUG7Q7GMIZTRC3EVT426PI5YSQHAOSR7PQRJ2KMVPOODQ">
+      <manifest-digest sha256new="RBCM6ZLOUG7Q7GMIZTRC3EVT426PI5YSQHAOSR7PQRJ2KMVPOODQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.53.0/just-1.53.0-aarch64-pc-windows-msvc.zip" size="1938332" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.54.0" released="2026-06-23" stability="stable" id="sha256new_XL3MZXMBVN3X5J4DQ7PHAYXR3EXWXH3C6JFTDXP6GUNJDN6NO6NQ">
+      <manifest-digest sha256new="XL3MZXMBVN3X5J4DQ7PHAYXR3EXWXH3C6JFTDXP6GUNJDN6NO6NQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.54.0/just-1.54.0-x86_64-pc-windows-msvc.zip" size="2191934" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.54.0" released="2026-06-23" stability="stable" id="sha256new_YGVHCKXP22DKEJF2IAEUFGPDMAV66MZUKMX26FVCO75DOTO5DOGQ">
+      <manifest-digest sha256new="YGVHCKXP22DKEJF2IAEUFGPDMAV66MZUKMX26FVCO75DOTO5DOGQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.54.0/just-1.54.0-aarch64-pc-windows-msvc.zip" size="1992168" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.55.0" released="2026-06-29" stability="stable" id="sha256new_GAGIU7CNIX2AXAJRU25PKNGXOHVLVHNEGYZZGT46ZD2FFDUOVPIQ">
+      <manifest-digest sha256new="GAGIU7CNIX2AXAJRU25PKNGXOHVLVHNEGYZZGT46ZD2FFDUOVPIQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.55.0/just-1.55.0-x86_64-pc-windows-msvc.zip" size="2219247" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.55.0" released="2026-06-29" stability="stable" id="sha256new_55TGLXGE3SGBD3OPXVUFFQQC4XQWITLLBSAD5G2RVGNXDZKYYICA">
+      <manifest-digest sha256new="55TGLXGE3SGBD3OPXVUFFQQC4XQWITLLBSAD5G2RVGNXDZKYYICA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.55.0/just-1.55.0-aarch64-pc-windows-msvc.zip" size="2024074" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.55.1" released="2026-06-30" stability="stable" id="sha256new_BXALV56VOC7UQMI2LKVWQ7HADA7HTXU6SGLNXMTYE6QLNLBCBATQ">
+      <manifest-digest sha256new="BXALV56VOC7UQMI2LKVWQ7HADA7HTXU6SGLNXMTYE6QLNLBCBATQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.55.1/just-1.55.1-x86_64-pc-windows-msvc.zip" size="2219356" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.55.1" released="2026-06-30" stability="stable" id="sha256new_YEVR2Y4ADOP43CUISO5JRWEP6ZDUUUS3E7VBDGVLZDWO36BXATPQ">
+      <manifest-digest sha256new="YEVR2Y4ADOP43CUISO5JRWEP6ZDUUUS3E7VBDGVLZDWO36BXATPQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.55.1/just-1.55.1-aarch64-pc-windows-msvc.zip" size="2024651" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.56.0" released="2026-07-10" stability="stable" id="sha256new_GXNY5YWSXB5OIVCFC3WFGGG7CCM3U5WOLTJPB5LOOZBGVVL5QBGQ">
+      <manifest-digest sha256new="GXNY5YWSXB5OIVCFC3WFGGG7CCM3U5WOLTJPB5LOOZBGVVL5QBGQ"/>
+      <archive href="https://github.com/casey/just/releases/download/1.56.0/just-1.56.0-x86_64-pc-windows-msvc.zip" size="2249936" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.56.0" released="2026-07-10" stability="stable" id="sha256new_IJQWJPYVGUJ5MB2WG2K5UUW2P3DYDC7VYUZZLHD6XAN5ZN3R67HA">
+      <manifest-digest sha256new="IJQWJPYVGUJ5MB2WG2K5UUW2P3DYDC7VYUZZLHD6XAN5ZN3R67HA"/>
+      <archive href="https://github.com/casey/just/releases/download/1.56.0/just-1.56.0-aarch64-pc-windows-msvc.zip" size="2053243" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

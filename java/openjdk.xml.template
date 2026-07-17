@@ -48,7 +48,41 @@
       <manifest-digest/>
       <archive href="https://download.oracle.com/java/GA/jdk{version}/{release-id}/GPL/openjdk-{version}_linux-aarch64_bin.tar.gz" type="application/x-compressed-tar" extract="jdk-{version}"/>
     </implementation>
-    <implementation arch="MacOSX-*" version="{version}" stability="testing">
+  </group>
+
+  <group arch="MacOSX-*" license="GPL-2.0-only WITH Classpath-exception-2.0">
+    <command name="run" path="Contents/Home/bin/javac"/>
+    <command name="java" path="Contents/Home/bin/java"/>
+    <command name="javap" path="Contents/Home/bin/javap"/>
+    <command name="jar" path="Contents/Home/bin/jar"/>
+    <command name="jarsigner" path="Contents/Home/bin/jarsigner"/>
+    <command name="javadoc" path="Contents/Home/bin/javadoc"/>
+    <command name="keytool" path="Contents/Home/bin/keytool"/>
+    <command name="rmiregistry" path="Contents/Home/bin/rmiregistry"/>
+    <command name="jrunscript" path="Contents/Home/bin/jrunscript"/>
+    <command name="jcmd" path="Contents/Home/bin/jcmd"/>
+    <command name="jconsole" path="Contents/Home/bin/jconsole"/>
+    <command name="jdb" path="Contents/Home/bin/jdb"/>
+    <command name="jdeprscan" path="Contents/Home/bin/jdeprscan"/>
+    <command name="jdeps" path="Contents/Home/bin/jdeps"/>
+    <command name="jfr" path="Contents/Home/bin/jfr"/>
+    <command name="jhsdb" path="Contents/Home/bin/jhsdb"/>
+    <command name="jimage" path="Contents/Home/bin/jimage"/>
+    <command name="jinfo" path="Contents/Home/bin/jinfo"/>
+    <command name="jlink" path="Contents/Home/bin/jlink"/>
+    <command name="jmap" path="Contents/Home/bin/jmap"/>
+    <command name="jmod" path="Contents/Home/bin/jmod"/>
+    <command name="jps" path="Contents/Home/bin/jps"/>
+    <command name="jshell" path="Contents/Home/bin/jshell"/>
+    <command name="jstack" path="Contents/Home/bin/jstack"/>
+    <command name="jstat" path="Contents/Home/bin/jstat"/>
+    <command name="jstatd" path="Contents/Home/bin/jstatd"/>
+    <command name="serialver" path="Contents/Home/bin/serialver"/>
+    <command name="jnativescan" path="Contents/Home/bin/jnativescan"/>
+    <command name="jpackage" path="Contents/Home/bin/jpackage"/>
+    <command name="jwebserver" path="Contents/Home/bin/jwebserver"/>
+
+    <implementation version="{version}" stability="testing">
       <manifest-digest/>
       <archive href="https://download.oracle.com/java/GA/jdk{version}/{release-id}/GPL/openjdk-{version}_macos-x64_bin.tar.gz" type="application/x-compressed-tar" extract="jdk-{version}.jdk"/>
     </implementation>

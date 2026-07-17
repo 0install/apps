@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uri="https://apps.0install.net/gui/krita.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>Krita</name>
+  <summary>digital painting application</summary>
+  <description>Krita is a free and open source cross-platform application that offers an end-to-end solution for creating digital art files from scratch. Krita is optimized for frequent, prolonged and focused use. Explicitly supported fields of painting are illustrations, concept art, matte painting, textures, comics and animations. Krita is developed together with users of such backgrounds, ensuring that Krita is really tailored to their needs.</description>
+  <homepage>https://krita.org/</homepage>
+  <icon href="https://apps.0install.net/gui/krita.png" type="image/png"/>
+  <icon href="https://apps.0install.net/gui/krita.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://apps.0install.net/gui/krita.icns" type="image/x-icns"/>
+  <category>Graphics</category>
+
+  <feed arch="Linux-*" src="https://apps.0install.net/gui/krita-linux.xml"/>
+  <feed arch="MacOSX-*" src="https://apps.0install.net/gui/krita-macos.xml"/>
+  <feed arch="Windows-*" src="https://apps.0install.net/gui/krita-windows.xml"/>
+
+  <entry-point binary-name="krita" command="run"/>
+  <entry-point binary-name="kritarunner" command="kritarunner">
+    <needs-terminal/>
+    <name>Krita Runner</name>
+  </entry-point>
+
+  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
+    <file-type id="krita-kra">
+      <description xml:lang="en">Krita Document</description>
+      <verb args="&quot;%V&quot;" name="open"/>
+      <extension mime-type="application/x-krita" value=".kra"/>
+    </file-type>
+  </capabilities>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmpaF+sACgkQWao5J8JOTh5eRQf+Mej5
+Qrikda5iGCRFOQeiA9K6Z/tCJxQl6nzPuk/aPTxkrwoGiq26l3JIyGxSPb4FM+LeNfCmFrUkOdYL
+lLOWPYMdmaXLTbhhypYNT1vIBonOY63VYTJsxmAD1a2m0EbBVEZQFaJrl4ge37OGvINx3V01Baoz
+SXsee31L1fvwJU0pf32ywgIycraTrXWB3KrArQGZJbqyZSFvorudJDVjNARG+3+zCP5WAhSJQMoi
+6PpshmGdqiuO8j6DESvekKf7F9JGhyC8Wg5rPylk6k/WJ9+7ukApUJRvhWrXS/gq8h7lM1Vxaigf
+08vx8rKfDwyHK3QgqkV/xMTClGW+M0Kfqg==
+
+-->

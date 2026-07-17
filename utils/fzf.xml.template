@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>fzf</name>
+  <summary>command-line fuzzy finder</summary>
+  <description>fzf is a general-purpose command-line fuzzy finder. It's an interactive filter program for any kind of list: files, command history, processes, hostnames, bookmarks, git commits, etc.</description>
+  <homepage>https://junegunn.github.io/fzf/</homepage>
+  <category>Utility</category>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/utils/fzf.xml"/>
+
+  <group license="MIT License">
+    <command name="run" path="fzf"/>
+    <implementation arch="Linux-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/junegunn/fzf/releases/download/v{version}/fzf-{version}-linux_amd64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/junegunn/fzf/releases/download/v{version}/fzf-{version}-linux_arm64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/junegunn/fzf/releases/download/v{version}/fzf-{version}-darwin_amd64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/junegunn/fzf/releases/download/v{version}/fzf-{version}-darwin_arm64.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="MIT License">
+    <command name="run" path="fzf.exe"/>
+    <implementation arch="Windows-x86_64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/junegunn/fzf/releases/download/v{version}/fzf-{version}-windows_amd64.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="{version}" stability="stable" released="{released}">
+      <manifest-digest/>
+      <archive href="https://github.com/junegunn/fzf/releases/download/v{version}/fzf-{version}-windows_arm64.zip" type="application/zip"/>
+    </implementation>
+  </group>
+</interface>

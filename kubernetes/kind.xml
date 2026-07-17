@@ -1,0 +1,595 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/kubernetes/kind.xml">
+  <name>kind</name>
+  <summary>run local Kubernetes clusters using Docker container &quot;nodes&quot;</summary>
+  <description>kind is a tool for running local Kubernetes clusters using Docker container &quot;nodes&quot;. It was primarily designed for testing Kubernetes itself, but may be used for local development or CI.</description>
+  <homepage>https://kind.sigs.k8s.io/</homepage>
+  <needs-terminal/>
+  <icon href="https://apps.0install.net/kubernetes/kind.png" type="image/png"/>
+  <icon href="https://apps.0install.net/kubernetes/kind.ico" type="image/vnd.microsoft.icon"/>
+
+  <group license="Apache-2.0">
+    <implementation arch="Windows-x86_64" version="0.6.0" released="2019-11-18" stability="stable" main="kind.exe" id="sha256new_HRGF47ZY32R4VQNZE3X2GMRN7D6Q7LH6VHKK3FW6NR2QYCA7DMZA">
+      <manifest-digest sha256new="HRGF47ZY32R4VQNZE3X2GMRN7D6Q7LH6VHKK3FW6NR2QYCA7DMZA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.6.0/kind-windows-amd64" size="9429504" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.6.0" released="2019-11-18" stability="stable" main="kind" id="sha256new_LAITVMYTEJX56LBHLEQZIECX3ARSUYKYUMQAZDA32BNDRY5ABSOQ">
+      <manifest-digest sha256new="LAITVMYTEJX56LBHLEQZIECX3ARSUYKYUMQAZDA32BNDRY5ABSOQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.6.0/kind-linux-amd64" size="9749846" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.6.0" released="2019-11-18" stability="stable" main="kind" id="sha256new_DOUGARRXNBZF7U33NEMECESB2Z7QIIPGNN6AOWLIOIJ477KOSA3Q">
+      <manifest-digest sha256new="DOUGARRXNBZF7U33NEMECESB2Z7QIIPGNN6AOWLIOIJ477KOSA3Q"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.6.0/kind-linux-arm64" size="9510765" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-*" version="0.6.0" released="2019-11-18" stability="stable" main="kind" id="sha256new_XGOMEEWTIHFCAZ3VSTQSFIQU4VI6G55Z447ESV7XBJ5HZYEXO43Q">
+      <manifest-digest sha256new="XGOMEEWTIHFCAZ3VSTQSFIQU4VI6G55Z447ESV7XBJ5HZYEXO43Q"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.6.0/kind-darwin-amd64" size="9587496" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.6.1" released="2019-12-04" stability="stable" main="kind.exe" id="sha256new_6REB2GKYYQXANMLIQLXWNMEQ7F2DFYSIVUJVEZCCJPJCU3RDMCEA">
+      <manifest-digest sha256new="6REB2GKYYQXANMLIQLXWNMEQ7F2DFYSIVUJVEZCCJPJCU3RDMCEA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.6.1/kind-windows-amd64" size="9429504" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.6.1" released="2019-12-04" stability="stable" main="kind" id="sha256new_JZOZRMNPYXWF3E5P42XTQTMSSV3VSA5HZAVOD4VQNUITXTTPKXVA">
+      <manifest-digest sha256new="JZOZRMNPYXWF3E5P42XTQTMSSV3VSA5HZAVOD4VQNUITXTTPKXVA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.6.1/kind-linux-amd64" size="9753942" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.6.1" released="2019-12-04" stability="stable" main="kind" id="sha256new_X7R6W6AIXZODYPPJYXXKHSYM4WOLSWITUYTOL4JWNO3RGG532QAA">
+      <manifest-digest sha256new="X7R6W6AIXZODYPPJYXXKHSYM4WOLSWITUYTOL4JWNO3RGG532QAA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.6.1/kind-linux-arm64" size="9510765" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-*" version="0.6.1" released="2019-12-04" stability="stable" main="kind" id="sha256new_NMTW7KKTEDQJSHJESWWRP3GX3XRJYVJM6BP3DW7SKIXUF3Z2V4VQ">
+      <manifest-digest sha256new="NMTW7KKTEDQJSHJESWWRP3GX3XRJYVJM6BP3DW7SKIXUF3Z2V4VQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.6.1/kind-darwin-amd64" size="9587496" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.7.0" released="2020-01-14" stability="stable" main="kind.exe" id="sha256new_7EJJMW7PLPJTXEELH2WQNTBJWPUSHPHZBSLAVB5X2FBPWETRF4KA">
+      <manifest-digest sha256new="7EJJMW7PLPJTXEELH2WQNTBJWPUSHPHZBSLAVB5X2FBPWETRF4KA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0/kind-windows-amd64" size="9452032" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.7.0" released="2020-01-14" stability="stable" main="kind" id="sha256new_ZDLIE7CK4MYU2UGU5P4XMCHRBE7OK2X7SQ3BDUFW4KYXDMAVENBA">
+      <manifest-digest sha256new="ZDLIE7CK4MYU2UGU5P4XMCHRBE7OK2X7SQ3BDUFW4KYXDMAVENBA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0/kind-linux-amd64" size="9355777" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.7.0" released="2020-01-14" stability="stable" main="kind" id="sha256new_UHGHHEA2A5JGB3JXFDBLABUAVSDXTSSQCQFZ4XOZGWLPE4OYR4SQ">
+      <manifest-digest sha256new="UHGHHEA2A5JGB3JXFDBLABUAVSDXTSSQCQFZ4XOZGWLPE4OYR4SQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0/kind-linux-arm64" size="9157573" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-*" version="0.7.0" released="2020-01-14" stability="stable" main="kind" id="sha256new_RBDAC3ZGM66KJUIDJZLGUCY3VLG4WFFXOQS3EYJFKFNBEU43CJLA">
+      <manifest-digest sha256new="RBDAC3ZGM66KJUIDJZLGUCY3VLG4WFFXOQS3EYJFKFNBEU43CJLA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0/kind-darwin-amd64" size="9241936" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.8.0" released="2020-05-01" stability="stable" main="kind.exe" id="sha256new_5KOTEPB4URJX56HL2FXQI5SKQSLUXQYEJO2FUZNIJKJQG2WEY4ZA">
+      <manifest-digest sha256new="5KOTEPB4URJX56HL2FXQI5SKQSLUXQYEJO2FUZNIJKJQG2WEY4ZA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.8.0/kind-windows-amd64" size="9770496" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.8.0" released="2020-05-01" stability="stable" main="kind" id="sha256new_JNGH5OQEDQUS47MB656WZIU5747IQKB5CXZ7OWSMVVTIGQRNSICA">
+      <manifest-digest sha256new="JNGH5OQEDQUS47MB656WZIU5747IQKB5CXZ7OWSMVVTIGQRNSICA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.8.0/kind-linux-amd64" size="10133844" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.8.0" released="2020-05-01" stability="stable" main="kind" id="sha256new_WOJ563P37ZHUKAAXY5DLNTUK72NHUVGAMGWPYENPQ4QCL5RQHBAA">
+      <manifest-digest sha256new="WOJ563P37ZHUKAAXY5DLNTUK72NHUVGAMGWPYENPQ4QCL5RQHBAA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.8.0/kind-linux-arm64" size="9713927" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-*" version="0.8.0" released="2020-05-01" stability="stable" main="kind" id="sha256new_32XH6JSVHXSUBXOV4Z2JQL5VGZ5D4E5JG2XLJTCF6LDWWSTIOCDA">
+      <manifest-digest sha256new="32XH6JSVHXSUBXOV4Z2JQL5VGZ5D4E5JG2XLJTCF6LDWWSTIOCDA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.8.0/kind-darwin-amd64" size="10006400" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.8.1" released="2020-05-02" stability="stable" main="kind.exe" id="sha256new_ZUY3CK63F34JBNRMZGIDLPSVHDO5MVF6YNO2GGR4BZYSVG4FWKIA">
+      <manifest-digest sha256new="ZUY3CK63F34JBNRMZGIDLPSVHDO5MVF6YNO2GGR4BZYSVG4FWKIA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.8.1/kind-windows-amd64" size="9773568" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.8.1" released="2020-05-02" stability="stable" main="kind" id="sha256new_2FEREJUKTU6TQFDAIY3IFXGRJDJDX56NHMOQXC7BYZFXF2GE5CYA">
+      <manifest-digest sha256new="2FEREJUKTU6TQFDAIY3IFXGRJDJDX56NHMOQXC7BYZFXF2GE5CYA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.8.1/kind-linux-amd64" size="10138042" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.8.1" released="2020-05-02" stability="stable" main="kind" id="sha256new_G35JJURY77SXIIPK7EQS3UKRZI3D647R2MDK5L67JX3EGGOSYINA">
+      <manifest-digest sha256new="G35JJURY77SXIIPK7EQS3UKRZI3D647R2MDK5L67JX3EGGOSYINA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.8.1/kind-linux-arm64" size="9714029" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-*" version="0.8.1" released="2020-05-02" stability="stable" main="kind" id="sha256new_WMFAHTPWAYCZ4ZDUU5LXJBQJJ4TPJBRIHRP6TH7XPLK7ELIJ6XUA">
+      <manifest-digest sha256new="WMFAHTPWAYCZ4ZDUU5LXJBQJJ4TPJBRIHRP6TH7XPLK7ELIJ6XUA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.8.1/kind-darwin-amd64" size="10006496" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.9.0" released="2020-09-15" stability="stable" main="kind.exe" id="sha256new_RIY6S55H4HXXSUSAKDWLHLXHDQ2AXO64BXAV4R7SGKWGN73RPUZQ">
+      <manifest-digest sha256new="RIY6S55H4HXXSUSAKDWLHLXHDQ2AXO64BXAV4R7SGKWGN73RPUZQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.9.0/kind-windows-amd64" size="7362560" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.9.0" released="2020-09-15" stability="stable" main="kind" id="sha256new_N3PCHP5URJYSMLWZ5KO6SEJGMUFVAW7ZNI6UXR7VWYR4CJXHZVUA">
+      <manifest-digest sha256new="N3PCHP5URJYSMLWZ5KO6SEJGMUFVAW7ZNI6UXR7VWYR4CJXHZVUA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.9.0/kind-linux-amd64" size="7421155" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.9.0" released="2020-09-15" stability="stable" main="kind" id="sha256new_UXO6LDFBGHIT3SDK6PRHCWKG6Q34FTKKVPFQXR2ZILWGDBDKL46A">
+      <manifest-digest sha256new="UXO6LDFBGHIT3SDK6PRHCWKG6Q34FTKKVPFQXR2ZILWGDBDKL46A"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.9.0/kind-linux-arm64" size="6966748" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-*" version="0.9.0" released="2020-09-15" stability="stable" main="kind" id="sha256new_SQQ3BPW7XZMHSHMHWOCHKY72YWWSZCRBN5CVVSU4W5F2S2LNTMQA">
+      <manifest-digest sha256new="SQQ3BPW7XZMHSHMHWOCHKY72YWWSZCRBN5CVVSU4W5F2S2LNTMQA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.9.0/kind-darwin-amd64" size="7430712" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.10.0" released="2021-01-23" stability="stable" main="kind.exe" id="sha256new_ANSUWNMZN37FQOZGUFMACVY6CYOZUGZWLXY6H4PGUMVFBWX3LFHA">
+      <manifest-digest sha256new="ANSUWNMZN37FQOZGUFMACVY6CYOZUGZWLXY6H4PGUMVFBWX3LFHA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.10.0/kind-windows-amd64" size="7387648" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.10.0" released="2021-01-23" stability="stable" main="kind" id="sha256new_S7XD6ZEXKK2TTKRGZJ3IDJL7TWU2BS22ISCHHLWBEO7DMPMG5QIQ">
+      <manifest-digest sha256new="S7XD6ZEXKK2TTKRGZJ3IDJL7TWU2BS22ISCHHLWBEO7DMPMG5QIQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.10.0/kind-linux-amd64" size="7452113" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.10.0" released="2021-01-23" stability="stable" main="kind" id="sha256new_Z4YWYL5CZKNA5BYQ55X3JAJ3KOHMINXKAKE4Z3XWQCADCNRGPCFA">
+      <manifest-digest sha256new="Z4YWYL5CZKNA5BYQ55X3JAJ3KOHMINXKAKE4Z3XWQCADCNRGPCFA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.10.0/kind-linux-arm64" size="6969034" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-*" version="0.10.0" released="2021-01-23" stability="stable" main="kind" id="sha256new_U3D5BXS5FAU2TANZ2OYDP3PDB3UUYIGVJKHRMEV4AVXUEXBGLHNA">
+      <manifest-digest sha256new="U3D5BXS5FAU2TANZ2OYDP3PDB3UUYIGVJKHRMEV4AVXUEXBGLHNA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.10.0/kind-darwin-amd64" size="7396096" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.11.0" released="2021-05-18" stability="stable" main="kind.exe" id="sha256new_O54GPIUQBHP3ZOH5M7CTMSXCH7ETYWQOZFCCZQPQBAFKO3BKZ6YQ">
+      <manifest-digest sha256new="O54GPIUQBHP3ZOH5M7CTMSXCH7ETYWQOZFCCZQPQBAFKO3BKZ6YQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.11.0/kind-windows-amd64" size="6901760" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.11.0" released="2021-05-18" stability="stable" main="kind" id="sha256new_L2G24VWWNPBQ2UMCBBSLKS44UZONETLIBRV4VRXXX6IKXRHKB6DQ">
+      <manifest-digest sha256new="L2G24VWWNPBQ2UMCBBSLKS44UZONETLIBRV4VRXXX6IKXRHKB6DQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.11.0/kind-linux-amd64" size="6820474" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.11.0" released="2021-05-18" stability="stable" main="kind" id="sha256new_RBPWNHJEVT7LEUJFOIMERGQRN3WKV6YYDXB23TX3PCIEBKSUHUKA">
+      <manifest-digest sha256new="RBPWNHJEVT7LEUJFOIMERGQRN3WKV6YYDXB23TX3PCIEBKSUHUKA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.11.0/kind-linux-arm64" size="6494139" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.11.0" released="2021-05-18" stability="stable" main="kind" id="sha256new_EVW6LDJ6OXSCO6MJYZTX5DYEB7VAQQZFPD3KH4NOZIDSHMO3HGEQ">
+      <manifest-digest sha256new="EVW6LDJ6OXSCO6MJYZTX5DYEB7VAQQZFPD3KH4NOZIDSHMO3HGEQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.11.0/kind-darwin-amd64" size="6789888" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="0.11.0" released="2021-05-18" stability="stable" main="kind" id="sha256new_M57PKPH2LKQMZOIECOIERML2M6CI5HIMIGUDD6PZWEP3GHKNJCFA">
+      <manifest-digest sha256new="M57PKPH2LKQMZOIECOIERML2M6CI5HIMIGUDD6PZWEP3GHKNJCFA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.11.0/kind-darwin-arm64" size="6702706" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.11.1" released="2021-05-28" stability="stable" main="kind.exe" id="sha256new_FWOT5KWY35LTGIITOZWCR6GHHKEWV2LQN3WNVFIIYX44CYOZPRCA">
+      <manifest-digest sha256new="FWOT5KWY35LTGIITOZWCR6GHHKEWV2LQN3WNVFIIYX44CYOZPRCA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.11.1/kind-windows-amd64" size="6903808" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.11.1" released="2021-05-28" stability="stable" main="kind" id="sha256new_KRWFYECFCEWD2OLMBKXVS4O2VUMAS2HAJ2BYZNHACSFCRWABLF4A">
+      <manifest-digest sha256new="KRWFYECFCEWD2OLMBKXVS4O2VUMAS2HAJ2BYZNHACSFCRWABLF4A"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.11.1/kind-linux-amd64" size="6820758" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.11.1" released="2021-05-28" stability="stable" main="kind" id="sha256new_VEGRJO6TDGOHWJWBPDVJ7VBBOSX32FFUZLAAWVHZ3RPK6WAAENYQ">
+      <manifest-digest sha256new="VEGRJO6TDGOHWJWBPDVJ7VBBOSX32FFUZLAAWVHZ3RPK6WAAENYQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.11.1/kind-linux-arm64" size="6494423" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.11.1" released="2021-05-28" stability="stable" main="kind" id="sha256new_OORI4KOZFBNP5QIDACRJOI774NWRREDEDBNT65NYVNWIRQWLFXQA">
+      <manifest-digest sha256new="OORI4KOZFBNP5QIDACRJOI774NWRREDEDBNT65NYVNWIRQWLFXQA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.11.1/kind-darwin-amd64" size="6789984" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="0.11.1" released="2021-05-28" stability="stable" main="kind" id="sha256new_GK6ER27C5HY4ZOYSLGOGRFEBW7XPWLVFGI3F7I47TWO47XFAKIHA">
+      <manifest-digest sha256new="GK6ER27C5HY4ZOYSLGOGRFEBW7XPWLVFGI3F7I47TWO47XFAKIHA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.11.1/kind-darwin-arm64" size="6702930" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.12.0" released="2022-03-07" stability="stable" main="kind.exe" id="sha256new_BRFIVP5GXIW5IAYPHMQID7LM3ZUATJR6ZLXQT342PPUJKKZRXWVA">
+      <manifest-digest sha256new="BRFIVP5GXIW5IAYPHMQID7LM3ZUATJR6ZLXQT342PPUJKKZRXWVA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.12.0/kind-windows-amd64" size="6728704" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.12.0" released="2022-03-07" stability="stable" main="kind" id="sha256new_JDGMNCKGRNXSE2IXRKTJ2PDWOEFC5EX7QRHCAEVKOU6ZAOCGYT3A">
+      <manifest-digest sha256new="JDGMNCKGRNXSE2IXRKTJ2PDWOEFC5EX7QRHCAEVKOU6ZAOCGYT3A"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.12.0/kind-linux-amd64" size="6668048" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.12.0" released="2022-03-07" stability="stable" main="kind" id="sha256new_NUXYBAIEFUYJUK36C3HQSRWRX7DXRMUZWKQ6F46VFRMZR2RUEHNA">
+      <manifest-digest sha256new="NUXYBAIEFUYJUK36C3HQSRWRX7DXRMUZWKQ6F46VFRMZR2RUEHNA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.12.0/kind-linux-arm64" size="6705372" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.12.0" released="2022-03-07" stability="stable" main="kind" id="sha256new_W6MWZ6YRFXMV2JXQ54BY2JRJW4R2RCZLL7DKS44PLJIE43QIWM3Q">
+      <manifest-digest sha256new="W6MWZ6YRFXMV2JXQ54BY2JRJW4R2RCZLL7DKS44PLJIE43QIWM3Q"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.12.0/kind-darwin-amd64" size="6633600" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="0.12.0" released="2022-03-07" stability="stable" main="kind" id="sha256new_HDNWOVDXMCZRVK7OSFF7IJHPSX3KR35L7B7FTG2URL475C4HSDHQ">
+      <manifest-digest sha256new="HDNWOVDXMCZRVK7OSFF7IJHPSX3KR35L7B7FTG2URL475C4HSDHQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.12.0/kind-darwin-arm64" size="6933138" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.13.0" released="2022-05-10" stability="stable" main="kind.exe" id="sha256new_5HNZSK77ZSXI5NTCEDWA2VEFXJKSLYMKJSKQMUKWE5L33IBW6K4A">
+      <manifest-digest sha256new="5HNZSK77ZSXI5NTCEDWA2VEFXJKSLYMKJSKQMUKWE5L33IBW6K4A"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.13.0/kind-windows-amd64" size="6620160" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.13.0" released="2022-05-10" stability="stable" main="kind" id="sha256new_A55GKU3CXHLOZB4XRROC3RXOJ2DRSSVQMXBDT3AHKE5MVW4V6FLA">
+      <manifest-digest sha256new="A55GKU3CXHLOZB4XRROC3RXOJ2DRSSVQMXBDT3AHKE5MVW4V6FLA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.13.0/kind-linux-amd64" size="6658372" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.13.0" released="2022-05-10" stability="stable" main="kind" id="sha256new_FGSGIOZZC44YTRAN3M6Q3YO6KK5YQM4KWRN4IG2FDQZGF5OJZLSQ">
+      <manifest-digest sha256new="FGSGIOZZC44YTRAN3M6Q3YO6KK5YQM4KWRN4IG2FDQZGF5OJZLSQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.13.0/kind-linux-arm64" size="6532362" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.13.0" released="2022-05-10" stability="stable" main="kind" id="sha256new_2ZBPC7YCAACLE2ZALV3TRQ7QSTQGSPZYLO2GZGD3XFC74MDYHVKA">
+      <manifest-digest sha256new="2ZBPC7YCAACLE2ZALV3TRQ7QSTQGSPZYLO2GZGD3XFC74MDYHVKA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.13.0/kind-darwin-amd64" size="6610752" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="0.13.0" released="2022-05-10" stability="stable" main="kind" id="sha256new_US2QIRHDFBFKPQRIOSJ4XCCPUBAHH6YJMAHHZPFWGV2Z5FLC6YUQ">
+      <manifest-digest sha256new="US2QIRHDFBFKPQRIOSJ4XCCPUBAHH6YJMAHHZPFWGV2Z5FLC6YUQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.13.0/kind-darwin-arm64" size="6552642" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.14.0" released="2022-05-19" stability="stable" main="kind.exe" id="sha256new_IMZ4I3HQQJHYVJ7KNY3R2BJPZJH23SPBBHEPBHNGSQITIZ227IHA">
+      <manifest-digest sha256new="IMZ4I3HQQJHYVJ7KNY3R2BJPZJH23SPBBHEPBHNGSQITIZ227IHA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.14.0/kind-windows-amd64" size="6621696" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.14.0" released="2022-05-19" stability="stable" main="kind" id="sha256new_NH5DXYRBWPKKNYI7LDNAFRUS5MUGKNYN74R3XLC3MVHHX2QMSURA">
+      <manifest-digest sha256new="NH5DXYRBWPKKNYI7LDNAFRUS5MUGKNYN74R3XLC3MVHHX2QMSURA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.14.0/kind-linux-amd64" size="6658458" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.14.0" released="2022-05-19" stability="stable" main="kind" id="sha256new_AG2H7F5CFJMJ4QSDPMNS2XMRUE4RIMGRZEISISQI3MATQZ6KPT2Q">
+      <manifest-digest sha256new="AG2H7F5CFJMJ4QSDPMNS2XMRUE4RIMGRZEISISQI3MATQZ6KPT2Q"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.14.0/kind-linux-arm64" size="6599135" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.14.0" released="2022-05-19" stability="stable" main="kind" id="sha256new_AUN7WVEIBZWKP2P54KNWYHJ7VQ5POKAQZREJRFKF6L55KGSF2UBQ">
+      <manifest-digest sha256new="AUN7WVEIBZWKP2P54KNWYHJ7VQ5POKAQZREJRFKF6L55KGSF2UBQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.14.0/kind-darwin-amd64" size="6610832" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="0.14.0" released="2022-05-19" stability="stable" main="kind" id="sha256new_LFGP3NG7ZCC2JH3OTWXCOTS2YPZUHCC34EAHLLJEWMO3NDR2ROYQ">
+      <manifest-digest sha256new="LFGP3NG7ZCC2JH3OTWXCOTS2YPZUHCC34EAHLLJEWMO3NDR2ROYQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.14.0/kind-darwin-arm64" size="6570290" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.15.0" released="2022-09-02" stability="stable" main="kind.exe" id="sha256new_23NIWWNN2AORCEJQOMPRLYVTAH7OB2KZZDB6YFXVWPXNA3FSAQVQ">
+      <manifest-digest sha256new="23NIWWNN2AORCEJQOMPRLYVTAH7OB2KZZDB6YFXVWPXNA3FSAQVQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.15.0/kind-windows-amd64" size="6992896" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.15.0" released="2022-09-02" stability="stable" main="kind" id="sha256new_37OYFIN6AYSZZCPTEBKPXXLW6UGBRELSHYXZ7XVYT6JZR56ERVPQ">
+      <manifest-digest sha256new="37OYFIN6AYSZZCPTEBKPXXLW6UGBRELSHYXZ7XVYT6JZR56ERVPQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.15.0/kind-linux-amd64" size="6877297" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.15.0" released="2022-09-02" stability="stable" main="kind" id="sha256new_TRZU2MBM2PDB2OKW5AJSQ52YCWHHK4YWZTBR2E65E3UOIVVSEK2Q">
+      <manifest-digest sha256new="TRZU2MBM2PDB2OKW5AJSQ52YCWHHK4YWZTBR2E65E3UOIVVSEK2Q"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.15.0/kind-linux-arm64" size="6679148" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.15.0" released="2022-09-02" stability="stable" main="kind" id="sha256new_SRLJYL5KXAT4NGTHS5PSLSRG3TU2ZUON6MOFKV4ROTUOKOYE45OQ">
+      <manifest-digest sha256new="SRLJYL5KXAT4NGTHS5PSLSRG3TU2ZUON6MOFKV4ROTUOKOYE45OQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.15.0/kind-darwin-amd64" size="6833072" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="0.15.0" released="2022-09-02" stability="stable" main="kind" id="sha256new_P4XCD762E7W66S7KPU3RQT7DJM6OMVN7NZN2Q6XCA27Y3EWFRD7A">
+      <manifest-digest sha256new="P4XCD762E7W66S7KPU3RQT7DJM6OMVN7NZN2Q6XCA27Y3EWFRD7A"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.15.0/kind-darwin-arm64" size="6741426" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.16.0" released="2022-09-22" stability="stable" main="kind.exe" id="sha256new_HXHITLTVFQF27FVR7FKC5WSRP4WMHCWX7GA2YJBQP4WBRKRRTBBA">
+      <manifest-digest sha256new="HXHITLTVFQF27FVR7FKC5WSRP4WMHCWX7GA2YJBQP4WBRKRRTBBA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.16.0/kind-windows-amd64" size="6988800" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.16.0" released="2022-09-22" stability="stable" main="kind" id="sha256new_HQZBAQHKKWWNGVD4EOTEXTLV7H3ZV7WBD6YWPL67ASXEW6TTNQYA">
+      <manifest-digest sha256new="HQZBAQHKKWWNGVD4EOTEXTLV7H3ZV7WBD6YWPL67ASXEW6TTNQYA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.16.0/kind-linux-amd64" size="6873201" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.16.0" released="2022-09-22" stability="stable" main="kind" id="sha256new_TIBV3VOSK7KLGMD3OP35XND77I4BO7GQ3DOMANWY3ZF7NXQQAHDQ">
+      <manifest-digest sha256new="TIBV3VOSK7KLGMD3OP35XND77I4BO7GQ3DOMANWY3ZF7NXQQAHDQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.16.0/kind-linux-arm64" size="6679148" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.16.0" released="2022-09-22" stability="stable" main="kind" id="sha256new_AAK6BHJHN5IZQA4L67ZOEO5VDL4ITM4CDPCO3GYXTRFCW7JWPNIA">
+      <manifest-digest sha256new="AAK6BHJHN5IZQA4L67ZOEO5VDL4ITM4CDPCO3GYXTRFCW7JWPNIA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.16.0/kind-darwin-amd64" size="6828976" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="0.16.0" released="2022-09-22" stability="stable" main="kind" id="sha256new_ZTCYPLWUOZ3GQPKFUUNDXYBOB3ANROLRZTAZBUHBQSDLG2RQMTEQ">
+      <manifest-digest sha256new="ZTCYPLWUOZ3GQPKFUUNDXYBOB3ANROLRZTAZBUHBQSDLG2RQMTEQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.16.0/kind-darwin-arm64" size="6741426" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.17.0" released="2022-10-26" stability="stable" main="kind.exe" id="sha256new_3DCKJFE2J6FFJ7UZTTUO2BJE4CBCHPTXOMMLPHM5P3KGBV4VBVTQ">
+      <manifest-digest sha256new="3DCKJFE2J6FFJ7UZTTUO2BJE4CBCHPTXOMMLPHM5P3KGBV4VBVTQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.17.0/kind-windows-amd64" size="7045632" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.17.0" released="2022-10-26" stability="stable" main="kind" id="sha256new_O5V2XLELDA5X7ZRIEWBQRHFQHBJ2IC2L6U4G6QGZXUQO6WJL5RWA">
+      <manifest-digest sha256new="O5V2XLELDA5X7ZRIEWBQRHFQHBJ2IC2L6U4G6QGZXUQO6WJL5RWA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.17.0/kind-linux-amd64" size="6929103" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.17.0" released="2022-10-26" stability="stable" main="kind" id="sha256new_GJB2LTR5QQORMAG4B6LUPFM5X67COAK3R4C475DC3Z7MB2FCMOIA">
+      <manifest-digest sha256new="GJB2LTR5QQORMAG4B6LUPFM5X67COAK3R4C475DC3Z7MB2FCMOIA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.17.0/kind-linux-arm64" size="6812874" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.17.0" released="2022-10-26" stability="stable" main="kind" id="sha256new_3TRMYHCWA34723L23S2QXGDU34ZXHCTM3MSKH3MD35WZG353NGMQ">
+      <manifest-digest sha256new="3TRMYHCWA34723L23S2QXGDU34ZXHCTM3MSKH3MD35WZG353NGMQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.17.0/kind-darwin-amd64" size="6884624" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="0.17.0" released="2022-10-26" stability="stable" main="kind" id="sha256new_KSNMIUZGRY4QGDJKXIGY6AQOOA34GMP44MSZ4GMNMJVY3FQKUG5Q">
+      <manifest-digest sha256new="KSNMIUZGRY4QGDJKXIGY6AQOOA34GMP44MSZ4GMNMJVY3FQKUG5Q"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.17.0/kind-darwin-arm64" size="6793762" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.18.0" released="2023-03-30" stability="stable" main="kind.exe" id="sha256new_DCZA2I5GHR3WKZCXBKCBCSQWDHZ2KFE4TFAT37JIMDUNUOZGXOZQ">
+      <manifest-digest sha256new="DCZA2I5GHR3WKZCXBKCBCSQWDHZ2KFE4TFAT37JIMDUNUOZGXOZQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.18.0/kind-windows-amd64" size="7096320" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.18.0" released="2023-03-30" stability="stable" main="kind" id="sha256new_37SVM7XDNMXPZBRCBSHCAS3RIJLMJKIGGBFE6QTUN72T2LSF3LRA">
+      <manifest-digest sha256new="37SVM7XDNMXPZBRCBSHCAS3RIJLMJKIGGBFE6QTUN72T2LSF3LRA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.18.0/kind-linux-amd64" size="6971683" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.18.0" released="2023-03-30" stability="stable" main="kind" id="sha256new_2QXRIYMISWLVZ4Z7PWU5WIHJNUQJPNLRBM5NKC6FLNLC7Q2VNAAQ">
+      <manifest-digest sha256new="2QXRIYMISWLVZ4Z7PWU5WIHJNUQJPNLRBM5NKC6FLNLC7Q2VNAAQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.18.0/kind-linux-arm64" size="6818508" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.18.0" released="2023-03-30" stability="stable" main="kind" id="sha256new_NYWPFESFIEGX5ND7V2IQFXVI6ALPIYHWTWZ3TQ4A5FNZUWREXBGQ">
+      <manifest-digest sha256new="NYWPFESFIEGX5ND7V2IQFXVI6ALPIYHWTWZ3TQ4A5FNZUWREXBGQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.18.0/kind-darwin-amd64" size="6944512" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="0.18.0" released="2023-03-30" stability="stable" main="kind" id="sha256new_ULW77EWQ2MN2LGGQYRPVWST6PPFZ2GH5OB6AFMSCMKEE66QWHWSA">
+      <manifest-digest sha256new="ULW77EWQ2MN2LGGQYRPVWST6PPFZ2GH5OB6AFMSCMKEE66QWHWSA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.18.0/kind-darwin-arm64" size="6836562" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.19.0" released="2023-05-17" stability="stable" main="kind.exe" id="sha256new_MGWUMI3KHLC2U6TGX6VC6HPG64MWZE3QZKEOL7EYUQAGNYJXMH2A">
+      <manifest-digest sha256new="MGWUMI3KHLC2U6TGX6VC6HPG64MWZE3QZKEOL7EYUQAGNYJXMH2A"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.19.0/kind-windows-amd64" size="7100928" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.19.0" released="2023-05-17" stability="stable" main="kind" id="sha256new_AIRGU2OIQZHRD6N3QUTZHZA7MHYSNFJYLMKAZNIPLLOMB6EMHDKQ">
+      <manifest-digest sha256new="AIRGU2OIQZHRD6N3QUTZHZA7MHYSNFJYLMKAZNIPLLOMB6EMHDKQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.19.0/kind-linux-amd64" size="6980059" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.19.0" released="2023-05-17" stability="stable" main="kind" id="sha256new_F33K5SM2OXL3EUHAJCCE5JLMT7BPF4KSADQUV2FRXIZWLO2YR5JQ">
+      <manifest-digest sha256new="F33K5SM2OXL3EUHAJCCE5JLMT7BPF4KSADQUV2FRXIZWLO2YR5JQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.19.0/kind-linux-arm64" size="6818779" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.19.0" released="2023-05-17" stability="stable" main="kind" id="sha256new_YZU2BSZ5JOODD5N22VQEUUWEJANFL4QFNAXAUIISRRHMMTITOGIA">
+      <manifest-digest sha256new="YZU2BSZ5JOODD5N22VQEUUWEJANFL4QFNAXAUIISRRHMMTITOGIA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.19.0/kind-darwin-amd64" size="6952928" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="0.19.0" released="2023-05-17" stability="stable" main="kind" id="sha256new_ZC6XEJDPY5XETQ4BW3C6D73N2SAN6XLY3MCJ5UDTQ7TPTKDXON5Q">
+      <manifest-digest sha256new="ZC6XEJDPY5XETQ4BW3C6D73N2SAN6XLY3MCJ5UDTQ7TPTKDXON5Q"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.19.0/kind-darwin-arm64" size="6886450" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.20.0" released="2023-06-15" stability="stable" main="kind.exe" id="sha256new_LBIHTPDSCGNXPIEMING37PZXSAUYWIVLCX5ODNS6QTUGXAP7LFEA">
+      <manifest-digest sha256new="LBIHTPDSCGNXPIEMING37PZXSAUYWIVLCX5ODNS6QTUGXAP7LFEA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.20.0/kind-windows-amd64" size="6561792" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.20.0" released="2023-06-15" stability="stable" main="kind" id="sha256new_6TF6CLYEWKOOAHSESZSU6YYFSTLLADTWOBO3BCYVSBZIAHOPD5OQ">
+      <manifest-digest sha256new="6TF6CLYEWKOOAHSESZSU6YYFSTLLADTWOBO3BCYVSBZIAHOPD5OQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.20.0/kind-linux-amd64" size="6455929" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.20.0" released="2023-06-15" stability="stable" main="kind" id="sha256new_7J3Q7HBE63HR3ZERHUNSQOS4FHFFCVXZUSUWEVWVYBJCCBTWV3ZA">
+      <manifest-digest sha256new="7J3Q7HBE63HR3ZERHUNSQOS4FHFFCVXZUSUWEVWVYBJCCBTWV3ZA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.20.0/kind-linux-arm64" size="6253689" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.20.0" released="2023-06-15" stability="stable" main="kind" id="sha256new_ZE22D3P7RXGFFEO333HVCJSQ62IPTJSR5K46XQ2O7K7N6BXQRR3A">
+      <manifest-digest sha256new="ZE22D3P7RXGFFEO333HVCJSQ62IPTJSR5K46XQ2O7K7N6BXQRR3A"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.20.0/kind-darwin-amd64" size="6429552" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="0.20.0" released="2023-06-15" stability="stable" main="kind" id="sha256new_3AA4KQBTPX67IXPDXX43MMUSSMC2ZTRXJV2NM5HSKUZN5SF3QJDQ">
+      <manifest-digest sha256new="3AA4KQBTPX67IXPDXX43MMUSSMC2ZTRXJV2NM5HSKUZN5SF3QJDQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.20.0/kind-darwin-arm64" size="6358514" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.21.0" released="2024-02-02" stability="stable" main="kind.exe" id="sha256new_5YSWISBSELMQHJZYHCI5CHOLB7H3QPILIRDEZ4II5L6DKJ34LEMA">
+      <manifest-digest sha256new="5YSWISBSELMQHJZYHCI5CHOLB7H3QPILIRDEZ4II5L6DKJ34LEMA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.21.0/kind-windows-amd64" size="6501888" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.21.0" released="2024-02-02" stability="stable" main="kind" id="sha256new_APEM7ZGBTHDLTPWYGB23FORYAYHZNY757X3ELMWUP5CFJ3DISCXQ">
+      <manifest-digest sha256new="APEM7ZGBTHDLTPWYGB23FORYAYHZNY757X3ELMWUP5CFJ3DISCXQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.21.0/kind-linux-amd64" size="6395039" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.21.0" released="2024-02-02" stability="stable" main="kind" id="sha256new_ZOQQMK2OHRRMYGBJRNAHZCFM7ZAMYP2547SVXIUCTRXY6SW3NPNQ">
+      <manifest-digest sha256new="ZOQQMK2OHRRMYGBJRNAHZCFM7ZAMYP2547SVXIUCTRXY6SW3NPNQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.21.0/kind-linux-arm64" size="6250143" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.21.0" released="2024-02-02" stability="stable" main="kind" id="sha256new_F3LPCJB6K6EBKCDSBQCUPT5IPNL7N2J6RB3X3XCNEPZJUVVZ5R7A">
+      <manifest-digest sha256new="F3LPCJB6K6EBKCDSBQCUPT5IPNL7N2J6RB3X3XCNEPZJUVVZ5R7A"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.21.0/kind-darwin-amd64" size="6369120" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="0.21.0" released="2024-02-02" stability="stable" main="kind" id="sha256new_EYGTMSSEQCJATDOKA2DR7MMTLINNJHTAMP3TFWHYXMIVSL4DVCMA">
+      <manifest-digest sha256new="EYGTMSSEQCJATDOKA2DR7MMTLINNJHTAMP3TFWHYXMIVSL4DVCMA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.21.0/kind-darwin-arm64" size="6305026" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.22.0" released="2024-02-14" stability="stable" main="kind.exe" id="sha256new_MXLCGASYFPM26XQGEZRFI6THLIXALJD4OLABWIUTUWUURYTO5J7Q">
+      <manifest-digest sha256new="MXLCGASYFPM26XQGEZRFI6THLIXALJD4OLABWIUTUWUURYTO5J7Q"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.22.0/kind-windows-amd64" size="6503424" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.22.0" released="2024-02-14" stability="stable" main="kind" id="sha256new_SYVJWVURLEQDV2LFGQI7WIA6UCZPMOFBDPA2746TUWSAZECLLEQQ">
+      <manifest-digest sha256new="SYVJWVURLEQDV2LFGQI7WIA6UCZPMOFBDPA2746TUWSAZECLLEQQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.22.0/kind-linux-amd64" size="6395039" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.22.0" released="2024-02-14" stability="stable" main="kind" id="sha256new_G2CRC4LLF2GRHUAQLHVU5SKRPQX2KUE3JREZRD3UIYLO3YNSCGPA">
+      <manifest-digest sha256new="G2CRC4LLF2GRHUAQLHVU5SKRPQX2KUE3JREZRD3UIYLO3YNSCGPA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.22.0/kind-linux-arm64" size="6250143" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.22.0" released="2024-02-14" stability="stable" main="kind" id="sha256new_SOZZ5V4MLXVIL2UUEM7EFVQ6UAY7HALNIGTE2RHFD2RBF7W3J33Q">
+      <manifest-digest sha256new="SOZZ5V4MLXVIL2UUEM7EFVQ6UAY7HALNIGTE2RHFD2RBF7W3J33Q"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.22.0/kind-darwin-amd64" size="6373216" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="0.22.0" released="2024-02-14" stability="stable" main="kind" id="sha256new_ARAC2EMW24OC2EJNS6YZQPEV7YL26K4TBWUP5S32URSPNYN363NQ">
+      <manifest-digest sha256new="ARAC2EMW24OC2EJNS6YZQPEV7YL26K4TBWUP5S32URSPNYN363NQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.22.0/kind-darwin-arm64" size="6321570" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.23.0" released="2024-05-14" stability="stable" main="kind.exe" id="sha256new_KRGQY6EVZS7LJ6CID7SYW7TTFM2SMCCKZQWPGD6OBCLTT4AMFDZQ">
+      <manifest-digest sha256new="KRGQY6EVZS7LJ6CID7SYW7TTFM2SMCCKZQWPGD6OBCLTT4AMFDZQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.23.0/kind-windows-amd64" size="6704128" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.23.0" released="2024-05-14" stability="stable" main="kind" id="sha256new_BFXNKOCPSRIZSIAMUAJG4TVPS2ZBDIIZG23BIC2RQGF6EPWEXMTQ">
+      <manifest-digest sha256new="BFXNKOCPSRIZSIAMUAJG4TVPS2ZBDIIZG23BIC2RQGF6EPWEXMTQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.23.0/kind-linux-amd64" size="6534249" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.23.0" released="2024-05-14" stability="stable" main="kind" id="sha256new_PHRVX27WUIKMP3UMRATJED5FP6PS7HQM7U45X457RNTYKNW34X6Q">
+      <manifest-digest sha256new="PHRVX27WUIKMP3UMRATJED5FP6PS7HQM7U45X457RNTYKNW34X6Q"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.23.0/kind-linux-arm64" size="6340234" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.23.0" released="2024-05-14" stability="stable" main="kind" id="sha256new_MLQDML62XNKOMYRIVHKNFDGBU5FFO6NUUU47BXRY3IUH4BGWQ7RQ">
+      <manifest-digest sha256new="MLQDML62XNKOMYRIVHKNFDGBU5FFO6NUUU47BXRY3IUH4BGWQ7RQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.23.0/kind-darwin-amd64" size="6509616" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="0.23.0" released="2024-05-14" stability="stable" main="kind" id="sha256new_U5CPMM7I5EUON5J7CMR5SWFNAIF5CFD3CRQ2FUIRN3SBSUS54LGQ">
+      <manifest-digest sha256new="U5CPMM7I5EUON5J7CMR5SWFNAIF5CFD3CRQ2FUIRN3SBSUS54LGQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.23.0/kind-darwin-arm64" size="6476738" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.24.0" released="2024-08-15" stability="stable" main="kind.exe" id="sha256new_QN5T4TBR6VWJW5DWPR7AKJISRHGTE5UIUG2UA4L3NV2QLJXDD6JQ">
+      <manifest-digest sha256new="QN5T4TBR6VWJW5DWPR7AKJISRHGTE5UIUG2UA4L3NV2QLJXDD6JQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.24.0/kind-windows-amd64" size="10144768" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.24.0" released="2024-08-15" stability="stable" main="kind" id="sha256new_PWE2XHDZLOM3RZTQPTTS6MNCPVNG6AY6NL6TRVT5WPJKUT7WZG5A">
+      <manifest-digest sha256new="PWE2XHDZLOM3RZTQPTTS6MNCPVNG6AY6NL6TRVT5WPJKUT7WZG5A"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.24.0/kind-linux-amd64" size="9930525" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.24.0" released="2024-08-15" stability="stable" main="kind" id="sha256new_NB57HTV6KFRQQQACUAPMTNYI5D3JARYQM4NERDMBFKY2GQLAAJNQ">
+      <manifest-digest sha256new="NB57HTV6KFRQQQACUAPMTNYI5D3JARYQM4NERDMBFKY2GQLAAJNQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.24.0/kind-linux-arm64" size="9545487" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.24.0" released="2024-08-15" stability="stable" main="kind" id="sha256new_VGKFQUUCFBFGJHX6Y45IO33P53B6UNOPJZSL6MQWFRPCWTGACAOA">
+      <manifest-digest sha256new="VGKFQUUCFBFGJHX6Y45IO33P53B6UNOPJZSL6MQWFRPCWTGACAOA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.24.0/kind-darwin-amd64" size="10080240" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="0.24.0" released="2024-08-15" stability="stable" main="kind" id="sha256new_52E76TGUWR2CIJ72XI5AQ35NQDOXTHD3ES3RTFMU4Z2TZLEI7S2A">
+      <manifest-digest sha256new="52E76TGUWR2CIJ72XI5AQ35NQDOXTHD3ES3RTFMU4Z2TZLEI7S2A"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.24.0/kind-darwin-arm64" size="9697458" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.25.0" released="2024-11-08" stability="stable" main="kind.exe" id="sha256new_FTKXVDZQT6VKNBYDLDBESRT3SWAV6FLM7GGF2OPKI5JBVLJSIM4A">
+      <manifest-digest sha256new="FTKXVDZQT6VKNBYDLDBESRT3SWAV6FLM7GGF2OPKI5JBVLJSIM4A"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.25.0/kind-windows-amd64" size="10145792" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.25.0" released="2024-11-08" stability="stable" main="kind" id="sha256new_7DQIZJVA7KKRU2ZWILGR6N7FSXREYN7VAUVKON43WHRJ42LOGC5Q">
+      <manifest-digest sha256new="7DQIZJVA7KKRU2ZWILGR6N7FSXREYN7VAUVKON43WHRJ42LOGC5Q"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.25.0/kind-linux-amd64" size="9930525" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.25.0" released="2024-11-08" stability="stable" main="kind" id="sha256new_LXRWJCLHFO7QBHSE4LDZKXDLCJTL6CZIFVDRLEFO54L5G6UMNLAA">
+      <manifest-digest sha256new="LXRWJCLHFO7QBHSE4LDZKXDLCJTL6CZIFVDRLEFO54L5G6UMNLAA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.25.0/kind-linux-arm64" size="9545487" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.25.0" released="2024-11-08" stability="stable" main="kind" id="sha256new_QSDMWP5PNHHDOL2HNJ74T6DMO46WHYBNIBGQCWQF3DSQ5MY3P6EA">
+      <manifest-digest sha256new="QSDMWP5PNHHDOL2HNJ74T6DMO46WHYBNIBGQCWQF3DSQ5MY3P6EA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.25.0/kind-darwin-amd64" size="10080240" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="0.25.0" released="2024-11-08" stability="stable" main="kind" id="sha256new_KXZUBB2JVTFVD24PSO2LX5FOUJHFAEUUH5XUOVEDLAOAZX2I5NGA">
+      <manifest-digest sha256new="KXZUBB2JVTFVD24PSO2LX5FOUJHFAEUUH5XUOVEDLAOAZX2I5NGA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.25.0/kind-darwin-arm64" size="9697458" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.26.0" released="2024-12-16" stability="stable" main="kind.exe" id="sha256new_64MQYWNBX4QNP5LDAPUEWVKI4OZUFQWR6RQFBOT3F725PYIT52CQ">
+      <manifest-digest sha256new="64MQYWNBX4QNP5LDAPUEWVKI4OZUFQWR6RQFBOT3F725PYIT52CQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.26.0/kind-windows-amd64" size="10668544" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.26.0" released="2024-12-16" stability="stable" main="kind" id="sha256new_SIVXIPWKRBKL73WPVS2NSKAU65AIJ4MYAQLGBOC2INTFS6W6MKBA">
+      <manifest-digest sha256new="SIVXIPWKRBKL73WPVS2NSKAU65AIJ4MYAQLGBOC2INTFS6W6MKBA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.26.0/kind-linux-amd64" size="10454801" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.26.0" released="2024-12-16" stability="stable" main="kind" id="sha256new_2MLC5B5QW7SCTTOXFXW7GJFPTXNVTXKDEX2N67TFEH2MTYAUW7MQ">
+      <manifest-digest sha256new="2MLC5B5QW7SCTTOXFXW7GJFPTXNVTXKDEX2N67TFEH2MTYAUW7MQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.26.0/kind-linux-arm64" size="10058651" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.26.0" released="2024-12-16" stability="stable" main="kind" id="sha256new_DSSW6I5O2QJXXPNCGNY377HYO4GLSQRR2ESAPGCYN73CJZIJB3WQ">
+      <manifest-digest sha256new="DSSW6I5O2QJXXPNCGNY377HYO4GLSQRR2ESAPGCYN73CJZIJB3WQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.26.0/kind-darwin-amd64" size="10583136" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="0.26.0" released="2024-12-16" stability="stable" main="kind" id="sha256new_SVUOWQLT3IEWOOI4L2RPP57OXPKEJ6TGAMB32I5OZRJUMDJEAMQA">
+      <manifest-digest sha256new="SVUOWQLT3IEWOOI4L2RPP57OXPKEJ6TGAMB32I5OZRJUMDJEAMQA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.26.0/kind-darwin-arm64" size="10167442" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.27.0" released="2025-02-15" stability="stable" main="kind.exe" id="sha256new_2VZFUCF3SVJCHU32QLWJRSSXDYFFC6M2QBUHXFFU7QZK4PLX7KGQ">
+      <manifest-digest sha256new="2VZFUCF3SVJCHU32QLWJRSSXDYFFC6M2QBUHXFFU7QZK4PLX7KGQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.27.0/kind-windows-amd64" size="10671616" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.27.0" released="2025-02-15" stability="stable" main="kind" id="sha256new_ZXK5TPII4XK6M3PC5KSDVRQ5G2ZKSCTHLSHMRMNDTVFPCAQ6TQAA">
+      <manifest-digest sha256new="ZXK5TPII4XK6M3PC5KSDVRQ5G2ZKSCTHLSHMRMNDTVFPCAQ6TQAA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.27.0/kind-linux-amd64" size="10458985" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.27.0" released="2025-02-15" stability="stable" main="kind" id="sha256new_W5UVCL6TSEW52PLC4KQ4HH4O44B5LZDPNKM7HQV6LMEL5QAGSWRA">
+      <manifest-digest sha256new="W5UVCL6TSEW52PLC4KQ4HH4O44B5LZDPNKM7HQV6LMEL5QAGSWRA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.27.0/kind-linux-arm64" size="10058739" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.27.0" released="2025-02-15" stability="stable" main="kind" id="sha256new_SGWMZ45YZVX6PTMMOFYZYRIRIBBHMYAETB5T4SSWUEJMDOJ6FKHQ">
+      <manifest-digest sha256new="SGWMZ45YZVX6PTMMOFYZYRIRIBBHMYAETB5T4SSWUEJMDOJ6FKHQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.27.0/kind-darwin-amd64" size="10591392" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="0.27.0" released="2025-02-15" stability="stable" main="kind" id="sha256new_G6I2P32EWY6M2NKHEMK2MXUOCSE5EBHEFSOU64ZFXZA7VZUXTS2A">
+      <manifest-digest sha256new="G6I2P32EWY6M2NKHEMK2MXUOCSE5EBHEFSOU64ZFXZA7VZUXTS2A"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.27.0/kind-darwin-arm64" size="10167506" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.28.0" released="2025-05-16" stability="stable" main="kind.exe" id="sha256new_6GVQJJ6Z5CUX6A6R4OYF6DRWT3NE6FH3NGEZO3YA53OOOB2VQSCQ">
+      <manifest-digest sha256new="6GVQJJ6Z5CUX6A6R4OYF6DRWT3NE6FH3NGEZO3YA53OOOB2VQSCQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.28.0/kind-windows-amd64" size="11266048" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.28.0" released="2025-05-16" stability="stable" main="kind" id="sha256new_BWOMUN26RSG3LUIHMXXFMCJR6XKJC3BVGADYFCXTV7QHTIB4V36Q">
+      <manifest-digest sha256new="BWOMUN26RSG3LUIHMXXFMCJR6XKJC3BVGADYFCXTV7QHTIB4V36Q"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.28.0/kind-linux-amd64" size="11058152" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.28.0" released="2025-05-16" stability="stable" main="kind" id="sha256new_M52YNMSA5QJRRTZS3JMELQDQ2GJC2PYCMTZUASJEZKSP4AWA3HNQ">
+      <manifest-digest sha256new="M52YNMSA5QJRRTZS3JMELQDQ2GJC2PYCMTZUASJEZKSP4AWA3HNQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.28.0/kind-linux-arm64" size="10455803" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.28.0" released="2025-05-16" stability="stable" main="kind" id="sha256new_RRHJCIFEKAOQ4GPNMITDIDJVGFPHJN34PODM6L24UH74AJYPH4IQ">
+      <manifest-digest sha256new="RRHJCIFEKAOQ4GPNMITDIDJVGFPHJN34PODM6L24UH74AJYPH4IQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.28.0/kind-darwin-amd64" size="11192272" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="0.28.0" released="2025-05-16" stability="stable" main="kind" id="sha256new_UJ4F47PEWD4SP6OLFPHMD3XWMKZSELFNEQK56H3BMFAL4RORAVJQ">
+      <manifest-digest sha256new="UJ4F47PEWD4SP6OLFPHMD3XWMKZSELFNEQK56H3BMFAL4RORAVJQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.28.0/kind-darwin-arm64" size="10627394" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.29.0" released="2025-05-21" stability="stable" main="kind.exe" id="sha256new_22OYCSDY73UETSXQO2E2QZBWAAJOCLW2ZJXZBCAIHYBQYVTL3KEA">
+      <manifest-digest sha256new="22OYCSDY73UETSXQO2E2QZBWAAJOCLW2ZJXZBCAIHYBQYVTL3KEA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.29.0/kind-windows-amd64" size="11266048" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.29.0" released="2025-05-21" stability="stable" main="kind" id="sha256new_LQXFLDOXAWKENIHVU5JI47GVBTTEHS57EKPG6ACARHJA6DWPWJCA">
+      <manifest-digest sha256new="LQXFLDOXAWKENIHVU5JI47GVBTTEHS57EKPG6ACARHJA6DWPWJCA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.29.0/kind-linux-amd64" size="11058152" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.29.0" released="2025-05-21" stability="stable" main="kind" id="sha256new_RB7B5NZIWRRDXMABFXCX2I2HJ3ZOOMN7FPVKBGDHRGENTZRGEIXA">
+      <manifest-digest sha256new="RB7B5NZIWRRDXMABFXCX2I2HJ3ZOOMN7FPVKBGDHRGENTZRGEIXA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.29.0/kind-linux-arm64" size="10455803" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.29.0" released="2025-05-21" stability="stable" main="kind" id="sha256new_WJKKSGA4ZCIISQTN44N6EU3QNJNWRE3MZD5FEJNCUDZ6U5ONVVDA">
+      <manifest-digest sha256new="WJKKSGA4ZCIISQTN44N6EU3QNJNWRE3MZD5FEJNCUDZ6U5ONVVDA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.29.0/kind-darwin-amd64" size="11192272" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="0.29.0" released="2025-05-21" stability="stable" main="kind" id="sha256new_RWTLCSU2R42PBKXK3RFEWLT2QV4NQZQRPZ5FKFEXO5CUNPPFJTEA">
+      <manifest-digest sha256new="RWTLCSU2R42PBKXK3RFEWLT2QV4NQZQRPZ5FKFEXO5CUNPPFJTEA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.29.0/kind-darwin-arm64" size="10627394" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.30.0" released="2025-08-27" stability="stable" main="kind.exe" id="sha256new_JWUYU7JAQRXQCNVI3ZPGK3U6DQAHHXH54PR6EQ63BA3DBEGDF2UQ">
+      <manifest-digest sha256new="JWUYU7JAQRXQCNVI3ZPGK3U6DQAHHXH54PR6EQ63BA3DBEGDF2UQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.30.0/kind-windows-amd64" size="11264000" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.30.0" released="2025-08-27" stability="stable" main="kind" id="sha256new_5ROCQIAFBY3GS2B5NDUQKY23E3SRYIWG3DLFPSSMX2G5LBLQ2BNA">
+      <manifest-digest sha256new="5ROCQIAFBY3GS2B5NDUQKY23E3SRYIWG3DLFPSSMX2G5LBLQ2BNA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.30.0/kind-linux-amd64" size="11055553" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.30.0" released="2025-08-27" stability="stable" main="kind" id="sha256new_XBJHWUCXWPOLFEJDU5G5BVSLTH7KPCBP7YNWJ3EW3OQAFFJUFADQ">
+      <manifest-digest sha256new="XBJHWUCXWPOLFEJDU5G5BVSLTH7KPCBP7YNWJ3EW3OQAFFJUFADQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.30.0/kind-linux-arm64" size="10453204" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.30.0" released="2025-08-27" stability="stable" main="kind" id="sha256new_GHOIZFKJAZPZ5T7U4KLDV27H466PSFXWBDMTYGURPPBN62X2FPIQ">
+      <manifest-digest sha256new="GHOIZFKJAZPZ5T7U4KLDV27H466PSFXWBDMTYGURPPBN62X2FPIQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.30.0/kind-darwin-amd64" size="11189744" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="0.30.0" released="2025-08-27" stability="stable" main="kind" id="sha256new_GLQ3NERPFDT56AYQ5CSYCYTPKFPFBSOWROJV5VCRBHF6GCLGLQ2A">
+      <manifest-digest sha256new="GLQ3NERPFDT56AYQ5CSYCYTPKFPFBSOWROJV5VCRBHF6GCLGLQ2A"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.30.0/kind-darwin-arm64" size="10624850" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.31.0" released="2025-12-18" stability="stable" main="kind.exe" id="sha256new_TCLTGVD5JABSK2EQOD4L2Y6KONVXDXY43GUI4KFDMIUYNQYDYH5Q">
+      <manifest-digest sha256new="TCLTGVD5JABSK2EQOD4L2Y6KONVXDXY43GUI4KFDMIUYNQYDYH5Q"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.31.0/kind-windows-amd64" size="11320320" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.31.0" released="2025-12-18" stability="stable" main="kind" id="sha256new_4TV6NP6JLVW5NQVD5SRPQUQON5LZDRFCGZKV6L6P73TRLSV3AIAA">
+      <manifest-digest sha256new="4TV6NP6JLVW5NQVD5SRPQUQON5LZDRFCGZKV6L6P73TRLSV3AIAA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.31.0/kind-linux-amd64" size="11097044" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.31.0" released="2025-12-18" stability="stable" main="kind" id="sha256new_UBJTKGYHD5YNAIUP2QYHVMMYH7WUPXJDKWC4FBH7E26W7GUXDGZQ">
+      <manifest-digest sha256new="UBJTKGYHD5YNAIUP2QYHVMMYH7WUPXJDKWC4FBH7E26W7GUXDGZQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.31.0/kind-linux-arm64" size="10458020" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.31.0" released="2025-12-18" stability="stable" main="kind" id="sha256new_E6ZAFKFPP72IDCXZXXWSVKVQOKKHDAZ7DXGM43GF4YUV77TW7EWA">
+      <manifest-digest sha256new="E6ZAFKFPP72IDCXZXXWSVKVQOKKHDAZ7DXGM43GF4YUV77TW7EWA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.31.0/kind-darwin-amd64" size="11186256" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="0.31.0" released="2025-12-18" stability="stable" main="kind" id="sha256new_CN32AE5BZGWHL54DYIIWYBFFDIGYMN2RKA7EZYWPYZUKRQTBICRA">
+      <manifest-digest sha256new="CN32AE5BZGWHL54DYIIWYBFFDIGYMN2RKA7EZYWPYZUKRQTBICRA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.31.0/kind-darwin-arm64" size="10538994" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.32.0" released="2026-06-02" stability="stable" main="kind.exe" id="sha256new_57KH6U2FHIJ2ZJNASUSJJZHRP4PSBYA2UD6IHKF4COZJQIRRTE4Q">
+      <manifest-digest sha256new="57KH6U2FHIJ2ZJNASUSJJZHRP4PSBYA2UD6IHKF4COZJQIRRTE4Q"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.32.0/kind-windows-amd64" size="10833920" dest="kind.exe"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="0.32.0" released="2026-06-02" stability="stable" main="kind" id="sha256new_T7P3TUYUJUNC3T5Z5ZBTAKTKZPYOT6O4NOQJ5IKEAROHTAR6XLVA">
+      <manifest-digest sha256new="T7P3TUYUJUNC3T5Z5ZBTAKTKZPYOT6O4NOQJ5IKEAROHTAR6XLVA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.32.0/kind-linux-amd64" size="10522750" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="0.32.0" released="2026-06-02" stability="stable" main="kind" id="sha256new_TCY6RUYE4CSURCA7MNNRNSQXK6HGKUKCLGXB76A6BBVWKXPSV5BA">
+      <manifest-digest sha256new="TCY6RUYE4CSURCA7MNNRNSQXK6HGKUKCLGXB76A6BBVWKXPSV5BA"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.32.0/kind-linux-arm64" size="9764990" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="0.32.0" released="2026-06-02" stability="stable" main="kind" id="sha256new_VC53YKDAP7CPIJXK7HHF2GANNN7B5MBWQ7QEDEXXNFBVOSRFXUXQ">
+      <manifest-digest sha256new="VC53YKDAP7CPIJXK7HHF2GANNN7B5MBWQ7QEDEXXNFBVOSRFXUXQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.32.0/kind-darwin-amd64" size="10719376" dest="kind" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="0.32.0" released="2026-06-02" stability="stable" main="kind" id="sha256new_JSGB536G7MWN5ORKQM6S6HUCQUHHTP4HGEV5VBF2YBDTNJJTB3TQ">
+      <manifest-digest sha256new="JSGB536G7MWN5ORKQM6S6HUCQUHHTP4HGEV5VBF2YBDTNJJTB3TQ"/>
+      <file href="https://github.com/kubernetes-sigs/kind/releases/download/v0.32.0/kind-darwin-arm64" size="9964754" dest="kind" executable="true"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmpaJLoACgkQWao5J8JOTh5CQAf9FZG6
+pdu0L2JKDvdE88G0G2oM+WcSH5jM2xdiJZ0DVEsRr6seIXKDuhs/WrKL/0HEc5u7/wl2COO5nlwb
+w3pRdE2PCBT1Z0TUEG5iI3w6yr7kDhwPiRXpS4msGma4su4iKbD/z4eVlxJtxeHGXUAhkWQAlUV5
+EVjJRlqShs7rQQt3vg7EZx9aGh5vvCcQkpVlmCGQoVBrWBk/IHH+gNmozFCxGY8jNnGjDRm83A+H
+1SD/JAsD+zrT4Eq6+3frhPdsWUzT6GCyfG6+wol4y0PWKXFD6aTKTBUqBmsPNR8r9Cvmly8NKg7P
+2kyWW6cTKiCgJ3YaF25FNML2AK8eQ6HA4Q==
+
+-->

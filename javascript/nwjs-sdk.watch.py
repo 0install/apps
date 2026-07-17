@@ -1,9 +1,9 @@
-#os=Linux
 from urllib import request
 import re
 from datetime import datetime
 
-data = request.urlopen('https://dl.nwjs.io/').read().decode('utf-8')
+req = request.Request('https://dl.nwjs.io/', headers={'User-Agent': 'Mozilla/5.0'})
+data = request.urlopen(req).read().decode('utf-8')
 matches = re.findall(r'v([0-9\.\-alphabetarc]+)\/<\/a><\/td><td align="right">(..-...-....)', data)
 releases = [{
     'version': match[0].replace('alpha', 'pre1-').replace('beta', 'pre2-') + '-0', # -0 suffix to ensure SDK is always considered "newer" than regular build

@@ -218,7 +218,7 @@ http://creativecommons.org/licenses/by-sa/2.5/
 																</td>
 																<td>
 																	<xsl:for-each select=".//zi:archive | .//zi:file">
-																		<a href="{@href}">Download</a> (<xsl:value-of select="@size"/> bytes)
+																		<a href="{@href}">Download</a> (<xsl:call-template name="format-size"><xsl:with-param name="size" select="@size"/></xsl:call-template>)
 																	</xsl:for-each>
 																</td>
 															</tr>
@@ -293,6 +293,16 @@ http://creativecommons.org/licenses/by-sa/2.5/
 				</div>
 			</body>
 		</html>
+	</xsl:template>
+
+	<xsl:template name="format-size">
+		<xsl:param name="size"/>
+		<xsl:choose>
+			<xsl:when test="$size &gt;= 1073741824"><xsl:value-of select="format-number($size div 1073741824, '0.#')"/> GiB</xsl:when>
+			<xsl:when test="$size &gt;= 1048576"><xsl:value-of select="format-number($size div 1048576, '0.#')"/> MiB</xsl:when>
+			<xsl:when test="$size &gt;= 1024"><xsl:value-of select="format-number($size div 1024, '0.#')"/> KiB</xsl:when>
+			<xsl:otherwise><xsl:value-of select="$size"/> bytes</xsl:otherwise>
+		</xsl:choose>
 	</xsl:template>
 
 	<xsl:template name="description">

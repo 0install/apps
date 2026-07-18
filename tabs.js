@@ -1,12 +1,4 @@
-function hideTabs() {
-    $('.nav-tabs a.nav-link').removeClass('active');
-    $('.tab-body').hide();
-}
-
-function showTab(name) {
-    $('.nav-tabs a.nav-link[href="#' + name + '"]').addClass('active');
-    $('#' + name + '-tab').show();
-}
+// Uses hideTabs()/showTab() from https://0install.net/js/site.js
 
 function updateTabs() {
     hideTabs();
@@ -19,5 +11,5 @@ function updateTabs() {
     }
 }
 
-$(window).bind('hashchange', updateTabs);
-$(function() { updateTabs(); });
+addEventListener('hashchange', updateTabs);
+updateTabs();

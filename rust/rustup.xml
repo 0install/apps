@@ -1,0 +1,891 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/rust/rustup.xml">
+  <name>rustup</name>
+  <summary>the Rust toolchain installer</summary>
+  <description>rustup installs the Rust programming language from the official release channels, enabling you to easily switch between stable, beta, and nightly compilers and keep them updated. It makes cross-compiling simpler with binary builds of the standard library for common platforms.</description>
+  <homepage>https://rust-lang.org/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+  <icon href="https://apps.0install.net/rust/rust.png" type="image/png"/>
+  <icon href="https://apps.0install.net/rust/rust.ico" type="image/vnd.microsoft.icon"/>
+
+  <entry-point binary-name="rustup" command="run">
+    <needs-terminal/>
+    <name>rustup</name>
+    <summary>the Rust toolchain installer</summary>
+  </entry-point>
+  <entry-point binary-name="cargo" command="cargo">
+    <needs-terminal/>
+    <name>cargo</name>
+    <summary>the Rust package manager</summary>
+  </entry-point>
+  <entry-point binary-name="rustc" command="rustc">
+    <needs-terminal/>
+    <name>rustc</name>
+    <summary>the Rust compiler</summary>
+  </entry-point>
+  <entry-point binary-name="rustdoc" command="rustdoc">
+    <needs-terminal/>
+    <name>rustdoc</name>
+    <summary>generate documentation for a Rust crate</summary>
+  </entry-point>
+  <entry-point binary-name="rustfmt" command="rustfmt">
+    <needs-terminal/>
+    <name>rustfmt</name>
+    <summary>format Rust code</summary>
+  </entry-point>
+
+  <group license="MIT OR Apache-2.0">
+    <command name="run" path="rustup"/>
+    <command name="cargo" path="rustup">
+      <arg>run</arg>
+      <arg>stable</arg>
+      <arg>cargo</arg>
+    </command>
+    <command name="rustc" path="rustup">
+      <arg>run</arg>
+      <arg>stable</arg>
+      <arg>rustc</arg>
+    </command>
+    <command name="rustdoc" path="rustup">
+      <arg>run</arg>
+      <arg>stable</arg>
+      <arg>rustdoc</arg>
+    </command>
+    <command name="rustfmt" path="rustup">
+      <arg>run</arg>
+      <arg>stable</arg>
+      <arg>rustfmt</arg>
+    </command>
+
+    <implementation arch="Linux-x86_64" version="1.16.0" released="2026-07-21" stability="stable" id="sha256new_5S4T3UYCOYOITOZFCSBMHYAPO6CAQHDCOGAGISJBE5VTXWX77JKA">
+      <manifest-digest sha256new="5S4T3UYCOYOITOZFCSBMHYAPO6CAQHDCOGAGISJBE5VTXWX77JKA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.16.0/x86_64-unknown-linux-gnu/rustup-init" size="11116056" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.16.0" released="2026-07-21" stability="stable" id="sha256new_TFHZWWQXNDFZKKVNP56D3YQUXVKJXT2YHDJW37XF6MB3DFEBZY3Q">
+      <manifest-digest sha256new="TFHZWWQXNDFZKKVNP56D3YQUXVKJXT2YHDJW37XF6MB3DFEBZY3Q"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.16.0/i686-unknown-linux-gnu/rustup-init" size="10383380" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.16.0" released="2026-07-21" stability="stable" id="sha256new_JV65IJKBYTZZ7TZFRYG63WDLVDRHOZNHJPMQXEYUHUBDJFVXWZSA">
+      <manifest-digest sha256new="JV65IJKBYTZZ7TZFRYG63WDLVDRHOZNHJPMQXEYUHUBDJFVXWZSA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.16.0/aarch64-unknown-linux-gnu/rustup-init" size="10257352" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.16.0" released="2026-07-21" stability="stable" id="sha256new_GX5KS5VFJPULWCVP664I2DIYJ2HUVAXH3RP7CXRBNHBTOFWMEZWA">
+      <manifest-digest sha256new="GX5KS5VFJPULWCVP664I2DIYJ2HUVAXH3RP7CXRBNHBTOFWMEZWA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.16.0/x86_64-apple-darwin/rustup-init" size="6786016" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.17.0" released="2026-07-21" stability="stable" id="sha256new_ROXJRYCODL6ZNKY3QT2UDSJI3LITGQN63TIRFH2GKZZ6VENOERWQ">
+      <manifest-digest sha256new="ROXJRYCODL6ZNKY3QT2UDSJI3LITGQN63TIRFH2GKZZ6VENOERWQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.17.0/x86_64-unknown-linux-gnu/rustup-init" size="10794568" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.17.0" released="2026-07-21" stability="stable" id="sha256new_STZD6GXGYVQ36MTAFHI7PAAKKCKHVBT2QVKR2UTGOI5ZFXNZTOJQ">
+      <manifest-digest sha256new="STZD6GXGYVQ36MTAFHI7PAAKKCKHVBT2QVKR2UTGOI5ZFXNZTOJQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.17.0/i686-unknown-linux-gnu/rustup-init" size="10114948" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.17.0" released="2026-07-21" stability="stable" id="sha256new_S7FNOWLM7PUMEAQSYIMO2ZTNVHFBE6RUNAVBUZ6LH3MBDS6RKLIA">
+      <manifest-digest sha256new="S7FNOWLM7PUMEAQSYIMO2ZTNVHFBE6RUNAVBUZ6LH3MBDS6RKLIA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.17.0/aarch64-unknown-linux-gnu/rustup-init" size="9716328" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.17.0" released="2026-07-21" stability="stable" id="sha256new_6FTF4X5AWMJMMEXF6UACV6INNT6OTQZK2Q5PU4GJH6TRZBNMNSYA">
+      <manifest-digest sha256new="6FTF4X5AWMJMMEXF6UACV6INNT6OTQZK2Q5PU4GJH6TRZBNMNSYA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.17.0/x86_64-apple-darwin/rustup-init" size="6466896" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.18.0" released="2026-07-21" stability="stable" id="sha256new_VV5TMZJ4G32JJBXUXECMICBMDT5Q2TQISLGCFL6T7QS7KQBNCCYQ">
+      <manifest-digest sha256new="VV5TMZJ4G32JJBXUXECMICBMDT5Q2TQISLGCFL6T7QS7KQBNCCYQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.0/x86_64-unknown-linux-gnu/rustup-init" size="10712912" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.18.0" released="2026-07-21" stability="stable" id="sha256new_FDPNHIDOLEU7WBZOUVCVNXJCU77RMDWSKTWGS7YFTOCIIWI7FFFA">
+      <manifest-digest sha256new="FDPNHIDOLEU7WBZOUVCVNXJCU77RMDWSKTWGS7YFTOCIIWI7FFFA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.0/i686-unknown-linux-gnu/rustup-init" size="9913604" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.18.0" released="2026-07-21" stability="stable" id="sha256new_VREASKQCO4KXHCMN2C6E2HI7OSSJ2Z5EHVOOOFH4MHBW4DMQHMBA">
+      <manifest-digest sha256new="VREASKQCO4KXHCMN2C6E2HI7OSSJ2Z5EHVOOOFH4MHBW4DMQHMBA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.0/aarch64-unknown-linux-gnu/rustup-init" size="9704336" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.18.0" released="2026-07-21" stability="stable" id="sha256new_O66GTWRSDY7C6XG73DYE6GYGFJD662GD3RIURS5QG7BSVWXMBPSA">
+      <manifest-digest sha256new="O66GTWRSDY7C6XG73DYE6GYGFJD662GD3RIURS5QG7BSVWXMBPSA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.0/x86_64-apple-darwin/rustup-init" size="6881840" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.18.1" released="2026-07-21" stability="stable" id="sha256new_BXLSRXFMRICJWU6CLN5KUNOVKWQ2L32R4OFROZTPXP4ER2PZPOPQ">
+      <manifest-digest sha256new="BXLSRXFMRICJWU6CLN5KUNOVKWQ2L32R4OFROZTPXP4ER2PZPOPQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.1/x86_64-unknown-linux-gnu/rustup-init" size="10704208" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.18.1" released="2026-07-21" stability="stable" id="sha256new_CC2VITXZTHDZD2MMDJ5NBJD3TIKTI4KIZHTIX244TMASJAAIETYA">
+      <manifest-digest sha256new="CC2VITXZTHDZD2MMDJ5NBJD3TIKTI4KIZHTIX244TMASJAAIETYA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.1/i686-unknown-linux-gnu/rustup-init" size="9905008" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.18.1" released="2026-07-21" stability="stable" id="sha256new_237M6744V2ETAWDGEDDSBB2K5ILONAAW2WRYWGRUEWMXNTSBXGTQ">
+      <manifest-digest sha256new="237M6744V2ETAWDGEDDSBB2K5ILONAAW2WRYWGRUEWMXNTSBXGTQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.1/aarch64-unknown-linux-gnu/rustup-init" size="9699872" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.18.1" released="2026-07-21" stability="stable" id="sha256new_2THX453FICOKDET5XVDHJ5KQESLB5WYP5VX5Y54K324ND567C7JQ">
+      <manifest-digest sha256new="2THX453FICOKDET5XVDHJ5KQESLB5WYP5VX5Y54K324ND567C7JQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.1/x86_64-apple-darwin/rustup-init" size="6874168" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.18.2" released="2026-07-21" stability="stable" id="sha256new_THHQMS7RSOJQ74BC6EGFCFYB5JVWXMEFXENBYZP34Z7X5567S7MA">
+      <manifest-digest sha256new="THHQMS7RSOJQ74BC6EGFCFYB5JVWXMEFXENBYZP34Z7X5567S7MA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.2/x86_64-unknown-linux-gnu/rustup-init" size="10715640" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.18.2" released="2026-07-21" stability="stable" id="sha256new_AHJ75SBBPMHTVOZOZJLIBT6L74KCK5M5VRKMEKXMQHBQ66V5SJWQ">
+      <manifest-digest sha256new="AHJ75SBBPMHTVOZOZJLIBT6L74KCK5M5VRKMEKXMQHBQ66V5SJWQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.2/i686-unknown-linux-gnu/rustup-init" size="9915020" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.18.2" released="2026-07-21" stability="stable" id="sha256new_NPB5LTHF62ZWCUG5MFNCP7BRXDJXXBP5HCP25S4TL4NO3DUKAPMQ">
+      <manifest-digest sha256new="NPB5LTHF62ZWCUG5MFNCP7BRXDJXXBP5HCP25S4TL4NO3DUKAPMQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.2/aarch64-unknown-linux-gnu/rustup-init" size="9715872" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.18.2" released="2026-07-21" stability="stable" id="sha256new_I62UDXIYGAYKRZV5WFE3XOO5G4JERZOIUZ65CGYMEILQFDXSG3ZQ">
+      <manifest-digest sha256new="I62UDXIYGAYKRZV5WFE3XOO5G4JERZOIUZ65CGYMEILQFDXSG3ZQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.2/x86_64-apple-darwin/rustup-init" size="6879440" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.18.3" released="2026-07-21" stability="stable" id="sha256new_PDT5KZNRXI6RKLFIKEJUWZJCT6FOGB3TW2DPZBHLX7ATCQYI7VTA">
+      <manifest-digest sha256new="PDT5KZNRXI6RKLFIKEJUWZJCT6FOGB3TW2DPZBHLX7ATCQYI7VTA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.3/x86_64-unknown-linux-gnu/rustup-init" size="10734264" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.18.3" released="2026-07-21" stability="stable" id="sha256new_XKLNJBQMR4JJKNS3IQXVOCKZTXJ7LG4RPGGTQXE3NIZ4V7BEKK7Q">
+      <manifest-digest sha256new="XKLNJBQMR4JJKNS3IQXVOCKZTXJ7LG4RPGGTQXE3NIZ4V7BEKK7Q"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.3/i686-unknown-linux-gnu/rustup-init" size="9536544" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.18.3" released="2026-07-21" stability="stable" id="sha256new_XZ75BGHZ35KPWZ2QVJEMR27EPGYKGWNIQEACNXZQPLQT2Y2WIQFA">
+      <manifest-digest sha256new="XZ75BGHZ35KPWZ2QVJEMR27EPGYKGWNIQEACNXZQPLQT2Y2WIQFA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.3/aarch64-unknown-linux-gnu/rustup-init" size="9740904" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.18.3" released="2026-07-21" stability="stable" id="sha256new_IMX7PLX6GFTHOD2UUIHS26HNYDPG34WYHVVXFU5V5RSXRNCP4LCA">
+      <manifest-digest sha256new="IMX7PLX6GFTHOD2UUIHS26HNYDPG34WYHVVXFU5V5RSXRNCP4LCA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.3/x86_64-apple-darwin/rustup-init" size="6875720" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.19.0" released="2026-07-21" stability="stable" id="sha256new_VU2AQLSMKVIPUH4GNOUMZ7V4KTIG2GF3I4URWGKJ4XWZK5OEJTVA">
+      <manifest-digest sha256new="VU2AQLSMKVIPUH4GNOUMZ7V4KTIG2GF3I4URWGKJ4XWZK5OEJTVA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.19.0/x86_64-unknown-linux-gnu/rustup-init" size="11401048" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.19.0" released="2026-07-21" stability="stable" id="sha256new_RENRK22MZEGXEMKGEBMQRV4YVSCUSJW5XM4EVOM4RYRIFPAASJVA">
+      <manifest-digest sha256new="RENRK22MZEGXEMKGEBMQRV4YVSCUSJW5XM4EVOM4RYRIFPAASJVA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.19.0/i686-unknown-linux-gnu/rustup-init" size="10289956" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.19.0" released="2026-07-21" stability="stable" id="sha256new_7NH7YCNONUPTDAM34XUKLKSIGFH2Z44UK555FLKFQHLS4HAMSOZA">
+      <manifest-digest sha256new="7NH7YCNONUPTDAM34XUKLKSIGFH2Z44UK555FLKFQHLS4HAMSOZA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.19.0/aarch64-unknown-linux-gnu/rustup-init" size="10307176" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.19.0" released="2026-07-21" stability="stable" id="sha256new_E7V7W4275QQ5NMWKWTGDJDLJYCANLYMZ4F4JKYA65GZXUYHHYXBA">
+      <manifest-digest sha256new="E7V7W4275QQ5NMWKWTGDJDLJYCANLYMZ4F4JKYA65GZXUYHHYXBA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.19.0/x86_64-apple-darwin/rustup-init" size="7165888" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.20.0" released="2026-07-21" stability="stable" id="sha256new_V5AGHBN7VVJXDWNL66ZTBJVICJQIQPLSE4OZSIVNUPZP7BOPWSCQ">
+      <manifest-digest sha256new="V5AGHBN7VVJXDWNL66ZTBJVICJQIQPLSE4OZSIVNUPZP7BOPWSCQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.20.0/x86_64-unknown-linux-gnu/rustup-init" size="11604240" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.20.0" released="2026-07-21" stability="stable" id="sha256new_XUCFR7FFTZPOSWGC3S3S3AKDTDKGOVONSJ3AO3QV6T56ATG26AMA">
+      <manifest-digest sha256new="XUCFR7FFTZPOSWGC3S3S3AKDTDKGOVONSJ3AO3QV6T56ATG26AMA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.20.0/i686-unknown-linux-gnu/rustup-init" size="10382356" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.20.0" released="2026-07-21" stability="stable" id="sha256new_BCDBGTZLOUQQOA4ZRQ5JACIZFVPAUNYVS4YHSCEXPY7WTTGPNZIA">
+      <manifest-digest sha256new="BCDBGTZLOUQQOA4ZRQ5JACIZFVPAUNYVS4YHSCEXPY7WTTGPNZIA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.20.0/aarch64-unknown-linux-gnu/rustup-init" size="10629304" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.20.0" released="2026-07-21" stability="stable" id="sha256new_DHCKVXHJIOVFKZRASYC2X76JRNXSVFZBX726VW2Y5XWUQBQZTOKQ">
+      <manifest-digest sha256new="DHCKVXHJIOVFKZRASYC2X76JRNXSVFZBX726VW2Y5XWUQBQZTOKQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.20.0/x86_64-apple-darwin/rustup-init" size="7201120" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.20.1" released="2026-07-21" stability="stable" id="sha256new_ZRLXDNK2NUXLRFFPGDE5SBYALLYEZIPS3K24D7VSROKUCQ33S2GA">
+      <manifest-digest sha256new="ZRLXDNK2NUXLRFFPGDE5SBYALLYEZIPS3K24D7VSROKUCQ33S2GA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.20.1/x86_64-unknown-linux-gnu/rustup-init" size="11605856" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.20.1" released="2026-07-21" stability="stable" id="sha256new_IK5EI3R7UEAD4KXG7VQSYNYCOSRSWQV63MSODJJIKVQOXQG5YP4A">
+      <manifest-digest sha256new="IK5EI3R7UEAD4KXG7VQSYNYCOSRSWQV63MSODJJIKVQOXQG5YP4A"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.20.1/i686-unknown-linux-gnu/rustup-init" size="10383912" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.20.1" released="2026-07-21" stability="stable" id="sha256new_QEEODIAVX55P2AH2CCVWZMYYLOW4TSIZF7AGFGVC5OMB7ID773QQ">
+      <manifest-digest sha256new="QEEODIAVX55P2AH2CCVWZMYYLOW4TSIZF7AGFGVC5OMB7ID773QQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.20.1/aarch64-unknown-linux-gnu/rustup-init" size="10629528" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.20.1" released="2026-07-21" stability="stable" id="sha256new_WTNGHYECJKGWEFH2BIIWIPBZFFHEMLM3BKTQZESHFGNOSOJCJQ4A">
+      <manifest-digest sha256new="WTNGHYECJKGWEFH2BIIWIPBZFFHEMLM3BKTQZESHFGNOSOJCJQ4A"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.20.1/x86_64-apple-darwin/rustup-init" size="7201128" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.20.2" released="2026-07-21" stability="stable" id="sha256new_EPUPJ5NP3OF7VRIZXU4PH2OYR7UUDEDNW7IBXYWNSLI3XOXRZTDA">
+      <manifest-digest sha256new="EPUPJ5NP3OF7VRIZXU4PH2OYR7UUDEDNW7IBXYWNSLI3XOXRZTDA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.20.2/x86_64-unknown-linux-gnu/rustup-init" size="11613464" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.20.2" released="2026-07-21" stability="stable" id="sha256new_CWNLVJ6BKF2FAOUQUMKOB7OMLELYFSFDGS5VF5XU6IYALOQX6GYQ">
+      <manifest-digest sha256new="CWNLVJ6BKF2FAOUQUMKOB7OMLELYFSFDGS5VF5XU6IYALOQX6GYQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.20.2/i686-unknown-linux-gnu/rustup-init" size="10392724" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.20.2" released="2026-07-21" stability="stable" id="sha256new_HJYELJFEIMZ5IZWIHA7ZTFWF2E7HX7SK63T7YHPPIXQNKEXWFCVA">
+      <manifest-digest sha256new="HJYELJFEIMZ5IZWIHA7ZTFWF2E7HX7SK63T7YHPPIXQNKEXWFCVA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.20.2/aarch64-unknown-linux-gnu/rustup-init" size="10631560" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.20.2" released="2026-07-21" stability="stable" id="sha256new_H26UBOFOW2DNQLWE56VTAA7R7JLCJW4VJ3QDFG5QYDD2QSQLISZQ">
+      <manifest-digest sha256new="H26UBOFOW2DNQLWE56VTAA7R7JLCJW4VJ3QDFG5QYDD2QSQLISZQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.20.2/x86_64-apple-darwin/rustup-init" size="7209304" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.21.0" released="2026-07-21" stability="stable" id="sha256new_3T6ICAIOKNGKKRNZYK4NVKR6YSVX4KB7ISE7SSR3EARPMVNOGEHQ">
+      <manifest-digest sha256new="3T6ICAIOKNGKKRNZYK4NVKR6YSVX4KB7ISE7SSR3EARPMVNOGEHQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.21.0/x86_64-unknown-linux-gnu/rustup-init" size="12352144" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.21.0" released="2026-07-21" stability="stable" id="sha256new_7D3FT5DQQJPGKZZ7FEZB7CLDX7JCI33EPHMNKMUNMDITUSZPZSZQ">
+      <manifest-digest sha256new="7D3FT5DQQJPGKZZ7FEZB7CLDX7JCI33EPHMNKMUNMDITUSZPZSZQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.21.0/i686-unknown-linux-gnu/rustup-init" size="11459292" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.21.0" released="2026-07-21" stability="stable" id="sha256new_ZSIBQQAGCAI7VV257D6TK5Y4ISSDWHHRDTNHPXLUMWSEZDBQHJRQ">
+      <manifest-digest sha256new="ZSIBQQAGCAI7VV257D6TK5Y4ISSDWHHRDTNHPXLUMWSEZDBQHJRQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.21.0/aarch64-unknown-linux-gnu/rustup-init" size="11515384" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.21.0" released="2026-07-21" stability="stable" id="sha256new_AVXGA7AJENHREIIQO4H4MWIHPYREPNAGVSZL3CWPYTKDAHE73M4Q">
+      <manifest-digest sha256new="AVXGA7AJENHREIIQO4H4MWIHPYREPNAGVSZL3CWPYTKDAHE73M4Q"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.21.0/x86_64-apple-darwin/rustup-init" size="8100760" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.21.1" released="2026-07-21" stability="stable" id="sha256new_7VAN3YMJKMA36VJGFTOXAO5QZWFGPSDZ2CJFWKMZ5R7DPOBRWCDQ">
+      <manifest-digest sha256new="7VAN3YMJKMA36VJGFTOXAO5QZWFGPSDZ2CJFWKMZ5R7DPOBRWCDQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.21.1/x86_64-unknown-linux-gnu/rustup-init" size="12245112" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.21.1" released="2026-07-21" stability="stable" id="sha256new_M27RQUGQ5URQITBBXOASOYY5BWBZE2YCKXS4AYCKQKIV3M73RIRA">
+      <manifest-digest sha256new="M27RQUGQ5URQITBBXOASOYY5BWBZE2YCKXS4AYCKQKIV3M73RIRA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.21.1/i686-unknown-linux-gnu/rustup-init" size="11371948" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.21.1" released="2026-07-21" stability="stable" id="sha256new_TM4ALPPBWVQT4XJRNG34SDNLQOR4HWSRFDZBWYTDSD5U62MTINZQ">
+      <manifest-digest sha256new="TM4ALPPBWVQT4XJRNG34SDNLQOR4HWSRFDZBWYTDSD5U62MTINZQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.21.1/aarch64-unknown-linux-gnu/rustup-init" size="11398168" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.21.1" released="2026-07-21" stability="stable" id="sha256new_RB42Z6UIQHYCLCEF7FBK5J5FJXY3JPFIONV4S4KV4INOXZ6PSQGQ">
+      <manifest-digest sha256new="RB42Z6UIQHYCLCEF7FBK5J5FJXY3JPFIONV4S4KV4INOXZ6PSQGQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.21.1/x86_64-apple-darwin/rustup-init" size="8004984" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.22.0" released="2026-07-21" stability="stable" id="sha256new_SUCIMSTEJA73P4BVO4XDSOE73YT7C36H6PWLOLAUE45F5IQ22NCQ">
+      <manifest-digest sha256new="SUCIMSTEJA73P4BVO4XDSOE73YT7C36H6PWLOLAUE45F5IQ22NCQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.22.0/x86_64-unknown-linux-gnu/rustup-init" size="12391440" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.22.0" released="2026-07-21" stability="stable" id="sha256new_RRSHNCZMSJ7Y4A3O2QGHWAWRDSU4RSNFOGUCCL7KX37N5DPNEO6Q">
+      <manifest-digest sha256new="RRSHNCZMSJ7Y4A3O2QGHWAWRDSU4RSNFOGUCCL7KX37N5DPNEO6Q"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.22.0/i686-unknown-linux-gnu/rustup-init" size="11025888" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.22.0" released="2026-07-21" stability="stable" id="sha256new_TS5OM5UZCUTHUBFQDLDEW2LYX3NJN3UB63R3K6UPF53QCTNQO34Q">
+      <manifest-digest sha256new="TS5OM5UZCUTHUBFQDLDEW2LYX3NJN3UB63R3K6UPF53QCTNQO34Q"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.22.0/aarch64-unknown-linux-gnu/rustup-init" size="11745144" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.22.0" released="2026-07-21" stability="stable" id="sha256new_QAYI7SQD5KAAVY4VRMTEQHENCA5GOM4GAQXPGA3PA55EPZ6EVXKA">
+      <manifest-digest sha256new="QAYI7SQD5KAAVY4VRMTEQHENCA5GOM4GAQXPGA3PA55EPZ6EVXKA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.22.0/x86_64-apple-darwin/rustup-init" size="7437292" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.22.1" released="2026-07-21" stability="stable" id="sha256new_VZG7RNYMCARV2QB3NSFBSV4XF2AQWGL72LNBLYN46TUG7LLRADYA">
+      <manifest-digest sha256new="VZG7RNYMCARV2QB3NSFBSV4XF2AQWGL72LNBLYN46TUG7LLRADYA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.22.1/x86_64-unknown-linux-gnu/rustup-init" size="12391632" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.22.1" released="2026-07-21" stability="stable" id="sha256new_PI6LGVI6AETDPHJOKCQ5NSLEUFEOUC566PEOJPEIFUAFBUWWKZNQ">
+      <manifest-digest sha256new="PI6LGVI6AETDPHJOKCQ5NSLEUFEOUC566PEOJPEIFUAFBUWWKZNQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.22.1/i686-unknown-linux-gnu/rustup-init" size="11015616" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.22.1" released="2026-07-21" stability="stable" id="sha256new_ZGCYQCWP7S53DPC6CCTRJZMPZIJGB27M6BN2XSRDJPB23TSLAIIA">
+      <manifest-digest sha256new="ZGCYQCWP7S53DPC6CCTRJZMPZIJGB27M6BN2XSRDJPB23TSLAIIA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.22.1/aarch64-unknown-linux-gnu/rustup-init" size="11741480" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.22.1" released="2026-07-21" stability="stable" id="sha256new_TMQGFDQGKVXW3QUPC5UDRXLFRJ2JXJGIZEP2DXUV4G2LF5LWHJUQ">
+      <manifest-digest sha256new="TMQGFDQGKVXW3QUPC5UDRXLFRJ2JXJGIZEP2DXUV4G2LF5LWHJUQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.22.1/x86_64-apple-darwin/rustup-init" size="7435380" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.23.0" released="2026-07-21" stability="stable" id="sha256new_KETYO52E2SAAXC44Y7CFR53ICQQXXSC7Z54JYXMORJJP2ST3ZM4A">
+      <manifest-digest sha256new="KETYO52E2SAAXC44Y7CFR53ICQQXXSC7Z54JYXMORJJP2ST3ZM4A"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.23.0/x86_64-unknown-linux-gnu/rustup-init" size="12813256" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.23.0" released="2026-07-21" stability="stable" id="sha256new_6HYDP7MXFGERI7XBIADLCCMAY23KE7NDJFJ4NHBYIVXU4QNRAE2A">
+      <manifest-digest sha256new="6HYDP7MXFGERI7XBIADLCCMAY23KE7NDJFJ4NHBYIVXU4QNRAE2A"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.23.0/i686-unknown-linux-gnu/rustup-init" size="11667520" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.23.0" released="2026-07-21" stability="stable" id="sha256new_L7G4DMNNDRCMOMEAUQUI5AWT6PXM67EKCJ7N5AGRKHPH7JBGC3NQ">
+      <manifest-digest sha256new="L7G4DMNNDRCMOMEAUQUI5AWT6PXM67EKCJ7N5AGRKHPH7JBGC3NQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.23.0/aarch64-unknown-linux-gnu/rustup-init" size="12326624" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.23.0" released="2026-07-21" stability="stable" id="sha256new_RYC74LXUSYCBFPERHGVDO3SEYAKSHKDXNSH767NMMEDRW5T4QLAQ">
+      <manifest-digest sha256new="RYC74LXUSYCBFPERHGVDO3SEYAKSHKDXNSH767NMMEDRW5T4QLAQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.23.0/x86_64-apple-darwin/rustup-init" size="7659432" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.23.0" released="2026-07-21" stability="stable" id="sha256new_LQQ6QWI6LVPG4S6VFBUYMYVGKVGU5XUDCU3LLHZNYDHOLNINMCQA">
+      <manifest-digest sha256new="LQQ6QWI6LVPG4S6VFBUYMYVGKVGU5XUDCU3LLHZNYDHOLNINMCQA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.23.0/aarch64-apple-darwin/rustup-init" size="7204248" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.23.1" released="2026-07-21" stability="stable" id="sha256new_67Q5CQC2KWCXWXQUMMGFVCZF4M5UWXRHQJP7ZZR6D7VCZZ4EZJ3Q">
+      <manifest-digest sha256new="67Q5CQC2KWCXWXQUMMGFVCZF4M5UWXRHQJP7ZZR6D7VCZZ4EZJ3Q"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.23.1/x86_64-unknown-linux-gnu/rustup-init" size="12817272" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.23.1" released="2026-07-21" stability="stable" id="sha256new_5LTTGQBB4ZGHQEMGWO6AMEHSURBXWYRPOI2LE4NZDSSLQZVSSHKA">
+      <manifest-digest sha256new="5LTTGQBB4ZGHQEMGWO6AMEHSURBXWYRPOI2LE4NZDSSLQZVSSHKA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.23.1/i686-unknown-linux-gnu/rustup-init" size="11668736" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.23.1" released="2026-07-21" stability="stable" id="sha256new_665B3TUBLBQCK2TDJNNWJHP2HP66SDEJNAIAFVAZAD5SL26B7Y5Q">
+      <manifest-digest sha256new="665B3TUBLBQCK2TDJNNWJHP2HP66SDEJNAIAFVAZAD5SL26B7Y5Q"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.23.1/aarch64-unknown-linux-gnu/rustup-init" size="12322328" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.23.1" released="2026-07-21" stability="stable" id="sha256new_MJM65IE3FNTV57JVZOC2FQAS52A354Q7GFOUWOKKSIXSJJPZTAUA">
+      <manifest-digest sha256new="MJM65IE3FNTV57JVZOC2FQAS52A354Q7GFOUWOKKSIXSJJPZTAUA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.23.1/x86_64-apple-darwin/rustup-init" size="7731520" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.23.1" released="2026-07-21" stability="stable" id="sha256new_3QFI4USRSJLS7R7J54AVCIJ6ADRZJZSUC2T6Z4LXSKYEOSHO5OFA">
+      <manifest-digest sha256new="3QFI4USRSJLS7R7J54AVCIJ6ADRZJZSUC2T6Z4LXSKYEOSHO5OFA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.23.1/aarch64-apple-darwin/rustup-init" size="7204248" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.24.0" released="2026-07-21" stability="stable" id="sha256new_4SZAHFANETECRD5NPK4PSV4T72MW6YVSXY7RWJ2KVUBD4FF3UAXQ">
+      <manifest-digest sha256new="4SZAHFANETECRD5NPK4PSV4T72MW6YVSXY7RWJ2KVUBD4FF3UAXQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.0/x86_64-unknown-linux-gnu/rustup-init" size="16138872" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.24.0" released="2026-07-21" stability="stable" id="sha256new_SUMUTE4XDDXRVQPZSMQAYWWYSPEU626ULKWWLUCNEKVPHV7A6HOQ">
+      <manifest-digest sha256new="SUMUTE4XDDXRVQPZSMQAYWWYSPEU626ULKWWLUCNEKVPHV7A6HOQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.0/i686-unknown-linux-gnu/rustup-init" size="14026236" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.24.0" released="2026-07-21" stability="stable" id="sha256new_3CBNKBYPU7W6OQIUWMDY2PGQPCOBKT42QOEI7VBAHJ6WMWHDETBA">
+      <manifest-digest sha256new="3CBNKBYPU7W6OQIUWMDY2PGQPCOBKT42QOEI7VBAHJ6WMWHDETBA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.0/aarch64-unknown-linux-gnu/rustup-init" size="14519472" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.24.0" released="2026-07-21" stability="stable" id="sha256new_WAKKKTWF3OQ7V3C4OOTRRPWTEVV5VIPBBNM2DMGCDEQBHNPFDXGQ">
+      <manifest-digest sha256new="WAKKKTWF3OQ7V3C4OOTRRPWTEVV5VIPBBNM2DMGCDEQBHNPFDXGQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.0/x86_64-apple-darwin/rustup-init" size="10061656" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.24.0" released="2026-07-21" stability="stable" id="sha256new_B4QAJLWCZGQCGIJJNYAX4SZEAGMKEWKVVCIP3PAPQ2Z7BM7ZP5EA">
+      <manifest-digest sha256new="B4QAJLWCZGQCGIJJNYAX4SZEAGMKEWKVVCIP3PAPQ2Z7BM7ZP5EA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.0/aarch64-apple-darwin/rustup-init" size="8707336" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.24.1" released="2026-07-21" stability="stable" id="sha256new_ABGLJXA5EIDSUQ5AYFZHI3UYXB5RVMY6QWOF5AKPDYR5L2ZLAT4A">
+      <manifest-digest sha256new="ABGLJXA5EIDSUQ5AYFZHI3UYXB5RVMY6QWOF5AKPDYR5L2ZLAT4A"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.1/x86_64-unknown-linux-gnu/rustup-init" size="16146320" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.24.1" released="2026-07-21" stability="stable" id="sha256new_BXH7LEQEVTNVOGYWCSBVN4VNHG33XXSUGVS24CYXJCAJ5YTO5OFA">
+      <manifest-digest sha256new="BXH7LEQEVTNVOGYWCSBVN4VNHG33XXSUGVS24CYXJCAJ5YTO5OFA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.1/i686-unknown-linux-gnu/rustup-init" size="14023464" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.24.1" released="2026-07-21" stability="stable" id="sha256new_24EA5VXJFQ2L7YXUSLZUMVX5YTY3TKEBW6WRJOUJCAPQH3ZLZJCA">
+      <manifest-digest sha256new="24EA5VXJFQ2L7YXUSLZUMVX5YTY3TKEBW6WRJOUJCAPQH3ZLZJCA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.1/aarch64-unknown-linux-gnu/rustup-init" size="14519928" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.24.1" released="2026-07-21" stability="stable" id="sha256new_VKDDJUY7ETPUZAMXWZPEZEVLN6RYKYQR3MEEMCSKJWXNRUE4HHUQ">
+      <manifest-digest sha256new="VKDDJUY7ETPUZAMXWZPEZEVLN6RYKYQR3MEEMCSKJWXNRUE4HHUQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.1/x86_64-apple-darwin/rustup-init" size="10061656" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.24.1" released="2026-07-21" stability="stable" id="sha256new_DDNYUUL7SLPIW4Y3NSDTK4WOPGTDBQSIPKGXHKH5BHPKODMQOXLA">
+      <manifest-digest sha256new="DDNYUUL7SLPIW4Y3NSDTK4WOPGTDBQSIPKGXHKH5BHPKODMQOXLA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.1/aarch64-apple-darwin/rustup-init" size="8706968" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.24.2" released="2026-07-21" stability="stable" id="sha256new_6EOHWBDIGMFNPZUXPRV2GRN5E4WIK6ASTCPPV5KJK5ATN6TH4MKQ">
+      <manifest-digest sha256new="6EOHWBDIGMFNPZUXPRV2GRN5E4WIK6ASTCPPV5KJK5ATN6TH4MKQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.2/x86_64-unknown-linux-gnu/rustup-init" size="15684664" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.24.2" released="2026-07-21" stability="stable" id="sha256new_4VXFFEEN4J6EZEJAZ2NSVOOIIUJIO4J7NQN2FAHSBQWITHZQI5NQ">
+      <manifest-digest sha256new="4VXFFEEN4J6EZEJAZ2NSVOOIIUJIO4J7NQN2FAHSBQWITHZQI5NQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.2/i686-unknown-linux-gnu/rustup-init" size="13443160" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.24.2" released="2026-07-21" stability="stable" id="sha256new_F7ACAFGXMEMEYA7VL6PIQHJCCT7PBJQ4ML33WOGXEI4BS5XGSQVQ">
+      <manifest-digest sha256new="F7ACAFGXMEMEYA7VL6PIQHJCCT7PBJQ4ML33WOGXEI4BS5XGSQVQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.2/aarch64-unknown-linux-gnu/rustup-init" size="14242976" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.24.2" released="2026-07-21" stability="stable" id="sha256new_5EBVSCL4DBOJ256367XJBKF24RYQMYAGLC5TXUQQH7EBQDGSZHMA">
+      <manifest-digest sha256new="5EBVSCL4DBOJ256367XJBKF24RYQMYAGLC5TXUQQH7EBQDGSZHMA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.2/x86_64-apple-darwin/rustup-init" size="9499616" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.24.2" released="2026-07-21" stability="stable" id="sha256new_Q7DIIAPCMRVO5WZVP32T7FIP65HLFXZGKYQVXEVHGWIE5RZEGMVQ">
+      <manifest-digest sha256new="Q7DIIAPCMRVO5WZVP32T7FIP65HLFXZGKYQVXEVHGWIE5RZEGMVQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.2/aarch64-apple-darwin/rustup-init" size="8522776" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.24.3" released="2026-07-21" stability="stable" id="sha256new_BF5OEDWZMXUZ7KZHADKLZ2QHXTDGZHAIQ3Y3HEK4RTT6YREVZZUQ">
+      <manifest-digest sha256new="BF5OEDWZMXUZ7KZHADKLZ2QHXTDGZHAIQ3Y3HEK4RTT6YREVZZUQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.3/x86_64-unknown-linux-gnu/rustup-init" size="15690192" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.24.3" released="2026-07-21" stability="stable" id="sha256new_JBROTAMSFXBCSCR5W2FIXKL57YSWHUQD2C2XFR56X3FLXVAZPZ4A">
+      <manifest-digest sha256new="JBROTAMSFXBCSCR5W2FIXKL57YSWHUQD2C2XFR56X3FLXVAZPZ4A"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.3/i686-unknown-linux-gnu/rustup-init" size="13454384" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.24.3" released="2026-07-21" stability="stable" id="sha256new_TOT5N62RWRNXZFGK67CMH7ZDTK6DJXIA5MK7TXZARSN43SX5INZQ">
+      <manifest-digest sha256new="TOT5N62RWRNXZFGK67CMH7ZDTK6DJXIA5MK7TXZARSN43SX5INZQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.3/aarch64-unknown-linux-gnu/rustup-init" size="14255928" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.24.3" released="2026-07-21" stability="stable" id="sha256new_XI437NMSVXZ4L2OGTEAMLP6DGI6WWMDUFO5EHQ72GRMMP74JEB2A">
+      <manifest-digest sha256new="XI437NMSVXZ4L2OGTEAMLP6DGI6WWMDUFO5EHQ72GRMMP74JEB2A"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.3/x86_64-apple-darwin/rustup-init" size="9500104" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.24.3" released="2026-07-21" stability="stable" id="sha256new_HHDTMYHC2B4N4WTDDH6TRCLBXDCMPETJE4CBUBQNYDDO2HLVDFVQ">
+      <manifest-digest sha256new="HHDTMYHC2B4N4WTDDH6TRCLBXDCMPETJE4CBUBQNYDDO2HLVDFVQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.3/aarch64-apple-darwin/rustup-init" size="8521112" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.25.0" released="2026-07-21" stability="stable" id="sha256new_DTCHX2PO2KDMHZT77EBKEPX445IRHKULIPGR5MDFDZH24EA3D4WA">
+      <manifest-digest sha256new="DTCHX2PO2KDMHZT77EBKEPX445IRHKULIPGR5MDFDZH24EA3D4WA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.25.0/x86_64-unknown-linux-gnu/rustup-init" size="15765000" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.25.0" released="2026-07-21" stability="stable" id="sha256new_I4G5CLBGHBFD2A647G7UZPMXQMWUNRO72QXWZR3SP5UTHYEBDJ5A">
+      <manifest-digest sha256new="I4G5CLBGHBFD2A647G7UZPMXQMWUNRO72QXWZR3SP5UTHYEBDJ5A"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.25.0/i686-unknown-linux-gnu/rustup-init" size="14216700" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.25.0" released="2026-07-21" stability="stable" id="sha256new_LQ4TKHPDOQRH4UJDA5IT4NNDNHYOBJXYBCGWFKEYXKKRNDHRN6SQ">
+      <manifest-digest sha256new="LQ4TKHPDOQRH4UJDA5IT4NNDNHYOBJXYBCGWFKEYXKKRNDHRN6SQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.25.0/aarch64-unknown-linux-gnu/rustup-init" size="15285808" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.25.0" released="2026-07-21" stability="stable" id="sha256new_MMOLPMEUL3BYDZOUKJ3ZHWKWB7RZJHV7B74F6CN35NDBMB5A4MTQ">
+      <manifest-digest sha256new="MMOLPMEUL3BYDZOUKJ3ZHWKWB7RZJHV7B74F6CN35NDBMB5A4MTQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.25.0/x86_64-apple-darwin/rustup-init" size="10537896" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.25.0" released="2026-07-21" stability="stable" id="sha256new_E6DUNPFPKRXIL4BC2VSUH3ETUCQPF2MENLXM6GZE7JM5J2RMHAJQ">
+      <manifest-digest sha256new="E6DUNPFPKRXIL4BC2VSUH3ETUCQPF2MENLXM6GZE7JM5J2RMHAJQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.25.0/aarch64-apple-darwin/rustup-init" size="9505273" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.25.1" released="2026-07-21" stability="stable" id="sha256new_BPIMEHZVPE52FBAUYG35NVHM6S3DDPXXHUBAM7C6NOAFK63LQDZQ">
+      <manifest-digest sha256new="BPIMEHZVPE52FBAUYG35NVHM6S3DDPXXHUBAM7C6NOAFK63LQDZQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.25.1/x86_64-unknown-linux-gnu/rustup-init" size="15825920" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.25.1" released="2026-07-21" stability="stable" id="sha256new_FHMIJYGOMZ6NQDNP55C36GGHPQ2K7NPUDJ75QWAURJV2F22WOEPQ">
+      <manifest-digest sha256new="FHMIJYGOMZ6NQDNP55C36GGHPQ2K7NPUDJ75QWAURJV2F22WOEPQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.25.1/i686-unknown-linux-gnu/rustup-init" size="14323884" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.25.1" released="2026-07-21" stability="stable" id="sha256new_267A7I4NKB3VEPYCQPXDGOFAM2QMGC4ANP664JENZQGHKGPYB7UA">
+      <manifest-digest sha256new="267A7I4NKB3VEPYCQPXDGOFAM2QMGC4ANP664JENZQGHKGPYB7UA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.25.1/aarch64-unknown-linux-gnu/rustup-init" size="15365512" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.25.1" released="2026-07-21" stability="stable" id="sha256new_Y6KDDA33XODKJTYLAP4AOZ3PF4I2IGBC4NQEOOSWK36JLCUSTV2A">
+      <manifest-digest sha256new="Y6KDDA33XODKJTYLAP4AOZ3PF4I2IGBC4NQEOOSWK36JLCUSTV2A"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.25.1/x86_64-apple-darwin/rustup-init" size="10555952" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.25.1" released="2026-07-21" stability="stable" id="sha256new_GNBAWPARA6PHT7CECY2GNOK2Y2BMMLE7NLMBLNA5E7IDT5CW66BQ">
+      <manifest-digest sha256new="GNBAWPARA6PHT7CECY2GNOK2Y2BMMLE7NLMBLNA5E7IDT5CW66BQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.25.1/aarch64-apple-darwin/rustup-init" size="9586297" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.25.2" released="2026-07-21" stability="stable" id="sha256new_BFWE6HDX5OMKTGOPPFJBZUBNG4PA4L7SIOSPNX3RUFNJMKFDX7VQ">
+      <manifest-digest sha256new="BFWE6HDX5OMKTGOPPFJBZUBNG4PA4L7SIOSPNX3RUFNJMKFDX7VQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.25.2/x86_64-unknown-linux-gnu/rustup-init" size="15788704" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.25.2" released="2026-07-21" stability="stable" id="sha256new_OEJLYP7V65BKHJMSRKGLVA3BAUJFCXYQSYPPQDSURTOT7N5QFK2Q">
+      <manifest-digest sha256new="OEJLYP7V65BKHJMSRKGLVA3BAUJFCXYQSYPPQDSURTOT7N5QFK2Q"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.25.2/i686-unknown-linux-gnu/rustup-init" size="14422852" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.25.2" released="2026-07-21" stability="stable" id="sha256new_PBT2USWAOPV5HL3GRGQY4OQKEPLRDJMGBXAISEZTOR5R2NQ7UNZA">
+      <manifest-digest sha256new="PBT2USWAOPV5HL3GRGQY4OQKEPLRDJMGBXAISEZTOR5R2NQ7UNZA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.25.2/aarch64-unknown-linux-gnu/rustup-init" size="15624696" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.25.2" released="2026-07-21" stability="stable" id="sha256new_LSLMKM3D6DRZB6SJZZT7PWRBYBXZM46AST23F2GV3BCPUZ5MYXVA">
+      <manifest-digest sha256new="LSLMKM3D6DRZB6SJZZT7PWRBYBXZM46AST23F2GV3BCPUZ5MYXVA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.25.2/x86_64-apple-darwin/rustup-init" size="10196192" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.25.2" released="2026-07-21" stability="stable" id="sha256new_T6JP56QWFD5TBQEBZIHRSRWZTIXTRG4UNKRASLBXW2N3TWJQ7PRQ">
+      <manifest-digest sha256new="T6JP56QWFD5TBQEBZIHRSRWZTIXTRG4UNKRASLBXW2N3TWJQ7PRQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.25.2/aarch64-apple-darwin/rustup-init" size="9499449" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.26.0" released="2026-07-21" stability="stable" id="sha256new_PRC7QY4L4L46O3BPMSFN4ORJCJHMTZ6243LEHIXBLA5F6ZCSMK7Q">
+      <manifest-digest sha256new="PRC7QY4L4L46O3BPMSFN4ORJCJHMTZ6243LEHIXBLA5F6ZCSMK7Q"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.26.0/x86_64-unknown-linux-gnu/rustup-init" size="14293176" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.26.0" released="2026-07-21" stability="stable" id="sha256new_5XGTVPQCSU6YBL6GBLPDS43E3CWDE54JVA3SS5KO65IZK5I3ONMQ">
+      <manifest-digest sha256new="5XGTVPQCSU6YBL6GBLPDS43E3CWDE54JVA3SS5KO65IZK5I3ONMQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.26.0/i686-unknown-linux-gnu/rustup-init" size="12894052" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.26.0" released="2026-07-21" stability="stable" id="sha256new_CYB2LLKFCL3LK4RQKAO2SN6LZYL6S75CQZZIIXZJJD2F3XCIIWZQ">
+      <manifest-digest sha256new="CYB2LLKFCL3LK4RQKAO2SN6LZYL6S75CQZZIIXZJJD2F3XCIIWZQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.26.0/aarch64-unknown-linux-gnu/rustup-init" size="14131368" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.26.0" released="2026-07-21" stability="stable" id="sha256new_UFU2QGIJCZLP2ULDMMWGCCGVOXLCSEBWPRHV7WXBFVLOIB7HXAMQ">
+      <manifest-digest sha256new="UFU2QGIJCZLP2ULDMMWGCCGVOXLCSEBWPRHV7WXBFVLOIB7HXAMQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.26.0/x86_64-apple-darwin/rustup-init" size="8670640" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.26.0" released="2026-07-21" stability="stable" id="sha256new_BLDRY4AMSHF7TYZB6I4AZQ3K5R44CYNTZ22ZWOMVQYAM247V64MQ">
+      <manifest-digest sha256new="BLDRY4AMSHF7TYZB6I4AZQ3K5R44CYNTZ22ZWOMVQYAM247V64MQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.26.0/aarch64-apple-darwin/rustup-init" size="8000713" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.27.0" released="2026-07-21" stability="stable" id="sha256new_WPJOCL4GWH3QZ3DROST4BI5AWTC64ZABHE22IUQ44BBCUJD57ZBA">
+      <manifest-digest sha256new="WPJOCL4GWH3QZ3DROST4BI5AWTC64ZABHE22IUQ44BBCUJD57ZBA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.27.0/x86_64-unknown-linux-gnu/rustup-init" size="15428432" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.27.0" released="2026-07-21" stability="stable" id="sha256new_CKOYLRYG5AI3RM7FDWDBC3H733NYWZIQOH3ANWOMJP4AIHUH2YTQ">
+      <manifest-digest sha256new="CKOYLRYG5AI3RM7FDWDBC3H733NYWZIQOH3ANWOMJP4AIHUH2YTQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.27.0/i686-unknown-linux-gnu/rustup-init" size="13908944" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.27.0" released="2026-07-21" stability="stable" id="sha256new_JEFOL4CYLLGARHRTJM7QELCG5RBTXXIMGVQ4T6SZLBGP5MNDC2RQ">
+      <manifest-digest sha256new="JEFOL4CYLLGARHRTJM7QELCG5RBTXXIMGVQ4T6SZLBGP5MNDC2RQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.27.0/aarch64-unknown-linux-gnu/rustup-init" size="15627400" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.27.0" released="2026-07-21" stability="stable" id="sha256new_EK5AKGRYZSD3CZVWN645F5JUIEDPQ22YW3HBMNVMRKKZM6YOQPOA">
+      <manifest-digest sha256new="EK5AKGRYZSD3CZVWN645F5JUIEDPQ22YW3HBMNVMRKKZM6YOQPOA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.27.0/x86_64-apple-darwin/rustup-init" size="9003064" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.27.0" released="2026-07-21" stability="stable" id="sha256new_5KMT2MGPONEFYGZG2NRYOKWO54JJHDSS25EA67EJQUMVNOSGMVHA">
+      <manifest-digest sha256new="5KMT2MGPONEFYGZG2NRYOKWO54JJHDSS25EA67EJQUMVNOSGMVHA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.27.0/aarch64-apple-darwin/rustup-init" size="8099056" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.27.1" released="2026-07-21" stability="stable" id="sha256new_C4PJBDNASGTOW4QDLU2T4527O5GEVHABHUWJDNXVBQM62SGQOUMQ">
+      <manifest-digest sha256new="C4PJBDNASGTOW4QDLU2T4527O5GEVHABHUWJDNXVBQM62SGQOUMQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.27.1/x86_64-unknown-linux-gnu/rustup-init" size="14881096" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.27.1" released="2026-07-21" stability="stable" id="sha256new_PWLBVDDT654HNNLWO7YLJRH6YVG3MSH4DMKEGHBOHVNZHTL7U4YQ">
+      <manifest-digest sha256new="PWLBVDDT654HNNLWO7YLJRH6YVG3MSH4DMKEGHBOHVNZHTL7U4YQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.27.1/i686-unknown-linux-gnu/rustup-init" size="13348964" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.27.1" released="2026-07-21" stability="stable" id="sha256new_WRWHIBBMSNBRIJDOAFBODB3YL7DMW63ZXVPHVPGHXOB4KHTAYQ3A">
+      <manifest-digest sha256new="WRWHIBBMSNBRIJDOAFBODB3YL7DMW63ZXVPHVPGHXOB4KHTAYQ3A"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.27.1/aarch64-unknown-linux-gnu/rustup-init" size="15187976" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.27.1" released="2026-07-21" stability="stable" id="sha256new_P4TJVCECCIFYWJUFS6P6NE64NUTHXIWMCFHAJK654Z4WGNZIPYRQ">
+      <manifest-digest sha256new="P4TJVCECCIFYWJUFS6P6NE64NUTHXIWMCFHAJK654Z4WGNZIPYRQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.27.1/x86_64-apple-darwin/rustup-init" size="8370416" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.27.1" released="2026-07-21" stability="stable" id="sha256new_YCG4KX4Z2HOM4LNPNJS4WAQMRZIY4WZK2JU6S2HC55JUVZSZD52A">
+      <manifest-digest sha256new="YCG4KX4Z2HOM4LNPNJS4WAQMRZIY4WZK2JU6S2HC55JUVZSZD52A"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.27.1/aarch64-apple-darwin/rustup-init" size="7585520" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.28.0" released="2026-07-21" stability="stable" id="sha256new_5JF7Y7VTRDABE5AIDOFIVZ7VXRTL4QDICLC6WOB3RE62GRAEDHJQ">
+      <manifest-digest sha256new="5JF7Y7VTRDABE5AIDOFIVZ7VXRTL4QDICLC6WOB3RE62GRAEDHJQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.0/x86_64-unknown-linux-gnu/rustup-init" size="19041840" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.28.0" released="2026-07-21" stability="stable" id="sha256new_7U36APDURJMPMPH4NN2G23BKT5PD4IYSU44VK64QWTH6YEE6XA3A">
+      <manifest-digest sha256new="7U36APDURJMPMPH4NN2G23BKT5PD4IYSU44VK64QWTH6YEE6XA3A"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.0/i686-unknown-linux-gnu/rustup-init" size="15442256" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.28.0" released="2026-07-21" stability="stable" id="sha256new_7GQFEM3YIEG3OPQK4PTXJR75JYAMRQWPREKLXTFE35UD7P3WUNZA">
+      <manifest-digest sha256new="7GQFEM3YIEG3OPQK4PTXJR75JYAMRQWPREKLXTFE35UD7P3WUNZA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.0/aarch64-unknown-linux-gnu/rustup-init" size="17551176" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.28.0" released="2026-07-21" stability="stable" id="sha256new_Z3V5LPSY43DJAGQSFZ46H5KGZYDTHDMNYYNWBSUTFN366ULEY5QA">
+      <manifest-digest sha256new="Z3V5LPSY43DJAGQSFZ46H5KGZYDTHDMNYYNWBSUTFN366ULEY5QA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.0/x86_64-apple-darwin/rustup-init" size="11804852" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.28.0" released="2026-07-21" stability="stable" id="sha256new_7A6OLZ6Z3YWCIL6N5QPDX2Q6AYTZFIRUKZ3GZD6SPT5UXMG7STEQ">
+      <manifest-digest sha256new="7A6OLZ6Z3YWCIL6N5QPDX2Q6AYTZFIRUKZ3GZD6SPT5UXMG7STEQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.0/aarch64-apple-darwin/rustup-init" size="10234464" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.28.1" released="2026-07-21" stability="stable" id="sha256new_PLJPVZ3FLIUSUZX2J24E2AUZNV5LTMXWAUTGLRXHTAKA35CAPJKQ">
+      <manifest-digest sha256new="PLJPVZ3FLIUSUZX2J24E2AUZNV5LTMXWAUTGLRXHTAKA35CAPJKQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.1/x86_64-unknown-linux-gnu/rustup-init" size="19072384" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.28.1" released="2026-07-21" stability="stable" id="sha256new_HK6O7C37RHSGZOW5KRTWCKXP6BHGIT65IUEKWG64C4XK7HKPZ44A">
+      <manifest-digest sha256new="HK6O7C37RHSGZOW5KRTWCKXP6BHGIT65IUEKWG64C4XK7HKPZ44A"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.1/i686-unknown-linux-gnu/rustup-init" size="15476344" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.28.1" released="2026-07-21" stability="stable" id="sha256new_N3H5YWUPVPYILGVXKATDRXYHXEE727HKIBVCL4IAMWRWLUNEEQ3A">
+      <manifest-digest sha256new="N3H5YWUPVPYILGVXKATDRXYHXEE727HKIBVCL4IAMWRWLUNEEQ3A"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.1/aarch64-unknown-linux-gnu/rustup-init" size="17624112" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.28.1" released="2026-07-21" stability="stable" id="sha256new_63TNPD4AIYAJYK4DX2VFVBONZFVEVSU377GFNIHBGL5FCYBCR65A">
+      <manifest-digest sha256new="63TNPD4AIYAJYK4DX2VFVBONZFVEVSU377GFNIHBGL5FCYBCR65A"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.1/x86_64-apple-darwin/rustup-init" size="11847372" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.28.1" released="2026-07-21" stability="stable" id="sha256new_2TQ6MCLIARYL5V5DRVHRFGA6AYMA3RERQHFXNE3RKYTE3BCUSJQA">
+      <manifest-digest sha256new="2TQ6MCLIARYL5V5DRVHRFGA6AYMA3RERQHFXNE3RKYTE3BCUSJQA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.1/aarch64-apple-darwin/rustup-init" size="10272960" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.28.2" released="2026-07-21" stability="stable" id="sha256new_IUFIH2XIXLV3O3JK3T4L2TDDALRZN65N53HPNXE6K3ALOI7MH3KA">
+      <manifest-digest sha256new="IUFIH2XIXLV3O3JK3T4L2TDDALRZN65N53HPNXE6K3ALOI7MH3KA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.2/x86_64-unknown-linux-gnu/rustup-init" size="20889000" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.28.2" released="2026-07-21" stability="stable" id="sha256new_76ZWGLOGVDPZBNPGA6M5FYF2DKBWAIUTPXIDBLMIGPC4RLWDVSOQ">
+      <manifest-digest sha256new="76ZWGLOGVDPZBNPGA6M5FYF2DKBWAIUTPXIDBLMIGPC4RLWDVSOQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.2/i686-unknown-linux-gnu/rustup-init" size="17033928" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.28.2" released="2026-07-21" stability="stable" id="sha256new_YGD2YH3BZ5RE53QL723TOCAEGEQIF3GB4PSEW3AMHFBRH3XZ5FDQ">
+      <manifest-digest sha256new="YGD2YH3BZ5RE53QL723TOCAEGEQIF3GB4PSEW3AMHFBRH3XZ5FDQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.2/aarch64-unknown-linux-gnu/rustup-init" size="19321944" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.28.2" released="2026-07-21" stability="stable" id="sha256new_IG4D4W5JBTND3J4PDXH36IFTUO5ZN4IRNBZ75PQA6IVGJX3OD3WQ">
+      <manifest-digest sha256new="IG4D4W5JBTND3J4PDXH36IFTUO5ZN4IRNBZ75PQA6IVGJX3OD3WQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.2/x86_64-apple-darwin/rustup-init" size="12887404" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.28.2" released="2026-07-21" stability="stable" id="sha256new_VJW5MC6NUK7FXA75A3PUQA6GFPD37Q67SH73475V2NKCBPR2U7EQ">
+      <manifest-digest sha256new="VJW5MC6NUK7FXA75A3PUQA6GFPD37Q67SH73475V2NKCBPR2U7EQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.2/aarch64-apple-darwin/rustup-init" size="11174016" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="1.29.0" released="2026-07-21" stability="stable" id="sha256new_LDDOV6UC7EBP2LGOZIGGLWSNEOKJ7SZTUE4ZRW57SH43I7RPXS2A">
+      <manifest-digest sha256new="LDDOV6UC7EBP2LGOZIGGLWSNEOKJ7SZTUE4ZRW57SH43I7RPXS2A"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.29.0/x86_64-unknown-linux-gnu/rustup-init" size="20838840" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="1.29.0" released="2026-07-21" stability="stable" id="sha256new_U3FZZKWBSEOIYCAFP52JNMAB64REURZN3EJ5UEXB6RNDEV2JAXEA">
+      <manifest-digest sha256new="U3FZZKWBSEOIYCAFP52JNMAB64REURZN3EJ5UEXB6RNDEV2JAXEA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.29.0/i686-unknown-linux-gnu/rustup-init" size="17097492" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="1.29.0" released="2026-07-21" stability="stable" id="sha256new_WOSRG54BQKFGYYZXGQOUHVEUZDGNS5KGJUQDBEMED6JLIYUDOGKQ">
+      <manifest-digest sha256new="WOSRG54BQKFGYYZXGQOUHVEUZDGNS5KGJUQDBEMED6JLIYUDOGKQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.29.0/aarch64-unknown-linux-gnu/rustup-init" size="19502880" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="1.29.0" released="2026-07-21" stability="stable" id="sha256new_BIACOYSHTZJHKLHPYNEGB3YE2DGXZPBQJS27FQBHJP5OQCWGGE6Q">
+      <manifest-digest sha256new="BIACOYSHTZJHKLHPYNEGB3YE2DGXZPBQJS27FQBHJP5OQCWGGE6Q"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.29.0/x86_64-apple-darwin/rustup-init" size="12691104" dest="rustup" executable="true"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="1.29.0" released="2026-07-21" stability="stable" id="sha256new_NL6W2E26DTFQRCIMDOFGPJ35YA3F2HP33UUCKDYS5HWM2PYVWVXQ">
+      <manifest-digest sha256new="NL6W2E26DTFQRCIMDOFGPJ35YA3F2HP33UUCKDYS5HWM2PYVWVXQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.29.0/aarch64-apple-darwin/rustup-init" size="11053296" dest="rustup" executable="true"/>
+    </implementation>
+  </group>
+
+  <group license="MIT OR Apache-2.0">
+    <command name="run" path="rustup.exe"/>
+    <command name="cargo" path="rustup.exe">
+      <arg>run</arg>
+      <arg>stable</arg>
+      <arg>cargo</arg>
+    </command>
+    <command name="rustc" path="rustup.exe">
+      <arg>run</arg>
+      <arg>stable</arg>
+      <arg>rustc</arg>
+    </command>
+    <command name="rustdoc" path="rustup.exe">
+      <arg>run</arg>
+      <arg>stable</arg>
+      <arg>rustdoc</arg>
+    </command>
+    <command name="rustfmt" path="rustup.exe">
+      <arg>run</arg>
+      <arg>stable</arg>
+      <arg>rustfmt</arg>
+    </command>
+
+    <implementation arch="Windows-x86_64" version="1.16.0" released="2026-07-21" stability="stable" id="sha256new_LVEWZRXURS7YE6UCKFWSICDEXLYSVQUWBY3Q3HJI676MDUW6VOHA">
+      <manifest-digest sha256new="LVEWZRXURS7YE6UCKFWSICDEXLYSVQUWBY3Q3HJI676MDUW6VOHA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.16.0/x86_64-pc-windows-msvc/rustup-init.exe" size="7217664" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.16.0" released="2026-07-21" stability="stable" id="sha256new_BDVST4CQJR4QLIHI2OPIQTABKP56SVHMUZJ6GT7BEIACIXFCHSIA">
+      <manifest-digest sha256new="BDVST4CQJR4QLIHI2OPIQTABKP56SVHMUZJ6GT7BEIACIXFCHSIA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.16.0/i686-pc-windows-msvc/rustup-init.exe" size="5621248" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.17.0" released="2026-07-21" stability="stable" id="sha256new_LPXBJM7O6GKJR3XIQ3X2MQL2S7KLIGN4PGIZHRJBHQY24GSA7AVQ">
+      <manifest-digest sha256new="LPXBJM7O6GKJR3XIQ3X2MQL2S7KLIGN4PGIZHRJBHQY24GSA7AVQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.17.0/x86_64-pc-windows-msvc/rustup-init.exe" size="6965248" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.17.0" released="2026-07-21" stability="stable" id="sha256new_BZRXILVBCJJCGM2Q74UZ6W5QE7YPV3OA3SMRGSUQIPXN7JY5SA6A">
+      <manifest-digest sha256new="BZRXILVBCJJCGM2Q74UZ6W5QE7YPV3OA3SMRGSUQIPXN7JY5SA6A"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.17.0/i686-pc-windows-msvc/rustup-init.exe" size="5464064" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.18.0" released="2026-07-21" stability="stable" id="sha256new_W4DJZEBMDMPHLHSCNYMLQ3NCSQOIN64YOH76ZB2NUY3UVNJBTGOA">
+      <manifest-digest sha256new="W4DJZEBMDMPHLHSCNYMLQ3NCSQOIN64YOH76ZB2NUY3UVNJBTGOA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.0/x86_64-pc-windows-msvc/rustup-init.exe" size="7225344" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.18.0" released="2026-07-21" stability="stable" id="sha256new_SP7D6VMZ6WNCNRIA7AI4MWT7AKXWTUE5EESPAN7BPIRQPYRYPVHQ">
+      <manifest-digest sha256new="SP7D6VMZ6WNCNRIA7AI4MWT7AKXWTUE5EESPAN7BPIRQPYRYPVHQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.0/i686-pc-windows-msvc/rustup-init.exe" size="5691904" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.18.1" released="2026-07-21" stability="stable" id="sha256new_DZWKPBR4GCA4WAEGNTHWFGSYR4SKMKJT5ALKI3IGZN2CP3XOXHFQ">
+      <manifest-digest sha256new="DZWKPBR4GCA4WAEGNTHWFGSYR4SKMKJT5ALKI3IGZN2CP3XOXHFQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.1/x86_64-pc-windows-msvc/rustup-init.exe" size="7212544" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.18.1" released="2026-07-21" stability="stable" id="sha256new_M7IBWP5JQUEXQA3BVKQIWHXUNCICN3WCEYB6DTBZ72TK2N4DLXKA">
+      <manifest-digest sha256new="M7IBWP5JQUEXQA3BVKQIWHXUNCICN3WCEYB6DTBZ72TK2N4DLXKA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.1/i686-pc-windows-msvc/rustup-init.exe" size="5683200" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.18.2" released="2026-07-21" stability="stable" id="sha256new_RUDTIYED5MQPFWBAFDNIZGQJN4UPFYLYLSVDDYM4STU77INRXXJA">
+      <manifest-digest sha256new="RUDTIYED5MQPFWBAFDNIZGQJN4UPFYLYLSVDDYM4STU77INRXXJA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.2/x86_64-pc-windows-msvc/rustup-init.exe" size="7215104" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.18.2" released="2026-07-21" stability="stable" id="sha256new_AB6WP3BZ3SLEBSSLFQ22BQYTKPEJTYJKL654JCEDPWO6YWCYIHAA">
+      <manifest-digest sha256new="AB6WP3BZ3SLEBSSLFQ22BQYTKPEJTYJKL654JCEDPWO6YWCYIHAA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.2/i686-pc-windows-msvc/rustup-init.exe" size="5689856" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.18.3" released="2026-07-21" stability="stable" id="sha256new_2HMYL6JOPPZHAQMUJU4NGGZ7YFVHB4FARDUT4FQ6XAJKTKCVIEYA">
+      <manifest-digest sha256new="2HMYL6JOPPZHAQMUJU4NGGZ7YFVHB4FARDUT4FQ6XAJKTKCVIEYA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.3/x86_64-pc-windows-msvc/rustup-init.exe" size="7279616" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.18.3" released="2026-07-21" stability="stable" id="sha256new_MOKLMOT2DEOX7HEXCRCAUKQQODVMIJEZHBVA2YLHVQ4NIOWHM75A">
+      <manifest-digest sha256new="MOKLMOT2DEOX7HEXCRCAUKQQODVMIJEZHBVA2YLHVQ4NIOWHM75A"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.18.3/i686-pc-windows-msvc/rustup-init.exe" size="5729792" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.19.0" released="2026-07-21" stability="stable" id="sha256new_27DBUZAFVW4ARXXUZEBHTF7CQ5PCWMFZRJHB36PKKOPTY7FDN6GQ">
+      <manifest-digest sha256new="27DBUZAFVW4ARXXUZEBHTF7CQ5PCWMFZRJHB36PKKOPTY7FDN6GQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.19.0/x86_64-pc-windows-msvc/rustup-init.exe" size="7367680" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.19.0" released="2026-07-21" stability="stable" id="sha256new_LBJYMLYVBKDCMTLX2FJFIYWILCLPWMF6KE4RG2WHQMTU34RZVOVA">
+      <manifest-digest sha256new="LBJYMLYVBKDCMTLX2FJFIYWILCLPWMF6KE4RG2WHQMTU34RZVOVA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.19.0/i686-pc-windows-msvc/rustup-init.exe" size="5953536" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.20.0" released="2026-07-21" stability="stable" id="sha256new_DWPQNJP3ZVVBC5FPEUAGNVJBLDD2G7CMM3OIEG6LGPUXAGWT2RGA">
+      <manifest-digest sha256new="DWPQNJP3ZVVBC5FPEUAGNVJBLDD2G7CMM3OIEG6LGPUXAGWT2RGA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.20.0/x86_64-pc-windows-msvc/rustup-init.exe" size="7704576" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.20.0" released="2026-07-21" stability="stable" id="sha256new_QOM2TRBCGR7OTCY2BKAGCSTYOHDCLLA7J4UHGIYCTRBVMYPS4PPA">
+      <manifest-digest sha256new="QOM2TRBCGR7OTCY2BKAGCSTYOHDCLLA7J4UHGIYCTRBVMYPS4PPA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.20.0/i686-pc-windows-msvc/rustup-init.exe" size="6036480" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.20.1" released="2026-07-21" stability="stable" id="sha256new_QWJD7GWFYFGZGLD7NXLECJQZ7KXTYM5ZRPW6FHBERI4TVYMPJMXA">
+      <manifest-digest sha256new="QWJD7GWFYFGZGLD7NXLECJQZ7KXTYM5ZRPW6FHBERI4TVYMPJMXA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.20.1/x86_64-pc-windows-msvc/rustup-init.exe" size="7706624" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.20.1" released="2026-07-21" stability="stable" id="sha256new_H66AUU3VUQVU3KAN24WAPUUYO2HDWDLGDJZ7IJMOVF7NBISMRJXQ">
+      <manifest-digest sha256new="H66AUU3VUQVU3KAN24WAPUUYO2HDWDLGDJZ7IJMOVF7NBISMRJXQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.20.1/i686-pc-windows-msvc/rustup-init.exe" size="6036480" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.21.0" released="2026-07-21" stability="stable" id="sha256new_MRKRO3SPVW2AHK2MDAPIIDVZUHRSZSQUP7LYM6SJ2DGR6JCLGOHQ">
+      <manifest-digest sha256new="MRKRO3SPVW2AHK2MDAPIIDVZUHRSZSQUP7LYM6SJ2DGR6JCLGOHQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.21.0/x86_64-pc-windows-msvc/rustup-init.exe" size="7713280" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.21.0" released="2026-07-21" stability="stable" id="sha256new_DRS4V4OQIUJKX2MFOLBWD637PEY5ICOAI267EYBQYXYCQBN3MV4Q">
+      <manifest-digest sha256new="DRS4V4OQIUJKX2MFOLBWD637PEY5ICOAI267EYBQYXYCQBN3MV4Q"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.21.0/i686-pc-windows-msvc/rustup-init.exe" size="6042624" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.21.1" released="2026-07-21" stability="stable" id="sha256new_HNFNNOBYQG4HDCAJGR34YZWBVFB3IUEMCG2MJE4COJRLHGKKAB6Q">
+      <manifest-digest sha256new="HNFNNOBYQG4HDCAJGR34YZWBVFB3IUEMCG2MJE4COJRLHGKKAB6Q"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.21.1/x86_64-pc-windows-msvc/rustup-init.exe" size="8636416" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.21.1" released="2026-07-21" stability="stable" id="sha256new_YXJ35YGOB4JKDV5Q5NPZ7RVFT5IHCURDG2SHVSQ7AD47LNU6UORA">
+      <manifest-digest sha256new="YXJ35YGOB4JKDV5Q5NPZ7RVFT5IHCURDG2SHVSQ7AD47LNU6UORA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.21.1/i686-pc-windows-msvc/rustup-init.exe" size="6937600" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.22.0" released="2026-07-21" stability="stable" id="sha256new_GFG5L6ZOKPP7Q4OYMJK42YMYIRZBYEKT752TFWOA7753ZVFKASWA">
+      <manifest-digest sha256new="GFG5L6ZOKPP7Q4OYMJK42YMYIRZBYEKT752TFWOA7753ZVFKASWA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.22.0/x86_64-pc-windows-msvc/rustup-init.exe" size="8486912" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.22.0" released="2026-07-21" stability="stable" id="sha256new_RSUG3AFO3OWM4XVZJHF6V6LZQAHY4PHOHGIL6UEZ74QSENAOUA4A">
+      <manifest-digest sha256new="RSUG3AFO3OWM4XVZJHF6V6LZQAHY4PHOHGIL6UEZ74QSENAOUA4A"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.22.0/i686-pc-windows-msvc/rustup-init.exe" size="6667264" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.22.1" released="2026-07-21" stability="stable" id="sha256new_FDRKHOZWPTJEE3E566ZCRN7M7YQ3JUZ4VVE56GOFOD4VWIGOJ5KQ">
+      <manifest-digest sha256new="FDRKHOZWPTJEE3E566ZCRN7M7YQ3JUZ4VVE56GOFOD4VWIGOJ5KQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.22.1/x86_64-pc-windows-msvc/rustup-init.exe" size="8486912" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.22.1" released="2026-07-21" stability="stable" id="sha256new_4QQ2T4KPYM3SL6IAC5KWRHFQC7YRGIVX5GOVWM7PKYNXURWFSXGQ">
+      <manifest-digest sha256new="4QQ2T4KPYM3SL6IAC5KWRHFQC7YRGIVX5GOVWM7PKYNXURWFSXGQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.22.1/i686-pc-windows-msvc/rustup-init.exe" size="6663680" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.23.0" released="2026-07-21" stability="stable" id="sha256new_Y5VTBU5P6X3BCVSNEUNTOR5NJF24BUWQ2NGDUJQ53EOE52WCYUJQ">
+      <manifest-digest sha256new="Y5VTBU5P6X3BCVSNEUNTOR5NJF24BUWQ2NGDUJQ53EOE52WCYUJQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.23.0/x86_64-pc-windows-msvc/rustup-init.exe" size="8536064" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.23.0" released="2026-07-21" stability="stable" id="sha256new_4RCRQ5BLV6RJOCYRM2M6RB6DYZGUQ3CPJYFXVSYMRIVLBEG5WASQ">
+      <manifest-digest sha256new="4RCRQ5BLV6RJOCYRM2M6RB6DYZGUQ3CPJYFXVSYMRIVLBEG5WASQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.23.0/i686-pc-windows-msvc/rustup-init.exe" size="6892544" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.23.1" released="2026-07-21" stability="stable" id="sha256new_C4UNSLFX3J3X53IQKK5RV43VKYPVXKURXKJQXPAK6DEYMPGLZGQA">
+      <manifest-digest sha256new="C4UNSLFX3J3X53IQKK5RV43VKYPVXKURXKJQXPAK6DEYMPGLZGQA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.23.1/x86_64-pc-windows-msvc/rustup-init.exe" size="8536064" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.23.1" released="2026-07-21" stability="stable" id="sha256new_7SBWEPOQLU3YDAQO7JJFADLQJ572NLLMKYI2J7JZ36PDNQNOVFEQ">
+      <manifest-digest sha256new="7SBWEPOQLU3YDAQO7JJFADLQJ572NLLMKYI2J7JZ36PDNQNOVFEQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.23.1/i686-pc-windows-msvc/rustup-init.exe" size="6894080" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.24.0" released="2026-07-21" stability="stable" id="sha256new_ZLTGYDUEQ5F2E6RCLG2SPVZLWK7JMJM7LDS3GTNKFNZQ75P7CVGQ">
+      <manifest-digest sha256new="ZLTGYDUEQ5F2E6RCLG2SPVZLWK7JMJM7LDS3GTNKFNZQ75P7CVGQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.0/x86_64-pc-windows-msvc/rustup-init.exe" size="10057216" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.24.0" released="2026-07-21" stability="stable" id="sha256new_3OO7NWH3XN5TOGPJXD2OKVNQJ4F5TBKPZRWOHUQNI65C3OCYZBOA">
+      <manifest-digest sha256new="3OO7NWH3XN5TOGPJXD2OKVNQJ4F5TBKPZRWOHUQNI65C3OCYZBOA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.0/i686-pc-windows-msvc/rustup-init.exe" size="8053760" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.24.1" released="2026-07-21" stability="stable" id="sha256new_JNWRRQMXDC4DKCN7TFO7MW6JUL2IHMRJI6VG6ATHELOKWXPOTWAA">
+      <manifest-digest sha256new="JNWRRQMXDC4DKCN7TFO7MW6JUL2IHMRJI6VG6ATHELOKWXPOTWAA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.1/x86_64-pc-windows-msvc/rustup-init.exe" size="10056192" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.24.1" released="2026-07-21" stability="stable" id="sha256new_2Y72M4PFNJMO6VD73KAJ5XBBE43YTWCQ2S54M2IZ5P4E3JSKP5ZA">
+      <manifest-digest sha256new="2Y72M4PFNJMO6VD73KAJ5XBBE43YTWCQ2S54M2IZ5P4E3JSKP5ZA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.1/i686-pc-windows-msvc/rustup-init.exe" size="8053760" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.24.2" released="2026-07-21" stability="stable" id="sha256new_2QG35G7DBGDAR7QXCO35WXGVJ57GX76OGW5LG4DBZNEEOEVTYSJA">
+      <manifest-digest sha256new="2QG35G7DBGDAR7QXCO35WXGVJ57GX76OGW5LG4DBZNEEOEVTYSJA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.2/x86_64-pc-windows-msvc/rustup-init.exe" size="9267712" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.24.2" released="2026-07-21" stability="stable" id="sha256new_KGRQSCSEGVCR32GMERN4CG65SZGYO6HJQWZ4IBSEMITVQRM7AJLQ">
+      <manifest-digest sha256new="KGRQSCSEGVCR32GMERN4CG65SZGYO6HJQWZ4IBSEMITVQRM7AJLQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.2/i686-pc-windows-msvc/rustup-init.exe" size="7709184" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.24.3" released="2026-07-21" stability="stable" id="sha256new_GGH55W7VEKXK76AQNW3NAENKO57I67VQCEQFLQ3WA5ATC5ORGOFQ">
+      <manifest-digest sha256new="GGH55W7VEKXK76AQNW3NAENKO57I67VQCEQFLQ3WA5ATC5ORGOFQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.3/x86_64-pc-windows-msvc/rustup-init.exe" size="9284608" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.24.3" released="2026-07-21" stability="stable" id="sha256new_5C7DLUFRW7E5D4ZUAXVMD3IM5HAIVKI6CBIC5MQVAHM4WKT2JZZA">
+      <manifest-digest sha256new="5C7DLUFRW7E5D4ZUAXVMD3IM5HAIVKI6CBIC5MQVAHM4WKT2JZZA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.24.3/i686-pc-windows-msvc/rustup-init.exe" size="7718912" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.25.0" released="2026-07-21" stability="stable" id="sha256new_RL5LPHGY67WJZJPETLCZ23V35IKTIZGXX7TJPWX6SZ6CHVUZE3LA">
+      <manifest-digest sha256new="RL5LPHGY67WJZJPETLCZ23V35IKTIZGXX7TJPWX6SZ6CHVUZE3LA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.25.0/x86_64-pc-windows-msvc/rustup-init.exe" size="10055680" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.25.0" released="2026-07-21" stability="stable" id="sha256new_GNKL5BWS3DSMKSF5MTVF2ZT43ZUOPB766G4I67B67YHH2ENYTAWQ">
+      <manifest-digest sha256new="GNKL5BWS3DSMKSF5MTVF2ZT43ZUOPB766G4I67B67YHH2ENYTAWQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.25.0/i686-pc-windows-msvc/rustup-init.exe" size="8169472" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.25.1" released="2026-07-21" stability="stable" id="sha256new_YWJ7KF6LA2OPNFYA5GM73BYP5FW4LZ325NPJC3X6VRTUINCVFTIQ">
+      <manifest-digest sha256new="YWJ7KF6LA2OPNFYA5GM73BYP5FW4LZ325NPJC3X6VRTUINCVFTIQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.25.1/x86_64-pc-windows-msvc/rustup-init.exe" size="10077696" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.25.1" released="2026-07-21" stability="stable" id="sha256new_AHSAWQJK5IM364RYYQ73ILBJ2GGBMKZJFTDQCKMPMZEMCPW2JTJQ">
+      <manifest-digest sha256new="AHSAWQJK5IM364RYYQ73ILBJ2GGBMKZJFTDQCKMPMZEMCPW2JTJQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.25.1/i686-pc-windows-msvc/rustup-init.exe" size="8189440" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.25.2" released="2026-07-21" stability="stable" id="sha256new_CTHPCM4Y3PTUXKUTWEU3LTYPKTW4ZV4IEXBPQNJQRCZQWIZRUW4Q">
+      <manifest-digest sha256new="CTHPCM4Y3PTUXKUTWEU3LTYPKTW4ZV4IEXBPQNJQRCZQWIZRUW4Q"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.25.2/x86_64-pc-windows-msvc/rustup-init.exe" size="9996288" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.25.2" released="2026-07-21" stability="stable" id="sha256new_OJJWS3PDKIW7VLW23ABKNFTRWMS7PT6IKKDJMDXX232ELWCENJAA">
+      <manifest-digest sha256new="OJJWS3PDKIW7VLW23ABKNFTRWMS7PT6IKKDJMDXX232ELWCENJAA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.25.2/i686-pc-windows-msvc/rustup-init.exe" size="8260096" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.26.0" released="2026-07-21" stability="stable" id="sha256new_N7ULMHYLC3FUNBUORRIONOZ25QOO6O6M33OZRAJOJJPRBFSF2V3A">
+      <manifest-digest sha256new="N7ULMHYLC3FUNBUORRIONOZ25QOO6O6M33OZRAJOJJPRBFSF2V3A"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.26.0/x86_64-pc-windows-msvc/rustup-init.exe" size="8594944" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.26.0" released="2026-07-21" stability="stable" id="sha256new_7KGRHG4HSWJYLIU5SCOO4LA6HSP6WOFSSPB7YO4YLDD6HRHPAYXQ">
+      <manifest-digest sha256new="7KGRHG4HSWJYLIU5SCOO4LA6HSP6WOFSSPB7YO4YLDD6HRHPAYXQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.26.0/i686-pc-windows-msvc/rustup-init.exe" size="7030784" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.26.0" released="2026-07-21" stability="stable" id="sha256new_XKGP5ERXUAC2C7VEPJ3DKRKRFYEWHQJYUZBNZ5POAD3FQLYOBPJA">
+      <manifest-digest sha256new="XKGP5ERXUAC2C7VEPJ3DKRKRFYEWHQJYUZBNZ5POAD3FQLYOBPJA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.26.0/aarch64-pc-windows-msvc/rustup-init.exe" size="6763520" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.27.0" released="2026-07-21" stability="stable" id="sha256new_D3AKFITQQRNB5G3BG2T7EB34OB4KDJGORNJDDVXY2T5YADMUBKHQ">
+      <manifest-digest sha256new="D3AKFITQQRNB5G3BG2T7EB34OB4KDJGORNJDDVXY2T5YADMUBKHQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.27.0/x86_64-pc-windows-msvc/rustup-init.exe" size="9684992" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.27.0" released="2026-07-21" stability="stable" id="sha256new_SU76U627M7AZZF27D3KQU4KZTSLID3ZVSKKXYUHDGJPWZZOZODIA">
+      <manifest-digest sha256new="SU76U627M7AZZF27D3KQU4KZTSLID3ZVSKKXYUHDGJPWZZOZODIA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.27.0/i686-pc-windows-msvc/rustup-init.exe" size="7699456" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.27.0" released="2026-07-21" stability="stable" id="sha256new_M24SB2UCKH4I4KFVZJSUBVSLGLQJOOAVVHY42FGHK4YONMNNDZCQ">
+      <manifest-digest sha256new="M24SB2UCKH4I4KFVZJSUBVSLGLQJOOAVVHY42FGHK4YONMNNDZCQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.27.0/aarch64-pc-windows-msvc/rustup-init.exe" size="7719424" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.27.1" released="2026-07-21" stability="stable" id="sha256new_RUY66UPZRQSGFUDQE3OZULLC2MUI3U5HNUWVX6AYXWJOEPK5HLYQ">
+      <manifest-digest sha256new="RUY66UPZRQSGFUDQE3OZULLC2MUI3U5HNUWVX6AYXWJOEPK5HLYQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.27.1/x86_64-pc-windows-msvc/rustup-init.exe" size="8949760" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.27.1" released="2026-07-21" stability="stable" id="sha256new_PONJJTOC5LD745VX6FPSHD5GORDQ4BYNSPSTSDSG6HVQ6OBXEM3Q">
+      <manifest-digest sha256new="PONJJTOC5LD745VX6FPSHD5GORDQ4BYNSPSTSDSG6HVQ6OBXEM3Q"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.27.1/i686-pc-windows-msvc/rustup-init.exe" size="7075840" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.27.1" released="2026-07-21" stability="stable" id="sha256new_NEF64CDAA3LHYB2BTVGNANO4FT64H7RDHYNT46BB6HIY7ZTGPBXA">
+      <manifest-digest sha256new="NEF64CDAA3LHYB2BTVGNANO4FT64H7RDHYNT46BB6HIY7ZTGPBXA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.27.1/aarch64-pc-windows-msvc/rustup-init.exe" size="6942208" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.28.0" released="2026-07-21" stability="stable" id="sha256new_GEKHUUMWZ7BEUHFGQAZMLUHBWRQ5Z735QADGCOENXRZ3CQOD45RQ">
+      <manifest-digest sha256new="GEKHUUMWZ7BEUHFGQAZMLUHBWRQ5Z735QADGCOENXRZ3CQOD45RQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.0/x86_64-pc-windows-msvc/rustup-init.exe" size="12530688" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.28.0" released="2026-07-21" stability="stable" id="sha256new_4523GZD66V2V4GA4E7D3NW2IV6MUQOAZHRCDJWBUVQ3QN4TDG5RA">
+      <manifest-digest sha256new="4523GZD66V2V4GA4E7D3NW2IV6MUQOAZHRCDJWBUVQ3QN4TDG5RA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.0/i686-pc-windows-msvc/rustup-init.exe" size="9781760" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.28.0" released="2026-07-21" stability="stable" id="sha256new_JO6FCFZBG2BV3GKWPHEUYWDTQXKJZVHI7M6XAQ25ACGZ2KXFBY7Q">
+      <manifest-digest sha256new="JO6FCFZBG2BV3GKWPHEUYWDTQXKJZVHI7M6XAQ25ACGZ2KXFBY7Q"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.0/aarch64-pc-windows-msvc/rustup-init.exe" size="10557952" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.28.1" released="2026-07-21" stability="stable" id="sha256new_XVIPJ7HOHXXQDONXNVRWR6LBYC2B3LYS5RB3WZB2JIIZSE62O6GQ">
+      <manifest-digest sha256new="XVIPJ7HOHXXQDONXNVRWR6LBYC2B3LYS5RB3WZB2JIIZSE62O6GQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.1/x86_64-pc-windows-msvc/rustup-init.exe" size="12568064" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.28.1" released="2026-07-21" stability="stable" id="sha256new_JHYVSWVCC2SVSDTC32VPAPSOU7IRQ5BUZHBWG3ZAWAMM5BCRK4UA">
+      <manifest-digest sha256new="JHYVSWVCC2SVSDTC32VPAPSOU7IRQ5BUZHBWG3ZAWAMM5BCRK4UA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.1/i686-pc-windows-msvc/rustup-init.exe" size="9808384" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.28.1" released="2026-07-21" stability="stable" id="sha256new_HXCNKLTU7B7OZLLGESNWTE76X42XZORAAJ7HXQKBN3ZKYDFVTHCQ">
+      <manifest-digest sha256new="HXCNKLTU7B7OZLLGESNWTE76X42XZORAAJ7HXQKBN3ZKYDFVTHCQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.1/aarch64-pc-windows-msvc/rustup-init.exe" size="10592768" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.28.2" released="2026-07-21" stability="stable" id="sha256new_JHC6CQ72CJAGQHLRBWK3DK7HCD5QTI5ILPNFNO7ET6ACALZQ7LRQ">
+      <manifest-digest sha256new="JHC6CQ72CJAGQHLRBWK3DK7HCD5QTI5ILPNFNO7ET6ACALZQ7LRQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.2/x86_64-pc-windows-msvc/rustup-init.exe" size="13551616" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.28.2" released="2026-07-21" stability="stable" id="sha256new_WF6CUDXNT67QFU3SKCTEGTDN7ZA2HMPIZNCFIZ46BK7LVZIVMAQQ">
+      <manifest-digest sha256new="WF6CUDXNT67QFU3SKCTEGTDN7ZA2HMPIZNCFIZ46BK7LVZIVMAQQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.2/i686-pc-windows-msvc/rustup-init.exe" size="10606080" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.28.2" released="2026-07-21" stability="stable" id="sha256new_5VVC2TSG2KJFQWUQV6IT4DP44WPB5RC4VM4DF7M6DNPO5Y4WW62A">
+      <manifest-digest sha256new="5VVC2TSG2KJFQWUQV6IT4DP44WPB5RC4VM4DF7M6DNPO5Y4WW62A"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.28.2/aarch64-pc-windows-msvc/rustup-init.exe" size="11443200" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.29.0" released="2026-07-21" stability="stable" id="sha256new_EAEEP7BRFFP4LUFJA7CWZIVVYIE7ITSG6LONHWPPZYKEPWXJRCDA">
+      <manifest-digest sha256new="EAEEP7BRFFP4LUFJA7CWZIVVYIE7ITSG6LONHWPPZYKEPWXJRCDA"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.29.0/x86_64-pc-windows-msvc/rustup-init.exe" size="12814336" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="1.29.0" released="2026-07-21" stability="stable" id="sha256new_GSQQ3X7HYWKBAEPR22FU6WMTTYQCNCDUD6XVERA4SNYWPCU5ONBQ">
+      <manifest-digest sha256new="GSQQ3X7HYWKBAEPR22FU6WMTTYQCNCDUD6XVERA4SNYWPCU5ONBQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.29.0/i686-pc-windows-msvc/rustup-init.exe" size="10006016" dest="rustup.exe"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.29.0" released="2026-07-21" stability="stable" id="sha256new_DKPNK5D636VFE7ZV35ASXJDGCY5ORMQFY2QEQ6QL7BLEV4NEWNIQ">
+      <manifest-digest sha256new="DKPNK5D636VFE7ZV35ASXJDGCY5ORMQFY2QEQ6QL7BLEV4NEWNIQ"/>
+      <file href="https://static.rust-lang.org/rustup/archive/1.29.0/aarch64-pc-windows-msvc/rustup-init.exe" size="11462144" dest="rustup.exe"/>
+    </implementation>
+  </group>
+</interface>

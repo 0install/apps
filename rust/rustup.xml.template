@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>rustup</name>
+  <summary>the Rust toolchain installer</summary>
+  <description>rustup installs the Rust programming language from the official release channels, enabling you to easily switch between stable, beta, and nightly compilers and keep them updated. It makes cross-compiling simpler with binary builds of the standard library for common platforms.</description>
+  <homepage>https://rust-lang.org/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+  <icon href="https://apps.0install.net/rust/rust.png" type="image/png"/>
+  <icon href="https://apps.0install.net/rust/rust.ico" type="image/vnd.microsoft.icon"/>
+
+  <feed-for interface="https://apps.0install.net/rust/rustup.xml"/>
+
+  <group license="MIT OR Apache-2.0">
+    <command name="run" path="rustup"/>
+    <command name="cargo" path="rustup">
+      <arg>run</arg>
+      <arg>stable</arg>
+      <arg>cargo</arg>
+    </command>
+    <command name="rustc" path="rustup">
+      <arg>run</arg>
+      <arg>stable</arg>
+      <arg>rustc</arg>
+    </command>
+    <command name="rustdoc" path="rustup">
+      <arg>run</arg>
+      <arg>stable</arg>
+      <arg>rustdoc</arg>
+    </command>
+    <command name="rustfmt" path="rustup">
+      <arg>run</arg>
+      <arg>stable</arg>
+      <arg>rustfmt</arg>
+    </command>
+
+    <implementation arch="Linux-x86_64" version="{version}" stability="stable">
+      <manifest-digest/>
+      <file dest="rustup" executable="true" href="https://static.rust-lang.org/rustup/archive/{version}/x86_64-unknown-linux-gnu/rustup-init"/>
+    </implementation>
+    <implementation arch="Linux-i686" version="{version}" stability="stable">
+      <manifest-digest/>
+      <file dest="rustup" executable="true" href="https://static.rust-lang.org/rustup/archive/{version}/i686-unknown-linux-gnu/rustup-init"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" stability="stable">
+      <manifest-digest/>
+      <file dest="rustup" executable="true" href="https://static.rust-lang.org/rustup/archive/{version}/aarch64-unknown-linux-gnu/rustup-init"/>
+    </implementation>
+    <implementation arch="Darwin-x86_64" version="{version}" stability="stable">
+      <manifest-digest/>
+      <file dest="rustup" executable="true" href="https://static.rust-lang.org/rustup/archive/{version}/x86_64-apple-darwin/rustup-init"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="{version}" stability="stable">
+      <manifest-digest/>
+      <file dest="rustup" executable="true" href="https://static.rust-lang.org/rustup/archive/{version}/aarch64-apple-darwin/rustup-init"/>
+    </implementation>
+  </group>
+
+  <group license="MIT OR Apache-2.0">
+    <command name="run" path="rustup.exe"/>
+    <command name="cargo" path="rustup.exe">
+      <arg>run</arg>
+      <arg>stable</arg>
+      <arg>cargo</arg>
+    </command>
+    <command name="rustc" path="rustup.exe">
+      <arg>run</arg>
+      <arg>stable</arg>
+      <arg>rustc</arg>
+    </command>
+    <command name="rustdoc" path="rustup.exe">
+      <arg>run</arg>
+      <arg>stable</arg>
+      <arg>rustdoc</arg>
+    </command>
+    <command name="rustfmt" path="rustup.exe">
+      <arg>run</arg>
+      <arg>stable</arg>
+      <arg>rustfmt</arg>
+    </command>
+
+    <implementation arch="Windows-x86_64" version="{version}" stability="stable">
+      <manifest-digest/>
+      <file dest="rustup.exe" href="https://static.rust-lang.org/rustup/archive/{version}/x86_64-pc-windows-msvc/rustup-init.exe"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" stability="stable">
+      <manifest-digest/>
+      <file dest="rustup.exe" href="https://static.rust-lang.org/rustup/archive/{version}/i686-pc-windows-msvc/rustup-init.exe"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="{version}" stability="stable">
+      <manifest-digest/>
+      <file dest="rustup.exe" href="https://static.rust-lang.org/rustup/archive/{version}/aarch64-pc-windows-msvc/rustup-init.exe"/>
+    </implementation>
+  </group>
+</interface>

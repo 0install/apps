@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Zero Install: Apps: Rust</title>
+  <link rel="icon" href="https://0install.net/logo/favicon.ico" type="image/vnd.microsoft.icon" />
+  <link rel="stylesheet" href="https://0install.net/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://0install.net/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://0install.net/css/site.css">
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://0install.net/js/site.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="site-header d-flex flex-wrap align-items-center gap-3">
+      <a class="site-brand d-flex align-items-center gap-2 text-decoration-none" href="https://0install.net/">
+        <img src="https://0install.net/logo/zeroinstall-icon.png" width="40" height="40" alt="Zero Install Logo">
+        Zero Install
+      </a>
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="https://apps.0install.net/#more">Apps</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Rust</li>
+      </ol>
+    </header>
+
+    <main>
+      <p>Rust is a general purpose programming language with an emphasis on performance, reliability and memory safety. You can use Zero Install to get Rust development tools.</p>
+
+      <div class="card mb-4">
+        <div class="card-body tab-body">
+          <iframe src="catalog.xml"></iframe>
+        </div>
+      </div>
+
+      <p>
+        To add <code>rustup</code> (the Rust toolchain installer) and its proxies (<code>cargo</code>, <code>rustc</code>, etc.) to your <code>PATH</code>:
+        <code>
+          <textarea readonly class="form-control-plaintext" rows="5">0install add rustup https://apps.0install.net/rust/rustup.xml
+0install add --command=cargo cargo https://apps.0install.net/rust/rustup.xml
+0install add --command=rustc rustc https://apps.0install.net/rust/rustup.xml
+0install add --command=rustdoc rustdoc https://apps.0install.net/rust/rustup.xml
+0install add --command=rustfmt rustfmt https://apps.0install.net/rust/rustup.xml
+        </code>
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      © Copyright 2003-2026 Thomas Leonard, Bastian Eicher and others<br>
+        Permission is granted to use the site (excluding the software, which is licensed separately) in accordance with the terms of the <a href="https://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike 2.5 license</a>.
+    </footer>
+  </div>
+</body>
+
+</html>

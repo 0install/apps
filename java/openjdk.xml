@@ -335,7 +335,7 @@
     </implementation>
   </group>
 
-  <group license="GPL-2.0-only WITH Classpath-exception-2.0" arch="MacOSX-*">
+  <group arch="MacOSX-*" license="GPL-2.0-only WITH Classpath-exception-2.0">
     <command name="run" path="Contents/Home/bin/javac"/>
     <command name="java" path="Contents/Home/bin/java"/>
     <command name="javap" path="Contents/Home/bin/javap"/>
@@ -398,6 +398,10 @@
     <implementation version="26.0.1" released="2026-04-22" stability="testing" id="sha256new_5FRA5S7ETJOYU2ZIMXG2PLD3ZXMQKDVVUQZ3QGRRACXW62IZDSQQ">
       <manifest-digest sha256new="5FRA5S7ETJOYU2ZIMXG2PLD3ZXMQKDVVUQZ3QGRRACXW62IZDSQQ"/>
       <archive href="https://download.oracle.com/java/GA/jdk26.0.1/458fda22e4c54d5ba572ab8d2b22eb83/8/GPL/openjdk-26.0.1_macos-x64_bin.tar.gz" size="222520238" type="application/x-compressed-tar" extract="jdk-26.0.1.jdk"/>
+    </implementation>
+    <implementation version="26.0.2" released="2026-07-22" stability="testing" id="sha256new_HC7BJDJ6NK6BLXZWPTGJEBVZBF2V2XY3I4C7YJ35GJFLHRVQXYTQ">
+      <manifest-digest sha256new="HC7BJDJ6NK6BLXZWPTGJEBVZBF2V2XY3I4C7YJ35GJFLHRVQXYTQ"/>
+      <archive href="https://download.oracle.com/java/GA/jdk26.0.2/818d462d89b645c7a1aad49066c454e5/10/GPL/openjdk-26.0.2_macos-x64_bin.tar.gz" size="222620041" type="application/x-compressed-tar" extract="jdk-26.0.2.jdk"/>
     </implementation>
   </group>
 
@@ -496,6 +500,14 @@
     <implementation arch="Linux-aarch64" version="26.0.1" released="2026-04-22" stability="testing" id="sha256new_CWG235S6ZJMXMVUWG7TJ6KBNRQTNVJNFJ5GEVZWBNHPP5AQ6SB4A">
       <manifest-digest sha256new="CWG235S6ZJMXMVUWG7TJ6KBNRQTNVJNFJ5GEVZWBNHPP5AQ6SB4A"/>
       <archive href="https://download.oracle.com/java/GA/jdk26.0.1/458fda22e4c54d5ba572ab8d2b22eb83/8/GPL/openjdk-26.0.1_linux-aarch64_bin.tar.gz" size="225176650" type="application/x-compressed-tar" extract="jdk-26.0.1"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" version="26.0.2" released="2026-07-22" stability="testing" id="sha256new_IU7OA5ZTWG2ZMGZ22BN44UDCKBRJIF45XMHEFOISEILKACLNQOCA">
+      <manifest-digest sha256new="IU7OA5ZTWG2ZMGZ22BN44UDCKBRJIF45XMHEFOISEILKACLNQOCA"/>
+      <archive href="https://download.oracle.com/java/GA/jdk26.0.2/818d462d89b645c7a1aad49066c454e5/10/GPL/openjdk-26.0.2_linux-x64_bin.tar.gz" size="227507843" type="application/x-compressed-tar" extract="jdk-26.0.2"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="26.0.2" released="2026-07-22" stability="testing" id="sha256new_2JUAB4I6O2SSH7JIOWSPJTPEQLP5JMTRV6FNTSMTUBM5YPGMX4WQ">
+      <manifest-digest sha256new="2JUAB4I6O2SSH7JIOWSPJTPEQLP5JMTRV6FNTSMTUBM5YPGMX4WQ"/>
+      <archive href="https://download.oracle.com/java/GA/jdk26.0.2/818d462d89b645c7a1aad49066c454e5/10/GPL/openjdk-26.0.2_linux-aarch64_bin.tar.gz" size="225302681" type="application/x-compressed-tar" extract="jdk-26.0.2"/>
     </implementation>
   </group>
 
@@ -887,14 +899,18 @@
       <manifest-digest sha256new="IJSL4QC4QAUFITFNTBZKRQTRGGOOCN4XD5QYOLPNIHTOPVKZ3TLQ"/>
       <archive href="https://download.oracle.com/java/GA/jdk26.0.1/458fda22e4c54d5ba572ab8d2b22eb83/8/GPL/openjdk-26.0.1_windows-x64_bin.zip" size="226908142" type="application/zip" extract="jdk-26.0.1"/>
     </implementation>
+    <implementation version="26.0.2" released="2026-07-22" stability="testing" id="sha256new_73ID4VTDKKUOUDHEOYS4PQZPXMAZKSC4JBKQ25QRZWSJZBL2QT6A">
+      <manifest-digest sha256new="73ID4VTDKKUOUDHEOYS4PQZPXMAZKSC4JBKQ25QRZWSJZBL2QT6A"/>
+      <archive href="https://download.oracle.com/java/GA/jdk26.0.2/818d462d89b645c7a1aad49066c454e5/10/GPL/openjdk-26.0.2_windows-x64_bin.zip" size="227004750" type="application/zip" extract="jdk-26.0.2"/>
+    </implementation>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmpacaAACgkQWao5J8JOTh7oRQf5AepB
-UNnJYsTsydlqgQyn4z1E/81tkxQzm6yXiiSnpGWnX4m7eSRtf5oxqmAStnEtSKhVwXC1KXAzBCBc
-PI/iatIn2eLC64KuLfQ3MRBfi0isyi11fIrgwdhO7D4o4aj/E74pjbuU8DFJeSE8VhC7a8hPFFH9
-TTP5AWyGdwnRKOOleSYtoG8YGUOG/00dvzDQvAbz6IEx5QeSR7f+Gmm5jPputfwAxxPp/+i7HPGe
-DzZahYC4SrFqg03JXc7RnIBkCZqb0R170FjCnGXdccKP+IhGdr2lUjSkUeu/wevvnsqokkI3aGqC
-hBV+SJIXYkQ/dQUpKrtO5nGEKzt4QAzAcw==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmpgdAoACgkQWao5J8JOTh4lzQf+Px3X
+or5OC6Bdgk1B6KVkmSYiMf9lT2TDxGK1pa4um1XO2QMcsHA7PLPzQQpu2jWF8UK7jsJH1ca9XJ0k
+jzw/Mb3UoOfurscFY8hPbefOgK2yFH6BJBfpY+t4rjzF1sHqIWtyz4mYJ2Syybs4noDkK+/JMYBh
+w+GVRxtOYmuALNkyuyi9kJpbrWOxcOUzCnRH87ECKN41nomWZIdJUKK4vR6CPtY/rsxBF5ZDlVU3
+XxBbaAw74u2uRKesZyortKI9d3mq+JtUxsses9hlcVYZHh9KAC0lEtb690Gf1f3dTXvyR5Kk/Wpt
+Qo1Lnv90Wh+bK0Jijytj3Q5sogoWNGX0kw==
 
 -->

@@ -16,30 +16,17 @@ jobs:
   incoming:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up directory structure
-        uses: 0install/apps/.github/actions/setup@master
-
-      - name: Download feed
-        run: curl -sSfL ${{inputs.feed_url}} -o incoming/feed.xml
-      - name: Download archive
-        if: inputs.archive_url
-        run: |
-          archive_name=$(basename ${{inputs.archive_url}})
-          curl -sSfL ${{inputs.archive_url}} -o incoming/$archive_name
-          archive_hash=($(sha1sum incoming/$archive_name))
-
-          cd public
-          echo "$archive_name $archive_hash ${{inputs.archive_url}}" >> archives.db
-          git add archives.db
-          git commit -m "Added $archive_name to archives.db"
-
-      - name: Run 0repo
-        uses: 0install/apps/.github/actions/0repo@master
+      - uses: 0install/github-actions/0repo-setup@v1
         with:
-          gpg_key: ${{secrets.GPG_KEY}}
-
-      - name: Push public
+          git-user-name: apps.0install.net
+          git-user-email: webmaster@0install.net
+      - uses: 0install/github-actions/0repo@v1
+        with:
+          gpg-key: ${{secrets.GPG_KEY}}
+          incoming-feed-url: ${{inputs.feed_url}}
+          incoming-archive-url: ${{inputs.archive_url}}
+      - name: Publish to GitHub Pages
         if: inputs.archive_url
         run: cd public; git push
-      - name: Push feeds
+      - name: Push modified feeds
         run: cd feeds; git push

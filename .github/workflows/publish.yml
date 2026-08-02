@@ -12,11 +12,12 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up directory structure
-        uses: 0install/apps/.github/actions/setup@master
-      - name: Run 0repo
-        uses: 0install/apps/.github/actions/0repo@master
+      - uses: 0install/github-actions/0repo-setup@v1
         with:
-          gpg_key: ${{secrets.GPG_KEY}}
-      - name: Push public
+          git-user-name: apps.0install.net
+          git-user-email: webmaster@0install.net
+      - uses: 0install/github-actions/0repo@v1
+        with:
+          gpg-key: ${{secrets.GPG_KEY}}
+      - name: Publish to GitHub Pages
         run: cd public; git push

@@ -17,8 +17,8 @@
         <script src="https://apps.0install.net/resources/list.min.js"></script>
         <script>
           window.addEventListener("keydown", function (e) {
-            if (e.keyCode === 114 || (e.ctrlKey &amp;&amp; e.keyCode === 70)) { 
-              document.getElementById("search").focus();
+            if (e.keyCode === 114 || (e.ctrlKey &amp;&amp; e.keyCode === 70)) {
+              document.querySelector(".search").focus();
               e.preventDefault();
             }
           });
@@ -30,10 +30,17 @@
         <div id="main">
           <div class="searchBar">
             <input class="search" placeholder="Search" />
+            <select class="category" aria-label="Categories">
+              <option value="">All categories</option>
+            </select>
           </div>
           <div class="list">
             <xsl:for-each select="interface:interface">
               <div class="app">
+                <xsl:attribute name="data-cats">|<xsl:for-each select="interface:category"><xsl:value-of select="text()"/>|</xsl:for-each></xsl:attribute>
+                <xsl:if test="interface:needs-terminal">
+                  <xsl:attribute name="data-terminal">true</xsl:attribute>
+                </xsl:if>
                 <a href="{@uri}">
                   <xsl:variable name="icon" select="interface:icon[@type='image/png']/@href"/>
                   <xsl:if test="$icon">
@@ -52,8 +59,9 @@
                   <p class="categories" hidden="true">
                     <xsl:for-each select="interface:category">
                       <xsl:value-of select="text()"/>
+                      <xsl:text> </xsl:text>
                     </xsl:for-each>
-                  </p> 
+                  </p>
                   <p class="summary">
                     <xsl:if test="interface:summary[@lang='en']">
                       <xsl:value-of select="interface:summary[@lang='en']"/>
@@ -80,8 +88,93 @@
               </div>
             </xsl:for-each>
           </div>
+          <!-- Only offer to hide command-line apps if that would leave a useful list behind -->
+          <xsl:if test="count(interface:interface[not(interface:needs-terminal)]) > 2 and interface:interface/interface:needs-terminal">
+            <div class="footerBar">
+              <label>
+                <input type="checkbox" class="includeTerminal" />
+                <span class="includeTerminalLabel">Include command-line apps</span>
+              </label>
+            </div>
+          </xsl:if>
         </div>
-        <script>new List('main', {valueNames: ['name', 'categories', 'summary']});</script>
+        <script>
+          //<![CDATA[
+          var categoryNames = {
+            "3DGraphics": "3D graphics", "Audio": "Audio", "AudioVideo": "Audio & video",
+            "AudioVideoEditing": "Audio & video editing", "Development": "Development",
+            "Education": "Education", "Email": "E-mail", "FileTools": "File tools",
+            "FileTransfer": "File transfer", "Game": "Games", "Graphics": "Graphics",
+            "Network": "Network", "Office": "Office", "Player": "Media players",
+            "RasterGraphics": "Raster graphics", "Scanning": "Scanning", "Science": "Science",
+            "Settings": "Settings", "System": "System", "Utility": "Utilities",
+            "VectorGraphics": "Vector graphics", "Video": "Video", "Viewer": "Viewers",
+            "WebBrowser": "Web browsers"
+          };
+          var includeCommandLineApps = "Include command-line apps";
+          var hiddenCount = "({0} hidden)";
+
+          var list = new List('main', {
+            valueNames: ['name', 'categories', 'summary', {data: ['cats', 'terminal']}],
+            searchColumns: ['name', 'categories', 'summary']
+          });
+
+          var comboCategory = document.querySelector('.category');
+          var checkBoxIncludeTerminal = document.querySelector('.includeTerminal');
+          var labelIncludeTerminal = document.querySelector('.includeTerminalLabel');
+
+          // Offer only the categories the catalog actually uses, sorted by their localized names
+          (function () {
+            var found = {};
+            list.items.forEach(function (item) {
+              (item.values().cats || '').split('|').forEach(function (category) {
+                if (category) found[category] = true;
+              });
+            });
+            Object.keys(found).map(function (category) {
+              return {name: category, label: categoryNames[category] || category};
+            }).sort(function (a, b) {
+              return a.label.localeCompare(b.label);
+            }).forEach(function (category) {
+              // This document is XML, so plain createElement() would not produce an HTML option
+              var option = document.createElementNS('http://www.w3.org/1999/xhtml', 'option');
+              option.value = category.name;
+              option.textContent = category.label;
+              comboCategory.appendChild(option);
+            });
+          })();
+
+          // Applies the filters to the list of apps. Should be called after any of the filters were changed.
+          function refilter() {
+            var category = comboCategory.value;
+            var includeTerminal = !checkBoxIncludeTerminal || checkBoxIncludeTerminal.checked;
+            var hidden = 0;
+
+            list.filter(function (item) {
+              var values = item.values();
+              var matches = !category || (values.cats || '').indexOf('|' + category + '|') !== -1;
+              var isTerminal = values.terminal === 'true';
+
+              // Count what the command-line filter holds back, taking the other filters into account.
+              // 'found' is only meaningful while a search is active.
+              if (matches && isTerminal && !includeTerminal && (!list.searched || item.found)) hidden++;
+
+              return matches && (includeTerminal || !isTerminal);
+            });
+
+            if (labelIncludeTerminal) {
+              labelIncludeTerminal.textContent = (hidden === 0)
+                ? includeCommandLineApps
+                : includeCommandLineApps + ' ' + hiddenCount.replace('{0}', hidden);
+            }
+          }
+
+          comboCategory.addEventListener('change', refilter);
+          if (checkBoxIncludeTerminal) checkBoxIncludeTerminal.addEventListener('change', refilter);
+          list.on('searchComplete', refilter);
+          refilter();
+          //]]>
+        </script>
       </body>
     </html>
   </xsl:template>

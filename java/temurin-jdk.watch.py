@@ -21,13 +21,16 @@ def get_common_release_name(feature_version):
     platform_releases = []
     for architecture, operating_system in PLATFORMS:
         releases = adoptium_api(
-            'assets/feature_releases/%d/ga?architecture=%s&image_type=jdk&jvm_impl=hotspot&os=%s&vendor=eclipse'
+            'assets/feature_releases/%d/ga?architecture=%s&image_type=jdk&jvm_impl=hotspot&os=%s&page_size=20&vendor=eclipse'
             % (feature_version, architecture, operating_system)
         )
         release_names = [release['release_name'] for release in releases]
         if not release_names:
             return None
         platform_releases.append(release_names)
+
+    if not platform_releases:
+        return None
 
     common_releases = set(platform_releases[0])
     for release_names in platform_releases[1:]:

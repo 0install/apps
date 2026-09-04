@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/gui/audacity-linux.xml">
+  <name>Audacity - Linux builds</name>
+  <summary xml:lang="en">fast multi-track audio editor and recorder</summary>
+  <summary xml:lang="de">schneller Mehrspur-Audio-Editor und -Aufzeichner</summary>
+  <description xml:lang="en">A fast multi-track audio editor and recorder. Supports WAV, AIFF, Ogg, and MP3 formats. Features include envelope editing, mixing, built-in effects and plug-ins, all with unlimited undo.</description>
+  <description xml:lang="de">Ein schneller Mehrspur-Audio-Editor und -Aufzeichner. Unterstützt die WAV, AIFF, Ogg, und MP3 Formate.</description>
+  <homepage>https://www.audacityteam.org/</homepage>
+  <icon href="https://apps.0install.net/gui/audacity.png" type="image/png"/>
+  <category>AudioVideo</category>
+  <category>Audio</category>
+  <category>AudioVideoEditing</category>
+
+  <feed-for interface="https://apps.0install.net/gui/audacity.xml"/>
+
+  <group license="GPL-3.0-only">
+    <command name="run" path="Audacity"/>
+    <implementation arch="Linux-x86_64" version="4.0.0" released="2026-09-03" stability="stable" id="sha256new_IYFCN4GSBIKS2R24DZL3UVFD2EISKKU2IJRJLYLK6RIQPWYLAFNQ">
+      <manifest-digest sha256new="IYFCN4GSBIKS2R24DZL3UVFD2EISKKU2IJRJLYLK6RIQPWYLAFNQ"/>
+      <file href="https://github.com/audacity/audacity/releases/download/Audacity-4.0.0/audacity-linux-4.0.0-x86_64.AppImage" size="73415160" dest="Audacity" executable="true"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="4.0.0" released="2026-09-03" stability="stable" id="sha256new_LEORGACTHFXNZKZFTHSN4575JOSU2XQV6UUJT6BUAZJX7O63ZGQA">
+      <manifest-digest sha256new="LEORGACTHFXNZKZFTHSN4575JOSU2XQV6UUJT6BUAZJX7O63ZGQA"/>
+      <file href="https://github.com/audacity/audacity/releases/download/Audacity-4.0.0/audacity-linux-4.0.0-aarch64.AppImage" size="70429192" dest="Audacity" executable="true"/>
+    </implementation>
+  </group>
+</interface>

@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/gui/audacity-macos.xml">
+  <name>Audacity - macOS builds</name>
+  <summary xml:lang="en">fast multi-track audio editor and recorder</summary>
+  <summary xml:lang="de">schneller Mehrspur-Audio-Editor und -Aufzeichner</summary>
+  <description xml:lang="en">A fast multi-track audio editor and recorder. Supports WAV, AIFF, Ogg, and MP3 formats. Features include envelope editing, mixing, built-in effects and plug-ins, all with unlimited undo.</description>
+  <description xml:lang="de">Ein schneller Mehrspur-Audio-Editor und -Aufzeichner. Unterstützt die WAV, AIFF, Ogg, und MP3 Formate.</description>
+  <homepage>https://www.audacityteam.org/</homepage>
+  <icon href="https://apps.0install.net/gui/audacity.png" type="image/png"/>
+  <icon href="https://apps.0install.net/gui/audacity.icns" type="image/x-icns"/>
+  <category>AudioVideo</category>
+  <category>Audio</category>
+  <category>AudioVideoEditing</category>
+
+  <feed-for interface="https://apps.0install.net/gui/audacity.xml"/>
+
+  <group license="GPL-3.0-only">
+    <command name="run" path="Audacity 4.app/Contents/MacOS/audacity"/>
+    <implementation arch="MacOSX-x86_64" version="4.0.0" released="2026-09-03" stability="stable" id="sha1new=5269c561dde9231b02fa038d8045a760369ef71a">
+      <manifest-digest sha256new="MDCWL5SDMKO36CLWU74P532DGVXEKHEF3Y57EXTQ5NGVDFHZ5YUA"/>
+      <archive href="https://github.com/audacity/audacity/releases/download/Audacity-4.0.0/audacity-macOS-4.0.0-x86_64.dmg" type="application/x-apple-diskimage" size="51096331"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="4.0.0" released="2026-09-03" stability="stable" id="sha1new=5a35449ed6f5a8fc248342238cb4c4894acd327d">
+      <manifest-digest sha256new="FRUZPTKYQ6WGTCFZLT4JOISTT5WN4NDOCFY2PQ7VBSXCLOHE5I7Q"/>
+      <archive href="https://github.com/audacity/audacity/releases/download/Audacity-4.0.0/audacity-macOS-4.0.0-arm64.dmg" type="application/x-apple-diskimage" size="46806707"/>
+    </implementation>
+  </group>
+</interface>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Audacity - Windows builds</name>
+  <summary xml:lang="en">fast multi-track audio editor and recorder</summary>
+  <summary xml:lang="de">schneller Mehrspur-Audio-Editor und -Aufzeichner</summary>
+  <description xml:lang="en">A fast multi-track audio editor and recorder. Supports WAV, AIFF, Ogg, and MP3 formats. Features include envelope editing, mixing, built-in effects and plug-ins, all with unlimited undo.</description>
+  <description xml:lang="de">Ein schneller Mehrspur-Audio-Editor und -Aufzeichner. Unterstützt die WAV, AIFF, Ogg, und MP3 Formate.</description>
+  <homepage>https://www.audacityteam.org/</homepage>
+  <icon href="https://apps.0install.net/gui/audacity.png" type="image/png"/>
+  <icon href="https://apps.0install.net/gui/audacity.ico" type="image/vnd.microsoft.icon"/>
+  <category>AudioVideo</category>
+  <category>Audio</category>
+  <category>AudioVideoEditing</category>
+
+  <feed-for interface="https://apps.0install.net/gui/audacity-windows.xml"/>
+
+  <group license="GPL-3.0-only">
+    <requires importance="recommended" interface="https://apps.0install.net/utils/ffmpeg.xml" version="2.0..!3.0"/>
+    <command name="run" path="bin/Audacity4.exe"/>
+
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="{stability}">
+      <manifest-digest/>
+      <archive extract="SourceDir/Audacity 4" href="https://github.com/audacity/audacity/releases/download/Audacity-{version}/audacity-win-{version}-x86_64.msi" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="{version}" released="{released}" stability="{stability}">
+      <manifest-digest/>
+      <archive extract="SourceDir/Audacity 4" href="https://github.com/audacity/audacity/releases/download/Audacity-{version}/audacity-win-{version}-arm64.msi" type="application/x-msi"/>
+    </implementation>
+  </group>
+</interface>

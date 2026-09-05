@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>ungoogled-chromium - macOS builds</name>
+  <summary>web browser based on Chromium, without Google integration</summary>
+  <description>ungoogled-chromium is Google Chromium, sans dependency on Google web services. It also features some tweaks to enhance privacy, control and transparency. Almost all of the modifications are contained in a single patch set, keeping it as close to upstream Chromium as possible.</description>
+  <homepage>https://github.com/ungoogled-software/ungoogled-chromium</homepage>
+  <icon href="https://apps.0install.net/gui/chromium.png" type="image/png"/>
+  <icon href="https://apps.0install.net/gui/chromium.icns" type="image/x-icns"/>
+  <category>Network</category>
+  <category>WebBrowser</category>
+
+  <feed-for interface="https://apps.0install.net/gui/ungoogled-chromium-macos.xml"/>
+
+  <group license="BSD-3-Clause">
+    <command name="run" path="Chromium.app/Contents/MacOS/Chromium"/>
+
+    <implementation arch="MacOSX-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/ungoogled-software/ungoogled-chromium-macos/releases/download/{version}/ungoogled-chromium_{version}_x86_64-macos.dmg" type="application/x-apple-diskimage"/>
+    </implementation>
+    <implementation arch="MacOSX-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/ungoogled-software/ungoogled-chromium-macos/releases/download/{version}/ungoogled-chromium_{version}_arm64-macos.dmg" type="application/x-apple-diskimage"/>
+    </implementation>
+  </group>
+</interface>

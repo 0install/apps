@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uri="https://apps.0install.net/gui/ungoogled-chromium.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+  <name>ungoogled-chromium</name>
+  <summary>web browser based on Chromium, without Google integration</summary>
+  <description>ungoogled-chromium is Google Chromium, sans dependency on Google web services. It also features some tweaks to enhance privacy, control and transparency. Almost all of the modifications are contained in a single patch set, keeping it as close to upstream Chromium as possible.</description>
+  <homepage>https://github.com/ungoogled-software/ungoogled-chromium</homepage>
+  <icon href="https://apps.0install.net/gui/chromium.png" type="image/png"/>
+  <icon href="https://apps.0install.net/gui/chromium.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://apps.0install.net/gui/chromium.icns" type="image/x-icns"/>
+  <category>Network</category>
+  <category>WebBrowser</category>
+
+  <feed arch="Linux-*" src="https://apps.0install.net/gui/ungoogled-chromium-linux.xml"/>
+  <feed arch="MacOSX-*" src="https://apps.0install.net/gui/ungoogled-chromium-macos.xml"/>
+  <feed arch="Windows-*" src="https://apps.0install.net/gui/ungoogled-chromium-windows.xml"/>
+
+  <entry-point binary-name="chromium" command="run"/>
+
+  <capabilities xmlns="http://0install.de/schema/desktop-integration/capabilities">
+    <default-program id="ungoogled-chromium" service="StartMenuInternet">
+      <verb name="open"/>
+    </default-program>
+    <registration capability-reg-path="Software\Clients\StartMenuInternet\ungoogled-chromium\Capabilities" id="ungoogled-chromium"/>
+    <url-protocol id="ungoogled-chromium-http">
+      <description xml:lang="en">URL:HyperText Transfer Protocol</description>
+      <verb args="&quot;%V&quot;" name="open"/>
+      <known-prefix value="http"/>
+    </url-protocol>
+    <url-protocol id="ungoogled-chromium-https">
+      <description xml:lang="en">URL:HyperText Transfer Protocol with Privacy</description>
+      <verb args="&quot;%V&quot;" name="open"/>
+      <known-prefix value="https"/>
+    </url-protocol>
+    <file-type id="ungoogled-chromium-html">
+      <description xml:lang="en">HTML Document</description>
+      <verb args="&quot;%V&quot;" name="open"/>
+      <extension mime-type="text/html" value=".html"/>
+      <extension mime-type="text/html" value=".htm"/>
+      <extension mime-type="text/html" value=".shtml"/>
+      <extension mime-type="application/xhtml+xml" value=".xhtml"/>
+      <extension mime-type="application/xhtml+xml" value=".xht"/>
+    </file-type>
+    <file-type id="ungoogled-chromium-pdf">
+      <description xml:lang="en">PDF Document</description>
+      <verb args="&quot;%V&quot;" name="open"/>
+      <extension mime-type="application/pdf" value=".pdf"/>
+    </file-type>
+    <file-type id="ungoogled-chromium-webp">
+      <description xml:lang="en">WebP Image</description>
+      <verb args="&quot;%V&quot;" name="open"/>
+      <extension mime-type="image/webp" perceived-type="image" value=".webp"/>
+    </file-type>
+  </capabilities>
+</interface>

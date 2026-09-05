@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>ungoogled-chromium - Linux builds</name>
+  <summary>web browser based on Chromium, without Google integration</summary>
+  <description>ungoogled-chromium is Google Chromium, sans dependency on Google web services. It also features some tweaks to enhance privacy, control and transparency. Almost all of the modifications are contained in a single patch set, keeping it as close to upstream Chromium as possible.</description>
+  <homepage>https://github.com/ungoogled-software/ungoogled-chromium</homepage>
+  <icon href="https://apps.0install.net/gui/chromium.png" type="image/png"/>
+  <category>Network</category>
+  <category>WebBrowser</category>
+
+  <feed-for interface="https://apps.0install.net/gui/ungoogled-chromium-linux.xml"/>
+
+  <group license="BSD-3-Clause">
+    <command name="run" path="chrome"/>
+
+    <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="ungoogled-chromium-{version}-x86_64_linux" href="https://github.com/ungoogled-software/ungoogled-chromium-portablelinux/releases/download/{version}/ungoogled-chromium-{version}-x86_64_linux.tar.xz" type="application/x-xz-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive extract="ungoogled-chromium-{version}-arm64_linux" href="https://github.com/ungoogled-software/ungoogled-chromium-portablelinux/releases/download/{version}/ungoogled-chromium-{version}-arm64_linux.tar.xz" type="application/x-xz-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

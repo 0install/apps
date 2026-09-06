@@ -22,15 +22,23 @@
       <verb name="open"/>
     </default-program>
     <registration capability-reg-path="Software\Clients\StartMenuInternet\ungoogled-chromium\Capabilities" id="ungoogled-chromium"/>
-    <url-protocol id="ungoogled-chromium-http">
-      <description xml:lang="en">URL:HyperText Transfer Protocol</description>
+    <url-protocol id="ungoogled-chromium">
+      <description xml:lang="en">URL:ungoogled-chromium Protocol</description>
       <verb args="&quot;%V&quot;" name="open"/>
       <known-prefix value="http"/>
-    </url-protocol>
-    <url-protocol id="ungoogled-chromium-https">
-      <description xml:lang="en">URL:HyperText Transfer Protocol with Privacy</description>
-      <verb args="&quot;%V&quot;" name="open"/>
       <known-prefix value="https"/>
+      <known-prefix value="irc"/>
+      <known-prefix value="mailto"/>
+      <known-prefix value="mms"/>
+      <known-prefix value="news"/>
+      <known-prefix value="nntp"/>
+      <known-prefix value="sms"/>
+      <known-prefix value="smsto"/>
+      <known-prefix value="snews"/>
+      <known-prefix value="tel"/>
+      <known-prefix value="urn"/>
+      <known-prefix value="webcal"/>
+      <known-prefix value="chromium"/>
     </url-protocol>
     <file-type id="ungoogled-chromium-html">
       <description xml:lang="en">HTML Document</description>
@@ -38,6 +46,7 @@
       <extension mime-type="text/html" value=".html"/>
       <extension mime-type="text/html" value=".htm"/>
       <extension mime-type="text/html" value=".shtml"/>
+      <extension mime-type="message/rfc822" value=".mhtml"/>
       <extension mime-type="application/xhtml+xml" value=".xhtml"/>
       <extension mime-type="application/xhtml+xml" value=".xht"/>
     </file-type>
@@ -51,14 +60,19 @@
       <verb args="&quot;%V&quot;" name="open"/>
       <extension mime-type="image/webp" perceived-type="image" value=".webp"/>
     </file-type>
+    <file-type id="ungoogled-chromium-svg">
+      <description xml:lang="en">Scalable Vector Graphics</description>
+      <verb args="&quot;%V&quot;" name="open"/>
+      <extension mime-type="image/svg+xml" perceived-type="image" value=".svg"/>
+    </file-type>
   </capabilities>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmqcMT4ACgkQWao5J8JOTh5tVwgAt8GL
-rl+CY0Tcj671Q+QEjaDJHHUV7WqhSkYuep7A0k44RSusvNtn2wqXPo6rcUOoYqoMVsa7fN/PBW7h
-BLnJFXYiywgLm07OzJrY0UrCyUu9IS88/VdfCsf+q6rEt6HgaMuza2rA36nsA8CSHQOm6gZgKw9v
-+RTd0KuFCb7agTCzsu+pb4f0PDuBS4ZY85YnV3DJvMInMyxZJuJdLhnE/rJ6gO9YmDhOJ/x2vLja
-cNbklLsbzeqAuBOnY8kADoa1YLRt9qMhXhoXbS1pckuHXBAvHSBaQdPvvWOFMtRXe9wC55xxFSMX
-leQYxwzcugJKfZMOs0yIJsWP5h7MuLnUtg==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmqdZg4ACgkQWao5J8JOTh5+SAf+KThM
+gFcN/iTW62o9/qGncWbxFG06deKv2biLAAcSqToEgmedf40hRxnny/f2Fse1ko+/HPRwT3hYASvn
+S88sMSyNPROAmstxeTvuzH060nF4A+D3eVQu2r0JRdre4DlXg3bFlxuZ5zxE43d/FZZ/wayZrqe+
+Q/KjJS5Vmj2OGI9Snl/iofq4Qmbd/PwVVba8ksnz9d1H5OqxKdHcF+4t3BzVtw82CB2+71wWTMC/
+FB1zJXHibjZphcXCMqU2GUxc7Obo+d9EqIfJo+fR5QzHtiPl2awb7LOwjc3NycTAzN6UpdMkaqs9
+BHf2K0p1wtsZwHLpkz+FqOfdgsoxrSst0g==
 
 -->

@@ -21,15 +21,23 @@
       <verb name="open"/>
     </default-program>
     <registration capability-reg-path="Software\Clients\StartMenuInternet\ungoogled-chromium\Capabilities" id="ungoogled-chromium"/>
-    <url-protocol id="ungoogled-chromium-http">
-      <description xml:lang="en">URL:HyperText Transfer Protocol</description>
+    <url-protocol id="ungoogled-chromium">
+      <description xml:lang="en">URL:ungoogled-chromium Protocol</description>
       <verb args="&quot;%V&quot;" name="open"/>
       <known-prefix value="http"/>
-    </url-protocol>
-    <url-protocol id="ungoogled-chromium-https">
-      <description xml:lang="en">URL:HyperText Transfer Protocol with Privacy</description>
-      <verb args="&quot;%V&quot;" name="open"/>
       <known-prefix value="https"/>
+      <known-prefix value="irc"/>
+      <known-prefix value="mailto"/>
+      <known-prefix value="mms"/>
+      <known-prefix value="news"/>
+      <known-prefix value="nntp"/>
+      <known-prefix value="sms"/>
+      <known-prefix value="smsto"/>
+      <known-prefix value="snews"/>
+      <known-prefix value="tel"/>
+      <known-prefix value="urn"/>
+      <known-prefix value="webcal"/>
+      <known-prefix value="chromium"/>
     </url-protocol>
     <file-type id="ungoogled-chromium-html">
       <description xml:lang="en">HTML Document</description>
@@ -37,6 +45,7 @@
       <extension mime-type="text/html" value=".html"/>
       <extension mime-type="text/html" value=".htm"/>
       <extension mime-type="text/html" value=".shtml"/>
+      <extension mime-type="message/rfc822" value=".mhtml"/>
       <extension mime-type="application/xhtml+xml" value=".xhtml"/>
       <extension mime-type="application/xhtml+xml" value=".xht"/>
     </file-type>
@@ -49,6 +58,11 @@
       <description xml:lang="en">WebP Image</description>
       <verb args="&quot;%V&quot;" name="open"/>
       <extension mime-type="image/webp" perceived-type="image" value=".webp"/>
+    </file-type>
+    <file-type id="ungoogled-chromium-svg">
+      <description xml:lang="en">Scalable Vector Graphics</description>
+      <verb args="&quot;%V&quot;" name="open"/>
+      <extension mime-type="image/svg+xml" perceived-type="image" value=".svg"/>
     </file-type>
   </capabilities>
 </interface>

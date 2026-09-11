@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Zero Install: Apps: Lua</title>
+  <link rel="icon" href="https://0install.net/logo/favicon.ico" type="image/vnd.microsoft.icon" />
+  <link rel="stylesheet" href="https://0install.net/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://0install.net/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://0install.net/css/site.css">
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://0install.net/js/site.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="site-header d-flex flex-wrap align-items-center gap-3">
+      <a class="site-brand d-flex align-items-center gap-2 text-decoration-none" href="https://0install.net/">
+        <img src="https://0install.net/logo/zeroinstall-icon.png" width="40" height="40" alt="Zero Install Logo">
+        Zero Install
+      </a>
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="https://apps.0install.net/#more">Apps</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Lua</li>
+      </ol>
+    </header>
+
+    <main>
+      <p>Lua is a powerful, efficient, lightweight, embeddable scripting language. You can use Zero Install to:</p>
+      <ul>
+        <li>Get the Lua interpreter and compiler</li>
+        <li>Run apps that need Lua as a dependency</li>
+      </ul>
+
+      <div class="card mb-4">
+        <div class="card-body tab-body">
+          <iframe src="catalog.xml"></iframe>
+        </div>
+      </div>
+
+      <p>The binaries are provided by the <a href="https://luabinaries.sourceforge.net/">LuaBinaries</a> project.</p>
+
+      <p>To add <code>lua</code> (the Lua interpreter) to your <code>PATH</code>:<br>
+        <code>
+          <input type="text" readonly class="form-control-plaintext" value="0install add lua https://apps.0install.net/lua/lua.xml">
+        </code>
+      </p>
+
+      <p>To add <code>luac</code> (the Lua bytecode compiler) to your <code>PATH</code>:<br>
+        <code>
+          <input type="text" readonly class="form-control-plaintext" value="0install add luac https://apps.0install.net/lua/lua.xml --command=compiler">
+        </code>
+      </p>
+
+      <p>On Windows there is also <code>wlua</code>, which runs scripts without opening a console window:<br>
+        <code>
+          <input type="text" readonly class="form-control-plaintext" value="0install add wlua https://apps.0install.net/lua/lua.xml --command=run-gui">
+        </code>
+      </p>
+
+      <p>To specify Lua as the runner in a feed:<br>
+        <code>
+          <textarea readonly class="form-control-plaintext" rows="3">&lt;command name="run" path="myapp.lua"&gt;
+  &lt;runner interface="https://apps.0install.net/lua/lua.xml"/&gt;
+&lt;/command&gt;</textarea>
+        </code>
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      © Copyright 2003-2026 Thomas Leonard, Bastian Eicher and others<br>
+        Permission is granted to use the site (excluding the software, which is licensed separately) in accordance with the terms of the <a href="https://creativecommons.org/licenses/by-sa/2.5/">Creative Commons Attribution-ShareAlike 2.5 license</a>.
+    </footer>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Lua</name>
+  <summary>powerful, efficient, lightweight, embeddable scripting language</summary>
+  <description>Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, functional programming, data-driven programming and data description. Lua combines simple procedural syntax with powerful data description constructs based on associative arrays and extensible semantics, is dynamically typed, runs by interpreting bytecode with a register-based virtual machine, and has automatic memory management with incremental garbage collection.</description>
+  <homepage>https://www.lua.org/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+
+  <icon href="https://apps.0install.net/lua/lua.png" type="image/png"/>
+  <icon href="https://apps.0install.net/lua/lua.ico" type="image/vnd.microsoft.icon"/>
+
+  <feed-for interface="https://apps.0install.net/lua/lua.xml"/>
+
+  <group license="MIT License" arch="Windows-*">
+    <command name="run" path="lua{suffix}.exe"/>
+    <command name="run-gui" path="wlua{suffix}.exe"/>
+    <command name="compiler" path="luac{suffix}.exe"/>
+
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://downloads.sourceforge.net/project/luabinaries/{version}/Tools%20Executables/lua-{version}_Win64_bin.zip" type="application/zip"/>
+    </implementation>
+    <implementation arch="Windows-i486" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://downloads.sourceforge.net/project/luabinaries/{version}/Tools%20Executables/lua-{version}_Win32_bin.zip" type="application/zip"/>
+    </implementation>
+  </group>
+
+  <group license="MIT License" arch="Linux-x86_64">
+    <command name="run" path="lua{suffix}"/>
+    <command name="run-gui" path="lua{suffix}"/>
+    <command name="compiler" path="luac{suffix}"/>
+
+    <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://downloads.sourceforge.net/project/luabinaries/{version}/Tools%20Executables/lua-{version}_Linux515_64_bin.tar.gz" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

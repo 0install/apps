@@ -1,0 +1,154 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/lua/lua.xml">
+  <name>Lua</name>
+  <summary>powerful, efficient, lightweight, embeddable scripting language</summary>
+  <description>Lua is a powerful, efficient, lightweight, embeddable scripting language. It supports procedural programming, object-oriented programming, functional programming, data-driven programming and data description. Lua combines simple procedural syntax with powerful data description constructs based on associative arrays and extensible semantics, is dynamically typed, runs by interpreting bytecode with a register-based virtual machine, and has automatic memory management with incremental garbage collection.</description>
+  <homepage>https://www.lua.org/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+
+  <icon href="https://apps.0install.net/lua/lua.png" type="image/png"/>
+  <icon href="https://apps.0install.net/lua/lua.ico" type="image/vnd.microsoft.icon"/>
+
+  <entry-point binary-name="lua" command="run">
+    <needs-terminal/>
+    <summary xml:lang="en">Lua interpreter</summary>
+  </entry-point>
+  <entry-point binary-name="wlua" command="run-gui">
+    <name xml:lang="en">Lua (GUI)</name>
+    <summary xml:lang="en">Lua interpreter without a console window</summary>
+  </entry-point>
+  <entry-point binary-name="luac" command="compiler">
+    <needs-terminal/>
+    <name xml:lang="en">luac</name>
+    <summary xml:lang="en">Lua bytecode compiler</summary>
+  </entry-point>
+
+  <group license="MIT License" arch="Windows-*">
+    <group>
+      <command name="run" path="lua5.1.exe"/>
+      <command name="run-gui" path="wlua5.1.exe"/>
+      <command name="compiler" path="luac5.1.exe"/>
+      <implementation arch="Windows-x86_64" version="5.1.5" released="2023-10-14" stability="stable" id="sha256new_TWK22EJ6R7OEC7CGN2KLAPN77CUNUU77RMFOPK2FP5HZ2C5DGGEQ">
+        <manifest-digest sha256new="TWK22EJ6R7OEC7CGN2KLAPN77CUNUU77RMFOPK2FP5HZ2C5DGGEQ"/>
+        <archive href="https://downloads.sourceforge.net/project/luabinaries/5.1.5/Tools%20Executables/lua-5.1.5_Win64_bin.zip" size="1055968" type="application/zip"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="5.1.5" released="2023-10-14" stability="stable" id="sha256new_JDDC2XMEBHGL4CLQDQD74YA3WIKZWNAYY4IJWCBXXEQKDUWI3IYA">
+        <manifest-digest sha256new="JDDC2XMEBHGL4CLQDQD74YA3WIKZWNAYY4IJWCBXXEQKDUWI3IYA"/>
+        <archive href="https://downloads.sourceforge.net/project/luabinaries/5.1.5/Tools%20Executables/lua-5.1.5_Win32_bin.zip" size="829421" type="application/zip"/>
+      </implementation>
+    </group>
+    <group>
+      <command name="run" path="lua52.exe"/>
+      <command name="run-gui" path="wlua52.exe"/>
+      <command name="compiler" path="luac52.exe"/>
+      <implementation arch="Windows-x86_64" version="5.2.4" released="2023-10-14" stability="stable" id="sha256new_ITASTQ4WP4TU6J5B6CHJCDM5TZ4FTOMO3DYE7KB7FJ6KV4D4FQAQ">
+        <manifest-digest sha256new="ITASTQ4WP4TU6J5B6CHJCDM5TZ4FTOMO3DYE7KB7FJ6KV4D4FQAQ"/>
+        <archive href="https://downloads.sourceforge.net/project/luabinaries/5.2.4/Tools%20Executables/lua-5.2.4_Win64_bin.zip" size="267781" type="application/zip"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="5.2.4" released="2023-10-14" stability="stable" id="sha256new_PDBIVBXMNB7RU5RMJML7K2OV3N3VGAA4XY3TMYZBG4F423B5ZD3A">
+        <manifest-digest sha256new="PDBIVBXMNB7RU5RMJML7K2OV3N3VGAA4XY3TMYZBG4F423B5ZD3A"/>
+        <archive href="https://downloads.sourceforge.net/project/luabinaries/5.2.4/Tools%20Executables/lua-5.2.4_Win32_bin.zip" size="273803" type="application/zip"/>
+      </implementation>
+    </group>
+    <group>
+      <command name="run" path="lua53.exe"/>
+      <command name="run-gui" path="wlua53.exe"/>
+      <command name="compiler" path="luac53.exe"/>
+      <implementation arch="Windows-x86_64" version="5.3.6" released="2023-10-14" stability="stable" id="sha256new_5LWYZP4MDESMSTOFVQX7PNW62VGOCZFGGGPSVAOBF33S33XOP6QQ">
+        <manifest-digest sha256new="5LWYZP4MDESMSTOFVQX7PNW62VGOCZFGGGPSVAOBF33S33XOP6QQ"/>
+        <archive href="https://downloads.sourceforge.net/project/luabinaries/5.3.6/Tools%20Executables/lua-5.3.6_Win64_bin.zip" size="347700" type="application/zip"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="5.3.6" released="2023-10-14" stability="stable" id="sha256new_FWVZB2WIOU3UJG642IV7H3R3JR53RJX65VEUERFX3Q2IGNC47FFQ">
+        <manifest-digest sha256new="FWVZB2WIOU3UJG642IV7H3R3JR53RJX65VEUERFX3Q2IGNC47FFQ"/>
+        <archive href="https://downloads.sourceforge.net/project/luabinaries/5.3.6/Tools%20Executables/lua-5.3.6_Win32_bin.zip" size="378084" type="application/zip"/>
+      </implementation>
+    </group>
+    <group>
+      <command name="run" path="lua54.exe"/>
+      <command name="run-gui" path="wlua54.exe"/>
+      <command name="compiler" path="luac54.exe"/>
+      <implementation arch="Windows-x86_64" version="5.4.2" released="2023-10-14" stability="stable" id="sha256new_ZIGZJYITS5XRY3N5T726G5CXKVUVMJIPDGV5PWKKC4UDTSIZBHIQ">
+        <manifest-digest sha256new="ZIGZJYITS5XRY3N5T726G5CXKVUVMJIPDGV5PWKKC4UDTSIZBHIQ"/>
+        <archive href="https://downloads.sourceforge.net/project/luabinaries/5.4.2/Tools%20Executables/lua-5.4.2_Win64_bin.zip" size="373984" type="application/zip"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="5.4.2" released="2023-10-14" stability="stable" id="sha256new_3NP7RRCOUBFVKPDVR7WIY4VGFRBQ4EU5UQQ5JTA6Q4ALQGCGJ3MQ">
+        <manifest-digest sha256new="3NP7RRCOUBFVKPDVR7WIY4VGFRBQ4EU5UQQ5JTA6Q4ALQGCGJ3MQ"/>
+        <archive href="https://downloads.sourceforge.net/project/luabinaries/5.4.2/Tools%20Executables/lua-5.4.2_Win32_bin.zip" size="407414" type="application/zip"/>
+      </implementation>
+      <implementation arch="Windows-x86_64" version="5.4.8" released="2026-01-19" stability="stable" id="sha256new_SNNR6VE2TU7Q4UEBOGTHHVE5HCSV6ZHZAIW25AM5L5N3JAFBVYSQ">
+        <manifest-digest sha256new="SNNR6VE2TU7Q4UEBOGTHHVE5HCSV6ZHZAIW25AM5L5N3JAFBVYSQ"/>
+        <archive href="https://downloads.sourceforge.net/project/luabinaries/5.4.8/Tools%20Executables/lua-5.4.8_Win64_bin.zip" size="377674" type="application/zip"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="5.4.8" released="2026-01-19" stability="stable" id="sha256new_2ZL2A6MS3TKRUENSC4CVBQ7ONWPXQYASS5XZUEM2ZBKTHE7HMMSA">
+        <manifest-digest sha256new="2ZL2A6MS3TKRUENSC4CVBQ7ONWPXQYASS5XZUEM2ZBKTHE7HMMSA"/>
+        <archive href="https://downloads.sourceforge.net/project/luabinaries/5.4.8/Tools%20Executables/lua-5.4.8_Win32_bin.zip" size="411214" type="application/zip"/>
+      </implementation>
+    </group>
+    <group>
+      <command name="run" path="lua55.exe"/>
+      <command name="run-gui" path="wlua55.exe"/>
+      <command name="compiler" path="luac55.exe"/>
+      <implementation arch="Windows-x86_64" version="5.5.0" released="2026-01-19" stability="stable" id="sha256new_JAAIMJPSKYDAZILDXS7D44YCGT5WOADBYAY4TB64CYQHYIK5UFGA">
+        <manifest-digest sha256new="JAAIMJPSKYDAZILDXS7D44YCGT5WOADBYAY4TB64CYQHYIK5UFGA"/>
+        <archive href="https://downloads.sourceforge.net/project/luabinaries/5.5.0/Tools%20Executables/lua-5.5.0_Win64_bin.zip" size="391146" type="application/zip"/>
+      </implementation>
+      <implementation arch="Windows-i486" version="5.5.0" released="2026-01-19" stability="stable" id="sha256new_F22M4B2CUKFPPW3KZ36N7RK67E7TNJGFINQLKMULJX4GE5MIYXBA">
+        <manifest-digest sha256new="F22M4B2CUKFPPW3KZ36N7RK67E7TNJGFINQLKMULJX4GE5MIYXBA"/>
+        <archive href="https://downloads.sourceforge.net/project/luabinaries/5.5.0/Tools%20Executables/lua-5.5.0_Win32_bin.zip" size="426454" type="application/zip"/>
+      </implementation>
+    </group>
+  </group>
+
+  <group license="MIT License" arch="Linux-x86_64">
+    <group>
+      <command name="run" path="lua5.1"/>
+      <command name="run-gui" path="lua5.1"/>
+      <command name="compiler" path="luac5.1"/>
+      <implementation version="5.1.5" released="2023-10-14" stability="stable" id="sha256new_T4MTHCJLGFYP4FEAYEEASJYO7ILCRALDJB2N2FZISAGODSREIXHQ">
+        <manifest-digest sha256new="T4MTHCJLGFYP4FEAYEEASJYO7ILCRALDJB2N2FZISAGODSREIXHQ"/>
+        <archive href="https://downloads.sourceforge.net/project/luabinaries/5.1.5/Tools%20Executables/lua-5.1.5_Linux515_64_bin.tar.gz" size="175133" type="application/x-compressed-tar"/>
+      </implementation>
+    </group>
+    <group>
+      <command name="run" path="lua52"/>
+      <command name="run-gui" path="lua52"/>
+      <command name="compiler" path="luac52"/>
+      <implementation version="5.2.4" released="2023-10-14" stability="stable" id="sha256new_LDYFMGDQ3TFX7DJTZN6RZIE6KGTRP244W7XZMMFMGR5XYA5754SA">
+        <manifest-digest sha256new="LDYFMGDQ3TFX7DJTZN6RZIE6KGTRP244W7XZMMFMGR5XYA5754SA"/>
+        <archive href="https://downloads.sourceforge.net/project/luabinaries/5.2.4/Tools%20Executables/lua-5.2.4_Linux515_64_bin.tar.gz" size="187764" type="application/x-compressed-tar"/>
+      </implementation>
+    </group>
+    <group>
+      <command name="run" path="lua53"/>
+      <command name="run-gui" path="lua53"/>
+      <command name="compiler" path="luac53"/>
+      <implementation version="5.3.6" released="2023-10-14" stability="stable" id="sha256new_YE2Z6S36UB2L4PO2UH5RLKIKA4ZECOBWLKU37BSFVAOLQ6V65KUQ">
+        <manifest-digest sha256new="YE2Z6S36UB2L4PO2UH5RLKIKA4ZECOBWLKU37BSFVAOLQ6V65KUQ"/>
+        <archive href="https://downloads.sourceforge.net/project/luabinaries/5.3.6/Tools%20Executables/lua-5.3.6_Linux515_64_bin.tar.gz" size="206701" type="application/x-compressed-tar"/>
+      </implementation>
+    </group>
+    <group>
+      <command name="run" path="lua54"/>
+      <command name="run-gui" path="lua54"/>
+      <command name="compiler" path="luac54"/>
+      <implementation version="5.4.2" released="2023-10-14" stability="stable" id="sha256new_BWS4MR2B3ZAJYKKMLI2YZQDASQS6W22EEIXHMH6CQIDK5BPL7NXA">
+        <manifest-digest sha256new="BWS4MR2B3ZAJYKKMLI2YZQDASQS6W22EEIXHMH6CQIDK5BPL7NXA"/>
+        <archive href="https://downloads.sourceforge.net/project/luabinaries/5.4.2/Tools%20Executables/lua-5.4.2_Linux515_64_bin.tar.gz" size="238505" type="application/x-compressed-tar"/>
+      </implementation>
+      <implementation version="5.4.8" released="2026-01-19" stability="stable" id="sha256new_RLNLBXM7WSIEYUGPLDXO4PDYXGPTS334JHKWRXGEQGPETVEI6EZQ">
+        <manifest-digest sha256new="RLNLBXM7WSIEYUGPLDXO4PDYXGPTS334JHKWRXGEQGPETVEI6EZQ"/>
+        <archive href="https://downloads.sourceforge.net/project/luabinaries/5.4.8/Tools%20Executables/lua-5.4.8_Linux515_64_bin.tar.gz" size="242234" type="application/x-compressed-tar"/>
+      </implementation>
+    </group>
+    <group>
+      <command name="run" path="lua55"/>
+      <command name="run-gui" path="lua55"/>
+      <command name="compiler" path="luac55"/>
+      <implementation version="5.5.0" released="2026-01-19" stability="stable" id="sha256new_7B7UM6IBQ6VN4G6LSRC7666OLWXUUQVPFV4DY7ES4CMSR5EXNYHQ">
+        <manifest-digest sha256new="7B7UM6IBQ6VN4G6LSRC7666OLWXUUQVPFV4DY7ES4CMSR5EXNYHQ"/>
+        <archive href="https://downloads.sourceforge.net/project/luabinaries/5.5.0/Tools%20Executables/lua-5.5.0_Linux515_64_bin.tar.gz" size="258532" type="application/x-compressed-tar"/>
+      </implementation>
+    </group>
+  </group>
+</interface>

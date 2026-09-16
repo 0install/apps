@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
-  <name>OpenJDK 26.x</name>
-  <summary>OpenJDK Development Kit 26.x</summary>
+  <name>OpenJDK</name>
+  <summary>OpenJDK Development Kit</summary>
   <description>OpenJDK is a development environment for building applications, applets, and components using the Java programming language.</description>
-  <homepage>http://jdk.java.net/26/</homepage>
+  <homepage>http://jdk.java.net/</homepage>
   <category>Development</category>
   <needs-terminal/>
 
@@ -18,7 +18,6 @@
     <command name="javadoc" path="bin/javadoc"/>
     <command name="keytool" path="bin/keytool"/>
     <command name="rmiregistry" path="bin/rmiregistry"/>
-    <command name="jrunscript" path="bin/jrunscript"/>
     <command name="jcmd" path="bin/jcmd"/>
     <command name="jconsole" path="bin/jconsole"/>
     <command name="jdb" path="bin/jdb"/>
@@ -51,7 +50,7 @@
     </implementation>
   </group>
 
-  <group arch="MacOSX-*" license="GPL-2.0-only WITH Classpath-exception-2.0">
+  <group arch="MacOSX-aarch64" license="GPL-2.0-only WITH Classpath-exception-2.0">
     <command name="run" path="Contents/Home/bin/javac"/>
     <command name="java" path="Contents/Home/bin/java"/>
     <command name="javap" path="Contents/Home/bin/javap"/>
@@ -60,7 +59,6 @@
     <command name="javadoc" path="Contents/Home/bin/javadoc"/>
     <command name="keytool" path="Contents/Home/bin/keytool"/>
     <command name="rmiregistry" path="Contents/Home/bin/rmiregistry"/>
-    <command name="jrunscript" path="Contents/Home/bin/jrunscript"/>
     <command name="jcmd" path="Contents/Home/bin/jcmd"/>
     <command name="jconsole" path="Contents/Home/bin/jconsole"/>
     <command name="jdb" path="Contents/Home/bin/jdb"/>
@@ -85,7 +83,7 @@
 
     <implementation version="{version}" stability="testing">
       <manifest-digest/>
-      <archive href="https://download.oracle.com/java/GA/jdk{version}/{release-id}/GPL/openjdk-{version}_macos-x64_bin.tar.gz" type="application/x-compressed-tar" extract="jdk-{version}.jdk"/>
+      <archive href="https://download.oracle.com/java/GA/jdk{version}/{release-id}/GPL/openjdk-{version}_macos-aarch64_bin.tar.gz" type="application/x-compressed-tar" extract="jdk-{version}.jdk"/>
     </implementation>
   </group>
 
@@ -99,7 +97,6 @@
     <command name="jarsigner" path="bin/jarsigner.exe"/>
     <command name="keytool" path="bin/keytool.exe"/>
     <command name="rmiregistry" path="bin/rmiregistry.exe"/>
-    <command name="jrunscript" path="bin/jrunscript.exe"/>
     <command name="jcmd" path="bin/jcmd.exe"/>
     <command name="jconsole" path="bin/jconsole.exe"/>
     <command name="jdb" path="bin/jdb.exe"/>

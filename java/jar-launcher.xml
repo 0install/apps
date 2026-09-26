@@ -26,14 +26,34 @@ Workaround for java -classpath ... -jar ... which does not work.</description>
       <manifest-digest sha1new="3706305d50a745c5a362b02aaf417d2d0765c9c1" sha256="60d4d71585f66a36ac1e3116f234ff93d0319b6d0dccb17e027e162cc9da0481" sha256new="MDKNOFMF6ZVDNLA6GELPENH7SPIDDG3NBXGLC7QCPYLCZSO2ASAQ"/>
       <file href="https://github.com/0install/jar-launcher/releases/download/1.0/jar-launcher-1.0.jar" size="3201" dest="jar-launcher.jar"/>
     </implementation>
+    <group>
+      <command name="run">
+        <environment name="CLASSPATH" insert="jar-launcher.jar"/>
+        <runner interface="https://apps.0install.net/java/jre.xml" command="run">
+          <version not-before="1.8"/>
+          <arg>net.zeroinstall.jar.launcher.JarLauncher</arg>
+        </runner>
+      </command>
+      <command name="run-gui">
+        <environment name="CLASSPATH" insert="jar-launcher.jar"/>
+        <runner interface="https://apps.0install.net/java/jre.xml" command="run-gui">
+          <version not-before="1.8"/>
+          <arg>net.zeroinstall.jar.launcher.JarLauncher</arg>
+        </runner>
+      </command>
+      <implementation version="2.0" released="2026-09-26" id="sha1new=3def9583ae1f59e3c304a8b95bfe52296c8031e6">
+        <manifest-digest sha256new="CYPN7HTA6MHG2DCZJZBNPQDBEM4MXIWP5AVRHOMKQV73D4ZFK6BA"/>
+        <file href="https://github.com/0install/jar-launcher/releases/download/2.0/jar-launcher-2.0.jar" dest="jar-launcher.jar" size="4145"/>
+      </implementation>
+    </group>
   </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmoh/8QACgkQWao5J8JOTh5j5wgAi94u
-pReql4yPBrBUA7OaSOizOVbMc6YQEzpsUnsS9E78gvw3esmkrJaSUMNavnzDwxkVPOU1JcBuWGNM
-9u59q89rY+6lQ0GPJX0ZczL/IlKY2uDQBZb7ie8V9XunIGKYCCQsZsXQVKEydMQSGladX3DEInSo
-TcvxafaC2sNV/CLn7RtMVALZXPEqNv+m4Kd564wvA6dPqAHIpYDy1xV/T4LX8moPmsys0mir5qfn
-SRi87CRYHmGeI9anL+4kDDxiyZzDlNJYw0/mhqpmmhEYcHz3BFBe7YsD8DI8GyCPtrZ94N3sSlo0
-1pmZXW/Ek9winypd06GvHn4+VI8NQCXkJg==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmq34H0ACgkQWao5J8JOTh4AqAgAtojA
+GuGwhjLmHwQ09bmvD8ttm/evlujj7ABgE8XruubDd27jiqYnVRGJP5FRWY1N/CeQHGdgNSfmiYVL
+VC4v5JcFXXoPkIokjv1YdLMrdVNamZBUHrb3Y2mJ0uPOzTkD2dIqck+PrXAAz3l7FpZgw18S9GCw
+HfF0uUeYkx7HTFVP17ND3eZEPmleFbpPikH++ORxAul7oWck4tqLM+zt0b7MrYWWerGrGaQ0ZJ6M
+XdKRnI7wTIVNTLVTJNhtlBX1wqfHoJDek5X9oeRicjqCQ/excJGVO2QyOVNqFfPwM6+bASpIqnn8
+vhBVCod+R/Yl26VheX55uDQk75pLkUR2uQ==
 
 -->

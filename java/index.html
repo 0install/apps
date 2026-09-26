@@ -76,9 +76,10 @@
       <p>
         To use the Java Runtime Environment as the runner in a feed:<br>
         <code>
-          <textarea readonly class="form-control-plaintext" rows="4">&lt;command name="run" path="myapp.jar"&gt;
-  &lt;runner interface="https://apps.0install.net/java/jre.xml"/&gt;
-  &lt;arg&gt;-jar&lt;/arg&gt;
+          <textarea readonly class="form-control-plaintext" rows="5">&lt;command name="run" path="myapp.jar"&gt;
+  &lt;runner interface="https://apps.0install.net/java/jre.xml"&gt;
+    &lt;arg&gt;-jar&lt;/arg&gt;
+  &lt;/runner&gt;
 &lt;/command&gt;</textarea>
         </code>
       </p>
@@ -86,7 +87,7 @@
       <p>
         If you wish to use the <code>CLASSPATH</code> variable to specify external dependencies in a feed you can use <a href="https://github.com/0install/jar-launcher">JAR Launcher</a>:<br>
         <code>
-          <textarea readonly class="form-control-plaintext" rows="7">&lt;command name="run" path="myapp.jar" /&gt;
+          <textarea readonly class="form-control-plaintext" rows="7">&lt;command name="run" path="myapp.jar"&gt;
   &lt;runner interface="https://apps.0install.net/java/jar-launcher.xml"/&gt;
 &lt;/command&gt;
 &lt;environment name="CLASSPATH" insert="myapp.jar"/&gt;

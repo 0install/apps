@@ -8,6 +8,12 @@
 
   <feed src="https://apps.0install.net/java/oraclejre-8.xml"/>
 
+  <!-- Modern Java versions don't offer JRE-only redistributables, so use full JDK instead. JRE-only native packages still exist though (see below). -->
+  <feed src="https://apps.0install.net/java/openjdk.xml"/>
+  <feed arch="Windows-*" src="https://apps.0install.net/java/microsoft-jdk.xml"/>
+  <feed arch="Linux-*" src="https://apps.0install.net/java/temurin-jdk.xml"/>
+  <feed arch="MacOSX-*" src="https://apps.0install.net/java/temurin-jdk.xml"/>
+
   <package-implementation distributions="Windows" package="openjdk-7-jre"/>
   <package-implementation distributions="Windows" package="openjdk-8-jre"/>
   <package-implementation distributions="Windows" package="openjdk-9-jre"/>

@@ -8,6 +8,12 @@
 
   <feed src="https://apps.0install.net/java/oraclejre-8.xml"/>
 
+  <!-- Modern Java versions don't offer JRE-only redistributables, so use full JDK instead. JRE-only native packages still exist though (see below). -->
+  <feed src="https://apps.0install.net/java/openjdk.xml"/>
+  <feed arch="Windows-*" src="https://apps.0install.net/java/microsoft-jdk.xml"/>
+  <feed arch="Linux-*" src="https://apps.0install.net/java/temurin-jdk.xml"/>
+  <feed arch="MacOSX-*" src="https://apps.0install.net/java/temurin-jdk.xml"/>
+
   <package-implementation distributions="Windows" package="openjdk-7-jre"/>
   <package-implementation distributions="Windows" package="openjdk-8-jre"/>
   <package-implementation distributions="Windows" package="openjdk-9-jre"/>
@@ -21,26 +27,60 @@
 
     <package-implementation distributions="Debian Darwin" main="/usr/bin/java" package="openjdk-7-jre"/>
     <package-implementation distributions="Debian Darwin" main="/usr/bin/java" package="openjdk-8-jre"/>
-    <package-implementation distributions="Debian Darwin" main="/usr/bin/java" package="openjdk-9-jre"/>
-    <package-implementation distributions="Debian Darwin" main="/usr/bin/java" package="openjdk-10-jre"/>
-    <package-implementation distributions="Debian Darwin" main="/usr/bin/java" package="openjdk-11-jre"/>
-    <package-implementation distributions="Debian Darwin" main="/usr/bin/java" package="openjdk-12-jre"/>
-    <package-implementation distributions="Debian Darwin" main="/usr/bin/java" package="openjdk-13-jre"/>
+    <package-implementation distributions="Debian" main="/usr/bin/java" package="openjdk-9-jre"/>
+    <package-implementation distributions="Debian" main="/usr/bin/java" package="openjdk-10-jre"/>
+    <package-implementation distributions="Debian" main="/usr/bin/java" package="openjdk-11-jre"/>
+    <package-implementation distributions="Debian" main="/usr/bin/java" package="openjdk-12-jre"/>
+    <package-implementation distributions="Debian" main="/usr/bin/java" package="openjdk-13-jre"/>
+    <package-implementation distributions="Debian" main="/usr/bin/java" package="openjdk-14-jre"/>
+    <package-implementation distributions="Debian" main="/usr/bin/java" package="openjdk-15-jre"/>
+    <package-implementation distributions="Debian" main="/usr/bin/java" package="openjdk-16-jre"/>
+    <package-implementation distributions="Debian" main="/usr/bin/java" package="openjdk-17-jre"/>
+    <package-implementation distributions="Debian" main="/usr/bin/java" package="openjdk-18-jre"/>
+    <package-implementation distributions="Debian" main="/usr/bin/java" package="openjdk-19-jre"/>
+    <package-implementation distributions="Debian" main="/usr/bin/java" package="openjdk-20-jre"/>
+    <package-implementation distributions="Debian" main="/usr/bin/java" package="openjdk-21-jre"/>
+    <package-implementation distributions="Debian" main="/usr/bin/java" package="openjdk-22-jre"/>
+    <package-implementation distributions="Debian" main="/usr/bin/java" package="openjdk-23-jre"/>
+    <package-implementation distributions="Debian" main="/usr/bin/java" package="openjdk-24-jre"/>
+    <package-implementation distributions="Debian" main="/usr/bin/java" package="openjdk-25-jre"/>
+    <package-implementation distributions="Debian" main="/usr/bin/java" package="openjdk-26-jre"/>
+    <package-implementation distributions="Debian" main="/usr/bin/java" package="openjdk-27-jre"/>
+
     <package-implementation distributions="RPM" main="/usr/bin/java" package="java-1_7_0-openjdk"/>
     <package-implementation distributions="RPM" main="/usr/bin/java" package="java-1.7.0-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-1_8_0-openjdk"/>
     <package-implementation distributions="RPM" main="/usr/bin/java" package="java-1.8.0-openjdk"/>
-    <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-9-openjdk"/>
-    <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-10-openjdk"/>
-    <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-11-openjdk"/>
-    <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-12-openjdk"/>
-    <package-implementation distributions="RPM" main="/usr/bin/javac" package="java-13-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-9-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-10-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-11-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-12-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-13-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-14-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-15-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-16-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-17-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-18-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-19-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-20-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-21-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-22-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-23-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-24-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-25-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-26-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-27-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-openjdk"/>
+    <package-implementation distributions="RPM" main="/usr/bin/java" package="java-latest-openjdk"/>
+
     <package-implementation distributions="Arch" main="/usr/bin/java" package="jre7-openjdk"/>
     <package-implementation distributions="Arch" main="/usr/bin/java" package="jre8-openjdk"/>
-    <package-implementation distributions="Arch" main="/usr/bin/java" package="jre9-openjdk"/>
     <package-implementation distributions="Arch" main="/usr/bin/java" package="jre10-openjdk"/>
     <package-implementation distributions="Arch" main="/usr/bin/java" package="jre11-openjdk"/>
-    <package-implementation distributions="Arch" main="/usr/bin/java" package="jre12-openjdk"/>
-    <package-implementation distributions="Arch" main="/usr/bin/java" package="jre13-openjdk"/>
+    <package-implementation distributions="Arch" main="/usr/bin/java" package="jre17-openjdk"/>
+    <package-implementation distributions="Arch" main="/usr/bin/java" package="jre21-openjdk"/>
+    <package-implementation distributions="Arch" main="/usr/bin/java" package="jre25-openjdk"/>
+    <package-implementation distributions="Arch" main="/usr/bin/java" package="jre-openjdk"/>
   </group>
 
   <entry-point binary-name="java" command="run">
@@ -130,11 +170,11 @@
   </capabilities>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmonKeQACgkQWao5J8JOTh4N6Af9HDeW
-nL887uxEEqxSH9V4PX8B+wtBKcJ2ebnu9yGoJjTNbAgutV/QEUmsoZ9tvA6W6vVaIes6tH02rIAk
-3Ne8BzMB1WGZVy+lxmaLGUSBRYiFv26IIk9sPRtmBJbNcHcWMVYanE6joCRkUh7KQg7MNlqzR51F
-Cqw+77AbKWq0Y15OFsosfPU/XBr40gH5wAHgMd5QCVFQVLmeE66nX7kwInJDSfoykpva679K0d4c
-oqP69wusRmRAERMJ807OJSlnNxUl/LVwzHEE2LW5t6CdHtnufzgvV2EnBgCGNFZDTSBRLkFCSA4g
-TmV9Kb9aZdyRuQbP63GcmEBgR7KjkNU1RA==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmq3ye4ACgkQWao5J8JOTh5KcwgAjIxb
+MgtzJ8TA09pFAJFsx3qUcwrrT83jibHb7C2YML2eMtmM4o5kkk59HaDKsnCagXtDrmJkcSVLVcU4
+7GXRJQtFTlUp/HD2KUuMteWfYkeESIzakqf2HtguOLAhljFP78IeOZH6s+KDkevsbl2dRJTzmIYz
+mhE/ZhlIN1BaBqaaJXUqr7zzreBvkcOv0VGMHxPczrDm0tI43RbSJVnKcjxM8yxhy6uyDAI/1Ld1
+7cBMmG4TDmfsNjP/7JlWMblnZtkP30ZTjiu1RA5DUPVddQPjCvNGd8x2usWZWu28b7iLIvA7CBYF
+cEqVHcZAZOYbI+CVG7l+4cissshBPP7w7Q==
 
 -->

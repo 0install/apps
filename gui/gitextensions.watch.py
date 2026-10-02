@@ -10,7 +10,7 @@ def convert(release):
         'stability': 'testing' if 'rc' in version or 'pre' in version else 'stable',
         'released': release['published_at'][0:10],
         'download-url-x64':  next(asset['browser_download_url'] for asset in release['assets'] if str.startswith(asset['name'], 'GitExtensions-x64')),
-        #'download-url-arm64': next((asset['browser_download_url'] for asset in release['assets'] if str.startswith(asset['name'], 'GitExtensions-arm64')), None),
+        'download-url-arm64': next((asset['browser_download_url'] for asset in release['assets'] if str.startswith(asset['name'], 'GitExtensions-arm64')), None),
     }
 
-releases = [convert(release) for release in github.releases('gitextensions/gitextensions') if str.startswith(release['tag_name'], 'v6') and not 'alpha' in release['tag_name']]
+releases = [convert(release) for release in github.releases('gitextensions/gitextensions') if str.startswith(release['tag_name'], 'v7') and not 'alpha' in release['tag_name']]

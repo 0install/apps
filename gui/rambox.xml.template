@@ -11,13 +11,14 @@
 
   <feed-for interface="https://apps.0install.net/gui/rambox.xml"/>
 
-  <group license="Freeware">
+  <!-- Rambox 3.0.0 shipped without Linux builds; re-enable once upstream provides them again -->
+  <!--<group license="Freeware">
     <command name="run" path="rambox"/>
     <implementation arch="Linux-x86_64" released="{released}" stability="stable" version="{version}">
       <manifest-digest/>
       <archive extract="Rambox-{version}-linux-x64" href="https://github.com/ramboxapp/download/releases/download/v{version}/Rambox-{version}-linux-x64.tar.gz" type="application/x-compressed-tar"/>
     </implementation>
-  </group>
+  </group>-->
 
   <group license="Freeware">
     <command name="run" path="Rambox.app/Contents/MacOS/Rambox"/>

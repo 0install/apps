@@ -12,6 +12,7 @@
       <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="Content-Language" content="de" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Zero Install - Software Katalog</title>
         <link rel="stylesheet" href="https://apps.0install.net/resources/catalog.css" type="text/css" />
         <script src="https://apps.0install.net/resources/list.min.js"></script>
@@ -118,6 +119,11 @@
             valueNames: ['name', 'categories', 'summary', {data: ['cats', 'terminal']}],
             searchColumns: ['name', 'categories', 'summary']
           });
+
+          if (new URLSearchParams(location.search).has('include-terminal')) {
+            var footerBar = document.querySelector('.footerBar');
+            if (footerBar) footerBar.parentNode.removeChild(footerBar);
+          }
 
           var comboCategory = document.querySelector('.category');
           var checkBoxIncludeTerminal = document.querySelector('.includeTerminal');

@@ -7,35 +7,22 @@ http://creativecommons.org/licenses/by-sa/2.5/
 
 :root {
     color-scheme: light dark;
-    --bg: #ffffff;
-    --fg: #212529;
-    --muted: #6c757d;
-    --border: #dee2e6;
-    --card-bg: #f8f9fa;
-    --accent: #2980b9;
-    --accent-hover: #216ba1;
+    --bg: light-dark(#ffffff, #1e2129);
+    --fg: light-dark(#212529, #dee2e6);
+    --muted: light-dark(#6c757d, #adb5bd);
+    --border: light-dark(#dee2e6, #495057);
+    --card-bg: light-dark(#f8f9fa, #2b3035);
+    --accent: light-dark(#2980b9, #5488e8);
+    --accent-hover: light-dark(#216ba1, #7aa3ee);
     --btn-bg: #2980b9;
     --btn-hover-bg: #216ba1;
     --terminal-bg: #11151a;
     --terminal-fg: #e6edf3;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #1e2129;
-        --fg: #dee2e6;
-        --muted: #adb5bd;
-        --border: #495057;
-        --card-bg: #2b3035;
-        --accent: #5488e8;
-        --accent-hover: #7aa3ee;
-    }
-}
-
 body {
     margin: 0;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 1rem;
     line-height: 1.5;
     background-color: var(--bg);
     color: var(--fg);
@@ -46,17 +33,9 @@ a[href] {
     text-decoration: none;
 }
 
-a[href]:visited {
-    color: var(--accent);
-}
-
 a[href]:hover {
     color: var(--accent-hover);
     text-decoration: underline;
-}
-
-img {
-    border: 0;
 }
 
 .inner {
@@ -71,12 +50,16 @@ img {
 }
 
 .title a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     color: var(--fg);
+    font-size: 1.25rem;
     font-weight: 600;
 }
 
 .title a:hover {
-    color: var(--accent);
+    color: var(--fg);
     text-decoration: none;
 }
 
@@ -106,11 +89,6 @@ img.icon {
     margin: 0.25rem 1rem 0.5rem 0;
 }
 
-img.alpha {
-    background: none;
-    border: none;
-}
-
 .what-is-this {
     clear: both;
     margin: 1.5rem 0;
@@ -121,8 +99,11 @@ img.alpha {
     color: var(--muted);
 }
 
-.what-is-this a {
-    color: var(--accent);
+.what-is-this .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
 }
 
 input[type=submit] {
@@ -178,11 +159,6 @@ ul {
     padding-left: 1.5rem;
 }
 
-li {
-    margin: 0;
-    padding: 0;
-}
-
 table {
     width: 100%;
     border-collapse: collapse;
@@ -231,17 +207,12 @@ code, pre {
 
 .chrome pre {
     padding: 0.75rem 1rem;
+    border: 1px solid light-dark(transparent, var(--border));
     border-radius: 0.5rem;
     background-color: var(--terminal-bg);
     color: var(--terminal-fg);
     font-size: 0.875rem;
     overflow-x: auto;
-}
-
-@media (prefers-color-scheme: dark) {
-    .chrome pre {
-        border: 1px solid var(--border);
-    }
 }
 
 .clear {

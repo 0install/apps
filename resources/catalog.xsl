@@ -64,10 +64,10 @@
                     </xsl:for-each>
                   </p>
                   <p class="summary">
-                    <xsl:if test="interface:summary[@lang='en']">
-                      <xsl:value-of select="interface:summary[@lang='en']"/>
+                    <xsl:if test="interface:summary[@xml:lang='en']">
+                      <xsl:value-of select="interface:summary[@xml:lang='en']"/>
                     </xsl:if>
-                    <xsl:if test="not(interface:summary[@lang='en'])">
+                    <xsl:if test="not(interface:summary[@xml:lang='en'])">
                       <xsl:value-of select="interface:summary"/>
                     </xsl:if>
                   </p>

@@ -41,8 +41,8 @@ http://creativecommons.org/licenses/by-sa/2.5/
 
 								<h2>
 									<xsl:choose>
-										<xsl:when test="zi:summary[@lang='en']">
-											<xsl:value-of select="zi:summary[@lang='en']"/>
+										<xsl:when test="zi:summary[@xml:lang='en']">
+											<xsl:value-of select="zi:summary[@xml:lang='en']"/>
 										</xsl:when>
 										<xsl:otherwise>
 											<xsl:value-of select="zi:summary"/>
@@ -115,9 +115,9 @@ http://creativecommons.org/licenses/by-sa/2.5/
 									</xsl:if>
 
 									<xsl:choose>
-										<xsl:when test="zi:description[@lang='en']">
+										<xsl:when test="zi:description[@xml:lang='en']">
 											<xsl:call-template name="description">
-												<xsl:with-param name="text"><xsl:value-of select="zi:description[@lang='en']"/></xsl:with-param>
+												<xsl:with-param name="text"><xsl:value-of select="zi:description[@xml:lang='en']"/></xsl:with-param>
 											</xsl:call-template>
 										</xsl:when>
 										<xsl:when test="zi:description">

@@ -33,7 +33,7 @@ jobs:
         run: ${{matrix.run}}
       - name: Upload generated feeds
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: ${{matrix.name}}-feeds
           path: incoming
@@ -47,7 +47,7 @@ jobs:
           git-user-name: apps.0install.net
           git-user-email: webmaster@0install.net
       - name: Download feeds
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           pattern: '*-feeds'
           merge-multiple: true

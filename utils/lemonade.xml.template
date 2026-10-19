@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Lemonade</name>
+  <summary>serve optimized LLMs locally from your own GPUs and NPUs</summary>
+  <description>Lemonade helps users discover and run local AI apps by serving optimized LLMs right from their own GPUs and NPUs. It provides an OpenAI-compatible server, a command-line client and (on Windows) a desktop app.</description>
+  <homepage>https://lemonade-server.ai/</homepage>
+  <category>Utility</category>
+
+  <icon href="https://apps.0install.net/utils/lemonade.png" type="image/png"/>
+  <icon href="https://apps.0install.net/utils/lemonade.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://apps.0install.net/utils/lemonade.icns" type="image/x-icns"/>
+
+  <feed-for interface="https://apps.0install.net/utils/lemonade.xml"/>
+
+  <group license="Apache License 2.0">
+    <command name="run" path="lemonade"/>
+    <command name="server" path="lemond"/>
+    <implementation arch="Linux-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/lemonade-sdk/lemonade/releases/download/v{version}/lemonade-embeddable-{version}-ubuntu-x64.tar.gz" type="application/x-compressed-tar" extract="lemonade-embeddable-{version}-ubuntu-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/lemonade-sdk/lemonade/releases/download/v{version}/lemonade-embeddable-{version}-ubuntu-arm64.tar.gz" type="application/x-compressed-tar" extract="lemonade-embeddable-{version}-ubuntu-arm64"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/lemonade-sdk/lemonade/releases/download/v{version}/lemonade-embeddable-{version}-macos-arm64.tar.gz" type="application/x-compressed-tar" extract="lemonade-embeddable-{version}-macos-arm64"/>
+    </implementation>
+  </group>
+
+  <group license="Apache License 2.0">
+    <command name="run" path="bin/lemonade.exe"/>
+    <command name="run-gui" path="app/lemonade-app.exe"/>
+    <command name="server" path="bin/LemonadeServer.exe"/>
+    <implementation arch="Windows-x86_64" version="{version}" released="{released}" stability="stable">
+      <manifest-digest/>
+      <archive href="https://github.com/lemonade-sdk/lemonade/releases/download/v{version}/lemonade.msi" type="application/x-msi" extract="SourceDir/LocalApp/lemonade_server"/>
+    </implementation>
+  </group>
+</interface>

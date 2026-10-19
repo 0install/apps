@@ -1,0 +1,401 @@
+<?xml version="1.0" ?>
+<interface uri="https://apps.0install.net/utils/lemonade.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Lemonade</name>
+  <summary>serve optimized LLMs locally from your own GPUs and NPUs</summary>
+  <description>Lemonade helps users discover and run local AI apps by serving optimized LLMs right from their own GPUs and NPUs. It provides an OpenAI-compatible server, a command-line client and (on Windows) a desktop app.</description>
+  <homepage>https://lemonade-server.ai/</homepage>
+  <category>Utility</category>
+
+  <icon href="https://apps.0install.net/utils/lemonade.png" type="image/png"/>
+  <icon href="https://apps.0install.net/utils/lemonade.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://apps.0install.net/utils/lemonade.icns" type="image/x-icns"/>
+
+  <entry-point binary-name="lemonade" command="run">
+    <needs-terminal/>
+    <name>Lemonade CLI</name>
+    <summary>command-line client for Lemonade Server</summary>
+  </entry-point>
+  <entry-point binary-name="lemonade-app" command="run-gui">
+    <name>Lemonade</name>
+    <summary>desktop app for Lemonade Server</summary>
+  </entry-point>
+  <entry-point binary-name="LemonadeServer" command="server">
+    <name>Lemonade Server</name>
+    <summary>local LLM server (with system tray icon on Windows)</summary>
+  </entry-point>
+
+  <group license="Apache License 2.0">
+    <command name="run" path="lemonade"/>
+    <command name="server" path="lemond"/>
+    <implementation arch="Linux-x86_64" id="sha256new_M7GZ4PQJQJ5W3RNMJD4X66OEHOB57BR44KK6K3WIHZ6LUZO2HZEA" released="2026-04-08" stability="stable" version="10.2.0">
+      <manifest-digest sha256new="M7GZ4PQJQJ5W3RNMJD4X66OEHOB57BR44KK6K3WIHZ6LUZO2HZEA"/>
+      <archive extract="lemonade-embeddable-10.2.0-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.2.0/lemonade-embeddable-10.2.0-ubuntu-x64.tar.gz" size="3184237" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha256new_CS4LW3BRVC4YNZSNXKJN3VA652N7T5TTHWZEOMGZYKYJT2ZYFZUQ" released="2026-04-28" stability="stable" version="10.3.0">
+      <manifest-digest sha256new="CS4LW3BRVC4YNZSNXKJN3VA652N7T5TTHWZEOMGZYKYJT2ZYFZUQ"/>
+      <archive extract="lemonade-embeddable-10.3.0-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.3.0/lemonade-embeddable-10.3.0-ubuntu-x64.tar.gz" size="3263623" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha256new_OLAHGGCYSWA2XMY4CFQBJONA4SY2THNYJJAYLEMJQCMQJULGJ4ZQ" released="2026-05-08" stability="stable" version="10.4.0">
+      <manifest-digest sha256new="OLAHGGCYSWA2XMY4CFQBJONA4SY2THNYJJAYLEMJQCMQJULGJ4ZQ"/>
+      <archive extract="lemonade-embeddable-10.4.0-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.4.0/lemonade-embeddable-10.4.0-ubuntu-x64.tar.gz" size="3332332" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha256new_CSC5R6IZMSXSA3J2SIGUUDSEPMDXM6BJW4DKKVR72CXEQR7652SQ" released="2026-05-16" stability="stable" version="10.5.0">
+      <manifest-digest sha256new="CSC5R6IZMSXSA3J2SIGUUDSEPMDXM6BJW4DKKVR72CXEQR7652SQ"/>
+      <archive extract="lemonade-embeddable-10.5.0-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.5.0/lemonade-embeddable-10.5.0-ubuntu-x64.tar.gz" size="3369937" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" id="sha256new_FJSUKHC6YBOGHNIFCNGGJ5OHCNBDVFKSELSKPDJF7E7OOMVC4JKQ" released="2026-05-16" stability="stable" version="10.5.0">
+      <manifest-digest sha256new="FJSUKHC6YBOGHNIFCNGGJ5OHCNBDVFKSELSKPDJF7E7OOMVC4JKQ"/>
+      <archive extract="lemonade-embeddable-10.5.0-macos-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.5.0/lemonade-embeddable-10.5.0-macos-arm64.tar.gz" size="2777697" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha256new_BJKARCZOQOTH2JAV6P2MUNVXUKWMIVBEL2WAZZBGGLX7Q3O3TVVQ" released="2026-05-18" stability="stable" version="10.5.1">
+      <manifest-digest sha256new="BJKARCZOQOTH2JAV6P2MUNVXUKWMIVBEL2WAZZBGGLX7Q3O3TVVQ"/>
+      <archive extract="lemonade-embeddable-10.5.1-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.5.1/lemonade-embeddable-10.5.1-ubuntu-x64.tar.gz" size="3385103" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" id="sha256new_XB7RGT3RWPJSJWVL2ICD5V7DHS7W555E6GJAOMZ5UDM3SOG4452Q" released="2026-05-18" stability="stable" version="10.5.1">
+      <manifest-digest sha256new="XB7RGT3RWPJSJWVL2ICD5V7DHS7W555E6GJAOMZ5UDM3SOG4452Q"/>
+      <archive extract="lemonade-embeddable-10.5.1-macos-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.5.1/lemonade-embeddable-10.5.1-macos-arm64.tar.gz" size="2788198" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha256new_5GIGVD6X2HBDS3XA2ARQUVBLXVMQK4LUKKN6LIVYJGJVTOYCATLA" released="2026-05-21" stability="stable" version="10.6.0">
+      <manifest-digest sha256new="5GIGVD6X2HBDS3XA2ARQUVBLXVMQK4LUKKN6LIVYJGJVTOYCATLA"/>
+      <archive extract="lemonade-embeddable-10.6.0-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.6.0/lemonade-embeddable-10.6.0-ubuntu-x64.tar.gz" size="3425958" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" id="sha256new_NXVFJ543PS3NN6UPNYWJ7RJ6WEIMYFMHBNLAXUZRORJ5BYL6RHCQ" released="2026-05-21" stability="stable" version="10.6.0">
+      <manifest-digest sha256new="NXVFJ543PS3NN6UPNYWJ7RJ6WEIMYFMHBNLAXUZRORJ5BYL6RHCQ"/>
+      <archive extract="lemonade-embeddable-10.6.0-macos-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.6.0/lemonade-embeddable-10.6.0-macos-arm64.tar.gz" size="2827730" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha256new_IRHGHIYUSMVRTC3CISFT6V33N6QMP32VO6IJSEP6SLOU6LP4MMQA" released="2026-06-10" stability="stable" version="10.7.0">
+      <manifest-digest sha256new="IRHGHIYUSMVRTC3CISFT6V33N6QMP32VO6IJSEP6SLOU6LP4MMQA"/>
+      <archive extract="lemonade-embeddable-10.7.0-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.7.0/lemonade-embeddable-10.7.0-ubuntu-x64.tar.gz" size="4273672" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" id="sha256new_OBII3A2XCML7NQWRSDPF4EMFHF4BGZD2Z5VTTGMQPM2P63Y5XFMA" released="2026-06-10" stability="stable" version="10.7.0">
+      <manifest-digest sha256new="OBII3A2XCML7NQWRSDPF4EMFHF4BGZD2Z5VTTGMQPM2P63Y5XFMA"/>
+      <archive extract="lemonade-embeddable-10.7.0-macos-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.7.0/lemonade-embeddable-10.7.0-macos-arm64.tar.gz" size="3541486" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha256new_62PYYUJJHUE4IZVOJNXFKNPOC67EZ3IVWMTKIQTFNRRDWXKY5JQQ" released="2026-06-17" stability="stable" version="10.8.0">
+      <manifest-digest sha256new="62PYYUJJHUE4IZVOJNXFKNPOC67EZ3IVWMTKIQTFNRRDWXKY5JQQ"/>
+      <archive extract="lemonade-embeddable-10.8.0-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.8.0/lemonade-embeddable-10.8.0-ubuntu-x64.tar.gz" size="4763606" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" id="sha256new_2EYFTNKMOVD6WTH2UZ5D2KDGLJNKI7S47FMDLSIJORB7LFZHU37Q" released="2026-06-17" stability="stable" version="10.8.0">
+      <manifest-digest sha256new="2EYFTNKMOVD6WTH2UZ5D2KDGLJNKI7S47FMDLSIJORB7LFZHU37Q"/>
+      <archive extract="lemonade-embeddable-10.8.0-macos-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.8.0/lemonade-embeddable-10.8.0-macos-arm64.tar.gz" size="3875607" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha256new_R6DBGLMMVBI4TGDX44APFPWAXWQ4KKY6HG27CDCMRNJNMZFW6QDQ" released="2026-06-25" stability="stable" version="10.8.1">
+      <manifest-digest sha256new="R6DBGLMMVBI4TGDX44APFPWAXWQ4KKY6HG27CDCMRNJNMZFW6QDQ"/>
+      <archive extract="lemonade-embeddable-10.8.1-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.8.1/lemonade-embeddable-10.8.1-ubuntu-x64.tar.gz" size="4787398" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" id="sha256new_OCETWFL3R6LZ3YEP5Y4K2MXS4R3R5TAGQEBLW4TAPRSNXN4OHUVA" released="2026-06-25" stability="stable" version="10.8.1">
+      <manifest-digest sha256new="OCETWFL3R6LZ3YEP5Y4K2MXS4R3R5TAGQEBLW4TAPRSNXN4OHUVA"/>
+      <archive extract="lemonade-embeddable-10.8.1-macos-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.8.1/lemonade-embeddable-10.8.1-macos-arm64.tar.gz" size="3896671" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha256new_BGQSZLEHNFBDGSHIM24DQNBWRV74SZ4SRVWK2ICDSB3IOCDKALQA" released="2026-07-01" stability="stable" version="10.9.0">
+      <manifest-digest sha256new="BGQSZLEHNFBDGSHIM24DQNBWRV74SZ4SRVWK2ICDSB3IOCDKALQA"/>
+      <archive extract="lemonade-embeddable-10.9.0-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.9.0/lemonade-embeddable-10.9.0-ubuntu-x64.tar.gz" size="5186916" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" id="sha256new_UAB5IJGCCAQ4TDITTV3SYCJFHCI74DDN6KMZLFWKLCDQ57MKHAVQ" released="2026-07-01" stability="stable" version="10.9.0">
+      <manifest-digest sha256new="UAB5IJGCCAQ4TDITTV3SYCJFHCI74DDN6KMZLFWKLCDQ57MKHAVQ"/>
+      <archive extract="lemonade-embeddable-10.9.0-ubuntu-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.9.0/lemonade-embeddable-10.9.0-ubuntu-arm64.tar.gz" size="4793636" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" id="sha256new_QALXJPPNYMX6BELPHY2SH57E32ULPD3YDWJVEMH7U33AI6VW47DA" released="2026-07-01" stability="stable" version="10.9.0">
+      <manifest-digest sha256new="QALXJPPNYMX6BELPHY2SH57E32ULPD3YDWJVEMH7U33AI6VW47DA"/>
+      <archive extract="lemonade-embeddable-10.9.0-macos-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.9.0/lemonade-embeddable-10.9.0-macos-arm64.tar.gz" size="4243481" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha256new_5ABVWJBTNAHGEIH3IPBDHPHNFV5F5MSEUR5RPIFRY2NV3C6VENTQ" released="2026-07-08" stability="stable" version="10.10.0">
+      <manifest-digest sha256new="5ABVWJBTNAHGEIH3IPBDHPHNFV5F5MSEUR5RPIFRY2NV3C6VENTQ"/>
+      <archive extract="lemonade-embeddable-10.10.0-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.10.0/lemonade-embeddable-10.10.0-ubuntu-x64.tar.gz" size="5393136" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" id="sha256new_IL4RE2TW3G22O7WB3YFNZDS3PIWBJ2DMK3NXWTN6AZ77B4KO3GSQ" released="2026-07-08" stability="stable" version="10.10.0">
+      <manifest-digest sha256new="IL4RE2TW3G22O7WB3YFNZDS3PIWBJ2DMK3NXWTN6AZ77B4KO3GSQ"/>
+      <archive extract="lemonade-embeddable-10.10.0-ubuntu-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.10.0/lemonade-embeddable-10.10.0-ubuntu-arm64.tar.gz" size="4974087" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" id="sha256new_MYLVPC2IEASRJOE46LPBBCGNHKB3FSJHE7IZT5MEZ4EEDNHFR4QQ" released="2026-07-08" stability="stable" version="10.10.0">
+      <manifest-digest sha256new="MYLVPC2IEASRJOE46LPBBCGNHKB3FSJHE7IZT5MEZ4EEDNHFR4QQ"/>
+      <archive extract="lemonade-embeddable-10.10.0-macos-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.10.0/lemonade-embeddable-10.10.0-macos-arm64.tar.gz" size="4365591" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha256new_LPZHMTWXBHHN4UYCCLGRBPZBJ2J5WPUHQTD7G454FLH6QFXUPRUA" released="2026-07-15" stability="stable" version="11.0.0">
+      <manifest-digest sha256new="LPZHMTWXBHHN4UYCCLGRBPZBJ2J5WPUHQTD7G454FLH6QFXUPRUA"/>
+      <archive extract="lemonade-embeddable-11.0.0-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.0.0/lemonade-embeddable-11.0.0-ubuntu-x64.tar.gz" size="5660266" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" id="sha256new_MI7J75BMFOAKR5KPU63DEVQTGFH2EGOJ7ADRO6L7PVFU3YPDFSTA" released="2026-07-15" stability="stable" version="11.0.0">
+      <manifest-digest sha256new="MI7J75BMFOAKR5KPU63DEVQTGFH2EGOJ7ADRO6L7PVFU3YPDFSTA"/>
+      <archive extract="lemonade-embeddable-11.0.0-ubuntu-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.0.0/lemonade-embeddable-11.0.0-ubuntu-arm64.tar.gz" size="5208869" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" id="sha256new_M5S24EWXDLIXLUW4SQ3AVBFCTE75I5C4OCP4DLZRI2TBXOWS4R2Q" released="2026-07-15" stability="stable" version="11.0.0">
+      <manifest-digest sha256new="M5S24EWXDLIXLUW4SQ3AVBFCTE75I5C4OCP4DLZRI2TBXOWS4R2Q"/>
+      <archive extract="lemonade-embeddable-11.0.0-macos-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.0.0/lemonade-embeddable-11.0.0-macos-arm64.tar.gz" size="4554024" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha256new_ZU7MUED4OVL4MSETLLPBP3X2EXUFSFOKOVIJLRI2AOWPUAVWGKGQ" released="2026-07-22" stability="stable" version="11.5.0">
+      <manifest-digest sha256new="ZU7MUED4OVL4MSETLLPBP3X2EXUFSFOKOVIJLRI2AOWPUAVWGKGQ"/>
+      <archive extract="lemonade-embeddable-11.5.0-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.5.0/lemonade-embeddable-11.5.0-ubuntu-x64.tar.gz" size="6474365" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" id="sha256new_EVMDHXZIEPAMSU5ANSSAHDRGY4YMVYXXKE3OUS4KNEZULUH4XYPQ" released="2026-07-22" stability="stable" version="11.5.0">
+      <manifest-digest sha256new="EVMDHXZIEPAMSU5ANSSAHDRGY4YMVYXXKE3OUS4KNEZULUH4XYPQ"/>
+      <archive extract="lemonade-embeddable-11.5.0-ubuntu-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.5.0/lemonade-embeddable-11.5.0-ubuntu-arm64.tar.gz" size="5964560" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" id="sha256new_GFCCYN3C76KHYRRDC654JMLENBFLE6NLS6CTK4SIG4C2VKU7UUEA" released="2026-07-22" stability="stable" version="11.5.0">
+      <manifest-digest sha256new="GFCCYN3C76KHYRRDC654JMLENBFLE6NLS6CTK4SIG4C2VKU7UUEA"/>
+      <archive extract="lemonade-embeddable-11.5.0-macos-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.5.0/lemonade-embeddable-11.5.0-macos-arm64.tar.gz" size="5090369" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha256new_NZTRCXJW3PLGB4WU6HVFBPTVUIZWBJED77D4LUCMA4FNLEPX6QTA" released="2026-07-29" stability="stable" version="11.5.1">
+      <manifest-digest sha256new="NZTRCXJW3PLGB4WU6HVFBPTVUIZWBJED77D4LUCMA4FNLEPX6QTA"/>
+      <archive extract="lemonade-embeddable-11.5.1-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.5.1/lemonade-embeddable-11.5.1-ubuntu-x64.tar.gz" size="6512136" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" id="sha256new_YTVJTHX5G3KUGOUMYBY234T247ZUCYH74PU24A6PJWW56VCVV34A" released="2026-07-29" stability="stable" version="11.5.1">
+      <manifest-digest sha256new="YTVJTHX5G3KUGOUMYBY234T247ZUCYH74PU24A6PJWW56VCVV34A"/>
+      <archive extract="lemonade-embeddable-11.5.1-ubuntu-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.5.1/lemonade-embeddable-11.5.1-ubuntu-arm64.tar.gz" size="5996764" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" id="sha256new_ZJR5RJVGEC6ETHFQ3PU4KDWM6CWVBVPTOXVASR2DIRZG3JLP63GQ" released="2026-07-29" stability="stable" version="11.5.1">
+      <manifest-digest sha256new="ZJR5RJVGEC6ETHFQ3PU4KDWM6CWVBVPTOXVASR2DIRZG3JLP63GQ"/>
+      <archive extract="lemonade-embeddable-11.5.1-macos-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.5.1/lemonade-embeddable-11.5.1-macos-arm64.tar.gz" size="5116489" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha256new_RYS5MLJ3AZDPQ3XKYVAYF6Y7ZFDUWEQIFQWV4ST7NAG5LD37LX7Q" released="2026-08-05" stability="stable" version="11.5.2">
+      <manifest-digest sha256new="RYS5MLJ3AZDPQ3XKYVAYF6Y7ZFDUWEQIFQWV4ST7NAG5LD37LX7Q"/>
+      <archive extract="lemonade-embeddable-11.5.2-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.5.2/lemonade-embeddable-11.5.2-ubuntu-x64.tar.gz" size="6843693" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" id="sha256new_E77MVRLE5DJSU5IFOG56EUNIXCLWPROPWWYXE6GNUEETVKBH45FQ" released="2026-08-05" stability="stable" version="11.5.2">
+      <manifest-digest sha256new="E77MVRLE5DJSU5IFOG56EUNIXCLWPROPWWYXE6GNUEETVKBH45FQ"/>
+      <archive extract="lemonade-embeddable-11.5.2-ubuntu-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.5.2/lemonade-embeddable-11.5.2-ubuntu-arm64.tar.gz" size="6312005" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" id="sha256new_ELR46N3RWXEYP4TGEUIUB5YYD37ETT7TZMDO7JEIUFJZSE6JHAUQ" released="2026-08-05" stability="stable" version="11.5.2">
+      <manifest-digest sha256new="ELR46N3RWXEYP4TGEUIUB5YYD37ETT7TZMDO7JEIUFJZSE6JHAUQ"/>
+      <archive extract="lemonade-embeddable-11.5.2-macos-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.5.2/lemonade-embeddable-11.5.2-macos-arm64.tar.gz" size="5292704" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha256new_YVLIGUWUL5FCMA4LLUSUXQ64KSKU5LYS5JNS4DGFYRA5ITEQDF5Q" released="2026-08-14" stability="stable" version="11.6.0">
+      <manifest-digest sha256new="YVLIGUWUL5FCMA4LLUSUXQ64KSKU5LYS5JNS4DGFYRA5ITEQDF5Q"/>
+      <archive extract="lemonade-embeddable-11.6.0-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.6.0/lemonade-embeddable-11.6.0-ubuntu-x64.tar.gz" size="7019760" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" id="sha256new_FKFVYDSNCDKILNA6WCYBLRVG2PWSN37JF5SFLJ2552PTQZHS4JKA" released="2026-08-14" stability="stable" version="11.6.0">
+      <manifest-digest sha256new="FKFVYDSNCDKILNA6WCYBLRVG2PWSN37JF5SFLJ2552PTQZHS4JKA"/>
+      <archive extract="lemonade-embeddable-11.6.0-ubuntu-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.6.0/lemonade-embeddable-11.6.0-ubuntu-arm64.tar.gz" size="6472263" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" id="sha256new_MJMSHZFE3XXBXFHECUR32KO53LPRRKPZIKESIVSD2HLGB57AXQSQ" released="2026-08-14" stability="stable" version="11.6.0">
+      <manifest-digest sha256new="MJMSHZFE3XXBXFHECUR32KO53LPRRKPZIKESIVSD2HLGB57AXQSQ"/>
+      <archive extract="lemonade-embeddable-11.6.0-macos-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.6.0/lemonade-embeddable-11.6.0-macos-arm64.tar.gz" size="5420300" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha256new_4PDSJEHTEBB3ER7XBQSWCSLJQZPBVTXQWSFCJREWTARAEB3UBMZQ" released="2026-08-19" stability="stable" version="11.7.0">
+      <manifest-digest sha256new="4PDSJEHTEBB3ER7XBQSWCSLJQZPBVTXQWSFCJREWTARAEB3UBMZQ"/>
+      <archive extract="lemonade-embeddable-11.7.0-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.7.0/lemonade-embeddable-11.7.0-ubuntu-x64.tar.gz" size="7113355" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" id="sha256new_ICP2KEIPMDWB564OZHSO6PHN4RNE6ORKSBFQPZHC7RHNMDQOU5ZA" released="2026-08-19" stability="stable" version="11.7.0">
+      <manifest-digest sha256new="ICP2KEIPMDWB564OZHSO6PHN4RNE6ORKSBFQPZHC7RHNMDQOU5ZA"/>
+      <archive extract="lemonade-embeddable-11.7.0-ubuntu-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.7.0/lemonade-embeddable-11.7.0-ubuntu-arm64.tar.gz" size="6560440" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" id="sha256new_QCHRGEJKPFDA7WG4CD2T3UVHF63V7ZWEBEMB7AD4QLUGCZS33LEQ" released="2026-08-19" stability="stable" version="11.7.0">
+      <manifest-digest sha256new="QCHRGEJKPFDA7WG4CD2T3UVHF63V7ZWEBEMB7AD4QLUGCZS33LEQ"/>
+      <archive extract="lemonade-embeddable-11.7.0-macos-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.7.0/lemonade-embeddable-11.7.0-macos-arm64.tar.gz" size="5493990" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha256new_XCPIEHINR4KPDPM4PD73MZE4KSJE7GVSWQKJLQV7B75IFFTLB2DA" released="2026-08-26" stability="stable" version="11.8.0">
+      <manifest-digest sha256new="XCPIEHINR4KPDPM4PD73MZE4KSJE7GVSWQKJLQV7B75IFFTLB2DA"/>
+      <archive extract="lemonade-embeddable-11.8.0-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.8.0/lemonade-embeddable-11.8.0-ubuntu-x64.tar.gz" size="7333010" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" id="sha256new_LMG2UYX2SFYQTX72TXDQLZQLMY34M7YYPOEV5ZIUPWTUDWAZHUTA" released="2026-08-26" stability="stable" version="11.8.0">
+      <manifest-digest sha256new="LMG2UYX2SFYQTX72TXDQLZQLMY34M7YYPOEV5ZIUPWTUDWAZHUTA"/>
+      <archive extract="lemonade-embeddable-11.8.0-ubuntu-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.8.0/lemonade-embeddable-11.8.0-ubuntu-arm64.tar.gz" size="6749311" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" id="sha256new_PDYHTMGTBN25V4GQXJ5RPRHQS4KCZSTXY4ALMRPRBHWNBFXBN7DQ" released="2026-08-26" stability="stable" version="11.8.0">
+      <manifest-digest sha256new="PDYHTMGTBN25V4GQXJ5RPRHQS4KCZSTXY4ALMRPRBHWNBFXBN7DQ"/>
+      <archive extract="lemonade-embeddable-11.8.0-macos-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.8.0/lemonade-embeddable-11.8.0-macos-arm64.tar.gz" size="5648452" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha256new_PY7LQGT4HASIWDDISJHU3M3SMPKY5VG73JO7BHUVZFOABCEEOVEQ" released="2026-08-28" stability="stable" version="11.8.1">
+      <manifest-digest sha256new="PY7LQGT4HASIWDDISJHU3M3SMPKY5VG73JO7BHUVZFOABCEEOVEQ"/>
+      <archive extract="lemonade-embeddable-11.8.1-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.8.1/lemonade-embeddable-11.8.1-ubuntu-x64.tar.gz" size="7351837" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" id="sha256new_QQP6I3O3DF4OE6BXLMIEDWT35U4SQHYHTZH4XTUOZ3UMTQMG3X3Q" released="2026-08-28" stability="stable" version="11.8.1">
+      <manifest-digest sha256new="QQP6I3O3DF4OE6BXLMIEDWT35U4SQHYHTZH4XTUOZ3UMTQMG3X3Q"/>
+      <archive extract="lemonade-embeddable-11.8.1-ubuntu-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.8.1/lemonade-embeddable-11.8.1-ubuntu-arm64.tar.gz" size="6760732" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" id="sha256new_NKDLCQOHL66TSMX5J3ANWUZFKNG7NAHKMYUR5JPRI3BFEGGKH3LA" released="2026-08-28" stability="stable" version="11.8.1">
+      <manifest-digest sha256new="NKDLCQOHL66TSMX5J3ANWUZFKNG7NAHKMYUR5JPRI3BFEGGKH3LA"/>
+      <archive extract="lemonade-embeddable-11.8.1-macos-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.8.1/lemonade-embeddable-11.8.1-macos-arm64.tar.gz" size="5658560" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha256new_4OAMYXJWXXTANEKKE3O6W4POGJNZUKECOM5VDMFA7X26ZF55B5TA" released="2026-09-02" stability="stable" version="11.9.0">
+      <manifest-digest sha256new="4OAMYXJWXXTANEKKE3O6W4POGJNZUKECOM5VDMFA7X26ZF55B5TA"/>
+      <archive extract="lemonade-embeddable-11.9.0-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.9.0/lemonade-embeddable-11.9.0-ubuntu-x64.tar.gz" size="7429447" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" id="sha256new_UIT6NAKZ6CGK26PAC6FKD22N73LHHFTXHBFLW2W5O4XJVGMHOGNQ" released="2026-09-02" stability="stable" version="11.9.0">
+      <manifest-digest sha256new="UIT6NAKZ6CGK26PAC6FKD22N73LHHFTXHBFLW2W5O4XJVGMHOGNQ"/>
+      <archive extract="lemonade-embeddable-11.9.0-ubuntu-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.9.0/lemonade-embeddable-11.9.0-ubuntu-arm64.tar.gz" size="6830826" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" id="sha256new_HAEYH3EVBOQ3YJCRJI7HLP6STSTJJCBPTAOYKCMBJQLUTJ2EC7XA" released="2026-09-02" stability="stable" version="11.9.0">
+      <manifest-digest sha256new="HAEYH3EVBOQ3YJCRJI7HLP6STSTJJCBPTAOYKCMBJQLUTJ2EC7XA"/>
+      <archive extract="lemonade-embeddable-11.9.0-macos-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.9.0/lemonade-embeddable-11.9.0-macos-arm64.tar.gz" size="5712509" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha256new_H2L6GTT73K3A5QK543RQINAUVNE34WNWEDLNWKSKP6G3SECV6WTA" released="2026-09-23" stability="stable" version="2026.39.1">
+      <manifest-digest sha256new="H2L6GTT73K3A5QK543RQINAUVNE34WNWEDLNWKSKP6G3SECV6WTA"/>
+      <archive extract="lemonade-embeddable-2026.39.1-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v2026.39.1/lemonade-embeddable-2026.39.1-ubuntu-x64.tar.gz" size="7368627" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" id="sha256new_RGO6TGGCGFZSJZ4T2RBLPBOQ4LCYPGLQFUDU3WRHTPN27SLHDPRQ" released="2026-09-23" stability="stable" version="2026.39.1">
+      <manifest-digest sha256new="RGO6TGGCGFZSJZ4T2RBLPBOQ4LCYPGLQFUDU3WRHTPN27SLHDPRQ"/>
+      <archive extract="lemonade-embeddable-2026.39.1-ubuntu-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v2026.39.1/lemonade-embeddable-2026.39.1-ubuntu-arm64.tar.gz" size="6775168" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" id="sha256new_L4XFW7NSILWFFAXAYAZW7PH3BSIPVIBCUSDBSTQJTZC6VXH5UG2A" released="2026-09-23" stability="stable" version="2026.39.1">
+      <manifest-digest sha256new="L4XFW7NSILWFFAXAYAZW7PH3BSIPVIBCUSDBSTQJTZC6VXH5UG2A"/>
+      <archive extract="lemonade-embeddable-2026.39.1-macos-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v2026.39.1/lemonade-embeddable-2026.39.1-macos-arm64.tar.gz" size="5690015" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha256new_SSO5OS2JN2CNBHH7FKWBK72LBTK43P2WIJAX5QC2HF4G67LCCEDA" released="2026-09-30" stability="stable" version="2026.40.0">
+      <manifest-digest sha256new="SSO5OS2JN2CNBHH7FKWBK72LBTK43P2WIJAX5QC2HF4G67LCCEDA"/>
+      <archive extract="lemonade-embeddable-2026.40.0-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v2026.40.0/lemonade-embeddable-2026.40.0-ubuntu-x64.tar.gz" size="7413892" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" id="sha256new_BPER2RKKYYQ3O3N4NFPRN66ZGXTSIRIJJCA3ZGVHII2KQBUCKF2Q" released="2026-09-30" stability="stable" version="2026.40.0">
+      <manifest-digest sha256new="BPER2RKKYYQ3O3N4NFPRN66ZGXTSIRIJJCA3ZGVHII2KQBUCKF2Q"/>
+      <archive extract="lemonade-embeddable-2026.40.0-ubuntu-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v2026.40.0/lemonade-embeddable-2026.40.0-ubuntu-arm64.tar.gz" size="6822623" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" id="sha256new_LVTMGUKXP3AKLITWASZOVFNQFCN734627R6WRXPXZPJLU6PWMZZQ" released="2026-09-30" stability="stable" version="2026.40.0">
+      <manifest-digest sha256new="LVTMGUKXP3AKLITWASZOVFNQFCN734627R6WRXPXZPJLU6PWMZZQ"/>
+      <archive extract="lemonade-embeddable-2026.40.0-macos-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v2026.40.0/lemonade-embeddable-2026.40.0-macos-arm64.tar.gz" size="5714867" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha256new_IVLHFXVKP7C5ZQX7UZQKXMWYNEMPHQTOKRYL5HKPELRPZRHBKNCA" released="2026-10-07" stability="stable" version="2026.41.1">
+      <manifest-digest sha256new="IVLHFXVKP7C5ZQX7UZQKXMWYNEMPHQTOKRYL5HKPELRPZRHBKNCA"/>
+      <archive extract="lemonade-embeddable-2026.41.1-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v2026.41.1/lemonade-embeddable-2026.41.1-ubuntu-x64.tar.gz" size="7423912" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" id="sha256new_S7FN2FN6XERC6AL4OOL4FBKDNTQS3YWTKCALITFRY6ODJKIIUVLA" released="2026-10-07" stability="stable" version="2026.41.1">
+      <manifest-digest sha256new="S7FN2FN6XERC6AL4OOL4FBKDNTQS3YWTKCALITFRY6ODJKIIUVLA"/>
+      <archive extract="lemonade-embeddable-2026.41.1-ubuntu-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v2026.41.1/lemonade-embeddable-2026.41.1-ubuntu-arm64.tar.gz" size="6828318" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" id="sha256new_5BD3UFAUA42NU4OSDDSRQYZVOJSLKBKP32QGPWUCEJOO4EE7YJNA" released="2026-10-07" stability="stable" version="2026.41.1">
+      <manifest-digest sha256new="5BD3UFAUA42NU4OSDDSRQYZVOJSLKBKP32QGPWUCEJOO4EE7YJNA"/>
+      <archive extract="lemonade-embeddable-2026.41.1-macos-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v2026.41.1/lemonade-embeddable-2026.41.1-macos-arm64.tar.gz" size="5724167" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" id="sha256new_VCOJBA3WZAFNIBTTYUUNM72SVHVVZQU5C63DHVI4KEQI7YRMLWGA" released="2026-10-14" stability="stable" version="2026.42.1">
+      <manifest-digest sha256new="VCOJBA3WZAFNIBTTYUUNM72SVHVVZQU5C63DHVI4KEQI7YRMLWGA"/>
+      <archive extract="lemonade-embeddable-2026.42.1-ubuntu-x64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v2026.42.1/lemonade-embeddable-2026.42.1-ubuntu-x64.tar.gz" size="7461030" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" id="sha256new_AIP3TS4MLLVZSWCWAEG7OGA2AGIQEHQEEY3XSYC2JVQ3FQOQ4FFA" released="2026-10-14" stability="stable" version="2026.42.1">
+      <manifest-digest sha256new="AIP3TS4MLLVZSWCWAEG7OGA2AGIQEHQEEY3XSYC2JVQ3FQOQ4FFA"/>
+      <archive extract="lemonade-embeddable-2026.42.1-ubuntu-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v2026.42.1/lemonade-embeddable-2026.42.1-ubuntu-arm64.tar.gz" size="6863745" type="application/x-compressed-tar"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" id="sha256new_3CEZDXJJWBHUEOC64HTY3DO5LDIV6W6KZ2ZX7CVMTU6HR7DPT2IA" released="2026-10-14" stability="stable" version="2026.42.1">
+      <manifest-digest sha256new="3CEZDXJJWBHUEOC64HTY3DO5LDIV6W6KZ2ZX7CVMTU6HR7DPT2IA"/>
+      <archive extract="lemonade-embeddable-2026.42.1-macos-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v2026.42.1/lemonade-embeddable-2026.42.1-macos-arm64.tar.gz" size="5757127" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+
+  <group license="Apache License 2.0">
+    <command name="run" path="bin/lemonade-server.exe"/>
+    <command name="run-gui" path="app/Lemonade.exe"/>
+    <command name="server" path="bin/lemonade-tray.exe"/>
+    <implementation arch="Windows-x86_64" id="sha256new_WPWU75ZYHWLUJ73ISLTHOJF2NPXKDCQVUUNZQOQM4M4BGHH2RW6Q" released="2026-02-27" stability="stable" version="9.4.1">
+      <manifest-digest sha256new="WPWU75ZYHWLUJ73ISLTHOJF2NPXKDCQVUUNZQOQM4M4BGHH2RW6Q"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v9.4.1/lemonade.msi" size="112365568" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_SJDXFUGIEJNUFZWGZOQHYL4XCSRKG2NEH6BQJHDSGI55KVETHTJA" released="2026-03-11" stability="stable" version="10.0.0">
+      <manifest-digest sha256new="SJDXFUGIEJNUFZWGZOQHYL4XCSRKG2NEH6BQJHDSGI55KVETHTJA"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.0.0/lemonade.msi" size="112279552" type="application/x-msi"/>
+    </implementation>
+  </group>
+
+  <group license="Apache License 2.0">
+    <command name="run" path="bin/lemonade.exe"/>
+    <command name="run-gui" path="app/Lemonade.exe"/>
+    <command name="server" path="bin/lemonade-tray.exe"/>
+    <implementation arch="Windows-x86_64" id="sha256new_P6EXCV2S6CVB4GVVQMPBD676IGLIGEVBG5PJUGVVO4FWTK3OALBA" released="2026-03-24" stability="stable" version="10.0.1">
+      <manifest-digest sha256new="P6EXCV2S6CVB4GVVQMPBD676IGLIGEVBG5PJUGVVO4FWTK3OALBA"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.0.1/lemonade.msi" size="112836608" type="application/x-msi"/>
+    </implementation>
+  </group>
+
+  <group license="Apache License 2.0">
+    <command name="run" path="bin/lemonade.exe"/>
+    <command name="run-gui" path="app/lemonade-app.exe"/>
+    <command name="server" path="bin/LemonadeServer.exe"/>
+    <implementation arch="Windows-x86_64" id="sha256new_UU2IAKC37N74VBAMYNWUVOKP3K7LM6GB4ZY5L6W22ILE6RSVJ7YQ" released="2026-04-06" stability="stable" version="10.1.0">
+      <manifest-digest sha256new="UU2IAKC37N74VBAMYNWUVOKP3K7LM6GB4ZY5L6W22ILE6RSVJ7YQ"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.1.0/lemonade.msi" size="112525312" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_BMASIOUYYWFO4V3DY3LTW57ANBMD2S5S33EVFGLQ2CY3WYQZSJTA" released="2026-04-08" stability="stable" version="10.2.0">
+      <manifest-digest sha256new="BMASIOUYYWFO4V3DY3LTW57ANBMD2S5S33EVFGLQ2CY3WYQZSJTA"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.2.0/lemonade.msi" size="112570368" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_BYXXYMRPGVGBYKEUS3LNMBIRYSCWNF2BYUXCHHILPO4BZ2YXVKTQ" released="2026-04-28" stability="stable" version="10.3.0">
+      <manifest-digest sha256new="BYXXYMRPGVGBYKEUS3LNMBIRYSCWNF2BYUXCHHILPO4BZ2YXVKTQ"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.3.0/lemonade.msi" size="8216576" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_SSVG6Q7GEIOFRNPWPTDDH6TURNH6DW5BSCWZN2ALZNNLWJHLOD4Q" released="2026-05-08" stability="stable" version="10.4.0">
+      <manifest-digest sha256new="SSVG6Q7GEIOFRNPWPTDDH6TURNH6DW5BSCWZN2ALZNNLWJHLOD4Q"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.4.0/lemonade.msi" size="8241152" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_OM5PLWEWQVVBGQPL233IGUJLIR4PBJZVDBOKAZHSK7AGMVSSJMDA" released="2026-05-16" stability="stable" version="10.5.0">
+      <manifest-digest sha256new="OM5PLWEWQVVBGQPL233IGUJLIR4PBJZVDBOKAZHSK7AGMVSSJMDA"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.5.0/lemonade.msi" size="8269824" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_EUCKD5RVTAV72RVCJXBZMGRB27XWES5NFTHJRLM4AXUATDV6KWDA" released="2026-05-18" stability="stable" version="10.5.1">
+      <manifest-digest sha256new="EUCKD5RVTAV72RVCJXBZMGRB27XWES5NFTHJRLM4AXUATDV6KWDA"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.5.1/lemonade.msi" size="8003584" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_OYKE3OZ6U65Z54CDF7WL3O5T3VZPR2DBX3D3S32GZ7TMXEFL7H5A" released="2026-05-21" stability="stable" version="10.6.0">
+      <manifest-digest sha256new="OYKE3OZ6U65Z54CDF7WL3O5T3VZPR2DBX3D3S32GZ7TMXEFL7H5A"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.6.0/lemonade.msi" size="8052736" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_CLWMMLQLWZZ3N7VSNC55XPXF5T3SLFICJKEHZ2XHRTWNTX5VYSQA" released="2026-06-10" stability="stable" version="10.7.0">
+      <manifest-digest sha256new="CLWMMLQLWZZ3N7VSNC55XPXF5T3SLFICJKEHZ2XHRTWNTX5VYSQA"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.7.0/lemonade.msi" size="8359936" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_3TXYJE3KL6MXLGDCOWIVO5XSDRUW72FBWKJKMJX4XXG6NX425MJA" released="2026-06-17" stability="stable" version="10.8.0">
+      <manifest-digest sha256new="3TXYJE3KL6MXLGDCOWIVO5XSDRUW72FBWKJKMJX4XXG6NX425MJA"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.8.0/lemonade.msi" size="8642560" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_34VOZPMQV276U3LHIF7QAWXDT6BXPOG6LC5ILZPK6MSRPENDA6YA" released="2026-06-25" stability="stable" version="10.8.1">
+      <manifest-digest sha256new="34VOZPMQV276U3LHIF7QAWXDT6BXPOG6LC5ILZPK6MSRPENDA6YA"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.8.1/lemonade.msi" size="8654848" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_PKCX26ZFJV5DXOSW7YVEFCD2IT772VGMOGID4SJ2I5NND3IOOU6A" released="2026-07-01" stability="stable" version="10.9.0">
+      <manifest-digest sha256new="PKCX26ZFJV5DXOSW7YVEFCD2IT772VGMOGID4SJ2I5NND3IOOU6A"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.9.0/lemonade.msi" size="8806400" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_TQXP3DNQY6RK3WRLXE4376TGO2YSPWD7LPYWDFXEADPVI5DTQHTQ" released="2026-07-08" stability="stable" version="10.10.0">
+      <manifest-digest sha256new="TQXP3DNQY6RK3WRLXE4376TGO2YSPWD7LPYWDFXEADPVI5DTQHTQ"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v10.10.0/lemonade.msi" size="8884224" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_E2WPOL7XDDN4F35HLONAEGXIVNTF5RUVPV6AXLXI5JA3DVBNRECA" released="2026-07-15" stability="stable" version="11.0.0">
+      <manifest-digest sha256new="E2WPOL7XDDN4F35HLONAEGXIVNTF5RUVPV6AXLXI5JA3DVBNRECA"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.0.0/lemonade.msi" size="9506816" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_KLIMMEAWMDASYBZDIQEOG5P5LC356RP6MG6JLM3Y5BRDXDSL42IQ" released="2026-07-22" stability="stable" version="11.5.0">
+      <manifest-digest sha256new="KLIMMEAWMDASYBZDIQEOG5P5LC356RP6MG6JLM3Y5BRDXDSL42IQ"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.5.0/lemonade.msi" size="10207232" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_KALUXCHTBFSHAD52C4MAO7WABBLG7Z3NO6KSCKDZMTFRCYAV6L4A" released="2026-07-29" stability="stable" version="11.5.1">
+      <manifest-digest sha256new="KALUXCHTBFSHAD52C4MAO7WABBLG7Z3NO6KSCKDZMTFRCYAV6L4A"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.5.1/lemonade.msi" size="10235904" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_WRXPR3TW4UBTFQVFALXQYFQFOLAC35LPJAZ3BX6ZZPW4HI4U74SQ" released="2026-08-05" stability="stable" version="11.5.2">
+      <manifest-digest sha256new="WRXPR3TW4UBTFQVFALXQYFQFOLAC35LPJAZ3BX6ZZPW4HI4U74SQ"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.5.2/lemonade.msi" size="10481664" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_3AFV7GTFW4DC4WHEQ2V525EFR6DFCP2UTDBOAW43QP3QUMWZ4TQQ" released="2026-08-14" stability="stable" version="11.6.0">
+      <manifest-digest sha256new="3AFV7GTFW4DC4WHEQ2V525EFR6DFCP2UTDBOAW43QP3QUMWZ4TQQ"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.6.0/lemonade.msi" size="10567680" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_7EKII7Q2YKMUBRHSPF3RJYFHOKUNXXZNQE5KYFNCLPZRQF2VSP5Q" released="2026-08-19" stability="stable" version="11.7.0">
+      <manifest-digest sha256new="7EKII7Q2YKMUBRHSPF3RJYFHOKUNXXZNQE5KYFNCLPZRQF2VSP5Q"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.7.0/lemonade.msi" size="10616832" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_2QDQFVKO7PPFUVQLETTSHSTXI7NIJIAUMOE73DAYTVNFHZNO33YA" released="2026-08-26" stability="stable" version="11.8.0">
+      <manifest-digest sha256new="2QDQFVKO7PPFUVQLETTSHSTXI7NIJIAUMOE73DAYTVNFHZNO33YA"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.8.0/lemonade.msi" size="10727424" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_2NUB6454ZJP2JLQCGKLNU7T6DNGJ74Q6ONCWIV3LWPSQTSNTSXRQ" released="2026-08-28" stability="stable" version="11.8.1">
+      <manifest-digest sha256new="2NUB6454ZJP2JLQCGKLNU7T6DNGJ74Q6ONCWIV3LWPSQTSNTSXRQ"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.8.1/lemonade.msi" size="10731520" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_2TD7UFUISZSUZOIPD34AJ5K35CSWJYNOHSSSP36JZLBFKTKTXJBA" released="2026-09-02" stability="stable" version="11.9.0">
+      <manifest-digest sha256new="2TD7UFUISZSUZOIPD34AJ5K35CSWJYNOHSSSP36JZLBFKTKTXJBA"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v11.9.0/lemonade.msi" size="10756096" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_FCCXQEZHS7UR4DUN4H6QANOU47BVWN5DJWDMDVJPIYK7LPSMME5Q" released="2026-09-23" stability="stable" version="2026.39.1">
+      <manifest-digest sha256new="FCCXQEZHS7UR4DUN4H6QANOU47BVWN5DJWDMDVJPIYK7LPSMME5Q"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v2026.39.1/lemonade.msi" size="10772480" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_ILJDXZTIGO6D3JORMVSPRXFLA4SXNAEBG3LMA5U3AWNPGMMPPFQQ" released="2026-09-30" stability="stable" version="2026.40.0">
+      <manifest-digest sha256new="ILJDXZTIGO6D3JORMVSPRXFLA4SXNAEBG3LMA5U3AWNPGMMPPFQQ"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v2026.40.0/lemonade.msi" size="10784768" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_SND7ZTL7NIG34NQNEI2KQUF5ATYU3ROVMCJYDJBODASWN6BN5J7Q" released="2026-10-07" stability="stable" version="2026.41.1">
+      <manifest-digest sha256new="SND7ZTL7NIG34NQNEI2KQUF5ATYU3ROVMCJYDJBODASWN6BN5J7Q"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v2026.41.1/lemonade.msi" size="10788864" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" id="sha256new_IERXLOFDGGQA7XPTM4R3ICVPSPQV6OEOIB4C6T7HVMPD5FNKFUQA" released="2026-10-14" stability="stable" version="2026.42.1">
+      <manifest-digest sha256new="IERXLOFDGGQA7XPTM4R3ICVPSPQV6OEOIB4C6T7HVMPD5FNKFUQA"/>
+      <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v2026.42.1/lemonade.msi" size="10813440" type="application/x-msi"/>
+    </implementation>
+  </group>
+</interface>

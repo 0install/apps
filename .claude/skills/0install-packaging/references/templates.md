@@ -71,7 +71,22 @@ The `<command name="run" path="…">` `path` is relative to the implementation r
 
 **Multiple `<group arch="…">` blocks** — when the command path or layout differs per OS (e.g. a macOS `.app` bundle vs a Linux `bin/`), or different dependencies per OS. Each group carries its own `<command>`/`<requires>` and one or more implementations.
 
-Shared attributes (`license`, `stability`) and child elements (`<command>`, `<requires>`, `<environment>`) set on an outer `<group>` are inherited by inner groups/implementations — factor common parts outward.
+Attributes (`license`, `stability`) and child elements (`<command>`, `<requires>`, `<environment>`) set on a `<group>` are inherited by its implementations. **Don't nest `<group>`s** to share them, though: keep every `<group>` at the top level and repeat the shared attributes (typically `license="…"`) on each one. For example:
+
+```xml
+<group license="Apache License 2.0">
+  <command name="run" path="foo"/>
+  <implementation arch="Linux-x86_64" …>…</implementation>
+  <implementation arch="Darwin-aarch64" …>…</implementation>
+</group>
+
+<group license="Apache License 2.0">
+  <command name="run" path="bin/foo.exe"/>
+  <implementation arch="Windows-x86_64" …>…</implementation>
+</group>
+```
+
+The seed master feed's skeleton follows the same flat layout.
 
 **Never give two `<implementation>`s the exact same `<archive>`(s).** One download is one implementation. If several platforms share a single build — a portable script, a `*-*` JAR/DLL, a universal binary, or just one asset that upstream declares as covering multiple arches — write **one** `<implementation>` whose `arch` is broad enough to cover them all (e.g. `arch="Darwin-*"`), rather than copies of the same `<archive href="…">` under different `arch` values.
 

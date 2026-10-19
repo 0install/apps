@@ -246,6 +246,8 @@ A practical strategy for getting those older versions in:
 
 Then run `NO_SIGN=1 0repo` once to merge everything that accumulated in `incoming/`.
 
+**Flatten nested groups afterwards.** When older versions have different `<command>`s from the skeleton (e.g. because you adjusted the template for them), 0repo nests them as inner `<group>`s that override the outer `<command>`s. Rewrite those into separate top-level `<group license="…">`s, each with its full set of `<command>`s, to keep the no-nested-groups layout. Then check that the feed still parses and selects, e.g. with `0install select --version=OLD CATEGORY/name.xml`.
+
 ## File-type quick reference
 
 - `name.xml.template` → feed with `{placeholders}`; consumed by 0template. **Write this.**

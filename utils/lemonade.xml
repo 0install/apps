@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<interface uri="https://apps.0install.net/utils/lemonade.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/utils/lemonade.xml">
   <name>Lemonade</name>
   <summary>serve optimized LLMs locally from your own GPUs and NPUs</summary>
   <description>Lemonade helps users discover and run local AI apps by serving optimized LLMs right from their own GPUs and NPUs. It provides an OpenAI-compatible server, a command-line client and (on Windows) a desktop app.</description>
@@ -267,6 +267,18 @@
       <manifest-digest sha256new="3CEZDXJJWBHUEOC64HTY3DO5LDIV6W6KZ2ZX7CVMTU6HR7DPT2IA"/>
       <archive extract="lemonade-embeddable-2026.42.1-macos-arm64" href="https://github.com/lemonade-sdk/lemonade/releases/download/v2026.42.1/lemonade-embeddable-2026.42.1-macos-arm64.tar.gz" size="5757127" type="application/x-compressed-tar"/>
     </implementation>
+    <implementation arch="Linux-x86_64" version="2026.43.3" released="2026-10-21" stability="stable" id="sha256new_CJIQ55AUHOXHKW5RMW3Z4D6QGJCILB5WZ7KVUEK42D4EKOBVW3DA">
+      <manifest-digest sha256new="CJIQ55AUHOXHKW5RMW3Z4D6QGJCILB5WZ7KVUEK42D4EKOBVW3DA"/>
+      <archive href="https://github.com/lemonade-sdk/lemonade/releases/download/v2026.43.3/lemonade-embeddable-2026.43.3-ubuntu-x64.tar.gz" size="7341867" type="application/x-compressed-tar" extract="lemonade-embeddable-2026.43.3-ubuntu-x64"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" version="2026.43.3" released="2026-10-21" stability="stable" id="sha256new_2ML5UQQVTZUEWNCV6U45M65DZU4VAMQEP6MIQSR3H3MRFLRG4YTA">
+      <manifest-digest sha256new="2ML5UQQVTZUEWNCV6U45M65DZU4VAMQEP6MIQSR3H3MRFLRG4YTA"/>
+      <archive href="https://github.com/lemonade-sdk/lemonade/releases/download/v2026.43.3/lemonade-embeddable-2026.43.3-ubuntu-arm64.tar.gz" size="6711918" type="application/x-compressed-tar" extract="lemonade-embeddable-2026.43.3-ubuntu-arm64"/>
+    </implementation>
+    <implementation arch="Darwin-aarch64" version="2026.43.3" released="2026-10-21" stability="stable" id="sha256new_A2AMKEOIQQF4NGDUZKGG2UHIMC6JDRN4DZCNVPERHN5YQY2I5J2Q">
+      <manifest-digest sha256new="A2AMKEOIQQF4NGDUZKGG2UHIMC6JDRN4DZCNVPERHN5YQY2I5J2Q"/>
+      <archive href="https://github.com/lemonade-sdk/lemonade/releases/download/v2026.43.3/lemonade-embeddable-2026.43.3-macos-arm64.tar.gz" size="6180218" type="application/x-compressed-tar" extract="lemonade-embeddable-2026.43.3-macos-arm64"/>
+    </implementation>
   </group>
 
   <group license="Apache License 2.0">
@@ -396,6 +408,10 @@
     <implementation arch="Windows-x86_64" id="sha256new_IERXLOFDGGQA7XPTM4R3ICVPSPQV6OEOIB4C6T7HVMPD5FNKFUQA" released="2026-10-14" stability="stable" version="2026.42.1">
       <manifest-digest sha256new="IERXLOFDGGQA7XPTM4R3ICVPSPQV6OEOIB4C6T7HVMPD5FNKFUQA"/>
       <archive extract="SourceDir/LocalApp/lemonade_server" href="https://github.com/lemonade-sdk/lemonade/releases/download/v2026.42.1/lemonade.msi" size="10813440" type="application/x-msi"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2026.43.3" released="2026-10-21" stability="stable" id="sha256new_HHSQNYYEUD7G4AQSV4ZRL6TSWUBQFARVS3XKLYEGDUARUEQSBEPQ">
+      <manifest-digest sha256new="HHSQNYYEUD7G4AQSV4ZRL6TSWUBQFARVS3XKLYEGDUARUEQSBEPQ"/>
+      <archive href="https://github.com/lemonade-sdk/lemonade/releases/download/v2026.43.3/lemonade.msi" size="10842112" type="application/x-msi" extract="SourceDir/LocalApp/lemonade_server"/>
     </implementation>
   </group>
 </interface>

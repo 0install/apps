@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/devel/tcl.xml">
+  <name>Tcl</name>
+  <summary>the Tool Command Language</summary>
+  <description>Tcl (Tool Command Language) is a very powerful but easy to learn dynamic programming language, suitable for a very wide range of uses, including web and desktop applications, networking, administration, testing and many more. This package contains the tclsh interpreter.</description>
+  <homepage>https://www.tcl-lang.org/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+
+  <package-implementation distributions="Debian" package="tcl8.6" main="/usr/bin/tclsh8.6"/>
+  <package-implementation distributions="RPM" package="tcl8" main="/usr/bin/tclsh8.6"/>
+  <package-implementation distributions="RPM Arch" package="tcl" version="..!9" main="/usr/bin/tclsh"/>
+  <package-implementation distributions="Gentoo" package="dev-lang/tcl" version="..!9" main="/usr/bin/tclsh"/>
+  <package-implementation distributions="MacPorts" package="tcl" version="..!9" main="/opt/local/bin/tclsh"/>
+
+  <entry-point binary-name="tclsh" command="run"/>
+
+  <group license="TCL">
+    <requires interface="https://apps.0install.net/lib/zlib.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/tclsh.exe"/>
+    <implementation arch="Windows-x86_64" version="8.6.13" released="2024-01-17" stability="stable" id="sha256new_JLGN25SE6G47RP7ZSUCBLLXFAWS2ZZPWPSTRFG77AJOLJIKOEWQQ">
+      <manifest-digest sha256new="JLGN25SE6G47RP7ZSUCBLLXFAWS2ZZPWPSTRFG77AJOLJIKOEWQQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-tcl-8.6.13-1-any.pkg.tar.zst" size="2806558" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="8.6.13" released="2024-01-17" stability="stable" id="sha256new_6YDKI6MXYG7HPQR4EDPPXCNGCBEU6DA6QST272H5M52RUBAYZRWA">
+      <manifest-digest sha256new="6YDKI6MXYG7HPQR4EDPPXCNGCBEU6DA6QST272H5M52RUBAYZRWA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-tcl-8.6.13-1-any.pkg.tar.zst" size="2707483" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="8.6.16" released="2025-04-16" stability="stable" id="sha256new_A2EEDIJT3JXY7XZFLVEWYLAJC6UYXJFJQK3CALCUMQBLTIBP73TQ">
+      <manifest-digest sha256new="A2EEDIJT3JXY7XZFLVEWYLAJC6UYXJFJQK3CALCUMQBLTIBP73TQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-tcl-8.6.16-1-any.pkg.tar.zst" size="2791817" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="8.6.16" released="2025-04-16" stability="stable" id="sha256new_4EGAXOI6EG3KNYIMTLOKAGYJUO43YAWVNDRXHVZASAIXP66MX27A">
+      <manifest-digest sha256new="4EGAXOI6EG3KNYIMTLOKAGYJUO43YAWVNDRXHVZASAIXP66MX27A"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-tcl-8.6.16-1-any.pkg.tar.zst" size="2689767" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="8.6.17" released="2025-11-04" stability="stable" id="sha256new_HPFNVZKL3NVSRWZKZABVOPZED77SQ5D2SKVWKRMVFYPGEYXM54XA">
+      <manifest-digest sha256new="HPFNVZKL3NVSRWZKZABVOPZED77SQ5D2SKVWKRMVFYPGEYXM54XA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-tcl-8.6.17-1-any.pkg.tar.zst" size="2804666" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="8.6.17" released="2025-11-04" stability="stable" id="sha256new_BYR4RR4BM6DFBKFVCPVSP7R5FLSUKPXP7LF2OVCGABJEIYQ6YPFA">
+      <manifest-digest sha256new="BYR4RR4BM6DFBKFVCPVSP7R5FLSUKPXP7LF2OVCGABJEIYQ6YPFA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-tcl-8.6.17-1-any.pkg.tar.zst" size="2687204" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="8.6.18" released="2026-06-03" stability="stable" id="sha256new_GCVWVTFN4SHTZAKEV47QH6AGH4ABOYR5BV27LJ2DVUPM43Q6JNAQ">
+      <manifest-digest sha256new="GCVWVTFN4SHTZAKEV47QH6AGH4ABOYR5BV27LJ2DVUPM43Q6JNAQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-tcl-8.6.18-1-any.pkg.tar.zst" size="2805892" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="8.6.18" released="2026-06-03" stability="stable" id="sha256new_MFPELWLKRBDBJUCJFZETREULZGQU453OLWJXNM43QR7RU2FH3GMQ">
+      <manifest-digest sha256new="MFPELWLKRBDBJUCJFZETREULZGQU453OLWJXNM43QR7RU2FH3GMQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-tcl-8.6.18-1-any.pkg.tar.zst" size="2689701" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+  </group>
+</interface>

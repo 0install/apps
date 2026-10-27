@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libjpeg-turbo - Linux builds</name>
+  <summary>JPEG image codec and command-line tools</summary>
+  <description>libjpeg-turbo is a JPEG image codec that uses SIMD instructions to accelerate baseline JPEG compression and decompression. This package also provides its command-line tools: jpegtran for lossless transformations of JPEG files (rotation, flipping, cropping, optimization and conversion between baseline and progressive encoding), cjpeg and djpeg for compressing and decompressing JPEG files, and rdjpgcom and wrjpgcom for reading and writing JPEG comments.</description>
+  <homepage>https://libjpeg-turbo.org/</homepage>
+  <category>Graphics</category>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/lib/libjpeg-turbo-linux.xml"/>
+
+  <group license="IJG AND BSD-3-Clause AND Zlib">
+    <command name="run" path="opt/libjpeg-turbo/bin/jpegtran"/>
+    <command name="cjpeg" path="opt/libjpeg-turbo/bin/cjpeg"/>
+    <command name="djpeg" path="opt/libjpeg-turbo/bin/djpeg"/>
+    <command name="rdjpgcom" path="opt/libjpeg-turbo/bin/rdjpgcom"/>
+    <command name="wrjpgcom" path="opt/libjpeg-turbo/bin/wrjpgcom"/>
+    <environment insert="opt/libjpeg-turbo/lib64" name="LD_LIBRARY_PATH"/>
+    <implementation arch="Linux-x86_64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/{version}/libjpeg-turbo-official_{version}_amd64.deb" type="application/x-deb"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/{version}/libjpeg-turbo-official_{version}_arm64.deb" type="application/x-deb"/>
+    </implementation>
+  </group>
+
+  <group license="IJG AND BSD-3-Clause AND Zlib">
+    <command name="run" path="opt/libjpeg-turbo/bin/jpegtran"/>
+    <command name="cjpeg" path="opt/libjpeg-turbo/bin/cjpeg"/>
+    <command name="djpeg" path="opt/libjpeg-turbo/bin/djpeg"/>
+    <command name="rdjpgcom" path="opt/libjpeg-turbo/bin/rdjpgcom"/>
+    <command name="wrjpgcom" path="opt/libjpeg-turbo/bin/wrjpgcom"/>
+    <environment insert="opt/libjpeg-turbo/lib32" name="LD_LIBRARY_PATH"/>
+    <implementation arch="Linux-i686" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/{version}/libjpeg-turbo-official_{version}_i386.deb" type="application/x-deb"/>
+    </implementation>
+  </group>
+</interface>

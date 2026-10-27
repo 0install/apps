@@ -1,6 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
-<interface uri="https://apps.0install.net/utils/bzip2.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uri="https://apps.0install.net/utils/bzip2.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>Bzip2</name>
   <summary xml:lang="en">A program and library for data compression</summary>
   <description xml:lang="en">bzip2 is a freely available, patent free, high-quality data compressor. It typically compresses files to within 10% to 15% of the best available techniques (the PPM family of statistical compressors), whilst being around twice as fast at compression and six times faster at decompression. The code is organised as a library, with a programming interface. The bzip2 program itself is a client of the library. You can use the library in your own programs, to directly read and write .bz2 files, or even just to compress data in memory using the bzip2 algorithms.</description>
@@ -98,6 +97,20 @@
     <implementation id="sha1new=d92df93455404bfa4a47c0d1f6f7f046519603de" released="2012-02-17" version="1.0.6">
       <manifest-digest sha256new="PCD7UCAYVUXAAAACO4LJSWFBQZSBH3ZRZROYO63YKU5BQBNMSGVA"/>
       <archive href="https://sourceforge.net/projects/ezwinports/files/bzip2-1.0.6-w32-bin.zip" size="675493" type="application/zip"/>
+    </implementation>
+  </group>
+  <group license="bzip2-1.0.6">
+    <command name="run" path="bin/bzip2.exe"/>
+    <command name="bunzip2" path="bin/bunzip2.exe"/>
+    <command name="bzcat" path="bin/bzcat.exe"/>
+    <command name="bzip2recover" path="bin/bzip2recover.exe"/>
+    <implementation arch="Windows-x86_64" version="1.0.8" released="2026-08-14" stability="stable" id="sha256new_U6DW2LFIABNLRC2C427UJUB4HX4X5THZRSFLOB4XRMDUJX5MNQJQ">
+      <manifest-digest sha256new="U6DW2LFIABNLRC2C427UJUB4HX4X5THZRSFLOB4XRMDUJX5MNQJQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-bzip2-1.0.8-4-any.pkg.tar.zst" size="94396" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.0.8" released="2026-08-14" stability="stable" id="sha256new_G2IUIAZEQRWRES3G42BALHGNCAQDB4HD23IFV5X3BPBFZW76XZAA">
+      <manifest-digest sha256new="G2IUIAZEQRWRES3G42BALHGNCAQDB4HD23IFV5X3BPBFZW76XZAA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-bzip2-1.0.8-4-any.pkg.tar.zst" size="95200" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
     </implementation>
   </group>
   <package-implementation distributions="Gentoo" package="app-arch/bzip2"/>

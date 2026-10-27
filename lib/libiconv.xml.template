@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>LibIconv</name>
+  <summary>convert between character encodings</summary>
+  <description>LibIconv converts from one character encoding to another through Unicode conversion. It also has limited support for transliteration, i.e. when a character cannot be represented in the target character set, it is approximated through one or several similar looking characters. This package also contains the iconv command-line tool.</description>
+  <homepage>https://www.gnu.org/software/libiconv/</homepage>
+  <icon href="https://apps.0install.net/utils/gnu.png" type="image/png"/>
+  <icon href="https://apps.0install.net/utils/gnu.ico" type="image/vnd.microsoft.icon"/>
+  <category>Development</category>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/lib/libiconv.xml"/>
+
+  <group license="LGPL-2.1-or-later AND GPL-3.0-or-later">
+    <command name="run" path="bin/iconv.exe">
+      <requires interface="https://apps.0install.net/devel/libintl.xml">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+    </command>
+    <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <recipe>
+        <archive extract="ucrt64" href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libiconv-{pkgver}-{pkgrel}-any.pkg.tar.zst" type="application/x-zstd-compressed-tar"/>
+        <archive extract="ucrt64" href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-iconv-{pkgver}-{pkgrel}-any.pkg.tar.zst" type="application/x-zstd-compressed-tar"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-aarch64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <recipe>
+        <archive extract="clangarm64" href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libiconv-{pkgver}-{pkgrel}-any.pkg.tar.zst" type="application/x-zstd-compressed-tar"/>
+        <archive extract="clangarm64" href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-iconv-{pkgver}-{pkgrel}-any.pkg.tar.zst" type="application/x-zstd-compressed-tar"/>
+      </recipe>
+    </implementation>
+  </group>
+</interface>

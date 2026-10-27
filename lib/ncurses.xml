@@ -1,74 +1,109 @@
-<?xml version="1.0" encoding="utf-8"?>
-<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd" uri="https://apps.0install.net/lib/ncurses.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<?xml version="1.0" ?>
+<interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd" uri="https://apps.0install.net/lib/ncurses.xml">
   <name>ncurses</name>
   <summary xml:lang="en">terminal-independent  text-based user interface library</summary>
   <description xml:lang="en">The ncurses (new curses) library is a free software emulation of curses in System V Release 4.0 (SVr4), and more. It uses terminfo format, supports pads and color and multiple highlights and forms characters and function-key mapping, and has all the other SVr4-curses enhancements over BSD curses. SVr4 curses became the basis of X/Open Curses.</description>
-  <icon href="https://apps.0install.net/utils/gnu.ico" type="image/vnd.microsoft.icon" />
-  <icon href="https://apps.0install.net/utils/gnu.png" type="image/png" />
+  <icon href="https://apps.0install.net/utils/gnu.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://apps.0install.net/utils/gnu.png" type="image/png"/>
   <category>Development</category>
   <homepage>https://sourceforge.net/projects/ezwinports/files/</homepage>
-  <needs-terminal />
+  <needs-terminal/>
   <implementation arch="Windows-i486" version="5.9" released="2012-04-07" license="MIT/X Consortium License, LGPL (GNU Lesser General Public License)" doc-dir="share/man" id="sha1new=68968061b2fbd255688172377f4a0778515b5855">
-    <command name="captoinfo" path="bin/captoinfo.exe" />
-    <command name="clear" path="bin/clear.exe" />
-    <command name="infocmp" path="bin/infocmp.exe" />
-    <command name="infotocap" path="bin/infotocap.exe" />
-    <command name="reset" path="bin/reset.exe" />
-    <command name="tabs" path="bin/tabs.exe" />
-    <command name="tic" path="bin/tic.exe" />
-    <command name="toe" path="bin/toe.exe" />
-    <command name="tput" path="bin/tput.exe" />
-    <command name="tset" path="bin/tset.exe" />
-    <manifest-digest sha256new="ICPRNY33GO7DTEB6EMALMXXTW744I52P2UBWVBXBDYGNLKYSW43Q" />
-    <archive href="https://sourceforge.net/projects/ezwinports/files/ncurses-5.9-w32-bin.zip" size="10698909" type="application/zip" />
+    <command name="captoinfo" path="bin/captoinfo.exe"/>
+    <command name="clear" path="bin/clear.exe"/>
+    <command name="infocmp" path="bin/infocmp.exe"/>
+    <command name="infotocap" path="bin/infotocap.exe"/>
+    <command name="reset" path="bin/reset.exe"/>
+    <command name="tabs" path="bin/tabs.exe"/>
+    <command name="tic" path="bin/tic.exe"/>
+    <command name="toe" path="bin/toe.exe"/>
+    <command name="tput" path="bin/tput.exe"/>
+    <command name="tset" path="bin/tset.exe"/>
+    <manifest-digest sha256new="ICPRNY33GO7DTEB6EMALMXXTW744I52P2UBWVBXBDYGNLKYSW43Q"/>
+    <archive href="https://sourceforge.net/projects/ezwinports/files/ncurses-5.9-w32-bin.zip" size="10698909" type="application/zip"/>
   </implementation>
-  <package-implementation package="ncurses" />
-  <package-implementation package="sys-libs/ncurses" distributions="Gentoo" />
-  <package-implementation package="ncurses-libs" distributions="RPM" />
+  <group license="MIT">
+    <requires interface="https://apps.0install.net/lib/cc-libs.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/pcre2.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/libwinpthread.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <implementation arch="Windows-x86_64" version="6.5.20241228" released="2025-01-08" stability="stable" id="sha256new_U6COP2PTLSVMHNEFKWYHY3EYMGNH4GGRVPVLWEEKXMEMYPFTK5SQ">
+      <manifest-digest sha256new="U6COP2PTLSVMHNEFKWYHY3EYMGNH4GGRVPVLWEEKXMEMYPFTK5SQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-ncurses-6.5.20241228-3-any.pkg.tar.zst" size="1789567" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="6.5.20241228" released="2025-01-08" stability="stable" id="sha256new_RHWPYNE5YGQMFSIINVDD2I2SX7FX6JIH7DZ7DAATNMZQPADZGBVQ">
+      <manifest-digest sha256new="RHWPYNE5YGQMFSIINVDD2I2SX7FX6JIH7DZ7DAATNMZQPADZGBVQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-ncurses-6.5.20241228-3-any.pkg.tar.zst" size="1707734" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="6.5.20250927" released="2025-10-04" stability="stable" id="sha256new_W32KBYQEWC6RRQTGB72URBFLGQ4UYXEM6C4KJBJN5PGTRFMK3ORA">
+      <manifest-digest sha256new="W32KBYQEWC6RRQTGB72URBFLGQ4UYXEM6C4KJBJN5PGTRFMK3ORA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-ncurses-6.5.20250927-2-any.pkg.tar.zst" size="1838609" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="6.5.20250927" released="2025-10-04" stability="stable" id="sha256new_K4FWS6MPID64AGUDISXAZ32SEN2JZZ4XTRIQX5OXD7ZIHGN66EUA">
+      <manifest-digest sha256new="K4FWS6MPID64AGUDISXAZ32SEN2JZZ4XTRIQX5OXD7ZIHGN66EUA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-ncurses-6.5.20250927-2-any.pkg.tar.zst" size="1747279" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="6.6" released="2026-04-10" stability="stable" id="sha256new_Q7ESUDVA4Y3NMNUEAV4K23TRGRUIGYVAQLBWTHNSTMYIBT32LRPQ">
+      <manifest-digest sha256new="Q7ESUDVA4Y3NMNUEAV4K23TRGRUIGYVAQLBWTHNSTMYIBT32LRPQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-ncurses-6.6-4-any.pkg.tar.zst" size="1605818" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="6.6" released="2026-04-10" stability="stable" id="sha256new_PCJQ3KHQ7KJX7CV3B7ND5EVUCR5GVY23DXYWSHSFVS42QU3ENPRA">
+      <manifest-digest sha256new="PCJQ3KHQ7KJX7CV3B7ND5EVUCR5GVY23DXYWSHSFVS42QU3ENPRA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-ncurses-6.6-4-any.pkg.tar.zst" size="1554000" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+  </group>
+  <package-implementation package="ncurses"/>
+  <package-implementation package="sys-libs/ncurses" distributions="Gentoo"/>
+  <package-implementation package="ncurses-libs" distributions="RPM"/>
   <entry-point command="captoinfo" binary-name="captoinfo">
     <name xml:lang="en">captoinfo</name>
-    <summary xml:lang="en"> a termcap conversion tool</summary>
+    <summary xml:lang="en">a termcap conversion tool</summary>
   </entry-point>
   <entry-point command="clear" binary-name="clear">
-    <needs-terminal />
+    <needs-terminal/>
     <name xml:lang="en">clear</name>
     <summary xml:lang="en">utility for clearing the screen</summary>
   </entry-point>
   <entry-point command="infocmp" binary-name="infocmp">
-    <needs-terminal />
+    <needs-terminal/>
     <name xml:lang="en">infocmp</name>
     <summary xml:lang="en">the terminfo decompiler</summary>
   </entry-point>
   <entry-point command="infotocap" binary-name="infotocap">
-    <needs-terminal />
+    <needs-terminal/>
     <name xml:lang="en">infotocap</name>
   </entry-point>
   <entry-point command="reset" binary-name="reset">
-    <needs-terminal />
+    <needs-terminal/>
     <name xml:lang="en">reset</name>
   </entry-point>
   <entry-point command="tabs" binary-name="tabs">
-    <needs-terminal />
+    <needs-terminal/>
     <name xml:lang="en">tabs</name>
     <summary xml:lang="en">set tabs on a terminal</summary>
   </entry-point>
   <entry-point command="tic" binary-name="tic">
-    <needs-terminal />
+    <needs-terminal/>
     <name xml:lang="en">tic</name>
     <summary xml:lang="en">the terminfo compiler</summary>
   </entry-point>
   <entry-point command="toe" binary-name="toe">
-    <needs-terminal />
+    <needs-terminal/>
     <name xml:lang="en">toe</name>
     <summary xml:lang="en">list (table of) terminfo entries</summary>
   </entry-point>
   <entry-point command="tput" binary-name="tput">
-    <needs-terminal />
+    <needs-terminal/>
     <name xml:lang="en">tput</name>
     <summary xml:lang="en">utility for retrieving terminal capabilities in shell scripts</summary>
   </entry-point>
   <entry-point command="tset" binary-name="tset">
-    <needs-terminal />
+    <needs-terminal/>
     <name xml:lang="en">tset</name>
     <summary xml:lang="en">to initialize the terminal</summary>
   </entry-point>

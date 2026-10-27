@@ -1,9 +1,8 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
-<interface uri="https://apps.0install.net/devel/libintl.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uri="https://apps.0install.net/devel/libintl.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>libintl</name>
   <summary xml:lang="en">library for native language support</summary>
-  <description xml:lang="en">Libintl is a library that provides native language support to programs. It is part of Gettext. </description>
+  <description xml:lang="en">Libintl is a library that provides native language support to programs. It is part of Gettext.</description>
   <icon href="https://apps.0install.net/utils/gnu.ico" type="image/vnd.microsoft.icon"/>
   <icon href="https://apps.0install.net/utils/gnu.png" type="image/png"/>
   <category>Development</category>
@@ -13,6 +12,67 @@
     <manifest-digest sha256new="U6G3MSVDLNBLPULTDOYAU5ZIPK5U4C23ABCTXWFWATWNL3XEDW5Q"/>
     <archive href="https://sourceforge.net/projects/gnuwin32/files/libintl/0.11.5-2/libintl-0.11.5-2-bin.zip" size="190842" type="application/zip"/>
   </implementation>
+  <group license="LGPL-2.1-or-later">
+    <requires interface="https://apps.0install.net/lib/libiconv.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <implementation arch="Windows-x86_64" version="0.23.1" released="2025-01-06" stability="stable" id="sha256new_HIKD75FJ3WHP6R7C2NWJHOXPJ3CIHHZB2WQ2GAH3JTGUCQKWEN4Q">
+      <manifest-digest sha256new="HIKD75FJ3WHP6R7C2NWJHOXPJ3CIHHZB2WQ2GAH3JTGUCQKWEN4Q"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-gettext-runtime-0.23.1-1-any.pkg.tar.zst" size="320874" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="0.23.1" released="2025-01-06" stability="stable" id="sha256new_3SRN2KXRPD5UWISY477CIAYWSJZI64CTSCLY3YCBJ3UTBHM2H5LA">
+      <manifest-digest sha256new="3SRN2KXRPD5UWISY477CIAYWSJZI64CTSCLY3YCBJ3UTBHM2H5LA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-gettext-runtime-0.23.1-1-any.pkg.tar.zst" size="300877" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.24.1" released="2025-05-03" stability="stable" id="sha256new_L34JTM3GQDWTBHJY5CVLHZBCH6OQZAV3LEYMH3WC56EOKFQ5C4PA">
+      <manifest-digest sha256new="L34JTM3GQDWTBHJY5CVLHZBCH6OQZAV3LEYMH3WC56EOKFQ5C4PA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-gettext-runtime-0.24.1-1-any.pkg.tar.zst" size="341817" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="0.24.1" released="2025-05-03" stability="stable" id="sha256new_QPDTRH3MALJOB66ZS6VGQT2GC2LC2QR4J5NLNSLCPBXNPF2TS6PQ">
+      <manifest-digest sha256new="QPDTRH3MALJOB66ZS6VGQT2GC2LC2QR4J5NLNSLCPBXNPF2TS6PQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-gettext-runtime-0.24.1-1-any.pkg.tar.zst" size="325620" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.24" released="2025-04-21" stability="stable" id="sha256new_IVBNVNMERRJFQAFC333SUTPEGEUPQLRFL7BUGRQLQ2OW6BWYSTZQ">
+      <manifest-digest sha256new="IVBNVNMERRJFQAFC333SUTPEGEUPQLRFL7BUGRQLQ2OW6BWYSTZQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-gettext-runtime-0.24-2-any.pkg.tar.zst" size="319889" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="0.24" released="2025-04-21" stability="stable" id="sha256new_LXOLMGERDP72QGNA33HFXNWEH52JWXBCHIPKTD6VRZJR4HZSYQSQ">
+      <manifest-digest sha256new="LXOLMGERDP72QGNA33HFXNWEH52JWXBCHIPKTD6VRZJR4HZSYQSQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-gettext-runtime-0.24-2-any.pkg.tar.zst" size="304457" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.25.1" released="2025-07-06" stability="stable" id="sha256new_GYSX7BCCF6FOB3P565XGXJX6TUSW2YXVMZ3SO2H2CDNRT27MZR6A">
+      <manifest-digest sha256new="GYSX7BCCF6FOB3P565XGXJX6TUSW2YXVMZ3SO2H2CDNRT27MZR6A"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-gettext-runtime-0.25.1-1-any.pkg.tar.zst" size="342540" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="0.25.1" released="2025-07-06" stability="stable" id="sha256new_G5JDYH4NHZDOMZQLCH3GJTMVPZ6XDOSKB4XMIZGKW4QY3LA5KV4A">
+      <manifest-digest sha256new="G5JDYH4NHZDOMZQLCH3GJTMVPZ6XDOSKB4XMIZGKW4QY3LA5KV4A"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-gettext-runtime-0.25.1-1-any.pkg.tar.zst" size="323726" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.25" released="2025-05-08" stability="stable" id="sha256new_Z4MHNCGWVFXIRNONWBI6Q2FA6QB5CZSDGU5NQLNUPKV4WACVFITQ">
+      <manifest-digest sha256new="Z4MHNCGWVFXIRNONWBI6Q2FA6QB5CZSDGU5NQLNUPKV4WACVFITQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-gettext-runtime-0.25-1-any.pkg.tar.zst" size="341544" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="0.25" released="2025-05-08" stability="stable" id="sha256new_7QSXVCXYTGUPFMOQO6WY6WOA5GSW54JZ4HYKQ7B5Y4HQAH3GBQWA">
+      <manifest-digest sha256new="7QSXVCXYTGUPFMOQO6WY6WOA5GSW54JZ4HYKQ7B5Y4HQAH3GBQWA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-gettext-runtime-0.25-1-any.pkg.tar.zst" size="325295" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="0.26" released="2025-10-04" stability="stable" id="sha256new_EVEO6AQ4LCJELI3M6Q3TQ7ZIXKHK3XUFDKWCG6P3NHX3YPMZGCEA">
+      <manifest-digest sha256new="EVEO6AQ4LCJELI3M6Q3TQ7ZIXKHK3XUFDKWCG6P3NHX3YPMZGCEA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-gettext-runtime-0.26-2-any.pkg.tar.zst" size="413608" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="0.26" released="2025-10-04" stability="stable" id="sha256new_4ED7QE7EJGLV6RSYWW56WVMWUJJH4WFF6IZF4IKDV5SEXZAPHAEQ">
+      <manifest-digest sha256new="4ED7QE7EJGLV6RSYWW56WVMWUJJH4WFF6IZF4IKDV5SEXZAPHAEQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-gettext-runtime-0.26-2-any.pkg.tar.zst" size="388358" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.0" released="2026-01-31" stability="stable" id="sha256new_KX477EED2QABWLSKWH5RFKJUEN7EBWHERJ3Y4LZE5GDOTW6PVFSQ">
+      <manifest-digest sha256new="KX477EED2QABWLSKWH5RFKJUEN7EBWHERJ3Y4LZE5GDOTW6PVFSQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-gettext-runtime-1.0-1-any.pkg.tar.zst" size="417977" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.0" released="2026-01-31" stability="stable" id="sha256new_UR4ZC652Z7JLGUOQSGX32VXG57MUIS4ZKUEIUX44ECTOFANOEIGQ">
+      <manifest-digest sha256new="UR4ZC652Z7JLGUOQSGX32VXG57MUIS4ZKUEIUX44ECTOFANOEIGQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-gettext-runtime-1.0-1-any.pkg.tar.zst" size="395859" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+  </group>
   <package-implementation distributions="Gentoo" package="dev-libs/libintl"/>
   <package-implementation package="libintl"/>
 </interface>

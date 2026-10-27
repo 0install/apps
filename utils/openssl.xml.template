@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
   <name>OpenSSL</name>
   <summary>command-line toolkit for TLS and SSL protocols</summary>
@@ -9,14 +9,15 @@
 
   <feed-for interface="https://apps.0install.net/utils/openssl.xml"/>
 
-  <group license="OpenSSL" main="openssl.exe">
-    <implementation arch="Windows-x86_64" version="{version}" released="{released}">
+  <group license="Apache-2.0">
+    <command name="run" path="bin/openssl.exe"/>
+    <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
       <manifest-digest/>
-      <archive href="http://wiki.overbyte.eu/arch/openssl-{version-original}-win64.zip" type="application/zip"/>
+      <archive extract="ucrt64" href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-openssl-{pkgver}-{pkgrel}-any.pkg.tar.zst" type="application/x-zstd-compressed-tar"/>
     </implementation>
-    <implementation arch="Windows-i486" version="{version}" released="{released}">
+    <implementation arch="Windows-aarch64" released="{released}" stability="stable" version="{version}">
       <manifest-digest/>
-      <archive href="http://wiki.overbyte.eu/arch/openssl-{version-original}-win32.zip" type="application/zip"/>
+      <archive extract="clangarm64" href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-openssl-{pkgver}-{pkgrel}-any.pkg.tar.zst" type="application/x-zstd-compressed-tar"/>
     </implementation>
   </group>
 </interface>

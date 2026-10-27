@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>sed</name>
+  <summary>stream editor</summary>
+  <description>Sed is a stream editor. It is used to filter text, i.e., it takes text input, performs some operation (or set of operations) on it and outputs the modified text.</description>
+  <homepage>https://www.gnu.org/software/sed/</homepage>
+  <icon href="https://apps.0install.net/utils/gnu.png" type="image/png"/>
+  <icon href="https://apps.0install.net/utils/gnu.ico" type="image/vnd.microsoft.icon"/>
+  <category>Utility</category>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/utils/sed.xml"/>
+
+  <group license="GPL-3.0-or-later">
+    <requires interface="https://apps.0install.net/devel/libintl.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/libwinpthread.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/sed.exe"/>
+    <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="ucrt64" href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-sed-{pkgver}-{pkgrel}-any.pkg.tar.zst" type="application/x-zstd-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="clangarm64" href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-sed-{pkgver}-{pkgrel}-any.pkg.tar.zst" type="application/x-zstd-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/lib/cc-libs.xml">
+  <name>cc-libs</name>
+  <summary>C/C++ compiler runtime libraries for MinGW-w64</summary>
+  <description>Runtime libraries required by C++ programs built with the MinGW-w64 toolchains that MSYS2 uses: GCC's libgcc and libstdc++ on x86-64 and LLVM's libc++ and libunwind on ARM64. Feeds for MSYS2-based packages depend on this instead of on a specific toolchain's libraries.</description>
+  <homepage>https://www.msys2.org/docs/environments/</homepage>
+  <category>Development</category>
+
+  <feed arch="Windows-x86_64" src="https://apps.0install.net/lib/gcc-libs.xml"/>
+  <feed arch="Windows-aarch64" src="https://apps.0install.net/lib/libcxx.xml"/>
+</interface>

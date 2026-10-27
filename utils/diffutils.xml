@@ -1,6 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
-<interface uri="https://apps.0install.net/utils/diffutils.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uri="https://apps.0install.net/utils/diffutils.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>DiffUtils</name>
   <summary xml:lang="en">show differences between files</summary>
   <description xml:lang="en">You can use the diff command to show differences between two files, or each corresponding file in two directories. diff outputs differences between files line by line in any of several formats, selectable by command line options. This set of differences is often called a `diff' or `patch'. For files that are identical, diff normally produces no output; for binary (non-text) files, diff normally reports only that they are different. 
@@ -33,6 +32,23 @@ You can use the sdiff command to merge two files interactively.
     <manifest-digest sha256new="LEKJAJDW6L2OJ7D2GKOCEOWQEAXRHVCDUR6GADEPHPD7GPBLIS2A"/>
     <archive href="https://sourceforge.net/projects/gnuwin32/files/diffutils/2.8.7-1/diffutils-2.8.7-1-bin.zip" size="456027" type="application/zip"/>
   </implementation>
+  <group license="GPL-3.0-or-later">
+    <requires interface="https://apps.0install.net/devel/libintl.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/diff.exe"/>
+    <command name="cmp" path="bin/cmp.exe"/>
+    <command name="diff3" path="bin/diff3.exe"/>
+    <command name="sdiff" path="bin/sdiff.exe"/>
+    <implementation arch="Windows-x86_64" version="3.12" released="2025-04-18" stability="stable" id="sha256new_AD2IKNNO2Y2JKYSZ7CWNVTBIKXNYLTQ4ESHNCNJI3XGTOMLILPTA">
+      <manifest-digest sha256new="AD2IKNNO2Y2JKYSZ7CWNVTBIKXNYLTQ4ESHNCNJI3XGTOMLILPTA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-diffutils-3.12-1-any.pkg.tar.zst" size="455048" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="3.12" released="2025-04-18" stability="stable" id="sha256new_LHT35DNIK4R5L6TTCWMLB3JSCRDOENEK5FEZU35K7IJYYXLY5N7Q">
+      <manifest-digest sha256new="LHT35DNIK4R5L6TTCWMLB3JSCRDOENEK5FEZU35K7IJYYXLY5N7Q"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-diffutils-3.12-1-any.pkg.tar.zst" size="449974" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+  </group>
   <package-implementation distributions="Gentoo" package="sys-apps/diffutils"/>
   <package-implementation package="diffutils"/>
   <entry-point binary-name="diff" command="run">

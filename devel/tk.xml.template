@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Tk</name>
+  <summary>graphical user interface toolkit for Tcl</summary>
+  <description>Tk is a graphical user interface toolkit that takes developing desktop applications to a higher level than conventional approaches. This package contains the wish windowing shell.</description>
+  <homepage>https://www.tcl-lang.org/</homepage>
+  <category>Development</category>
+
+  <feed-for interface="https://apps.0install.net/devel/tk.xml"/>
+
+  <group license="TCL">
+    <requires interface="https://apps.0install.net/devel/tcl.xml">
+      <environment insert="bin" name="PATH"/>
+      <environment insert="lib/tcl8.6" mode="replace" name="TCL_LIBRARY"/>
+    </requires>
+    <command name="run" path="bin/wish.exe"/>
+    <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="ucrt64" href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-tk-{pkgver}-{pkgrel}-any.pkg.tar.zst" type="application/x-zstd-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="clangarm64" href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-tk-{pkgver}-{pkgrel}-any.pkg.tar.zst" type="application/x-zstd-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

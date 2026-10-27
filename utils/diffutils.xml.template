@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>DiffUtils</name>
+  <summary>show differences between files</summary>
+  <description>GNU Diffutils is a package of several programs related to finding differences between files: diff shows differences between two files or directories, cmp shows where two files differ byte by byte, diff3 compares three files, and sdiff merges two files interactively.</description>
+  <homepage>https://www.gnu.org/software/diffutils/</homepage>
+  <icon href="https://apps.0install.net/utils/gnu.png" type="image/png"/>
+  <icon href="https://apps.0install.net/utils/gnu.ico" type="image/vnd.microsoft.icon"/>
+  <category>System</category>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/utils/diffutils.xml"/>
+
+  <group license="GPL-3.0-or-later">
+    <requires interface="https://apps.0install.net/devel/libintl.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/diff.exe"/>
+    <command name="cmp" path="bin/cmp.exe"/>
+    <command name="diff3" path="bin/diff3.exe"/>
+    <command name="sdiff" path="bin/sdiff.exe"/>
+    <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="ucrt64" href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-diffutils-{pkgver}-{pkgrel}-any.pkg.tar.zst" type="application/x-zstd-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="clangarm64" href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-diffutils-{pkgver}-{pkgrel}-any.pkg.tar.zst" type="application/x-zstd-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

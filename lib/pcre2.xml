@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/lib/pcre2.xml">
+  <name>PCRE2</name>
+  <summary>Perl-compatible regular expression library</summary>
+  <description>PCRE2 is a library of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5. This package also contains pcre2grep, a grep with Perl-compatible regular expressions, and pcre2test for testing patterns.</description>
+  <homepage>https://pcre2project.github.io/pcre2/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+
+  <package-implementation distributions="Debian" package="pcre2-utils">
+    <command name="run" path="/usr/bin/pcre2grep"/>
+    <command name="pcre2test" path="/usr/bin/pcre2test"/>
+  </package-implementation>
+  <package-implementation distributions="RPM" package="pcre2-tools">
+    <command name="run" path="/usr/bin/pcre2grep"/>
+    <command name="pcre2test" path="/usr/bin/pcre2test"/>
+  </package-implementation>
+  <package-implementation distributions="Arch" package="pcre2">
+    <command name="run" path="/usr/bin/pcre2grep"/>
+    <command name="pcre2test" path="/usr/bin/pcre2test"/>
+  </package-implementation>
+  <package-implementation distributions="Gentoo" package="dev-libs/libpcre2">
+    <command name="run" path="/usr/bin/pcre2grep"/>
+    <command name="pcre2test" path="/usr/bin/pcre2test"/>
+  </package-implementation>
+  <package-implementation distributions="MacPorts" package="pcre2">
+    <command name="run" path="/opt/local/bin/pcre2grep"/>
+    <command name="pcre2test" path="/opt/local/bin/pcre2test"/>
+  </package-implementation>
+
+  <entry-point binary-name="pcre2grep" command="run">
+    <needs-terminal/>
+    <name>pcre2grep</name>
+    <summary>search files for lines matching a Perl-compatible regular expression</summary>
+  </entry-point>
+  <entry-point command="pcre2test">
+    <needs-terminal/>
+    <name>pcre2test</name>
+    <summary>test Perl-compatible regular expressions</summary>
+  </entry-point>
+
+  <group license="BSD-3-Clause WITH PCRE2-exception">
+    <requires interface="https://apps.0install.net/utils/bzip2.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/zlib.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/wineditline.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/pcre2grep.exe"/>
+    <command name="pcre2test" path="bin/pcre2test.exe"/>
+    <implementation arch="Windows-x86_64" version="10.44" released="2024-12-20" stability="stable" id="sha256new_PBTHINCEB3N4B76YHU7VQMTC2BBQMMIHABLT7LW3VHUL2RAZR22Q">
+      <manifest-digest sha256new="PBTHINCEB3N4B76YHU7VQMTC2BBQMMIHABLT7LW3VHUL2RAZR22Q"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-pcre2-10.44-2-any.pkg.tar.zst" size="1304597" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="10.44" released="2024-12-20" stability="stable" id="sha256new_5Q67XP46YPTGOVC6TN3VTHDW6MD6KWKUFGHMHPJLQIR5BFF6XHQA">
+      <manifest-digest sha256new="5Q67XP46YPTGOVC6TN3VTHDW6MD6KWKUFGHMHPJLQIR5BFF6XHQA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-pcre2-10.44-2-any.pkg.tar.zst" size="1248285" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.45" released="2025-02-18" stability="stable" id="sha256new_FITA7DXOVZG3AEH2NR6J5XMAZPAZFYZLGWQDRI6NVG4E4ZXYDNJA">
+      <manifest-digest sha256new="FITA7DXOVZG3AEH2NR6J5XMAZPAZFYZLGWQDRI6NVG4E4ZXYDNJA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-pcre2-10.45-1-any.pkg.tar.zst" size="1386147" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="10.45" released="2025-02-18" stability="stable" id="sha256new_K67RDKOTKGJC6YSLE6A36KXRWZQ4V4LQ5L6F4YHU4AG4UVMDY7YQ">
+      <manifest-digest sha256new="K67RDKOTKGJC6YSLE6A36KXRWZQ4V4LQ5L6F4YHU4AG4UVMDY7YQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-pcre2-10.45-1-any.pkg.tar.zst" size="1316596" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.46" released="2025-08-28" stability="stable" id="sha256new_4M4MCPOLMTLCTPUWIE25KZ24IQUPGSHL7I4M3W5LYVUW43RDAAKA">
+      <manifest-digest sha256new="4M4MCPOLMTLCTPUWIE25KZ24IQUPGSHL7I4M3W5LYVUW43RDAAKA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-pcre2-10.46-1-any.pkg.tar.zst" size="1384041" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="10.46" released="2025-08-28" stability="stable" id="sha256new_ENXANONJHIJUOHHCLBJRW4ZVWK6J7PHXBHHZKNFTUDTVVKETJIIQ">
+      <manifest-digest sha256new="ENXANONJHIJUOHHCLBJRW4ZVWK6J7PHXBHHZKNFTUDTVVKETJIIQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-pcre2-10.46-1-any.pkg.tar.zst" size="1317914" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.47" released="2025-10-22" stability="stable" id="sha256new_NCBXTL7EGUPZG6CFV7PP3354ZDTX2M3OQRPOT4MHSVYWXBN44QJA">
+      <manifest-digest sha256new="NCBXTL7EGUPZG6CFV7PP3354ZDTX2M3OQRPOT4MHSVYWXBN44QJA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-pcre2-10.47-1-any.pkg.tar.zst" size="1435291" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="10.47" released="2025-10-22" stability="stable" id="sha256new_NMDUSX2BVIHEU6D6NXAG6LN62AJKSEUHX6BCF726DJATSRGAPKNA">
+      <manifest-digest sha256new="NMDUSX2BVIHEU6D6NXAG6LN62AJKSEUHX6BCF726DJATSRGAPKNA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-pcre2-10.47-1-any.pkg.tar.zst" size="1370151" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.48" released="2026-09-02" stability="stable" id="sha256new_GPXCLFTYBHMPUSINPBMTYCGAKPIVVBOJKEB7B3EJPNQF6FSFPCDQ">
+      <manifest-digest sha256new="GPXCLFTYBHMPUSINPBMTYCGAKPIVVBOJKEB7B3EJPNQF6FSFPCDQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-pcre2-10.48-3-any.pkg.tar.zst" size="1446434" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="10.48" released="2026-09-02" stability="stable" id="sha256new_YU6T6TM727YN2U543CEKKOSXX6L7GBCU3R3DKNH2R2OQYKKYRMVA">
+      <manifest-digest sha256new="YU6T6TM727YN2U543CEKKOSXX6L7GBCU3R3DKNH2R2OQYKKYRMVA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-pcre2-10.48-3-any.pkg.tar.zst" size="1381854" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="10.49" released="2026-09-29" stability="stable" id="sha256new_RCYN7CUOCI3YWVEYIMVFKTEJ4RBXUWRH2QAB56YIW6MH4BQSENJA">
+      <manifest-digest sha256new="RCYN7CUOCI3YWVEYIMVFKTEJ4RBXUWRH2QAB56YIW6MH4BQSENJA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-pcre2-10.49-1-any.pkg.tar.zst" size="1445467" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="10.49" released="2026-09-29" stability="stable" id="sha256new_DSOHCJWEI4CQ4PCATOOMZI5ATXSH3VD7OVPUETZVJ7VWI36UVWHA">
+      <manifest-digest sha256new="DSOHCJWEI4CQ4PCATOOMZI5ATXSH3VD7OVPUETZVJ7VWI36UVWHA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-pcre2-10.49-1-any.pkg.tar.zst" size="1382162" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+  </group>
+</interface>

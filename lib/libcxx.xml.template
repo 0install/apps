@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libc++</name>
+  <summary>LLVM C++ standard library and unwinder for MinGW-w64</summary>
+  <description>Runtime libraries shipped by LLVM: the libc++ C++ standard library and libunwind. Required at runtime by C++ programs built with MinGW-w64 Clang, which MSYS2 uses for its ARM64 packages.</description>
+  <homepage>https://libcxx.llvm.org/</homepage>
+  <category>Development</category>
+
+  <feed-for interface="https://apps.0install.net/lib/libcxx.xml"/>
+
+  <group license="Apache-2.0 WITH LLVM-exception">
+    <implementation arch="Windows-aarch64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <recipe>
+        <archive extract="clangarm64" href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libc++-{pkgver}-{pkgrel}-any.pkg.tar.zst" type="application/x-zstd-compressed-tar"/>
+        <archive extract="clangarm64" href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libunwind-{pkgver}-{pkgrel}-any.pkg.tar.zst" type="application/x-zstd-compressed-tar"/>
+      </recipe>
+    </implementation>
+  </group>
+</interface>

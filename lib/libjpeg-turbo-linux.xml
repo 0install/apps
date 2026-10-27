@@ -1,0 +1,233 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/lib/libjpeg-turbo-linux.xml">
+  <name>libjpeg-turbo - Linux builds</name>
+  <summary>JPEG image codec and command-line tools</summary>
+  <description>libjpeg-turbo is a JPEG image codec that uses SIMD instructions to accelerate baseline JPEG compression and decompression. This package also provides its command-line tools: jpegtran for lossless transformations of JPEG files (rotation, flipping, cropping, optimization and conversion between baseline and progressive encoding), cjpeg and djpeg for compressing and decompressing JPEG files, and rdjpgcom and wrjpgcom for reading and writing JPEG comments.</description>
+  <homepage>https://libjpeg-turbo.org/</homepage>
+  <category>Graphics</category>
+  <needs-terminal/>
+
+  <feed-for interface="https://apps.0install.net/lib/libjpeg-turbo.xml"/>
+
+  <group license="IJG AND BSD-3-Clause AND Zlib">
+    <command name="run" path="opt/libjpeg-turbo/bin/jpegtran"/>
+    <command name="cjpeg" path="opt/libjpeg-turbo/bin/cjpeg"/>
+    <command name="djpeg" path="opt/libjpeg-turbo/bin/djpeg"/>
+    <command name="rdjpgcom" path="opt/libjpeg-turbo/bin/rdjpgcom"/>
+    <command name="wrjpgcom" path="opt/libjpeg-turbo/bin/wrjpgcom"/>
+    <environment insert="opt/libjpeg-turbo/lib64" name="LD_LIBRARY_PATH"/>
+    <implementation arch="Linux-x86_64" released="2021-11-19" stability="stable" version="2.1.2" id="sha1new=6b3157b4fa928164a657d9f6a5dfe0f21f51324c">
+      <manifest-digest sha256new="44PXGMXM5H7WQ5WO7S6JUMI5557YCH273GYP5ILTTEZSOH3VKCIQ"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/2.1.2/libjpeg-turbo-official_2.1.2_amd64.deb" type="application/x-deb" size="1171518"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" released="2021-11-19" stability="stable" version="2.1.2" id="sha1new=a75d0d7e97d60bcc64e13f5825dbae141f120d5b">
+      <manifest-digest sha256new="ITFMBY2Y6EXS6YKQMU2GJ2URWD47IUUYWWBY46RDUJ5IDKMW4F4A"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/2.1.2/libjpeg-turbo-official_2.1.2_arm64.deb" type="application/x-deb" size="1243974"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" released="2022-02-25" stability="stable" version="2.1.3" id="sha1new=e06842871e96300e83ca1a4506e5f111f3941836">
+      <manifest-digest sha256new="MGIKTDAGAF2RSIOYQDUYKO433LDJITOYUAQCTJKPHPLWT7AIZO3A"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/2.1.3/libjpeg-turbo-official_2.1.3_amd64.deb" type="application/x-deb" size="1173402"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" released="2022-02-25" stability="stable" version="2.1.3" id="sha1new=b2b55e20e034a24d0be9ea6063a8e8af31c52995">
+      <manifest-digest sha256new="7FATHGYESDT74OXHNQYZ4X2LYQH5ZFYBOQNTMEI6Q5L5ULTIIK7A"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/2.1.3/libjpeg-turbo-official_2.1.3_arm64.deb" type="application/x-deb" size="1245602"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" released="2022-08-12" stability="stable" version="2.1.4" id="sha1new=e247f5d4cf0a07d7c54c95d6d22542b800998e64">
+      <manifest-digest sha256new="5D2P2BTDTBHIRZHININBK55JE32CPWA4F6JHLMJIEYI3SCCPEF2Q"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/2.1.4/libjpeg-turbo-official_2.1.4_amd64.deb" type="application/x-deb" size="1174360"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" released="2022-08-12" stability="stable" version="2.1.4" id="sha1new=3b5dd093d377f6e6db7d93affb6f637ce13ee323">
+      <manifest-digest sha256new="7AL7AMC44ROTVEIJUXS2FMM5RL2SFAO4B22XKZLV7G67RKGGYMPA"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/2.1.4/libjpeg-turbo-official_2.1.4_arm64.deb" type="application/x-deb" size="1245552"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" released="2023-02-08" stability="stable" version="2.1.5.1" id="sha1new=738dcb2b95663fa93af8aa42c9b42055c69c64c1">
+      <manifest-digest sha256new="TX3LTXNSRUA2KKXXCWTLW7GOGJEE7CKMCRB6XZD7OZTG6GHFW7DQ"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/2.1.5.1/libjpeg-turbo-official_2.1.5.1_amd64.deb" type="application/x-deb" size="1179358"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" released="2023-02-08" stability="stable" version="2.1.5.1" id="sha1new=b40203f455917c02755f4f13fdf020c21298fe9e">
+      <manifest-digest sha256new="26IVGFOKSDWK53ACIAAHN2OZ535MZL6ZJNKQEHKWT6B27CZEWAWA"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/2.1.5.1/libjpeg-turbo-official_2.1.5.1_arm64.deb" type="application/x-deb" size="1248862"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" released="2023-01-31" stability="stable" version="2.1.5" id="sha1new=6a607316c6d0c9dc8853a03df44aafa9fcfec27d">
+      <manifest-digest sha256new="WXNC5RLHT3MFAPEDGAQ6HRHHCCTWETFB45DV7DDD6N2FZFVSFZMQ"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/2.1.5/libjpeg-turbo-official_2.1.5_amd64.deb" type="application/x-deb" size="1178800"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" released="2023-01-31" stability="stable" version="2.1.5" id="sha1new=2e433613849d43e3e0887d4e8db9b597cf979796">
+      <manifest-digest sha256new="C766OBB3DN2CIU5KPCQJ5DYXB55C5OFYICTXCIWZELTMGWJJQGBA"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/2.1.5/libjpeg-turbo-official_2.1.5_arm64.deb" type="application/x-deb" size="1248822"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" released="2023-07-03" stability="stable" version="3.0.0" id="sha1new=6b281ec7aa67d1bd4ef0fc95c6adc49acf101b6d">
+      <manifest-digest sha256new="OYLRMOIPCFP7BBDXVTNN73VVJGOVLMLNGDCUIW7NZVJNQAMFOYIQ"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.0.0/libjpeg-turbo-official_3.0.0_amd64.deb" type="application/x-deb" size="586402"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" released="2023-07-03" stability="stable" version="3.0.0" id="sha1new=6b900a7ae327f249e85519c51212791b1bf62d11">
+      <manifest-digest sha256new="3H36UJMHWUBT4WPVZYIPIO6LLJQ2YFKD5WXUGGDDQQIZCY2LT3SQ"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.0.0/libjpeg-turbo-official_3.0.0_arm64.deb" type="application/x-deb" size="598046"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" released="2023-10-16" stability="stable" version="3.0.1" id="sha1new=efcdc079b61d55e3f60c4ccd96c2930998a8b339">
+      <manifest-digest sha256new="RSS7H7XRMV2H3JCQGF225R6IPIBN4S4PFDBAMWYX7QAKYLHGQ4MA"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.0.1/libjpeg-turbo-official_3.0.1_amd64.deb" type="application/x-deb" size="586906"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" released="2023-10-16" stability="stable" version="3.0.1" id="sha1new=1946fa9e3890c92118d4b7374a3a50249377a059">
+      <manifest-digest sha256new="RYPJNOI3V4ARZW23W7ICMDFBYNCDFPEAOSLYHVE4TV4K37RGQTWQ"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.0.1/libjpeg-turbo-official_3.0.1_arm64.deb" type="application/x-deb" size="599064"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" released="2024-01-24" stability="stable" version="3.0.2" id="sha1new=4765144f7b153b0d98c75c289fcbb08dea2ea565">
+      <manifest-digest sha256new="THKJL2J2722WYQJARZ2WGXYCNJP2AH6F7UHWVYEIK5VIKN7KKD3Q"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.0.2/libjpeg-turbo-official_3.0.2_amd64.deb" type="application/x-deb" size="588748"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" released="2024-01-24" stability="stable" version="3.0.2" id="sha1new=206027879cd204dcbb8bc486759d3fea4d508090">
+      <manifest-digest sha256new="BF2QM6CILF2B653IKHQHPTFGVFIZJRN6ZP3FVH6SESF76PZ3WVSA"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.0.2/libjpeg-turbo-official_3.0.2_arm64.deb" type="application/x-deb" size="601348"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" released="2024-05-08" stability="stable" version="3.0.3" id="sha1new=ac65e6d3fbdc32c000932d574a72fc9f0a5fe2ed">
+      <manifest-digest sha256new="OYG4S44D2CR7FKXKDD6ILINBSF3XO6CJSGNLQPZBOGDLGJTNDN5Q"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.0.3/libjpeg-turbo-official_3.0.3_amd64.deb" type="application/x-deb" size="588530"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" released="2024-05-08" stability="stable" version="3.0.3" id="sha1new=98c85dfb1f11f9ec368808d5dc8ac072d15a5f15">
+      <manifest-digest sha256new="QYLB2ICWWYDKYJBUHCEQYIZMT5XGTVIXYP3XXX7SGR27FDG2WUBA"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.0.3/libjpeg-turbo-official_3.0.3_arm64.deb" type="application/x-deb" size="600612"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" released="2024-09-14" stability="stable" version="3.0.4" id="sha1new=952f50c55f82ed2773adc56c28c44460290f9d46">
+      <manifest-digest sha256new="EUP7L3PYYEDPMP2P6TR6MBA5XSHOUJM2LJOO7WUHEZEPL6MCRTJA"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.0.4/libjpeg-turbo-official_3.0.4_amd64.deb" type="application/x-deb" size="589136"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" released="2024-09-14" stability="stable" version="3.0.4" id="sha1new=189bb66ac0d79dba0b6c003e3ab1ca8a555d0620">
+      <manifest-digest sha256new="3NRBLAZPBTJNUFXKEHYJMKLR6L5TY4GFJKGGUJGDREADMU5QT6CQ"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.0.4/libjpeg-turbo-official_3.0.4_arm64.deb" type="application/x-deb" size="602062"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" released="2024-12-12" stability="stable" version="3.1.0" id="sha1new=6aac3e279a3553d13a035e38da3baffd8f4b7b11">
+      <manifest-digest sha256new="U526MXSWQE3YZDKQ3L7OFXNEMFCOQPTLJ4PVIWOJX2KTAHWYWPEQ"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.0/libjpeg-turbo-official_3.1.0_amd64.deb" type="application/x-deb" size="614496"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" released="2024-12-12" stability="stable" version="3.1.0" id="sha1new=334e768857e8d7ecddd3f25786d2ee9810889eeb">
+      <manifest-digest sha256new="GG3AUYC4BVLH5HUURWN2B2PKJ4RONIERXRY347BTV5MVTQWTE2IA"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.0/libjpeg-turbo-official_3.1.0_arm64.deb" type="application/x-deb" size="624612"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" released="2025-06-10" stability="stable" version="3.1.1" id="sha1new=400ede0a6bf52fe42fff4b831e038659adce94e3">
+      <manifest-digest sha256new="TXKC64RRRZZ7VH54XLYYBT55L3UDBR6ATWH7TLSGCL5A7U7ZEIRQ"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.1/libjpeg-turbo-official_3.1.1_amd64.deb" type="application/x-deb" size="614800"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" released="2025-06-10" stability="stable" version="3.1.1" id="sha1new=69071c976998cad163a8bcd2b65f29204132d41d">
+      <manifest-digest sha256new="U4BKSXNE4MSQKZUPSKZVX7RKUSBFD6JP3DAIDMY2MT2KJ3S4GWPQ"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.1/libjpeg-turbo-official_3.1.1_arm64.deb" type="application/x-deb" size="626084"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" released="2025-09-03" stability="stable" version="3.1.2" id="sha1new=a4a0802ac3d26bdb414918bf4f609aeb0d8088b9">
+      <manifest-digest sha256new="B4HWWHACBYCP57JBO3IWONAFCYA5BJSPKWRND6LA7XJZ2Z5HXMEA"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.2/libjpeg-turbo-official_3.1.2_amd64.deb" type="application/x-deb" size="615682"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" released="2025-09-03" stability="stable" version="3.1.2" id="sha1new=bef522b76c657e3865211ff0e796ab8d5c29772d">
+      <manifest-digest sha256new="LYXKT2OXNI2YYZ76FFEGVXN3WZCVRQEULUG73SCVBYJGKPLDCZKA"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.2/libjpeg-turbo-official_3.1.2_arm64.deb" type="application/x-deb" size="629706"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" released="2025-12-10" stability="stable" version="3.1.3" id="sha1new=5462523b2788f6291566fce56577d50a56a846b2">
+      <manifest-digest sha256new="7KLD3LGHMAETC2VONQCXCBEDXXLXRT7BMOVYSZXB6Q2CA3SXQIBQ"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.3/libjpeg-turbo-official_3.1.3_amd64.deb" type="application/x-deb" size="617502"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" released="2025-12-10" stability="stable" version="3.1.3" id="sha1new=425b979767d5293a03b9061380fe54b87a855d53">
+      <manifest-digest sha256new="2PAOBI45RNVDPCR3HEG7XA3FUPU6PGBVORAE6K3FDINQC7SK7RYA"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.3/libjpeg-turbo-official_3.1.3_arm64.deb" type="application/x-deb" size="629884"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" released="2026-03-27" stability="stable" version="3.1.4.1" id="sha1new=51d0ead0036c8e0e37480219e693d675ee967a14">
+      <manifest-digest sha256new="WXVECXNYLTWRHJCGDP7FZS6H7YUHGQERTDCTASRMCTNL7WHDGAXA"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.4.1/libjpeg-turbo-official_3.1.4.1_amd64.deb" type="application/x-deb" size="623592"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" released="2026-03-27" stability="stable" version="3.1.4.1" id="sha1new=f3beb7d34fc8eabef41732b8ac08a806b98a7de8">
+      <manifest-digest sha256new="HPYNKPIT6Y7MSJXLU5CIWPNSVN2LF62HILTVMWL2ZY2D33K24CKA"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.4.1/libjpeg-turbo-official_3.1.4.1_arm64.deb" type="application/x-deb" size="635198"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" released="2026-03-26" stability="stable" version="3.1.4" id="sha1new=e76ec419e1562f3e20040d93b9a669ceb517e5fb">
+      <manifest-digest sha256new="XCKFZ25TXBATPBRRULJ7UIZMEUOVE7ZPHJGOQ5V53A5V5ZSS7TLQ"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.4/libjpeg-turbo-official_3.1.4_amd64.deb" type="application/x-deb" size="623158"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" released="2026-03-26" stability="stable" version="3.1.4" id="sha1new=9fbc699bb71497dc120fea1651d29e590d1c1ff6">
+      <manifest-digest sha256new="R5GEQFL472ZMLLY3NZFP4JZ6M2TW6HHDHUZ4R2ORH5PRPBIXVJ6Q"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.4/libjpeg-turbo-official_3.1.4_arm64.deb" type="application/x-deb" size="635488"/>
+    </implementation>
+    <implementation arch="Linux-x86_64" released="2026-06-30" stability="stable" version="3.2.0" id="sha1new=08d56cd9af186c7b6f34db180de7ac74abc15d2c">
+      <manifest-digest sha256new="XPPNQDBYCXKDHXPMQEVE6SULPHCVXURBDTSCKHQDJYTWJO5IVM7A"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.2.0/libjpeg-turbo-official_3.2.0_amd64.deb" type="application/x-deb" size="727160"/>
+    </implementation>
+    <implementation arch="Linux-aarch64" released="2026-06-30" stability="stable" version="3.2.0" id="sha1new=d438e26a115b405cca0f890ac2928b595118659c">
+      <manifest-digest sha256new="7EX7ZKHVXSQK7UPS4PVWRPTE5FFHB2AVWOFPLH6ZMGMWPEPJIQIA"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.2.0/libjpeg-turbo-official_3.2.0_arm64.deb" type="application/x-deb" size="728952"/>
+    </implementation>
+  </group>
+
+  <group license="IJG AND BSD-3-Clause AND Zlib">
+    <command name="run" path="opt/libjpeg-turbo/bin/jpegtran"/>
+    <command name="cjpeg" path="opt/libjpeg-turbo/bin/cjpeg"/>
+    <command name="djpeg" path="opt/libjpeg-turbo/bin/djpeg"/>
+    <command name="rdjpgcom" path="opt/libjpeg-turbo/bin/rdjpgcom"/>
+    <command name="wrjpgcom" path="opt/libjpeg-turbo/bin/wrjpgcom"/>
+    <environment insert="opt/libjpeg-turbo/lib32" name="LD_LIBRARY_PATH"/>
+    <implementation arch="Linux-i686" released="2021-11-19" stability="stable" version="2.1.2" id="sha1new=fa9297ae3e4b0e38362841e1d1683a10ca9d00a8">
+      <manifest-digest sha256new="RHUMZQXMSP4GPTCXSIYO564C3OL7HLD5ZXAAWVI2XEMNSR5AXUEQ"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/2.1.2/libjpeg-turbo-official_2.1.2_i386.deb" type="application/x-deb" size="1111418"/>
+    </implementation>
+    <implementation arch="Linux-i686" released="2022-02-25" stability="stable" version="2.1.3" id="sha1new=2248e760f7ae1461e2f33caeca498a193177da64">
+      <manifest-digest sha256new="GW73M42F3EE3AM6LBCU5CN4NP4LD5VEWPUPSYLYUA4MRLSKSKULQ"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/2.1.3/libjpeg-turbo-official_2.1.3_i386.deb" type="application/x-deb" size="1113340"/>
+    </implementation>
+    <implementation arch="Linux-i686" released="2022-08-12" stability="stable" version="2.1.4" id="sha1new=08572920576b1ef7b569a038aca862586cbd7efe">
+      <manifest-digest sha256new="SZZNP34GP7IYV3U4Z2EAJB5B5LMEJXSPGHNT2MSD3GBZC4SFLT5Q"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/2.1.4/libjpeg-turbo-official_2.1.4_i386.deb" type="application/x-deb" size="1114056"/>
+    </implementation>
+    <implementation arch="Linux-i686" released="2023-02-08" stability="stable" version="2.1.5.1" id="sha1new=098db48aaaaf43ef5b472413b2edc66c0c00f7dd">
+      <manifest-digest sha256new="UL3USVDP6B4KUHNSACZFD74S3MRFFVN3LMD6CYVLRIA6HNIDXWHA"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/2.1.5.1/libjpeg-turbo-official_2.1.5.1_i386.deb" type="application/x-deb" size="1116618"/>
+    </implementation>
+    <implementation arch="Linux-i686" released="2023-01-31" stability="stable" version="2.1.5" id="sha1new=b7433908fb2ee0b29f3462f1bbcfb4595e602550">
+      <manifest-digest sha256new="6T7VKRX5QKF7X3F2SXWUDHSRSACLTYALGYYMLAVLOEQAUSYKCAWA"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/2.1.5/libjpeg-turbo-official_2.1.5_i386.deb" type="application/x-deb" size="1116118"/>
+    </implementation>
+    <implementation arch="Linux-i686" released="2023-07-03" stability="stable" version="3.0.0" id="sha1new=6f99c73acfb94c38a501b10a1031e746916e0245">
+      <manifest-digest sha256new="ELZQMYZILAQQNO76A4FUHCC5K2MXIK4BPEWJEFOG7ELAEX4EGTSA"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.0.0/libjpeg-turbo-official_3.0.0_i386.deb" type="application/x-deb" size="634718"/>
+    </implementation>
+    <implementation arch="Linux-i686" released="2023-10-16" stability="stable" version="3.0.1" id="sha1new=c52f2a82ea761b8bc8df33be96178cf1c1f2760f">
+      <manifest-digest sha256new="RMF5DA5VXKV6PD5B53OFORN5N5AC4QC2NRPC3MQ37IHXY5FXFROA"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.0.1/libjpeg-turbo-official_3.0.1_i386.deb" type="application/x-deb" size="634234"/>
+    </implementation>
+    <implementation arch="Linux-i686" released="2024-01-24" stability="stable" version="3.0.2" id="sha1new=ee9e58d2025eb6c04bdf7869c2d03b50e686b739">
+      <manifest-digest sha256new="G6DOMIPCX5MKGOJF5OJI6MYNUOQICWZHJCQND7SGBLOMEBRTGFMQ"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.0.2/libjpeg-turbo-official_3.0.2_i386.deb" type="application/x-deb" size="636040"/>
+    </implementation>
+    <implementation arch="Linux-i686" released="2024-05-08" stability="stable" version="3.0.3" id="sha1new=86aeb01ad13fc6eae3342b7688aeb65a62ec3c37">
+      <manifest-digest sha256new="5G34SFRVZIRT446HCFC25PQMAI47X6TKKQLERI457UE772LZBTLA"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.0.3/libjpeg-turbo-official_3.0.3_i386.deb" type="application/x-deb" size="634832"/>
+    </implementation>
+    <implementation arch="Linux-i686" released="2024-09-14" stability="stable" version="3.0.4" id="sha1new=1a7271a2e59153c42b2b2c3e0fed44ce69405555">
+      <manifest-digest sha256new="MQW6ZVRPAPS2XYJLWZCEEHVSBGX33YIV4YYL5XUKB4ORTBGY4B2A"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.0.4/libjpeg-turbo-official_3.0.4_i386.deb" type="application/x-deb" size="636806"/>
+    </implementation>
+    <implementation arch="Linux-i686" released="2024-12-12" stability="stable" version="3.1.0" id="sha1new=c01df3ddd3d250b39a1c135508418e684626aa8d">
+      <manifest-digest sha256new="LO7TWKYBKKSLV53LNK7YMIVMLHVW6LNL6YDVHKWGKL2AGJGKPAYA"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.0/libjpeg-turbo-official_3.1.0_i386.deb" type="application/x-deb" size="660856"/>
+    </implementation>
+    <implementation arch="Linux-i686" released="2025-06-10" stability="stable" version="3.1.1" id="sha1new=81fce56ef418f8d16f3dddd84923e27248a9c2cf">
+      <manifest-digest sha256new="DNKO6VFPS57SCHTGXHKHICJFY7A6KK6THPCZLORI6DNS3ABETLJQ"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.1/libjpeg-turbo-official_3.1.1_i386.deb" type="application/x-deb" size="660570"/>
+    </implementation>
+    <implementation arch="Linux-i686" released="2025-09-03" stability="stable" version="3.1.2" id="sha1new=6a1011e24e14b4186f3cbb35b163b1c134131882">
+      <manifest-digest sha256new="NQA5AQK7B2VWKXZEGPGNET7OWJP3V6O2SJWLCY2PUQTQHIQCFG5A"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.2/libjpeg-turbo-official_3.1.2_i386.deb" type="application/x-deb" size="663730"/>
+    </implementation>
+    <implementation arch="Linux-i686" released="2025-12-10" stability="stable" version="3.1.3" id="sha1new=07bd181b1995e9341b0ace269639b2bc57326980">
+      <manifest-digest sha256new="H7LHNBH2WUS2X4MEOXUWZLQBPAA626ROOQSA75MQ2X7SM4AFUU4Q"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.3/libjpeg-turbo-official_3.1.3_i386.deb" type="application/x-deb" size="664554"/>
+    </implementation>
+    <implementation arch="Linux-i686" released="2026-03-27" stability="stable" version="3.1.4.1" id="sha1new=835677c4949d2ac494213081d4559ec1faca9fd4">
+      <manifest-digest sha256new="CBJDWZMRLI74JXDR5O7PXXSFBY7SETNFCS5DURGM6VU55LO6AAZQ"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.4.1/libjpeg-turbo-official_3.1.4.1_i386.deb" type="application/x-deb" size="668954"/>
+    </implementation>
+    <implementation arch="Linux-i686" released="2026-03-26" stability="stable" version="3.1.4" id="sha1new=4c43909e9aebdbb27820055b19b8d6ea433cbe66">
+      <manifest-digest sha256new="UKLDHASBC43H5R4VL4DSGLWQ6EKLUOO7GADLL5G6YCWBQDUDLELA"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.4/libjpeg-turbo-official_3.1.4_i386.deb" type="application/x-deb" size="668796"/>
+    </implementation>
+    <implementation arch="Linux-i686" released="2026-06-30" stability="stable" version="3.2.0" id="sha1new=eeef035d1e0987b2bae0ede58427aec80de132a5">
+      <manifest-digest sha256new="IFXYFB2X3RNC5KNUC53C4OT5REF4W5B7AS5E432I5X3M3GHFIIQQ"/>
+      <archive href="https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.2.0/libjpeg-turbo-official_3.2.0_i386.deb" type="application/x-deb" size="803700"/>
+    </implementation>
+  </group>
+</interface>

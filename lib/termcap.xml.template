@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>termcap</name>
+  <summary>terminal capability library</summary>
+  <description>The GNU termcap library retrieves information about terminal capabilities from a database. It is used by GNU Readline.</description>
+  <homepage>https://www.gnu.org/software/termutils/</homepage>
+  <icon href="https://apps.0install.net/utils/gnu.png" type="image/png"/>
+  <icon href="https://apps.0install.net/utils/gnu.ico" type="image/vnd.microsoft.icon"/>
+  <category>Development</category>
+
+  <feed-for interface="https://apps.0install.net/lib/termcap.xml"/>
+
+  <group license="GPL-2.0-or-later">
+    <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="ucrt64" href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-termcap-{pkgver}-{pkgrel}-any.pkg.tar.zst" type="application/x-zstd-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="clangarm64" href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-termcap-{pkgver}-{pkgrel}-any.pkg.tar.zst" type="application/x-zstd-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

@@ -1,6 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="https://apps.0install.net/utils/optipng.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/elements/1.1/" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/elements/1.1/" uri="https://apps.0install.net/utils/optipng.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>OptiPNG</name>
   <summary>Compresses PNG files to a smaller size, without losing any information</summary>
   <description>The OptiPNG
@@ -14,13 +13,38 @@ and pixmap-to-PNG conversion.
   <needs-terminal/>
   <package-implementation distributions="Gentoo" package="media-gfx/optipng"/>
   <package-implementation package="optipng"/>
-  <package-implementation package="graphics/optipng" distributions="Slack" />
+  <package-implementation package="graphics/optipng" distributions="Slack"/>
   <implementation arch="Windows-*" id="sha1new=54a5a176f8c7ca6312ea96fb9eb4424af811f388" license="Zlib" released="2017-12-27" version="0.7.7">
     <command name="run" path="optipng.exe"/>
     <manifest-digest sha256new="HGJUTGTH3T5WQMO6XOCRTRMPBKSBL5RPDSULJQK3UNHUL2YJDV5A"/>
     <archive extract="optipng-0.7.7-win32" href="http://prdownloads.sourceforge.net/optipng/optipng-0.7.7-win32.zip" size="138730" type="application/zip"/>
   </implementation>
+  <group license="Zlib">
+    <requires interface="https://apps.0install.net/lib/png16-0.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/zlib.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/optipng.exe"/>
+    <implementation arch="Windows-x86_64" version="0.7.8" released="2023-11-04" stability="stable" id="sha256new_4RAL7ZESE3PMO4O5XLYVAW7YYRCF2F5HPFTNNZL7V7OHRDXS3PKA">
+      <manifest-digest sha256new="4RAL7ZESE3PMO4O5XLYVAW7YYRCF2F5HPFTNNZL7V7OHRDXS3PKA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-optipng-0.7.8-1-any.pkg.tar.zst" size="64470" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="0.7.8" released="2023-11-04" stability="stable" id="sha256new_2VH4QUGXF2JBPJQNVLJU6EBHYK3KVOFANMSGOHWY3IMX6SY7643A">
+      <manifest-digest sha256new="2VH4QUGXF2JBPJQNVLJU6EBHYK3KVOFANMSGOHWY3IMX6SY7643A"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-optipng-0.7.8-1-any.pkg.tar.zst" size="65261" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="7.9.1" released="2025-05-25" stability="stable" id="sha256new_MYHR7WHC7GZXBOJLF3GE7UPZOYYKH2ZDKOW7JRF5PAZD3F2ZNLYA">
+      <manifest-digest sha256new="MYHR7WHC7GZXBOJLF3GE7UPZOYYKH2ZDKOW7JRF5PAZD3F2ZNLYA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-optipng-7.9.1-1-any.pkg.tar.zst" size="66251" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="7.9.1" released="2025-05-25" stability="stable" id="sha256new_KGSDXVZJUXH2OAEHWOT7YEDVS473LXY7IENBO66GUIMTODOMAU4Q">
+      <manifest-digest sha256new="KGSDXVZJUXH2OAEHWOT7YEDVS473LXY7IENBO66GUIMTODOMAU4Q"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-optipng-7.9.1-1-any.pkg.tar.zst" size="64363" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+  </group>
   <entry-point binary-name="optipng" command="run">
-  <needs-terminal/>
+    <needs-terminal/>
   </entry-point>
 </interface>

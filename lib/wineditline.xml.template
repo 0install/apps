@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>WinEditLine</name>
+  <summary>line editing library for Windows</summary>
+  <description>WinEditLine is a native Windows implementation of the editline/readline API, providing line editing and history for interactive console programs.</description>
+  <homepage>https://mingweditline.sourceforge.net/</homepage>
+  <category>Development</category>
+
+  <feed-for interface="https://apps.0install.net/lib/wineditline.xml"/>
+
+  <group license="BSD-3-Clause">
+    <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="ucrt64" href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-wineditline-{pkgver}-{pkgrel}-any.pkg.tar.zst" type="application/x-zstd-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="clangarm64" href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-wineditline-{pkgver}-{pkgrel}-any.pkg.tar.zst" type="application/x-zstd-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/lib/libjpeg-turbo.xml">
+  <name>libjpeg-turbo</name>
+  <summary>JPEG image codec and command-line tools</summary>
+  <description>libjpeg-turbo is a JPEG image codec that uses SIMD instructions to accelerate baseline JPEG compression and decompression. This package also provides its command-line tools: jpegtran for lossless transformations of JPEG files (rotation, flipping, cropping, optimization and conversion between baseline and progressive encoding), cjpeg and djpeg for compressing and decompressing JPEG files, and rdjpgcom and wrjpgcom for reading and writing JPEG comments.</description>
+  <homepage>https://libjpeg-turbo.org/</homepage>
+  <category>Graphics</category>
+  <needs-terminal/>
+
+  <feed arch="Linux-*" src="https://apps.0install.net/lib/libjpeg-turbo-linux.xml"/>
+  <feed arch="Windows-*" src="https://apps.0install.net/lib/libjpeg-turbo-windows.xml"/>
+
+  <entry-point binary-name="jpegtran" command="run">
+    <needs-terminal/>
+    <name>jpegtran</name>
+    <summary>lossless transformation of JPEG files</summary>
+  </entry-point>
+  <entry-point command="cjpeg">
+    <needs-terminal/>
+    <name>cjpeg</name>
+    <summary>compress an image file to a JPEG file</summary>
+  </entry-point>
+  <entry-point command="djpeg">
+    <needs-terminal/>
+    <name>djpeg</name>
+    <summary>decompress a JPEG file to an image file</summary>
+  </entry-point>
+  <entry-point command="rdjpgcom">
+    <needs-terminal/>
+    <name>rdjpgcom</name>
+    <summary>display text comments from a JPEG file</summary>
+  </entry-point>
+  <entry-point command="wrjpgcom">
+    <needs-terminal/>
+    <name>wrjpgcom</name>
+    <summary>insert text comments into a JPEG file</summary>
+  </entry-point>
+</interface>

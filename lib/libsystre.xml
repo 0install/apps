@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/lib/libsystre.xml">
+  <name>libsystre</name>
+  <summary>POSIX regex.h wrapper around TRE</summary>
+  <description>libsystre provides the POSIX regcomp/regexec API (regex.h) for Windows, implemented on top of the TRE regular expression library.</description>
+  <homepage>https://github.com/msys2/MINGW-packages/tree/master/mingw-w64-libsystre</homepage>
+  <category>Development</category>
+
+  <group license="BSD-3-Clause">
+    <requires interface="https://apps.0install.net/lib/libtre.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <implementation arch="Windows-x86_64" version="1.0.1" released="2024-10-16" stability="stable" id="sha256new_VKZUBSELRETEMLS523NN3H4YB2RJDZV2KYMGLHL3N42GKO6OLNPA">
+      <manifest-digest sha256new="VKZUBSELRETEMLS523NN3H4YB2RJDZV2KYMGLHL3N42GKO6OLNPA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libsystre-1.0.1-6-any.pkg.tar.zst" size="9847" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.0.1" released="2024-10-16" stability="stable" id="sha256new_CMVS32RYKEUT2BF6W52YO6JLEHNYNJOAYQN27ZUW57VPAEEIZFNQ">
+      <manifest-digest sha256new="CMVS32RYKEUT2BF6W52YO6JLEHNYNJOAYQN27ZUW57VPAEEIZFNQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libsystre-1.0.1-6-any.pkg.tar.zst" size="10489" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.0.2" released="2026-09-08" stability="stable" id="sha256new_LK4N6DLF3Q5WB47CWOSVO4OEESF3PZ4P4JSMWDS2OMFFEQT5ACHA">
+      <manifest-digest sha256new="LK4N6DLF3Q5WB47CWOSVO4OEESF3PZ4P4JSMWDS2OMFFEQT5ACHA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libsystre-1.0.2-3-any.pkg.tar.zst" size="8603" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.0.2" released="2026-09-08" stability="stable" id="sha256new_VPPFBYQGRDDTPOGPUDO3QVJDH4SPU7ZOUW4TL4IEVWS5IIWHX27A">
+      <manifest-digest sha256new="VPPFBYQGRDDTPOGPUDO3QVJDH4SPU7ZOUW4TL4IEVWS5IIWHX27A"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libsystre-1.0.2-3-any.pkg.tar.zst" size="8926" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+  </group>
+</interface>

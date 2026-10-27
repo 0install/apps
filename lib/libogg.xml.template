@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>libogg</name>
+  <summary>Ogg bitstream library</summary>
+  <description>libogg is the reference implementation of the Ogg multimedia container format, used by Vorbis, Opus, Theora and FLAC.</description>
+  <homepage>https://www.xiph.org/ogg/</homepage>
+  <category>AudioVideo</category>
+
+  <feed-for interface="https://apps.0install.net/lib/libogg.xml"/>
+
+  <group license="BSD-3-Clause">
+    <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="ucrt64" href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libogg-{pkgver}-{pkgrel}-any.pkg.tar.zst" type="application/x-zstd-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="clangarm64" href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libogg-{pkgver}-{pkgrel}-any.pkg.tar.zst" type="application/x-zstd-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/utils/flac.xml">
+  <name>FLAC</name>
+  <summary>Free Lossless Audio Codec</summary>
+  <description>FLAC (Free Lossless Audio Codec) compresses audio without any loss in quality. This package contains the flac encoder/decoder and metaflac for editing metadata.</description>
+  <homepage>https://xiph.org/flac/</homepage>
+  <category>AudioVideo</category>
+  <needs-terminal/>
+
+  <package-implementation distributions="Debian RPM Arch" package="flac">
+    <command name="run" path="/usr/bin/flac"/>
+    <command name="metaflac" path="/usr/bin/metaflac"/>
+  </package-implementation>
+  <package-implementation distributions="Gentoo" package="media-libs/flac">
+    <command name="run" path="/usr/bin/flac"/>
+    <command name="metaflac" path="/usr/bin/metaflac"/>
+  </package-implementation>
+  <package-implementation distributions="MacPorts" package="flac">
+    <command name="run" path="/opt/local/bin/flac"/>
+    <command name="metaflac" path="/opt/local/bin/metaflac"/>
+  </package-implementation>
+
+  <entry-point binary-name="flac" command="run">
+    <needs-terminal/>
+    <name>FLAC</name>
+    <summary>encode and decode FLAC audio files</summary>
+  </entry-point>
+  <entry-point command="metaflac">
+    <needs-terminal/>
+    <name>metaflac</name>
+    <summary>list and edit metadata of FLAC files</summary>
+  </entry-point>
+
+  <group license="GPL-2.0-or-later AND BSD-3-Clause">
+    <requires interface="https://apps.0install.net/lib/libogg.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/libwinpthread.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/flac.exe"/>
+    <command name="metaflac" path="bin/metaflac.exe"/>
+    <implementation arch="Windows-x86_64" version="1.5.0" released="2026-08-14" stability="stable" id="sha256new_RPXRQYOMWZ7H5JWX4WZAB453R4BX37S7S6IQBAJVZC3WSYQC7P3A">
+      <manifest-digest sha256new="RPXRQYOMWZ7H5JWX4WZAB453R4BX37S7S6IQBAJVZC3WSYQC7P3A"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-flac-1.5.0-2-any.pkg.tar.zst" size="523215" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.5.0" released="2026-08-14" stability="stable" id="sha256new_PC5CFP6ZCZ44SJRVEIMGBXHFGKMH2TIBFSNV3LM4XUUSAFQJF55A">
+      <manifest-digest sha256new="PC5CFP6ZCZ44SJRVEIMGBXHFGKMH2TIBFSNV3LM4XUUSAFQJF55A"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-flac-1.5.0-2-any.pkg.tar.zst" size="430306" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+  </group>
+</interface>

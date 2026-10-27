@@ -1,6 +1,5 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='feed.xsl'?>
-<interface uri="https://apps.0install.net/lib/expat1.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/lib/expat1.xml">
   <name>libexpat1</name>
   <summary>XML parsing C library - runtime library</summary>
   <description>
@@ -24,15 +23,135 @@ parsing XML.</description>
     </implementation>
   </group>
   <implementation arch="Windows-i486" version="1.95.0" released="2000-10-22" license="MIT" id="1.95.1withdllrenamed">
-    <manifest-digest sha256new="NIFBMKJZ277BARKR4SOXWRHPTW45IL3NBJM76PZZD4GVCYV6RHQQ" />
+    <manifest-digest sha256new="NIFBMKJZ277BARKR4SOXWRHPTW45IL3NBJM76PZZD4GVCYV6RHQQ"/>
     <recipe>
-      <archive href="https://sourceforge.net/projects/expat/files/expat_win32/1.95.1/expat_win32bin_1_95_1.zip" size="119596" type="application/zip" extract="expat_win32bin_1_95_1" />
-      <rename source="expat_1_95_1.dll" dest="libexpat.dll" />
+      <archive href="https://sourceforge.net/projects/expat/files/expat_win32/1.95.1/expat_win32bin_1_95_1.zip" size="119596" type="application/zip" extract="expat_win32bin_1_95_1"/>
+      <rename source="expat_1_95_1.dll" dest="libexpat.dll"/>
     </recipe>
     <recipe>
-      <archive href="https://raw.githubusercontent.com/libexpat/libexpat/releases/download/R_1_95_1/expat_win32bin_1_95_1.zip" size="119596" type="application/zip" extract="expat_win32bin_1_95_1" />
-      <rename source="expat_1_95_1.dll" dest="libexpat.dll" />
+      <archive href="https://raw.githubusercontent.com/libexpat/libexpat/releases/download/R_1_95_1/expat_win32bin_1_95_1.zip" size="119596" type="application/zip" extract="expat_win32bin_1_95_1"/>
+      <rename source="expat_1_95_1.dll" dest="libexpat.dll"/>
     </recipe>
   </implementation>
+  <group license="MIT">
+    <command name="xmlwf" path="bin/xmlwf.exe"/>
+    <implementation arch="Windows-x86_64" version="2.6.4" released="2024-11-08" stability="stable" id="sha256new_5SEH4U6N2LCGKEFGANL5ZLPC7G6EQSCOGWTI6YSIWXFJV7AWI7RA">
+      <manifest-digest sha256new="5SEH4U6N2LCGKEFGANL5ZLPC7G6EQSCOGWTI6YSIWXFJV7AWI7RA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-expat-2.6.4-1-any.pkg.tar.zst" size="167392" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.6.4" released="2024-11-08" stability="stable" id="sha256new_GBTS7LIRGR5YHPPM5H5W7XBPK5Q7DSRCIZBNRJILRZL6EDXQ2FDA">
+      <manifest-digest sha256new="GBTS7LIRGR5YHPPM5H5W7XBPK5Q7DSRCIZBNRJILRZL6EDXQ2FDA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-expat-2.6.4-1-any.pkg.tar.zst" size="156107" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.7.0" released="2025-03-14" stability="stable" id="sha256new_3M7Z5O7IQHWDGWR7FC3SVVRBDFTD6PV4A3B3MYU56GXP3AN4QLNQ">
+      <manifest-digest sha256new="3M7Z5O7IQHWDGWR7FC3SVVRBDFTD6PV4A3B3MYU56GXP3AN4QLNQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-expat-2.7.0-1-any.pkg.tar.zst" size="168403" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.7.0" released="2025-03-14" stability="stable" id="sha256new_KX7Q53L3EIF3AAEDVDDPIBO5CBUQAGXKTYVWDV5WCNXUBBJHSZ4A">
+      <manifest-digest sha256new="KX7Q53L3EIF3AAEDVDDPIBO5CBUQAGXKTYVWDV5WCNXUBBJHSZ4A"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-expat-2.7.0-1-any.pkg.tar.zst" size="158385" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.7.1" released="2025-04-11" stability="stable" id="sha256new_YCPNG2YOEH2W6BUWKA5A7PTFLXN6RG5BGHUEHS5D3PCI3D3M6RGQ">
+      <manifest-digest sha256new="YCPNG2YOEH2W6BUWKA5A7PTFLXN6RG5BGHUEHS5D3PCI3D3M6RGQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-expat-2.7.1-2-any.pkg.tar.zst" size="168854" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.7.1" released="2025-04-11" stability="stable" id="sha256new_3CH3B76YZTPMQGOBXTJ5PY4NWSXRZIGYYDWLCWXYFNJB6M7Y52IA">
+      <manifest-digest sha256new="3CH3B76YZTPMQGOBXTJ5PY4NWSXRZIGYYDWLCWXYFNJB6M7Y52IA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-expat-2.7.1-2-any.pkg.tar.zst" size="159100" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.7.2" released="2025-09-17" stability="stable" id="sha256new_SW42OIIC6PFNT2ALXLIGCSCDVTLQEFGRWA2US7FGACKYFQ5M43EA">
+      <manifest-digest sha256new="SW42OIIC6PFNT2ALXLIGCSCDVTLQEFGRWA2US7FGACKYFQ5M43EA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-expat-2.7.2-1-any.pkg.tar.zst" size="174073" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.7.2" released="2025-09-17" stability="stable" id="sha256new_N2FDZVBJDOC5GSIOKFMLV622TEG3AKH7ZLDTBP3WZ37477YAOM3Q">
+      <manifest-digest sha256new="N2FDZVBJDOC5GSIOKFMLV622TEG3AKH7ZLDTBP3WZ37477YAOM3Q"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-expat-2.7.2-1-any.pkg.tar.zst" size="162669" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.7.3" released="2025-09-25" stability="stable" id="sha256new_NRYX5AS2CEFJINFAVJZ4EU6XVY7BGUKZOT7JPEP6KK64LK56NKNA">
+      <manifest-digest sha256new="NRYX5AS2CEFJINFAVJZ4EU6XVY7BGUKZOT7JPEP6KK64LK56NKNA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-expat-2.7.3-1-any.pkg.tar.zst" size="174675" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.7.3" released="2025-09-25" stability="stable" id="sha256new_BZZSNAFIJVFV6PPFZZSVEPQB6L7FZ5MEHMBDVP57RRMM4J7V3UHA">
+      <manifest-digest sha256new="BZZSNAFIJVFV6PPFZZSVEPQB6L7FZ5MEHMBDVP57RRMM4J7V3UHA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-expat-2.7.3-1-any.pkg.tar.zst" size="163259" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.7.4" released="2026-01-31" stability="stable" id="sha256new_HXRAAWIUORQXTVY6R5LLSBEQR3UPLY7H6VM3UBMY3JHDOCW5HU6A">
+      <manifest-digest sha256new="HXRAAWIUORQXTVY6R5LLSBEQR3UPLY7H6VM3UBMY3JHDOCW5HU6A"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-expat-2.7.4-1-any.pkg.tar.zst" size="176172" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.7.4" released="2026-01-31" stability="stable" id="sha256new_OIVEMWZPF2KRN6MFAOS3IXXCYMGTRJQJKDCOULDYBMK5ZG34VPBA">
+      <manifest-digest sha256new="OIVEMWZPF2KRN6MFAOS3IXXCYMGTRJQJKDCOULDYBMK5ZG34VPBA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-expat-2.7.4-1-any.pkg.tar.zst" size="165377" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.7.5" released="2026-03-30" stability="stable" id="sha256new_OJ6RR4LNT2A6HMUJXSW37E6IE2P2OGNHJPY5WTJ2FMUCJPSPCJGA">
+      <manifest-digest sha256new="OJ6RR4LNT2A6HMUJXSW37E6IE2P2OGNHJPY5WTJ2FMUCJPSPCJGA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-expat-2.7.5-2-any.pkg.tar.zst" size="181012" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.7.5" released="2026-03-30" stability="stable" id="sha256new_KMZDSBYUHO47HJTCG6IL7KABWSVAJQAKPNUKA5JM6SPFFD24XYIQ">
+      <manifest-digest sha256new="KMZDSBYUHO47HJTCG6IL7KABWSVAJQAKPNUKA5JM6SPFFD24XYIQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-expat-2.7.5-2-any.pkg.tar.zst" size="167762" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.8.0" released="2026-04-24" stability="stable" id="sha256new_FXGMSTZTKR6RHLCXUP2IRAKHSHCXFE6VSYE7IBR3UYGSDDYTEKXA">
+      <manifest-digest sha256new="FXGMSTZTKR6RHLCXUP2IRAKHSHCXFE6VSYE7IBR3UYGSDDYTEKXA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-expat-2.8.0-1-any.pkg.tar.zst" size="183250" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.8.0" released="2026-04-24" stability="stable" id="sha256new_IHNUKEUXL4MNC7GTZAUHEDJFGBVKRRXVK464AAOROAJJMJC7HDKA">
+      <manifest-digest sha256new="IHNUKEUXL4MNC7GTZAUHEDJFGBVKRRXVK464AAOROAJJMJC7HDKA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-expat-2.8.0-1-any.pkg.tar.zst" size="169331" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.8.1" released="2026-06-10" stability="stable" id="sha256new_T2PZNXAI7I46QIPBZTRIYXTOAJKATQI7PAJURKPOFV4JDOF66MNQ">
+      <manifest-digest sha256new="T2PZNXAI7I46QIPBZTRIYXTOAJKATQI7PAJURKPOFV4JDOF66MNQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-expat-2.8.1-2-any.pkg.tar.zst" size="190756" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.8.1" released="2026-06-10" stability="stable" id="sha256new_THSSZ7RPGPYCXHBC7IODK6QSRPI2PS2MALAM6F3IY3ZQKMEX433A">
+      <manifest-digest sha256new="THSSZ7RPGPYCXHBC7IODK6QSRPI2PS2MALAM6F3IY3ZQKMEX433A"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-expat-2.8.1-2-any.pkg.tar.zst" size="169310" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.8.2" released="2026-06-26" stability="stable" id="sha256new_KE3J6EQ4NSDTNQMJ7XF5KMZX77EG5QMHRDRBJN6JMMMFIIOOYSJA">
+      <manifest-digest sha256new="KE3J6EQ4NSDTNQMJ7XF5KMZX77EG5QMHRDRBJN6JMMMFIIOOYSJA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-expat-2.8.2-1-any.pkg.tar.zst" size="193308" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.8.2" released="2026-06-26" stability="stable" id="sha256new_CAXXEFRIP73IZO2IFWXJ3FV7FROZPM36E5H4NKE6UIKD77GSBR6A">
+      <manifest-digest sha256new="CAXXEFRIP73IZO2IFWXJ3FV7FROZPM36E5H4NKE6UIKD77GSBR6A"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-expat-2.8.2-1-any.pkg.tar.zst" size="171744" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.8.3" released="2026-08-11" stability="stable" id="sha256new_ZG2DTIFR77JGSUYCPIA3V54H3VSNLY63PRZVUSFGUXYK6OWVJOHQ">
+      <manifest-digest sha256new="ZG2DTIFR77JGSUYCPIA3V54H3VSNLY63PRZVUSFGUXYK6OWVJOHQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-expat-2.8.3-1-any.pkg.tar.zst" size="193668" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.8.3" released="2026-08-11" stability="stable" id="sha256new_4W3H3HUTYEZH2H5GFGVFXPWDWUEBJJYQQWIDB6TXRQP4WZUR6LJA">
+      <manifest-digest sha256new="4W3H3HUTYEZH2H5GFGVFXPWDWUEBJJYQQWIDB6TXRQP4WZUR6LJA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-expat-2.8.3-1-any.pkg.tar.zst" size="171034" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.8.4" released="2026-09-02" stability="stable" id="sha256new_KSHMPTOMSUR22PCK3RHYHLB2QH5JDOJH7OQ2SMFASO6MXW6SNWOQ">
+      <manifest-digest sha256new="KSHMPTOMSUR22PCK3RHYHLB2QH5JDOJH7OQ2SMFASO6MXW6SNWOQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-expat-2.8.4-2-any.pkg.tar.zst" size="193737" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.8.4" released="2026-09-02" stability="stable" id="sha256new_OW4QSTXLFBYLIWRVKCIXA66TCVZR2HWSX36DDAFSESV7AWPJT3WA">
+      <manifest-digest sha256new="OW4QSTXLFBYLIWRVKCIXA66TCVZR2HWSX36DDAFSESV7AWPJT3WA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-expat-2.8.4-2-any.pkg.tar.zst" size="172017" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.8.5" released="2026-09-22" stability="stable" id="sha256new_PX476EQW5NIW6MNHK327LP4H5VY5X4SD3PGGQWYAM5T6GTEBPC5A">
+      <manifest-digest sha256new="PX476EQW5NIW6MNHK327LP4H5VY5X4SD3PGGQWYAM5T6GTEBPC5A"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-expat-2.8.5-1-any.pkg.tar.zst" size="195706" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.8.5" released="2026-09-22" stability="stable" id="sha256new_GNBAI7MQWLA7ZWSGPKRAUX2OKSPWSHQ4I3UGMP2RWSROGWU4ALVQ">
+      <manifest-digest sha256new="GNBAI7MQWLA7ZWSGPKRAUX2OKSPWSHQ4I3UGMP2RWSROGWU4ALVQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-expat-2.8.5-1-any.pkg.tar.zst" size="172720" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="2.9.0" released="2026-10-06" stability="stable" id="sha256new_TWMQ2LWMKFH3O5QPRUKGZXFHAKYJTFJTXTJBIES4HTZJ5XFPZ5PA">
+      <manifest-digest sha256new="TWMQ2LWMKFH3O5QPRUKGZXFHAKYJTFJTXTJBIES4HTZJ5XFPZ5PA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-expat-2.9.0-1-any.pkg.tar.zst" size="197375" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.9.0" released="2026-10-06" stability="stable" id="sha256new_SGDKX4DVB3AIIK54FC3FDRHLMCJBI6XL3KBHWFCTFRRHIKKUSRGA">
+      <manifest-digest sha256new="SGDKX4DVB3AIIK54FC3FDRHLMCJBI6XL3KBHWFCTFRRHIKKUSRGA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-expat-2.9.0-1-any.pkg.tar.zst" size="174835" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+  </group>
+  <entry-point command="xmlwf">
+    <needs-terminal/>
+    <name>xmlwf</name>
+    <summary>check whether XML documents are well-formed</summary>
+  </entry-point>
 
 </interface>

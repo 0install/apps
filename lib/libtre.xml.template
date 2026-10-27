@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>TRE</name>
+  <summary>POSIX-compliant regular expression library</summary>
+  <description>TRE is a lightweight, robust and efficient POSIX compliant regexp matching library with some exciting features such as approximate (fuzzy) matching.</description>
+  <homepage>https://github.com/laurikari/tre</homepage>
+  <category>Development</category>
+
+  <feed-for interface="https://apps.0install.net/lib/libtre.xml"/>
+
+  <group license="BSD-2-Clause">
+    <requires interface="https://apps.0install.net/devel/libintl.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <implementation arch="Windows-x86_64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="ucrt64" href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libtre-{pkgver}-{pkgrel}-any.pkg.tar.zst" type="application/x-zstd-compressed-tar"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" released="{released}" stability="stable" version="{version}">
+      <manifest-digest/>
+      <archive extract="clangarm64" href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libtre-{pkgver}-{pkgrel}-any.pkg.tar.zst" type="application/x-zstd-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>

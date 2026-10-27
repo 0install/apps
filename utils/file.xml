@@ -1,11 +1,10 @@
 <?xml version="1.0" ?>
-<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
-<interface uri="https://apps.0install.net/utils/file.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uri="https://apps.0install.net/utils/file.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
   <name>File</name>
   <summary xml:lang="en">File: determine file type</summary>
   <description xml:lang="en">The latest GnuWin32 port is of version 5.03, released in May 2009.
   It has a subtle bug that breaks libtool, and also a few Windows
-  specific gotcha's (e.g., try "file NUL" or "file -").  This port of
+  specific gotcha's (e.g., try &quot;file NUL&quot; or &quot;file -&quot;).  This port of
   the latest upstream release fixes those bugs.</description>
   <icon href="https://apps.0install.net/utils/file.ico" type="image/vnd.microsoft.icon"/>
   <icon href="https://apps.0install.net/utils/file.png" type="image/png"/>
@@ -16,20 +15,49 @@
     <requires interface="https://apps.0install.net/lib/regex.xml">
       <environment insert="bin" name="PATH"/>
     </requires>
-    <requires interface="https://apps.0install.net/lib/zlib.xml"> 
+    <requires interface="https://apps.0install.net/lib/zlib.xml">
       <environment insert="bin" name="PATH"/>
     </requires>
     <command name="run" path="bin/file.exe"/>
     <manifest-digest sha256new="IS34PRCL3BXH4QKZ5W3YP637X6PPNTIIQOTOJUFBPR4FOGAOJA4Q"/>
     <archive href="https://sourceforge.net/projects/gnuwin32/files/file/5.03/file-5.03-bin.zip" size="442585" type="application/zip"/>
   </implementation>
-  <implementation arch="Windows-*"  license="BSD License (revised), zlib/libpng license, LGPL (GNU Lesser General Public License)" released="2012-01-06"  version="5.9" id="sha1new=92f09c596a997f8a948511b66b2627b0c425d064">
-    <command name="run" path="bin/file.exe" />
-    <manifest-digest sha256new="YKAAAMFC7O5J3RZJJR36QSBKUQCPKP5D43M5K33SEK57GWHM4BDA" />
-    <archive href="https://sourceforge.net/projects/ezwinports/files/file-5.09-w32-bin.zip" size="371683" type="application/zip" />
+  <implementation arch="Windows-*" license="BSD License (revised), zlib/libpng license, LGPL (GNU Lesser General Public License)" released="2012-01-06" version="5.9" id="sha1new=92f09c596a997f8a948511b66b2627b0c425d064">
+    <command name="run" path="bin/file.exe"/>
+    <manifest-digest sha256new="YKAAAMFC7O5J3RZJJR36QSBKUQCPKP5D43M5K33SEK57GWHM4BDA"/>
+    <archive href="https://sourceforge.net/projects/ezwinports/files/file-5.09-w32-bin.zip" size="371683" type="application/zip"/>
   </implementation>
+  <group license="BSD-2-Clause">
+    <requires interface="https://apps.0install.net/lib/libsystre.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/file.exe"/>
+    <implementation arch="Windows-x86_64" version="5.46" released="2024-11-29" stability="stable" id="sha256new_MFSVP7XGPEASKFNT4PCV7Y5ROSVDQBOBQDEJCRWPKT6IAFDHGQAQ">
+      <manifest-digest sha256new="MFSVP7XGPEASKFNT4PCV7Y5ROSVDQBOBQDEJCRWPKT6IAFDHGQAQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-file-5.46-1-any.pkg.tar.zst" size="506771" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="5.46" released="2024-11-29" stability="stable" id="sha256new_RX4DQJTQDQHYDU5OOHFGPRQ5FXDXW4F5HMLMYLFXZKH37WCHNHDA">
+      <manifest-digest sha256new="RX4DQJTQDQHYDU5OOHFGPRQ5FXDXW4F5HMLMYLFXZKH37WCHNHDA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-file-5.46-1-any.pkg.tar.zst" size="497485" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="5.47" released="2026-03-01" stability="stable" id="sha256new_3EWI3S7455AQL6IZLG53WER47DKANJY4GDDKL3BL3OBDRFXVLIFA">
+      <manifest-digest sha256new="3EWI3S7455AQL6IZLG53WER47DKANJY4GDDKL3BL3OBDRFXVLIFA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-file-5.47-1-any.pkg.tar.zst" size="511919" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="5.47" released="2026-03-01" stability="stable" id="sha256new_Q36ZINCYLY2AD77RX7GJ5DY6L7QOJQACDE6NZLDJYH2OFFMFEZQA">
+      <manifest-digest sha256new="Q36ZINCYLY2AD77RX7GJ5DY6L7QOJQACDE6NZLDJYH2OFFMFEZQA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-file-5.47-1-any.pkg.tar.zst" size="500753" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="5.48" released="2026-06-11" stability="stable" id="sha256new_QNNXYRLRZHP2H6NM3HVF6QDTLJQXFVORTEX7UPMTGONV6QPB22BQ">
+      <manifest-digest sha256new="QNNXYRLRZHP2H6NM3HVF6QDTLJQXFVORTEX7UPMTGONV6QPB22BQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-file-5.48-1-any.pkg.tar.zst" size="517886" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="5.48" released="2026-06-11" stability="stable" id="sha256new_CTPSSRDDDFZTPBMYYHH3QUSL2YNPKJVHNWOQSAWESWBUQBT46CLA">
+      <manifest-digest sha256new="CTPSSRDDDFZTPBMYYHH3QUSL2YNPKJVHNWOQSAWESWBUQBT46CLA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-file-5.48-1-any.pkg.tar.zst" size="505912" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+  </group>
   <package-implementation distributions="Gentoo" package="sys-apps/file"/>
   <package-implementation package="file" main="/usr/bin/file"/>
   <entry-point binary-name="file" command="run"/>
 </interface>
-

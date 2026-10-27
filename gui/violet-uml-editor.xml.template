@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Violet UML Editor</name>
+  <summary>UML editor</summary>
+  <icon href="https://apps.0install.net/gui/violet-uml-editor.ico" type="image/vnd.microsoft.icon"/>
+  <icon href="https://apps.0install.net/gui/violet-uml-editor.png" type="image/png"/>
+  <category>Development</category>
+
+  <feed-for interface="https://apps.0install.net/gui/violet-uml-editor.xml"/>
+
+  <group license="GPL">
+    <command name="run" path="violetumleditor.jar">
+      <runner interface="https://apps.0install.net/java/jre.xml" version="{java-version}" command="run-gui">
+        <arg>-jar</arg>
+      </runner>
+    </command>
+
+    <implementation version="{version}" released="{released}" stability="{stability}">
+      <manifest-digest/>
+      <file dest="violetumleditor.jar" href="https://downloads.sourceforge.net/project/violet/violetumleditor/{version-original}/violetumleditor-{version-original}.jar"/>
+    </implementation>
+  </group>
+</interface>

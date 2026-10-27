@@ -9,11 +9,179 @@
 
   <feed src="https://apps.0install.net/java/oraclejre-8.xml"/>
 
-  <!-- Modern Java versions don't offer JRE-only redistributables, so use full JDK instead. JRE-only native packages still exist though (see below). -->
-  <feed src="https://apps.0install.net/java/openjdk.xml"/>
-  <feed arch="Windows-*" src="https://apps.0install.net/java/microsoft-jdk.xml"/>
-  <feed arch="Linux-*" src="https://apps.0install.net/java/temurin-jdk.xml"/>
-  <feed arch="MacOSX-*" src="https://apps.0install.net/java/temurin-jdk.xml"/>
+  <!-- Modern Java versions don't offer JRE-only redistributables, so delegate to the full JDK instead. JRE-only native packages still exist though (see below). -->
+  <group>
+    <command name="run">
+      <runner interface="https://apps.0install.net/java/jdk.xml" command="java"/>
+    </command>
+    <command name="run-gui">
+      <runner interface="https://apps.0install.net/java/jdk.xml" command="java-gui"/>
+    </command>
+    <command name="javaws">
+      <runner interface="https://apps.0install.net/java/jdk.xml" command="javaws"/>
+    </command>
+    <command name="javacpl">
+      <runner interface="https://apps.0install.net/java/jdk.xml" command="javacpl"/>
+    </command>
+    <command name="keytool">
+      <runner interface="https://apps.0install.net/java/jdk.xml" command="keytool"/>
+    </command>
+    <command name="servertool">
+      <runner interface="https://apps.0install.net/java/jdk.xml" command="servertool"/>
+    </command>
+    <command name="pack200">
+      <runner interface="https://apps.0install.net/java/jdk.xml" command="pack200"/>
+    </command>
+    <command name="unpack200">
+      <runner interface="https://apps.0install.net/java/jdk.xml" command="unpack200"/>
+    </command>
+    <command name="appletviewer">
+      <runner interface="https://apps.0install.net/java/jdk.xml" command="appletviewer"/>
+    </command>
+    <command name="rmid">
+      <runner interface="https://apps.0install.net/java/jdk.xml" command="rmid"/>
+    </command>
+    <command name="rmiregistry">
+      <runner interface="https://apps.0install.net/java/jdk.xml" command="rmiregistry"/>
+    </command>
+    <command name="idlj">
+      <runner interface="https://apps.0install.net/java/jdk.xml" command="idlj"/>
+    </command>
+    <command name="jjs">
+      <runner interface="https://apps.0install.net/java/jdk.xml" command="jjs"/>
+    </command>
+    <command name="jrunscript">
+      <runner interface="https://apps.0install.net/java/jdk.xml" command="jrunscript"/>
+    </command>
+    <command name="kinit">
+      <runner interface="https://apps.0install.net/java/jdk.xml" command="kinit"/>
+    </command>
+    <command name="klist">
+      <runner interface="https://apps.0install.net/java/jdk.xml" command="klist"/>
+    </command>
+    <command name="ktab">
+      <runner interface="https://apps.0install.net/java/jdk.xml" command="ktab"/>
+    </command>
+    <command name="jabswitch">
+      <runner interface="https://apps.0install.net/java/jdk.xml" command="jabswitch"/>
+    </command>
+    <command name="jaccessinspector">
+      <runner interface="https://apps.0install.net/java/jdk.xml" command="jaccessinspector"/>
+    </command>
+    <command name="jaccesswalker">
+      <runner interface="https://apps.0install.net/java/jdk.xml" command="jaccesswalker"/>
+    </command>
+    <implementation version="9" id="jdk-9">
+      <restricts interface="https://apps.0install.net/java/jdk.xml" version="9..!10"/>
+      <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <recipe/>
+    </implementation>
+    <implementation version="10" id="jdk-10">
+      <restricts interface="https://apps.0install.net/java/jdk.xml" version="10..!11"/>
+      <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <recipe/>
+    </implementation>
+    <implementation version="11" id="jdk-11">
+      <restricts interface="https://apps.0install.net/java/jdk.xml" version="11..!12"/>
+      <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <recipe/>
+    </implementation>
+    <implementation version="12" id="jdk-12">
+      <restricts interface="https://apps.0install.net/java/jdk.xml" version="12..!13"/>
+      <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <recipe/>
+    </implementation>
+    <implementation version="13" id="jdk-13">
+      <restricts interface="https://apps.0install.net/java/jdk.xml" version="13..!14"/>
+      <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <recipe/>
+    </implementation>
+    <implementation version="14" id="jdk-14">
+      <restricts interface="https://apps.0install.net/java/jdk.xml" version="14..!15"/>
+      <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <recipe/>
+    </implementation>
+    <implementation version="15" id="jdk-15">
+      <restricts interface="https://apps.0install.net/java/jdk.xml" version="15..!16"/>
+      <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <recipe/>
+    </implementation>
+    <implementation version="16" id="jdk-16">
+      <restricts interface="https://apps.0install.net/java/jdk.xml" version="16..!17"/>
+      <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <recipe/>
+    </implementation>
+    <implementation version="17" id="jdk-17">
+      <restricts interface="https://apps.0install.net/java/jdk.xml" version="17..!18"/>
+      <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <recipe/>
+    </implementation>
+    <implementation version="18" id="jdk-18">
+      <restricts interface="https://apps.0install.net/java/jdk.xml" version="18..!19"/>
+      <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <recipe/>
+    </implementation>
+    <implementation version="19" id="jdk-19">
+      <restricts interface="https://apps.0install.net/java/jdk.xml" version="19..!20"/>
+      <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <recipe/>
+    </implementation>
+    <implementation version="20" id="jdk-20">
+      <restricts interface="https://apps.0install.net/java/jdk.xml" version="20..!21"/>
+      <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <recipe/>
+    </implementation>
+    <implementation version="21" id="jdk-21">
+      <restricts interface="https://apps.0install.net/java/jdk.xml" version="21..!22"/>
+      <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <recipe/>
+    </implementation>
+    <implementation version="22" id="jdk-22">
+      <restricts interface="https://apps.0install.net/java/jdk.xml" version="22..!23"/>
+      <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <recipe/>
+    </implementation>
+    <implementation version="23" id="jdk-23">
+      <restricts interface="https://apps.0install.net/java/jdk.xml" version="23..!24"/>
+      <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <recipe/>
+    </implementation>
+    <implementation version="24" id="jdk-24">
+      <restricts interface="https://apps.0install.net/java/jdk.xml" version="24..!25"/>
+      <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <recipe/>
+    </implementation>
+    <implementation version="25" id="jdk-25">
+      <restricts interface="https://apps.0install.net/java/jdk.xml" version="25..!26"/>
+      <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <recipe/>
+    </implementation>
+    <implementation version="26" id="jdk-26">
+      <restricts interface="https://apps.0install.net/java/jdk.xml" version="26..!27"/>
+      <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <recipe/>
+    </implementation>
+    <implementation version="27" id="jdk-27">
+      <restricts interface="https://apps.0install.net/java/jdk.xml" version="27..!28"/>
+      <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <recipe/>
+    </implementation>
+    <implementation version="28" id="jdk-28">
+      <restricts interface="https://apps.0install.net/java/jdk.xml" version="28..!29"/>
+      <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <recipe/>
+    </implementation>
+    <implementation version="29" id="jdk-29">
+      <restricts interface="https://apps.0install.net/java/jdk.xml" version="29..!30"/>
+      <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <recipe/>
+    </implementation>
+    <implementation version="30" id="jdk-30">
+      <restricts interface="https://apps.0install.net/java/jdk.xml" version="30..!31"/>
+      <manifest-digest sha1new="da39a3ee5e6b4b0d3255bfef95601890afd80709" sha256="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" sha256new="4OYMIQUY7QOBJGX36TEJS35ZEQT24QPEMSNZGTFESWMRW6CSXBKQ"/>
+      <recipe/>
+    </implementation>
+  </group>
 
   <package-implementation distributions="Windows" package="openjdk-7-jre"/>
   <package-implementation distributions="Windows" package="openjdk-8-jre"/>
@@ -171,11 +339,11 @@
   </capabilities>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrctKIACgkQWao5J8JOTh6npAf9GYjK
-u7HY4ACRwCReuCyL5FbpHj/3MD2MsGAK5cWBkBKZ4cYz4I+LfR7fUXIW+zeiP902m09hwQlN7KAR
-+6mo4U5prtZfG5QqPJ4bXcxIkZJkk61kVkBhlCG5Tu9YZ5kkIfWCQq+Y6+X4kfEmSCzxILWLZ/zM
-68Von4t6pR/yPvvCpFKtc/PmmJ01c0kTx3dJBNziTN5Cc/32m+79pjfTsb0d3fl84jGtk6atMD/o
-qVLSj/7iHmQP63nSYnoqcIW1g3Tu+RCpoO+wjCGti9HFmRVlP8wV+94I74D24oOrH1JYR1EtAtPM
-5u8/MPYUCVP/t9zdUgU1NRy9Fo8ULfKGdg==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrgx8gACgkQWao5J8JOTh6XWwf+MI/Q
+r9MyygG0qIJKoymu1WFKOM2PDmIwk/peFHH1jmrTegBYZ1yHMy2dHMsFsS64MxoztEUU2bh1fqHJ
+uIJcsj+1UQEuppt5UBUQ6ZZw02tm/LGQf7mYsYFsym3oXOX/fsUMYe99V4gcy+/YWO06tMbq+3Wm
+VEi9T9VTsnsSv7Hk9S00pdhNdCTUvh7miNTaSe1AVf8xzJCEVgD5674IUNVTnUCYLE3+hjdKTKFi
+lsGFRZM4Nx6uSHzYhkLnaHYNjUC31jaEtZkEKCgFH1+dxhzI2vTawqOszU7eZatWOeQQa5F774iS
+6WJhrpgkRaD2Vc3kHW3SIMHGlBwnHfRy8A==
 
 -->

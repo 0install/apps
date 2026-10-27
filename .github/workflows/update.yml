@@ -18,9 +18,7 @@ jobs:
             run: feeds/watch.sh
           - os: ubuntu-latest
             name: linux
-            run: |
-              sudo apt-get -qq install python3-gnupg
-              feeds/watch.sh
+            run: feeds/watch.sh
     runs-on: ${{matrix.os}}
     steps:
       - uses: 0install/github-actions/0repo-setup@v1

@@ -1,52 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?>
-<interface  uri="https://apps.0install.net/lib/mpfr4.xml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/lib/mpfr4.xml">
   <name>mpfr</name>
-  <summary xml:lang="en">Multiple-precision floating-point library (mingw-w64)</summary>
-  <description/>
-  <icon href="https://apps.0install.net/lib/mpfr.png" type="image/png" />
-  <icon href="https://apps.0install.net/lib/mpfr.ico" type="image/vnd.microsoft.icon" />
-  <home>https://www.mpfr.org/index.html</home>
+  <summary>Multiple-precision floating-point library (mingw-w64)</summary>
+  <description>MPFR is a C library for multiple-precision floating-point computations with correct rounding. Windows builds by MSYS2.</description>
+  <homepage>https://www.mpfr.org/</homepage>
+  <icon href="https://apps.0install.net/lib/mpfr.png" type="image/png"/>
+  <icon href="https://apps.0install.net/lib/mpfr.ico" type="image/vnd.microsoft.icon"/>
+
   <package-implementation package="mpfr" version="4.0.0.."/>
   <package-implementation package="dev-libs/mpfr" distributions="Gentoo" version="4.0.0.."/>
-  <package-implementation package="mpfr4" distributions="Debian" />
+  <package-implementation package="mpfr4" distributions="Debian"/>
   <package-implementation package="math/mpfr" distributions="Ports" version="4.0.0.."/>
-  <group license="LGPL">
-    <requires interface="https://apps.0install.net/lib/gmp.xml">
-      <environment name="LD_LIBRARY_PATH" insert="lib" />
-      <environment name="PATH" insert="bin" />
+
+  <group license="LGPL-3.0-or-later">
+    <requires interface="https://apps.0install.net/lib/gcc-libs.xml">
+      <environment insert="bin" name="PATH"/>
     </requires>
-    <group version="4.0.0-1" released="2017-12-26">
-      <implementation arch="Windows-x86_64" id="sha1new=a22aa54fc629355ad18877b84175ceafec2f21cf">
-        <manifest-digest />
-        <archive href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-mpfr-4.0.0-1-any.pkg.tar.xz" size="343488" extract="mingw64" />
-      </implementation>
-      <implementation arch="Windows-i686" id="sha1new=3513bac584df646fec8b3a03bdd47ba6d9a9b2db">
-        <manifest-digest />
-        <archive href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-mpfr-4.0.0-1-any.pkg.tar.xz" size="327748" extract="mingw32" />
-      </implementation>
-    </group>
-    <group version="4.0.1-2" released="2018-07-07">
-      <implementation arch="Windows-i686" id="sha1new=5710d6e5cea0627d66c0d08d42640276247077b3">
-        <manifest-digest />
-        <archive href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-mpfr-4.0.1-2-any.pkg.tar.xz" size="331036" extract="mingw32" />
-      </implementation>
-      <implementation arch="Windows-x86_64" id="sha1new=a85780d6e56cfb3acae7090761326f8637b84001">
-        <manifest-digest />
-        <archive href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-mpfr-4.0.1-2-any.pkg.tar.xz" size="346392" extract="mingw64" />
-      </implementation>
-    </group>
-    <group version="4.0.2-2">
-      <dc:creator>Alexey Pavlov &lt;alexpux@gmail.com&gt;</dc:creator>
-      <implementation arch="Windows-x86_64" id="sha1new=4de64dcbc11561e403edfaa228c16e107cbfd132" released="2020-04-29">
-        <dc:available>2019-02-08</dc:available>
-	<manifest-digest sha256new="PM5JMF6VBE4OSRCSRWZQDLD5TYEO7FJGD6UABAWBRXO5TMK7DNSQ"/>
-        <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-mpfr-4.0.2-2-any.pkg.tar.xz" size="354244"/>
-      </implementation>
-      <implementation arch="Windows-i686" id="sha1new=c260af20c3566c6afb5ffb19d11f7d1571809177" released="2020-04-29">
-        <dc:available>2019-02-08</dc:available>
-	<manifest-digest sha256new="JZYT3VSGXIHQW5ZMONV66LNZ5JCOKZPMQ27IHAH66IUW3FZMHD2Q"/>
-        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-mpfr-4.0.2-2-any.pkg.tar.xz" size="333592"/>
-      </implementation>
-    </group>
+    <requires interface="https://apps.0install.net/lib/gmp.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <implementation arch="Windows-x86_64" version="4.2.1" released="2023-09-13" stability="stable" id="sha256new_7U6MPNWB5K5CJ4YDEW53UNFUW3E6OAJIWMETT25ZDDXEDUURXPQA">
+      <manifest-digest sha256new="7U6MPNWB5K5CJ4YDEW53UNFUW3E6OAJIWMETT25ZDDXEDUURXPQA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-mpfr-4.2.1-2-any.pkg.tar.zst" size="548588" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="4.2.2" released="2026-05-09" stability="stable" id="sha256new_DT6X46QCD6ZKPDE6ODGMINTMWT2APSYHO36DYS5CTO55BJ2MHAKQ">
+      <manifest-digest sha256new="DT6X46QCD6ZKPDE6ODGMINTMWT2APSYHO36DYS5CTO55BJ2MHAKQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-mpfr-4.2.2-3-any.pkg.tar.zst" size="553765" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+  </group>
+
+  <group license="LGPL-3.0-or-later">
+    <requires interface="https://apps.0install.net/lib/gmp.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <implementation arch="Windows-aarch64" version="4.2.1" released="2023-09-13" stability="stable" id="sha256new_4TJYUYXMOROFVF73W3EPEAGBHMTTHUA7DD76BA5BVTP6JY3ZVSYQ">
+      <manifest-digest sha256new="4TJYUYXMOROFVF73W3EPEAGBHMTTHUA7DD76BA5BVTP6JY3ZVSYQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-mpfr-4.2.1-2-any.pkg.tar.zst" size="443773" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="4.2.2" released="2026-05-09" stability="stable" id="sha256new_BGYQTERS5VX4MKIAQJLKAXQEGPAS6NKWBR3EO4CS7NZMUAU5GMQA">
+      <manifest-digest sha256new="BGYQTERS5VX4MKIAQJLKAXQEGPAS6NKWBR3EO4CS7NZMUAU5GMQA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-mpfr-4.2.2-3-any.pkg.tar.zst" size="443036" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
   </group>
 </interface>

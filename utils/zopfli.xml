@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/utils/zopfli.xml">
+  <script xmlns="http://www.w3.org/1999/xhtml" src="../resources/xslt-polyfill.min.js"/>
+  <name>Zopfli</name>
+  <summary>very good, but slow, deflate and PNG compression</summary>
+  <description>Zopfli is a compression library that produces deflate-compatible output (gzip, zlib, PNG) a few percent smaller than other compressors, at the cost of much slower compression. This package contains the zopfli command-line compressor and zopflipng, a PNG optimizer.</description>
+  <homepage>https://github.com/google/zopfli</homepage>
+  <category>Utility</category>
+  <needs-terminal/>
+
+  <package-implementation distributions="Debian RPM Arch" package="zopfli">
+    <command name="run" path="/usr/bin/zopfli"/>
+    <command name="zopflipng" path="/usr/bin/zopflipng"/>
+  </package-implementation>
+  <package-implementation distributions="Gentoo" package="app-arch/zopfli">
+    <command name="run" path="/usr/bin/zopfli"/>
+    <command name="zopflipng" path="/usr/bin/zopflipng"/>
+  </package-implementation>
+  <package-implementation distributions="MacPorts" package="zopfli">
+    <command name="run" path="/opt/local/bin/zopfli"/>
+    <command name="zopflipng" path="/opt/local/bin/zopflipng"/>
+  </package-implementation>
+
+  <entry-point binary-name="zopfli" command="run">
+    <needs-terminal/>
+    <name>Zopfli</name>
+    <summary>compress files to gzip, zlib or deflate format</summary>
+  </entry-point>
+  <entry-point command="zopflipng">
+    <needs-terminal/>
+    <name>ZopfliPNG</name>
+    <summary>optimize PNG files</summary>
+  </entry-point>
+
+  <group license="Apache-2.0">
+    <requires interface="https://apps.0install.net/lib/cc-libs.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/zopfli.exe"/>
+    <command name="zopflipng" path="bin/zopflipng.exe"/>
+    <implementation arch="Windows-x86_64" version="1.0.3" released="2026-05-01" stability="stable" id="sha256new_IN5OG6EITQU6CT5MNCI6U3PU3TU7Y7BEG4DJ4JJL2D2J77SJ5RTA">
+      <manifest-digest sha256new="IN5OG6EITQU6CT5MNCI6U3PU3TU7Y7BEG4DJ4JJL2D2J77SJ5RTA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-zopfli-1.0.3-4-any.pkg.tar.zst" size="225491" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.0.3" released="2026-05-01" stability="stable" id="sha256new_YGM5E5ENURWCQ35BYVJIETMK3A57YTJ6HWJWMDTBHAK6U6AOHEFQ">
+      <manifest-digest sha256new="YGM5E5ENURWCQ35BYVJIETMK3A57YTJ6HWJWMDTBHAK6U6AOHEFQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-zopfli-1.0.3-4-any.pkg.tar.zst" size="200926" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrgmmwACgkQWao5J8JOTh4LBQf/Tu5u
+uJ99wOaFAS6EhKne4J3DZ/zh/cHFsxokvAE7USxULv8ndhsftVUaaO4ePXDfAJQHZ4axQab++PJ8
+UF0yxqx1E5j3y6Xdt2Ke/jubQKuHM8vXB+NvJRyPnGcBbZjlSWSurkL9MNfxicPsZGpxdyWwQcSi
+KHePtCtVfnYORH4usa8gAdosRKuEVIYdg2M8fyx+M9ukBT7VLnNdgCq/BAeGV4Xar7RqTESPLGnZ
+MM7yMVeQwKjZKA2uwy4Xj0VB+DU0fOlD7gTYy0ZYiDn3xreXRa5PZXikYMtDHvzi83MKxsoo2eFh
+mxjZEHRqCPVM5qs8nt0vngPthxVtCydMog==
+
+-->

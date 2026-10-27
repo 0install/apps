@@ -1,72 +1,39 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uri="https://apps.0install.net/lib/gcc-libs.xml" xsi:schemaLocation="http://zero-install.sourceforge.net/2004/injector/interface http://0install.de/schema/injector/interface/interface.xsd http://0install.de/schema/desktop-integration/capabilities http://0install.de/schema/desktop-integration/capabilities/capabilities.xsd">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/lib/gcc-libs.xml">
   <script xmlns="http://www.w3.org/1999/xhtml" src="../resources/xslt-polyfill.min.js"/>
   <name>gcc-libs</name>
   <summary>GNU Compiler Collection (libraries) for MinGW-w64</summary>
-  <description/>
+  <description>Runtime libraries shipped by GCC: libgcc, libstdc++, libatomic, libgomp (OpenMP) and libquadmath. Required at runtime by many programs built with MinGW-w64 GCC.</description>
+  <homepage>https://gcc.gnu.org/</homepage>
   <icon href="https://apps.0install.net/utils/gnu.ico" type="image/vnd.microsoft.icon"/>
   <icon href="https://apps.0install.net/utils/gnu.png" type="image/png"/>
   <category>Development</category>
-  <homepage>https://gcc.gnu.org</homepage>
+
   <package-implementation package="gcc-libs"/>
-  <group license="GPL3+, partial:GCCRLE, partial:LGPL2+">
-    <requires interface="https://apps.0install.net/lib/gmp.xml">
-      <environment insert="lib" name="LD_LIBRARY_PATH"/>
 
-      <environment insert="bin" name="PATH"/>
-    </requires>
-    <requires interface="https://apps.0install.net/lib/gnumpc.xml">
-      <environment insert="lib" name="LD_LIBRARY_PATH"/>
-
-      <environment insert="bin" name="PATH"/>
-    </requires>
-    <requires interface="https://apps.0install.net/lib/mpfr4.xml">
-      <environment insert="lib" name="LD_LIBRARY_PATH"/>
-
-      <environment insert="bin" name="PATH"/>
-    </requires>
+  <group license="GPL-3.0-or-later WITH GCC-exception-3.1 AND LGPL-2.1-or-later">
     <requires interface="https://apps.0install.net/lib/libwinpthread.xml">
-      <environment insert="lib" name="LD_LIBRARY_PATH"/>
-
       <environment insert="bin" name="PATH"/>
     </requires>
-    <group released="2017-08-15" version="7.2.0-1">
-      <implementation arch="Windows-x86_64" id="sha1new=f722c40fc72c7b9937fcbf25b84bec22c2f54034">
-        <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-gcc-libs-7.2.0-1-any.pkg.tar.xz" size="580676"/>
-      </implementation>
-      <implementation arch="Windows-i686" id="sha1new=3ab4c471544a3fd3fe5efce2c944400a366f7418">
-        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-gcc-libs-7.2.0-1-any.pkg.tar.xz" size="648056"/>
-      </implementation>
-    </group>
-    <implementation arch="Windows-i686" id="sha1new=a84323e1366ab184ddb7070538fa7eb0bc59294f" released="2018-04-25" version="7.3.0-2">
-      <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-gcc-libs-7.3.0-2-any.pkg.tar.xz" size="651440"/>
+    <implementation arch="Windows-x86_64" version="16.2.0" released="2026-10-13" stability="stable" id="sha256new_RKZEBNZFYU32P4ORQIBKZP5OQKDB6STA26O53BU24AQ2ETC7ZO3A">
+      <manifest-digest sha256new="RKZEBNZFYU32P4ORQIBKZP5OQKDB6STA26O53BU24AQ2ETC7ZO3A"/>
+      <recipe>
+        <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libgcc-16.2.0-6-any.pkg.tar.zst" size="77191" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+        <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libstdc++-16.2.0-6-any.pkg.tar.zst" size="795910" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+        <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libatomic-16.2.0-6-any.pkg.tar.zst" size="25423" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+        <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libgomp-16.2.0-6-any.pkg.tar.zst" size="311245" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+        <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libquadmath-16.2.0-6-any.pkg.tar.zst" size="179374" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+      </recipe>
     </implementation>
-    <implementation arch="Windows-x86_64" id="sha1new=dd1b97d23349af5c12d0472ff9fc12a5dbe2c01c" released="2018-09-30" version="8.2.0-3">
-      <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-gcc-libs-8.2.0-3-any.pkg.tar.xz" size="578888"/>
-    </implementation>
-    <group version="9.3.0-2">
-      <dc:creator>Alexey Pavlov &lt;alexpux@gmail.com&gt;</dc:creator>
-      <implementation arch="Windows-x86_64" id="sha1new=3cb2b272dd4059d8bb75ea9d9b42d84fd2f85cf3" released="2020-05-04">
-        <dc:available>2020-04-06</dc:available>
-	<manifest-digest sha256new="T66XIBEOJVY4FBHVPOFPKJ4INCWPY4TXUR2CZPZXFDLSNH6NVWPQ"/>
-      <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-gcc-libs-9.3.0-2-any.pkg.tar.xz" size="704272"/>
-      </implementation>
-      <implementation arch="Windows-i686" id="sha1new=0524a43b3840c4ed76db20b70de916dc80d361ba" released="2020-05-04">
-        <dc:available>2020-04-07</dc:available>
-	<manifest-digest sha256new="GHUI3YNY7Y4SPVUQJ2CUT66HQUMXS62FP57EAB7S2KJU4RZS3I4Q"/>
-        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-gcc-libs-9.3.0-2-any.pkg.tar.xz" size="784008"/>
-      </implementation>
-    </group>
   </group>
-
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrctJwACgkQWao5J8JOTh4G8QgAppWi
-LRSvCQgtgRl0nVlSfUvaA/EWeDsHkSmC+K62dIm19JB15UM0ceAAuKg+bdbeqZQtERo6sZ3e1Ek5
-SASQQrKpNnbGw8rv5r5GS0r+ZizLBma+tuiFKjplLUkQ0m1Jce5lE4XpJL6aH3Or9pT702BEmSNL
-lO7uKfA2mw/zSqlxpLb7rhBb/GEiyEQSUjFp+RzJTybnvFZN7CiRxFPn9g9mmOsHvy/Rrjyrve+e
-xUyzQkNA+NdpdUvR01BBpqRJIH06vwYA6PYQhtbR4a8R+6D60E5+s4Hyu/Fw7CA0UarmbFQ2+gEa
-rm3/GcqrAusryDLmFFvD9Andk1WQWxKNEw==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrgmmsACgkQWao5J8JOTh4TOwf9GMlo
+pNrp0CES+QNG4EQKJqBw2KMuqVqEWjceFJQU5/Yi5RujagV9TrDkHEx4411oiHtBPYbkp+jwDuuY
+Wn2z+jL2Bsw1px0Er405EKKa+rXEHC0IeKHat14Uwo9IVIjz0Jzh0WrAt5qJKYQumNtYNNiSTPTr
+DzfnXJok1clmeR2aASGu5tm0G480RK6DydlgkMuZoPKWDruu7OHOfKbtwIO6SIkgPdnVKk8dwwGQ
+rrE0ta5KY8no8xoTwbOngVP/di4xmMijUNGnXQ/ZQrpKT+0xcZJwXGv+RjS/XJAx0mMEpCpCtCrn
+qB+1YxsdSSIC4z1fO3o1Jkvksx9ggwNMsQ==
 
 -->

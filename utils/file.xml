@@ -17,7 +17,7 @@
     <requires interface="https://apps.0install.net/lib/regex.xml">
       <environment insert="bin" name="PATH"/>
     </requires>
-    <requires interface="https://apps.0install.net/lib/zlib.xml"> 
+    <requires interface="https://apps.0install.net/lib/zlib.xml">
       <environment insert="bin" name="PATH"/>
     </requires>
     <command name="run" path="bin/file.exe"/>
@@ -29,16 +29,46 @@
     <manifest-digest sha256new="YKAAAMFC7O5J3RZJJR36QSBKUQCPKP5D43M5K33SEK57GWHM4BDA"/>
     <archive href="https://sourceforge.net/projects/ezwinports/files/file-5.09-w32-bin.zip" size="371683" type="application/zip"/>
   </implementation>
+  <group license="BSD-2-Clause">
+    <requires interface="https://apps.0install.net/lib/libsystre.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/file.exe"/>
+    <implementation arch="Windows-x86_64" version="5.46" released="2024-11-29" stability="stable" id="sha256new_MFSVP7XGPEASKFNT4PCV7Y5ROSVDQBOBQDEJCRWPKT6IAFDHGQAQ">
+      <manifest-digest sha256new="MFSVP7XGPEASKFNT4PCV7Y5ROSVDQBOBQDEJCRWPKT6IAFDHGQAQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-file-5.46-1-any.pkg.tar.zst" size="506771" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="5.46" released="2024-11-29" stability="stable" id="sha256new_RX4DQJTQDQHYDU5OOHFGPRQ5FXDXW4F5HMLMYLFXZKH37WCHNHDA">
+      <manifest-digest sha256new="RX4DQJTQDQHYDU5OOHFGPRQ5FXDXW4F5HMLMYLFXZKH37WCHNHDA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-file-5.46-1-any.pkg.tar.zst" size="497485" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="5.47" released="2026-03-01" stability="stable" id="sha256new_3EWI3S7455AQL6IZLG53WER47DKANJY4GDDKL3BL3OBDRFXVLIFA">
+      <manifest-digest sha256new="3EWI3S7455AQL6IZLG53WER47DKANJY4GDDKL3BL3OBDRFXVLIFA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-file-5.47-1-any.pkg.tar.zst" size="511919" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="5.47" released="2026-03-01" stability="stable" id="sha256new_Q36ZINCYLY2AD77RX7GJ5DY6L7QOJQACDE6NZLDJYH2OFFMFEZQA">
+      <manifest-digest sha256new="Q36ZINCYLY2AD77RX7GJ5DY6L7QOJQACDE6NZLDJYH2OFFMFEZQA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-file-5.47-1-any.pkg.tar.zst" size="500753" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="5.48" released="2026-06-11" stability="stable" id="sha256new_QNNXYRLRZHP2H6NM3HVF6QDTLJQXFVORTEX7UPMTGONV6QPB22BQ">
+      <manifest-digest sha256new="QNNXYRLRZHP2H6NM3HVF6QDTLJQXFVORTEX7UPMTGONV6QPB22BQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-file-5.48-1-any.pkg.tar.zst" size="517886" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="5.48" released="2026-06-11" stability="stable" id="sha256new_CTPSSRDDDFZTPBMYYHH3QUSL2YNPKJVHNWOQSAWESWBUQBT46CLA">
+      <manifest-digest sha256new="CTPSSRDDDFZTPBMYYHH3QUSL2YNPKJVHNWOQSAWESWBUQBT46CLA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-file-5.48-1-any.pkg.tar.zst" size="505912" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+  </group>
   <package-implementation distributions="Gentoo" package="sys-apps/file"/>
   <package-implementation package="file" main="/usr/bin/file"/>
   <entry-point binary-name="file" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrctJ4ACgkQWao5J8JOTh4FpQf/abuL
-KX4ZUo/F7B8c9+z67nheeCldIEm2b/Tr1Q7GZSozGrPTEjjHY4byZ9TBRZVkzYMigUdX9z3SWnw4
-26P1espdYEy1DCW8Q1mVNB67JwImUvm0OJ9LXw89LkakxyswmyYKZCl+RlSMZELtdPhM9DT27ZcF
-lrf4In5pwAtq19E/UvycFm0erwOa3JO+gw8L57sDewvawLM7oXL7tSU3ETZjkVg/beYMK0PzuY+D
-FYp0vMQ4LkKVLOjvEq9P6lAQNlLHqoBosTvxWamV9hge8LUkCRn4xYKGRxgBXHDFWgSC0aBL0ggY
-gHLrnfl4FKzMaFQa+ihay8kdfLzYFEfVZA==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrgmmwACgkQWao5J8JOTh7aXAf/SeaQ
++im33QvMbM9JKshytwMrrWpEQDKZHRO4fgEJkfxnxvMGAF5YQknJQeDBBBliK/HPwoNd7cvr8uWH
+fXq8GTFNPLjCBU5DAoZG0YGVtROBBocbaSH0Px3uJkrK2DMd6BrnaUW1uX4X7AJwAM/OqU+MvL4x
+DbtM3RzrManepnCLxN9Z2QlTURJxhrlO/H9XWvN+MMI8iRiSWp2nesUylrSYBbzzcRwg8yG8VUzr
+1WYEYj9MozfJN+NqDjwEjieNWxeU1NmLmju2Eu3n4VMQDYbMwhdYKowEOc1EM5i/ta9UYiIRHP3E
+tMOYXSCwv+BVF3zj7+7Pn8PM+KmnUfBzzA==
 
 -->

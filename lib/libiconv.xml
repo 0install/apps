@@ -27,9 +27,44 @@
         <requires interface="https://apps.0install.net/devel/libintl.xml" version="0.11">
           <environment insert="bin" name="PATH"/>
         </requires>
-      </command>      
+      </command>
       <manifest-digest sha256new="GW36LDQPOZ6EDCSCSVPUENEWB5T6SSBN7JLFSV6BGCML3NVX5RCA"/>
       <archive href="https://sourceforge.net/projects/gnuwin32/files/libiconv/1.8-1/libiconv-1.8-1-bin.zip" size="758762" type="application/zip"/>
+    </implementation>
+  </group>
+  <group license="LGPL-2.1-or-later AND GPL-3.0-or-later">
+    <command name="run" path="bin/iconv.exe">
+      <requires interface="https://apps.0install.net/devel/libintl.xml">
+        <environment insert="bin" name="PATH"/>
+      </requires>
+    </command>
+    <implementation arch="Windows-x86_64" version="1.18" released="2024-12-17" stability="stable" id="sha256new_KTY463XGPRERJX7ZLJRQ3TGCWZFS2YW7CJ2BDOCBD5PKNZFNTL7A">
+      <manifest-digest sha256new="KTY463XGPRERJX7ZLJRQ3TGCWZFS2YW7CJ2BDOCBD5PKNZFNTL7A"/>
+      <recipe>
+        <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libiconv-1.18-1-any.pkg.tar.zst" size="742765" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+        <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-iconv-1.18-1-any.pkg.tar.zst" size="97477" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.18" released="2024-12-17" stability="stable" id="sha256new_HROEZEHFJDAAIM34UO3OTKJZIB4GJF4AOPPM4P7PUKMJTQOUI4IA">
+      <manifest-digest sha256new="HROEZEHFJDAAIM34UO3OTKJZIB4GJF4AOPPM4P7PUKMJTQOUI4IA"/>
+      <recipe>
+        <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libiconv-1.18-1-any.pkg.tar.zst" size="733670" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+        <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-iconv-1.18-1-any.pkg.tar.zst" size="95466" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.19" released="2026-03-14" stability="stable" id="sha256new_XXHXPSVAU2FAXXLITHMTTQEMG5W5IL7CBVEXUGKKTZKQZB4GC5NQ">
+      <manifest-digest sha256new="XXHXPSVAU2FAXXLITHMTTQEMG5W5IL7CBVEXUGKKTZKQZB4GC5NQ"/>
+      <recipe>
+        <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libiconv-1.19-1-any.pkg.tar.zst" size="744750" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+        <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-iconv-1.19-1-any.pkg.tar.zst" size="97857" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+      </recipe>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.19" released="2026-03-14" stability="stable" id="sha256new_LF2YXHEPJSX43NGIG77T2IBQW4UITMHQE4MNHYQ3KXKGKX3MYE5Q">
+      <manifest-digest sha256new="LF2YXHEPJSX43NGIG77T2IBQW4UITMHQE4MNHYQ3KXKGKX3MYE5Q"/>
+      <recipe>
+        <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libiconv-1.19-1-any.pkg.tar.zst" size="734170" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+        <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-iconv-1.19-1-any.pkg.tar.zst" size="96133" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+      </recipe>
     </implementation>
   </group>
   <package-implementation distributions="Gentoo" package="dev-libs/libiconv"/>
@@ -39,11 +74,11 @@
   </entry-point>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrctJwACgkQWao5J8JOTh6rygf/aJwO
-1qqx7p92IAy3aeDWz6GJPRa3zP6ZiNsj/4okZqH5Kpz75ZMGsPSKnKTRGRps5g8XP/miZM16HlUC
-EDgoXcqn7KxVPSlLLY2UDnlqoQlQEbhJ5eTjZEvyMIPNfKsEQVg2Ip6LnxJdm/aNkLAco5dMnmYN
-sCP65IAtXTj1lmmzOBC4o/UOy5sVEw48A0jegGvUr9cDpnp12e32he8L1AcOZv2lAWUuTqj5vchU
-+yanGcoF7cyzGPTAZJ7ZZhd3SzU2bJfaw/Lc1aA6EMgEvKS512dShvsITDc3Z547DF5u2lBgNjoh
-LxlNbdIM2UcN46CDBDz037Otb6hci2+Ttg==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrgmmsACgkQWao5J8JOTh6/7wf+KCGw
+xFYJZvgqiIykzz+0Ne6fErdBzyXGHFHS8ST5qCsYc/HDfkgXO7OhkGrd73aeQYFDX+IdbqD1Qech
+vk9INU4KkCsn4WHAFEvebAQoxtVV/CuBni2Ai3wWKN/lNxKf97gPhnOJv4EbGx0VIFKs1phTmV3c
+seyRsrqBmj2mn4yex6aPim4XN14B0CPeehDPwypoCZ88bOJGzDDpSN/b4APoTK/gxiWzo2oXpQmj
+Z5KGcUdKSxpnG4qghzqXAHqTgpN2/u37sSmeLMJCcU8ZejiHMhMCo8uAu79noBpGTqNijt3Djp6T
+6/zQBLl7+NI8Sdcks/RzxzU94UAk+ZmrRw==
 
 -->

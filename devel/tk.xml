@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/devel/tk.xml">
+  <script xmlns="http://www.w3.org/1999/xhtml" src="../resources/xslt-polyfill.min.js"/>
+  <name>Tk</name>
+  <summary>graphical user interface toolkit for Tcl</summary>
+  <description>Tk is a graphical user interface toolkit that takes developing desktop applications to a higher level than conventional approaches. This package contains the wish windowing shell.</description>
+  <homepage>https://www.tcl-lang.org/</homepage>
+  <category>Development</category>
+
+  <package-implementation distributions="Debian" package="tk8.6" main="/usr/bin/wish8.6"/>
+  <package-implementation distributions="RPM" package="tk8" main="/usr/bin/wish8.6"/>
+  <package-implementation distributions="RPM Arch" package="tk" version="..!9" main="/usr/bin/wish"/>
+  <package-implementation distributions="Gentoo" package="dev-lang/tk" version="..!9" main="/usr/bin/wish"/>
+  <package-implementation distributions="MacPorts" package="tk" version="..!9" main="/opt/local/bin/wish"/>
+
+  <entry-point binary-name="wish" command="run"/>
+
+  <group license="TCL">
+    <requires interface="https://apps.0install.net/devel/tcl.xml">
+      <environment insert="bin" name="PATH"/>
+      <environment insert="lib/tcl8.6" mode="replace" name="TCL_LIBRARY"/>
+    </requires>
+    <command name="run" path="bin/wish.exe"/>
+    <implementation arch="Windows-x86_64" version="8.6.13" released="2024-04-03" stability="stable" id="sha256new_TWNKDGBSG2H77Q4S27O2RR24OX74GA5TRQ6XS2JSF46F4DT7Q3GA">
+      <manifest-digest sha256new="TWNKDGBSG2H77Q4S27O2RR24OX74GA5TRQ6XS2JSF46F4DT7Q3GA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-tk-8.6.13-1-any.pkg.tar.zst" size="2067294" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="8.6.13" released="2024-04-03" stability="stable" id="sha256new_OMBHH5I4LLM6I2WN7AVWXFXTFAXTBXVJV5DGNDDRU5DBEBMTPPCQ">
+      <manifest-digest sha256new="OMBHH5I4LLM6I2WN7AVWXFXTFAXTBXVJV5DGNDDRU5DBEBMTPPCQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-tk-8.6.13-1-any.pkg.tar.zst" size="2032926" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="8.6.16" released="2025-04-16" stability="stable" id="sha256new_NXOLESHN75364K25DTD4JN5JWEZSMWBAC65RTGRZ5OYSVBRL6OMQ">
+      <manifest-digest sha256new="NXOLESHN75364K25DTD4JN5JWEZSMWBAC65RTGRZ5OYSVBRL6OMQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-tk-8.6.16-1-any.pkg.tar.zst" size="2107925" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="8.6.16" released="2025-04-16" stability="stable" id="sha256new_5WMCRXJCGWEJNZMEZ2QNN3G3JTRQLJDQWJVCNJ65OQEKXWRIGRAA">
+      <manifest-digest sha256new="5WMCRXJCGWEJNZMEZ2QNN3G3JTRQLJDQWJVCNJ65OQEKXWRIGRAA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-tk-8.6.16-1-any.pkg.tar.zst" size="2065505" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="8.6.17" released="2025-11-07" stability="stable" id="sha256new_65VAVYLZFP5TPVUF3TJIGHKKKAASQO7DAEKS7NBWFDMDC4JBATAA">
+      <manifest-digest sha256new="65VAVYLZFP5TPVUF3TJIGHKKKAASQO7DAEKS7NBWFDMDC4JBATAA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-tk-8.6.17-2-any.pkg.tar.zst" size="2120982" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="8.6.17" released="2025-11-07" stability="stable" id="sha256new_66DNGXAB54FKACHYMQ7T4ZEJ5ECLEM66SGXKTJ4X2O4XO2ZNGP6Q">
+      <manifest-digest sha256new="66DNGXAB54FKACHYMQ7T4ZEJ5ECLEM66SGXKTJ4X2O4XO2ZNGP6Q"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-tk-8.6.17-2-any.pkg.tar.zst" size="2068332" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="8.6.18" released="2026-06-03" stability="stable" id="sha256new_CGOLNGIH4IT47DAE5R6HRHJMM5PIMQ5UMRUGFW4FTYZVOJ6OH6MQ">
+      <manifest-digest sha256new="CGOLNGIH4IT47DAE5R6HRHJMM5PIMQ5UMRUGFW4FTYZVOJ6OH6MQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-tk-8.6.18-1-any.pkg.tar.zst" size="2122449" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="8.6.18" released="2026-06-03" stability="stable" id="sha256new_BBNCLV4UNAVX4P7JROT7FKWH3DDYZDE7IUXG3UW3OT5INDM4NR6Q">
+      <manifest-digest sha256new="BBNCLV4UNAVX4P7JROT7FKWH3DDYZDE7IUXG3UW3OT5INDM4NR6Q"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-tk-8.6.18-1-any.pkg.tar.zst" size="2070859" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrgmmwACgkQWao5J8JOTh4Akgf7BOJx
+sel/H5MtBnTDem2S+hYJfX2ZP4b/5C7yU3mfgn1jr/etxJCcqGXjRbxRWNBLy7FR5UvAN6kDWwwc
+I1ByZhrfrgS9uqq+77e4Pw4/y1Bt3oqQ/zi+HoWmCDd2nsT0Lp/eq/rR7JEkFWtg24+WQlIw+Lmz
+GvYoAkvFVYvhDaXj7339B6AnXtXp8YT2a6tol9WHoN2L6BiMKLABF3PXCgiERQgw5OzQK2PLkYm8
+fXKiYZMp7QozXvKTywKTbbWoHHBlfIi62yg+C+RlMYKauvdqasrFmsC/RFrO9CBJB3abpXSRf5zK
+h/QDVNXZAJBhoVdlhkvtSitvSg92rGTNaw==
+
+-->

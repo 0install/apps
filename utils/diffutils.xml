@@ -34,6 +34,23 @@ You can use the sdiff command to merge two files interactively.
     <manifest-digest sha256new="LEKJAJDW6L2OJ7D2GKOCEOWQEAXRHVCDUR6GADEPHPD7GPBLIS2A"/>
     <archive href="https://sourceforge.net/projects/gnuwin32/files/diffutils/2.8.7-1/diffutils-2.8.7-1-bin.zip" size="456027" type="application/zip"/>
   </implementation>
+  <group license="GPL-3.0-or-later">
+    <requires interface="https://apps.0install.net/devel/libintl.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/diff.exe"/>
+    <command name="cmp" path="bin/cmp.exe"/>
+    <command name="diff3" path="bin/diff3.exe"/>
+    <command name="sdiff" path="bin/sdiff.exe"/>
+    <implementation arch="Windows-x86_64" version="3.12" released="2025-04-18" stability="stable" id="sha256new_AD2IKNNO2Y2JKYSZ7CWNVTBIKXNYLTQ4ESHNCNJI3XGTOMLILPTA">
+      <manifest-digest sha256new="AD2IKNNO2Y2JKYSZ7CWNVTBIKXNYLTQ4ESHNCNJI3XGTOMLILPTA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-diffutils-3.12-1-any.pkg.tar.zst" size="455048" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="3.12" released="2025-04-18" stability="stable" id="sha256new_LHT35DNIK4R5L6TTCWMLB3JSCRDOENEK5FEZU35K7IJYYXLY5N7Q">
+      <manifest-digest sha256new="LHT35DNIK4R5L6TTCWMLB3JSCRDOENEK5FEZU35K7IJYYXLY5N7Q"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-diffutils-3.12-1-any.pkg.tar.zst" size="449974" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+  </group>
   <package-implementation distributions="Gentoo" package="sys-apps/diffutils"/>
   <package-implementation package="diffutils"/>
   <entry-point binary-name="diff" command="run">
@@ -66,11 +83,11 @@ You can use the sdiff command to merge two files interactively.
   </entry-point>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrctJ0ACgkQWao5J8JOTh7U8Af/QAY1
-5qJx0pL7b60YL/tgV9Dn4vx1mmGFZD/OAM8lb1qI+sWfLB2oNcYC/XI7ycN5eytSBbuzep9R+y8a
-lXhgyvRg4P+VEc0GPuSAHzA8U8VFxRCz8AyG1iS7MM7QGn8OzQkAIR4RnD29Pk5JvhyHv6FL4oSL
-4oq1nG0e0J8RXUpnOQ8oAcU+Z1rUdyLQrOQB/nAWmImlpKW4AkIbnI4lENacBUZlulJRQHMLSR8t
-tsHpovRyslZRosk/6no7o0ZhiuOlptZYxnBLdML6tbeY/zzwqflxIK7hvppRj3SVM7hMJatXkro4
-frCO2eGYzO2OHlbRaNUPDbF3H0g6RoVCeg==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrgmmwACgkQWao5J8JOTh7MAgf+OUGc
+wu9PrR9GUORN/rr+ZXhNyglJZiGhFd4COmXourqwDkMqMpWX8pBBkFf5yuWIY0iQtNYvUnnjwRRX
+RQ0yaeH2Z7JYPLILp5XwaG3I01vcXYj4B938f9uy8Fm5+rbRBnGz3cLIQ2VotK9HXebxzoHRjIys
+FhXZSDRxvoPtchQXGb2hUyODIEyT3hEpKeVT6WlE0uRyCpg3i7oHhah99LZimb7oMd5U7M5x3QwY
+qsls53Ye9p9AoCcM7KTMNnH3JVm/aR27QrHqIc1V1NDuwupz1CK3VJHCk523C8oEcagraJcflZ1S
+3IrUDh8Q/m7Kv9xXLBeIKF4lw3rhpKLWDQ==
 
 -->

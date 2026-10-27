@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
-<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:dc="http://purl.org/dc/elements/1.1/" uri="https://apps.0install.net/lib/png16-0.xml">
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/lib/png16-0.xml">
   <script xmlns="http://www.w3.org/1999/xhtml" src="../resources/xslt-polyfill.min.js"/>
   <name>libpng16-0</name>
   <summary>A collection of routines used to create PNG format graphics</summary>
@@ -20,41 +20,6 @@ using libpng.</description>
   <package-implementation package="libpng1.6" distributions="Debian"/>
   <package-implementation package="graphics/png" distributions="Ports"/>
 
-  <group license="Zlib">
-    <requires interface="https://apps.0install.net/lib/gcc-libs.xml">
-      <environment insert="bin" name="PATH"/>
-    </requires>
-    <requires interface="https://apps.0install.net/lib/zlib.xml">
-      <environment insert="bin" name="PATH"/>
-    </requires>
-    <command name="run" path="bin/pngfix.exe"/>
-    <command name="png-fix-itxt" path="bin/png-fix-itxt.exe"/>
-    <command name="libpng16-config" path="bin/libpng16-config"/>
-    <command name="libpng-config" path="bin/libpng-config"/>
-
-    <group released="2018-12-03" version="1.6.36-1">
-      <implementation arch="Windows-x86_64" id="sha1new=e3c20cee2dff3e6330542739374811f680da0c96">
-        <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-libpng-1.6.36-1-any.pkg.tar.xz" size="298024"/>
-      </implementation>
-      <implementation arch="Windows-i686" id="sha1new=8944d6543025943fbaf6c501cc5070cb71ca3707">
-        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-libpng-1.6.36-1-any.pkg.tar.xz" size="300048"/>
-      </implementation>
-    </group>
-    <group version="1.6.37-3">
-      <dc:creator>Alexey Pavlov &lt;alexpux@gmail.com&gt;</dc:creator>
-      <implementation arch="Windows-x86_64" id="sha1new=0d1541417b6859b9e1b2543e03875c678b9d2271" released="2020-05-06">
-        <dc:available>2019-04-23</dc:available>
-        <manifest-digest sha256new="3XMBWJUUBNLOTACQ3VXF6XRDTCVTZW6QHRCKPZN4LRHYYVBLNZ4A"/>
-        <archive extract="mingw64" href="http://repo.msys2.org/mingw/x86_64/mingw-w64-x86_64-libpng-1.6.37-3-any.pkg.tar.xz" size="355436"/>
-      </implementation>
-      <implementation arch="Windows-i686" id="sha1new=613bb705b38ebd634991de362b94ef00db50dc8d" released="2020-05-06">
-        <dc:available>2019-04-23</dc:available>
-        <manifest-digest sha256new="BKBOVWAUP5DDGSFQYCYEJRNZM4J5T4Z6W352UCSPF56X7HTGNZLQ"/>
-        <archive extract="mingw32" href="http://repo.msys2.org/mingw/i686/mingw-w64-i686-libpng-1.6.37-3-any.pkg.tar.xz" size="355156"/>
-      </implementation>
-    </group>
-  </group>
-
   <entry-point binary-name="pngfix" command="run">
     <needs-terminal/>
     <name>pngfix</name>
@@ -66,13 +31,132 @@ using libpng.</description>
     <summary>Fixes a PNG file written with libpng-1.6.0 or 1.6.1 that has one or more uncompressed iTXt chunks.</summary>
   </entry-point>
 
+  <group license="libpng-2.0">
+    <requires interface="https://apps.0install.net/lib/zlib.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/pngfix.exe"/>
+    <command name="png-fix-itxt" path="bin/png-fix-itxt.exe"/>
+    <implementation arch="Windows-x86_64" version="1.6.46" released="2025-01-27" stability="stable" id="sha256new_VOQORGTZ26EUQ4AHPRQ22IRH7B6F4BPW3MKG52FZRVNYT5IDSW2A">
+      <manifest-digest sha256new="VOQORGTZ26EUQ4AHPRQ22IRH7B6F4BPW3MKG52FZRVNYT5IDSW2A"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libpng-1.6.46-1-any.pkg.tar.zst" size="403440" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.6.46" released="2025-01-27" stability="stable" id="sha256new_SQIM6AVKK5J3DU4ZXVOHQZBFTIQFCM2ONGTXIELQNUZB467IYBJA">
+      <manifest-digest sha256new="SQIM6AVKK5J3DU4ZXVOHQZBFTIQFCM2ONGTXIELQNUZB467IYBJA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libpng-1.6.46-1-any.pkg.tar.zst" size="415505" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.6.47" released="2025-02-21" stability="stable" id="sha256new_PF72ZZZY3C4BDHGBD7STRIA57UQ7TU3E7JNZZWYYZ443OQOAKXGQ">
+      <manifest-digest sha256new="PF72ZZZY3C4BDHGBD7STRIA57UQ7TU3E7JNZZWYYZ443OQOAKXGQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libpng-1.6.47-1-any.pkg.tar.zst" size="395434" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.6.47" released="2025-02-21" stability="stable" id="sha256new_F6CQL4KSCHXZMRVDUJZOVL2MIBQOYBQDQNPESOGYVFGAUCB3V5ZA">
+      <manifest-digest sha256new="F6CQL4KSCHXZMRVDUJZOVL2MIBQOYBQDQNPESOGYVFGAUCB3V5ZA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libpng-1.6.47-1-any.pkg.tar.zst" size="406651" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.6.48" released="2025-05-01" stability="stable" id="sha256new_XOS2HU4TE3HCS7ES6YGB57PWGEWOIJMM25W67T2AJHGL3ONSDJBA">
+      <manifest-digest sha256new="XOS2HU4TE3HCS7ES6YGB57PWGEWOIJMM25W67T2AJHGL3ONSDJBA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libpng-1.6.48-1-any.pkg.tar.zst" size="400954" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.6.48" released="2025-05-01" stability="stable" id="sha256new_7OL75RKUGPBDFJTBSNKSI5FYMBVXTCHONA3NCGLVZ2IZTEP5MMLA">
+      <manifest-digest sha256new="7OL75RKUGPBDFJTBSNKSI5FYMBVXTCHONA3NCGLVZ2IZTEP5MMLA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libpng-1.6.48-1-any.pkg.tar.zst" size="406864" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.6.49" released="2025-06-13" stability="stable" id="sha256new_5FVZB3UYRJDQLCG45DKF5HM72VUJKKKZ7HKMOADVPGPCZUGZJJZA">
+      <manifest-digest sha256new="5FVZB3UYRJDQLCG45DKF5HM72VUJKKKZ7HKMOADVPGPCZUGZJJZA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libpng-1.6.49-1-any.pkg.tar.zst" size="401409" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.6.49" released="2025-06-13" stability="stable" id="sha256new_ZPSV5WYD5QFV2EWNCI234RCZFW3DYQ3MUYL6IAG366Y47EVX25XQ">
+      <manifest-digest sha256new="ZPSV5WYD5QFV2EWNCI234RCZFW3DYQ3MUYL6IAG366Y47EVX25XQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libpng-1.6.49-1-any.pkg.tar.zst" size="406850" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.6.50" released="2025-07-06" stability="stable" id="sha256new_B33S3HXDVJM7PF66UNJMYR77QQWMA27R3XMM2QDTNSR6QG7G3MRQ">
+      <manifest-digest sha256new="B33S3HXDVJM7PF66UNJMYR77QQWMA27R3XMM2QDTNSR6QG7G3MRQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libpng-1.6.50-1-any.pkg.tar.zst" size="401642" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.6.50" released="2025-07-06" stability="stable" id="sha256new_CZNMAW5XEUAZQY5BASJ4JNOGLYAMUVS5QZOT5Q4KYZ6PJPKFOEVA">
+      <manifest-digest sha256new="CZNMAW5XEUAZQY5BASJ4JNOGLYAMUVS5QZOT5Q4KYZ6PJPKFOEVA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libpng-1.6.50-1-any.pkg.tar.zst" size="406782" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.6.51" released="2025-11-22" stability="stable" id="sha256new_UVWPBC3LE5IJJ2VOFWEAEPYWE222H3HGZ2PTRBDS3KRLK3KIUT6A">
+      <manifest-digest sha256new="UVWPBC3LE5IJJ2VOFWEAEPYWE222H3HGZ2PTRBDS3KRLK3KIUT6A"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libpng-1.6.51-1-any.pkg.tar.zst" size="404118" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.6.51" released="2025-11-22" stability="stable" id="sha256new_GD4UWPTYNCB6OMT2BHDKJMPIE7C6HAYY3YNNXBX4J7EVXQYXURGQ">
+      <manifest-digest sha256new="GD4UWPTYNCB6OMT2BHDKJMPIE7C6HAYY3YNNXBX4J7EVXQYXURGQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libpng-1.6.51-1-any.pkg.tar.zst" size="409051" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.6.52" released="2025-12-04" stability="stable" id="sha256new_QUQ4GOXQBWWE75RZOSVYDYYVVBTDCL5BKAG2IZFIOIKN3RKHKBQQ">
+      <manifest-digest sha256new="QUQ4GOXQBWWE75RZOSVYDYYVVBTDCL5BKAG2IZFIOIKN3RKHKBQQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libpng-1.6.52-1-any.pkg.tar.zst" size="404103" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.6.52" released="2025-12-04" stability="stable" id="sha256new_SNRVYQJTYCDM2O3AY45TUR346HJYDWZ5ERAEDMAMVAYBZ5F7LG3Q">
+      <manifest-digest sha256new="SNRVYQJTYCDM2O3AY45TUR346HJYDWZ5ERAEDMAMVAYBZ5F7LG3Q"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libpng-1.6.52-1-any.pkg.tar.zst" size="409437" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.6.53" released="2025-12-06" stability="stable" id="sha256new_SWYAGDP5EGHFEMECRZZIY3ZB6WYPVCM2GGYHOON4NBUJ4NE73IMQ">
+      <manifest-digest sha256new="SWYAGDP5EGHFEMECRZZIY3ZB6WYPVCM2GGYHOON4NBUJ4NE73IMQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libpng-1.6.53-1-any.pkg.tar.zst" size="404109" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.6.53" released="2025-12-06" stability="stable" id="sha256new_KBMN3GDLPNSMZDSCSEFGF3ZEJ2LJRDDSP2C324HCAI26AFMCFT3A">
+      <manifest-digest sha256new="KBMN3GDLPNSMZDSCSEFGF3ZEJ2LJRDDSP2C324HCAI26AFMCFT3A"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libpng-1.6.53-1-any.pkg.tar.zst" size="409336" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.6.54" released="2026-01-16" stability="stable" id="sha256new_YZGZVHTV6D5SUHMIJAJK6AQLXHFGYFN6FL7LIVZ5FWK3GTYN4XSQ">
+      <manifest-digest sha256new="YZGZVHTV6D5SUHMIJAJK6AQLXHFGYFN6FL7LIVZ5FWK3GTYN4XSQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libpng-1.6.54-1-any.pkg.tar.zst" size="403730" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.6.54" released="2026-01-16" stability="stable" id="sha256new_VJ5CGCCJ4I776IZOUXTZ2DGOUZ2JYNNMGUT3VMANU4NT4DHNE3EA">
+      <manifest-digest sha256new="VJ5CGCCJ4I776IZOUXTZ2DGOUZ2JYNNMGUT3VMANU4NT4DHNE3EA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libpng-1.6.54-1-any.pkg.tar.zst" size="409224" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.6.55" released="2026-02-10" stability="stable" id="sha256new_W4444QXM2FJE3RLVR63ADIXJG3KLFGQ3BXC3CDZN2DINUQSFGOLQ">
+      <manifest-digest sha256new="W4444QXM2FJE3RLVR63ADIXJG3KLFGQ3BXC3CDZN2DINUQSFGOLQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libpng-1.6.55-1-any.pkg.tar.zst" size="404459" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.6.55" released="2026-02-10" stability="stable" id="sha256new_MOGQUPJUPCNNGLDSWHCKZICBGK4R2CP4O64YV5HTAC4RRH4FYSMQ">
+      <manifest-digest sha256new="MOGQUPJUPCNNGLDSWHCKZICBGK4R2CP4O64YV5HTAC4RRH4FYSMQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libpng-1.6.55-1-any.pkg.tar.zst" size="409977" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.6.56" released="2026-03-26" stability="stable" id="sha256new_5LQWJE2DICCGBUXMP5QUZ5HPBJ3R6HH7DBO6WVZUCTZPG5NAPKDQ">
+      <manifest-digest sha256new="5LQWJE2DICCGBUXMP5QUZ5HPBJ3R6HH7DBO6WVZUCTZPG5NAPKDQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libpng-1.6.56-1-any.pkg.tar.zst" size="406346" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.6.56" released="2026-03-26" stability="stable" id="sha256new_GBBSVMEFP6FEL5XWW7X3QBMXHT7UVVREN3XMBLKRMTQCYTYODY6A">
+      <manifest-digest sha256new="GBBSVMEFP6FEL5XWW7X3QBMXHT7UVVREN3XMBLKRMTQCYTYODY6A"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libpng-1.6.56-1-any.pkg.tar.zst" size="402363" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.6.57" released="2026-04-09" stability="stable" id="sha256new_7UOEF7C5PKEINNYPGM6NBYYFHSKMHJGGYHYZO73336XWTAKMGP6Q">
+      <manifest-digest sha256new="7UOEF7C5PKEINNYPGM6NBYYFHSKMHJGGYHYZO73336XWTAKMGP6Q"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libpng-1.6.57-1-any.pkg.tar.zst" size="406810" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.6.57" released="2026-04-09" stability="stable" id="sha256new_DT4ZYM5TCPHQUXR3DFGFLTHFV7G3Q6ZUH3QPLKGRW4VPH7AYXYXQ">
+      <manifest-digest sha256new="DT4ZYM5TCPHQUXR3DFGFLTHFV7G3Q6ZUH3QPLKGRW4VPH7AYXYXQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libpng-1.6.57-1-any.pkg.tar.zst" size="402647" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.6.58" released="2026-04-17" stability="stable" id="sha256new_KPMPDXH6Y4C2UB23MHJK3RORIQLIN6I36BUS7WSXKN6QM6SCAH4Q">
+      <manifest-digest sha256new="KPMPDXH6Y4C2UB23MHJK3RORIQLIN6I36BUS7WSXKN6QM6SCAH4Q"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libpng-1.6.58-1-any.pkg.tar.zst" size="406891" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.6.58" released="2026-04-17" stability="stable" id="sha256new_KKAH3WIIQVCK7COARZSKIZZIQZT7LHNUIBS7D6K463GTNWG6J3OA">
+      <manifest-digest sha256new="KKAH3WIIQVCK7COARZSKIZZIQZT7LHNUIBS7D6K463GTNWG6J3OA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libpng-1.6.58-1-any.pkg.tar.zst" size="402637" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.6.59" released="2026-10-23" stability="stable" id="sha256new_DWLXCPS7MWPXKZWNTGHTWOYBDBRPH6P2HEC2EPVYJL5PGAIG6OVQ">
+      <manifest-digest sha256new="DWLXCPS7MWPXKZWNTGHTWOYBDBRPH6P2HEC2EPVYJL5PGAIG6OVQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libpng-1.6.59-2-any.pkg.tar.zst" size="401066" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.6.59" released="2026-10-23" stability="stable" id="sha256new_V4UOMABE3VO5YDVWCG774YVDUSTROFHP2JXAR5RA2BRSKXDIDWKQ">
+      <manifest-digest sha256new="V4UOMABE3VO5YDVWCG774YVDUSTROFHP2JXAR5RA2BRSKXDIDWKQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libpng-1.6.59-2-any.pkg.tar.zst" size="398861" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+  </group>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrctJwACgkQWao5J8JOTh6vDwf/TfR5
-IoLFlNFjY0k0CqnIdyv+PhlIY03m19HbC0WbHn+yrzUAhoNXADjPK54dPCwGVaTY9ckyAqMu+USY
-Ua7rW2dHs68Nbl+HYyzrZXjjvhvGFSBro6z2MNTqRhYeEqH9K8QozydeQ7kOfCno/Bm4u0VTsvAm
-zEbtOkMgTYztB+a0YY+o2jL1AbGfeluEFTb4zGp6d8mQ1ikRra2jkclKrfL7PI1xVjUDhQ5i+0B6
-UN5zoC5Ro9A4halgok0cpzZXnnzVhT2+sId2G4N1AzcG9QhxDxDhbvtbJRRfZ8olVN46l1l8z5Qs
-fJ9w1/BD67qsgGZkCXMlSLWhgG2F6ZeK7w==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrgmmsACgkQWao5J8JOTh7HmQgAvCsZ
+Gdjp6okF2A2ugZ+6IZ6xV0PjxUsZs+9EQVQMksbtxkI8v0iT/XqZmJZ6BKm2i7UeN90WcKcZs6lV
+eG9OnWQx90PUSKzmOvPGPu1IR8UMXN3ZtQgQeECQHM4pSHEM5hMv1b1PYlt4/h++0uC3rQDhSaDX
+06UbCbjA4x6hWPYnSHWV/XkdkRJIiZwlVH1VL4qQ7154v4DxR+vflSt5g/m3GJ8x1E6xiNbHZJ9X
+hxpZvQF93e302gDkCNg4QNjSqL165MC98CUfWVaIZ9NW8nGXZHIrwiSerikQNEst7kwaJc9i2hGe
+qyJ5jrZHwCdnsjBmBrBCuv92zbuwlOsBDA==
 
 -->

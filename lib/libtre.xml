@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/lib/libtre.xml">
+  <script xmlns="http://www.w3.org/1999/xhtml" src="../resources/xslt-polyfill.min.js"/>
+  <name>TRE</name>
+  <summary>POSIX-compliant regular expression library</summary>
+  <description>TRE is a lightweight, robust and efficient POSIX compliant regexp matching library with some exciting features such as approximate (fuzzy) matching.</description>
+  <homepage>https://github.com/laurikari/tre</homepage>
+  <category>Development</category>
+
+  <package-implementation distributions="Debian" package="libtre5"/>
+  <package-implementation distributions="RPM" package="tre"/>
+  <package-implementation distributions="RPM" package="libtre5"/>
+  <package-implementation distributions="Arch" package="tre"/>
+  <package-implementation distributions="Gentoo" package="dev-libs/tre"/>
+  <package-implementation distributions="MacPorts" package="tre"/>
+
+  <group license="BSD-2-Clause">
+    <requires interface="https://apps.0install.net/devel/libintl.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <implementation arch="Windows-x86_64" version="0.9.0" released="2025-10-04" stability="stable" id="sha256new_SKYUELTVYYQPJSRRKU65S4TBISL6U3DAKDVVQKOBD3TMF6HNBEDQ">
+      <manifest-digest sha256new="SKYUELTVYYQPJSRRKU65S4TBISL6U3DAKDVVQKOBD3TMF6HNBEDQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-libtre-0.9.0-2-any.pkg.tar.zst" size="82227" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="0.9.0" released="2025-10-04" stability="stable" id="sha256new_Z5DNCAAOQXXISMJ7Q3DODUZ6MPC5Z6FNDYPOKAKKRT6KBMXY3BHA">
+      <manifest-digest sha256new="Z5DNCAAOQXXISMJ7Q3DODUZ6MPC5Z6FNDYPOKAKKRT6KBMXY3BHA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-libtre-0.9.0-2-any.pkg.tar.zst" size="76997" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrgmmsACgkQWao5J8JOTh7ZEAf+LgLR
+biAVaCY/4bazWWlReXdUSl/Y8COqC3a6Tvh39FT8nPpncDoW+0NN3bEwDOyuKsxoYp84tdf4HkkS
+yTFGLfxhFbV2PuhZY5MmazXuyfV9N67r03oDTPYg1cuGgC10dJ2aUseUG7qUiy9I5YhpqoDG7I82
+jW0AjTApccuZAN7BHdgasySqtEAV+WE+35m5qO+N9OI8gVM+yfN9szs7+COccpCuuJJ4ZPqF5ckw
+/ckKTGqXcYSqIjz9IdHrxhBS8gWNXJyvlbqxV1Xk/o4Adgd9FAbsXeAtqJDsiMuTaB8iKzN45dpG
+me+4Ghmcwl+9+lX5S/vgeicEEtLb3HVCXQ==
+
+-->

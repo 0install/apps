@@ -38,6 +38,37 @@
       <archive href="https://sourceforge.net/projects/ezwinports/files/grep-2.10-w32-bin.zip" size="1476889" type="application/zip"/>
     </implementation>
   </group>
+  <group license="GPL-3.0-or-later">
+    <requires interface="https://apps.0install.net/devel/libintl.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/pcre2.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/grep.exe"/>
+    <command name="egrep" path="bin/grep.exe">
+      <arg>-E</arg>
+    </command>
+    <command name="fgrep" path="bin/grep.exe">
+      <arg>-F</arg>
+    </command>
+    <implementation arch="Windows-x86_64" version="3.11" released="2023-05-20" stability="stable" id="sha256new_P4MNYVPEGH45Y7PZ2KCGNJJRVXY6DE3AEDTBBU7JA5CZMCNG7JBQ">
+      <manifest-digest sha256new="P4MNYVPEGH45Y7PZ2KCGNJJRVXY6DE3AEDTBBU7JA5CZMCNG7JBQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-grep-3.11-1-any.pkg.tar.zst" size="324461" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="3.11" released="2023-05-20" stability="stable" id="sha256new_VMVG3NYKAEV2NY6XA62PG3QKHUNOIUTHLP5DOBEFX3SPYUQDJILQ">
+      <manifest-digest sha256new="VMVG3NYKAEV2NY6XA62PG3QKHUNOIUTHLP5DOBEFX3SPYUQDJILQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-grep-3.11-1-any.pkg.tar.zst" size="320680" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="3.12" released="2025-05-25" stability="stable" id="sha256new_XU6ET6LV2VFJX6BY5JM5IDBARRI6SD2DXGV62QKMGA6D65CD2QEQ">
+      <manifest-digest sha256new="XU6ET6LV2VFJX6BY5JM5IDBARRI6SD2DXGV62QKMGA6D65CD2QEQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-grep-3.12-1-any.pkg.tar.zst" size="332922" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="3.12" released="2025-05-25" stability="stable" id="sha256new_L2TULFGCAOC4I36K26BQXKHHFZLF2HGI4LC3QVQVO744U3RCQH6A">
+      <manifest-digest sha256new="L2TULFGCAOC4I36K26BQXKHHFZLF2HGI4LC3QVQVO744U3RCQH6A"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-grep-3.12-1-any.pkg.tar.zst" size="324710" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+  </group>
   <package-implementation package="grep" main="/bin/grep"/>
   <package-implementation distributions="Gentoo" package="sys-apps/grep"/>
   <entry-point binary-name="grep" command="run"/>
@@ -53,11 +84,11 @@
   </entry-point>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrctJ0ACgkQWao5J8JOTh48gAf+ODfd
-UthlS4hW9UUMJCAAF+44OWjDi4Rx6BD9kTPxHAngjK6xawCPHgdVjNzquxq4oFpHCJEIUzhNZlvB
-8+tJ4twoATPUiJA7SIzWFbNNToQdEmO9NUPlUSqfBPiNpARK9iCijWlfHHOjw1YYL6rjlGm6T+/P
-SYQ+tTpzP50Yw1kWEC7Rs1lFo2VYCdcCpj+muworXiGGktvn7qpaB6l7iOSWfdbmrP6cTbzK6V7s
-Xh+pmlPp2NEO8693oxHnpcfTilLtVa6ek1W/xBUJn2db9MYKPBRLkVO86IF3AiWwdcpvr2pWxCSe
-ckDMz8Qbil0vFfaV4aTJw90BNzWqsvCOAA==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrgmmsACgkQWao5J8JOTh5++QgAmh25
+h92M3jewjCBI7jRYM5VZYfUvt35hMTsxMEhD/J7c7E0oWsgcBb4Scz7zrbCFXW5q/Nj2bgh8/7+5
+vQQ7uCh7MFWyCrINZmabVZCxug3YvJpVp0Aok8iZ7AXZ+PGnmPen/X4gykAjkgoCpp+7jqNzGqEg
+Uwh+eDd9MKZopqLLedPqd5zqkO7uer3Q6DgewlnLhbEq4ImTfOvSkkvIGSOGDQtbyVqBanx1Fvga
+bwjNTINZ48a+SfHW+YGcoJIHI7CG2DI2/Qa9kKn1qoG1if4eECrylmG0aS+hcDxKPx+oQY8uqv7x
+4IVLmvlbJ7nFyHquRyNF9f5MAw04BLIjKA==
 
 -->

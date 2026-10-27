@@ -24,12 +24,47 @@
     <manifest-digest sha256new="ICPRNY33GO7DTEB6EMALMXXTW744I52P2UBWVBXBDYGNLKYSW43Q"/>
     <archive href="https://sourceforge.net/projects/ezwinports/files/ncurses-5.9-w32-bin.zip" size="10698909" type="application/zip"/>
   </implementation>
+  <group license="MIT">
+    <requires interface="https://apps.0install.net/lib/cc-libs.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/pcre2.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/libwinpthread.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <implementation arch="Windows-x86_64" version="6.5.20241228" released="2025-01-08" stability="stable" id="sha256new_U6COP2PTLSVMHNEFKWYHY3EYMGNH4GGRVPVLWEEKXMEMYPFTK5SQ">
+      <manifest-digest sha256new="U6COP2PTLSVMHNEFKWYHY3EYMGNH4GGRVPVLWEEKXMEMYPFTK5SQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-ncurses-6.5.20241228-3-any.pkg.tar.zst" size="1789567" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="6.5.20241228" released="2025-01-08" stability="stable" id="sha256new_RHWPYNE5YGQMFSIINVDD2I2SX7FX6JIH7DZ7DAATNMZQPADZGBVQ">
+      <manifest-digest sha256new="RHWPYNE5YGQMFSIINVDD2I2SX7FX6JIH7DZ7DAATNMZQPADZGBVQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-ncurses-6.5.20241228-3-any.pkg.tar.zst" size="1707734" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="6.5.20250927" released="2025-10-04" stability="stable" id="sha256new_W32KBYQEWC6RRQTGB72URBFLGQ4UYXEM6C4KJBJN5PGTRFMK3ORA">
+      <manifest-digest sha256new="W32KBYQEWC6RRQTGB72URBFLGQ4UYXEM6C4KJBJN5PGTRFMK3ORA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-ncurses-6.5.20250927-2-any.pkg.tar.zst" size="1838609" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="6.5.20250927" released="2025-10-04" stability="stable" id="sha256new_K4FWS6MPID64AGUDISXAZ32SEN2JZZ4XTRIQX5OXD7ZIHGN66EUA">
+      <manifest-digest sha256new="K4FWS6MPID64AGUDISXAZ32SEN2JZZ4XTRIQX5OXD7ZIHGN66EUA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-ncurses-6.5.20250927-2-any.pkg.tar.zst" size="1747279" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="6.6" released="2026-04-10" stability="stable" id="sha256new_Q7ESUDVA4Y3NMNUEAV4K23TRGRUIGYVAQLBWTHNSTMYIBT32LRPQ">
+      <manifest-digest sha256new="Q7ESUDVA4Y3NMNUEAV4K23TRGRUIGYVAQLBWTHNSTMYIBT32LRPQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-ncurses-6.6-4-any.pkg.tar.zst" size="1605818" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="6.6" released="2026-04-10" stability="stable" id="sha256new_PCJQ3KHQ7KJX7CV3B7ND5EVUCR5GVY23DXYWSHSFVS42QU3ENPRA">
+      <manifest-digest sha256new="PCJQ3KHQ7KJX7CV3B7ND5EVUCR5GVY23DXYWSHSFVS42QU3ENPRA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-ncurses-6.6-4-any.pkg.tar.zst" size="1554000" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+  </group>
   <package-implementation package="ncurses"/>
   <package-implementation package="sys-libs/ncurses" distributions="Gentoo"/>
   <package-implementation package="ncurses-libs" distributions="RPM"/>
   <entry-point command="captoinfo" binary-name="captoinfo">
     <name xml:lang="en">captoinfo</name>
-    <summary xml:lang="en"> a termcap conversion tool</summary>
+    <summary xml:lang="en">a termcap conversion tool</summary>
   </entry-point>
   <entry-point command="clear" binary-name="clear">
     <needs-terminal/>
@@ -76,11 +111,11 @@
   </entry-point>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrctJwACgkQWao5J8JOTh5Khwf/UsjT
-jwBZtDk76K3HFIx5ZscVPijzB8PWaPU/moUB2pCC2o9nzDZ8Aqvs1pZ6kwqDmusxLS3DTKbmRjLH
-l9kxuzW7SZ78uGLSYYCx1JnDQOPFng1WX/eEFa5Jmr3Heldfq73Gmggdh6oYB2n811cGzEmiLFRX
-PxrCbD72IakqFr2B5TooJkQnWLur5zgqpOfd5Noy+gTfb/diN6zaEw6NquXQU3Xvvz5/H+8gw+q/
-5EikweZzFlCFhXWecQFedQ6Y/ot2GevD5lvD7RoiAVgZY3Ln87JHAHv/gH8RQlqswviPYme+wHc3
-q1tTYXkWNLXOgrD1agCetcgVXYjnBwPe+w==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrgmmsACgkQWao5J8JOTh4BDwgAknBV
+utjpCXRUENqH6pDHAkCDeSIfK8cIvquD31iuA9rU8y48UsSzlOapFqtOgeKT0bHGnxOL74RRVQmY
+x5W98iQFHoLlBnzFWqN5S4IcD3/T8uNk4UKSxrzENTOXXXaF4/zV+6MQ0/NC6XaquGFRKg/rc39Q
++tXACZBmz7rLtiYdC3RLuh7RLf7MH5LzqkDPxB/DcOcAj4TChtGsJ6JxJf9noO/ACiTOx/CNpCf5
+4GrmQ4FeExaEURGv/wDjFJ/iT3400H36qmYCOH/EiczmoqrgakC0kIB7ZzClAGAldgGViWWusj11
+uY+feaSr9pYhipbPc+V8kiYiTzYmEZHWzA==
 
 -->

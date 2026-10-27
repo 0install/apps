@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/lib/readline8.xml">
+  <script xmlns="http://www.w3.org/1999/xhtml" src="../resources/xslt-polyfill.min.js"/>
+  <name>Readline</name>
+  <summary>GNU readline and history libraries</summary>
+  <description>The GNU Readline library provides a set of functions for use by applications that allow users to edit command lines as they are typed in, and to recall previously entered lines.</description>
+  <homepage>https://tiswww.case.edu/php/chet/readline/rltop.html</homepage>
+  <icon href="https://apps.0install.net/utils/gnu.png" type="image/png"/>
+  <icon href="https://apps.0install.net/utils/gnu.ico" type="image/vnd.microsoft.icon"/>
+  <category>Development</category>
+
+  <package-implementation distributions="Debian" package="libreadline8t64"/>
+  <package-implementation distributions="Debian" package="libreadline8"/>
+  <package-implementation distributions="RPM" package="readline"/>
+  <package-implementation distributions="RPM" package="libreadline8"/>
+  <package-implementation distributions="Arch" package="readline"/>
+  <package-implementation distributions="Gentoo" package="sys-libs/readline"/>
+  <package-implementation distributions="MacPorts" package="readline"/>
+
+  <group license="GPL-3.0-or-later">
+    <requires interface="https://apps.0install.net/lib/termcap.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <implementation arch="Windows-x86_64" version="8.2.13" released="2024-08-06" stability="stable" id="sha256new_34QFXQ7ZGDOG2C2WRKQIDTPN3OOQDO6HDUUZIFFOLWKDATDPHPJQ">
+      <manifest-digest sha256new="34QFXQ7ZGDOG2C2WRKQIDTPN3OOQDO6HDUUZIFFOLWKDATDPHPJQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-readline-8.2.013-1-any.pkg.tar.zst" size="422304" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="8.2.13" released="2024-08-06" stability="stable" id="sha256new_MZWFV4MQCYDSF6CKRAZBIDP5NLEH25DL2DKCV26UWSDGGF4IKATA">
+      <manifest-digest sha256new="MZWFV4MQCYDSF6CKRAZBIDP5NLEH25DL2DKCV26UWSDGGF4IKATA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-readline-8.2.013-1-any.pkg.tar.zst" size="425648" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="8.3.0" released="2025-07-08" stability="stable" id="sha256new_4JZVHS4LLXLLHKSRT3QMZ2SRGQ2J542CVMWD7WLXHRNHE6SFYJUA">
+      <manifest-digest sha256new="4JZVHS4LLXLLHKSRT3QMZ2SRGQ2J542CVMWD7WLXHRNHE6SFYJUA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-readline-8.3.000-1-any.pkg.tar.zst" size="512283" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="8.3.0" released="2025-07-08" stability="stable" id="sha256new_4FA5IZABS6F25OBPKUW5YXA66C4ZR4DBV7VKVNWNUSULDMZRMO3A">
+      <manifest-digest sha256new="4FA5IZABS6F25OBPKUW5YXA66C4ZR4DBV7VKVNWNUSULDMZRMO3A"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-readline-8.3.000-1-any.pkg.tar.zst" size="517859" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="8.3.1" released="2025-07-22" stability="stable" id="sha256new_BYNLW3JNF3HSRB4X5IU2U7HZB64KHJYIPZJRUYEIW3WOQ3CSASZQ">
+      <manifest-digest sha256new="BYNLW3JNF3HSRB4X5IU2U7HZB64KHJYIPZJRUYEIW3WOQ3CSASZQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-readline-8.3.001-1-any.pkg.tar.zst" size="512190" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="8.3.1" released="2025-07-22" stability="stable" id="sha256new_AELJOLJR5EO6E3YCIOG5YZGQGMVMDUJMIIXISSUFLQTNDMFAGFSA">
+      <manifest-digest sha256new="AELJOLJR5EO6E3YCIOG5YZGQGMVMDUJMIIXISSUFLQTNDMFAGFSA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-readline-8.3.001-1-any.pkg.tar.zst" size="517946" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="8.3.3" released="2025-12-11" stability="stable" id="sha256new_APXZNG5A4CENSLPLKYZC5E3ZHVC3XIXO63VCZL3SQEZVBT6IHYPQ">
+      <manifest-digest sha256new="APXZNG5A4CENSLPLKYZC5E3ZHVC3XIXO63VCZL3SQEZVBT6IHYPQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-readline-8.3.003-1-any.pkg.tar.zst" size="513820" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="8.3.3" released="2025-12-11" stability="stable" id="sha256new_4VLEN3JYXS4MUI7PAHVVFUXSOKTTTTBVPGSJODCJTIDJ6Q6XTYJA">
+      <manifest-digest sha256new="4VLEN3JYXS4MUI7PAHVVFUXSOKTTTTBVPGSJODCJTIDJ6Q6XTYJA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-readline-8.3.003-1-any.pkg.tar.zst" size="518353" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrgmmsACgkQWao5J8JOTh6/Bgf9E69J
+3M5ZrvvZ0XnRrbk08gp6ohU8DTfNtByTwqY3VN6lACm7AIvauhx5grzFnat2amYiaeAcF5x8Fmyo
+/+gNWBY9ze5Hg4mPISRabHW34OgVJTq6A6nhbJc0c5iqtDrLXJ2yLjmKOfdMQzZ2tr8q/qrsQyV+
+1Yp8w3d2DlM3zxgU7swFD/KfTvXG7HQ6BqoauTgT5v+hrwAdFrTaDifpqfvw54hAI5+wZUaKqjop
+p/6/4WHHPtNaDccDlNX6GnBeRrna5K+/Jjm8ygPLpen4+z1/7WE1WiT3WPrrtt5hORPuVsKAPa9J
+Ks9rpqOIp5h25qdmumefAhCN5/gjJQfsvA==
+
+-->

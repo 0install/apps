@@ -55,14 +55,28 @@ the Debian Free Software Guidelines, and has been removed from this package.</de
       <archive href="https://sourceforge.net/projects/gnuwin32/files/make/3.81/make-3.81-bin.zip" size="495645" type="application/zip"/>
     </implementation>
   </group>
+  <group license="GPL-3.0-or-later">
+    <requires interface="https://apps.0install.net/devel/libintl.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/mingw32-make.exe"/>
+    <implementation arch="Windows-x86_64" version="4.4.1" released="2026-06-15" stability="stable" id="sha256new_GYDUFHBPG4LOPH62SNI5G26CPF2VNI6M2K62GTRD7S26QL5Y5SQQ">
+      <manifest-digest sha256new="GYDUFHBPG4LOPH62SNI5G26CPF2VNI6M2K62GTRD7S26QL5Y5SQQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-make-4.4.1-5-any.pkg.tar.zst" size="129076" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="4.4.1" released="2026-06-15" stability="stable" id="sha256new_2INHXJDTFW7DBIEORNQWNBFAYBTATVNQ4NBIJSRMQ5FS4J6ZNEDQ">
+      <manifest-digest sha256new="2INHXJDTFW7DBIEORNQWNBFAYBTATVNQ4NBIJSRMQ5FS4J6ZNEDQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-make-4.4.1-5-any.pkg.tar.zst" size="140601" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+  </group>
   <entry-point binary-name="make" command="run"/>
 </interface>
 <!-- Base64 Signature
-iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrctJ8ACgkQWao5J8JOTh5/Xwf/aWhu
-7+HjgqUOrLmJXd3rAndIngzQfPzW0AT3g7lIex336RIqaOLGeEH+6DZibCzniciPxnChSZz5yMJ8
-G+xOvZgqmzuH632uAtc/Xx5ntUx5WnQUUzc81OSV8+MKvoOOS/gCzxsco3v/TPDNXZikDbuZon9F
-l/sJa3rOObc3M80U0x7mIx6yTFh2pp9Gw4rBgIhARc0oYWMG2TBxVzVI5QBqPB6XgjASEOcv4m/Q
-IUPr6GztCtjfWFv3yuqt6EXGbgChRV//xEGTXVBnS01OT1BH55/3fidAGsO/TPtpmTguXOBQTO6G
-sdrkWUvV0gjfaSSprBEWNuUAVPjcmRnLNw==
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrgmmwACgkQWao5J8JOTh60PwgAkIMS
+PtEtOktln/6gzMTIDIrdc8/ymEl0OZXwLdHBmteNxWsRvoujpntMFwnfMIEk6roSSDbUwsFgltbk
+PFIWd08xob5V0WfDgMpaMUtOxkzQ9sLjHtISB1ppyp+1sBeqiwC7l8+33WaVNOfSHg+ZyXkgJUtp
+hQLFPk7vIWwWkZ2JKzSjcYvrq45lJJeDyGQArZb4+ZRxZaQys/4a1KixtdtRfBolIIfmeML9MEVt
+NxP+FwaIEDT4f3/byxDu2vjmXK05OONQ9OuM8AXevL1v4ov5HFCBsxd2l7ycMuN02xrCypc+TLlf
+LwpHGuMz/0ZWrIFVy0qEDOg4NEYk44dtmg==
 
 -->

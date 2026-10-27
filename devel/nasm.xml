@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/devel/nasm.xml">
+  <script xmlns="http://www.w3.org/1999/xhtml" src="../resources/xslt-polyfill.min.js"/>
+  <name>NASM</name>
+  <summary>the Netwide Assembler for x86</summary>
+  <description>NASM, the Netwide Assembler, is an assembler and disassembler for the Intel x86 architecture. It can output several binary formats, including COFF, OMF, a.out, ELF, Mach-O and binary. This package also contains ndisasm, a disassembler.</description>
+  <homepage>https://www.nasm.us/</homepage>
+  <category>Development</category>
+  <needs-terminal/>
+
+  <package-implementation distributions="Debian RPM Arch" package="nasm">
+    <command name="run" path="/usr/bin/nasm"/>
+    <command name="ndisasm" path="/usr/bin/ndisasm"/>
+  </package-implementation>
+  <package-implementation distributions="Gentoo" package="dev-lang/nasm">
+    <command name="run" path="/usr/bin/nasm"/>
+    <command name="ndisasm" path="/usr/bin/ndisasm"/>
+  </package-implementation>
+  <package-implementation distributions="MacPorts" package="nasm">
+    <command name="run" path="/opt/local/bin/nasm"/>
+    <command name="ndisasm" path="/opt/local/bin/ndisasm"/>
+  </package-implementation>
+
+  <entry-point binary-name="nasm" command="run">
+    <needs-terminal/>
+    <name>NASM</name>
+    <summary>assemble x86 code</summary>
+  </entry-point>
+  <entry-point command="ndisasm">
+    <needs-terminal/>
+    <name>ndisasm</name>
+    <summary>disassemble x86 code</summary>
+  </entry-point>
+
+  <group license="BSD-2-Clause">
+    <requires interface="https://apps.0install.net/lib/zlib.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/nasm.exe"/>
+    <command name="ndisasm" path="bin/ndisasm.exe"/>
+    <implementation arch="Windows-x86_64" version="2.16.3" released="2024-05-05" stability="stable" id="sha256new_U4JKHO2WJZ7IVC6USA6UGAV673FSQO3CUBHWGQNHK5BSKXPZBAEQ">
+      <manifest-digest sha256new="U4JKHO2WJZ7IVC6USA6UGAV673FSQO3CUBHWGQNHK5BSKXPZBAEQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-nasm-2.16.03-1-any.pkg.tar.zst" size="376255" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="2.16.3" released="2024-05-05" stability="stable" id="sha256new_MRLTBBHT74BVSXSQRKVKNL3H4MCINRMHZEWO2JCVSCOOGGBB6OTQ">
+      <manifest-digest sha256new="MRLTBBHT74BVSXSQRKVKNL3H4MCINRMHZEWO2JCVSCOOGGBB6OTQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-nasm-2.16.03-1-any.pkg.tar.zst" size="367789" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="3.1" released="2025-12-03" stability="stable" id="sha256new_7IQUZT7Y7ONWR6GMSA6LR7WYR5RUI2TS7NF4IP6KAV4KKMWMPTYQ">
+      <manifest-digest sha256new="7IQUZT7Y7ONWR6GMSA6LR7WYR5RUI2TS7NF4IP6KAV4KKMWMPTYQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-nasm-3.01-1-any.pkg.tar.zst" size="428097" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="3.1" released="2025-12-03" stability="stable" id="sha256new_YOD67BMQVV63D4OC2HKLLWIBPI7LIKW324QWZMJLDWT7SKH6NADQ">
+      <manifest-digest sha256new="YOD67BMQVV63D4OC2HKLLWIBPI7LIKW324QWZMJLDWT7SKH6NADQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-nasm-3.01-1-any.pkg.tar.zst" size="400459" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="3.2" released="2026-07-04" stability="stable" id="sha256new_S64U24JCQTJ6VJIGAUZDXWLVOKMJPQUHMIF4EDDYHHUU3JRIXJTQ">
+      <manifest-digest sha256new="S64U24JCQTJ6VJIGAUZDXWLVOKMJPQUHMIF4EDDYHHUU3JRIXJTQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-nasm-3.02-1-any.pkg.tar.zst" size="452146" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="3.2" released="2026-07-04" stability="stable" id="sha256new_EHMISVFFY5OPGXDXZRCMDD6LPNJ4JBILQA6Z2J4SIBVHWOHCJ5GA">
+      <manifest-digest sha256new="EHMISVFFY5OPGXDXZRCMDD6LPNJ4JBILQA6Z2J4SIBVHWOHCJ5GA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-nasm-3.02-1-any.pkg.tar.zst" size="420643" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrgmmwACgkQWao5J8JOTh5+wwf9FezL
+LQVRBdsf+5YS03Hw+StyZQ7w2BpC+PI/rnMkcFD+7kKCBU+tQrzo16PXte4xzI3KW+zxFuzoJtLF
+uIePkvc7TUqfmblwRrKPszpObfDau4DvJCMGc0nSIANStkRUE1OCmvm2OJY/W++2/L/2fjvfLKvp
+2RUNYMhKLr+vRO/5qxu47q5TpNtmbWNuhoHf+ARqn5Nk6mscdivr2sty86LthTg1hxAYyEPNo5IN
+ThGw3pXaBaIDSXnqHwXbojwy3IpieLZ+S9AoyC1KvrnSOi1U8ioUmlyroTtRQ61LCnVQ/9wwMSAr
+P5mm2YWSvH6erRDxdpm6TMFmK41TJzgwlA==
+
+-->

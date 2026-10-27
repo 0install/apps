@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='../resources/feed.xsl'?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="https://apps.0install.net/utils/hunspell.xml">
+  <script xmlns="http://www.w3.org/1999/xhtml" src="../resources/xslt-polyfill.min.js"/>
+  <name>Hunspell</name>
+  <summary>spell checker and morphological analyzer</summary>
+  <description>Hunspell is a spell checker and morphological analyzer library and program, used by LibreOffice, Firefox and many other programs. Dictionaries are not included.</description>
+  <homepage>https://hunspell.github.io/</homepage>
+  <category>Utility</category>
+  <needs-terminal/>
+
+  <package-implementation distributions="Debian RPM Arch" package="hunspell" main="/usr/bin/hunspell"/>
+  <package-implementation distributions="Gentoo" package="app-text/hunspell" main="/usr/bin/hunspell"/>
+  <package-implementation distributions="MacPorts" package="hunspell" main="/opt/local/bin/hunspell"/>
+
+  <entry-point binary-name="hunspell" command="run"/>
+
+  <group license="MPL-1.1 OR GPL-2.0-or-later OR LGPL-2.1-or-later">
+    <requires interface="https://apps.0install.net/lib/cc-libs.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/devel/libintl.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/libiconv.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <requires interface="https://apps.0install.net/lib/readline8.xml">
+      <environment insert="bin" name="PATH"/>
+    </requires>
+    <command name="run" path="bin/hunspell.exe"/>
+    <implementation arch="Windows-x86_64" version="1.7.2" released="2026-05-09" stability="stable" id="sha256new_5M5FUCWMTX6E33VLWXI2UON57ULEOSGZCQFCSD5LPELPLMZOUPUA">
+      <manifest-digest sha256new="5M5FUCWMTX6E33VLWXI2UON57ULEOSGZCQFCSD5LPELPLMZOUPUA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-hunspell-1.7.2-6-any.pkg.tar.zst" size="556569" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.7.2" released="2026-05-09" stability="stable" id="sha256new_XLWAEKFAQBWGAFMY6ONDCC7NKZWPGBIAYSWE7ANPGSYZQCAQ2NWA">
+      <manifest-digest sha256new="XLWAEKFAQBWGAFMY6ONDCC7NKZWPGBIAYSWE7ANPGSYZQCAQ2NWA"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-hunspell-1.7.2-6-any.pkg.tar.zst" size="525779" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.7.3" released="2026-07-13" stability="stable" id="sha256new_3377ITLCQUU4JC2NDIYIOR6TMZ5KHTJFFVELX7GM2MWTWSLC3LBA">
+      <manifest-digest sha256new="3377ITLCQUU4JC2NDIYIOR6TMZ5KHTJFFVELX7GM2MWTWSLC3LBA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-hunspell-1.7.3-1-any.pkg.tar.zst" size="578912" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.7.3" released="2026-07-13" stability="stable" id="sha256new_F2F7OY34EKPEGUYNY5SBNGMUMEASC4OR4SBVPXYXGL4KUTCI2QLQ">
+      <manifest-digest sha256new="F2F7OY34EKPEGUYNY5SBNGMUMEASC4OR4SBVPXYXGL4KUTCI2QLQ"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-hunspell-1.7.3-1-any.pkg.tar.zst" size="528263" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.7.4" released="2026-09-28" stability="stable" id="sha256new_J4EDWNZMI3ENF5EFAN65WGV7EAHLPRUHXG7RSN63TKD5U27U2TGQ">
+      <manifest-digest sha256new="J4EDWNZMI3ENF5EFAN65WGV7EAHLPRUHXG7RSN63TKD5U27U2TGQ"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-hunspell-1.7.4-1-any.pkg.tar.zst" size="447439" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.7.4" released="2026-09-28" stability="stable" id="sha256new_7A5VNVIBXSO36HLT5PXEVSY6YQB4WYMDZU6F6N53FLCHTQG26V4Q">
+      <manifest-digest sha256new="7A5VNVIBXSO36HLT5PXEVSY6YQB4WYMDZU6F6N53FLCHTQG26V4Q"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-hunspell-1.7.4-1-any.pkg.tar.zst" size="400681" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+    <implementation arch="Windows-x86_64" version="1.7.5" released="2026-10-10" stability="stable" id="sha256new_WAMM3BENE246YDNDEJK3UUT7EPQ3ECY7INRDZDK7IP3JWBBIIRRA">
+      <manifest-digest sha256new="WAMM3BENE246YDNDEJK3UUT7EPQ3ECY7INRDZDK7IP3JWBBIIRRA"/>
+      <archive href="https://repo.msys2.org/mingw/ucrt64/mingw-w64-ucrt-x86_64-hunspell-1.7.5-2-any.pkg.tar.zst" size="404223" type="application/x-zstd-compressed-tar" extract="ucrt64"/>
+    </implementation>
+    <implementation arch="Windows-aarch64" version="1.7.5" released="2026-10-10" stability="stable" id="sha256new_MPBTVIK3J7D3UD6DXHYDZPUB7BI4DQXTFXK7QLQYEDYVVFQS2V2Q">
+      <manifest-digest sha256new="MPBTVIK3J7D3UD6DXHYDZPUB7BI4DQXTFXK7QLQYEDYVVFQS2V2Q"/>
+      <archive href="https://repo.msys2.org/mingw/clangarm64/mingw-w64-clang-aarch64-hunspell-1.7.5-2-any.pkg.tar.zst" size="408947" type="application/x-zstd-compressed-tar" extract="clangarm64"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iQEzBAABCgAdFiEEiMih83WShpHXNlwCWao5J8JOTh4FAmrgmmwACgkQWao5J8JOTh7ofAgAkvAa
+C5rPPU2FOHNvlFk0YSulwTQ8NmjFTOXFT9NA4OPLgsUR42M7MGgb0XS5Sq/8cbUuSC4o96n0aEyh
+KftwL7216YzhK9NtAv5YNiC2Cg7AQqs5lz5y/b/rr9+oCGFr5v1QxhVvlGq8UWzwIdBX0WA1uVz/
+VCDO5Peuz4TCvQQuIs6yE/z/B3qHqjWDX2exmGkIKVnkWyo6/yPZjURJH+KIdYmmfwacjxJZR/1n
+byxb+qp9sMmtouzm3SDA9bdezdNGt06r4PsZVgZL0HB9N646HcrIw6+ILB3DQimLsp5nNdYplWIh
+qxdpWKGrJjNF4ASN6NW9XhSjrrWERg3OTw==
+
+-->

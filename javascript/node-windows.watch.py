@@ -9,4 +9,4 @@ releases = [{
     'version': release['version'][1:],
     'stability': 'stable' if release['lts'] else 'testing',
     'released': release['date']
-} for release in json.loads(data) if 'win-x64-7z' in release['files'] and not release['version'] in excluded_versions]
+} for release in json.loads(data) if 'win-x64-7z' in release['files'] and not '-' in release['version'] and not release['version'] in excluded_versions]

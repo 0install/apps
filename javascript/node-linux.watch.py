@@ -4,9 +4,11 @@ import json
 
 excluded_versions = ['v9.11.0']
 
+def convert(release):
+    original_version = release['version'][1:]
+    version = original_version.replace('-rc.', '-rc').replace('-beta.', '-pre2-').replace('-alpha.', '-pre1-')
+    stability = 'developer' if '-' in original_version else ('stable' if release['lts'] else 'testing')
+    return {'version': version, 'original-version': original_version, 'stability': stability, 'released': release['date']}
+
 data = request.urlopen('https://nodejs.org/dist/index.json').read().decode('utf-8')
-releases = [{
-    'version': release['version'][1:],
-    'stability': 'stable' if release['lts'] else 'testing',
-    'released': release['date']
-} for release in json.loads(data) if 'linux-arm64' in release['files'] and not '-' in release['version'] and not release['version'] in excluded_versions]
+releases = [convert(release) for release in json.loads(data) if 'linux-arm64' in release['files'] and not release['version'] in excluded_versions]

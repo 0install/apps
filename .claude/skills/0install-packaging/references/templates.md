@@ -25,11 +25,11 @@ Order, top to bottom inside `<interface xmlns="http://zero-install.sourceforge.n
 - `<homepage>` — upstream project URL.
 - `<category>` — freedesktop menu category (`Development`, `Utility`, `Network`, `Graphics`, …); optional.
 - `<needs-terminal/>` — for CLI tools only; **omit for GUI apps**.
-- `<icon href="https://apps.0install.net/CATEGORY/name.png" type="image/png"/>` — PNG; GUI apps that get desktop integration may also add an `.ico` (`type="image/vnd.microsoft.icon"`) and an `.icns` (`type="image/x-icns"`) for macOS. The `href` resolves to the **`gh-pages`** branch: the actual `.png`/`.ico`/`.icns` files live under `CATEGORY/` there, not on `master` (see SKILL.md step 6).
+- `<icon href="https://apps.0install.net/CATEGORY/name.png" type="image/png"/>` — PNG; GUI apps that get desktop integration may also add an `.ico` (`type="image/vnd.microsoft.icon"`) and an `.icns` (`type="image/x-icns"`) for macOS. The `href` resolves to the **`gh-pages`** branch: the actual `.png`/`.ico`/`.icns` files live under `CATEGORY/` there, not on `master` (see `references/icons.md`).
 - `<feed-for interface="https://apps.0install.net/CATEGORY/name.xml"/>` — **required**; the canonical URL that 0repo merges into. Filename + category must match the file's location.
 - `<group …>` … `<implementation …>` — the versions.
 
-`license` is set as an attribute on `<group>` (or on each `<implementation>`). Use a recognizable name like `MIT License`, `Apache License 2.0`, `GNU General Public License, version 3 or later`.
+`license` is set as an attribute on `<group>` (or on each `<implementation>`). Use an [SPDX identifier](https://spdx.org/licenses/) or expression: `MIT`, `Apache-2.0`, `GPL-3.0-or-later`, `MIT OR Apache-2.0`. Some older templates still carry long names such as `MIT License`; don't copy that form into new packages.
 
 ## Placeholders
 
@@ -39,7 +39,7 @@ Order, top to bottom inside `<interface xmlns="http://zero-install.sourceforge.n
 - `{released}` — ISO date `YYYY-MM-DD`; `<implementation released="{released}">`.
 - `{stability}` — `stable` / `testing` / `developer`; use `<implementation stability="{stability}">` only if the watch script varies it, otherwise hard-code `stability="stable"`.
 - `{version-original}` — the **raw upstream tag** for use in download URLs when it differs from the normalized `{version}` (e.g. `version=1.7.1` but the asset path needs `jq-1.7.1`). See `utils/jq.xml.template`.
-- Any other key the watch script emits (e.g. `{minor-version}`, `{release-id}`, `{build}`). Every `{key}` in the template must be provided, or 0template errors.
+- Any other key the watch script emits (e.g. `{minor-version}`, `{release-id}`, `{build}`). Every `{key}` in the template must be provided, or 0template errors. The reverse holds too: a value that no `{key}` in the template uses is an "Unused parameter" error, so the watch script must not emit keys the template doesn't reference.
 
 ## Arch tokens
 
@@ -71,16 +71,16 @@ The `<command name="run" path="…">` `path` is relative to the implementation r
 
 **Multiple `<group arch="…">` blocks** — when the command path or layout differs per OS (e.g. a macOS `.app` bundle vs a Linux `bin/`), or different dependencies per OS. Each group carries its own `<command>`/`<requires>` and one or more implementations.
 
-Attributes (`license`, `stability`) and child elements (`<command>`, `<requires>`, `<environment>`) set on a `<group>` are inherited by its implementations. **Don't nest `<group>`s** to share them, though: keep every `<group>` at the top level and repeat the shared attributes (typically `license="…"`) on each one. For example:
+Attributes (`license`, `stability`) and child elements (`<command>`, `<requires>`, `<environment>`) set on a `<group>` are inherited by its implementations. **Don't nest `<group>`s** in new packages to share them, though: keep every `<group>` at the top level and repeat the shared attributes (typically `license="…"`) on each one. (A few older templates do nest; leave those as they are, but don't use them as models.) For example:
 
 ```xml
-<group license="Apache License 2.0">
+<group license="Apache-2.0">
   <command name="run" path="foo"/>
   <implementation arch="Linux-x86_64" …>…</implementation>
   <implementation arch="Darwin-aarch64" …>…</implementation>
 </group>
 
-<group license="Apache License 2.0">
+<group license="Apache-2.0">
   <command name="run" path="bin/foo.exe"/>
   <implementation arch="Windows-x86_64" …>…</implementation>
 </group>
@@ -100,7 +100,7 @@ Naming:
 - If the app has **both a GUI and a non-GUI main entry point**, name them `name="run-gui"` (GUI) and `name="run"` (CLI).
 - Secondary commands take any `name` — conventionally the binary's own name (`<command name="gitk" path="cmd/gitk.exe"/>`).
 
-`<command>`s go in the **template** (so they flow into every generated per-version feed). The matching `<entry-point>`s — the desktop-integration metadata — go in the **master feed** (`name.xml`) and **must not** appear in the template. Place them after the implementation groups, one per command:
+`<command>`s go in the **template** (so they flow into every generated per-version feed). The matching `<entry-point>`s — the desktop-integration metadata — go in the **master feed** (`name.xml`) and **must not** appear in the template. Place them after the metadata (name, description, icons, …) and **before** the `<group>`s, one per command:
 
 ```xml
 <entry-point binary-name="git" command="run">       <!-- binary-name: command name ≠ executable -->

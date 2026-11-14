@@ -17,6 +17,12 @@ A watch script is a Python program that [0watch](https://docs.0install.net/tools
 
 The script must set a module-level variable `releases` to a list of dicts. Each dict is one release; each key/value becomes a substitution for the matching `{key}` placeholder in `name.xml.template`. The script doesn't print or write anything — 0watch reads the `releases` variable after exec'ing it, then calls 0template for each version not already packaged.
 
+Three things 0watch and 0template are strict about (`scripts/run_watch.py` checks all of them):
+
+- **`releases` must not be empty.** 0watch treats an empty list as an error, so a filter that removes everything fails the run.
+- **Every value must be a `str`.** 0watch builds `key=value` arguments by string concatenation; an `int` or a `date` crashes it.
+- **Keys and template placeholders must match exactly.** A `{key}` without a value and a value without a `{key}` are both 0template errors.
+
 It runs with the watch file's directory as `__file__`'s location, so the standard `sys.path.insert(0, …'..')` makes repo-root helpers (`github`) importable.
 
 ## `releases` dict keys
@@ -55,7 +61,7 @@ Models: `utils/curl.watch.py`, `devel/cmake.watch.py`, `python/pywin32.watch.py`
 
 0install versions are dotted lists with optional modifiers: digits/dots, with `-pre`/`-rc`/`-post` separated by `-`. So `1.2.3`, `1.2.3-rc1`, `1.2-post2` are valid; `v1.2.3`, `1.2.3rc1`, `1.2.3a` are **not**. Normalize in the watch script:
 
-- Strip prefixes: `tag.lstrip('v')`, or `tag.removeprefix('name-')` / `tag.strip('jq-')`.
+- Strip prefixes with `tag.removeprefix('v')` / `tag.removeprefix('name-')`. Don't use `strip('name-')` or `lstrip('name-')` for this, although some existing scripts do: they remove any of those *characters* from the ends, not the prefix, and so can eat part of the version.
 - Insert the modifier dash: `'1.7rc1'` → `'1.7-rc1'` (e.g. `.replace('rc', '-rc')`).
 - If the **download URL** still needs the raw tag, keep it as a separate key: `'version-original': tag` and use `{version-original}` in the template's `href`.
 
@@ -63,11 +69,28 @@ The full version grammar is in the [feed specification](https://docs.0install.ne
 
 ## The `#os=` header
 
-An optional first-line comment `#os=VALUE` pins the script to a single OS. The reason is archive **extraction**, not the script itself: 0watch calls 0template, which downloads *and unpacks* every archive to compute its `manifest-digest`, and 0install can only unpack some archive formats on certain platforms. So the script has to run on an OS where 0template can unpack the formats your template references.
+An optional first-line comment `#os=VALUE` decides which CI runner executes the script. The nightly Update workflow runs `watch.ps1` on a Windows runner and `watch.sh` on a macOS and a Linux runner:
+
+| First line | Runs on |
+| --- | --- |
+| *(no header)* | the **Windows** runner only |
+| `#os=Windows` | the Windows runner (same as no header, but states that it is required) |
+| `#os=Darwin` | the macOS runner |
+| `#os=Linux` | the Linux runner |
+| anything else, e.g. `#os=manual-Darwin` | **no** runner; someone runs it by hand on that OS (`python/macos.watch.py`) |
+
+So a header-less script is not "run everywhere": it is generated on Windows. That is fine for ordinary archives, including Linux and macOS `.tar.gz`/`.tar.xz`/`.zip` builds, and it is what most scripts in the repo do.
+
+The header matters because of archive **extraction**: 0watch calls 0template, which downloads *and unpacks* every archive to compute its `manifest-digest`, and some formats unpack only on one platform. Pin the script to an OS where 0template can unpack everything the template references:
 
 - `.dmg` (Apple disk image) unpacks only on **macOS** → `#os=Darwin`.
 - `.msi` unpacks only on **Windows** → `#os=Windows`.
-- Plain `.tar.gz` / `.tar.bz2` / `.tar.xz` / `.zip` unpack anywhere → **no header needed**.
+- `.deb`, `.rpm`, `.AppImage` → `#os=Linux` (see `gui/drawio-linux`, `utils/nmap`, `gui/krita-linux`).
+- Plain `.tar.gz` / `.tar.bz2` / `.tar.xz` / `.zip` → **no header needed**.
+
+The Linux-only half of a per-OS split (`foo-linux.watch.py`) is conventionally `#os=Linux` even when it only uses tarballs. A few multi-platform scripts with plain archives are pinned to Linux as well (`dotnet/sdk`, `protobuf/protoc`, `utils/upx`); the reason isn't recorded, so keep an existing header unless you know it is no longer needed, and if a header-less script produces a wrong digest for a Unix archive, try `#os=Linux`.
+
+Generate and verify locally on the OS the header names; on another OS, 0template fails to unpack or the script is skipped by `watch.ps1`/`watch.sh`.
 
 If one template mixes formats, pin to the OS that can handle the most restrictive one — e.g. `devel/cmake.xml.template` ships `.tar.gz` for Linux/macOS but an `.msi` for Windows, so its watch script is `#os=Windows` (Windows unpacks the `.tar.gz` too). If a template would need *two* mutually exclusive formats (a `.dmg` and an `.msi`), no single OS can generate it — split it into per-OS feeds instead. That's why many `gui/` apps come as `foo-linux` / `foo-macos` / `foo-windows` trios, each with its own template, watch script and `#os=` header.
 
@@ -77,8 +100,10 @@ Models: `gui/blender-macos.watch.py` (`#os=Darwin`, `.dmg`), `devel/cmake.watch.
 
 Rename it from `name.watch.py` to `name.watch_.py` (trailing underscore before `.py`). The `*.watch.py` glob in `watch.sh`/`watch.ps1` no longer matches it, so it stops running while staying in the tree for reference. Used for scripts whose upstream broke or that need a rewrite. Examples: `utils/fixparts.watch_.py`, `gui/winscp.watch_.py`.
 
+To re-enable one, fix it first, check it with `run_watch.py` (which accepts the `.watch_.py` name), then rename it back.
+
 ## How 0watch decides what's new
 
-0watch packages a reported release (calls 0template) **unless** `name.xml` already contains that version, or a `name-VERSION.xml` already sits in the directory. This dedup is what lets it run repeatedly and only generate genuinely new feeds.
+0watch packages a reported release (calls 0template) **unless** `name.xml` already contains that version, or a `name-VERSION.xml` already sits in the output directory (the `--output` directory, normally `incoming/`; the script's own directory when `--output` isn't given). This dedup is what lets it run repeatedly and only generate genuinely new feeds.
 
 Bootstrapping a new package starts by hand-creating the master `name.xml` (SKILL.md step 6): it mirrors the `.xml.template` but with **no `<implementation>` elements**, and the feed URI goes in the `uri` attribute of the top-level `<interface>` (where the template uses `<feed-for interface="…"/>`). Since that fresh master has no implementations, the first 0watch run treats every version your script reports as new and generates them all — which is exactly how the feed gets its initial versions; 0repo then merges them into the master.
